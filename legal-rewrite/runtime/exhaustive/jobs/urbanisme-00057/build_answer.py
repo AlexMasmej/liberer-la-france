@@ -1,0 +1,421 @@
+import json
+import re
+from html import unescape
+from pathlib import Path
+
+sources = json.loads(Path('source.json').read_text())
+by_number = {a['number']: a for a in sources}
+answers = {}
+
+
+def effect(kind, measure, description, before, after, unit, population,
+           transition, burdens, source_quote, proposed_quote):
+    return dict(kind=kind, measure_id=measure, description=description,
+                before=before, after=after, unit=unit,
+                affected_population=population,
+                conditions_and_transition=transition,
+                replacement_or_new_burdens=burdens,
+                source_quote=source_quote, proposed_quote=proposed_quote)
+
+
+def add(number, xml, reason, notes, assessment, limits, burdens, effects=None,
+        removed=None, full_repeal=None, benefit=None, impact_class=None):
+    s = by_number[number]
+    row = {k: s[k] for k in ('code_id', 'source_id', 'source_sha256', 'number')}
+    row.update(proposed_xml=xml, reason=reason, review_notes=notes,
+               status='retained_unchanged' if xml is None else 'rewrite_draft')
+    if xml is None:
+        row['classification'] = 'retained_necessary'
+    if full_repeal:
+        row.update(change_type='full_repeal',
+                   repeal_policy_id='editorial_direction_2026_10_19',
+                   repeal_scope=full_repeal)
+    if removed:
+        row.update(change_type='normative_reduction',
+                   reform_policy_id='editorial_direction_2026_10_19',
+                   removed_provisions=removed)
+    if benefit:
+        row['benefit_review'] = benefit
+    row['substantive_impact'] = dict(
+        version=1,
+        classification=impact_class or ('retained_necessary' if xml is None else 'material_reduction'),
+        assessment=assessment, scope_limitations=limits,
+        new_burdens_review=burdens, effects=effects or [])
+    answers[number] = row
+
+
+add('R111-44',
+    "<p>Le présent article est abrogé à compter de l'entrée en vigueur de la loi portant cette abrogation.</p>\n"
+    "<p>À compter de cette date, l'installation d'une résidence mobile de loisirs dans un terrain de camping ou un village de vacances mentionné à l'article R. 111-42 ne peut être interdite sur le seul fondement d'une cession de l'emplacement en pleine propriété, d'une cession de droits sociaux donnant vocation à son attribution en propriété ou en jouissance ou d'une location d'une durée supérieure à deux ans. Cette suppression s'applique aussi aux emplacements déjà cédés ou loués.</p>\n"
+    "<p>Les actes et contrats valablement conclus, les droits des occupants et des tiers ainsi que les décisions juridictionnelles définitives demeurent préservés. Les dérogations antérieurement applicables aux opérations et contrats antérieurs au 1er octobre 2011 ne donnent lieu à aucune remise en cause. Sous réserve de l'application de la loi répressive plus douce aux sanctions non définitives, les faits antérieurs restent soumis au droit qui leur était applicable.</p>\n"
+    "<p>L'abrogation ne dispense pas du respect des autres règles applicables à l'installation, à l'aménagement et à la sécurité des terrains, notamment de l'article R. 111-42. Elle ne modifie pas les prescriptions des autorisations déjà délivrées, dont la modification reste soumise aux procédures ordinaires.</p>",
+    "Réforme de fond : suppression complète de l'interdiction fondée sur le mode de détention de l'emplacement et sur une location dépassant deux ans. Dans les campings et villages de vacances déjà admissibles, cette distinction patrimoniale n'assure pas par elle-même la mobilité du véhicule ni la sécurité du terrain, qui relèvent de règles conservées. Les trois exceptions historiques deviennent sans objet pour l'avenir parce que l'interdiction entière disparaît ; leurs bénéficiaires ne perdent aucun droit. Aucune simple copie de la source n'est présentée comme une réécriture.",
+    "Sources et notes vides lues intégralement. R111-41 à R111-43, R111-35 et R*421-19 lus dans le corpus : la définition mobile, les catégories de terrains autorisés et les normes d'aménagement demeurent. Le 1° de R111-42 conserve sa restriction autonome concernant certains parcs résidentiels de loisirs ; elle n'est pas supprimée par cette abrogation ciblée sur les campings et villages. Le d de R*421-23 concerne les caravanes et non une réintroduction de R111-44. Aucun renvoi direct à R111-44 trouvé dans le texte source du corpus urbanisme. La suppression n'annule pas automatiquement une prescription individuelle ou un contrat. Pas de filiation SRU affirmée ni d'examen global des 209 articles revendiqué.",
+    "La source entière interdisait certaines installations selon la propriété ou la durée du bail, avec trois exceptions antérieures à octobre 2011. La proposition retire effectivement cette interdiction pour l'avenir, y compris sur les emplacements existants, sans retirer les droits historiques ni les règles autonomes d'accueil et de sécurité.",
+    "L'allègement ne rend pas admissible tout terrain ni tous les parcs résidentiels de loisirs. Les prescriptions des titres existants et les règles de tourisme ou de propriété restent distinctes. Aucun effet financier national n'est établi.",
+    "Aucune charge nouvelle identifiée : ni agrément, ni déclaration, ni justificatif ne remplace l'interdiction supprimée. Les réserves renvoient seulement aux règles déjà applicables et aux droits des tiers.",
+    [effect('obligation_removed', 'residences-mobiles-fin-interdit-patrimonial',
+            "Suppression de l'interdiction d'installation liée à la cession ou à une location de plus de deux ans.",
+            "Installation interdite sur les emplacements de campings et villages visés, cédés en propriété ou en droits sociaux, ou loués plus de deux ans, sauf les trois exceptions historiques.",
+            "Aucune interdiction au seul titre de ces cessions ou locations, pour les installations futures sur emplacements anciens comme nouveaux ; autres conditions d'accueil conservées.",
+            'legal_duty', "Propriétaires, titulaires de droits sociaux et locataires des emplacements concernés, ainsi que leurs exploitants.",
+            "Dès l'entrée en vigueur ; contrats, droits des tiers, prescriptions individuelles et situations antérieures protégés selon la transition.",
+            "Aucune formalité de remplacement ; les autres règles d'installation subsistent.",
+            "Les résidences mobiles de loisirs ne peuvent être installées sur un emplacement situé à l'intérieur du périmètre d'un terrain de camping ou d'un village de vacances mentionné à l'article R. 111-42 ayant fait l'objet d'une cession en pleine propriété, de la cession de droits sociaux donnant vocation à son attribution en propriété ou en jouissance ou d'une location pour une durée supérieure à deux ans.",
+            "Cette suppression s'applique aussi aux emplacements déjà cédés ou loués.")],
+    full_repeal="Interdiction d'installer une résidence mobile de loisirs sur certains emplacements cédés ou loués pour plus de deux ans, et régime d'exceptions devenu inutile du fait de sa suppression intégrale.")
+
+add('R111-45', None,
+    "Maintien intégral utile à droit constant : ce texte autorise l'entreposage en vue d'une prochaine utilisation dans trois catégories de lieux. Il n'impose ni autorisation individuelle supplémentaire ni durée minimale. Le supprimer ferait perdre ce fondement favorable sans supprimer les régimes autonomes d'aménagement des terrains.",
+    "Source entière et absence de notes vérifiées. Lecture de R*421-19 j et R*421-23 e : seuils respectifs d'au moins cinquante unités et de dix à quarante-neuf unités, avec le champ propre de chaque énumération, conservés. L'article permet l'entreposage, non l'occupation permanente ni une dispense des règles de création des garages et dépôts. Le renvoi au e n'est pas étendu au-delà de son texte.",
+    "La possibilité d'entreposer les résidences mobiles dans les garages collectifs, aires ouvertes au public et dépôts désignés reste entière, pour les futures utilisations aussi. Aucun prélèvement ni obligation autonome n'a été identifié dans cet article d'autorisation générale.",
+    "Aucune simplification nouvelle n'est comptée ; les formalités d'aménagement des terrains prévues dans d'autres articles subsistent et ne sont pas réécrites ici.",
+    "Aucune charge nouvelle identifiée puisque le texte est maintenu intégralement, sans pièce, durée ou procédure ajoutée.")
+
+add('R111-46',
+    "<p>Par dérogation aux articles précédents, les résidences mobiles de loisirs peuvent, à titre temporaire, être installées dans tout autre terrain afin de permettre le relogement provisoire des personnes victimes d'une catastrophe naturelle ou technologique. Cette installation n'est subordonnée à aucune décision préfectorale au titre du présent article.</p>\n"
+    "<p>Cette dispense ne déroge ni aux droits des propriétaires et des tiers, ni aux mesures d'évacuation ou d'interdiction d'occupation légalement prises pour prévenir les risques, ni aux règles de sécurité et de salubrité applicables.</p>\n"
+    "<p>La présente rédaction s'applique aux installations réalisées à compter de l'entrée en vigueur de la loi qui la prévoit et aux demandes en cours, sans nouveau dépôt au titre de la décision supprimée. Les décisions déjà prises et les droits qu'elles ont ouverts demeurent préservés ; leurs prescriptions fondées sur les règles de sécurité et de salubrité restent applicables.</p>",
+    "Réforme de fond : la dérogation de relogement provisoire après catastrophe devient directement utilisable sans décision préfectorale particulière. La temporalité, les deux types de catastrophe et la qualité de victime sont conservés. La fonction de protection contre un terrain dangereux est assurée par les règles de sécurité, de salubrité et les mesures de prévention conservées, sans reconstituer un visa de relogement.",
+    "Lecture intégrale de la source et des notes vides ; R111-2 et R111-41 à R111-43 lus pour le champ des installations et la sécurité. La suppression porte exclusivement sur la décision de cet article, non sur une autorisation environnementale autonome, un permis nécessaire à un aménagement distinct ou une mesure d'évacuation. Les règles de gestion de catastrophe hors des cinq codes ne sont pas réputées réécrites. Aucun formulaire, certificat de catastrophe ou délai d'occupation chiffré n'est créé.",
+    "La décision préfectorale préalable, explicitement exigée par la source entière, est retirée. Le bénéfice de la dérogation reste ouvert aux futures victimes de catastrophes naturelles ou technologiques et aux dossiers en cours, dans son champ de relogement temporaire.",
+    "Aucun droit d'occuper contre la volonté du propriétaire ni de rester sur un terrain interdit pour risque n'est créé. Les procédures autonomes ne sont pas abolies et aucun gain global de délai n'est chiffré.",
+    "Aucune charge nouvelle identifiée : pas de déclaration ni d'attestation en remplacement du visa supprimé. Les réserves relatives aux tiers et à la sécurité maintiennent des règles préexistantes, sans nouveau contrôle préalable spécifique.",
+    [effect('authorization_removed', 'relogement-catastrophe-sans-decision-prefectorale',
+            "Suppression de la décision préfectorale spéciale pour le relogement temporaire en résidence mobile.",
+            "Dérogation aux emplacements ordinaires ouverte sur décision préfectorale, seulement pour le relogement provisoire de victimes de catastrophes naturelles ou technologiques.",
+            "Même dérogation et mêmes bénéficiaires, sans décision préfectorale au titre de R111-46 ; les mesures de prévention et droits des tiers restent applicables.",
+            'legal_duty', "Victimes de catastrophes naturelles ou technologiques et personnes organisant leur relogement provisoire.",
+            "Installations futures et demandes en cours dès l'entrée en vigueur ; bénéfices des décisions antérieures protégés.",
+            "Aucune déclaration de remplacement ; les règles autonomes de sécurité et de propriété subsistent.",
+            "Sur décision préfectorale, et par dérogation aux articles précédents, les résidences mobiles de loisirs peuvent, à titre temporaire, être installées dans tout autre terrain afin de permettre le relogement provisoire des personnes victimes d'une catastrophe naturelle ou technologique.",
+            "Cette installation n'est subordonnée à aucune décision préfectorale au titre du présent article.")],
+    removed=["La décision préfectorale préalable conditionnant spécialement la dérogation de relogement temporaire après une catastrophe naturelle ou technologique."],
+    benefit="L'avantage identifié est la possibilité de reloger provisoirement les victimes d'une catastrophe naturelle ou technologique dans une résidence mobile sur un terrain autre que les emplacements ordinaires. Il est maintenu pour toutes les futures situations éligibles et pour les demandes en cours, avec suppression du préalable préfectoral. Les décisions anciennes conservent les droits ouverts. Les réserves de sécurité, d'évacuation et de propriété ne ferment pas la dérogation et ne créent aucun justificatif ou agrément de remplacement.")
+
+add('R111-47', None,
+    "Maintien intégral de la définition des caravanes : véhicule terrestre habitable, usage temporaire ou saisonnier de loisirs, moyens de mobilité permanents et circulation non interdite par le code de la route. Ces éléments délimitent les régimes de caravane et de résidence mobile ; ce ne sont pas des demandes administratives doublonnées.",
+    "Source et notes vides relues intégralement. Comparaison avec R111-41 : les résidences mobiles de loisirs ne peuvent pas circuler sur la route, contrairement à la catégorie définie ici. Conserver la mobilité par déplacement autonome ou traction et la qualification de loisirs évite d'appliquer implicitement ce régime à l'habitat permanent des gens du voyage, traité distinctement au j de R*421-23.",
+    "La définition entière demeure sans changement. Aucune taxe, déclaration, autorisation, durée minimale de séjour ni justificatif périodique n'est institué par cet article ; aucune réduction réelle n'est donc attribuée à son maintien.",
+    "Les restrictions d'installation figurant aux articles suivants sont examinées séparément. Les règles de circulation routière ne sont pas réécrites dans ce lot.",
+    "Aucune charge nouvelle identifiée : la conservation de la définition n'ajoute ni procédure ni condition à celles de la source.")
+
+add('R111-48', None,
+    "Maintien intégral justifié des protections de sites, captages, espaces boisés classés et forêts de protection. L'interdiction y a une fonction environnementale ou sanitaire identifiable. Le 1° renvoie à R111-33, qui comporte des dérogations ; le 2° réserve l'application éventuelle de L113-1 à L113-5. Les supprimer indifféremment retirerait aussi des garanties nécessaires aux dérogations maintenues.",
+    "Lecture entière de la source et des notes vides ; R111-33 lu avec ses quatre catégories et dérogations, R111-50 avec ses deux possibilités d'entreposage. La conservation du renvoi à R111-33 maintient ses exceptions littorales, patrimoniales et de captage pour les cas futurs éligibles. L113-1 à L113-5 sont vérifiés séparément dans le contrôle des renvois. L141-1 forestier, hors des cinq codes, n'est pas présenté comme réécrit. Les autorisations et avis du texte renvoyé ne sont pas comptés comme des formalités créées ici.",
+    "L'interdiction d'installation dans les secteurs spécialement protégés reste entière, avec ses réserves et les dérogations d'entreposage de R111-50. Après examen, sa fonction de protection de l'eau, des boisements et des sites justifie un maintien, sans réduction revendiquée.",
+    "Ce maintien ne tranche pas la nécessité de chaque classement particulier ni des procédures autonomes du code forestier. Aucun allègement fiscal ou solde global de contraintes n'est démontré ici.",
+    "Aucune charge nouvelle identifiée : aucun périmètre, document, autorisation ou délai n'est ajouté au texte source.")
+
+add('R111-49',
+    "<p>L'installation des caravanes, quelle qu'en soit la durée, est interdite dans les secteurs où la pratique du camping a été interdite dans les conditions prévues à l'article R. 111-34. L'interdiction n'est opposable que si elle a été portée à la connaissance du public par affichage en mairie et par apposition de panneaux aux points d'accès habituels aux zones visées par ces interdictions. Un arrêté conjoint des ministres chargés de l'urbanisme et du tourisme fixe les conditions dans lesquelles est établie cette signalisation.</p>\n"
+    "<p>Sauf circonstance exceptionnelle, cette interdiction ne s'applique pas aux caravanes à usage professionnel lorsqu'il n'existe pas, sur le territoire de la commune, de terrain aménagé.</p>\n"
+    "<p>Un arrêté du maire peut néanmoins autoriser l'installation des caravanes dans ces zones pour une durée qui peut varier selon les périodes de l'année. Il précise les emplacements affectés à cet usage.</p>\n"
+    "<p>La suppression du plafond de quinze jours s'applique aux arrêtés pris à compter de l'entrée en vigueur de la loi portant la présente rédaction ainsi qu'aux demandes en cours. Elle n'allonge pas automatiquement la durée des autorisations antérieures, dont les bénéficiaires peuvent solliciter la modification selon les règles ordinaires. Les autres conditions de l'interdiction et de ses dérogations demeurent applicables.</p>",
+    "Réduction de fond limitée au plafond absolu de quinze jours imposé à la dérogation municipale. Le maire continue de fixer durée et emplacements en fonction des zones et saisons ; ce pouvoir individualisé ne justifie pas un second plafond national uniforme. Le reste du corps source est conservé : publicité conditionnant l'opposabilité, arrêté de signalisation et dispense professionnelle sauf circonstance exceptionnelle.",
+    "Source entière et notes vides lues ; R111-34 et R111-50 lus. La dérogation professionnelle reste ouverte aux futures situations sans terrain aménagé, et la dérogation municipale n'est pas fermée. R111-50 peut continuer de déroger à R111-49, qui n'est pas abrogé. Ne pas confondre les quinze jours ici supprimés avec le préavis de travail. L'arrêté conjoint de signalisation hors lot demeure ; aucune modification de signalétique n'est imposée par cette coupe.",
+    "La proposition retire une limite effective à la durée que le maire peut autoriser, sans rendre libre l'installation dans les zones interdites. Toutes les conditions favorables de publicité et l'exception professionnelle restent identiques à la source entière.",
+    "La durée concrète reste celle de l'arrêté municipal ; aucun droit à un séjour illimité, aucune prolongation automatique d'un titre ancien et aucune suppression des protections de R111-34 ne sont annoncés.",
+    "Aucune charge nouvelle identifiée : l'arrêté, ses emplacements et sa durée existaient déjà. Aucune déclaration ou pièce supplémentaire ne remplace le plafond retiré.",
+    [effect('relief_extended', 'caravanes-derogation-sans-plafond-quinze-jours',
+            "Ouverture de la dérogation municipale à une durée supérieure à quinze jours.",
+            "Le maire pouvait autoriser une installation dans la zone interdite, avec durée variable selon la saison mais plafonnée à quinze jours.",
+            "Le maire fixe toujours la durée et les emplacements ; aucun plafond de quinze jours n'est imposé par cet article.",
+            'calendar_days', "Usagers de caravanes sollicitant une dérogation municipale et communes concernées.",
+            "Nouveaux arrêtés et demandes en cours ; modification nécessaire pour allonger un titre ancien.",
+            "Aucune nouvelle démarche générale ; l'autorisation municipale existante subsiste.",
+            "Un arrêté du maire peut néanmoins autoriser l'installation des caravanes dans ces zones pour une durée qui peut varier selon les périodes de l'année et qui ne peut être supérieure à quinze jours.",
+            "Un arrêté du maire peut néanmoins autoriser l'installation des caravanes dans ces zones pour une durée qui peut varier selon les périodes de l'année.")],
+    removed=["Le plafond national de quinze jours applicable aux autorisations municipales dérogatoires d'installation de caravanes dans les zones localement interdites."])
+
+add('R111-50', None,
+    "Maintien intégral de deux dérogations favorables aux interdictions de R111-48 et R111-49 : entreposage dans les lieux de garage désignés et dans les bâtiments, remises ou terrain de la résidence de l'utilisateur. Aucune autorisation propre ou justification redondante n'est ajoutée par cet article ; sa suppression réduirait des possibilités utiles.",
+    "Source entière et notes vides vérifiées ; R111-48, R111-49, R*421-19 j et R*421-23 e lus. La réduction du seul plafond municipal dans R111-49 conserve son numéro et ne rend pas le renvoi incohérent. Les deux catégories et la finalité de prochaine utilisation restent applicables aux situations futures ; l'entreposage ne vaut pas permission d'habitation permanente.",
+    "Les deux voies d'entreposage dérogatoire restent intégralement ouvertes, y compris pour les futurs utilisateurs éligibles. Aucun nouvel allègement n'est compté pour la conservation de ces avantages existants.",
+    "Les règles autonomes d'aménagement des garages et dépôts ne disparaissent pas. Aucun gain global de délai ou coût ni extension à l'occupation permanente n'est démontré.",
+    "Aucune charge nouvelle identifiée : aucun dépôt, justificatif, inventaire ni durée n'est ajouté au texte maintenu.")
+
+add('R111-51', None,
+    "Maintien intégral d'une définition nécessaire à l'habitat démontable : absence de fondation, équipements intérieurs ou extérieurs, autonomie possible des réseaux, résidence principale occupée au moins huit mois et démontabilité rapide des équipements comme de l'habitat. Le seuil distingue l'habitat permanent des hébergements saisonniers, sans exiger un raccordement ou une autorisation supplémentaire.",
+    "Source entière et notes vides relues. R*421-19 m et R*421-23 l lus : ils utilisent cette définition, avec répartition des aménagements selon la surface totale de quarante mètres carrés. Le caractère potentiellement autonome vis-à-vis des réseaux est un élément favorable à conserver pour les projets futurs. La suppression du seuil ne serait pas une suppression de délai administratif mais un changement de catégorie d'habitat, non retenu sans coordination des protections correspondantes.",
+    "La catégorie autonome d'habitat permanent démontable est conservée dans tous ses éléments et avantages. Aucun prélèvement, justificatif récurrent ou démarche propre à cet article n'a été identifié ; le maintien ne compte pas comme simplification.",
+    "Le maintien du critère d'occupation n'abolit pas les formalités d'aménagement prévues ailleurs. L'effet d'une éventuelle extension à l'habitat intermittent n'est pas établi dans ce lot.",
+    "Aucune charge nouvelle identifiée : les équipements extérieurs, l'autonomie possible et les huit mois demeurent ceux de la source, sans preuve additionnelle prescrite.")
+
+add('R111-52',
+    "<p>En Guadeloupe, en Guyane, en Martinique et à La Réunion, en ce qui concerne les bâtiments situés sur un terrain appartenant au même propriétaire, la distance entre les façades en vis-à-vis doit être au moins égale à la hauteur de la façade la plus élevée.</p>\n"
+    "<p>La suppression du minimum supplémentaire de quatre mètres s'applique aux décisions prises à compter de l'entrée en vigueur de la loi portant la présente rédaction, y compris sur les demandes en cours sans nouveau dépôt ni reprise des délais. Les autorisations déjà délivrées et les droits des tiers demeurent préservés ; la modification des prescriptions de ces autorisations relève des procédures ordinaires. Les règles distinctes de sécurité et de salubrité demeurent applicables.</p>",
+    "Réforme de fond : suppression du plancher uniforme de quatre mètres entre bâtiments d'un même propriétaire, tout en conservant la distance proportionnelle à la façade la plus élevée. Pour les façades de moins de quatre mètres, le second plancher empêchait une implantation que la règle de hauteur autoriserait. Le maintien de cette règle proportionnelle, de R111-53 et des règles de sécurité conserve une fonction d'aération et de lumière sans interdire uniformément le rapprochement des bâtiments bas.",
+    "Source entière et notes vides lues ; R111-1, R111-2, R111-16 et R111-17 lus, ainsi que R111-53. Le champ est limité aux quatre territoires expressément cités, sans ajouter Mayotte en raison de l'intitulé de section. La règle concerne les façades en vis-à-vis sur le terrain du même propriétaire, non le retrait de la limite parcellaire de R111-17. Les dispositions locales ou de construction autonomes ne sont pas supprimées ; le gain effectif dépend aussi d'elles. Aucun chiffre nouveau de distance n'est inventé.",
+    "Par rapport à la source entière, seul le minimum supplémentaire de quatre mètres disparaît. La distance requise passe du maximum entre hauteur et quatre mètres à la seule hauteur ; l'allègement concerne donc les cas où la hauteur de la façade la plus élevée est inférieure à quatre mètres.",
+    "Aucun gain pour les façades d'au moins quatre mètres. Les prescriptions de permis existants, la sécurité incendie, les autres règles d'urbanisme et les droits des tiers restent distincts ; aucun nombre de logements ni gain national n'est chiffré.",
+    "Aucune charge nouvelle identifiée : la mesure retire un plancher sans exiger d'étude, d'attestation technique ou de demande dérogatoire en remplacement.",
+    [effect('obligation_removed', 'outremer-retrait-facades-fin-plancher-quatre-metres',
+            "Suppression du plancher additionnel de quatre mètres entre façades en vis-à-vis.",
+            "Dans les quatre territoires cités, sur terrain du même propriétaire : distance au moins égale à la hauteur de la plus haute façade et jamais inférieure à quatre mètres.",
+            "Même champ et distance au moins égale à la hauteur de la plus haute façade, sans plancher additionnel de quatre mètres.",
+            'legal_duty', "Projets sur un terrain d'un même propriétaire en Guadeloupe, Guyane, Martinique et à La Réunion, avec façades de moins de quatre mètres.",
+            "Décisions futures et demandes en cours ; prescriptions des titres anciens modifiables par la procédure ordinaire.",
+            "Aucune pièce ni procédure de remplacement ; autres règles de sécurité inchangées.",
+            "la distance entre les façades en vis-à-vis doit être au moins égale à la hauteur de la façade la plus élevée, sans pouvoir être inférieure à 4 mètres.",
+            "la distance entre les façades en vis-à-vis doit être au moins égale à la hauteur de la façade la plus élevée.")],
+    removed=["Le minimum additionnel uniforme de quatre mètres entre façades en vis-à-vis de bâtiments situés sur un terrain appartenant au même propriétaire."])
+
+add('R111-53', None,
+    "Maintien intégral de la règle de ventilation naturelle des logements collectifs dans les quatre territoires cités. L'exposition aux vents dominants de la moitié au moins des pièces habitables assure une fonction de salubrité et d'adaptation climatique identifiable. L'article n'exige pas de dossier ou d'agrément distinct. Remplacer cette règle par une démonstration technique générale créerait des justificatifs sans allègement établi.",
+    "Source entière et notes vides relues. Maintien exact de Guadeloupe, Guyane, Martinique et La Réunion, de l'usage d'habitation avec plusieurs logements et du seuil de moitié des pièces habitables, et non de tous les locaux. La réduction de distance de R111-52 ne supprime pas cette protection. Mayotte n'est pas ajoutée par inférence depuis l'intitulé de section.",
+    "La règle bioclimatique entière est maintenue après examen de sa contrainte d'implantation : sa fonction de ventilation des logements justifie sa conservation. Aucun gain ni nouvelle obligation n'est attribué à ce maintien.",
+    "L'adéquation de chaque implantation reste à apprécier ; aucune équivalence générale avec climatisation ou ventilation mécanique n'est décidée ici. Les normes de construction autonomes restent hors de cette proposition.",
+    "Aucune charge nouvelle identifiée : aucune étude complémentaire, aucun indicateur ni justificatif périodique n'est ajouté au texte conservé.")
+
+add('D111-54', None,
+    "Maintien intégral du cadre d'identification des friches : les quatre indices restent non exhaustifs, les travaux de réemploi sont définis et une occupation transitoire autorisée ne fait pas perdre la qualification. L'exclusion des terrains non bâtis agricoles ou forestiers évite de convertir une vocation productive en friche par seule vacance. L'article ne prescrit ni inventaire privé, ni agrément, ni certificat pour accéder à la catégorie.",
+    "Source entière, subdivisions I à III et notes vides relues ; L111-26 lu. Le coût ou déséquilibre financier du 4° n'est pas transformé en condition cumulative ni en expertise obligatoire. La pollution du 3° conserve les conditions de disparition ou insolvabilité des responsables ; les autres indices demeurent disponibles. La phrase favorable sur l'activité transitoire est conservée pour les réemplois futurs. L'expression source « de l'un ou des éléments » est grammaticalement imparfaite mais son examen ne justifie pas une réécriture stylistique.",
+    "La définition réglementaire complète reste en place avec ses indices alternatifs et sa protection des activités transitoires. Aucun nouvel agrément ou prélèvement n'est identifié, et la conservation des possibilités de réemploi ne compte pas comme réduction nouvelle.",
+    "Aucune extension générale des friches aux terrains agricoles ou forestiers non bâtis n'est décidée. Les effets de cette qualification dans les dispositifs d'aide ou d'urbanisme autonomes ne sont pas chiffrés.",
+    "Aucune charge nouvelle identifiée : le maintien ne crée ni obligation de démontrer tous les indices, ni expertise, ni inventaire supplémentaire.")
+
+add('D111-55',
+    "<p>Les inventaires comprenant des données et cartographies relatives aux friches qui sont établis et mis à disposition par l'Etat, une collectivité territoriale ou son groupement, un établissement public ou une agence d'urbanisme peuvent être réalisés d'après les standards du Conseil national de l'information géolocalisée. Le recours à ces standards est facultatif.</p>\n"
+    "<p>Ces inventaires permettent d'alimenter un inventaire national des friches.</p>\n"
+    "<p>La présente rédaction s'applique à compter de l'entrée en vigueur de la loi qui la prévoit, y compris aux inventaires en cours d'établissement. Aucune mise en conformité avec ces standards des inventaires existants n'est exigée sur le fondement du présent article. L'absence de conformité à ces standards ne fait pas obstacle à la qualification d'une friche selon l'article L. 111-26 et l'article D. 111-54.</p>",
+    "Réduction de fond : rendre facultatif le respect des standards CNIG pour les inventaires publics de friches. L'utilisation de standards peut servir l'interopérabilité mais leur caractère obligatoire pour tout inventaire publié n'est pas nécessaire à la qualification juridique de chaque friche. Les inventaires, leur alimentation possible du niveau national et les standards comme outil volontaire restent disponibles. Aucun rapport ou format alternatif obligatoire n'est substitué.",
+    "Source entière et notes vides lues ; L111-26 et D111-54 lus. Le renvoi explicite à D111-54 confirme ses critères inchangés et n'impose aucune preuve nouvelle. L'article source ne créait pas expressément l'obligation d'établir tout inventaire : seule l'obligation de format est retirée, non une obligation de recensement prétendument abolie. Aucune norme technique CNIG n'est reproduite ou réputée auditée ; les règles d'accès et de protection des données restent autonomes.",
+    "L'obligation source de respecter les standards CNIG est effectivement supprimée pour les inventaires concernés. La possibilité de les utiliser et d'alimenter un inventaire national reste entière ; la qualité de friche ne dépend pas d'un format cartographique.",
+    "Le gain de mise en conformité n'est pas chiffré. L'interopérabilité peut être moins immédiate et les coûts d'intégration des formats hétérogènes ne sont pas évalués ; aucune baisse nette de coût public n'est démontrée.",
+    "Aucune charge nouvelle identifiée : pas de format de remplacement, transmission supplémentaire ou inventaire imposé. Une éventuelle conversion technique volontaire par les services n'est ni rendue obligatoire ni réputée financée.",
+    [effect('obligation_removed', 'friches-inventaires-standards-cnig-facultatifs',
+            "Fin de l'obligation d'établir les inventaires publics de friches selon les standards CNIG.",
+            "Les inventaires publiés par les personnes publiques et agences désignées sont réalisés d'après les standards du CNIG.",
+            "Ces standards deviennent facultatifs, y compris pour les inventaires en cours ; pas de mise en conformité exigée des inventaires existants sur ce fondement.",
+            'legal_duty', "Etat, collectivités et groupements, établissements publics et agences d'urbanisme établissant des inventaires de friches.",
+            "Application à l'entrée en vigueur ; critères matériels de friche inchangés pour les situations futures.",
+            "Aucun standard ou dépôt obligatoire de remplacement ; coûts éventuels d'intégration non évalués.",
+            "sont réalisés d'après les standards du Conseil national de l'information géolocalisée.",
+            "Le recours à ces standards est facultatif.")],
+    removed=["L'obligation générale de réaliser les inventaires publics de friches d'après les standards du Conseil national de l'information géolocalisée."])
+
+pv_notes = ("Les notes source de l'article 8 du décret 2024-318 ont été lues intégralement : entrée dans le régime un mois après la publication du décret pour l'agrivoltaïque, un mois après publication du document-cadre pour les installations de L111-29, et délai historique de neuf mois pour la proposition des chambres. Ces repères anciens ne sont pas la date de la réforme proposée et ne sont pas rouverts. ")
+
+add('R111-56', None,
+    "Maintien intégral des deux voies alternatives de qualification d'un sol inculte. La première permet une appréciation adaptée à la topographie, au sol, au climat ou à une décision administrative ; l'indice départemental n'est qu'un appui possible. La seconde préserve les forêts à forts enjeux de carbone, production, biodiversité ou paysage. Supprimer la définition retirerait aussi un accès favorable aux surfaces admissibles ; aucun nouveau certificat n'est requis.",
+    pv_notes + "L111-29 et R111-57 à R111-59 lus. Le 1° et le 2° demeurent alternatifs, non cumulatifs. Les critères d'inculture ne sont pas confondus avec le délai de non-exploitation de R111-57. L'arrêté interministériel définissant les catégories forestières, hors lot, n'a pas été fourni comme compagnon et n'est pas déclaré réécrit ni son contenu inféré.",
+    "La définition entière est conservée avec ses deux critères alternatifs et ses modalités facultatives d'appréciation. Sa fonction de délimitation de sols admissibles et de protection forestière justifie ce maintien, sans gain nouveau compté.",
+    "Aucune suppression des protections forestières ni extension à tous les sols agricoles n'est décidée. Le contenu de l'arrêté de catégories forestières n'est pas audité dans ce lot.",
+    "Aucune charge nouvelle identifiée : l'indice pédologique reste facultatif et aucun document ou contrôle supplémentaire n'est ajouté.")
+
+add('R111-57', None,
+    "Maintien intégral, après examen de sa charge, de la durée de dix ans pour la voie de la non-exploitation de L111-29. Cette durée historique évite qu'un abandon récent d'activité agricole ne suffise à ouvrir le photovoltaïque ordinaire et protège la vocation productive des sols. Ce n'est pas un délai d'instruction. L'autre voie, celle des sols réputés incultes de R111-56, reste disponible sans lui appliquer ce délai par extension.",
+    pv_notes + "L111-29 entier lu : le deuxième alinéa impose une durée minimale antérieure à la publication de la loi 2023-175, définie par décret. Une abrogation réglementaire isolée laisserait cette condition légale sans paramètre ; un nouveau nombre arbitraire n'est pas retenu. R111-58 conserve son renvoi. Le seuil historique ne doit pas être présenté comme une nouvelle attente glissante de dix ans à compter de la réforme. Aucun justificatif particulier n'est prescrit par cet article.",
+    "La source entière ne contient que la fixation de dix ans. Sa conservation protège le foncier agricole dans la branche de non-exploitation prévue par la loi et ne retire pas l'éligibilité alternative des sols incultes. Aucun allègement ni simple changement de vocabulaire n'est compté.",
+    "Le besoin de ce seuil est apprécié dans son cadre de protection agricole ; aucun effet sur le nombre de projets ou sur leurs délais d'instruction n'est chiffré. Modifier le principe légal appellerait une réforme distincte de L111-29.",
+    "Aucune charge nouvelle identifiée : ni délai ajouté, ni preuve nouvelle, ni modification de la date historique de référence.")
+
+add('R111-58', None,
+    "Maintien intégral des quatorze catégories ouvrant des surfaces au projet photovoltaïque et à leur inclusion dans le document-cadre, sous les conditions conservées de R111-56 et R111-57. Ce catalogue comprend des possibilités favorables de réemploi de terrains dégradés, de délaissés, de plans d'eau et de zones favorables de PLU. Les exceptions de remise en état et les critères de risque évitent que cette ouverture efface les protections des sols ou des personnes.",
+    pv_notes + "Source entière, quatorze numéros et renvois relus, sans tableau ni image. Conservation exacte des cent mètres du 1°, des 25 ans du 3°, des plus de 10 ans du 4°, des exclusions de remise en état des 3°, 5° et 6°, de la référence SEVESO et de son annexe 3 au 11°, des aléas fort/très fort au 12° et de la pollution pyrotechnique au 13°. Les classements autorisent l'examen du projet, non l'effacement des risques ni une dispense d'autorisation environnementale. La coquille « projet d'installation photovoltaïques » n'est pas un motif de nouvelle rédaction.",
+    "Toutes les ouvertures et leurs conditions de la source entière sont préservées pour les projets futurs éligibles. L'article n'impose pas un dossier supplémentaire propre à chaque catégorie ; aucun allègement nouveau n'est revendiqué.",
+    "Les critères de sécurité et de remise en état, le document-cadre légal et les régimes environnementaux distincts demeurent. Aucun nombre de projets nouveaux ni rendement financier n'est établi.",
+    "Aucune charge nouvelle identifiée : les quatorze catégories, leurs seuils et leurs exceptions ne sont ni réduits ni complétés par une attestation nouvelle.")
+
+add('R111-59',
+    "<p>Sont exclus du document-cadre :</p>\n"
+    "<p>1° Les zones agricoles protégées au titre de l'article L. 112-2 du code rural et de la pêche maritime ;</p>\n"
+    "<p>2° Les périmètres dans lesquels le conseil départemental ou son président a ordonné la mise en œuvre d'un aménagement foncier agricole et forestier en application de l'article L. 121-14 du code rural et de la pêche maritime ;</p>\n"
+    "<p>3° La zone de protection naturelle, agricole et forestière du plateau de Saclay délimitée sur le fondement des articles L. 123-25 à L. 123-32 du code de l'urbanisme ;</p>\n"
+    "<p>4° Abrogé ;</p>\n"
+    "<p>5° Abrogé.</p>\n"
+    "<p>À compter de l'entrée en vigueur de la loi portant la présente rédaction, la clôture d'un aménagement foncier ou la constatation d'un état d'inculture ou de sous-exploitation dans les conditions antérieurement prévues aux 4° et 5° ne constitue plus, par elle-même, un motif d'exclusion du document-cadre. Les exclusions reposant exclusivement sur ces dispositions cessent d'être opposables, y compris lorsqu'elles figurent dans un document-cadre déjà arrêté.</p>\n"
+    "<p>La suppression de ces exclusions n'emporte pas, à elle seule, inscription d'une surface dans le document-cadre ni autorisation d'une installation. Les autres conditions de l'article L. 111-29 et des articles R. 111-56 à R. 111-58 ainsi que les exclusions des 1° à 3° du présent article demeurent applicables. Les demandes d'inscription ou de révision en cours bénéficient de la présente rédaction sans nouveau dépôt ni reprise des délais déjà courus. Les décisions définitives de refus ne sont pas rouvertes ; les actes et contrats valablement conclus, les droits acquis des tiers et les obligations de remise en état fondées sur d'autres dispositions demeurent préservés.</p>",
+    "Réduction de fond : retrait des exclusions automatiques des 4° et 5°, attachées à des événements fonciers historiques définis par référence à la publication du décret de 2024, avec des fenêtres antérieures de dix ans là où la source les prévoit. Une clôture ancienne d'aménagement ou un constat d'inculture ne démontrent pas à eux seuls la productivité actuelle du sol ; les critères matériels de L111-29, R111-56 et R111-57 restent le filtre. Les protections spécifiques des zones agricoles, des opérations foncières en cours et du plateau de Saclay sont conservées intégralement et à leurs numéros.",
+    pv_notes + "L111-29 et L123-25 à L123-32 lus ; R111-56 à R111-58, R111-60, R111-61 et R111-61-1 examinés. Les articles ruraux cités ne figurent pas parmi les cinq codes fournis : leur contenu n'est pas supposé abrogé et leurs procédures autonomes demeurent. Le retrait est circonscrit aux conséquences d'exclusion créées ici. Les fenêtres historiques retirées n'étaient pas un calendrier nouveau de dix ans ; la transition vise leurs effets persistants dans les cartes existantes. Pas d'inclusion automatique ni de rétablissement de quota SRU.",
+    "La comparaison à la source entière démontre le retrait de deux motifs réglementaires d'exclusion, sans réduction des trois autres protections. Les surfaces concernées pourront être examinées selon leurs caractéristiques et le document-cadre, sans exclusion au seul titre des événements historiques retirés.",
+    "L'inscription et l'autorisation ne sont pas acquises par la seule suppression ; les critères légaux d'inculture ou de non-exploitation et les autorisations autonomes subsistent. Aucun effet quantitatif sur les surfaces réellement admissibles n'est démontré.",
+    "Aucune charge nouvelle identifiée : aucune attestation de substitution, registre ou nouvelle consultation n'est créé. L'inscription et la révision évoquées sont les voies existantes du document-cadre, sans remise à zéro des demandes en cours.",
+    [effect('relief_extended', 'photovoltaique-fin-exclusions-foncieres-historiques',
+            "Retrait de deux exclusions automatiques fondées sur des situations foncières historiques.",
+            "Exclusion des périmètres d'aménagement foncier clos dans les dix années précédant le décret 2024-318 et des fonds visés au 5° par les constats d'inculture ou de sous-exploitation, selon ses dates et autorités.",
+            "Ces deux événements ne sont plus des motifs autonomes d'exclusion ; les conditions matérielles et les exclusions des 1° à 3° restent opposables, sans inclusion automatique.",
+            'regime', "Propriétaires et porteurs de projets sur des surfaces relevant des anciens 4° ou 5°, et autorités élaborant les documents-cadres.",
+            "Dès l'entrée en vigueur, y compris pour les effets de cartes anciennes et les demandes en cours ; refus définitifs et droits des tiers protégés.",
+            "Aucun justificatif ou régime de remplacement ; conditions légales existantes maintenues.",
+            "4° Les périmètres dans lesquels le conseil départemental ou son président a clos les opérations d'un aménagement foncier agricole et forestier au cours des dix années précédant la date de publication du décret n° 2024-318 du 8 avril 2024 relatif au développement de l'agrivoltaïsme et aux conditions d'implantation des installations photovoltaïques sur des terrains agricoles, naturels ou forestiers ;",
+            "À compter de l'entrée en vigueur de la loi portant la présente rédaction, la clôture d'un aménagement foncier ou la constatation d'un état d'inculture ou de sous-exploitation dans les conditions antérieurement prévues aux 4° et 5° ne constitue plus, par elle-même, un motif d'exclusion du document-cadre.")],
+    removed=["L'exclusion automatique des périmètres dont l'aménagement foncier a été clos dans les dix années précédant la publication du décret du 8 avril 2024, prévue au 4°.",
+             "L'exclusion automatique des fonds visés au 5° en raison de constats historiques d'inculture ou de sous-exploitation et de leurs fenêtres temporelles de référence."])
+
+add('R111-60', None,
+    "Maintien intégral d'une règle nécessaire de localisation des surfaces, avec ses deux exceptions favorables pour les catégories de R111-58 et les sols du 2° de R111-56. L'échelle cadastrale détermine l'opposabilité géographique de l'ouverture aux projets ; supprimer cette précision rendrait incertaine l'éligibilité. Aucun relevé d'arpentage, bornage ou dépôt privé n'est exigé par cet article.",
+    pv_notes + "L111-29, R111-56 et les quatorze catégories de R111-58 lus. Les exceptions d'échelle ne sont pas fermées aux futures surfaces admissibles. R463-3 contient un renvoi préexistant erroné à R111-60 comme source de durée : le présent article ne fixe aucune durée. Cette anomalie, à corriger vers R111-62 dans R463-3 hors lot, n'est ni maintenue volontairement dans une nouvelle rédaction ni utilisée pour inventer une durée ici.",
+    "La précision cadastrale et ses exceptions sont conservées en entier, sans nouvelle démarche imposée aux porteurs de projet. La source ne contient pas une obligation distincte de produire un relevé cadastral individuel ; aucune suppression fictive n'est comptée.",
+    "La correction du renvoi de durée dans R463-3 reste extérieure aux 24 articles assignés. Les coûts de cartographie et l'effet de leurs exceptions ne sont pas chiffrés.",
+    "Aucune charge nouvelle identifiée : aucune échelle supplémentaire, pièce privée ou donnée personnelle n'est ajoutée ; les deux exceptions restent intégrales.")
+
+add('R111-61', None,
+    "Maintien intégral de la consultation du projet de document-cadre. L111-29 impose déjà la consultation de la commission, des organisations intéressées et des collectivités ; l'article organise leur saisine et un avis réputé favorable après deux mois. La consultation du zonage protège les usages agricoles et les collectivités tout en permettant l'ouverture de surfaces ; aucune seconde consultation de même objet n'est ajoutée.",
+    pv_notes + "L111-29 lu intégralement : consultation légale et plafond de six mois entre proposition et publication. Le délai de deux mois est un maximum pour le silence favorable, non une durée minimale d'attente imposée après réception de tous les avis. Les représentants agricoles, des énergies renouvelables et des collectivités ainsi que la commission sont maintenus dans leurs champs. La révision rendue facultative dans R111-61-1 ne dispense pas de ces consultations lorsqu'une révision est engagée. Ni avis conforme ni nouveau veto n'est créé.",
+    "La procédure source et son silence favorable sont conservés entièrement. Après examen de son articulation avec la consultation légale de L111-29, aucun circuit redondant distinct ni délai minimal supprimable n'est démontré dans cet article.",
+    "Aucun raccourcissement du délai de deux mois ni du calendrier légal de six mois n'est revendiqué. Les obligations de participation environnementale éventuellement applicables ne sont pas évaluées comme abolies.",
+    "Aucune charge nouvelle identifiée : mêmes organismes, même saisine et même silence favorable, sans rapport, données ou consultation ajoutés.")
+
+add('R111-61-1',
+    "<p>Le document-cadre peut être révisé dans les mêmes conditions que celles de son établissement. Aucune révision périodique n'est obligatoire au titre du présent article.</p>\n"
+    "<p>La présente rédaction s'applique à compter de l'entrée en vigueur de la loi qui la prévoit, y compris aux documents-cadres déjà arrêtés. L'écoulement de cinq ans n'entraîne ni caducité du document-cadre ni obligation d'engager ou d'achever une révision sur ce seul fondement. Les révisions en cours peuvent être poursuivies sans reprise des consultations régulièrement accomplies ; la possibilité de réviser demeure ouverte pour prendre en compte de nouvelles surfaces satisfaisant aux conditions légales. Les autres obligations légales d'actualisation ou de modification gardent leur champ propre.</p>",
+    "Réforme de fond : suppression de l'obligation de réviser le document-cadre au moins tous les cinq ans. Aucun changement matériel n'était nécessaire à cette échéance pour déclencher la répétition de la procédure complète ; la révision reste disponible selon les mêmes compétences et consultations lorsqu'elle est utile. Les ouvertures futures ne sont pas gelées et la carte ne devient pas caduque par la seule ancienneté.",
+    pv_notes + "L111-29 lu : il ne prévoit pas de révision quinquennale obligatoire ; la coupe ne contredit donc pas une échéance législative repérée. R111-61 conserve les avis et le délai favorable applicables à toute révision engagée. La suppression ne dispense pas de retirer les exclusions historiques dans le champ de la transition de R111-59 et ne ferme pas les demandes d'ouverture de nouvelles surfaces admissibles. Aucun renvoi source direct à R111-61-1 trouvé dans le corpus urbanisme.",
+    "La source entière imposait une révision au moins quinquennale dans les mêmes conditions. La proposition supprime le déclencheur périodique et conserve une faculté de révision, sans retrait des possibilités futures ni des consultations lorsqu'elle a lieu.",
+    "La mesure ne supprime pas la procédure de révision volontaire ni les obligations autonomes d'actualisation. Les économies de travail des services et les délais effectifs d'inscription de nouvelles surfaces ne sont pas chiffrés.",
+    "Aucune charge nouvelle identifiée : aucun bilan périodique, constat d'absence de changement ou demande de dispense ne remplace la révision obligatoire.",
+    [effect('obligation_removed', 'photovoltaique-fin-revision-quinquennale-document-cadre',
+            "Suppression de la révision périodique obligatoire du document-cadre.",
+            "Révision obligatoire au moins tous les cinq ans dans les mêmes conditions que l'établissement du document-cadre.",
+            "Révision possible selon les mêmes conditions mais sans périodicité obligatoire au titre de cet article ; cartes existantes non caduques après cinq ans.",
+            'legal_duty', "Préfets, chambres d'agriculture, organismes consultés et collectivités participant aux documents-cadres.",
+            "Documents nouveaux et déjà arrêtés dès l'entrée en vigueur ; procédures engagées peuvent se poursuivre sans refaire les avis.",
+            "Aucun rapport, attestation de stabilité ou visa de remplacement.",
+            "Le document-cadre est révisé au moins tous les cinq ans dans les mêmes conditions.",
+            "Aucune révision périodique n'est obligatoire au titre du présent article.")],
+    removed=["L'obligation de réviser intégralement le document-cadre au moins tous les cinq ans, même en l'absence de changement matériel justifiant une nouvelle procédure."])
+
+add('R111-62',
+    "<p>Les installations, ouvrages ou constructions mentionnés aux articles L. 111-27 et L. 111-29 sont autorisés pour une durée maximale de quarante ans.</p>\n"
+    "<p>Avant l'échéance de l'autorisation, l'autorité compétente pour délivrer l'autorisation d'urbanisme peut, sur demande de son bénéficiaire, disposant lorsqu'il est requis de l'accord du propriétaire, la proroger pour dix ans lorsque l'installation présente encore un rendement significatif. Dans ce cas, l'autorité compétente procède à une actualisation du montant des garanties financières dans les conditions prévues à l'article R. 111-64.</p>\n"
+    "<p>La suppression de l'anticipation de six mois s'applique aux prorogations décidées à compter de l'entrée en vigueur de la loi portant la présente rédaction, y compris sur les demandes en cours, sans nouveau dépôt. Elle ne fait pas revivre une autorisation déjà expirée et ne vaut pas prorogation tacite. Les prorogations régulièrement accordées et les droits des tiers demeurent préservés.</p>",
+    "Réduction de fond : suppression de l'exigence selon laquelle la prorogation doit intervenir au plus tard six mois avant l'échéance. La décision peut intervenir jusqu'avant l'expiration, sans retirer la demande du bénéficiaire, l'accord du propriétaire lorsqu'il est requis, le rendement significatif ni l'actualisation des garanties. Les quarante ans maximum et la prorogation de dix ans sont maintenus ; il ne s'agit pas de rendre l'installation perpétuelle.",
+    pv_notes + "L111-32 lu, exigeant une durée limitée et la réversibilité ; sa portée est préservée. R111-63, R111-64 et R463-3 lus : aucune prolongation de l'exploitation après expiration ni suppression de démantèlement. La source rattache grammaticalement l'anticipation de six mois au pouvoir de proroger, non explicitement au seul dépôt de demande : le gain porte sur cette borne de décision, sans promettre qu'une demande tardive sera traitée avant expiration. Le renvoi erroné de R463-3 à R111-60 est signalé séparément, à corriger vers R111-62 hors lot.",
+    "Par rapport à la source entière, la borne d'anticipation de six mois disparaît. Toutes les durées d'exploitation, conditions de prorogation et garanties sont conservées, pour les nouveaux bénéficiaires éligibles comme pour les demandes pendantes.",
+    "Pas de prorogation automatique, pas de délai d'instruction nouveau garanti et pas de résurrection d'un titre expiré. Le gain effectif dépend d'une décision prise avant l'échéance.",
+    "Aucune charge nouvelle identifiée : la demande, l'accord éventuel du propriétaire et les garanties sont ceux déjà prévus ; aucun justificatif ni renouvellement supplémentaire n'est ajouté.",
+    [effect('obligation_removed', 'photovoltaique-prorogation-fin-anticipation-six-mois',
+            "Suppression de l'anticipation obligatoire de six mois de la décision de prorogation.",
+            "Prorogation possible au plus tard six mois avant l'échéance, pour dix ans avec rendement significatif et garanties actualisées.",
+            "Prorogation possible avant l'échéance, sans cette anticipation de six mois ; mêmes dix ans et mêmes conditions de fond.",
+            'legal_duty', "Bénéficiaires d'autorisations relevant de L111-27 ou L111-29 demandant une prorogation, propriétaires et autorités compétentes.",
+            "Décisions futures et demandes en cours ; pas de réouverture des autorisations expirées ni de prorogation tacite.",
+            "Aucun dépôt supplémentaire, conditions de garantie et de propriété inchangées.",
+            "Au plus tard six mois avant l'échéance de l'autorisation, l'autorité compétente pour délivrer l'autorisation d'urbanisme peut, sur demande de son bénéficiaire, disposant lorsqu'il est requis de l'accord du propriétaire, la proroger pour dix ans lorsque l'installation présente encore un rendement significatif.",
+            "Avant l'échéance de l'autorisation, l'autorité compétente pour délivrer l'autorisation d'urbanisme peut, sur demande de son bénéficiaire, disposant lorsqu'il est requis de l'accord du propriétaire, la proroger pour dix ans lorsque l'installation présente encore un rendement significatif.")],
+    removed=["L'exigence d'une décision de prorogation au plus tard six mois avant l'échéance de l'autorisation photovoltaïque, sans suppression des conditions de fond de la prorogation."])
+
+add('R111-63',
+    "<p>Les opérations de démantèlement et de remise en état d'un site après exploitation comprennent :</p>\n"
+    "<p>1° Le démantèlement des installations de production, y compris l'excavation de toutes les fondations et installations enterrées ;</p>\n"
+    "<p>2° La remise en état des terrains, en garantissant notamment le maintien de leur vocation initiale ;</p>\n"
+    "<p>3° La réutilisation, le recyclage, la valorisation ou à défaut l'élimination des déchets de démolition ou de démantèlement dans les filières dûment autorisées à cet effet.</p>\n"
+    "<p>Ces opérations doivent être réalisées dans un délai d'un an à compter de la fin de l'exploitation de l'installation énergétique ou de la date d'échéance de son autorisation. Ce délai peut être étendu jusqu'à trois ans en cas de difficultés matérielles tenant à la topographie du terrain, sans avis préalable de la commission départementale de préservation des espaces naturels, agricoles et forestiers au titre du présent article.</p>\n"
+    "<p>A l'issue de ces opérations, l'organisme responsable des contrôles mentionné à l'article R. 314-120 du code de l'énergie atteste de leur bonne fin et du maintien des qualités agronomiques des sols. Lorsqu'il est établi par cet organisme et atteste de ces deux éléments, le rapport de contrôle prévu à l'article R. 463-3 vaut cette attestation ; aucun document distinct n'est alors exigé au titre du présent alinéa.</p>\n"
+    "<p>La suppression de l'avis préalable et la possibilité d'utiliser le même document s'appliquent à compter de l'entrée en vigueur de la loi portant la présente rédaction, y compris aux opérations et demandes d'extension de délai en cours. Les délais déjà écoulés ne recommencent pas à courir et les extensions déjà accordées restent valables. Aucune attestation régulièrement fournie n'est à refaire ; les obligations de remise en état, les créances antérieures et les recours demeurent préservés.</p>",
+    "Réduction de fond : suppression de l'avis préalable de la commission pour étendre jusqu'à trois ans le délai de démantèlement en cas de difficultés topographiques. L'autorité conserve la décision et le contrôle des difficultés ; cet avis de procédure n'est pas nécessaire au maintien de l'obligation de remise en état. Les trois opérations, le délai d'un an, le plafond de trois ans et l'attestation agronomique sont maintenus. La possibilité d'un rapport valant attestation est précisée pour les cas où même auteur et même contenu existent ; aucun gain autonome de suppression d'une seconde attestation n'est présumé démontré par la source.",
+    pv_notes + "L111-32, R111-62, R111-64 et R463-1 à R463-3 lus. R463-3 prévoit déjà un rapport technique de fin de remise en état : l'équivalence est limitée aux rapports émanant de l'organisme de R314-120 et attestant les deux éléments existants, sans généraliser ses auteurs possibles. L'article R314-120 énergie n'est pas fourni dans le corpus des cinq codes et n'est pas réputé réécrit. La décision d'extension reste de la compétence de l'autorité chargée des obligations et délais selon L111-32/R463-3 ; aucune nouvelle autorisation n'est créée. Corriger hors lot dans R463-3 le renvoi de durée R111-60 vers R111-62. Les filières de déchets, l'excavation et la vocation initiale demeurent intégrales.",
+    "La source entière imposait un avis de commission avant l'extension topographique ; il disparaît sans substitution. Les opérations et contrôles matériels restent identiques. La réunion possible du rapport et de l'attestation clarifie leur articulation mais n'est pas comptée comme une deuxième obligation nécessairement supprimée.",
+    "La remise en état n'est ni supprimée ni automatiquement repoussée à trois ans. L'équivalence de documents ne vaut que pour le même organisme et les deux mêmes constatations ; le contenu de R314-120 énergie n'est pas contrôlé ici. Aucun coût national n'est établi.",
+    "Aucune charge nouvelle identifiée : l'extension, la topographie et l'attestation existaient déjà. Le rapport de R463-3 est préexistant ; sa reconnaissance évite d'exiger un document distinct lorsqu'il satisfait déjà aux conditions, sans nouveau relevé ni formulaire.",
+    [effect('obligation_removed', 'photovoltaique-remise-etat-fin-avis-extension',
+            "Suppression de la consultation préalable de la commission pour l'extension du délai de remise en état.",
+            "Délai ordinaire d'un an, extension jusqu'à trois ans pour difficultés matérielles topographiques sur avis de la commission départementale.",
+            "Même délai ordinaire et même extension conditionnelle jusqu'à trois ans, sans avis préalable de la commission au titre de cet article.",
+            'legal_duty', "Personnes tenues de démanteler et remettre en état les sites photovoltaïques, autorités compétentes et commission départementale.",
+            "Application aux demandes en cours et futures ; délais écoulés non remis à zéro et extensions acquises préservées.",
+            "Aucune consultation ou déclaration équivalente de remplacement ; décision et contrôle matériels subsistent.",
+            "Sur avis de la commission départementale de préservation des espaces naturels, agricoles et forestiers, ce délai peut être étendu jusqu'à trois ans en cas de difficultés matérielles tenant à la topographie du terrain.",
+            "Ce délai peut être étendu jusqu'à trois ans en cas de difficultés matérielles tenant à la topographie du terrain, sans avis préalable de la commission départementale de préservation des espaces naturels, agricoles et forestiers au titre du présent article."),
+     effect('coordination', 'photovoltaique-rapport-remise-etat-attestation-commune',
+            "Articulation explicite de l'attestation et du rapport existant lorsque auteur et contenu coïncident, sans seconde réduction démontrée.",
+            "L'organisme de R314-120 atteste la bonne fin et les qualités agronomiques ; R463-3 prévoit un rapport de contrôle, sans obligation explicite dans la source de produire deux supports distincts.",
+            "Le rapport existant vaut attestation s'il émane du même organisme et contient les deux constatations requises.",
+            'legal_duty', "Personnes remettant en état un site et organismes réalisant à la fois le rapport et l'attestation selon les champs applicables.",
+            "Utilisation pour les opérations en cours et futures, sans refaire les attestations déjà fournies.",
+            "Aucun rapport nouveau et aucune réduction autonome de coût présumée.",
+            "A l'issue de ces opérations, l'organisme responsable des contrôles mentionné à l'article R. 314-120 du code de l'énergie atteste de leur bonne fin et du maintien des qualités agronomiques des sols.",
+            "Lorsqu'il est établi par cet organisme et atteste de ces deux éléments, le rapport de contrôle prévu à l'article R. 463-3 vaut cette attestation ; aucun document distinct n'est alors exigé au titre du présent alinéa.")],
+    removed=["L'avis préalable de la commission départementale de préservation des espaces naturels, agricoles et forestiers exigé pour étendre le délai de remise en état en raison de difficultés topographiques."])
+
+add('R111-64',
+    "<p>L'autorité compétente pour délivrer l'autorisation d'urbanisme portant sur une installation, un ouvrage ou une construction mentionnés aux articles L. 111-27 et L. 111-29 peut subordonner la mise en œuvre de celle-ci à la constitution de garanties financières par le bénéficiaire de l'autorisation d'urbanisme. Ces garanties financières couvrent le coût prévisionnel des opérations prévues à l'article R. 111-63 en cas de défaillance du propriétaire du terrain d'assiette sur lequel ces installations, ouvrages ou constructions sont implantés.</p>\n"
+    "<p>Le montant des garanties financières est fixé par l'arrêté d'autorisation d'urbanisme, sur la base d'un barème forfaitaire fixé par arrêté des ministres chargés de l'agriculture et de l'énergie.</p>\n"
+    "<p>Les garanties financières exigées aux articles L. 314-40 du code de l'énergie et L. 111-32 du code de l'urbanisme résultent d'une consignation, par le bénéficiaire de l'autorisation d'urbanisme, entre les mains de la Caisse des dépôts et consignations.</p>\n"
+    "<p>La consignation est reçue sur présentation de l'autorisation d'urbanisme fixant le montant de la garantie, accompagnée de la déclaration de consignation dument remplie, et de tout document visant à justifier l'identité et la qualité du bénéficiaire de l'autorisation d'urbanisme.</p>\n"
+    "<p>La Caisse des dépôts et consignations transmet sans délai le récépissé de consignation au maire et à l'autorité compétente en matière d'autorisation d'urbanisme. Le bénéficiaire de l'autorisation d'urbanisme n'est pas tenu d'en assurer lui-même la transmission. La consignation demeure obligatoire avant le démarrage des travaux, au plus tard lors de la transmission de la déclaration d'ouverture de chantier pour les projets soumis à permis de construire ou d'aménager.</p>\n"
+    "<p>Le maire n'est pas tenu de retransmettre le récépissé à l'autorité compétente lorsque la Caisse des dépôts et consignations le lui a transmis. Un retard de transmission du récépissé ne peut, à lui seul, justifier l'interruption des travaux lorsque le bénéficiaire établit au moyen du récépissé que la consignation requise a été effectuée avant leur démarrage. L'absence de consignation préalable permet au maire de prescrire l'interruption des travaux.</p>\n"
+    "<p>Lorsque les travaux de démantèlement et de remise en état du site ont été partiellement ou totalement réalisés, l'autorité compétente en matière d'autorisation d'urbanisme détermine, à la vue de l'attestation mentionnée au dernier alinéa de l'article R. 111-63 et par décision motivée, la date à laquelle peut être levée, en tout ou en partie, l'obligation de garanties financières.</p>\n"
+    "<p>La déconsignation est faite sur présentation, par le bénéficiaire des fonds, de la décision de l'autorité compétente en matière d'autorisation d'urbanisme fixant les modalités de levée totale ou partielle de la garantie, le montant à déconsigner et la désignation du ou des bénéficiaires, accompagné de tout document visant à justifier l'identité et la qualité du demandeur.</p>\n"
+    "<p>Les installations sur bâtiment ne sont pas soumises à garanties financières.</p>\n"
+    "<p>Un arrêté des ministres chargés de l'agriculture et de l'énergie fixe les conditions d'application du présent article et notamment les conditions dans lesquelles le montant des garanties financières peut être actualisé.</p>\n"
+    "<p>Les nouvelles modalités de transmission et la protection contre l'interruption fondée sur le seul retard d'acheminement s'appliquent aux consignations effectuées à compter de l'expiration d'un délai de six mois suivant l'entrée en vigueur de la loi portant la présente rédaction. Les consignations antérieures restent régies par leurs modalités de transmission antérieures ; aucun récépissé déjà régulièrement transmis n'est à renvoyer. Les garanties constituées, leurs montants, leurs conditions de levée, les créances antérieures et les recours demeurent préservés.</p>",
+    "Réforme de fond mixte : retrait de l'envoi personnel du récépissé par le bénéficiaire et du relais municipal lorsqu'une transmission directe a déjà été effectuée, remplacés par la transmission directe par la Caisse aux deux destinataires. L'interruption ne peut plus sanctionner le seul retard d'acheminement si la consignation préalable est prouvée. La garantie environnementale, son montant, sa consignation, la remise en état, les conditions de déconsignation et l'exemption des installations sur bâtiment sont maintenus. Le doublon rédactionnel « aux articles aux articles » est corrigé sans gain matériel attribué.",
+    pv_notes + "L111-32, R111-62, R111-63 et R463-3 lus. La garantie reste facultativement imposée par l'autorité dans le champ de la source, et n'est pas généralisée ; son exigibilité préalable est conservée lorsqu'elle est requise. Coordination à faire de l'arrêté d'application prévu au dernier alinéa permanent, des supports de consignation et du circuit CDC-maire-autorité ; ces textes non fournis ne sont pas réputés réécrits. Le L314-40 énergie, hors corpus, reste cité sans modification supposée. Le renvoi à l'attestation de R111-63 doit viser l'alinéa substantiel conservé et non sa transition ajoutée : correction explicite opérée dans le contrôle final. Mesure de transmission distincte par son champ photovoltaïque du récépissé de démolition littorale de L425-16 ; aucune nouvelle réduction de L425-16 n'est revendiquée. Coût de transmission transféré à la Caisse, solde public et privé non chiffré.",
+    "La comparaison avec les dix alinéas de la source démontre la disparition de l'envoi privé et du relais municipal après transmission directe, mais aussi une nouvelle obligation de transmission pour la Caisse. Le classement est mixte : allègement privé et changement du circuit public, sans prétendre démontrer un gain net global.",
+    "Ni le principal consigné ni le barème de garantie ne diminuent ; la mesure n'est pas une baisse d'impôt ni une libération anticipée des fonds. Les anciennes consignations conservent leur circuit. Le coût du nouveau circuit et le solde net de complexité restent inconnus.",
+    "Une charge nouvelle est identifiée pour la Caisse : transmettre sans délai le récépissé au maire et à l'autorité compétente. Elle remplace l'envoi privé et le relais public concernés ; aucun nouveau registre, formulaire ou jeu de données n'est créé. Le récépissé utilisé pour prouver le paiement existait déjà. Le solde net des charges de l'ensemble des codes n'est pas établi.",
+    [effect('obligation_removed', 'photovoltaique-consignation-transmission-directe',
+            "Suppression de l'envoi personnel du récépissé et du relais municipal lorsque la Caisse a transmis directement.",
+            "Le bénéficiaire adresse le récépissé au maire avant travaux et au plus tard avec la déclaration d'ouverture ; le maire le transmet sans délai à l'autorité compétente.",
+            "Le bénéficiaire n'effectue plus cet envoi ; le maire ne retransmet pas lorsque la Caisse a déjà transmis à l'autorité. La consignation reste préalable aux travaux.",
+            'legal_duty', "Bénéficiaires d'autorisations photovoltaïques soumis à garantie et maires concernés.",
+            "Consignations effectuées après six mois suivant l'entrée en vigueur ; anciennes modalités pour le stock antérieur, sans renvoi des pièces déjà transmises.",
+            "Transmission directe imposée à la Caisse, recensée comme charge nouvelle dans la même mesure.",
+            "Le bénéficiaire de l'autorisation d'urbanisme adresse au maire le récépissé de consignation délivré par la Caisse des dépôts et consignations au plus tard lors de la transmission de la déclaration d'ouverture de chantier pour les projets soumis à permis de construire ou d'aménager, et dans tous les cas avant le démarrage des travaux.",
+            "Le bénéficiaire de l'autorisation d'urbanisme n'est pas tenu d'en assurer lui-même la transmission."),
+     effect('obligation_added', 'photovoltaique-consignation-transmission-directe',
+            "Transfert du circuit d'envoi vers une transmission directe obligatoire par la Caisse aux deux destinataires.",
+            "L'envoi au maire incombe au bénéficiaire puis le relais à l'autorité au maire ; aucune transmission directe de la Caisse à ces deux destinataires n'est imposée par cet article.",
+            "La Caisse transmet sans délai au maire et à l'autorité compétente, sans nouveau formulaire pour le bénéficiaire.",
+            'legal_duty', "Caisse des dépôts et consignations, maires et autorités d'urbanisme destinataires.",
+            "Même transition de six mois et même périmètre de consignations que la suppression de l'envoi privé.",
+            "Nouvelle tâche de transmission publique ; coûts de raccordement et coût net non établis.",
+            "Le récépissé de consignation délivré par la Caisse des dépôts et consignations est transmis sans délai par le maire à l'autorité compétente en matière d'autorisation d'urbanisme.",
+            "La Caisse des dépôts et consignations transmet sans délai le récépissé de consignation au maire et à l'autorité compétente en matière d'autorisation d'urbanisme."),
+     effect('relief_extended', 'photovoltaique-consignation-transmission-directe',
+            "Protection des travaux contre une interruption fondée seulement sur le retard d'acheminement du récépissé.",
+            "Le maire peut interrompre les travaux à défaut d'envoi ou si les travaux ont démarré avant la transmission du récépissé, même lorsque les fonds ont été consignés.",
+            "Pas d'interruption pour le seul retard de transmission si le récépissé prouve la consignation préalable ; interruption possible en l'absence de cette consignation.",
+            'legal_duty', "Bénéficiaires ayant effectivement consigné la garantie avant le démarrage des travaux.",
+            "Même champ temporel de consignations nouvelles après la transition de six mois.",
+            "Le récépissé existant constitue la preuve, sans attestation de substitution.",
+            "A défaut, ou si les travaux ont démarré avant la transmission de ce récépissé, le maire peut en prescrire l'interruption.",
+            "Un retard de transmission du récépissé ne peut, à lui seul, justifier l'interruption des travaux lorsque le bénéficiaire établit au moyen du récépissé que la consignation requise a été effectuée avant leur démarrage.")],
+    removed=["L'envoi personnel au maire du récépissé de consignation par le bénéficiaire pour les nouvelles consignations relevant de la transition.",
+             "Le relais municipal obligatoire vers l'autorité compétente lorsque la Caisse des dépôts lui a déjà transmis directement le récépissé.",
+             "La possibilité d'interrompre les travaux au seul motif du retard de transmission du récépissé lorsque la consignation préalable requise est établie."],
+    impact_class='mixed')
+
+# L'ajout d'une transition à R111-63 impose de remplacer le renvoi ordinal,
+# sans déplacer l'alinéa matériel auquel il renvoyait.
+answers['R111-64']['proposed_xml'] = answers['R111-64']['proposed_xml'].replace(
+    "à la vue de l'attestation mentionnée au dernier alinéa de l'article R. 111-63",
+    "à la vue de l'attestation de bonne fin et de maintien des qualités agronomiques des sols prévue à l'article R. 111-63")
+answers['R111-64']['review_notes'] = answers['R111-64']['review_notes'].replace(
+    "Le renvoi à l'attestation de R111-63 doit viser l'alinéa substantiel conservé et non sa transition ajoutée : correction explicite opérée dans le contrôle final.",
+    "Le renvoi ordinal à l'ancien dernier alinéa de R111-63 est remplacé expressément par la désignation de l'attestation de bonne fin et de maintien des qualités agronomiques, afin qu'il ne vise pas la transition ajoutée à cet article.")
+
+# Les deux exclusions retirées constituent une seule mesure et un seul effet.
+# La preuve continue reproduit les deux numéros entiers, sans les tronquer.
+e59 = answers['R111-59']['substantive_impact']['effects'][0]
+e59['before'] = ("Au 4°, exclusion des périmètres d'aménagement foncier clos par le conseil départemental ou son président au cours des dix années précédant la publication du décret 2024-318. Au 5°, exclusion des fonds dont la commission départementale avait prononcé l'état d'inculture ou de sous-exploitation manifeste à la publication de ce décret selon L125-1 rural, ou dont le conseil départemental l'avait arrêté selon L125-5 depuis moins de dix ans avant cette publication.")
+e59['source_quote'] = re.sub(r'\s+', ' ', unescape(re.sub(
+    r'<[^>]*>', ' ', by_number['R111-59']['source_xml']))).strip().split('4° ', 1)[1]
+e59['source_quote'] = '4° ' + e59['source_quote']
+answers['R111-59']['reason'] = answers['R111-59']['reason'].replace(
+    "des opérations foncières en cours", "des périmètres d'aménagement foncier visés au 2°")
+answers['R111-59']['review_notes'] += (
+    " Chevauchement préexistant à signaler : le 2° vise les périmètres où un aménagement a été ordonné, sans préciser expressément que son exclusion cesse à la clôture. Il peut donc continuer à couvrir un périmètre anciennement visé au 4°. La suppression du 4° ne neutralise pas le 2° maintenu ; aucun accès automatique de ces périmètres ni allègement supplémentaire à ce titre n'est affirmé.")
+answers['R111-59']['substantive_impact']['scope_limitations'] += (
+    " Le 2° maintenu peut encore couvrir un périmètre où un aménagement a été ordonné puis clos : son libellé source ne limite pas expressément cette exclusion aux opérations en cours. Le retrait du 4° peut donc rester sans effet d'éligibilité pour ces périmètres ; l'effet matériel net des deux retraits dépend des autres exclusions.")
+
+add('R112-1', None,
+    "Maintien intégral de la formule de l'indice Lden et de ses définitions. La pondération jour-soir-nuit, les heures de référence et la norme acoustique permettent de comparer et de délimiter les zones de bruit protégeant la santé des riverains. Ce n'est ni une déclaration privée supplémentaire ni une méthode de calcul fiscal ; la supprimer sans méthode de substitution ferait perdre la mesure nécessaire des nuisances.",
+    "Source entière, formule et toutes définitions lues, sans image ni compagnon. Conservation de 10 × log, du facteur 1/24, des durées 12/4/8, des majorations +5 et +10 dB, des périodes 6 h–18 h, 18 h–22 h, 22 h–6 h le lendemain, du niveau pondéré A à long terme et de la référence ISO 1996-2:1987. R112-2 à R112-4 et L112-3 à L112-5 lus. Le balisage source de Ld comporte une ancienne balise font et des sup imbriqués ; proposed_xml=null ne réécrit pas cette formule et évite une réparation mathématique implicite. Le cadre européen du bruit environnemental est à coordonner en cas de réforme future ; aucune abrogation de ce cadre n'est prétendue ici.",
+    "La formule complète de l'indice de bruit est conservée, avec tous ses coefficients et périodes, pour sa fonction sanitaire et de délimitation des servitudes. Le maintien ne supprime aucune taxe ni obligation et ne compte pas comme une réécriture.",
+    "Aucune modernisation de la norme ISO ni modification des seuils de zones n'est décidée. La conformité européenne de l'ensemble de la planification acoustique n'est pas auditée dans ce lot.",
+    "Aucune charge nouvelle identifiée : mêmes calcul, coefficients et définitions ; aucune mesure, donnée ou étude additionnelle n'est prescrite.")
+
+add('R112-2', None,
+    "Maintien intégral de la méthode particulière pour les aérodromes à trafic commercial limité et fortement variable. Le calcul sur les jours de trafic effectif évite qu'une moyenne sur des jours sans activité masque l'exposition saisonnière ; l'explication dans le rapport de présentation est nécessaire au contrôle du choix entre 180 et 365 jours et aux recours. Aucun rapport autonome nouveau n'est exigé par cet article.",
+    "Source entière et notes vides relues. Conserver « n'excède pas 10 000 dans l'une des trois hypothèses » : ce n'est ni une limite de 10 000 dans toutes les hypothèses ni une moyenne. Maintien de la forte variation saisonnière ou hebdomadaire, de 180 à 365 jours, et de l'appréciation pour chacune des activités commerciale, militaire ou générale. R112-1, R112-3 et R112-4 lus : R112-3 conserve son exception pour certains aérodromes militaires et ses propres seuils ; elle n'est pas effacée par le maintien de R112-2.",
+    "La méthode entière et sa justification dans le rapport existant sont conservées pour la mesure correcte du bruit et la transparence des servitudes. Aucun allègement nouveau ni changement de seuil n'est attribué à ce maintien.",
+    "Aucune extension à tous les aérodromes, suppression des prévisions de trafic ou modification des zones n'est décidée. L'effet propre de cette méthode sur les droits à construire n'est pas chiffré.",
+    "Aucune charge nouvelle identifiée : pas de rapport distinct, de nouvelles périodes ni de données supplémentaires ; l'explication reste dans le rapport déjà prévu.")
+
+assert len(answers) == len(sources) == 24
+Path('answer.json').write_text(json.dumps([answers[a['number']] for a in sources], ensure_ascii=False, indent=2) + '\n')
+print('answer.json :', len(answers), 'articles')

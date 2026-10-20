@@ -1,0 +1,449 @@
+import json
+import re
+from html import unescape
+from pathlib import Path
+
+sources = json.loads(Path('source.json').read_text())
+references = json.loads(Path('reference-targets.json').read_text())
+by_number = {a['number']: a for a in sources}
+answers = {}
+
+
+def impact(classification, assessment, scope, burdens, effects=None):
+    return {
+        'version': 1,
+        'classification': classification,
+        'assessment': assessment,
+        'scope_limitations': scope,
+        'new_burdens_review': burdens,
+        'effects': effects or [],
+    }
+
+
+def base(number):
+    source = by_number[number]
+    return {k: source[k] for k in ['code_id', 'source_id', 'source_sha256', 'number']}
+
+
+def retain(number, reason, review, assessment, scope, burdens):
+    result = base(number)
+    result.update(
+        proposed_xml=None,
+        reason=reason,
+        review_notes=review,
+        status='retained_unchanged',
+        classification='retained_necessary',
+        substantive_impact=impact('retained_necessary', assessment, scope, burdens),
+        reference_checks=[],
+    )
+    answers[number] = result
+
+
+def effect(kind, measure, description, before, after, unit, population, transition, replacement, source_quote, proposed_quote):
+    return dict(
+        kind=kind, measure_id=measure, description=description,
+        before=before, after=after, unit=unit, affected_population=population,
+        conditions_and_transition=transition,
+        replacement_or_new_burdens=replacement,
+        source_quote=source_quote, proposed_quote=proposed_quote,
+    )
+
+
+def rewrite(number, proposed, reason, review, substantive, removed=None):
+    result = base(number)
+    result.update(
+        proposed_xml=proposed, reason=reason, review_notes=review,
+        status='rewrite_draft', substantive_impact=substantive, reference_checks=[],
+    )
+    if removed:
+        result.update(
+            change_type='normative_reduction',
+            reform_policy_id='editorial_direction_2026_10_19',
+            removed_provisions=removed,
+        )
+    answers[number] = result
+
+
+retain(
+    'L2315-82',
+    "Maintien intégral à droit constant du libre accès des experts des paragraphes 2 et 3, limité aux besoins de leur mission. Ce droit rend l'expertise effectivement possible ; le supprimer au motif qu'il contraint l'employeur retirerait une garantie du CSE. L'article ne prescrit ni agrément d'accès, ni dossier, ni calendrier de visites autonome à supprimer.",
+    "Les paragraphes 2 et 3 de la sous-section couvrent les consultations récurrentes et les autres expertises légales, notamment celles des L2315-92 et L2315-94 du lot. L'accès ne devient pas un pouvoir général étranger à la mission ; L2315-84 conserve secret et discrétion. La note au plus tard au 1er janvier 2018 est historique. Aucun effet sur la durée des contrats ou les procédures de rupture.",
+    "La source entière conserve sa fonction d'accès matériel aux lieux nécessaires à l'expertise ; aucune formalité redondante distincte ni réduction de prélèvement n'est démontrée ici.",
+    "Maintien dans le champ exact des deux paragraphes visés ; ni accès illimité hors mission, ni extension aux agents publics statutaires, ni gain national chiffré.",
+    "Aucune charge nouvelle identifiée : le texte source est intégralement conservé, sans badge, registre de visites, autorisation ou déclaration supplémentaire.",
+)
+
+retain(
+    'L2315-83',
+    "Maintien intégral à droit constant de l'information nécessaire à l'expert. L'obligation est bornée par la mission et conditionne une consultation utile et le contrôle des risques ; ce n'est pas un rapport périodique supplémentaire. La retirer laisserait subsister le droit à expertise sans ses moyens. Aucun taux, contribution accessoire ou justificatif déterminé n'est institué ici.",
+    "Renvois reçus de L2315-93 maintenus. R2315-45, lu dans le corpus, distingue la demande complémentaire sous trois jours et la réponse sous cinq jours ; L1233-35 prévoit son circuit collectif spécial de dix et huit jours. Ces délais ne sont pas le préavis individuel. Aucune nouvelle dispense CRPA ni nouveau droit d'accès aux données n'est revendiqué. La note de 2018 demeure historique.",
+    "Le devoir ciblé de fournir les informations nécessaires reste entier ; la source ne contient pas de double formulaire ou d'envoi systématique pouvant être isolément retiré sans priver l'expert d'information.",
+    "La nécessité des informations reste appréciée au regard de chaque mission ; les délais réglementaires et les régimes spéciaux ne sont pas réécrits par ce maintien.",
+    "Aucune charge nouvelle identifiée : aucune pièce, certification, base de données ou échéance supplémentaire n'est ajoutée à l'obligation source.",
+)
+
+retain(
+    'L2315-84',
+    "Maintien intégral à droit constant du secret et de la discrétion de l'expert. Ces limites protègent les procédés de fabrication et les informations confidentielles auxquels les droits d'accès du même lot donnent accès. Leur suppression n'est pas une simplification justifiée : elle fragiliserait la protection de l'information et la possibilité de la communiquer aux représentants.",
+    "L2315-3 a été lu intégralement : secret professionnel pour les procédés de fabrication ; discrétion pour les informations confidentielles présentées comme telles par l'employeur. Le renvoi ne transforme pas toute information en secret et reste applicable aux experts, sans effacer les communications légalement nécessaires. Note d'entrée en vigueur 2018 sans effet de transition future.",
+    "La source conserve une garantie de confidentialité proportionnée aux accès des L2315-82, L2315-83 et L2315-90 ; aucune réduction matérielle n'est attribuée à ce maintien.",
+    "Les qualifications précises de L2315-3 demeurent déterminantes ; aucune nouvelle catégorie d'information secrète ou interdiction de recours n'est créée.",
+    "Aucune charge nouvelle identifiée : maintien du seul renvoi existant, sans engagement de confidentialité distinct à signer ni registre à tenir.",
+)
+
+retain(
+    'L2315-85',
+    "Maintien intégral des deux subdivisions. Le délai maximal supplétif rend le rapport disponible pour la consultation ; sa suppression exposerait les représentants à une expertise trop tardive. La priorité de l'accord d'entreprise ou de l'accord employeur-CSE adopté à la majorité des titulaires est favorable et conservée. L'habilitation sur les expertises à plusieurs champs permet déjà une organisation commune, sans multiplier les rapports.",
+    "R2315-47 et R2315-48 ont été lus : remise quinze jours avant les échéances de consultation concernées, huit jours dans le cas de concentration, deux mois supplétifs avec renouvellement encadré, et rapport unique lorsque plusieurs champs sont couverts. Ce rapport unique préexiste : aucune nouvelle fusion n'est comptée. Conserver l'assiette exacte de la majorité des membres titulaires et les deux numéros 1° et 2°. Aucun délai maximal n'est converti en délai minimal.",
+    "La source entière organise la ponctualité et l'expertise multichamp avec une faculté conventionnelle déjà ouverte ; aucun rapport supplémentaire n'est supprimé par simple réaffirmation du rapport unique existant.",
+    "Aucune réduction des délais réglementaires n'est proposée ; les calendriers de consultation, les accords et leurs majorités restent distincts du préavis de rupture.",
+    "Aucune charge nouvelle identifiée : aucun accord imposé, nouveau rapport, dépôt, délai d'attente ou justificatif n'est ajouté au texte source.",
+)
+
+retain(
+    'L2315-87',
+    "Maintien intégral de la faculté du CSE de recourir à l'expert-comptable pour les orientations stratégiques. Elle soutient l'expression collective en amont des décisions et n'est pas une expertise automatiquement imposée à chaque entreprise. La suppression ferait perdre un droit favorable ; le même objet n'est pas couvert par la seule consultation des comptes ou de la politique sociale.",
+    "Le 1° de L2312-17, lu entier, demeure les orientations stratégiques. L2315-87-1 précise le champ utile de la mission. L2315-80, également lu, conserve le financement 20 % CSE/80 % employeur et sa prise en charge patronale favorable lorsque les conditions légales sont réunies ; ces chiffres ne sont pas un taux fiscal. L'accord grammatical de « prévu » dans la source ne justifie pas une réécriture. Note de 2018 historique.",
+    "Le droit facultatif à l'expertise stratégique est conservé pour toutes les consultations éligibles futures ; aucun prélèvement ni nouvelle expertise obligatoire n'est introduit ou supprimé.",
+    "Les conditions et coûts d'exercice préexistants restent régis par leurs articles propres ; aucun solde de coût des consultations de l'ensemble des entreprises n'est établi.",
+    "Aucune charge nouvelle identifiée : maintien de la faculté existante, sans fréquence imposée, formulaire ou autorisation supplémentaire.",
+)
+
+retain(
+    'L2315-87-1',
+    "Maintien intégral du champ de la mission stratégique. Les quatre dimensions économique, financière, sociale et environnementale restent limitées aux éléments nécessaires à la compréhension des orientations. Ce périmètre protège une analyse complète ; il ne prescrit pas quatre rapports ou quatre collectes autonomes susceptibles d'être fusionnés.",
+    "Articulation conservée avec L2315-87 et le 1° de L2312-17. Les informations utiles de L2315-83 et les secrets de L2315-84 encadrent l'exercice concret. Aucune obligation autonome de reporting environnemental supplémentaire ne peut être déduite du seul maintien de cette phrase ; les fondements distincts gardent leur champ. Pas de note source ni de tableau.",
+    "La source délimite une seule mission et non des formalités cumulatives : le maintien des quatre dimensions nécessaires n'est ni une simplification matérielle ni une hausse d'obligations.",
+    "Aucune appréciation de nécessité d'une donnée particulière n'est préjugée ; les coûts d'une mission réelle restent à examiner selon son périmètre.",
+    "Aucune charge nouvelle identifiée : le périmètre source est conservé sans document, indicateur, registre ou fréquence de collecte supplémentaire.",
+)
+
+retain(
+    'L2315-88',
+    "Maintien intégral de l'expertise facultative sur la situation économique et financière. L'assistance du CSE ne se confond pas avec la certification des comptes destinée à d'autres utilisateurs ; sa suppression retirerait un droit à information éclairée. L'article ne crée ni expertise systématique ni déclaration à l'administration.",
+    "Le 2° de L2312-17 demeure la situation économique et financière, distincte des orientations stratégiques du 1°. L2315-89 et L2315-90 du lot préservent champ et accès documentaire. Le financement patronal de L2315-80 reste applicable sans nouveau partage de coût ni perte de prise en charge. La note historique fixe l'installation du régime en 2018, pas la date de la réforme proposée.",
+    "Le maintien porte sur un droit d'assistance comptable à l'initiative du CSE ; aucune suppression nette de coût n'est démontrée par la seule proximité avec l'expertise stratégique.",
+    "Les conditions de recours, le financement et les modalités de mission demeurent ceux du régime applicable ; aucune économie nationale n'est présumée.",
+    "Aucune charge nouvelle identifiée : la source n'est pas modifiée et aucun diagnostic, dépôt ou choix d'expert obligatoire supplémentaire n'est ajouté.",
+)
+
+retain(
+    'L2315-89',
+    "Maintien intégral du champ de la mission comptable. Les éléments économiques, financiers, sociaux ou environnementaux doivent tous être nécessaires à la compréhension des comptes ou à l'appréciation de la situation. Écarter une dimension par principe pourrait rendre l'expertise incomplète ; aucune annexe déclarative distincte n'est imposée par cet article.",
+    "Le champ demeure celui de L2315-88, avec les documents accessibles selon L2315-90 et les obligations de confidentialité de L2315-84. La référence à la situation de l'entreprise n'est pas étendue à une investigation étrangère à la mission. Aucune note source et aucun tableau à retrancher ; aucun taux, seuil d'emploi ou délai n'est changé.",
+    "La source contient une limite fonctionnelle de mission, non une série de rapports imposés ; son maintien ne produit aucun allègement autonome mesurable.",
+    "Les documents effectivement nécessaires dépendent des comptes et de la mission ; le maintien ne valide pas des demandes illimitées et ne chiffre pas leur coût.",
+    "Aucune charge nouvelle identifiée : la règle source est conservée sans nouvel indicateur, attestation ni document de synthèse à établir.",
+)
+
+retain(
+    'L2315-90',
+    "Maintien intégral de l'accès documentaire équivalent à celui du commissaire aux comptes, pour les vérifications ou contrôles entrant dans les missions de l'expert-comptable. Cette garantie opposable précise la portée de L2315-83 ; la supprimer comme simple doublon permettrait de restreindre les pièces accessibles. Elle n'impose pas la fabrication d'un second jeu comptable.",
+    "Le renvoi reçu par L2315-93 conserve son objet : accès aux documents dans les limites de la mission. La qualité d'expert-comptable n'est pas transformée en mandat de commissaire aux comptes, et les secrets de L2315-84 restent applicables. La note de l'ordonnance de 2017 renvoie à l'entrée en vigueur historique au plus tard en 2018. Pas de réduction de prélèvement ni de calendrier revendiquée.",
+    "La source assure un niveau d'accès documentaire, sans prescrire de double dépôt ; le maintien évite de retirer les moyens d'une expertise tout en prétendant simplifier son exercice.",
+    "Le texte n'élargit pas les missions de l'expert ni les compétences du commissaire aux comptes ; aucun coût de reproduction national n'est estimé.",
+    "Aucune charge nouvelle identifiée : maintien du droit existant, sans jeu de copies, plateforme, certificat ou registre obligatoire ajouté.",
+)
+
+retain(
+    'L2315-91',
+    "Maintien intégral de la faculté d'expertise sur la politique sociale, les conditions de travail et l'emploi. Ce droit protège une consultation dont l'objet diffère de la seule lecture des comptes. La réforme du contrat unique ne fait pas disparaître les salaires, la prévention, l'égalité ou les enjeux d'emploi ; supprimer l'expert retirerait un avantage utile sans supprimer un doublon démontré.",
+    "Le 3° de L2312-17 a été vérifié dans sa source entière. Le champ de mission de L2315-91-1 et le financement patronal de L2315-80 restent ouverts aux situations futures éligibles, y compris sous contrat unique. Aucun renvoi n'autorise de nouveau CDD et aucun seuil indemnitaire d'un an n'est importé dans le droit à expertise. La date de 2018 de la note est historique.",
+    "La source conserve une faculté d'assistance sociale distincte des deux autres consultations récurrentes ; le maintien n'est compté ni comme fusion de régimes ni comme suppression d'obligation.",
+    "Les contrats anciens et nouveaux conservent l'accès à la représentation dans leur champ légal ; aucune économie sur le financement des expertises n'est affirmée.",
+    "Aucune charge nouvelle identifiée : aucune expertise annuelle automatique, nouveau relevé de personnel ou condition d'ancienneté n'est ajouté.",
+)
+
+retain(
+    'L2315-91-1',
+    "Maintien intégral de la mission sociale, limitée aux éléments nécessaires à la compréhension de la politique sociale, des conditions de travail et de l'emploi. La pluralité des dimensions utiles n'impose pas plusieurs expertises. Leur retrait pourrait occulter santé, égalité ou effets économiques sur l'emploi, sans supprimer une formalité autonome identifiée.",
+    "Articulation conservée avec L2315-91, L2315-83 et L2315-84. Les durées de formation, de mission ou d'aide éventuellement examinées ne constituent pas le terme du nouvel emploi ; cette disposition de périmètre n'établit aucun contrat spécial et ne doit pas être chargée d'un nouveau barème de rupture. Aucune note historique ni tableau dans cette source.",
+    "La source entière reste une délimitation d'analyse et non un reporting à quatre volets obligatoirement séparés ; aucun gain matériel supplémentaire n'est démontré.",
+    "L'étendue concrète de la mission reste soumise à la nécessité ; aucune suppression d'obligation de santé ou de droit à expertise n'est opérée.",
+    "Aucune charge nouvelle identifiée : maintien sans nouvelle collecte, attestation, périodicité ou transmission de remplacement.",
+)
+
+retain(
+    'L2315-92',
+    "Maintien intégral des I et II après examen des quatre cas d'expertise et du mandat d'appui à la négociation. Ces facultés permettent une information utile en concentration, alerte, licenciement collectif et OPA ; elles ne rendent pas chaque expertise obligatoire. La même personne accompagne déjà le PSE dans le cas du II : la fusion préexiste. La réforme du contrat unique ne justifie ni de supprimer ces protections collectives ni de recopier ici le barème individuel de rupture.",
+    "L2312-41, L2312-63 à L2312-67, L1233-34/35/35-1 et L1233-24-1 ont été lus dans le corpus. Le 3° du I vise la procédure collective ; le II vise séparément l'APC de L2254-2 et l'accord PSE de L1233-24-1. Les quatre vues requises sont examinées dans reference_checks ; elles sont des propositions, pas le droit en vigueur. La plage OPA L2312-42 à L2312-52 conserve l'exception de L2312-52, dont la proposition borne les règles exclues à L2312-50 ; elle ne rétablit pas les comptes rendus de L2312-51 supprimés par sa proposition. Le même expert du II ne concerne que le « dernier cas », l'accord PSE, sans extension automatique à toute négociation APC. L'information administrative d'ouverture du PSE et ses majorités restent distinctes. Note historique de 2018 sans bascule future. Les exonérations, aides et indemnités spéciales ne sont pas modifiées par cet article de compétence.",
+    "La source entière préserve des droits facultatifs et une mutualisation d'expert déjà existante. Le renvoi à l'APC reste cohérent avec sa proposition coordonnée au contrat unique ; aucune baisse nouvelle de coût ou de prélèvement n'est créée ici.",
+    "Les règles individuelles de préavis et d'indemnité sont celles de leurs articles propres ; ni les agents publics statutaires ni les régimes spéciaux ne sont convertis par ce maintien. Les coordinations collectives extérieures à ce lot ne sont pas réputées achevées.",
+    "Aucune charge nouvelle identifiée : pas de notification individuelle supplémentaire, de rapport supplémentaire ni d'obligation de désigner un expert. Le recours au même expert dans le cas PSE demeure celui de la source.",
+)
+
+retain(
+    'L2315-93',
+    "Maintien intégral des trois alinéas d'accès. L'information de l'expert doit pouvoir couvrir toutes les sociétés intéressées par une concentration ou une recherche de repreneur, puis les seuls documents nécessaires au rapport OPA. Ces périmètres évitent une expertise privée de pièces déterminantes. Ils ne commandent ni déclaration périodique ni nouveau dossier comptable propre à chaque société.",
+    "L2315-83 et L2315-90 sont maintenus dans le lot. L2312-41 et L2312-42 à L2312-52 ont été lus ; L2312-45 reste le rapport d'expert OPA, distinct des comptes rendus postérieurs de L2312-51 dont l'abrogation est proposée. La plage jusqu'à L2312-52 conserve ses exceptions et ne rétablit pas ces comptes rendus. La section 4 bis, L1233-57-9 à L1233-57-22, a été lue entière : il s'agit de recherche de repreneurs liée à certaines fermetures avec licenciements collectifs, pas de tout recrutement. Ses anciens renvois L2325-5 en L1233-57-15 et L2323-3 en L1233-57-19 appellent une concordance dans leurs propres lots ; ils ne sont pas corrigés silencieusement ici et n'enlèvent pas le droit documentaire présent. Note de 2018 historique.",
+    "La source entière maintient des droits de communication différenciés selon l'opération. Aucune seconde obligation de produire les mêmes comptes n'est expressément imposée ici et aucune économie de copies n'est présumée.",
+    "Le maintien n'achève pas la réécriture de la recherche de repreneurs ni les concordances anciennes signalées ; la nécessité du rapport OPA et les secrets restent opposables.",
+    "Aucune charge nouvelle identifiée : maintien sans élargissement des sociétés visées, nouveau dépôt, registre ou calendrier de transmission.",
+)
+
+retain(
+    'L2315-94',
+    "Maintien intégral des trois cas de recours facultatif. L'expertise en présence d'un risque grave identifié et actuel ou d'un projet important protège la santé et la sécurité ; l'habilitation garantit des compétences vérifiables et n'est pas un agrément d'embauche. L'expertise préparant l'égalité professionnelle à partir de trois cents salariés reste un droit favorable pour les futures négociations. Aucune suppression de cette protection n'est justifiée par la réduction du nombre de contrats.",
+    "Le 4° du II de L2312-8 a été lu : nouvelles technologies et aménagement important des conditions de santé, sécurité ou travail. R2315-51 définit l'habilitation comme certification de compétence par organisme accrédité ; aucune déclaration équivalente ne lui est substituée. L2315-80 conserve notamment le financement patronal en cas de risque grave et, pour l'égalité, l'avantage lorsque les indicateurs font défaut. La proximité du 3° et de L2315-95 doit être articulée sans retirer le choix d'un expert technique ni présumer deux expertises cumulatives. Les exigences supérieures de prévention ne sont pas réputées effacées par la réforme. Les trois cents salariés ne deviennent ni cinquante ni mille.",
+    "La source protège des missions ciblées de prévention et d'égalité avec qualification de l'expert ; aucune autorisation redondante distincte de la compétence n'a été démontrée et supprimée.",
+    "Aucune conformité générale au droit européen n'est affirmée ; les conditions de qualification et de financement conservent leur champ propre et le coût global n'est pas établi.",
+    "Aucune charge nouvelle identifiée : texte source maintenu, sans nouvel agrément, certification, déclaration de risque ou seuil supplémentaire.",
+)
+
+retain(
+    'L2315-95',
+    "Maintien intégral du droit du CSE de choisir un expert technique pour préparer l'égalité professionnelle dans les entreprises d'au moins trois cents salariés. La proximité avec le 3° de L2315-94 ne suffit pas à supprimer ce droit : les qualifications d'expert technique de son choix et d'expert habilité ne sont pas textuellement identiques. Retirer la faculté autonome sans garantir un choix équivalent ferait disparaître un avantage.",
+    "Lecture croisée avec les trois cas de L2315-94 et la certification définie par R2315-51. Le présent maintien ne crée aucun droit nouveau à deux expertises financées pour une même mission et ne tranche pas leur articulation par une fiction de doublon. Le seuil d'au moins trois cents salariés et le libre choix sont conservés pour les négociations futures comme pour les situations en cours. La note d'entrée en vigueur au plus tard le 1er janvier 2018 reste historique.",
+    "La source ne prescrit pas de second rapport obligatoire : elle ouvre un choix d'assistance. Sans identité démontrée des deux régimes d'expert, une abrogation ne prouverait pas une fusion à avantages préservés.",
+    "L'articulation des qualifications et de la prise en charge doit rester appréciée dans chaque recours ; aucune économie tirée d'un cumul hypothétique n'est comptée.",
+    "Aucune charge nouvelle identifiée : maintien sans expertise obligatoire, nouveau rapport ou condition de choix ajoutée.",
+)
+
+retain(
+    'L2316-3',
+    "Maintien intégral de la désignation de l'expert par le comité central lorsque les projets relèvent de L2316-2. Cette règle attribue déjà la décision au niveau compétent et évite de faire désigner un expert central par chaque établissement. La supprimer retirerait un repère de compétence utile ; elle ne crée ni expertise automatique ni obligation administrative de validation.",
+    "La sous-section 10 comprend les droits et limites d'expertise du présent lot. L2316-2 est coordonné dans ce lot pour la seule borne du renvoi OPA. L2316-20 et L2316-21, lus dans le corpus, conservent les compétences locales et leur propre droit à expertise lorsqu'elles sont réunies ; cette règle centrale ne les absorbe pas. R2315-48 prévoit déjà un rapport unique multichamp. Note historique de 2018 sans modification de mandat.",
+    "La source contient déjà la centralisation de la désignation pour les projets centraux ; son maintien ne constitue pas une nouvelle fusion ni un second allègement imputable à la même expertise.",
+    "Les expertises d'établissement sur leurs compétences propres demeurent ; aucune réduction générale de leur nombre ou de leur financement n'est démontrée.",
+    "Aucune charge nouvelle identifiée : aucune autorisation centrale supplémentaire, notification ou délibération locale répétée n'est ajoutée.",
+)
+
+retain(
+    'L2316-4',
+    "Maintien intégral de la composition et des voix. Les titulaires et suppléants élus par les comités d'établissement garantissent la représentation ; les professionnels de santé, contrôle et prévention n'interviennent qu'à titre consultatif sur leur champ. Supprimer ces présences ou les suppléants retirerait des protections essentielles. L'article ne contient pas de dossier d'autorisation ou de reporting périodique autonome à retirer.",
+    "Les 1°, 2° et 3° et les deux alinéas finaux sont conservés, notamment le rattachement des personnes consultatives à l'établissement du siège et la voix délibérative réservée aux 1° et 2°. L8112-1 a été lu : agents de contrôle et indépendance de l'inspection. R2316-1, lu, fixe vingt-cinq titulaires et vingt-cinq suppléants sauf accord unanime, puis permet certaines représentations par un seul délégué : l'articulation de ces options réglementaires avec la formule législative « nombre égal » mérite contrôle, sans correction silencieuse ni restriction du choix conventionnel favorable. La note de 2018 n'est pas une date future.",
+    "La source entière définit une structure de représentation et de prévention ; aucune formalité indépendante de cette fonction ni prélèvement n'est supprimé par ce maintien.",
+    "Le nombre effectif des sièges reste fixé selon les règles réglementaires et conventionnelles applicables ; l'articulation législative et réglementaire signalée n'est pas présentée comme définitivement résolue.",
+    "Aucune charge nouvelle identifiée : aucun siège, participant, vote, justificatif ni fréquence de réunion supplémentaire n'est créé.",
+)
+
+retain(
+    'L2316-5',
+    "Maintien intégral de la représentation minimale des ingénieurs, chefs de service et cadres lorsque des établissements constituent trois collèges. Le titulaire et le suppléant garantis sont un avantage de représentation, non un rapport ou une autorisation. Leur suppression au nom du nombre de règles ferait perdre ce droit aux futures compositions recevables.",
+    "L2314-11, lu entier, organise les collèges et la catégorie des ingénieurs, chefs de service et cadres assimilés. Le présent article impose au moins un titulaire et un suppléant de cette catégorie au niveau central lorsque son déclencheur est rempli ; il ne crée pas un quatrième collège. La classification professionnelle et toutes ses qualifications sont conservées. Note historique de 2018 ; aucune ancienneté de rupture ou durée de contrat n'est introduite.",
+    "La source préserve un minimum catégoriel de représentation ; la contrainte de composition a une fonction protectrice identifiée et aucune obligation documentaire redondante n'est isolée.",
+    "Les effectifs et collèges s'apprécient selon leurs textes propres ; aucun siège additionnel au-delà des règles applicables n'est promis.",
+    "Aucune charge nouvelle identifiée : le minimum source reste inchangé, sans nouvelle élection distincte, attestation ou condition d'accès.",
+)
+
+retain(
+    'L2316-6',
+    "Maintien intégral du minimum d'un titulaire cadre au comité central quand aucun établissement ne constitue trois collèges mais que les seuils agrégés sont remplis. Cette garantie couvre une situation différente de L2316-5 et ne peut être supprimée comme doublon. La condition organise la représentation des salariés dispersés et ne commande aucun dépôt autonome.",
+    "Les déclencheurs sont alternatifs : plusieurs établissements distincts groupent au moins cinq cents un salariés OU au moins vingt-cinq ingénieurs, chefs de service et cadres assimilés. Le minimum est ici un titulaire, sans ajouter un suppléant par imitation de L2316-5. L2314-11 et L2316-5 ont été lus : aucun troisième collège local est la condition particulière de cet article. Note de 2018 historique ; aucun seuil de trois cents salariés de l'expertise égalité n'est importé.",
+    "La source complète protège une représentation agrégée distincte des trois collèges locaux ; son maintien évite de supprimer une garantie favorable sous prétexte d'harmoniser les seuils.",
+    "Les deux seuils alternatifs et le périmètre des établissements demeurent ; aucun impact financier national ni nombre de sièges nouvellement créés n'est estimé.",
+    "Aucune charge nouvelle identifiée : pas de déclaration d'effectif particulière, nouveau collège ou justificatif ajouté à la règle source.",
+)
+
+# Suppression d'une notification conditionnelle du CSE, sans document de remplacement.
+number = 'L2315-81-1'
+proposed = by_number[number]['source_xml'].replace(
+    "les membres du comité établissent au besoin et notifient à l'employeur un cahier des charges.",
+    "les membres du comité établissent au besoin un cahier des charges. Sa notification à l'employeur est facultative.",
+)
+proposed += "<p>Ces dispositions s'appliquent aux expertises décidées à compter de l'entrée en vigueur de la loi qui supprime la notification obligatoire du cahier des charges. Les expertises décidées avant cette date restent régies par les dispositions antérieures, y compris pour les notifications, les créances et les recours qui s'y rapportent.</p>"
+rewrite(
+    number, proposed,
+    "Réforme de fond limitée à une formalité : supprimer la notification obligatoire par les membres du CSE du cahier des charges qu'ils établissent au besoin. L'élaboration utile de ce document et sa communication volontaire restent possibles. L'expert reste tenu de notifier coût prévisionnel, étendue et durée dans le délai réglementaire ; ces éléments permettent le contrôle et la contestation sans imposer un autre envoi du comité. Aucun agrément ni déclaration de remplacement n'est créé. Les expertises déjà décidées conservent leur circuit et leurs recours.",
+    "L2315-86 3° est coordonné dans ce lot : son point de départ repose désormais sur les informations notifiées par l'expert pour les nouvelles expertises. R2315-46, lu dans le corpus, conserve dix jours à compter de la désignation et ne rétablit pas l'envoi du cahier. R2315-49 conserve son délai de contestation de dix jours. Ni la justification du coût, ni le coût final, ni le recours au juge ne sont supprimés. La note de l'ordonnance de 2017 fixe l'entrée en vigueur historique de la source, au plus tard en 2018 ; elle ne fixe pas celle de cette réforme. Le gain ne concerne que les cas où un cahier des charges est établi : aucune obligation générale de rédiger un tel document n'est prétendue supprimée.",
+    impact(
+        'material_reduction',
+        "La source impose la notification du cahier établi au besoin par le CSE. La proposition rend cet envoi facultatif tout en conservant la notification prévisionnelle de l'expert : une formalité conditionnelle est réellement retirée, sans retrait du droit à expertise.",
+        "Allègement limité aux expertises nouvellement décidées pour lesquelles un cahier est établi ; les expertises antérieures gardent leur régime. Aucun montant de coût économisé ou solde de complexité de l'ensemble des codes n'est établi.",
+        "Aucune charge nouvelle identifiée : la notification de l'expert reste celle de la source, sans cahier à joindre, nouvelle donnée, registre, attestation ou délai supplémentaire.",
+        [effect(
+            'obligation_removed', 'cse-expertise-fin-notification-cahier-charges',
+            "Fin de la notification obligatoire du cahier des charges établi au besoin par le comité.",
+            "Pour une expertise désignée, le CSE qui établit au besoin un cahier des charges doit le notifier à l'employeur ; l'expert notifie en outre coût, étendue et durée.",
+            "Pour les nouvelles expertises, la notification du cahier est facultative ; seule la notification prévisionnelle de l'expert reste obligatoire dans son délai existant.",
+            'legal_duty', "Membres du CSE établissant un cahier des charges d'expertise ; employeur destinataire.",
+            "Expertises décidées à compter de l'entrée en vigueur de la loi ; circuit, créances et recours antérieurs conservés.",
+            "Aucun envoi de remplacement ; les trois informations prévisionnelles déjà dues par l'expert demeurent.",
+            "A compter de la désignation de l'expert par le comité social et économique, les membres du comité établissent au besoin et notifient à l'employeur un cahier des charges.",
+            "Sa notification à l'employeur est facultative.",
+        )],
+    ),
+    ["Notification obligatoire à l'employeur, par les membres du CSE, du cahier des charges établi au besoin pour l'expertise."],
+)
+
+# Coordination du point de départ du recours ; toutes les autres règles sont conservées.
+number = 'L2315-86'
+old_quote = "3° La notification à l'employeur du cahier des charges et des informations prévues à l'article L. 2315-81-1 s'il entend contester le coût prévisionnel, l'étendue ou la durée de l'expertise ;"
+new_quote = "3° La notification à l'employeur, par l'expert, des informations prévues à l'article L. 2315-81-1 s'il entend contester le coût prévisionnel, l'étendue ou la durée de l'expertise ;"
+proposed = by_number[number]['source_xml'].replace(old_quote, new_quote)
+proposed += "<p>La rédaction du 3° résultant de la suppression de la notification obligatoire du cahier des charges s'applique aux expertises décidées à compter de l'entrée en vigueur de la loi qui institue cette suppression. Pour les expertises décidées avant cette date, les dispositions antérieures, notamment les points de départ et les délais de recours, demeurent applicables. La présente modification ne rouvre aucun délai expiré.</p>"
+rewrite(
+    number, proposed,
+    "Coordination nécessaire, sans nouvelle réduction autonome : puisque L2315-81-1 rend facultative la notification du cahier des charges du CSE, le 3° fait partir le recours de la notification des seules informations prévisionnelles obligatoires de l'expert. Les autres cas de contestation, l'exception administrative, la décision sous dix jours, la suspension, l'absence d'appel, la restitution et la faculté favorable de prise en charge par le CSE restent intégralement conservés. Les anciennes expertises gardent leurs points de départ.",
+    "L1233-35-1 a été lu entier : contestation administrative avant demande de validation ou homologation et décision sous cinq jours, avec recours propre ; cette exception reste écrite. R2315-49/50, lus, prévoient saisine judiciaire sous dix jours et pourvoi sous dix jours à compter de la notification ; aucun de ces chiffres n'est confondu avec le délai de jugement ou le préavis individuel. L2312-15 conserve l'information suffisante, les recours et l'éventuelle prolongation judiciaire de consultation. La note du 17 juillet 2019 s'applique aux demandes introduites à partir du 1er janvier 2020 et demeure historique. La clé de mesure est commune à L2315-81-1 ; pas de seconde formalité supprimée comptabilisée. Le cahier peut toujours être communiqué volontairement sans redevenir une notification obligatoire préalable au recours.",
+    impact(
+        'coordination_only',
+        "Seule l'amorce du recours du 3° est ajustée à la suppression de l'envoi obligatoire du cahier. Les protections judiciaires et la prise en charge facultative par le CSE restent celles de la source entière ; aucune deuxième économie n'est comptée.",
+        "Coordination pour les expertises nouvelles ; anciennes expertises et délais expirés protégés. Les procédures administratives spéciales et les autres cas de recours ne sont pas modifiés.",
+        "Aucune charge nouvelle identifiée : la notification existante de l'expert devient le seul déclencheur du 3°, sans nouvelle pièce, déclaration ou procédure préalable.",
+        [effect(
+            'coordination', 'cse-expertise-fin-notification-cahier-charges',
+            "Ajustement du déclencheur de contestation au caractère facultatif du cahier, sans seconde suppression.",
+            "Le 3° mentionne la notification du cahier et des informations de L2315-81-1 ; le recours demeure enfermé dans le délai réglementaire de dix jours.",
+            "Pour les nouvelles expertises, le 3° mentionne les seules informations prévisionnelles obligatoires notifiées par l'expert ; même délai réglementaire de dix jours.",
+            'legal_duty', "Employeurs contestant coût prévisionnel, étendue ou durée ; CSE et experts concernés.",
+            "Même périmètre temporel que L2315-81-1 ; points de départ des anciennes expertises et délais expirés non rouverts.",
+            "Aucun recours ou document de remplacement ; l'exception administrative et les autres voies existantes sont conservées.",
+            old_quote, new_quote,
+        )],
+    ),
+)
+
+# Dispense ciblée de retransmission documentaire, et correction d'un renvoi incomplet de la source.
+number = 'L2316-1'
+old_sentence = "Dans ce cas, son avis accompagné des documents relatifs au projet est transmis, par tout moyen, aux comités sociaux et économiques d'établissement ;"
+new_sentence = "Dans ce cas, son avis est transmis, par tout moyen, aux comités sociaux et économiques d'établissement. Les documents relatifs au projet l'accompagnent, sauf s'ils sont déjà légalement, directement et intégralement accessibles aux membres des comités destinataires dans leur version à jour. Cette dispense ne réduit ni le contenu des informations dues ni les droits de communication et de recours des comités ;"
+proposed = by_number[number]['source_xml'].replace(old_sentence, new_sentence).replace(
+    "au 4° du II de l'article 2312-8", "au 4° du II de l'article L. 2312-8"
+)
+proposed += "<p>La dispense de nouvelle transmission des documents déjà accessibles s'applique aux transmissions effectuées à compter de l'entrée en vigueur de la loi qui l'institue, y compris pour les projets décidés auparavant. Les avis et documents déjà régulièrement transmis aux mêmes destinataires n'ont pas à être transmis à nouveau du seul fait de la présente réforme. Les droits et recours relatifs aux manquements antérieurs restent régis par les dispositions qui leur étaient applicables.</p>"
+rewrite(
+    number, proposed,
+    "Réduction de fond ciblée : le CSE central continue de transmettre son avis aux comités d'établissement, mais n'a plus à l'accompagner de copies des documents du projet déjà légalement, directement, intégralement et actuellement accessibles à leurs membres. Tous les documents manquants restent transmis avec l'avis. La compétence exclusive des trois cas et les futures consultations locales du 2° sont conservées. Le 3° corrige aussi le renvoi préexistant matériellement incomplet « article 2312-8 » en « article L. 2312-8 », sans changer son objet.",
+    "L2312-8 II 4°, L2312-15, L2312-18 et L2312-36 ont été lus. La BDESE et ses propositions permettent déjà certains accès sans recopie ; le seul gain ici concerne l'accompagnement documentaire du 1° encore exigé pour les projets, notamment ponctuels, et non les communications récurrentes déjà réputées effectuées. Aucune économie supplémentaire n'est comptée pour un accès valant déjà légalement communication. La dispense exige un accès effectif existant, sans obliger à créer une base ou à équiper les salariés ; les documents non accessibles restent joints. L2316-20 à L2316-22 conservent compétences locales et articulation des avis. Tous les alinéas et les 1° à 3° restent à leur place ; les mesures communes de santé-sécurité du 3° ne sont ni supprimées ni transformées en projet purement local. Le champ L2311-1, lu, inclut certains établissements publics sous conditions et adaptations sans convertir les agents statutaires au contrat privé.",
+    impact(
+        'material_reduction',
+        "Par rapport à l'accompagnement documentaire obligatoire du 1° dans la source entière, la proposition dispense de retransmettre les seules pièces du projet déjà effectivement accessibles. L'avis et les informations demeurent dus ; la correction de la lettre L du 3° n'est pas un gain supplémentaire.",
+        "Gain limité aux retransmissions encore obligatoires de documents déjà accessibles dans leur version à jour ; aucun gain nouveau sur les communications BDESE déjà dispensées, ni nombre de copies ou économie globale établi.",
+        "Aucune charge nouvelle identifiée : l'accès doit déjà exister ; aucun support, abonnement, registre, inventaire de pièces, attestation d'accès ou nouveau délai n'est imposé. Les pièces inaccessibles suivent le circuit source.",
+        [effect(
+            'obligation_removed', 'cse-central-dispense-retransmission-documents',
+            "Dispense de retransmettre les documents du projet déjà effectivement accessibles aux membres des comités d'établissement.",
+            "Dans le cas du 1°, l'avis central doit être accompagné des documents relatifs au projet lors de sa transmission aux comités d'établissement.",
+            "L'avis reste transmis ; seuls les documents qui ne sont pas déjà légalement, directement, intégralement accessibles et à jour doivent l'accompagner.",
+            'legal_duty', "CSE central transmetteur et membres des CSE d'établissement destinataires dans le cas du 1°.",
+            "Transmissions à compter de l'entrée en vigueur, même sur projet antérieur ; communications déjà faites et recours sur manquements antérieurs préservés.",
+            "Aucun document ou dispositif d'accès nouveau obligatoire ; maintien de l'envoi des pièces non accessibles et des garanties d'information.",
+            old_sentence,
+            "Les documents relatifs au projet l'accompagnent, sauf s'ils sont déjà légalement, directement et intégralement accessibles aux membres des comités destinataires dans leur version à jour.",
+        )],
+    ),
+    ["Accompagnement obligatoire de l'avis du CSE central par les documents du projet déjà légalement et effectivement accessibles aux membres des comités destinataires dans leur version à jour."],
+)
+
+# Coordination expressément attendue dans les notes de L2312-51 du corpus.
+number = 'L2316-2'
+proposed = by_number[number]['source_xml'].replace('L. 2312-42 à L. 2312-51', 'L. 2312-42 à L. 2312-50')
+proposed += "<p>La modification de cette plage de références s'applique à compter de l'entrée en vigueur de la loi supprimant les comptes rendus périodiques de l'article L. 2312-51. Le présent article ne rétablit aucune échéance ni aucun compte rendu supprimé par cette loi, y compris au titre d'une offre antérieure. Les droits et recours relatifs aux obligations antérieurement exigibles demeurent régis par les dispositions transitoires de cette suppression. Les autres attributions d'information et de consultation du comité central sont conservées.</p>"
+rewrite(
+    number, proposed,
+    "Coordination nécessaire de la borne OPA, de L2312-51 vers L2312-50, à la suite de l'abrogation prospective du suivi périodique proposée dans L2312-51 et déjà coordonnée dans L2312-52. L'information et la consultation centrales sur les projets importants économiques, financiers, de santé, de sécurité et de conditions de travail restent intégralement conservées. Aucun second calendrier ou compte rendu ne peut survivre par ce renvoi.",
+    "Les textes officiels et les propositions actuelles de L2312-42 à L2312-52 ont été lus dans le corpus public, sans confondre proposition et droit en vigueur. Les notes de L2312-51 demandaient expressément cette coordination de L2316-2. L2312-51 proposé supprime les échéances nouvelles de six, douze et vingt-quatre mois, y compris pour les offres anciennes, et protège les échéances déjà exigibles ; la transition présente y est alignée. L2312-8 II 4° conserve son objet et L2316-3 garde l'expertise centrale. Aucun renvoi nouveau n'est introduit ; la plage ne supprime pas les exceptions OPA applicables et ne modifie pas leurs conditions. Les garanties supérieures d'information-consultation et de prévention restent à leur champ propre, sans conformité générale présumée. Une seule mesure de suppression du suivi post-OPA, aucune obligation autonome retirée une seconde fois dans cet article.",
+    impact(
+        'coordination_only',
+        "La source vise encore L2312-51 en borne terminale ; la proposition retire cette référence devenue inadaptée au projet d'abrogation du suivi post-OPA. Toutes les compétences substantielles centrales sont maintenues : la suppression du suivi n'est pas comptée une seconde fois.",
+        "La suppression principale relève de la proposition de L2312-51 hors du lot ; la présente coordination n'abroge ni les engagements de l'auteur d'une OPA ni les obligations autonomes d'information. Aucun effet net national n'est établi.",
+        "Aucune charge nouvelle identifiée : pas de rapport, calendrier, registre ou nouvelle transmission ; la transition empêche précisément un suivi de remplacement par renvoi.",
+        [effect(
+            'coordination', 'cse-opa-suppression-suivi-periodique',
+            "Retrait de la borne renvoyant au suivi post-OPA supprimé, sans réduction supplémentaire comptée.",
+            "L2316-2 cite les cas de L2312-42 à L2312-51, dont le dernier texte impose un suivi post-OPA à six, douze et vingt-quatre mois.",
+            "L2316-2 cite L2312-42 à L2312-50 et réserve la transition de suppression du suivi ; les autres compétences centrales restent identiques.",
+            'legal_duty', "CSE central et employeurs concernés par les projets importants et les offres publiques.",
+            "Prise d'effet avec la loi supprimant le suivi ; échéances supprimées non rétablies sur offres anciennes et droits sur obligations déjà exigibles préservés.",
+            "Aucun suivi de substitution ; maintien des compétences et engagements autonomes.",
+            "Le comité social et économique central d'entreprise est informé et consulté sur tous les projets importants concernant l'entreprise en matière économique et financière notamment dans les cas définis aux articles L. 2312-42 à L. 2312-51 ainsi qu'en matière de santé, de sécurité et des conditions de travail, notamment dans les cas définis au 4° du II de l'article L. 2312-8.",
+            "Le comité social et économique central d'entreprise est informé et consulté sur tous les projets importants concernant l'entreprise en matière économique et financière notamment dans les cas définis aux articles L. 2312-42 à L. 2312-50 ainsi qu'en matière de santé, de sécurité et des conditions de travail, notamment dans les cas définis au 4° du II de l'article L. 2312-8.",
+        )],
+    ),
+)
+
+# Allègement de la condition de mandat préalable, avec éligibilité et voix inchangées.
+number = 'L2316-7'
+old_first = "Chaque organisation syndicale représentative dans l'entreprise désigne un représentant au comité social et économique central d'entreprise choisi soit parmi les représentants de cette organisation aux comités sociaux et économiques d'établissement, soit parmi les membres élus de ces comités."
+new_first = "Chaque organisation syndicale représentative dans l'entreprise désigne un représentant au comité social et économique central d'entreprise choisi parmi les salariés de l'entreprise qui remplissent les conditions d'éligibilité au comité social et économique qui leur sont applicables, sans qu'un mandat dans un comité social et économique d'établissement soit requis."
+proposed = by_number[number]['source_xml'].replace(old_first, new_first)
+proposed += "<p>La suppression de la condition de mandat préalable s'applique aux désignations effectuées à compter de l'entrée en vigueur de la loi qui l'institue. Les désignations régulièrement effectuées avant cette date et les mandats en cours ne sont pas remis en cause ; leurs conditions de cessation ainsi que les droits et recours qui s'y rapportent demeurent applicables.</p>"
+rewrite(
+    number, proposed,
+    "Réduction de fond de la restriction de choix : une organisation représentative peut désigner au comité central un salarié éligible sans qu'il détienne déjà un mandat syndical ou électif dans un comité d'établissement. L'appartenance à la collectivité de travail et les conditions d'éligibilité applicables protègent le rattachement et l'indépendance ; le mandat préalable ajoute une sélection sans fonction essentielle démontrée. Le nombre d'un représentant par organisation, la représentativité et la seule voix consultative restent identiques. Aucun droit ni mandat antérieur n'est supprimé.",
+    "L2314-2 et L2314-19 ont été lus : les représentants syndicaux d'établissement et les élus parmi lesquels la source imposait le choix sont soumis à des conditions d'éligibilité. La proposition conserve cette exigence pour les nouveaux candidats, sans imposer un dossier ni une élection préalable. La formule « qui leur sont applicables » respecte les conditions spéciales de l'intérim et du portage des L2314-20 et L2314-21, lus, et ne rétablit pas l'année générale d'ancienneté que la proposition de L2314-19 supprime pour son champ futur. Aucun seuil d'ancienneté propre à l'indemnité de rupture n'est applicable à la désignation. L2316-9 conserve le recours judiciaire sur les désignations ; L2411-1 3°, lu entier, protège le représentant syndical au CSE sans exiger un second mandat. Pas de nouvelle cible numérotée dans le corps proposé ni d'attribution aux agents publics statutaires. La note de 2018 reste historique. L'extension ne crée pas de siège syndical supplémentaire ni de seconde voix délibérative.",
+    impact(
+        'material_reduction',
+        "La source restreint la désignation centrale aux représentants syndicaux d'établissement ou aux élus de ces comités. La proposition retire le mandat préalable et ouvre le choix à d'autres salariés éligibles, avec le même siège consultatif : une condition d'accès est effectivement supprimée.",
+        "Ouverture pour les désignations futures, sans changement de représentativité, de nombre de sièges ou des conditions d'éligibilité générales et spéciales applicables. Aucun coût de représentation ou gain global de complexité n'est chiffré.",
+        "Aucune charge nouvelle identifiée : l'éligibilité conserve les garanties auxquelles étaient déjà soumis les candidats admis par la source ; aucun formulaire, attestation, scrutin préalable ou siège supplémentaire n'est imposé. La nouvelle possibilité de choix reste une faculté.",
+        [effect(
+            'obligation_removed', 'cse-central-libre-choix-representant-syndical',
+            "Suppression du mandat d'établissement préalable pour être désigné représentant syndical central.",
+            "Un représentant par organisation représentative, choisi exclusivement parmi ses représentants aux CSE d'établissement ou les élus de ces comités ; voix consultative.",
+            "Même représentant et même voix consultative, choisi parmi les salariés éligibles de l'entreprise sans mandat d'établissement préalable ; conditions spéciales d'éligibilité préservées.",
+            'legal_duty', "Organisations syndicales représentatives de l'entreprise et salariés pouvant être désignés au comité central.",
+            "Désignations à compter de l'entrée en vigueur ; mandats réguliers en cours, règles de cessation et recours préservés.",
+            "Aucune déclaration ou élection de remplacement ; maintien de l'éligibilité et du contrôle judiciaire, sans siège additionnel.",
+            old_first, new_first,
+        )],
+    ),
+    ["Obligation de détenir préalablement un mandat de représentant syndical ou de membre élu dans un CSE d'établissement pour être désigné au comité central."],
+)
+
+# Les quatre contrôles sont ceux exigés pour L2315-92, sans cible supplémentaire.
+checks = {
+    'L1234-1': "Le renvoi de L2315-92 II est à L2254-2, dont le V vise L1234-1 à L1234-11 ; ce n'est pas un renvoi direct imposant ici un préavis d'expertise. La source L1234-1 prévoit un ou deux mois selon l'ancienneté, avec réserve plus favorable, et la faute grave ; sa proposition réserve ces règles aux anciens contrats et fixe quinze jours calendaires pour les nouveaux, sans seuil d'ancienneté, y compris préavis payé si faute grave. Le point de départ de notification relève de L1234-3 selon la décision travail ; aucune procédure collective ou autorisation de salarié protégé n'est remplacée par ces quinze jours. Le maintien du droit à expertise est cohérent sans recopier ces durées dans L2315-92.",
+    'L1221-2': "L2315-92 organise l'expertise et l'aide aux négociations, sans créer de type de contrat. La source L1221-2 autorise encore des contrats à terme dans les cas du titre IV ; sa proposition impose le contrat indéterminé aux nouvelles relations et interdit leur fin automatique avec une mission ou formation, ainsi que les nouveaux renouvellements à terme. Les anciennes situations restent transitoirement distinctes. Les futurs salariés sous contrat unique gardent la représentation et les droits à expertise du présent article ; aucun nouveau CDD ni contrat public n'est créé par le maintien du I ou du II. Le seuil indemnitaire et la notification de rupture n'y sont pas des conditions d'expertise.",
+    'L1234-9': "La source L1234-9 ouvre l'indemnité ordinaire à huit mois hors faute grave ; sa proposition distingue les nouveaux contrats : un an apprécié au terme effectif avec préavis inclus, puis 0,20 mois par année totale, fractions en mois complets, plafond de six mois, initiative patronale seule, avec ses autres conditions d'ouverture. Elle réserve la composante ancienne, les garanties plus favorables et les indemnités spéciales. L2315-92 ne calcule aucune indemnité : le renvoi indirect par L2254-2 V ne transforme ni le seuil en franchise de première année ni l'expertise collective en procédure individuelle de quinze jours. Les salaires, congés et réparations restent distincts ; pas d'incohérence de renvoi exigeant un nouveau corps ici.",
+    'L2254-2': "Le II de L2315-92 vise réellement l'appui d'un expert à la préparation de l'accord de performance collective, distinct de l'accord PSE de L1233-24-1 ; la règle du même expert concerne seulement ce dernier cas. La source L2254-2 comporte refus écrit sous un mois après information datée, puis deux mois pour engager le licenciement ; ces délais sont conservés par sa proposition. Celle-ci coordonne préavis individuel de quinze jours après notification, indemnité à partir d'un an au terme effectif, 0,20 mois sur toute l'ancienneté et plafond légal de six mois, avec les transitions anciennes, droits CPF et protections spéciales. Ni l'expertise ni ce renvoi ne suppriment les procédures collectives ou autorisations distinctes. Le préambule facultatif proposé dans la cible ne rend pas facultative l'information permettant le refus.",
+}
+source_92 = by_number['L2315-92']
+source_key = source_92['code_id'] + '|' + source_92['source_id']
+for target_key in references['requirements'][source_key]:
+    target = references['targets'][target_key]
+    answers['L2315-92']['reference_checks'].append({
+        'target_key': target_key,
+        'view_sha256': target['view_sha256'],
+        'assessment': checks[target['number']],
+    })
+
+ordered = [answers[s['number']] for s in sources]
+Path('answer.json').write_text(json.dumps(ordered, ensure_ascii=False, indent=2) + '\n')
+
+# Contrôles de structure et de traçabilité, sans prétention de validation juridique.
+def plain(xml):
+    return unescape(re.sub(r'<[^>]*>', '', xml or ''))
+
+
+assert len(ordered) == len(sources) == 24
+assert len(answers) == 24
+for source, result in zip(sources, ordered):
+    for key in ['code_id', 'source_id', 'source_sha256', 'number']:
+        assert result[key] == source[key], (result['number'], key)
+    key = source['code_id'] + '|' + source['source_id']
+    required = references['requirements'][key]
+    assert [c['target_key'] for c in result['reference_checks']] == required
+    for check in result['reference_checks']:
+        assert len(check['assessment']) >= 80
+        assert check['view_sha256'] == references['targets'][check['target_key']]['view_sha256']
+    si = result['substantive_impact']
+    assert si['version'] == 1
+    for field in ['assessment', 'scope_limitations', 'new_burdens_review']:
+        assert len(si[field]) >= 40, (result['number'], field)
+    if source.get('benefit_check_required'):
+        assert len(result['benefit_review']) >= 100
+    if result['status'] == 'retained_unchanged':
+        assert result['proposed_xml'] is None
+        assert result['classification'] == si['classification'] == 'retained_necessary'
+        assert si['effects'] == []
+    else:
+        assert result['proposed_xml'] and result['proposed_xml'] != source['source_xml']
+    if result.get('change_type') == 'normative_reduction':
+        assert result['reform_policy_id'] == 'editorial_direction_2026_10_19'
+        assert all(len(x) >= 30 for x in result['removed_provisions'])
+    for item in si['effects']:
+        assert re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', item['measure_id'])
+        assert 6 <= len(item['measure_id']) <= 96
+        assert len(item['source_quote']) >= 12 and item['source_quote'] in plain(source['source_xml']), (result['number'], 'source_quote')
+        assert len(item['proposed_quote']) >= 12 and item['proposed_quote'] in plain(result['proposed_xml']), (result['number'], 'proposed_quote')
+
+print(json.dumps({
+    'articles': len(ordered),
+    'rewrite_draft': sum(x['status'] == 'rewrite_draft' for x in ordered),
+    'retained_unchanged': sum(x['status'] == 'retained_unchanged' for x in ordered),
+    'material_reduction': sum(x['substantive_impact']['classification'] == 'material_reduction' for x in ordered),
+    'coordination_only': sum(x['substantive_impact']['classification'] == 'coordination_only' for x in ordered),
+    'reference_checks': sum(len(x['reference_checks']) for x in ordered),
+}, ensure_ascii=False))

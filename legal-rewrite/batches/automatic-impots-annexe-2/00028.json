@@ -34,10 +34,51 @@
     "source_id": "LEGIARTI000022179520",
     "source_sha256": "c4159be3fb5c1f63e378b18db5e32fb8ae0cf2f658696589c48aafedf1fd2533",
     "number": "383",
-    "proposed_xml": "<p>Les droits exigibles au titre de la taxe sur les salaires en application des 1 et 2 bis de l'article 231 du code général des impôts et des articles 142 à 143 de la présente annexe font l'objet d'un versement global au Trésor. Ce versement est effectué dans les conditions et délais et sous les sanctions prévus aux articles 1679, 1679 A, 1679 bis, 1727, 1728, 1729, 1731 et aux I et IV de l'article 1754 du code général des impôts, ainsi qu'aux articles 51, 369 et au 1 de l'article 374 de l'annexe III à ce code.</p>",
-    "reason": "Réécriture à droit constant : le principe du versement global est distingué des règles de délai et de sanction auxquelles il renvoie. Tous les renvois sont conservés ; aucune modification du champ ou du montant de la taxe n'est introduite.",
-    "review_notes": "Alinéa unique maintenu ; seuls les sauts de ligne de présentation sont supprimés. Contrôle de la liste complète des renvois, notamment les 1 et 2 bis de l'article 231, les I et IV de l'article 1754 et le 1 de l'article 374 de l'annexe III. Les réformes de CSG salariale et d'IS ne s'appliquent pas à cette taxe distincte.",
-    "status": "rewrite_draft"
+    "status": "rewrite_draft",
+    "proposed_xml": "<p>Le présent article ne s'applique qu'à la taxe sur les salaires afférente aux rémunérations versées avant la date d'entrée en vigueur de la loi portant suppression de la taxe sur les salaires prévue à l'article 231 du code général des impôts. Il ne peut fonder aucune taxe, déclaration, donnée ou versement sur les rémunérations soustraites à l'imposition par cet article 231.</p>\n<p>Les droits exigibles au titre de la taxe sur les salaires en application des 1 et 2 bis de l'article 231 du code général des impôts et des articles 142 à 143 de la présente annexe font l'objet d'un versement global au Trésor. Ce versement est effectué dans les conditions et délais et sous les sanctions prévus aux articles 1679, 1679 A, 1679 bis, 1727, 1728, 1729, 1731 et aux I et IV de l'article 1754 du code général des impôts, ainsi qu'aux articles 51, 369 et au 1 de l'article 374 de l'annexe III à ce code.</p>\n<p>Pour les rémunérations antérieures, demeurent applicables les règles de liquidation et de régularisation, les franchises, décotes, abattements, exonérations et taux réduits, les imputations et restitutions, les prescriptions et voies de recours qui leur sont applicables. Les modalités de versement et de déclaration plus favorables prévues à l'article 369 de l'annexe III au code général des impôts restent applicables dans leur champ, sans rétablissement des relevés, versements périodiques ou dépôts anticipés qu'elles suppriment. Aucune somme n'est acquittée ou imputée deux fois.</p>",
+    "reason": "Réserver intégralement le calcul, la déclaration ou le recouvrement de la taxe au portefeuille de rémunérations anciennes ; empêcher le rétablissement de la taxe abolie par une disposition d'exécution. Aucune seconde taxe supprimée n'est comptée.",
+    "review_notes": "Source et notes entières, proposition antérieure entière et article231 entier lus. Tous les calculs, seuils, exceptions et éléments de la proposition antérieure restent reproduits sans modification, sous la seule restriction prospective explicite. La transition du231 commande l'année mixte ; les modalités annuelles allégées de369/374 ne sont pas rétablies sous leur ancien régime périodique.",
+    "benefit_review": "Les droits du portefeuille ancien restent entiers : exonérations, franchises1200euros, décote jusqu'à2040euros, abattement associatif indexé, taux ultramarins, annualisation favorable et restitutions gardent leurs conditions propres. Le texte ne crée aucune déclaration ou charge de remplacement sur les rémunérations nouvelles.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Réserver intégralement le calcul, la déclaration ou le recouvrement de la taxe au portefeuille de rémunérations anciennes ; empêcher le rétablissement de la taxe abolie par une disposition d'exécution. Aucune seconde taxe supprimée n'est comptée. Les articles coordonnés partagent une seule mesure fiscale.",
+      "scope_limitations": "Le coût national et le solde net consolidé ne sont pas chiffrés ; aucun effet d'emploi ni recette de remplacement n'est présumé. Les textes hors corpus et les formalités externes restant à adapter sont recensés ; les cotisations ordinaires et autres prélèvements distincts ne sont pas supprimés.",
+      "new_burdens_review": "Aucune déclaration, registre, autorisation ni taxe de remplacement. La ventilation des rémunérations de l'année de bascule utilise les déclarations anciennes dans leur champ, sans double dépôt. Les règles autonomes conservées ne sont pas des obligations nouvelles ; le coût des régimes sociaux et les ajustements informatiques restent non chiffrés.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "taxe-sur-les-salaires-suppression",
+          "description": "Réserver intégralement le calcul, la déclaration ou le recouvrement de la taxe au portefeuille de rémunérations anciennes ; empêcher le rétablissement de la taxe abolie par une disposition d'exécution. Aucune seconde taxe supprimée n'est comptée.",
+          "before": "Disposition de calcul, déclaration, recouvrement ou renvoi autonome à la taxe sur les salaires, avant sa suppression.",
+          "after": "Seul portefeuille TSA ancien maintenu, ou définition/procédure autonome préservée pour le dispositif distinct ; aucune nouvelle taxe supprimée à compter.",
+          "unit": "legal_duty",
+          "source_quote": "L'ensemble des droits exigibles au titre de la taxe sur les salaires en application des dispositions des 1 et 2 bis de l'article 231 du code général des impôts et des articles 142 à 143 de la présente annexe est versé globalement au Trésor dans les conditions et délais et sous les sanctions prévus aux articles 1679, 1679 A, 1679 bis, 1727, 1728, 1729, 1731 et aux I et IV de l'article 1754 du code général des impôts ainsi qu'aux articles 51, 369 et au 1 de l'article 374 de l'annexe III à ce code.",
+          "proposed_quote": "Le présent article ne s'applique qu'à la taxe sur les salaires afférente aux rémunérations versées avant la date d'entrée en vigueur de la loi portant suppression de la taxe sur les salaires prévue à l'article 231 du code général des impôts. Il ne peut fonder aucune taxe, déclaration, donnée ou versement sur les rémunérations soustraites à l'imposition par cet article 231.",
+          "affected_population": "Employeurs effectivement redevables de TSA ; bénéficiaires déjà exonérés conservés. Organismes sociaux affectataires et autorités fiscales pour les seules coordinations.",
+          "conditions_and_transition": "Rémunérations versées à compter de l'entrée en vigueur de la loi supprimant la TSA ; paiements antérieurs, seuils annuels non proratisés, avantages et recours préservés. Les dispositifs autonomes gardent leurs périodes et bénéficiaires propres.",
+          "replacement_or_new_burdens": "Aucun prélèvement de remplacement ni compensation inventée. Les données nécessaires à IR/cotisations/PEEC/formation restent dues selon leur fondement propre, sans données exclusivement TSA pour les rémunérations nouvelles."
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Application de la taxe sur les salaires ou de ses seules formalités aux rémunérations futures, et dépendance d’un dispositif distinct à son maintien comme impôt exigible."
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "c4159be3fb5c1f63e378b18db5e32fb8ae0cf2f658696589c48aafedf1fd2533",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "a758b7fd0dc33ddec0e4778ca8318c590b4d6f5a6e3aa0c413e14110fb1b7379",
+      "assessment_sha256": "f909611c55c8a29cc5b4e17ec35850a9e6aaac1d31fd1a9bf15a718ead7fb2ca",
+      "policy_sha256": "85982bff4c7fdba97ac4130c87bc752004065d14a5a637a540efaa09183594c2",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "2af11c987f966aa28445fc653e864202e1e333de5057dbaafef4af4c1897c385"
   },
   {
     "code_id": "LEGITEXT000006069569",

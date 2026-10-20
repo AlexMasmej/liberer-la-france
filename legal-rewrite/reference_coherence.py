@@ -163,7 +163,10 @@ def accept_checks(rows,expected,snapshot,catalog=None):
             if not isinstance(item,dict):raise ValueError('Malformed reference check')
             identifier=item.get('target_key')
             if identifier in found:raise ValueError('Duplicate reference check')
-            if identifier not in needed:raise ValueError('Unexpected reference target in assessment')
+            if identifier not in needed:
+                raise ValueError('Unexpected reference target in assessment for '+key(row)+': '+str(identifier)+
+                                 '. reference_checks must contain only this article’s required targets; '
+                                 'put any optional analysis in review_notes instead.')
             if item.get('view_sha256')!=snapshot['targets'][identifier]['view_sha256']:raise ValueError('Reference assessment uses an outdated target')
             if not isinstance(item.get('assessment'),str) or len(item['assessment'].strip())<80:raise ValueError('Reference assessment must explain the actual rule, transition or inapplicability')
             found[identifier]=item
@@ -193,5 +196,5 @@ def certificate_current(db,article,body,certificate,catalog=None):
 
 PROMPT='''
 RENVOIS AU CONTRAT UNIQUE : lis reference-targets.json en entier, pour les cibles applicables à tes articles. Ce fichier contient les textes officiels entiers, leurs notes et les propositions actuelles ; une proposition n'est pas le droit en vigueur. Les identifiants dans requirements désignent les cibles à vérifier pour chaque article source. Vérifie le champ de chaque renvoi, les alinéas/subdivisions réellement visés, les anciens contrats, les avantages futurs et les exceptions spéciales. Un renvoi à un code extérieur ou à un régime public ne doit pas être attribué artificiellement au contrat privé : explique l'inapplicabilité lorsqu'elle existe.
-Pour chaque objet answer.json concerné, ajoute reference_checks : une liste d'objets target_key, view_sha256, assessment. Couvre toutes les cibles requises. Reprends leurs empreintes EXACTES et donne pour chaque cible au moins80caractères d'analyse spécifique : règle réellement visée, cohérence/rectification du renvoi, condition d'ancienneté et de notification ou distinction d'une ancienne règle/situation spéciale. Pas de simple « vérifié ». Tout nouveau renvoi à une cible non fournie doit être signalé ; n'invente pas son contenu. La vérification automatique ne constitue aucune approbation juridique.
+Pour chaque objet answer.json concerné, ajoute reference_checks : une liste d'objets target_key, view_sha256, assessment. Elle couvre EXACTEMENT les cibles requises pour cet article, sans cible supplémentaire même si elle figure dans le contexte d'un autre article. Place les analyses facultatives dans review_notes. Reprends leurs empreintes EXACTES et donne pour chaque cible au moins80caractères d'analyse spécifique : règle réellement visée, cohérence/rectification du renvoi, condition d'ancienneté et de notification ou distinction d'une ancienne règle/situation spéciale. Pas de simple « vérifié ». Tout nouveau renvoi à une cible non fournie doit être signalé ; n'invente pas son contenu. La vérification automatique ne constitue aucune approbation juridique.
 '''

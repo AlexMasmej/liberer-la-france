@@ -1,0 +1,65 @@
+{
+  "attempts": [
+    {
+      "url": "https://www11.minefi.gouv.fr/boi/boi2012/4fepub/textes/4a612/4a612.pdf",
+      "method": "standard HTTPS urllib, public official site",
+      "result": "downloaded; PDF49pages, visually checked page32; missing both formulas",
+      "provenance_file": "boi-4a612-provenance.json"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023333871",
+      "method": "standard public HTTPS; no custom authentication or anti-protection headers",
+      "result": "HTTP403; not retried with evasive credentials/headers",
+      "evidence": "legifrance-standard-attempt.json"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000023333871",
+      "method": "web reader normal public URL exposed by source",
+      "result": "tool could not access; no document acquired"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/download/pdf?id=JORFTEXT000023333871",
+      "method": "web reader standard endpoint (not a token or challenge bypass)",
+      "result": "tool could not access; no document acquired"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFSCTA000000893867",
+      "method": "normal public Chrome navigation",
+      "result": "security verification page; challenge left untouched; no downloadMedia used"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFSCTA000000893867",
+      "method": "web reader",
+      "result": "historical HTML text accessible; equation linearly fragmented/duplicated, not a visually verified facsimile; no attempt to reconstruct currentformula"
+    },
+    {
+      "url": "https://bofip-archives.impots.gouv.fr/bofip/24759-AIDA.html/identifiant=-20120330",
+      "method": "web reader",
+      "result": "official annex3 also contains two JO referrals, no formula images at those positions"
+    },
+    {
+      "url": "https://legislation.lassuranceretraite.fr/Pdf/circulaire_rsi_2011_017_14062011.pdf",
+      "method": "web reader",
+      "result": "official circular on 2010age changes; inspected relevant passage, not an original formula facsimile; no recoveryclaim"
+    },
+    {
+      "url": "https://www.sgfgas.fr/",
+      "method": "web reader",
+      "result": "tool internal/access error; no resource acquired"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000017767416",
+      "method": "web reader",
+      "result": "not accessible; no resource acquired"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000038731196",
+      "method": "web reader",
+      "result": "HTTP403 on open; indexed initialtext metadata accessible; no PDF acquired"
+    }
+  ],
+  "protection_bypassed": false,
+  "captcha_solved": false,
+  "active_registry_changed": false,
+  "canonical_articles_written": false
+}

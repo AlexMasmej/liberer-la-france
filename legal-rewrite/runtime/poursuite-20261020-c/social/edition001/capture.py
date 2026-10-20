@@ -1,0 +1,11 @@
+from pathlib import Path
+import json,sqlite3,hashlib,sys,datetime,copy
+P=Path(__file__).resolve().parent;L=P.parents[3];sys.path.insert(0,str(L));from ingest import source_notes
+sha=lambda v:hashlib.sha256(v if isinstance(v,bytes)else(v or'').encode()).hexdigest()
+nums=['L242-12-1','L243-5','L243-6','L243-6-5','L243-6-6','L243-13','L244-2','R243-6-3','R243-11','R243-12','R243-13','R243-14','R243-15','R243-17','R243-18','R243-19','R243-26','R243-45-1','R243-46','R243-48','R243-51','R243-53','R243-59-6-A','R243-59-6']
+export=json.loads((L/'runtime/export-source/securite-sociale.json').read_text());by={x['number']:x for x in export};db=sqlite3.connect('file:'+str(L/'corpus.sqlite')+'?mode=ro',uri=True);db.row_factory=sqlite3.Row;db.execute('BEGIN');rows=[]
+for n in nums:
+ x=copy.deepcopy(by[n]);c,i=x['code_id'],x['source_id'];r=dict(db.execute('select * from articles where code_id=? and id=?',(c,i)).fetchone());d=db.execute('select * from drafts where code_id=? and source_id=?',(c,i)).fetchone();assert not d;raw=dict(db.execute("select xml,sha256 from documents where code_id=? and id=? and kind='ARTICLE'",(c,i)).fetchone());notes=source_notes(db,c,i);assert r['content_xml']==x['source_xml'];assert sha(raw['xml'])==raw['sha256']==r['source_sha256'];x.update(source_xml=r['content_xml'],source_notes_xml=notes,source_body_sha256=sha(r['content_xml']),source_notes_sha256=sha(notes),source_document_xml=raw['xml'].decode()if isinstance(raw['xml'],bytes)else raw['xml'],source_document_sha256=sha(raw['xml']),previous_draft=None,benefit_check_required=True,impact_check_required=True);rows.append(x)
+db.rollback();db.close();(P/'source.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
+for n in ['policy-coordinations.json','site-summaries.json']:(P/n).write_bytes((L/n).read_bytes())
+(P/'capture.json').write_text(json.dumps(dict(captured_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),mode='ro BEGIN',articles=24,source_chars=sum(len(x['source_xml'])for x in rows),all_current_export=True,all_without_draft=True,policy_sha256={n:sha((P/n).read_bytes())for n in ['policy-coordinations.json','site-summaries.json']}),ensure_ascii=False,indent=2)+'\n');print('CAPTURE',len(rows),sum(len(x['source_xml'])for x in rows))

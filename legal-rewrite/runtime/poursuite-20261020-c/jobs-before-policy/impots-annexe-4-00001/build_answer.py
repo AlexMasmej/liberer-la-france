@@ -1,0 +1,291 @@
+import json
+from pathlib import Path
+
+sources = json.loads(Path('source.json').read_text())
+drafts = {}
+
+
+def put(number, xml, reason, notes):
+    assert number not in drafts
+    drafts[number] = dict(proposed_xml=xml.strip(), reason=reason,
+                          review_notes=notes, status='rewrite_draft')
+
+
+put('01', """
+<p>L'imposition des personnes physiques qui n'ont pas leur domicile fiscal en France et des personnes mentionnées au 2 de l'article 4 B du code général des impôts relève du service des impôts des non-résidents. Cette règle ne s'applique pas aux personnes physiques mentionnées à l'article 121 Z quinquies de la présente annexe.</p>
+""", "Réécriture à droit constant : le service compétent est désigné par une phrase principale et l'exception relative aux personnes visées à l'article 121 Z quinquies fait l'objet d'une phrase distincte dans le même alinéa. Aucune réforme de fond du lieu d'imposition n'est prévue par policy.json pour cet article.",
+    "Renvois au 2 de l'article 4 B du CGI et à l'article 121 Z quinquies de l'annexe IV conservés. Ce dernier renvoi a été vérifié dans le corpus : il règle notamment le dépôt des déclarations de personnes résidant habituellement à Monaco. Ne pas étendre la compétence du service des non-résidents à cette exception.")
+
+put('01 bis', """
+<p>I. – Pour l'application du A du 1 du o du 1° du I de l'article 31 du code général des impôts, les communes caractérisées par un déséquilibre important entre l'offre et la demande de logements sont celles classées dans les zones A bis, A et B1 définies à l'article D. 304-1 du code de la construction et de l'habitation.</p>
+<p>II. – Pour l'application du B du 1 du o du 1° du I de l'article 31 du code général des impôts, les communes caractérisées par un déséquilibre entre l'offre et la demande de logements, autres que celles mentionnées au A du 1 du même o, sont celles classées dans la zone B2 définie à l'article D. 304-1 du code de la construction et de l'habitation.</p>
+<p>III. – Pour l'application du C du 1 du o du 1° du I de l'article 31 du code général des impôts, les communes autres que celles mentionnées aux A et B du 1 du même o sont celles classées dans la zone C définie à l'article D. 304-1 du code de la construction et de l'habitation.</p>
+""", "Réécriture à droit constant : les trois définitions territoriales sont formulées directement, sans modifier leur numérotation ni les exclusions réciproques. Les orientations de réforme du logement ne définissent pas de changement de ce zonage fiscal.",
+    "Conserver la correspondance A bis/A/B1 au I, B2 au II et C au III, ainsi que chacun des niveaux des renvois à l'article 31 du CGI et à l'article D. 304-1 du CCH. Ces zones ne sont pas remplacées par les secteurs de densification envisagés par la réforme de l'urbanisme ; les champs sont distincts.")
+
+put('01 ter', """
+<p>I. – Pour l'application du 3 du o du 1° du I de l'article 31 du code général des impôts en France métropolitaine, le contribuable doit justifier que la consommation conventionnelle en énergie primaire du logement est inférieure à 331 kWh/m2/an.<br><br>Cette consommation est évaluée pour les usages suivants : chauffage, production d'eau chaude sanitaire et refroidissement.<br><br>Le contribuable justifie du respect de cette exigence dans les conditions fixées au II.<br><br>II. – Pour justifier du respect des exigences de performance énergétique mentionnées au I, le contribuable fournit une évaluation énergétique établie selon une méthode de calcul conventionnel conforme aux dispositions des arrêtés du 15 septembre 2006 modifiés. Ces arrêtés concernent respectivement les méthodes et procédures applicables au diagnostic de performance énergétique pour les bâtiments existants proposés à la vente en France métropolitaine et le diagnostic de performance énergétique pour les bâtiments proposés à la vente en France métropolitaine. Cette méthode s'applique quels que soient l'année de construction et le type du bâtiment. L'évaluation est réalisée par une personne qui remplit soit les conditions prévues à l'article L. 271-6 du code de la construction et de l'habitation, soit celles prévues par le décret n° 2018-416 du 30 mai 2018 relatif aux conditions de qualification des auditeurs réalisant l'audit énergétique éligible au crédit d'impôt sur le revenu pour la transition énergétique prévues au dernier alinéa du 2 de l'article 200 quater du code général des impôts.<br><br>L'évaluation énergétique mentionnée au premier alinéa doit être en cours de validité à la date de dépôt de la demande de convention auprès de l'Agence nationale de l'habitat.</p>
+""", "Réécriture à droit constant : l'obligation de justification est attribuée au contribuable, les usages énergétiques sont énumérés clairement et la phrase relative aux deux arrêtés est divisée. Le seuil, les deux voies de qualification de l'évaluateur et la date d'appréciation de la validité restent identiques. Aucune dérogation énergétique nouvelle n'est introduite.",
+    "Seuil strictement inférieur à 331 kWh/m2/an, limité ici à la France métropolitaine. Les arrêtés modifiés du 15 septembre 2006, le décret n° 2018-416 du 30 mai 2018, l'article L. 271-6 du CCH et le dernier alinéa du 2 de l'article 200 quater du CGI sont conservés. Ces références anciennes de méthode et de crédit d'impôt appellent un contrôle de coordination avec les textes ultérieurs, sans substitution silencieuse. La voie de rénovation locative de vingt-quatre mois envisagée dans policy.json ne dispense pas de cette condition fiscale et nécessite notamment une disposition dans la loi n° 89-462 du 6 juillet 1989 ; aucun numéro d'article nouveau n'est inventé.")
+
+put('01 quater', """
+<p>I. – Pour l'application du 3 du o du 1° du I de l'article 31 du code général des impôts en Guadeloupe, en Martinique, en Guyane, à La Réunion et à Mayotte, le contribuable doit justifier que le logement présente au moins une des améliorations de la performance énergétique mentionnées à l'article 2 de l'arrêté du 25 mai 2011 modifié relatif à l'application en outre-mer de dispositions concernant les avances remboursables sans intérêts destinées au financement de travaux de rénovation afin d'améliorer la performance énergétique des logements anciens. Cette amélioration doit satisfaire aux exigences mentionnées aux articles 3 à 6 du même arrêté.<br><br>II. – Sur simple demande, le contribuable doit produire toutes les factures ou notes émises par les entreprises prestataires, ou tout autre moyen de preuve compatible avec les règles de la procédure écrite, permettant d'établir que le logement remplit les conditions prévues au I.</p>
+""", "Réécriture à droit constant : la condition technique est séparée de son niveau d'exigence et la production des justificatifs est énoncée comme une obligation du contribuable sur simple demande. Les cinq territoires, le minimum d'une amélioration et l'ouverture aux autres preuves écrites sont préservés. Aucune réforme de fond n'est appliquée à ce régime ultramarin.",
+    "Maintien du renvoi fiscal au 3 du o du 1° du I de l'article 31 du CGI et des renvois aux articles 2 et 3 à 6 de l'arrêté modifié du 25 mai 2011. Le seuil métropolitain de 331 kWh/m2/an de l'article 01 ter n'est pas transposé outre-mer. Les projets de rénovation locative exigent leurs propres dispositions et ne valent pas suppression des conditions fiscales présentes.")
+
+put('02', """
+<p>I. – Les matériels destinés à économiser l'énergie et les équipements de production d'énergies renouvelables figurant sur la liste mentionnée au 2 ne peuvent bénéficier de l'amortissement dégressif accéléré prévu au 2° de l'article 39 AA du code général des impôts ou de l'amortissement exceptionnel prévu à l'article 39 AB du même code que s'ils peuvent être séparés des appareils auxquels ils ont été adjoints sans être rendus définitivement inutilisables.</p>
+<p>II. – La liste des matériels est la suivante :</p>
+<p>1. Matériels permettant de récupérer la force ou la chaleur produite par l'emploi d'hydrocarbures liquides ou gazeux, de combustibles minéraux solides ou d'électricité :</p>
+<p>1° a. Matériels permettant directement de récupérer l'énergie et de transporter l'énergie récupérée :</p>
+<p>– chaudières à vapeur, à eau chaude ou à fluide thermique, à haut rendement, c'est-à-dire supérieur à 90 % PCS ;</p>
+<p>– chaudières de récupération sur effluents thermiques ou gaz pauvre de procédé ;</p>
+<p>b. Échangeurs thermiques récupérateurs sur fluides liquides, gazeux ou de refroidissement : échangeurs tubulaires, à plaques, à caloducs, par fluide caloporteur ou rotatifs. Ces matériels doivent être destinés à la production d'eau chaude, de vapeur, de fluide thermique ou d'air. L'énergie échangée est utilisée pour le préchauffage d'air de combustion, de produits, de combustibles ou de fluides utilisés dans des cycles binaires, ou pour la récupération de frigories sur des fluides détendus ;</p>
+<p>c. Installations permettant de préchauffer des produits par échange direct avec des rejets thermiques ;</p>
+<p>d. Incinérateurs de sous-produits de fabrication ou de déchets, avec récupération d'énergie, et installations annexes de stockage, de manutention et de préparation ;</p>
+<p>e. Hottes et dispositifs permettant de capter la chaleur de refroidissement de solides après une opération nécessitant une élévation de température ;</p>
+<p>f. Matériels permettant de récupérer, de transporter, de stocker, de préparer et de valoriser sous forme d'énergie les gaz fatals issus comme sous-produits de procédés industriels ;</p>
+<p>g. Dispositifs mécaniques ou électromécaniques permettant de récupérer l'énergie mécanique potentielle de fluides sous pression : turbines et turboalternateurs mus par la détente de gaz ou de fluides sous pression destinés à un procédé de fabrication ou provenant d'un tel procédé ;</p>
+<p>h. Pompes à chaleur à recompression mécanique de vapeur dont le coefficient de performance est supérieur ou égal à 4, et matériels permettant la thermocompression directe de fluides avec recyclage de l'énergie ainsi récupérée ;</p>
+<p>i. Turbines à condensation pour la production d'électricité, lorsque la vapeur est produite pour l'essentiel lors de l'incinération de déchets industriels ou ménagers, ou par récupération sur un procédé de fabrication excédentaire en énergie ;</p>
+<p>2° Matériels de cogénération permettant de produire simultanément, dans un seul processus, de l'énergie thermique et de l'énergie électrique et/ou mécanique :</p>
+<p>a. Turbines de détente de vapeur en contre-pression ;</p>
+<p>b. Turbines de détente de fluides utilisés dans des cycles binaires de production d'électricité à partir de rejets thermiques à bas niveau ;</p>
+<p>c. Turbines de détente de haute pression utilisées à la place de vannes de laminage ou de détente ;</p>
+<p>d. Turbines à gaz et moteurs thermiques équipés pour récupérer l'énergie des gaz d'échappement et/ou des fluides de refroidissement ;</p>
+<p>3° Matériels permettant de transformer en énergie électrique ou mécanique l'énergie cinétique des turbines mentionnées ci-dessus ;</p>
+<p>4° Générateurs électrochimiques à usage stationnaire.</p>
+<p>2. Matériels permettant d'améliorer le rendement énergétique d'appareils ou d'installations consommant de l'énergie :</p>
+<p>a. Matériels de combustion performants acquis pour remplacer un matériel de combustion classique : brûleurs autorécupérateurs et brûleurs régénératifs ;</p>
+<p>b. Matériels de régulation améliorant les performances énergétiques des fours, chaudières, séchoirs, moteurs ou machines-outils ;</p>
+<p>c. Matériels permettant une chauffe en surface ou dans la masse à la place d'un chauffage global classique : chauffage infrarouge au gaz ou à l'électricité, à haute fréquence, par rayonnement ultraviolet ou par micro-ondes ;</p>
+<p>d. Matériels de mesure ou enregistreurs permettant de mieux contrôler le rendement énergétique des installations, à l'exception des appareils de contrôle prévus aux articles R. 224-26 et R. 224-27 du code de l'environnement ;</p>
+<p>e. Matériels de séparation performants remplaçant un système de séparation par voies thermiques : membranes polymères, minérales ou cryogéniques ;</p>
+<p>f. Matériels permettant d'économiser l'énergie par l'optimisation et la commande centralisée de la gestion d'un ensemble de dispositifs consommateurs d'énergie, et affectés exclusivement à cet usage : systèmes informatiques centralisés de mesure et de commande ou systèmes répartis par microprocesseurs ;</p>
+<p>g. Matériels permettant de réduire les pertes sur les réseaux de fluides énergétiques, tels que les purgeurs de vapeur. Les réseaux concernés sont les réseaux de condensats, de vapeur, d'air comprimé, de vide ou de fluide frigorigène ;</p>
+<p>h. Matériels d'isolation utilisés dans les secteurs tertiaire et industriel pour limiter les déperditions thermiques des matériels qui utilisent ou transportent de l'énergie ;</p>
+<p>i. Matériels permettant de diminuer la consommation d'énergie réactive des installations électriques : batteries de condensateurs ;</p>
+<p>j. Variateurs de vitesse permettant d'adapter la consommation énergétique d'un moteur ou d'une machine à sa charge instantanée ;</p>
+<p>k. Moteurs électriques à rendement amélioré, de classe de rendement EFF1, dont la valeur d'efficacité est définie suivant la norme EN 60034-2 ;</p>
+<p>l. Presses hydrauliques électriques ;</p>
+<p>3. Matériels permettant de capter et d'utiliser des sources d'énergie autres que les hydrocarbures liquides ou gazeux, les combustibles minéraux solides et l'électricité :</p>
+<p>a. Matériels permettant de récupérer l'énergie solaire pour le préchauffage de fluide, la préparation d'eau de chaudière, d'eau de procédé ou d'eau chaude sanitaire et son stockage, ainsi que pour la production d'électricité, son stockage et son raccordement au réseau ;</p>
+<p>b. Matériels permettant l'utilisation de l'énergie hydraulique, éolienne ou géothermique, son stockage et le raccordement au réseau électrique ou de chaleur ;</p>
+<p>c. Matériels d'exploitation de la biomasse : chaudières avec leurs auxiliaires et leurs équipements de stockage et d'alimentation en combustible ; équipements sylvicoles utilisés exclusivement pour la production et le conditionnement de bois à des fins énergétiques ; digesteurs et équipements de production thermique ou électrique associés à une utilisation du biogaz ;</p>
+<p>d. Réseaux de récupération et de collecte de biogaz destiné à une utilisation énergétique ;</p>
+<p>e. Matériels permettant d'utiliser l'énergie marémotrice, houlomotrice et thermique des mers et de la stocker ;</p>
+<p>f. Matériels de raccordement à un réseau de chaleur classé au sens des deuxième et troisième alinéas de l'article 5 de la loi n° 80-531 du 15 juillet 1980 modifiée relative aux économies d'énergie et à l'utilisation de la chaleur et du chapitre II du titre Ier du livre VII du code de l'énergie ;</p>
+<p>g. Matériels de raccordement à un réseau de chaleur utilisant majoritairement de l'énergie géothermale ;</p>
+<p>h. Autres matériels de transformation thermochimique de la biomasse ;</p>
+<p>i. Autres types d'équipements de valorisation thermique et électrique des biocombustibles ;</p>
+<p>4. a. Matériels permettant de stocker l'énergie lorsque sa réutilisation ultérieure permet des économies globales d'énergie primaire ;</p>
+<p>b. Matériels permettant de stocker l'énergie sous forme d'énergie mécanique potentielle, par pompage sur les ouvrages hydroélectriques pour faire remonter l'eau de l'aval vers la retenue, ou sous forme d'énergie cinématique, au moyen de volants d'inertie de grande puissance ;</p>
+<p>c. Batteries d'accumulateurs permettant de stocker l'électricité lorsque ce stockage permet l'arrêt permanent de matériels générateurs d'électricité exclusivement affectés à la fourniture instantanée d'énergie électrique en secours ;</p>
+<p>d. Matériels permettant de stocker le froid pour lisser la demande d'électricité afin de réduire les tensions sur les réseaux électriques ;</p>
+<p>5. Matériels utilisant un procédé à haut rendement énergétique pour le chauffage et le conditionnement des bâtiments :</p>
+<p>a. Systèmes de climatisation réversible dont le coefficient de performance, à + 7° C, est supérieur ou égal à 3 ;</p>
+<p>b. Chaudières à condensation ;</p>
+<p>c. Matériels de régulation améliorant les performances énergétiques des appareils de chauffage, de climatisation ou de ventilation ;</p>
+<p>d. Matériels de chauffage permettant de favoriser les concentrations énergétiques dans des espaces limités à la place d'un chauffage classique : générateurs d'air chaud, aérothermes directs et générateurs de ventilation tempérée ;</p>
+<p>e. Systèmes de pompes à chaleur géothermale ou air/eau dont le coefficient de performance machine en mode chauffage est supérieur ou égal à 3 ;</p>
+<p>f. Systèmes d'optimisation énergétique en fonction des programmes de production et/ou des données climatiques ;</p>
+<p>g. Matériaux d'isolation thermique des parois opaques :</p>
+<p>– planchers bas sur sous-sol, sur vide sanitaire ou sur passage ouvert, toitures-terrasses, murs en façade ou en pignon, possédant une résistance supérieure ou égale à 2,4 mètres carrés kelvin par watt (m<sup>2</sup> K/W) ;</p>
+<p>– toitures sur comble possédant une résistance thermique supérieure ou égale à 4,5 m<sup>2</sup> K/W ;</p>
+<p>h. Systèmes de ventilation mécanique contrôlée dont l'efficacité de la récupération d'énergie de l'échangeur est supérieure à 65 % sur l'air humide et dont la puissance par ventilateur est inférieure à 0,30 W/m<sup>3</sup>/h, soit 0,70 W/m<sup>3</sup>/h pour la centrale double flux.</p>
+""", "Réécriture à droit constant de l'intégralité de la liste : les conditions de séparation des équipements sont explicitées, les phrases techniques longues sont scindées dans leur alinéa et les actions de récupération, de stockage et d'utilisation sont formulées directement. Toutes les rubriques, lettres, matériels, exclusions et performances chiffrées sont maintenus. L'orientation de réexamen des aides ne vaut ni suppression ni réouverture de ces amortissements historiques.",
+    "Incohérence préexistante : le I renvoie à la liste « au 2 », alors qu'elle est présentée sous II et comporte elle-même une rubrique 2 ; renvoi conservé en attendant une coordination explicite. Les articles 39 AA et 39 AB du CGI ont été vérifiés dans le corpus : ils comportent des limites temporelles, notamment l'acquisition ou fabrication avant le 1er janvier 2011 pour 39 AB et les périodes propres à 39 AA ; aucune nouvelle éligibilité n'est créée. Conserver 90 % PCS, les coefficients 4 et 3, + 7° C, EFF1 et EN 60034-2, 2,4 et 4,5 m2 K/W, les inégalités strictes à 65 %, 0,30 et 0,70 W/m3/h. La présentation « soit 0,70 » après une puissance par ventilateur inférieure à 0,30 est celle de la source : articulation technique à contrôler, sans la rectifier. Les renvois aux articles R. 224-26 et R. 224-27 du code de l'environnement, à l'article 5 de la loi n° 80-531 du 15 juillet 1980 et au chapitre II du titre Ier du livre VII du code de l'énergie sont maintenus. Note historique conservée ici : modification en conséquence des articles 1er, 2, 4 [16°], 6 [4° a] et 14 de l'ordonnance n° 2011-504 du 9 mai 2011 ; elle ne fixe aucune entrée en vigueur d'une réforme future.")
+
+put('06', """
+<p>1. Les matériels destinés à réduire le bruit qui figurent sur la liste du 2 ne peuvent bénéficier de l'amortissement exceptionnel prévu au premier alinéa de l'article 39 quinquies DA du code général des impôts que s'ils peuvent être séparés des matériels auxquels ils ont été adjoints sans les rendre définitivement inutilisables.</p>
+<p>2. La liste des matériels mentionnée au 1 est la suivante :</p>
+<p>A. – Matériels et dispositifs de protection contre le bruit.</p>
+<p>1. Capotages et systèmes d'insonorisation prêts à monter permettant de limiter le niveau sonore émis par des machines et appareils tels que les presses, compresseurs, tours automatiques, ventilateurs, pompes, surpresseurs, fraiseuses et raboteuses.</p>
+<p>2. Cabines d'insonorisation permettant d'isoler une machine du reste de l'atelier.</p>
+<p>3. Écrans mobiles modulables ou démontables permettant d'isoler une ou plusieurs machines bruyantes du reste d'un atelier pendant leur fonctionnement, sans empêcher leur approvisionnement ou leur maintenance.</p>
+<p>4. Silencieux pour les dispositifs d'aspiration, de détente de gaz sous pression et de turbine à gaz, ainsi que pour les pièges à son et les résonateurs.</p>
+<p>5. Dispositifs de contrôle actif du bruit utilisés sur les cheminées et les tuyauteries.</p>
+<p>6. Amortisseurs et pièces antivibratiles : tous les dispositifs installés sous les machines pour amortir les vibrations émises et empêcher ainsi la transmission du bruit par les sols et les parois.</p>
+<p>7. Protecteurs individuels actifs ou passifs : casques antibruit.</p>
+<p>B. – Matériels et dispositifs d'amélioration de l'acoustique.</p>
+<p>Panneaux et baffles acoustiques spécifiquement conçus pour réduire ou absorber le bruit et pour être disposés sur les parois opaques et les plafonds.</p>
+<p>C. – Matériels de contrôle ou de limitation des niveaux sonores.</p>
+<p>1. Sonomètres et sonomètres intégrateurs.</p>
+<p>2. Appareils permettant de mesurer la dose de bruit reçue par un travailleur en milieu bruyant afin d'éviter le dépassement de la durée d'exposition fixée en fonction du niveau sonore : dosimètres et exposimètres.</p>
+<p>3. Régulateurs et limiteurs de bruit.</p>
+""", "Réécriture à droit constant : la condition d'accès à l'amortissement est formulée directement et les fonctions des matériels de chaque rubrique sont rendues plus lisibles, sans réduire la liste. Les subdivisions 1 et 2, A à C et leurs numéros sont conservés. Aucune extension ni suppression de cet avantage historique n'est déduite des orientations générales de policy.json.",
+    "L'article 39 quinquies DA du CGI, vérifié dans le corpus, vise les matériels acquis ou fabriqués avant le 1er janvier 2011 et les installations existant au 31 décembre 1990 ; ces limites restent applicables par renvoi. Conserver la possibilité de séparation et l'absence d'inutilisabilité définitive ; la source utilise « sans les rendre », contrairement à « sans être rendus » à l'article 02 : ne pas harmoniser silencieusement le matériel auquel cette condition se rapporte. La rubrique A.4 conserve le rattachement des pièges à son et résonateurs aux silencieux tel qu'il figure dans la source ; sa portée technique mérite contrôle.")
+
+put('1', """
+<p>Les entreprises qui transforment les matières premières visées à l'article 4 de l'annexe III au code général des impôts, dont les cours en monnaie étrangère sont publiés par l'Institut national de la statistique et des études économiques, doivent appliquer la règle suivante lorsqu'elles choisissent, pour calculer les provisions pour fluctuation des cours, le mode prévu à l'article 9 de la même annexe. Quelle que soit la qualité des matières comprises dans leur stock de base, elles doivent retenir les cours publiés dans le bulletin mensuel de la statistique générale de la France pour les matières-types correspondantes désignées ci-dessous :</p>
+<p>Cuivre électrolytique, New York ;</p>
+<p>Étain standard, Royaume-Uni ;</p>
+<p>Plomb, en saumons, New York ;</p>
+<p>Zinc, en plaques, East Saint-Louis ;</p>
+<p>Coton, milddling, Galveston ;</p>
+<p>Laine lavée indigène, Royaume-Uni ;</p>
+<p>Soie brute, au Japon, double extra, New York ;</p>
+<p>Caoutchouc, feuilles fumées, Royaume-Uni ;</p>
+<p>Pétrole brut, 36-36,9 aux puits Kansas-Oklahoma.</p>
+""", "Réécriture à droit constant : la phrase unique est divisée pour distinguer les entreprises et l'option concernées de l'obligation de retenir les cours des matières-types. La liste complète des neuf références de marché est conservée. Aucune réforme de fond n'est définie pour ces provisions dans policy.json.",
+    "Renvois aux articles 4 et 9 de l'annexe III conservés. Les désignations historiques des matières, places de cotation et publication demeurent ; le libellé « milddling » du coton et l'indication « 36-36,9 » du pétrole sont reproduits sans correction technique non documentée. L'éventuelle actualisation des références de cotation nécessite un contrôle distinct, sans remplacer les indices applicables aux situations historiques.")
+
+put('4 octies', """
+<p>Les publications définies au premier alinéa du 1 bis B de l'article 39 bis et au deuxième alinéa du 2 de l'article 39 bis A du code général des impôts sont assimilées à des quotidiens pour l'application de ces articles si elles remplissent les deux conditions suivantes de diffusion et de prix :</p>
+<p>1° Leur zone normale de diffusion ne doit couvrir qu'une partie restreinte du territoire national, caractérisant leur vocation départementale ou régionale ;</p>
+<p>2° Leur prix de vente ne doit pas dépasser de plus de 75 % celui de la majorité des quotidiens. Cette condition s'apprécie par comparaison des prix de vente au numéro. Lorsque la publication est vendue exclusivement par abonnement, elle s'apprécie par comparaison des prix d'abonnement annuel, compte tenu du nombre respectif d'exemplaires livrés au titre de ces abonnements.</p>
+""", "Réécriture à droit constant : le caractère cumulatif des conditions est explicite et les deux modalités de comparaison des prix sont distinguées en phrases séparées. Les catégories de publications et les subdivisions de leurs textes de définition restent identiques. Aucune réforme de fond du régime de presse n'est prévue.",
+    "Maintien des références au premier alinéa du 1 bis B de l'article 39 bis et au deuxième alinéa du 2 de l'article 39 bis A du CGI. La limite de dépassement de 75 % du prix de la majorité des quotidiens est conservée ; elle ne devient pas un prix plafonné à 75 % de ce prix. L'abonnement annuel n'est comparé que pour une vente exclusivement par abonnement, en tenant compte du nombre d'exemplaires.")
+
+put('4 D', """
+<p>Lorsque l'implantation est réalisée dans un État qui n'est pas membre de la Communauté européenne, dans les conditions prévues à l'article 39 octies A du code général des impôts, la provision prévue au I bis de cet article peut être égale au montant de l'investissement.</p>
+""", "Réécriture à droit constant : la condition territoriale et le maintien des conditions de l'article 39 octies A sont placés avant la faculté de provisionner le montant de l'investissement prévue au I bis. Aucun nouvel avantage à l'investissement ni changement de taux d'IS n'est introduit.",
+    "Renvoi au I bis de l'article 39 octies A vérifié dans le corpus : ce régime n'est plus applicable aux investissements réalisés dans le cadre d'une première implantation commerciale effectuée après le 31 décembre 1987. La proposition ne le rouvre pas. La désignation historique « Communauté européenne » est conservée pour ne pas modifier silencieusement le champ temporel ou territorial du régime.")
+
+put('4 J', """
+<p>Les entreprises qui exercent une activité industrielle ou commerciale et sont soumises à l'impôt sur le revenu d'après leur bénéfice réel, ainsi que les entreprises passibles de l'impôt sur les sociétés, doivent joindre à la déclaration des résultats de chaque exercice le relevé détaillé des catégories de frais généraux prévu à l'article 54 quater du code général des impôts lorsque les frais d'au moins une de ces catégories dépassent l'un des seuils suivants :</p>
+<p>1° Pour l'ensemble des rémunérations directes ou indirectes versées aux personnes les mieux rémunérées, 540 000 € pour les 10 personnes les mieux rémunérées lorsque l'effectif dépasse 200 salariés, ou 270 000 € pour les 5 personnes les mieux rémunérées lorsque l'effectif ne dépasse pas 200 salariés ; le seuil est de 50 000 € pour l'une de ces personnes prise individuellement ;</p>
+<p>2° 15 000 € pour les frais de voyage et de déplacement exposés par ces personnes ;</p>
+<p>3° 30 000 € pour le total des dépenses et charges afférentes, d'une part, aux véhicules et autres biens dont ces personnes peuvent disposer en dehors des locaux professionnels et, d'autre part, aux immeubles non affectés à l'exploitation, quelle que soit la nature de ces dernières dépenses et charges ;</p>
+<p>4° 3 000 € pour les cadeaux de toute nature, à l'exception des objets spécialement conçus pour la publicité dont la valeur unitaire, toutes taxes comprises, ne dépasse pas 73 € par bénéficiaire ;</p>
+<p>5° 6 100 € pour les frais de réception, y compris les frais de restaurant et de spectacles.</p>
+<p>Lorsque l'administration détient déjà légalement des informations nécessaires à ce relevé et peut légalement les utiliser à cette fin dans le respect des secrets protégés, elle les réutilise pour préremplir le relevé qu'elle met à la disposition de l'entreprise. L'entreprise peut corriger ces informations et complète celles qui manquent. Les informations ainsi réutilisées n'ont pas à être transmises une seconde fois.</p>
+""", "Réécriture à droit constant de l'obligation et des cinq catégories : le choix des seuils de rémunération est explicité en fonction de l'effectif et la portée des exceptions reste identique. Réforme de fond limitée à un nouvel alinéa final, en application de l'orientation « déclarer une fois » de policy.json : réemploi et préremplissage des informations légalement détenues et utilisables, suppression de leur seconde transmission, maintien des secrets et du droit de correction. Les seuils et le relevé lui-même ne sont pas supprimés.",
+    "Vérifier les seuils stricts de dépassement : 540 000 €/10 personnes au-delà de 200 salariés, 270 000 €/5 personnes jusqu'à 200 salariés inclus et 50 000 € individuellement ; puis 15 000 €, 30 000 €, 3 000 €, 73 € TTC par bénéficiaire et 6 100 €. L'article 54 quater du CGI et l'article 36 de l'annexe II ont été vérifiés dans le corpus. Le nouvel alinéa appelle leur coordination pour que les informations reprises constituent bien le relevé joint à la déclaration ; il ne dispense pas de fournir les données manquantes. L'article 36 exige les renseignements de l'exercice et de l'exercice précédent : le réemploi doit conserver ces deux périodes et permet notamment de reprendre les données déjà déclarées de l'exercice précédent. Préciser les modalités de mise à disposition et de correction dans le dispositif déclaratif existant. Aucune habilitation nouvelle d'accès ou d'échange de données couvertes par un secret n'est créée. Les cinq subdivisions sources restent à leur place ; l'alinéa de réforme est ajouté après le 5°.")
+
+put('4 K', """
+<p>Pour l'application de l'article 4 J, les catégories de frais généraux sont définies comme suit :</p>
+<p>a. Les rémunérations visées au 1° comprennent le montant total des rémunérations de toute nature, fixes ou proportionnelles, admises en déduction des bénéfices imposables de l'employeur, des indemnités et allocations diverses, des remboursements de frais autres que ceux directement rattachés à un acte de gestion de l'entreprise, et des avantages en nature alloués aux personnes les mieux rémunérées. Sont exclues les personnes qui relèvent de l'impôt sur le revenu dans la catégorie des bénéfices industriels et commerciaux en raison de leur activité dans l'entreprise ;</p>
+<p>b. Les frais visés au 2° sont les frais de voyage et de déplacement engagés par les personnes les mieux rémunérées pour la gestion de l'entreprise et dont la charge incombe normalement à celle-ci ;</p>
+<p>c. Les dépenses et charges énumérées au 3° sont celles afférentes aux véhicules et autres biens que l'entreprise met à la disposition des personnes les mieux rémunérées, y compris les immeubles non affectés à l'exploitation. Leur montant est diminué, le cas échéant, des dépenses incombant à ces personnes que l'entreprise a prises en charge sous forme de rémunérations indirectes ;</p>
+<p>d. (Alinéa abrogé) (1).</p>
+<p>e. Les frais visés au 5° sont les frais de réception, y compris les frais de restaurant et de spectacles, qui se rattachent à la gestion de l'entreprise et dont la charge lui incombe normalement.</p>
+""", "Réécriture à droit constant : les catégories sont définies par des phrases directes et les exclusions de personnes ou de dépenses sont détachées dans leur subdivision. L'alinéa abrogé conserve son emplacement et sa lettre. Le réemploi déclaratif proposé à l'article 4 J n'altère pas l'assiette de ces catégories.",
+    "Maintenir la correspondance a/1°, b/2°, c/3° et e/5° de l'article 4 J, ainsi que le d abrogé. Ne pas recréer une définition des cadeaux dans ce d. Conserver l'exclusion des personnes imposées en BIC pour leur activité dans l'entreprise et la déduction des rémunérations indirectes au c pour éviter un double compte. Note (1) : l'article 1er de l'arrêté du 10 mai 2010 s'applique aux exercices clos à compter du 31 décembre 2010 ; cette date historique ne vaut pas entrée en vigueur du réemploi proposé à l'article 4 J.")
+
+put('4 L', """
+<p>Les entreprises soumises à l'impôt sur le revenu dans la catégorie des bénéfices industriels et commerciaux, autres que les sociétés, sont dispensées de fournir les renseignements relatifs aux catégories de frais énumérées aux 1° à 3° de l'article 4 J.</p>
+""", "Réécriture à droit constant : la dispense de renseignements est formulée directement en conservant son champ BIC et l'exclusion de toutes les sociétés. Aucune extension de la dispense n'est apportée par les orientations de simplification.",
+    "La dispense reste limitée aux rubriques 1° à 3° de l'article 4 J ; elle ne s'étend pas aux cadeaux ni aux réceptions des 4° et 5°. L'exclusion vise toute société, y compris lorsqu'elle relève de l'impôt sur le revenu. Coordonner l'application pratique avec le préremplissage proposé à l'article 4 J sans faire renaître des obligations couvertes par cette dispense.")
+
+put('4 LA', """
+<p>1. Les entreprises qui tiennent une comptabilité super-simplifiée peuvent évaluer les coûts de revient selon les modalités suivantes :</p>
+<p>a. Pour les marchandises et les produits en stock, elles peuvent appliquer au prix de vente de ces biens à la date du bilan un abattement correspondant à la marge pratiquée ;</p>
+<p>b. Pour les travaux en cours, elles peuvent retenir le montant des acomptes réclamés au client avant facturation.</p>
+<p>2. L'entreprise doit conserver la méthode d'évaluation retenue tant que ses conditions d'activité ne sont pas substantiellement modifiées.</p>
+""", "Réécriture à droit constant : l'entreprise est le sujet des facultés d'évaluation et de l'obligation de permanence de la méthode. Les deux méthodes, leur caractère facultatif et la condition de modification substantielle de l'activité sont conservés. Aucun nouveau régime comptable n'est créé.",
+    "Conserver la date du bilan pour le prix de vente, la marge effectivement pratiquée et les acomptes réclamés, et non nécessairement encaissés, avant facturation. Le b rattache dans la source le coût de revient au montant des acomptes : cette convention particulière est maintenue, sans substitution du coût réel ni du prix final. Le changement de méthode ne découle pas d'une simple variation non substantielle de l'activité.")
+
+put('4 M', """
+<p>Les élevages effectués en série qui sont énumérés ci-après peuvent bénéficier des dispositions du troisième alinéa de l'article 38 sexdecies A de l'annexe III au code général des impôts :</p>
+<p>1° Élevages de volailles :</p>
+<p>Comportant au moins 1 000 sujets en état de pondre, en moyenne annuelle ;</p>
+<p>Ou dont la production annuelle commercialisée atteint au moins 5 000 volailles de chair ;</p>
+<p>2° Élevages de porcs de charcuterie effectués principalement à partir de porcelets achetés, dont la production annuelle commercialisée atteint au moins 300 sujets ;</p>
+<p>3° Élevages de bovins à partir d'animaux achetés, dont la production annuelle commercialisée atteint au moins 100 têtes pour les veaux de boucherie ou 40 têtes pour les autres bovins, à condition que les animaux :</p>
+<p>Soient élevés en stabulation permanente,</p>
+<p>Et soient revendus :</p>
+<p>Au plus tard à l'âge d'un an, ou moins de neuf mois après leur achat s'ils sont nourris principalement avec des aliments achetés ;</p>
+<p>Au plus tard à l'âge de dix-huit mois s'ils sont nourris exclusivement avec des aliments achetés.</p>
+""", "Réécriture à droit constant : la faculté d'accès au régime et les seuils de production sont exprimés plus directement. Les alternatives propres aux volailles et les conditions de conduite et de revente des bovins gardent leur ordre et leurs alinéas. Aucune réforme de fond des élevages n'est prévue par policy.json.",
+    "Renvoi vérifié au troisième alinéa de l'article 38 sexdecies A de l'annexe III, qui renvoie réciproquement à cette liste. Conserver les minima de 1 000, 5 000, 300, 100 et 40, la moyenne annuelle pour les pondeuses et la production annuelle commercialisée pour les autres seuils. Préserver les limites d'un an, de moins de neuf mois après achat et de dix-huit mois. L'articulation préexistante entre les deux derniers alinéas, notamment le régime des animaux nourris exclusivement avec des aliments achetés par rapport à ceux nourris principalement ainsi, mérite clarification explicite ; elle n'est pas réinterprétée par une fusion des alinéas.")
+
+put('6 A', """
+<p>La contribution de l'employeur mentionnée au 19° de l'article 81 du code général des impôts doit représenter au moins 50 % et au plus 60 % de la valeur libératoire des titres-restaurant.</p>
+""", "Réécriture à droit constant : les deux bornes de la participation de l'employeur sont exprimées dans une même construction positive. Aucun taux ni plafond fiscal nouveau n'est introduit et la réforme de la CSG salariale n'est pas étendue aux titres-restaurant.",
+    "Les bornes de 50 % et 60 % sont inclusives et portent sur la valeur libératoire des titres. Le renvoi au 19° de l'article 81 du CGI est conservé ; la coquille grammaticale « de l'articles » est corrigée sans changement de référence. Ne pas confondre ces proportions avec un montant maximal d'exonération en euros.")
+
+put('6 B', """
+<p>I. – Les tableaux suivants fixent le barème forfaitaire mentionné au 3° de l'article 83 du code général des impôts :</p>
+<table><tbody>
+<tr><th colspan="4">Tarif applicable aux automobiles</th></tr>
+<tr><td>Puissance administrative</td><td>Jusqu'à 5 000 km</td><td>De 5 001 à 20 000 km</td><td>Au-delà de 20 000 km</td></tr>
+<tr><td>3 CV et moins</td><td>d × 0,529</td><td>(d × 0,316) + 1065</td><td>d × 0,370</td></tr>
+<tr><td>4 CV</td><td>d × 0,606</td><td>(d × 0,340) + 1330</td><td>d × 0,407</td></tr>
+<tr><td>5 CV</td><td>d × 0,636</td><td>(d × 0,357) + 1395</td><td>d × 0,427</td></tr>
+<tr><td>6 CV</td><td>d × 0,665</td><td>(d × 0,374) + 1457</td><td>d × 0,447</td></tr>
+<tr><td>7 CV et plus</td><td>d × 0,697</td><td>(d × 0,394) + 1515</td><td>d × 0,470</td></tr>
+<tr><td colspan="4">Le symbole d désigne la distance parcourue en kilomètres.</td></tr>
+</tbody></table>
+<table><tbody>
+<tr><th colspan="4">Tarif applicable aux motocyclettes</th></tr>
+<tr><td>Puissance administrative</td><td>Jusqu'à 3 000 km</td><td>De 3 001 à 6 000 km</td><td>Au-delà de 6 000 km</td></tr>
+<tr><td>1 ou 2 CV</td><td>d × 0,395</td><td>(d × 0,099) + 891</td><td>d × 0,248</td></tr>
+<tr><td>3, 4 ou 5 CV</td><td>d × 0,468</td><td>(d × 0,082) + 1158</td><td>d × 0,275</td></tr>
+<tr><td>plus de 5 CV</td><td>d × 0,606</td><td>(d × 0,079) + 1583</td><td>d × 0,343</td></tr>
+<tr><td colspan="4">Le symbole d désigne la distance parcourue en kilomètres.</td></tr>
+</tbody></table>
+<table><tbody>
+<tr><th colspan="3">Tarif applicable aux cyclomoteurs</th></tr>
+<tr><td>Jusqu'à 3 000 km</td><td>De 3 001 km à 6 000 km</td><td>Au-delà de 6 000 km</td></tr>
+<tr><td>d × 0,315</td><td>(d × 0,079) + 711</td><td>d × 0,198</td></tr>
+<tr><td colspan="3">Le symbole d désigne la distance parcourue en kilomètres.</td></tr>
+</tbody></table>
+<p>II. – Pour les véhicules électriques, les frais de déplacement calculés selon le I sont majorés de 20 %.</p>
+""", "Réécriture à droit constant : l'introduction désigne directement les trois tableaux, la variable d est définie par une phrase et la majoration est formulée plus simplement. L'intégralité des trois tableaux, de leurs tranches, puissances et formules est reprise ; le signe de multiplication et les espaces décimaux sont harmonisés sans modification de calcul. Aucune réforme de barème n'est définie par policy.json.",
+    "Contrôler cellule par cellule les trois tableaux : automobiles (5 lignes de puissances), motocyclettes (3 lignes) et cyclomoteurs (1 ligne), avec leurs trois tranches de distance et tous les termes constants. Les nombres « 0, 316 » et « 0, 394 » de la source sont typographiquement normalisés en 0,316 et 0,394. La ligne « 3,4 ou 5 CV » désigne les puissances 3, 4 ou 5 CV et reçoit seulement des espaces. La majoration de 20 % reste réservée aux véhicules électriques. Selon la note source, l'article 2 de l'arrêté du 27 mars 2023 (NOR : ECOE2307260A) rend ces dispositions applicables à compter de l'imposition des revenus de l'année 2022 ; cette portée historique est maintenue, sans annoncer de barème actualisé.")
+
+put('6 C', """
+<p>En application du 2° de l'article 87 A du code général des impôts, les redevables qui ne relèvent pas de l'article L. 133-5-3 du code de la sécurité sociale doivent déposer la déclaration prévue à l'article 87-0 A du code général des impôts au plus tard le 10 du mois suivant celui au cours duquel les sommes ont été précomptées.</p>
+<p>Lorsque ce délai expire un jour férié ou non ouvré, il est prolongé jusqu'au jour ouvrable suivant.</p>
+""", "Réécriture à droit constant : les redevables sont directement désignés comme débiteurs de l'obligation déclarative et le report du délai fait l'objet d'une phrase simple. Le fait déclenchant le délai reste le précompte des sommes. Les réformes de taux de CSG ne modifient pas cette échéance de déclaration.",
+    "Conserver l'exclusion du champ de l'article L. 133-5-3 du CSS, les renvois au 2° de l'article 87 A et à l'article 87-0 A du CGI, l'échéance du 10 du mois suivant le précompte et le report au jour ouvrable suivant en cas de jour férié ou non ouvré. Note historique : entrée en vigueur au 1er janvier 2019 conformément à l'article 5 de l'arrêté du 9 mai 2017 (NOR : ECFE1711669A), dans sa rédaction issue de l'article 2 de l'arrêté du 22 décembre 2017 (NOR : CPAE1725693A). Cette date ne concerne aucune réforme future.")
+
+put('6 C bis', """
+<p>Les débiteurs mentionnés au a du 2° du B de l'article 204 C du code général des impôts doivent déposer la déclaration prévue à l'article 87-0 A bis du même code au plus tard le 10 février de l'année suivant celle au cours de laquelle ils ont versé les traitements et salaires.</p>
+""", "Réécriture à droit constant : le débiteur est le sujet de l'obligation et le versement des traitements et salaires est directement rattaché à l'année de référence. L'échéance annuelle et les deux renvois sont conservés, sans réforme de fond.",
+    "Maintenir le 10 février de l'année suivante et le champ précis du a du 2° du B de l'article 204 C du CGI. Ne pas confondre l'article 87-0 A bis avec l'article 87-0 A visé par l'article 6 C, ni remplacer l'année du versement par celle du précompte. Aucun report propre à l'article 6 C n'est ajouté ici.")
+
+put('6 quater', """
+<p>Pour les catégories de titres ou de dépôts désignées à l'article 6 quinquies, les organismes émetteurs ou dépositaires peuvent proposer au public des placements dont les produits sont, dans tous les cas, soumis au prélèvement institué par l'article 125 A du code général des impôts. Toutefois, lorsque le créancier est une personne physique, il peut opter expressément pour l'imposition de droit commun.</p>
+""", "Réécriture à droit constant du mécanisme décrit par la source : la faculté des organismes et l'exception tenant à l'option du créancier personne physique sont séparées. La construction grammaticalement incomplète de la source est restituée comme une exception d'option expresse, sans créer de nouvelle catégorie de placements ou de créanciers.",
+    "La source porte la séquence incomplète « sauf si le créancier est une personne physique option expresse de sa part » : la proposition retient une option expresse réservée à la personne physique, lecture à contrôler. Les renvois aux articles 6 quinquies et 125 A du CGI sont conservés. Le texte de l'article 125 A présent dans le corpus ne formule plus le même mécanisme général d'option pour le droit commun : articulation temporelle préexistante à vérifier pour ces placements historiques, sans transformer cet article d'annexe en une option nouvelle dérogeant à la loi. Aucune réforme de la CSG sur les salaires n'est étendue aux produits de capitaux.")
+
+put('6 quinquies', """
+<p>Les règles de l'article 6 quater s'appliquent aux placements suivants :</p>
+<p>Les bons du Trésor sur formules ;</p>
+<p>Les bons d'épargne des PTT ou de La Poste ;</p>
+<p>Les bons de l'organe central du Crédit agricole ;</p>
+<p>Les bons à cinq ans de participation au développement du marché hypothécaire émis par le Crédit foncier de France ;</p>
+<p>Les bons émis par les groupements régionaux d'épargne et de prévoyance ;</p>
+<p>Les versements en comptes sur livrets.</p>
+""", "Réécriture à droit constant de l'introduction pour exprimer directement la fonction de la liste : déterminer les placements auxquels s'appliquent les règles de l'article 6 quater. Les dénominations institutionnelles sont harmonisées typographiquement ; les six catégories, qui constituent les données de cette liste, et leurs alinéas sont intégralement conservés. Aucune réforme de fond des placements n'est définie dans policy.json.",
+    "Maintenir les six catégories, notamment les bons à cinq ans et les versements en comptes sur livrets. Les dénominations PTT, La Poste, organe central du Crédit agricole, Crédit foncier de France et groupements régionaux d'épargne et de prévoyance décrivent des instruments historiques et ne sont pas remplacées par des émetteurs supposés actuels. Vérifier leur articulation temporelle avec l'article 6 quater et l'article 125 A du CGI, sans ouvrir un régime nouveau aux placements contemporains.")
+
+put('7', """
+<p>Toutes les personnes, sociétés ou établissements mentionnés à l'article 57 de l'annexe II au code général des impôts, ainsi que les caisses publiques, doivent appliquer les dispositions de cet article dans les conditions prévues par les articles ci-après.</p>
+""", "Réécriture à droit constant : les personnes tenues d'appliquer les règles de contrôle sont placées en sujet de l'obligation, avec mention distincte des caisses publiques. Le champ et le renvoi aux modalités des articles suivants sont préservés, sans réforme de fond.",
+    "L'article 57 de l'annexe II a été vérifié dans le corpus ; il vise les payeurs professionnels ou accessoires, certaines collectivités pour leurs propres titres et les modalités applicables aux caisses publiques. Ne pas réduire le champ aux seuls établissements financiers. Son renvoi aux articles 7 à 17 de l'annexe IV demeure compatible avec la présente règle générale.")
+
+put('8', """
+<p>Lorsque le payeur connaît l'identité ainsi que le domicile ou le siège du présentateur des coupons ou des titres, ou du bénéficiaire des revenus, il ne demande aucune pièce justificative. Il porte la lettre C, signifiant « connu », sur les pièces de paiement et, le cas échéant, sur le relevé de coupons mentionné à l'article 57 de l'annexe II au code général des impôts.</p>
+""", "Réécriture à droit constant : le payeur est explicitement le sujet de la dispense de demande et de l'obligation d'annotation. La connaissance de l'identité et de l'adresse reste requise et les deux supports éventuels sont conservés. Cette dispense existante est maintenue sans extension nouvelle du réemploi de données.",
+    "Conserver la lettre C et sa signification « connu », ainsi que le caractère éventuel de l'annotation du relevé de coupons. La dispense suppose la connaissance de l'identité et du domicile ou siège, pour le présentateur ou le bénéficiaire selon le cas. Le renvoi à l'article 57 de l'annexe II a été vérifié dans le corpus ; les obligations de preuve de l'article 9 restent distinctes pour les personnes inconnues.")
+
+put('9', """
+<p>1. Les personnes que les payeurs ne connaissent pas doivent justifier de leur identité et de leur domicile ou siège social en produisant l'une des pièces de la liste figurant à l'article 13.</p>
+<p>La pièce produite, ou son numéro de référence dans la liste mentionnée au premier alinéa, doit être indiquée sur les pièces de paiement.</p>
+<p>2. Lorsque le domicile ou le siège social indiqué par le présentateur ou le bénéficiaire diffère de celui figurant sur la pièce produite, l'intéressé doit souscrire une déclaration de changement de domicile selon le modèle fixé par l'administration.</p>
+<p>Toutefois, lorsque le domicile ou le siège social indiqué est situé en France et que la pièce produite mentionne une adresse hors de France, le nouveau domicile ou siège ne peut être justifié que par l'attestation prévue au n° 19 de la liste mentionnée au 1. Cette attestation doit dater de moins d'un an.</p>
+<p>Les personnes qui présentent un passeport ou une carte d'identité officielle, délivrés par un État membre de la Communauté européenne, et déclarent résider dans un pays tiers doivent produire l'attestation de résidence fiscale prévue au dernier alinéa de l'article 13. À défaut, elles sont considérées comme résidentes fiscales de l'État membre qui a délivré le passeport ou la carte d'identité officielle.</p>
+""", "Réécriture à droit constant : les obligations de preuve, d'annotation et de déclaration de changement d'adresse sont énoncées directement, chacune à son emplacement. Les conditions particulières d'adresse française et de résidence déclarée dans un pays tiers ainsi que la présomption à défaut d'attestation sont conservées. Aucune nouvelle dispense de contrôle n'est introduite.",
+    "Incohérence préexistante vérifiée dans le corpus : la liste de l'article 13 est organisée en I (1° à 15°), II (1° à 3°) et III (attestation), et ne comporte pas de n° 19 ; ce renvoi est conservé et exige une coordination expresse. Le dernier alinéa de l'article 13 prévoit une attestation administrative du lieu de résidence fiscale mentionnant domicile ou siège et lieu d'imposition ; vérifier sa concordance avec l'attestation ici appelée de résidence fiscale. Maintenir l'exigence stricte de moins d'un an pour l'attestation en cas de passage d'une adresse hors de France à une adresse française. La désignation « Communauté européenne » est historique et reste conservée. Note source : application à l'identification des présentateurs et bénéficiaires de revenus de capitaux mobiliers à compter du 1er janvier 2004, en vertu du II de l'article 24 de la loi de finances rectificative pour 2003. Cette portée historique ne devient pas la date d'une réforme future.")
+
+put('10', """
+<p>Lorsque le présentateur est l'employé d'une personne ou société soumise au 1 de l'article 57 de l'annexe II au code général des impôts et qu'il justifie que les coupons sont présentés pour le compte de cette personne ou société, la pièce de paiement doit être établie au nom de celle-ci.</p>
+""", "Réécriture à droit constant : les deux conditions tenant à la qualité d'employé et à la justification du compte pour lequel les coupons sont présentés sont regroupées dans une construction claire. Le titulaire du nom à porter sur la pièce de paiement reste la personne ou société qui fait encaisser les coupons. Aucune réforme de fond n'est introduite.",
+    "Renvoi au 1 de l'article 57 de l'annexe II vérifié dans le corpus et conservé. La qualité d'employé ne suffit pas : la présentation pour le compte de la personne ou société doit être justifiée. Ne pas établir la pièce au seul nom de l'employé ni étendre cette règle aux mandataires qui ne remplissent pas la condition source.")
+
+
+assert len(sources) == 24
+assert set(drafts) == {x['number'] for x in sources}
+fragments = Path('fragments')
+fragments.mkdir(exist_ok=True)
+answer = []
+for index, source in enumerate(sources):
+    draft = drafts[source['number']]
+    (fragments / f'{index:02d}.xml').write_text(draft['proposed_xml'] + '\n')
+    answer.append({**{k: source[k] for k in (
+        'code_id', 'source_id', 'source_sha256', 'number')}, **draft})
+Path('answer.json').write_text(json.dumps(answer, ensure_ascii=False, indent=2) + '\n')
+print(f'{len(answer)} articles écrits dans answer.json')

@@ -1,0 +1,438 @@
+import json
+from pathlib import Path
+from html.parser import HTMLParser
+
+sources = json.loads(Path('source.json').read_text())
+refs = json.loads(Path('reference-targets.json').read_text())
+answers = []
+
+
+def source_passage(number, needle):
+    class Blocks(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=True)
+            self.blocks = []
+
+        def handle_data(self, data):
+            self.blocks.append(data)
+
+    parser = Blocks()
+    parser.feed(next(s['source_xml'] for s in sources if s['number'] == number))
+    matches = [block.strip() for block in parser.blocks if needle in block]
+    assert len(matches) == 1, (number, needle)
+    return matches[0]
+
+
+def effect(kind, measure, description, before, after, unit, population,
+           transition, replacement, source_quote, proposed_quote):
+    return dict(kind=kind, measure_id=measure, description=description,
+                before=before, after=after, unit=unit,
+                affected_population=population,
+                conditions_and_transition=transition,
+                replacement_or_new_burdens=replacement,
+                source_quote=source_quote, proposed_quote=proposed_quote)
+
+
+def add(number, xml, reason, review, classification, assessment, limitations,
+        burdens, effects=(), removed=None, repeal=None, benefit=None,
+        reference_checks=None):
+    s = next(s for s in sources if s['number'] == number)
+    a = {k: s[k] for k in ['code_id', 'source_id', 'source_sha256', 'number']}
+    a.update(proposed_xml=xml, reason=reason, review_notes=review,
+             status='retained_unchanged' if xml is None else 'rewrite_draft')
+    if removed:
+        a.update(change_type='normative_reduction',
+                 reform_policy_id='editorial_direction_2026_10_19',
+                 removed_provisions=removed)
+    if repeal:
+        a.update(change_type='full_repeal',
+                 repeal_policy_id='editorial_direction_2026_10_19',
+                 repeal_scope=repeal)
+    if benefit:
+        a['benefit_review'] = benefit
+    a['substantive_impact'] = dict(
+        version=1, classification=classification, assessment=assessment,
+        scope_limitations=limitations, new_burdens_review=burdens,
+        effects=list(effects))
+    if reference_checks is not None:
+        a['reference_checks'] = reference_checks
+    answers.append(a)
+
+
+add('404 F',
+    '<p>Le fractionnement prévu au 5° de l’article 396 est limité aux droits et taxes exigibles sur la fraction de la valeur imposable correspondant au montant du prêt consenti à l’acquéreur.</p>'
+    '<p>La nature et le montant du prêt consenti sont établis par le contrat de prêt ou par tout document émanant de l’établissement prêteur qui contient ces informations. Aucune attestation distincte n’est exigée. Le document déjà produit pour la même demande de crédit n’est pas fourni de nouveau.</p>'
+    '<p>Par dérogation à l’article 401, ce fractionnement ne donne lieu au versement d’aucun intérêt.</p>'
+    '<p>Les droits et taxes exigibles sont acquittés en cinq annuités égales.</p>'
+    '<p>L’aliénation, même à titre onéreux, des biens acquis avec ce fractionnement n’entraîne pas, à elle seule, l’exigibilité anticipée des droits restant dus. Les obligations de paiement selon l’échéancier et de garantie suffisante demeurent applicables.</p>'
+    '<p>La dispense d’attestation distincte s’applique aux demandes restant à instruire à compter de l’entrée en vigueur de la loi portant la présente réforme, sans nouveau dépôt des demandes en cours. Le maintien de l’échéancier s’applique aux aliénations réalisées à compter de cette entrée en vigueur, y compris pour les crédits en cours. Les exigibilités nées d’aliénations antérieures, les paiements effectués, les sûretés valablement constituées et les droits des tiers ne sont pas remis en cause ; les restitutions, prescriptions et recours conservent leur régime.</p>',
+    'Réforme de fond : supprimer l’attestation bancaire spécialement établie pour le crédit lorsque le prêt est prouvé par son contrat ou un document bancaire existant. Le réemploi des pièces déjà produites coordonne le droit existant et la demande de crédit. Le cinquième alinéa met en œuvre, pour ces acquisitions, la suppression déjà proposée à l’article 404 D de l’exigibilité anticipée pour la seule revente. À droit constant, conserver le champ du 5° de 396, la limite au montant prêté, les cinq annuités égales et l’absence d’intérêts.',
+    '396, source, notes et proposition actuelles du fichier reference-targets.json entièrement lues : seul le 5° est visé, soit rapatriés d’outre-mer et migrants agricoles, avec leurs prêts et qualifications propres. Le 1° successoral n’est pas applicable ; aucune condition d’ancienneté d’emploi, de notification de rupture ou de contrat privé n’est concernée. Les sources et propositions de 399, 400, 401, 402 et 404 D ont été lues dans le corpus. La référence ancienne au deuxième alinéa de 404 D est remplacée par la règle complète afin de ne pas conserver son ancienne accélération ou de perdre sa transition. Les garanties existantes ne sont pas augmentées. Le gain de calendrier est la même mesure credit-paiement-cession-maintien que 404 D, sans nouvelle baisse d’impôt. Le seul réemploi ne constitue pas un gain supplémentaire par rapport au CRPA. Aucun taux, fait générateur fiscal ou nouveau crédit remboursable n’est créé.',
+    'material_reduction',
+    'La source entière imposait une attestation de l’établissement prêteur en plus de la demande. La proposition dispense réellement de ce document dédié lorsque les mêmes deux informations figurent dans le prêt. Elle conserve sans intérêts le fractionnement limité à la valeur financée. La protection contre l’accélération pour revente coordonne la mesure commune de 404 D.',
+    'Le crédit reste limité au champ du 5° de 396 et au montant du prêt ; aucun autre acquéreur ni impôt n’est exonéré. La suffisance des garanties demeure contrôlable. Ni le coût par dossier ni le solde de l’ensemble des codes ne sont chiffrés.',
+    'Aucune charge nouvelle n’est identifiée : les deux informations sur le prêt étaient déjà exigées, un document bancaire existant suffit, aucun registre ni déclaration de remplacement n’est créé. Les obligations de garantie et l’échéancier sont maintenus, sans supplément.',
+    [effect('obligation_removed', 'credit-paiement-attestation-pret-supprimee',
+            'Dispenser de l’attestation bancaire distincte prouvant le prêt.',
+            'Attestation spéciale du prêteur indiquant la nature et le montant du prêt, à l’appui de la demande des acquéreurs du 5° de 396.',
+            'Contrat de prêt ou document bancaire contenant ces mêmes informations ; aucune attestation séparée ; assiette du crédit inchangée.',
+            'legal_duty', 'Acquéreurs éligibles au 5° de l’article 396 demandant le fractionnement de 404 F.',
+            'Demandes restant à instruire lors de l’entrée en vigueur, sans redépôt des demandes en cours.',
+            'Ni attestation, ni autorisation, ni déclaration équivalente ; preuve bancaire de la nature et du montant conservée.',
+            source_passage('404 F', "produire une attestation de l'établissement prêteur"),
+            'Aucune attestation distincte n’est exigée.'),
+     effect('coordination', 'credit-paiement-cession-maintien',
+            'Coordonner le renvoi à 404 D avec le maintien du crédit malgré la seule revente.',
+            'Le renvoi au deuxième alinéa de 404 D rendait le solde immédiatement exigible en cas d’aliénation non gratuite.',
+            'La seule aliénation ne modifie plus les cinq annuités égales ; taux d’intérêt nul et assiette du crédit inchangés.',
+            'other', 'Bénéficiaires du fractionnement de 404 F cédant les biens acquis.',
+            'Aliénations à compter de l’entrée en vigueur, y compris crédits en cours ; anciennes exigibilités et droits des tiers préservés.',
+            'Aucun nouveau crédit, taux ou justificatif ; échéancier et garanties suffisantes demeurent.',
+            "Les dispositions de l'article 404 D, deuxième alinéa sont applicables.",
+            'L’aliénation, même à titre onéreux, des biens acquis avec ce fractionnement n’entraîne pas, à elle seule, l’exigibilité anticipée des droits restant dus.')],
+    removed=['Attestation bancaire distincte obligatoirement produite pour établir la nature et le montant du prêt, alors qu’un document bancaire existant les établit déjà.',
+             'Application par renvoi de l’exigibilité immédiate du solde lors d’une aliénation non gratuite ; coordination de la même suppression que dans 404 D.'],
+    benefit='Le 5° de 396 ouvre un crédit aux rapatriés et migrants agricoles pour leurs acquisitions financées par les prêts qu’il désigne : cet accès subsiste pour toute future acquisition éligible, sans fermeture aux nouveaux bénéficiaires. La limite à la valeur financée est conservée. Le fractionnement reste sans intérêts, par dérogation à 401, et comporte cinq annuités égales. La preuve du prêt est allégée et le crédit n’est plus accéléré par la seule aliénation, conformément à 404 D proposé ; les sûretés et droits des tiers restent protégés. Aucune taxe n’est augmentée ni substituée à ces avantages.',
+    reference_checks=[dict(
+        target_key='LEGITEXT000006069574|LEGIARTI000022343738',
+        view_sha256='cc4b0b375b17f1f3423326a67951a367e7b752e6e7ba5a9deb7b3ea52e409a4c',
+        assessment='L’article 396 officiel ouvre au 5° le fractionnement aux acquisitions de rapatriés d’outre-mer avec les prêts de reclassement de l’article 30 du décret du 10 mars 1962 et aux migrants agricoles avec les prêts de R. 341-5 et la qualité ministériellement reconnue. Ce champ est conservé par sa proposition actuelle ; 404 F ne vise ni le 1° relatif aux décès ni les acquisitions du 3°. Sa proposition n’est pas présentée comme le droit en vigueur. Aucune ancienneté d’emploi ni notification de rupture n’est requise : ces prêts et qualifications ne renvoient pas au contrat unique de droit privé. La suppression des droits sur les décès futurs n’éteint donc pas ce crédit favorable pour les acquisitions futures éligibles au 5°.')])
+
+add('404 GB', None,
+    'Maintien intégral après examen : cet article rend le crédit de transmission d’entreprise effectivement utilisable, avec fractions égales tous les six mois, premier versement à l’expiration du différé et un mois pour régler chaque fraction suivante. Ce calendrier favorable ne constitue ni un agrément ni une pièce redondante. Le supprimer ferait perdre une facilité de paiement encore utile aux donations futures et aux anciens décès.',
+    '397 A officiel et proposé ont été lus : différé de cinq ans puis fractionnement sur dix ans, entreprise individuelle ou titres non cotés avec au moins 5 % du capital reçus dans le second cas. Sa proposition réserve les transmissions par décès aux décès antérieurs à la réforme, tout en conservant les donations futures. Le renvoi de 404 GB porte sur le crédit, non sur un fait générateur autonome : il n’exige aucun droit pour les décès futurs. 402 officiel, intégralement conservé dans le corpus sans proposition nouvelle, réserve déjà ce premier versement différé et le mois de paiement. 404 GC conserve ses échéances d’intérêts distinctes. Aucun contrat de travail, délai de préavis ou seuil d’indemnité de rupture n’est concerné.',
+    'retained_necessary',
+    'Le texte officiel entier ne crée qu’un calendrier d’exécution du crédit favorable de 397 A. Les six mois, l’égalité des fractions, le premier versement au terme du différé et le mois accordé aux suivantes sont nécessaires à cet avantage ; aucune suppression supplémentaire sans recul du crédit n’est retenue.',
+    'Aucune réduction de taux ou d’assiette n’est réalisée. Le maintien du crédit sur les donations et anciens décès suppose l’adoption coordonnée de 397 A ; aucun crédit successoral nouveau ne peut naître pour les décès désormais sans droits.',
+    'Aucune charge nouvelle n’est identifiée : source intégralement maintenue, sans demande, donnée, registre ou délai supplémentaire. Le calendrier existant n’est pas compté comme un nouveau report de paiement.')
+
+add('404 GD',
+    '<p>Le présent article est abrogé pour les cessions et apports réalisés à compter de l’entrée en vigueur de la loi portant la présente réforme.</p>'
+    '<p>Pour ces opérations, la seule cession de biens ou de titres bénéficiant du paiement différé et fractionné prévu à l’article 397 A ne rend pas les droits restant dus immédiatement exigibles, quelle que soit la proportion cédée. Aucun engagement de conserver les titres reçus en contrepartie d’un apport n’est exigé pour maintenir cet échéancier. La cession de ces titres à compter de la même date ne rend pas davantage le solde exigible sur le seul fondement d’un engagement antérieurement souscrit en application du présent article.</p>'
+    '<p>Le débiteur reste tenu du paiement aux échéances du crédit. Les intérêts légalement dus, les garanties suffisantes, les droits des tiers et les causes de déchéance pour défaut de paiement ou de constitution des garanties demeurent soumis à leur régime propre.</p>'
+    '<p>Les exigibilités nées de cessions ou de manquements à l’engagement de conservation antérieurs à cette entrée en vigueur conservent leur régime. Les paiements effectués, créances, restitutions, prescriptions et recours antérieurs ne sont pas remis en cause. Pour les transmissions résultant de décès survenus à compter de cette entrée en vigueur, aucun crédit ni intérêt ne peut être exigé au titre de droits de mutation par décès supprimés.</p>',
+    'Réforme de fond : abroger l’accélération automatique du solde au-delà d’un tiers des biens et la condition de conservation des titres après apport qui n’existait que pour éviter cette accélération. Le crédit subsiste sans cet obstacle à la réorganisation ou à la cession. Les droits et intérêts ne sont pas remis : il s’agit principalement d’un maintien du calendrier, dans la même mesure que 404 D, avec suppression de l’engagement accessoire.',
+    '397 A, 399, 400, 403, 404 GB et 404 GC officiels et proposés lus. Le différé cinq ans/fractionnement dix ans, les versements semestriels, les garanties et les intérêts, dont la réduction des deux tiers de 404 GC dans son champ, ne sont pas supprimés. La valeur au jour de la cession et le seuil de plus du tiers n’ont plus de fonction une fois leur accélération abrogée. L’exception favorable d’apport est généralisée sans engagement, y compris pour les comportements futurs au titre de crédits en cours. Les exigibilités déjà nées sont préservées ; aucun remboursement général ni abandon de sûreté n’est créé. Les donations restent imposables ; les décès futurs ne le sont plus. L’abrogation ne modifie pas les règles autonomes anti-fraude. Même measure_id que 404 D : pas de deuxième suppression de taxe.',
+    'payment_timing_relief',
+    'La comparaison avec les trois alinéas officiels établit la suppression de l’exigibilité anticipée attachée au dépassement d’un tiers et de l’engagement d’apport destiné à y échapper. La dette et ses intérêts subsistent aux échéances du crédit : seule une amélioration du calendrier de paiement est comptée. Le retrait de l’engagement, accessoire à cette même protection de calendrier, ne constitue pas une baisse permanente d’impôt ni une seconde mesure de réduction.',
+    'Les causes de déchéance pour défaut réel de garanties ou de paiement demeurent ; les accélérations nées avant la réforme ne sont pas annulées. Aucun gain de trésorerie agrégé ni économie nationale n’est évalué.',
+    'Aucune charge nouvelle n’est identifiée : l’engagement et son suivi conditionnant le maintien du crédit disparaissent sans déclaration de cession de remplacement. Paiement, intérêts et garanties étaient déjà exigibles selon leurs textes propres.',
+    [effect('payment_deferred', 'credit-paiement-cession-maintien',
+            'Maintenir le différé et le fractionnement malgré la seule cession, au lieu d’accélérer le solde.',
+            'Cession de plus du tiers des biens, évalués au jour de la cession : tout le solde des droits devient immédiatement exigible.',
+            'Quel que soit le pourcentage cédé, maintien du différé de cinq ans puis du fractionnement de dix ans de 397 A, sans engagement de conservation après apport ; principal, assiette et taux d’intérêt inchangés, sans remise de dette.',
+            'other', 'Donataires d’entreprises et bénéficiaires de crédits relatifs à des décès antérieurs à la réforme.',
+            'Cessions et apports futurs, crédits en cours compris ; anciennes exigibilités non annulées.',
+            'Garanties et paiements aux échéances maintenus ; engagement de conservation devenu inutile retiré dans la même mesure de calendrier, sans effet autonome de baisse d’impôt ; aucune taxe ou déclaration de substitution.',
+            "La cession de plus du tiers des biens bénéficiant du paiement différé et fractionné prévu à l'article 397 A entraîne pour le cédant l'exigibilité immédiate des droits en suspens.",
+            'Pour ces opérations, la seule cession de biens ou de titres bénéficiant du paiement différé et fractionné prévu à l’article 397 A ne rend pas les droits restant dus immédiatement exigibles, quelle que soit la proportion cédée. Aucun engagement de conserver les titres reçus en contrepartie d’un apport n’est exigé pour maintenir cet échéancier.')],
+    repeal='Accélération du crédit lors de la cession de plus du tiers des biens et engagement de conservation des titres après apport, pour les opérations et manquements futurs ; dette, intérêts et anciennes exigibilités préservés.',
+    benefit='L’apport pouvait déjà préserver le crédit moyennant conservation des titres : la suppression de l’accélération donne cette protection sans engagement aux apports et cessions futurs, même pour un crédit en cours. Le paiement différé et fractionné de 397 A reste disponible aux donations futures et aux anciens décès, avec ses intérêts réduits lorsqu’ils sont applicables. Pour les décès futurs, la taxe correspondante est entièrement supprimée ; aucune contribution de remplacement n’est créée.')
+
+add('405 B', None,
+    'Maintien intégral de l’agrément des machines après examen de sa fonction : une empreinte mécanique vaut preuve du paiement du droit de timbre. La fiabilité du compteur et l’impossibilité de fabriquer de fausses empreintes justifient le contrôle technique de l’appareil ; l’article n’exige pas un visa pour chaque document. La faculté de paiement par machine et l’assimilation de ses délais et emplacements aux timbres mobiles sont conservées.',
+    'Articles 71 à 74 et 164 AD à 164 AG de l’annexe IV lus en entier : mentions des empreintes, égalité des droits, garantie, carnet, remise de 0,50 %, autorisation de l’usager, interdiction d’altérer les compteurs et inspection. Les obligations de l’usager et l’agrément technique de la machine sont distincts ; aucune nouvelle autorisation n’est ajoutée ici. L’article 75 cité par la source n’a pas été retrouvé dans le corpus fourni : la portée complète de cette borne reste une lacune documentaire, sans correction numérique inventée. Le renvoi préexistant atypique de l’article 73 à 164 L à 164 A n’est pas corrigé par 405 B. La suppression de l’autorisation du paiement sur états à 405 H ne retire pas l’exigence de fiabilité des machines. Aucune baisse du droit de timbre n’est annoncée.',
+    'retained_necessary',
+    'La source entière organise la preuve mécanique du paiement. L’agrément de l’appareil protège contre la fabrication et le comptage frauduleux d’empreintes fiscales ; il n’est pas assimilé à la permission individuelle de payer sur états. Aucune coupe techniquement sûre ni doublon démontré n’est retenu sur ces trois paragraphes.',
+    'Le coût de l’agrément et l’existence d’une certification technique équivalente ne sont pas établis par les pièces locales ; l’article 75 manque. Les autres obligations des utilisateurs de machines ne sont pas déclarées simplifiées par ce maintien.',
+    'Aucune charge nouvelle n’est identifiée : le texte est intégralement conservé, sans nouvelle certification, attestation, donnée ou périodicité. La remise favorable prévue à l’annexe IV n’est pas affectée.')
+
+add('405 D', None,
+    'Maintien intégral : fixer le moment du timbrage permet de déterminer si le droit a été payé avant l’usage fiscalement visé du document ; l’oblitération immédiate empêche la réutilisation d’un même timbre. Les quatre situations et leurs dates limites restent nécessaires à une perception vérifiable, sans dossier ou déclaration supplémentaire à retirer.',
+    'Conserver les lettres a à d : remise du document administratif, signification des copies d’actes d’huissier, exigibilité en France des écrits étrangers, signature pour les autres écrits. Ne pas transformer ces délais de paiement en délais minimaux d’attente. 405 F, examiné dans le même lot, maintient l’oblitération et son empreinte sur le timbre et le support, tout en dispensant d’une signature répétée dans son champ. Les intitulés professionnels historiques de la source ne sont pas actualisés silencieusement.',
+    'retained_necessary',
+    'Les six alinéas utiles de la source identifient les personnes responsables, les quatre événements de paiement et l’oblitération. La suppression de l’oblitération ou des événements rendrait possible la réutilisation et priverait les redevables d’une règle certaine sur la ponctualité du paiement.',
+    'Aucun droit de timbre, délai fiscal ou régime de documents n’est supprimé. La dispense de signature redondante relève de 405 F ; aucune économie ni réduction du montant de l’impôt n’est attribuée au présent maintien.',
+    'Aucune charge nouvelle n’est identifiée : mêmes personnes, documents, événements et oblitération que dans la source, sans registre ou justificatif supplémentaire.')
+
+add('405 F',
+    '<p>Lorsqu’elle est manuscrite, l’oblitération consiste à porter à l’encre indélébile, en travers de chaque timbre, la date de l’oblitération et la signature de l’un quelconque des redevables ou de l’autorité administrative. La signature sur le timbre n’est pas exigée si le document porte déjà la signature d’un redevable ou de cette autorité.</p>'
+    '<p>Cette oblitération manuscrite peut être remplacée par l’apposition à l’encre grasse :</p>'
+    '<p>soit d’un cachet indiquant le nom ou la raison sociale du contribuable et la date de l’oblitération ;</p>'
+    '<p>soit du cachet réglementaire à date de l’autorité ou du fonctionnaire compétent.</p>'
+    '<p>Dans tous les cas, l’oblitération figure en partie sur le timbre mobile et en partie sur le papier ou le document passible du droit.</p>'
+    '<p>La dispense de signature répétée s’applique aux oblitérations réalisées à compter de l’entrée en vigueur de la loi portant la présente réforme, sans obligation de refaire une oblitération antérieure.</p>',
+    'Réforme de fond limitée : dispenser de la signature manuscrite répétée sur le timbre si un redevable ou l’autorité a déjà signé le document. La date, l’encre indélébile et l’oblitération chevauchant le timbre et son support restent exigées pour empêcher sa réutilisation. Les deux modes de cachet demeurent intégralement disponibles. La correction de la coquille source « peut tre » ne constitue pas une réduction autonome.',
+    'Les cinq alinéas de la source ont été confrontés : date et signataire admis au premier, alternative à l’encre grasse au deuxième, nom ou raison sociale/date au troisième, cachet réglementaire à date au quatrième, chevauchement obligatoire au cinquième. 405 D garde l’oblitération immédiate. La dispense porte sur une signature déjà matériellement présente, sans exiger qu’elle soit ajoutée au document pour obtenir l’allègement ; à défaut, la règle antérieure s’applique. Aucun agrément ou dispositif de certification n’est créé.',
+    'material_reduction',
+    'Le premier alinéa officiel imposait une signature sur chaque timbre pour toute oblitération manuscrite, même si le document était déjà signé par un redevable. La proposition retire cette répétition dans ce seul cas ; les deux modes de cachet et les garanties contre la réutilisation sont conservés.',
+    'Les documents dépourvus de signature existante restent soumis à la signature du timbre ou aux cachets autorisés. L’impôt, sa date de paiement et la date d’oblitération ne sont pas réduits ; aucun coût global n’est évalué.',
+    'Aucune charge nouvelle n’est identifiée : la signature sur le document n’est pas imposée, elle ouvre seulement la dispense si elle existe. Aucun registre, attestation de signature ou nouveau mode obligatoire d’oblitération ne remplace la signature retirée.',
+    [effect('obligation_removed', 'timbre-oblitération-signature-repetee'.replace('é', 'e'),
+            'Supprimer la signature sur chaque timbre lorsque le document comporte déjà la signature admise.',
+            'En oblitération manuscrite, date et signature d’un redevable ou de l’autorité sur chaque timbre, même si le support était signé.',
+            'Date et chevauchement maintenus ; signature répétée sur le timbre dispensée si un redevable ou l’autorité a signé le document.',
+            'legal_duty', 'Redevables et autorités oblitérant à la main des timbres mobiles sur des documents déjà signés.',
+            'Oblitérations à compter de l’entrée en vigueur ; aucun retraitement des anciennes oblitérations.',
+            'Aucune attestation ou signature de remplacement ; cachets antérieurement admis conservés.',
+            source_passage('405 F', "Lorsqu'elle est manuscrite"),
+            'La signature sur le timbre n’est pas exigée si le document porte déjà la signature d’un redevable ou de cette autorité.')],
+    removed=['Signature manuscrite répétée sur chaque timbre lorsque le document porte déjà celle de l’un des redevables ou de l’autorité administrative.'])
+
+add('405 G', None,
+    'Maintien intégral du visa pour timbre au comptant ou en débet : le débet est une modalité favorable qui ne doit pas être fermé. Le visa constate le traitement du droit, et la faculté pour le comptable de lui substituer des timbres mobiles au comptant évite une procédure exclusive. Il ne s’agit pas de l’agrément préalable du paiement sur états supprimé à 405 H.',
+    'Deux paragraphes intégralement lus et maintenus : alternative comptant/débet, compétence du comptable chargé du timbre et substitution par timbres mobiles limitée au comptant. Aucune généralisation de cette substitution au débet ni nouvelle condition d’accès au débet. Les dates de timbrage et l’oblitération relèvent de 405 D et 405 F dans leurs champs propres.',
+    'retained_necessary',
+    'Le texte entier ouvre deux modalités et une substitution de support ; il n’ajoute ni demande d’agrément ni transmission répétée. Retirer le visa sans maintenir sa fonction de constatation et l’accès au débet ferait perdre une facilité existante plutôt que réduire le droit.',
+    'Le présent maintien ne supprime aucun droit ni condition de fond résultant de ses textes propres. Aucune extension générale du débet, baisse de taux ou économie de gestion n’est établie.',
+    'Aucune charge nouvelle n’est identifiée : le visa, la compétence et les options sont conservés exactement, sans donnée, registre, délai ou autorisation supplémentaire.')
+
+add('405 H',
+    '<p>Lorsqu’il est facultatif, le paiement sur états relève du choix du redevable. Il n’est subordonné à aucune autorisation de l’administration, demande d’autorisation ou déclaration de remplacement, y compris lors d’un changement d’exploitant.</p>'
+    '<p>Le redevable conserve les documents nécessaires au contrôle dans les conditions prévues par les arrêtés d’application. Il n’est tenu ni de demander une autorisation en indiquant leur lieu de conservation, ni de présenter des demandes distinctes pour les établissements où ces documents sont établis ou conservés.</p>'
+    '<p>Le choix du paiement sur états n’est subordonné à aucun engagement préalable distinct.</p>'
+    '<p>Les obligations prévues aux articles 405 I et 406 et par les arrêtés d’application demeurent applicables, sans condition particulière attachée à une autorisation.</p>'
+    '<p>Pour les pouvoirs, la société qui recourt au paiement sur états acquitte pour le compte des mandants les droits de timbre exigibles ; aucun engagement écrit séparé n’est requis à ce titre.</p>'
+    '<p>La suppression de l’autorisation et de ses demandes s’applique aux paiements sur états effectués à compter de l’entrée en vigueur de la loi portant la présente réforme. Les autorisations déjà délivrées n’ont pas à être renouvelées ou remplacées ; leurs conditions propres ne peuvent rétablir les formalités supprimées pour ces paiements. Les droits, versements et obligations déclaratives déjà échus, ainsi que les contrôles, restitutions, prescriptions et recours qui s’y rapportent, conservent leur régime.</p>',
+    'Réforme de fond : ouvrir de plein droit le paiement facultatif sur états, sans autorisation révocable, fin automatique au changement d’exploitant, demande indiquant le lieu des pièces, multiplication des demandes par établissement ou engagements préalables. Les obligations fiscales de paiement, de conservation utile et de contrôle restent applicables. Cette suppression coordonne le choix sans autorisation déjà proposé à 301 ; elle n’est pas une nouvelle suppression de taxe.',
+    '301 officiel et proposé lus : le droit de timbre de dimension reste payable par machine, timbres mobiles ou états ; sa proposition supprime déjà l’autorisation de cette dernière voie. Même mesure à 405 H et 405 I. Les cinq emplacements d’alinéas source sont conservés, avec une transition ajoutée au sixième ; le paiement des pouvoirs reste au cinquième. Les arrêtés d’application ne pourront rétablir la demande sous une autre forme. Les articles 93 H ter et 93 H quater de l’annexe IV, sources, notes et propositions lues intégralement, mentionnent encore demande, engagement et justificatifs dans un circuit de paiement sur états : une coordination sectorielle reste à établir, sans prétendre ces articles réécrits ici. L’obligation de la société pour les pouvoirs correspond au paiement qu’elle devait déjà s’engager à effectuer : elle n’est étendue ni à d’autres actes ni à d’autres personnes. Les droits de contrôle et de recouvrement demeurent, sans nouveau registre ni nouvelle information périodique.',
+    'material_reduction',
+    'La source entière imposait une autorisation essentiellement révocable avec demande, localisation des archives, demandes locales possibles et engagements écrits. La proposition retire ce circuit préalable tout en maintenant le paiement sur états, les pièces utiles et les contrôles. Elle exécute la même mesure que le choix ouvert à 301.',
+    'La réduction porte sur le paiement facultatif sur états, sans abroger tous les régimes de visa ou d’agrément des timbres. Les arrêtés, notamment les circuits sectoriels de l’annexe IV, nécessitent coordination ; les droits de timbre eux-mêmes restent dus.',
+    'Aucune charge nouvelle n’est identifiée : ni déclaration d’option, ni notification du changement d’exploitant, ni demande territoriale n’est substituée. Le paiement pour compte des mandants et la conservation utile existaient déjà ; aucun solde national de coût n’est chiffré.',
+    [effect('authorization_removed', 'timbre-paiement-etats-sans-autorisation',
+            'Supprimer le préalable administratif au choix du paiement sur états et ses demandes et engagements accessoires.',
+            'Autorisation révocable, caduque au changement d’exploitant, demande localisant les documents, demandes par établissement et engagements préalables.',
+            'Libre choix du paiement facultatif sur états sans autorisation ni déclaration de remplacement ; conservation et paiement existants maintenus.',
+            'legal_duty', 'Redevables pouvant payer facultativement le droit de timbre sur états, nouveaux exploitants compris.',
+            'Paiements futurs dès l’entrée en vigueur ; aucun renouvellement des anciennes autorisations ; obligations déjà échues préservées.',
+            'Aucune formalité équivalente ; les obligations fiscales légales subsistent sans engagement additionnel.',
+            "Lorsqu'il est facultatif, le paiement sur états est subordonné à une autorisation de l'administration, essentiellement révocable, et qui prend fin de plein droit à chaque changement d'exploitant.",
+            'Il n’est subordonné à aucune autorisation de l’administration, demande d’autorisation ou déclaration de remplacement, y compris lors d’un changement d’exploitant.')],
+    removed=['Autorisation administrative essentiellement révocable du paiement facultatif sur états et sa caducité automatique à chaque changement d’exploitant.',
+             'Demande spéciale au service territorial avec indication du lieu des pièces et demandes supplémentaires possibles pour chaque établissement.',
+             'Engagements écrits préalables de respecter les conditions et de payer les droits des mandants, sans suppression du paiement effectivement dû.'])
+
+add('405 I',
+    '<p>Les redevables qui recourent au paiement sur états perçoivent les droits sous leur responsabilité et à leurs risques et périls.</p>'
+    '<p>La perception de l’impôt est constatée par l’apposition d’une formule très apparente comprenant :</p>'
+    '<p>la mention « droit de timbre payé sur état ».</p>'
+    '<p>La date d’une autorisation n’est pas exigée.</p>'
+    '<p>Ces dispositions s’appliquent aux mentions apposées à compter de l’entrée en vigueur de la loi portant la présente réforme. Les mentions antérieures demeurent valables sans nouvelle apposition ; les droits et recours relatifs aux perceptions antérieures conservent leur régime.</p>',
+    'Coordination de fond de 405 H : remplacer les redevables bénéficiant d’une autorisation par ceux recourant au paiement sur états et supprimer sa date dans la formule. Conserver la responsabilité de perception et la mention apparente de paiement. Il ne s’agit pas d’une deuxième suppression d’autorisation ou d’impôt.',
+    'Les quatre alinéas source sont intégralement couverts, sans déplacement de la mention utile : la date disparaît au quatrième emplacement. 405 H proposé ouvre le paiement sans autorisation et sans déclaration de remplacement ; 301 proposé concorde dans le champ du timbre de dimension. La mention de paiement ne sert pas de notification d’option à l’administration. Les anciens documents n’ont pas à être retimbrés.',
+    'coordination_only',
+    'La source entière exigeait, lorsque nécessaire, la date de l’autorisation et réservait la perception aux bénéficiaires de celle-ci. La proposition enlève ces deux dépendances à l’autorisation supprimée à 405 H. La mention probatoire du paiement reste exigée ; aucune nouvelle réduction fiscale autonome n’est comptée.',
+    'Le montant des droits, les états de paiement et la responsabilité des percepteurs ne sont pas réduits ici. La portée dépend de l’adoption de 405 H et des coordinations de l’annexe IV, sans validation globale de ces textes.',
+    'Aucune charge nouvelle n’est identifiée : la formule de paiement est antérieure, seule sa date d’autorisation disparaît. Aucun nouvel identifiant, registre, dépôt ou délai ne la remplace.',
+    [effect('coordination', 'timbre-paiement-etats-sans-autorisation',
+            'Retirer de la preuve de paiement la dépendance à l’autorisation supprimée.',
+            'Mention de la date d’autorisation lorsque celle-ci est nécessaire ; redevables définis par cette autorisation.',
+            'Mention de paiement maintenue sans date d’autorisation, pour tout redevable recourant légalement aux états.',
+            'legal_duty', 'Redevables percevant les droits payés sur états.',
+            'Mentions futures ; validité des anciens documents maintenue sans nouvelle formalité.',
+            'Aucune donnée ou déclaration nouvelle ; formule existante allégée.',
+            "la date de l'autorisation, lorsque celle-ci est nécessaire.",
+            'La date d’une autorisation n’est pas exigée.')],
+    removed=['Mention obligatoire de la date d’une autorisation lorsque celle-ci était requise, devenue sans objet après suppression du préalable de 405 H.'])
+
+add('406',
+    '<p>1. Lorsque le droit de timbre est payé sur états, son recouvrement, à défaut de versement dans les délais et formes prescrits, est poursuivi comme en matière de timbre.</p>'
+    '<p>2. Si le redevable découvre des erreurs ou omissions, il porte leur rectification sur l’état du mois au cours duquel il les a constatées, en indiquant de manière détaillée les différences en plus ou en moins. Aucun état spécial ni double exemplaire n’est exigé.</p>'
+    '<p>Si les vérifications de l’administration font apparaître un complément de droits au profit du Trésor, ce complément est acquitté immédiatement. Si elles font apparaître un excédent de versement, cet excédent est imputé sur le plus prochain versement.</p>'
+    '<p>Le 2 s’applique aux erreurs et omissions constatées à compter de l’entrée en vigueur de la loi portant la présente réforme, même lorsqu’elles concernent une période antérieure. Un état spécial déjà fourni n’est pas déposé à nouveau. Les obligations déjà échues, les paiements et les droits à imputation, restitution ou recours antérieurs conservent leur régime.</p>',
+    'Réforme de fond : fusionner l’état spécial détaillé de correction et l’état mensuel qui l’accompagnait, supprimer le double exemplaire et conserver les différences détaillées en plus ou en moins sur un seul support. À droit constant, maintenir le recouvrement du timbre, le paiement immédiat d’un complément issu du contrôle et l’imputation de l’excédent au plus prochain versement.',
+    'Les numéros 1 et 2 et l’alinéa final de contrôle sont maintenus à leurs emplacements. La rectification figure dans le mois de constatation, comme dans la source ; ni délai supplémentaire ni envoi rectificatif autonome n’est créé. La réduction ne se limite pas au réemploi des pièces reconnu par le CRPA : elle retire effectivement un état distinct et deux exemplaires obligatoires. Les formats et arrêtés de paiement sur états devront accepter cette rectification sur l’état ordinaire ; aucune reconstitution du dépôt spécial par formulaire n’est admise. Le droit de restitution légalement ouvert ne peut être fermé par le seul mécanisme d’imputation.',
+    'material_reduction',
+    'L’article officiel entier prescrivait un état spécial détaillé en double exemplaire joint à l’état mensuel. Les mêmes différences sont désormais portées dans cet état mensuel, sans document ni exemplaire additionnel. Le régime de recouvrement et les résultats favorables ou défavorables du contrôle ne sont pas modifiés.',
+    'La correction reste détaillée et doit être portée dans le mois de constatation ; le paiement du droit demeure. Aucun nombre de corrections, frais d’affranchissement ou solde net de gestion des services n’est évalué.',
+    'Aucune charge nouvelle n’est identifiée : les différences détaillées et leur mois de production étaient déjà imposés. Le support mensuel existe déjà ; aucun registre, accusé, code de correction ou nouvelle certification n’est exigé.',
+    [effect('obligation_merged', 'timbre-etats-rectification-unique',
+            'Fusionner le correctif avec l’état mensuel et supprimer sa production spéciale en double.',
+            'État spécial détaillé en deux exemplaires, fourni avec celui du mois de constatation des erreurs ou omissions.',
+            'Différences détaillées sur l’état mensuel existant, sans état spécial ni double exemplaire.',
+            'legal_duty', 'Redevables du timbre payé sur états découvrant une erreur ou une omission.',
+            'Constatations après l’entrée en vigueur, même concernant des périodes anciennes ; aucun redépôt des états déjà transmis.',
+            'Pas de déclaration ou registre de remplacement ; contenu de correction déjà exigé.',
+            source_passage('406', "état spécial détaillé en double exemplaire"),
+            'Aucun état spécial ni double exemplaire n’est exigé.')],
+    removed=['État rectificatif spécial obligatoirement distinct de l’état mensuel de paiement du droit de timbre.',
+             'Production en double exemplaire de cet état de rectification, remplacée par les informations de correction sur l’état mensuel déjà requis.'])
+
+add('406 undecies',
+    '<p>La direction générale des douanes et droits indirects est compétente pour percevoir, dans la limite des attributions que les dispositions législatives en vigueur lui confèrent :</p>'
+    '<p>1° (Sans objet).</p>'
+    '<p>2° Le droit de consommation sur les tabacs mentionné à l’article 575 C du code général des impôts, pour les seules créances demeurant légalement dues et dont le recouvrement relève de cette direction ;</p>'
+    '<p>3° 4° 5° (Sans objet).</p>'
+    '<p>Le présent article ne rétablit aucune imposition abrogée ni aucune compétence légalement transférée. Cette réserve s’applique aux opérations de recouvrement accomplies à compter de l’entrée en vigueur de la loi portant la présente réforme. Les créances antérieures, leur recouvrement par l’autorité légalement compétente, les contrôles, restitutions, prescriptions et recours conservent leur régime propre.</p>',
+    'Coordination de la désignation du service avec la compétence législative effectivement applicable et la survie des seules créances légalement dues. Le renvoi ancien à 575 C ne suffit plus à présenter ce texte comme une assiette actuelle ou à attribuer aux douanes une compétence transférée. Aucune accise ni obligation de paiement n’est déclarée supprimée par cette coordination réglementaire ; aucune modification stylistique autonome n’est comptée.',
+    'Les emplacements 1° et 3° à 5° sont « Sans objet », non « Réservé », et restent à leur place. La note de 2020 tire les conséquences de la loi de finances pour 2020 ; elle n’est pas une date de réforme future. CGI 575 C n’a pas été retrouvé dans le corpus fourni, ni les textes de concordance CIBS ou de transfert dans les pièces pertinentes disponibles. La réserve opératoire empêche la réactivation d’une ancienne assiette ou compétence, mais ne résout pas cette lacune : le remplacement numérique exact du renvoi et la répartition actuelle DGFiP/douanes restent à établir sur ces textes hors des cinq codes. Aucun contenu non fourni ni nouveau numéro n’est inventé. Les accises harmonisées européennes et leurs fondements autonomes ne sont pas supprimés. Aucun renvoi au contrat privé ne figure dans cet article.',
+    'coordination_only',
+    'La source entière attribue la perception d’un droit aux douanes par un renvoi dont la cible est absente du corpus. La proposition subordonne expressément cette désignation à la dette et à la compétence légalement subsistantes. Elle assure la continuité des créances valables sans prétendre supprimer l’accise ou réécrire une concordance non documentée ; aucune réduction permanente d’impôt n’est comptée.',
+    'La concordance exacte avec le CIBS et les transferts de compétence n’est pas démontrée par les pièces locales. La réserve ne prouve ni que 575 C demeure applicable aux faits nouveaux ni qu’une taxe est abolie ; l’examen des textes extérieurs reste ouvert et aucun gain budgétaire n’est avancé.',
+    'Aucune charge nouvelle n’est identifiée : la réserve borne les pouvoirs du service et n’exige aucune attestation du redevable, nouvelle déclaration, donnée, registre ou calendrier. Les dettes et procédures autonomes ne sont pas étendues ; aucun solde national de complexité n’est chiffré.',
+    [effect('coordination', 'tabacs-recouvrement-competence-legale',
+            'Borner la désignation des douanes aux seules dettes et compétences légalement subsistantes.',
+            'Attribution aux douanes par renvoi à 575 C sans réserve expresse des abrogations ou transferts législatifs ultérieurs ; ni taux ni assiette fixés ici.',
+            'Aucune taxe réduite : seules les créances encore légalement dues et relevant des douanes peuvent être perçues sur ce fondement, sans réactivation d’une imposition ou compétence ancienne.',
+            'legal_duty', 'Services de recouvrement et redevables des créances de droit de consommation sur les tabacs légalement subsistantes.',
+            'Opérations de recouvrement à compter de l’entrée en vigueur ; créances antérieures, recours et autorité légalement compétente préservés.',
+            'Aucun nouveau dépôt ou justificatif de compétence demandé au redevable ; concordance extérieure explicitement non résolue.',
+            '2° Le droit de consommation sur les tabacs dans les conditions prévues à l\'article 575 C du code général des impôts ;',
+            'Le présent article ne rétablit aucune imposition abrogée ni aucune compétence légalement transférée.')])
+
+add('406 duodecies', None,
+    'Maintien intégral : la désignation des comptables rend applicable le seuil favorable de non-recouvrement de 1724 A. La distinction entre DGFiP et douanes, limitée pour ces dernières aux contributions indirectes et impositions suivant les mêmes règles, n’impose pas de double démarche au redevable.',
+    '1724 A du CGI a été lu en entier : les créances non acquittées à l’échéance ne sont mises en recouvrement que si leur montant cumulé excède 16 €. Conserver cette protection et la compétence désignée, pour les situations futures comme pour les dettes anciennes. La note relative aux mots « aux mêmes règles » est une indication de portée historique, non une nouvelle réserve ni un nouveau seuil. Ne pas confondre le montant cumulé de 16 € avec une exonération d’assiette de chaque impôt ou le seuil de publicité de 200 000 € de 416 bis.',
+    'retained_necessary',
+    'L’unique alinéa officiel identifie les comptables auxquels s’applique une dispense de mise en recouvrement pour petites créances. Il ne crée pas de charge déclarative ; le conserver protège l’exécution du seuil favorable de 16 € sans fusionner des compétences fiscales distinctes.',
+    'Aucune extension du seuil à des services non visés ni suppression de dette en principal n’est décidée. La concordance des prélèvements autonomes avec leurs textes propres demeure nécessaire ; aucun gain nouveau n’est compté.',
+    'Aucune charge nouvelle n’est identifiée : source inchangée, sans registre, déclaration de faible montant, demande de dispense ou délai supplémentaire.')
+
+add('406 A 12', None,
+    'Maintien intégral de la saisine administrative encadrant le séquestre : la mesure porte atteinte à la disposition des biens et reste soumise aux conditions judiciaires de 1751. L’identification du chef de service demandeur rattache la mesure à l’administration pour laquelle les poursuites sont engagées et évite d’ouvrir une voie de séquestre sans responsable désigné.',
+    '1751 du CGI, source et absence de proposition, lu intégralement : manquements aux règles de facturation de L. 441-9 et L. 443-3 du commerce, mesure pouvant porter sur le patrimoine, décision du juge d’instruction ou du tribunal correctionnel et, hors leur saisine, du président en référé selon CPC 485 et 486, service des domaines et mainlevée coordonnée par 406 A 15. Incohérence préexistante à contrôler hors corpus : 1751 emploie encore « auteur du délit » pour des manquements aux règles de facturation ; les textes commerce et LPF L. 246 ne sont pas fournis en entier. Aucune extension pénale n’en est déduite. Le maintien du contrôle judiciaire ne signifie pas validation de toutes les qualifications ou de la nécessité d’un séquestre dans chaque affaire.',
+    'retained_necessary',
+    'La source entière renvoie les conditions du séquestre à 1751 et désigne l’autorité administrative à l’origine de la demande. Cette garantie de saisine d’une mesure intrusive est conservée ; l’enlever isolément pourrait élargir l’initiative répressive au lieu d’alléger la charge du poursuivi.',
+    'Les infractions commerciales et leur articulation pénale, ainsi que les textes extérieurs de séquestre, ne sont pas entièrement documentés. L’article ne supprime aucun séquestre ni ne démontre un gain de coût ou de délai.',
+    'Aucune charge nouvelle n’est identifiée : aucune extension des personnes, biens, motifs ou pouvoirs ; les conditions de la source sont maintenues avec la compétence du juge et les recours.')
+
+add('406 A 13', None,
+    'Maintien intégral du cadre de gestion des séquestres judiciaires : le renvoi à des dispositions déterminées et la réserve expresse de leur compatibilité avec 1751 empêchent de laisser les biens séquestrés sans règles de gestion. L’ancienneté du texte référencé ne démontre pas à elle seule un doublon ou une obligation inutile pouvant être abrogée sans risque pour les droits sur les biens.',
+    '1751 a été lu intégralement : il confie le séquestre au service des domaines et renvoie à la loi validée du 5 octobre 1940. Le présent article vise exactement les articles 1 à 5, 7 à 9, 11 et 12 de l’arrêté validé du 23 novembre 1940, modifié les 14 septembre 1942 et 11 janvier 1946, avec primauté de 1751. Ces trois arrêtés et la loi de 1940 ne figurent pas dans les textes locaux consultés ; leurs obligations détaillées et leurs éventuelles recodifications restent une lacune documentaire, et ne sont pas présentées comme examinées ou modernisées. L’abrogation ciblée de 406 A 14 retire la seule mention obligatoire de l’avis du chef de service, sans fermer l’autorisation de poursuite de l’exploitation de l’article 9 cité. Aucun renvoi nouveau n’est créé.',
+    'retained_necessary',
+    'L’unique alinéa officiel assure un cadre de gestion par renvoi limité et contient une réserve de non-contrariété avec 1751. Cette fonction est conservée intégralement après examen de ce renvoi ; la suppression ponctuelle de l’avis administratif de 406 A 14 est traitée dans cet autre article, sans abrogation aveugle de la gestion.',
+    'L’intégralité matérielle des arrêtés de 1940, 1942 et 1946 n’est pas disponible dans le contexte local autorisé. Leurs conditions ne sont ni certifiées ni déclarées toutes nécessaires ; aucune réforme exhaustive du régime extérieur ou économie n’est affirmée.',
+    'Aucune charge nouvelle n’est identifiée : mêmes articles référencés et même clause de compatibilité, sans nouvelle donnée ou rapport. Aucune obligation documentaire supplémentaire n’est tirée de ce maintien.')
+
+add('406 A 14',
+    '<p>Le présent article est abrogé à compter de l’entrée en vigueur de la loi portant la présente réforme.</p>'
+    '<p>Les requêtes du service des domaines tendant à obtenir l’autorisation de poursuivre l’exploitation d’établissements commerciaux, industriels ou agricoles ne sont plus tenues de faire état de l’avis du chef de service départemental de l’administration à l’origine du séquestre. Aucune demande d’avis ni attestation équivalente ne lui est substituée. L’autorisation prévue à l’article 9 de l’arrêté du 23 novembre 1940 et les conditions judiciaires du séquestre demeurent applicables.</p>'
+    '<p>La suppression s’applique aux requêtes présentées à compter de cette date ainsi qu’à celles restant alors à examiner, sans nouveau dépôt. Les autorisations et décisions antérieures, les droits des tiers et les recours conservent leur régime ; aucune poursuite d’exploitation déjà autorisée n’est remise en cause du seul fait de cette suppression.</p>',
+    'Réforme de fond : abroger l’obligation de faire état d’un avis administratif préalable pour poursuivre l’exploitation d’une entreprise déjà placée sous séquestre. Ce circuit supplémentaire ne remplace ni le juge ni l’autorisation de continuer l’activité ; leur décision demeure requise. Aucune déclaration équivalente n’est instaurée.',
+    'Source intégrale et 1751 lus. La cible article 9 de l’arrêté du 23 novembre 1940 n’est pas fournie en entier : son contenu exact reste à contrôler hors corpus, mais l’existence et l’objet de l’autorisation sont expressément attestés par la présente source. Le renvoi et cette autorisation sont préservés, sans inventer leur procédure. 406 A 13 continue à viser les articles de cet arrêté compatibles avec 1751 ; sa coordination devra empêcher la réintroduction du seul avis supprimé. Ne pas confondre l’avis du service à l’origine du séquestre avec le contrôle du juge, la gestion des domaines ou la saisine initiale de 406 A 12. Les requêtes en cours profitent de la suppression sans remise à zéro des autres délais.',
+    'material_reduction',
+    'L’alinéa officiel exigeait que la requête expose obligatoirement l’avis du chef de service qui avait provoqué le séquestre. Cette exigence documentaire et son préalable disparaissent, tandis que l’autorisation de poursuivre l’exploitation et le contrôle judiciaire restent nécessaires et applicables.',
+    'La suppression ne donne pas le droit d’exploiter sans autorisation et ne supprime pas les séquestres motivés. L’arrêté extérieur reste à confronter en entier ; aucun délai total de décision ou gain financier n’est mesuré.',
+    'Aucune charge nouvelle n’est identifiée : ni déclaration ni attestation n’est substituée à l’avis, aucune requête n’est redéposée et les autorisations existantes ne sont pas refaites. Les contrôles judiciaires préexistants sont maintenus.',
+    [effect('obligation_removed', 'sequestre-exploitation-sans-avis-double',
+            'Supprimer l’avis du service fiscal à exposer dans la requête de continuation d’exploitation.',
+            'Requête des domaines devant obligatoirement faire état de l’avis du chef de service à l’origine du séquestre.',
+            'Requête examinée sans avis administratif obligatoire ni pièce équivalente ; autorisation de continuer l’exploitation maintenue.',
+            'legal_duty', 'Service des domaines et entreprises commerciales, industrielles ou agricoles sous séquestre sollicitant la continuation de l’activité.',
+            'Requêtes nouvelles ou restant à examiner à l’entrée en vigueur ; décisions et autorisations antérieures préservées.',
+            'Aucun avis, certificat ou déclaration substitué ; contrôle judiciaire existant conservé.',
+            source_passage('406 A 14', "doit obligatoirement faire état"),
+            'Les requêtes du service des domaines tendant à obtenir l’autorisation de poursuivre l’exploitation d’établissements commerciaux, industriels ou agricoles ne sont plus tenues de faire état de l’avis du chef de service départemental de l’administration à l’origine du séquestre.')],
+    repeal='Obligation de recueillir et de faire état de l’avis du chef de service fiscal dans les requêtes des domaines de continuation d’exploitation ; autorisation et contrôle judiciaires demeurent.')
+
+add('406 A 15',
+    '<p>La mainlevée du séquestre peut être ordonnée par le juge d’instruction ou par le tribunal correctionnel, saisis, à tout stade de la procédure, sur réquisitions du procureur de la République ou à la demande de l’intéressé. Hors leur saisine, elle peut également être ordonnée par le président du tribunal statuant en référé dans les conditions des articles 485 et 486 du code de procédure civile.</p>'
+    '<p>Les réquisitions du procureur de la République ne sont subordonnées à aucune demande préalable de l’administration. Avant toute décision définitive sur l’action publique, le directeur départemental de l’administration à l’origine du séquestre peut saisir le procureur d’une demande de mainlevée. Après cette décision définitive, le directeur départemental des finances publiques ou le responsable du service à compétence nationale peut le saisir d’une telle demande, jusqu’à l’exécution de la décision et après celle-ci.</p>'
+    '<p>La suppression du préalable administratif s’applique aux demandes et réquisitions présentées à compter de l’entrée en vigueur de la loi portant la présente réforme ainsi qu’à celles restant alors à examiner, sans nouveau dépôt. Les décisions antérieures, les droits des tiers et les voies de recours conservent leur régime. Les présentes dispositions ne reportent pas une abrogation différée du présent article prévue par un autre texte et ne le remettent pas en vigueur s’il est déjà abrogé lors de cette entrée en vigueur.</p>',
+    'Réforme de fond : supprimer la dépendance des réquisitions de mainlevée à une demande préalable de l’administration, tout en conservant sa faculté de solliciter la mainlevée et ses autorités compétentes avant et après décision définitive. À droit constant, maintenir la saisine directe par l’intéressé, les compétences judiciaires, le référé et la possibilité de mainlevée à tout stade.',
+    '1751 officiel lu en entier : la saisine aux fins de placement sous séquestre est distincte des demandes de mainlevée du présent article. Le premier alinéa est conservé dans tout son champ ; aucune demande administrative ne peut devenir une condition du recours direct de l’intéressé. Les articles CPC 485 et 486 ne sont pas fournis comme cibles : leurs conditions ne sont pas modifiées ou inventées. La note du décret de 2011 porte seulement sur la transition départementale terminée au plus tard le 31 décembre 2012, pas sur la réforme future. La métadonnée de source indique une abrogation différée au 1er janvier 2029 : son fondement et le régime qui succédera ne sont pas fournis ; cette proposition ne la reporte pas et ne fait pas revivre l’article après cette date. Aucun nouveau renvoi à un contrat de travail n’est créé.',
+    'material_reduction',
+    'La lecture des deux alinéas officiels montre un accès direct de l’intéressé au juge, déjà ouvert, et un préalable administratif distinct pour les réquisitions du parquet. Seul ce préalable est retiré : le gain ne consiste ni à inventer le recours direct ni à supprimer le contrôle du juge.',
+    'L’allègement vise la voie des réquisitions du parquet tant que cet article est applicable, sans lever automatiquement un séquestre. Le régime annoncé après l’abrogation différée de 2029 reste à coordonner ; aucun délai judiciaire effectif n’est garanti.',
+    'Aucune charge nouvelle n’est identifiée : la demande administrative devient facultative, sans nouvelle pièce pour l’intéressé et sans nouvelle consultation. La décision de mainlevée relève toujours du juge compétent et les recours restent ouverts.',
+    [effect('obligation_removed', 'sequestre-mainlevee-sans-filtre-administratif',
+            'Retirer la demande administrative préalable aux réquisitions de mainlevée du parquet.',
+            'Réquisitions prises à la demande du directeur administratif compétent, selon le stade de la procédure.',
+            'Le procureur peut requérir sans demande préalable ; ces directeurs peuvent toujours le saisir ; décision du juge maintenue.',
+            'legal_duty', 'Parquet, administrations compétentes et personnes intéressées à la mainlevée d’un séquestre de 1751.',
+            'Demandes et réquisitions en cours ou nouvelles dès l’entrée en vigueur, sans report de l’abrogation différée.',
+            'Aucune déclaration ou pièce nouvelle ; la voie directe préexistante de l’intéressé reste intégralement ouverte.',
+            source_passage('406 A 15', 'Les réquisitions du parquet'),
+            'Les réquisitions du procureur de la République ne sont subordonnées à aucune demande préalable de l’administration.')],
+    removed=['Demande préalable de l’administration imposée comme condition des réquisitions du parquet tendant à la mainlevée du séquestre.'])
+
+add('406 A 16', None,
+    'Maintien intégral de la compétence judiciaire de clôture des opérations : elle est distincte de la mainlevée du séquestre et garantit une autorité déterminée pour achever la gestion des biens. Supprimer ce juge ou cette règle territoriale sans régime complet de remplacement risquerait de prolonger ou de rendre incertaine la clôture.',
+    'La source entière désigne, dans tous les cas, le président du tribunal judiciaire du domicile ou du siège de l’intéressé, personne physique ou morale. 1751 et 406 A 15 ont été lus : décision de placement, mainlevée et clôture ne sont pas des actes interchangeables. La note du décret de 2019 fixe l’entrée en vigueur historique au 1er janvier 2020 ; aucune date future n’est inventée. Les textes extérieurs sur les comptes et la gestion du séquestre ne sont pas fournis intégralement : ne pas présenter leur examen comme achevé.',
+    'retained_necessary',
+    'L’unique alinéa officiel assure la clôture par le juge territorialement identifié pour toutes les personnes intéressées. Il ne demande ni rapport privé supplémentaire ni agrément économique ; sa fonction de fin de gestion protège la sortie du séquestre et justifie son maintien.',
+    'Aucune fusion avec la mainlevée ou les procédures extérieures n’est démontrée possible sans perte de garantie. Aucune durée de procédure, baisse d’impôt ou économie n’est attribuée à cette disposition conservée.',
+    'Aucune charge nouvelle n’est identifiée : mêmes compétence, critère territorial et personnes qu’en source, sans nouveau dépôt, registre ou formalité de clôture ajouté.')
+
+add('406 A 27', None,
+    'Maintien intégral d’une protection contre les pénalités de retard : le refus de publier suivi d’une régularisation impossible ne doit pas faire perdre le délai de la formalité fusionnée ni, dans le champ prévu, pénaliser le temps écoulé au service. Les deux alinéas sont un avantage et sa règle de calcul, sans justification spéciale redondante à supprimer.',
+    'Conserver toutes les conditions cumulatives : refus de publier, impossibilité de régularisation, enregistrement requis dans le délai de la formalité fusionnée ; neutralisation de la période entre dépôt refusé et présentation à l’enregistrement si celle-ci intervient dans le mois de notification du refus. Ce mois n’est ni un délai minimal d’attente ni un délai de préavis de travail. L’allègement demeure ouvert aux actes futurs éligibles. 416 E distingue le rejet définitif de la publicité du droit à restitution d’un impôt régulièrement perçu ; ne pas confondre cette absence de pénalité et une exonération des droits en principal.',
+    'retained_necessary',
+    'La source officielle entière ouvre une absence de pénalité et neutralise une période de calcul sous la condition du mois. Son maintien conserve cet avantage futur sans retirer ses conditions ni inventer une deuxième dispense ; supprimer la règle de calcul pourrait au contraire rendre le délai moins favorable.',
+    'Les droits en principal et les conditions d’enregistrement ne sont pas supprimés. Aucune extension au-delà du mois ni aux refus régularisables n’est décidée ; aucun gain nouveau n’est compté.',
+    'Aucune charge nouvelle n’est identifiée : source reproduite sans modification, sans demande de certificat de refus, rapport, nouvelle date ou attestation. Les conditions favorables existantes demeurent.',
+    benefit='Le premier alinéa dispense des pénalités sanctionnant le retard d’enregistrement lorsque le refus de publication ne peut être régularisé et que la formalité est requise à temps. Le second neutralise la période de dépôt à présentation si cette dernière a lieu dans le mois du refus notifié. Les deux avantages, leurs champs et toutes leurs conditions restent applicables aux actes futurs comme aux situations anciennes ; ils ne sont pas fermés par les autres simplifications du lot.')
+
+add('415',
+    '<p>Le présent article est abrogé pour les frais accessoires afférents aux actes ou opérations accomplis à compter de l’entrée en vigueur de la loi portant la présente réforme.</p>'
+    '<p>Les frais dont l’imputation aux redevables résultait du présent article ne leur sont plus réclamés pour ces actes ou opérations, même si la dette recouvrée est antérieure. Ils sont supportés par le Trésor, les communes ou les établissements publics au profit desquels les poursuites sont exercées. Ils ne peuvent être réimputés au redevable sous une autre qualification sur le seul fondement des dispositions abrogées.</p>'
+    '<p>La rémunération légalement due aux professionnels et prestataires pour les opérations effectuées n’est pas supprimée. Les frais de poursuites distincts, autres que les frais accessoires retirés par le présent article, conservent leur régime propre. Aucun prélèvement de remplacement n’est créé.</p>'
+    '<p>Les frais accessoires afférents aux actes ou opérations accomplis avant cette entrée en vigueur restent soumis à leurs règles antérieures de liquidation, de tarif, de recouvrement, de contestation, de prescription et de restitution. La présente abrogation ne crée pas de droit général au remboursement de frais antérieurement et régulièrement mis à la charge d’un redevable.</p>',
+    'Réforme de fond : supprimer entièrement, pour les opérations futures, l’imputation au débiteur des frais accessoires a à r et de leurs tarifs de refacturation. Leur paiement par le bénéficiaire public de la poursuite est coordonné avec 416. Il s’agit d’un transfert de financeur, non d’une disparition du coût des professionnels, d’une réduction des taux fiscaux ou d’une économie nationale.',
+    'Les dix-huit rubriques a à r et la règle tarifaire finale ont été lues intégralement : ouverture des portes, notifications et remise des actes, inscriptions et créanciers, mise en vente sous huit jours, garde/transport des biens, honoraires et frais d’incident, saisie immobilière interrompue, véhicule, vente de titres cotés ou non cotés et sûretés judiciaires. Aucune opération protectrice des tiers n’est supprimée ; seule leur imputation accessoire au poursuivi cesse. 1912 du CGI a été lu : ses frais de poursuites plafonnés à 5 % et 500 € sont distincts ; son renvoi réglementaire pour les frais accessoires doit être coordonné afin de ne pas reconstituer la liste de 415. Cet article législatif n’est pas réécrit dans ce lot : adoption au niveau compétent et coordination expresse nécessaires. 416 est traité simultanément pour l’allocation publique. Les textes tarifaires et de procédure civile extérieurs ne sont pas déclarés réécrits. Le support public des frais est une charge nouvelle pour ce financeur, sans suppression de la créance fiscale ni de la rémunération des prestataires et sans compensation inventée.',
+    'financing_transfer',
+    'La source entière imputait au redevable les dix-huit catégories de frais accessoires selon les tarifs des professionnels. Pour les opérations futures, la proposition retire cette dette accessoire privée et en transfère le financement au bénéficiaire public de la poursuite. Les opérations et leurs coûts ne disparaissent pas : aucun gain net national n’est démontré.',
+    'Les frais des opérations antérieures et les frais de poursuites distincts de 1912 ne sont pas effacés. L’articulation législative et les tarifs extérieurs restent à coordonner ; le coût public nouveau et le solde de l’ensemble des codes sont inconnus.',
+    'Une charge de financement nouvelle incombe au Trésor, aux communes ou aux établissements publics bénéficiaires pour les frais auparavant facturés au débiteur. Elle est expressément recensée comme transfert, sans nouveau registre, donnée ou déclaration pour le redevable et sans chiffrage d’économie nationale.',
+    [effect('financing_transfer', 'frais-recouvrement-accessoires-financeur-public',
+            'Transférer les frais accessoires de la liste a à r du débiteur au bénéficiaire public des poursuites.',
+            'Frais accessoires énumérés a à r supportés par les redevables poursuivis suivant les tarifs applicables aux intervenants ; pas de taux uniforme propre à 415.',
+            'Même coût légal des opérations et rémunérations, financé par Trésor, commune ou établissement public bénéficiaire ; aucune imputation privée sur le seul fondement de 415 pour les opérations nouvelles.',
+            'financing', 'Redevables poursuivis, bénéficiaires publics du recouvrement et professionnels intervenant dans les opérations accessoires.',
+            'Actes et opérations accomplis à compter de l’entrée en vigueur, même pour dettes anciennes ; frais d’opérations antérieures et recours préservés.',
+            'Financement public nouveau explicitement assumé ; aucun prélèvement compensateur, aucune réduction fictive de coût des prestataires.',
+            'Sont à la charge des redevables poursuivis les frais accessoires ci-après :',
+            'Ils sont supportés par le Trésor, les communes ou les établissements publics au profit desquels les poursuites sont exercées.')],
+    repeal='Imputation aux redevables poursuivis de toutes les catégories a à r de frais accessoires et règle tarifaire de leur refacturation, pour les actes et opérations futurs ; allocation aux bénéficiaires publics sans suppression de la rémunération des intervenants.')
+
+add('416',
+    '<p>Les frais accessoires aux poursuites, notamment les frais de transport de l’huissier, les salaires des afficheurs et les frais d’insertion dans les journaux, sont supportés par le Trésor, les communes ou les établissements publics au profit desquels les poursuites sont exercées.</p>'
+    '<p>Cette prise en charge s’applique aux frais afférents aux actes ou opérations accomplis à compter de l’entrée en vigueur de la loi portant la présente réforme. Elle comprend les catégories de frais accessoires dont l’imputation au redevable a été supprimée, sans transfert de leur coût vers un nouveau prélèvement. Les frais afférents aux actes ou opérations antérieurs, les créances de rémunération des intervenants, les contestations, prescriptions et restitutions conservent leur régime. Les frais de poursuites distincts des frais accessoires ne sont pas modifiés par le présent article.</p>',
+    'Coordination de fond de l’abrogation de 415 : étendre l’allocation publique des « autres » frais accessoires à tous les frais accessoires futurs, en conservant les bénéficiaires publics désignés et les trois exemples. La même mesure transfère le financeur ; elle ne supprime pas deux fois une charge ni les opérations de poursuite.',
+    '415 est traité simultanément : liste entière a à r et règle tarifaire ont été examinées. 1912 CGI a été lu : les frais de poursuites distincts, plafonnés à 5 % et 500 €, ne sont pas supprimés par ce changement d’allocation des accessoires ; son habilitation pour ces derniers nécessite coordination législative. Les catégories de 415 et les trois exemples de 416 sont financés par le bénéficiaire public exact de la poursuite, sans affectation automatique de tout le coût à l’État. Les tarifs, droits des prestataires et protections des tiers ne disparaissent pas. Le surcoût public correspond au même transfert recensé dans 415, pas à une autre mesure d’économie. Aucune compensation fiscale n’est présumée.',
+    'coordination_only',
+    'La source entière réservait la charge publique aux « autres » frais accessoires. Après suppression de l’imputation de la liste de 415 au débiteur, la proposition enlève cette restriction et assure l’allocation publique de l’ensemble des accessoires futurs. C’est la coordination du même transfert de financement, sans nouvelle baisse fiscale autonome.',
+    'La dépense publique supplémentaire et la diminution correspondante des paiements privés ne sont pas évaluées. Les frais de poursuites distincts et les opérations antérieures restent hors de ce transfert nouveau ; les tarifs extérieurs restent à coordonner.',
+    'Le financement public est élargi aux accessoires anciennement imputables au débiteur : c’est la charge nouvelle du même transfert décrit dans 415, sans double comptage. Aucun document, registre ou délai supplémentaire n’est créé pour les usagers ; aucun solde net national n’est établi.',
+    [effect('coordination', 'frais-recouvrement-accessoires-financeur-public',
+            'Coordonner l’allocation publique avec la suppression de la liste imputable au débiteur.',
+            '416 attribuait aux bénéficiaires publics les autres frais accessoires, la liste de 415 restant à la charge du débiteur.',
+            'Prise en charge publique de tous les accessoires futurs, y compris ceux de l’ancienne liste ; financeur exact selon le bénéficiaire de la poursuite.',
+            'financing', 'Trésor, communes et établissements publics bénéficiaires, ainsi que redevables poursuivis.',
+            'Actes et opérations futurs dès l’entrée en vigueur ; droits et frais antérieurs préservés.',
+            'Même charge publique transférée qu’à 415, sans seconde mesure ni taxe de remplacement.',
+            source_passage('416', 'Les autres frais accessoires'),
+            'Les frais accessoires aux poursuites, notamment les frais de transport de l’huissier, les salaires des afficheurs et les frais d’insertion dans les journaux, sont supportés par le Trésor, les communes ou les établissements publics au profit desquels les poursuites sont exercées.')],
+    removed=['Restriction de la prise en charge publique aux seuls autres frais accessoires, coordonnée avec la suppression de la liste imputable aux redevables dans 415.'])
+
+add('416 bis', None,
+    'Maintien intégral du seuil de 200 000 € : il limite la publicité obligatoire du privilège du Trésor et protège les débiteurs situés sous ce seuil sans supprimer l’information des tiers pour les dettes importantes. Le montant ne doit pas être abaissé ni transformé en nouveau seuil d’assiette ou de recouvrement.',
+    '1929 quater officiel et proposé lus en entier : le premier alinéa du 4 mesure les sommes publiables dues par un même redevable à un même poste comptable ou service assimilé au terme d’un semestre civil. Le 1° réserve les plans d’apurement respectés et le 2° les réclamations assorties du sursis ; frais d’inscription au Trésor au 6, défaut de publicité opposable au privilège au 7 et radiation sous un mois au 8 bis. Le seuil de 200 000 € est distinct du seuil de 16 € de 1724 A. La proposition de 1929 quater limite la taxe sur les salaires aux rémunérations anciennes ; le seuil ne fait renaître aucune TSA nouvelle ni CVAE. Aucun montant de CFE nette n’est assimilé à un taux ou une base.',
+    'retained_necessary',
+    'L’unique phrase officielle fixe un seuil favorable à la dispense de publicité obligatoire et donne une limite certaine à la garantie d’information des tiers. Conserver 200 000 € préserve cet équilibre entre la protection du débiteur et celle des autres créanciers ; aucune obligation déclarative privée ou duplication n’est imposée par cette phrase.',
+    'La publicité sous le seuil dans les cas légalement distincts, notamment subrogation, reste régie par 1929 quater. Aucune exonération d’impôt ou suppression générale des privilèges fiscaux n’est décidée ; aucun gain nouveau n’est compté.',
+    'Aucune charge nouvelle n’est identifiée : seuil, assiette de comparaison et moment semestriel restent ceux des textes existants, sans attestation d’éligibilité ni déclaration nouvelle.')
+
+add('416 ter',
+    '<p>Le comptable de la direction générale des finances publiques ou de la direction générale des douanes et des droits indirects notifie au redevable la fin du plan d’apurement échelonné mentionné au 1° du 4 de l’article 1929 quater du code général des impôts par tout moyen légal permettant d’établir avec certitude la date de réception. La lettre recommandée avec accusé de réception demeure utilisable, sans être exclusive. Le comptable procède à l’inscription du privilège du Trésor dans le délai de deux mois prévu au même 1°. Ce délai court à compter de la réception de la dénonciation par le redevable.</p>'
+    '<p>La liberté du moyen de notification s’applique aux dénonciations notifiées à compter de l’entrée en vigueur de la loi portant la présente réforme, y compris pour les plans en cours. Les notifications antérieures, leurs effets, délais et voies de recours demeurent régis par les règles qui leur étaient applicables ; aucune nouvelle notification n’est exigée.</p>',
+    'Réforme de fond : supprimer l’exclusivité de la lettre recommandée avec accusé de réception pour dénoncer le plan, au profit de tout moyen légal établissant la réception avec certitude. Maintenir la notification effective au débiteur et le point de départ à réception ; expliciter, à droit constant, les deux mois déjà prévus au 1° du 4 de 1929 quater.',
+    '1929 quater entier, officiel et proposé, lu : seuls les plans du 1° du 4 sont concernés, non la voie du sursis de paiement du 2°. La dénonciation est distincte de l’inscription ; son délai de deux mois part de la réception, jamais du seul envoi. Les exigences légales de notification électronique, le consentement lorsqu’il est requis et la preuve de réception restent applicables ; un simple courriel ne vaut pas automatiquement notification régulière. La faculté de recommandé est préservée. La note de 2019 n’est pas utilisée comme date de la réforme. Les protections liées au respect du plan, à la CFE plafonnée et aux dettes de TSA exclusivement anciennes ne sont pas fermées. Aucun renvoi au contrat de travail, à son préavis de quinze jours ou à une rupture privée ne s’applique.',
+    'material_reduction',
+    'La source entière imposait le recommandé avec accusé de réception, même si un autre procédé légal établissait déjà la réception. La proposition retire ce canal exclusif sans diminuer la preuve du fait déclencheur, l’information du débiteur ou le délai légal d’inscription de deux mois.',
+    'Aucune dénonciation du plan sans notification valable n’est autorisée. La réforme ne réduit ni le délai de deux mois ni la dette, et ne démontre pas un gain chiffré d’affranchissement ou de temps de traitement.',
+    'Aucune charge nouvelle n’est identifiée : la preuve de réception était déjà exigée par le recommandé et déterminait déjà le délai. Aucun portail, nouvelle adresse déclarée ou fichier de suivi obligatoire n’est institué ; le recommandé reste possible.',
+    [effect('compliance_cost_reduced', 'privilege-tresor-denonciation-support-libre',
+            'Retirer le support postal exclusif de la dénonciation du plan d’apurement.',
+            'Lettre recommandée avec accusé de réception imposée ; inscription dans les deux mois courant à réception.',
+            'Tout moyen légal prouvant avec certitude la réception, recommandé toujours admis ; même délai de deux mois et même point de départ.',
+            'legal_duty', 'Comptables DGFiP et douanes notifiant la dénonciation des plans du 1° du 4 de 1929 quater, et débiteurs destinataires.',
+            'Notifications à compter de l’entrée en vigueur, plans en cours compris ; notifications et délais antérieurs maintenus sans réitération.',
+            'Aucun nouveau moyen obligatoire ; légalité et preuve de réception conservées, sans assimilation d’un simple courriel à une notification.',
+            source_passage('416 ter', 'par lettre recommandée avec accusé de réception'),
+            'La lettre recommandée avec accusé de réception demeure utilisable, sans être exclusive.')],
+    removed=['Exclusivité de la lettre recommandée avec accusé de réception pour notifier la dénonciation d’un plan d’apurement, malgré un autre moyen légal prouvant la réception.'])
+
+add('416 E', None,
+    'Maintien intégral après examen : un rejet définitif de publicité foncière ne prouve pas, à lui seul, que le fait générateur des droits d’enregistrement a disparu ou que les droits étaient indus. La règle évite une restitution détachée de l’impôt réellement dû, tout en laissant ouverts les fondements propres de restitution, d’annulation et de contestation.',
+    '1961 du CGI lu en entier : il distingue les actes régulièrement taxés puis révoqués ou résolus, les restitutions liées aux annulations, résolutions ou rescisions prononcées par décision passée en force de chose jugée et l’absence de nouvelle perception proportionnelle sur la décision judiciaire. 416 E n’écarte que le rejet de publicité comme cause autonome ; il ne supprime pas ces règles favorables ni les restitutions de droits indus. 406 A 27 conserve en entier sa dispense de pénalité pour refus non régularisable et son calcul de délai. 1701 officiel et proposé lus : les droits d’actes distincts demeurent, mais aucun paiement ou certificat de droits de succession ne conditionne les formalités pour les décès futurs. 416 E ne peut servir à recouvrer ou conserver un droit sur ces décès pour lequel l’impôt a été supprimé ; les anciens décès restent à leur régime. Aucun nouveau droit de succession ou prélèvement équivalent n’est établi.',
+    'retained_necessary',
+    'L’unique alinéa officiel porte seulement sur des droits régulièrement perçus et le seul motif tiré du rejet de la publicité. Le conserver respecte la distinction entre l’acte imposable et sa formalité, sans retrancher les restitutions légales pour d’autres causes ; aucune nouvelle formalité ou perception n’est ajoutée.',
+    'Aucune exonération générale des actes dont la publicité échoue n’est décidée. Le droit à restitution selon 1961, les impôts indus et les décès futurs non imposables conservent leur champ ; aucune baisse de taux ou recette compensatoire n’est chiffrée.',
+    'Aucune charge nouvelle n’est identifiée : source inchangée, sans nouvelle attestation, demande préalable ou blocage de versement. Les fondements de restitution et les voies de recours distincts demeurent applicables.')
+
+
+assert len(answers) == len(sources) == 23
+assert [a['number'] for a in answers] == [s['number'] for s in sources]
+Path('answer.json').write_text(json.dumps(answers, ensure_ascii=False, indent=2) + '\n')

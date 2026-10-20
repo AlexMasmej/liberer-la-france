@@ -1,0 +1,455 @@
+import json
+import re
+import html
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+sources = json.loads((ROOT / 'source.json').read_text())
+refs = json.loads((ROOT / 'reference-targets.json').read_text())
+by_number = {a['number']: a for a in sources}
+answers = {}
+
+
+def plain(x):
+    return html.unescape(re.sub(r'<[^>]+>', '', x or ''))
+
+
+def effect(kind, measure, description, before, after, unit, population, transition, burdens, source_quote, proposed_quote):
+    return dict(kind=kind, measure_id=measure, description=description, before=before, after=after,
+                unit=unit, affected_population=population, conditions_and_transition=transition,
+                replacement_or_new_burdens=burdens, source_quote=source_quote, proposed_quote=proposed_quote)
+
+
+def put(number, proposed, reason, notes, classification, assessment, limitations, burdens, effects=None, removed=None, benefit=None, repeal=None):
+    src = by_number[number]
+    a = {k: src[k] for k in ['code_id', 'source_id', 'source_sha256', 'number']}
+    a.update(proposed_xml=proposed, reason=reason, review_notes=notes,
+             status='retained_unchanged' if proposed is None else 'rewrite_draft')
+    if proposed is None:
+        a['classification'] = 'retained_necessary'
+    if removed:
+        a.update(change_type='normative_reduction', reform_policy_id='editorial_direction_2026_10_19', removed_provisions=removed)
+    if repeal:
+        a.update(change_type='full_repeal', repeal_policy_id='editorial_direction_2026_10_19', repeal_scope=repeal)
+    if benefit:
+        a['benefit_review'] = benefit
+    a['substantive_impact'] = dict(version=1, classification=classification, assessment=assessment,
+                                  scope_limitations=limitations, new_burdens_review=burdens, effects=effects or [])
+    answers[number] = a
+
+
+n = 'L381-23'
+p = """<p>La prise en charge des frais de santé des personnes mentionnées à l'article L. 381-20 demeure assurée dans les conditions suivantes :</p>
+<p>1°) Aucune cotisation n'est prélevée au titre du présent article sur les pensions versées à compter de l'entrée en vigueur de la loi supprimant cette cotisation, quelle que soit la période à laquelle ces pensions se rapportent ;</p>
+<p>2°) par une contribution inscrite chaque année au budget général de l'Etat et dont le montant est déterminé compte tenu du coût moyen des risques pour l'année précédente, sans déduction d'une cotisation supprimée au 1°.</p>
+<p>La suppression de la cotisation ne réduit ni la prise en charge des frais de santé ni les droits des bénéficiaires. Les cotisations afférentes aux pensions versées avant cette entrée en vigueur, leurs plafonds, prises en charge par l'Etat, régularisations, restitutions, prescriptions et recours demeurent régis par les dispositions antérieurement applicables. Aucune restitution générale des cotisations légalement dues n'est instituée.</p>"""
+put(n, p,
+    "Réforme de fond : suppression de la cotisation maladie retenue sur la pension des bénéficiaires de la section, sans supprimer leur couverture. La contribution budgétaire de l'Etat déjà prévue au 2° demeure et n'est plus calculée en déduisant cette cotisation. Les subdivisions 1° et 2° et les droits sur les périodes anciennes sont conservés. Il s'agit d'un transfert de financement, et non d'une économie pour les administrations publiques.",
+    "Coordonner les modalités réglementaires de retenue et de versement avec L381-24 et L381-25. R381-80 à R381-85 ont été lus dans le corpus pour les contributions et leurs régularisations ; leur champ médical, leurs seuils de 85 %, 66,66 %, 65 ans et leurs exclusions ne sont pas abrogés par cette mesure. Les provisions et soldes de R381-82/R381-85 doivent distinguer les recettes anciennes réelles ; aucun taux de remplacement n'est créé. Le coût supplémentaire pour l'Etat et le solde consolidé Etat-assurance maladie restent à établir dans les textes financiers ; aucune ressource nouvelle n'est présumée.",
+    'financing_transfer',
+    "La retenue sur pension disparaît pour les versements nouveaux ; la dépense de santé reste financée et la part auparavant couverte par cette retenue incombe au financement budgétaire existant. La source ne donne aucun taux numérique permettant un chiffrage individuel ou national.",
+    "Les autres cotisations, participations médicales autonomes et conditions de couverture ne sont pas supprimées. Les pensions versées avant la bascule conservent leur régime, même si une régularisation intervient ensuite. Le coût public net n'est pas établi.",
+    "La charge de financement de l'Etat augmente à due concurrence de la cotisation retirée ; son montant n'est pas chiffré. Aucune déclaration, justificatif, registre ou condition nouvelle n'est imposé aux bénéficiaires.",
+    [effect('financing_transfer', 'invalides-guerre-financement-etat',
+            "Suppression de la retenue sur pension avec maintien du financement des frais de santé par la contribution budgétaire existante.",
+            "Cotisation à la charge des bénéficiaires, prélevée sur pension, à taux réglementaire plafonné par celui des fonctionnaires retraités et veuves de fonctionnaires ; contribution budgétaire déterminée en tenant compte de cette cotisation.",
+            "Aucune cotisation sur les pensions versées après la bascule ; taux de prélèvement nul sur ces pensions pour cette seule cotisation, sans plafond de montant ; contribution de l'Etat sans déduction de cette recette supprimée.",
+            'financing', "Personnes relevant de la section 5, notamment invalides de guerre et ayants droit remplissant les conditions de L381-20.",
+            "Pensions versées dès l'entrée en vigueur, quelle que soit leur période ; anciens versements et recours préservés.",
+            "Transfert à l'Etat dans le financement existant, sans prélèvement de remplacement ni démarche privée supplémentaire ; solde public non chiffré.",
+            "par une cotisation due par les bénéficiaires de la présente section prélevée sur leur pension",
+            "Aucune cotisation n'est prélevée au titre du présent article sur les pensions versées à compter de l'entrée en vigueur de la loi supprimant cette cotisation")],
+    ["Suppression de la cotisation à la charge des bénéficiaires et de sa retenue sur les pensions versées après la bascule."])
+
+n = 'L381-24'
+p = """<p>Les conditions dans lesquelles la contribution mentionnée au 2° de l'article L. 381-23 est versée aux caisses de sécurité sociale compétentes sont déterminées par décret en Conseil d'Etat.</p>
+<p>Les cotisations afférentes aux pensions versées avant l'entrée en vigueur de la loi supprimant la cotisation prévue au 1° de l'article L. 381-23, ainsi que les contributions afférentes aux périodes antérieures, restent soumises aux règles de versement, de régularisation, de restitution, de prescription et de recours qui leur étaient applicables. Le décret ne peut rétablir de cotisation pour les pensions versées à compter de cette entrée en vigueur.</p>"""
+put(n, p,
+    "Coordination nécessaire de la suppression de la cotisation de L381-23 : l'habilitation réglementaire de versement ne porte pour l'avenir que sur la contribution de l'Etat. La compétence du décret en Conseil d'Etat et le règlement des créances anciennes demeurent ; aucune seconde baisse de prélèvement n'est revendiquée.",
+    "La note source étend cette disposition aux sapeurs-pompiers dans le champ de L381-25 ; cette extension subsiste. Coordonner les textes de versement, notamment R381-82 et R381-85 lus au corpus. Il ne s'agit pas de supprimer les provisions ou contrôles des anciennes cotisations ni les affectations des contributions publiques.",
+    'coordination_only',
+    "Le renvoi est limité à la ressource publique maintenue et interdit qu'un règlement de versement rétablisse la cotisation supprimée. Cet article d'exécution ne constitue pas une deuxième suppression de cotisation.",
+    "Les modalités financières détaillées restent réglementaires. Les dettes anciennes ne sont pas annulées et la réforme ne démontre aucune économie de gestion ou recette de compensation.",
+    "Aucune charge nouvelle n'est identifiée : le décret et les circuits de versement existaient déjà ; seule leur portée future est réduite, avec conservation des régularisations anciennes.",
+    [effect('coordination', 'invalides-guerre-financement-etat', "Limiter l'habilitation de versement à la contribution publique pour l'avenir.",
+            "Habilitation commune pour les cotisations et contributions de L381-23.", "Contribution de l'Etat seule pour les faits nouveaux ; cotisations anciennes suivies séparément.", 'legal_duty',
+            "Etat, caisses compétentes et catégories couvertes par L381-23 et L381-25.", "Même date et même distinction des pensions anciennes et nouvelles que L381-23.",
+            "Aucune formalité de remplacement ; coût budgétaire de la mesure principale non établi.",
+            "Les conditions dans lesquelles les cotisations et contributions susmentionnées à l'article L. 381-23 sont versées",
+            "Les conditions dans lesquelles la contribution mentionnée au 2° de l'article L. 381-23 est versée")])
+
+n = 'L381-25'
+p = by_number[n]['source_xml'].replace("Pour l'application du présent article la cotisation prévue au deuxième alinéa (1°) de l'article L. 381-23 est à la charge de l'Etat.",
+    "Pour l'application du présent article, les bénéficiaires ne supportent aucune cotisation au titre de la prise en charge de leurs frais de santé. Le financement demeure à la charge de l'Etat par la contribution prévue au 2° de l'article L. 381-23. La cotisation prise en charge par l'Etat pour les pensions et rentes versées avant l'entrée en vigueur de la loi supprimant cette cotisation demeure régie par les règles antérieures, y compris pour ses régularisations, restitutions, prescriptions et recours.")
+put(n, p,
+    "Coordination de fond imposée par L381-23 : remplacer le renvoi à la cotisation supprimée par le maintien explicite de la gratuité pour les bénéficiaires et du financement public. Les trois catégories, les conditions d'absence d'assurance sociale et la loi du 31 décembre 1991 sont intégralement conservées ; aucun nouvel allègement privé n'est compté pour des personnes dont l'Etat supportait déjà la cotisation.",
+    "Les 1° à 3°, conjoints non remariés, orphelins et situation de la personne les ayant recueillis sont conservés à leur place. R381-83 à R381-85 ont été lus ; seuils et périmètres médicaux réglementaires ne sont pas changés ici. Le renvoi au 2° demeure valide car la subdivision est conservée dans L381-23 proposé. Vérifier dans la coordination réglementaire les vocabulaires pension/rente sans supprimer de bénéficiaire futur.",
+    'coordination_only',
+    "La règle favorable de financement par l'Etat survit à la suppression de la cotisation de référence. Les futurs sapeurs-pompiers et ayants droit éligibles restent couverts, sans gain privé nouveau attribué à cet article.",
+    "Ni les conditions du taux minimum d'invalidité ni les droits autonomes de la loi de 1991 ne sont modifiés. La réforme générale de L381-23 n'est pas comptée une seconde fois et son incidence publique demeure non chiffrée.",
+    "Aucune charge nouvelle n'est identifiée : maintien des bénéficiaires et du financement public déjà existants, sans déclaration, option, autorisation ou justificatif supplémentaire.",
+    [effect('coordination', 'invalides-guerre-financement-etat', "Conserver le financement public favorable malgré la disparition de la cotisation de référence.",
+            "La cotisation visée au 1° de L381-23 est à la charge de l'Etat pour les bénéficiaires de L381-25.",
+            "Aucune cotisation à la charge des bénéficiaires ; contribution publique de L381-23, 2°, maintenue pour leur couverture.", 'financing',
+            "Sapeurs-pompiers volontaires et conjoints/orphelins remplissant les trois catégories de l'article.", "Avantage conservé pour les situations futures éligibles et règlement des anciennes sommes.",
+            "Aucune démarche de remplacement ; pas de nouvelle baisse individuelle puisque la cotisation était déjà publique.",
+            "la cotisation prévue au deuxième alinéa (1°) de l'article L. 381-23 est à la charge de l'Etat",
+            "les bénéficiaires ne supportent aucune cotisation au titre de la prise en charge de leurs frais de santé")])
+
+put('L381-32', None,
+    "Maintien intégral utile : cette disposition rattache les nouveaux membres du CESE à l'assurance vieillesse du régime général. Elle n'institue ni rapport, agrément, délai minimal ni cotisation accessoire distincte. Supprimer l'affiliation retirerait la couverture, sans démontrer un doublon. La réforme de capitalisation visant les salariés privés ne s'étend pas à ce mandat public.",
+    "La note source réserve le texte aux membres entrant en fonction à compter du 1er septembre 2023, conformément au IX de l'article 1er de la loi 2023-270 ; cette transition est conservée. Aucun alignement des membres antérieurs ni rattachement au contrat de travail unique n'est opéré.",
+    'retained_necessary',
+    "L'affiliation vieillesse des membres du CESE est maintenue entièrement ; aucun allègement n'est revendiqué pour ce rattachement nécessaire au service des droits de retraite.",
+    "Les régimes des mandats antérieurs au 1er septembre 2023 et les paramètres de cotisation ne sont pas réécrits ici ; aucune extension de la capitalisation salariale privée n'est démontrée.",
+    "Aucune charge nouvelle n'est identifiée : aucun texte nouveau n'est proposé, et l'affiliation existante n'est assortie d'aucune démarche supplémentaire.")
+
+n = 'L382-1'
+p = by_number[n]['source_xml'].replace("articles L. 761-2 et suivants du code du travail", "articles L. 7111-3 à L. 7111-5 du code du travail")
+p = p.replace(" et qui exercent leur activité depuis au moins trois années civiles", "")
+p += "<p>La suppression de la condition d'exercice pendant trois années civiles s'applique aux affiliations prenant effet à compter de l'entrée en vigueur de la loi portant cette suppression, y compris lorsque l'activité a commencé auparavant. Aucune durée minimale d'exercice ne conditionne l'affiliation des auteurs mentionnés au quatrième alinéa. Les droits et recours relatifs aux périodes antérieures demeurent régis par les dispositions alors applicables, sans remise en cause des affiliations déjà acquises.</p>"
+put(n, p,
+    "Réforme de fond : supprimer l'attente de trois années civiles imposée aux photographes non journalistes pour bénéficier du régime, obstacle sans fonction de financement ou de protection démontrée dès lors que les revenus d'auteur et l'activité restent établis. L'affiliation, les prestations familiales, la distinction des revenus photographiques dans et hors presse, les accords professionnels et la commission de recours sont conservés. Coordination explicite du renvoi préexistant au code du travail recodifié.",
+    "Le renvoi L761-2 et suivants est ancien : remplacement par L7111-3 à L7111-5, dont les textes officiels ont été lus dans travail.json du corpus (définition, assimilés dont reporters-photographes, presse électronique). Ces trois cibles nouvelles du renvoi ne figurent pas dans reference-targets.json : vérification complémentaire locale, sans ajout aux reference_checks requis. Le délai de deux ans lié à la loi du 1er août 2006 reste une règle historique de compétence normative, non une nouvelle attente individuelle. L311-2 et les deuxième à quatrième alinéas gardent leur champ ; absence de lien automatique entre assimilation sociale et contrat de travail. Coordonner les règlements d'affiliation, notamment R382-16-3 lu, sans réintroduire les trois ans ni effacer ses droits acquis.",
+    'material_reduction',
+    "Le droit au régime est ouvert sans trois années d'exercice pour les photographes non journalistes répondant aux autres conditions du quatrième alinéa ; c'est une extension effective aux entrants futurs, avec maintien des voies de contestation et de la qualification sociale autonome.",
+    "La nature des droits d'auteur, leur régime fiscal BNC et le champ de L311-2 demeurent. Les cotisations de financement restent dues et aucun rendement, coût public ou nombre de nouveaux affiliés n'est établi.",
+    "Aucune charge nouvelle n'est identifiée : disparition d'une condition de durée sans attestation ni déclaration équivalente ; l'organisme et les voies d'affiliation existants sont conservés.",
+    [effect('relief_extended', 'photographes-affiliation-sans-trois-ans', "Ouvrir le régime des artistes auteurs aux photographes non journalistes sans attente de trois années civiles.",
+            "Activité produisant directement ou par agence des droits d'auteur imposés en BNC et exercice depuis au moins trois années civiles.",
+            "Mêmes revenus et catégories, sans durée minimale d'exercice.", 'legal_duty', "Auteurs d'œuvres photographiques non journalistes professionnels visés au quatrième alinéa.",
+            "Affiliations prenant effet dès l'entrée en vigueur ; activité déjà commencée admise et droits antérieurs conservés.", "Aucune formalité ou condition de remplacement ; pas de suppression de la protection de L311-2.",
+            "et qui exercent leur activité depuis au moins trois années civiles",
+            "Aucune durée minimale d'exercice ne conditionne l'affiliation des auteurs mentionnés au quatrième alinéa.")],
+    ["Suppression de la condition d'exercice pendant au moins trois années civiles pour les photographes non journalistes professionnels."])
+
+n = 'L382-2'
+p = by_number[n]['source_xml'].replace(
+    "Les délibérations du conseil d'administration ne deviennent exécutoires que si aucune opposition n'est faite dans un délai et dans les conditions fixées par décret en Conseil d'Etat.",
+    "Les délibérations du conseil d'administration sont exécutoires dès leur adoption, sans délai d'opposition préalable. Les approbations budgétaires légalement requises, les contrôles financiers et les pouvoirs de suspension en cas d'irrégularité grave, de mauvaise gestion ou de carence demeurent applicables.")
+p += "<p>La règle d'exécution immédiate s'applique aux délibérations adoptées à compter de l'entrée en vigueur de la loi portant cette règle. Les délibérations et oppositions antérieures ainsi que leurs effets demeurent régis par les dispositions alors applicables. Elle ne modifie ni la transition relative à la composition du conseil d'administration jusqu'au 31 décembre 2026 ni les mandats valablement constitués.</p>"
+put(n, p,
+    "Réforme de fond ciblée : supprimer l'attente systématique et l'opposition préalable pour rendre exécutoires les délibérations ordinaires. Le cadre financier fixé par l'Etat, l'agrément de l'association, sa représentation, le médiateur, la consultation sur les projets et la transparence du rapport annuel sont maintenus pour la gestion des fonds sociaux ; le budget et les pouvoirs de contrôle restent protégés. Aucune déclaration préalable ne remplace le délai supprimé.",
+    "R382-8-1, lu dans le corpus, fixe actuellement un mois après transmission aux ministres : coordonner son dernier alinéa pour les délibérations nouvelles. R382-13 (budget soumis aux ministres et modifications nécessaires) et R382-14 (suspension pour irrégularité grave, mauvaise gestion ou carence), également lus, demeurent distincts. La note source du 2° du IV de l'article 8 de la loi 2025-1403 prévoit le 1er juin 2026 et une dérogation de composition jusqu'au 31 décembre 2026 ; aucune de ces dates n'est une date de promulgation de la présente réforme.",
+    'material_reduction',
+    "La condition suspensive générale des délibérations disparaît, y compris le délai réglementaire d'un mois identifié au corpus. La publication annuelle des dépenses et l'encadrement financier restent nécessaires ; aucun rapport supplémentaire supprimé n'est compté.",
+    "La suppression ne vaut pas exécution d'une dépense hors budget approuvé, immunité contre un contrôle ou annulation d'une opposition ancienne. Le coût net de la nouvelle organisation n'est pas établi.",
+    "Aucune charge nouvelle n'est identifiée : ni transmission nouvelle ni visa de remplacement ; les approbations budgétaires, le rapport et les contrôles expressément réservés existaient déjà.",
+    [effect('deadline_reduced', 'artistes-auteurs-deliberations-sans-attente', "Supprimer le délai d'opposition préalable à l'exécution des délibérations ordinaires.",
+            "Exécution subordonnée à l'absence d'opposition dans un délai réglementaire ; R382-8-1 lu fixe un mois à compter de la transmission.",
+            "Exécution dès l'adoption, sans délai d'opposition préalable ; approbations budgétaires et contrôles autonomes conservés.", 'other',
+            "Association de protection sociale des artistes auteurs et son conseil d'administration.", "Délibérations adoptées dès l'entrée en vigueur ; oppositions anciennes et transition de composition jusqu'au 31 décembre 2026 préservées.",
+            "Aucune autorisation, déclaration ou délai de remplacement ; les contrôles financiers existants subsistent.",
+            "Les délibérations du conseil d'administration ne deviennent exécutoires que si aucune opposition n'est faite dans un délai et dans les conditions fixées par décret en Conseil d'Etat.",
+            "Les délibérations du conseil d'administration sont exécutoires dès leur adoption, sans délai d'opposition préalable.")],
+    ["Suppression de la condition suspensive générale d'absence d'opposition et de son délai préalable d'exécution des délibérations."])
+
+n = 'L382-3'
+p = by_number[n]['source_xml'].replace("revenus imposables au titre des bénéfices non commerciaux majorés de 15 %", "revenus imposables au titre des bénéfices non commerciaux, sans majoration de 15 %")
+p += "<p>La suppression de la majoration de 15 % s'applique aux cotisations dues au titre des années civiles commençant le 1er janvier de l'année suivant celle de l'entrée en vigueur de la loi portant cette suppression. Les années antérieures conservent leurs règles d'assiette, exonérations, réductions, plafonds, régularisations, restitutions, prescriptions et recours. Les droits sociaux déjà constitués ne sont pas réduits par cette suppression ; les droits futurs demeurent déterminés selon les règles propres aux prestations et aux cotisations effectivement dues.</p>"
+put(n, p,
+    "Réforme de fond : retirer la majoration forfaitaire de 15 % de l'assiette sociale BNC des artistes auteurs. L'assiette sur droits bruts dans le cas du 1 quater de CGI 93, les taux de droit commun, l'activité principale ou accessoire et l'exclusion des cotisations AT-MP restent intacts. Aucun taux intermédiaire ni nouvelle recette de compensation n'est introduit. La minoration d'assiette n'est pas présentée comme une modification du contrat de travail.",
+    "L'année de bascule est définie sans date de promulgation inventée pour éviter de fractionner une assiette annuelle BNC. Coordonner les règlements d'assiette et les renvois utilisant cette assiette, dont L6331-65 du code du travail lu au corpus : ses contributions propres de 0,35 % et 0,1 % ne sont pas la contribution CPF-CDD de 1 %. La cible CGI 93 fournie conserve le 1 quater et ses déductions ; sa proposition ancienne contient encore des coordinations fiscales à reprendre selon les décisions actuelles sur 231 ter et les successions, sans les modifier dans ce lot. L'impact sur les droits futurs proportionnels et les recettes sociales doit être chiffré ; aucun maintien fictif de droits futurs identiques n'est garanti.",
+    'material_reduction',
+    "Pour la branche BNC, l'assiette sociale passe de 115 % à 100 % du revenu imposable concerné, à taux inchangés et sous les autres règles du régime. Il s'agit d'une baisse d'assiette démontrée, sans chiffrage national ni assimilation au forfait microsocial.",
+    "Le taux de chaque cotisation n'est pas fixé dans cet article ; les effets des plafonds et des exonérations dépendent de la situation. Les droits déjà constitués restent protégés mais des droits futurs liés aux cotisations peuvent varier.",
+    "Aucune charge nouvelle n'est identifiée : le même revenu BNC sert de base sans majoration, sans registre, justificatif ou contribution de substitution ; le manque de recettes et ses effets restent non chiffrés.",
+    [effect('tax_reduced', 'artistes-auteurs-suppression-majoration-bnc', "Supprimer la majoration de 15 % de la base des cotisations des auteurs imposés en BNC.",
+            "Taux sociaux de droit commun inchangés, appliqués à un revenu imposable BNC majoré de 15 %, soit 115 % de ce revenu, sous les adaptations et plafonds du régime.",
+            "Mêmes taux et adaptations, appliqués à 100 % du revenu imposable BNC ; la branche des droits bruts fiscalement assimilés à des salaires demeure distincte.", 'percent',
+            "Artistes auteurs de L382-1 dont les revenus ne relèvent pas de l'assimilation du 1 quater de CGI 93.", "Années civiles commençant le 1er janvier suivant l'entrée en vigueur ; années antérieures et droits constitués protégés.",
+            "Aucun impôt, cotisation ou déclaration de remplacement ; pertes de recettes et droits futurs à évaluer.",
+            "revenus imposables au titre des bénéfices non commerciaux majorés de 15 %",
+            "revenus imposables au titre des bénéfices non commerciaux, sans majoration de 15 %")],
+    ["Suppression de la majoration de quinze pour cent des revenus imposables BNC dans l'assiette des cotisations des artistes auteurs."])
+
+put('L382-3-1', None,
+    "Maintien intégral d'une option favorable : l'artiste auteur dont les revenus sont faibles peut volontairement cotiser sur le forfait réglementaire afin d'ouvrir les droits correspondants. Le seuil ne constitue pas une cotisation minimale obligatoire. Retirer l'option fermerait un avantage aux futurs affiliés et n'allégerait aucune charge imposée.",
+    "La note source relative au IV de l'article 23 de la loi 2017-1836 et à l'application au plus tard le 1er janvier 2019 reste conservée. R382-31 lu au corpus rattache expressément cette option à l'ouverture des prestations. Ne pas transférer aux auteurs le compte de capitalisation des salariés privés ni confondre ce forfait volontaire avec le plafond microsocial L613-7.",
+    'retained_necessary',
+    "L'option de surcotisation volontaire est conservée pour tous les auteurs éligibles futurs. Elle protège l'accès aux droits sans imposer un plancher de cotisations à ceux qui ne la demandent pas.",
+    "Le montant réglementaire et le calcul des prestations ne sont pas fixés dans cet article ; aucune baisse de cotisation ni égalité de droits futurs à versement réduit n'est démontrée ici.",
+    "Aucune charge nouvelle n'est identifiée : maintien exact du choix facultatif existant, sans condition ou document supplémentaire.")
+
+put('L382-3-2', None,
+    "Maintien intégral d'une régularisation favorable des cotisations en cas de pluralité de revenus excédant le plafond. Le délai maximal de quatre mois pèse sur l'organisme, non comme attente minimale sur l'assuré. Supprimer ce texte ferait perdre une garantie contre une perception excessive et ne retirerait pas de déclaration autonome, la déclaration étant déjà le point de départ.",
+    "Le plafond de L241-3 reste au premier alinéa, devenu I dans sa proposition, avec fixation annuelle et absence de baisse nominale ; le renvoi demeure intelligible sans ajout de subdivision. Le compte de capitalisation salarié privé ne s'applique pas automatiquement à l'activité d'auteur. Incohérence documentaire à conserver visible : valid_from indique le 31 décembre 2025, tandis que les notes mentionnent entrée immédiate et application à compter du 1er janvier 2026 ; aucune date nouvelle n'est inférée.",
+    'retained_necessary',
+    "Le plafond agrégé et la régularisation dans les quatre mois sont maintenus. Aucune deuxième suppression de déclaration, de taux ou de condition d'ancienneté n'est revendiquée pour cette garantie favorable.",
+    "Le texte ne fixe ni le plafond numérique ni le remboursement d'autres prélèvements non plafonnés ; son application dépend des revenus de l'année et de la déclaration existante.",
+    "Aucune charge nouvelle n'est identifiée : aucun nouveau corps n'est proposé ; délai, déclaration de référence et organisme de régularisation sont conservés à l'identique.")
+
+put('L382-4', None,
+    "Maintien intégral après examen : la contribution des diffuseurs constitue ici le financement principal de la part correspondant aux charges patronales d'assurances sociales et familiales, non une contribution accessoire identifiée comme doublon. Sa fraction finance aussi l'action sanitaire et sociale de L382-7. La supprimer sans décision de financement ou de maintien de cette action mettrait en cause la couverture ; aucun tel prélèvement de remplacement n'est inventé.",
+    "Les personnes publiques, activités principales ou accessoires, œuvres d'auteurs vivants ou morts et les deux branches d'assiette sont toutes conservées. Les barèmes ne sont pas chiffrés par la source législative et ne sont pas inventés. La mention des auteurs morts taxe la diffusion, non la transmission d'un capital au décès : la suppression des droits de succession ne supprime pas cette contribution professionnelle. L6331-65 du travail est une contribution de formation distincte, non la contribution CPF-CDD supprimée.",
+    'retained_necessary',
+    "Le financement patronal adapté au régime des artistes auteurs et son assiette différenciée restent entiers. Aucun taux ni déclaration supplémentaire n'est créé ou supprimé par un simple changement de vocabulaire.",
+    "L'examen ne démontre pas que cette ressource principale serait redondante ou remplaçable sans effet sur les droits. Il ne chiffre ni son rendement ni le solde de financement de l'ensemble du régime.",
+    "Aucune charge nouvelle n'est identifiée : la source est intégralement maintenue, sans extension d'assiette, taux nouveau ou pièce nouvelle.")
+
+put('L382-5', None,
+    "Maintien intégral utile du circuit de paiement : paiement direct par l'auteur ou précompte par le diffuseur, puis recouvrement par le même organisme désigné. Il évite que l'auteur reverse une seconde fois ce qui a été précompté. Le dernier alinéa permet le recouvrement commun des contributions sociales et de formation distinctes ; aucune autorisation préalable ni déclaration en double n'y est imposée.",
+    "Conserver les trois alinéas et le renvoi au premier alinéa. L6331-65 a été lu dans travail.json : contributions propres artistes auteurs/diffuseurs, distinctes du CPF-CDD de 1 % aboli. L213-1 proposé maintient les missions autonomes de recouvrement ; ses restrictions C3S et CPF-CDD ne doivent pas être étendues à ces contributions. La note source de 2015, avec application au plus tard le 1er janvier 2019, reste historique.",
+    'retained_necessary',
+    "Le paiement à un seul organisme et le précompte existant sont conservés comme mécanismes de collecte et de protection des droits. Ils ne sont pas présentés comme une nouvelle fusion ou une nouvelle baisse de charges.",
+    "Les obligations réglementaires des diffuseurs et des tiers collecteurs ne sont pas toutes décidées par cet article. Le traitement social d'un salaire issu d'un contrat distinct reste hors de cette règle de droits d'auteur.",
+    "Aucune charge nouvelle n'est identifiée : maintien exact du circuit existant, sans deuxième paiement, nouvel agrément ou donnée supplémentaire.")
+
+n = 'L382-6'
+p = """<p>Les personnes redevables des cotisations et contributions sociales mentionnées aux articles L. 382-3 et L. 382-4 effectuent les déclarations et les versements afférents à ces contributions par voie dématérialisée ou par tout autre moyen légalement admis pour ces opérations. Le choix d'un moyen autre que la voie dématérialisée n'est subordonné à aucune déclaration d'impossibilité ni à aucun justificatif et ne donne lieu à aucune majoration ou pénalité fondée sur ce seul choix.</p>
+<p>Les personnes mentionnées à l'article L. 382-4 sont soumises, sous peine des pénalités fixées par décret, à l'obligation de fournir à l'organisme mentionné au premier alinéa de l'article L. 382-5 le numéro prévu à l'avant-dernier alinéa de l'article L. 114-12-1 permettant l'identification des artistes-auteurs dont ils assurent l'exploitation commerciale et la diffusion des œuvres.</p>
+<p>Le libre choix du moyen de déclaration ou de versement s'applique aux opérations effectuées à compter de l'entrée en vigueur de la loi portant cette liberté, y compris lorsqu'elles concernent des périodes antérieures. Il ne modifie ni les échéances, ni les données nécessaires à l'assiette et à l'identification, ni les montants dus. Les manquements antérieurs restent soumis aux règles alors applicables, sous réserve de l'application de la loi répressive plus douce aux sanctions non définitives.</p>"""
+put(n, p,
+    "Réforme de fond : supprimer l'exclusivité du canal dématérialisé et les majorations attachées à ce seul canal, ainsi que l'obligation de signaler une incapacité numérique pour obtenir une autre voie. Le contenu des déclarations, les échéances, les cotisations et l'identification des auteurs demeurent. L'ancienne dispense est généralisée sans demande ni justificatif ; aucun dépôt équivalent ne la remplace.",
+    "Le numéro de L114-12-1 figure bien à son avant-dernier alinéa dans la source et la proposition fournies ; l'obligation d'identification et ses pénalités propres restent distinctes. Coordonner les mentions imposant la dématérialisation dans R382-20 et R382-28, lus au corpus ; leurs assiettes, échéances et précomptes subsistent. Cette proposition ne compte pas comme une suppression la seule réutilisation de données déjà imposée par le CRPA. Les majorations de L133-5-5 ne sont écartées que pour le choix du support, sans suppression des sanctions autonomes de défaut ou inexactitude. Les deux notes historiques de 2025/2026 demeurent sans en tirer une date de promulgation future.",
+    'material_reduction',
+    "Les auteurs et diffuseurs peuvent employer les autres moyens légalement admis sans déclarer une impossibilité numérique ; la sanction du seul choix de support est retirée. L'identification et le paiement effectif restent exigés, sans baisse de taux revendiquée.",
+    "Le texte ne crée pas de mode de paiement interdit par ailleurs et n'allonge aucun délai. L'incidence du recours accru aux canaux existants pour les organismes n'est pas chiffrée ; aucun solde global de complexité n'est établi.",
+    "Aucune obligation, donnée, registre ou justification nouvelle n'est identifiée : les autres canaux existaient pour les personnes empêchées. Leur ouverture générale peut accroître leur volume de traitement public, sans coût net chiffré ni équipement nouveau imposé au déclarant.",
+    [effect('obligation_removed', 'artistes-auteurs-libre-support-social', "Retirer la dématérialisation exclusive et la déclaration d'impossibilité nécessaire pour employer un autre canal.",
+            "Déclarations et versements obligatoirement dématérialisés ; dérogation après indication de l'impossibilité ; majorations du II de L133-5-5 pour les diffuseurs.",
+            "Choix des moyens légalement admis sans indication d'impossibilité ni justificatif ; aucune sanction du seul choix du support, échéances et contenu inchangés.", 'legal_duty',
+            "Artistes auteurs redevables au titre de L382-3 et diffuseurs redevables au titre de L382-4.",
+            "Opérations effectuées dès l'entrée en vigueur, y compris pour des périodes anciennes ; réserve de loi répressive plus douce.",
+            "Aucune formalité de remplacement ; traitement des canaux existants potentiellement accru, coût net inconnu.",
+            "les personnes qui indiquent à l'organisme mentionné à l'article L. 213-1 désigné par le directeur de l'Agence centrale des organismes de la sécurité sociale ne pas être en mesure de souscrire ces déclarations ou d'effectuer ces versements par voie dématérialisée ne sont pas tenues d'y procéder par ce moyen.",
+            "Le choix d'un moyen autre que la voie dématérialisée n'est subordonné à aucune déclaration d'impossibilité ni à aucun justificatif et ne donne lieu à aucune majoration ou pénalité fondée sur ce seul choix.")],
+    ["Suppression de l'exclusivité du dépôt et du versement dématérialisés ainsi que des majorations fondées sur le seul support choisi.",
+     "Suppression de l'indication obligatoire d'une impossibilité numérique pour bénéficier d'un autre moyen légalement admis."],
+    "L'avantage explicite de la source est la dispense de dématérialisation pour toute personne indiquant ne pas être en mesure de l'utiliser. Il est conservé et élargi aux situations futures : aucun signalement d'impossibilité, certificat ou agrément ne conditionne désormais le recours à un autre moyen légalement admis. L'absence de majoration pour ce choix est garantie. Le paiement et l'identification continuent d'assurer l'inscription des droits ; la pénalité distincte d'absence d'identifiant n'est ni une exonération ni une dispense favorable et reste à son champ propre. Aucune exonération sociale de fond n'est retirée.")
+
+put('L382-7', None,
+    "Maintien intégral de l'action sanitaire et sociale des artistes auteurs et de son financement par une fraction de la contribution des diffuseurs. Il s'agit d'un avantage et d'une mission de service, non d'un rapport annuel ou d'une cotisation additionnelle. L'allègement des délibérations de L382-2 ne supprime ni l'association, ni ses orientations, ni le cadre financier.",
+    "Le renvoi à l'association agréée L382-2 reste exact après sa réduction ciblée ; le renvoi L382-4 finance toujours l'action sociale. L'organisme L213-1 désigné exerce ici une mission spéciale, distincte de l'action sociale des indépendants du 9° de L213-1. La note d'application au 1er juin 2026 est préservée. Aucun état annuel supprimé de protection complémentaire D912-14/15 n'est réintroduit.",
+    'retained_necessary',
+    "L'action sanitaire et sociale et sa ressource sont maintenues pour les bénéficiaires présents et futurs ; aucun allègement n'est attribué au simple maintien des renvois valides.",
+    "Le montant de la fraction de contribution et les critères réglementaires des aides ne sont pas fixés ici. Cette mission ne transforme pas les auteurs en salariés privés du nouveau dispositif de retraite.",
+    "Aucune charge nouvelle n'est identifiée : conservation de la mission, des bénéficiaires et du financement existants, sans reporting ou condition supplémentaire.")
+
+n = 'L382-9'
+p = """<p>Le présent article est abrogé pour les prestations en espèces des assurances maladie et maternité dues au titre des jours courant à compter de l'entrée en vigueur de la loi portant cette abrogation, y compris lorsque l'incapacité de travail ou le congé a commencé auparavant. Leur règlement ne peut être subordonné au paiement préalable des cotisations de l'assuré.</p>
+<p>Les autres conditions d'ouverture et de calcul de ces prestations restent applicables. Les cotisations dues, leur recouvrement, leurs régularisations, restitutions, prescriptions et recours ne sont pas supprimés par cette abrogation. Les prestations relatives aux jours antérieurs restent soumises aux règles alors applicables, sans réduction des droits déjà acquis, sans restitution générale des sommes légalement payées et sans réouverture des décisions de refus devenues définitives.</p>"""
+put(n, p,
+    "Abrogation prospective de la seule norme de l'article : retirer le blocage des prestations en espèces maladie-maternité pour défaut de mise à jour des cotisations. Le recouvrement des cotisations offre un moyen distinct de traiter la dette sans priver l'assuré malade ou en congé maternité de son revenu de remplacement. Les conditions médicales, d'activité et de calcul et les droits anciens ne sont pas effacés.",
+    "La transition couvre aussi les jours futurs d'une incapacité ou d'un congé déjà commencé, sans remboursement rétroactif général. Coordonner les règlements et formulaires d'ouverture de prestations pour supprimer cette condition seulement ; R382-31 lu conserve ses conditions et l'option favorable de L382-3-1. Ne pas réintroduire une attestation de paiement à jour par le décret de L382-14 ; celui-ci est coordonné dans le lot. L'abrogation ne dispense d'aucune cotisation ni n'autorise un double service de prestations.",
+    'material_reduction',
+    "La condition de paiement préalable qui bloquait les prestations maladie-maternité disparaît pour les jours futurs. Il s'agit d'une extension d'accès aux prestations et d'une dissociation du recouvrement, sans suppression de la dette sociale.",
+    "Les jours antérieurs restent à leur droit et les autres conditions d'indemnisation subsistent. Le coût de l'ouverture supplémentaire et son effet sur les encaissements ne sont pas mesurés.",
+    "Aucune charge nouvelle n'est identifiée : aucune attestation, garantie ou échéance de remplacement ; les contrôles d'éligibilité et le recouvrement existants gardent leur objet propre.",
+    [effect('relief_extended', 'artistes-auteurs-prestations-sans-quitus', "Ouvrir les prestations maladie-maternité sans condition de cotisations à jour.",
+            "Le règlement des prestations en espèces maladie-maternité exige que l'assuré soit à jour de ses cotisations.",
+            "Le règlement des prestations dues pour les jours futurs ne dépend plus du paiement préalable ; les cotisations restent recouvrables et les autres conditions de prestation demeurent.", 'legal_duty',
+            "Assurés artistes auteurs relevant de la section et éligibles aux prestations en espèces maladie-maternité.",
+            "Jours dès l'entrée en vigueur, y compris incapacité ou congé antérieurs ; pas de réouverture générale des refus passés.",
+            "Aucune condition de remplacement ; dépense sociale supplémentaire éventuelle non chiffrée.",
+            "l'assuré doit être à jour de ses cotisations.",
+            "Leur règlement ne peut être subordonné au paiement préalable des cotisations de l'assuré.")],
+    repeal="Suppression pour les prestations relatives aux jours futurs de la condition de paiement à jour des cotisations qui bloquait les prestations en espèces maladie et maternité des artistes auteurs ; dette sociale et droits anciens conservés.")
+
+n = 'L382-10'
+p = by_number[n]['source_xml'].replace(
+    "L'article L. 351-14 n'est pas applicable aux personnes mentionnées à l'article L. 382-1.",
+    "L'article L. 351-14 est applicable aux personnes mentionnées à l'article L. 382-1, dans les conditions qu'il prévoit, pour les périodes qui n'ont pas déjà été prises en compte au titre des deuxième et quatrième alinéas du présent article.")
+p += "<p>La faculté prévue au premier alinéa est ouverte aux demandes présentées à compter de l'entrée en vigueur de la loi supprimant l'exclusion des artistes auteurs. Elle ne remet pas en cause les droits déjà pris en charge ni le service des pensions liquidées ; les révisions demandées restent soumises aux conditions de l'article L. 351-14. Une même période ne peut être validée deux fois dans le régime de base du seul fait de cette ouverture. Aucun rachat ni versement de cotisations n'est obligatoire du seul fait de la présente disposition et aucune restitution générale des versements antérieurs n'est instituée.</p>"
+put(n, p,
+    "Réforme de fond favorable : supprimer l'exclusion catégorielle des artistes auteurs du dispositif de prise en compte des périodes antérieures à leur affiliation obligatoire prévu par L351-14. La faculté est ouverte dans les conditions de ce dispositif et seulement pour les périodes non déjà reprises, sans double validation. Les trois autres alinéas sont conservés entièrement : transfert des droits libéraux antérieurs au 1er janvier 1977, couverture maladie et prise en compte des cotisations anciennes.",
+    "L351-14 et L351-14-1 ont été lus intégralement dans le corpus : demande volontaire, périodes et territoires définis, possibilité pour des pensions déjà liquidées, et cotisations de rachat fixées selon le renvoi légal existant ; aucun rachat gratuit ni taux nouveau n'est inventé. L351-14 est une cible sociale déjà citée, mais non fournie dans reference-targets.json ; les vérifications complémentaires sont consignées ici. Coordonner les règlements de rachat et de liquidation pour les demandes nouvelles sans doubler les droits repris avant 1977. La durée photographique de L382-1 n'est pas une ancienneté de contrat. Pas d'extension automatique de la capitalisation salariale privée.",
+    'material_reduction',
+    "L'interdiction générale d'accéder au dispositif de L351-14 disparaît pour les demandes futures des auteurs remplissant ses conditions. Les reprises historiques de droits sont maintenues et les mêmes périodes ne sont pas validées deux fois ; il s'agit d'une faculté élargie, non d'une baisse du prix de rachat.",
+    "Seules les périodes admises par L351-14 et non déjà reprises sont concernées. Les conditions et coûts réglementaires du rachat subsistent ; ni gratuité, ni gain de pension individuel, ni coût national ne sont chiffrés.",
+    "Aucune charge obligatoire nouvelle n'est identifiée : la démarche et le versement éventuel restent volontaires et relèvent du dispositif existant. La limite de non-double validation encadre seulement l'avantage nouvellement ouvert sans retirer de droits anciens.",
+    [effect('relief_extended', 'artistes-auteurs-ouverture-rachat-ancien',
+            "Lever l'exclusion catégorielle du dispositif de prise en compte des périodes antérieures à affiliation obligatoire.",
+            "L351-14 est entièrement inapplicable aux personnes de L382-1, même pour des périodes non reprises par le transfert des anciens droits libéraux.",
+            "Accès volontaire à L351-14 dans ses conditions, pour les seules périodes non déjà prises en compte ; cotisations de rachat de ce dispositif inchangées.", 'legal_duty',
+            "Artistes auteurs et autres demandeurs admis par L351-14 dans leur situation propre, pour les périodes historiques éligibles non déjà reprises.",
+            "Demandes présentées dès l'entrée en vigueur ; pensions servies et droits transférés avant 1977 conservés, révisions selon le dispositif existant.",
+            "Demande et cotisations uniquement si l'intéressé choisit le rachat ; pas de procédure obligatoire générale, ni double validation d'une période.",
+            "L'article L. 351-14 n'est pas applicable aux personnes mentionnées à l'article L. 382-1.",
+            "L'article L. 351-14 est applicable aux personnes mentionnées à l'article L. 382-1, dans les conditions qu'il prévoit, pour les périodes qui n'ont pas déjà été prises en compte au titre des deuxième et quatrième alinéas du présent article.")],
+    ["Suppression de l'exclusion générale des artistes auteurs de la faculté de prise en compte prévue par l'article L351-14 pour les périodes non déjà validées."])
+
+put('L382-12', None,
+    "Maintien intégral nécessaire des régimes complémentaires et de leurs avantages : précompte par le producteur, part de cotisation à sa charge et prise en charge partielle financée par le prêt en bibliothèque pour les auteurs de livres éligibles. Supprimer ces mécanismes retirerait des droits et un financement favorable aux futures œuvres recevables. La caisse, sa personnalité juridique et son autonomie ne sont pas un agrément ou un rapport supplémentaire identifié comme doublon.",
+    "Les quatre alinéas sont maintenus, notamment plus de la moitié des revenus tirés des œuvres éditées sous forme de livre et limite de la moitié des cotisations pour la fraction financée. L644-1 a été lu au corpus ; son cadre de régimes complémentaires reste distinct du compte de capitalisation des salariés privés. Les renvois L132-23/24 et L133-3/4 concernent expressément le code de la propriété intellectuelle, hors des cinq codes fournis et non lus intégralement ici : ne pas leur substituer les homonymes CSS. La cible CSS L133-4 fournie a été lue et son inapplicabilité est explicitée dans reference_checks, sans inventer le texte du CPI.",
+    'retained_necessary',
+    "La protection complémentaire et les prises en charge de cotisations par des tiers restent accessibles aux futurs bénéficiaires répondant aux conditions. Aucun gain nouveau ni transfert automatique vers la capitalisation salariale n'est compté.",
+    "Les fractions réglementaires et les textes du code de la propriété intellectuelle non fournis restent à leur champ propre. Cet examen ne démontre pas qu'une autre ressource financerait les mêmes garanties.",
+    "Aucune charge nouvelle n'est identifiée : conservation intégrale des modalités et avantages existants, sans plafonnement nouveau des prestations ni pièce supplémentaire.")
+
+n = 'L382-14'
+p = by_number[n]['source_xml'] + """<p>Les modalités d'application ne peuvent rétablir la condition d'exercice pendant trois années civiles supprimée à l'article L. 382-1 ni la condition de paiement préalable des cotisations supprimée à l'article L. 382-9 pour les prestations qui en sont dispensées.</p>
+<p>Elles ne peuvent rétablir la majoration de 15 % de l'assiette des cotisations calculées sur les revenus imposables au titre des bénéfices non commerciaux pour les années auxquelles sa suppression à l'article L. 382-3 s'applique, ni imposer le seul recours à la voie dématérialisée ou une déclaration d'impossibilité en méconnaissance de l'article L. 382-6. Ces limites s'appliquent dans les champs et aux dates définis par chacun de ces articles, sans modification des créances et droits antérieurs qu'ils conservent.</p>"""
+put(n, p,
+    "Coordination nécessaire des habilitations : conserver intégralement les compétences réglementaires utiles au calcul des prestations, au contrôle et au recouvrement, tout en empêchant qu'elles rétablissent les quatre conditions ou charges retirées par L382-1, L382-3, L382-6 et L382-9. Le nouveau corps garde les deux alinéas sources à leur place ; cette limite de compétence ne compte pas comme quatre nouvelles réductions.",
+    "Respecter les dates propres : affiliation et libre support dès entrée, assiette BNC à partir du 1er janvier suivant, prestations pour les jours futurs y compris congé/incapacité en cours. Le renvoi à L382-9 désigne explicitement la disposition d'abrogation et sa transition, et non une condition survivante. Les conditions médicales, délai de carence distinct, représentation majoritaire, contrôle d'assiette, chiffre d'affaires du diffuseur et rôle des organismes demeurent. Les notes source d'entrée immédiate/application 1er janvier 2026 ne datent pas ces nouvelles réformes.",
+    'coordination_only',
+    "L'habilitation générale est bornée pour éviter la réintroduction réglementaire des charges déjà supprimées dans les articles matériels. Les obligations utiles de la source ne sont pas résumées ni abrogées et aucune nouvelle réduction n'est décomptée ici.",
+    "Les règlements correspondants doivent encore recevoir leurs coordinations formelles hors du présent lot ; la limite législative proposée leur est opposable dans chaque champ et transition. Le solde global de complexité n'est pas établi.",
+    "Aucune charge nouvelle n'est identifiée : les ajouts limitent la compétence réglementaire et n'instituent ni contrôle, rapport, collecte, délai ou justificatif de remplacement.",
+    [effect('coordination', 'photographes-affiliation-sans-trois-ans', "Empêcher le retour réglementaire de l'ancienneté minimale d'affiliation.",
+            "Habilitation générale sur les obligations des personnes relevant de la section.", "Habilitation maintenue sous interdiction de rétablir les trois années supprimées.", 'legal_duty', "Photographes non journalistes et organismes du régime.", "Même champ et même date que L382-1 proposé.", "Aucune condition de remplacement.",
+            "les obligations des personnes relevant des dispositions de la présente section",
+            "Les modalités d'application ne peuvent rétablir la condition d'exercice pendant trois années civiles supprimée à l'article L. 382-1"),
+     effect('coordination', 'artistes-auteurs-prestations-sans-quitus', "Borner le pouvoir de fixer les conditions de prestation après suppression du quitus social.",
+            "Habilitation générale sur les conditions d'ouverture des prestations.", "Interdiction de rétablir le paiement préalable retiré de L382-9 pour les prestations futures couvertes.", 'legal_duty', "Artistes auteurs éligibles aux prestations en espèces maladie-maternité.", "Jours et situations définis par L382-9 proposé ; créances anciennes conservées.", "Aucune attestation de remplacement.",
+            "les conditions d'ouverture du droit aux prestations prenant en compte les spécificités des revenus des affiliés",
+            "ni la condition de paiement préalable des cotisations supprimée à l'article L. 382-9 pour les prestations qui en sont dispensées."),
+     effect('coordination', 'artistes-auteurs-suppression-majoration-bnc', "Interdire la réintroduction réglementaire de la majoration de base retirée.",
+            "Adaptations réglementaires relatives au contrôle de l'assiette et à la fixation des cotisations.", "Compétence conservée sans majoration de 15 % sur les années réformées.", 'legal_duty', "Artistes auteurs imposés en BNC.", "Même bascule annuelle que L382-3, sans effacer les anciennes dettes.", "Aucune recette ni base nouvelle.",
+            "les adaptations à apporter le cas échéant aux dispositions du présent code relatives au contrôle de l'assiette",
+            "Elles ne peuvent rétablir la majoration de 15 % de l'assiette des cotisations calculées sur les revenus imposables au titre des bénéfices non commerciaux pour les années auxquelles sa suppression à l'article L. 382-3 s'applique"),
+     effect('coordination', 'artistes-auteurs-libre-support-social', "Coordonner les pouvoirs déclaratifs avec le libre support prévu par L382-6.",
+            "Habilitation générale aux obligations déclaratives dans la section.", "Aucune exclusivité numérique ni indication d'impossibilité ne peut être rétablie par règlement.", 'legal_duty', "Auteurs et diffuseurs déclarants.", "Opérations visées par la transition de L382-6.", "Aucune déclaration de remplacement.",
+            "les obligations des personnes mentionnées à l'article L. 382-4 en matière de déclaration de leur chiffre d'affaires",
+            "ni imposer le seul recours à la voie dématérialisée ou une déclaration d'impossibilité en méconnaissance de l'article L. 382-6.")])
+
+put('L382-14-1', None,
+    "Maintien intégral du rattachement social des revenus de L132-42 du code de la propriété intellectuelle, avec exclusion expresse des cotisations AT-MP. Cette exclusion favorable demeure pour les revenus futurs ; le renvoi au chapitre permet le traitement adapté des droits d'auteur au lieu de créer un prélèvement autonome. Aucune déclaration ou procédure d'autorisation propre n'est créée par cette disposition.",
+    "Le renvoi au chapitre demeure valide après suppression de la majoration BNC de L382-3 dans son champ et de la condition de paiement de L382-9 pour les prestations visées. L132-42 relève du CPI hors corpus fourni : son contenu entier n'est pas inventé ni assimilé à une règle de rupture. L'exclusion AT-MP n'est pas supprimée à l'occasion de la coordination du contrat unique.",
+    'retained_necessary',
+    "Le régime social adapté et l'exclusion AT-MP sont conservés intégralement, sans prélèvement ou procédure supplémentaire. Le maintien d'une exclusion existante n'est pas une nouvelle baisse de cotisation.",
+    "Le contenu du CPI non fourni et les régimes sociaux d'autres rémunérations restent distincts. Aucune baisse additionnelle ni extension du taux de CSG salariale privée n'est démontrée par ce texte.",
+    "Aucune charge nouvelle n'est identifiée : maintien exact du champ et de l'exclusion existants, sans nouvel identifiant, rapport ou justificatif.")
+
+put('L382-15', None,
+    "Maintien intégral de l'affiliation des ministres des cultes, membres des congrégations et pensionnés visés, sans double rattachement à un autre régime obligatoire. La consultation de la commission n'est pas automatique : l'organisme compétent la sollicite s'il y a lieu pour qualifier des situations diverses. Cette expertise pluraliste ne constitue ni un agrément religieux ni une pièce supplémentaire à imposer au demandeur ; aucune redondance obligatoire n'est démontrée.",
+    "Conserver l'interdiction d'une affiliation sur la seule condition de résidence L160-1 dans ce régime spécial sans fermer les autres droits légaux à la santé. R382-80 lu prévoit une consultation facultative lors du recours amiable avec suspension spécifique de délai ; elle n'est pas un préavis individuel de travail. Les voies de recours de L382-20 sont coordonnées dans le lot. Le statut religieux ne devient pas un contrat privé du seul fait du contrat unique.",
+    'retained_necessary',
+    "L'affiliation légale et l'expertise facultative dans le respect de la diversité des cultes sont maintenues. Aucun rapport, autorisation de remplacement ou taxe accessoire n'est identifié dans cet article.",
+    "La consultation facultative ne dispense pas des voies de recours et ses délais réglementaires ne sont pas réécrits dans cet article. Les situations relevant déjà obligatoirement d'un autre régime restent exclues de ce rattachement.",
+    "Aucune charge nouvelle n'est identifiée : maintien intégral de la règle, sans demande d'attestation religieuse, registre ou condition supplémentaire.")
+
+put('L382-16', None,
+    "Maintien intégral de la possibilité favorable de conserver la couverture pendant un détachement temporaire à l'étranger. L'engagement de l'association, congrégation ou collectivité à acquitter les cotisations garantit le financement de cette continuité ; ce n'est pas un agrément supplémentaire. Supprimer la faculté ou la réserver aux détachements anciens fermerait un avantage aux futures personnes éligibles.",
+    "La durée maximale est réglementaire et aucun chiffre n'est fourni dans la source législative : ne pas inventer de durée illimitée ni de délai nouveau. Les conventions internationales et la coordination européenne des régimes restent à leur champ ; aucune dérogation unilatérale à ces règles n'est déduite de la simplification. L'engagement de payer ne devient pas une autorisation préalable distincte.",
+    'retained_necessary',
+    "Le maintien d'affiliation lors des détachements temporaires et son engagement de financement sont conservés pour les futurs détachements recevables. Aucun gain de prélèvement ou nouveau régime n'est revendiqué.",
+    "Le plafond de durée et les règles internationales ne sont pas réécrits ici ; l'affiliation à l'étranger hors détachement ou à titre permanent n'est pas étendue automatiquement.",
+    "Aucune charge nouvelle n'est identifiée : la condition existante de financement et la faculté de maintien sont conservées sans autorisation ou document nouveau.")
+
+put('L382-17', None,
+    "Maintien intégral utile de la CAVIMAC, de ses prestations, de ses quatre sections, de l'action sanitaire et sociale et de la représentation pluraliste des cultes. Un organisme payeur et son contrôle restent essentiels à la continuité des droits et au bon emploi des fonds ; leur abrogation ne constituerait pas une simplification opératoire sans reprise organisée. Le financement de l'action sociale avant l'exercice constitue une garantie budgétaire, non un délai minimal imposé à un assuré.",
+    "Les quatre sections sont conservées sans fusion comptable artificielle. Les notes source de l'article 18 de la loi 2019-1446 prévoient le 1er janvier 2023 et la faculté historique d'avancer/reporter de deux ans ; elles ne permettent pas de dater une réforme future. La suppression d'approbation de conventions L382-18 ne supprime pas le contrôle de l'Etat prévu au deuxième alinéa, la comptabilité ou le financement légal des prestations.",
+    'retained_necessary',
+    "Le service des droits maladie-maternité, vieillesse, invalidité et l'action sanitaire et sociale reste garanti par l'organisme existant. Aucun démantèlement fictif ni économie d'organisme non mesurée n'est compté.",
+    "La fusion d'organismes ou une autre gouvernance exigerait une reprise des actifs, personnels et engagements non décidée ici ; cette règle spéciale n'est pas un contrat de travail privé.",
+    "Aucune charge nouvelle n'est identifiée : maintien intégral des missions et contrôles existants, sans rapport, cotisation ou calendrier supplémentaire.")
+
+n = 'L382-18'
+p = by_number[n]['source_xml'].replace(
+    "Ces conventions sont soumises à l'approbation des ministres chargés de la sécurité sociale et du budget.",
+    "Ces conventions et leurs avenants prennent effet à la date qu'ils fixent, sans approbation particulière des ministres chargés de la sécurité sociale et du budget. Le contrôle de l'Etat sur les organismes et leurs actes ainsi que les règles budgétaires et comptables qui leur sont applicables demeurent.")
+p += "<p>La suppression de cette approbation s'applique aux conventions et avenants conclus à compter de l'entrée en vigueur de la loi portant cette suppression. Les conventions valablement conclues auparavant, leurs engagements et les droits nés de leur exécution demeurent ; elles n'ont pas à être conclues ou approuvées de nouveau.</p>"
+put(n, p,
+    "Réforme de fond : supprimer le visa ministériel particulier des conventions de trésorerie passées entre organismes sociaux déjà soumis au contrôle de l'Etat. La mise à disposition des moyens nécessaires aux prestations, à la gestion et à l'action sanitaire et sociale, le reversement des cotisations L382-25 et les deux conventions par branche sont intégralement conservés. Aucun dépôt, avis ou délai équivalent ne remplace l'approbation.",
+    "La suppression porte sur la dernière phrase, non sur les engagements de la CNAV, de la CNAM, de l'ACOSS ou de la CAVIMAC. Elle couvre les avenants nouveaux sans faire refaire les conventions anciennes. Le contrôle autonome de L382-17 demeure ; les obligations de financement et de reversement ne sont pas annulées. Les règlements ou clauses de convention conditionnant leur effet à cette seule approbation devront être coordonnés ; aucun rendement budgétaire n'est déduit de sa disparition.",
+    'material_reduction',
+    "L'approbation spécifique des deux ministres disparaît pour les conventions nouvelles et leurs avenants. Il s'agit d'une procédure préalable retirée, sans suppression de la dette de cotisations ni promesse de baisse de dépense publique.",
+    "Les deux conventions et leurs contenus financiers subsistent ; la mesure ne modifie pas les compétences de branche ni les contrôles légaux autonomes. Les coûts administratifs et le solde net ne sont pas chiffrés.",
+    "Aucune charge nouvelle n'est identifiée : les parties concluent les mêmes conventions, sans nouvelle déclaration ou approbation ; la date d'effet reste fixée dans l'acte comme modalité contractuelle.",
+    [effect('authorization_removed', 'cultes-conventions-sans-approbation', "Supprimer l'approbation ministérielle particulière des conventions financières de la CAVIMAC.",
+            "Conventions ACOSS-CNAV-CAVIMAC et ACOSS-CNAM-CAVIMAC soumises à l'approbation des ministres de la sécurité sociale et du budget.",
+            "Mêmes conventions et reversements, exécutoires à la date qu'elles fixent sans cette approbation ; contrôles autonomes conservés.", 'legal_duty',
+            "ACOSS, CNAV, CNAM et CAVIMAC, avec maintien du financement des bénéficiaires.", "Conventions et avenants nouveaux dès l'entrée en vigueur ; engagements anciens conservés sans nouvelle approbation.",
+            "Aucun visa, déclaration ni délai de remplacement ; contrôle de l'Etat déjà existant réservé.",
+            "Ces conventions sont soumises à l'approbation des ministres chargés de la sécurité sociale et du budget.",
+            "sans approbation particulière des ministres chargés de la sécurité sociale et du budget.")],
+    ["Suppression de l'approbation particulière des ministres chargés de la sécurité sociale et du budget pour les conventions et avenants nouveaux."])
+
+put('L382-19', None,
+    "Maintien intégral de l'avis consultatif général sur l'application du régime des cultes. La commission pluraliste de L382-15 fournit une expertise aux autorités et à la caisse ; cet article n'impose ni saisine préalable pour tout dossier ni déclaration aux assurés. Aucune compétence décisionnelle d'agrément ou cotisation accessoire ne justifie une suppression qui retirerait cette expertise sans bénéfice privé démontré.",
+    "Le deuxième alinéa de L382-15 est conservé intégralement : le renvoi n'est ni orphelin ni déplacé. La consultation en recours amiable de R382-80, lue au corpus, reste facultative et distincte de l'avis général. La suppression de l'approbation des conventions de L382-18 ne se transforme pas en avis obligatoire de cette commission.",
+    'retained_necessary',
+    "La compétence d'avis, sans autorisation ni démarche privée autonome, est maintenue afin d'éclairer l'application pluraliste du régime. Aucun délai ou prélèvement retiré n'est artificiellement attribué à cette conservation.",
+    "L'organisation réglementaire et la durée d'une consultation particulière ne sont pas modifiées ici. La commission ne remplace ni l'organisme d'affiliation ni le juge compétent.",
+    "Aucune charge nouvelle n'est identifiée : maintien de l'avis existant, sans saisine nouvelle, transmission obligatoire ou justificatif supplémentaire pour l'assuré.")
+
+n = 'L382-20'
+p = """<p>Les différends auxquels donne lieu l'application de la présente section sont réglés conformément aux dispositions du chapitre 2 du titre IV du livre Ier.</p>
+<p>Cette coordination ne rouvre aucun délai expiré, ne remet en cause aucune décision définitive et ne modifie pas les règles transitoires applicables aux procédures déjà engagées.</p>"""
+put(n, p,
+    "Coordination nécessaire d'un renvoi obsolète : la source vise encore les chapitres 2 à 4 du titre IV alors que le contentieux est regroupé au chapitre 2. Le nouveau corps conserve la règle entière d'accès au contentieux de sécurité sociale et ses garanties, sans prétendre supprimer une procédure ou réduire un délai de recours.",
+    "Lecture locale intégrale de L142-1, L142-3, L142-4 et L142-8 et vérification de la structure active : chapitre 2, contentieux de sécurité sociale et de l'admission à l'aide sociale ; anciens chapitres 3 et 4 sans articles actifs dans le corpus. Ce renvoi actualisé au chapitre 2 n'est pas une cible fournie de reference-targets.json ; les contrôles facultatifs sont donc consignés ici. Recours préalable, compétence judiciaire, représentation et garanties du chapitre restent applicables. Ne pas confondre les litiges des cultes avec les ruptures individuelles du contrat privé ni rouvrir les recours clos.",
+    'coordination_only',
+    "Le renvoi est actualisé vers le chapitre actif du contentieux ; les droits au juge et les règles de procédure sont conservés. Aucune obligation ni juridiction supplémentaire n'est déclarée supprimée.",
+    "La coordination ne réécrit pas le chapitre contentieux, ses décrets ou les dispositions transitoires des réformes de 2016-2020. Aucun effet chiffré ou gain de délai n'est établi.",
+    "Aucune charge nouvelle n'est identifiée : le même contentieux reste ouvert, sans recours préalable additionnel, preuve nouvelle ou délai imposé par cet article.",
+    [effect('coordination', 'cultes-renvoi-contentieux-actuel', "Actualiser le renvoi contentieux sans modifier ses garanties.",
+            "Renvoi aux chapitres 2 à 4 du titre IV du livre Ier, dont deux anciens chapitres n'ont plus d'articles actifs dans le corpus.",
+            "Renvoi au chapitre 2 actuel, sans réouverture des délais ni altération des transitions procédurales.", 'legal_duty',
+            "Assurés et organismes relevant de la section des cultes.", "Respect des règles transitoires des procédures engagées et des décisions définitives.", "Aucune procédure ou formalité nouvelle.",
+            "conformément aux dispositions des chapitres 2 à 4 du titre IV du livre Ier.",
+            "conformément aux dispositions du chapitre 2 du titre IV du livre Ier.")])
+
+
+# Les analyses portent sur la vue fournie, même lorsqu'elle est un brouillon et
+# que le présent lot fait évoluer l'article cible lui-même.
+contexts = {
+    'L382-1': "L382-1 définit l'affiliation des auteurs et protège expressément le rattachement salarié de L311-2 ; l'attente photographique supprimée n'est pas une ancienneté d'emploi.",
+    'L382-3': "L382-3 détermine l'assiette et les taux sociaux des droits d'auteur, même accessoires ; l'assimilation à des salaires est sociale et ne crée pas un contrat de travail.",
+    'L382-3-2': "L382-3-2 régularise des cotisations sur des revenus annuels cumulés au-delà du plafond ; son délai de quatre mois court du dépôt de la déclaration, pas d'une notification de rupture.",
+    'L382-5': "L382-5 organise le paiement direct ou précompté des cotisations d'auteur et leur recouvrement ; la forme ou la fin d'un emploi distinct ne conditionne pas ce circuit.",
+    'L382-6': "L382-6 règle le support des déclarations, les versements et l'identification des auteurs ; sa réduction conserve les données d'assiette et l'affiliation, sans condition d'ancienneté d'emploi.",
+    'L382-7': "L382-7 confie l'action sanitaire et sociale aux organismes du régime des auteurs ; ses bénéficiaires ne deviennent pas salariés privés du fait de cette mission.",
+    'L382-10': "L382-10 conserve des droits vieillesse du régime libéral antérieurs au 1er janvier 1977 et leur couverture maladie ; ces périodes historiques ne sont pas des services sous contrat unique.",
+    'L382-12': "L382-12 concerne la retraite complémentaire des auteurs, le précompte du producteur et la part financée grâce au prêt en bibliothèque ; les contrats visés sont du CPI.",
+    'L382-14': "L382-14 habilite le décret à adapter prestations, assiette et recouvrement du régime des auteurs ; les limites ajoutées coordonnent des coupes sociales, sans modifier la rupture d'un emploi.",
+}
+
+
+def reference_assessment(source_number, target_number):
+    ctx = contexts[source_number]
+    if target_number == 'L1234-1':
+        detail = "La cible est le préavis patronal : source à six mois/deux ans et proposition de quinze jours calendaires pour les nouveaux contrats, sans condition d'ancienneté. Son départ relève de la notification écrite selon la coordination de travail, non du versement de droits d'auteur. Aucun renvoi de cet article n'importe ces durées ; anciens emplois et protections collectives restent à leur régime."
+    elif target_number == 'L1221-2':
+        detail = "La cible remplace les nouveaux CDD par un contrat privé unique à durée indéterminée ; les anciens contrats gardent leur transition. Ni une cession de droits, ni une édition, ni l'assimilation sociale des revenus d'auteur ne constituent par elles-mêmes un emploi. Les droits sociaux de l'article restent ouverts aux auteurs éligibles futurs, quel que soit un emploi distinct."
+    elif target_number == 'L1234-9':
+        detail = "La cible passe de huit mois dans la source à un an au terme effectif, préavis inclus, dans la proposition pour le nouveau contrat ; 0,20 mois par année totale, mois complets au prorata, plafond six mois, employeur seul. Aucune de ces conditions de rupture, ni la notification qui les précède, ne conditionne les droits d'auteur ici ; les droits d'anciens emplois et indemnités spéciales ne sont pas réduits."
+    elif target_number == '93':
+        detail = "Le renvoi opératoire vise exactement le 1 quater fiscal : déclaration intégrale par les tiers, assimilation à traitements et salaires et déduction de 10 % sur droits nets des cotisations visées. Ce n'est pas un contrat salarié. La branche BNC sociale perd seulement sa majoration de 15 % ; ni l'option fiscale, ni les autres abattements de l'article 93 ne sont supprimés. La vue proposée n'est pas le droit en vigueur."
+    elif target_number == 'L213-1':
+        specifics = {
+            'L382-1': "L'organisme URSSAF est désigné pour l'affiliation par L382-1 lui-même ; le I de L213-1 conserve le recouvrement et les contrôles. La suppression des trois ans n'exige pas de nouvelle désignation ni d'autorisation. Son 6° proposé supprime le CPF-CDD, sans réduire le droit d'affiliation des auteurs.",
+            'L382-3-2': "L'organisme de recouvrement L213-1 reste compétent pour régulariser après dépassement du plafond dans les quatre mois de la déclaration. Les 1° et 7° du I n'importent ni préavis de rupture ni indemnité ; la suppression CPF-CDD du 6° et la transition C3S du 5° n'annulent pas les cotisations d'auteur plafonnées.",
+            'L382-5': "L213-1 conserve la compétence URSSAF, complétée par l'attribution spéciale de L382-5 et le 7° du I. La restriction du 6° proposé pour le CPF-CDD de 1 % ne vise pas L6331-65 (formation des artistes auteurs). Le précompte et le paiement direct restent sans condition de notification ou d'ancienneté d'emploi.",
+            'L382-6': "L213-1 désigne la catégorie des organismes de recouvrement, sans fixer le support exclusif des déclarations de droits d'auteur. Le 8° proposé réemploie les données légalement disponibles, sans ouvrir un accès au NIR aux diffuseurs ; le libre support ici ne supprime ni identité ni assiette. Aucune condition de rupture n'y est importée.",
+            'L382-7': "La désignation de l'URSSAF par L213-1 reste compatible avec la mission spéciale d'action sanitaire et sociale confiée par L382-7. Le 9° du I de la cible concerne les décisions d'action sociale des indépendants et ne remplace pas les orientations de l'association L382-2. La suppression CPF-CDD du 6° n'affecte pas ce financement par L382-4."
+        }
+        detail = specifics[source_number]
+    elif target_number == 'L241-3':
+        detail = "Le plafond annuel renvoyé figure au premier alinéa officiel, repris au I de la proposition, avec revalorisation salariale et interdiction de baisse. L'ajout du compte capitalisé aux II et suivants ne déplace pas ce plafond. Son premier champ est le salarié privé, non tous les auteurs assimilés ; il ne modifie pas le plafond agrégé ni les quatre mois de régularisation de cet article."
+    elif target_number == 'L114-12-1':
+        detail = "L'avant-dernier alinéa est bien celui du numéro d'inscription au RNIPP dans les deux vues ; le renvoi ordinal de L382-6 est donc conservé. Le dernier alinéa prévoit l'identification des personnes sans numéro. L'identification ne crée aucun accès général des diffuseurs au répertoire ; finalités, habilitations, confidentialité et rectification ne sont pas écartées par le choix du support."
+    elif target_number == 'L382-5':
+        detail = "La cible est fournie en source officielle seule : son premier alinéa identifie l'organisme destinataire, le deuxième le précompte et le troisième le recouvrement des contributions de formation distinctes. L382-6 conserve exactement le renvoi au premier alinéa ; le libre support ne déplace pas le destinataire ni ne dispense du versement, et L382-5 est maintenu dans ce lot."
+    elif target_number == 'L382-1':
+        specifics = {
+            'L382-3': "Le renvoi vise les personnes de L382-1, y compris les photographes ; sa vue est officielle seule et comporte encore les trois années civiles. Leur suppression proposée dans ce lot ouvre le même régime aux entrants futurs et n'assimile pas leur contrat à un emploi. La réduction d'assiette BNC s'applique dans ce champ, sans retirer les prestations ni la réserve L311-2.",
+            'L382-5': "Le renvoi vise les auteurs redevables, pas une subdivision de contrat. La vue officielle L382-1 contient encore les trois années photographiques, retirées par la proposition du lot : les nouveaux affiliés bénéficieront aussi du circuit de paiement et de précompte. Aucun renvoi au nouveau seuil d'un an de licenciement ne doit restreindre ce champ.",
+            'L382-7': "Le renvoi définit les bénéficiaires de l'action sanitaire et sociale. La vue officielle contient les trois ans photographiques que le lot supprime pour les affiliations futures ; le renvoi dynamique maintient l'action au profit de ces nouveaux auteurs éligibles. Ni ancienneté salariée ni notification de rupture ne devient un critère d'aide ici.",
+            'L382-10': "Le renvoi identifie les artistes auteurs dont les anciens droits libéraux sont repris ; la suppression des trois années photographiques dans la proposition de L382-1 ne réécrit pas les périodes antérieures à 1977 ni les pensions acquises. La réserve L311-2 préserve un salariat distinct ; aucun seuil d'indemnité ou préavis n'est importé dans cette reprise historique.",
+            'L382-12': "Le premier alinéa renvoie à l'affiliation L382-1 pour le champ de la retraite complémentaire. La vue officielle n'est pas une proposition et inclut encore les trois années photographiques ; le lot les retire pour les futurs affiliés sans supprimer l'accès aux régimes complémentaires, aux prises en charge du producteur ou aux avantages de prêt en bibliothèque selon leurs conditions propres.",
+            'L382-14': "Le renvoi d'ensemble au chapitre suppose le champ de L382-1, dont la vue officielle conserve encore les trois ans photographiques. La proposition du lot les supprime et borne expressément le décret pour empêcher leur retour. La réserve de salariat L311-2 et les règles professionnelles de photographie dans la presse subsistent, sans imposer l'ancienneté de rupture d'un emploi."
+        }
+        detail = specifics[source_number]
+    elif target_number == 'L133-4':
+        detail = "Homonymie à distinguer explicitement : le renvoi de L382-12 vise L133-4 du code de la propriété intellectuelle pour la limite du financement par le prêt en bibliothèque. La cible fournie est L133-4 du CSS, qui recouvre les indus médicaux avec notamment des accessoires de 10 % ; elle est sans application à ce renvoi. Ne pas substituer ce texte au CPI ni appliquer ses sanctions aux auteurs. Le texte entier du CPI n'est pas fourni."
+    else:
+        raise ValueError((source_number, target_number))
+    return ctx + ' ' + detail
+
+
+for src in sources:
+    a = answers[src['number']]
+    key = src['code_id'] + '|' + src['source_id']
+    a['reference_checks'] = [
+        dict(target_key=k, view_sha256=refs['targets'][k]['view_sha256'],
+             assessment=reference_assessment(src['number'], refs['targets'][k]['number']))
+        for k in refs['requirements'][key]
+    ]
+
+out = [answers[s['number']] for s in sources]
+assert len(out) == 24
+(ROOT / 'answer.json').write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n')
+print('answer.json :', len(out), 'articles ;', sum(len(a['reference_checks']) for a in out), 'analyses de renvois.')

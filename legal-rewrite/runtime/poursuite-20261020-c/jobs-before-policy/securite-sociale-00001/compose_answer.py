@@ -1,0 +1,341 @@
+import json
+from pathlib import Path
+
+
+def paragraphs(*items):
+    return "\n".join(f"<p>{item}</p>" for item in items)
+
+
+drafts = {}
+
+
+def draft(number, text, reason, review_notes):
+    assert number not in drafts
+    drafts[number] = dict(proposed_xml=text, reason=reason, review_notes=review_notes)
+
+
+draft(
+    "LO111-4-1",
+    paragraphs(
+        "Le projet de loi de financement de l'année est accompagné des annexes suivantes :",
+        "1° Une annexe dresse la liste des régimes obligatoires de base de sécurité sociale. Pour chaque régime, elle indique le nombre de cotisants actifs et de retraités titulaires de droits propres ;",
+        "2° Une annexe présente, pour l'année en cours et les trois années suivantes, les comptes prévisionnels des organismes et fonds suivants. Elle justifie l'évolution de leurs recettes et de leurs dépenses. Elle détaille les effets des mesures du projet de loi de financement de l'année sur leurs comptes, pour l'année à venir et, le cas échéant, les années ultérieures :",
+        "a) Les organismes qui concourent au financement des régimes obligatoires de base, à l'amortissement de leur dette et à la mise en réserve de recettes à leur profit ;",
+        "b) Les organismes financés par des régimes obligatoires de base. L'annexe détaille, le cas échéant, les dotations des régimes obligatoires d'assurance maladie affectées à ces organismes : elle indique le montant de la dotation pour l'année en cours et celui de la dotation prévisionnelle pour l'année à venir ;",
+        "c) Les fonds comptables qui retracent le financement de dépenses spécifiques relevant d'un régime obligatoire de base ;",
+        "3° Une annexe présente les mesures relatives à l'équilibre des finances sociales. À ce titre, elle fournit notamment les informations suivantes :",
+        "a) Elle détaille, par catégorie, la liste et l'évaluation des recettes, des dépenses et du solde de l'ensemble des régimes obligatoires de base, par branche. Elle fournit les mêmes informations pour chaque organisme qui concourt au financement de ces régimes, à l'amortissement de leur dette et à la mise en réserve de recettes à leur profit ;",
+        "b) Elle justifie les besoins de trésorerie des régimes et organismes que le projet de loi de financement de l'année habilite à recourir à des ressources non permanentes ;",
+        "c) Elle détaille, pour l'année à venir et, le cas échéant, les années ultérieures, les effets des mesures du projet de loi de financement de l'année et des mesures réglementaires ou conventionnelles qu'il prend en compte. Elle précise ces effets sur les comptes des régimes obligatoires de base et sur l'objectif national de dépenses d'assurance maladie ;",
+        "d) Elle détaille les mesures qui ont des effets sur les champs d'intervention respectifs de la sécurité sociale, de l'État et des autres collectivités publiques. Elle précise leurs effets sur les recettes, les dépenses et les tableaux d'équilibre de l'année des régimes obligatoires de base de sécurité sociale et des organismes qui concourent à leur financement. Elle présente aussi les mesures destinées à garantir, pour la trésorerie de ces régimes et organismes, la neutralité des opérations qu'ils effectuent pour le compte de tiers ;",
+        "4° Une annexe présente l'ensemble des mesures de réduction ou d'exonération de cotisations ou de contributions de sécurité sociale affectées aux régimes obligatoires de base ou aux organismes qui concourent à leur financement. Elle présente également les mesures de réduction de l'assiette ou d'abattement sur l'assiette de ces cotisations et contributions, ainsi que les mesures envisagées pour l'année à venir. Elle évalue l'impact financier de l'ensemble de ces mesures et précise les modalités et le montant de leur compensation financière. Les mesures sont détaillées par nature, par branche et par régime ou organisme ;",
+        "5° Une annexe précise le périmètre de l'objectif national de dépenses d'assurance maladie et sa composition en sous-objectifs. Elle analyse, au regard des besoins de santé publique, l'évolution des soins financés au titre de cet objectif. Elle présente les éventuelles modifications du périmètre de l'objectif ou de la composition des sous-objectifs et indique l'évolution à structure constante de l'objectif ou des sous-objectifs concernés par les modifications de périmètre. Elle précise comment l'objectif national de dépenses d'assurance maladie est calculé à partir des objectifs des différentes branches. Elle fournit des éléments précis sur l'exécution de l'objectif national pour l'exercice en cours et sur les modalités de construction de l'objectif pour l'année à venir. À ce titre, elle détaille, le cas échéant, les mesures correctrices envisagées et leurs impacts financiers, ainsi que les mesures prises pour atteindre les objectifs d'économies fixés. Elle indique aussi l'évolution de la dépense nationale de santé et les modes de prise en charge de cette dépense. Elle rappelle, le cas échéant, l'alerte émise par une autorité indépendante désignée par la loi. Elle présente en outre le taux prévisionnel de consommation pluriannuel se rattachant aux objectifs d'engagement inscrits pour l'année à venir, ainsi que le bilan des taux de consommation des objectifs d'engagement de l'exercice en cours ;",
+        "6° Une annexe présente la situation financière des établissements de santé et des établissements médico-sociaux financés en tout ou partie par les régimes obligatoires de base de sécurité sociale et soumis à un objectif de dépenses. Elle expose notamment :",
+        "a) Les actions menées en matière de financement de ces établissements et leur bilan, y compris les dotations dont ils bénéficient et leur répartition par région et par établissement ;",
+        "b) L'évolution prévisionnelle de la dette de ces établissements ;",
+        "c) Les éventuels engagements de l'État relatifs à l'évolution pluriannuelle des ressources de ces établissements ;",
+        "7° Une annexe présente, pour le dernier exercice clos, l'exercice en cours et l'exercice à venir, les dépenses et les prévisions de dépenses de sécurité sociale consacrées au soutien à l'autonomie des personnes âgées et des personnes en situation de handicap. Elle indique aussi l'évolution de la dépense nationale en faveur du soutien à l'autonomie et les modes de prise en charge de cette dépense ;",
+        "8° Une annexe présente, pour l'année en cours et l'année à venir, les perspectives d'évolution des recettes, des dépenses et du solde du régime d'assurance chômage et des régimes de retraite complémentaire légalement obligatoires. Elle expose les effets des mesures nouvelles envisagées sur ces perspectives. Elle indique le nombre de cotisants actifs de ces régimes et, pour chaque régime de retraite complémentaire, le nombre de retraités titulaires de droits propres ;",
+        "9° Une annexe contient, pour les dispositions relevant du paragraphe 2 de la sous-section 1 de la section 1 du présent chapitre, les documents mentionnés aux dix derniers alinéas de l'article 8 de la loi organique n° 2009-403 du 15 avril 2009 relative à l'application des articles 34-1, 39 et 44 de la Constitution ;",
+        "10° Une annexe contient le rapport mentionné au III de l'article 62 de la loi organique n° 2001-692 du 1er août 2001 relative aux lois de finances."
+    ),
+    "Réécriture à droit constant : chaque annexe devient le sujet explicite de ses obligations ; les phrases longues des 2°, 3°, 4°, 5° et 8° sont divisées sans déplacer leurs subdivisions. Les horizons de prévision, les catégories d'organismes et toutes les informations exigées sont conservés. Aucune baisse de prélèvement ni affectation de cotisations n'est instituée par cet article organique de présentation.",
+    "Les 1° à 10°, les a à c du 2°, les a à d du 3° et les a à c du 6° restent à leur emplacement. Les comptes prévisionnels couvrent l'année en cours et les trois suivantes ; l'effet des mesures est détaillé pour l'année à venir et, le cas échéant, au-delà. La réserve du paragraphe 12 de la décision n° 2022-836 DC du 10 mars 2022 demeure applicable : le retard ou l'absence de documents ne bloque pas à lui seul la discussion ; continuité de la vie nationale et sincérité gouvernent le contrôle constitutionnel. L'entrée en vigueur du 1er septembre 2022 est historique, non celle des réformes. Pour policy.json, les annexes devront retracer les pertes de recettes, compensations et financements réellement votés. La baisse ciblée de CSG relève de L. 136-8, avec coordination de son champ salarial et de sa déductibilité dans le CGI ; l'allègement supplémentaire relève d'une disposition de cotisations coordonnée avec L. 241-13, notamment sa règle de non-cumul, et avec L. 131-7. La suppression de C3S relève de L. 137-30 et des dispositions connexes, avec coordination de l'affectation vieillesse de L. 241-3. Les comptes personnels de retraite et le fonds de transition exigent des dispositions législatives nouvelles définissant leur régime, le financement préalable des paliers, les garanties et les droits préservés ; aucun renvoi à un fonds ou compte encore inexistant n'est créé ici. Une annexe financière ne suffit pas à autoriser ces mesures."
+)
+
+draft(
+    "LO111-4-2",
+    paragraphs(
+        "Le projet de loi de financement rectificative est accompagné d'un rapport qui présente, pour les quatre années à venir, les prévisions de recettes et les objectifs de dépenses des régimes obligatoires de base, par branche. Ce rapport présente aussi, pour cette même période, les prévisions de recettes et de dépenses des organismes qui concourent au financement de ces régimes, ainsi que l'objectif national de dépenses d'assurance maladie.",
+        "Le rapport précise les hypothèses retenues pour prévoir l'objectif national de dépenses d'assurance maladie des quatre années à venir. Ces hypothèses tiennent compte des facteurs qui déterminent l'évolution tendancielle de cet objectif et des effets attendus des mesures nouvelles.",
+        "Le rapport actualise en outre, le cas échéant, pour l'année à laquelle se rapporte le projet de loi, les écarts mentionnés au troisième alinéa de l'article LO 111-4. Il expose les raisons et les hypothèses qui justifient ces écarts."
+    ),
+    "Réécriture à droit constant : la première phrase distingue les comptes des régimes de base de ceux des organismes de financement tout en maintenant le même horizon de quatre ans. Les hypothèses et l'actualisation des écarts font l'objet de phrases plus directes. Aucune réforme de fond n'est introduite dans ce rapport prévisionnel.",
+    "Les trois alinéas sont conservés. Le renvoi au troisième alinéa de LO 111-4 a été vérifié dans le corpus : il vise les écarts cumulés avec la programmation des finances publiques. La réserve du paragraphe 12 de la décision n° 2022-836 DC du 10 mars 2022 s'applique aux retards ou à l'absence de documents, sous les exigences de continuité de la vie nationale et de sincérité. La date du 1er septembre 2022 indiquée en note concerne le texte source. Les hypothèses relatives aux réformes devront distinguer les financements votés des effets de croissance ou de rendement espérés ; cet article ne constitue pas leur base d'entrée en vigueur."
+)
+
+draft(
+    "LO111-4-3",
+    paragraphs(
+        "Le projet de loi de financement rectificative est accompagné des annexes suivantes :",
+        "1° Une annexe présente des informations relatives à l'équilibre des finances sociales. À ce titre, elle fournit notamment les informations suivantes :",
+        "a) Elle détaille, par catégorie et par branche, la liste et l'évaluation des recettes, des dépenses et du solde de l'ensemble des régimes obligatoires de base. Elle fournit les mêmes informations pour chaque organisme qui concourt au financement de ces régimes, à l'amortissement de leur dette ou à la mise en réserve de recettes à leur profit ;",
+        "b) Elle justifie les besoins de trésorerie des régimes et organismes que le projet de loi de financement rectificative habilite à recourir à des ressources non permanentes ;",
+        "c) Elle détaille, pour l'année en cours et, le cas échéant, les années ultérieures, les effets des mesures du projet de loi de financement rectificative et des mesures réglementaires ou conventionnelles qu'il prend en compte. Elle précise ces effets sur les comptes des régimes obligatoires de base et sur l'objectif national de dépenses d'assurance maladie ;",
+        "2° Si le projet de loi de financement rectificative modifie l'objectif national de dépenses d'assurance maladie, une annexe précise le périmètre de cet objectif et sa composition en sous-objectifs. Elle présente, le cas échéant, les modifications du périmètre de l'objectif ou de la composition des sous-objectifs et indique l'évolution à structure constante de l'objectif ou des sous-objectifs concernés par les modifications de périmètre. Elle précise comment l'objectif national de dépenses d'assurance maladie est calculé à partir des objectifs des différentes branches. Elle fournit des éléments précis sur l'exécution de l'objectif national pour l'exercice en cours et détaille, le cas échéant, les mesures correctrices envisagées. Elle rappelle, le cas échéant, l'alerte émise par une autorité indépendante désignée par la loi ;",
+        "3° Une annexe contient, pour les dispositions relevant de l'article LO 111-3-12, les documents mentionnés aux dix derniers alinéas de l'article 8 de la loi organique n° 2009-403 du 15 avril 2009 relative à l'application des articles 34-1, 39 et 44 de la Constitution."
+    ),
+    "Réécriture à droit constant : les annexes et leurs obligations sont identifiées explicitement. Le 2° sépare la condition tenant à la modification de l'objectif national, les informations de périmètre et les informations d'exécution. Les subdivisions et les effets à retracer pour l'année en cours sont maintenus ; aucune réforme de fond n'est ajoutée.",
+    "Conserver la différence avec LO 111-4-1 : le c du 1° porte ici sur l'année en cours et non sur la seule année à venir. L'annexe du 2° reste conditionnée à une modification de l'objectif national. Les renvois à LO 111-3-12 et aux dix derniers alinéas de l'article 8 de la loi organique du 15 avril 2009 sont maintenus. Réserve applicable : paragraphe 12 de la décision n° 2022-836 DC du 10 mars 2022, qui exclut un blocage automatique de la discussion pour retard ou absence de documents et maintient les exigences de continuité et de sincérité. La note d'entrée en vigueur du 1er septembre 2022 ne fixe aucune date pour les réformes de policy.json."
+)
+
+draft(
+    "LO111-4-4",
+    paragraphs(
+        "Le projet de loi d'approbation des comptes de la sécurité sociale est accompagné des annexes suivantes :",
+        "1° Une annexe présente les rapports d'évaluation des politiques de sécurité sociale pour chaque branche. Ces rapports rappellent les objectifs assignés dans chacun des domaines couverts, résument les principaux résultats obtenus et précisent les actions mises en œuvre pour atteindre ces objectifs. Ils s'appuient sur un diagnostic de situation fondé notamment sur les données sanitaires et sociales de la population. Ils retracent les objectifs au moyen d'indicateurs précis dont le choix est justifié, présentent les moyens mis en œuvre pour les réaliser et exposent les résultats atteints au cours des trois dernières années.",
+        "Pour la branche vieillesse, cette annexe analyse l'évolution de la soutenabilité financière de l'ensemble des régimes de retraite de base et complémentaires légalement obligatoires. Elle précise les hypothèses de prévision et les facteurs qui déterminent l'évolution à long terme des dépenses, des recettes et du solde de ces régimes ;",
+        "2° Une annexe contient un rapport qui décrit les mesures prises ou envisagées par le Gouvernement pour affecter les excédents ou couvrir les déficits constatés lors de l'approbation des tableaux d'équilibre du dernier exercice clos. Le rapport présente aussi un tableau de la situation patrimoniale, au 31 décembre de ce dernier exercice clos, des régimes obligatoires de base et des organismes qui concourent à leur financement, à l'amortissement de leur dette ou à la mise en réserve de recettes à leur profit ;",
+        "3° Une annexe énumère l'ensemble des mesures, en vigueur au 31 décembre du dernier exercice clos, de réduction ou d'exonération de cotisations ou de contributions de sécurité sociale affectées aux régimes obligatoires de base ou aux organismes qui concourent à leur financement. Elle énumère aussi les mesures de réduction de l'assiette ou d'abattement sur l'assiette de ces cotisations et contributions en vigueur à cette même date. Elle évalue l'impact financier de l'ensemble de ces mesures. Elle précise les modalités et le montant de leur compensation financière, les moyens qui assurent la neutralité de cette compensation pour la trésorerie des régimes et organismes concernés et l'état des créances. Les mesures sont détaillées par nature, par branche et par régime ou organisme. L'annexe évalue l'efficacité d'au moins le tiers de ces mesures au regard des objectifs poursuivis. Chaque mesure doit être évaluée une fois tous les trois ans ;",
+        "4° Une annexe fournit des éléments précis sur l'exécution de l'objectif national de dépenses d'assurance maladie au cours de l'exercice clos ;",
+        "5° Une annexe présente, pour le dernier exercice clos, l'état des recettes, des dépenses et du solde du régime d'assurance chômage et des régimes de retraite complémentaire légalement obligatoires ;",
+        "6° Une annexe contient un rapport sur la mise en œuvre des dispositions de la loi de financement du dernier exercice clos ;",
+        "7° Une annexe contient un rapport qui présente, pour le dernier exercice clos et les années à venir, les objectifs pluriannuels de gestion et les moyens de fonctionnement dont disposent les organismes des régimes obligatoires de base pour les atteindre. Ces objectifs et ces moyens sont ceux que l'État et les organismes nationaux de ces régimes déterminent conjointement. Pour le dernier exercice clos, le rapport indique les résultats atteints au regard des moyens de fonctionnement effectivement utilisés. Il présente aussi les mesures de simplification du recouvrement des recettes et de la gestion des prestations de la sécurité sociale ;",
+        "8° Une annexe présente, pour le dernier exercice clos, les comptes définitifs des organismes et fonds suivants :",
+        "a) Les organismes qui concourent au financement des régimes obligatoires de base, à l'amortissement de leur dette et à la mise en réserve de recettes à leur profit ;",
+        "b) Les organismes financés par des régimes obligatoires de base. L'annexe détaille, le cas échéant, le montant de la dotation des régimes obligatoires d'assurance maladie affectée à ces organismes ;",
+        "c) Les fonds comptables qui retracent le financement de dépenses spécifiques relevant d'un régime obligatoire de base."
+    ),
+    "Réécriture à droit constant : les annexes sont désignées comme sujets, les composantes des évaluations sont distinguées et les obligations relatives aux compensations sont réparties en phrases lisibles. La situation patrimoniale, l'évaluation triennale, les comptes définitifs et le paragraphe propre à la vieillesse sont intégralement maintenus. Aucune réforme de fond des régimes n'est opérée.",
+    "Le second alinéa du 1° reste consacré à la vieillesse ; les 1° à 8° et les a à c du 8° ne sont pas déplacés. Contrôles : trois dernières années pour les résultats ; 31 décembre du dernier exercice clos pour le patrimoine et les exonérations ; au moins un tiers des mesures évaluées et chaque mesure une fois tous les trois ans. La réserve du paragraphe 12 de la décision n° 2022-836 DC du 10 mars 2022 demeure applicable aux documents manquants ou tardifs, avec contrôle de continuité et de sincérité. L'entrée en vigueur source du 1er septembre 2022 est historique. La transition retraite de policy.json devra être évaluée sans comptabiliser le transfert de cotisations comme une économie ; la création du compte investi collectivement et du fonds de transition nécessite des dispositions nouvelles. Le gel partiel envisagé requiert une disposition temporaire interrégimes coordonnée notamment avec L. 161-23-1, sans appliquer par simple renvoi le régime général aux retraites complémentaires. Elle devra traiter le cumul des pensions, la fraction supérieure à 2 000 euros bruts mensuels, la revalorisation du seuil, la durée maximale de trois ans et la préservation du nominal et des droits constitués. Cette disposition nouvelle n'est pas créée par l'annexe d'évaluation."
+)
+
+draft(
+    "LO111-4-5",
+    paragraphs(
+        "Les données chiffrées servant aux tableaux et aux graphiques des documents prévus à l'article LO 111-4, aux 1° à 8° de l'article LO 111-4-1, à l'article LO 111-4-2, aux 1° et 2° de l'article LO 111-4-3, ainsi qu'aux 1° à 5° et aux 7° et 8° de l'article LO 111-4-4 doivent être publiées sous forme électronique. Le standard utilisé doit être ouvert, aisément réutilisable et exploitable par un système de traitement automatisé."
+    ),
+    "Réécriture à droit constant : l'obligation de publication et les caractéristiques du standard sont exprimées dans deux phrases au sein du même alinéa. La liste précise des documents concernés est conservée, sans extension de la publication à d'autres données ni réforme de fond.",
+    "Les exclusions résultant des plages de renvois sont maintenues : le 9° et le 10° de LO 111-4-1, le 3° de LO 111-4-3 et le 6° de LO 111-4-4 ne sont pas ajoutés. Les données visées sont celles des tableaux et graphiques. La note d'entrée en vigueur du 1er septembre 2022 n'est pas une date de lancement des réformes. Toute obligation nouvelle de publier le gain disponible d'un euro de salaire supplémentaire demanderait un objet, une méthode et un responsable propres ; elle ne découle pas de cet article à droit constant."
+)
+
+draft(
+    "LO111-4-6",
+    paragraphs(
+        "Dans le cadre de la mission d'assistance au Parlement que lui confie le premier alinéa de l'article 47-2 de la Constitution, la Cour des comptes accomplit notamment les travaux suivants :",
+        "1° Elle réalise toute enquête demandée par les commissions de l'Assemblée nationale et du Sénat saisies au fond des projets de loi de financement de la sécurité sociale, dans les conditions prévues à l'article LO 132-3-1 du code des juridictions financières ;",
+        "2° Elle rend des avis sur la cohérence des tableaux d'équilibre du dernier exercice clos mentionnés à l'article LO 111-3-13 du présent code et sur celle du tableau de situation patrimoniale du dernier exercice clos mentionné au 2° de l'article LO 111-4-4 ;",
+        "3° Elle produit le rapport sur l'application des lois de financement de la sécurité sociale mentionné à l'article LO 132-3 du code des juridictions financières ;",
+        "4° Elle produit le rapport mentionné à l'article LO 132-2-1 du même code, qui certifie la régularité et la fidélité des comptes du dernier exercice clos des organismes nationaux du régime général, de chaque branche et de l'activité de recouvrement du régime général. Ces comptes sont établis dans les conditions prévues au présent livre. Le rapport rend compte des vérifications effectuées aux fins de certification."
+    ),
+    "Réécriture à droit constant : la Cour des comptes devient le sujet explicite de chacun des quatre travaux ; le champ des comptes certifiés et le compte rendu des vérifications sont séparés en phrases. Les missions, leurs destinataires et leurs fondements sont conservés. Aucun audit nouveau de la réforme retraite n'est ajouté à ces compétences organiques.",
+    "Maintenir la distinction entre les avis de cohérence du 2°, le rapport d'application du 3° et la certification de régularité et de fidélité du 4°. Les renvois aux articles LO 132-3-1, LO 132-3 et LO 132-2-1 du code des juridictions financières, extérieur aux cinq codes du projet, devront être coordonnés si les missions évoluent ; aucune modification de ce code n'est faite ici. Les obligations d'audit des futurs comptes de retraite doivent être définies dans leur régime nouveau sans les confondre avec cette certification du régime général. La date source du 1er septembre 2022 reste historique."
+)
+
+draft(
+    "LO111-5",
+    paragraphs(
+        "Le ministre chargé de la sécurité sociale prépare les projets de loi de financement de la sécurité sociale sous l'autorité du Premier ministre. Ces projets sont délibérés en conseil des ministres."
+    ),
+    "Réécriture à droit constant : la préparation par le ministre et la délibération en conseil des ministres sont formulées dans deux phrases. L'autorité du Premier ministre est maintenue ; aucune compétence ni réforme de fond n'est ajoutée.",
+    "Le texte conserve un seul alinéa et les trois niveaux d'intervention : Premier ministre, ministre chargé de la sécurité sociale et conseil des ministres. Les réformes de policy.json ne changent pas cette procédure organique."
+)
+
+draft(
+    "LO111-5-1",
+    paragraphs(
+        "Pour la préparation du projet de loi de financement, les organismes gestionnaires d'un régime obligatoire de protection sociale transmettent au ministre chargé de la sécurité sociale les données dont ils disposent sur les recettes et les dépenses du dernier exercice clos et de l'année en cours. Ils lui transmettent également leurs perspectives d'évolution de ces recettes et dépenses pour les quatre années à venir."
+    ),
+    "Réécriture à droit constant : l'obligation de transmettre les données disponibles est distinguée de celle de transmettre les perspectives d'évolution. Les organismes concernés, le destinataire et les périodes couvertes sont inchangés ; aucune réforme de fond n'est introduite.",
+    "Conserver le champ des régimes obligatoires de protection sociale, plus large dans sa formulation que celui des seuls régimes obligatoires de base. Les données portent sur le dernier exercice clos et l'année en cours ; les perspectives portent sur les quatre années à venir. La réécriture n'ajoute ni collecte de données indisponibles ni nouveau délai de transmission."
+)
+
+draft(
+    "LO111-5-2",
+    paragraphs(
+        "Au cours du dernier trimestre de la session ordinaire, le Gouvernement présente un rapport sur les orientations des finances sociales en vue de l'examen et du vote, par le Parlement, du projet de loi de financement de la sécurité sociale de l'année suivante. Ce rapport comporte :",
+        "1° Une présentation des grandes orientations de la politique de sécurité sociale du Gouvernement au regard des engagements européens de la France ;",
+        "2° Une évaluation pluriannuelle de l'évolution des recettes et des dépenses des administrations de sécurité sociale, ainsi que de l'objectif national de dépenses d'assurance maladie.",
+        "L'Assemblée nationale et le Sénat peuvent débattre de ce rapport. Ce débat peut se tenir en même temps que celui prévu à l'article 48 de la loi organique n° 2001-692 du 1er août 2001 relative aux lois de finances."
+    ),
+    "Réécriture à droit constant : le moment de présentation et la finalité du rapport sont placés au début ; le débat facultatif et sa concomitance possible sont exprimés directement. Les deux rubriques et le champ des administrations de sécurité sociale sont maintenus, sans réforme de fond.",
+    "Le dernier trimestre est celui de la session ordinaire, non celui de l'année civile. Le débat reste facultatif dans les deux assemblées. Le renvoi à l'article 48 de la loi organique du 1er août 2001 est conservé sans actualisation silencieuse d'une éventuelle évolution de ce texte extérieur au lot. Les trajectoires financières des réformes devront distinguer les financements acquis et les scénarios espérés."
+)
+
+draft(
+    "LO111-6",
+    paragraphs(
+        "Le Gouvernement dépose sur le bureau de l'Assemblée nationale, au plus tard le premier mardi d'octobre, le projet de loi de financement de l'année, avec le rapport mentionné à l'article LO 111-4 et les annexes mentionnées à l'article LO 111-4-1.",
+        "Il dépose sur le bureau de l'Assemblée nationale le projet de loi d'approbation des comptes de la sécurité sociale, avec les documents prévus à l'article LO 111-4-4, avant le 1er juin de l'année qui suit l'exercice concerné."
+    ),
+    "Réécriture à droit constant : le Gouvernement est désigné comme auteur du dépôt et les pièces jointes sont rattachées directement à chacun des deux projets. Les échéances et l'ordre des deux alinéas sont conservés ; aucune date de réforme nouvelle n'est fixée.",
+    "Le premier délai est au plus tard le premier mardi d'octobre ; le second est strictement avant le 1er juin, sans substitution par au plus tard le 1er juin. La réserve du paragraphe 16 de la décision n° 2022-836 DC du 10 mars 2022 demeure applicable : retard ou absence de rapports et annexes ne fait pas automatiquement obstacle à la discussion ; la conformité s'apprécie au regard de la continuité de la vie nationale et de la sincérité pendant tout l'examen. La note du 1er septembre 2022 concerne l'entrée en vigueur du texte source."
+)
+
+draft(
+    "LO111-7",
+    paragraphs(
+        "En première lecture, l'Assemblée nationale doit se prononcer dans les vingt jours suivant le dépôt d'un projet de loi de financement de la sécurité sociale.",
+        "En première lecture, le Sénat doit se prononcer dans les quinze jours suivant sa saisine.",
+        "Si l'Assemblée nationale n'a pas voté sur l'ensemble du projet en première lecture dans le délai prévu à l'article 47-1 de la Constitution, le Gouvernement saisit le Sénat du texte qu'il avait initialement présenté. Il y intègre, le cas échéant, les amendements votés par l'Assemblée nationale qu'il a acceptés. Le Sénat doit alors se prononcer dans les quinze jours suivant sa saisine.",
+        "Si le Sénat n'a pas voté sur l'ensemble du projet en première lecture dans le délai qui lui est imparti, le Gouvernement saisit à nouveau l'Assemblée nationale du texte soumis au Sénat. Il y intègre, le cas échéant, les amendements votés par le Sénat qu'il a acceptés.",
+        "Le projet de loi de financement de la sécurité sociale est ensuite examiné selon la procédure accélérée, dans les conditions prévues à l'article 45 de la Constitution."
+    ),
+    "Réécriture à droit constant : les délais sont rapprochés de leur point de départ et la composition du texte transmis entre les assemblées est exposée dans des phrases distinctes. Le vote sur l'ensemble, l'acceptation des amendements par le Gouvernement et la procédure accélérée sont maintenus, sans réforme de fond.",
+    "Les cinq alinéas sont maintenus. Contrôles : vingt jours après le dépôt pour l'Assemblée nationale, quinze jours après la saisine pour le Sénat, y compris lors de la saisine prévue au troisième alinéa ; renvois aux articles 47-1 et 45 de la Constitution inchangés. La note source rend ces dispositions applicables à compter de la loi de financement pour 2011 ; elle ne fixe aucune date future."
+)
+
+draft(
+    "LO111-7-1",
+    paragraphs(
+        "I. - Une assemblée ne peut mettre en discussion le projet de loi de financement de l'année avant l'adoption de la loi d'approbation des comptes de la sécurité sociale relative à l'année qui précède celle de cette discussion.",
+        "Une assemblée ne peut mettre en discussion la partie du projet de loi de financement de la sécurité sociale de l'année relative aux recettes et à l'équilibre général pour l'année à venir avant d'avoir voté la partie du même projet qui contient les dispositions rectificatives pour l'année en cours.",
+        "Une assemblée ne peut mettre en discussion la partie du projet de loi de financement de l'année relative aux dépenses pour l'année à venir avant d'avoir adopté la partie du même projet relative aux recettes et à l'équilibre général pour cette même année.",
+        "II. - Une assemblée ne peut mettre en discussion la partie du projet de loi de financement rectificative relative aux dépenses avant d'avoir adopté la partie du même projet relative aux recettes et à l'équilibre général.",
+        "III. - Dans la partie relative à l'année en cours, la rectification des prévisions de recettes et des tableaux d'équilibre des régimes obligatoires de base de sécurité sociale ou des organismes qui concourent à leur financement est soumise à un vote unique. Un vote unique porte sur la rectification de l'objectif d'amortissement des organismes chargés d'amortir la dette de ces régimes et sur celle des prévisions de recettes affectées aux organismes chargés de mettre en réserve des recettes au profit de ces régimes. La rectification des objectifs de dépenses, décomposés, le cas échéant, par branche ou en sous-objectifs, est soumise à un vote unique portant sur l'ensemble des régimes obligatoires de base de sécurité sociale. La rectification de l'objectif national de dépenses d'assurance maladie, décomposé en sous-objectifs, est soumise à un vote distinct.",
+        "Dans la partie relative aux recettes et à l'équilibre général pour l'année à venir, les prévisions de recettes de l'ensemble des régimes obligatoires de base ou des organismes qui concourent à leur financement sont soumises à un vote unique. Les tableaux d'équilibre sont soumis à des votes distincts selon qu'ils concernent l'ensemble des régimes obligatoires de base ou les organismes qui concourent à leur financement. Un vote unique porte sur la détermination de l'objectif d'amortissement des organismes chargés d'amortir la dette de ces régimes et des prévisions de recettes affectées aux organismes chargés de mettre en réserve des recettes au profit de ces régimes. Un vote unique porte sur la liste des régimes obligatoires de base de sécurité sociale et des organismes qui concourent à leur financement habilités à recourir à des ressources non permanentes, ainsi que sur les limites dans lesquelles ces ressources peuvent couvrir leurs besoins de trésorerie.",
+        "Dans la partie relative aux dépenses pour l'année à venir, les charges prévisionnelles des organismes qui concourent au financement des régimes obligatoires de base de sécurité sociale sont soumises à un vote unique. Pour chaque branche, un vote unique portant sur l'ensemble des régimes obligatoires de base de sécurité sociale est consacré à l'objectif de dépenses, décomposé, le cas échéant, en sous-objectifs. L'objectif national de dépenses d'assurance maladie de l'ensemble des régimes obligatoires de base, décomposé en sous-objectifs, est soumis à un vote unique.",
+        "III bis. - Lors de l'examen du projet de loi d'approbation des comptes de la sécurité sociale, un vote unique porte sur l'approbation des tableaux d'équilibre des régimes obligatoires de base et des organismes qui concourent à leur financement. Un vote unique porte sur l'approbation des dépenses relevant de l'objectif national de dépenses d'assurance maladie constatées au titre de cet exercice, des montants des recettes affectées aux organismes chargés de mettre en réserve des recettes au profit de ces régimes et des montants de l'amortissement de leur dette.",
+        "IV. - Pour l'application de l'article 40 de la Constitution aux amendements aux projets de loi de financement de la sécurité sociale qui portent sur les objectifs de dépenses, chaque objectif de dépenses par branche ou l'objectif national de dépenses d'assurance maladie constitue une charge.",
+        "Tout amendement doit être motivé. Il doit être accompagné des justifications permettant sa mise en œuvre.",
+        "Les amendements qui ne respectent pas les dispositions du présent chapitre sont irrecevables."
+    ),
+    "Réécriture à droit constant : l'assemblée qui doit voter ou adopter chaque partie est explicitement désignée. Les objets des votes uniques et distincts sont présentés par des phrases plus directes, sans changer les regroupements de votes. Les subdivisions I, II, III, III bis et IV et les onze alinéas sont conservés. Aucune réforme financière de fond n'est ajoutée.",
+    "Point préexistant essentiel : l'exigence littérale d'adoption figurant au premier alinéa du I doit se lire sous la réserve du paragraphe 18 de la décision n° 2022-836 DC du 10 mars 2022. Elle ne peut faire obstacle à la discussion du projet de loi de financement de l'année dès lors que le projet de loi d'approbation des comptes a été examiné. La proposition conserve la lettre de cette exigence et ne prétend pas supprimer la réserve, qui doit accompagner toute consolidation. Au deuxième alinéa du I, la condition est un vote ; au troisième et au II, c'est une adoption : ces termes ne sont pas uniformisés. Les votes uniques et distincts du III et du III bis restent séparés. La note source prévoit l'entrée en vigueur le 1er septembre 2022 et une dérogation pour la loi de financement pour 2023 renvoyant au I et au premier alinéa du III dans leur rédaction antérieure ; cette règle historique n'est ni étendue à une réforme future ni reconstituée sans le texte antérieur."
+)
+
+draft(
+    "LO111-8",
+    paragraphs(
+        "Pour préparer l'examen et le vote du projet de loi de financement de la sécurité sociale de l'année, les commissions de l'Assemblée nationale et du Sénat saisies au fond de ce projet, ainsi que les autres commissions concernées, adressent chaque année au Gouvernement, avant le 10 juillet, des questionnaires sur l'application des lois de financement de la sécurité sociale. Le Gouvernement y répond par écrit au plus tard le 8 octobre. Ces dispositions s'appliquent sans préjudice des autres dispositions relatives à l'information et au contrôle du Parlement."
+    ),
+    "Réécriture à droit constant : la transmission des questionnaires et la réponse écrite sont distinguées, avec un sujet explicite pour chaque obligation. La réserve des autres droits d'information et de contrôle reste dans le même alinéa. Aucun délai ni pouvoir nouveau n'est créé.",
+    "Les auteurs des questionnaires comprennent aussi les autres commissions concernées, pas seulement celles saisies au fond. Le Gouvernement demeure le destinataire tenu de répondre. Maintien de la distinction entre avant le 10 juillet et au plus tard le 8 octobre. Les autres dispositions d'information et de contrôle ne sont pas écartées."
+)
+
+draft(
+    "LO111-9",
+    paragraphs(
+        "Les commissions de l'Assemblée nationale et du Sénat saisies au fond du projet de loi de financement de la sécurité sociale suivent et contrôlent l'application des lois de financement de la sécurité sociale. Elles évaluent toute question relative aux finances de la sécurité sociale. Cette mission est exercée par leur président, leur rapporteur général et le président de la mission mentionnée à l'article LO 111-10. Elle est également exercée par leurs rapporteurs, dans leurs domaines d'attributions, et par des membres de l'une de ces commissions que celle-ci désigne à cet effet pour un objet et une durée déterminés. Dans l'exercice de cette mission, ces personnes procèdent à toute audition qu'elles jugent utile et à toute investigation sur pièces et sur place auprès des administrations de l'État, des organismes de sécurité sociale, de tout autre organisme privé gérant un régime de base de sécurité sociale légalement obligatoire et des établissements publics compétents. Tous les renseignements et documents d'ordre financier et administratif qu'elles demandent doivent leur être fournis, y compris tout rapport établi par les organismes et services chargés du contrôle de l'administration. Cette communication reste soumise aux réserves concernant les sujets à caractère secret relatifs à la défense nationale et à la sécurité intérieure ou extérieure de l'État, ainsi qu'au respect du secret de l'instruction et du secret médical. Le cas échéant, les données chiffrées demandées leur sont rendues accessibles sous forme électronique, dans un standard ouvert aisément réutilisable et exploitable par un système de traitement automatisé.",
+        "Les personnes dont le président et le ou les rapporteurs de la commission, dans leur domaine d'attribution, jugent l'audition nécessaire sont tenues de s'y soumettre. Elles sont déliées du secret professionnel, sous les réserves prévues au premier alinéa."
+    ),
+    "Réécriture à droit constant : les titulaires de la mission, leurs investigations et l'obligation de communication sont distingués en phrases. Toutes les catégories d'organismes, les limites des habilitations, les secrets protégés et le format des données restent dans les deux alinéas d'origine. Aucune extension des pouvoirs de contrôle n'est introduite.",
+    "Les rapporteurs restent limités à leurs domaines d'attributions ; les membres désignés restent habilités pour un objet et une durée déterminés. Le texte maintient toutes les réserves : défense nationale, sécurité intérieure ou extérieure, secret de l'instruction et secret médical. La levée du secret professionnel au second alinéa reste subordonnée à ces réserves. La mise à disposition électronique porte sur les données chiffrées demandées et n'autorise pas une publication générale. Le renvoi à LO 111-10 demeure au premier alinéa."
+)
+
+draft(
+    "LO111-9-1",
+    paragraphs(
+        "Dans le cadre d'une mission d'évaluation et de contrôle, si les renseignements demandés au titre de l'article LO 111-9 ne sont pas communiqués à l'issue d'un délai raisonnable compte tenu de la difficulté de les réunir, le président des commissions de l'Assemblée nationale et du Sénat saisies au fond des projets de loi de financement de la sécurité sociale peut demander à la juridiction compétente de faire cesser l'entrave sous astreinte. La juridiction statue en référé."
+    ),
+    "Réécriture à droit constant : la condition de saisine, l'appréciation du délai raisonnable et la demande au juge sont rendues plus lisibles dans un seul alinéa. La faculté de saisir le juge, le référé et l'astreinte sont conservés. Aucune réforme de fond du recours n'est introduite.",
+    "La formulation source le président des commissions, au singulier pour les deux assemblées, est conservée et signalée comme une ambiguïté préexistante ; elle ne désigne pas expressément chaque président. Une clarification du titulaire exact du recours demanderait une coordination organique avec LO 111-9, plutôt qu'une correction implicite. Le délai raisonnable n'est pas remplacé par un délai chiffré. Le juge compétent n'est pas désigné davantage que dans la source."
+)
+
+draft(
+    "LO111-9-2",
+    paragraphs(
+        "En cas d'urgence, les limites prévues au e du 2° de l'article LO 111-3-4 peuvent être relevées par des décrets de relèvement pris en Conseil d'État, après avis des commissions de l'Assemblée nationale et du Sénat saisies au fond des projets de loi de financement de la sécurité sociale.",
+        "La commission de chaque assemblée saisie au fond des projets de loi de financement de la sécurité sociale communique son avis au Premier ministre dans un délai de sept jours à compter de la notification du projet de décret qui lui est faite. Le décret ne peut être signé qu'après réception des avis de ces commissions ou, à défaut, après l'expiration de ce délai.",
+        "En cas d'urgence et de nécessité impérieuse d'intérêt national, des décrets en Conseil des ministres, pris après avis du Conseil d'État, peuvent relever les limites prévues au e du 2° de l'article LO 111-3-4. Ces décrets sont pris après information des commissions de l'Assemblée nationale et du Sénat saisies au fond des projets de loi de financement de la sécurité sociale.",
+        "Le Gouvernement demande au Parlement, dans le projet de loi de financement de la sécurité sociale suivant, la ratification des décrets pris sur le fondement des trois premiers alinéas du présent article."
+    ),
+    "Réécriture à droit constant : les deux procédures d'urgence sont distinguées, le délai d'avis est rattaché à sa notification et l'auteur de la demande de ratification est explicité. Les quatre alinéas, les conditions cumulatives de la seconde procédure et les renvois sont conservés. Aucun financement nouveau des réformes n'est autorisé.",
+    "Le renvoi au e du 2° de LO 111-3-4 a été vérifié : il vise les limites de couverture des besoins de trésorerie par des ressources non permanentes. La procédure ordinaire d'urgence exige un décret en Conseil d'État et les avis des commissions ; la procédure d'urgence et de nécessité impérieuse d'intérêt national exige un décret en Conseil des ministres après avis du Conseil d'État et information préalable des commissions. Délai conservé : sept jours, sans ajout de jours francs. Le relèvement de trésorerie ne constitue pas un financement récurrent des baisses de recettes ni de la transition retraite."
+)
+
+draft(
+    "LO111-9-2-1",
+    paragraphs(
+        "Si, en cours d'exercice, les conditions générales de l'équilibre financier de la sécurité sociale fixées par la loi de financement de la sécurité sociale sont remises en cause, le Gouvernement adresse sans délai aux commissions de l'Assemblée nationale et du Sénat saisies au fond des projets de loi de financement de la sécurité sociale un rapport qui présente :",
+        "1° Les raisons pour lesquelles la situation financière de la sécurité sociale s'est dégradée ;",
+        "2° Les modifications envisagées des tableaux d'équilibre établis dans la précédente loi de financement, ainsi que, le cas échéant, la révision envisagée des objectifs de dépenses par branche et de l'objectif national de dépenses d'assurance maladie ;",
+        "3° Les mesures envisagées pour redresser les comptes de la sécurité sociale au titre de l'année en cours.",
+        "Si aucun projet de loi de financement de l'année ou de loi de financement rectificative n'est déposé, le Gouvernement transmet chaque trimestre un rapport actualisé.",
+        "La commission de chaque assemblée saisie au fond des projets de loi de financement de la sécurité sociale communique au Premier ministre son avis sur les modifications et les mesures mentionnées aux 2° et 3°."
+    ),
+    "Réécriture à droit constant : le déclenchement du rapport, son contenu et son actualisation trimestrielle sont exprimés avec des sujets explicites. Les trois rubriques et la consultation des commissions sont maintenues. Le rapport n'est pas transformé en autorisation de modifier les comptes ou en mécanisme nouveau de suspension des réformes.",
+    "Le rapport initial doit être transmis sans délai ; l'actualisation est trimestrielle en l'absence de dépôt d'un projet annuel ou rectificatif. L'avis porte sur les seuls 2° et 3°. La source déclenche le dispositif lorsque les conditions générales de l'équilibre sont remises en cause, mais intitule le 1° par référence à une dégradation : cette articulation préexistante est maintenue, sans restreindre le déclencheur par réécriture. Une condition de financement préalable des paliers prévue par policy.json doit figurer dans les dispositions matérielles de la réforme ; elle ne peut être déduite de ce seul mécanisme d'information."
+)
+
+draft(
+    "LO111-9-2-2",
+    paragraphs(
+        "En cours d'exercice, toute augmentation de plus de 10 % du montant de la dotation affectée à un organisme et mentionnée au b du 2° de l'article LO 111-4-1 doit être signalée sans délai aux commissions parlementaires saisies au fond des projets de loi de financement de la sécurité sociale."
+    ),
+    "Réécriture à droit constant : le fait générateur de l'information est placé en tête et l'obligation est formulée directement. Le seuil strict, le champ de la dotation et les commissions destinataires sont conservés, sans réforme de fond.",
+    "Le seuil reste une augmentation de plus de 10 %, non une augmentation d'au moins 10 %. Le renvoi au b du 2° de LO 111-4-1 vise la dotation des régimes obligatoires d'assurance maladie affectée aux organismes financés par les régimes de base. La source ne précise ni l'auteur de l'information ni la base de comparaison des hausses successives ; ces lacunes ne sont pas comblées implicitement. La note du 1er septembre 2022 n'est pas une date de réforme future."
+)
+
+draft(
+    "LO111-9-3",
+    paragraphs(
+        "Le Gouvernement ou l'organisme de sécurité sociale auquel sont notifiées des observations issues d'une mission d'évaluation et de contrôle dispose de deux mois pour y répondre."
+    ),
+    "Réécriture à droit constant : le destinataire tenu de répondre est placé en tête et le délai est rattaché à la notification des observations. Le champ de la mission et le délai de deux mois sont conservés, sans réforme de fond.",
+    "Le délai demeure de deux mois et se rapporte à la notification, sans ajout de sanction, de prorogation ou de forme de réponse. Chaque destinataire concerné reste tenu de répondre aux observations qui lui sont notifiées."
+)
+
+draft(
+    "LO111-10",
+    paragraphs(
+        "La commission de chaque assemblée saisie au fond des projets de loi de financement de la sécurité sociale peut comprendre une mission d'évaluation et de contrôle chargée d'évaluer ces lois de façon permanente."
+    ),
+    "Réécriture à droit constant : la possibilité de créer une mission au sein de chaque commission est exprimée directement et son objet est formulé par un verbe. Le caractère facultatif de la mission et la permanence de l'évaluation sont maintenus, sans réforme de fond.",
+    "La mission demeure interne à la commission saisie au fond de chaque assemblée et sa création n'est pas rendue obligatoire. Le renvoi à cet article depuis LO 111-9 ne change pas."
+)
+
+draft(
+    "LO111-10-1",
+    paragraphs(
+        "Chaque année, le Gouvernement transmet un état des sommes que l'État doit encore aux régimes obligatoires de base."
+    ),
+    "Réécriture à droit constant : la périodicité est placée en tête et la dette de l'État est exprimée directement. L'obligation de transmission et le champ des régimes sont maintenus, sans ajout de réforme de fond.",
+    "La source ne désigne ni le destinataire de l'état ni une date précise de transmission : ces éléments manquants sont signalés et ne sont pas inventés. Les organismes concourant au financement ne sont pas ajoutés au champ des régimes obligatoires de base. La date historique du 1er septembre 2022 ne lance aucune réforme nouvelle. Le suivi de dettes de l'État ne suffit pas à assurer la compensation durable exigée par policy.json."
+)
+
+draft(
+    "LO111-10-2",
+    paragraphs(
+        "Dans le cadre des consultations prévues aux 2° et 3° de l'article LO 111-3-5 sur la liste des sous-objectifs de dépenses de l'objectif national d'assurance maladie et sur celle des éventuels sous-objectifs de dépenses par branche, les commissions saisies au fond des projets de loi de financement de la sécurité sociale rendent leurs avis dans les quinze jours francs à compter de leur réception. Si l'avis n'est pas notifié au ministre chargé de la sécurité sociale dans ce délai, il est réputé rendu."
+    ),
+    "Réécriture à droit constant : le cadre des consultations et les listes concernées sont placés avant la règle de délai, puis l'effet du défaut de notification est formulé dans une phrase distincte. Le délai de quinze jours francs et l'avis réputé rendu sont conservés, sans réforme de fond.",
+    "Ambiguïté préexistante maintenue : leur réception ne désigne pas clairement les demandes de consultation plutôt que les avis. Le point de départ demanderait une clarification organique expresse, qui ne doit pas être déguisée en simple réécriture. Les 2° et 3° de LO 111-3-5 ont été vérifiés dans le corpus : ils concernent respectivement les objectifs par branche et l'objectif national de dépenses d'assurance maladie ; le 3° vise aussi la définition des composantes des sous-objectifs. La formulation abrégée objectif national d'assurance maladie est celle de la source et n'est pas corrigée silencieusement. Le silence vaut avis rendu, sans valoir avis favorable. La note d'entrée en vigueur du 1er septembre 2022 reste historique."
+)
+
+draft(
+    "L111-11",
+    paragraphs(
+        "Avant le 15 juin de chaque année, l'Union nationale des caisses d'assurance maladie transmet au ministre chargé de la sécurité sociale et au Parlement ses propositions sur l'évolution, pour l'année suivante, des charges et des produits de la Caisse nationale de l'assurance maladie et de la Caisse centrale de mutualité sociale agricole. Ces propositions portent aussi sur les mesures nécessaires pour atteindre l'équilibre prévu par le cadrage financier pluriannuel des dépenses d'assurance maladie. Elles tiennent compte des objectifs de santé publique.",
+        "Avant leur transmission, ces propositions sont soumises à l'avis du conseil mentionné à l'article L. 182-2-2.",
+        "Les propositions sont accompagnées d'un bilan détaillé de la mise en œuvre et de l'impact financier des propositions de l'année précédente retenues pour l'application de la loi de financement de la sécurité sociale, ainsi que des négociations menées avec les professionnels de santé en application de l'article L. 182-2.",
+        "Les propositions sont aussi accompagnées d'un bilan détaillé de la mise en œuvre du 22° de l'article L. 162-5 et du 9° de l'article L. 162-32-1. Ce bilan présente les engagements souscrits par les professionnels, analyse l'exigence des objectifs retenus et indique leur taux d'atteinte. Il précise les critères d'attribution de la rémunération versée et son montant moyen. Il évalue les économies que l'atteinte de ces objectifs procure à l'assurance maladie."
+    ),
+    "Réécriture à droit constant : le délai et les destinataires sont placés au début ; l'évolution des comptes et les mesures d'équilibre sont distinguées. Les bilans des propositions antérieures, des négociations et des engagements conventionnels sont exposés plus directement. Les quatre alinéas, les objectifs de santé publique et les renvois restent conservés ; aucune économie nouvelle n'est présumée.",
+    "Le délai demeure avant le 15 juin, pour les charges et produits de l'année suivante, avec avis préalable du conseil de L. 182-2-2. Le troisième alinéa conserve les deux objets du bilan : propositions antérieures retenues et négociations de L. 182-2. Le dernier conserve les renvois au 22° de L. 162-5 et au 9° de L. 162-32-1, ainsi que les engagements, l'exigence et le taux d'atteinte des objectifs, les critères de rémunération, son montant moyen et les économies pour l'assurance maladie. Ces économies sont à évaluer ; cet article ne les affecte pas aux baisses de prélèvements ou à la transition retraite de policy.json et n'en autorise pas le double financement."
+)
+
+draft(
+    "L111-12",
+    paragraphs(
+        "L'objectif prévisionnel des dépenses de soins de ville tient compte de toute évolution qui place des établissements, des services ou des activités sanitaires ou médico-sociales, pour tout ou partie, sous un régime juridique ou de financement différent de leur régime antérieur.<br><br>Cet objectif peut être corrigé en fin d'année pour tenir compte de ces évolutions lorsqu'elles sont intervenues en cours d'année."
+    ),
+    "Réécriture à droit constant : la phrase relative aux changements de régime est simplifiée et l'objet de la correction de fin d'année est explicité. Les établissements, services et activités concernés, les changements partiels et l'alternative entre régime juridique et régime de financement sont maintenus. Aucune réforme de fond n'est introduite.",
+    "La correction demeure une faculté et intervient en fin d'année pour des évolutions réalisées en cours d'année. Le champ couvre les activités sanitaires ou médico-sociales ainsi que les changements de toute nature, partiels ou totaux. La séparation interne des deux passages est conservée par des sauts de ligne dans le même paragraphe. Aucun changement de périmètre de l'objectif national ni financement nouveau des réformes n'est déduit de cette règle."
+)
+
+
+drafts["LO111-4-1"]["review_notes"] += (
+    " La modification des articles LO de ce lot relève d'une loi organique ; les deux articles L relèvent de la loi ordinaire."
+)
+
+drafts["LO111-4-4"]["review_notes"] += (
+    " Le régime législatif nouveau du compte devra organiser, pour la première phase limitée aux salariés privés,"
+    " le transfert de cotisations vieillesse existantes : 0,5 % du brut pendant deux ans, puis 1 %, 2 %, 3 % et 4 %"
+    " à partir de la neuvième année, avec à terme deux points salariaux et deux points patronaux."
+    " La répartition précise des paliers intermédiaires et leur articulation avec le financement voté restent à fixer expressément."
+    " Les dispositions nouvelles devront préserver les pensions liquidées et les droits constitués, ajuster seulement les droits futurs"
+    " correspondant à la fraction transférée, financer les abondements de solidarité et définir le raccordement ultérieur des autres statuts."
+    " Elles devront également définir la diversification, la réduction du risque à l'approche du départ, la séparation des actifs,"
+    " l'audit et la portée juridique de l'objectif de frais annuels de 0,35 % pour gestion et supports, sans frais d'entrée ni de transfert,"
+    " sans garantie du capital de marché ou du rendement. La réglementation de la gestion des placements et des dépositaires"
+    " appelle une coordination avec le code monétaire et financier, extérieur aux cinq codes ; son support exact dépend du véhicule"
+    " collectif retenu, que policy.json ne définit pas. Aucun numéro d'article nouveau ni date de promulgation n'est supposé."
+)
+
+
+def main():
+    sources = json.loads(Path("source.json").read_text())
+    assert len(sources) == 24
+    assert {x["number"] for x in sources} == set(drafts)
+    answer = []
+    for source in sources:
+        result = {key: source[key] for key in ("code_id", "source_id", "source_sha256", "number")}
+        result.update(drafts[source["number"]])
+        result["status"] = "rewrite_draft"
+        answer.append(result)
+    Path("answer.json").write_text(json.dumps(answer, ensure_ascii=False, indent=2) + "\n")
+
+
+if __name__ == "__main__":
+    main()

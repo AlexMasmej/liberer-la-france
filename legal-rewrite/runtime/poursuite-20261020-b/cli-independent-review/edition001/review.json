@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "created_at": "2026-10-20T08:56:27.013817+00:00",
+  "job": "review-travail-LEGIARTI000026566046-00005",
+  "verdict": "no_concrete_normative_defect_identified_in_bounded_review",
+  "semantic_review_by_jurist": false,
+  "coverage": {
+    "candidates_entire": 12,
+    "additional_whole_sources_notes_current_proposals": 46,
+    "total": 58,
+    "prior_drafts_entire": 12,
+    "reference_assessments_entire": true,
+    "source_conflict_ids": [],
+    "source_interception_identified": false,
+    "other_batches_certified": false
+  },
+  "frozen_policy_sha256": "85982bff4c7fdba97ac4130c87bc752004065d14a5a637a540efaa09183594c2",
+  "current_policy_sha256": "7d57aca661b3005f5fd49c46e1dd03961c530ddce5796b2cfecbadab5900b910",
+  "policy_difference": {
+    "keys": [
+      "autorisations_urbanisme",
+      "fiscalite",
+      "reporting_social",
+      "substantive_outcomes_2026_10_19",
+      "taxe_sur_les_salaires_removal"
+    ],
+    "travail_identical": true,
+    "global_equivalence_claimed": false,
+    "details": "policy-delta-phaseB.json"
+  },
+  "normative_check": {
+    "unique_contract": "Aucun CDD nouveau ni renouvellement ; aides, parcours, missions et conventions ne terminent pas l’emploi. Ancien régime et conversion sans nouvel essai/ancienneté conservés.",
+    "notice": "L1234-1/L1237-1/L1234-3 : quinze jours calendaires des deux côtés à compter du lendemain de notification valable, hors dispenses favorables et protections/procédures distinctes ; R5134-36 concerne des horaires. L1221-25/26 relus pour essai et préavis dépassant son terme.",
+    "ordinary_severance": "L1234-9 et R1234-1/2/4 : employeur seulement, zéro avant un an au terme effectif préavis inclus, ensuite0,20mois sur toute ancienneté reconnue au prorata des mois complets, six mois maximum pour composante nouvelle. L’exception de faute grave déjà dans la cible est conservée ; les composantes anciennes, minima plus favorables et indemnités spéciales restent distincts.",
+    "prior_rights": "Anciens contrats et créances conservés ; anciens CDD non assimilés à de nouveaux CDI ; les dispenses futures de même objet restent ouvertes. Pas de remise à zéro d’ancienneté ou de durée d’aide à la conversion."
+  },
+  "material_review": {
+    "classification_counts": {
+      "material_reduction": 7,
+      "coordination_only": 3,
+      "retained_necessary": 1,
+      "mixed": 1
+    },
+    "autonomous_cut_measure_ids": [
+      "prolongations-cae-sans-fractionnement-annuel",
+      "aides-emploi-acquises-rupture-licite",
+      "cie-sans-attribution-prealable-embauche",
+      "aides-ea-sans-reconnaissance-prefectorale-individuelle"
+    ],
+    "mixed_measure_ids": [
+      "suspension-pmsmp-sans-accord-patronal"
+    ],
+    "coordination_measure_id": "contrat-unique-duree-indeterminee",
+    "deduplication": "Les quatre articles de restitution partagent une seule mesure ; fusion du contrat unique pas recomptée à chaque renvoi. Quatre mesures autonomes conservées du brouillon, une coupe nouvelle mixed ; ni12simplifications nouvelles ni économies nationales.",
+    "body_identical_to_prior_count": 5,
+    "new_vs_prior": "Retrait du veto PMSMP ; les quatre articles d’aide corrigent leurs articulations dette/restitution/suspension ; R5213-76 corrige l’affirmation de double dépôt ; D5134-41 revient à source/null.",
+    "national_savings": null
+  },
+  "technical": {
+    "schema_passed": 12,
+    "snapshot_guards": 232,
+    "all_guards_match": true,
+    "source_document_hashes": 28,
+    "registered_bodies_match": true,
+    "substantive_certificates_match_frozen_policy": true,
+    "reference_certificates_fresh": false,
+    "reason": "Tous les certificats restent liés à la politique85982… antérieure à phaseB ; trois dépendent aussi de cibles modifiées dans le même lot.",
+    "target_reopens": [
+      {
+        "referrer": "R5134-47",
+        "changed_targets": [
+          {
+            "target": "LEGITEXT000006072050|LEGIARTI000026566027",
+            "number": "R5134-46"
+          }
+        ]
+      },
+      {
+        "referrer": "R5134-70",
+        "changed_targets": [
+          {
+            "target": "LEGITEXT000006072050|LEGIARTI000026565979",
+            "number": "R5134-69"
+          }
+        ]
+      },
+      {
+        "referrer": "D5213-63-1",
+        "changed_targets": [
+          {
+            "target": "LEGITEXT000006072050|LEGIARTI000049127323",
+            "number": "R5213-76"
+          }
+        ]
+      }
+    ],
+    "action": "Reprendre les certificats avec la politique courante et les textes cibles après commit ; aucune réécriture normative supplémentaire justifiée par ces seuls décalages."
+  },
+  "limits": [
+    "Aucun autre lot, ni chaîne entière, ni corpus entier validé.",
+    "CASF L262-2 et code pénitentiaire L412-3 extérieurs non relus ; aucun montant RSA ni régime pénitentiaire inventé.",
+    "R5213-79/79-1 restent officiels sans proposition : coordination future des durées de parcours nécessaire, sans prétendre chantier terminé.",
+    "Incohérence préexistante heures/ETP au II de R5213-76 laissée à clarification de l’arrêté ; pas de conversion inventée.",
+    "Régimes européens d’aide et circuits/conventions non assignés restent à examiner ; aucun financement automatique illimité.",
+    "Réemploi du bilan ne démontre pas de deuxième dépôt dans la source et n’est pas compté comme gain CRPA neuf.",
+    "Aucun changement DB, politique, lots actifs ou site par cette revue."
+  ],
+  "evidence_files": {
+    "source.capture.json": "784ac04dc33256f86d580a5abf7416791ae5286836930c5a9a1b531b054394ba",
+    "answer.capture.json": "bd18ccb98aae6e2fa38cb493be1f9e8cee5b5ec44d99701c5e4daea68aaf265e",
+    "current-snapshot.json": "b2be740786f6f0b7f206346e17acbda95d4f6c1db7f85ee7be889c25b80c4169",
+    "additional-support.json": "6938e74108f8b0ef94241a7263dea612a0001ad68ecf8a18c3b8723b37632447",
+    "registered-batch.capture.json": "ae7fbcd0c9f6990ce41fda1d2c10287d6b3daa7835a64d5937f582b2355d7c27",
+    "validation.json": "85a0fd25a58c0db54529216f97ae02a76ebf5a5a9bc3f7debb3f5ed168569b06",
+    "article-findings.json": "9895bfe2510bbc1eb7b97fe7c71d04bfc38c87641a7a55243cfea5f84cad4bf3",
+    "bounded-cases.json": "bdb6edbc0143f5e932b8fd69002a789c488aeccbc607defa341c0e458dffe38c",
+    "policy-delta-phaseB.json": "3f8e501c3bc0df2bebd9d98d937a858f1c5f937405daa34852b0b646dd01f78c"
+  }
+}

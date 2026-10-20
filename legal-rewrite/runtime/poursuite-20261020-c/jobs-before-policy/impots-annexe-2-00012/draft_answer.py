@@ -1,0 +1,276 @@
+import json
+from pathlib import Path
+
+sources = json.loads(Path('source.json').read_text())
+drafts = {}
+
+
+def add(number, xml, reason, notes):
+    assert number not in drafts
+    drafts[number] = (xml.strip(), reason, notes)
+
+
+add('202 G', """
+<p>I. – Lorsque la demande est recevable, les services informatiques de la direction générale des douanes et droits indirects donnent au demandeur accès à un environnement de certification. Une équipe l'accompagne pour obtenir la certification de sa plate-forme informatique. Le directeur interrégional ou le directeur régional des douanes et droits indirects territorialement compétent, mentionné à l'article 202 E, délivre cette certification.</p>
+<p>II. – Le directeur interrégional ou le directeur régional des douanes et droits indirects territorialement compétent, mentionné au I, informe l'intéressé qu'un audit est programmé. Cet audit vérifie que les conditions d'obtention de l'agrément sont remplies et que l'opérateur est en mesure de respecter les obligations réglementaires liées à l'activité de détaxe.</p>
+<p>L'audit est réalisé dans les conditions prévues à l'article L. 80 I du livre des procédures fiscales, selon les critères des grilles d'audit publiées par arrêté du ministre chargé des douanes. Chaque grille précise toutes les spécifications nécessaires au bon fonctionnement de l'activité d'opérateur de détaxe.</p>
+<p>III. – Le directeur interrégional ou le directeur régional des douanes et droits indirects territorialement compétent, mentionné au I, prend la décision d'agrément au vu des résultats de l'audit réalisé par les services de l'administration des douanes.</p>
+<p>Il prend cette décision dans les cent vingt jours suivant la délivrance de la certification informatique. Le rapport d'audit accompagne la décision.</p>
+<p>Si le directeur interrégional ou le directeur régional des douanes et droits indirects territorialement compétent, mentionné au I, ne peut réaliser l'audit prévu à l'article 202 F dans ce délai, il peut le proroger de soixante jours par une décision expresse.</p>
+<p>Sous réserve du troisième alinéa du présent III, l'absence de réponse de l'autorité compétente pour délivrer l'agrément dans le délai prévu aux deuxième et troisième alinéas vaut acceptation.</p>
+""", "Réécriture à droit constant : les acteurs de la certification, les objectifs de l'audit et l'autorité de décision sont explicités ; les étapes et délais restent dans leurs alinéas respectifs. Aucune réforme de fond de policy.json ne vise ce régime.", "Délais conservés : cent vingt jours à compter de la certification et prorogation expresse de soixante jours. Incohérence préexistante : le troisième alinéa du III renvoie à un audit prévu à l'article 202 F, alors que cet article, vérifié dans le corpus public local, traite de la recevabilité ; l'audit figure au II de l'article 202 G. Renvoi conservé dans l'attente d'une correction normative explicite. La réserve relative au troisième alinéa du III est également conservée sans en réinterpréter la portée.")
+
+add('202 H', """
+<p>Lorsque l'autorité compétente envisage de refuser l'agrément, elle notifie au demandeur les motifs du refus envisagé. Le demandeur peut présenter des observations écrites ou orales dans les trente jours suivant la communication de ces motifs.</p>
+<p>L'autorité compétente statue ensuite définitivement sur la demande.</p>
+""", "Réécriture à droit constant : l'auteur de la notification et de la décision est rendu explicite, et le droit de présenter des observations est formulé directement. Aucune réforme de fond n'est appliquée.", "Le délai contradictoire de trente jours court toujours à compter de la communication des motifs ; les observations peuvent être écrites ou orales. Coordination maintenue avec la procédure d'agrément des articles 202 E à 202 G.")
+
+add('202 I', """
+<p>L'agrément d'opérateur de détaxe est valable pendant trois ans à compter de sa délivrance.</p>
+<p>L'opérateur présente sa demande de renouvellement au moins trois mois avant l'expiration de l'agrément, dans les conditions prévues aux articles 202 E, 202 F, 202 G et 202 H.</p>
+<p>L'administration des douanes lui transmet une attestation de réception de cette demande. Cette attestation lui permet de poursuivre son activité jusqu'à la nouvelle décision.</p>
+""", "Réécriture à droit constant : l'opérateur est désigné comme auteur de la demande et l'effet de l'attestation est expliqué dans une phrase distincte. Aucune réforme de fond n'est appliquée.", "Durée de trois ans, anticipation minimale de trois mois et poursuite de l'activité jusqu'à la nouvelle décision conservées. Les quatre renvois procéduraux restent inchangés.")
+
+add('202 J', """
+<p>Pendant la durée de validité de l'agrément d'opérateur de détaxe, les agents des douanes peuvent réaliser des audits de suivi dans les conditions prévues à l'article L. 80 I du livre des procédures fiscales. L'administration des douanes peut notamment faire réaliser ces audits pour vérifier que l'opérateur respecte les obligations liées à l'exercice de son activité.</p>
+""", "Réécriture à droit constant : les agents chargés des audits et leur finalité sont exprimés directement. Le caractère facultatif des audits et non limitatif du motif cité est conservé ; aucune réforme de fond n'est appliquée.", "Le contrôle reste possible durant toute la validité de l'agrément et demeure soumis à l'article L. 80 I du livre des procédures fiscales.")
+
+add('202 K', """
+<p>Pour respecter les obligations énumérées au II de l'article 262-0 bis du code général des impôts, les opérateurs de détaxe appliquent les modalités techniques suivantes :</p>
+<p>1° L'opérateur transmet à la base informatique douanière les données électroniques des bordereaux de vente à l'exportation qu'il émet ou que ses vendeurs affiliés émettent. La transmission intervient en temps réel et au plus tard dans l'heure suivant l'émission du bordereau par le vendeur. Les relevés statistiques du système informatique douanier dédié à la détaxe permettent de contrôler le respect de cette obligation ;</p>
+<p>2° Pour évaluer et gérer les risques liés au processus de détaxe, l'opérateur met en place des outils qui détectent toute anomalie de transmission, d'intégration ou d'intégrité des données des bordereaux de vente à l'exportation. Il vérifie régulièrement ces outils afin de remédier aux anomalies constatées ;</p>
+<p>3° Les conditions de formation et d'information régulières sont remplies lorsque des outils ou des processus permettent au personnel de l'entreprise et de ses commerçants affiliés d'acquérir les connaissances juridiques nécessaires et assurent la diffusion des informations légales transmises par l'administration des douanes ;</p>
+<p>4° Le délai prévu au 4° du II de l'article 262-0 bis du code général des impôts est fixé à trente jours à compter du changement intervenu.</p>
+""", "Réécriture à droit constant : les modalités techniques sont présentées comme des actions dont le responsable et l'objet sont explicites. Les quatre subdivisions et leurs conditions sont conservées. Aucune réforme de fond n'est appliquée.", "Transmission en temps réel, limite d'une heure, trois catégories d'anomalies, vérification régulière des outils et délai de trente jours conservés. Le réemploi des données évoqué dans policy.json ne supprime aucune obligation technique de ce régime.")
+
+add('202 L', """
+<p>1. L'obligation prévue au 1° du II de l'article 262-0 bis du code général des impôts et au 1° de l'article 202 K est méconnue lorsque, au moment où le voyageur procède au visa douanier, les bordereaux de vente à l'exportation n'ont pas été transmis et sont absents de la base de données informatique douanière. L'opérateur de détaxe répond de ce manquement, qu'il provienne de son propre système informatique ou de celui utilisé chez ses commerçants affiliés.</p>
+<p>Ce manquement donne lieu à une amende dont le montant est fixé par le tableau suivant :</p>
+<table><tbody>
+<tr><th colspan="2">NOMBRE DE BORDEREAUX DE VENTE à l'exportation inexistants par mois</th><th>BASE D'IMPOSITION (en euros par bordereau de vente à l'exportation)</th></tr>
+<tr><td>De 1 à</td><td>500</td><td>10</td></tr>
+<tr><td>De 501 à</td><td>1000</td><td>12</td></tr>
+<tr><td>De 1001 à</td><td>2000</td><td>15</td></tr>
+<tr><td>De 2001 à</td><td>3000</td><td>20</td></tr>
+<tr><td>De 3001 à</td><td>4000</td><td>25</td></tr>
+<tr><td>De 4001 à</td><td>5000</td><td>30</td></tr>
+<tr><td>De 5001 à</td><td>6000</td><td>35</td></tr>
+<tr><td>De 6001 à</td><td>7000</td><td>40</td></tr>
+<tr><td>De 7001 à</td><td>8000</td><td>45</td></tr>
+<tr><td>De 8001 à</td><td>9000</td><td>50</td></tr>
+<tr><td>De 9001 à</td><td>10 000</td><td>55</td></tr>
+<tr><td colspan="2">De 10 001 et plus</td><td>60</td></tr>
+</tbody></table>
+<p>2. Le non-respect de chacune des obligations prévues aux 2° à 4° du II de l'article 262-0 bis du code général des impôts et aux 2° à 4° de l'article 202 K donne lieu à une amende maximale de 300 000 euros. Son montant est proportionné à la gravité du manquement, à la situation de l'opérateur sanctionné et, le cas échéant, à la réitération de manquements à ces obligations.</p>
+<p>3. Les agents des douanes constatent les manquements prévus au 1 du présent article au vu des relevés statistiques trimestriels du système informatique douanier dédié à la détaxe.</p>
+<p>Les agents des douanes constatent les manquements prévus au 2 du présent article lors de leurs contrôles ou d'audits de suivi.</p>
+<p>Le directeur interrégional des douanes et droits indirects territorialement compétent prononce les amendes. En Guadeloupe, en Guyane, à La Réunion et à Mayotte, cette compétence appartient au directeur régional des douanes et droits indirects. Aucune amende ne peut être prononcée avant l'expiration de trente jours à compter de la notification du document par lequel l'administration indique à l'opérateur la sanction envisagée, ses motifs et la possibilité de présenter des observations dans ce délai. Les amendes sont recouvrées selon les règles, privilèges et garanties applicables en matière douanière.</p>
+<p>Dans les deux cas, les représentants légaux de l'intéressé accèdent au dossier le concernant sur demande écrite.</p>
+""", "Réécriture à droit constant : les manquements, la responsabilité de l'opérateur et les étapes de la sanction sont explicités. Le tableau est intégralement repris, avec suppression des seuls attributs de présentation interdits. Aucune réforme de fond n'est appliquée.", "Les douze lignes du barème et leurs seuils sont conservés, ainsi que le plafond de 300 000 euros, les relevés trimestriels, le contradictoire de trente jours et les compétences territoriales. Aucune interprétation nouvelle du mode de calcul du tableau n'est ajoutée. Note source : article 42 du décret n° 2020-68 du 30 janvier 2020, entrée en vigueur le 1er février 2020 ; les demandes individuelles antérieures restent régies par les dispositions applicables à leur présentation. Cette transition historique doit être conservée lors de la consolidation.")
+
+add('202 M', """
+<p>Lorsque l'opérateur de détaxe ne remplit plus une ou plusieurs conditions de délivrance de l'agrément, ou lorsqu'il apparaît qu'il ne peut plus respecter ses obligations, le directeur interrégional ou le directeur régional des douanes et droits indirects qui a délivré l'agrément, mentionné à l'article 202 G, l'informe de son intention de suspendre cet agrément et des motifs de la suspension envisagée.</p>
+<p>Le titulaire dispose de trente jours à compter de la communication de ces motifs pour se conformer aux obligations en cause ou présenter ses observations écrites ou orales.</p>
+<p>Si les conditions de maintien de l'agrément ne sont pas réunies à l'issue de ces trente jours, le directeur interrégional ou le directeur régional des douanes et droits indirects qui l'a délivré, mentionné à l'article 202 G, suspend l'agrément. La suspension prononcée par l'administration ne peut durer plus d'une année.</p>
+<p>Pendant la suspension, le titulaire ne peut émettre de bordereaux de vente à l'exportation. Il demeure tenu des obligations relatives aux bordereaux émis auparavant.</p>
+<p>Dès qu'il reçoit la décision de suspension, l'opérateur en informe par tout moyen ses commerçants affiliés afin qu'ils cessent de produire, par son intermédiaire, des bordereaux de vente à l'exportation, quelle qu'en soit la forme.</p>
+<p>Lorsque l'opérateur estime s'être remis en conformité et saisit l'administration, le directeur interrégional ou le directeur régional mentionné au premier alinéa décide de lever la suspension après qu'un audit de suivi a établi que l'opérateur respecte les critères requis pour exercer son activité. Les périodes de suspension sont comprises dans la durée de validité de l'agrément.</p>
+""", "Réécriture à droit constant : la procédure contradictoire, les effets de la suspension et les conditions de sa levée sont formulés plus directement, sans déplacement des six alinéas. Aucune réforme de fond n'est appliquée.", "Délai de trente jours, suspension maximale d'une année, obligations relatives aux bordereaux antérieurs et audit préalable à la levée conservés. Les périodes de suspension continuent à être incluses dans la validité de l'agrément ; elles ne la prolongent pas.")
+
+add('202 N', """
+<p>Le directeur interrégional ou le directeur régional des douanes et droits indirects mentionné à l'article 202 G peut retirer l'agrément si l'opérateur de détaxe ne s'est pas conformé à ses obligations pendant la période de suspension.</p>
+<p>Avant tout retrait, le titulaire est informé des motifs qui le justifient. Il dispose de trente jours à compter de leur communication pour présenter ses observations écrites ou orales.</p>
+<p>Lorsque son agrément est retiré, l'opérateur ne peut plus émettre de bordereaux de vente à l'exportation. Il reste tenu des obligations relatives aux bordereaux émis auparavant.</p>
+<p>Dès qu'il reçoit la décision de retrait, l'opérateur en informe par tout moyen ses commerçants affiliés afin qu'ils cessent de produire, par son intermédiaire, des bordereaux de vente à l'exportation, quelle qu'en soit la forme.</p>
+<p>Le demandeur ne peut présenter une nouvelle demande d'agrément pendant un an à compter de la notification du retrait.</p>
+""", "Réécriture à droit constant : les conditions du retrait, la garantie contradictoire et les interdictions qui en résultent sont exprimées directement. Aucune réforme de fond n'est appliquée.", "Le retrait reste facultatif, avec trente jours pour les observations et un an d'interdiction de nouvelle demande à compter de sa notification. Note source : article 42 du décret n° 2020-68 du 30 janvier 2020, applicable le 1er février 2020 ; les demandes individuelles antérieures restent soumises au droit applicable lors de leur présentation. Cette réserve historique n'est pas une date d'entrée en vigueur de la présente réécriture.")
+
+add('202 O', """
+<p>L'opérateur de détaxe qui souhaite cesser son activité en informe, au plus tard trois mois avant la date de cessation, le directeur interrégional ou le directeur régional des douanes et droits indirects qui a délivré l'agrément, mentionné à l'article 202 G.</p>
+<p>Ce directeur accuse réception de la demande et enregistre la fin de validité de l'agrément à la date de fin d'activité déclarée par l'opérateur.</p>
+<p>L'opérateur demeure tenu de ses obligations pendant sept mois à compter de la date d'émission de chacun des bordereaux de vente à l'exportation émis auparavant.</p>
+""", "Réécriture à droit constant : le préavis de cessation, l'enregistrement de la fin d'agrément et la survie des obligations sont formulés dans trois alinéas distincts. Aucune réforme de fond n'est appliquée.", "Préavis minimal de trois mois et maintien des obligations pendant sept mois pour chaque bordereau à compter de sa propre émission conservés. Note source : article 42 du décret n° 2020-68 du 30 janvier 2020, applicable le 1er février 2020, avec maintien du droit antérieur pour les demandes individuelles présentées auparavant.")
+
+add('204 ter', """
+<p>Les dispositions du chapitre II du titre VI du livre Ier de la partie réglementaire du code des impositions sur les biens et services régissent le régime simplifié de déclaration des taxes sur le chiffre d'affaires.</p>
+""", "Réécriture à droit constant : la phrase désigne directement les dispositions qui régissent le régime simplifié, sans modifier le renvoi. Aucune réforme de fond n'est appliquée.", "Le renvoi porte sur la partie réglementaire du code des impositions sur les biens et services. La note source fixe l'entrée en vigueur historique au 1er janvier 2025 en application de l'article 51 du décret n° 2024-610 du 26 juin 2024 ; aucune nouvelle date n'est fixée.")
+
+add('205', """
+<p>L'assujetti à la taxe sur la valeur ajoutée peut déduire la taxe qui grève un bien ou un service qu'il acquiert, importe ou se livre à lui-même, à proportion du coefficient de déduction de ce bien ou de ce service.</p>
+""", "Réécriture à droit constant : l'assujetti est le sujet de la phrase et le coefficient est expressément rattaché au bien ou au service. Aucune réforme de fond n'est appliquée.", "Les trois modes d'entrée du bien ou du service et la proportionnalité au coefficient de déduction sont conservés. La définition et les composantes du coefficient restent régies par l'article 206.")
+
+
+add('206', """
+<p>I. – Le coefficient de déduction prévu à l'article 205 se calcule en multipliant les coefficients d'assujettissement, de taxation et d'admission.</p>
+<p>II. – Le coefficient d'assujettissement d'un bien ou d'un service correspond à la proportion dans laquelle il est utilisé pour réaliser des opérations imposables. Sont imposables les opérations qui relèvent du champ d'application de la taxe sur la valeur ajoutée en vertu des articles 256 et suivants du code général des impôts, qu'elles soient taxées ou légalement exonérées.</p>
+<p>III. – 1. Le coefficient de taxation d'un bien ou d'un service est égal à l'unité lorsque les opérations imposables pour lesquelles il est utilisé ouvrent droit à déduction.</p>
+<p>2. Ce coefficient est nul lorsque les opérations pour lesquelles le bien ou le service est utilisé n'ouvrent pas droit à déduction.</p>
+<p>3. Lorsque le bien ou le service sert à la fois à des opérations imposables ouvrant droit à déduction et à des opérations imposables n'ouvrant pas ce droit, son coefficient de taxation est calculé comme suit :</p>
+<p>1° Le coefficient est le rapport entre les montants suivants :</p>
+<p>a. Au numérateur, le chiffre d'affaires annuel total des opérations ouvrant droit à déduction, y compris les subventions directement liées à leur prix ;</p>
+<p>b. Au dénominateur, le chiffre d'affaires annuel total des opérations imposables, y compris les subventions directement liées à leur prix.</p>
+<p>Les montants retenus au numérateur et au dénominateur comprennent tous les frais et taxes, à l'exception de la taxe sur la valeur ajoutée ;</p>
+<p>2° Si l'assujetti a constitué des secteurs distincts d'activité en application de l'article 209, le rapport prévu au 1° est calculé à partir du chiffre d'affaires du ou des secteurs pour lesquels le bien ou le service est utilisé. Toutefois, lorsqu'un assujetti unique mentionné à l'article 256 C du code général des impôts le décide et que plusieurs de ses membres utilisent le bien ou le service, le chiffre d'affaires retenu est celui de l'ensemble des opérations imposables de cet assujetti unique ;</p>
+<p>3° Pour calculer le rapport prévu au 1°, le chiffre d'affaires afférent aux opérations suivantes est exclu :</p>
+<p>a. Les cessions de biens d'investissement corporels ou incorporels ;</p>
+<p>b. Les opérations immobilières et financières accessoires exonérées de taxe sur la valeur ajoutée. Sont accessoires les opérations qui présentent un lien avec l'activité principale de l'entreprise et dont la réalisation nécessite une utilisation des biens et services acquis grevés de taxe sur la valeur ajoutée limitée au maximum à 10 %. Pour apprécier ce pourcentage, la proportion d'utilisation de chaque bien ou service grevé de taxe pour ces opérations est appliquée à sa valeur d'acquisition par le redevable. Le résultat constitue sa valeur d'utilisation. Le pourcentage est le rapport entre la somme de ces valeurs d'utilisation, au numérateur, et la valeur totale d'acquisition de ces biens et services, au dénominateur.</p>
+<p>IV. – 1. Sauf dans les cas prévus aux 2 à 4, le coefficient d'admission d'un bien ou d'un service est égal à l'unité.</p>
+<p>2. Le coefficient d'admission est nul dans les situations suivantes :</p>
+<p>1° Le bien ou le service est utilisé par l'assujetti à plus de 90 % à des fins étrangères à son entreprise ;</p>
+<p>2° Le bien ou le service concerne le logement fourni gratuitement aux dirigeants ou au personnel de l'entreprise. Cette exclusion ne concerne pas le logement du personnel de gardiennage, de sécurité ou de surveillance sur les chantiers ou dans les locaux de l'entreprise ;</p>
+<p>3° Le bien est cédé gratuitement ou pour une rémunération très inférieure à son prix normal, notamment à titre de commission, de salaire, de gratification, de rabais, de bonification ou de cadeau. Cette règle s'applique quelle que soit la qualité du bénéficiaire ou la forme de la distribution. Elle ne s'applique pas aux biens de très faible valeur, dont la valeur maximale est fixée par arrêté du ministre chargé du budget ;</p>
+<p>4° Le bien ou le service sert à des publicités interdites par les articles L. 3323-2, L. 3323-4 et L. 3323-5 du code de la santé publique ;</p>
+<p>5° Il s'agit de prestations de transport de personnes ou de prestations accessoires à ce transport. Sont exceptées les prestations réalisées pour le compte d'une entreprise de transports publics de voyageurs et celles réalisées en vertu d'un contrat permanent de transport conclu par les entreprises pour conduire leur personnel sur les lieux de travail ;</p>
+<p>6° Il s'agit de véhicules ou d'engins, de toute nature, conçus pour transporter des personnes ou pour des usages mixtes. Sont exceptés les véhicules ou engins suivants :</p>
+<p>a. Ceux qui sont destinés à être revendus à l'état neuf ;</p>
+<p>b. Ceux qui sont donnés en location ;</p>
+<p>c. Ceux qui comportent plus de huit places assises en plus du siège du conducteur et que les entreprises utilisent pour conduire leur personnel sur les lieux de travail ;</p>
+<p>d. Ceux qui sont exclusivement affectés à l'enseignement de la conduite ;</p>
+<p>e. Ceux de type tout terrain qui sont exclusivement affectés à l'exploitation des remontées mécaniques et des domaines skiables, dans les conditions fixées par décret ;</p>
+<p>f. Ceux que les entreprises de transports publics de voyageurs acquièrent et affectent exclusivement à ces transports ;</p>
+<p>g. Ceux qui sont aménagés pour le transport des équidés ;</p>
+<p>7° Il s'agit d'éléments constitutifs, de pièces détachées ou d'accessoires des véhicules et engins mentionnés au premier alinéa du 6° ;</p>
+<p>8° Sauf dans les cas prévus au 1° bis du 4 de l'article 298 du code général des impôts, il s'agit des produits suivants :</p>
+<p>a) Les carburéacteurs mentionnés au d du 1° du même 4 ;</p>
+<p>b) Les produits pétroliers mentionnés au e du 1° du même 4 ;</p>
+<p>9° Il s'agit de biens acquis ou construits ou de services acquis dont la valeur d'achat, de construction ou de livraison à soi-même est retenue pour l'application du e du 1 de l'article 266 du code général des impôts ainsi que de l'article 297 A du même code ;</p>
+<p>10° Il s'agit de prestations de services de toute nature, notamment de location, qui concernent les biens dont le coefficient d'admission est nul en application des 1° à 8°.</p>
+<p>3. Sauf dans les cas prévus au 1° bis du 4 de l'article 298 du code général des impôts, le coefficient d'admission se calcule selon les règles d'exclusion du droit à déduction fixées aux a, b et c du 1° du même 4. Ces dispositions concernent respectivement les essences, les gazoles et le superéthanol E 85, et les gaz de pétrole et autres hydrocarbures présentés à l'état gazeux et le pétrole lampant.</p>
+<p>4. (Abrogé).</p>
+<p>V. – 1. Pour chaque année civile, l'assujetti peut retenir :</p>
+<p>1° Un coefficient d'assujettissement unique pour l'ensemble de ses biens et services utilisés à la fois pour des opérations imposables et pour des opérations non imposables, à condition de le justifier ;</p>
+<p>2° Un coefficient de taxation unique pour l'ensemble de ses biens et services, calculé selon le 3 du III.</p>
+<p>L'option est exercée séparément pour chacun des secteurs mentionnés au deuxième alinéa de l'article 209 et aux 1° à 5° du I de cet article. Elle concerne les biens et services utilisés pour les opérations imposables de ce secteur.</p>
+<p>2. Les quatre coefficients mentionnés au I sont arrondis par excès à la deuxième décimale. Ils sont fixés définitivement avant le 25 avril de l'année suivante. Pour les personnes qui deviennent redevables de la taxe sur la valeur ajoutée en cours d'année, ils sont fixés définitivement avant le 31 décembre de l'année suivante.</p>
+<p>Toutefois, si l'option prévue au VI est exercée pour un membre d'un assujetti unique, les coefficients mentionnés au I sont fixés définitivement avant le 25 mai de l'année suivante, en tenant compte, le cas échéant, des arrondis prévus à l'alinéa précédent.</p>
+<p>VI. – Lorsque l'option mentionnée au 2° du 1 du V est exercée pour un membre d'un assujetti unique constitué en application de l'article 256 C du code général des impôts, elle s'applique à toutes les dépenses de ce membre. Le rapport prévu au 1° du 3 du III pour calculer son coefficient de taxation est alors établi comme suit :</p>
+<p>a. Le numérateur comprend le chiffre d'affaires annuel total des opérations ouvrant droit à déduction, y compris les subventions directement liées à leur prix. Ce montant est majoré du produit de deux éléments : d'une part, le chiffre d'affaires annuel total des opérations que le membre effectue à destination des autres membres de l'assujetti unique et qui auraient été imposables si cet assujetti unique n'avait pas été constitué, en excluant les opérations mentionnées au 3° du 3 du III ; d'autre part, un coefficient de taxation de l'assujetti unique calculé à partir du chiffre d'affaires de l'ensemble de ses opérations imposables ;</p>
+<p>b. Le dénominateur comprend le chiffre d'affaires annuel total des opérations imposables, y compris les subventions directement liées à leur prix. Ce montant est majoré du chiffre d'affaires annuel total des opérations que le membre effectue à destination des autres membres de l'assujetti unique et qui auraient été imposables si cet assujetti unique n'avait pas été constitué, en excluant les opérations mentionnées au 3° du 3 du III.</p>
+""", "Réécriture à droit constant : les formules de coefficients, les exclusions et leurs exceptions sont rendues plus lisibles, et les calculs propres aux membres d'un assujetti unique sont décomposés en phrases. Toutes les subdivisions et tous les alinéas normatifs sont conservés. Aucune réforme de fond de policy.json ne vise ces règles de TVA.", "Contrôle à maintenir sur les calculs : produit des trois coefficients ; rapport de chiffres d'affaires hors TVA mais tous autres frais et taxes compris ; exclusion des opérations accessoires dans la limite de 10 % ; exclusion d'admission au-delà de 90 % ; exception des véhicules de plus de huit places en plus du conducteur. Sept exceptions de véhicules, les dix cas d'admission nulle, le 4 abrogé et tous les renvois sont conservés. Arrondi par excès à la deuxième décimale et échéances avant les 25 avril, 31 décembre ou 25 mai conservés. Le VI garde la majoration pondérée au numérateur et non pondérée au dénominateur. Incohérence préexistante du IV, 3 : la correspondance annoncée avec les a, b et c du 1° du 4 de l'article 298 est vieillie ; dans le corpus local, le a regroupe les gazoles et les essences, le b est abrogé et le c vise les gaz naturels et les gaz de pétrole liquéfiés. Le renvoi et les catégories du texte fourni sont conservés, sans réécrire implicitement les exclusions de l'article 298. Note source : article 3 du décret n° 2022-1033 du 20 juillet 2022, entrée en vigueur après consultation du comité TVA de l'article 398 de la directive 2006/112/CE et au plus tôt le 1er janvier 2023 ; la note de coordination aux articles 1er-I et 3 de ce décret n'est pas une date de réforme future.")
+
+add('207', """
+<p>I. – La déduction effectuée selon les articles 205 et 206 est définitivement acquise à l'entreprise, sous réserve des règles qui suivent.</p>
+<p>II. – 1. Pour un bien immobilisé, la taxe initialement déduite est régularisée chaque année pendant cinq ans. Cette période comprend l'année de l'acquisition, de l'importation, de l'achèvement, de la première utilisation ou du transfert entre secteurs d'activité constitués en application de l'article 209.</p>
+<p>2. La régularisation annuelle correspond au cinquième du produit de la taxe initiale par la différence entre le coefficient de déduction de l'année et le coefficient de déduction de référence mentionné au 2 du V. Une différence positive donne lieu à une déduction complémentaire ; dans le cas contraire, elle donne lieu à un reversement.</p>
+<p>3. Pour les immeubles immobilisés, par dérogation à la durée prévue au 1 et à la fraction prévue au 2, la régularisation est effectuée par vingtième pendant vingt ans.</p>
+<p>Toutefois, pour les immeubles loués dans les conditions prévues au 2 de l'article L. 313-7 du code monétaire et financier, la durée de régularisation correspond au nombre d'années restant jusqu'à l'échéance du bail, arrondi à l'entier supérieur et limité à vingt ans. La fraction annuelle de régularisation est égale à l'inverse de cette durée.</p>
+<p>4. La régularisation est effectuée avant le 25 avril de l'année suivante. Elle n'est pas effectuée lorsque la différence, en valeur absolue, entre le produit des coefficients d'assujettissement et de taxation de l'année et le produit des coefficients d'assujettissement et de taxation de référence mentionnés au 2 du V ne dépasse pas un dixième.</p>
+<p>Si l'option prévue au 2° du 1 du V de l'article 206 est exercée pour un membre d'un assujetti unique constitué en application de l'article 256 C du code général des impôts, la régularisation est effectuée avant le 25 mai de l'année suivante.</p>
+<p>5. Les règles qui précèdent ne s'appliquent pas :</p>
+<p>1° Aux biens immobilisés dont le coefficient d'assujettissement de référence est nul ;</p>
+<p>2° Aux immeubles livrés, acquis, apportés ou utilisés pour la première fois avant le 1er janvier 1996.</p>
+<p>6. Pour déterminer les coefficients de référence mentionnés aux 2 et 4, les dispositions des 1° et 2° du 2 du V ne sont pas prises en compte au titre de l'année de leur application.</p>
+<p>III. – 1. La taxe initialement déduite sur un bien immobilisé est également régularisée dans les situations suivantes :</p>
+<p>1° Le bien est cédé ou apporté sans que l'opération soit soumise à la taxe sur le prix total, sur la valeur totale ou dans les conditions de l'article 268 du code général des impôts ; ou il est transféré entre secteurs d'activité constitués en application de l'article 209 ;</p>
+<p>2° Le bien est cédé ou apporté et l'opération est soumise à la taxe sur le prix total, sur la valeur totale ou dans les conditions de l'article 268 du code général des impôts ;</p>
+<p>3° La réglementation modifie la valeur du coefficient d'admission du bien pendant son utilisation ;</p>
+<p>4° Pendant son utilisation, le bien commence à servir à des opérations ouvrant droit à déduction ou, sous réserve du 5°, cesse de servir à de telles opérations ;</p>
+<p>5° Le bien cesse de servir à des opérations imposables.</p>
+<p>2. La régularisation correspond à la somme des régularisations qui auraient été effectuées jusqu'à la fin de la période de régularisation selon les 1, 2, 3 et 5 du II. Pour chacune des années restantes, les coefficients suivants sont retenus :</p>
+<p>1° Dans les situations prévues au 1° du 1, le coefficient de taxation est égal à zéro ;</p>
+<p>2° Dans les situations prévues au 2° du 1, le coefficient de déduction est égal à l'unité ;</p>
+<p>3° Dans la situation prévue au 3° du 1, le coefficient d'admission prend sa nouvelle valeur ;</p>
+<p>4° Dans les situations prévues au 4° du 1, le coefficient de taxation prend sa nouvelle valeur ;</p>
+<p>5° Dans la situation prévue au 5° du 1, le coefficient d'assujettissement est égal à zéro.</p>
+<p>3. Dans les situations prévues au 1° du 1, le bénéficiaire de la cession, de l'apport ou du transfert peut déduire une fraction de la taxe sur la valeur ajoutée ayant initialement grevé le bien, si celui-ci constitue également une immobilisation pour lui. Cette fraction est proportionnelle au rapport entre le nombre d'années restant à courir pour le cédant ou l'apporteur jusqu'à la fin de la période de régularisation et la durée totale de cette période. Le cédant ou l'apporteur délivre à cette fin au bénéficiaire une attestation du montant de taxe qu'il peut déduire. La déduction est effectuée dans les conditions prévues à l'article 206.</p>
+<p>4. Les 1 à 3 ne s'appliquent pas :</p>
+<p>1° Aux cessions ou apports dispensés de taxe sur la valeur ajoutée en application de l'article 257 bis du code général des impôts ;</p>
+<p>2° Aux biens immobilisés suivants :</p>
+<p>a. Ceux qui ont été volés ou détruits, si le vol ou la destruction est justifié ;</p>
+<p>b. Ceux dont le coefficient d'assujettissement de référence est nul.</p>
+<p>IV. – 1. (alinéa abrogé)</p>
+<p>2. Lorsqu'un bien en stock ou un bien immobilisé qui n'a pas encore été utilisé commence à servir à des opérations ouvrant droit à déduction, la taxe initiale peut être déduite à proportion du coefficient de déduction résultant de ce changement.</p>
+<p>3. Pour appliquer le II et les 1° et 2° du 1 du III, un immeuble ou une fraction d'immeuble en stock est considéré comme immobilisé si, au 31 décembre de la deuxième année suivant celle de son achèvement, il est utilisé pendant plus d'un an pour une opération relevant d'une activité économique mentionnée à l'article 256 A du code général des impôts.</p>
+<p>V. – 1. La taxe initiale est, selon le cas, celle mentionnée au 1 du II de l'article 271 du code général des impôts ou la fraction de taxe portée sur les attestations prévues au 3 du III du présent article.</p>
+<p>2. À l'origine, les coefficients d'assujettissement, de taxation et d'admission de référence sont ceux retenus pour calculer la déduction effectuée selon l'article 206 lors de l'acquisition, de l'importation ou de la livraison à soi-même du bien. Le cas échéant, ils sont modifiés comme suit :</p>
+<p>1° Après chaque déduction effectuée selon le 3 du III du présent article lors d'un transfert entre secteurs d'activité mentionné au 1° du 1 de ce III, ils prennent la valeur des coefficients utilisés pour calculer cette déduction ;</p>
+<p>2° Après chaque régularisation effectuée selon les 3° à 5° du 1 du III du présent article, ils prennent la valeur des coefficients mentionnés respectivement aux 3° à 5° du 2 de ce III.</p>
+<p>Le coefficient de déduction de référence est le produit des coefficients d'assujettissement, de taxation et d'admission de référence ainsi déterminés.</p>
+<p>VI. – La taxe déjà déduite doit être reversée dans les situations suivantes :</p>
+<p>1° Les marchandises ont disparu ;</p>
+<p>2° Les biens ou services sur lesquels la taxe a été déduite ont servi à une opération qui n'est pas effectivement soumise à l'impôt.</p>
+<p>Le reversement est effectué avant le 25 du mois suivant celui de l'événement qui le justifie. Toutefois, aucun reversement n'est exigé pour les biens détruits avant toute utilisation ou cession, ou pour les biens volés, si la destruction ou le vol est justifié.</p>
+""", "Réécriture à droit constant : les régularisations annuelles et celles liées à un événement sont formulées avec leurs conditions et leurs formules explicites. Les subdivisions, les alinéas, les exclusions et l'emplacement de l'alinéa abrogé sont conservés. Aucune réforme de fond n'est appliquée.", "Contrôles sensibles : cinq ans par cinquième, vingt ans par vingtième, durée spéciale des baux arrondie par excès et plafonnée à vingt ans ; seuil absolu d'un dixième portant sur le produit assujettissement-taxation ; délais avant les 25 avril, 25 mai et 25 du mois suivant. L'exclusion des immeubles antérieurs au 1er janvier 1996 et le test au 31 décembre de la deuxième année suivant l'achèvement sont maintenus. Le III conserve les cinq événements et leurs coefficients respectifs, les attestations et les exceptions pour vol ou destruction justifiés. Le VI distingue la destruction avant utilisation ou cession du vol. Note source : article 3 du décret n° 2022-1033 du 20 juillet 2022, application après consultation du comité TVA de l'article 398 de la directive 2006/112/CE et au plus tôt le 1er janvier 2023 ; cette condition historique n'est pas réputée nouvellement remplie.")
+
+add('208', """
+<p>I. – L'assujetti indique le montant de la taxe déductible sur les déclarations déposées pour payer la taxe sur la valeur ajoutée. S'il a omis une déduction sur une déclaration, il peut la porter distinctement sur une déclaration ultérieure déposée avant le 31 décembre de la deuxième année suivant celle de l'omission. Les régularisations prévues à l'article 207 sont également indiquées distinctement sur ces déclarations.</p>
+<p>II. – Si le montant de la taxe déductible porté sur une déclaration dépasse celui de la taxe due, l'excédent qui ne peut être imputé est reporté sur les déclarations suivantes jusqu'à épuisement. Cet excédent peut toutefois être remboursé dans les conditions prévues aux articles 242-0 A à 242-0 J.</p>
+""", "Réécriture à droit constant : les obligations déclaratives de l'assujetti, le rattrapage d'une déduction omise et le traitement de l'excédent sont formulés directement dans leurs deux subdivisions. Aucune réforme de fond n'est appliquée.", "Le délai reste antérieur au 31 décembre de la deuxième année suivant l'omission, avec inscription distincte de la déduction omise et des régularisations. Le report jusqu'à épuisement et le renvoi aux articles 242-0 A à 242-0 J sont conservés. La note source vise une modification de conséquence de l'article 193-II-5° d et VI B de la loi n° 2018-1317 du 28 décembre 2018.")
+
+add('209', """
+<p>I. – Pour appliquer le droit à déduction, l'assujetti comptabilise séparément, dans des comptes distincts, les opérations qui relèvent du champ d'application de la taxe sur la valeur ajoutée et celles qui en sont exclues.</p>
+<p>Il comptabilise également dans des comptes distincts les secteurs d'activité soumis à des dispositions différentes en matière de taxe sur la valeur ajoutée.</p>
+<p>Constituent des secteurs d'activité :</p>
+<p>1° Chaque immeuble, ensemble d'immeubles ou fraction d'immeuble dont la livraison à soi-même est imposable en application du II de l'article 278 sexies du code général des impôts, ou dans lequel des travaux d'amélioration, de transformation ou d'aménagement de logement donnent lieu à des livraisons à soi-même imposables en application du 1° du 3 du I de l'article 257 du même code ;</p>
+<p>2° Les immeubles, ensembles d'immeubles ou fractions d'immeubles dont la location est imposée en application du 2° de l'article 260 du code général des impôts ;</p>
+<p>3° Les services visés à l'article 260 A du code général des impôts ;</p>
+<p>4° Pour les organismes qui agissent sans but lucratif, désignés au a du 1° du 7 de l'article 261 du code général des impôts, les ensembles d'opérations suivants :</p>
+<p>a. L'ensemble des opérations non soumises à la taxe sur la valeur ajoutée et des ventes consenties à leurs membres au-delà de 10 % de leurs recettes totales ;</p>
+<p>b. Chacune des manifestations de bienfaisance ou de soutien qu'ils organisent et dont les recettes sont imposables à la taxe sur la valeur ajoutée ;</p>
+<p>5° Chaque opération de lotissement ou d'aménagement de zone effectuée par les collectivités territoriales ou leurs groupements ;</p>
+<p>6° Chaque membre d'un assujetti unique mentionné à l'article 256 C du code général des impôts. Les secteurs que ce membre constitue conformément au deuxième alinéa et aux 1° à 5° du présent I sont maintenus.</p>
+<p>II. – L'entreprise inscrit en comptabilité les biens d'investissement ouvrant droit à déduction à leur prix d'achat ou de revient, diminué de la déduction à laquelle ils ouvrent droit et rectifié, s'il y a lieu, conformément à l'article 207.</p>
+""", "Réécriture à droit constant : la comptabilisation séparée, la liste des secteurs et la valeur comptable des investissements sont exprimées avec des sujets explicites. Les alinéas et subdivisions sont maintenus. Aucune réforme de fond n'est appliquée.", "Les six catégories de secteurs, les deux sous-catégories du 4°, le seuil de 10 % et les secteurs internes à chaque membre d'un assujetti unique sont conservés. Les renvois à 278 sexies, 257, 260, 260 A, 261 et 256 C ne sont pas remplacés. Note source : application selon l'article 3 du décret n° 2022-1033 du 20 juillet 2022 après consultation du comité TVA de l'article 398 de la directive 2006/112/CE et au plus tôt le 1er janvier 2023. Cette note historique n'est pas une nouvelle date d'effet.")
+
+add('210', """
+<p>I. – 1. L'entreprise utilisatrice d'un bien dont elle n'est pas propriétaire peut déduire la taxe sur la valeur ajoutée qui l'a grevé lorsque ce bien constitue une immobilisation et sert à réaliser des opérations ouvrant droit à déduction, dans les conditions et selon les modalités prévues aux 2 et 3.</p>
+<p>2. La taxe déductible est celle qui se rapporte :</p>
+<p>1° Aux dépenses engagées pour les investissements publics que l'État, les collectivités territoriales et leurs groupements, ou leurs établissements publics, n'utilisent pas pour des opérations ouvrant droit à déduction et confient à l'entreprise utilisatrice pour qu'elle gère, à ses frais et risques, le service public qu'ils lui ont délégué ;</p>
+<p>2° Aux immeubles édifiés par les sociétés de construction dont les parts ou actions donnent vocation à l'attribution, en propriété ou en jouissance, d'un immeuble ou d'une fraction d'immeuble.</p>
+<p>3. La taxe déductible est celle due ou supportée pour l'acquisition ou la construction du bien, ou pour la réalisation des travaux. La mise à disposition du bien, l'entrée en jouissance, le retrait du bien ou l'interruption de sa jouissance sont assimilés à des transferts de propriété. Les personnes énumérées au 2 délivrent à l'utilisateur une attestation du montant de la taxe ayant grevé le bien et en adressent une copie au service des impôts.</p>
+<p>II. – Les redevables de la taxe sur la valeur ajoutée qui ne peuvent exercer eux-mêmes leur droit à déduction du fait du 2° du 1 et du 2° du 4 de l'article 298 du code général des impôts peuvent transférer ce droit aux redevables de la taxe sur la valeur ajoutée exigible lors de la mise à la consommation des produits pétroliers et assimilés énumérés au tableau B de l'article 265 du code des douanes.</p>
+<p>Le transfert est effectué au moyen de certificats de transfert de droits à déduction délivrés par la direction générale des douanes et droits indirects.</p>
+""", "Réécriture à droit constant du texte fourni, sous sa réserve historique d'application : les titulaires du droit à déduction, les dépenses concernées et les documents de transfert sont explicités. Les deux régimes de transfert restent distincts. Aucune réforme de fond ni remise en vigueur pour des opérations nouvelles n'est proposée.", "Contradiction préexistante entre l'état VIGUEUR de la fiche et la note source : l'article 1er du décret n° 2015-1763 du 24 décembre 2015 a abrogé l'article 210. Selon l'article 2 rapporté dans la note, cette abrogation s'applique aux dépenses d'investissements publics mis à disposition de délégataires en vertu de contrats de délégation conclus à compter du 1er janvier 2016, ainsi qu'aux dépenses d'édification ou d'acquisition d'immeubles par des sociétés civiles d'attribution dont l'état descriptif de division a été établi à compter de cette date. Conserver la portée historique pour les situations antérieures ; ne pas rétablir le transfert pour les situations visées par cette abrogation. Le II présente aussi des renvois préexistants devenus incohérents dans le corpus local : le 2° du 1 de l'article 298 définit les régimes suspensifs d'accises et le 2° de son 4 est abrogé. L'articulation exacte du II pétrolier avec l'abrogation de l'article 210 et l'actualité du renvoi au tableau B de l'article 265 du code des douanes nécessitent un contrôle de consolidation ; le code des douanes ne figure pas dans le corpus fourni. Aucun renvoi de remplacement n'est inventé.")
+
+add('242-0 A', """
+<p>Pour obtenir le remboursement de la taxe sur la valeur ajoutée déductible qu'il n'a pas pu imputer, l'assujetti doit présenter une demande. Le remboursement porte sur le crédit de taxe déductible constaté à la fin de chaque année civile (1).</p>
+<p>(1) Pour les entreprises imposées selon le régime simplifié, voir également l'article 242 septies J.</p>
+""", "Réécriture à droit constant : la nécessité d'une demande de l'assujetti et la période de constatation du crédit sont formulées directement. Le rappel propre au régime simplifié est conservé. Aucune réforme de fond n'est appliquée.", "Le crédit annuel reste constaté à la fin de chaque année civile ; la note (1), incluse dans source_xml, et son renvoi à l'article 242 septies J sont maintenus. Ce dernier, vérifié dans le corpus local, précise les remboursements provisionnels prévus au III de l'article 242-0 C.")
+
+add('242-0 C', """
+<p>I. – 1. La demande de remboursement est déposée au cours du mois de janvier. Son montant doit être au moins égal à 150 €.</p>
+<p>2. Pour l'assujetti relevant du régime simplifié d'imposition, le crédit de taxe déductible est déterminé par les énonciations de sa déclaration annuelle. Il dépose la demande de remboursement avec cette déclaration.</p>
+<p>L'assujetti qui a renoncé au régime simplifié dans les conditions prévues aux articles D. 162-10 à D. 162-12 du code des impositions sur les biens et services peut demander le remboursement du crédit de taxe déductible constaté le 31 décembre dans les conditions prévues au 1.</p>
+<p>II. – Par dérogation au I, l'assujetti soumis de plein droit ou sur option au régime normal d'imposition peut demander un remboursement lorsque la déclaration mentionnée au 2 de l'article 287 du code général des impôts fait apparaître un crédit de taxe déductible. La demande doit porter sur au moins 760 €.</p>
+<p>Le premier alinéa s'applique également aux exploitants agricoles qui ont exercé l'option prévue au quatrième alinéa du I de l'article 1693 bis du code général des impôts pour acquitter l'impôt au vu de déclarations mensuelles ou trimestrielles.</p>
+<p>II bis. – Les montants minimaux prévus au 1 du I et au II ne s'appliquent pas aux assujettis membres du groupe désignés au 1 de l'article 1693 ter du code général des impôts pour les demandes de remboursement mentionnées au premier alinéa de l'article 1693 ter A du même code.</p>
+<p>III. – Par dérogation au I, l'assujetti relevant du régime d'acomptes prévu au 3 de l'article 287 du code général des impôts peut demander le remboursement du crédit constitué par la taxe déductible sur l'acquisition de biens immobilisés, si ce crédit atteint au moins 760 €. Il présente cette demande lors du dépôt du relevé mentionné au dernier alinéa de l'article 242 sexies relatif à l'acompte de juillet ou d'un relevé mentionné au 3 de l'article 242 septies A.</p>
+<p>Les remboursements sont effectués dans les conditions prévues à l'article 242 septies J.</p>
+""", "Réécriture à droit constant : les conditions de dépôt sont rapprochées de chaque régime, sans changer les subdivisions ni les alinéas. La coquille « de du premier alinéa » est corrigée. Aucune réforme de fond n'est appliquée.", "Seuil annuel de 150 €, deux seuils de 760 €, dépôt en janvier, constat au 31 décembre, dépôt avec la déclaration annuelle et acompte de juillet conservés. Le II bis dispense des minimums les crédits des membres visés au premier alinéa de 1693 ter A, sans étendre la dispense au crédit du redevable du groupe de l'article 242-0 L. Les renvois à 242 sexies, 242 septies A, 242 septies J, 1693 ter et 1693 ter A ont été vérifiés localement. La note de 1693 ter A annonce une abrogation au 1er janvier 2027 avec maintien de dispositions jusqu'à leur reprise réglementaire : coordination future à suivre sans anticiper cette substitution. Note source propre à 242-0 C : article 2 du décret n° 2014-1686 du 29 décembre 2014, modifications applicables aux acomptes dus à compter du 1er janvier 2015.")
+
+add('242-0 D', """
+<p>1. (Abrogé).</p>
+<p>2. (Devenu sans objet).</p>
+<p>3. Pour l'assujetti relevant du régime simplifié des exploitants agricoles qui n'a pas opté pour des déclarations trimestrielles ou mensuelles, le crédit de taxe déductible est déterminé par les énonciations de sa déclaration annuelle. S'il a exercé l'option prévue à l'article 260 J, il est également déterminé par les déclarations portant sur des périodes inférieures à un an. La demande de remboursement est déposée avec cette déclaration.</p>
+""", "Réécriture à droit constant de la règle encore rédigée au 3 : le champ agricole, l'exclusion des déclarants mensuels ou trimestriels et le rôle des déclarations sont clarifiés. Les emplacements 1 et 2 sont conservés. Aucune réforme de fond n'est appliquée.", "Les mentions « Abrogé » et « Devenu sans objet » ne constituent pas des emplacements « Réservé » : l'article entier est traité comme une réécriture. Le renvoi à l'article 260 J de la même annexe est conservé ; cet article, vérifié localement, régit l'option d'imposition selon l'exercice comptable. La formulation finale au singulier « cette déclaration », malgré la référence précédente à plusieurs déclarations possibles, est une ambiguïté préexistante conservée ; préciser le dépôt en cas de période inférieure à un an requerrait une coordination expresse.")
+
+add('242-0 E', """
+<p>Le crédit de taxe déductible pour lequel un remboursement a été demandé ne peut plus être imputé. Il est annulé au moment du remboursement.</p>
+""", "Réécriture à droit constant : les effets de la demande et ceux du remboursement sont distingués en deux phrases dans le même alinéa. Aucune réforme de fond n'est appliquée.", "L'interdiction d'imputation intervient dès la demande ; l'annulation du crédit intervient lors du remboursement. Aucun report de cette interdiction n'est introduit.")
+
+add('242-0 G', """
+<p>Le redevable qui perd cette qualité peut obtenir le remboursement de la totalité du crédit de taxe déductible dont il dispose.</p>
+""", "Réécriture à droit constant : le bénéficiaire et l'étendue du remboursement sont exprimés dans une phrase active. Aucune réforme de fond n'est appliquée.", "Le remboursement demeure une possibilité et porte sur le montant total du crédit disponible lors de la perte de la qualité de redevable ; aucune nouvelle condition ni aucun nouveau seuil n'est ajouté.")
+
+add('242-0 I', """
+<p>Les sociétés dont l'activité habituelle et principale consiste à réaliser les opérations de crédit-bail visées au 1 de l'article L. 313-7 du code monétaire et financier ont droit au remboursement du crédit de taxe déductible non imputable résultant de droits à déduction nés depuis le 1er janvier 1972. Elles peuvent déposer une demande de restitution pour chaque trimestre civil, à condition que le montant demandé atteigne au moins 760 €.</p>
+<p>Les crédits de taxe déductible que ces sociétés détenaient au 31 décembre 1971 ne peuvent pas être remboursés.</p>
+<p>Ces sociétés distinguent en comptabilité les recettes des contrats conclus après le 1er janvier 1972 ainsi que les droits à déduction mentionnés au premier alinéa.</p>
+""", "Réécriture à droit constant : les sociétés bénéficiaires, le seuil trimestriel, l'exclusion historique et l'obligation comptable sont formulés directement dans leurs trois alinéas. Aucune réforme de fond n'est appliquée.", "Seuil de 760 € par demande au titre d'un trimestre civil et caractère à la fois habituel et principal de l'activité conservés. Les dates historiques ne sont pas harmonisées : droits nés depuis le 1er janvier 1972 au premier alinéa, crédits détenus au 31 décembre 1971 exclus au deuxième, contrats conclus après le 1er janvier 1972 au troisième. Cette différence de formulation est préexistante et n'est pas corrigée silencieusement.")
+
+add('242-0 J', """
+<p>L'administration peut exiger de toute personne qui demande à bénéficier des articles 242-0 A à 242-0 I qu'elle présente une caution solvable. Cette caution s'engage solidairement avec le demandeur à reverser les sommes dont celui-ci aurait obtenu indûment le remboursement.</p>
+""", "Réécriture à droit constant : le pouvoir de l'administration et l'engagement de la caution sont séparés en deux phrases dans le même alinéa. Aucune réforme de fond n'est appliquée.", "La caution n'est pas automatique : elle peut être exigée par l'administration. Sa solvabilité, la solidarité avec le demandeur et la limitation aux sommes indûment remboursées sont conservées. Note source : modification de conséquence de l'article 193-II-5° d et VI B de la loi n° 2018-1317 du 28 décembre 2018.")
+
+add('242-0 L', """
+<p>Le redevable du groupe reçoit le remboursement du crédit de taxe déductible mentionné au b du 3 de l'article 1693 ter du code général des impôts, dans les conditions et selon les modalités prévues au 1 du I et au premier alinéa du II de l'article 242-0 C.</p>
+""", "Réécriture à droit constant : le redevable du groupe est placé en sujet de la phrase et le renvoi aux modalités de remboursement est conservé intégralement. Aucune réforme de fond n'est appliquée.", "Le b du 3 de l'article 1693 ter, vérifié dans le corpus local, vise le solde de TVA du groupe et son remboursement au redevable. Les renvois au 1 du I et au premier alinéa du II de 242-0 C maintiennent leurs conditions respectives ; la dispense du II bis de cet article, propre aux crédits de certains membres, n'est pas étendue au présent remboursement.")
+
+if __name__ == '__main__':
+    result = []
+    for source in sources:
+        xml, reason, notes = drafts[source['number']]
+        result.append({**{k: source[k] for k in ('code_id', 'source_id', 'source_sha256', 'number')},
+                       'proposed_xml': xml, 'reason': reason, 'review_notes': notes,
+                       'status': 'rewrite_draft'})
+    Path('answer.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')

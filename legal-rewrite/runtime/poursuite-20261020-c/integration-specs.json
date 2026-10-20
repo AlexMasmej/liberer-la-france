@@ -1,0 +1,70 @@
+[
+  {
+    "folder": "fiscal/edition001",
+    "review": "fiscal-independent-review/edition001/review.json",
+    "contexts": [
+      "references.json",
+      "direct-dependencies-read.json"
+    ]
+  },
+  {
+    "folder": "fiscal/edition001/csi-coordination",
+    "review": "fiscal-independent-review/edition001/review.json",
+    "manifest_folder": "fiscal/edition001"
+  },
+  {
+    "folder": "logement/edition001",
+    "review": "logement-independent-review/edition001/review.json",
+    "contexts": [
+      "references.json",
+      "automatic-extra-references.json",
+      "election-reference.json"
+    ]
+  },
+  {
+    "folder": "logement/edition001",
+    "source": "companion-source.json",
+    "answer": "companion-answer.json",
+    "review": "logement-independent-review/edition001/review.json"
+  },
+  {
+    "folder": "logement/coherence/edition002",
+    "review": "logement-independent-review/edition001/review.json",
+    "override": true,
+    "contexts": [
+      "cch-references.json"
+    ]
+  },
+  {
+    "folder": "logement/transition/edition001",
+    "review": "logement-independent-review/edition001/review.json",
+    "override": true
+  },
+  {
+    "folder": "logement/metadata-crpa/edition001",
+    "review": "logement-independent-review/edition001/review.json",
+    "override": true
+  },
+  {
+    "folder": "travail/edition001",
+    "review": "travail-independent-review/edition001/review.json",
+    "contexts": [
+      "context.json"
+    ]
+  },
+  {
+    "folder": "travail-coordination-supplement/edition001",
+    "review": "travail-coordination-independent-review/edition001/review.json",
+    "override": true,
+    "contexts": [
+      "references.json"
+    ]
+  },
+  {
+    "folder": "social/edition002",
+    "review": "social-independent-review/edition002/review.json",
+    "contexts": [
+      "context.json"
+    ]
+  }
+]

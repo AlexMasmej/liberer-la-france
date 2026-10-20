@@ -1,0 +1,5 @@
+Trois entrées gardées : R243-18, R243-17 et R243-19. Les sources, notes et avant-images courantes ont été lues intégralement. R243-18 et R243-19 coordonnent la suppression législative prospective du seul 10 % ; leurs règles historiques, assiettes, délais et recours sont conservés. R243-17 reste intégralement source/null : ses trois avantages et les sanctions autonomes ou historiques justifient ce maintien. Les trois anciens audits C doivent être remplacés, pas simplement renouvelés.
+
+Les sept cibles complètes ont été lues et les dix-sept checks validés contre les vues réellement présentes. R243-59 est encore source/null dans ces vues. Le plan séparé impose recapture et réémission après son inscription pour R243-17 et R243-18, ainsi que C R243-59-6-A ; aucun certificat futur n’est présenté comme courant. Zéro nouvelle famille d’allègement : même measure_id que la suppression législative. Pas d’économie nationale ni validation par juriste.
+
+Voir ../final-guards.json, ../article-dependency-map.json, ../post-commit-reissue-plan.json et ../preservation-tests.json. Aucune inscription ni mutation canonique effectuée.

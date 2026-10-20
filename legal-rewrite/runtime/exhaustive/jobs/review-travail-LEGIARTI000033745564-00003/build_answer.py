@@ -389,12 +389,6 @@ SPECIAL = {
  ('D5132-10-15', 'L1251-58-1'): "Renvoi d'emploi ajouté pour remplacer le fondement dérogatoire abrogé : les 1° et 2° maintiennent mise à disposition et lettre de mission, tandis que le contrat unique demeure distinct et sans terme lié à la mission. Le régime favorable d'inclusion reste accessible après suppression de l'attente ; ancienneté et CDI antérieurs ne sont ni remis à zéro ni terminés par l'échéance d'une mission ou d'une aide.",
 }
 
-EXTRA = {
-    'R5132-7': ['L5132-5'],
-    'R5132-10-12': ['L5132-6', 'L1251-58-1', 'L5132-6-1'],
-    'D5132-10-15': ['L1251-58-1'],
-}
-
 for obj in ANSWER:
     n = obj['number']
     if n == 'R5122-18':
@@ -411,10 +405,6 @@ for obj in ANSWER:
             "La durée légale retenue est celle applicable au salarié concerné : le passage du seuil hebdomadaire à quarante heures pour les nouveaux contrats ne relève pas celui des contrats antérieurs, fixé à trente-cinq heures, et ne réduit pas le salaire contractuel."))
     key = obj['code_id'] + '|' + obj['source_id']
     required = list(REFS['requirements'][key])
-    for extra in EXTRA.get(n, []):
-        k = TARGET_NUMBER[extra]
-        if k not in required:
-            required.append(k)
     checks = []
     for k in required:
         target = TARGETS[k]

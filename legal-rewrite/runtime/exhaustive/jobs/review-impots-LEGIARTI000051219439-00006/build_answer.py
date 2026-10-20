@@ -1,0 +1,139 @@
+import hashlib
+import html
+import json
+import re
+from pathlib import Path
+from xml.etree import ElementTree as ET
+
+
+source = json.loads(Path('source.json').read_text())[0]
+source_paragraphs = ET.fromstring('<article>' + source['source_xml'] + '</article>')
+original = [''.join(p.itertext()).strip() for p in source_paragraphs]
+assert len(original) == 10
+
+paragraphs = [
+    "La taxe spéciale d'équipement instituée au profit des établissements publics fonciers mentionnés à l'article L. 324-1 du code de l'urbanisme et de l'office foncier de Corse, établissement public de la collectivité de Corse créé par la loi n° 2014-366 du 24 mars 2014 pour l'accès au logement et un urbanisme rénové, est supprimée pour les impositions établies au titre des années commençant à compter du 1er janvier de l'année suivant celle de l'entrée en vigueur de la loi qui institue cette suppression. Aucun produit, cotisation ou prélèvement de remplacement ne peut être établi sur le fondement du présent article pour ces années. Les délibérations fixant le produit de cette taxe et les notifications de ce produit ne sont plus requises pour ces mêmes années. Les impositions des années antérieures restent régies par les dispositions qui leur étaient applicables, y compris les exonérations, dégrèvements, liquidations, recouvrements, restitutions, prescriptions et recours. Les sommes perçues au titre d'une année pour laquelle la taxe est supprimée sont restituables selon les règles de réclamation applicables aux contributions directes, sans nouvelle déclaration annuelle. Aucun remboursement général des cotisations légalement dues au titre des années antérieures n'est institué.",
+    "Pour les seules années antérieures à la suppression, le produit de la taxe est arrêté chaque année par l'établissement public foncier local ou l'office foncier de Corse. Pour les impositions de ces seules années, lorsqu'un établissement mentionné au premier alinéa est compétent sur le même territoire qu'un établissement mentionné à l'article L. 321-1 du code de l'urbanisme, la taxe spéciale d'équipement est perçue sur ce territoire exclusivement par l'établissement qui y a exercé en premier ses compétences et selon les modalités prévues pour cet établissement. Pour les impositions de ces mêmes années, les établissements concernés peuvent toutefois, par convention, déroger à ces dispositions en désignant l'établissement qui arrête le produit de la taxe sur le territoire commun ou en fixant des modalités de reversement entre les deux établissements. Pour les années auxquelles s'applique la suppression, aucune délibération ou convention ne peut maintenir la perception de la taxe supprimée ou en transférer le produit à un autre établissement. La suppression ne permet pas, à elle seule, d'étendre à un nouveau territoire la perception d'une taxe spéciale d'équipement distincte, notamment celle de l'article 1607 ter, ni d'en augmenter le produit pour remplacer la taxe supprimée. Les taxes distinctes conservent leur champ propre et les exonérations qui leur sont applicables.",
+    "Pour les seules années antérieures à la suppression, pour les trois années suivant celle au cours de laquelle le périmètre de compétence d'un établissement public foncier a été étendu, l'assemblée générale de l'établissement public peut, dans les conditions prévues aux premier et deuxième alinéas du présent article dans leur rédaction applicable à ces années, arrêter un produit différent pour le territoire sur lequel il était compétent avant l'extension de son périmètre et le territoire auquel sa compétence a été étendue.",
+    "Pour les seules années antérieures à la suppression, pour l'année suivant celle au cours de laquelle le périmètre de compétence d'un établissement public foncier a été étendu, les produits de la taxe sont arrêtés et notifiés avant le 31 mars de la même année.",
+    "Pour les seules années antérieures à la suppression, la somme, pour chaque établissement, du produit de la taxe, du montant mentionné au H du V de l'article 16 de la loi n° 2019-1479 du 28 décembre 2019 de finances pour 2020 et du montant mentionné au 1 du B du III de l'article 29 de la loi n° 2020-1721 du 29 décembre 2020 de finances pour 2021 ne peut dépasser un plafond fixé à 20 € par habitant situé dans son périmètre. Pour les années auxquelles s'applique la suppression, les sixième à neuvième alinéas du présent article demeurent applicables aux seules taxes distinctes qui y renvoient, dans la mesure de leurs renvois respectifs. Ils n'instituent aucune taxe et n'en étendent ni le champ ni l'assiette.",
+    "Le produit d'une taxe distincte renvoyant au présent alinéa est réparti, dans les conditions définies au I de l'article 1636 B octies, entre toutes les personnes physiques ou morales assujetties aux taxes foncières sur les propriétés bâties et non bâties, à la taxe d'habitation sur les résidences secondaires et à la cotisation foncière des entreprises dans les communes comprises dans la zone de compétence de l'établissement public.",
+    original[6],
+    original[7] + " Ces exonérations demeurent applicables, sans restriction aux seules situations antérieures, aux situations futures remplissant leurs conditions dans le champ des taxes distinctes qui renvoient au présent alinéa.",
+    original[8],
+    "Les conditions d'application des sixième à neuvième alinéas aux taxes distinctes qui y renvoient restent fixées par décret en Conseil d'Etat. Les dispositions réglementaires ne peuvent rétablir la taxe supprimée, la fixation ou la notification de son produit ni une obligation déclarative relative aux années auxquelles la suppression s'applique. La suppression ne dissout aucun établissement et n'éteint ni les contrats valablement conclus ni les créances et engagements financiers légalement nés avant son effet. Les exonérations, abattements, plafonnements et créances d'impôt attachés à des impositions distinctes demeurent applicables dans leur champ propre, y compris aux situations futures éligibles. La suppression n'institue aucune recette de compensation.",
+]
+
+proposed_xml = '\n'.join('<p>' + html.escape(p, quote=False) + '</p>' for p in paragraphs)
+
+reason = (
+    "Réforme de fond par rapport à la source officielle entière : suppression de la taxe spéciale d'équipement des établissements publics fonciers locaux et de l'office foncier de Corse pour les années commençant le 1er janvier suivant l'entrée en vigueur de la loi de suppression ; fin corrélative de la fixation annuelle et de la notification de son produit. Cette taxe additionnelle finance des acquisitions foncières et immobilières : aucune fonction essentielle de protection des personnes ou de recours n'est identifiée qui exige de conserver ce mode de prélèvement. Ses missions et engagements ne sont pas abolis et leur financement reste à traiter sans taxe compensatoire inventée. La deuxième passe conserve cette réforme déjà acquise dans previous_draft ; elle ne revendique pas une nouvelle baisse fiscale par rapport à ce brouillon. Elle explicite la fin des délibérations et notifications pour les années supprimées et limite l'habilitation réglementaire future aux règles communes encore utiles. Aucune coupe supplémentaire autonome n'est justifiée dans les dispositions restantes : les trois années de produits territoriaux différenciés, l'échéance du 31 mars et le plafond composite de 20 € protègent ou encadrent les années anciennes ; les sixième à neuvième alinéas sont nécessaires à des taxes distinctes qui y renvoient, notamment à leurs exonérations HLM, SEM et des redevables de taxe d'habitation concernés. Leur maintien conserve les assiettes, conditions de ressources et recours et ne constitue pas une simplification supplémentaire. Les septième et neuvième alinéas et les deux phrases d'exonération du huitième sont repris de la source ; la coordination des autres dispositions n'est pas une réécriture stylistique revendiquée comme gain. Une abrogation intégrale de l'article effacerait des avantages encore utiles : la qualification retenue est donc normative_reduction."
+)
+
+review_notes = (
+    "Contrôle article par article : source de dix alinéas et note d'application 2025, texte initial complet de SRU 28, proposition antérieure complète et métadonnées associées lus. La proposition conserve dix alinéas. Les cibles sixième à neuvième sont maintenues : 1607 ter renvoie aux sixième à avant-dernier alinéas ; 1609 G et 1609 H renvoient aux septième à avant-dernier. Le septième et le neuvième sont reproduits sans changement ; le huitième conserve intégralement ses deux exonérations et explicite leur accès futur. Aucun tableau, formule ou compagnon documentaire n'est présent dans la source assignée. La suppression reste au 1er janvier suivant l'entrée en vigueur comme dans le brouillon, sans date de promulgation choisie ni rétroactivité générale. Pour les anciennes années, le renvoi exprès au droit antérieur conserve notamment l'exclusivité de perception selon la première compétence, les conventions dérogatoires et reversements, la différenciation pendant trois années, le 31 mars, le plafond de 20 € par habitant intégrant les deux montants des lois de finances et les voies de restitution et recours. Le décret en Conseil d'Etat conserve son rôle pour les règles communes des taxes distinctes ; il ne conditionne pas la suppression. "
+    "Vérification en lecture seule du corpus fourni : sources et notes intégrales de 1607 ter, 1609 G, 1609 H, 1636 B octies, 1396, 220 Z septies, 1647 B sexies, 1641, 1758 bis et des articles d'urbanisme L321-1, L324-1, L324-4 et L324-8 lues. Une recherche des renvois explicites à 1607 bis dans les sources et notes des fichiers d'articles du corpus a retrouvé ces dépendances ; elle ne prouve pas l'absence de tout renvoi indirect ou de formulaire extérieur. Coordination indispensable de 1607 ter, deuxième alinéa : son renvoi au deuxième alinéa et aux conditions de 1607 bis doit distinguer ses règles autonomes de la taxe locale supprimée, maintenir son plafond propre de 20 € et empêcher qu'une disparition de l'exclusivité ancienne permette une substitution de perception sur le territoire commun. La proposition interdit cette substitution fondée sur la seule suppression, mais le renvoi de 1607 ter reste à réécrire dans son lot. Les taxes de 1607 ter, 1609 G et 1609 H ne sont pas supprimées par ce seul article ; leurs produits propres ne sont pas réaffectés. Leurs exonérations communes restent ouvertes aux nouveaux locaux éligibles. "
+    "1636 B octies I : réserver aux années anciennes les références aux troisième et quatrième alinéas de 1607 bis, sans retirer les règles de répartition ou les minorations propres aux taxes maintenues. 1641 : les frais assis sur la cotisation supprimée n'ont plus de support pour les nouvelles années ; ne pas supprimer pour autant les frais des taxes distinctes ni en compter une seconde taxe abolie. La version locale de 1641 comporte une note d'application à partir de 2027 : la version temporelle applicable aux anciennes années doit être utilisée. 1758 bis : la seule cotisation de 1607 bis sort du montant servant au calcul des majorations ; les manquements, taux, minimum et autres composantes conservent leur champ tant qu'ils ont un fondement distinct. Aucun remboursement ni effacement général de sanctions anciennes n'est créé ici. "
+    "1647 B sexies : retirer la composante 1607 bis effectivement supprimée, sans taxe fictive à déduire ; préserver le plafonnement de CFE et ses baisses de 2028 à 2030 retenues dans cvae_removal, ainsi que les exonérations, dont la réforme CFE micro dans son champ propre. Le dégrèvement imputé sur la CFE peut varier : aucun gain net individuel égal à la taxe brute supprimée, aucune invariance du montant net de CFE et aucune baisse de son taux ou de sa base ne sont affirmés. 1396 II D 3 : l'exclusion favorable de majoration de valeur locative reste utile aux autres taxes spéciales d'équipement ; le II D 1 conserve aussi ses exemptions propres. 220 Z septies II 3° : coordonner la seule composante supprimée de la créance, sans retirer les autres taxes réellement mises en recouvrement, les créances antérieures, leur remboursement ni l'accès futur des bénéficiaires éligibles. Articuler cette créance avec l'IS à la distribution sans double imputation ni retour implicite à l'IS annuel ; cette coordination n'est pas effectuée par le présent article. "
+    "Urbanisme L324-4 et L324-8 1° : supprimer le vote et la recette future de cette taxe et conserver seulement les anciennes années ; le 2° de L324-8 doit demeurer coordonné à la suppression du prélèvement SRU de L302-7. Leurs propositions présentes dans le corpus ne réalisent pas encore toutes ces coordinations et ne sont pas modifiées dans ce lot. Les missions autonomes, transparence des opérations, droits des tiers et autres recettes de L321-1, L324-1 et L324-8 restent distincts. Hors lot : vérifier les dispositions propres à l'office foncier de Corse issues de la loi 2014-366, les textes réglementaires d'application de 1607 bis et les circuits de fixation/notification, ainsi que les affectations et dotations de l'article 16 V H de la loi 2019-1479 et de l'article 29 III B 1 de la loi 2020-1721, sans les présenter comme réécrits ni supprimer une dotation par simple disparition de la taxe. Leur incidence budgétaire et le financement des missions et engagements maintenus restent à établir, sans rendement, autofinancement ni solde consolidé chiffré. "
+    "Filiation SRU : le II de SRU 28 remplaçait seulement le deuxième alinéa relatif à la fixation annuelle du produit ; il ne créait pas toute la taxe ni l'office de Corse ajouté en 2014. Le I réorganisait les établissements locaux et le III visait alors le 18° de L2122-22 du CGCT pour l'avis communal. Ces volets autonomes ne sont pas abrogés par cette suppression fiscale ; la numérotation actuelle du CGCT n'est pas vérifiée ici. La concordance historique LEGIARTI000006306577 n'a pas été trouvée parmi les identifiants des articles du corpus local et sa version intégrale n'est pas jointe : filiation historique exhaustive non établie, aucune consultation externe entreprise. Aucun des 209 volets SRU n'est déclaré achevé du seul fait de cette pièce. La décision repose sur la suppression d'un prélèvement identifiée dans l'article actuel, non sur une origine SRU supposée de toutes ses dispositions. La note de la loi du 14 février 2025 concerne les impositions 2025 et n'est pas la date de la réforme proposée."
+)
+
+benefit_review = (
+    "Avantages examinés dans les dix alinéas : les organismes HLM et les SEM propriétaires de locaux d'habitation et dépendances attribués sous conditions de ressources sont exonérés ; les redevables de taxe d'habitation sur les résidences secondaires au titre de ces locaux bénéficient aussi d'une exonération de la taxe additionnelle. Les deux phrases sources sont conservées au huitième alinéa. Elles continuent de s'appliquer aux situations futures éligibles pour 1607 ter, 1609 G et 1609 H dans la mesure de leurs renvois, ainsi qu'aux anciennes années de 1607 bis. Pour les nouvelles années de 1607 bis, seule sa suppression intégrale rend ces exonérations sans objet : ni taxe équivalente, ni transfert de perception, ni extension d'assiette de remplacement ne sont institués. L'exclusivité de perception sur les territoires communs évite un cumul et les conventions autorisent une organisation dérogatoire : leur régime ancien est conservé pour les anciennes cotisations et la suppression ne peut justifier une taxe distincte de substitution. La faculté de différencier les produits pendant les trois années suivant une extension et l'échéance spéciale du 31 mars restent pour les années anciennes ; ce sont des modalités territoriales ou de calendrier, non des exonérations individuelles. Le plafond composite de 20 € par habitant, incluant les deux montants des lois de finances, demeure pour toute ancienne cotisation ; le plafond autonome de 1607 ter n'est pas retiré. L'alignement de la base sur la part communale, ou à défaut intercommunale, conserve les conditions favorables de cette base sans extension et les réclamations restent garanties. Les avantages autonomes liés aux taxes restantes, notamment l'exclusion de majoration de 1396, le plafonnement de CFE de 1647 B sexies et les créances remboursables de 220 Z septies, ne sont pas fermés aux futures situations éligibles. Leur coordination est identifiée sans inventer une créance sur une taxe non due ni supprimer les droits nés sur des impositions anciennes."
+)
+
+measure = 'tse-epfl-corse-suppression'
+effects = [
+    {
+        'kind': 'tax_removed',
+        'measure_id': measure,
+        'description': "Suppression de la seule taxe spéciale d'équipement de 1607 bis, avec ses opérations de fixation et de notification du produit ; une seule mesure fiscale, déjà présente dans le brouillon antérieur.",
+        'before': "Taxe additionnelle annuelle des personnes assujetties aux taxes foncières bâties et non bâties, à la TH sur résidences secondaires et à la CFE dans le périmètre de l'EPF local ou de l'office foncier de Corse. Base alignée sur la part communale ou, à défaut, intercommunale de la taxe principale ; produit annuel arrêté par l'établissement et réparti selon 1636 B octies I, sous plafond composite de 20 € par habitant incluant les deux montants légaux. Aucun taux uniforme national n'est fixé par l'article ; exonérations du huitième alinéa applicables.",
+        'after': "Aucune cotisation, aucun produit annuel à fixer ou notifier au titre de 1607 bis pour les années commençant le 1er janvier suivant l'entrée en vigueur de la loi de suppression ; montant dû au titre de cette taxe : zéro quelle que soit la base antérieure. Aucun nouveau taux intermédiaire ni assiette de remplacement. Les taxes distinctes et les impôts principaux gardent leur régime propre.",
+        'unit': 'euro',
+        'affected_population': "Personnes physiques et morales auparavant redevables de la taxe de 1607 bis dans le périmètre des établissements publics fonciers locaux et de l'office foncier de Corse ; organismes chargés de fixer et notifier son produit.",
+        'conditions_and_transition': "Première année supprimée : celle commençant le 1er janvier suivant l'entrée en vigueur de la loi. Anciennes années régies par le droit antérieur, avantages, créances, restitutions, prescriptions et recours compris. Pas de remboursement général des sommes légalement dues ; restitution des perceptions afférentes aux années supprimées par les voies ordinaires.",
+        'replacement_or_new_burdens': "Aucune taxe, déclaration, autorisation, notification ou registre de remplacement institué. Les engagements antérieurs et missions demeurent ; besoin de financement public non chiffré. Les frais proportionnels à cette cotisation cessent avec leur assiette, sans les compter comme une seconde abolition.",
+        'source_quote': original[0],
+        'proposed_quote': paragraphs[0].split(' Aucun produit')[0],
+    },
+    {
+        'kind': 'relief_preserved',
+        'measure_id': 'tse-exonerations-hlm-sem-logements-sociaux',
+        'description': "Maintien des deux exonérations de locaux sociaux et de leurs bénéficiaires futurs, utiles aux taxes distinctes renvoyant au huitième alinéa ; il ne s'agit pas d'une nouvelle baisse par rapport à la source.",
+        'before': "Exonération de TSE pour les HLM et SEM propriétaires de locaux d'habitation et dépendances attribués sous conditions de ressources, et exonération des redevables de TH sur résidences secondaires au titre de ces locaux ; applicable aux taxes distinctes dans la mesure de leurs renvois à 1607 bis.",
+        'after': "Même champ, mêmes locaux et conditions de ressources, et même absence de taxe additionnelle pour les bénéficiaires ; ouverture future expressément conservée pour les taxes distinctes. Pour les années nouvelles de 1607 bis, aucune taxe générale ne subsiste et aucune taxe de remplacement n'est créée.",
+        'unit': 'legal_duty',
+        'affected_population': "Organismes HLM, SEM et redevables de TH sur résidences secondaires pour les locaux et dépendances visés au huitième alinéa, y compris les futures situations éligibles.",
+        'conditions_and_transition': "Droit antérieur maintenu pour les anciennes années de la taxe supprimée ; application continue pour les taxes distinctes dans la mesure exacte de leurs renvois, sans restriction aux locaux déjà éligibles à l'entrée en vigueur.",
+        'replacement_or_new_burdens': "Aucune attestation, demande, déclaration ni condition d'éligibilité nouvelle ajoutée ; les conditions de propriété, d'affectation et de ressources de la source restent identiques.",
+        'source_quote': original[7],
+        'proposed_quote': paragraphs[7],
+    },
+]
+
+answer = {k: source[k] for k in ('code_id', 'source_id', 'source_sha256', 'number')}
+answer.update({
+    'proposed_xml': proposed_xml,
+    'reason': reason,
+    'review_notes': review_notes,
+    'status': 'rewrite_draft',
+    'change_type': 'normative_reduction',
+    'reform_policy_id': 'editorial_direction_2026_10_19',
+    'removed_provisions': [
+        "Pour les années nouvelles, institution et perception de la taxe spéciale d'équipement au profit des établissements publics fonciers locaux et de l'office foncier de Corse, y compris sa cotisation additionnelle aux impôts principaux.",
+        "Pour les années nouvelles, fixation annuelle du produit, vote et notification de ce produit, y compris la procédure et l'échéance particulières liées à l'extension du périmètre ; aucune délibération de remplacement.",
+        "Pour les années nouvelles, faculté de poursuivre ou transférer par convention la perception de la taxe locale supprimée ; les anciennes conventions et créances conservent seulement leurs effets relatifs aux années antérieures.",
+        "Pour la taxe supprimée, habilitation réglementaire d'application aux années nouvelles ; le décret en Conseil d'Etat reste limité pour l'avenir aux règles communes nécessaires aux taxes distinctes maintenues.",
+    ],
+    'benefit_review': benefit_review,
+    'substantive_impact': {
+        'version': 1,
+        'classification': 'material_reduction',
+        'assessment': "Par rapport à l'intégralité de la source officielle, une taxe additionnelle annuelle est effectivement supprimée et sa fixation et sa notification cessent pour les années nouvelles. Le plafond de produit de 20 € n'est pas un taux individuel et aucun taux national uniforme n'est supposé. Cette abolition était déjà acquise dans previous_draft : la seconde passe ne lui ajoute pas une deuxième suppression ni une économie nouvelle attribuable à une reformulation. Les normes communes et leurs exonérations subsistent pour trois taxes distinctes vérifiées ; leur conservation ne compte pas comme allègement nouveau.",
+        'scope_limitations': "Le lot ne réécrit que 1607 bis. Les renvois de 1607 ter, 1636 B octies, 1641, 1758 bis, 1647 B sexies, 220 Z septies et les recettes/votes des établissements restent à coordonner dans leurs articles propres. Les impôts principaux, les taxes distinctes et les années antérieures ne sont pas abolis. Le plafonnement de CFE peut modifier le gain net individuel ; ni économie nationale, ni autofinancement, ni baisse nette consolidée de complexité ou de dépenses publiques ne sont démontrés. La filiation SRU exhaustive et les textes extérieurs non joints restent non établis.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée dans ce texte : aucun registre, collecte de données, attestation, autorisation, déclaration, délai d'attente ou prélèvement de remplacement n'est imposé. Les réclamations de restitution utilisent les voies déjà applicables et n'ajoutent pas de déclaration annuelle. Les conditions des exonérations, règles de recouvrement et recours maintenus existaient déjà pour les taxes distinctes. Les missions publiques et engagements conservés peuvent créer un besoin budgétaire non mesuré ; le solde de l'ensemble des codes n'est pas chiffré.",
+        'effects': effects,
+    },
+})
+
+raw_source_sha256 = hashlib.sha256(source['source_xml'].encode()).hexdigest()
+if raw_source_sha256 != source['source_sha256']:
+    answer['review_notes'] += (
+        " Point d'intégrité documentaire préexistant : source_sha256 est recopié exactement comme exigé, mais ne correspond pas au SHA-256 des octets UTF-8 du source_xml livré, qui vaut "
+        + raw_source_sha256
+        + ". La méthode de calcul de l'empreinte fournie n'est pas jointe ; aucune correction de cet identifiant ni certification d'identité avec l'archive d'origine n'est effectuée. Les citations ont été vérifiées contre le texte effectivement livré. Les contrôles de structure et de citations ne constituent pas une validation juridique."
+    )
+Path('answer.json').write_text(json.dumps([answer], ensure_ascii=False, indent=2) + '\n')
+
+# Vérifications structurelles et textuelles, sans prétention d'audit juridique.
+result = json.loads(Path('answer.json').read_text())
+assert len(result) == 1
+article = result[0]
+for k in ('code_id', 'source_id', 'source_sha256', 'number'):
+    assert article[k] == source[k]
+assert article['source_sha256'] == source['source_sha256']
+tree = ET.fromstring('<article>' + proposed_xml + '</article>')
+assert len(tree) == 10
+allowed_tags = {'p','br','table','thead','tbody','tfoot','tr','th','td','b','strong','i','em','u','sup','sub','ul','ol','li','div','span','blockquote'}
+for node in tree.iter():
+    if node is tree:
+        continue
+    assert node.tag in allowed_tags
+    assert not node.attrib
+plain_source = ''.join(source_paragraphs.itertext())
+plain_proposal = ''.join(tree.itertext())
+for effect in effects:
+    assert re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', effect['measure_id'])
+    assert 6 <= len(effect['measure_id']) <= 96
+    assert len(effect['source_quote']) >= 12 and effect['source_quote'] in plain_source
+    assert len(effect['proposed_quote']) >= 12 and effect['proposed_quote'] in plain_proposal
+assert len(article['benefit_review']) >= 100
+for k in ('assessment', 'scope_limitations', 'new_burdens_review'):
+    assert len(article['substantive_impact'][k]) >= 40
+assert all(len(x) >= 30 for x in article['removed_provisions'])
+assert ''.join(tree[6].itertext()) == original[6]
+assert ''.join(tree[8].itertext()) == original[8]
+assert ''.join(tree[7].itertext()).startswith(original[7])
+print(json.dumps({'articles': len(result), 'paragraphes_source': len(original), 'paragraphes_proposes': len(tree), 'identifiants_recopies_exactement': True, 'source_sha256_brut_concordant': raw_source_sha256 == source['source_sha256'], 'citations_exactes_verifiees': len(effects) * 2, 'taille_answer_octets': Path('answer.json').stat().st_size}, ensure_ascii=False))

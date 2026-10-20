@@ -1,0 +1,15 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import sqlite3,json,hashlib,sys
+P=Path(__file__).resolve().parent;B=P.parents[3];sys.path.insert(0,str(B));from ingest import source_notes
+H=lambda v:hashlib.sha256(v if isinstance(v,bytes)else(v or'').encode()).hexdigest()
+nums={'impots':['1020','80 quater','748','893','635','647','664','677','679','680','724','763','1701','1702 bis','1840 C','1840 D','1961','750 ter','792-0 bis','792 bis','199 octodecies','1594 F septies','900 B','204 H','197','150 VH','199 quater C'], 'impots-annexe-3':['246','252','257'], 'securite-sociale':['L133-5-12']}
+d=sqlite3.connect('file:'+str(B/'corpus.sqlite')+'?mode=ro',uri=True);d.row_factory=sqlite3.Row;d.execute('BEGIN');out=[];missing=[]
+for slug,wanted in nums.items():
+ by={x['number']:x for x in json.loads((B/f'runtime/export-source/{slug}.json').read_text())}
+ for n in wanted:
+  if n not in by:missing.append([slug,n]);continue
+  x=by[n];k=x['code_id'],x['source_id'];s=d.execute('SELECT * FROM articles WHERE code_id=? AND id=?',k).fetchone();r=d.execute("SELECT xml,sha256 FROM documents WHERE code_id=? AND id=? AND kind='ARTICLE'",k).fetchone();old=d.execute('SELECT * FROM drafts WHERE code_id=? AND source_id=?',k).fetchone();raw=r['xml'].decode()if isinstance(r['xml'],bytes)else r['xml'];assert H(raw)==s['source_sha256']==r['sha256']
+  a=dict(slug=slug,code_id=k[0],source_id=k[1],number=n,source_xml=s['content_xml'],source_notes_xml=source_notes(d,*k),source_sha256=s['source_sha256'],source_document_xml=raw,source_document_sha256=H(raw),source_url='https://www.legifrance.gouv.fr/codes/article_lc/'+k[1],source_archive=s['archive'],previous_draft=dict(old)if old else None)
+  out.append(a)
+d.rollback();d.close();(P/'references.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');(P/'missing-canonical-reference-numbers.json').write_text(json.dumps(missing,ensure_ascii=False,indent=2)+'\n');print(len(out),missing)

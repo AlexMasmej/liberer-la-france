@@ -1,0 +1,252 @@
+import json
+from html import escape
+from pathlib import Path
+
+
+sources = json.loads(Path('source.json').read_text())
+drafts = {}
+
+
+def article(number, paragraphs, reason, review_notes):
+    assert number not in drafts
+    drafts[number] = {
+        'proposed_xml': '\n'.join('<p>' + escape(p, quote=False) + '</p>' for p in paragraphs),
+        'reason': reason,
+        'review_notes': review_notes,
+    }
+
+
+historical = (
+    "Portée historique à contrôler avec le cinquième alinéa du 5° du 1 de l'article 39 du CGI : "
+    "les dispositions relatives aux provisions pour fluctuation des cours cessent de s'appliquer "
+    "aux résultats des exercices clos à compter du 31 décembre 1997. "
+    "La réécriture ne réactive pas ce régime ; les règles législatives de reprise et de réserve spéciale restent distinctes. "
+)
+
+article('2 C quater', [
+    "Chaque année, l'associé coopérateur qui exerce une activité professionnelle agricole joint l'état de suivi prévu à l'article 2 C ter à la déclaration annuelle de résultat qu'il est tenu de déposer en application de l'article 53 A du code général des impôts. Cette obligation s'applique jusqu'à l'exercice comptable de cession, de transmission ou d'apport des parts attribuées ou, si la cessation d'activité intervient plus tôt, jusqu'à l'exercice comptable de cette cessation.",
+],
+    "Réécriture à droit constant : l'associé tenu de joindre l'état et la déclaration concernée sont identifiés dès la première phrase ; la fin de l'obligation est distinguée selon le sort des parts et la cessation anticipée d'activité. Aucune réforme de fond n'est applicable à cette formalité.",
+    "Renvois aux articles 2 C ter de l'annexe III et 53 A du CGI conservés. Les trois événements concernant les parts et la priorité de la cessation d'activité antérieure sont maintenus ; l'exercice terminal reste compris dans la période déclarative. L'article 2 C ter du corpus confirme que l'état suit le report d'imposition des ristournes attribuées en parts sociales.")
+
+article('2 D', [
+    "I. - Pour l'application du 1° quater du 1 de l'article 39 du code général des impôts, l'émetteur exerce son option en inscrivant pour la première fois en comptabilité les frais d'émission d'un emprunt en charges à répartir sur plusieurs exercices. Cette option est globale et irrévocable pour une période de deux ans.",
+    "II. - La période de deux ans commence le premier jour de l'exercice au cours duquel l'émetteur a exercé l'option selon les modalités du I.",
+    "III. - L'option prévue au I se reconduit tacitement par périodes de deux ans. Elle demeure irrévocable pendant chacune de ces périodes.",
+    "IV. - L'entreprise qui souhaite renoncer à son option notifie ce choix à l'administration par une mention expresse jointe à la déclaration de résultat déposée au titre de l'exercice suivant la période pour laquelle l'option a été exercée ou tacitement reconduite.",
+],
+    "Réécriture à droit constant des quatre subdivisions : l'acte comptable qui vaut option est séparé de ses effets, puis le point de départ, la reconduction et la notification de renonciation sont formulés avec un sujet explicite. Aucune modification du régime d'étalement n'est introduite.",
+    "Le 1° quater du 1 de l'article 39 du CGI, les périodes de deux ans et le dépôt au titre de l'exercice suivant la période sont conservés. La renonciation n'est pas déplacée vers la déclaration du dernier exercice de la période. Le champ et les exclusions du dispositif législatif ne sont pas étendus par cette réécriture.")
+
+article('2 E', [
+    "Pour l'application du troisième alinéa de l'article 38 bis C du code général des impôts, les taux d'intérêt du marché utilisés pour actualiser les flux de trésorerie futurs sont les taux de coupons zéro correspondant à chaque échéance des flux à payer ou à recevoir. Ces taux sont calculés à partir des taux d'intérêt des contrats d'échange de taux d'intérêt ou de devises.",
+],
+    "Réécriture à droit constant : la définition des taux d'actualisation et leur méthode de calcul sont réparties en deux phrases, sans modifier les instruments ni les échéances concernés. Aucune réforme de fond n'est applicable.",
+    "Renvoi au troisième alinéa de l'article 38 bis C du CGI vérifié dans le corpus : cet alinéa traite de l'actualisation des flux pour la valeur de marché. Maintien des taux de coupons zéro, de chaque échéance, des flux à payer et à recevoir et des deux catégories de contrats d'échange.")
+
+article('2 F', [
+    "Pour l'application de l'article 38 quinquies du code général des impôts :",
+    "I. – Un contrat constitue une convention d'entreposage de productions agricoles faisant l'objet d'un dépôt non individualisé lorsqu'il remplit les conditions suivantes :",
+    "1° La convention porte sur la livraison et le stockage de la production en vue de sa reprise par l'exploitant ou de sa vente. Elle prévoit, le cas échéant, la transformation de cette production ou d'autres prestations réalisées par l'entreprise d'entreposage ;",
+    "2° La production se compose de biens agricoles fongibles, entreposés dans des conditions qui ne permettent pas d'en attribuer l'origine à un exploitant déterminé.",
+    "II. – L'exploitant inscrit distinctement chaque récolte entreposée dans les stocks de son bilan. Il retient sa valeur à la date de clôture de l'exercice au cours duquel l'entreposage est intervenu, majorée des seuls frais facturés par l'organisme entrepositaire.",
+    "III. – La reprise est réputée à l'équivalent lorsque les conditions suivantes sont remplies :",
+    "1° Les produits repris par l'exploitant proviennent de la transformation des produits qu'il a apportés ou de produits identiques ;",
+    "2° Les quantités de produits reprises par l'exploitant correspondent aux quantités qu'il a apportées ;",
+    "3° La valeur des produits fournis par l'entreprise d'entreposage, après déduction de la valeur de sa prestation de transformation et de conditionnement, n'excède pas la valeur des matières apportées par l'exploitant.",
+    "IV. – Lorsque l'exploitant reprend la production, le transfert du contrôle et des avantages économiques futurs intervient au titre de l'exercice au cours duquel il livre ou consomme cette production.",
+    "V. – Les stocks de produits agricoles entreposés qui figurent au bilan de l'exploitant sont crédités du montant des acomptes perçus sur les sommes représentatives de leur cession, après diminution de ce montant de la décote mentionnée à l'article 38 sexdecies JC.",
+    "Les sommes représentatives de la cession ou les acomptes entrent dans la détermination du résultat de l'exercice au cours duquel ils sont perçus.",
+],
+    "Réécriture à droit constant : les parties au contrat et l'exploitant chargé de l'inscription au bilan sont nommés ; les critères du dépôt et de la reprise à l'équivalent ainsi que les règles d'évaluation et de rattachement sont formulés plus directement. Aucune réforme de fond n'est introduite dans ce régime agricole distinct.",
+    "Les subdivisions I à V et les deux listes 1° à 3° sont maintenues à leur place, ainsi que le dernier alinéa distinct. Renvois aux articles 38 quinquies du CGI et 38 sexdecies JC de l'annexe III vérifiés dans le corpus. La décote reste celle du texte de renvoi, sans création de taux ; la limitation aux seuls frais facturés et les trois conditions cumulatives de la reprise à l'équivalent sont conservées.")
+
+article('3', [
+    "Les entreprises dont l'objet principal est de faire subir en France la première transformation à des matières premières acquises sur les marchés internationaux ou à des matières premières acquises sur le territoire national dont les prix sont étroitement liés aux variations des prix internationaux peuvent constituer des provisions pour fluctuation des cours en franchise d'impôt sur le revenu ou d'impôt sur les sociétés. Elles exercent cette faculté en application du troisième alinéa du 5° du 1 de l'article 39 du code général des impôts et dans les conditions prévues aux articles 4 à 10 septies.",
+    "Ces entreprises peuvent prélever les provisions sur les bénéfices des exercices 1948 et suivants. Toutefois, pour les entreprises qui, à la clôture du dernier exercice arrêté avant le 29 décembre 1959, n'avaient pas pour objet principal la première transformation des matières visées au a de l'article 4, les provisions peuvent être prélevées sur les bénéfices des exercices clos à partir du 29 décembre 1959.",
+    "Pour la première transformation de l'argent métal, les provisions pour fluctuation des cours ne peuvent toutefois être prélevées que sur les bénéfices des exercices arrêtés après le 30 décembre 1967.",
+    "Pour la détermination des résultats des exercices arrêtés après le 30 décembre 1972, seules les entreprises dont l'activité consiste à transformer directement l'or, ainsi que, le cas échéant, une ou plusieurs autres matières premières visées à l'article 4, peuvent bénéficier des articles 8 ter, 10 bis A et 10 ter.",
+],
+    "Réécriture à droit constant du texte réglementaire historique : le champ des entreprises est relié explicitement à la faculté de provisionner ; les dates d'accès et la restriction relative à l'or sont exprimées par des phrases distinctes, dans les quatre alinéas d'origine. Aucune mesure de politique fiscale n'est étendue à ce régime.",
+    historical + "Contradiction de portée entre le maintien de cet article réglementaire et l'extinction législative expressément relevée, sans correction silencieuse. Dates 1948, 29 décembre 1959, 30 décembre 1967 et 30 décembre 1972 maintenues, avec les distinctions entre exercices clos à partir d'une date et exercices arrêtés après une date. La restriction du dernier alinéa doit rester coordonnée avec les articles 8 ter, 10 bis A et 10 ter, y compris les mentions historiques de l'argent dans ces deux derniers articles.")
+
+article('4', [
+    "Seules les matières premières suivantes peuvent donner lieu à la constitution des provisions prévues à l'article 3 :",
+    "a. Minerais et métaux : minerai d'antimoine et antimoine, minerai de cuivre et cuivre, minerai d'étain et étain, minerai de magnésium, minerai de molybdène, minerai de plomb et plomb, minerai de tungstène, minerai de vanadium, minerai de zinc et zinc, cadmium, minerai de chrome, platine et métaux de la mine du platine.",
+    "Textiles : chanvre, coton, jute, laine, lin et étoupe de lin, schappe, sisal et fibres dures d'importation, soie.",
+    "Graines oléagineuses : graines de coprah, graines de lin, graines de soja.",
+    "Divers : amiante, caoutchouc, coke de pétrole, os des Indes, pâtes de bois d'origine étrangère, pétrole brut.",
+    "b. Fèves de cacao, graines de palmiste, graines de ricin, ferrailles, grumes et sciages bruts, pâtes de bois ou de végétaux annuels d'origine française, peaux brutes de bovins, équidés, ovins et caprins, poils fins et grossiers utilisés dans l'industrie textile.",
+    "c. Argent métal.",
+    "d. Or.",
+],
+    "Réécriture à droit constant de l'introduction pour exprimer le caractère limitatif de la liste et clarification de la ponctuation des catégories du a. Les dénominations techniques et la liste elle-même sont conservées, sans les présenter comme une reformulation de fond. Aucune matière n'est ajoutée ou retirée.",
+    historical + "Les lettres a à d et les huit alinéas sont conservés : les rubriques Textiles, Graines oléagineuses et Divers demeurent dans le a. Toutes les matières, leurs formes et leurs qualifications d'origine sont maintenues, notamment la différence entre pâtes de bois d'origine étrangère et pâtes de bois ou de végétaux annuels d'origine française.")
+
+article('5', [
+    "Pour déterminer la provision pour fluctuation des cours, l'entreprise retient les quantités de matières énumérées à l'article 4 qui existent normalement dans l'entreprise, à l'état de matières premières, de produits demi-finis ou de produits finis.",
+],
+    "Réécriture à droit constant : le calcul est formulé comme une opération de l'entreprise et les trois états des matières sont énumérés explicitement. Aucune modification de l'assiette quantitative ni réforme de fond n'est introduite.",
+    historical + "Le renvoi à l'article 4 et le critère des quantités existant normalement dans l'entreprise sont conservés. Ce critère n'est pas remplacé par les seules quantités constatées à une clôture particulière ; les articles suivants déterminent le stock de base.")
+
+article('6', [
+    "Pour les entreprises visées à l'article 3 qui ne relevaient pas déjà du régime des provisions pour fluctuation des cours à la clôture du dernier exercice arrêté avant le 29 décembre 1959, le stock de base correspond forfaitairement, pour l'ensemble des matières premières ouvrant droit à provision, à la moyenne des quantités inventoriées à la clôture des exercices 1956 à 1959.",
+    "À la clôture de chaque exercice, le montant total de la provision que ces entreprises peuvent constituer est limité à la différence entre deux montants. Le premier est obtenu en multipliant les quantités constituant le stock de base par la valeur unitaire d'inventaire de chacune des matières à la clôture de l'exercice. Le second est obtenu en multipliant la valeur de ce même stock de base, calculée au prix de revient unitaire au 30 juin 1959, par le rapport entre le cours moyen du dollar pendant les six derniers mois de l'exercice considéré et son cours au 30 juin 1959.",
+    "Toutefois, la provision relative à l'argent métal est calculée dans les conditions de l'article 8 bis et celle relative à l'or dans les conditions de l'article 8 ter.",
+    "Pour les matières premières cotées sur les marchés internationaux dont les cours en monnaie étrangère sont publiés par l'Institut national de la statistique et des études économiques, les entreprises peuvent calculer la limite maximale de la provision dans les conditions de l'article 9.",
+],
+    "Réécriture à droit constant : le groupe d'entreprises concerné est conservé et la formule du plafond est décomposée en phrases qui identifient ses deux termes. Les exceptions pour les métaux précieux et le calcul optionnel restent dans leurs alinéas respectifs. Aucune réforme de fond n'est appliquée.",
+    historical + "Quatre alinéas conservés, notamment le quatrième auquel renvoient les articles 10 bis et 10 ter. Moyenne des exercices 1956 à 1959, dates du 29 décembre 1959 et du 30 juin 1959, et cours moyen des six derniers mois conservés. Dans le rapport de change, le dénominateur demeure le cours au 30 juin 1959, et non une moyenne semestrielle. Renvois aux articles 8 bis, 8 ter et 9 maintenus.")
+
+article('7', [
+    "1. Pour les entreprises qui avaient pour objet principal la première transformation des matières visées au a de l'article 4 à la clôture du dernier exercice arrêté avant le 29 décembre 1959, le stock de base de ces matières correspond forfaitairement à la moyenne des quantités inventoriées à la clôture des exercices 1938, 1939, 1946 et 1947.",
+    "Pour les matières premières visées au a de l'article 4, ces entreprises calculent la provision pour fluctuation des cours à partir des quantités en stock à la clôture des deux premiers exercices d'exploitation lorsqu'elles remplissent l'une des conditions suivantes : elles ont été créées après le 31 décembre 1946 ; elles n'avaient pas encore fait d'inventaire à cette date ; elles assurent la transformation de ces matières à titre principal depuis une date postérieure à celle du dernier bilan arrêté en 1946.",
+    "En cas de mutation d'entreprise intervenue, sans changement dans les conditions d'exploitation, avant la clôture du dernier exercice arrêté avant le 29 décembre 1959, le nouvel exploitant peut retenir le stock de base du cédant pour les matières visées au a de l'article 4.",
+    "2. Les entreprises visées au 1 doivent retenir :",
+    "1° Pour les matières premières énumérées au b de l'article 4, un stock de base correspondant forfaitairement à la moyenne des quantités de matières inventoriées à la clôture des exercices 1956 à 1959 ;",
+    "2° Pour l'argent métal, un stock de base déterminé dans les conditions de l'article 8 bis ;",
+    "3° Pour l'or, un stock de base déterminé dans les conditions de l'article 8 ter.",
+],
+    "Réécriture à droit constant : les catégories historiques d'entreprises, la faculté de reprendre le stock du cédant et les obligations par catégorie de matière sont formulées directement. La structure 1, 2 et 1° à 3° est conservée ; aucune réforme de fond n'est introduite.",
+    historical + "Le deuxième alinéa du 1 reste à sa place, car il est visé aux articles 8 et 10 septies. Les exercices 1938, 1939, 1946 et 1947 ne sont pas assimilés à une période continue. Les références aux deux premiers exercices d'exploitation, aux exercices 1956 à 1959 et aux dates du 31 décembre 1946 et du 29 décembre 1959 sont maintenues. Aucune moyenne supplémentaire n'est ajoutée à la règle du deuxième alinéa, qui évoque les quantités des deux premiers exercices sans en préciser ici le traitement.")
+
+article('8', [
+    "Sous réserve de l'article 9, le montant total de la provision pour fluctuation des cours que les entreprises visées à l'article 7 peuvent constituer pour les matières premières énumérées au a de l'article 4 est limité, à la clôture de chaque exercice, à la différence entre deux montants. Le premier est obtenu en multipliant les quantités de ces matières comprises dans le stock de base par la valeur unitaire d'inventaire de chacune d'elles à la clôture de l'exercice. Le second est obtenu en multipliant la valeur de ces mêmes matières, calculée au prix moyen d'inventaire à la clôture des exercices 1945 à 1947, par le rapport entre le cours moyen du dollar pendant les six derniers mois de l'exercice considéré et son cours au 31 décembre 1946.",
+    "Pour déterminer le second terme de la différence prévue au premier alinéa, les entreprises définies au deuxième alinéa du 1 de l'article 7 évaluent leur stock de base au prix moyen d'achat, pendant les années 1945 à 1947, des matières premières qu'il comprend. En cas de mutation d'entreprise intervenue avant la clôture du dernier exercice arrêté avant le 29 décembre 1959, elles retiennent le prix moyen figurant aux inventaires dressés par le cédant à la clôture des exercices 1945 à 1947.",
+    "Pour les matières premières énumérées au b de l'article 4, les entreprises visées à l'article 7 calculent la provision pour fluctuation des cours dans les conditions de l'article 6.",
+    "Pour l'argent métal, les entreprises visées à l'article 7 calculent la provision pour fluctuation des cours dans les conditions de l'article 8 bis.",
+    "Pour l'or, les entreprises visées à l'article 7 calculent la provision pour fluctuation des cours dans les conditions de l'article 8 ter.",
+],
+    "Réécriture à droit constant : les deux termes du plafond et les modalités d'évaluation du second terme sont explicités par des phrases plus courtes. Les cinq alinéas et les renvois propres à chaque matière sont maintenus. Aucune réforme de fond n'est appliquée.",
+    historical + "Maintien de la réserve de l'article 9, des prix de 1945 à 1947, du cours au 31 décembre 1946 et de la moyenne du dollar des six derniers mois de l'exercice. Le cas de mutation conserve son seuil temporel du 29 décembre 1959 et les inventaires du cédant ; il ne se confond pas avec l'évaluation au prix moyen d'achat. Renvoi précis au deuxième alinéa du 1 de l'article 7 inchangé.")
+
+article('8 bis', [
+    "1. Pour calculer la provision pour fluctuation des cours, l'entreprise retient dans le stock de base une quantité d'argent égale à la moyenne des quantités de ce métal inventoriées à la clôture des exercices 1963 à 1965.",
+    "2. À la clôture de chaque exercice, le plafond de la provision pour fluctuation des cours relative à l'argent est égal à la différence entre deux montants. Le premier est obtenu en multipliant la quantité d'argent comprise dans le stock de base par sa valeur unitaire d'inventaire à la clôture de l'exercice considéré. Le second est obtenu en multipliant la valeur de cette même quantité, calculée au prix de revient unitaire d'inventaire à la clôture de l'exercice 1965, par le rapport entre le cours moyen du dollar pendant les six derniers mois de l'exercice considéré et son cours moyen pendant les six derniers mois de l'exercice 1965.",
+],
+    "Réécriture à droit constant : l'entreprise est désignée comme auteur du calcul ; les deux termes du plafond relatif à l'argent sont identifiés sans modifier la formule. Les subdivisions 1 et 2 sont conservées, sans réforme de fond.",
+    historical + "Moyenne des quantités des exercices 1963 à 1965 et prix de revient unitaire d'inventaire à la clôture de 1965 conservés. Les deux termes du rapport de change sont des moyennes sur les six derniers mois de l'exercice correspondant, contrairement au dénominateur ponctuel des articles 6 et 8.")
+
+article('8 ter', [
+    "1. Pour calculer la provision pour fluctuation des cours, l'entreprise retient dans le stock de base une quantité d'or égale à la moyenne des quantités de ce métal inventoriées à la clôture des exercices 1967 à 1971.",
+    "2. À la clôture de chaque exercice, le plafond de la provision pour fluctuation des cours relative à l'or est égal à la différence entre les deux montants suivants :",
+    "D'une part, le montant obtenu en multipliant la quantité d'or comprise dans le stock de base par sa valeur unitaire d'inventaire à la clôture de l'exercice considéré ;",
+    "D'autre part, le montant obtenu en multipliant la valeur de cette même quantité, calculée au prix de revient unitaire d'inventaire à la clôture de l'exercice 1971, par le rapport entre le cours moyen du dollar pendant les six derniers mois de l'exercice considéré et son cours moyen pendant les six derniers mois de l'exercice 1971.",
+],
+    "Réécriture à droit constant : l'opération sur la quantité d'or et la différence entre les deux termes du plafond sont énoncées directement. Les subdivisions et les alinéas séparant ces termes sont maintenus. Aucune réforme de fond n'est introduite.",
+    historical + "Les exercices 1967 à 1971, le prix de revient unitaire d'inventaire à la clôture de 1971 et les deux moyennes semestrielles du dollar sont conservés. La restriction historique du dernier alinéa de l'article 3 demeure applicable dans son champ ; aucune garantie de valeur de l'or n'est créée.")
+
+article('9', [
+    "1. Pour les matières premières cotées sur les marchés internationaux dont les cours en monnaie étrangère sont publiés par l'Institut national de la statistique et des études économiques, les entreprises définies à l'article 7 peuvent calculer, à la clôture de chaque exercice et pour chacune de ces matières, le plafond de la provision selon les règles suivantes. Ce plafond ne peut excéder la différence entre deux montants. Le premier est le produit de la quantité de la matière comprise dans le stock de base par sa valeur unitaire d'inventaire à la clôture de l'exercice. Le second est obtenu en multipliant ce même produit par le rapport entre le cours moyen mensuel de la matière pendant les années 1945 à 1947 et son cours moyen mensuel pendant les six derniers mois de l'exercice.",
+    "2. Pour chaque matière, les entreprises définies à l'article 6 retiennent, comme premier terme du rapport prévu au 1, le cours moyen de cette matière pendant le mois de juin 1959.",
+    "3. Pour l'application des 1 et 2, les cours retenus sont ceux des matières-types définies par arrêté du ministre de l'économie et des finances (1), quelle que soit la qualité des matières en stock. Ces cours sont exprimés en monnaie étrangère.",
+    "L'entreprise qui opte pour le mode de calcul de la provision prévu au présent article ne peut révoquer cette option.",
+    "(1) Annexe IV, art. 1.",
+],
+    "Réécriture à droit constant : la formule optionnelle est décomposée en deux termes, puis le cours de référence propre aux entreprises de l'article 6, les matières-types et l'irrévocabilité sont formulés séparément. Les subdivisions et le renvoi de note sont maintenus ; aucune réforme de fond n'est introduite.",
+    historical + "Rapport entre cours moyens mensuels de 1945 à 1947 et des six derniers mois conservé, avec substitution du seul premier terme par le cours moyen de juin 1959 pour les entreprises de l'article 6. Renvoi (1) à l'article 1 de l'annexe IV vérifié dans le corpus : il énumère les matières-types et leurs places de cotation. Les paragraphes 1 à 3 et l'alinéa distinct sur l'option restent à leur place.")
+
+article('10', [
+    "Par dérogation aux articles 6, 7, 8 bis et 8 ter, le stock de base d'une catégorie de matières est fixé à la moyenne des quantités réellement en stock à la clôture de trois exercices consécutifs lorsque cette moyenne est inférieure ou supérieure de plus de 20 % aux quantités de cette catégorie comprises dans le stock de base. Cette révision prend effet dès la clôture du troisième exercice. Elle ne s'applique toutefois que si les quantités en stock à la clôture de chacun de ces exercices ont été inférieures ou supérieures de plus de 10 % à celles comprises dans le stock de base.",
+    "Lorsqu'une entreprise dont l'objet principal est déjà la transformation de matières premières visées à l'article 4 ajoute à son activité la transformation de nouvelles matières également visées à cet article, elle inclut leur moyenne quantitative sur trois exercices consécutifs dans le stock de base sous la condition suivante : pendant ces trois exercices, la valeur d'inventaire des nouvelles matières doit être au moins égale au dixième de la valeur globale d'inventaire, à la clôture de ces mêmes exercices, des matières ouvrant droit à provision.",
+    "En cas de cession d'un établissement ou d'une branche d'activité, l'entreprise réduit immédiatement le stock de base pour ne retenir que les quantités de matières premières correspondant aux établissements ou activités qu'elle conserve.",
+],
+    "Réécriture à droit constant : le résultat du réajustement est énoncé avant son déclenchement et la prise d'effet est isolée dans une phrase. L'intégration de nouvelles matières et la réduction en cas de cession restent dans les deuxième et troisième alinéas. Aucune réforme de fond n'est introduite.",
+    historical + "Seuils stricts de plus de 20 % pour la moyenne et de plus de 10 % pour chaque clôture maintenus, ainsi que les trois exercices consécutifs et l'effet dès la troisième clôture. Le seuil d'au moins un dixième pour les nouvelles matières n'est pas modifié. Le deuxième alinéa reste la cible du dernier alinéa de l'article 10 septies ; aucune précision nouvelle sur le sens des variations annuelles n'est ajoutée au texte source.")
+
+article('10 bis', [
+    "Par dérogation aux dispositions qui précèdent, les entreprises nouvelles dont le premier exercice a été arrêté après le 31 décembre 1959 retiennent, pour l'ensemble des matières premières visées aux a et b de l'article 4, un stock de base correspondant forfaitairement à la moyenne des quantités existant à la clôture des deux premiers exercices d'exploitation.",
+    "Sous réserve du quatrième alinéa de l'article 6 et du 2 de l'article 9, le montant total de la provision pour fluctuation des cours que ces entreprises peuvent constituer est limité, à la clôture de chaque exercice, à la différence entre deux montants. Le premier est obtenu en multipliant les quantités de matières constituant le stock de base par la valeur unitaire d'inventaire de chacune d'elles à la clôture de l'exercice. Le second est obtenu en multipliant la valeur de ce même stock, calculée au prix de revient unitaire d'inventaire à la clôture du premier exercice d'exploitation, par le rapport entre le cours moyen du dollar pendant les six derniers mois de l'exercice considéré et son cours moyen pendant les six derniers mois du premier exercice d'exploitation.",
+],
+    "Réécriture à droit constant : l'entreprise nouvelle est le sujet de la règle de stock de base ; la formule du plafond distingue ses deux termes dans un même alinéa. Les dérogations et les périodes de référence demeurent inchangées, sans réforme de fond.",
+    historical + "Premier exercice arrêté après le 31 décembre 1959, moyenne des deux premiers exercices et prix de revient unitaire d'inventaire du seul premier exercice maintenus. Les deux moyennes du dollar portent sur les six derniers mois. Le quatrième alinéa de l'article 6 et le 2 de l'article 9 restent expressément réservés ; le premier conserve son emplacement dans la proposition correspondante.")
+
+article('10 bis A', [
+    "I. - Par dérogation à l'article 8 bis, l'article 10 bis s'applique aux entreprises nouvelles dont le premier exercice a été arrêté après le 31 décembre 1965 et dont l'objet principal est de faire subir en France la première transformation à l'argent seul ou à ce métal et à une ou plusieurs autres matières visées aux a et b de l'article 4.",
+    "II. - Par dérogation à l'article 8 ter, l'article 10 bis s'applique aux entreprises nouvelles dont le premier exercice a été arrêté après le 31 décembre 1971 et dont l'objet principal est de faire subir en France la première transformation à l'or seul ou à ce métal et à une ou plusieurs autres matières visées à l'article 4.",
+],
+    "Réécriture à droit constant : chaque subdivision indique directement l'article applicable avant les conditions propres aux entreprises nouvelles transformant l'argent ou l'or. Les deux champs restent distincts ; aucune réforme de fond ni extension temporelle n'est introduite.",
+    historical + "Dates du 31 décembre 1965 et du 31 décembre 1971, caractère postérieur du premier exercice et première transformation en France maintenus. Le I vise seulement les a et b de l'article 4 pour les autres matières, tandis que le II vise l'article 4 entier. Articulation historique à contrôler avec le dernier alinéa de l'article 3, qui réserve le bénéfice notamment de l'article 10 bis A aux entreprises transformant directement l'or pour les exercices arrêtés après le 30 décembre 1972 ; la mention de l'argent au I n'est pas supprimée silencieusement.")
+
+article('10 ter', [
+    "Pour le calcul de la provision pour fluctuation des cours, les entreprises dont l'objet principal correspond à l'un des cas suivants sont assimilées à des entreprises nouvelles et relèvent de l'article 10 bis :",
+    "Soit faire subir en France la première transformation à des matières premières énumérées aux a et b de l'article 4, depuis une date postérieure à la clôture du dernier exercice arrêté en 1959 ;",
+    "Soit faire subir en France la première transformation à l'argent seul ou à ce métal et à une ou plusieurs autres matières visées aux a et b de l'article 4, depuis une date postérieure à la clôture du dernier exercice arrêté en 1965 ;",
+    "Soit faire subir en France la première transformation à l'or seul ou à ce métal et à une ou plusieurs autres matières visées à l'article 4, depuis une date postérieure à la clôture du dernier exercice arrêté en 1971.",
+    "Dans ces cas, les deux premiers exercices ou le premier exercice d'exploitation visés à l'article 10 bis et au I de l'article 10 bis A désignent les deux premiers exercices ou le premier exercice pendant lesquels l'entreprise a eu pour objet principal la première transformation en France de ces matières.",
+    "Pour l'application du quatrième alinéa de l'article 6 et du 2 de l'article 9, le cours moyen à retenir pour les matières considérées est celui des six derniers mois du premier exercice ainsi défini.",
+],
+    "Réécriture à droit constant : les trois cas d'assimilation sont présentés avec l'activité avant la date de son commencement ; les exercices de référence et le cours moyen sont explicités. Les six alinéas et les renvois sont conservés, sans réforme de fond.",
+    historical + "Années 1959, 1965 et 1971, distinctions entre a et b de l'article 4 et l'article 4 entier, ainsi que cours des six derniers mois du premier exercice maintenus. Le cinquième alinéa de la source vise le I, et non le II, de l'article 10 bis A malgré le cas de l'or au quatrième alinéa : cette asymétrie préexistante est conservée et signalée pour contrôle. Contrôler aussi la restriction historique du dernier alinéa de l'article 3, sans supprimer les cas antérieurs relatifs à l'argent.")
+
+article('10 quater', [
+    "Lorsqu'une matière entre dans le stock de base d'une entreprise en application de l'article 10, après la clôture du dernier exercice arrêté en 1959, l'entreprise calcule la provision pour fluctuation des cours relative à cette matière dans les conditions de l'article 10 bis.",
+],
+    "Réécriture à droit constant : la condition d'entrée d'une matière dans le stock de base précède l'obligation de calcul, dont l'entreprise devient le sujet explicite. Aucun changement de date ni réforme de fond n'est introduit.",
+    historical + "Les renvois aux articles 10 et 10 bis et la référence à une entrée postérieure à la clôture du dernier exercice arrêté en 1959 sont maintenus. La date ne devient pas le 31 décembre 1959 : elle reste liée à la clôture propre à l'entreprise.")
+
+article('10 quinquies', [
+    "La provision que l'entreprise peut imputer sur les bénéfices de l'exercice est égale à la différence entre le plafond calculé selon les articles qui précèdent et le total des provisions déjà constituées au titre des exercices précédents.",
+    "Lorsque la provision antérieurement constituée dépasse le plafond prévu au premier alinéa, l'entreprise la ramène à ce plafond et rapporte la différence au bénéfice imposable de l'exercice.",
+],
+    "Réécriture à droit constant : le montant imputable est exprimé directement, puis l'entreprise est désignée comme responsable de la reprise de l'excédent. Les deux alinéas sont conservés, sans réforme de fond.",
+    historical + "La différence reste calculée avec le total des provisions des exercices précédents. Le second alinéa ne permet pas une augmentation automatique de la provision : il vise sa réduction lorsqu'elle excède la limite maximale, avec réintégration au bénéfice imposable du même exercice.")
+
+article('10 sexies', [
+    "En cas de cession ou de cessation d'entreprise ou de décès de l'exploitant, les provisions pour fluctuation des cours figurant au dernier bilan entrent dans le bénéfice immédiatement imposable, dans les conditions de l'article 201 et du 2 de l'article 204 du code général des impôts.",
+    "Toutefois, ces provisions ne sont pas rapportées au bénéfice imposable lorsque l'exploitation du fonds d'industrie se poursuit dans les conditions de l'article 41 du même code.",
+    "Elles ne sont pas non plus rapportées au bénéfice imposable en cas de fusion de sociétés ou d'apport partiel bénéficiant de l'article 210 du même code, à condition que la société absorbante ou nouvelle, ou la société bénéficiaire de l'apport, puisse elle-même constituer des provisions pour fluctuation des cours.",
+    "Pour bénéficier des deuxième et troisième alinéas, les nouveaux exploitants, la société absorbante ou nouvelle, ou la société bénéficiaire de l'apport doivent inscrire immédiatement à leur passif la provision pour fluctuation des cours afférente aux éléments transférés qui figurait dans les écritures du précédent exploitant, des sociétés fusionnées ou de la société apporteuse. Le cas échéant, cette obligation doit être constatée dans l'acte de fusion ou d'apport.",
+],
+    "Réécriture à droit constant : l'imposition immédiate, les deux cas de non-réintégration et la reprise obligatoire au passif sont distingués dans les quatre alinéas d'origine. Les débiteurs de l'obligation sont expressément désignés. Aucune réforme de fond n'est introduite.",
+    historical + "Renvois aux articles 201, 204, 41 et 210 du CGI maintenus. Le corpus montre que l'article 210 conserve un champ historique relatif à certaines plus-values antérieures à l'entrée en vigueur des articles 39 duodecies à 39 quindecies A : il ne doit pas être remplacé silencieusement par 210 A. Le 2 de l'article 204 traite des obligations déclaratives après décès ; la portée de ce renvoi ancien pour l'imposition immédiate mérite contrôle. Maintien de l'éligibilité propre de la société repreneuse, de l'inscription immédiate des seules provisions afférentes aux éléments transférés et de la constatation dans l'acte, le cas échéant.")
+
+article('10 septies', [
+    "Les entreprises joignent à la déclaration des résultats du premier exercice au titre duquel elles constituent une provision pour fluctuation des cours, puis à celle de chacun des exercices suivants, une note qui expose les modalités de constitution de cette provision. Cette note indique notamment :",
+    "a. Les quantités de matières visées à l'article 4 qui existaient dans l'entreprise, sous forme de matières premières, de produits demi-finis et de produits finis, à la clôture des exercices retenus pour déterminer le stock de base ;",
+    "b. Pour les matières énumérées au a de l'article 4 qui étaient déjà comprises dans le stock de base à la clôture du dernier exercice arrêté avant le 29 décembre 1959, les évaluations d'inventaire à la clôture de chacun des exercices 1945 à 1947 ou, pour les entreprises visées au deuxième alinéa du 1 de l'article 7, deuxième alinéa, le prix moyen d'achat retenu pour les années 1945 à 1947 ;",
+    "c. Pour les matières définies au a de l'article 4 qui n'étaient pas déjà comprises dans le stock de base à la clôture du dernier exercice arrêté avant le 29 décembre 1959, ainsi que pour les matières énumérées au b de l'article 4, le prix de revient unitaire au 30 juin 1959 ou, pour les entreprises visées aux articles 10 bis à 10 quater, le prix de revient unitaire d'inventaire à la clôture du premier exercice d'exploitation ou de l'exercice qui lui est assimilé ;",
+    "d. Les quantités de matières visées au a qui existent à la clôture de l'exercice dont les résultats sont déclarés et leur évaluation d'inventaire à cette date ;",
+    "e. Les cours du dollar et, le cas échéant, les cours des matières premières sur les marchés internationaux utilisés pour calculer la provision.",
+    "Les entreprises qui souhaitent bénéficier du deuxième alinéa de l'article 10 apportent en outre toutes les justifications propres à établir qu'elles remplissent la condition prévue par cet alinéa.",
+],
+    "Réécriture à droit constant : l'entreprise est le sujet de l'obligation de joindre la note et les renseignements sont exprimés en termes plus directs. Les lettres a à e, leurs alinéas et l'obligation complémentaire relative aux nouvelles matières sont conservés. Aucune réforme de fond n'est appliquée.",
+    historical + "Conservation des dates et exercices 1945 à 1947, 29 décembre 1959 et 30 juin 1959, du renvoi aux articles 10 bis à 10 quater et du caractère non limitatif de la note. Le b comporte dans la source la répétition « au deuxième alinéa du 1 de l'article 7, deuxième alinéa » : cette anomalie rédactionnelle préexistante est maintenue pour ne pas choisir silencieusement un autre renvoi. Au d, « au a » continue de viser le a du présent article ; aucune restriction aux seules matières du a de l'article 4 n'est ajoutée. Le dernier alinéa vise toujours le deuxième alinéa de l'article 10.")
+
+article('10 nonies', [
+    "1. À la clôture de chaque exercice, l'entreprise calcule, pour chaque matière, produit ou approvisionnement, le montant maximal de la dotation au compte « Provisions pour hausse des prix » en multipliant les quantités en stock à cette date par la différence entre les deux valeurs suivantes :",
+    "1° La valeur unitaire d'inventaire de la matière, du produit ou de l'approvisionnement à cette date ;",
+    "2° Une somme égale à 110 % de sa valeur unitaire d'inventaire à l'ouverture de l'exercice précédent ou, si elle est inférieure, de sa valeur unitaire d'inventaire à l'ouverture de l'exercice considéré.",
+    "Toutefois, lorsque le calcul repose sur la valeur unitaire à l'ouverture de l'exercice précédent, l'entreprise diminue, le cas échéant, la dotation ainsi obtenue du montant de la dotation effectivement pratiquée à la clôture de cet exercice précédent.",
+    "2. Par dérogation au 1, les entreprises existant au 30 juin 1959 retiennent, à la clôture du premier et du deuxième exercices arrêtés après cette date, comme second terme de la différence définie ci-dessus, une somme égale à 110 % du prix de revient unitaire au 30 juin 1959 ou, si elle est inférieure, de la valeur unitaire d'inventaire à la clôture de l'exercice en cours au 30 juin 1959. Lorsque la dotation calculée à la clôture du deuxième exercice arrêté après le 30 juin 1959 repose sur le prix de revient unitaire à cette date, l'entreprise la diminue, le cas échéant, du montant de la dotation effectivement pratiquée à la clôture de l'exercice précédent.",
+],
+    "Réécriture à droit constant : l'entreprise est désignée comme auteur du calcul ; la différence et la déduction de la dotation déjà pratiquée sont explicitées, sans modifier les deux valeurs de comparaison. Les subdivisions et le régime historique du 2 sont maintenus. Aucune réforme de fond n'est appliquée à la provision pour hausse des prix.",
+    "Régime distinct de la provision pour fluctuation des cours. Taux de 110 %, stocks de clôture, deux valeurs d'ouverture et réduction par la dotation effectivement pratiquée conservés. Le 2 maintient le 30 juin 1959, les premier et deuxième exercices arrêtés après cette date et la valeur à la clôture de l'exercice alors en cours. La formulation source « ou, si elle est inférieure, de » est conservée dans les deux comparaisons afin de ne pas modifier silencieusement la base à laquelle s'appliquent les 110 %. Le plafond et les autres conditions législatives du 5° du 1 de l'article 39 du CGI restent applicables sans être remplacés par ce calcul réglementaire.")
+
+article('10 decies', [
+    "L'entreprise inscrit la provision pour hausse des prix au passif de son bilan, dans une rubrique spéciale qui présente séparément le montant des dotations de chaque exercice.",
+],
+    "Réécriture à droit constant : l'entreprise devient le sujet explicite de l'obligation d'inscription et de présentation séparée. La règle comptable est intégralement maintenue, sans réforme de fond.",
+    "Maintien du passif du bilan, de la rubrique spéciale et de la séparation des dotations par exercice. Cette règle concerne la provision pour hausse des prix, distincte des provisions pour fluctuation des cours ; aucune fusion de ces comptes ni compensation entre exercices n'est introduite.")
+
+article('10 undecies', [
+    "La provision pour hausse des prix est automatiquement rapportée aux bénéfices imposables à l'expiration du délai prévu au douzième alinéa du 5° du 1 de l'article 39 du code général des impôts.",
+    "Lorsque l'application de cette disposition dépend de la durée normale de rotation du stock de l'entreprise, cette durée est exprimée forfaitairement en mois selon le calcul suivant. Le nombre de mois compris dans les trois premiers exercices clos après le 30 juin 1959 est divisé par le rapport entre le prix de revient global des marchandises vendues pendant ces exercices et la moyenne des valeurs des stocks à la clôture de ces mêmes exercices.",
+],
+    "Réécriture à droit constant : le caractère automatique de la reprise est formulé directement et les deux étapes du calcul de la durée de rotation sont séparées en phrases. Les deux alinéas et la formule sont conservés, sans réforme de fond.",
+    "Renvoi au douzième alinéa du 5° du 1 de l'article 39 du CGI vérifié dans le corpus : il prévoit la reprise à l'expiration de la sixième année, avec la règle propre aux secteurs dont la rotation normale excède trois ans. Le texte proposé conserve le renvoi sans déplacer le délai dans l'annexe. Maintien des trois premiers exercices clos après le 30 juin 1959, du nombre de mois comme numérateur principal, du rapport prix de revient des ventes sur moyenne des stocks comme diviseur et de l'expression forfaitaire en mois.")
+
+
+assert len(sources) == len(drafts) == 24
+result = []
+for source in sources:
+    result.append({
+        'code_id': source['code_id'],
+        'source_id': source['source_id'],
+        'source_sha256': source['source_sha256'],
+        'number': source['number'],
+        **drafts[source['number']],
+        'status': 'rewrite_draft',
+    })
+Path('answer.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
+print(f'answer.json : {len(result)} articles')

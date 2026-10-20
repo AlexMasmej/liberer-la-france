@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "status": "frozen_plan_only_not_a_current_certificate",
+  "future_target": {
+    "key": "LEGITEXT000006073189|LEGIARTI000053220874",
+    "number": "R243-59",
+    "expected_source_sha256": "0f88e4af7470b8151e3892bda6cf13f6dcc19ccc2c58ed625be222635b867c56",
+    "expected_source_body_sha256": "f6563dc86dd0fe4c89cab60016f564a117c00a65c1ddfe2e808c74694e97856d",
+    "expected_source_notes_sha256": "8dfb64cf95f6cdcec110b130b3e1d7c530700ab8630c4d82b1e7800cdcdcd7cd",
+    "future_proposed_sha256": "b2f6cdb46cc0a86dc76f121dd89b430fb44f7b27fa8354036f9f26b99615ace4",
+    "pack_answer_sha256": "4622a98ac16e19485fad22a1f70bc7b4fdf1e6f1e633fc67eebdaac475ce4255"
+  },
+  "affected_existing_reference_certificates": [
+    "R243-17",
+    "R243-18",
+    "R243-59-6-A"
+  ],
+  "unaffected_existing_reference_certificates": "Root inventoried the 36 C certificates: no other pins R243-59 and none pins R243-18/-19. This review does not reattest those certificates.",
+  "steps": [
+    "Before either inscription, require all current own before-images, policies and target guards exact; reject unlisted concurrent changes.",
+    "The current E3 checks target the present R243-59 source/null. Do not replace their hashes or call them post-commit checks in advance.",
+    "After actual R243-59 inscription, capture source, complete notes, proposal, status and target view SHA from a new consistent DB read transaction. Compare raw proposal to the separately announced future body hash; block on any delta.",
+    "Recapture the complete own source/notes and actual current before-image for R243-17, R243-18 and R243-59-6-A. Their bodies and substantive impacts must remain exact. R243-59-6-A remains source/null, with the exact old assessment.",
+    "Re-read the three changed R243-59 paragraphs and the operative unchanged events in the actual committed whole. Turn the proposed assessments below into checks only after that capture; use the actual new view SHA.",
+    "Validate the actual new snapshot and checks; under the shared registration lock compare all own and target guards again before metadata-only inscription. Do not reuse a pre-commit target certificate.",
+    "For C141 audit renewal separately preserve own body/notes/source/assessment, all unrelated guards and policy SHA; permit only the explicitly approved fiscal/social deltas. Replace the three obsolete C assessments with the E analyses. Do not blanket-renew all144."
+  ],
+  "proposed_assessments_not_certificates": [
+    {
+      "number": "R243-17",
+      "target_key": "LEGITEXT000006073189|LEGIARTI000053220874",
+      "expected_future_proposed_sha256": "b2f6cdb46cc0a86dc76f121dd89b430fb44f7b27fa8354036f9f26b99615ace4",
+      "assessment_after_actual_capture_only": "La vue réelle post-inscription de R243-59 doit correspondre exactement au SHA futur séparément annoncé. Ses trois substitutions retirent seulement l’énumération, le constat et la menace du 10 % abrogé. Le contrôle I à V, la lettre du III et les étapes du IV demeurent. R243-17 reste intégralement source/null : ses trois avantages et exceptions autonomes ou historiques ne changent pas, et aucun nouveau L243-7-6 ne peut devenir une exception."
+    },
+    {
+      "number": "R243-18",
+      "target_key": "LEGITEXT000006073189|LEGIARTI000053220874",
+      "expected_future_proposed_sha256": "b2f6cdb46cc0a86dc76f121dd89b430fb44f7b27fa8354036f9f26b99615ace4",
+      "assessment_after_actual_capture_only": "La vue réelle post-inscription de R243-59 doit correspondre exactement au SHA futur séparément annoncé. Le deuxième alinéa du IV continue de notifier les observations sans redressement ; le retrait de la menace de 10 % n’en change ni l’identité ni la date. Ce renvoi garde uniquement le point de départ des anciennes majorations définitives légalement dues. Le délai de six ans, l’assiette limitée et les recours ne sont pas rouverts."
+    },
+    {
+      "number": "R243-59-6-A",
+      "target_key": "LEGITEXT000006073189|LEGIARTI000053220874",
+      "expected_future_proposed_sha256": "b2f6cdb46cc0a86dc76f121dd89b430fb44f7b27fa8354036f9f26b99615ace4",
+      "assessment_after_actual_capture_only": "La vue réelle post-inscription de R243-59 doit correspondre exactement au SHA futur séparément annoncé. La première visite prévue au I et l’envoi de la lettre d’observations au III, seuls événements employés pour début et fin du contrôle, sont identiques au texte antérieur. Les trois substitutions ne déplacent aucun de ces actes. Le corps intégral source/null et l’appréciation de maintien de R243-59-6-A doivent rester exactement inchangés ; seule l’attestation de cette cible est réémise."
+    }
+  ],
+  "no_generated_future_view_certificate": true,
+  "other_E_views": [
+    {
+      "number": "R243-18",
+      "key": "LEGITEXT000006073189|LEGIARTI000047437198",
+      "future_proposed_sha256": "84a9c656a103829d5c7dea2edb39d1741c5107e14bca2f88f08565e5af02b172"
+    },
+    {
+      "number": "R243-17",
+      "key": "LEGITEXT000006073189|LEGIARTI000047437207",
+      "future_proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "number": "R243-19",
+      "key": "LEGITEXT000006073189|LEGIARTI000047480864",
+      "future_proposed_sha256": "149a78f917706ac9a9fc218714ba4df36b955e75c9ff692a5e8e1b620beef062"
+    }
+  ],
+  "C141_proof_file": "runtime/poursuite-20261020-d/social-context-review/edition001/compatibility-141.proposed.json",
+  "C141_proof_sha256": "82af86ae63a699979c2da1c708e04f759319a5f80602b70c006f909fa0a5b7f1"
+}

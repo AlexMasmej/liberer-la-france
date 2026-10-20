@@ -1,0 +1,814 @@
+[
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000025009254",
+    "source_sha256": "3d63a40c1f02108d33db69bcfae8a0fd835cfcaab199e65fb444b9584a87d90d",
+    "number": "L242-12-1",
+    "proposed_xml": "<p>Lorsque les données nécessaires au calcul des cotisations n'ont pas été transmises, l'organisme de recouvrement calcule provisoirement les cotisations à partir des dernières données connues ou, si celles-ci ne permettent pas ce calcul, sur une base forfaitaire. Cette base ne fait l'objet d'aucune majoration automatique pour défaut de transmission.</p><p>Le calcul provisoire tient compte des exonérations dont les conditions sont établies par les données et décisions légalement disponibles. Le défaut de transmission ne justifie pas, à lui seul, d'écarter une exonération.</p><p>Le cotisant fournit les seules données nécessaires qui ne sont pas déjà exactes, à jour et légalement disponibles auprès de l'organisme. Les cotisations sont régularisées sur la base des données ainsi établies, en tenant compte des exonérations applicables si leurs conditions restent remplies. Aucune pénalité n'est due sur le seul fondement du présent article.</p><p>Un décret en Conseil d'État fixe les modalités d'application du présent article.</p><p>La suppression de la majoration automatique de base, de l'exclusion systématique des exonérations et de la pénalité s'applique aux calculs provisoires et régularisations effectués à compter de l'entrée en vigueur de la loi qui la prévoit. Les calculs provisoires antérieurs non définitivement régularisés sont rectifiés selon ces règles. Les cotisations définitivement établies avant cette date et leurs voies de recours conservent leur régime, sous réserve de l'application de la loi répressive plus douce aux sanctions non définitives. Les autres obligations déclaratives et les règles distinctes de lutte contre la fraude demeurent applicables.</p>",
+    "reason": "Réforme de fond : retrait de la majoration automatique de base, de l'éviction systématique des exonérations et de la pénalité propre à la taxation provisoire. L'estimation et la régularisation du principal réellement dû sont maintenues. Le réemploi des données relève du droit existant et n'est pas compté comme une suppression supplémentaire.",
+    "review_notes": "Coordonner le décret de taxation provisoire et les consignes de calcul ; ne pas reconstituer la majoration par un forfait punitif. Les exonérations non encore établies sont prises en compte à la régularisation, sans suppression du droit futur. L'article ne remet pas les cotisations principales ni les sanctions légalement autonomes de fraude ; aucun nouveau taux de pénalité n'est inventé. Relecture de fusion édition002 : corps CLI courant strictement conservé, après comparaison de la source entière, notes et candidat001. L’avant-image d’existence et de corps est capturée après inscription effective ; aucune amélioration compatible du CLI n’est annulée.",
+    "status": "rewrite_draft",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Majoration automatique de l'assiette provisoire au seul motif de la non-transmission des données de calcul.",
+      "Exclusion de toutes les exonérations lors du calcul provisoire, même lorsque leurs conditions sont déjà établies.",
+      "Pénalité propre à L242-12-1 calculée sur les cotisations finalement dues à raison de l'absence des données initiales."
+    ],
+    "benefit_review": "Toutes les exonérations potentiellement applicables sont préservées pour les situations futures. Celles qui sont démontrées sont intégrées dès le calcul provisoire ; les autres le sont lors de la régularisation si leurs conditions sont remplies. La disparition de la majoration et de la pénalité n'est compensée par aucune augmentation de cotisation ni perte d'avantage.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Suppression de la pénalité propre, distincte des deux effets de trésorerie : base provisoire non majorée et exonérations déjà établies prises en compte immédiatement. Le principal définitivement dû reste régularisé selon ses bases et taux ; aucune baisse permanente de cotisation n’est déduite du calcul provisoire.",
+      "scope_limitations": "Les majorations automatiques de base sont un effet de trésorerie, pas une baisse de taux ou d’assiette définitive. La pénalité propre disparaît ; les pénalités légales distinctes de retard de paiement ou de fraude restent dans leur champ. Les conditions et le montant des exonérations doivent pouvoir être déterminés ; aucun avantage inconnu n’est inventé. La coordination R243-15 du même pack garde la DOETH distincte au III ; aucun effet national net n’est chiffré.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : pas de justificatif ni de déclaration de remplacement, seulement les données nécessaires manquantes ; le réemploi respecte les accès déjà légaux.",
+      "effects": [
+        {
+          "kind": "payment_deferred",
+          "measure_id": "taxation-provisoire-base-non-majoree",
+          "description": "Suppression de la majoration automatique de la base d'estimation provisoire.",
+          "before": "Calcul provisoire sur base majorée des dernières données ou base forfaitaire en cas de non-transmission ; coefficient non fourni.",
+          "after": "Dernières données connues ou forfait subsidiaire, sans majoration automatique ; cotisations réellement dues régularisées sur leur assiette légale.",
+          "unit": "financing",
+          "affected_population": "Cotisants dont les données nécessaires n'ont pas été transmises.",
+          "conditions_and_transition": "Calculs et régularisations futurs et estimations anciennes non définitivement régularisées, selon la transition.",
+          "replacement_or_new_burdens": "Aucun forfait punitif ou impôt de remplacement ; obligations nécessaires de calcul maintenues. Effet de trésorerie seulement : dette finale inchangée, pas une réduction fiscale permanente.",
+          "source_quote": "Lorsque les données nécessaires au calcul des cotisations n'ont pas été transmises, celles-ci sont calculées à titre provisoire par les organismes chargés du recouvrement sur une base majorée déterminée par référence aux dernières données connues ou sur une base forfaitaire.",
+          "proposed_quote": "Cette base ne fait l'objet d'aucune majoration automatique pour défaut de transmission."
+        },
+        {
+          "kind": "payment_deferred",
+          "measure_id": "taxation-provisoire-exonerations",
+          "description": "Application immédiate des exonérations dont les conditions sont déjà établies.",
+          "before": "Aucune exonération n'entre dans le calcul provisoire, même si les conditions sont connues ; prise en compte seulement lors de la régularisation.",
+          "after": "Les exonérations démontrées sont intégrées au calcul provisoire ; les autres restent applicables à la régularisation si leurs conditions sont remplies.",
+          "unit": "financing",
+          "affected_population": "Cotisants éligibles à une exonération malgré l'absence de transmission des données.",
+          "conditions_and_transition": "Calculs futurs et calculs anciens encore provisoires ; aucun gel de l'éligibilité future ni extension des conditions substantielles.",
+          "replacement_or_new_burdens": "Aucune demande nouvelle ; utilisation des données et décisions légalement disponibles. Effet de trésorerie seulement : dette finale inchangée, pas une réduction fiscale permanente.",
+          "source_quote": "Dans ce cas, il n'est tenu compte d'aucune exonération dont pourrait bénéficier le cotisant.",
+          "proposed_quote": "Le calcul provisoire tient compte des exonérations dont les conditions sont établies par les données et décisions légalement disponibles."
+        },
+        {
+          "kind": "relief_extended",
+          "measure_id": "taxation-provisoire-penalite-supprimee",
+          "description": "Suppression de la pénalité propre à la régularisation de L242-12-1.",
+          "before": "Pénalité sur les cotisations finalement dues, recouvrée sous leurs garanties et sanctions ; taux non fixé dans l'article.",
+          "after": "Aucune pénalité fondée sur L242-12-1 ; principal et sanctions de fraude légalement autonomes non supprimés.",
+          "unit": "legal_duty",
+          "affected_population": "Cotisants soumis à la taxation provisoire pour données absentes.",
+          "conditions_and_transition": "Régularisations futures et sanctions non définitives sous réserve de loi plus douce ; situations définitivement établies antérieurement réservées.",
+          "replacement_or_new_burdens": "Aucune cotisation ou sanction de remplacement sur ce seul fondement.",
+          "source_quote": "Le cotisant est, en outre, redevable d'une pénalité calculée sur ce montant et recouvrée sous les mêmes garanties et sanctions que ces cotisations.",
+          "proposed_quote": "Aucune pénalité n'est due sur le seul fondement du présent article."
+        }
+      ]
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000053281562",
+    "source_sha256": "7ed02d87446c24f5bcabd227cdcb854e1332e53e4c54537f345c538264aa96d9",
+    "number": "L243-5",
+    "proposed_xml": null,
+    "reason": "Maintien intégral d'une remise favorable nécessaire en sauvegarde, redressement ou liquidation : les pénalités, majorations et frais sont remis à l'ouverture, sauf passif lié au travail dissimulé. Retirer cette règle augmenterait la charge des entreprises en difficulté ; son exception protège contre la fraude.",
+    "review_notes": "Périmètre fixé à la date du jugement d'ouverture ; pas de remise du principal par ce texte. Le renvoi à L8221-1 est celui du travail dissimulé, non d'un contrat unique. La note donne le 1er juillet 2026 et date la loi 2025-1403 du 31 décembre, alors que d'autres notes la datent du 30 ; divergence documentaire signalée sans corriger silencieusement la source. Relecture de fusion édition002 : corps CLI courant strictement conservé, après comparaison de la source entière, notes et candidat001. L’avant-image d’existence et de corps est capturée après inscription effective ; aucune amélioration compatible du CLI n’est annulée.",
+    "status": "retained_unchanged",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "La remise légale reste ouverte aux futures procédures collectives éligibles ; les trois catégories d'accessoires et l'exception antifraude sont conservées sans baisse nouvelle comptée.",
+      "scope_limitations": "Les dettes principales ne sont pas remises et aucun remboursement général des pénalités antérieures n'est créé. La divergence de date de la note reste signalée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien de l'avantage et de ses conditions officielles sans dossier ni autorisation supplémentaire.",
+      "effects": []
+    },
+    "benefit_review": "La remise des pénalités, majorations et frais en sauvegarde/redressement/liquidation protège déjà le débiteur ; supprimer l'article retirerait cet avantage. L'exception de travail dissimulé et la date légale du 1er juillet 2026 sont conservées, sans nouvelle formalité. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien."
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000029962138",
+    "source_sha256": "979da94a95ee0b01390cd62e7c5368fe49ec0902eedfd3c394a7670c96302efc",
+    "number": "L243-6",
+    "proposed_xml": "<p>I. - La demande de remboursement des cotisations de sécurité sociale et d'allocations familiales indûment versées se prescrit par trois ans à compter de leur paiement.</p><p>Lorsque l'obligation de remboursement résulte d'une décision juridictionnelle révélant la non-conformité de la règle de droit appliquée à une règle supérieure, la demande ne peut porter que sur la période postérieure au 1er janvier de la troisième année précédant celle de cette décision.</p><p>Lorsque l'obligation de remboursement résulte d'une décision rectificative d'une caisse d'assurance retraite et de la santé au travail en matière de taux de cotisation d'accidents du travail et de maladies professionnelles, le remboursement peut porter sur toute la période dont les taux sont rectifiés. L'organisme de recouvrement rembourse d'office l'indu lorsque la décision rectificative et les données légalement disponibles permettent d'en déterminer le montant et le bénéficiaire, sans demande distincte du cotisant. Si ces éléments ne sont pas suffisants, le cotisant conserve la faculté de demander le remboursement pour l'ensemble de cette période ; aucune attestation nouvelle de la décision déjà légalement disponible n'est exigée.</p><p>II. - En cas de remboursement, les organismes de sécurité sociale et d'allocations familiales peuvent demander le reversement des prestations servies à l'assuré. Cette demande est présentée au plus tard deux ans après le remboursement des cotisations.</p><p>Toutefois, si la demande de remboursement des cotisations indues n'a pas été présentée dans le délai de trois ans prévu au premier alinéa du I, les prestations servies et les droits à l'assurance vieillesse restent acquis à l'assuré, sauf fraude ou fausse déclaration.</p><p>III. - Les organismes mentionnés aux articles L. 213-1 et L. 752-1 remboursent les cotisations indues dans les quatre mois suivant la demande mentionnée au premier alinéa du I. Pour le remboursement d'office prévu au troisième alinéa du I, ce délai court à compter du jour où l'organisme dispose légalement de la décision rectificative et des données suffisantes pour déterminer le montant de l'indu et son bénéficiaire. Le cotisant conserve ses droits à réclamation et à recours ; un remboursement déjà effectué s'impute une seule fois sur l'indu correspondant.</p><p>Le remboursement d'office s'applique aux décisions rectificatives intervenant à compter de l'entrée en vigueur de la loi, ainsi qu'aux décisions antérieures pour lesquelles le droit au remboursement n'est pas prescrit à cette date et dont l'indu n'a pas déjà été remboursé. Il ne rouvre aucun délai expiré et ne réduit ni la période de remboursement propre à la rectification des taux ni les droits à prestations conservés au II. Les remboursements et contentieux antérieurs conservent leurs garanties.</p>",
+    "reason": "Réforme de fond : le remboursement de l'indu découlant d'une rectification AT-MP devient automatique lorsque son montant et son bénéficiaire sont établis, sans demande séparée. Les prescriptions de trois ans, période juridictionnelle, période intégrale rectifiée, reversement de prestations sous deux ans et remboursement sous quatre mois sont conservés. L'automaticité impose une mise en paiement d'office à l'organisme : elle ne constitue pas une économie nette démontrée.",
+    "review_notes": "Maintenir exactement les quatre repères temporels : trois ans depuis paiement, 1er janvier de la troisième année avant la décision de non-conformité, deux ans pour le reversement des prestations et quatre mois pour rembourser. Le renvoi source à L752-1 est conservé sans substitution silencieuse à L752-4 ; compétence et champ territorial doivent être coordonnés dans leurs textes. Coordonner le circuit de réception des décisions CARSAT, sans nouveau droit d'accès ni déclaration de remplacement. La rectification AT-MP n'ouvre pas un remboursement de cotisations non indûment payées ; aucun taux ou solde national n'est inventé. Relecture de fusion édition002 : corps CLI courant strictement conservé, après comparaison de la source entière, notes et candidat001. L’avant-image d’existence et de corps est capturée après inscription effective ; aucune amélioration compatible du CLI n’est annulée.",
+    "status": "rewrite_draft",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Demande distincte du cotisant pour obtenir la restitution d'un indu AT-MP déjà déterminable à partir d'une décision rectificative et de données légalement disponibles."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "mixed",
+      "assessment": "Suppression effective de la demande séparée dans les seuls indus AT-MP déterminables. En contrepartie, l'organisme doit initier le remboursement et suivre un délai de quatre mois sans demande. Les cotisations dues et les autres prescriptions demeurent ; le solde net administratif n'est pas établi.",
+      "scope_limitations": "Automaticité limitée aux décisions rectificatives AT-MP et indus déterminables légalement ; pas de réouverture de prescription ni restitution automatique générale pour tous les motifs d'indu.",
+      "new_burdens_review": "Une obligation nouvelle de mise en paiement d'office incombe à l'organisme dans le champ déterminable. Aucun registre, attestation ou donnée nouvelle n'est imposé au cotisant ; l'accès aux données n'est pas élargi. Le coût public reste inconnu.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "remboursement-indu-atmp-automatique",
+          "description": "Suppression de la demande séparée pour l'indu AT-MP déjà déterminable.",
+          "before": "Remboursement envisagé sur demande, y compris après rectification du taux, avec quatre mois à compter de cette demande.",
+          "after": "Pas de demande nécessaire si la décision rectificative et les données disponibles établissent bénéficiaire et montant ; quatre mois à compter de la disponibilité de ces éléments.",
+          "unit": "legal_duty",
+          "affected_population": "Cotisants ayant trop versé après rectification d'un taux AT-MP.",
+          "conditions_and_transition": "Décisions nouvelles et anciennes non prescrites, sans remboursement préalable du même indu ; autres droits à réclamation préservés.",
+          "replacement_or_new_burdens": "Mise en paiement d'office transférée à l'organisme, sans nouvelle déclaration de l'employeur.",
+          "source_quote": "Lorsque l'obligation de remboursement des cotisations naît d'une décision rectificative d'une caisse d'assurance retraite et de la santé au travail en matière de taux de cotisation d'accidents du travail et maladies professionnelles, la demande de remboursement des cotisations peut porter sur l'ensemble de la période au titre de laquelle les taux sont rectifiés.",
+          "proposed_quote": "L'organisme de recouvrement rembourse d'office l'indu lorsque la décision rectificative et les données légalement disponibles permettent d'en déterminer le montant et le bénéficiaire, sans demande distincte du cotisant."
+        },
+        {
+          "kind": "obligation_added",
+          "measure_id": "remboursement-indu-atmp-automatique",
+          "description": "Déclenchement administratif d'office du remboursement sans attendre une demande.",
+          "before": "L'obligation de rembourser sous quatre mois est déclenchée par la demande du cotisant.",
+          "after": "L'organisme doit déclencher lui-même le remboursement déterminable et respecter quatre mois à compter des éléments suffisants légalement détenus.",
+          "unit": "legal_duty",
+          "affected_population": "Organismes de recouvrement disposant des décisions de rectification AT-MP et des données suffisantes.",
+          "conditions_and_transition": "Même transition que l'automaticité, sans rouvrir les anciennes prescriptions.",
+          "replacement_or_new_burdens": "Nouvelle initiative de liquidation et paiement pour l'organisme ; aucune transmission ou base de données nouvelle autorisée par cet article.",
+          "source_quote": "Les organismes mentionnés aux articles L. 213-1 et L. 752-1 effectuent le remboursement des cotisations indues dans un délai de quatre mois à compter de la demande mentionnée au premier alinéa du I du présent article.",
+          "proposed_quote": "Pour le remboursement d'office prévu au troisième alinéa du I, ce délai court à compter du jour où l'organisme dispose légalement de la décision rectificative et des données suffisantes pour déterminer le montant de l'indu et son bénéficiaire."
+        }
+      ]
+    },
+    "benefit_review": "Les prescriptions de remboursement, correction AT/MP couvrant toute la période rectifiée, protection des prestations acquises et remboursement sous quatre mois sont des garanties du cotisant/assuré. Aucune demande en double ni support exclusif n'est imposé dans cet article ; sa suppression retirerait des droits. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien."
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000039279570",
+    "source_sha256": "b899c5c75da856e52c3a78c12af518ad86c12d98ffdd42bb1873bd4b9a130851",
+    "number": "L243-6-5",
+    "proposed_xml": "<p>I. - Lorsque les sommes dues ne sont pas définitives, le directeur des organismes mentionnés aux articles L. 213-1 et L. 752-4 peut conclure une transaction avec un cotisant. Cette faculté est exclue en cas de travail dissimulé défini aux articles L. 8221-3 et L. 8221-5 du code du travail ou si le cotisant a mis en œuvre des manœuvres dilatoires destinées à nuire au bon déroulement du contrôle.</p><p>II. - La transaction ne peut porter, pour une période limitée à quatre ans, que sur :</p><p>1° Le montant des majorations de retard et des pénalités, notamment pour déclaration obligatoire tardive ou inexacte relative aux cotisations et contributions sociales ;</p><p>2° L'évaluation des éléments d'assiette relatifs aux avantages en nature, aux avantages en argent et aux frais professionnels, lorsqu'elle présente une difficulté particulière ;</p><p>3° Les redressements calculés par extrapolation ou fixation forfaitaire en raison de documents administratifs et comptables insuffisants ou inexploitables.</p><p>III. - La transaction peut être conclue pendant l'examen du recours devant la commission de recours amiable ou après sa décision, sans saisine préalable du tribunal, tant que les sommes ne sont pas définitives. La seule négociation n'ajoute aucune suspension ou interruption aux effets favorables que les règles applicables attachent déjà à une demande régulière de transaction ; ces effets sont maintenus. Les parties conservent leurs garanties contentieuses jusqu'à ce que la transaction devienne définitive dans les conditions du IV.</p><p>IV. - La transaction conclue est communiquée à l'autorité mentionnée à l'article L. 151-1. Cette communication n'est pas une demande d'approbation particulière de la transaction ; les pouvoirs de contrôle légalement autonomes de cette autorité sont maintenus.</p><p>Le directeur n'est pas tenu d'établir un compte rendu annuel distinct des transactions conclues ni de le transmettre avant le 30 juin sur le seul fondement du présent article.</p><p>La transaction devient définitive après l'accomplissement des obligations qu'elle prévoit, sans approbation particulière de l'autorité mentionnée à l'article L. 151-1. Aucune procédure contentieuse ne peut alors être engagée ou reprise pour remettre en cause son objet.</p><p>V. - À peine de nullité, toute convention portant sur les éléments mentionnés aux 1° à 3° du II respecte les conditions et la procédure du présent article et de ses textes d'application.</p><p>VI. - La transaction conclue par le directeur mentionné au I engage l'organisme de recouvrement. L'article L. 243-6-4 est applicable aux transactions.</p><p>La suppression de la suspension prévue pendant le recours amiable s'applique dès l'entrée en vigueur de la loi, y compris aux recours et contrôles en cours, sans rouvrir les délais expirés ni remettre en cause une somme devenue définitive. La suppression de l'approbation particulière s'applique aux transactions conclues à compter de cette date ; les transactions antérieures et les droits qui en résultent conservent leur régime. La suppression du compte rendu annuel concerne les comptes rendus non encore transmis à cette date, y compris pour les années antérieures, sans état de remplacement.</p>",
+    "reason": "Réforme de fond : supprimer l'interdiction temporaire de transiger pendant le recours amiable et l'exigence de saisir le tribunal pour retrouver cette faculté ; retirer l'approbation particulière de la transaction et le compte rendu annuel distinct. Les exclusions antifraude, les trois objets, la limite de quatre ans, la nullité, l'information de la tutelle et la portabilité restent conservés. Les effets interruptifs favorables d'une demande régulière sont expressément conservés, sans nouveau délai implicite.",
+    "review_notes": "Maintenir I à VI et trois alinéas au IV pour préserver les renvois. R243-45-1 a été lu intégralement : coordonner son IV (approbation, trente jours prorogeables, refus et silence), son V pour les seuls délais d'approbation retirés, et son VIII (rapport du directeur et analyse ACOSS avant le 1er octobre). Ces obligations réglementaires ne sont pas présentées comme déjà réécrites. Son III conserve l'interruption favorable du délai de recours amiable dès réception d'une demande régulière ainsi que celle des délais de recouvrement, les garanties et les autres conditions autonomes. Le nouveau III ne retire pas ces interruptions, ni le bénéfice d'un plan d'apurement du II réglementaire. L151-1 a été lu dans le corpus : il vise le contrôle légal des décisions des conseils et conseils d'administration et ne doit pas être transformé en une nouvelle approbation spéciale des transactions du directeur. Le nouveau texte supprime uniquement l'approbation spéciale du présent article. L243-6-4, source du lot lue en entier, maintient la portabilité des transactions sous ses conditions. Les exclusions de travail dissimulé et de manœuvres dilatoires restent cumulables avec les contrôles. L'incohérence rédactionnelle source « personne physique mentionnée au I » est explicitement clarifiée vers le directeur effectivement visé, sans ouvrir la compétence au cotisant. Relecture de fusion édition002 : corps CLI courant strictement conservé, après comparaison de la source entière, notes et candidat001. L’avant-image d’existence et de corps est capturée après inscription effective ; aucune amélioration compatible du CLI n’est annulée. Dans cette édition002, les coordinations réglementaires nécessaires sont proposées intégralement dans R243-45-1 IV/V/VIII : elles sont futures, non présentées comme déjà canoniques. La suppression du rapport directeur emporte aussi le circuit réglementaire correspondant ; pas de nouvelle demande équivalente.",
+    "status": "rewrite_draft",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suspension de la faculté de transiger pendant le recours amiable et obligation de saisir le tribunal pour la rétablir après la décision de la commission.",
+      "Approbation particulière obligatoire de l'autorité de tutelle pour rendre définitive une transaction exécutée, sans suppression de son contrôle autonome.",
+      "Compte rendu annuel distinct des transactions de l'année précédente, imposé au directeur avant le 30 juin."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Trois obstacles réels disparaissent : gel pendant le recours amiable avec passage imposé au tribunal, approbation spéciale et compte rendu annuel. L'information de tutelle et les limites antifraude demeurent. Les transactions ne deviennent pas un droit automatique à remise.",
+      "scope_limitations": "Les pouvoirs autonomes de L151-1 sont réservés et le règlement d'application doit être coordonné. Aucune baisse nette de dette sociale ni économie de justice nationale n'est chiffrée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : la communication de la transaction à la tutelle existait déjà ; pas de déclaration substitutive, de garantie nouvelle ni de délai nouveau. Les règles existantes de recours, y compris les interruptions favorables d'une demande régulière, sont conservées.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "transaction-sociale-sans-gel-amiable",
+          "description": "Suppression du gel des transactions pendant le recours amiable et de la saisine judiciaire imposée pour retrouver cette faculté.",
+          "before": "Faculté suspendue dès le recours amiable jusqu'à la décision ; ensuite rétablie seulement si le tribunal judiciaire est saisi.",
+          "after": "Faculté continue avant, pendant et après le recours amiable, tant que les sommes ne sont pas définitives ; aucun nouveau délai de recours.",
+          "unit": "legal_duty",
+          "affected_population": "Cotisants et directeurs d'organismes envisageant une transaction sur des sommes non définitives.",
+          "conditions_and_transition": "Recours et contrôles en cours dès la loi, sans rouvrir une prescription ou une dette définitive ; exclusions antifraude maintenues.",
+          "replacement_or_new_burdens": "Aucune voie obligatoire de remplacement ; la seule négociation n'ajoute aucun effet nouveau, les interruptions favorables d'une demande régulière restant applicables.",
+          "source_quote": "Cette possibilité n'est rétablie à l'issue de cette période que lorsque le tribunal judiciaire spécialement désigné en application de l'article L. 211-16 du code de l'organisation judiciaire a été saisi.",
+          "proposed_quote": "La transaction peut être conclue pendant l'examen du recours devant la commission de recours amiable ou après sa décision, sans saisine préalable du tribunal, tant que les sommes ne sont pas définitives."
+        },
+        {
+          "kind": "authorization_removed",
+          "measure_id": "transaction-sociale-sans-approbation-speciale",
+          "description": "Suppression de l'approbation spéciale de tutelle conditionnant la transaction définitive.",
+          "before": "Transaction exécutée devenant définitive après approbation de l'autorité de L151-1.",
+          "after": "Transaction définitive après exécution de ses obligations, sans approbation spéciale ; information et contrôle autonomes réservés.",
+          "unit": "legal_duty",
+          "affected_population": "Cotisants transigeant et organismes de recouvrement signataires.",
+          "conditions_and_transition": "Transactions conclues à compter de la loi ; transactions antérieures conservent leur régime et leurs droits.",
+          "replacement_or_new_burdens": "Communication à la tutelle déjà existante maintenue, sans nouvelle demande équivalente.",
+          "source_quote": "Lorsqu'une transaction est devenue définitive après accomplissement des obligations qu'elle prévoit et approbation de l'autorité prévue au même article L. 151-1, aucune procédure contentieuse ne peut plus être engagée ou reprise pour remettre en cause l'objet de la transaction.",
+          "proposed_quote": "La transaction devient définitive après l'accomplissement des obligations qu'elle prévoit, sans approbation particulière de l'autorité mentionnée à l'article L. 151-1."
+        },
+        {
+          "kind": "obligation_removed",
+          "measure_id": "transaction-sociale-compte-rendu-annuel-supprime",
+          "description": "Suppression du compte rendu annuel distinct des transactions.",
+          "before": "Compte rendu du directeur avant le 30 juin de chaque année pour les transactions de l'année précédente.",
+          "after": "Aucun compte rendu annuel sur ce fondement et aucun état de remplacement ; information individuelle de la tutelle maintenue.",
+          "unit": "legal_duty",
+          "affected_population": "Directeurs des organismes de recouvrement concernés et tutelle destinataire.",
+          "conditions_and_transition": "Comptes rendus non encore transmis à l'entrée en vigueur, même pour des années antérieures.",
+          "replacement_or_new_burdens": "Aucun nouveau registre ni rapport regroupé obligatoire créé.",
+          "source_quote": "Le directeur des organismes mentionnés au I du présent article rend compte, avant le 30 juin de chaque année, des transactions conclues l'année précédente.",
+          "proposed_quote": "Le directeur n'est pas tenu d'établir un compte rendu annuel distinct des transactions conclues ni de le transmettre avant le 30 juin sur le seul fondement du présent article."
+        }
+      ]
+    },
+    "benefit_review": "Les transactions restent possibles pour les situations futures éligibles et les sommes non définitives, dans les trois objets et la limite de quatre ans, sans travail dissimulé ni manœuvres dilatoires. Les concessions réciproques, interruptions favorables de la demande régulière, plans d’apurement et droits de recours sont conservés. L’approbation particulière n’est plus exigée pour les transactions nouvelles ; les transactions antérieures gardent leur régime et leurs droits. Aucune remise générale de dette ni nouvelle obligation ne remplace le contrôle retiré."
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000048701041",
+    "source_sha256": "8814c9a87cc48832d2b59da1c625a0967a58623603438e11ca43baa31c155aea",
+    "number": "L243-6-6",
+    "proposed_xml": null,
+    "reason": "Maintien intégral d'une simplification favorable déjà existante : communication interorganismes de la demande d'échéancier et de la réponse, échéancier complémentaire similaire et mandat dans les plans publics. Les répéter ou les requalifier en suppressions nouvelles serait infondé.",
+    "review_notes": "Le bénéfice automatique porte sur les cotisations patronales restant dues aux régimes complémentaires obligatoires et reste soumis au décret. La transmission concerne les institutions de L922-4 dont relève le cotisant ; le mandat vise les décisions sur leurs créances dans un plan avec plusieurs créanciers publics. Ces règles n'abaissent pas les taux et restent ouvertes aux demandes futures. Note d'entrée en vigueur au 1er janvier 2024. Relecture de fusion édition002 : corps CLI courant strictement conservé, après comparaison de la source entière, notes et candidat001. L’avant-image d’existence et de corps est capturée après inscription effective ; aucune amélioration compatible du CLI n’est annulée.",
+    "status": "retained_unchanged",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "La source offre déjà le guichet coordonné et un échéancier complémentaire similaire : maintien intégral sans prétendre supprimer une seconde demande ou réduire la dette une nouvelle fois.",
+      "scope_limitations": "L'octroi dépend de ses conditions réglementaires et ne remet pas le principal, les garanties ou les contributions à la charge du salarié.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les transmissions entre organismes et le mandat sont strictement ceux du droit source, sans nouvel état du cotisant.",
+      "effects": []
+    },
+    "benefit_review": "La communication de l'échéancier et son extension aux cotisations patronales complémentaires, avec mandat entre créanciers, évitent déjà plusieurs démarches. Ce calendrier n'est pas une remise de cotisations et n'exige pas de nouvelle inscription ; le supprimer fermerait une facilité. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien."
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000046804900",
+    "source_sha256": "71a065e69565c07e26fedacaa2acf8041e927d06b662e2de53de54149f2e9a97",
+    "number": "L243-13",
+    "status": "rewrite_draft",
+    "proposed_xml": "\n<p>I.-Les contrôles prévus à l'article L. 243-7 visant les entreprises versant des rémunérations à moins de vingt salariés ou les travailleurs indépendants ne peuvent s'étendre sur une période supérieure à trois mois, comprise entre le début effectif du contrôle et la lettre d'observations.</p>\n<p>Cette période peut être prorogée une fois à la seule demande expresse de la personne contrôlée. L'organisme de recouvrement ne peut imposer cette prorogation par sa propre demande.</p>\n<p>La limitation de la durée du contrôle prévue au premier alinéa du présent I n'est pas applicable lorsqu'est établie au cours de cette période l'une des situations suivantes :</p>\n<p>1° Une situation de travail dissimulé, défini aux articles L. 8221-3 et L. 8221-5 du code du travail ;</p>\n<p>2° Une situation d'obstacle à contrôle, mentionnée à l'article L. 243-12-1 du présent code ;</p>\n<p>3° Une situation d'abus de droit, défini à l'article L. 243-7-2 ;</p>\n<p>4° Un constat de comptabilité insuffisante ou de documentation soit inexploitable, soit transmise ou remise plus de quinze jours après la réception de la demande faite par l'agent chargé du contrôle ;</p>\n<br />\n<p> 5° Le report, à la demande de la personne contrôlée, d'une visite de l'agent chargé du contrôle.</p>\n<p>II.-Le présent article n'est pas applicable lorsque la personne contrôlée appartient à un ensemble de personnes entre lesquelles il existe un lien de dépendance ou de contrôle, au sens des articles L. 233-1 et L. 233-3 du code de commerce, et que l'effectif de cet ensemble est égal ou supérieur à celui mentionné au premier alinéa du I du présent article.</p>\n<br />\n\n<p>Cette suppression de la prorogation à la demande de l'organisme s'applique aux contrôles engagés à compter de l'entrée en vigueur de la loi de simplification. Les contrôles antérieurs restent soumis à leur régime. La prolongation demandée par le cotisant, les exceptions prévues aux 1° à 5° du I et le champ du II sont conservés ; aucune dette, garantie de débat contradictoire ou voie de recours n'est supprimée.</p>\n",
+    "reason": "Supprime la faculté pour l'organisme de demander seul la prorogation du contrôle de trois mois, tout en conservant celle du cotisant et les exceptions légales.",
+    "review_notes": "Source entière et notes lues ; chaque autre alinéa reste conservé. Pas de plafond absolu de trois mois dans les cas dérogatoires ; pas de suppression du délai contradictoire ni extinction des cotisations. Durée de la prorogation non inventée. Les cibles nécessaires sont jointes entières ; les règles de contrat unique et de quinze jours ne sont pas des délais de contrôle ou de recouvrement. Aucun barème, droit de retraite, exonération Acre/DOM ni règle de CSG n'est modifié. Les preuves techniques ne sont pas une validation juridique indépendante.",
+    "benefit_review": "Les exonérations, remboursements, remises, prescriptions, contradictoire et recours préexistants restent applicables dans leur champ, y compris aux futures situations éligibles. Contrôles engagés après entrée en vigueur ; demandes de prolongation du cotisant et contrôles anciens conservés. Pas de plafond absolu de trois mois dans les cas dérogatoires ; pas de suppression du délai contradictoire ni extinction des cotisations. Durée de la prorogation non inventée.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Supprime la faculté pour l'organisme de demander seul la prorogation du contrôle de trois mois, tout en conservant celle du cotisant et les exceptions légales. Contrôle de trois mois des entreprises de moins de vingt salariés et indépendants, prorogeable une fois à la demande du cotisant ou de l'organisme. La prorogation de droit commun ne peut venir que de la demande expresse du cotisant ; exceptions de fraude, obstruction, documentation et report ainsi que groupes inchangées.",
+      "scope_limitations": "Pas de plafond absolu de trois mois dans les cas dérogatoires ; pas de suppression du délai contradictoire ni extinction des cotisations. Durée de la prorogation non inventée.",
+      "new_burdens_review": "Aucune charge privée nouvelle identifiée : les conditions réellement manquantes et les contrôles existants restent exigibles. Les seules formalités ou restrictions expressément visées sont supprimées ; aucun accès nouveau aux données ou régime d'exonération fictif n'est créé. Les administrations adaptent leurs circuits, coûts nets inconnus.",
+      "effects": [
+        {
+          "kind": "deadline_reduced",
+          "measure_id": "controle-tpe-sans-prorogation-unilaterale",
+          "description": "Supprime la faculté pour l'organisme de demander seul la prorogation du contrôle de trois mois, tout en conservant celle du cotisant et les exceptions légales.",
+          "before": "Contrôle de trois mois des entreprises de moins de vingt salariés et indépendants, prorogeable une fois à la demande du cotisant ou de l'organisme.",
+          "after": "La prorogation de droit commun ne peut venir que de la demande expresse du cotisant ; exceptions de fraude, obstruction, documentation et report ainsi que groupes inchangées.",
+          "unit": "legal_duty",
+          "affected_population": "Entreprises rémunérant moins de vingt salariés et indépendants, hors exclusions et groupes du II.",
+          "conditions_and_transition": "Contrôles engagés après entrée en vigueur ; demandes de prolongation du cotisant et contrôles anciens conservés.",
+          "replacement_or_new_burdens": "Aucun nouveau formulaire, registre, justificatif ou déclaration de remplacement. Contrôles nécessaires, dettes et droits de recours conservés ; coûts administratifs ou budgétaires non chiffrés.",
+          "source_quote": "à la demande expresse de la personne contrôlée ou de l'organisme de recouvrement",
+          "proposed_quote": "à la seule demande expresse de la personne contrôlée"
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Contrôle de trois mois des entreprises de moins de vingt salariés et indépendants, prorogeable une fois à la demande du cotisant ou de l'organisme."
+    ]
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000037947880",
+    "source_sha256": "8e100fc9467f7a32b5cb708a2126bd29235df9230552bf5b65d1f4d2f32f303e",
+    "number": "L244-2",
+    "status": "rewrite_draft",
+    "proposed_xml": "\n<p>Toute action ou poursuite effectuée en application de l'article précédent ou des articles L. 244-6 et L. 244-8-1 est obligatoirement précédée, si elle a lieu à la requête du ministère public, d'un avertissement de l'autorité compétente de l'Etat adressé par lettre recommandée ou par tout autre moyen légal permettant de donner date certaine à sa réception invitant l'employeur ou le travailleur indépendant à régulariser sa situation dans le mois. Si la poursuite n'a pas lieu à la requête du ministère public, ledit avertissement est remplacé par une mise en demeure adressée par lettre recommandée ou par tout moyen donnant date certaine à sa réception par l'employeur ou le travailleur indépendant.</p>\n<p>Le contenu de l'avertissement ou de la mise en demeure mentionnés au premier alinéa doit être précis et motivé, dans des conditions fixées par décret en Conseil d'Etat.</p>\n\n<p>La faculté de choisir un autre moyen légal donnant date certaine à réception s'applique aux avertissements émis à compter de l'entrée en vigueur de la loi de simplification. La lettre recommandée reste possible. Le délai d'un mois, le contenu précis et motivé, les garanties de réception et les recours restent exigés. Les avertissements et procédures antérieurs conservent leur régime ; aucune irrégularité passée n'est validée par le seul effet de cette disposition.</p>\n",
+    "reason": "Coordination des modes légaux de notification, sans gain nouveau démontré au-delà des facultés électroniques déjà ouvertes par le CRPA. Le corps reste intégral et inchangé ; aucune baisse de dette, d’avis ou de protection du destinataire.",
+    "review_notes": "Source entière et notes lues ; chaque autre alinéa reste conservé. Aucune présomption qu'un courriel simple suffit. Pas de suppression de l'avis, du mois de régularisation législatif ni des droits du débiteur ; coûts de notification et économies nationales non chiffrés. Les cibles nécessaires sont jointes entières ; les règles de contrat unique et de quinze jours ne sont pas des délais de contrôle ou de recouvrement. Aucun barème, droit de retraite, exonération Acre/DOM ni règle de CSG n'est modifié. Les preuves techniques ne sont pas une validation juridique indépendante. Contrelecture complémentaire : CRPA L112-14/15 et R112-16 lus dans la capture primaire affichée. Les substitutions électroniques existaient déjà ; l’accord exprès préalable du destinataire demeure requis lorsqu’il est légalement exigé. Aucun gain papier supplémentaire n’est démontré dans ce lot. Classement coordination_only, sans nouvelle mesure de réduction ni économie. La saisine électronique du public et la notification d’un document par l’administration sont distinguées ; pas de notification valable par simple courriel présumée.",
+    "benefit_review": "Les exonérations, remboursements, remises, prescriptions, contradictoire et recours préexistants restent applicables dans leur champ, y compris aux futures situations éligibles. Avertissements émis ou inscriptions demandées après entrée en vigueur ; procédures anciennes et irrégularités passées non validées. Aucune présomption qu'un courriel simple suffit. Pas de suppression de l'avis, du mois de régularisation législatif ni des droits du débiteur ; coûts de notification et économies nationales non chiffrés. Les garanties légales de notification restent requises, notamment l’accord exprès préalable du destinataire lorsque le CRPA ou un autre texte l’impose pour le procédé électronique. Aucun gain nouveau n’est attribué à une faculté déjà ouverte.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Le recommandé n’est déjà pas un support exclusivement postal en raison des alternatives légales, notamment CRPA L112-15. La réécriture respecte les autres moyens légalement admissibles et la date certaine de réception, mais ne démontre aucun allègement nouveau propre. Ni une notification ni une dette ne disparaissent.",
+      "scope_limitations": "Aucun gain nouveau démontré sur les modes de notification ; aucune économie nationale ou locale chiffrée. Le simple courriel ne vaut pas réception certaine ; l’accord exprès préalable du destinataire demeure requis lorsqu’il est légalement exigé. Le mois de régularisation de L244-2, la motivation et les recours restent.",
+      "new_burdens_review": "Aucune charge privée nouvelle identifiée : les conditions réellement manquantes et les contrôles existants restent exigibles. Les seules formalités ou restrictions expressément visées sont supprimées ; aucun accès nouveau aux données ou régime d'exonération fictif n'est créé. Les administrations adaptent leurs circuits, coûts nets inconnus.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "recouvrement-notifications-sans-recommande-exclusif",
+          "description": "Alignement sur les moyens légaux de notification, sans compter les alternatives électroniques déjà ouvertes comme une nouvelle suppression.",
+          "before": "Le texte mentionne la lettre recommandée ; des alternatives électroniques existent déjà sous leurs conditions légales.",
+          "after": "Avis maintenu avec date certaine de réception, moyens légaux et protections applicables. Aucun nouveau droit général au courrier simple démontré.",
+          "unit": "legal_duty",
+          "affected_population": "Autorités et organismes notifiant ; cotisants destinataires des seuls avertissements ou avis visés.",
+          "conditions_and_transition": "Avertissements émis ou inscriptions demandées après entrée en vigueur ; procédures anciennes et irrégularités passées non validées.",
+          "replacement_or_new_burdens": "Aucun nouveau formulaire, registre, justificatif ou déclaration de remplacement. Contrôles nécessaires, dettes et droits de recours conservés ; coûts administratifs ou budgétaires non chiffrés.",
+          "source_quote": "d'un avertissement par lettre recommandée",
+          "proposed_quote": "par tout autre moyen légal permettant de donner date certaine à sa réception"
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Un avertissement du ministère public ou l'avis d'inscription du privilège impose le recommandé, selon l'article concerné."
+    ]
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000034668590",
+    "source_sha256": "8df61e131f4abed024ac0db81a9741fb16712bbd6651ead5af4d635369f807d0",
+    "number": "R243-6-3",
+    "status": "rewrite_draft",
+    "proposed_xml": "\n<p>I. – Par dérogation au I de l'article R. 243-6, l'entreprise verse les cotisations afférentes à l'ensemble de ses établissements à un des organismes mentionnés aux L. 213-1 et L. 752-1, qui remplit la fonction d'interlocuteur unique désigné dans les conditions prévues au II de cet article dès lors que l'une des conditions suivantes est remplie : </p>\n<p>1° L'entreprise emploie au moins deux cent cinquante salariés dans des établissements situés dans la circonscription de plusieurs organismes de recouvrement ; </p>\n<p>2° L'entreprise appartient à un groupe dont l'effectif cumulé des entreprises, situées dans la circonscription de plusieurs organismes de recouvrement, est d'au moins cinq cent salariés. </p>\n<p>Le groupe mentionné au précédent alinéa est constitué, d'une part, par une entreprise ayant, en application de l'article L. 233-16 du code de commerce, publié des comptes consolidés l'année précédant la désignation de l'organisme de recouvrement, et d'autre part, par les sociétés qu'elle contrôle ou sur lesquelles elle exerce une influence dominante au sens du même article. </p>\n<p>II. – L'interlocuteur unique mentionné au I est désigné par le directeur de l'Agence centrale des organismes de sécurité sociale après consultation de l'entreprise et l'envoi, par tout moyen permettant de donner date certaine à sa réception, d'une proposition de rattachement au plus tard le 1er septembre de l'année précédant son entrée dans le dispositif. </p>\n<p>A compter de la réception de la proposition, l'entreprise dispose d'un délai de quinze jours soit pour indiquer son accord, soit pour décliner la proposition qui lui est faite. L'absence de réponse dans le délai imparti vaut accord tacite de l'entreprise. </p>\n<p>En cas de désaccord de l'entreprise sur l'organisme de recouvrement proposé, le directeur de l'Agence centrale des organismes de sécurité sociale désigne un interlocuteur unique du recouvrement. </p>\n<p>Le régime de versement en lieu unique prend effet à compter du 1er janvier de l'année suivant cette désignation. Il reste en vigueur, nonobstant les fluctuations d'effectifs, jusqu'au 31 décembre de la quatrième année suivant cette date d'effet. </p>\n<p>L'entreprise peut demander le changement de son interlocuteur unique en désignant, dans sa demande adressée au directeur de l'Agence centrale des organismes de sécurité sociale, un organisme figurant sur la liste mentionnée aux articles L. 213-1 et L. 752-1. Cette demande vaut option sans autorisation préalable ni reprise de la procédure de proposition et de désignation initiale. Le changement prend effet le 1er janvier suivant la réception de la demande ; il ne recommence pas, à lui seul, la période de maintien dans le régime prévue à l'alinéa précédent. Le choix s'exerce sans déroger aux affectations obligatoires prévues à l'article L. 243-1-2 ou prises en application de l'article R. 243-8-1, pour les personnels qu'elles concernent. Le même organisme assure le recouvrement de l'ensemble des établissements relevant de cette option. </p>\n<p>III. – L'organisme de recouvrement, qui remplit la fonction d'interlocuteur unique, assure pour tous les établissements de l'entreprise ou des entreprises d'un groupe l'ensemble des missions mentionnées à l'article L. 213-1. </p>\n<p>Toutefois, l'organisme mentionné à l'alinéa précédent peut confier à d'autres organismes de recouvrement des contrôles qu'il juge utile d'effectuer pour tout ou partie des établissements de l'entreprise ou des entreprises d'un groupe.</p>\n\n<p>La suppression de l'autorisation de changement s'applique aux demandes présentées ou en cours à l'entrée en vigueur de la loi de simplification, sans nouveau dépôt. Les désignations et actes antérieurs conservent leurs effets. L'option n'efface aucune dette, n'interrompt aucun contrôle ou recours et ne modifie ni les échéances, ni les déclarations, ni les exonérations opposables. Elle ne supprime pas le régime obligatoire de versement en lieu unique du I ni les affectations spéciales applicables.</p>\n",
+    "reason": "Retire l'autorisation préalable et la reprise de la procédure initiale pour changer d'interlocuteur unique dans le régime obligatoire ; garde l'unicité du versement et les affectations spéciales.",
+    "review_notes": "Source entière et notes lues ; chaque autre alinéa reste conservé. La mesure partage le même identifiant que l'option de R243-8 déjà proposée, sans compter deux fois une autorisation abolie. Pas de droit de choisir un collecteur contraire à L243-1-2/R243-8-1 ni de fragmentation de l'entreprise. Coûts de migration inconnus. Les cibles nécessaires sont jointes entières ; les règles de contrat unique et de quinze jours ne sont pas des délais de contrôle ou de recouvrement. Aucun barème, droit de retraite, exonération Acre/DOM ni règle de CSG n'est modifié. Les preuves techniques ne sont pas une validation juridique indépendante.",
+    "benefit_review": "Les exonérations, remboursements, remises, prescriptions, contradictoire et recours préexistants restent applicables dans leur champ, y compris aux futures situations éligibles. Demandes nouvelles ou pendantes après entrée en vigueur ; changement au 1er janvier suivant réception, sans redépôt. La mesure partage le même identifiant que l'option de R243-8 déjà proposée, sans compter deux fois une autorisation abolie. Pas de droit de choisir un collecteur contraire à L243-1-2/R243-8-1 ni de fragmentation de l'entreprise. Coûts de migration inconnus.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Retire l'autorisation préalable et la reprise de la procédure initiale pour changer d'interlocuteur unique dans le régime obligatoire ; garde l'unicité du versement et les affectations spéciales. Un changement d'organisme demandé par l'entreprise requiert autorisation du directeur puis nouvelle procédure de désignation. La demande existante vaut option pour un organisme de la liste, effet au 1er janvier suivant ; elle ne recommence pas la période de maintien. Désignation initiale et régime obligatoire conservés.",
+      "scope_limitations": "La mesure partage le même identifiant que l'option de R243-8 déjà proposée, sans compter deux fois une autorisation abolie. Pas de droit de choisir un collecteur contraire à L243-1-2/R243-8-1 ni de fragmentation de l'entreprise. Coûts de migration inconnus.",
+      "new_burdens_review": "Aucune charge privée nouvelle identifiée : les conditions réellement manquantes et les contrôles existants restent exigibles. Les seules formalités ou restrictions expressément visées sont supprimées ; aucun accès nouveau aux données ou régime d'exonération fictif n'est créé. Les administrations adaptent leurs circuits, coûts nets inconnus.",
+      "effects": [
+        {
+          "kind": "authorization_removed",
+          "measure_id": "versement-unique-fin-autorisation",
+          "description": "Retire l'autorisation préalable et la reprise de la procédure initiale pour changer d'interlocuteur unique dans le régime obligatoire ; garde l'unicité du versement et les affectations spéciales.",
+          "before": "Un changement d'organisme demandé par l'entreprise requiert autorisation du directeur puis nouvelle procédure de désignation.",
+          "after": "La demande existante vaut option pour un organisme de la liste, effet au 1er janvier suivant ; elle ne recommence pas la période de maintien. Désignation initiale et régime obligatoire conservés.",
+          "unit": "legal_duty",
+          "affected_population": "Entreprises du régime obligatoire R243-6-3 : seuils 250/500 et établissements multiples conservés, affectations spéciales réservées.",
+          "conditions_and_transition": "Demandes nouvelles ou pendantes après entrée en vigueur ; changement au 1er janvier suivant réception, sans redépôt.",
+          "replacement_or_new_burdens": "Aucun nouveau formulaire, registre, justificatif ou déclaration de remplacement. Contrôles nécessaires, dettes et droits de recours conservés ; coûts administratifs ou budgétaires non chiffrés.",
+          "source_quote": "après autorisation du directeur de l'Agence centrale des organismes de sécurité sociale",
+          "proposed_quote": "Cette demande vaut option sans autorisation préalable ni reprise de la procédure de proposition et de désignation initiale."
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Un changement d'organisme demandé par l'entreprise requiert autorisation du directeur puis nouvelle procédure de désignation."
+    ]
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000039222435",
+    "source_sha256": "cc7c9e8d6064c6710161adfc64d5e48d0e130a3ca0689978a0faa0bc2e63c041",
+    "number": "R243-11",
+    "status": "rewrite_draft",
+    "proposed_xml": "\n<p>Lorsque le cotisant, qui respecte les obligations déclaratives mentionnées à l'article L. 133-5-3 ou L. 613-2, n'a pas versé les cotisations et contributions sociales dont il est redevable à la date d'exigibilité s'en acquitte dans un délai de trente jours ou a souscrit, dans ce même délai, un plan d'apurement avec l'organisme de recouvrement dont il relève dans les conditions prévues à l'article R. 243-21 et en respecte les termes, les majorations de retard et les pénalités prévues à l'article R. 243-16 ne sont pas dues si le montant des majorations et pénalités qui seraient applicables est inférieur à la valeur mensuelle du plafond de la sécurité sociale. Un retard de paiement constaté au cours des vingt-quatre mois précédents ne prive pas, à lui seul, le cotisant de cette dispense.</p>\n\n<p>La suppression de la condition d'absence de retard antérieur s'applique aux échéances de cotisations et contributions exigibles à compter de l'entrée en vigueur de la loi de simplification. Le respect des obligations déclaratives, le règlement ou le plan sous trente jours, le respect du plan et le plafond des accessoires restent nécessaires. Cette dispense ne porte que sur les accessoires visés au présent article ; les cotisations dues, les autres pénalités, les remises et recours ouverts dans leur champ et les situations antérieures restent régis par leurs dispositions propres.</p>\n",
+    "reason": "Étend la dispense de majorations pour une régularisation rapide en retirant la condition d'absence de retard au cours des vingt-quatre mois précédents.",
+    "review_notes": "Source entière et notes lues ; chaque autre alinéa reste conservé. Vraie remise d'accessoires sous conditions, non simple report : le principal reste dû. Aucun taux social, dispositif de fraude ou pénalité distincte n'est supprimé ; perte de recettes non chiffrée. Les cibles nécessaires sont jointes entières ; les règles de contrat unique et de quinze jours ne sont pas des délais de contrôle ou de recouvrement. Aucun barème, droit de retraite, exonération Acre/DOM ni règle de CSG n'est modifié. Les preuves techniques ne sont pas une validation juridique indépendante.",
+    "benefit_review": "Les exonérations, remboursements, remises, prescriptions, contradictoire et recours préexistants restent applicables dans leur champ, y compris aux futures situations éligibles. Nouvelles échéances exigibles après réforme ; régimes anciens et autres remises favorables conservés. Vraie remise d'accessoires sous conditions, non simple report : le principal reste dû. Aucun taux social, dispositif de fraude ou pénalité distincte n'est supprimé ; perte de recettes non chiffrée.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Étend la dispense de majorations pour une régularisation rapide en retirant la condition d'absence de retard au cours des vingt-quatre mois précédents. Même si le cotisant régularise sous trente jours ou respecte un plan, un retard dans les vingt-quatre mois précédents ferme la dispense. Un retard antérieur ne ferme plus la dispense ; obligations déclaratives, trente jours, plan respecté et accessoires inférieurs au plafond mensuel restent nécessaires.",
+      "scope_limitations": "Vraie remise d'accessoires sous conditions, non simple report : le principal reste dû. Aucun taux social, dispositif de fraude ou pénalité distincte n'est supprimé ; perte de recettes non chiffrée.",
+      "new_burdens_review": "Aucune charge privée nouvelle identifiée : les conditions réellement manquantes et les contrôles existants restent exigibles. Les seules formalités ou restrictions expressément visées sont supprimées ; aucun accès nouveau aux données ou régime d'exonération fictif n'est créé. Les administrations adaptent leurs circuits, coûts nets inconnus.",
+      "effects": [
+        {
+          "kind": "relief_extended",
+          "measure_id": "retard-regularise-sans-condition-de-premier-incident",
+          "description": "Étend la dispense de majorations pour une régularisation rapide en retirant la condition d'absence de retard au cours des vingt-quatre mois précédents.",
+          "before": "Même si le cotisant régularise sous trente jours ou respecte un plan, un retard dans les vingt-quatre mois précédents ferme la dispense.",
+          "after": "Un retard antérieur ne ferme plus la dispense ; obligations déclaratives, trente jours, plan respecté et accessoires inférieurs au plafond mensuel restent nécessaires.",
+          "unit": "legal_duty",
+          "affected_population": "Cotisants respectant leurs déclarations et régularisant leur paiement, avec accessoires sous le plafond mensuel.",
+          "conditions_and_transition": "Nouvelles échéances exigibles après réforme ; régimes anciens et autres remises favorables conservés.",
+          "replacement_or_new_burdens": "Aucun nouveau formulaire, registre, justificatif ou déclaration de remplacement. Contrôles nécessaires, dettes et droits de recours conservés ; coûts administratifs ou budgétaires non chiffrés.",
+          "source_quote": "Aucun retard de paiement n'a été constaté au cours des vingt-quatre mois précédents",
+          "proposed_quote": "Un retard de paiement constaté au cours des vingt-quatre mois précédents ne prive pas, à lui seul, le cotisant de cette dispense."
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Même si le cotisant régularise sous trente jours ou respecte un plan, un retard dans les vingt-quatre mois précédents ferme la dispense."
+    ]
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000039222430",
+    "source_sha256": "5149c03e1619022fd9ff60cb6b20885067091c0c61ed4a8d0ea2e5af10b2ed86",
+    "number": "R243-12",
+    "status": "rewrite_draft",
+    "proposed_xml": "\n<p>Une pénalité de 1,5 % du plafond mensuel de sécurité sociale mentionné à l'article L. 133-5-4 par salarié ou assimilé est applicable aux employeurs en cas de défaut de production des déclarations aux échéances prescrites ou en cas d'omission de salariés ou assimilés. <br />\n<br />Pour une même échéance déclarative et les personnes auxquelles se rapporte le manquement, cette pénalité n'est appliquée qu'une fois ; la seule persistance du même retard ne fait pas naître une nouvelle pénalité mensuelle. Les manquements relatifs à des échéances déclaratives distinctes restent appréciés séparément. La pénalité est calculée en fonction de l'effectif connu ou transmis lors de la dernière déclaration produite par l'employeur. Lorsque le défaut de production n'excède pas cinq jours, la pénalité est plafonnée à 150 % du plafond mensuel de sécurité sociale en vigueur par entreprise. Ce plafonnement n'est applicable qu'une seule fois par année civile.</p>\n\n<p>La suppression de la répétition mensuelle s'applique aux manquements relatifs aux échéances déclaratives postérieures à l'entrée en vigueur de la loi de simplification. Le taux par salarié, la base d'effectif et le plafond favorable en cas de retard n'excédant pas cinq jours demeurent dans leurs conditions propres. Les obligations de déclarer, les cotisations et les sanctions distinctes légalement applicables restent dues dans leur champ, sous réserve de la règle de non-cumul de l'article R. 243-14. Les manquements antérieurs et leurs recours conservent leur régime.</p>\n",
+    "reason": "Retire le cumul automatique d'une nouvelle pénalité à chaque mois ou fraction de mois pour le même défaut déclaratif ; maintient la pénalité initiale et les déclarations distinctes.",
+    "review_notes": "Source entière et notes lues ; chaque autre alinéa reste conservé. Baisse d'une pénalité administrative, pas d'un taux de cotisation. Le délai de déclaration n'est pas prolongé et les droits sociaux ne deviennent pas facultatifs. Recettes et effet d'incitation non chiffrés. Les cibles nécessaires sont jointes entières ; les règles de contrat unique et de quinze jours ne sont pas des délais de contrôle ou de recouvrement. Aucun barème, droit de retraite, exonération Acre/DOM ni règle de CSG n'est modifié. Les preuves techniques ne sont pas une validation juridique indépendante.",
+    "benefit_review": "Les exonérations, remboursements, remises, prescriptions, contradictoire et recours préexistants restent applicables dans leur champ, y compris aux futures situations éligibles. Manquements aux échéances déclaratives après réforme ; anciens manquements et voies de recours inchangés. Baisse d'une pénalité administrative, pas d'un taux de cotisation. Le délai de déclaration n'est pas prolongé et les droits sociaux ne deviennent pas facultatifs. Recettes et effet d'incitation non chiffrés.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Retire le cumul automatique d'une nouvelle pénalité à chaque mois ou fraction de mois pour le même défaut déclaratif ; maintient la pénalité initiale et les déclarations distinctes. Pénalité de 1,5 % du plafond mensuel par salarié, répétée chaque mois ou fraction de mois pour un même retard. Même pénalité initiale, sans répétition mensuelle du même manquement ; échéances distinctes, plafond cinq jours et non-cumul conservés.",
+      "scope_limitations": "Baisse d'une pénalité administrative, pas d'un taux de cotisation. Le délai de déclaration n'est pas prolongé et les droits sociaux ne deviennent pas facultatifs. Recettes et effet d'incitation non chiffrés.",
+      "new_burdens_review": "Aucune charge privée nouvelle identifiée : les conditions réellement manquantes et les contrôles existants restent exigibles. Les seules formalités ou restrictions expressément visées sont supprimées ; aucun accès nouveau aux données ou régime d'exonération fictif n'est créé. Les administrations adaptent leurs circuits, coûts nets inconnus.",
+      "effects": [
+        {
+          "kind": "relief_extended",
+          "measure_id": "declaration-tardive-sans-penalite-mensuelle-repetee",
+          "description": "Retire le cumul automatique d'une nouvelle pénalité à chaque mois ou fraction de mois pour le même défaut déclaratif ; maintient la pénalité initiale et les déclarations distinctes.",
+          "before": "Pénalité de 1,5 % du plafond mensuel par salarié, répétée chaque mois ou fraction de mois pour un même retard.",
+          "after": "Même pénalité initiale, sans répétition mensuelle du même manquement ; échéances distinctes, plafond cinq jours et non-cumul conservés.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs tardifs ou ayant omis un salarié, sans remise de leurs déclarations et cotisations.",
+          "conditions_and_transition": "Manquements aux échéances déclaratives après réforme ; anciens manquements et voies de recours inchangés.",
+          "replacement_or_new_burdens": "Aucun nouveau formulaire, registre, justificatif ou déclaration de remplacement. Contrôles nécessaires, dettes et droits de recours conservés ; coûts administratifs ou budgétaires non chiffrés.",
+          "source_quote": "Cette pénalité est appliquée pour chaque mois ou fraction de mois de retard.",
+          "proposed_quote": "cette pénalité n'est appliquée qu'une fois"
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Pénalité de 1,5 % du plafond mensuel par salarié, répétée chaque mois ou fraction de mois pour un même retard."
+    ]
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000039222423",
+    "source_sha256": "2ecd87a8825d02743415ccdfc0a79621f0800361bab498c6e848b6e0fd529ae4",
+    "number": "R243-13",
+    "status": "retained_unchanged",
+    "proposed_xml": null,
+    "reason": "Maintien intégral après examen : La pénalité distingue minoration de rémunération, autres erreurs et nomenclature ; aucune seconde production précise n'est imposée par ces trois règles. Les taux sont sous le plafond législatif de L133-5-4 et le non-cumul de R243-14 demeure. Modifier le seul libellé serait cosmétique ; l'effet sur les droits individuels d'un changement du contrôle de nomenclature n'est pas établi.",
+    "review_notes": "Source entière, notes et cibles nécessaires lues ; maintien sans réécriture de style. La pénalité distingue minoration de rémunération, autres erreurs et nomenclature ; aucune seconde production précise n'est imposée par ces trois règles. Les taux sont sous le plafond législatif de L133-5-4 et le non-cumul de R243-14 demeure. Modifier le seul libellé serait cosmétique ; l'effet sur les droits individuels d'un changement du contrôle de nomenclature n'est pas établi.",
+    "benefit_review": "La pénalité distingue minoration de rémunération, autres erreurs et nomenclature ; aucune seconde production précise n'est imposée par ces trois règles. Les taux sont sous le plafond législatif de L133-5-4 et le non-cumul de R243-14 demeure. Modifier le seul libellé serait cosmétique ; l'effet sur les droits individuels d'un changement du contrôle de nomenclature n'est pas établi. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "La pénalité distingue minoration de rémunération, autres erreurs et nomenclature ; aucune seconde production précise n'est imposée par ces trois règles. Les taux sont sous le plafond législatif de L133-5-4 et le non-cumul de R243-14 demeure. Modifier le seul libellé serait cosmétique ; l'effet sur les droits individuels d'un changement du contrôle de nomenclature n'est pas établi.",
+      "scope_limitations": "Maintien de la règle utile examinée, sans prétendre valider les textes extérieurs non modifiés ni calculer une économie nationale. Pas d'allègement nouveau déclaré.",
+      "new_burdens_review": "Aucune obligation nouvelle : corps officiel intégralement conservé, proposed_xml nul. Les obligations existantes ne sont pas comptées comme supprimées ni requalifiées en baisse de cotisations.",
+      "effects": []
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000039222407",
+    "source_sha256": "f59a08902fd0752484e353d0ec2b6d3e6686c43eed26e0201a591c96e8c981c8",
+    "number": "R243-14",
+    "status": "retained_unchanged",
+    "proposed_xml": null,
+    "reason": "Maintien intégral après examen : La règle interdit le cumul de pénalités pour les mêmes faits, sous sa réserve fiscale propre. La retirer exposerait les employeurs à une double sanction ; aucune obligation déclarative ou taux nouveau n'est créé par son maintien.",
+    "review_notes": "Source entière, notes et cibles nécessaires lues ; maintien sans réécriture de style. La règle interdit le cumul de pénalités pour les mêmes faits, sous sa réserve fiscale propre. La retirer exposerait les employeurs à une double sanction ; aucune obligation déclarative ou taux nouveau n'est créé par son maintien.",
+    "benefit_review": "La règle interdit le cumul de pénalités pour les mêmes faits, sous sa réserve fiscale propre. La retirer exposerait les employeurs à une double sanction ; aucune obligation déclarative ou taux nouveau n'est créé par son maintien. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "La règle interdit le cumul de pénalités pour les mêmes faits, sous sa réserve fiscale propre. La retirer exposerait les employeurs à une double sanction ; aucune obligation déclarative ou taux nouveau n'est créé par son maintien.",
+      "scope_limitations": "Maintien de la règle utile examinée, sans prétendre valider les textes extérieurs non modifiés ni calculer une économie nationale. Pas d'allègement nouveau déclaré.",
+      "new_burdens_review": "Aucune obligation nouvelle : corps officiel intégralement conservé, proposed_xml nul. Les obligations existantes ne sont pas comptées comme supprimées ni requalifiées en baisse de cotisations.",
+      "effects": []
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000047480899",
+    "source_sha256": "7af72a3afda4352644335a3ffb9af874920b7600af83d843a60d8d192e7c8029",
+    "number": "R243-15",
+    "status": "rewrite_draft",
+    "proposed_xml": "\n<p>I. - Lorsque les données nécessaires au calcul des cotisations ou des contributions n'ont pas été transmises par l'employeur, celles-ci sont calculées à titre provisoire dans les conditions suivantes :</p>\n<p>1° Sur la base des dernières rémunérations connues, sans majoration automatique de cette base pour défaut de transmission ;</p>\n<p>2° En l'absence de rémunérations connues, sur la base du produit de la valeur mensuelle du plafond de la sécurité sociale, tel que prévu à l'article L. 241-3, et du nombre de salariés ou assimilés connus, sans majoration automatique de cette base pour défaut de transmission.</p>\n<p>Pour le calcul provisoire du I, les exonérations dont les conditions d'application et le montant sont établis pour la période considérée par des informations exactes, à jour et légalement disponibles à l'organisme sont prises en compte conformément à l'article L. 242-12-1. Les données nécessaires qui restent manquantes demeurent à fournir pour la liquidation définitive. Le forfait ne peut reconstituer une majoration punitive de la base. Les exonérations dont les conditions ou le montant ne peuvent pas encore être établis sont pris en compte lors de la régularisation, dans leurs conditions propres. Cette règle ne crée pas d'exonération de la contribution distincte du III.</p>\n<p>II. - La taxation déterminée en vertu du I est notifiée à l'intéressé dans le délai d'un mois suivant la date limite de déclaration. Ce délai est porté à trois mois maximum pour les employeurs mentionnés à l'article R. 243-6-1.</p>\n<p>III. - Lorsque l'employeur assujetti à l'obligation d'emploi mentionnée au premier alinéa de l'article L. 5212-2 du code du travail ne satisfait pas à l'obligation déclarative annuelle mentionnée à l'article L. 5212-5 du même code, un montant de contribution est fixé, à titre provisoire. Ce montant correspond au produit, majoré de 25 %, du coefficient applicable en fonction de l'effectif d'assujettissement de l'entreprise, déterminé par décret, par la différence entre le nombre de bénéficiaires de l'obligation d'emploi devant être employés et le nombre de bénéficiaires de l'obligation d'emploi déclarés, le cas échéant, par l'employeur au cours de l'année. Le taux de majoration est augmenté de cinq points à chaque échéance non déclarée consécutive.</p>\n<br />\n<p> La contribution déterminée en application du précédent alinéa est notifiée avant le 31 décembre de l'année au cours de laquelle la déclaration aurait dû être souscrite.</p>\n<p>IV. - Lorsque le cotisant effectue sa déclaration postérieurement aux notifications prévues au II et au III, le montant des cotisations et contributions dues est régularisé en conséquence.</p>\n<br />\n<p>Lorsque la régularisation fait suite à la notification prévue au III, la majoration prévue au premier alinéa de l'article R. 243-16 est portée à 8 % du montant de la contribution ainsi régularisée. La régularisation d'un calcul provisoire du I après notification prévue au II ne donne pas lieu au relèvement à 8 % sur le seul fondement du défaut de transmission des données. Les majorations ordinaires de retard de paiement légalement dues sur un fondement distinct demeurent applicables, avec leurs conditions et possibilités de remise ; aucune pénalité propre à la régularisation du I n'est rétablie.</p>\n<div>\n<p>V .- Les calculs et notifications des I et II ne peuvent être fondés sur la seule absence d'une déclaration mensuelle à néant dont l'employeur est dispensé en application du I de l'article R. 133-14. Cette règle ne dispense pas de données qui restent dues, notamment au titre du dernier mois comportant un emploi, d'un versement ou d'une régularisation déclarable ou de l'obligation annuelle du III.</p>\n<p>Ces dispositions ne sont pas applicables lorsque l'organisme a admis la demande préalable de l'employeur de ne plus adresser la déclaration en raison de l'absence d'emploi salarié.</p>\n</div>\n\n<p>La suppression des majorations automatiques de base du I, la prise en compte provisoire des exonérations établies et la suppression de la pénalité propre à leur régularisation s'appliquent selon les conditions et la transition de l'article L. 242-12-1. Les calculs provisoires antérieurs du I non définitivement régularisés sont rectifiés en conséquence ; aucune décision devenue définitive n'est rouverte par le seul effet de ces règles, sous réserve de l'application de la loi répressive plus douce aux sanctions non définitives. La contribution distincte du III, ses majorations et son échéance annuelle demeurent inchangées. Les délais de notification, les données nécessaires, les droits à régularisation, à restitution et à recours et les cotisations définitivement dues restent soumis à leurs règles propres.</p>\n",
+    "reason": "Coordonner intégralement les coupes de L242-12-1 désormais inscrit : retirer les majorations provisoires25/50% et5points, garder les exonérations établies et retirer le relèvement à8% propre à leur régularisation, sans toucher à la DOETH duIII ni aux majorations ordinaires de paiement. Maintenir la coordination de la DSN à néant déjà proposée.",
+    "review_notes": "Source, notes, avant-image absente, L242-12-1 CLI courant, L5212-2/5, L241-3, R243-16 et R133-14 source/projets entiers relus. Le I suit les trois coupes législatives ; les données et principal restent. Le III DOETH demeure byte-identique avec25%+5points et échéance31décembre. Le IV conserve la régularisation commune, mais le relèvement8% ne reste que pour la contribution duIII ; la majoration ordinaire de paiement duR243-16 et ses remises restent autonomes. Le V préserve dernier mois d’emploi, versements/régularisations et DOETH, avec la source favorable de dispense individuelle. Aucun transfert retraite n’est une baisse de cotisation, aucun nouveauCDD ou terme de mission n’est créé.",
+    "benefit_review": "Les exonérations futures demeurent éligibles dès qu’établies, sinon à régularisation ; le principal n’est pas remis. Les remises de majorations ordinaires, droits à restitution/recours, dispenseDSN à néant et ancienne dispense individuelle restent dans leurs champs. La contribution annuelle DOETH et ses conditions ne sont pas modifiées, ni majorées pour compenser les coupes.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Coordination réglementaire des trois changements législatifs désormais inscrits : base provisoire sans majoration et exonérations établies (trésorerie), suppression de la pénalité propre (allègement d’accessoire). La DOETH duIII et les retards ordinaires de paiement sont distincts ; la DSN à néant suit le projetR133-14 déjà présent.",
+      "scope_limitations": "Le calcul provisoire duI ne change pas la dette finale. La contribution distincte duIII conserve25%+5points et8% lors de sa régularisation ; le présent lot ne modifie pas cette DOETH. Les retards de paiement restent soumis à leurs règles autonomes. Pas d’économie nationale ou de taux général réduit.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : pas de justificatif ni de déclaration de remplacement, seulement les données nécessaires manquantes ; le réemploi respecte les accès déjà légaux.",
+      "effects": [
+        {
+          "kind": "payment_deferred",
+          "measure_id": "taxation-provisoire-base-non-majoree",
+          "description": "Suppression de la majoration automatique de la base d'estimation provisoire.",
+          "before": "I : dernières rémunérations+25% ou forfait plafond/effectif+50%, puis5points par échéance manquante.",
+          "after": "I : mêmes références de calcul sans25/50% ni5points ; dette finale régularisée, pas de baisse permanente.",
+          "unit": "financing",
+          "affected_population": "Employeurs soumis au calcul provisoire duI deR243-15, à distinguer de la contribution annuelle DOETH duIII.",
+          "conditions_and_transition": "Calculs provisoires, régularisations et situations antérieures selonL242-12-1 ; aucune réouverture générale des décisions définitives.",
+          "replacement_or_new_burdens": "Aucun forfait punitif ou impôt de remplacement ; obligations nécessaires de calcul maintenues. Effet de trésorerie seulement : dette finale inchangée, pas une réduction fiscale permanente.",
+          "source_quote": "majorées de 25 % pour la première échéance non déclarée",
+          "proposed_quote": "sans majoration automatique de cette base pour défaut de transmission"
+        },
+        {
+          "kind": "payment_deferred",
+          "measure_id": "taxation-provisoire-exonerations",
+          "description": "Application immédiate des exonérations dont les conditions sont déjà établies.",
+          "before": "Aucune exonération n'entre dans le calcul provisoire, même si les conditions sont connues ; prise en compte seulement lors de la régularisation.",
+          "after": "Seules conditions et montant légalement établis pris en compte dès le provisoire ; les autres à régularisation, sans remise définitive.",
+          "unit": "financing",
+          "affected_population": "Employeurs soumis au calcul provisoire duI deR243-15, à distinguer de la contribution annuelle DOETH duIII.",
+          "conditions_and_transition": "Calculs provisoires, régularisations et situations antérieures selonL242-12-1 ; aucune réouverture générale des décisions définitives.",
+          "replacement_or_new_burdens": "Aucune demande nouvelle ; utilisation des données et décisions légalement disponibles. Effet de trésorerie seulement : dette finale inchangée, pas une réduction fiscale permanente.",
+          "source_quote": "Lorsque les données nécessaires au calcul des cotisations ou des contributions n'ont pas été transmises par l'employeur",
+          "proposed_quote": "les exonérations dont les conditions d'application et le montant sont établis pour la période considérée"
+        },
+        {
+          "kind": "relief_extended",
+          "measure_id": "taxation-provisoire-penalite-supprimee",
+          "description": "Exécution réglementaire de la suppression de la pénalité propre pour le calcul duI.",
+          "before": "Le relèvement à8% suit aussi la régularisation du calcul provisoire duI.",
+          "after": "Pas de relèvement8% propre à cette régularisation ; DOETHIII et paiement tardif ordinaire restent distincts.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs soumis au calcul provisoire duI deR243-15, à distinguer de la contribution annuelle DOETH duIII.",
+          "conditions_and_transition": "Calculs provisoires, régularisations et situations antérieures selonL242-12-1 ; aucune réouverture générale des décisions définitives.",
+          "replacement_or_new_burdens": "Aucune cotisation ou sanction de remplacement sur ce seul fondement.",
+          "source_quote": "la majoration prévue au premier alinéa de l'article R. 243-16 est portée à 8 %",
+          "proposed_quote": "ne donne pas lieu au relèvement à 8 % sur le seul fondement du défaut de transmission des données"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "dsn-neant-dispense-sans-emploi",
+          "description": "Évite que la taxation provisoire rétablisse l'autorisation préalable déjà retirée par le R133-14 proposé.",
+          "before": "Le V vise seulement l'admission d'une demande préalable d'absence de déclaration pour absence d'emploi.",
+          "after": "Aucune taxation I/II pour le seul défaut d'une DSN à néant dispensée par R133-14 ; données encore dues et DOETH annuelle maintenues.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs bénéficiant de la dispense mensuelle de R133-14 après cessation de la dernière relation d'emploi, sans donnée déclarable.",
+          "conditions_and_transition": "Champ et entrée en vigueur de la dispense déjà proposée ; ancienne dispense individuelle conservée dans son champ.",
+          "replacement_or_new_burdens": "Aucun nouveau dossier ni taxe supprimée ; coordination de la même dispense, pas nouveau gain CRPA.",
+          "source_quote": "l'organisme a admis la demande préalable de l'employeur de ne plus adresser la déclaration",
+          "proposed_quote": "Les calculs et notifications des I et II ne peuvent être fondés sur la seule absence d'une déclaration mensuelle à néant"
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "La taxation provisoire écarte toute exonération ; la liquidation définitive rétablit les avantages éligibles après déclaration."
+    ]
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000047437207",
+    "source_sha256": "cecc630ff7fad528bdae823c44fbee3ca388ac28f4505f2dc2b133fff7d6be10",
+    "number": "R243-17",
+    "status": "retained_unchanged",
+    "proposed_xml": null,
+    "reason": "Maintien intégral après examen : Exemption de la majoration initiale pour certains contrôles, réduction à 0,1 % si paiement sous trente jours et dispense de complément si retard administratif supérieur à deux mois sont favorables. Les exceptions fraude/abus/obstacle et seuil annuel sont conservés ; pas de nouvelle copie ni formulaire identifié.",
+    "review_notes": "Source entière, notes et cibles nécessaires lues ; maintien sans réécriture de style. Exemption de la majoration initiale pour certains contrôles, réduction à 0,1 % si paiement sous trente jours et dispense de complément si retard administratif supérieur à deux mois sont favorables. Les exceptions fraude/abus/obstacle et seuil annuel sont conservés ; pas de nouvelle copie ni formulaire identifié.",
+    "benefit_review": "Exemption de la majoration initiale pour certains contrôles, réduction à 0,1 % si paiement sous trente jours et dispense de complément si retard administratif supérieur à deux mois sont favorables. Les exceptions fraude/abus/obstacle et seuil annuel sont conservés ; pas de nouvelle copie ni formulaire identifié. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Exemption de la majoration initiale pour certains contrôles, réduction à 0,1 % si paiement sous trente jours et dispense de complément si retard administratif supérieur à deux mois sont favorables. Les exceptions fraude/abus/obstacle et seuil annuel sont conservés ; pas de nouvelle copie ni formulaire identifié.",
+      "scope_limitations": "Maintien de la règle utile examinée, sans prétendre valider les textes extérieurs non modifiés ni calculer une économie nationale. Pas d'allègement nouveau déclaré.",
+      "new_burdens_review": "Aucune obligation nouvelle : corps officiel intégralement conservé, proposed_xml nul. Les obligations existantes ne sont pas comptées comme supprimées ni requalifiées en baisse de cotisations.",
+      "effects": []
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000047437198",
+    "source_sha256": "6d4c1e71a2dd3d44c103fe7b067bc23463623231c30a1fd5432e72d2e9142c72",
+    "number": "R243-18",
+    "status": "retained_unchanged",
+    "proposed_xml": null,
+    "reason": "Maintien intégral après examen : Le délai de six ans et l'assiette limitée au seul manquement réitéré bornent la majoration de L243-7-6. Ils n'imposent pas une seconde déclaration ; retirer l'article créerait une incertitude sur cette garantie et ne supprime pas la majoration législative.",
+    "review_notes": "Source entière, notes et cibles nécessaires lues ; maintien sans réécriture de style. Le délai de six ans et l'assiette limitée au seul manquement réitéré bornent la majoration de L243-7-6. Ils n'imposent pas une seconde déclaration ; retirer l'article créerait une incertitude sur cette garantie et ne supprime pas la majoration législative.",
+    "benefit_review": "Le délai de six ans et l'assiette limitée au seul manquement réitéré bornent la majoration de L243-7-6. Ils n'imposent pas une seconde déclaration ; retirer l'article créerait une incertitude sur cette garantie et ne supprime pas la majoration législative. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Le délai de six ans et l'assiette limitée au seul manquement réitéré bornent la majoration de L243-7-6. Ils n'imposent pas une seconde déclaration ; retirer l'article créerait une incertitude sur cette garantie et ne supprime pas la majoration législative.",
+      "scope_limitations": "Maintien de la règle utile examinée, sans prétendre valider les textes extérieurs non modifiés ni calculer une économie nationale. Pas d'allègement nouveau déclaré.",
+      "new_burdens_review": "Aucune obligation nouvelle : corps officiel intégralement conservé, proposed_xml nul. Les obligations existantes ne sont pas comptées comme supprimées ni requalifiées en baisse de cotisations.",
+      "effects": []
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000047480864",
+    "source_sha256": "6ad1b4436479189eeba9fad0a381508990caa16f657b98ec2196d2a48dcba085",
+    "number": "R243-19",
+    "status": "retained_unchanged",
+    "proposed_xml": null,
+    "reason": "Maintien intégral après examen : La compétence de liquidation et le délai d'un mois après notification sont nécessaires au recouvrement et à sa contestation. Les renvois aux sanctions gardent leurs régimes propres, y compris l'extinction prospective C3S ; les énumérer ne rétablit pas une contribution supprimée ni ne retire une remise.",
+    "review_notes": "Source entière, notes et cibles nécessaires lues ; maintien sans réécriture de style. La compétence de liquidation et le délai d'un mois après notification sont nécessaires au recouvrement et à sa contestation. Les renvois aux sanctions gardent leurs régimes propres, y compris l'extinction prospective C3S ; les énumérer ne rétablit pas une contribution supprimée ni ne retire une remise.",
+    "benefit_review": "La compétence de liquidation et le délai d'un mois après notification sont nécessaires au recouvrement et à sa contestation. Les renvois aux sanctions gardent leurs régimes propres, y compris l'extinction prospective C3S ; les énumérer ne rétablit pas une contribution supprimée ni ne retire une remise. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "La compétence de liquidation et le délai d'un mois après notification sont nécessaires au recouvrement et à sa contestation. Les renvois aux sanctions gardent leurs régimes propres, y compris l'extinction prospective C3S ; les énumérer ne rétablit pas une contribution supprimée ni ne retire une remise.",
+      "scope_limitations": "Maintien de la règle utile examinée, sans prétendre valider les textes extérieurs non modifiés ni calculer une économie nationale. Pas d'allègement nouveau déclaré.",
+      "new_burdens_review": "Aucune obligation nouvelle : corps officiel intégralement conservé, proposed_xml nul. Les obligations existantes ne sont pas comptées comme supprimées ni requalifiées en baisse de cotisations.",
+      "effects": []
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000039222660",
+    "source_sha256": "73d29936540b2e8a34f56df1a14715fe4cdf57ee5495e5a8eeda63bab27c3f27",
+    "number": "R243-26",
+    "status": "retained_unchanged",
+    "proposed_xml": null,
+    "reason": "Maintien intégral après examen : Le délai supplémentaire d'un mois après mise en demeure protège l'entreprise utilisatrice tenue subsidiairement après défaillance de l'ETT et insuffisance de garantie. Ni la mission ni le contrat unique ne suppriment la dette de cotisations ; retirer cette règle retirerait le délai favorable.",
+    "review_notes": "Source entière, notes et cibles nécessaires lues ; maintien sans réécriture de style. Le délai supplémentaire d'un mois après mise en demeure protège l'entreprise utilisatrice tenue subsidiairement après défaillance de l'ETT et insuffisance de garantie. Ni la mission ni le contrat unique ne suppriment la dette de cotisations ; retirer cette règle retirerait le délai favorable.",
+    "benefit_review": "Le délai supplémentaire d'un mois après mise en demeure protège l'entreprise utilisatrice tenue subsidiairement après défaillance de l'ETT et insuffisance de garantie. Ni la mission ni le contrat unique ne suppriment la dette de cotisations ; retirer cette règle retirerait le délai favorable. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Le délai supplémentaire d'un mois après mise en demeure protège l'entreprise utilisatrice tenue subsidiairement après défaillance de l'ETT et insuffisance de garantie. Ni la mission ni le contrat unique ne suppriment la dette de cotisations ; retirer cette règle retirerait le délai favorable.",
+      "scope_limitations": "Maintien de la règle utile examinée, sans prétendre valider les textes extérieurs non modifiés ni calculer une économie nationale. Pas d'allègement nouveau déclaré.",
+      "new_burdens_review": "Aucune obligation nouvelle : corps officiel intégralement conservé, proposed_xml nul. Les obligations existantes ne sont pas comptées comme supprimées ni requalifiées en baisse de cotisations.",
+      "effects": []
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000038787043",
+    "source_sha256": "38322fc866e8c6785a71b3ecae724bb380fd0feef08ab3be538b50de52e84dc5",
+    "number": "R243-45-1",
+    "status": "rewrite_draft",
+    "proposed_xml": "\n<p>I.-La transaction conclue entre un cotisant et le directeur d'un organisme de recouvrement en application de l'article 2044 du code civil et de l'article L. 243-6-5 du présent code termine une contestation née, à la condition que les créances concernées aient fait l'objet d'une contestation dans les délais de recours fixés par les dispositions du présent code et n'aient pas fait l'objet d'une décision de justice définitive, ou prévient une contestation à naître. Elle comporte des concessions réciproques de la part de chaque partie.</p>\n<p>La demande formulée par le cotisant en application des dispositions du 3° du II de l'article L. 243-6-5 porte sur les montants redressés en application des dispositions de l'article R. 243-59-4 ainsi que sur les montants des redressements calculés en application de méthodes d'évaluation par extrapolation autres que celles mentionnées à l'article R. 243-59-2. Elle porte sur des sommes non prescrites.</p>\n<p>Le montant de la transaction s'apprécie comme la différence entre le montant initialement notifié par l'organisme de recouvrement et le montant figurant dans la proposition de transaction.</p>\n<p>II.- Le cotisant ou, pour le compte de celui-ci, un expert-comptable mandaté ou un avocat, peut demander au directeur de l'organisme de recouvrement mentionné aux articles L. 213-1 et L. 752-4 auprès duquel il est tenu de souscrire ses déclarations la conclusion d'une transaction dans les conditions mentionnées à l'article L. 243-6-5.</p>\n<p>La demande n'est recevable que si un cotisant est à jour de ses obligations déclaratives et de paiement à l'égard de l'organisme de recouvrement dont il dépend, à l'exception de l'objet de la demande. La condition est réputée remplie dès lors que le cotisant a souscrit et respecte, à la date de la demande, un plan d'apurement.</p>\n<p>La demande peut être présentée avant ou après réception d'une mise en demeure, dès lors que les sommes et l'objet de la transaction peuvent être identifiés et que les conditions de l'article L. 243-6-5 sont remplies. Un recours pendant devant la commission de recours amiable ou l'absence de saisine judiciaire ne la rend pas irrecevable.</p>\n<p>La demande est écrite et adressée par tout moyen permettant de rapporter la preuve de sa date de réception. Elle est motivée et comporte :</p>\n<p>1° Le nom et l'adresse du demandeur ;</p>\n<p>2° Son numéro d'inscription lorsqu'il est déjà inscrit au régime général de sécurité sociale ;</p>\n<p>3° Tous documents et supports d'information utile à l'identification des montants qui font l'objet de la demande ;</p>\n<p>4° Lorsqu'une mise en demeure a été adressée, ses références pour les sommes faisant l'objet de la demande.</p>\n<p>III.-Le délai imparti au cotisant pour saisir la commission de recours amiable mentionnée à l'article R. 142-1 est interrompu dès réception de la demande de transaction par le directeur de l'organisme de recouvrement et jusqu'à la notification, le cas échéant, de la décision du directeur de l'organisme de ne pas transiger.</p>\n<p>La demande de transaction interrompt également les délais applicables au recouvrement des cotisations et contributions de sécurité sociale faisant suite à une mise en demeure dans les mêmes conditions.</p>\n<p>Lorsque la demande est complète, le directeur dispose d'un délai de trente jours à compter de sa réception pour notifier sa réponse par tout moyen permettant de rapporter la preuve de sa date de réception. Lorsque la demande est incomplète, le directeur adresse une demande de pièces complémentaires au demandeur. Dans ce cas, le délai de trente jours ne court qu'à compter de la réception par le directeur des documents manquants. L'absence de réception des éléments manquants dans les vingt jours ne rend pas la demande caduque : elle reste en attente de ces éléments, sans nouveau dépôt. Le délai de réponse de trente jours ne commence qu'à réception des éléments nécessaires. Chacune des parties conserve la faculté d'abandon prévue ci-après ; le silence ne vaut pas conclusion d'une transaction.</p>\n<p>Une réponse apportée à la demande de transaction, laissée à la libre appréciation du directeur, est notifiée au demandeur par tout moyen permettant de rapporter la preuve de sa date de réception. Une réponse négative n'a pas à être motivée. Lorsque la réponse du directeur n'a pas été portée à la connaissance du demandeur dans un délai de trente jours, cette réponse est réputée négative.</p>\n<p>Une réponse positive du directeur n'emporte pas droit à la transaction. Les parties peuvent à tout moment abandonner la procédure. Elles doivent alors en informer l'autre partie par tout moyen permettant de rapporter la preuve de sa date de réception à cette information. L'abandon de la transaction en cours n'a pas à être motivé.</p>\n<p>Le directeur et le demandeur conviennent d'une proposition de protocole transactionnel, conforme à un modèle approuvé par arrêté conjoint des ministres chargés de la sécurité sociale et de l'agriculture.</p>\n<p>IV.-La transaction conclue est communiquée par le directeur de l'organisme de recouvrement à l'autorité mentionnée à l'article R. 155-1 dans les conditions du IV de l'article L. 243-6-5. Cette communication n'est pas une demande d'approbation de la transaction. Aucune approbation particulière, expresse ou tacite, aucun délai d'attente à cette fin et aucun refus d'approbation privant la transaction d'effet ne sont requis au titre du présent article pour les transactions conclues à compter de l'entrée en vigueur de la suppression législative de cette approbation.</p>\n<p>Les conditions légales de la transaction, notamment les concessions réciproques, demeurent exigées. Les pouvoirs de contrôle légalement autonomes de l'autorité restent applicables dans leur champ ; ils ne sont pas transformés en une nouvelle approbation particulière de la transaction. La transaction devient définitive selon le IV de l'article L. 243-6-5.</p>\n<p>V.-Les dispositions prévues aux articles 641 et 642 du code de procédure civile s'appliquent aux délais mentionnés au III.</p>\n<p>VI.-Le manquement par le cotisant à l'accomplissement des obligations prévues dans la transaction entraîne la caducité de celle-ci.</p>\n<p>A défaut de conclusion d'une transaction ou lorsque la transaction est devenue caduque, la procédure de recouvrement des sommes notifiées dans la mise en demeure est alors engagée ou poursuivie selon les règles, garanties et sanctions applicables au recouvrement des cotisations et contributions de sécurité sociale.</p>\n<p>VII.-La transaction signée n'emporte pas d'effet sur l'interprétation en droit concernant les motifs mentionnés dans la lettre d'observations.</p>\n<p>VIII.-Le rapport annuel distinct du directeur au conseil d'administration et à l'Agence centrale des organismes de sécurité sociale et le rapport annuel d'analyse de cette agence à l'autorité mentionnée à l'article R. 155-1 avant le 1er octobre ne sont plus exigés sur le seul fondement du présent article. Aucun état, registre ou rapport de remplacement n'est créé. La communication individuelle prévue au IV et les contrôles légalement autonomes sont maintenus. Cette suppression s'applique aux rapports non encore transmis à l'entrée en vigueur de la suppression législative du compte rendu annuel, y compris pour les années antérieures.</p>\n\n<p>Les suppressions de l'attente obligatoire d'une mise en demeure, de l'obstacle lié au recours amiable ou à l'absence de saisine judiciaire et de la caducité automatique à vingt jours s'appliquent aux demandes présentées ou en cours à l'entrée en vigueur de la loi de simplification. Elles ne rouvrent pas une demande déjà définitivement éteinte ni une décision devenue définitive. Les conditions d'actualité des déclarations et paiements, les concessions réciproques, la liberté de ne pas transiger et les garanties de recours sont maintenues. La suppression de l'approbation particulière ne s'applique qu'aux transactions conclues à compter de l'entrée en vigueur prévue au IV de l'article L. 243-6-5 ; les transactions antérieures et les droits qui en résultent conservent leur régime. Aucun délai de recours judiciaire n'est interrompu du seul fait de négociations, en dehors des effets expressément prévus par les textes qui le régissent.</p>\n",
+    "reason": "Retire la mise en demeure comme préalable obligatoire et la caducité automatique de la demande incomplète à vingt jours ; coordonne l'accès pendant le recours amiable sans imposer un procès. Coordonne aussi les suppressions législatives désormais inscrites de l’approbation particulière et du compte rendu annuel ; aucun circuit équivalent ne les remplace.",
+    "review_notes": "Source et notes entières, candidat001 et L243-6-5 CLI inscrit relus. I, concessions, trois objets, sommes non prescrites, plan d’apurement et compétence du directeur restent ; II retire le préalable de mise en demeure, III seulement la caducité automatique de vingt jours et garde les deux interruptions favorables, trente jours sur dossier complet, refus et libre abandon. IV/V retirent le mécanisme d’approbation et ses seuls délais, avec communication individuelle et pouvoirs autonomes conservés ; VIII retire les deux rapports sans remplacement. Les transactions antérieures conservent leur ancien régime. Les articles641/642CPC restent pour les délaisIII. L243-6-4 source/null est maintenant réellement inscrit, sa portabilité favorable demeure. Ni négociation seule ni présent article ne créent une interruption judiciaire générale. Les préavis quinze jours, barème de rupture et retraite ne deviennent pas des délais ou remises de recouvrement. Les textes futurs des deux cibles intralot sont explicitement distingués des vues canoniques avant inscription.",
+    "benefit_review": "Les conditions favorables de plan d’apurement, les interruptions de recours amiable et de recouvrement, le contradictoire et la liberté de négocier demeurent. La demande avant mise en demeure et sans caducité automatique ne crée pas de droit à remise. L’approbation particulière disparaît pour les seules transactions nouvelles visées par L243-6-5, sans fermer les pouvoirs autonomes de contrôle ; les anciennes gardent leur régime. Les concessions, délais judiciaires, prescriptions et droits acquis restent.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Retire la mise en demeure comme préalable obligatoire et la caducité automatique de la demande incomplète à vingt jours ; coordonne l'accès pendant le recours amiable sans imposer un procès. La demande ne peut être déposée qu'après réception de la mise en demeure et devient caduque après vingt jours sans compléments. Demande possible avant mise en demeure si sommes identifiables ; demande incomplète en attente sans redépôt. Les trente jours sur dossier complet et la faculté d'abandon restent. L’approbation particulière et les rapports annuels sont retirés conformément à L243-6-5 déjà inscrit : ces coordinations ne constituent pas de nouvelles mesures en plus des mêmes mesures législatives.",
+      "scope_limitations": "Pas de droit à obtenir une transaction : dettes non définitives, conditions déclaratives, concessions réciproques et délais judiciaires conservés. Les transactions nouvelles sont dispensées de l’approbation particulière ; les anciennes gardent leur régime. Le délai administratif sur dossier complet duIII reste trente jours. Aucun gain national net calculé.",
+      "new_burdens_review": "Aucune charge privée nouvelle identifiée : les conditions réellement manquantes et les contrôles existants restent exigibles. Les seules formalités ou restrictions expressément visées sont supprimées ; aucun accès nouveau aux données ou régime d'exonération fictif n'est créé. Les administrations adaptent leurs circuits, coûts nets inconnus.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "transaction-sociale-sans-gel-amiable",
+          "description": "Retire la mise en demeure comme préalable obligatoire et la caducité automatique de la demande incomplète à vingt jours ; coordonne l'accès pendant le recours amiable sans imposer un procès.",
+          "before": "La demande ne peut être déposée qu'après réception de la mise en demeure et devient caduque après vingt jours sans compléments.",
+          "after": "Demande possible avant mise en demeure si sommes identifiables ; demande incomplète en attente sans redépôt. Les trente jours sur dossier complet et la faculté d'abandon restent.",
+          "unit": "legal_duty",
+          "affected_population": "Cotisants admissibles à une transaction, y compris ceux dont le recours amiable est pendant.",
+          "conditions_and_transition": "Demandes nouvelles et pendantes après entrée en vigueur ; caducités et décisions antérieures définitives non rouvertes.",
+          "replacement_or_new_burdens": "Aucun nouveau formulaire, registre, justificatif ou déclaration de remplacement. Contrôles nécessaires, dettes et droits de recours conservés ; coûts administratifs ou budgétaires non chiffrés.",
+          "source_quote": "La demande n'est recevable qu'après réception de la mise en demeure prévue à l'article L. 244-2.",
+          "proposed_quote": "La demande peut être présentée avant ou après réception d'une mise en demeure"
+        },
+        {
+          "kind": "relief_extended",
+          "measure_id": "transaction-sociale-sans-gel-amiable",
+          "description": "Conservation de la demande incomplète sans caducité automatique ni nouveau dépôt après vingt jours.",
+          "before": "Absence de compléments reçus sous vingt jours : caducité automatique de la demande.",
+          "after": "Demande en attente des compléments, sans caducité pour ce seul délai ni redépôt ; liberté d'abandon maintenue.",
+          "unit": "legal_duty",
+          "affected_population": "Cotisants ayant demandé une transaction et devant encore compléter leur dossier.",
+          "conditions_and_transition": "Demandes nouvelles ou encore pendantes à l'entrée en vigueur, sans réouverture des caducités déjà définitives.",
+          "replacement_or_new_burdens": "Aucun formulaire ni attestation de remplacement ; les seuls éléments nécessaires au dossier restent dus.",
+          "source_quote": "la demande de transaction est réputée caduque",
+          "proposed_quote": "elle reste en attente de ces éléments, sans nouveau dépôt."
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "transaction-sociale-sans-approbation-speciale",
+          "description": "Coordination réglementaire de la même suppression législative déjà inscrite, sans recompter un nouveau dispositif. Suppression de l'approbation spéciale de tutelle conditionnant la transaction définitive.",
+          "before": "Transaction exécutée devenant définitive après approbation de l'autorité de L151-1.",
+          "after": "Transaction définitive après exécution de ses obligations, sans approbation spéciale ; information et contrôle autonomes réservés.",
+          "unit": "legal_duty",
+          "affected_population": "Cotisants transigeant et organismes de recouvrement signataires.",
+          "conditions_and_transition": "Transactions conclues à compter de la loi ; transactions antérieures conservent leur régime et leurs droits.",
+          "replacement_or_new_burdens": "Communication à la tutelle déjà existante maintenue, sans nouvelle demande équivalente.",
+          "source_quote": "Le refus d'approbation de la proposition prive d'effet la transaction.",
+          "proposed_quote": "Cette communication n'est pas une demande d'approbation de la transaction."
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "transaction-sociale-compte-rendu-annuel-supprime",
+          "description": "Coordination réglementaire de la même suppression législative déjà inscrite, sans recompter un nouveau dispositif. Suppression du compte rendu annuel distinct des transactions.",
+          "before": "Compte rendu du directeur avant le 30 juin de chaque année pour les transactions de l'année précédente.",
+          "after": "Aucun compte rendu annuel sur ce fondement et aucun état de remplacement ; information individuelle de la tutelle maintenue.",
+          "unit": "legal_duty",
+          "affected_population": "Directeurs des organismes de recouvrement concernés et tutelle destinataire.",
+          "conditions_and_transition": "Comptes rendus non encore transmis à l'entrée en vigueur, même pour des années antérieures.",
+          "replacement_or_new_burdens": "Aucun nouveau registre ni rapport regroupé obligatoire créé.",
+          "source_quote": "présente chaque année au conseil d'administration de cet organisme",
+          "proposed_quote": "Le rapport annuel distinct du directeur au conseil d'administration"
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "La demande ne peut être déposée qu'après réception de la mise en demeure et devient caduque après vingt jours sans compléments."
+    ]
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000044952457",
+    "source_sha256": "e58a92c32225249f263ddb7d9799b20fc920712ae635869cdb172a9f2fbce352",
+    "number": "R243-46",
+    "status": "retained_unchanged",
+    "proposed_xml": null,
+    "reason": "Maintien intégral après examen : L'inscription au registre et le greffe compétent rendent le privilège opposable et identifiable ; l'entreprise hors métropole bénéficie d'un circuit unique à Paris pour ses créances métropolitaines. Aucune formalité privée supplémentaire ou double dépôt n'est démontré dans ces deux alinéas.",
+    "review_notes": "Source entière, notes et cibles nécessaires lues ; maintien sans réécriture de style. L'inscription au registre et le greffe compétent rendent le privilège opposable et identifiable ; l'entreprise hors métropole bénéficie d'un circuit unique à Paris pour ses créances métropolitaines. Aucune formalité privée supplémentaire ou double dépôt n'est démontré dans ces deux alinéas.",
+    "benefit_review": "L'inscription au registre et le greffe compétent rendent le privilège opposable et identifiable ; l'entreprise hors métropole bénéficie d'un circuit unique à Paris pour ses créances métropolitaines. Aucune formalité privée supplémentaire ou double dépôt n'est démontré dans ces deux alinéas. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "L'inscription au registre et le greffe compétent rendent le privilège opposable et identifiable ; l'entreprise hors métropole bénéficie d'un circuit unique à Paris pour ses créances métropolitaines. Aucune formalité privée supplémentaire ou double dépôt n'est démontré dans ces deux alinéas.",
+      "scope_limitations": "Maintien de la règle utile examinée, sans prétendre valider les textes extérieurs non modifiés ni calculer une économie nationale. Pas d'allègement nouveau déclaré.",
+      "new_burdens_review": "Aucune obligation nouvelle : corps officiel intégralement conservé, proposed_xml nul. Les obligations existantes ne sont pas comptées comme supprimées ni requalifiées en baisse de cotisations.",
+      "effects": []
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000006748841",
+    "source_sha256": "834a6205e518ea724cf1b3e9602a8fa37be6ee2ef133786a222aacdb0f462f98",
+    "number": "R243-48",
+    "status": "rewrite_draft",
+    "proposed_xml": "\n<br />   En même temps qu'il requiert l'inscription de son privilège, l'organisme créancier en avise le débiteur par lettre recommandée ou par tout autre moyen légal permettant de donner date certaine à sa réception.<br />\n<br />\n\n<p>Cette faculté s'applique aux avis accompagnant les demandes d'inscription présentées à compter de l'entrée en vigueur de la loi de simplification. Elle ne supprime ni l'avis concomitant au débiteur ni la preuve de sa réception. Les règles légales de notification et de protection du destinataire demeurent applicables ; un simple envoi électronique ne vaut pas, à lui seul, réception certaine. Les inscriptions, avis et recours antérieurs restent régis par leurs règles propres.</p>\n",
+    "reason": "Coordination des modes légaux de notification, sans gain nouveau démontré au-delà des facultés électroniques déjà ouvertes par le CRPA. Le corps reste intégral et inchangé ; aucune baisse de dette, d’avis ou de protection du destinataire.",
+    "review_notes": "Source entière et notes lues ; chaque autre alinéa reste conservé. Aucune présomption qu'un courriel simple suffit. Pas de suppression de l'avis, du mois de régularisation législatif ni des droits du débiteur ; coûts de notification et économies nationales non chiffrés. Les cibles nécessaires sont jointes entières ; les règles de contrat unique et de quinze jours ne sont pas des délais de contrôle ou de recouvrement. Aucun barème, droit de retraite, exonération Acre/DOM ni règle de CSG n'est modifié. Les preuves techniques ne sont pas une validation juridique indépendante. Contrelecture complémentaire : CRPA L112-14/15 et R112-16 lus dans la capture primaire affichée. Les substitutions électroniques existaient déjà ; l’accord exprès préalable du destinataire demeure requis lorsqu’il est légalement exigé. Aucun gain papier supplémentaire n’est démontré dans ce lot. Classement coordination_only, sans nouvelle mesure de réduction ni économie. La saisine électronique du public et la notification d’un document par l’administration sont distinguées ; pas de notification valable par simple courriel présumée.",
+    "benefit_review": "Les exonérations, remboursements, remises, prescriptions, contradictoire et recours préexistants restent applicables dans leur champ, y compris aux futures situations éligibles. Avertissements émis ou inscriptions demandées après entrée en vigueur ; procédures anciennes et irrégularités passées non validées. Aucune présomption qu'un courriel simple suffit. Pas de suppression de l'avis, du mois de régularisation législatif ni des droits du débiteur ; coûts de notification et économies nationales non chiffrés. Les garanties légales de notification restent requises, notamment l’accord exprès préalable du destinataire lorsque le CRPA ou un autre texte l’impose pour le procédé électronique. Aucun gain nouveau n’est attribué à une faculté déjà ouverte.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Le recommandé n’est déjà pas un support exclusivement postal en raison des alternatives légales, notamment CRPA L112-15. La réécriture respecte les autres moyens légalement admissibles et la date certaine de réception, mais ne démontre aucun allègement nouveau propre. Ni une notification ni une dette ne disparaissent.",
+      "scope_limitations": "Aucun gain nouveau démontré sur les modes de notification ; aucune économie nationale ou locale chiffrée. Le simple courriel ne vaut pas réception certaine ; l’accord exprès préalable du destinataire demeure requis lorsqu’il est légalement exigé. Le mois de régularisation de L244-2, la motivation et les recours restent.",
+      "new_burdens_review": "Aucune charge privée nouvelle identifiée : les conditions réellement manquantes et les contrôles existants restent exigibles. Les seules formalités ou restrictions expressément visées sont supprimées ; aucun accès nouveau aux données ou régime d'exonération fictif n'est créé. Les administrations adaptent leurs circuits, coûts nets inconnus.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "recouvrement-notifications-sans-recommande-exclusif",
+          "description": "Alignement sur les moyens légaux de notification, sans compter les alternatives électroniques déjà ouvertes comme une nouvelle suppression.",
+          "before": "Le texte mentionne la lettre recommandée ; des alternatives électroniques existent déjà sous leurs conditions légales.",
+          "after": "Avis maintenu avec date certaine de réception, moyens légaux et protections applicables. Aucun nouveau droit général au courrier simple démontré.",
+          "unit": "legal_duty",
+          "affected_population": "Autorités et organismes notifiant ; cotisants destinataires des seuls avertissements ou avis visés.",
+          "conditions_and_transition": "Avertissements émis ou inscriptions demandées après entrée en vigueur ; procédures anciennes et irrégularités passées non validées.",
+          "replacement_or_new_burdens": "Aucun nouveau formulaire, registre, justificatif ou déclaration de remplacement. Contrôles nécessaires, dettes et droits de recours conservés ; coûts administratifs ou budgétaires non chiffrés.",
+          "source_quote": "en avise le débiteur par lettre recommandée",
+          "proposed_quote": "par tout autre moyen légal permettant de donner date certaine à sa réception"
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Un avertissement du ministère public ou l'avis d'inscription du privilège impose le recommandé, selon l'article concerné."
+    ]
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000044952451",
+    "source_sha256": "faf787d97db4be4819246323276d67436cac434d47d697d761155d60159b8273",
+    "number": "R243-51",
+    "status": "retained_unchanged",
+    "proposed_xml": null,
+    "reason": "Maintien intégral après examen : L'inscription peut être contestée et la contestation doit apparaître publiquement, à l'initiative du créancier, du greffe ou du débiteur. Le certificat garantit la concordance de l'inscription demandée avec le litige ; aucun autre justificatif équivalent déjà admis n'est démontré dans les pièces lues. Les droits de mention et suppression restent entiers ; la norme n'est pas reformulée.",
+    "review_notes": "Source entière, notes et cibles nécessaires lues ; maintien sans réécriture de style. L'inscription peut être contestée et la contestation doit apparaître publiquement, à l'initiative du créancier, du greffe ou du débiteur. Le certificat garantit la concordance de l'inscription demandée avec le litige ; aucun autre justificatif équivalent déjà admis n'est démontré dans les pièces lues. Les droits de mention et suppression restent entiers ; la norme n'est pas reformulée.",
+    "benefit_review": "L'inscription peut être contestée et la contestation doit apparaître publiquement, à l'initiative du créancier, du greffe ou du débiteur. Le certificat garantit la concordance de l'inscription demandée avec le litige ; aucun autre justificatif équivalent déjà admis n'est démontré dans les pièces lues. Les droits de mention et suppression restent entiers ; la norme n'est pas reformulée. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "L'inscription peut être contestée et la contestation doit apparaître publiquement, à l'initiative du créancier, du greffe ou du débiteur. Le certificat garantit la concordance de l'inscription demandée avec le litige ; aucun autre justificatif équivalent déjà admis n'est démontré dans les pièces lues. Les droits de mention et suppression restent entiers ; la norme n'est pas reformulée.",
+      "scope_limitations": "Maintien de la règle utile examinée, sans prétendre valider les textes extérieurs non modifiés ni calculer une économie nationale. Pas d'allègement nouveau déclaré.",
+      "new_burdens_review": "Aucune obligation nouvelle : corps officiel intégralement conservé, proposed_xml nul. Les obligations existantes ne sont pas comptées comme supprimées ni requalifiées en baisse de cotisations.",
+      "effects": []
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000044952437",
+    "source_sha256": "70c1741de09d55f98493b762d6d0b1463e0c9a678d1937784e2f74dd39223b4a",
+    "number": "R243-53",
+    "status": "retained_unchanged",
+    "proposed_xml": null,
+    "reason": "Maintien intégral après examen : La mention de saisie, sa preuve, les quatre informations publiques, la mainlevée et la suppression automatique après dix ans assurent l'exactitude du registre et la fin d'une publicité devenue sans objet. Supprimer la mainlevée ou l'échéance pénaliserait le débiteur ; aucune seconde certification identique effectivement requise n'est établie.",
+    "review_notes": "Source entière, notes et cibles nécessaires lues ; maintien sans réécriture de style. La mention de saisie, sa preuve, les quatre informations publiques, la mainlevée et la suppression automatique après dix ans assurent l'exactitude du registre et la fin d'une publicité devenue sans objet. Supprimer la mainlevée ou l'échéance pénaliserait le débiteur ; aucune seconde certification identique effectivement requise n'est établie.",
+    "benefit_review": "La mention de saisie, sa preuve, les quatre informations publiques, la mainlevée et la suppression automatique après dix ans assurent l'exactitude du registre et la fin d'une publicité devenue sans objet. Supprimer la mainlevée ou l'échéance pénaliserait le débiteur ; aucune seconde certification identique effectivement requise n'est établie. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "La mention de saisie, sa preuve, les quatre informations publiques, la mainlevée et la suppression automatique après dix ans assurent l'exactitude du registre et la fin d'une publicité devenue sans objet. Supprimer la mainlevée ou l'échéance pénaliserait le débiteur ; aucune seconde certification identique effectivement requise n'est établie.",
+      "scope_limitations": "Maintien de la règle utile examinée, sans prétendre valider les textes extérieurs non modifiés ni calculer une économie nationale. Pas d'allègement nouveau déclaré.",
+      "new_burdens_review": "Aucune obligation nouvelle : corps officiel intégralement conservé, proposed_xml nul. Les obligations existantes ne sont pas comptées comme supprimées ni requalifiées en baisse de cotisations.",
+      "effects": []
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000047435216",
+    "source_sha256": "af596a0f4d3a4a5bcbcc2a1425a903022b61b5698ae1acc1792871afe0606b39",
+    "number": "R243-59-6-A",
+    "status": "retained_unchanged",
+    "proposed_xml": null,
+    "reason": "Maintien intégral après examen : Les dates de première visite ou de début du contrôle sur pièces et d'envoi de la lettre d'observations rendent mesurable la garantie de trois mois. Les supprimer faciliterait une durée indéterminée. La réforme de L243-13 retire une prorogation mais ne déplace pas ces bornes ; aucune nouvelle démarche ne résulte du maintien.",
+    "review_notes": "Source entière, notes et cibles nécessaires lues ; maintien sans réécriture de style. Les dates de première visite ou de début du contrôle sur pièces et d'envoi de la lettre d'observations rendent mesurable la garantie de trois mois. Les supprimer faciliterait une durée indéterminée. La réforme de L243-13 retire une prorogation mais ne déplace pas ces bornes ; aucune nouvelle démarche ne résulte du maintien.",
+    "benefit_review": "Les dates de première visite ou de début du contrôle sur pièces et d'envoi de la lettre d'observations rendent mesurable la garantie de trois mois. Les supprimer faciliterait une durée indéterminée. La réforme de L243-13 retire une prorogation mais ne déplace pas ces bornes ; aucune nouvelle démarche ne résulte du maintien. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Les dates de première visite ou de début du contrôle sur pièces et d'envoi de la lettre d'observations rendent mesurable la garantie de trois mois. Les supprimer faciliterait une durée indéterminée. La réforme de L243-13 retire une prorogation mais ne déplace pas ces bornes ; aucune nouvelle démarche ne résulte du maintien.",
+      "scope_limitations": "Maintien de la règle utile examinée, sans prétendre valider les textes extérieurs non modifiés ni calculer une économie nationale. Pas d'allègement nouveau déclaré.",
+      "new_burdens_review": "Aucune obligation nouvelle : corps officiel intégralement conservé, proposed_xml nul. Les obligations existantes ne sont pas comptées comme supprimées ni requalifiées en baisse de cotisations.",
+      "effects": []
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000032865782",
+    "source_sha256": "642f43d81f455fb6209dfa459f17eb1647b5e73e3375c975f3e312f3d6de1270",
+    "number": "R243-59-6",
+    "status": "retained_unchanged",
+    "proposed_xml": null,
+    "reason": "Maintien intégral après examen : L'information de clôture et l'interdiction de contrôler à nouveau la période antérieure protègent le cotisant quand le délai de L243-13 est dépassé. Ces garanties restent opérantes avec la prorogation limitée à sa demande ; aucune nouvelle procédure ni extinction générale des cotisations n'est déduite de ce maintien.",
+    "review_notes": "Source entière, notes et cibles nécessaires lues ; maintien sans réécriture de style. L'information de clôture et l'interdiction de contrôler à nouveau la période antérieure protègent le cotisant quand le délai de L243-13 est dépassé. Ces garanties restent opérantes avec la prorogation limitée à sa demande ; aucune nouvelle procédure ni extinction générale des cotisations n'est déduite de ce maintien.",
+    "benefit_review": "L'information de clôture et l'interdiction de contrôler à nouveau la période antérieure protègent le cotisant quand le délai de L243-13 est dépassé. Ces garanties restent opérantes avec la prorogation limitée à sa demande ; aucune nouvelle procédure ni extinction générale des cotisations n'est déduite de ce maintien. Les exonérations, remises, garanties, droits acquis, recours et situations futures recevables restent régis par la source entière et ses coordinations législatives. Aucun impôt ni dette n'est supprimé par ce maintien.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "L'information de clôture et l'interdiction de contrôler à nouveau la période antérieure protègent le cotisant quand le délai de L243-13 est dépassé. Ces garanties restent opérantes avec la prorogation limitée à sa demande ; aucune nouvelle procédure ni extinction générale des cotisations n'est déduite de ce maintien.",
+      "scope_limitations": "Maintien de la règle utile examinée, sans prétendre valider les textes extérieurs non modifiés ni calculer une économie nationale. Pas d'allègement nouveau déclaré.",
+      "new_burdens_review": "Aucune obligation nouvelle : corps officiel intégralement conservé, proposed_xml nul. Les obligations existantes ne sont pas comptées comme supprimées ni requalifiées en baisse de cotisations.",
+      "effects": []
+    }
+  }
+]

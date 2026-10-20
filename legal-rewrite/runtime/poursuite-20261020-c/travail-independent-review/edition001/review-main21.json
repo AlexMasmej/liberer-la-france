@@ -1,0 +1,1353 @@
+{
+  "checked_at": "2026-10-20T10:12:01.750099+00:00",
+  "verdict": "main21_ready_only_with_two_required_coordination_articles_pending_parent_review",
+  "reviewed_source_sha256": "f6a4f8d6c630f10372405912639607943edc203fca2be5cc6c16ec65b89c73ce",
+  "reviewed_answer_sha256": "913e01c31e0f6c4b5fa77dedfceabd1271ba631fab3f030274ca64eca0e22e33",
+  "reviewed_manifest_sha256": "a4e137129681d1d9660fc13c17c055d526a4c278f1da30eb70112ce6d25f6f0b",
+  "reviewed_context_sha256": "50f00af3de3714f02978f5dfe8669c05ec578a4c5157215173ccdd9527328e7a",
+  "full_reads": {
+    "main_sources_notes_proposals": 21,
+    "context": 8,
+    "protocol_targets": 10,
+    "additional_CPA_sources": 13,
+    "direct_dependencies_and_penalties": 4,
+    "counts_overlap": true
+  },
+  "technical": {
+    "validate_answer": "passed_on_deepcopy",
+    "five_guards_per_unique_article": true,
+    "guard_count": 235,
+    "all_match": true,
+    "reference_snapshot_guard": "passed",
+    "policy_guards": {
+      "policy-coordinations.json": true,
+      "site-summaries.json": true
+    },
+    "preservation_checks": {
+      "R2262-1_body_identical_previous": true,
+      "L3243-2_first_third_paragraphs_exact": true,
+      "L5151-6_all_other_source_paragraphs_exact": true,
+      "D3243-7_opposition_and_three_months_exact": true,
+      "D3243-8_retained_null": true,
+      "14_retained_no_hidden_texts": true
+    }
+  },
+  "article_findings": [
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006901814",
+      "number": "L2262-5",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "73def21bda0ae8b663d67e3a9f58ac172eabe9b8dfa4a4e3645d2afcf40ad994",
+      "body_sha256": "d3326ad6c7807e9fbb5c963b81bce34b6a9a417ef1c1aea525a1b289cbdc8ec5",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "73def21bda0ae8b663d67e3a9f58ac172eabe9b8dfa4a4e3645d2afcf40ad994",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Priorité des modalités conventionnelles et règlement supplétif conservés. La liste annuelle n’est pas le seul fondement de l’information ; absence de nouvelle obligation.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000035653106",
+      "number": "L2262-6",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "1f9a2ad30d0066527d2c895f4f288c1bcfbd3034ea376fbb527d85cfe347e7f2",
+      "body_sha256": "e5cc3985df04988deef512b7047d52a7aad8f20fbd15ca9f12a627630e1e4687",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "1f9a2ad30d0066527d2c895f4f288c1bcfbd3034ea376fbb527d85cfe347e7f2",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": "72c42fddcfe9cbd9743db48af20b15874e3a035a6822ed749cc58974bcca9483",
+      "classification": "material_reduction",
+      "finding": "Suppression prospective réelle de la liste annuelle seulement ; pas de document de remplacement. Communication à l’embauche, accès aux accords, actualisation et autres fondements maintenus. CoordinationL2262-7 indispensable pour son information événementielle, fournie séparément.",
+      "verdict": "requires_separate_coordination_supplement"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006902862",
+      "number": "L3243-1",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "d40d9b4c42ed76e7465ec7c67385b4cb0af7ebb6ea63fbb18581e12333eb7bd3",
+      "body_sha256": "f1b924fdaa3b57f4aaa769ea25de11a295db430ff3b9317ebca36f533f3be51a",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "d40d9b4c42ed76e7465ec7c67385b4cb0af7ebb6ea63fbb18581e12333eb7bd3",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Champ protecteur même pour rémunération atypique et contrat invalide conservé ; aucun bénéficiaire écarté par le contrat unique.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033024092",
+      "number": "L3243-2",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "55bf12bc42e9b2b6a6a78e16bc925cb13f34201b90e3ed6d1abb831d428dee65",
+      "body_sha256": "575cb613c2c34cc78c8e226500fe904e009fe27a1595ca9514251bc3aeec1dd1",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "55bf12bc42e9b2b6a6a78e16bc925cb13f34201b90e3ed6d1abb831d428dee65",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": "5120a36616ce48a809290f7146e85af5b9b9177298b47f8fff0628dc74b6a5eb",
+      "classification": "material_reduction",
+      "finding": "RaccordementCPA supprimé pour remises futures seulement. Opposition, intégrité, confidentialité, duréeD8, récupération et engagements plus favorables maintenus. Pas d’équipement/abonnement payant imposé au salarié. Pas de garantie que le serviceCPA fonctionne matériellement ni économie chiffrée.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000019017587",
+      "number": "L3243-3",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "900847d398bebed5fc980338d446844a30d54bf72468e0880b5380b2779cc97a",
+      "body_sha256": "2bf579286881da2b631dbe34f072ef82fe303e4e9ac867daeb08d26a66de3dc1",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "900847d398bebed5fc980338d446844a30d54bf72468e0880b5380b2779cc97a",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Acceptation ne vaut ni renonciation aux salaires/indemnités ni compte arrêté ; texte entier maintenu.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000020625846",
+      "number": "L3243-4",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "f50c9c6054835b0a31a11c2dd98455442d5b125c07e7e06fef31311ddbb03318",
+      "body_sha256": "1e4f241b806ad321bf1cb555e47c7cbe1adcbf55924fed6c4f5ee007386904d2",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "f50c9c6054835b0a31a11c2dd98455442d5b125c07e7e06fef31311ddbb03318",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Conservation employeur cinq ans papier ou électronique préservée ; pas doublearchivepapier inventée ni extension des coupesDPAE à la paie.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006902866",
+      "number": "L3243-5",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "5d9ed61f96dec24f636a91e508530397bdf7c243e36042e874e03801aa442440",
+      "body_sha256": "5f665139ad0ebe711ec429a2ee37ddce78904ad903bfb4eaaf9b665ce1278b45",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "5d9ed61f96dec24f636a91e508530397bdf7c243e36042e874e03801aa442440",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Avantage autonome conservé mais renvoi préexistant au deuxièmealinéaL8113-6 vide : correction nécessaire et coordonnée dans le supplément. Zéro nouvelle réduction ; la garantie d’équivalence du texte cible demeure.",
+      "verdict": "requires_separate_coordination_supplement"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000048288541",
+      "number": "R2262-1",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "f1d087cdd9424692b4d8f4f74e4c0aacbe411c834690e72c49baadc73a51df2d",
+      "body_sha256": "50c0844bc117edfc32a3bb555e72e958d2ead832790b1bf8db06ab21f26cb146",
+      "notes_sha256": "ba2c2557db31b34d663f69bb98639e855ef4a1d248e389a5a89cdb4b85a2f6de",
+      "document_sha256": "f1d087cdd9424692b4d8f4f74e4c0aacbe411c834690e72c49baadc73a51df2d",
+      "prior_proposed_sha256": "ba10a2c04c5c5ec6c7d998614c73e20bb04666822dfce48305bf72c8c0050703",
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": "ba10a2c04c5c5ec6c7d998614c73e20bb04666822dfce48305bf72c8c0050703",
+      "classification": "material_reduction",
+      "finding": "Corps strictement identique à l’avant-image : faculté de support unique déjà proposée, non comptée comme nouvelle coupe. Délais individuelsR1221-35(13°unmois) et accords effectivement accessibles maintenus.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000036483258",
+      "number": "R2262-2",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "55441146fc76eb56dde3a96daf670eb6707fd77169355d72ff522f19d225e418",
+      "body_sha256": "fcdc6a8cc65c305720f92910613f81b059319f07cdb6466ff02ba0b8995f735d",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "55441146fc76eb56dde3a96daf670eb6707fd77169355d72ff522f19d225e418",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Exemplaire aux représentants maintenu sans prétendre qu’un papier ou une signature étaient imposés ; aucun droit d’information autonome retiré.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033292505",
+      "number": "R2262-3",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "754076e7dbcd5a7aa2c0c82439d5c6c93d45bc9ca0ad95c8c2cffa44c309425d",
+      "body_sha256": "79bc1dfac706de0d44ab02afa1911d40cf72c0c9cd3ad0826bfc132e7e2631aa",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "754076e7dbcd5a7aa2c0c82439d5c6c93d45bc9ca0ad95c8c2cffa44c309425d",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Avis déjà communicable par tout moyen, mentionANIgénérique et modalités de consultation pendant présence au travail conservés. Pas d’affichage obligatoire inventé.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000018535591",
+      "number": "R2262-4",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "bbce93678330c4367fa90b8ac56abc05b5dbff675f236021ead5da1afd8957e2",
+      "body_sha256": "849f8bb5bd74d089776393e80c2b0d30cebf2221223a68a71473baa5a93b4095",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "bbce93678330c4367fa90b8ac56abc05b5dbff675f236021ead5da1afd8957e2",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": "ca68207e727db474caf4b0105284e994dabc0b7c972734cae3e998565a2e7f33",
+      "classification": "coordination_only",
+      "finding": "Renvoi obsolète à affichage corrigé, information individuelle des salariés éloignés maintenue ; papier ou écrit accessible, réemploi des informations exactes et mise àjourR2262-5, aucun gain nouveau revendiqué.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000018535589",
+      "number": "R2262-5",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "a108bf5c695909315891f3c1a3543d1b4cdfd17cc1669819ef862ef1ff5b12c5",
+      "body_sha256": "097f9a186376f35f4cec4e7e6b025e30e4ac47814293b27096d8642bb6d51e6e",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "a108bf5c695909315891f3c1a3543d1b4cdfd17cc1669819ef862ef1ff5b12c5",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Actualisation sous unmois de l’avis reste, distincte de liste annuelle supprimée ; R2263-2 continue de sanctionner ce manquement autonome, pas une liste annuelle recréée.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000048841718",
+      "number": "R3243-1",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "d885ac5f9d30d3457ecf4828b0cfa67d2776b7b3d4003f2f3e03192a95f783cc",
+      "body_sha256": "829efd87f2705e90526125b9f1a1ab9fab2a717ea92ac6e2988a2d4869970b17",
+      "notes_sha256": "6176327742fff678b697d3646cd0311362531034c17938a879a4ce9f8aa47bcc",
+      "document_sha256": "d885ac5f9d30d3457ecf4828b0cfa67d2776b7b3d4003f2f3e03192a95f783cc",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Seizecatégories, net social, PAS, indemnitéactivitépartielle et exonérations maintenus. Les ciblesR844-1/R5122-18 sont entières et conservent leurs garanties ; aucun changement salarial déduit du support.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000048841713",
+      "number": "R3243-2",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "22bb7943b3df0bf57df319725539696e51d019496c7c4d8a27ba1173abcef98b",
+      "body_sha256": "ca8794bb1bbb23425da895279f9b725b6f63fd612045f5def7d96762b5930d71",
+      "notes_sha256": "6176327742fff678b697d3646cd0311362531034c17938a879a4ce9f8aa47bcc",
+      "document_sha256": "22bb7943b3df0bf57df319725539696e51d019496c7c4d8a27ba1173abcef98b",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Agrégations et modèle maintenus. La lacune documentaire des modèles externes n’est pas maquillée en réécriture complète ; aucun nouveau gain de maquette annoncé.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000018533800",
+      "number": "R3243-4",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "73a8132040c386d8b129f9d86b1bbcc8e31ac93e4ad45bb4328c4d05d131d3a8",
+      "body_sha256": "7b5ecb76999b2ca10727d0ff2e0d5b7d108ec16b8b17ff1aa16cdb654d4a2214",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "73a8132040c386d8b129f9d86b1bbcc8e31ac93e4ad45bb4328c4d05d131d3a8",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Confidentialité grève/représentation et fiche annexe de rémunération préservées. Ne supprime pas un justificatif protégé sans équivalent.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000018533798",
+      "number": "R3243-5",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "7f09b2c92709f3c274ac928c67263ebbaf99a65bc91c999d568c7fd6cf433d34",
+      "body_sha256": "016d5bccdf2b5518560fdc044310f8a6fc839282fa581b79ea95f17ebc1ef177",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "7f09b2c92709f3c274ac928c67263ebbaf99a65bc91c999d568c7fd6cf433d34",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Mention de conservation illimitée par le salarié informative, pas nouvelle obligation d’archive ni substitution à la duréeemployeur ; source conservée.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000018533796",
+      "number": "R3243-6",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "3c404dc02d36decb3d39fbb77dcd6d32076f82d5361f7d24bd1cfd22f352de6c",
+      "body_sha256": "68fbb61c911ba1bff5258cb36a54009cb863cdd58bf3c5c53bad0fc0f09768e5",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "3c404dc02d36decb3d39fbb77dcd6d32076f82d5361f7d24bd1cfd22f352de6c",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Trois dispenses des particuliers employeurs à domicile restent : classification, brut et cotisations patronales. Aucun seuil ni formulaire ajouté.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033627030",
+      "number": "D3243-7",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "d3c21b0f53f4d3ede684e68504c274b4f14302e1f2b1954c1223a56f66c191e0",
+      "body_sha256": "3e63b3bb9a08c4d4edba3986cdc2aa5a8c304161c98de260e82b812322120580",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "d3c21b0f53f4d3ede684e68504c274b4f14302e1f2b1954c1223a56f66c191e0",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": "a7eb1c6b26c596742ae263aa4bb60973c46c22b9592e5b9aab1bdca8f37179a4",
+      "classification": "material_reduction",
+      "finding": "Seul mois d’anticipation retiré pour salariés en poste ; information préalable certaine, droit d’opposition à toutmoment et effet dans meilleursdélais au plus tardtroismois exacts. Information à l’embauche déjà admise, pas nouvelle coupe sur cette population.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033627046",
+      "number": "D3243-8",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "c1b9450c3978d23f1e8e82a40d4f46199ae5c8f41239b64ab796d799302168b1",
+      "body_sha256": "232c76aafe479802a9517dde849d7caabb9e23405797055b5ac600a3679159a0",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "c1b9450c3978d23f1e8e82a40d4f46199ae5c8f41239b64ab796d799302168b1",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": null,
+      "classification": "retained_necessary",
+      "finding": "Deux alternatives50ans ouâge du dernieralinéaL1237-5+6, fermeture avec alerte3mois et récupérationintégrale sans manipulationcomplexe maintenues. CibleL1237-5 garde ledernieralinéa ; aucun âge nouveau calculé dans leprojet.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033627094",
+      "number": "R3243-9",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "d4b672021288eae05193d769aaf9a730baea0fb1fd4f3f56d685cde566d3be70",
+      "body_sha256": "452f4e208370ec57337e8c3e2abaeaa7846356d9086a36658e3675c8f3026f8d",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "d4b672021288eae05193d769aaf9a730baea0fb1fd4f3f56d685cde566d3be70",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": "f7c467f9b731a535da871caf164f7d4f230e44243b7b1d5c3f0c4ca804711ec0",
+      "classification": "coordination_only",
+      "finding": "Coordination de la seule obligation de raccordement ; accès déjà ouverts non supprimés/payants, durée/récupération et fermetureD8 préservées. Même mesure queL3243-2, pas deuxième gain.",
+      "verdict": "no_concrete_defect_found"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000037064956",
+      "number": "L5151-6",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "b306cb334387bf51f3cd0e8d818c57ece3aa87a4b92adf99c5806ffcc3ccd604",
+      "body_sha256": "f902078fabc2920eacfb37b12e176a4a8fbcfbd6218a9c2700d3b321670802d1",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "b306cb334387bf51f3cd0e8d818c57ece3aa87a4b92adf99c5806ffcc3ccd604",
+      "prior_proposed_sha256": null,
+      "source_notes_proposal_entirely_read": true,
+      "proposed_sha256": "48a470ef4c05a59bb477c00da0935c9cfa20ebb15591cffd1a4f1b6fd6541698",
+      "classification": "coordination_only",
+      "finding": "SeulII2° et transition changent ; I,1°/3°, interfaces etIII restent exacts. ServiceCPA reste pour bulletins légalement accessibles, sans dépôt nouveau du salarié ni extension des usagesCPF/DSN.",
+      "verdict": "no_concrete_defect_found"
+    }
+  ],
+  "all_unique_article_guards": [
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006901814",
+      "number": "L2262-5",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "73def21bda0ae8b663d67e3a9f58ac172eabe9b8dfa4a4e3645d2afcf40ad994",
+      "body_sha256": "d3326ad6c7807e9fbb5c963b81bce34b6a9a417ef1c1aea525a1b289cbdc8ec5",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "73def21bda0ae8b663d67e3a9f58ac172eabe9b8dfa4a4e3645d2afcf40ad994",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000035653106",
+      "number": "L2262-6",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "1f9a2ad30d0066527d2c895f4f288c1bcfbd3034ea376fbb527d85cfe347e7f2",
+      "body_sha256": "e5cc3985df04988deef512b7047d52a7aad8f20fbd15ca9f12a627630e1e4687",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "1f9a2ad30d0066527d2c895f4f288c1bcfbd3034ea376fbb527d85cfe347e7f2",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006902862",
+      "number": "L3243-1",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "d40d9b4c42ed76e7465ec7c67385b4cb0af7ebb6ea63fbb18581e12333eb7bd3",
+      "body_sha256": "f1b924fdaa3b57f4aaa769ea25de11a295db430ff3b9317ebca36f533f3be51a",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "d40d9b4c42ed76e7465ec7c67385b4cb0af7ebb6ea63fbb18581e12333eb7bd3",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033024092",
+      "number": "L3243-2",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "55bf12bc42e9b2b6a6a78e16bc925cb13f34201b90e3ed6d1abb831d428dee65",
+      "body_sha256": "575cb613c2c34cc78c8e226500fe904e009fe27a1595ca9514251bc3aeec1dd1",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "55bf12bc42e9b2b6a6a78e16bc925cb13f34201b90e3ed6d1abb831d428dee65",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000019017587",
+      "number": "L3243-3",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "900847d398bebed5fc980338d446844a30d54bf72468e0880b5380b2779cc97a",
+      "body_sha256": "2bf579286881da2b631dbe34f072ef82fe303e4e9ac867daeb08d26a66de3dc1",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "900847d398bebed5fc980338d446844a30d54bf72468e0880b5380b2779cc97a",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000020625846",
+      "number": "L3243-4",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "f50c9c6054835b0a31a11c2dd98455442d5b125c07e7e06fef31311ddbb03318",
+      "body_sha256": "1e4f241b806ad321bf1cb555e47c7cbe1adcbf55924fed6c4f5ee007386904d2",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "f50c9c6054835b0a31a11c2dd98455442d5b125c07e7e06fef31311ddbb03318",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006902866",
+      "number": "L3243-5",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "5d9ed61f96dec24f636a91e508530397bdf7c243e36042e874e03801aa442440",
+      "body_sha256": "5f665139ad0ebe711ec429a2ee37ddce78904ad903bfb4eaaf9b665ce1278b45",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "5d9ed61f96dec24f636a91e508530397bdf7c243e36042e874e03801aa442440",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000048288541",
+      "number": "R2262-1",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "f1d087cdd9424692b4d8f4f74e4c0aacbe411c834690e72c49baadc73a51df2d",
+      "body_sha256": "50c0844bc117edfc32a3bb555e72e958d2ead832790b1bf8db06ab21f26cb146",
+      "notes_sha256": "ba2c2557db31b34d663f69bb98639e855ef4a1d248e389a5a89cdb4b85a2f6de",
+      "document_sha256": "f1d087cdd9424692b4d8f4f74e4c0aacbe411c834690e72c49baadc73a51df2d",
+      "prior_proposed_sha256": "ba10a2c04c5c5ec6c7d998614c73e20bb04666822dfce48305bf72c8c0050703"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000036483258",
+      "number": "R2262-2",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "55441146fc76eb56dde3a96daf670eb6707fd77169355d72ff522f19d225e418",
+      "body_sha256": "fcdc6a8cc65c305720f92910613f81b059319f07cdb6466ff02ba0b8995f735d",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "55441146fc76eb56dde3a96daf670eb6707fd77169355d72ff522f19d225e418",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033292505",
+      "number": "R2262-3",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "754076e7dbcd5a7aa2c0c82439d5c6c93d45bc9ca0ad95c8c2cffa44c309425d",
+      "body_sha256": "79bc1dfac706de0d44ab02afa1911d40cf72c0c9cd3ad0826bfc132e7e2631aa",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "754076e7dbcd5a7aa2c0c82439d5c6c93d45bc9ca0ad95c8c2cffa44c309425d",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000018535591",
+      "number": "R2262-4",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "bbce93678330c4367fa90b8ac56abc05b5dbff675f236021ead5da1afd8957e2",
+      "body_sha256": "849f8bb5bd74d089776393e80c2b0d30cebf2221223a68a71473baa5a93b4095",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "bbce93678330c4367fa90b8ac56abc05b5dbff675f236021ead5da1afd8957e2",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000018535589",
+      "number": "R2262-5",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "a108bf5c695909315891f3c1a3543d1b4cdfd17cc1669819ef862ef1ff5b12c5",
+      "body_sha256": "097f9a186376f35f4cec4e7e6b025e30e4ac47814293b27096d8642bb6d51e6e",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "a108bf5c695909315891f3c1a3543d1b4cdfd17cc1669819ef862ef1ff5b12c5",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000048841718",
+      "number": "R3243-1",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "d885ac5f9d30d3457ecf4828b0cfa67d2776b7b3d4003f2f3e03192a95f783cc",
+      "body_sha256": "829efd87f2705e90526125b9f1a1ab9fab2a717ea92ac6e2988a2d4869970b17",
+      "notes_sha256": "6176327742fff678b697d3646cd0311362531034c17938a879a4ce9f8aa47bcc",
+      "document_sha256": "d885ac5f9d30d3457ecf4828b0cfa67d2776b7b3d4003f2f3e03192a95f783cc",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000048841713",
+      "number": "R3243-2",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "22bb7943b3df0bf57df319725539696e51d019496c7c4d8a27ba1173abcef98b",
+      "body_sha256": "ca8794bb1bbb23425da895279f9b725b6f63fd612045f5def7d96762b5930d71",
+      "notes_sha256": "6176327742fff678b697d3646cd0311362531034c17938a879a4ce9f8aa47bcc",
+      "document_sha256": "22bb7943b3df0bf57df319725539696e51d019496c7c4d8a27ba1173abcef98b",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000018533800",
+      "number": "R3243-4",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "73a8132040c386d8b129f9d86b1bbcc8e31ac93e4ad45bb4328c4d05d131d3a8",
+      "body_sha256": "7b5ecb76999b2ca10727d0ff2e0d5b7d108ec16b8b17ff1aa16cdb654d4a2214",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "73a8132040c386d8b129f9d86b1bbcc8e31ac93e4ad45bb4328c4d05d131d3a8",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000018533798",
+      "number": "R3243-5",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "7f09b2c92709f3c274ac928c67263ebbaf99a65bc91c999d568c7fd6cf433d34",
+      "body_sha256": "016d5bccdf2b5518560fdc044310f8a6fc839282fa581b79ea95f17ebc1ef177",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "7f09b2c92709f3c274ac928c67263ebbaf99a65bc91c999d568c7fd6cf433d34",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000018533796",
+      "number": "R3243-6",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "3c404dc02d36decb3d39fbb77dcd6d32076f82d5361f7d24bd1cfd22f352de6c",
+      "body_sha256": "68fbb61c911ba1bff5258cb36a54009cb863cdd58bf3c5c53bad0fc0f09768e5",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "3c404dc02d36decb3d39fbb77dcd6d32076f82d5361f7d24bd1cfd22f352de6c",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033627030",
+      "number": "D3243-7",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "d3c21b0f53f4d3ede684e68504c274b4f14302e1f2b1954c1223a56f66c191e0",
+      "body_sha256": "3e63b3bb9a08c4d4edba3986cdc2aa5a8c304161c98de260e82b812322120580",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "d3c21b0f53f4d3ede684e68504c274b4f14302e1f2b1954c1223a56f66c191e0",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033627046",
+      "number": "D3243-8",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "c1b9450c3978d23f1e8e82a40d4f46199ae5c8f41239b64ab796d799302168b1",
+      "body_sha256": "232c76aafe479802a9517dde849d7caabb9e23405797055b5ac600a3679159a0",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "c1b9450c3978d23f1e8e82a40d4f46199ae5c8f41239b64ab796d799302168b1",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033627094",
+      "number": "R3243-9",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "d4b672021288eae05193d769aaf9a730baea0fb1fd4f3f56d685cde566d3be70",
+      "body_sha256": "452f4e208370ec57337e8c3e2abaeaa7846356d9086a36658e3675c8f3026f8d",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "d4b672021288eae05193d769aaf9a730baea0fb1fd4f3f56d685cde566d3be70",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000037064956",
+      "number": "L5151-6",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "b306cb334387bf51f3cd0e8d818c57ece3aa87a4b92adf99c5806ffcc3ccd604",
+      "body_sha256": "f902078fabc2920eacfb37b12e176a4a8fbcfbd6218a9c2700d3b321670802d1",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "b306cb334387bf51f3cd0e8d818c57ece3aa87a4b92adf99c5806ffcc3ccd604",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000019071087",
+      "number": "L1221-2",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+      "body_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+      "prior_proposed_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006901112",
+      "number": "L1234-1",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+      "body_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+      "prior_proposed_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000035644154",
+      "number": "L1234-9",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+      "body_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
+      "notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b",
+      "document_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+      "prior_proposed_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000052437183",
+      "number": "L1237-5",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "948ec70f2d82b59f8a5812ab5f4ef07eb9c97a31fc190d8d7f33426b92bb2d25",
+      "body_sha256": "6e0eaeca18682f147963bfcbe4c34c02a212340aa9dc54ea1736b71603c11987",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "948ec70f2d82b59f8a5812ab5f4ef07eb9c97a31fc190d8d7f33426b92bb2d25",
+      "prior_proposed_sha256": "a558246b12c1169f3ec448bf11e53522857b08ec6303ece59c61953b938f1d02"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006904798",
+      "number": "L8113-6",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "1abba54b219b8fd37f44e2b6e70019cf80c906d578b04ebb07d1351f0a16559b",
+      "body_sha256": "777cda3e652f3cdb26bcb2af142bdacdf6e531a94dda6b1c6216cf4c87770add",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "1abba54b219b8fd37f44e2b6e70019cf80c906d578b04ebb07d1351f0a16559b",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000048288642",
+      "number": "R1221-34",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "29f093a4c2481ea028f62335eb963255b7b94452ff627af08e57d87a5df01934",
+      "body_sha256": "79fd5d4594b2db26e30b665aae636da3a681b0599b3d967ef70c3b2ed5cc3dc9",
+      "notes_sha256": "ba2c2557db31b34d663f69bb98639e855ef4a1d248e389a5a89cdb4b85a2f6de",
+      "document_sha256": "29f093a4c2481ea028f62335eb963255b7b94452ff627af08e57d87a5df01934",
+      "prior_proposed_sha256": "4131cfc3a64f4ff302f96761ef6ac3ca427677ea53c32163a6459ed1ddf595dc"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000048288640",
+      "number": "R1221-35",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "243e95fdfdbaf24c176671eb6c12e1d0d3222bd9e7d78ef6239ab3ba1d64354e",
+      "body_sha256": "2ca9a9360f4537460c64822643339a01f2f22c2c963e64370b02d66dc57f86ad",
+      "notes_sha256": "ba2c2557db31b34d663f69bb98639e855ef4a1d248e389a5a89cdb4b85a2f6de",
+      "document_sha256": "243e95fdfdbaf24c176671eb6c12e1d0d3222bd9e7d78ef6239ab3ba1d64354e",
+      "prior_proposed_sha256": "1cc17d636ee3ea8708ebd0093ace69134b08024732522c98cf0d67465c3dd001"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000046824694",
+      "number": "R5122-18",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "9c0b3bddea14835f641984592bbe2ce752289f47d9e07258d4ad7fe85f6847a9",
+      "body_sha256": "1531e689f1c674518368dddf7a22554c725bff6f4175164c6a58a8ebec4ddc38",
+      "notes_sha256": "fc385d6073b7f1214667b78e962a1638aae75d272bfc0990de7ffb572d47c2d2",
+      "document_sha256": "9c0b3bddea14835f641984592bbe2ce752289f47d9e07258d4ad7fe85f6847a9",
+      "prior_proposed_sha256": "78cf90df470b3ec4b57822221688e367891d95e65b0d4693978fcd379f0fa31f"
+    },
+    {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000054314917",
+      "number": "R844-1",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "1930dfb7c5439caedab36f3b9b62df12d72fa51ef3936ad7c7de376ead075039",
+      "body_sha256": "ecf7127ed21596d8d72755b3213b65ca6aafdcdae337d6e454d1ef3aef879e43",
+      "notes_sha256": "783db1339919945f029b6f939ca0384cf09625c775f6881b0a419301e6e37ad9",
+      "document_sha256": "1930dfb7c5439caedab36f3b9b62df12d72fa51ef3936ad7c7de376ead075039",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000046454647",
+      "number": "L5151-2",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "d1615375d7ef048787bb7887fcf94e80bef197444d3489c75767919cca2d0d47",
+      "body_sha256": "5fec99aaba53e05e01557a457f198631d031c7e2577ca846b93184b93d681cc4",
+      "notes_sha256": "aa28ea698dadb33857dfa55bbf4b52ae0984d4a9a40b3fc97582e926f41f0f98",
+      "document_sha256": "d1615375d7ef048787bb7887fcf94e80bef197444d3489c75767919cca2d0d47",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000037385254",
+      "number": "L6333-5",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "e46530447f101b1b57251291821a222abc66e3c67e8e140c7fd43381f6d7ea56",
+      "body_sha256": "d574a3cab66ff66b49e74adeb13ab02c930aec4831a7b718e71cd7d3afc04973",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "e46530447f101b1b57251291821a222abc66e3c67e8e140c7fd43381f6d7ea56",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000036410005",
+      "number": "R5151-1",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "3d8d8882c7ecef7a3dabdc77e19afd089574203d76941035732621c475df53ea",
+      "body_sha256": "e072586387550750f4cfabd4540fdc253bf57c98bb88961dc7d7166fb319bda6",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "3d8d8882c7ecef7a3dabdc77e19afd089574203d76941035732621c475df53ea",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033792458",
+      "number": "R5151-2",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "02b536b1b871141f325d9ffce2a1e38a068d64076b953e52d662c79d6a678719",
+      "body_sha256": "5627aa37abbbfc9b08fa74886eabe04606715ef2976f07413c20bbf44bbd8190",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "02b536b1b871141f325d9ffce2a1e38a068d64076b953e52d662c79d6a678719",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000036409997",
+      "number": "R5151-3",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "8bb977129a74ee5044502c095309ff13c40d4a56edde6ec7f705d5bf9839d86b",
+      "body_sha256": "9ab8aa660950b0126af412d6a3f1b0b4b3cea8eee3d51bdb47becb9f1a9e0d6b",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "8bb977129a74ee5044502c095309ff13c40d4a56edde6ec7f705d5bf9839d86b",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000036409990",
+      "number": "R5151-4",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "774943969b914c437afe87bd79955e3119dbb0db4208c82f83b16a477bca2dc7",
+      "body_sha256": "377d127dece633ea8a176a55d47521d8e2d69714d170190cb7bf39f217948949",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "774943969b914c437afe87bd79955e3119dbb0db4208c82f83b16a477bca2dc7",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033792464",
+      "number": "R5151-5",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "49706086636e6ec3bde17a6aca687981ac3513a66bc378fd17c58d412dfdd2bc",
+      "body_sha256": "1a6343167277d3de735c118d33adec077a4b15a2db5adc67ed9e6cf165ce2099",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "49706086636e6ec3bde17a6aca687981ac3513a66bc378fd17c58d412dfdd2bc",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033792466",
+      "number": "R5151-6",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "56d91f136c7033995a090d74ce5ddd873ffa9cbd11e45d1deb1ad5aea2ce4b20",
+      "body_sha256": "77f6becf6c9ee20e351baceee2d54135bbbb865161a08de28f5b1b6b7f8e31fe",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "56d91f136c7033995a090d74ce5ddd873ffa9cbd11e45d1deb1ad5aea2ce4b20",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033792468",
+      "number": "R5151-7",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "15608257a852b512cb9ea3468bd251ec42b319afa9f4431f78ce99e041282f02",
+      "body_sha256": "76f7f2133efb2ed6813ebf02823b44e099565754a7387c0ae483d205214ad028",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "15608257a852b512cb9ea3468bd251ec42b319afa9f4431f78ce99e041282f02",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033792470",
+      "number": "R5151-8",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "12c2a1a894ff1cf7a3ee6e5267c93223f3fa6179bc25f77a429a30d88a8f073c",
+      "body_sha256": "ed13306e861f159a27190cca8ebb8406f28e1b3c614cc4cba71905048fbaeb0a",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "12c2a1a894ff1cf7a3ee6e5267c93223f3fa6179bc25f77a429a30d88a8f073c",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033792472",
+      "number": "R5151-9",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "aaab2bc0b7e7958785184fb8dc567bc4f98ffaeb0d3902ffa80b010899a555e2",
+      "body_sha256": "3ff67f7dde5be89c44caa4769ea14c7fc3e49810dd58c8fd699f4d78b77a3bc4",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "aaab2bc0b7e7958785184fb8dc567bc4f98ffaeb0d3902ffa80b010899a555e2",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000036437379",
+      "number": "R5151-10",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "7e4a7d5dd0e00ab0aab9ad33b672c190585ae4b9be61b84dc5dbf1e27921c425",
+      "body_sha256": "5f2c5615fb8c4a6a405a7de61a386e146c18f4355ff1a1ed9b83def7bc826717",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "7e4a7d5dd0e00ab0aab9ad33b672c190585ae4b9be61b84dc5dbf1e27921c425",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000050924202",
+      "number": "R6323-33",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "999dcc51d10623bc8104b7672cf1cb12a821bb065739ea41842e1b8fba1e549a",
+      "body_sha256": "26f11b8af14ff19168e5d1c244183ee9cc35df85dd4f63fa109c9e68ab48a09f",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "999dcc51d10623bc8104b7672cf1cb12a821bb065739ea41842e1b8fba1e549a",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006901816",
+      "number": "L2262-7",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "4f4ee7a46217c68370725e4a544fc97bea8d45c2fdd56fce6188b897c980c7ef",
+      "body_sha256": "88a46f8b18e39bbae48983501292de582891c844f622a1ccd46ec6ae63228dcd",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "4f4ee7a46217c68370725e4a544fc97bea8d45c2fdd56fce6188b897c980c7ef",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000034732984",
+      "number": "R2263-1",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "79b72ad4555f87cafeba169137a09a62a18fb8fac83de83bbb092bcbd3643aa5",
+      "body_sha256": "9ab664d8ee350cbbd225cc86be54207217316ba305bf2686487d2b18feddd422",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "79b72ad4555f87cafeba169137a09a62a18fb8fac83de83bbb092bcbd3643aa5",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000018535583",
+      "number": "R2263-2",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "dd49044819284256fc8c07fed022a3a3478914555bc70df2c6d83657c1887a16",
+      "body_sha256": "0ed043d0e2033766f0e763383b8d58a985252f0979e6d674106ebad7955cdb4a",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "dd49044819284256fc8c07fed022a3a3478914555bc70df2c6d83657c1887a16",
+      "prior_proposed_sha256": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000033644145",
+      "number": "R3246-2",
+      "guards": {
+        "source_identity": true,
+        "source_body": true,
+        "source_notes": true,
+        "source_document": true,
+        "previous_draft": true
+      },
+      "source_sha256": "2e10981c9fe22097edb71ad2fb2d3b566ac8bac79252f5427b3847cd5a543234",
+      "body_sha256": "355738aa39c3b9e19d692dfe51b00925814a71e5682f6989e379f1e44e95f786",
+      "notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "document_sha256": "2e10981c9fe22097edb71ad2fb2d3b566ac8bac79252f5427b3847cd5a543234",
+      "prior_proposed_sha256": null
+    }
+  ],
+  "concrete_required_coordinations": [
+    {
+      "article": "L2262-7",
+      "cause": "L2262-6 repeal leaves its immediate employerwithdrawalnotification with an emptyconditionspointer. Preserve notification andrecipients without annualreport.",
+      "supplement_path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/poursuite-20261020-c/travail-coordination-supplement/edition001",
+      "proposed_answer_sha256": "a5145a042f23fe36566bd14b1ff83cee0e8026a6cf497fa6586f032bc9a89f1d"
+    },
+    {
+      "article": "L3243-5",
+      "cause": "Pre-existing nonexistentsecondparagraph pointer; favourableruleautonomous inL8113-6. Correct pointer without newcut.",
+      "supplement_path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/poursuite-20261020-c/travail-coordination-supplement/edition001",
+      "proposed_answer_sha256": "a5145a042f23fe36566bd14b1ff83cee0e8026a6cf497fa6586f032bc9a89f1d"
+    }
+  ],
+  "no_other_concrete_defect_found": true,
+  "direct_dependency_assessment": {
+    "R5151-1_to10": "Fullread : finalities/data/access/security/retention remain ; no independentmandatoryemployerconnection survives newL3243-2. R5151-3II2°readswith amendedlegislativescope, not a newobligation to upload allbulletins.",
+    "L5151-2_L6333-5_R6323-33": "Accounts/opening/death/funding/platformservices remain ; service not abolished, no revenueor budget automaticallyremoved.",
+    "R2263-1_2": "Penalties concern notice andupdatingR2262-3/4/5, not sourceofannualreport removed.",
+    "R3246-2": "Punishes applicablebulletinrules; no separate month orCPAconnection obligation afterlawcoordination.",
+    "external_ordinal_scan": "Ninecanonicalexports scanned for L3243-2 plusordinalterms ; onlygenericL133-5-8 references, no shiftingthird/lastparagraph targetfound. Not a claim to fullyaudit allothercodes."
+  },
+  "counting": {
+    "new_measures": 3,
+    "old_R2262-1_measure_not_recounted": true,
+    "three_CPA_articles_one_measure": true,
+    "14_main_retained_not_rewritten_or_new_cuts": true,
+    "supplement_two_coordination_only_no_new_gain": true,
+    "cost_or_savings_national": null
+  },
+  "primary_web_checks": [
+    {
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006902866/2026-09-11",
+      "supports": "CurrentL3243-5stillcontainssecondparagraphpointer; canonicalfullsourceattached."
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006904798",
+      "supports": "L8113-6singleparagraph andequivalentcontrolrule, fullDILAsourceattached."
+    },
+    {
+      "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-remuneration/article/le-bulletin-de-paie",
+      "supports": "Officialministry stilldescribeslegalCPAaccesscondition. Doesnotestablish currenttechnicaloperation oramount saved."
+    }
+  ],
+  "limits": [
+    "Paquet21and2notregistered byreviewer ; parentmustcounterread2andrefreshcurrentguards atintegration, including plannedparentviews.",
+    "No currenttechnicalCPAplatformexecution tested. No savingsorintegrationcost measured.",
+    "Ministerialpayrollmodels2016/2023notreadinfull; retainedR3243-2doesnotclaim rewriteofthosemodels.",
+    "OldGDPR/law78references inunmodifiedCPAregulations notdeclaredfixed orfullycoordinated; no broadprivacycomplianceapproval.",
+    "Independentlegalread is not a juristsignedapproval oftheentire fivecodeproject."
+  ],
+  "canonical_mutations": false,
+  "frozen_author_inputs_unchanged": true
+}

@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "created_at": "2026-10-20T09:58:36.412203+00:00",
+  "scope": "Premier sous-lot complet de 24, retenu à la demande du parent plutôt que quota 48. Proposition isolée, non inscrite.",
+  "selected_count": 24,
+  "all_selected_from_current_export": true,
+  "all_previous_drafts": null,
+  "whole_sources_notes_and_relevant_current_proposals_read": 76,
+  "reading_method": "24 sources sélectionnées et notes ; 50 appuis/cibles du contexte, dont 16 textes identiques à des captures déjà entièrement lues et 34 lus ou relus ici ; 2 cibles de renvoi supplémentaires 87-0 A/R133-14 lues entières. Quatre articles externes primaires supplémentaires joints, provenance et limites distinctes.",
+  "classifications": {
+    "payment_timing_relief": 2,
+    "retained_necessary": 14,
+    "material_reduction": 8
+  },
+  "families": {
+    "taxation-provisoire-exonerations-etablies": {
+      "articles": [
+        "L242-12-1",
+        "R243-15"
+      ],
+      "kinds": [
+        "payment_deferred"
+      ]
+    },
+    "transaction-sociale-sans-parcours-contentieux-impose": {
+      "articles": [
+        "L243-6-5",
+        "R243-45-1"
+      ],
+      "kinds": [
+        "obligation_removed",
+        "relief_extended"
+      ]
+    },
+    "controle-tpe-sans-prorogation-unilaterale": {
+      "articles": [
+        "L243-13"
+      ],
+      "kinds": [
+        "deadline_reduced"
+      ]
+    },
+    "recouvrement-notifications-sans-recommande-exclusif": {
+      "articles": [
+        "L244-2",
+        "R243-48"
+      ],
+      "kinds": [
+        "obligation_removed"
+      ]
+    },
+    "versement-unique-fin-autorisation": {
+      "articles": [
+        "R243-6-3"
+      ],
+      "kinds": [
+        "authorization_removed"
+      ]
+    },
+    "retard-regularise-sans-condition-de-premier-incident": {
+      "articles": [
+        "R243-11"
+      ],
+      "kinds": [
+        "relief_extended"
+      ]
+    },
+    "declaration-tardive-sans-penalite-mensuelle-repetee": {
+      "articles": [
+        "R243-12"
+      ],
+      "kinds": [
+        "relief_extended"
+      ]
+    },
+    "dsn-neant-dispense-sans-emploi": {
+      "articles": [
+        "R243-15"
+      ],
+      "kinds": [
+        "coordination"
+      ]
+    }
+  },
+  "material_outcomes": [
+    "Transaction possible pendant le recours amiable et sans saisine judiciaire imposée ; dépôt avant mise en demeure et retrait de la caducité automatique à vingt jours.",
+    "Prorogation de contrôle des petites entreprises ne provenant plus de la seule demande de l’organisme, exceptions et faculté du cotisant conservées.",
+    "Changement du collecteur obligatoire par option sans autorisation/reprise de la procédure initiale, affectations spéciales et unicité conservées.",
+    "Dispense d’accessoires pour régularisation rapide sans condition d’absence de retard dans les vingt-quatre mois antérieurs.",
+    "Pénalité initiale pour défaut déclaratif conservée mais répétition mensuelle automatique retirée pour un même manquement.",
+    "Deux notifications ouvertes à un autre moyen légal prouvant une date certaine de réception, sans retirer avis ni droits du destinataire."
+  ],
+  "payment_timing_only": "Exonérations dont conditions et montant sont déjà établis incluses dans la taxation provisoire ; le montant définitif des cotisations reste identique. Aucun avantage inconnu n’est supposé rempli.",
+  "coordination_without_new_gain": "R243-15V reconnaît la dispense de DSN à néant déjà proposée dans R133-14 ; pas de nouvelle économie CRPA ni dispense de DOETH annuelle.",
+  "unchanged_necessary": 14,
+  "national_savings": null,
+  "net_budget_effect": null,
+  "created_tax_or_contribution_rate": null,
+  "preserved": [
+    "Acre, DOM, exonérations et droits antérieurs ne sont ni remplacés ni réservés aux seuls anciens contrats.",
+    "Salaires, congés, protections, recours et indemnités spéciales restent distincts ; aucune formalité supprimée ne remet le principal de cotisations.",
+    "Contrat unique, quinze jours calendaires, employeur seul, seuil d’un an au terme effectif, 0,20 mois sur ancienneté totale/prorata mois complets et six mois de composante nouvelle relus dans les cibles quand applicables.",
+    "Pensions/droits de répartition antérieurs et paliers de capitalisation de L241-3 restent inchangés ; le transfert ne vaut pas baisse de cotisation.",
+    "Protocole écrit, concessions, approbation tutelle, contradictoire, exclusions de fraude et liberté de refuser la transaction conservés."
+  ],
+  "policy_sha256": "7d57aca661b3005f5fd49c46e1dd03961c530ddce5796b2cfecbadab5900b910",
+  "technical_validation": "24 schémas ; 344 gardes sources/contextes ; 14 cibles canoniques ; 66 analyses ; 10 tests arithmétiques et de préservation. Voir validation.json pour date exacte.",
+  "intrapack_dependencies": {
+    "targets": [
+      "L243-6-5",
+      "L243-13",
+      "R243-15"
+    ],
+    "dependent_rows": [
+      "R243-45-1",
+      "R243-59-6-A",
+      "R243-59-6",
+      "R243-19"
+    ],
+    "current_guards_not_future": true,
+    "recertification_required_after_commit": true
+  },
+  "concurrency": {
+    "detected": true,
+    "job": "securite-sociale-00045",
+    "potential_overlap": [
+      "L242-12-1",
+      "L243-5",
+      "L243-6",
+      "L243-6-5",
+      "L243-6-6"
+    ],
+    "evidence": "events-1 mis à jour 09:56:10 UTC, answer.json présent, pas de result.json au constat ; aucune proposition DB encore apparue lors des 344 gardes.",
+    "source_interception": false,
+    "action": "Ne pas inscrire ces cinq sur une avant-image périmée ; comparer le résultat canonique du worker ou vérifier sous verrou qu’aucun draft n’est apparu. Le parent est informé. Aucune réservation ni interruption de processus."
+  },
+  "limits": [
+    "Le travail demandé initialement sur 48 n’est pas annoncé achevé ; le parent a donné priorité à ce sous-lot cohérent de 24.",
+    "Les cibles futures intracolot ne sont pas annoncées canoniques avant inscription ; quatre certificats dépendants sont à reprendre après commit.",
+    "Les références extérieures non modifiées (notamment certains registres commerciaux et définition du groupe) ne sont pas déclarées entièrement auditées. Le maintien intégral des articles de publicité ne prouve pas qu’aucune simplification extérieure soit possible.",
+    "La note de L243-7-7 conditionne les taux nouveaux à un décret, au plus tard janvier 2027 ; aucun effet immédiat de ces taux n’est inventé.",
+    "R155-4 mentionne encore quinze jours dans la procédure sommaire, tandis que L244-2 conserve son mois : articulation préexistante laissée distincte, non résolue par la seule ouverture d’un support de notification.",
+    "Les garanties individuelles et obligations d’archivage ne sont pas raccourcies implicitement ; aucun nouveau formulaire ou justificatif n’est introduit.",
+    "Contrôles techniques et citations ne remplacent pas une contrelecture indépendante ni une validation juridique."
+  ],
+  "active_state_mutated": false,
+  "semantic_review_by_jurist": false
+}

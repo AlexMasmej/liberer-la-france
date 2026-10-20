@@ -1,0 +1,349 @@
+import json
+from pathlib import Path
+
+
+drafts = {}
+
+
+def add(number, xml, reason, review_notes):
+    if number in drafts:
+        raise ValueError(number)
+    drafts[number] = {
+        "proposed_xml": xml.strip(),
+        "reason": reason,
+        "review_notes": review_notes,
+        "status": "rewrite_draft",
+    }
+
+
+transition_2027 = (
+    "La note source réserve cette rédaction aux assurés dont la première pension de vieillesse de base "
+    "prend effet à compter du 1er janvier 2027. Elle exclut les titulaires d'une autre pension de base "
+    "ayant pris effet auparavant, sauf si cette pension a été liquidée au titre des 1° à 5° de "
+    "L. 161-22-1-2 dans sa rédaction issue de l'article 102 de la loi n° 2025-1403 du 30 décembre 2025. "
+    "Conserver cette transition du XI de cet article 102 et les rédactions applicables aux autres assurés ; "
+    "l'entrée en vigueur immédiate indiquée par la note ne supprime pas ce champ d'application différé."
+)
+
+
+add(
+    "L161-21-1",
+    """
+<p>L'assuré peut obtenir, sur sa demande, l'examen de sa situation par une commission placée auprès de la Caisse nationale d'assurance vieillesse. Il doit justifier des durées d'assurance mentionnées au premier alinéa de l'article L. 351-1-3 et au premier alinéa du III des articles L. 643-3 et L. 653-2 du présent code ainsi qu'au 5° du I de l'article L. 24 du code des pensions civiles et militaires de retraites, sans pouvoir attester, pour une fraction de ces durées, de la reconnaissance administrative de l'incapacité requise au premier alinéa de l'article L. 351-1-3 du présent code. Il doit également être atteint d'une incapacité permanente d'au moins 50 % à la date de sa demande de liquidation de pension.</p>
+<p>La caisse ou le service chargé de liquider la pension de retraite saisit la commission. Celle-ci examine la situation à partir d'un dossier médical transmis par l'assuré et permettant d'établir, pour les périodes considérées, l'ampleur de l'incapacité, de la déficience ou du désavantage. La commission rend un avis motivé, qui est notifié à l'organisme débiteur de la pension et s'impose à lui.</p>
+<p>Dans l'exercice de leurs fonctions, les membres de la commission respectent le secret professionnel et le secret médical.</p>
+<p>Un décret détermine les modalités d'application du présent article. Il fixe notamment le fonctionnement et la composition de la commission, qui comprend au moins un médecin-conseil et un membre de l'équipe mentionnée à l'article L. 146-8 du code de l'action sociale et des familles. Il fixe également la fraction des durées d'assurance requises que la commission peut valider.</p>
+<p>Lorsque la reconnaissance de la qualité de travailleur handicapé mentionnée à l'article L. 5213-1 du code du travail a été attribuée avant le 1er janvier 2016, l'intéressé peut demander à la commission mentionnée à l'article L. 241-5 du code de l'action sociale et des familles d'évaluer son incapacité permanente.</p>
+""",
+    "Réécriture à droit constant des conditions d'accès à la commission, de sa saisine et de la portée obligatoire de son avis. Les phrases distinguent les justificatifs, le taux d'incapacité, les garanties de secret et l'évaluation des reconnaissances antérieures à 2016. Aucune réforme de fond n'est introduite dans ce dispositif de retraite pour handicap.",
+    "Les cinq alinéas, le minimum de 50 %, la date du 1er janvier 2016 et tous les renvois sont conservés. La note source situe l'entrée en vigueur de la rédaction issue de l'article 87 de la loi n° 2025-199 au 1er janvier 2026. Le titre du code cité à L. 24 comporte dans la source « retraites » au pluriel : cette graphie est conservée et signalée pour harmonisation éditoriale éventuelle. Les abondements de solidarité envisagés à L. 241-3 n'altèrent pas cette procédure ni les droits déjà constitués.",
+)
+
+add(
+    "L161-21-2",
+    """
+<p>L'exercice, pendant un mandat complet, de l'une des fonctions suivantes ouvre droit à une majoration d'un trimestre de la durée d'assurance :</p>
+<p>1° Maire, président de délégation spéciale, adjoint au maire ou membre de délégation spéciale faisant fonction d'adjoint au maire ;</p>
+<p>2° Président ou vice-président de conseil départemental ou de conseil régional ;</p>
+<p>3° Président ou vice-président d'établissement public de coopération intercommunale à fiscalité propre ;</p>
+<p>4° Président ou vice-président de la métropole de Lyon ;</p>
+<p>5° Président ou vice-président de l'assemblée de Corse ;</p>
+<p>6° Président ou membre du conseil exécutif de Corse ;</p>
+<p>7° Président ou vice-président de l'assemblée de Guyane ;</p>
+<p>8° Président ou vice-président de l'assemblée de Martinique ;</p>
+<p>9° Président ou membre du conseil exécutif de Martinique ;</p>
+<p>10° Président ou vice-président de l'assemblée de Mayotte ;</p>
+<p>11° Conseiller des collectivités territoriales mentionnées aux 1° à 10° bénéficiant d'une délégation de fonction.</p>
+<p>La majoration accordée à une même personne au titre du présent article ne peut dépasser trois trimestres.</p>
+<p>Les fonctions mentionnées au 11° n'ouvrent pas droit à cette majoration lorsque l'élu est également titulaire d'un mandat parlementaire.</p>
+<p>Pour l'assuré ayant relevé successivement, alternativement ou simultanément de plusieurs régimes d'assurance vieillesse de base, un décret en Conseil d'Etat désigne le régime chargé de valider la majoration.</p>
+""",
+    "Réécriture à droit constant de l'ouverture du droit, du plafond individuel et de la désignation du régime compétent. Les onze catégories de fonctions sont intégralement maintenues, avec l'exclusion parlementaire propre au 11°. Aucune modification de fond du régime des élus n'est prévue par la politique de réforme.",
+    "Un trimestre par mandat complet et trois trimestres au maximum sont conservés, sans ajouter de règle sur les mandats simultanés. Les quinze alinéas et les 1° à 11° restent à leur place. Le 11° qualifie de collectivités territoriales l'ensemble visé aux 1° à 10°, alors que le 3° vise des EPCI : cette imprécision préexistante n'est pas corrigée par extension du champ. La source ne comporte aucune note de transition.",
+)
+
+add(
+    "L161-22",
+    """
+<p>I.-A.-Le versement d'une pension de vieillesse liquidée dans un régime de retraite de base légalement obligatoire, lorsque son entrée en jouissance intervient à compter d'un âge fixé par décret, est soumis aux conditions suivantes :</p>
+<p>1° L'assuré qui exerce une activité salariée doit rompre le lien professionnel avec son employeur ;</p>
+<p>2° L'assuré qui relève du régime d'assurance vieillesse des personnes non salariées des professions agricoles doit cesser son activité non salariée agricole dans les conditions prévues aux articles L. 732-39 et L. 732-40 du code rural et de la pêche maritime ;</p>
+<p>3° Le fonctionnaire civil ou militaire doit être radié des cadres dans les conditions prévues à l'article L. 3 du code des pensions civiles et militaires de retraite.</p>
+<p>B.-La condition fixée au 1° du A du présent I ne s'applique pas aux assurés qui exercent l'une des activités définies par décret en Conseil d'Etat et correspondant aux catégories suivantes :</p>
+<p>1° Les activités dont la nature ou le caractère accessoire ne permet ou ne justifie pas la rupture du lien avec l'employeur à la date d'entrée en jouissance de la pension ;</p>
+<p>2° Les activités pour lesquelles l'employeur loge l'assuré ;</p>
+<p>3° Les activités pour lesquelles il existe des difficultés de recrutement ;</p>
+<p>4° Les activités d'intérêt général ou concourant à un service public.</p>
+<p>II.-Le versement d'une pension de retraite personnelle liquidée dans un régime d'assurance vieillesse de base est suspendu dans les cas suivants :</p>
+<p>1° L'assuré reprend une activité non salariée agricole mentionnée au 2° du A du I ;</p>
+<p>2° L'assuré reprend une activité de mandataire social en qualité de salarié assimilé mentionnée aux 8° ou 9° de l'article L. 722-20 du code rural et de la pêche maritime, dans des conditions fixées par décret ;</p>
+<p>3° Après avoir atteint l'âge mentionné à l'article L. 161-17-2 du présent code, l'assuré reprend ou poursuit une activité sans être entré en jouissance de toutes ses pensions de vieillesse personnelles dans les régimes dont il a relevé : régimes légaux ou rendus légalement obligatoires, de base et complémentaires, français et étrangers, ainsi que régimes des organisations internationales.</p>
+<p>Pour apprécier la liquidation de l'ensemble des pensions au titre du présent 3°, il n'est pas tenu compte de la pension due par un régime de retraite légalement obligatoire dont l'âge d'ouverture des droits, le cas échéant sans minoration, est supérieur à l'âge mentionné à l'article L. 161-17-2. Cette exclusion s'applique jusqu'à ce que l'assuré atteigne l'âge auquel il peut demander l'entrée en jouissance de cette pension ou, si elle est assortie d'une minoration, l'âge auquel cette minoration prend fin.</p>
+<p>Le présent 3° ne s'applique pas à la pension qu'un régime mentionné aux 1° à 5° de l'article L. 161-22-1-2 verse aux assurés mentionnés aux mêmes 1° à 5°.</p>
+<p>III.-A.-Le cumul d'une pension de vieillesse personnelle versée par un régime légal ou rendu légalement obligatoire, de base ou complémentaire, avec une activité professionnelle est soumis aux règles suivantes :</p>
+<p>1° Si l'assuré n'a pas atteint l'âge mentionné à l'article L. 161-17-2, le montant de la pension versée est réduit à hauteur des revenus professionnels et de remplacement ;</p>
+<p>2° Si l'assuré a atteint l'âge mentionné au même article L. 161-17-2 sans avoir atteint celui prévu au 1° de l'article L. 351-8, et si ses revenus professionnels et de remplacement dépassent un seuil fixé par décret, le montant de la pension versée est réduit de la moitié du dépassement de ce seuil ;</p>
+<p>3° Si l'assuré a atteint l'âge mentionné au même 1°, il peut cumuler intégralement la pension avec ses revenus professionnels et de remplacement.</p>
+<p>Lorsqu'un assuré mentionné aux 1° et 2° du présent A perçoit des pensions de vieillesse de droits propres de plusieurs régimes de retraite de base et complémentaires, un décret détermine comment la réduction prévue aux mêmes 1° et 2° est répartie entre ces pensions en fonction des montants versés par chaque régime. La réduction est imputée en priorité sur les pensions des régimes de retraite de base. La somme des réductions ainsi imputées ne peut dépasser la réduction prévue auxdits 1° et 2°.</p>
+<p>Pour l'application du présent A, les revenus de remplacement pris en compte sont les indemnités journalières mentionnées à l'article L. 321-1, l'indemnité complémentaire mentionnée à l'article L. 1226-1 du code du travail, les indemnités prévues au titre II du livre IV de la cinquième partie du même code, ainsi que celles prévues par les dispositions légales et réglementaires ayant le même objet, déterminées par décret.</p>
+<p>Pour l'assuré qui reprend ou poursuit une activité non salariée, un décret fixe les conditions d'appréciation des revenus professionnels perçus pendant l'année au cours de laquelle sa pension a pris effet.</p>
+<p>B.-Les revenus professionnels et de remplacement perçus à l'occasion d'une activité d'intérêt général ou concourant à un service public ne sont pas pris en compte pour l'application du A du présent III, dans les conditions d'âge, de durée, de plafond ou de lieu d'exercice de l'activité professionnelle fixées par décret en Conseil d'Etat.</p>
+<p>C.-Par dérogation au A du présent III, les assurés suivants peuvent cumuler intégralement leur pension avec les revenus professionnels et de remplacement :</p>
+<p>1° Les assurés mentionnés aux 1° à 5° de l'article L. 161-22-1-2, pour la pension versée par les régimes mentionnés aux mêmes 1° à 5° ;</p>
+<p>2° Les fonctionnaires mentionnés à l'article L. 414-4 du code général de la fonction publique, pour les revenus perçus à l'occasion d'une activité mentionnée à l'article L. 611-1 du code de la sécurité intérieure, lorsque leur pension est versée par le régime de la fonction publique de l'Etat.</p>
+<p>D.-Un décret désigne les caisses, organismes ou services chargés de recouvrer les sommes correspondant à la réduction prévue au A du présent III et fixe les modalités de ce recouvrement.</p>
+<p>E.-L'assuré mentionné aux 1° et 2° du A du présent III qui reprend ou poursuit une activité relevant de l'article L. 611-1 en informe la caisse compétente.</p>
+<p>IV.-Le présent article ne s'applique pas à l'assuré qui demande ou perçoit une pension au titre d'un dispositif de retraite progressive prévu par des dispositions législatives ou réglementaires, notamment les articles L. 161-22-1-5 du présent code et L. 89 bis du code des pensions civiles et militaires de retraite.</p>
+<p>V.-Sauf disposition contraire, un décret fixe les modalités d'application du présent article.</p>
+""",
+    "Réécriture à droit constant de toutes les conditions de cessation d'activité, de suspension et de cumul. Les sujets sont explicités dans chaque cas ; les règles de réduction selon l'âge, leur répartition entre pensions et les exceptions restent intégrales. La réforme de capitalisation et le gel partiel de revalorisation ne modifient pas ici les règles de cumul.",
+    transition_2027 + " Les I à V, leurs lettres, les énumérations et les trente alinéas sont conservés. Les deux renvois à L. 611-1 sont maintenus avec leurs qualifications d'origine : le C du III vise expressément le code de la sécurité intérieure ; le E du III ne précise pas de code. Cette différence préexistante appelle un contrôle de portée, sans rattachement silencieux du E au code de la sécurité intérieure. La liquidation du compte de capitalisation prévu au II et au VI du L. 241-3 proposé devra être coordonnée avec la liquidation de l'ensemble des pensions exigée au 3° du II ; la source ne permet pas de présumer ces modalités déjà définies.",
+)
+
+add(
+    "L161-22-1",
+    """
+<p>Le bénéficiaire d'une pension de vieillesse personnelle versée par un régime de retraite de base légalement obligatoire qui reprend ou poursuit une activité professionnelle n'acquiert, au titre de cette activité, aucun avantage de vieillesse de droit direct ou dérivé dans un régime légal ou rendu légalement obligatoire d'assurance vieillesse, de base ou complémentaire.</p>
+<p>Cette interdiction ne s'applique pas :</p>
+<p>1° Aux assurés qui demandent le versement d'une fraction de pension au titre d'un dispositif de retraite progressive prévu par des dispositions législatives ou réglementaires, notamment l'article L. 161-22-1-5 ;</p>
+<p>2° Aux assurés qui remplissent les conditions de cumul intégral de leur pension et des revenus d'une activité professionnelle prévues au 3° du A du III de l'article L. 161-22.</p>
+""",
+    "Réécriture à droit constant de l'interdiction d'acquérir de nouveaux avantages après liquidation et de ses deux exceptions. Le lien entre l'activité reprise ou poursuivie et les droits exclus est explicité, sans confondre retraite progressive et cumul intégral ni étendre leurs bénéficiaires.",
+    transition_2027 + " Les quatre alinéas logiques et les 1° et 2° sont conservés. L'exception du 2° reste limitée au 3° du A du III de L. 161-22 et ne s'étend pas d'elle-même aux autres cumuls intégraux. Pour la réforme de capitalisation, la loi préalable exigée au VI du L. 241-3 proposé doit préciser l'articulation des cotisations transférées avec cette interdiction après liquidation ; aucune dérogation générale ni garantie de nouveaux droits par répartition n'est créée ici.",
+)
+
+add(
+    "L161-22-1-1",
+    """
+<p>Les assurés mentionnés au 2° de l'article L. 161-22-1 acquièrent de nouveaux droits à pension dans les régimes de base selon les conditions du présent article. Les dispositions ou stipulations des régimes complémentaires auxquels ils sont affiliés restent applicables. Ces nouveaux droits, propres et dérivés, ne modifient ni le montant de la pension de vieillesse issue de la première liquidation, ni celui de la majoration prévue à l'article L. 732-54-1 du code rural et de la pêche maritime, ni celui du complément différentiel prévu à l'article L. 732-63 du même code.</p>
+<p>La nouvelle pension de vieillesse acquise par l'exercice d'une activité professionnelle après la liquidation d'une première pension est liquidée au taux plein ou au pourcentage maximum mentionnés à l'article L. 161-17-3 du présent code.</p>
+<p>Le calcul retient uniquement les périodes d'assurance ayant donné lieu à des cotisations à la charge de l'assuré. Sont exclues les périodes correspondant aux versements mentionnés aux articles L. 173-7 et L. 634-2-1 du présent code ainsi qu'au I de l'article 108 de la loi n° 2021-1754 du 23 décembre 2021 de financement de la sécurité sociale pour 2022.</p>
+<p>La nouvelle pension et la pension de droit dérivé qui en est issue ne peuvent donner lieu à aucune majoration, aucun supplément ni aucun accessoire.</p>
+<p>Les articles L. 161-22-2 et L. 173-1 du présent code ne sont pas applicables à cette nouvelle pension.</p>
+""",
+    "Réécriture à droit constant des nouveaux droits de base acquis en cumul intégral : autonomie par rapport à la première pension, taux de liquidation, périodes cotisées retenues et exclusions. Les phrases distinguent les règles des régimes complémentaires et les trois montants protégés, sans promettre de droits supplémentaires sur les cotisations transférées vers la capitalisation.",
+    transition_2027 + " Les cinq alinéas, les deux versements codifiés exclus et le versement du I de l'article 108 de la loi du 23 décembre 2021 sont maintenus. L. 161-22-2 et L. 173-1 restent expressément écartés. La coordination de calcul exigée au III du L. 241-3 proposé devra traiter aussi ces nouvelles pensions, pour ne pas compter en répartition la fraction transférée ; les droits antérieurement constitués restent protégés et aucun mode de réduction non défini n'est inventé.",
+)
+
+add(
+    "L161-22-1-2",
+    """
+<p>Après la liquidation d'une seconde pension de vieillesse en application de l'article L. 161-22-1-1, l'assuré ne peut plus acquérir de droits dans un régime de retraite de base. Toutefois, lorsque plusieurs pensions sont liquidées simultanément après la première liquidation, des droits sont acquis au titre de chacune d'elles.</p>
+<p>Par dérogation, les articles L. 161-22, L. 161-22-1 et le premier alinéa du présent article n'empêchent pas les assurés suivants d'acquérir des droits supplémentaires dans les conditions prévues par décret en Conseil d'Etat :</p>
+<p>1° Les assurés relevant du régime mentionné à l'article L. 5551-1 du code des transports ;</p>
+<p>2° Les artistes du ballet relevant de la caisse de retraites des personnels de l'Opéra national de Paris ;</p>
+<p>3° Les anciens agents relevant du régime de retraite des mines qui ont été employés par l'une des entreprises minières ou ardoisières mentionnées au titre Ier de la loi n° 2004-105 du 3 février 2004 portant création de l'Agence nationale pour la garantie des droits des mineurs et diverses dispositions relatives aux mines, lorsque cette entreprise a définitivement cessé son activité ou a été mise en liquidation avant le 31 décembre 2015 ;</p>
+<p>4° Les titulaires d'une pension militaire prévue à l'article L. 6 du code des pensions civiles et militaires de retraite ;</p>
+<p>5° Les titulaires de pensions civiles et militaires ou d'une solde de réforme allouées pour invalidité.</p>
+""",
+    "Réécriture à droit constant de la limite après seconde liquidation et des cinq catégories dérogatoires. La phrase concernant les mines identifie plus directement les anciens agents et la situation de leur entreprise. La simultanéité des liquidations et la condition historique antérieure au 31 décembre 2015 sont conservées.",
+    transition_2027 + " Le premier alinéa et les 1° à 5° gardent leur position logique, afin de préserver les nombreux renvois de L. 161-22 et des notes transitoires. Les cinq catégories relèvent de régimes ou de situations propres : la première phase de capitalisation du L. 241-3 proposé ne s'y étend pas automatiquement. Son articulation avec l'interdiction d'acquisition après seconde liquidation relève des dispositions préalables de liquidation et de calcul exigées aux III et VI de ce L. 241-3.",
+)
+
+add(
+    "L161-22-1-3",
+    """
+<p>L'assuré qui acquiert de nouveaux droits à pension de vieillesse en application du 2° de l'article L. 161-22-1 peut néanmoins bénéficier des droits ou prestations dont les dispositions législatives et réglementaires subordonnent l'attribution à la liquidation des droits à retraite.</p>
+""",
+    "Réécriture à droit constant de la compatibilité entre l'acquisition de nouveaux droits en cumul intégral et l'accès aux prestations conditionnées par la liquidation. Le sujet bénéficiaire et l'effet de la règle sont rendus explicites ; aucune condition d'une prestation n'est supprimée.",
+    "La note source prévoit une entrée en vigueur au 1er septembre 2023 en application du XII de l'article 26 de la loi n° 2023-270. Le renvoi au 2° de L. 161-22-1 est conservé ; son champ doit suivre la transition au 1er janvier 2027 prévue par la note de cet article. Cette compatibilité ne vaut ni liquidation automatique du compte de capitalisation ni dispense des conditions propres à chaque prestation.",
+)
+
+add(
+    "L161-22-1-4",
+    """
+<p>Si des circonstances exceptionnelles nécessitent, en urgence, la poursuite ou la reprise d'activités par des assurés susceptibles de les exercer, un décret peut suspendre l'application du 3° du II et des 1° et 2° du A du III de l'article L. 161-22. La suspension ne peut dépasser un an ; elle peut être renouvelée pour une durée maximale de six mois. Le décret précise les catégories d'activités et d'assurés concernées par la suspension des mêmes plafonds, seuils et délai. Il peut prévoir une application rétroactive, sans remonter à plus d'un mois avant sa publication.</p>
+<p>Dans les mêmes conditions, le décret peut suspendre les dispositions analogues à celles mentionnées au premier alinéa du présent article qui figurent dans les dispositions ou stipulations régissant les régimes complémentaires de retraite.</p>
+<p>Le deuxième alinéa du présent article est d'ordre public.</p>
+""",
+    "Réécriture à droit constant du pouvoir exceptionnel de suspension. Les conditions d'urgence, les limites de durée, la rétroactivité maximale et l'application aux régimes complémentaires sont séparées en phrases lisibles. L'alinéa d'ordre public conserve sa cible.",
+    transition_2027 + " Les trois alinéas sont conservés : un an au maximum, renouvellement de six mois au maximum et rétroactivité d'un mois au maximum. La formule source « plafonds, seuils et délai » subsiste, mais le 3° du II de L. 161-22 réécrit en 2025 concerne la liquidation de toutes les pensions et ne prévoit pas explicitement un délai de reprise. Ce reliquat de rédaction appelle une coordination de fond à vérifier ; il n'est ni supprimé ni remplacé silencieusement.",
+)
+
+add(
+    "L161-22-1-5",
+    """
+<p>I.-L'assuré peut bénéficier d'une retraite progressive s'il a atteint un âge fixé par décret, inférieur à celui mentionné à l'article L. 161-17-2, s'il justifie d'une durée d'assurance et de périodes reconnues équivalentes fixées par décret en Conseil d'Etat et s'il relève de l'une des catégories suivantes :</p>
+<p>1° L'assuré qui exerce une activité salariée ou non salariée à temps partiel, ou à temps réduit par rapport à la durée maximale légale ou conventionnelle de travail exprimée en jours ou en demi-journées, et qui justifie d'une quotité de temps de travail comprise entre deux limites fixées par décret en Conseil d'Etat ;</p>
+<p>2° L'assuré qui exerce à titre exclusif une activité salariée ou non salariée qui n'est pas soumise à une durée d'activité définie par un employeur, lorsque cette activité lui procure un revenu minimal et donne lieu à une diminution de ses revenus professionnels ;</p>
+<p>3° L'assuré qui exerce à titre exclusif une activité de chef d'exploitation ou d'entreprise agricole et engage la cessation progressive de cette activité.</p>
+<p>Un décret fixe les conditions relatives au revenu minimal et à la diminution des revenus professionnels mentionnées au 2°, ainsi que la condition de cessation progressive de l'activité agricole mentionnée au 3°.</p>
+<p>L'attribution de la retraite progressive entraîne la liquidation provisoire et le versement d'une même fraction de pension dans tous les régimes de retraite de base légalement obligatoires.</p>
+<p>La fraction de retraite versée varie, dans les conditions fixées par voie réglementaire, selon la durée de travail à temps partiel ou à temps réduit par rapport à la durée maximale légale ou conventionnelle, la diminution des revenus professionnels ou la cessation progressive de l'activité agricole. Lorsque le temps de travail, les revenus professionnels ou l'activité agricole conservée sont modifiés, cette fraction est ajustée au terme d'un délai fixé par voie réglementaire.</p>
+<p>Les majorations de pension mentionnées au premier alinéa de l'article L. 351-10 et à l'article L. 351-12 du présent code ainsi qu'à l'article L. 732-54-1 du code rural et de la pêche maritime sont attribuées lors de la liquidation provisoire si leurs conditions d'attribution sont remplies. A défaut, elles sont attribuées lors de la liquidation ultérieure de la pension complète si ces conditions sont remplies à cette date. Les majorations accordées lors de la liquidation provisoire sont révisées lors de la liquidation de la pension complète.</p>
+<p>Les modalités d'application du présent article aux assurés qui exercent auprès de plusieurs employeurs des activités à temps partiel ou à temps réduit par rapport à la durée maximale légale ou conventionnelle de travail sont précisées par voie réglementaire.</p>
+<p>L'assuré reçoit une information sur les conditions d'application de l'article L. 241-3-1.</p>
+<p>II.-Le présent article ne s'applique pas :</p>
+<p>1° Aux assurés bénéficiant d'un avantage de préretraite prévu par des dispositions réglementaires, des stipulations conventionnelles ou une décision unilatérale de l'employeur ;</p>
+<p>2° Aux assurés qui exercent à titre exclusif l'une des activités désignées par décret parmi celles mentionnées à l'article L. 311-3 ;</p>
+<p>3° Aux assurés dont l'indemnité de départ à la retraite est affectée au maintien total ou partiel de leur rémunération en application du dernier alinéa de l'article L. 1237-9 du code du travail.</p>
+""",
+    "Réécriture à droit constant de l'ensemble de la retraite progressive : conditions communes, trois catégories d'activité, liquidation provisoire, variation de la fraction, majorations et trois exclusions. Les phrases isolent les conditions cumulatives et la chronologie des majorations. Les renvois au pouvoir réglementaire gardent leur niveau respectif ; aucune condition d'âge, de revenu ou de quotité n'est chiffrée sans fondement.",
+    "Les quatorze alinéas, les I et II et leurs 1° à 3° restent en place. Aucune note source ne prévoit de transition supplémentaire. Le renvoi à L. 241-3-1 concerne le maintien d'assiette à temps partiel et reste distinct de L. 241-3 portant le projet de capitalisation. Les conditions de départ et de calcul du futur compte doivent être organisées par la loi préalable du VI du L. 241-3 proposé ; la liquidation provisoire de toutes les pensions de base ne liquide pas à elle seule ce compte. Le passage à quarante heures prévu pour certains nouveaux contrats ne relève pas automatiquement les quotités ou durées annuelles propres à ce dispositif.",
+)
+
+add(
+    "L161-22-1-6",
+    """
+<p>Le présent sous-paragraphe s'applique aux agents suivants sans leur imposer la condition d'exercice à temps partiel :</p>
+<p>1° Les agents non titulaires de la fonction publique qui exercent leur activité à titre exclusif dans un service à temps incomplet ou dans un ou plusieurs emplois à temps non complet ;</p>
+<p>2° Les fonctionnaires qui occupent à titre exclusif un ou plusieurs emplois permanents à temps non complet mentionnés aux articles L. 613-6 et L. 613-10 du code général de la fonction publique.</p>
+<p>Lorsque les agents mentionnés aux 1° et 2° du présent article occupent plusieurs emplois à temps non complet, ils ne peuvent bénéficier de la retraite progressive que si leur durée totale de travail ne dépasse pas un pourcentage, fixé par décret, de la durée annuelle mentionnée au second alinéa de l'article L. 611-1 du code général de la fonction publique.</p>
+""",
+    "Réécriture à droit constant de la dérogation à la condition de temps partiel pour les agents publics à temps incomplet ou non complet. Les deux catégories et la limite de durée totale en cas de plusieurs emplois sont formulées avec des sujets explicites. Aucune réforme de fond n'est étendue à la fonction publique.",
+    "Les quatre alinéas logiques et les 1° et 2° sont conservés, avec l'exclusivité d'activité, les emplois permanents pour le 2° et le plafond fixé par décret. La note source fixe l'entrée en vigueur au 1er septembre 2023 selon le XII de l'article 26 de la loi n° 2023-270. Les trois renvois au code général de la fonction publique sont maintenus. La première phase du L. 241-3 proposé concerne les salariés du régime général employés par une personne de droit privé ; l'affiliation éventuelle d'un agent public au régime général ne suffit pas à l'y inclure.",
+)
+
+add(
+    "L161-22-1-7",
+    """
+<p>A la demande de l'assuré qui remplit les conditions d'attribution de la pension complète, celle-ci remplace la fraction de pension qui lui est versée. Dans les conditions fixées par décret, la pension complète est liquidée en prenant en compte le montant de la pension initiale et la durée d'assurance accomplie depuis sa liquidation.</p>
+<p>L'assuré ne peut ensuite demander à bénéficier de nouveau de la retraite progressive.</p>
+""",
+    "Réécriture à droit constant du passage de la fraction de pension à la pension complète. La demande de l'assuré et les deux éléments du calcul sont explicités, et l'interdiction d'un nouveau recours à la retraite progressive figure dans son alinéa propre.",
+    "Les deux alinéas logiques sont conservés. La note source prévoit l'entrée en vigueur au 1er septembre 2023 au titre du XII de l'article 26 de la loi n° 2023-270. La liquidation complète demeure soumise aux conditions d'attribution et aux règles de calcul fixées par décret. La coordination du III du L. 241-3 proposé devra distinguer droits constitués et droits futurs sur la période travaillée en retraite progressive, sans double acquisition sur la fraction transférée ; le présent article ne fixe pas la liquidation du compte investi collectivement.",
+)
+
+add(
+    "L161-22-1-8",
+    """
+<p>Le versement de la fraction de pension est définitivement supprimé, et l'assuré ne peut plus demander à bénéficier de la retraite progressive, s'il reprend une activité à temps complet, si le revenu de son activité professionnelle atteint ou dépasse le revenu professionnel qu'il percevait avant le versement de cette fraction, ou si les conditions de cessation de l'activité agricole ne sont pas respectées.</p>
+<p>Dans les autres cas où l'assuré ne remplit plus les conditions d'attribution de la fraction de pension, son versement est suspendu.</p>
+""",
+    "Réécriture à droit constant distinguant les trois causes de suppression définitive et les autres cas de simple suspension. Les seuils de revenu, la reprise à temps complet et les obligations de cessation agricole sont intégralement préservés, sans ajouter de sanction.",
+    "Les deux alinéas logiques et le renvoi du second aux seuls cas autres que ceux du premier sont conservés. L'égalité du revenu avec le revenu antérieur suffit toujours à la suppression définitive ; le dépassement n'est pas requis. La note source fixe l'entrée en vigueur au 1er septembre 2023 selon le XII de l'article 26 de la loi n° 2023-270. Le texte continue à viser les conditions de cessation de l'activité agricole, sans leur substituer un régime salarié ni étendre la capitalisation aux exploitants agricoles.",
+)
+
+add(
+    "L161-22-1-9",
+    """
+<p>Lorsque l'assuré atteint l'âge mentionné à l'article L. 351-1-5, les articles L. 341-15 et L. 341-16 n'empêchent pas de remplacer sa pension d'invalidité par la fraction de pension de vieillesse prévue à l'article L. 161-22-1-5.</p>
+""",
+    "Réécriture à droit constant de la règle de compatibilité permettant la substitution d'une fraction de pension de vieillesse à la pension d'invalidité. L'âge déclencheur et les deux articles qui ne font pas obstacle à cette substitution sont explicitement rattachés à l'assuré ; la substitution n'est pas rendue automatique.",
+    "Les quatre renvois sont conservés et aucun âge numérique n'est substitué à L. 351-1-5. La note source fixe l'entrée en vigueur au 1er septembre 2023 selon le XII de l'article 26 de la loi n° 2023-270. La réforme de revalorisation des pensions de vieillesse et de réversion ne s'étend pas, par ce texte, aux pensions d'invalidité ; les conditions propres de la retraite progressive restent applicables.",
+)
+
+add(
+    "L161-22-2",
+    """
+<p>L'assuré qui n'a relevé, au cours de sa carrière, que d'un seul régime de retraite de base perçoit un versement sur sa demande, au plus tôt à l'âge fixé à l'article L. 161-17-2, s'il ne justifie pas d'une durée d'assurance, au sens du deuxième alinéa de l'article L. 351-1, atteignant le nombre de trimestres fixé par décret en Conseil d'Etat. Le montant de ce versement est celui des cotisations versées à son régime de retraite après leur revalorisation par les coefficients en vigueur au 1er janvier de l'année de la demande, applicables aux salaires et cotisations servant de base au calcul des pensions.</p>
+""",
+    "Réécriture à droit constant du versement demandé en cas de courte affiliation à un régime unique. Les conditions d'unicité de régime, de défaut de justification de la durée requise et d'âge sont distinguées du calcul ; la référence temporelle des coefficients est conservée.",
+    "L'alinéa unique et les deux renvois sont maintenus. La note de l'article 44 V de la loi n° 2014-40 réserve le dispositif aux assurés dont l'ensemble des pensions prend effet à compter du 1er janvier 2016. L. 161-22-1-1 exclut expressément ce versement pour la nouvelle pension acquise après la première liquidation. La réforme du L. 241-3 proposé doit préciser le sort des sommes transférées au compte, afin d'éviter qu'une même cotisation soit conservée sur ce compte et versée de nouveau au titre du présent article ; le remboursement de l'épargne investie ne peut être assimilé d'office à ce versement revalorisé.",
+)
+
+add(
+    "L161-22-3",
+    """
+<p>Le conjoint survivant ou divorcé définitivement condamné à l'une des peines complémentaires mentionnées aux articles 221-9-2 et 222-48-3 du code pénal n'a pas droit à une pension de réversion au titre d'un régime de retraite de base ou complémentaire légal ou rendu légalement obligatoire.</p>
+""",
+    "Réécriture à droit constant de l'exclusion de la réversion attachée à une condamnation définitive aux peines complémentaires visées. La phrase nomme directement le titulaire du droit exclu et conserve le champ de tous les régimes obligatoires de base et complémentaires. Aucune peine ni cause nouvelle d'exclusion n'est ajoutée.",
+    "Les renvois aux articles 221-9-2 et 222-48-3 du code pénal et l'exigence d'une condamnation définitive sont conservés. La source ne comporte pas de note transitoire. Les règles de transmission ou de liquidation du futur compte prévues au VI du L. 241-3 proposé doivent distinguer un droit successoral et une pension de réversion ; leur soumission à cette exclusion ne peut être présumée avant ces dispositions.",
+)
+
+add(
+    "L161-23",
+    """
+<p>Le conjoint survivant ou divorcé qui s'est remarié recouvre le droit à pension de réversion au titre d'un précédent conjoint, perdu du fait de ce remariage, lorsqu'il ne peut bénéficier d'aucun droit à pension de réversion au titre de son dernier conjoint. Ce rétablissement est subordonné à l'absence d'ouverture de ce droit au profit d'un autre ayant cause.</p>
+<p>Ces dispositions s'appliquent aux pensions de réversion prenant effet après le 14 juillet 1982.</p>
+""",
+    "Réécriture à droit constant du rétablissement d'un droit à réversion perdu à la suite d'un remariage. La situation du dernier conjoint et la réserve des droits d'un autre ayant cause sont distinguées en deux phrases, sans modifier la date historique d'application.",
+    "Les deux alinéas logiques sont maintenus. La date du 14 juillet 1982 reste une borne strictement postérieure pour la prise d'effet des pensions. Le terme « autre ayant cause » n'est pas réduit à un autre conjoint. Le futur régime successoral du compte de capitalisation doit être défini par la loi préalable au VI du L. 241-3 proposé ; le rétablissement d'une pension de réversion n'emporte pas, par lui-même, rétablissement de droits sur ce compte.",
+)
+
+add(
+    "L161-23-1 A",
+    """
+<p>Sous réserve des engagements internationaux de la France, la pension de réversion d'un régime de retraite de base ou complémentaire, légal ou rendu légalement obligatoire, ne peut être versée qu'à un seul conjoint survivant. Si plusieurs conjoints survivent à l'assuré décédé, la pension est versée à celui dont le mariage a été contracté à la date la plus ancienne dans le respect de l'article 147 du code civil.</p>
+<p>Pour bénéficier d'un droit à pension de réversion, le conjoint divorcé doit remplir les conditions prévues par le régime dont il relève. Ce droit ne peut lui être accordé que dans l'un des cas suivants : soit son mariage a été contracté, dans le respect du même article 147, à la date la plus ancienne ; soit le droit est ouvert au titre de la durée du mariage pendant laquelle il était le seul conjoint de l'assuré décédé et en proportion de cette durée. Un décret en Conseil d'Etat fixe les modalités d'application de ces règles.</p>
+<p>Le présent article ne s'applique pas aux mariages déclarés nuls mentionnés à l'article 201 du code civil. Pour ces mariages, la pension de réversion est partagée entre les conjoints survivants selon les modalités fixées par décret en Conseil d'Etat.</p>
+""",
+    "Réécriture à droit constant des règles de réversion en présence de plusieurs mariages : réserve internationale, priorité chronologique conforme à l'article 147, situation du conjoint divorcé et exception des mariages déclarés nuls. Le prorata de la période où le conjoint divorcé était seul conjoint est explicité sans modifier les conditions propres au régime.",
+    "Les trois alinéas logiques et les renvois aux articles 147 et 201 du code civil sont conservés. Selon le II de l'article 29 de la loi n° 2021-1109 mentionné par la note source, cette règle concerne les pensions de réversion prenant effet à compter de la publication de cette loi. L. 161-23-1 A est distinct de L. 161-23-1 : le gel partiel prévu au II proposé de ce dernier n'est pas inséré dans les règles d'attribution de la réversion. Les modalités de prorata et les engagements internationaux restent à respecter. Le futur traitement successoral du compte de capitalisation exige les dispositions préalables du VI du L. 241-3 proposé.",
+)
+
+add(
+    "L161-24",
+    """
+<p>Le bénéficiaire d'une pension de vieillesse versée par un régime de retraite obligatoire qui réside hors des territoires mentionnés à l'article L. 111-2, de Mayotte et de la Polynésie française doit, chaque année, justifier de son existence auprès de l'organisme ou du service de l'Etat qui verse cette pension.</p>
+""",
+    "Réécriture à droit constant de l'obligation annuelle de preuve d'existence. Le débiteur de l'obligation, son champ territorial et l'organisme destinataire sont explicités dans une phrase conservant la périodicité annuelle. Aucune nouvelle formalité ni extension territoriale n'est créée.",
+    "Le renvoi à L. 111-2 et les exclusions de Mayotte et de la Polynésie française sont conservés. La note source indique une entrée en vigueur immédiate le 23 juillet 2026 de la rédaction issue de l'ordonnance n° 2026-648 du 22 juillet 2026. Les métadonnées signalent ABROGE_DIFF avec fin de validité au 1er janvier 2028 : cette proposition correspond à la seule version assignée, et la coordination avec la version applicable à compter de cette date doit être contrôlée, sans présumer le contenu du texte successeur. L'obligation ne s'étend pas automatiquement au futur compte de capitalisation.",
+)
+
+add(
+    "L161-24-1",
+    """
+<p>Pour justifier de son existence, l'intéressé peut recourir à des dispositifs techniques utilisant des données biométriques de manière adaptée à cette preuve, dans les conditions prévues par la loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux libertés et aux fichiers. Un décret en Conseil d'Etat, pris après avis de la Commission nationale de l'informatique et des libertés, précise les moyens utilisables et les garanties accordées aux personnes pour l'utilisation de ces dispositifs et l'exercice de leurs droits. Il fixe les conditions dans lesquelles les personnes concernées utilisent les outils numériques leur permettant d'accomplir cette démarche.</p>
+""",
+    "Réécriture à droit constant de la possibilité de prouver son existence par biométrie. La faculté de l'intéressé reste distincte des garanties et modalités imposées au décret en Conseil d'Etat après avis de la CNIL. Le recours à ces outils n'est pas rendu obligatoire.",
+    "L'alinéa unique, la loi n° 78-17 du 6 janvier 1978 et l'avis préalable de la CNIL sont maintenus. La note source rattache l'application au lendemain de la publication du décret visé aux deux dernières phrases, au plus tard le 1er septembre 2023, conformément à l'article 28 de la loi n° 2023-270. Les métadonnées indiquent une fin de validité au 1er janvier 2028 et l'état ABROGE_DIFF ; vérifier la coordination avec le dispositif successeur sans anticiper son contenu. La mutualisation prévue à L. 161-24-3 ne dispense pas des garanties sur les données biométriques.",
+)
+
+add(
+    "L161-24-2",
+    """
+<p>Lorsque le bénéficiaire d'une pension de retraite ne justifie pas de son existence, le versement de cette pension ne peut être suspendu qu'après l'expiration du délai fixé par décret.</p>
+""",
+    "Réécriture à droit constant de la garantie de délai préalable à la suspension pour défaut de preuve d'existence. Le motif, le versement concerné et le moment à partir duquel la suspension est possible sont directement identifiés, sans transformer cette possibilité en suspension automatique.",
+    "Le délai reste intégralement renvoyé au décret ; aucune durée, date de départ ni procédure supplémentaire n'est inventée. La source ne contient pas de note transitoire. Coordonner les modalités réglementaires avec L. 161-24 à L. 161-24-3, notamment avec les modifications différées au 1er janvier 2028 signalées pour L. 161-24 et L. 161-24-1, sans supprimer entre-temps cette garantie de délai.",
+)
+
+add(
+    "L161-24-3",
+    """
+<p>Les régimes obligatoires de retraite doivent mettre en commun la gestion de la preuve d'existence et les modalités de son contrôle par l'intermédiaire du groupement mentionné à l'article L. 161-17-1, dans les conditions fixées par décret.</p>
+""",
+    "Réécriture à droit constant de l'obligation de mutualisation. Le caractère obligatoire de la mise en commun, son double objet et le rôle du groupement sont explicités ; le texte ne crée ni organisme ni contrôle supplémentaire.",
+    "Le renvoi à L. 161-17-1 et l'habilitation au décret sont conservés. La source ne comporte pas de note transitoire. Cette mutualisation s'articule avec la preuve annuelle de L. 161-24, les garanties biométriques de L. 161-24-1 et le délai préalable de L. 161-24-2 ; les deux versions à abrogation différée au 1er janvier 2028 appellent une coordination. Le groupement ne reçoit pas ici de compétence nouvelle de gestion des actifs du compte de capitalisation.",
+)
+
+add(
+    "L161-25-1",
+    """
+<p>Lorsqu'elles remplissent les conditions d'affiliation à un régime de sécurité sociale prévues à l'article L. 115-6, les personnes de nationalité étrangère ont droit aux prestations des assurances maladie, maternité et décès et ouvrent droit à ces prestations.</p>
+""",
+    "Réécriture à droit constant de la condition d'accès aux trois assurances. Le bénéfice personnel des prestations et l'ouverture de droits sont tous deux maintenus, avec un renvoi explicite aux conditions d'affiliation. Aucune mesure relative aux salaires ou aux retraites n'est étendue à ces prestations.",
+    "Le renvoi à L. 115-6, qui vise la régularité du séjour, et les trois risques maladie, maternité et décès sont conservés. La note source de l'article 48 de la loi n° 93-1027 du 24 août 1993 maintient les droits à prestations ouverts à raison de cotisations versées avant l'entrée en vigueur de cette loi, nonobstant L. 161-18-1, L. 161-25-1, L. 161-25-2 et L. 356-1 : cette sauvegarde historique demeure applicable et ne doit pas être effacée par la consolidation. Le présent article n'est pas L. 161-25 relatif à la revalorisation.",
+)
+
+add(
+    "L161-26",
+    """
+<p>Un décret rend les dispositions de l'article L. 355-3 applicables aux bénéficiaires de tous les régimes obligatoires d'assurance vieillesse ou d'invalidité.</p>
+""",
+    "Réécriture à droit constant de l'extension réglementaire : le décret est le sujet de la phrase, et le champ comprend toujours tous les régimes obligatoires de vieillesse ou d'invalidité. Les règles de recouvrement auxquelles renvoie le texte ne sont ni remplacées ni modifiées.",
+    "Le renvoi unique à L. 355-3 conserve l'ensemble de ses dispositions et n'est pas limité à son délai de prescription. L'extension reste opérée par décret ; la source ne comporte pas de note transitoire. Le futur compte de capitalisation ne relève pas automatiquement de ce mécanisme d'indus de prestations : ses règles de recours et de liquidation doivent être définies selon le VI du L. 241-3 proposé.",
+)
+
+add(
+    "L161-27",
+    """
+<p>Lorsque cela est nécessaire, des décrets précisent les modalités d'application des articles L. 161-1 à L. 161-6, L. 161-15 et L. 161-17 à L. 161-23-1.</p>
+""",
+    "Réécriture à droit constant de l'habilitation réglementaire générale. La nécessité d'un décret et les trois ensembles d'articles concernés sont exprimés plus directement, sans élargir leur périmètre ni modifier les habilitations spéciales.",
+    "Les bornes L. 161-1 à L. 161-6 et L. 161-17 à L. 161-23-1 ainsi que L. 161-15 sont conservées à l'identique. La source ne comporte pas de note transitoire. Le texte ne suffit pas à organiser par décret les matières que les III et VI du L. 241-3 proposé réservent à une intervention législative préalable : réduction des droits futurs, propriété, liquidation, fiscalité et succession du compte.",
+)
+
+
+def main():
+    sources = json.loads(Path("source.json").read_text())
+    if len(sources) != 24 or len(drafts) != 24:
+        raise ValueError((len(sources), len(drafts)))
+    if {s["number"] for s in sources} != set(drafts):
+        raise ValueError("Périmètre incomplet ou excédentaire")
+    answer = []
+    for source in sources:
+        result = {
+            key: source[key]
+            for key in ("code_id", "source_id", "source_sha256", "number")
+        }
+        result.update(drafts[source["number"]])
+        answer.append(result)
+    Path("answer.json").write_text(
+        json.dumps(answer, ensure_ascii=False, indent=2) + "\n"
+    )
+
+
+if __name__ == "__main__":
+    main()

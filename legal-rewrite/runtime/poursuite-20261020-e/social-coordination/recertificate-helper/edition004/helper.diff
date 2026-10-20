@@ -1,0 +1,40 @@
+--- recertificate-helper/edition003/prepare_recertificates.py
++++ recertificate-helper/edition004/prepare_recertificates.py
+@@ -10,6 +10,8 @@
+ D=H/'runtime/poursuite-20261020-d/social-context-review/edition001'
+ C=H/'runtime/poursuite-20261020-c/certificate-refresh/refreshed003'
+ ROOT_C=E/'recertificate-helper/root-C-beforeimage001.json'
++ROOT_ADDITIONAL=E/'recertificate-helper/root-additional-source-guards001.json'
++ADDITIONAL_KEY='LEGITEXT000006073189|LEGIARTI000035656692'
+ TARGET='LEGITEXT000006073189|LEGIARTI000053220874'
+ OPTIONAL='LEGITEXT000006073189|LEGIARTI000041396065'
+ NAMES={'R243-17','R243-18','R243-19','R243-59','R243-59-6-A'}
+@@ -20,6 +22,7 @@
+  E/'complement-r243-59/edition001/answer.json':'4622a98ac16e19485fad22a1f70bc7b4fdf1e6f1e633fc67eebdaac475ce4255',
+  C/'answer.json':'626f0d00e183aadff71eb10824c9ce17fc2cb67989e929ea4119ea60378b9e52',
+  ROOT_C:'cd61db7e9dc57d7118a854be1120df6f21fc9f1f037dc84b971240be41b52311',
++ ROOT_ADDITIONAL:'d8e6756dcae52f3463a1ecacf751de2048277aea36b5915076165de5beb053fc',
+  E/'final-guards.json':'2c8730b9e8521d331f80c51ca4241704f8a3b99e655c34de666a2510f60d8b4d',
+  D/'manifest.json':'d96cec5f43ceb7751ad7b742252cb8100d856f47a8d0ca0573c18ae7226ff2e6'}
+ def read(p):return json.loads(p.read_text())
+@@ -52,6 +55,12 @@
+     for p,want in FROZEN.items():require(fs(p)==want,'Frozen evidence changed: '+str(p))
+     require(fs(D/'captured-guard-records.json')==read(D/'manifest.json')['files']['captured-guard-records.json'],'Source guard evidence changed')
+     oldguards={rc.key(x):x for x in read(D/'captured-guard-records.json')}
++    extra=read(ROOT_ADDITIONAL)
++    require(extra.get('status')=='root_approved_exact_additional_source_guard' and extra.get('approved_by')=='root' and extra.get('whole_source_notes_proposal_read') is True and len(extra.get('records',[]))==1,'Wrong additional root source approval')
++    item=extra['records'][0];s=item['source'];g=item['guard'];row=item['row']
++    require(rc.key(s)==rc.key(g)==rc.key(row)==g['key']==ADDITIONAL_KEY and s['number']==g['number']==row['number']=='R133-1' and ADDITIONAL_KEY not in oldguards,'Unexpected additional source identity or duplicate guard')
++    require(s['source_sha256']==g['source_sha256']==g['raw_document_sha256'] and sha(s['source_xml'])==g['source_body_sha256'] and sha(s['source_notes_xml'])==g['source_notes_sha256'] and row['proposed_xml'] is None and g['proposed_sha256']==sha(None),'Inconsistent approved R133-1 source/notes/proposal guards')
++    oldguards[ADDITIONAL_KEY]=g
+     policy=read(E/'final-guards.json')['policy_guards']
+     require(rc.policy_state()=={n:x['current_sha256'] for n,x in policy.items()},'Policy changed since E review')
+     approved_C=read(ROOT_C)
+@@ -85,6 +94,7 @@
+     require(set(found)==set(keys),'Missing canonical batch owner');return found
+ def check_source(record,oldguards):
+     old=oldguards[record['key']]
++    if record['key']==ADDITIONAL_KEY:require(record['draft'] is None or record['draft']['proposed_xml'] is None,'Approved R133-1 source/null view changed')
+     for field in ['source_sha256','source_body_sha256','source_notes_sha256','raw_document_sha256']:
+         require(record[field]==old[field],'Source/notes/raw XML changed: '+record['key']+' '+field)
+ def new_folder(out):

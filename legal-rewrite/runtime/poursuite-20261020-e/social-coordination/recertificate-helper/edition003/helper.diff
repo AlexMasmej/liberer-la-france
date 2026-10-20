@@ -1,0 +1,62 @@
+--- recertificate-helper/edition002/prepare_recertificates.py
++++ recertificate-helper/edition003/prepare_recertificates.py
+@@ -9,6 +9,7 @@
+ 
+ D=H/'runtime/poursuite-20261020-d/social-context-review/edition001'
+ C=H/'runtime/poursuite-20261020-c/certificate-refresh/refreshed003'
++ROOT_C=E/'recertificate-helper/root-C-beforeimage001.json'
+ TARGET='LEGITEXT000006073189|LEGIARTI000053220874'
+ OPTIONAL='LEGITEXT000006073189|LEGIARTI000041396065'
+ NAMES={'R243-17','R243-18','R243-19','R243-59','R243-59-6-A'}
+@@ -18,6 +19,7 @@
+  E/'complement-r243-59/edition001/source.json':'1c07e5d51674da1b949b272b1a2c1763d1849e2cf01b2c4b38b5106832ea7592',
+  E/'complement-r243-59/edition001/answer.json':'4622a98ac16e19485fad22a1f70bc7b4fdf1e6f1e633fc67eebdaac475ce4255',
+  C/'answer.json':'626f0d00e183aadff71eb10824c9ce17fc2cb67989e929ea4119ea60378b9e52',
++ ROOT_C:'cd61db7e9dc57d7118a854be1120df6f21fc9f1f037dc84b971240be41b52311',
+  E/'final-guards.json':'2c8730b9e8521d331f80c51ca4241704f8a3b99e655c34de666a2510f60d8b4d',
+  D/'manifest.json':'d96cec5f43ceb7751ad7b742252cb8100d856f47a8d0ca0573c18ae7226ff2e6'}
+ def read(p):return json.loads(p.read_text())
+@@ -52,9 +54,13 @@
+     oldguards={rc.key(x):x for x in read(D/'captured-guard-records.json')}
+     policy=read(E/'final-guards.json')['policy_guards']
+     require(rc.policy_state()=={n:x['current_sha256'] for n,x in policy.items()},'Policy changed since E review')
+-    expected={a['number']:a for a in read(E/'edition001/answer.json')+read(C/'answer.json') if a['number'] in NAMES}
+-    # The E entries override the older C definitions.
+-    expected.update({a['number']:a for a in read(E/'edition001/answer.json') if a['number'] in NAMES})
++    approved_C=read(ROOT_C)
++    require(approved_C.get('status')=='root_approved_exact_final_C_beforeimage' and approved_C.get('approved_by')=='root', 'Wrong root-approved C evidence')
++    require(approved_C['frozen_C_answer_sha256']==FROZEN[C/'answer.json'] and pathlib.Path(approved_C['frozen_C_answer_path']).resolve()==C/'answer.json', 'Wrong final C evidence link')
++    crow=approved_C['row']
++    require(crow['number']=='R243-59-6-A' and rc.key(crow)=='LEGITEXT000006073189|LEGIARTI000047435216', 'Wrong approved C identity')
++    expected={a['number']:a for a in read(E/'edition001/answer.json') if a['number'] in NAMES}
++    expected[crow['number']]=crow
+     r59=read(E/'complement-r243-59/edition001/answer.json')[0];expected[r59['number']]=r59
+     return oldguards,expected,r59
+ def connect():
+@@ -95,6 +101,9 @@
+                 require(a.get(f)==r['draft'][f],'Batch/DB mismatch '+k+' '+f)
+             for f,v in expected_row.items():
+                 if f not in ALLOWED:require(a.get(f)==v,'Approved E/C field not registered exactly '+k+' '+f)
++            if r['number']=='R243-59-6-A':
++                root_C=read(ROOT_C);require(a==root_C['row'],'Exact root-approved C row changed')
++                require((H/owned[k]['path']).resolve()==pathlib.Path(root_C['owner_path']).resolve() and owned[k]['file_sha256']==root_C['owner_file_sha256'],'Approved C owner file changed')
+             prior=dict(r['draft']);prior['proposed_sha256']=sha(prior['proposed_xml'])
+             sources.append({f:r[f] for f in ['code_id','source_id','number','source_sha256','source_xml','source_notes_xml']}|
+               {'previous_draft':prior,'impact_check_required':True,'benefit_check_required':mentions_possible_relief(r['source_xml'])})
+@@ -129,7 +138,7 @@
+       'approved_optional_check_removals':removals,'analyses':[{'key':rc.key(a),'target_key':TARGET,'assessment':''} for a in before if TARGET in snap['requirements'][rc.key(a)]]}
+     dump(out/'approval.template.json',template);print('Capture only:',out/'capture.json',fs(out/'capture.json'))
+ def stage(cap,approval_path,out):
+-    _,_,r59=frozen();cap=cap.resolve();info=read(cap/'capture.json');out=new_folder(out)
++    _,expected,r59=frozen();cap=cap.resolve();info=read(cap/'capture.json');out=new_folder(out)
+     require(info.get('version')==1 and info.get('helper_sha256')==fs(SCRIPT),'Wrong helper/capture version')
+     require(info.get('policy_sha256')==rc.policy_state(),'Policy changed after capture')
+     require(set(info['files'])=={'source.json','before-answer.json','reference-targets.json','db-records.json','batch-owners.json'},'Unexpected capture file set')
+@@ -138,6 +147,7 @@
+     require(info['expected_R243_59_proposed_sha256']==sha(r59['proposed_xml']) and
+             snap['targets'][TARGET]['proposed_xml']==r59['proposed_xml'],'Capture does not contain the exact registered E R243-59 body')
+     require(len(S)==5 and {a['number'] for a in S}==NAMES,'Capture must contain exactly the five reviewed articles')
++    require(next(a for a in before if a['number']=='R243-59-6-A')==expected['R243-59-6-A'],'Captured C row differs from exact root-approved before-image')
+     pairs={(rc.key(a),TARGET) for a in before if TARGET in snap['requirements'][rc.key(a)]}
+     require(len(pairs)==3,'Expected three changed-target analyses')
+     analyses=approved(read(approval_path),fs(cap/'capture.json'),pairs,info['optional_checks_to_remove'])

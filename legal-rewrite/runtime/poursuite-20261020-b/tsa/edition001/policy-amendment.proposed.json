@@ -1,0 +1,29 @@
+{
+  "status": "proposed_not_activated",
+  "expected_policy_sha256": "85982bff4c7fdba97ac4130c87bc752004065d14a5a637a540efaa09183594c2",
+  "expected_site_summaries_sha256": "6e3306c115ed295b554dedbbc0563d1302aa12b6184de1c6b0ca1ff6c421f110",
+  "operations": [
+    {
+      "op": "add_section",
+      "key": "taxe_sur_les_salaires_removal",
+      "value": {
+        "decision": "Suppression prospective de la taxe employeur sur les salaires instituée par CGI231, autorisée dans le cadre de la poursuite des baisses de taxes ; projet distinct du droit en vigueur.",
+        "measure_id": "taxe-sur-les-salaires-suppression",
+        "scope": "Toutes rémunérations versées dès entrée en vigueur de la loi de suppression, quelle que soit leur période de travail ; taux normal, majorations et taux DOM supprimés pour ces versements. Aucun nouvel impôt de remplacement.",
+        "old_periods": "Les rémunérations versées avant la bascule gardent liquidation, contrôles, taux réduits et exonérations, franchises, décote, abattements, imputations, restitutions et recours ; aucune restitution générale des sommes légalement dues. Année mixte : rémunérations nouvelles hors assiette et tranches, seuils annuels non proratisés. Modalités annuelles déjà allégées369/374 conservées.",
+        "formalities": "Aucune donnée, déclaration, relevé, acompte ou garantie exclusivementTSA pour nouvelles rémunérations. Les formalités communes nécessaires à IR/cotisations/PEEC/formation restent, avec réemploi sans nouveaux dépôts.",
+        "independent_regimes": "Ne pas abolir les cotisations, IR/PAS, PEEC, contribution formation, amendes logement ou leur procédure par simple suppression du renvoiTSA. Définition autonome du champ/assiette/territorialité, y compris nouveaux employeurs, et procédure distincte garanties préservées.",
+        "social_revenues": "L131-8 : affectations aux branches vieillesse/famille/maladie/autonomie58,35/10,74/24,77/6,14% conservées uniquement sur recettes anciennes réellement recouvrées et leurs régularisations. Aucun produit fictif, pourcentage redistribué ou compensation créée. Les autres affectations et CSG6,6 restent inchangées.",
+        "budget": "Distinguer perte brute de recettes affectées et effet net consolidé : employeurs publics ou financés publiquement, baisse possible de leurs dépenses, trésorerie, droits sociaux et incidence des autres impôts. Ne compter aucune économie automatique ni aucun montant national ou autofinancement. Examiner séparément les obligations de compensation et les lois financières nécessaires, sans inventer une recette ni conditionner silencieusement l’abolition à un financement non décidé.",
+        "preserved_reforms": "IS àdistribution, successionzéro/990I, CVAE supprimée, CFE micro et plafonds sociaux20%, autres exonérations et garanties inchangés.",
+        "outside_scope": "Formulaires2501/2502/2460, LPF et références agricoles/autrescodes non déclarés entièrement réécrits ; inventaire borné joint."
+      }
+    },
+    {
+      "op": "append",
+      "key": "fiscalite",
+      "value": "Supprimer prospectivement la taxe sur les salaires selon taxe_sur_les_salaires_removal, avec droits anciens, affectations résiduelles et prélèvements autonomes préservés ; une seule mesure dédupliquée."
+    }
+  ],
+  "active_policy_changed": false
+}

@@ -1,0 +1,273 @@
+import json
+from pathlib import Path
+
+
+sources = json.loads(Path('source.json').read_text())
+drafts = {}
+
+
+def add(number, proposed_xml, reason, review_notes):
+    assert number not in drafts
+    drafts[number] = {
+        'proposed_xml': proposed_xml.strip(),
+        'reason': reason,
+        'review_notes': review_notes,
+        'status': 'rewrite_draft',
+    }
+
+
+add('L222-6', """
+<p>Lorsqu'elles agissent comme promoteurs dans le cadre d'un contrat de promotion immobilière ou de l'écrit prévu aux articles L. 212-10 et L. 213-6, les sociétés d'économie mixte dont plus de la moitié du capital appartient à des personnes de droit public sont dispensées de fournir la garantie prévue au h de l'article L. 222-3.</p>
+""",
+    "Réécriture à droit constant : la qualité dans laquelle agit la société et la condition de détention de son capital précèdent la dispense de garantie. L'accord grammatical est rectifié. Aucune réforme de fond du régime des promoteurs n'est prévue pour cet article par policy.json.",
+    "La dispense reste limitée à la garantie du h de L. 222-3 et aux sociétés dont le capital public dépasse strictement la moitié. Les renvois à L. 212-10, L. 213-6 et L. 222-3 ont été vérifiés dans le corpus public local. Le seuil et les deux supports de l'intervention du promoteur sont conservés.")
+
+add('L222-7', """
+<p>Le présent chapitre est d'ordre public.</p>
+""",
+    "Réécriture à droit constant : la phrase est resserrée autour de la portée impérative du chapitre, sans modifier son champ. Aucune réforme de fond n'est applicable à cette disposition.",
+    "Le caractère d'ordre public reste attaché à tout le chapitre II relatif aux contrats de promotion immobilière concernés, sans exception nouvelle.")
+
+add('L230-1', """
+<p>Les règles du présent titre sont d'ordre public.</p>
+""",
+    "Réécriture à droit constant : suppression de la formule intermédiaire « prévues au » dans cette disposition courte, dont la portée est conservée. Aucune réforme de fond n'est introduite.",
+    "Le caractère d'ordre public demeure applicable à l'ensemble du titre III, y compris aux contrats avec et sans fourniture du plan.")
+
+add('L231-1', """
+<p>Toute personne qui prend en charge, d'après un plan qu'elle a proposé ou fait proposer, la construction d'un immeuble à usage d'habitation ou à usage professionnel et d'habitation ne comportant pas plus de deux logements destinés au même maître de l'ouvrage doit conclure avec celui-ci un contrat soumis à l'article L. 231-2.</p>
+<p>Cette obligation s'applique également :</p>
+<p>a) À toute personne qui prend en charge la construction d'un tel immeuble à partir d'un plan fourni par un tiers à la suite d'un démarchage à domicile ou d'une publicité réalisés pour le compte de la personne chargée de la construction ;</p>
+<p>b) À toute personne qui réalise une partie des travaux de construction d'un tel immeuble, dès lors qu'elle a fourni le plan de celui-ci ou que ce plan a été fourni pour son compte au moyen des procédés mentionnés à l'alinéa précédent.</p>
+<p>La personne ainsi désignée est dénommée constructeur au sens du présent chapitre. Elle est réputée constructeur de l'ouvrage au sens de l'article 1792-1 du code civil.</p>
+""",
+    "Réécriture à droit constant : le rôle du fournisseur du plan et le bénéficiaire du démarchage sont explicités ; la dénomination et la qualification civile du constructeur sont exprimées en deux phrases. Aucune réforme de fond ni extension aux opérations de transformation de bureaux n'est introduite.",
+    "Les cinq alinéas et les lettres a et b sont maintenus, notamment le renvoi du b à l'alinéa précédent. Le plafond de deux logements destinés au même maître de l'ouvrage et le double usage professionnel et d'habitation sont conservés. La note source rattache cette rédaction à l'article 8 de l'ordonnance 2020-71 du 29 janvier 2020 : entrée en vigueur fixée par décret en Conseil d'État, au plus tard le 1er juillet 2021 ; cette donnée historique n'est pas une date de réforme nouvelle.")
+
+add('L231-2', """
+<p>Le contrat prévu à l'article L. 231-1 doit comporter les mentions suivantes :</p>
+<p>a) La désignation du terrain sur lequel la construction doit être implantée et la mention du titre de propriété du maître de l'ouvrage ou des droits réels qui lui permettent de construire ;</p>
+<p>b) L'affirmation que le projet respecte les règles de construction prescrites en application du présent code, notamment de son livre Ier, et du code de l'urbanisme ;</p>
+<p>c) La consistance et les caractéristiques techniques du bâtiment à construire, comprenant :</p>
+<p>- tous les travaux d'adaptation au sol, notamment, le cas échéant, ceux que rend nécessaires l'étude géotechnique mentionnée aux articles L. 132-6 et L. 132-7 du présent code ; une copie de cette étude est annexée au contrat ;<br />- les raccordements aux réseaux divers ;<br />- tous les travaux d'équipement intérieur ou extérieur indispensables à l'implantation et à l'utilisation de l'immeuble ;</p>
+<p>d) Le coût du bâtiment à construire, égal à la somme du prix convenu et, s'il y a lieu, du coût des travaux dont le maître de l'ouvrage se réserve l'exécution, en précisant :</p>
+<p>- d'une part, le prix convenu, qui est forfaitaire et définitif, sous réserve, s'il y a lieu, de sa révision dans les conditions et limites convenues conformément à l'article L. 231-11. Ce prix comprend la rémunération de tout ce qui incombe au constructeur, y compris le coût de la garantie de livraison ;</p>
+<p>- d'autre part, le coût des travaux dont le maître de l'ouvrage se réserve l'exécution. Le constructeur décrit et chiffre ces travaux. Le maître de l'ouvrage en accepte le coût et la charge par une clause manuscrite spécifique qu'il paraphe ;</p>
+<p>e) Les modalités de règlement selon l'état d'avancement des travaux ;</p>
+<p>f) L'indication que, lors de la réception, le maître de l'ouvrage peut se faire assister par un professionnel habilité en application de la loi n° 77-2 du 3 janvier 1977 sur l'architecture ou des articles L. 125-1 et suivants, ou par tout autre professionnel de la construction titulaire d'un contrat d'assurance couvrant les responsabilités liées à ce type de mission ;</p>
+<p>g) L'indication de l'obtention du permis de construire et des autres autorisations administratives, dont une copie est annexée au contrat ;</p>
+<p>h) Les modalités de financement ainsi que la nature et le montant des prêts obtenus et acceptés par le maître de l'ouvrage ;</p>
+<p>i) La date d'ouverture du chantier, le délai d'exécution des travaux et les pénalités prévues en cas de retard de livraison ;</p>
+<p>j) La référence de l'assurance de dommages souscrite par le maître de l'ouvrage en application de l'article L. 242-1 du code des assurances ;</p>
+<p>k) Les justifications des garanties de remboursement et de livraison fournies par le constructeur. Les attestations de ces garanties sont établies par le garant et annexées au contrat.</p>
+<p>Lorsque le constructeur assure la fabrication, la pose et l'assemblage sur le chantier d'éléments préfabriqués dans les conditions définies à l'article L. 111-1-1, le contrat doit aussi décrire ces éléments et préciser leurs caractéristiques. Il doit indiquer les modalités d'information du maître de l'ouvrage sur l'achèvement et la bonne exécution de leur fabrication.</p>
+<p>Dans le cas prévu à l'alinéa précédent, les modalités de règlement inscrites au contrat en application du e de l'article L. 231-2 tiennent compte à la fois de l'état d'avancement des travaux de construction et de l'achèvement de la fabrication des éléments préfabriqués.</p>
+<p>Les stipulations du contrat peuvent se référer à des clauses types approuvées par décret en Conseil d'État. Cette faculté concerne notamment les stipulations relatives aux travaux à la charge du constructeur, au prix convenu, au délai d'exécution des travaux, aux pénalités applicables en cas de retard d'exécution et aux modalités d'information du maître de l'ouvrage sur l'achèvement et la bonne exécution de la fabrication des éléments préfabriqués.</p>
+""",
+    "Réécriture à droit constant : les mentions obligatoires restent énumérées de a à k ; les obligations de chiffrage, d'acceptation manuscrite, d'attestation et d'information sont attribuées à leur auteur. Les phrases sur le prix et la préfabrication sont divisées à l'intérieur des mêmes alinéas. Aucune réforme de fond des garanties ou du contrat n'est introduite ; les solutions d'effet équivalent et le dossier coordonné relèvent de leurs dispositions propres.",
+    "Les dix-huit alinéas sont conservés : la préfabrication reste à l'antépénultième alinéa, visé par L. 231-6 et L. 242-2 ; le dernier alinéa reste celui des clauses types, visé par L. 232-2. Anomalie préexistante : L. 111-1-1, cité pour la préfabrication, est absent du corpus local fourni ; renvoi conservé, à coordonner après vérification de la recodification. La note de l'article 2 de l'ordonnance n° 2019-395 du 30 avril 2019 réserve ses dispositions aux contrats conclus à compter du premier jour du troisième mois suivant la publication du décret prévu à L. 242-2 dans la rédaction issue du 4° de l'article 1er de cette ordonnance, au plus tard le premier jour du neuvième mois suivant celui de sa publication au Journal officiel. La note de l'article 8 de l'ordonnance 2020-71 du 29 janvier 2020 prévoit une entrée en vigueur fixée par décret en Conseil d'État, au plus tard le 1er juillet 2021. Ces transitions historiques restent à respecter. Pour policy.json, la transformation des bureaux et l'équivalence technique sont à coordonner avec les articles L. 112-4 à L. 112-10 du CCH, vérifiés dans le corpus, et les autorisations d'urbanisme ; elles ne dispensent pas des garanties du présent contrat.")
+
+add('L231-3', """
+<p>Dans le contrat prévu à l'article L. 231-1, toute clause ayant l'un des objets ou effets suivants est réputée non écrite :</p>
+<p>a) Obliger le maître de l'ouvrage à mandater le constructeur pour rechercher le ou les prêts nécessaires au financement de la construction, sans mandat exprès comportant toutes les précisions utiles sur les conditions de ces prêts ;</p>
+<p>b) Exiger du maître de l'ouvrage qu'il justifie du refus de plusieurs demandes de prêt pour obtenir le remboursement du dépôt de garantie ;</p>
+<p>c) Considérer comme une autorisation administrative un permis de construire assorti de prescriptions techniques ou architecturales qui modifient substantiellement le projet ayant donné lieu à la conclusion du contrat initial ;</p>
+<p>d) Libérer le constructeur de son obligation d'exécuter les travaux dans les délais contractuels, notamment en prévoyant des causes légitimes de retard autres que les intempéries, les cas de force majeure et les cas fortuits ;</p>
+<p>e) Conditionner la remise des clefs au paiement intégral du prix et faire ainsi obstacle au droit du maître de l'ouvrage de consigner les sommes restant dues lorsque des réserves sont formulées à la réception des travaux ;</p>
+<p>f) Interdire au maître de l'ouvrage de visiter le chantier avant chaque échéance de paiement et avant la réception des travaux ;</p>
+<p>g) Interdire au maître de l'ouvrage de constater l'achèvement et la bonne exécution des éléments préfabriqués dûment identifiés qui doivent être livrés et assemblés pour construire sa maison.</p>
+""",
+    "Réécriture à droit constant : les sept catégories de clauses réputées non écrites sont formulées avec des verbes directs, sans modifier les objets ou effets prohibés. Aucune réforme de fond n'ajoute de causes de retard ni ne réduit les droits de visite ou de consignation.",
+    "Les huit alinéas et les lettres a à g sont maintenus. Sont conservés le mandat exprès et ses précisions, le caractère substantiel de la modification du projet et les trois catégories de causes de retard. La note de l'article 2 de l'ordonnance n° 2019-395 du 30 avril 2019 fixe l'application aux contrats conclus à compter du premier jour du troisième mois suivant la publication du décret prévu à L. 242-2 dans la rédaction issue du 4° de l'article 1er de cette ordonnance, au plus tard le premier jour du neuvième mois suivant celui de sa publication au Journal officiel. Cette transition de la préfabrication ne doit pas être étendue aux contrats antérieurs.")
+
+add('L231-4', """
+<p>I.-Le contrat défini à l'article L. 231-1 peut être conclu sous les conditions suspensives suivantes :</p>
+<p>a) L'acquisition du terrain ou des droits réels permettant de construire, si le maître de l'ouvrage bénéficie d'une promesse de vente ;</p>
+<p>b) L'obtention du permis de construire et des autres autorisations administratives ; le maître de l'ouvrage doit préciser la date limite de dépôt de la demande ;</p>
+<p>c) L'obtention des prêts demandés pour financer la construction ;</p>
+<p>d) L'obtention de l'assurance de dommages ;</p>
+<p>e) L'obtention de la garantie de livraison.</p>
+<p>Le contrat précise le délai maximal de réalisation des conditions suspensives et la date d'ouverture du chantier, déterminée à partir de ce délai.</p>
+<p>II.-Il est interdit d'exiger ou d'accepter un versement, un dépôt, une souscription ou une acceptation d'effets de commerce avant la signature du contrat défini à l'article L. 231-1 ou avant la date d'exigibilité de la créance.</p>
+<p>III.-Le contrat peut prévoir un dépôt de garantie sur un compte spécial ouvert au nom du maître de l'ouvrage par un organisme habilité. Ce dépôt ne peut dépasser 3 % du prix de la construction projetée indiqué au contrat.</p>
+<p>Jusqu'à la réalisation de toutes les conditions, les fonds déposés sont indisponibles, incessibles et insaisissables. Lorsque toutes les conditions sont réalisées, ces sommes s'imputent sur les premiers paiements prévus au contrat.</p>
+<p>Les fonds déposés en garantie sont immédiatement restitués au maître de l'ouvrage, sans retenue ni pénalité, si toutes les conditions suspensives ne sont pas réalisées dans le délai contractuel ou si le maître de l'ouvrage exerce la faculté de rétractation prévue à l'article L. 271-1.</p>
+<p>Le contrat peut prévoir des paiements au constructeur avant l'ouverture du chantier, à condition qu'un établissement habilité à cet effet en garantisse le remboursement.</p>
+<p>Un décret en Conseil d'État fixe la nature de cette garantie ainsi que les conditions et limites de versement de ces sommes.</p>
+""",
+    "Réécriture à droit constant : le contrat devient le sujet de ses mentions obligatoires ; l'interdiction des paiements prématurés et la chronologie du dépôt sont rendues explicites. Les trois subdivisions et leurs alinéas sont maintenus. Aucune réforme de fond ne modifie le dépôt ni les garanties.",
+    "Le II reste au même emplacement, notamment pour les renvois de L. 232-2 et L. 241-1. Le plafond de 3 %, les cinq conditions suspensives, l'indisponibilité, l'incessibilité, l'insaisissabilité et la restitution immédiate sans retenue ni pénalité sont conservés. Le renvoi à L. 271-1 a été vérifié dans le corpus local ; son délai propre de rétractation n'est pas réécrit ni confondu avec le délai de huit jours de L. 231-8.")
+
+add('L231-5', """
+<p>Lorsque le constructeur procure indirectement le terrain, l'obligation prévue au deuxième alinéa de l'article L. 261-10 de conclure un contrat conforme au premier alinéa de cet article ne s'applique pas.</p>
+""",
+    "Réécriture à droit constant : la condition de la dérogation est placée en tête et les deux alinéas de référence sont identifiés dans une phrase plus directe. Aucune réforme de fond n'élargit cette dérogation.",
+    "Le renvoi a été vérifié dans le corpus local à L. 261-10. La dérogation reste limitée au terrain procuré indirectement par le constructeur ; elle n'est pas étendue à la fourniture directe du terrain ni à toute opération de promotion.")
+
+add('L231-6', """
+<p>I.-À compter de l'ouverture du chantier, la garantie de livraison prévue au k de l'article L. 231-2 protège le maître de l'ouvrage contre l'inexécution ou la mauvaise exécution des travaux prévus au contrat, au prix et dans les délais convenus. Dans le cas prévu à l'antépénultième alinéa de l'article L. 231-2, elle le protège également, à compter de l'ouverture du chantier, contre l'inexécution ou la mauvaise exécution de la fabrication, de la pose et de l'assemblage des éléments préfabriqués.</p>
+<p>Si le constructeur est défaillant, le garant prend en charge :</p>
+<p>a) Le coût des dépassements du prix convenu nécessaires à l'achèvement de la construction. La garantie peut, à ce titre, comporter une franchise ne dépassant pas 5 % du prix convenu ;</p>
+<p>b) Les conséquences des faits du constructeur ayant entraîné un paiement anticipé ou un supplément de prix ;</p>
+<p>c) Les pénalités forfaitaires prévues au contrat en cas de retard de livraison excédant trente jours. Le montant et le seuil minimum de ces pénalités sont fixés par décret.</p>
+<p>La garantie prend la forme d'une caution solidaire donnée par un établissement de crédit, une société de financement ou une entreprise d'assurance agréés à cet effet.</p>
+<p>II.-Dès qu'il constate que le délai de livraison n'est pas respecté ou que les travaux nécessaires à la levée des réserves formulées à la réception ne sont pas réalisés, le garant met en demeure sans délai le constructeur de livrer l'immeuble ou d'exécuter les travaux, selon le cas. Il doit également le faire lorsque le maître de l'ouvrage l'informe de ces faits.</p>
+<p>Si cette mise en demeure reste sans effet pendant quinze jours, le garant exécute ses obligations dans les conditions prévues au III du présent article.</p>
+<p>Si, pendant l'exécution des travaux, le constructeur fait l'objet des procédures de sauvegarde et de redressement judiciaire prévues par le code de commerce, le garant peut mettre en demeure l'administrateur de se prononcer sur l'exécution du contrat conformément à l'article L. 621-28 de ce code. En l'absence de réponse dans un délai d'un mois, qui ne peut être prorogé pour quelque raison que ce soit, le garant exécute ses obligations. Il en est de même si, malgré une réponse positive, l'administrateur ne poursuit pas l'exécution du contrat dans les quinze jours suivant sa réponse.</p>
+<p>III.-Dans les cas prévus au II, si le constructeur ou l'administrateur n'achève pas la construction, le garant doit désigner, sous sa responsabilité, la personne chargée de terminer les travaux.</p>
+<p>Toutefois, si l'immeuble a atteint le stade du hors d'eau, le garant peut proposer au maître de l'ouvrage de conclure lui-même des marchés de travaux avec des entreprises chargées de l'achèvement. Si le maître de l'ouvrage accepte, le garant verse directement à ces entreprises les sommes qu'il doit au titre du I du présent article.</p>
+<p>En cas de défaillance du constructeur, le garant peut exiger de percevoir directement les sommes correspondant aux travaux qu'il effectue ou fait effectuer dans les conditions prévues au e de l'article L. 231-2.</p>
+<p>IV.-La garantie cesse lorsque la réception des travaux a été constatée par écrit et, le cas échéant, à l'expiration du délai de huit jours prévu à l'article L. 231-8 pour dénoncer les vices apparents ou, si des réserves ont été formulées, lorsqu'elles ont été levées.</p>
+""",
+    "Réécriture à droit constant : les déclencheurs de l'intervention du garant, les sommes couvertes et les étapes de la mise en demeure sont formulés directement. Les phrases longues sont fractionnées à alinéas constants. Aucune réforme de fond ne réduit la garantie, ne l'anticipe à la fabrication hors chantier ni ne modifie les délais.",
+    "Les quatre subdivisions, treize alinéas et lettres a à c sont conservés. Contrôle des paramètres : ouverture du chantier, franchise maximale de 5 % du prix convenu, retard excédant trente jours, quinze jours après mise en demeure, réponse sous un mois non prorogeable, quinze jours après réponse positive et huit jours pour les vices apparents. L'antépénultième alinéa de L. 231-2 reste en place. Le renvoi ancien à L. 621-28 du code de commerce appelle une vérification de sa concordance avec les règles des procédures collectives ; il est conservé, sans remplacement supposé. La note de l'article 2 de l'ordonnance n° 2019-395 du 30 avril 2019 fixe l'application aux contrats conclus à compter du premier jour du troisième mois suivant la publication du décret prévu à L. 242-2 dans la rédaction issue du 4° de l'article 1er de cette ordonnance, au plus tard le premier jour du neuvième mois suivant celui de sa publication au Journal officiel. Cette règle historique d'application contractuelle reste à respecter.")
+
+add('L231-7', """
+<p>I.-Dans le cas prévu au d de l'article L. 231-2, le maître de l'ouvrage peut demander au constructeur, dans les quatre mois suivant la signature du contrat, d'exécuter ou de faire exécuter les travaux dont le maître de l'ouvrage s'était réservé l'exécution. Le constructeur est alors tenu de les réaliser ou de les faire réaliser aux prix et conditions mentionnés au contrat.</p>
+<p>II.-Tout mandat donné par le maître de l'ouvrage au constructeur ou à l'un de ses préposés pour percevoir tout ou partie d'un prêt destiné au financement de la construction est réputé non écrit.</p>
+<p>III.-Le prêteur peut effectuer directement les paiements aux différents stades de la construction, à condition d'obtenir l'accord écrit du maître de l'ouvrage à chaque échéance et d'en informer le garant.</p>
+<p>Si le maître de l'ouvrage n'a pas donné son accord écrit à chaque échéance, le prêteur est responsable des conséquences préjudiciables des paiements qu'il effectue aux différents stades de la construction.</p>
+""",
+    "Réécriture à droit constant : la demande du maître de l'ouvrage et l'obligation corrélative du constructeur sont distinguées en deux phrases ; les conditions du paiement direct et la responsabilité du prêteur sont explicitées. Aucune réforme de fond ne modifie les mandats ou les échéances.",
+    "Le délai de quatre mois court toujours à compter de la signature du contrat. Les subdivisions I à III sont conservées ; le III comporte toujours deux alinéas, dont le premier est visé par L. 231-10. L'accord écrit demeure exigé à chaque échéance, avec information du garant ; le mandat de recherche de prêts de L. 231-3 a n'est pas confondu avec le mandat de perception interdit ici.")
+
+add('L231-8', """
+<p>Dans les huit jours suivant la remise des clefs consécutive à la réception, le maître de l'ouvrage peut dénoncer, par lettre recommandée avec accusé de réception, les vices apparents qu'il n'avait pas signalés lors de la réception. Ces vices doivent alors être corrigés dans le cadre de l'exécution du contrat.</p>
+<p>Cette faculté ne s'applique pas lorsque le maître de l'ouvrage est assisté, lors de la réception, par un professionnel habilité en application de la loi n° 77-2 du 3 janvier 1977 sur l'architecture ou des articles L. 125-1 et suivants, ou par tout autre professionnel de la construction titulaire d'un contrat d'assurance couvrant les responsabilités liées à ce type de mission.</p>
+""",
+    "Réécriture à droit constant : le point de départ du délai est placé en tête ; la dénonciation et sa finalité de correction sont exposées en deux phrases au sein du même alinéa. L'exception tenant à l'assistance professionnelle est conservée. Aucune réforme de fond n'est introduite.",
+    "Les deux alinéas, le délai de huit jours, la remise des clefs consécutive à la réception et la lettre recommandée avec accusé de réception sont maintenus. Coordination avec la cessation de garantie prévue à L. 231-6 IV et l'application par L. 232-2. La note de l'article 8 de l'ordonnance 2020-71 du 29 janvier 2020 fixe une entrée en vigueur par décret en Conseil d'État, au plus tard le 1er juillet 2021 ; elle ne fournit aucune date de réforme future.")
+
+add('L231-9', """
+<p>Le constructeur adresse le contrat au maître de l'ouvrage par lettre recommandée avec avis de réception. Il y joint une notice d'information conforme au modèle type agréé par arrêté conjoint des ministres chargés de la construction et de la consommation.</p>
+""",
+    "Réécriture à droit constant : le constructeur devient le sujet explicite des obligations d'envoi du contrat et de jonction de la notice. Ces deux obligations restent dans un seul alinéa. Aucune réforme de fond de la notification n'est introduite.",
+    "Sont conservés le courrier recommandé avec avis de réception, le modèle type agréé et la compétence conjointe des deux ministres. L'application au contrat sans fourniture du plan par L. 232-2 est maintenue.")
+
+add('L231-10', """
+<p>Avant d'émettre une offre de prêt, le prêteur doit vérifier que le contrat comporte les mentions de l'article L. 231-2 qui doivent y figurer au moment où l'acte lui est transmis. Il ne peut débloquer les fonds tant que l'attestation de garantie de livraison ne lui a pas été communiquée.</p>
+<p>Dans les cas de défaillance du constructeur prévus au II de l'article L. 231-6, le prêteur est responsable des conséquences préjudiciables d'un versement dépassant le pourcentage maximal du prix total exigible aux différents stades de la construction, compte tenu de l'état d'avancement des travaux, dès lors que ce versement résulte de l'exécution d'une clause irrégulière du contrat. Cette responsabilité s'applique même si le maître de l'ouvrage a donné l'accord prévu au premier alinéa du III de l'article L. 231-7.</p>
+""",
+    "Réécriture à droit constant : les vérifications préalables à l'offre et au déblocage des fonds sont énoncées séparément ; l'absence d'effet exonératoire de l'accord du maître de l'ouvrage est exprimée dans une seconde phrase du même alinéa. Aucune réforme de fond de la responsabilité du prêteur n'est introduite.",
+    "Les deux alinéas sont conservés. La responsabilité spécifique suppose toujours la défaillance visée au II de L. 231-6, un versement dépassant le pourcentage exigible et l'exécution d'une clause irrégulière. Aucun pourcentage nouveau n'est fixé. Le premier alinéa du III de L. 231-7 conserve son emplacement.")
+
+add('L231-11', """
+<p>Si le contrat défini à l'article L. 231-1 prévoit une révision du prix, celle-ci ne peut être calculée qu'à partir de la variation d'un indice national du bâtiment tous corps d'état, publié par l'autorité administrative et mesurant l'évolution du coût des facteurs de production dans le bâtiment. Les parties choisissent l'une des deux modalités suivantes :</p>
+<p>a) Le prix est révisé selon la variation de l'indice entre la date de signature du contrat et la date fixée à l'article L. 231-12. Le prix ainsi révisé ne peut plus varier après cette date ;</p>
+<p>b) Chaque paiement est révisé dans une limite exprimée en pourcentage de la variation de cet indice entre la date de signature du contrat et la date de livraison prévue au contrat. Si cette livraison doit intervenir plus de neuf mois après la date définie à l'article L. 231-12, aucune révision ne peut être effectuée au-delà de cette période de neuf mois.</p>
+<p>Avant la signature du contrat, la personne chargée de la construction doit informer le maître de l'ouvrage de ces modalités. Celles-ci doivent être reproduites dans le contrat. Le contrat doit également comporter une clause, paraphée par le maître de l'ouvrage, par laquelle il reconnaît avoir reçu cette information dans les conditions qui précèdent.</p>
+<p>Le contrat indique la modalité choisie d'un commun accord par les parties.</p>
+<p>En l'absence des mentions prévues aux deux alinéas précédents, le prix inscrit au contrat n'est pas révisable.</p>
+<p>L'indice et la limite mentionnés ci-dessus sont définis par décret en Conseil d'État. Cette limite tient compte des frais fixes, des approvisionnements constitués et des améliorations de productivité. Elle doit être comprise entre 60 % et 80 % de la variation de l'indice.</p>
+<p>L'indice de base pour calculer la révision est le dernier indice publié au jour de la signature du contrat. Selon la modalité choisie par les parties, la variation prise en compte résulte de la comparaison de cet indice avec le dernier indice publié avant la date de chaque paiement ou avant la date prévue à l'article L. 231-12.</p>
+""",
+    "Réécriture à droit constant : les deux modalités de révision et les obligations d'information sont exposées par phrases plus courtes, sans déplacer les alinéas. Les bornes de calcul et la sanction d'absence des mentions restent explicites. Aucune réforme de fond de l'indexation n'est introduite.",
+    "Les huit alinéas et les lettres a et b sont maintenus ; a et b restent les deuxième et troisième alinéas visés par L. 231-12. La période de neuf mois, la limite de 60 % à 80 %, l'indice de base au jour de la signature et les derniers indices publiés avant les dates de comparaison sont conservés. Le renvoi aux deux alinéas précédents vise toujours l'information et le choix de modalité. Aucun nouvel indice ni taux de révision n'est créé.")
+
+add('L231-12', """
+<p>Pour l'application des deuxième (a) et troisième (b) alinéas de l'article L. 231-11, la date à retenir est celle à laquelle expire un délai d'un mois suivant la plus tardive des deux dates suivantes :<br />a) La date d'obtention, tacite ou expresse, des autorisations administratives nécessaires pour entreprendre la construction ;<br />b) La date de réalisation de la condition suspensive sous laquelle le contrat a été conclu ou est considéré comme conclu en application des articles L. 313-41 et L. 313-42 du code de la consommation.</p>
+""",
+    "Réécriture à droit constant : la règle de détermination de la date est formulée directement et les deux dates comparées sont séparées par des retours à la ligne, dans le même alinéa. Aucune réforme de fond de la révision du prix n'est introduite.",
+    "Le délai reste d'un mois après la plus tardive des deux dates, sans substitution de la plus proche ni de la seule date du permis. Les autorisations tacites ou expresses et la condition suspensive réputée convenue sont conservées. Les lettres a et b ainsi que les renvois à L. 231-11 et aux articles L. 313-41 et L. 313-42 du code de la consommation sont maintenus.")
+
+add('L231-13', """
+<p>Le constructeur doit conclure par écrit les contrats de sous-traitance avant le commencement des travaux à la charge du sous-traitant. Chaque contrat comporte les mentions suivantes :</p>
+<p>a) La désignation de la construction ainsi que les nom et adresse du maître de l'ouvrage et de l'établissement qui fournit la garantie prévue à l'article L. 231-6 ;</p>
+<p>b) La description des travaux sous-traités, conforme aux mentions du contrat de construction ;</p>
+<p>c) Le prix convenu et, s'il y a lieu, les modalités de sa révision ;</p>
+<p>d) Le délai d'exécution des travaux et le montant des pénalités de retard ;</p>
+<p>e) Les modalités de règlement du prix. Le délai de paiement ne peut dépasser trente jours à compter du versement effectué au constructeur par le maître de l'ouvrage ou le prêteur pour régler des travaux comprenant ceux exécutés par le sous-traitant et acceptés par le constructeur ;</p>
+<p>f) Le montant des pénalités dues par le constructeur en cas de retard de paiement ;</p>
+<p>g) La justification de l'une ou l'autre des garanties de paiement prévues à l'article 14 de la loi n° 75-1334 du 31 décembre 1975 relative à la sous-traitance, ou de toute autre garantie délivrée par un établissement de crédit, une société de financement ou une entreprise d'assurance et de nature à garantir le paiement des sommes dues au titre du sous-traité.</p>
+<p>Le constructeur adresse une copie des contrats de sous-traitance à l'établissement qui fournit la garantie prévue à l'article L. 231-6.</p>
+""",
+    "Réécriture à droit constant : les obligations d'établir et de transmettre les contrats sont attribuées au constructeur ; le délai de règlement est distingué des modalités de paiement dans le e. Aucune réforme de fond des garanties de sous-traitance n'est introduite.",
+    "Les neuf alinéas et les lettres a à g sont conservés. Le délai maximal de trente jours reste déclenché par le versement au constructeur, pour des travaux comprenant ceux du sous-traitant acceptés par le constructeur. L'alternative entre les garanties de l'article 14 de la loi n° 75-1334 du 31 décembre 1975 et une autre garantie qualifiée est maintenue ; aucune dispense de garantie n'est créée. Application par L. 232-2 conservée.")
+
+add('L232-1', """
+<p>Le contrat de louage d'ouvrage qui ne relève pas de l'article L. 231-1 doit être établi par écrit lorsqu'il porte au moins sur les travaux de gros œuvre, de mise hors d'eau et hors d'air d'un immeuble à usage d'habitation ou à usage professionnel et d'habitation ne comportant pas plus de deux logements destinés au même maître de l'ouvrage. Ce contrat doit préciser :</p>
+<p>a) La désignation du terrain ;</p>
+<p>b) La consistance et les caractéristiques techniques de l'ouvrage à réaliser ;</p>
+<p>c) Le prix convenu, forfaitaire et définitif sous réserve, s'il y a lieu, de sa révision dans les conditions et limites convenues, ainsi que les modalités de son règlement au fur et à mesure de l'exécution des travaux ;</p>
+<p>d) Le délai d'exécution des travaux et les pénalités applicables en cas de retard de livraison ;</p>
+<p>e) La référence de l'assurance de dommages souscrite par le maître de l'ouvrage en application de l'article L. 242-1 du code des assurances ;</p>
+<p>f) L'indication que, lors de la réception, le maître de l'ouvrage peut se faire assister par un professionnel habilité en application de la loi n° 77-2 du 3 janvier 1977 sur l'architecture ou des articles L. 125-1 et suivants, ou par tout autre professionnel de la construction titulaire d'un contrat d'assurance couvrant les responsabilités liées à ce type de mission ;</p>
+<p>g) L'engagement de l'entrepreneur de justifier, au plus tard à la date d'ouverture du chantier, de la garantie de livraison qu'il fournit au maître de l'ouvrage. L'attestation de cette garantie est établie par le garant et annexée au contrat.</p>
+""",
+    "Réécriture à droit constant : le champ du contrat sans fourniture du plan est exprimé comme condition de l'écrit ; l'auteur et l'échéance de la justification de garantie sont explicités. Aucune réforme de fond n'aligne ce régime sur toutes les mentions du contrat avec fourniture du plan.",
+    "Les huit alinéas et les lettres a à g sont maintenus. Les trois composantes minimales des travaux, le plafond de deux logements pour un même maître de l'ouvrage, la date limite d'ouverture du chantier et l'attestation établie par le garant sont conservés. La note de l'article 8 de l'ordonnance 2020-71 du 29 janvier 2020 prévoit une entrée en vigueur par décret en Conseil d'État, au plus tard le 1er juillet 2021. Les mesures de location de policy.json exigent des dispositions distinctes, hors de ce contrat : voie de rénovation de vingt-quatre mois à coordonner avec l'article 6 de la loi n° 89-462 du 6 juillet 1989 et ses textes de décence, contrôle des travaux et compensation des surcoûts à définir ; traitement des impayés à coordonner avec l'article 24 de cette loi et les règles de procédure et d'exécution applicables. Aucun de ces dispositifs n'est réputé créé par le présent article.")
+
+add('L232-2', """
+<p>Au contrat prévu au présent chapitre s'appliquent le dernier alinéa de l'article L. 231-2, l'article L. 231-6, le II de l'article L. 231-4 ainsi que les articles L. 231-8, L. 231-9 et L. 231-13.</p>
+""",
+    "Réécriture à droit constant : le contrat destinataire est placé en tête et les dispositions rendues applicables sont énumérées directement. Aucune réforme de fond ni application générale du chapitre relatif au contrat avec fourniture du plan n'est introduite.",
+    "Tous les renvois sont conservés, dans leur ordre. Le dernier alinéa de L. 231-2 reste consacré aux clauses types ; le II de L. 231-4 conserve son emplacement. Les dispositions de L. 231-11 et L. 231-12 ne sont pas ajoutées à cette liste.")
+
+add('L241-1', """
+<p>Le fait d'exiger ou d'accepter un versement, un dépôt de fonds, une souscription ou une acceptation d'effets de commerce en violation des articles L. 212-10, L. 212-11, L. 213-9, L. 222-5 ou du II de l'article L. 231-4 est puni de deux ans d'emprisonnement et de 9 000 euros d'amende, ou de l'une de ces deux peines seulement.</p>
+""",
+    "Réécriture à droit constant : l'infraction est formulée au présent à partir du comportement réprimé ; la liste des dispositions dont la violation est sanctionnée reste complète. Aucune réforme de fond des incriminations ou des peines n'est introduite.",
+    "Sont conservés les deux modes de commission, les quatre catégories d'opérations et les cinq références. Les peines restent deux ans d'emprisonnement et 9 000 euros d'amende, avec possibilité de ne prononcer que l'une d'elles. Le II de L. 231-4 n'est pas déplacé.")
+
+add('L241-2', """
+<p>Toute personne qui détourne tout ou partie des sommes qu'elle a reçues ou acceptées, sous la forme d'un ou de plusieurs versements, dépôts ou souscriptions d'effets de commerce, à l'occasion d'un contrat de société ou de promotion immobilière soumis aux titres Ier et II du présent livre, est punie des peines de l'abus de confiance prévues aux articles 314-1 et 314-10 du code pénal.</p>
+""",
+    "Réécriture à droit constant : le détournement devient le verbe principal et les formes de remise des sommes sont rattachées explicitement à leur réception ou acceptation. Aucune réforme de fond n'étend les contrats visés ni ne modifie le renvoi aux peines de l'abus de confiance.",
+    "Le détournement total ou partiel, la pluralité éventuelle des remises, les contrats de société ou de promotion des titres Ier et II et les deux articles pénaux sont conservés. Aucun montant de peine autonome n'est substitué aux articles 314-1 et 314-10 du code pénal.")
+
+add('L241-3', """
+<p>L'interdiction prévue au présent article s'applique aux personnes ayant fait l'objet de l'une des condamnations énumérées à l'article 1er de la loi n° 47-1435 du 30 août 1947 relative à l'assainissement des professions commerciales et industrielles. Elle s'applique également aux personnes condamnées à une peine d'emprisonnement, avec ou sans sursis, pour l'une des infractions énumérées ci-après. Ces personnes ne peuvent participer, en droit ou en fait, directement ou par personne interposée, à la fondation ou à la gestion des sociétés régies par le titre Ier du présent livre, d'une société régie par la loi n° 86-18 du 6 janvier 1986 relative aux sociétés d'attribution d'immeubles en jouissance à temps partagé ou d'une société de promotion immobilière. Elles ne peuvent pas non plus participer, en droit ou en fait, directement ou par personne interposée, à la conclusion d'un contrat de promotion immobilière ou de l'un des contrats régis par les articles L. 231-1 et L. 232-1. Les infractions concernées sont les suivantes :</p>
+<p>1° Faux et usage de faux en écriture privée, de commerce ou de banque, faux prévu par les articles 153 et 154 du code pénal ;</p>
+<p>2° Vol, recel, escroquerie, abus de confiance, banqueroute, extorsion de fonds, valeurs ou signatures, délits punis des peines de l'escroquerie, de l'abus de confiance ou de la banqueroute ;</p>
+<p>3° Émission de mauvaise foi de chèque sans provision, usure et délit réprimé par l'article 15 de la loi n° 66-1010 du 28 décembre 1966 relative à l'usure, aux prêts d'argent et à certaines opérations de démarchage et de publicité ;</p>
+<p>4° Soustraction commise par dépositaire public, concussion commise par fonctionnaire public, corruption de fonctionnaires publics et d'employés des entreprises privées, communication de secrets de fabrique ;</p>
+<p>5° Atteinte au crédit de l'État, organisation du refus collectif de l'impôt ;</p>
+<p>6° Faux témoignage, faux serment, subornation de témoin ;</p>
+<p>7° Proxénétisme ou délit puni des peines du proxénétisme ;</p>
+<p>8° Délits prévus par les articles L. 241-1 à L. 241-4, L. 242-6, L. 242-17 et L. 242-27 du code de commerce ;</p>
+<p>9° Délit prévu par l'article 13 de la loi n° 52-332 du 24 mars 1952 relative aux entreprises de crédit différé ;</p>
+<p>10° Délit prévu par l'article 21 de la loi du 13 juin 1941 (1) sur l'exercice de la profession bancaire et délit prévu par le deuxième alinéa de l'article 6 de la loi du 14 juin 1941 (2) relative à la réglementation et à l'organisation des professions se rattachant à la profession de banquier ;</p>
+<p>11° Délit prévu par l'article 4 de la loi n° 60-580 du 21 juin 1960 (3) interdisant certaines pratiques en matière de transactions portant sur des immeubles et des fonds de commerce, et par le a bis de l'article 14 et les articles 16, 17 et 18 de la loi n° 70-9 du 2 janvier 1970 réglementant les conditions d'exercice des activités relatives à certaines opérations portant sur les immeubles et les fonds de commerce ;</p>
+<p>12° Délit prévu par les articles L. 241-1, L. 241-2, L. 241-5, L. 241-6, L. 263-1 et L. 263-2 ;</p>
+<p>13° Délit prévu par l'article L. 311-13.</p>
+<p>14° Délits prévus par les articles 22 et 31 de la loi n° 86-18 du 6 janvier 1986 précitée.</p>
+""",
+    "Réécriture à droit constant : les deux catégories de condamnations déclenchant l'interdiction sont exposées séparément ; les participations aux sociétés et aux contrats font ensuite l'objet de deux phrases, dans le même alinéa, qui précisent toutes deux les formes de participation interdites. Les qualifications pénales et leurs quatorze rubriques sont maintenues pour ne pas modifier le champ de l'interdiction. Aucune réforme de fond n'actualise silencieusement les incriminations historiques.",
+    "Les quinze alinéas de texte et les rubriques 1° à 14° sont conservés, ainsi que les appels de notes (1), (2) et (3). Les condamnations visées par la loi de 1947 restent distinctes de celles à l'emprisonnement avec ou sans sursis pour les infractions listées. Incohérences historiques signalées par la source : les lois des 13 et 14 juin 1941 ont été abrogées par l'article 94 de la loi n° 84-46 du 24 janvier 1984 ; la loi n° 60-580 du 21 juin 1960 a été abrogée par l'article 19 de la loi n° 70-9 du 2 janvier 1970. Les références de ces rubriques demeurent reproduites pour leur éventuelle portée historique, sans inventer de concordance. Contrôler aussi la portée des autres références anciennes, notamment les articles 153 et 154 du code pénal et la loi du 30 août 1947, avant toute actualisation de fond. La numérotation L. 241-3 du présent code n'a aucun rapport avec L. 241-3 du code de la sécurité sociale visé par coordination.json : aucune mesure de retraite ne s'applique ici.")
+
+add('L241-4', """
+<p>L'interdiction prévue à l'article L. 241-3 s'applique également :</p>
+<p>a) Aux faillis non réhabilités et aux personnes frappées de faillite personnelle ou de l'une des interdictions de diriger, gérer, administrer ou contrôler toute entreprise commerciale prévues aux articles 108 et 109 de la loi n° 67-563 du 13 juillet 1967 sur le règlement judiciaire, la liquidation des biens, la faillite personnelle et les banqueroutes ;</p>
+<p>b) Aux officiers publics et ministériels destitués ;</p>
+<p>c) Aux agréés, syndics et administrateurs judiciaires révoqués ;</p>
+<p>d) Aux membres des professions constituées en ordres qui ont été radiés à titre disciplinaire et définitif pour manquement à la probité.</p>
+""",
+    "Réécriture à droit constant : l'interdiction commune est expressément rattachée à L. 241-3 et les personnes concernées sont présentées dans une énumération homogène. Aucune réforme de fond n'élargit les motifs disciplinaires ou ne remplace les régimes historiques.",
+    "Les cinq alinéas et lettres a à d sont conservés, notamment le caractère définitif de la radiation et le manquement à la probité. Le renvoi à L. 241-3 explicite seulement l'antécédent de « la même interdiction ». Anomalie préexistante documentée par la note source : les articles 108 et 109 de la loi n° 67-563 ont été abrogés et transférés aux articles 189 et 190 de la loi n° 85-98 du 25 janvier 1985, eux-mêmes codifiés aux articles L. 625-5 et L. 625-6 du code de commerce par l'ordonnance n° 2000-912 du 18 septembre 2000. Le renvoi historique est conservé ; sa concordance complète et sa portée temporelle doivent être contrôlées avant toute substitution.")
+
+add('L241-5', """
+<p>Le fait de contrevenir à l'interdiction résultant des articles L. 241-3 et L. 241-4 est puni de deux ans d'emprisonnement et de 22 500 euros d'amende, ou de l'une de ces deux peines seulement.</p>
+""",
+    "Réécriture à droit constant : l'infraction est exprimée au présent à partir du comportement interdit, avec formulation directe des peines. Aucune réforme de fond des sanctions ou de l'interdiction n'est introduite.",
+    "Les renvois à L. 241-3 et L. 241-4, la peine de deux ans, l'amende de 22 500 euros et la possibilité de ne prononcer que l'une des deux peines sont conservés. La portée des renvois historiques de ces deux articles est signalée dans leurs notes respectives, sans modification par le présent article.")
+
+add('L241-6', """
+<p>Les infractions aux articles L. 214-6 à L. 214-9 sont punies de cinq ans d'emprisonnement et de 18 000 euros d'amende, ou de l'une de ces deux peines seulement.</p>
+<p>Sont punis des mêmes peines :</p>
+<p>1. Le fait de porter, dans les contrats ou documents prévus par le décret n° 54-1123 du 10 novembre 1954, des indications volontairement inexactes ou incomplètes, ou de tromper ou de tenter de tromper volontairement, lors de l'exécution de ces contrats ou documents, sur la qualité, la quantité ou les dimensions de la construction ou des matériaux, appareils ou produits employés ou fournis ;</p>
+<p>2. Le fait de faire obstacle à l'action des organes de contrôle prévus par ce décret ;</p>
+<p>3. Le fait, pour une personne qui assure en droit ou en fait, directement ou par personne interposée, la gestion d'une société concernée par ces décrets, d'utiliser de mauvaise foi les biens ou le crédit de la société, ou les pouvoirs ou les voix dont elle dispose, d'une manière qu'elle sait contraire à l'intérêt de cette société, dans un but personnel ou pour favoriser une autre société ou une entreprise quelconque dans laquelle elle est directement ou indirectement intéressée.</p>
+<p>Les tentatives des infractions prévues au présent article sont punies des mêmes peines.</p>
+""",
+    "Réécriture à droit constant : les incriminations sont formulées au présent ; les objets de la tromperie sont distingués et l'usage abusif est exprimé par un verbe direct. Les éléments intentionnels et la répression des tentatives sont maintenus. Aucune réforme de fond des sanctions n'est introduite.",
+    "Les six alinéas et la numérotation 1., 2., 3. sont conservés. Peines inchangées : cinq ans et 18 000 euros, ou une seule de ces peines. Sont maintenus le caractère volontaire au 1, la mauvaise foi, la connaissance de l'intérêt contraire, le but personnel ou l'intérêt direct ou indirect au 3. Incohérence rédactionnelle préexistante : le 3 vise « ces décrets », alors qu'un seul décret, n° 54-1123 du 10 novembre 1954, est expressément nommé dans l'article. Ce pluriel et le renvoi ancien sont conservés et signalés pour contrôle de leur portée historique ; aucune nouvelle référence n'est supposée.")
+
+
+assert len(sources) == len(drafts) == 24
+answer = []
+for source in sources:
+    item = {key: source[key] for key in ('code_id', 'source_id', 'source_sha256', 'number')}
+    item.update(drafts[source['number']])
+    answer.append(item)
+Path('answer.json').write_text(json.dumps(answer, ensure_ascii=False, indent=2) + '\n')
+print(f'answer.json : {len(answer)} articles, {sum(len(a["proposed_xml"]) for a in answer)} caractères de texte proposé')

@@ -1,0 +1,231 @@
+import json
+from pathlib import Path
+
+
+SOURCE = Path('source.json')
+articles = json.loads(SOURCE.read_text())
+drafts = {}
+
+
+def draft(number, proposed_xml, reason, review_notes):
+    assert number not in drafts
+    drafts[number] = (proposed_xml, reason, review_notes)
+
+
+draft(
+    'L122-25',
+    "<p>Dans les communes qui ne sont pas couvertes par un schéma de cohérence territoriale, les règles suivantes s'appliquent :</p>"
+    "<p>1° Les autorisations d'occupation du sol nécessaires à la réalisation des unités touristiques nouvelles structurantes ne peuvent être délivrées que si la commune est dotée d'un plan local d'urbanisme ;</p>"
+    "<p>2° Les autorisations d'occupation du sol nécessaires à la réalisation des unités touristiques nouvelles locales ne peuvent être délivrées que si la commune est dotée d'une carte communale ou d'un plan local d'urbanisme.</p>",
+    "Réécriture à droit constant : l'introduction explicite le champ communal et chaque subdivision formule directement la condition de délivrance. La distinction entre unités structurantes et locales et les documents d'urbanisme requis sont conservés. Aucune réforme de fond n'est appliquée à ce régime montagnard.",
+    "Les 1° et 2° sont conservés dans leur ordre. La fiche de parcelle et le dossier coordonné prévus pour L410-1 et L423-1 ne dispensent pas des documents exigés ici. La note source renvoie à l'article 10 du décret n° 2017-1039 du 10 mai 2017 pour l'entrée en vigueur de l'article 71 de la loi n° 2016-1888 du 28 décembre 2016, le premier jour du troisième mois suivant la publication du décret ; cette indication historique n'est pas une date de réforme nouvelle."
+)
+
+draft(
+    'L122-26',
+    "<p>Lorsque les directives territoriales d'aménagement n'y ont pas déjà pourvu, des décrets en Conseil d'État peuvent définir des prescriptions particulières sur tout ou partie des massifs définis à l'article 5 de la loi n° 85-30 du 9 janvier 1985 relative au développement et à la protection de la montagne. Ces décrets sont pris sur proposition des comités de massif prévus à l'article 7 de la même loi, après l'organisation d'une enquête publique réalisée conformément au chapitre III du titre II du livre Ier du code de l'environnement. Ces prescriptions peuvent avoir pour objet de :<br />"
+    "1° Adapter, en fonction de la sensibilité des milieux concernés, les seuils et critères des études d'impact spécifiques aux zones de montagne fixés en application des articles L. 122-1 à L. 122-3 du code de l'environnement, ainsi que les seuils et critères d'enquête publique spécifiques aux zones de montagne fixés en application du chapitre III du titre II du livre Ier du même code ;<br />"
+    "2° Désigner les espaces, paysages et milieux les plus remarquables du patrimoine naturel et culturel montagnard et définir les modalités de leur préservation. Sont notamment concernés les gorges, grottes, glaciers, lacs, tourbières, marais, lieux de pratique de l'alpinisme, de l'escalade et du canoë-kayak ainsi que les cours d'eau de première catégorie, au sens du 10° de l'article L. 436-5 du code de l'environnement, et leurs abords ;<br />"
+    "3° Préciser les modalités d'application des articles L. 122-5 à L. 122-11 du présent code, en fonction des particularités de tout ou partie de chaque massif.</p>",
+    "Réécriture à droit constant : la longue phrase introductive est répartie entre le pouvoir de prescription, les conditions procédurales et les objets des prescriptions. Les trois subdivisions, l'intégralité des milieux cités et tous les renvois sont maintenus. La politique de densification ne justifie ici aucune dérogation de fond aux protections de massif.",
+    "Conservation de la réserve tenant aux directives territoriales d'aménagement, de la proposition des comités et de l'enquête publique préalable. Les renvois au code de l'environnement et à la loi n° 85-30 ne sont pas modifiés. La mention des abords est conservée dans la même énumération. La note source relative à l'article 10 du décret n° 2017-1039 du 10 mai 2017 et à l'article 71 de la loi n° 2016-1888 du 28 décembre 2016 demeure une indication historique d'entrée en vigueur au premier jour du troisième mois suivant la publication du décret."
+)
+
+draft(
+    'L122-27',
+    "<p>Pour élaborer leurs propositions de prescriptions particulières de massif, les comités de massif peuvent, selon leurs besoins, faire appel gratuitement aux services techniques de l'État ainsi qu'aux conseils d'architecture, d'urbanisme et de l'environnement.</p>",
+    "Réécriture à droit constant : le sujet et l'objet du recours sont rapprochés et la formule « en tant que de besoin » est explicitée. Le recours reste facultatif et gratuit pour les deux catégories d'appui. Aucune réforme de fond n'est introduite.",
+    "Coordination avec les propositions des comités prévues à L122-26 ; aucune compétence supplémentaire n'est créée. La note source renvoie à l'article 10 du décret n° 2017-1039 du 10 mai 2017 et à l'article 71 de la loi n° 2016-1888 du 28 décembre 2016 pour une entrée en vigueur le premier jour du troisième mois suivant la publication du décret ; elle n'est pas utilisée comme date d'une réforme future."
+)
+
+draft(
+    'L123-1',
+    "<p>Le schéma directeur de la région d'Île-de-France vise à maîtriser la croissance urbaine et démographique ainsi que l'utilisation de l'espace, tout en garantissant le rayonnement international de la région.</p>"
+    "<p>Pour assurer les conditions d'un développement durable de la région, il précise les moyens à mettre en œuvre pour corriger les disparités spatiales, sociales et économiques, coordonner l'offre de déplacement et préserver les zones rurales et naturelles.</p>"
+    "<p>Il fixe notamment la destination générale des différentes parties du territoire. Il définit les moyens de protection et de mise en valeur de l'environnement et détermine la localisation des grandes infrastructures de transport et des grands équipements.</p>"
+    "<p>Il détermine aussi les localisations à privilégier pour les extensions urbaines ainsi que pour les activités industrielles, logistiques, artisanales, agricoles, forestières et touristiques.</p>"
+    "<p>Il fixe une trajectoire permettant d'atteindre l'absence de toute artificialisation nette des sols. Il fixe également, par tranches de dix années, un objectif de réduction du rythme de l'artificialisation.</p>",
+    "Réécriture à droit constant : les objectifs sont distingués des moyens, la liste des éléments à localiser est rendue plus lisible et les deux composantes de la trajectoire d'artificialisation sont exprimées séparément dans le même alinéa. Les cinq alinéas et toutes les catégories d'activités sont conservés. Aucune réforme de fond du schéma régional n'est ajoutée.",
+    "Les objectifs de densification du projet restent à coordonner avec L151-4 et L151-26 ; ils ne suppriment ici ni les espaces ruraux et naturels ni l'objectif d'absence de toute artificialisation nette. Les tranches de dix années sont maintenues. La note source renvoie aux conditions d'application de l'article 194 de la loi n° 2021-1104 du 22 août 2021 : ce renvoi historique reste à consulter pour l'application temporelle et ne fixe aucune date d'entrée en vigueur de la réforme proposée."
+)
+
+draft(
+    'L123-2',
+    "<p>Le schéma directeur de la région d'Île-de-France doit respecter les règles générales d'aménagement et d'urbanisme à caractère obligatoire prévues au présent livre. Il doit également respecter les servitudes d'utilité publique affectant l'utilisation des sols et les dispositions nécessaires à la mise en œuvre des projets d'intérêt général relevant de l'État et des opérations d'intérêt national.</p>"
+    "<p>Le schéma est compatible avec les objectifs et les dispositions des plans de gestion des risques d'inondation pris en application de l'article L. 566-7 du code de l'environnement. Lorsqu'un de ces plans est approuvé après le schéma, celui-ci est, si nécessaire, rendu compatible dans un délai de trois ans avec les objectifs et les dispositions de ce plan.</p>"
+    "<p>Le schéma prend aussi en compte les orientations des schémas des services collectifs institués par l'article 2 de la loi n° 95-115 du 4 février 1995 d'orientation pour l'aménagement et le développement du territoire.</p>",
+    "Réécriture à droit constant : les obligations de respect sont réparties en deux phrases et le renvoi aux objectifs et dispositions des plans d'inondation est explicité. Les trois degrés normatifs — respect, compatibilité et prise en compte — restent distincts. Aucune réforme de fond n'est introduite.",
+    "Le délai de trois ans et la réserve « si nécessaire » restent attachés à l'approbation postérieure d'un plan de gestion des risques d'inondation. Les renvois à L. 566-7 du code de l'environnement et à l'article 2 de la loi n° 95-115 du 4 février 1995 sont conservés. Les obligations ainsi énoncées restent celles auxquelles renvoie L123-18 ; aucune dispense liée à la densification n'est créée."
+)
+
+draft(
+    'L123-4',
+    "<p>Le schéma directeur de la région d'Île-de-France couvre la totalité du territoire de cette région.</p>",
+    "Réécriture à droit constant : le périmètre régional intégral est exprimé directement, sans répétition du nom de la région. Aucune réforme de fond n'est introduite.",
+    "L'unique alinéa est conservé. Le périmètre n'est ni réduit aux zones urbanisées ni étendu au-delà de la région."
+)
+
+draft(
+    'L123-5',
+    "<p>L'élaboration du schéma directeur de la région d'Île-de-France relève de la région, qui y associe l'État.</p>",
+    "Réécriture à droit constant : la responsabilité de la région et l'association de l'État sont explicitées dans la même phrase. Aucune réforme de fond ni transfert de compétence n'est introduit.",
+    "L'association de l'État demeure obligatoire. La compétence d'élaboration reste distincte de l'approbation par décret en Conseil d'État prévue à L123-11."
+)
+
+draft(
+    'L123-6',
+    "<p>Le conseil régional engage l'élaboration du schéma directeur de la région d'Île-de-France par une délibération.<br />Avant cette élaboration, il débat des orientations stratégiques du schéma.</p>",
+    "Réécriture à droit constant : le conseil régional devient le sujet des deux phrases et l'antériorité du débat est formulée directement. La délibération d'engagement et le débat stratégique sont maintenus sans réforme de fond.",
+    "L'ordre des deux énoncés est conservé. Le débat reste préalable à l'élaboration ; aucun délai supplémentaire ni ordre nouveau entre le débat et la délibération d'engagement n'est imposé."
+)
+
+draft(
+    'L123-7',
+    "<p>L'élaboration du projet de schéma associe :</p>"
+    "<p>1° L'autorité administrative compétente de l'État ;</p>"
+    "<p>2° Les conseils départementaux des départements intéressés ;</p>"
+    "<p>3° Les établissements publics mentionnés à l'article L. 143-16 ;</p>"
+    "<p>4° Les établissements publics de coopération intercommunale à fiscalité propre intéressés qui sont situés hors du périmètre d'un établissement public mentionné à l'article L. 143-16 ;</p>"
+    "<p>5° Le conseil économique, social et environnemental régional, ainsi que les chambres d'agriculture, les chambres de commerce et d'industrie et les chambres de métiers et de l'artisanat ;</p>"
+    "<p>6° La population. Le conseil régional prend l'initiative de la concertation publique et l'organise.</p>"
+    "<p>Pour élaborer le projet de schéma, le conseil régional peut également consulter tout autre organisme ou toute autre personne.</p>",
+    "Réécriture à droit constant : l'introduction exprime directement l'association à l'élaboration, le critère territorial du 4° est simplifié et le rôle du conseil régional dans la concertation est détaillé. La liste institutionnelle, les six subdivisions et la consultation facultative finale sont conservées. Aucune réforme de fond n'est introduite.",
+    "Le renvoi à L143-16 a été vérifié dans le corpus public : il désigne les établissements chargés des schémas de cohérence territoriale. L'exclusion du 4° reste limitée au périmètre de ces établissements. Les positions des 1° à 5° sont conservées pour le renvoi de L123-9. L123-15 vise, dans la source, les 1° à 5° de L123-8 au lieu de la présente liste ; cette incohérence est signalée dans sa notice sans correction silencieuse."
+)
+
+draft(
+    'L123-8',
+    "<p>L'autorité administrative compétente de l'État communique à la région toutes les informations nécessaires, dans les conditions prévues aux articles L. 132-1 à L. 132-3.</p>",
+    "Réécriture à droit constant : l'obligation de porter les informations à la connaissance de la région est formulée comme une communication de toutes les informations nécessaires. Le renvoi qui en encadre les conditions est intégralement conservé. Aucune réforme de fond n'est introduite.",
+    "Les articles L132-1 à L132-3 ont été lus dans le corpus public : leurs dispositions relatives au porter à connaissance mentionnent les communes ou leurs groupements. Leur application à la région résulte du renvoi spécial conservé ici ; aucun destinataire nouveau n'est ajouté dans ces articles. Le présent L123-8 ne comporte pas de 1° à 5°, contrairement à ce que suppose le renvoi source de L123-15."
+)
+
+draft(
+    'L123-9',
+    "<p>Le conseil régional arrête le projet de schéma, puis le soumet à l'avis des autorités et organes suivants :</p>"
+    "<p>1° L'autorité administrative compétente de l'État ;</p>"
+    "<p>2° Les organes délibérants des collectivités territoriales, des établissements publics et des organismes énumérés aux 1° à 5° de l'article L. 123-7 ;</p>"
+    "<p>3° L'autorité environnementale ;</p>"
+    "<p>4° La conférence territoriale de l'action publique.</p>",
+    "Réécriture à droit constant : la succession de l'arrêt du projet et de sa soumission pour avis est explicite. La formulation de la liste est harmonisée avec l'introduction, sans changement des quatre destinataires ni du renvoi. Aucune réforme de fond n'est introduite.",
+    "Incohérence préexistante à contrôler : le 2° vise les 1° à 5° de L123-7, alors que son 1° désigne déjà l'autorité administrative de l'État, séparément consultée au 1° du présent article, et non un organe délibérant. Le renvoi est conservé. La note source renvoie à l'article 6 de l'ordonnance n° 2016-1058 du 3 août 2016 pour les conditions d'application ; cette règle historique n'est pas assimilée à une transition nouvelle."
+)
+
+draft(
+    'L123-10',
+    "<p>Le président du conseil régional soumet le projet de schéma à une enquête publique, dans les conditions prévues au chapitre III du titre II du livre Ier du code de l'environnement.</p>",
+    "Réécriture à droit constant : la phrase passive est remplacée par une obligation directement attribuée au président du conseil régional. L'enquête et son cadre juridique sont maintenus sans réforme de fond.",
+    "Le renvoi au chapitre III du titre II du livre Ier du code de l'environnement reste intégral. La concertation publique de L123-7 ne remplace pas cette enquête."
+)
+
+draft(
+    'L123-11',
+    "<p>À l'issue de la concertation publique et de l'enquête publique, le conseil régional adopte le schéma par délibération. Avant cette adoption, le schéma peut être modifié pour tenir compte des avis recueillis, des observations de la population et des conclusions de la commission d'enquête.</p>"
+    "<p>Le schéma adopté est transmis à l'autorité administrative compétente de l'État afin d'être approuvé par décret en Conseil d'État.</p>"
+    "<p>L'approbation du schéma directeur de la région d'Île-de-France intervient par décret en Conseil d'État.</p>",
+    "Réécriture à droit constant : le conseil régional est le sujet de l'adoption et la faculté d'ajuster le texte avant celle-ci est exprimée dans une phrase distincte. Les trois catégories de contributions et les étapes de transmission et d'approbation sont conservées dans leurs alinéas. Aucune réforme de fond n'est introduite.",
+    "La répétition de l'approbation par décret en Conseil d'État, déjà présente aux deuxième et troisième alinéas de la source, est maintenue pour préserver les alinéas. L'adoption reste postérieure à la concertation et à l'enquête, et les modifications restent rattachées aux avis, observations et conclusions recueillis."
+)
+
+draft(
+    'L123-12',
+    "<p>Un bilan de la mise en œuvre du schéma directeur de la région d'Île-de-France est présenté au conseil régional six mois avant le terme du délai de six ans qui court à compter de l'approbation du schéma. Le conseil régional délibère sur ce bilan. Il peut décider de maintenir le schéma en vigueur, de le modifier, de le réviser en partie ou en totalité, ou de l'abroger.</p>",
+    "Réécriture à droit constant : l'échéance du bilan est explicitée, puis la délibération et les suites possibles sont présentées dans des phrases distinctes. Les cinq issues possibles, en distinguant révision partielle et totale, sont conservées sans réforme de fond.",
+    "Conservation des deux durées : présentation six mois avant l'expiration des six ans suivant l'approbation. Il ne s'agit ni d'un bilan à six ans révolus ni d'un délai de six mois après le bilan. Aucun auteur du bilan, non désigné dans la source, n'est ajouté."
+)
+
+draft(
+    'L123-13',
+    "<p>Le schéma directeur de la région d'Île-de-France peut faire l'objet d'une révision. Celle-ci suit les modalités d'élaboration prévues au paragraphe 3.</p>",
+    "Réécriture à droit constant : la faculté de révision et la procédure applicable sont distinguées en deux phrases dans le même alinéa. Le renvoi au paragraphe 3 est maintenu sans réforme de fond.",
+    "Le paragraphe 3 correspond aux articles L123-6 à L123-11 du lot : l'engagement, les associations, les avis, l'enquête, l'adoption et l'approbation demeurent applicables à la révision par ce renvoi."
+)
+
+draft(
+    'L123-14',
+    "<p>Le schéma directeur de la région d'Île-de-France peut faire l'objet d'une modification à l'initiative du président du conseil régional. Les changements envisagés ne doivent pas porter atteinte à l'économie générale du schéma.</p>",
+    "Réécriture à droit constant : l'initiative et la limite de la procédure de modification sont exprimées dans deux phrases. La condition relative à l'économie générale conserve sa portée et aucune réforme de fond n'est introduite.",
+    "La distinction entre modification et révision reste articulée avec L123-13. La seconde phrase est une condition de recours à la modification, et non une nouvelle interdiction de réviser l'économie générale du schéma."
+)
+
+draft(
+    'L123-15',
+    "<p>Sont consultés pour avis sur les modifications envisagées : l'autorité administrative compétente de l'État, ainsi que les collectivités territoriales, les établissements publics et les organismes énumérés aux 1° à 5° de l'article L. 123-8.</p>",
+    "Réécriture à droit constant : les destinataires de la consultation sont placés après une formule qui en précise l'objet. Le caractère consultatif et le renvoi source sont conservés. Aucune réforme de fond ni rectification implicite du renvoi n'est introduite.",
+    "Incohérence préexistante vérifiée dans le lot : L123-8 ne comporte aucune subdivision numérotée et porte sur la communication d'informations par l'État. La liste des personnes associées figure aux 1° à 5° de L123-7, qui paraît être la cible attendue. Le renvoi à L123-8 est maintenu dans le texte proposé ; sa correction expresse vers L123-7 nécessite validation. Cette difficulté concerne aussi l'identification des avis requis à L123-16."
+)
+
+draft(
+    'L123-16',
+    "<p>La procédure de modification donne lieu à une concertation à laquelle sont associés les habitants, les associations locales et les autres personnes concernées.<br />"
+    "Les modalités de la concertation permettent au public, pendant une durée suffisante et par des moyens adaptés aux caractéristiques des modifications, d'accéder aux informations relatives aux modifications envisagées et aux avis requis précités, ainsi que de formuler des observations et des propositions. Le conseil régional enregistre et conserve ces observations et propositions.<br />"
+    "Le projet de modification et les avis précités sont mis à la disposition du public par voie électronique pendant au moins deux mois. Un bilan de cette mise à disposition est présenté au conseil régional. Celui-ci délibère sur le projet de modification, puis le transmet à l'autorité administrative compétente de l'État pour approbation.</p>",
+    "Réécriture à droit constant : les participants, les droits d'accès et d'expression, la conservation des contributions et les suites de la mise à disposition sont formulés plus directement. Les trois blocs successifs et le minimum de deux mois sont conservés. Aucune réforme de fond n'est introduite.",
+    "La durée suffisante de concertation et le minimum de deux mois de mise à disposition électronique restent deux exigences distinctes. Aucun auteur du bilan n'est inventé. Les « avis requis précités » restent soumis à la difficulté du renvoi de L123-15, expressément signalée dans sa notice. La transmission conserve son objet d'approbation par l'autorité de l'État."
+)
+
+draft(
+    'L123-17',
+    "<p>Si l'autorité administrative compétente de l'État estime ne pas pouvoir approuver en l'état le projet arrêté de modification du schéma, elle le notifie au conseil régional par une décision motivée et lui renvoie le projet dans les trois mois suivant sa transmission, afin que les modifications nécessaires y soient apportées.</p>",
+    "Réécriture à droit constant : la condition est raccourcie, le sujet féminin de l'autorité est repris correctement et la finalité du renvoi est explicitée. La motivation, le destinataire et le délai sont conservés sans réforme de fond.",
+    "Le délai de trois mois reste calculé à partir de la transmission du projet. Aucune approbation tacite à son expiration n'est créée ; l'article ne l'énonce pas. Les modifications demandées restent celles nécessaires à l'approbation du projet."
+)
+
+draft(
+    'L123-18',
+    "<p>L'autorité administrative compétente de l'État informe le président du conseil régional lorsque le respect des obligations prévues à l'article L. 123-2 nécessite une révision ou une modification du schéma directeur de la région d'Île-de-France.</p>",
+    "Réécriture à droit constant : l'autorité chargée de l'information est placée en tête et la nécessité de modifier ou de réviser est directement rattachée aux obligations de L123-2. Aucune réforme de fond n'est introduite.",
+    "Le renvoi porte sur toutes les obligations de L123-2, et pas seulement sur la prévention des inondations. Le destinataire demeure le président du conseil régional ; aucune substitution de l'État n'est déclenchée par cette seule information."
+)
+
+draft(
+    'L123-19',
+    "<p>La région indique à l'autorité administrative compétente de l'État si elle entend procéder à la révision ou à la modification nécessaire. Elle le fait dans les trois mois à compter de la demande que cette autorité adresse au président du conseil régional.</p>",
+    "Réécriture à droit constant : l'obligation de réponse et son délai sont distingués, avec des sujets et destinataires explicites. Le délai de trois mois et la demande qui en constitue le point de départ sont conservés sans réforme de fond.",
+    "La réponse reste une déclaration d'intention, et non une approbation du projet dans les trois mois. Le défaut de réponse et la réponse négative restent régis par L123-20."
+)
+
+draft(
+    'L123-20',
+    "<p>Si la région répond qu'elle n'entend pas procéder à la révision ou à la modification, ou si elle ne répond pas dans le délai prévu à l'article L. 123-19, l'autorité administrative compétente de l'État peut engager et arrêter la révision ou la modification du schéma. Elle recueille au préalable l'avis de la région, des départements et des communautés d'agglomération concernés de la région.<br />"
+    "L'autorité administrative compétente de l'État dispose de la même faculté si la région a exprimé son intention de procéder à la révision ou à la modification, mais qu'aucune délibération approuvant le projet correspondant n'intervient dans les vingt-quatre mois à compter de la notification de la demande initiale de cette autorité.</p>",
+    "Réécriture à droit constant : les deux situations permettant l'intervention de l'État sont explicitées et la consultation préalable est formulée séparément dans le premier bloc. Le renvoi implicite au délai de réponse est rendu explicite par une référence à L123-19, qui fixe ce délai. La faculté de substitution et le délai de vingt-quatre mois restent inchangés ; aucune réforme de fond n'est introduite.",
+    "Le renvoi explicite ajouté à L123-19 identifie le délai de trois mois déjà visé par « ce délai » dans la source, sans modifier son calcul. Les vingt-quatre mois courent depuis la notification de la demande initiale, et non depuis la réponse de la région. La même faculté du second bloc inclut l'avis préalable du premier. Les communautés d'agglomération sont conservées comme telles, sans extension aux autres catégories intercommunales. L'approbation reste soumise à L123-21."
+)
+
+draft(
+    'L123-21',
+    "<p>L'approbation de la révision ou de la modification intervient par décret en Conseil d'État, après une enquête publique réalisée conformément au chapitre III du titre II du livre Ier du code de l'environnement.</p>",
+    "Réécriture à droit constant : la règle est formulée à partir de l'acte d'approbation, en conservant l'enquête préalable et l'intégralité du renvoi environnemental. Aucune réforme de fond n'est introduite.",
+    "L'article demeure dans la procédure de mise en compatibilité ou de prise en compte d'un document supérieur régie par L123-18 à L123-21. Il n'est pas étendu par cette rédaction à toutes les modifications ordinaires de L123-14 à L123-17."
+)
+
+draft(
+    'L123-22',
+    "<p>Lorsqu'une opération n'est pas compatible avec les dispositions du schéma directeur de la région d'Île-de-France, sa déclaration d'utilité publique ou, si une telle déclaration n'est pas requise, sa déclaration de projet ne peut être prononcée que si les conditions suivantes sont réunies :<br />"
+    "1° L'enquête publique relative à l'opération, réalisée conformément au chapitre III du titre II du livre Ier du code de l'environnement, a porté à la fois sur l'utilité publique de l'opération et sur la mise en compatibilité du schéma qui en découle ;<br />"
+    "2° Avant que la déclaration d'utilité publique ou la déclaration de projet soit prononcée, les dispositions proposées pour assurer la mise en compatibilité du schéma ont fait l'objet d'un examen conjoint de l'État, de la région d'Île-de-France, du conseil économique, social et environnemental régional, des départements et des chambres consulaires.<br />"
+    "La déclaration d'utilité publique vaut approbation des nouvelles dispositions du schéma directeur de la région d'Île-de-France. En cas d'opposition de la région, elle est prise par décret en Conseil d'État.<br />"
+    "La déclaration de projet ne peut être prononcée qu'après la mise en compatibilité du schéma par l'autorité administrative et, en cas de désaccord de la région, par décret en Conseil d'État.</p>",
+    "Réécriture à droit constant : le cas d'incompatibilité est placé en tête, les deux conditions cumulatives sont explicitées et les effets respectifs de la déclaration d'utilité publique et de la déclaration de projet sont formulés directement. Les deux subdivisions, tous les participants et les exigences d'enquête et d'examen conjoint sont conservés. Aucune réforme de fond n'est introduite.",
+    "La déclaration de projet reste subsidiaire à l'absence d'exigence de déclaration d'utilité publique. Le 1° de la source exige que l'enquête porte sur l'utilité publique même lorsque la procédure débouche sur une déclaration de projet : cette formulation commune est conservée et son articulation doit être contrôlée, sans réécriture implicite de son objet. L'effet approbatif de la déclaration d'utilité publique est maintenu ; pour la déclaration de projet, la mise en compatibilité doit être préalable. L'opposition ou le désaccord de la région conserve l'exigence du décret en Conseil d'État. Le régime distinct de L123-23, lu dans le corpus pour vérifier cette articulation, n'est pas modifié."
+)
+
+
+assert len(articles) == 24
+assert set(drafts) == {a['number'] for a in articles}
+answer = []
+for article in articles:
+    proposed_xml, reason, review_notes = drafts[article['number']]
+    answer.append({
+        'code_id': article['code_id'],
+        'source_id': article['source_id'],
+        'source_sha256': article['source_sha256'],
+        'number': article['number'],
+        'proposed_xml': proposed_xml,
+        'reason': reason,
+        'review_notes': review_notes,
+        'status': 'rewrite_draft',
+    })
+Path('answer.json').write_text(json.dumps(answer, ensure_ascii=False, indent=2) + '\n')
+print(f'answer.json : {len(answer)} articles')

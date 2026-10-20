@@ -1,0 +1,23 @@
+{
+  "metadata_only": true,
+  "allowed_changed_fields": [
+    "reference_checks",
+    "reference_coherence"
+  ],
+  "articles": 5,
+  "registered": false,
+  "capture_sha256": "07fb2bf0f874b059734c170f16c2ae7e5078f286d083ebef440265d1341026ff",
+  "approval_sha256": "80dde545956101b8e56e5e7a1f7fbf77f3fb4a78fec1193c69792612992b3fc6",
+  "helper_sha256": "04fa85c0e85384fc30979155e5136bfb5d24d88f94789afda27b8733cf6f6f21",
+  "files": {
+    "source.json": "9dd9685e5269fd2373966d2be77c7ba3cda3e2914877776fa7530fcf907818a5",
+    "answer.json": "88d470b7739730e6078bd85a27c86fadaa5cf5efd310dc26bdc8c511a431c92a",
+    "reference-targets.json": "967435d5a487351103d71c47a383ef4160c3a2ffbbea024a1705b791eb3a3bfa"
+  },
+  "post_registration_workflow_fields": [
+    "policy_review_id",
+    "prior_proposal_sha256"
+  ],
+  "post_registration_limit": "review_prior.commit may update these two workflow-provenance fields; root must compare them explicitly. Bodies, impacts, reasons, notes and every other non-reference field must remain exact. The staging invariant itself allows no provenance-field change.",
+  "registration_condition": "Under the registration writer lock recheck these full capture DB/raw/owner guards as well as register_pack reference/own guards. Any later delta blocks inscription; staging is no approval to overwrite it."
+}

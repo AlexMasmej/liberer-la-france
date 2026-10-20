@@ -1,0 +1,28 @@
+--- recertificate-helper/prepare_recertificates.py
++++ recertificate-helper/edition002/prepare_recertificates.py
+@@ -1,14 +1,14 @@
+ """RO capture, then root-approved metadata-only staging. Never registers anything."""
+ import argparse, copy, datetime, hashlib, json, pathlib, re, sqlite3, sys
+ 
+-SCRIPT=pathlib.Path(__file__).resolve(); E=SCRIPT.parent.parent; H=SCRIPT.parents[4]
++SCRIPT=pathlib.Path(__file__).resolve(); E=SCRIPT.parents[2]; H=SCRIPT.parents[5]
+ sys.path.insert(0,str(H))
+ import reference_coherence as rc
+ from ingest import source_notes
+ from run_exhaustive import validate_answer, mentions_possible_relief
+ 
+ D=H/'runtime/poursuite-20261020-d/social-context-review/edition001'
+-C=H/'runtime/poursuite-20261020-c/social/edition002'
++C=H/'runtime/poursuite-20261020-c/certificate-refresh/refreshed003'
+ TARGET='LEGITEXT000006073189|LEGIARTI000053220874'
+ OPTIONAL='LEGITEXT000006073189|LEGIARTI000041396065'
+ NAMES={'R243-17','R243-18','R243-19','R243-59','R243-59-6-A'}
+@@ -17,7 +17,7 @@
+  E/'edition001/answer.json':'8ced38d1de77327a25f2862fe698a7e12a2d1c7e58a1c691c06496e9684356c7',
+  E/'complement-r243-59/edition001/source.json':'1c07e5d51674da1b949b272b1a2c1763d1849e2cf01b2c4b38b5106832ea7592',
+  E/'complement-r243-59/edition001/answer.json':'4622a98ac16e19485fad22a1f70bc7b4fdf1e6f1e633fc67eebdaac475ce4255',
+- C/'answer.json':'615ac7362561d4fbb294f2e9469165bb43b9e7bbcb16ff297c29d59aaee05d40',
++ C/'answer.json':'626f0d00e183aadff71eb10824c9ce17fc2cb67989e929ea4119ea60378b9e52',
+  E/'final-guards.json':'2c8730b9e8521d331f80c51ca4241704f8a3b99e655c34de666a2510f60d8b4d',
+  D/'manifest.json':'d96cec5f43ceb7751ad7b742252cb8100d856f47a8d0ca0573c18ae7226ff2e6'}
+ def read(p):return json.loads(p.read_text())

@@ -1,0 +1,184 @@
+import json
+from pathlib import Path
+
+
+sources = json.loads(Path('source.json').read_text())
+answers = []
+
+
+def add(index, proposed_xml, reason, review_notes, removed=None, repeal=None):
+    source = sources[index]
+    item = {key: source[key] for key in ('code_id', 'source_id', 'source_sha256', 'number')}
+    item.update(
+        proposed_xml=proposed_xml,
+        reason=reason,
+        review_notes=review_notes,
+        status='rewrite_draft',
+    )
+    if removed:
+        item.update(
+            change_type='normative_reduction',
+            reform_policy_id='editorial_direction_2026_10_19',
+            removed_provisions=removed,
+        )
+    if repeal:
+        item.update(
+            change_type='full_repeal',
+            repeal_policy_id='editorial_direction_2026_10_19',
+            repeal_scope=repeal,
+        )
+    answers.append(item)
+
+
+add(
+    0,
+    '<p>Outre les obligations de droit commun applicables à ses salariés, l’employeur est tenu, à l’égard du salarié en télétravail :</p>'
+    '<p>1° De l’informer de toute restriction à l’usage des équipements ou outils informatiques ou des services de communication électronique, ainsi que des sanctions encourues en cas de non-respect de ces restrictions ;</p>'
+    '<p>2° De lui donner priorité pour occuper ou reprendre un poste sans télétravail correspondant à ses qualifications et compétences professionnelles, et de l’informer de la disponibilité de tout poste de cette nature ;</p>'
+    '<p>3° D’examiner avec lui ses conditions d’activité et sa charge de travail à sa demande ou dès qu’une difficulté ou un risque pour sa santé est identifié.</p>'
+    '<p>Le 3° n’impose pas d’entretien annuel du seul fait du télétravail. Les obligations de prévention des risques professionnels, de contrôle de la durée du travail et de suivi de la charge de travail, ainsi que les règles propres aux conventions de forfait, demeurent applicables.</p>'
+    '<p>La nouvelle rédaction du 3° s’applique à compter de l’entrée en vigueur de la loi portant la présente réforme, y compris aux télétravails en cours. Elle ne remet en cause ni les manquements antérieurs ni les garanties plus favorables résultant d’un contrat de travail, d’un accord collectif ou d’une charte.</p>',
+    'Réforme de fond : supprime l’entretien annuel automatique attaché au seul statut de télétravailleur et le remplace par un examen à la demande ou dès l’identification d’une difficulté ou d’un risque. Le suivi général de la santé et de la charge de travail reste obligatoire ; il ne dépend pas d’une alerte du salarié. À droit constant, les 1° et 2° gardent l’information sur les restrictions et les sanctions, la priorité de retour et l’information sur tous les postes correspondants. Ces garanties préviennent les sanctions imprévisibles et l’isolement professionnel ; leur suppression n’est pas justifiée.',
+    'Coordonner le 3° avec L. 1222-9, II, 3° et 4°, L. 4121-1 et, pour les forfaits, L. 3121-60, L. 3121-64 et L. 3121-65 : l’entretien annuel prévu par ce dernier article, lorsqu’il est applicable, subsiste. La suppression ne dispense ni du repos ni du suivi préventif et doit rester compatible avec les exigences européennes de santé et de temps de travail, notamment les directives 89/391/CEE et 2003/88/CE. Maintien de la règle historique de l’article 40-VII de l’ordonnance n° 2017-1387 du 22 septembre 2017 : pour un contrat antérieur comportant des clauses de télétravail, l’accord ou la charte de L. 1222-9 se substitue, s’il y a lieu, aux clauses contraires ou incompatibles, sauf refus du salarié exprimé sous un mois à compter de sa communication dans l’entreprise. Cette règle historique ne fixe pas la date de la réforme proposée.',
+    removed=[
+        'Obligation légale d’organiser chaque année un entretien pour tout télétravailleur, indépendamment d’une demande, d’une difficulté ou d’un risque identifié ; les autres dispositifs de suivi de la santé et de la charge de travail sont conservés.'
+    ],
+)
+
+add(
+    1,
+    '<p>En cas de circonstances exceptionnelles, notamment de menace d’épidémie, ou de force majeure, le télétravail peut constituer un aménagement du poste de travail rendu nécessaire pour assurer la continuité de l’activité de l’entreprise et protéger les salariés.</p>',
+    'Réécriture à droit constant : rend directement lisibles les deux circonstances ouvrant le dispositif et ses deux finalités cumulatives. Après réexamen, aucune coupe supplémentaire n’est retenue : cet article permet déjà l’adaptation exceptionnelle du poste, sans déclaration ni autorisation administrative. Supprimer les circonstances ou la nécessité transformerait une exception de protection et de continuité en faculté ordinaire d’écarter le caractère volontaire du télétravail.',
+    'Articuler avec le principe de volontariat de L. 1222-9 et les obligations de prévention de L. 4121-1 ; aucune extension à la gestion courante n’est proposée. La note source conserve l’article 40-VII de l’ordonnance n° 2017-1387 du 22 septembre 2017 : pour les contrats antérieurs à cette ordonnance contenant des clauses de télétravail, l’accord ou la charte de L. 1222-9 se substitue, s’il y a lieu, aux clauses contraires ou incompatibles, sauf refus du salarié. Celui-ci dispose d’un mois à compter de la communication de l’accord ou de la charte dans l’entreprise pour exprimer ce refus. Ce mécanisme historique reste distinct de l’aménagement exceptionnel et de l’entrée en vigueur de la présente réforme.',
+)
+
+add(
+    2,
+    '<p>Tout salarié peut, avec l’accord de son employeur, bénéficier d’une période de mobilité volontaire sécurisée pour exercer une activité dans une autre entreprise. L’exécution de son contrat de travail est suspendue pendant cette période.</p>'
+    '<p>Après deux refus successifs de l’employeur à une demande de mobilité, le salarié a droit au congé spécifique mentionné à l’article L. 6323-17-1, sans que puissent lui être opposées une condition d’ancienneté ou les dispositions définies par décret en Conseil d’État. Ce droit au congé ne vaut pas, à lui seul, décision de prise en charge financière du projet de transition professionnelle.</p>'
+    '<p>La suppression des conditions d’effectif et d’ancienneté pour la mobilité s’applique aux demandes présentées à compter de l’entrée en vigueur de la loi portant la présente réforme. Les refus antérieurs opposés à des demandes relevant du dispositif alors applicable restent pris en compte pour l’application du deuxième alinéa. Les périodes de mobilité déjà convenues et les droits au congé déjà ouverts ne sont pas remis en cause.</p>',
+    'Réforme de fond : ouvre la mobilité négociée à tous les salariés en supprimant le seuil de trois cents salariés dans l’entreprise ou le groupe et les vingt-quatre mois d’ancienneté, consécutifs ou non. Ces filtres empêchent l’accès à une suspension pourtant acceptée par les deux parties ; les garanties de l’avenant et du retour suffisent à organiser cette mobilité. L’accord de l’employeur reste nécessaire pour programmer l’absence et le retour ; le droit au congé après deux refus est conservé. Le renvoi erroné de la source à une ancienneté dans L. 6323-17-1 est traité explicitement par l’expression directe de la dispense, sans assimiler le congé à un financement automatique.',
+    'Incohérence préexistante vérifiée dans le corpus : L. 6323-17-1 définit le projet et le congé, mais ne fixe pas de durée d’ancienneté ; celle-ci relève du I de L. 6323-17-2 et de ses textes d’application. Le renvoi à L. 6323-17-1 est conservé pour identifier le congé ; la dispense d’ancienneté est désormais exprimée directement. La formule source sur les « dispositions définies par décret en Conseil d’État » reste large : la coordonner précisément avec les textes du congé et les décisions de financement de L. 6323-17-2, sans supprimer tacitement l’examen financier. Suppression corrélative du renvoi à L. 2331-1, qui ne servait ici qu’à apprécier le seuil du groupe. L. 1222-13 à L. 1222-15 continuent d’encadrer l’avenant, le retour et le choix de ne pas revenir. Aucun nouveau financement ni droit général à une rémunération pendant la mobilité n’est créé.',
+    removed=[
+        'Condition réservant la mobilité volontaire sécurisée aux entreprises ou groupes d’au moins trois cents salariés, avec le calcul du périmètre de groupe par renvoi à L. 2331-1.',
+        'Condition imposant au salarié au moins vingt-quatre mois d’ancienneté, consécutifs ou non, avant de pouvoir convenir avec son employeur d’une mobilité volontaire sécurisée.',
+    ],
+)
+
+add(
+    3,
+    '<p>La période de mobilité volontaire sécurisée est convenue par un avenant au contrat de travail. Cet avenant fixe sa date de prise d’effet et son terme, ainsi que le délai dans lequel le salarié informe par écrit l’employeur de son éventuel choix de ne pas réintégrer l’entreprise.</p>'
+    '<p>L’avenant prévoit également les situations et les modalités d’un retour anticipé du salarié. Ce retour intervient dans un délai raisonnable. Dans tous les cas, un retour anticipé reste possible à tout moment avec l’accord de l’employeur.</p>'
+    '<p>Pour les avenants conclus à compter de l’entrée en vigueur de la loi portant la présente réforme, aucune mention distincte de l’objet légal de la mobilité ni de sa durée calculée entre la date de prise d’effet et le terme n’est exigée. Les avenants antérieurs et les garanties de retour qu’ils prévoient conservent leurs effets.</p>',
+    'Réforme de fond : retire deux mentions obligatoires redondantes de l’avenant, l’objet déjà défini par L. 1222-12 et une durée distincte des dates de début et de fin. L’avenant lui-même n’est pas supprimé : il établit le consentement à la suspension et les engagements opposables de retour. À droit constant, maintient le délai d’information écrite de non-retour, les situations et modalités de retour anticipé, le délai raisonnable et le retour possible à tout moment par accord. La simplification porte sur les mentions, sans fragiliser la preuve des droits du salarié.',
+    'Le terme et la date de prise d’effet restent obligatoires ; aucune durée maximale ou minimale nouvelle n’est créée. Les deux alinéas matériels de la source sont conservés avant la transition. Un retour garanti par l’avenant ne requiert pas un nouvel accord discrétionnaire de l’employeur ; l’accord visé en fin de deuxième alinéa permet un retour supplémentaire. Articuler le délai de notification avec le seul préavis admis par L. 1222-15 : la source de L. 1222-13 impose un délai d’information, mais ne décrit pas séparément un préavis. Ne pas ajouter silencieusement un préavis de droit commun ni affaiblir une clause de retour déjà convenue.',
+    removed=[
+        'Obligation de répéter dans l’avenant l’objet légal de la mobilité volontaire sécurisée, déjà défini comme l’exercice d’une activité dans une autre entreprise par L. 1222-12.',
+        'Obligation d’inscrire une durée autonome en plus de la date de prise d’effet et du terme de la même période de mobilité ; ces deux dates restent exigées.',
+    ],
+)
+
+add(
+    4,
+    '<p>À son retour dans l’entreprise d’origine, le salarié retrouve de plein droit son emploi précédent ou un emploi similaire, avec une qualification et une rémunération au moins équivalentes. Il conserve à titre personnel sa classification. Il bénéficie de l’entretien de parcours professionnel mentionné au I de l’article L. 6315-1 dans les conditions prévues par cet article.</p>'
+    '<p>Le renvoi aux conditions de l’article L. 6315-1 s’applique aux reprises d’activité intervenant à compter de l’entrée en vigueur de la loi portant la présente réforme. Il ne remet en cause ni les droits à entretien nés d’une reprise antérieure ni les garanties contractuelles ou conventionnelles plus favorables.</p>',
+    'Réforme de fond : retire l’obligation autonome et inconditionnelle d’entretien au retour, qui double le dispositif de L. 6315-1, et applique les conditions de ce dispositif commun, notamment l’absence d’entretien au cours des douze mois précédant la reprise. À droit constant, conserve intégralement le retour de plein droit, l’alternative du poste similaire, les minima de qualification et de rémunération et la classification personnelle. Ces garanties constituent la sécurité de la mobilité ; les supprimer rendrait illusoire la suspension réversible du contrat.',
+    'Incohérence préexistante signalée : la source de L. 1222-14 vise encore sans réserve un « entretien professionnel », tandis que le I de L. 6315-1 figurant dans le corpus prévoit un entretien de parcours professionnel au retour de mobilité seulement si aucun entretien de cette nature n’a eu lieu dans les douze mois précédents. L’alignement est une réduction explicite, non une simple modernisation de vocabulaire. L. 6315-1 conserve son contenu, sa réalisation pendant le temps de travail, son document remis au salarié et sa possibilité d’anticipation à l’initiative de celui-ci. Les transitions propres aux lois n° 2025-989 et n° 2025-1403 figurant dans les notes de cet article restent distinctes. La classification personnelle demeure conservée même lorsque le salarié retrouve un emploi similaire.',
+    removed=[
+        'Obligation d’organiser au seul titre de L. 1222-14 un entretien à chaque retour de mobilité, y compris lorsqu’un entretien de parcours professionnel a déjà eu lieu dans les douze mois précédant la reprise.',
+    ],
+)
+
+add(
+    5,
+    '<p>Lorsque le salarié choisit, au cours ou au terme de sa période de mobilité, de ne pas réintégrer son entreprise d’origine, le contrat de travail qui le lie à son employeur est rompu par démission. Aucun préavis autre que celui prévu par l’avenant mentionné à l’article L. 1222-13 ne lui est applicable.</p>',
+    'Réécriture à droit constant : réunit clairement le choix du salarié, la qualification de démission et l’exclusion de tout préavis supplémentaire. Aucune coupe supplémentaire n’est justifiée : l’article simplifie déjà la sortie en limitant le préavis à l’avenant et il empêche de déduire une démission du seul comportement de l’employeur. Supprimer la référence au choix du salarié ferait disparaître une garantie essentielle du consentement ; supprimer toute règle de préavis déferait les engagements de retour négociés.',
+    'Le choix peut intervenir pendant la mobilité ou à son terme. Ni l’absence d’un poste de retour conforme à L. 1222-14, ni le silence du salarié ne sont ici assimilés à un choix de démission. Conserver la coordination avec le délai écrit de L. 1222-13 et les clauses des avenants antérieurs. Cet article ne requalifie pas la rupture du contrat conclu avec l’entreprise d’accueil et ne modifie pas les règles générales relatives à une démission contestée.',
+)
+
+add(
+    6,
+    '<p>Le présent article est abrogé à compter de l’entrée en vigueur de la loi portant la présente réforme. La communication semestrielle au comité social et économique de la liste des demandes de mobilité volontaire sécurisée et de leurs suites n’est plus exigée pour les échéances intervenant à compter de cette date.</p>'
+    '<p>Les obligations dont l’échéance est antérieure à cette date et les conséquences de leur inexécution restent régies par les dispositions antérieures. Les droits d’information et de consultation du comité social et économique fondés sur d’autres dispositions ou sur un accord collectif demeurent applicables.</p>',
+    'Abrogation de fond pour l’avenir : supprime la production et la transmission semestrielles d’une liste particulière de demandes individuelles et de leurs suites. Le dispositif ajoute un calendrier et un relevé spécialisés à la mobilité, sans décider de l’accès individuel ni des garanties de retour. L’information collective utile demeure due dans le cadre des attributions générales du CSE lorsqu’elles sont applicables. La réforme ne transforme pas ce relevé en un nouveau rapport annuel et préserve les manquements arrivés à échéance avant son entrée en vigueur.',
+    'Maintenir notamment, dans leur champ respectif, les attributions de L. 2312-8 et la consultation sur la politique sociale de L. 2312-26 ; ces textes ne sont pas présentés comme exigeant déjà la même liste individuelle. La suppression du relevé spécialisé ne doit pas priver le CSE des informations nécessaires à une consultation effectivement due, ni modifier la protection des données personnelles. Coordonner les accords collectifs et références réglementaires éventuels à L. 1222-16 sans supprimer automatiquement une obligation conventionnelle autonome. Préserver les exigences européennes générales d’information et de consultation, notamment la directive 2002/14/CE, sans leur attribuer une liste semestrielle déterminée. Aucun document ancien n’est détruit par cette abrogation.',
+    repeal='Suppression, pour les échéances à compter de l’entrée en vigueur de la réforme, de l’obligation patronale de communiquer semestriellement au CSE la liste des demandes de mobilité volontaire sécurisée et l’indication de la suite donnée à chacune ; maintien des obligations échues et des autres droits collectifs.',
+)
+
+add(
+    7,
+    '<p>Un accord collectif de branche ou d’entreprise peut déterminer les contrats conclus pour une mission à l’exportation accomplie en majeure partie hors du territoire national dont la rupture, à l’initiative de l’employeur à la fin de la mission, est exclue des dispositions relatives au licenciement économique.</p>'
+    '<p>En l’absence d’un tel accord, cette exclusion s’applique également à un contrat écrit qui identifie la mission à l’exportation accomplie en majeure partie hors du territoire national, sous réserve des garanties de l’article L. 1223-6.</p>'
+    '<p>Dans tous les cas, l’exclusion ne concerne que la rupture à l’initiative de l’employeur à la fin effective de la mission. Elle ne dispense pas du respect des autres règles de rupture applicables au contrat, ni du contrôle du juge.</p>'
+    '<p>La possibilité de conclure un tel contrat sans accord collectif s’applique aux contrats conclus à compter de l’entrée en vigueur de la loi portant la présente réforme. Les contrats conclus antérieurement restent soumis aux conditions de recours et aux garanties propres à ce régime qui leur étaient applicables, sous réserve des dispositions transitoires relatives au calcul de l’indemnité légale de licenciement. Les garanties conventionnelles ou contractuelles plus favorables demeurent applicables.</p>',
+    'Réforme de fond : supprime le préalable obligatoire d’un accord collectif pour accéder au régime de mission à l’exportation. À défaut d’accord, un contrat écrit identifiant la mission peut désormais relever du dispositif, avec les garanties légales directement applicables de L. 1223-6. Maintient le champ matériel strict : exportation, activité majoritairement hors du territoire national, initiative patronale et fin effective de mission. Le régime des ruptures anticipées n’est pas assimilé à celui de la fin de mission. Les contrats antérieurs ne sont pas basculés dans cette ouverture.',
+    'Réforme indissociable de L. 1223-6 : l’indemnité proportionnelle sans ancienneté et le reclassement y deviennent des obligations directes même sans accord. La suppression du préalable collectif étend réellement une exclusion du licenciement économique ; il faut examiner ses effets avec les règles de rupture et les engagements internationaux relatifs à la justification et au contrôle du licenciement, notamment la convention OIT n° 158, sans présumer cette extension validée. Les obligations d’information sur la relation de travail, notamment celles issues de la directive (UE) 2019/1152, restent applicables. Aucune dérogation nouvelle au droit applicable au travail à l’étranger, au détachement ou à la protection sociale n’est créée ; coordonner L. 1223-7. Les avantages collectifs existants ne sont pas effacés.',
+    removed=[
+        'Condition imposant qu’un accord collectif de branche ou d’entreprise détermine préalablement les contrats de mission à l’exportation admis à l’exclusion du régime du licenciement économique.',
+    ],
+)
+
+add(
+    8,
+    '<p>Les contrats de mission à l’exportation mentionnés à l’article L. 1223-5 sont soumis aux règles suivantes, même en l’absence d’accord collectif :</p>'
+    '<p>1° Abrogé ;</p>'
+    '<p>2° La nature de la mission à l’exportation est précisée dans le contrat. Aucune durée minimale légale de mission n’est exigée ;</p>'
+    '<p>3° Le salarié a droit à une indemnité de licenciement au moins égale à l’indemnité légale de licenciement calculée à due proportion du temps, sans condition d’ancienneté et quel que soit l’effectif de l’entreprise ;</p>'
+    '<p>4° Les obligations de formation et d’adaptation au poste ainsi que de formation à la sécurité prévues par les dispositions de droit commun s’appliquent, sans obligation de définir des garanties de formation propres à ce contrat dans un accord collectif ;</p>'
+    '<p>5° L’employeur met en œuvre les mesures indispensables au reclassement du salarié.</p>'
+    '<p>Un accord collectif peut prévoir des garanties supplémentaires. Il n’est pas tenu de fixer une durée minimale de mission ni, s’il s’agit d’un accord de branche, la taille et le type des entreprises concernées. Les garanties conventionnelles ou contractuelles plus favorables demeurent applicables.</p>'
+    '<p>Les présentes règles s’appliquent aux contrats conclus à compter de l’entrée en vigueur de la loi portant la présente réforme. Les contrats antérieurs conservent leurs conditions de recours et leurs garanties propres à la mission. Pour les contrats antérieurs comme pour les nouveaux contrats, le calcul de l’indemnité minimale tient compte des dispositions transitoires attachées à l’indemnité légale de licenciement, sans réduire les droits d’ancienneté antérieurement constitués.</p>',
+    'Réforme de fond : rend directement opposables l’indemnité minimale et les mesures indispensables de reclassement pour permettre l’accès sans accord prévu à L. 1223-5. Supprime la désignation obligatoire des catégories de salariés, la durée minimale de six mois et l’obligation d’en fixer une, les contreparties spéciales de rémunération obligatoirement négociées, la clause collective particulière de formation et les mentions de taille et de type d’entreprise. Ces prescriptions de négociation ne conditionnent plus un contrat individuellement identifié. Le salaire légal et conventionnel, la formation de droit commun, les accords plus favorables et les protections d’une mission à l’étranger restent applicables ; le minimum indemnitaire sans ancienneté et le reclassement sont maintenus expressément.',
+    'Le 1° reste à son emplacement comme subdivision abrogée ; les 2° à 5° gardent leurs numéros. La suppression du plancher de six mois concerne ce régime seulement, sans modifier les minima propres aux CDD, au travail temporaire ou à d’autres mobilités. L. 6321-1 et L. 4141-2, lus dans le corpus, assurent respectivement l’adaptation et le maintien de l’employabilité, et la formation pratique appropriée à la sécurité : leur application n’est pas subordonnée à un accord spécial. Au 3°, maintenir l’exception à toute ancienneté d’ouverture du droit, y compris celle de huit mois de L. 1234-9. Coordonner le calcul avec L. 1234-9 et R. 1234-1, R. 1234-2 et R. 1234-4 réformés : composante nouvelle à 0,20 mois par année plafonnée à six mois, composante antérieure protégée et garanties plus favorables ; aucun plafonnement global nouveau n’est introduit ici. La transition protège également les accords et les missions en cours ; les dispositions internationales du travail à l’étranger ne sont pas modifiées.',
+    removed=[
+        'Obligation faite à l’accord collectif de déterminer les catégories de salariés pouvant bénéficier du contrat de mission à l’exportation, ancien 1°.',
+        'Plancher légal de six mois pour la mission à l’exportation et obligation de fixer une durée minimale de mission dans l’accord collectif, ancien 2°.',
+        'Obligation de prévoir dans l’accord collectif des contreparties spéciales de rémunération propres à la mission, ancien 3° ; les salaires minima et avantages conventionnels ou contractuels applicables sont conservés.',
+        'Obligation de négocier des garanties de formation propres à ce contrat, ancien 4°, en plus des obligations générales de formation, d’adaptation et de sécurité qui demeurent applicables.',
+        'Obligation, pour un accord de branche instituant ce régime, de préciser la taille et le type des entreprises concernées, ancien dernier alinéa.',
+    ],
+)
+
+add(
+    9,
+    '<p>Le salarié titulaire d’un contrat de mission à l’exportation bénéficie des dispositions de protection sociale applicables dans sa branche ou son entreprise.</p>',
+    'Réécriture à droit constant conservant la proposition antérieure. Aucune coupe supplémentaire n’est justifiée : cet article garantit que le départ en mission à l’exportation ne retire pas au salarié la protection sociale de la branche ou de l’entreprise. Il ne crée ni déclaration spécialisée ni cotisation autonome pouvant être supprimée dans ce lot. Sa fonction reste nécessaire, particulièrement après l’ouverture de L. 1223-5 aux contrats sans accord collectif ; l’absence d’un tel accord ne doit pas devenir une exclusion de couverture.',
+    'Le rattachement à la protection sociale collective ne crée pas, à lui seul, une affiliation française pour toute mission à l’étranger. Maintenir les règles de territorialité, les conventions internationales et, dans leur champ, la coordination européenne des règlements (CE) n° 883/2004 et n° 987/2009. Les éventuelles obligations de détachement ou d’affiliation relèvent de leurs textes propres et ne sont pas abrogées ici. Les garanties contractuelles et collectives des contrats en cours demeurent applicables.',
+)
+
+add(
+    10,
+    '<p>Une convention ou un accord collectif de branche étendu peut fixer les conditions de recours à un contrat conclu pour la durée d’un chantier ou d’une opération.</p>'
+    '<p>Ce contrat peut également être conclu en l’absence d’une telle convention ou d’un tel accord, sans condition d’usage antérieur dans le secteur. Il identifie par écrit le chantier ou l’opération pour les besoins duquel le salarié est recruté. La réalité de cette affectation et de l’achèvement du chantier ou de l’opération reste soumise au contrôle du juge.</p>'
+    '<p>Ce contrat est un contrat à durée indéterminée. Les garanties de l’article L. 1223-9 s’appliquent.</p>'
+    '<p>Les présentes conditions de recours s’appliquent aux contrats conclus à compter de l’entrée en vigueur de la loi portant la présente réforme. Les contrats antérieurs restent soumis aux conditions de recours et aux garanties propres à ce régime qui leur étaient applicables, y compris au champ d’application historique des dispositions issues de l’ordonnance n° 2017-1387 du 22 septembre 2017, sans préjudice des dispositions transitoires de calcul de l’indemnité légale de licenciement. Les garanties conventionnelles et contractuelles plus favorables demeurent applicables.</p>',
+    'Réforme de fond : supprime l’obligation de disposer d’un accord de branche étendu ou, à défaut, de prouver un usage sectoriel habituel et régulier au 1er janvier 2017. Ce verrou historique n’est plus nécessaire dès lors que le chantier ou l’opération est identifié par écrit, que le contrat reste un CDI et que les garanties de L. 1223-9 deviennent accessibles sans accord. Le rôle de la branche est conservé sans faire de son intervention un préalable légal. La réalité du besoin et de sa fin reste contrôlable ; l’ouverture ne transforme pas les contrats anciens ni les CDD.',
+    'Coordination indispensable avec L. 1223-9 réécrit dans ce lot et le 8° de L. 2253-1 : le renvoi à la branche et les garanties au moins équivalentes ne doivent pas recréer un préalable d’autorisation pour les contrats nouveaux ni effacer les garanties collectives applicables. L. 1236-8, lu dans le corpus, attache une cause réelle et sérieuse à la fin du chantier ou à la réalisation de l’opération et conserve les procédures et recours : son articulation avec l’élargissement du champ doit assurer la preuve de la fin effective et le contrôle de la fraude, sans présumer une validation au regard de la convention OIT n° 158. Conserver L. 1236-9 et sa priorité conventionnelle de réembauche ; son renvoi ne doit pas donner à croire à une priorité légale automatique en l’absence d’accord. La note source de l’article 40-VIII de l’ordonnance de 2017 réserve le régime issu de cette ordonnance aux contrats conclus après sa publication : elle subsiste pour les contrats antérieurs à la présente réforme. Les obligations écrites relevant notamment de la directive (UE) 2019/1152 restent applicables.',
+    removed=[
+        'Condition exigeant une convention ou un accord collectif de branche étendu comme préalable légal au recours au CDI de chantier ou d’opération hors de l’exception sectorielle historique.',
+        'Condition subsidiaire imposant, en l’absence d’accord de branche étendu, un usage habituel et conforme à l’exercice régulier de la profession au 1er janvier 2017 ; suppression de cette date comme verrou d’accès pour les nouveaux contrats.',
+    ],
+)
+
+add(
+    11,
+    '<p>La convention ou l’accord collectif mentionné à l’article L. 1223-8, lorsqu’il existe, fixe les éléments suivants. À défaut d’une telle convention ou d’un tel accord, ces éléments sont précisés dans le contrat de travail :</p>'
+    '<p>1° Abrogé ;</p>'
+    '<p>2° Abrogé ;</p>'
+    '<p>3° Les mesures d’information du salarié sur la nature de son contrat ;</p>'
+    '<p>4° Les contreparties en matière de rémunération et d’indemnité de licenciement accordées au salarié, dans le respect des minima légaux et des garanties conventionnelles applicables ;</p>'
+    '<p>5° Les garanties de formation du salarié ;</p>'
+    '<p>6° Les modalités de rupture adaptées au cas où le chantier ou l’opération pour lequel le contrat a été conclu ne peut être réalisé ou prend fin de manière anticipée, dans le respect des règles légales de rupture du contrat à durée indéterminée.</p>'
+    '<p>Les éléments directement précisés dans le contrat ne nécessitent pas de document distinct. Ils ne peuvent écarter les garanties légales ou conventionnelles applicables.</p>'
+    '<p>La suppression des mentions obligatoires des 1° et 2° et la possibilité de préciser les autres éléments dans le contrat s’appliquent aux contrats conclus à compter de l’entrée en vigueur de la loi portant la présente réforme. Les contrats antérieurs conservent les conditions de recours et les garanties propres à ce régime qui leur étaient applicables, dans le respect du champ d’application historique de l’article 40-VIII de l’ordonnance n° 2017-1387 du 22 septembre 2017, sans préjudice des dispositions transitoires de calcul de l’indemnité légale de licenciement. Les garanties conventionnelles ou contractuelles plus favorables demeurent applicables.</p>',
+    'Réforme de fond : supprime les rubriques obligatoires de taille d’entreprise et d’activités, qui encadraient l’accès sectoriel désormais ouvert par L. 1223-8. Prévoit un contenu contractuel supplétif lorsque l’accord de branche n’existe pas, au lieu de maintenir indirectement le blocage supprimé par cet article. Conserve les quatre matières protectrices : information sur la nature du contrat, contreparties de rémunération et de licenciement, formation et traitement de l’impossibilité ou de la fin anticipée du chantier. Leur suppression laisserait précisément les salariés nouvellement admis au dispositif sans garanties explicites. Aucun document supplémentaire ni nouveau barème d’indemnité n’est créé.',
+    'Les numéros 1° et 2° sont maintenus comme subdivisions abrogées ; les quatre garanties restantes ne sont pas renumérotées. La réforme retire l’obligation de négocier les deux mentions de champ, sans annuler silencieusement les stipulations des accords existants. Coordonner leur portée avec L. 1223-8 et le 8° de L. 2253-1. Le 4° ne neutralise ni L. 1234-9 ni sa transition : la composante d’ancienneté antérieure reste protégée, la composante future relève du taux de 0,20 mois et de son plafond propre de six mois selon les textes coordonnés, avec maintien des avantages plus favorables. Le 6° n’autorise pas une rupture automatique sans procédure si le chantier est abandonné ; L. 1236-8 et les règles applicables aux CDI demeurent à articuler. La note source réservant les dispositions de 2017 aux contrats conclus après la publication de l’ordonnance est conservée pour les situations historiques. L’information due notamment au titre de la directive (UE) 2019/1152 ne disparaît pas.',
+    removed=[
+        'Obligation de préciser dans la convention ou l’accord de branche la taille des entreprises concernées par le recours au contrat de chantier ou d’opération, ancien 1°.',
+        'Obligation de préciser dans la convention ou l’accord de branche les activités concernées par le recours au contrat de chantier ou d’opération, ancien 2°.',
+    ],
+)
+
+
+assert len(answers) == len(sources) == 12
+Path('answer.json').write_text(json.dumps(answers, ensure_ascii=False, indent=2) + '\n')

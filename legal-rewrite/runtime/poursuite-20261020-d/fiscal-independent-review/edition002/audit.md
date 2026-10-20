@@ -1,0 +1,13 @@
+Fiscal D — contrelecture indépendante finale002
+
+Approbation bornée des24sources et ducompagnon1665bis, après lecture entière de leurs sources, notes et propositions, ainsi que des29références/projets ;53identités uniques. Les deux corps modifiés900 et1961ter ont été relus entièrement en002. Les22autres objets principaux, toutes sources et références et le corps1665bis sont identiques à001.
+
+Les trois points sont résolus :900 ne permet aucun supplément/refus pour hausse de tarif postérieure ;1961ter déroge expressément au seul premier alinéa1961bis pour le vrai doublepaiement, sans toucher à l’imputation favorable ;1665bis est correctement classé payment_timing_relief, effetpayment_deferred. Aucun autre défaut concret détecté dans ce périmètre.
+
+Les deux125€ spécifiques sont supprimés sans changement du0,70%1020, des partages748, des avantagesIR de prestationcompensatoire ni des donations distinctes792bis. Timbres : fin des délais future/droitsouverts, sans réouverture de la forclusion ancienne ni doubleusage. Les remboursements1962/63/64/65B/C/E/FA et leurs garanties demeurent.1703 retire une vraie rétention24h/frais,1704 retire seulement une contrainte d’écriture, pas la quittance ni ses duplicata.1723ter est une coordination de références abrogées2021, pas un gainnouveau.
+
+1665bis :60%, calendriers, aides et régularisations restent inchangés. Exemple abstrait :6€ d’avance puis4€ au solde au lieu de10€ au solde, jamais16€ ni baisseIRfinal ; résultatnul/négatif sans prélèvementnouveau.1965L est un véritable retrait de seuil de non-exécution, distinct de cette seule avance. Coûts de traitement, remboursements et recettes perdues inconnus ; aucun budgetnational ou autofinancement inventé. Le simple réemploiCRPA n’est pas recompté.
+
+54entrées source/référence contrôlées enSQLite ro BEGIN,53identités, politiques et renvois actuels conformes. Trois grilles204H et leurs63lignes/cellules lues et conservées ; tous les caractères1665bis avant le dernier alinéa identiques à la source. Le protocole porte2certificats/2referrers/3cibles et23absences, selon erratumdocumentaire de l’auteur.
+
+Limites : pas audit intégral des codes extérieurs, des autres crédits littéralement conservés ni des formulaires/services. Les sources civiles sélectionnées proviennent de la sectionprimaire datée2024 et de résultatsprimaires, sans prétendre une consolidationcivile2026entière. LPFR196-1 actuel depuis30juillet2026 distingué de l’ancientexte. Ce rapport ne vaut ni validation de juriste ni intégrationD autorisée. Aucune mutation de source, propositionauteur, base, politique, ledger ou site.

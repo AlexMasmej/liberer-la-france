@@ -1,0 +1,40 @@
+import json,hashlib,sqlite3,sys,copy,shutil
+from pathlib import Path
+from datetime import datetime,timezone
+L=Path('legal-rewrite').resolve();P=Path(__file__).parent;S=L/'runtime/poursuite-20261020-b/social/edition002';O=S.parent/'edition001';R=P.parent/'edition001';sys.path.insert(0,str(L))
+from ingest import source_notes
+from run_exhaustive import validate_answer
+H=lambda s:hashlib.sha256(s if isinstance(s,bytes)else(s or '').encode()).hexdigest()
+def load(p):return json.loads(p.read_text())
+def save(n,x):(P/n).write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')
+assert H((S/'source.json').read_bytes())=='9fbca2630e93dc49fdaab45ed75c4b91db6ffc2ed19245661178d21c8fcfbd44'
+assert H((S/'answer.json').read_bytes())=='6b301eac5a2e1761f7f2febef0734e1289da085f4d6e2c79a87fd4e443541db4'
+assert H((S/'manifest.json').read_bytes())=='ae42f76f395fa4f1f5f6da76c3d5d79e36a12ecca1a6154d172a3d0d1a395194'
+s=load(S/'source.json');a=load(S/'answer.json');old=load(O/'answer.json');cs=load(R/'reviewed-critical-references.json')
+assert (S/'source.json').read_bytes()==(O/'source.json').read_bytes()
+assert (S/'context.json').read_bytes()==(O/'context.json').read_bytes()
+changed=[x['number']for x,y in zip(a,old)if x!=y];assert changed==['L613-2','R243-8'],changed
+checks=[];db=sqlite3.connect('file:'+str(L/'corpus.sqlite')+'?mode=ro',uri=True);db.row_factory=sqlite3.Row;db.execute('BEGIN')
+for x in s+cs:
+ k=x['code_id'],x['source_id'];b=db.execute('select source_sha256,content_xml from articles where code_id=? and id=?',k).fetchone();doc=db.execute("select xml from documents where code_id=? and id=? and kind='ARTICLE'",k).fetchone()[0];d=db.execute('select source_sha256,proposed_xml from drafts where code_id=? and source_id=?',k).fetchone();pr=x.get('previous_draft')
+ g={'source_identity':b[0]==x['source_sha256'],'source_body':b[1]==x['source_xml'],'source_notes':source_notes(db,*k)==x['source_notes_xml'],'source_document':H(doc)==x['source_document_sha256'],'previous_draft':d is None if pr is None else d is not None and d[0]==pr['source_sha256']and d[1]==pr['proposed_xml']}
+ checks.append({'code_id':k[0],'source_id':k[1],'number':x['number'],'guards':g,'all_match':all(g.values()),'source_sha256':x['source_sha256'],'source_body_sha256':H(x['source_xml']),'source_notes_sha256':H(x['source_notes_xml']),'source_document_sha256':x['source_document_sha256'],'previous_proposed_sha256':H(pr['proposed_xml'])if pr else None})
+db.rollback();db.close();assert all(x['all_match']for x in checks),[x for x in checks if not x['all_match']]
+validate_answer(copy.deepcopy(a),copy.deepcopy(s))
+pol={f:H((S/f).read_bytes())==H((L/f).read_bytes())for f in['policy-coordinations.json','site-summaries.json']};assert all(pol.values()),pol
+base=load(R/'review-001.json');findings=copy.deepcopy(base['article_findings'])
+for i,(x,y) in enumerate(zip(s,a)):
+ findings[i].update(checks[i]);findings[i]['reviewed_proposed_sha256']=H(y['proposed_xml'])if y.get('proposed_xml')else None;findings[i]['verdict']='no_concrete_defect_found_after_review'
+ if x['number']=='L613-2':findings[i]['finding']='Défaut001 résolu : conditions cumulatives, donnée légalement obtenable auprès de DGFiP non redemandable par simple absence de transmission. Exactitude, mises à jour, éléments manquants et correction, déclaration fiscale, finalités légales et secrets restent applicables. Le I demeure hors microsocial et le III reste intact. Coordination du droit CRPA existant, sans gain nouveau compté.'
+ if x['number']=='R243-8':findings[i]['finding']='Défaut001 résolu : option sans autorisation réservant expressément L243-1-2 et R243-8-1 pour les personnels concernés ; ne contourne plus les affectations obligatoires. Admissibilité, liste des organismes, dates et dettes, III R243-6-3, droits anciens et recours restent. Une autorisation retirée, sans exonération ni nouvelle dette.'
+resolutions=[{'prior_issue_id':'social-001','number':'L613-2','verdict':'resolved','exact_corrective_quote':"les seuls éléments nécessaires au calcul qui ne leur ont pas déjà été transmis et qu'ils ne peuvent pas obtenir directement et légalement auprès d'une autre administration",'counterexample_result':'Donnée non transmise mais légalement directement obtenable : second membre faux, donc non redemandable. Donnée erronée : correction toujours due ; donnée réellement manquante et non obtenable : transmission reste due.'},{'prior_issue_id':'social-002','number':'R243-8','verdict':'resolved','exact_corrective_quote':"Cette faculté et le choix de l'organisme unique s'exercent sans déroger aux affectations obligatoires prévues à l'article L. 243-1-2 ou prises en application de l'article R. 243-8-1, pour les personnels qu'elles concernent.",'counterexample_result':'Employeur étranger obligatoirement rattaché : aucun droit de choisir une autre caisse pour ces personnels. Autres personnels réellement admissibles : option sans autorisation conservée.'}]
+for r in resolutions:assert r['exact_corrective_quote']in next(x['proposed_xml']for x in a if x['number']==r['number'])
+report={'reviewed_at':datetime.now(timezone.utc).isoformat(),'edition':'002','verdict':'approved_with_bounded_scope_no_concrete_defect_remaining','source_sha256':H((S/'source.json').read_bytes()),'answer_sha256':H((S/'answer.json').read_bytes()),'author_manifest_sha256':H((S/'manifest.json').read_bytes()),'context_sha256':H((S/'context.json').read_bytes()),'frozen_inputs_unchanged':True,'delta':{'changed_objects':changed,'other_objects_strictly_identical':22,'source_and_context_byte_identical':True,'both_corrected_sources_notes_entire_proposals_reread':True},'prior_full_read_evidence':{'path':str(R/'review-001.json'),'sha256':H((R/'review-001.json').read_bytes()),'source_notes_proposal_reads':24,'critical_context_reads':19,'four_full_CRPA_primary_bodies_read':base['crpa_full_primary_bodies_read']},'technical_checks':{'validate_answer':'passed_on_deepcopy','guards_per_article':5,'total_article_guards':len(checks)*5,'all_match':True,'policy_checks':pol},'issues':[],'resolved_prior_issues':resolutions,'article_findings':findings,'critical_reference_guards':checks[24:],'counting_review':base['counting_review'],'limits':base['limits'][:3]+['Approbation bornée à ces24sources et19cibles critiques ; ni chiffrage national ni validation globale de tous les codes.','Le rejet001 est conservé intact. Aucun autre corps des22articles inchangés n’a été relu inutilement à nouveau : la lecture intégrale001 et la stricte identité002 sont documentées.'],'canonical_mutations':False}
+report['counting_review']['R243_8']='Une autorisation réellement retirée pour les entreprises admissibles, avec affectations obligatoires explicitement préservées.'
+for n in ['source.json','answer.json','context.json','manifest.json','policy-coordinations.json','site-summaries.json']:
+ shutil.copyfile(S/n,P/('reviewed-'+n))
+shutil.copyfile(R/'reviewed-critical-references.json',P/'reviewed-critical-references.json')
+save('review.json',report);save('review-002.json',report)
+(P/'audit.md').write_text('Contrelecture indépendante social002 : les deux défauts001 sont résolus. L613-2 cumule absence de transmission et impossibilité d’obtention directe légale. R243-8 réserve expressément les affectations obligatoires. Les deux articles complets, notes et propositions ont été relus ; les22autres objets sont strictement identiques à001 déjà entièrement lue. Les215gardes et deux politiques concordent ; validate_answer passe sur copie. Aucun autre défaut concret constaté dans le périmètre. Le report reste dû, sans remboursement abusif, et les six coordinations de réemploi ne sont pas de nouveaux gains CRPA. Aucun fichier canonique ou candidature de l’auteur modifié.\n')
+save('manifest.json',{'edition_reviewed':'002','frozen':True,'canonical_mutations':False,'files':{f.name:H(f.read_bytes())for f in sorted(P.iterdir())if f.is_file()and f.name!='manifest.json'}})
+print(json.dumps({'review_sha256':H((P/'review-002.json').read_bytes()),'manifest_sha256':H((P/'manifest.json').read_bytes()),'guards':len(checks)*5,'verdict':report['verdict']},ensure_ascii=False))

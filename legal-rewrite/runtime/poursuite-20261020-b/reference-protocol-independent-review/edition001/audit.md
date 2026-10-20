@@ -1,0 +1,5 @@
+Le refus vient d’une seule analyse supplémentaire, L6325-11 pour L6325-25 : cible fournie et empreinte correcte, mais hors des quatre dépendances de cet article. Le builder l’ajoute explicitement hors exigences minimales ; accept_checks exige une égalité exacte. Aucun défaut de garde des cibles non lues ou périmées n’est démontré. Le protocole textuel gagnerait à préciser « exactement les cibles requises », et l’erreur à nommer article et cible.
+
+Correction minimale proposée, non appliquée : conserver cette analyse en review_notes et ne plus l’inclure dans reference_checks. La simulation en mémoire passe ; les douze corps normatifs ne changent pas. Ne pas assouplir le validateur ni filtrer silencieusement les cibles inattendues.
+
+Ce correctif ne rend pas l’ancien job intégrable : sa politique est maintenant périmée. Les douze vues cibles concordent au contrôle SQLite RO, mais il faut une reprise sous la politique active et une vraie relecture, pas une actualisation artificielle d’empreinte. Aucun fichier du job, module, base ou publication modifié ; aucune génération lancée.

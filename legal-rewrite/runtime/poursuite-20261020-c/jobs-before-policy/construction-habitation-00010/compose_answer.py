@@ -1,0 +1,269 @@
+import json
+from pathlib import Path
+
+
+drafts = {}
+
+
+def article(number, paragraphs, reason, review_notes):
+    assert number not in drafts
+    drafts[number] = {
+        "proposed_xml": "\n".join("<p>" + p + "</p>" for p in paragraphs),
+        "reason": reason,
+        "review_notes": review_notes,
+    }
+
+
+article("L214-7", [
+    "Les administrateurs ou les gérants des sociétés régies par le chapitre II ou le chapitre III du présent titre rendent compte des résultats des appels à la concurrence et des projets de marchés de travaux de construction à conclure avec les entrepreneurs. Ils en rendent compte au conseil de surveillance ou, lorsque la société est constituée sous la forme anonyme, au conseil d'administration.",
+    "Ils rendent également compte de leur gestion à ce conseil aussi souvent que la bonne marche de la société l'exige et, dans tous les cas, tous les trois mois.",
+    "Le conseil de surveillance peut recourir à l'assistance d'un expert-comptable. Il peut aussi convoquer l'assemblée générale. Il est tenu de la convoquer lorsque des associés représentant au moins le quart du capital social le demandent.",
+],
+    "Réécriture à droit constant : les informations que les dirigeants doivent transmettre sont regroupées, puis le conseil destinataire est précisé selon la forme de la société. Les pouvoirs du conseil et son obligation de convoquer l'assemblée sont distingués. Aucune réforme de fond de policy.json ne vise ce régime.",
+    "Trois alinéas conservés. Maintien des chapitres II et III du présent titre, de la reddition de comptes tous les trois mois au minimum et du seuil d'au moins un quart du capital pour la convocation obligatoire. L'assistance d'un expert-comptable et le pouvoir de convocation restent propres au conseil de surveillance."
+)
+
+article("L214-8", [
+    "Pour les sociétés qui existaient le 16 novembre 1954, l'article L. 214-7 s'applique à l'expiration d'un délai de quatre mois à compter du 17 mars 1955. Les autres dispositions de la présente section ne s'appliquent pas à ces sociétés.",
+],
+    "Réécriture à droit constant : la catégorie de sociétés concernées précède désormais la règle d'application dans le temps. L'exclusion des autres dispositions de la section reste explicite. Aucune réforme de fond n'est introduite.",
+    "Disposition historique intégralement maintenue : existence au 16 novembre 1954 et délai de quatre mois à compter du 17 mars 1955. Ces dates ne constituent pas une entrée en vigueur de la réforme projetée. Renvoi à L. 214-7 et exclusion du reste de la section conservés."
+)
+
+article("L214-9", [
+    "La liquidation définitive des comptes de l'opération de construction constatés par l'assemblée générale met fin à l'application des articles L. 214-6 à L. 214-8.",
+],
+    "Réécriture à droit constant : le fait mettant fin au régime devient le sujet de la phrase, avec maintien du rôle de l'assemblée générale. Aucune réforme de fond n'est introduite.",
+    "Le renvoi couvre toujours L. 214-6, L. 214-7 et L. 214-8. La liquidation définitive des comptes demeure le fait mettant fin à leur application. La source accorde « constatés » avec les comptes et non avec la liquidation ; ce rattachement est conservé, sans trancher silencieusement l'ambiguïté rédactionnelle sur l'objet du constat de l'assemblée générale."
+)
+
+article("L215-1", [
+    "L'objet des sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété est de réaliser les opérations suivantes :",
+    "I. - Toutes opérations d'accession à la propriété de l'habitat destinées aux personnes dont les revenus sont inférieurs aux plafonds de ressources mentionnés à l'article 244 quater J du code général des impôts.",
+    "II. - Toutes opérations d'aménagement destinées, en tout ou partie, à des opérations d'habitat, ainsi que toutes opérations de construction, de rénovation et de prestations de services liées à l'habitat, notamment dans un objectif de mixité sociale.",
+    "Ces sociétés ne peuvent détenir un patrimoine locatif que si celui-ci est nécessaire à l'accomplissement des activités mentionnées au I.",
+],
+    "Réécriture à droit constant : l'objet social est présenté par catégories d'opérations et l'exception autorisant un patrimoine locatif est formulée comme une condition nécessaire. Les subdivisions I et II sont maintenues. Aucune réforme de fond n'est introduite.",
+    "Quatre alinéas conservés. Le critère de revenus reste strictement inférieur aux plafonds de l'article 244 quater J du CGI ; aucun plafond nouveau n'est fixé. La mixité sociale reste un objectif notamment poursuivi au II. L'exception relative au patrimoine locatif reste limitée aux activités du I, sans extension à l'ensemble de l'objet social."
+)
+
+article("L215-1-1", [
+    "Les sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété peuvent détenir des participations, directement ou indirectement, dans des sociétés de toute forme. Les sociétés dans lesquelles ces participations sont détenues doivent avoir pour objet soit toutes opérations de construction, de rénovation, de location et de prestations de services liées à l'habitat, ainsi que toutes opérations d'aménagement destinées en tout ou partie à des opérations d'habitat, soit la fourniture à toute personne de produits et services bancaires et de leurs accessoires concourant aux opérations liées à l'habitat.",
+    "Les participations ainsi détenues doivent représenter plus du tiers du capital de la société concernée. Ce seuil peut être atteint conjointement avec d'autres sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété. Il ne s'applique toutefois pas aux participations dans des sociétés d'habitations à loyer modéré, des sociétés d'économie mixte de construction et de gestion de logements sociaux, d'autres sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété ou des sociétés de tiers-financement définies à l'article L. 381-2.",
+],
+    "Réécriture à droit constant : les formes de détention, les deux objets possibles des sociétés détenues, puis le seuil de participation et ses exceptions sont énoncés dans des phrases distinctes. Aucune réforme de fond n'est introduite.",
+    "Deux alinéas conservés. Seuil strictement supérieur au tiers du capital, apprécié le cas échéant conjointement avec d'autres sociétés de même statut. Les quatre catégories d'exceptions sont maintenues, de même que la détention directe ou indirecte et le renvoi à L. 381-2, vérifié dans le corpus public local."
+)
+
+article("L215-1-2", [
+    "Chaque société anonyme coopérative d'intérêt collectif pour l'accession à la propriété consacre chaque année au moins le tiers du bénéfice distribuable du dernier exercice au financement d'opérations dans le domaine de l'habitat en faveur de personnes aux ressources modestes. Elle conçoit et réalise ces opérations elle-même ou par l'intermédiaire de ses filiales, selon les orientations définies par une convention avec l'État.",
+    "Pour chaque exercice, la société constitue une réserve de disponibilités d'un montant égal à la somme calculée conformément au premier alinéa. Cette réserve est utilisée conformément à ce même alinéa. Une annexe au rapport de gestion de la société indique le montant de la réserve à la fin de l'exercice et détaille les opérations financées.",
+],
+    "Réécriture à droit constant : l'obligation annuelle de financement, la conception et la réalisation des opérations, puis la constitution et le suivi de la réserve sont explicités. Aucune réforme de fond n'est introduite.",
+    "Les deux alinéas sont maintenus pour conserver les renvois de L. 215-7 au premier et au second alinéas. Maintien du minimum d'un tiers du bénéfice distribuable du dernier exercice, de la réserve correspondante, des personnes aux ressources modestes, de la convention avec l'État et de l'annexe au rapport de gestion."
+)
+
+article("L215-2", [
+    "Les sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété exercent leur activité dans la région où se trouve leur siège social.",
+    "L'autorité administrative peut autoriser une société à exercer son activité au-delà de cette région par un agrément spécial. Elle délivre cet agrément après avis de l'Union d'économie sociale pour l'accession à la propriété mentionnée à l'article L. 215-5.",
+    "Ces sociétés et leurs filiales peuvent participer, avec des organismes d'habitations à loyer modéré et des sociétés d'économie mixte exerçant une activité de construction ou de gestion de logements sociaux, à des actions de coopération. Elles peuvent aussi participer avec ces organismes et sociétés à des groupements constitués pour mettre des moyens en commun ou mettre en œuvre un service commun.",
+],
+    "Réécriture à droit constant : le ressort régional, la procédure d'extension et l'objet de la coopération sont formulés séparément, avec un sujet explicite pour la délivrance de l'agrément. Aucune réforme de fond n'est introduite.",
+    "Trois alinéas conservés. L'extension géographique reste subordonnée à un agrément spécial après avis de l'Union visée à L. 215-5. Maintien des filiales, des deux catégories de partenaires et des deux finalités de coopération, sans élargissement général du ressort territorial."
+)
+
+article("L215-3", [
+    "Les sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété relèvent du titre II ter de la loi n° 47-1775 du 10 septembre 1947 portant statut de la coopération et du présent chapitre.",
+    "Toutefois, les trois derniers alinéas de l'article 11, l'article 11 bis, l'article 17 et les articles 19 sexdecies à 19 tervicies de la loi du 10 septembre 1947 ne s'appliquent pas à ces sociétés.",
+    "Ces sociétés doivent compter parmi leurs associés :",
+    "- leurs salariés ;",
+    "- les bénéficiaires des opérations d'accession à la propriété de l'habitat mentionnées au I de l'article L. 215-1 ;",
+    "- des collectivités territoriales ou leurs groupements dont le ressort territorial est compris dans la région où se trouve le siège de la société ;",
+    "- des organismes d'habitations à loyer modéré compétents pour intervenir dans cette même région.",
+    "Elles peuvent aussi admettre comme associés :",
+    "- toute personne physique souhaitant participer bénévolement à leur activité ;",
+    "- toute personne contribuant par un autre moyen à la réalisation de leurs objectifs.",
+    "Le dernier alinéa de l'article 19 septies de la loi n° 47-1775 du 10 septembre 1947 précitée ne s'applique pas à ces sociétés.",
+],
+    "Réécriture à droit constant : les catégories d'associés obligatoires et facultatifs sont introduites par des obligations ou facultés explicites. Les exclusions du statut coopératif sont conservées à leur place. Aucune réforme de fond n'est introduite.",
+    "Ordre des onze unités de texte et des deux listes maintenu. Conservation du titre II ter, des trois derniers alinéas de l'article 11, des articles 11 bis, 17 et 19 sexdecies à 19 tervicies, ainsi que de l'exclusion finale de l'article 19 septies. Les restrictions régionales restent attachées aux collectivités et aux organismes HLM."
+)
+
+article("L215-4", [
+    "Les statuts de la société anonyme coopérative d'intérêt collectif pour l'accession à la propriété organisent la répartition des associés entre plusieurs collèges.",
+    "Un collège comprend des organismes d'habitations à loyer modéré et un autre comprend des collectivités territoriales et leurs groupements. Chacun peut accueillir des associés d'autres catégories, à condition que les organismes d'habitations à loyer modéré conservent la majorité des voix dans leur collège et que les collectivités territoriales et leurs groupements conservent cette majorité dans le leur.",
+    "Le cas échéant, un autre collège réunit des sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété ou une ou plusieurs entités autres que des sociétés d'habitations à loyer modéré. Pour ces entités, la majorité des droits de vote doit être détenue soit directement par des sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété, soit indirectement par une entité contrôlée, au sens de l'article L. 233-3 du code de commerce, par une ou plusieurs des entités dont la majorité des droits de vote est détenue directement par des sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété.",
+    "Les statuts attribuent 50 % des droits de vote à l'assemblée générale à l'un des collèges ou à un groupe de collèges dont les associés se sont engagés, par convention, à s'exprimer d'une seule voix dans les assemblées générales de la société.",
+    "Lorsqu'il est constitué, le collège composé des entités mentionnées au troisième alinéa du présent article ne peut détenir plus de 20 % des droits de vote à l'assemblée générale.",
+    "Le plafond prévu à l'avant-dernier alinéa ne s'applique pas à un collège composé d'une ou plusieurs entités dont la majorité des droits de vote est détenue soit directement par au moins trois quarts des sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété, soit indirectement par une entité contrôlée, au sens de l'article L. 233-3 du code de commerce, par une ou plusieurs des entités dont la majorité des droits de vote est détenue directement par au moins trois quarts des sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété.",
+],
+    "Réécriture à droit constant : la composition de chaque collège, les majorités internes et les droits de vote en assemblée sont distingués. La détention indirecte conserve sa chaîne de contrôle propre. Aucune réforme de fond n'est introduite.",
+    "Six alinéas conservés, notamment le deuxième visé par L. 215-8 et le troisième visé par le cinquième. Maintien de l'attribution de 50 %, du plafond de 20 % et de son exception pour les entités détenues par au moins trois quarts des sociétés concernées. Les deux chaînes de détention indirecte et le contrôle au sens de L. 233-3 du code de commerce ne sont pas remplacés par une notion générale de participation indirecte. Le renvoi final à l'avant-dernier alinéa continue de désigner le cinquième alinéa."
+)
+
+article("L215-5", [
+    "L'Union d'économie sociale pour l'accession à la propriété relève du titre II bis de la loi n° 47-1775 du 10 septembre 1947 précitée.",
+    "Elle doit compter parmi ses associés les sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété et l'Union des fédérations d'organismes d'habitations à loyer modéré.",
+    "Les sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété détiennent ensemble au moins 90 % des droits de vote aux assemblées générales de l'Union d'économie sociale pour l'accession à la propriété. Ces droits sont répartis à parts égales entre ces sociétés.",
+],
+    "Réécriture à droit constant : les associés obligatoires sont identifiés et le minimum de droits de vote est séparé de leur répartition égalitaire. Aucune réforme de fond n'est introduite.",
+    "Trois alinéas conservés. Le titre applicable demeure le titre II bis de la loi du 10 septembre 1947, distinct du titre II ter visé à L. 215-3. Le seuil est d'au moins 90 % collectivement, à répartir à parts égales entre les sociétés, sans création d'un droit de vote égal pour l'autre associé."
+)
+
+article("L215-6", [
+    "Un décret en Conseil d'État approuve les statuts de l'Union d'économie sociale pour l'accession à la propriété.",
+    "L'Union d'économie sociale pour l'accession à la propriété ne peut détenir, directement ou indirectement, de part sociale dans une société anonyme coopérative d'intérêt collectif pour l'accession à la propriété. Cette interdiction s'étend à toute société détenue majoritairement ou de façon conjointe par des sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété.",
+    "Un conseil d'administration d'au plus quinze membres administre l'Union. Au moins douze de ses membres sont désignés par les sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété. Un membre est désigné par l'Union des fédérations d'organismes d'habitations à loyer modéré si celle-ci en fait la demande.",
+],
+    "Réécriture à droit constant : l'interdiction de participation et son extension sont exprimées en deux phrases ; les règles de composition du conseil sont ensuite détaillées. Aucune réforme de fond n'est introduite.",
+    "Trois alinéas conservés. Maintien de l'approbation par décret en Conseil d'État, de l'interdiction de détention directe ou indirecte, des sociétés détenues majoritairement ou conjointement, du maximum de quinze administrateurs et du minimum de douze désignations par les coopératives. La désignation par l'Union des fédérations HLM reste subordonnée à sa demande."
+)
+
+article("L215-7", [
+    "L'Union d'économie sociale pour l'accession à la propriété représente les intérêts communs des sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété, notamment auprès des pouvoirs publics. À ce titre, elle conclut avec l'État ou des organismes publics et parapublics toutes conventions définissant les objectifs et les conditions d'exercice de l'activité de ces sociétés.",
+    "L'Union veille à la mise en œuvre de ces conventions. Elle adresse aux sociétés des recommandations pour leur bonne application et remet chaque année à l'autorité administrative un rapport sur leur exécution.",
+    "Le règlement intérieur de l'Union définit les modalités d'alerte, de prévention, de contrôle et de sanction destinées à garantir que chaque société anonyme coopérative d'intérêt collectif pour l'accession à la propriété respecte les engagements issus des conventions mentionnées aux premier et deuxième alinéas.",
+    "L'Union rend un avis préalable conforme sur les opérations suivantes lorsqu'elles sont réalisées, directement ou indirectement, par une ou plusieurs sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété ou à leur profit. Elle rend cet avis dans les conditions de son règlement intérieur et en tenant compte, le cas échéant, des objectifs définis dans les conventions mentionnées aux premier et deuxième alinéas :",
+    "1° Les souscriptions, attributions ou transferts d'instruments financiers, de parts sociales ou de droits de toute nature dans toute entité ;",
+    "2° Les opérations en capital, les fusions, les scissions, les apports partiels d'actif ou les apports concernant toute entité ;",
+    "3° Les transferts d'actifs incorporels.",
+    "L'avis préalable conforme est exigé à peine de nullité absolue de l'opération.",
+    "Une opération mentionnée au quatrième alinéa est réalisée indirectement lorsqu'elle est effectuée soit par une ou plusieurs entités dont la majorité des droits de vote est détenue directement par une ou plusieurs sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété, soit par une ou plusieurs entités contrôlées, au sens de l'article L. 233-3 du code de commerce, par une ou plusieurs entités dont la majorité des droits de vote est détenue directement par une ou plusieurs de ces sociétés.",
+    "L'Union veille à ce que les sociétés anonymes coopératives d'intérêt collectif pour l'accession sociale à la propriété respectent l'article L. 215-1-2 du présent code.",
+    "À cette fin, elle conclut avec l'État toutes conventions définissant les modalités de contrôle du montant et de l'utilisation de la réserve de disponibilités que chaque société anonyme coopérative d'intérêt collectif pour l'accession à la propriété constitue en application du second alinéa de l'article L. 215-1-2.",
+    "Lorsqu'une société anonyme coopérative d'intérêt collectif pour l'accession à la propriété n'utilise pas, pendant deux exercices successifs, tout ou partie de la réserve mentionnée au second alinéa de l'article L. 215-1-2 dans les conditions prévues au premier alinéa du même article L. 215-1-2, les sommes non utilisées sont attribuées à une autre société anonyme coopérative d'intérêt collectif pour l'accession à la propriété. Cette attribution intervient sur proposition de l'Union et avec l'accord de l'autorité administrative. La société bénéficiaire emploie les sommes attribuées aux fins prévues à l'article L. 215-1-2, en supplément de ses propres obligations au titre du même article L. 215-1-2.",
+],
+    "Réécriture à droit constant : les missions de l'Union, la procédure d'avis conforme et l'affectation des réserves inutilisées sont exprimées avec des sujets explicites et des phrases plus courtes. La liste des opérations soumises à avis et la définition de leur réalisation indirecte restent intégrales. Aucune réforme de fond n'est introduite.",
+    "Douze alinéas de fond conservés, dont les trois items 1° à 3° ; les renvois aux premier, deuxième et quatrième alinéas demeurent en place. Maintien de la nullité absolue, du contrôle au sens de L. 233-3 du code de commerce, des renvois aux deux alinéas de L. 215-1-2 et du déclenchement après deux exercices successifs. Incohérence terminologique préexistante conservée et signalée : le dixième alinéa vise l'« accession sociale à la propriété », alors que le statut est désigné ailleurs comme l'« accession à la propriété ». Son harmonisation nécessiterait une décision expresse."
+)
+
+article("L215-8", [
+    "L'autorité administrative agrée les sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété après avis de l'Union d'économie sociale pour l'accession à la propriété. Pour obtenir l'agrément, la société doit compter parmi ses associés au moins une collectivité territoriale ou un groupement de collectivités territoriales, ainsi qu'un organisme d'habitations à loyer modéré, afin de former les collèges mentionnés au deuxième alinéa de l'article L. 215-4.",
+    "La société doit obtenir un nouvel agrément si le collège ou le groupe de collèges disposant de 50 % des droits de vote dans les conditions de l'article L. 215-4 change.",
+    "La perte de l'agrément entraîne la dissolution de la société anonyme coopérative d'intérêt collectif pour l'accession à la propriété. L'autorité administrative attribue le boni de liquidation à une ou plusieurs sociétés anonymes coopératives d'intérêt collectif pour l'accession à la propriété, sur proposition de l'Union d'économie sociale pour l'accession à la propriété.",
+],
+    "Réécriture à droit constant : l'autorité compétente, les conditions minimales d'agrément et les conséquences d'un changement de collège ou d'une perte d'agrément sont explicitées. Aucune réforme de fond n'est introduite.",
+    "Trois alinéas conservés. L'avis préalable de l'Union demeure requis. Les deux catégories d'associés nécessaires restent cumulatives et le renvoi au deuxième alinéa de L. 215-4 est maintenu. Le changement vise le collège ou groupe détenant 50 % des droits ; la dissolution et l'affectation du boni conservent leurs conditions et leurs bénéficiaires."
+)
+
+article("L221-1", [
+    "Le contrat de promotion immobilière défini à l'article 1831-1 du code civil répond aux règles suivantes :",
+    "Le contrat de promotion immobilière est un mandat d'intérêt commun. Par ce contrat, une personne, dénommée « promoteur immobilier », s'engage envers le maître de l'ouvrage à faire réaliser, pour un prix convenu et au moyen de contrats de louage d'ouvrage, un programme de construction d'un ou plusieurs édifices. Elle s'engage également, pour une rémunération convenue, à réaliser elle-même ou à faire réaliser tout ou partie des opérations juridiques, administratives et financières concourant au même objet. Le promoteur garantit l'exécution des obligations des personnes avec lesquelles il a contracté au nom du maître de l'ouvrage. Il est notamment tenu des obligations résultant des articles 1792, 1792-1, 1792-2 et 1792-3 du code civil.",
+    "Lorsque le promoteur s'engage à exécuter lui-même une partie des opérations du programme, il est soumis, pour ces opérations, aux obligations d'un locateur d'ouvrage.",
+],
+    "Réécriture à droit constant : la définition du mandat, l'obligation de faire construire, les opérations annexes et les garanties sont dissociées en phrases complètes. Le texte proposé est intégral et ne prend plus la forme d'une citation. Aucune réforme de fond n'est introduite.",
+    "Trois alinéas conservés. Coordination rédactionnelle nécessaire avec l'article 1831-1 du code civil, hors des cinq codes, dont la source reproduit le texte. Le renvoi source aux articles 1792 à 1792-3 « du présent code », situé dans la citation du code civil, est explicité comme visant le code civil, sans changer sa destination. Maintien de la distinction entre prix convenu et rémunération convenue, de la garantie des cocontractants et du régime du promoteur exécutant lui-même des travaux."
+)
+
+article("L221-2", [
+    "Les pouvoirs et les engagements attachés au contrat de promotion immobilière, prévus à l'article 1831-2 du code civil, sont les suivants :",
+    "Le contrat donne au promoteur le pouvoir de conclure les contrats, de recevoir les travaux et de liquider les marchés. Plus généralement, il lui permet d'accomplir au nom du maître de l'ouvrage, dans la limite du prix global convenu, tous les actes nécessaires à la réalisation du programme.",
+    "Toutefois, les emprunts contractés et les actes de disposition accomplis par le promoteur n'engagent le maître de l'ouvrage que si un mandat spécial les autorise. Ce mandat doit figurer dans le contrat ou dans un acte postérieur.",
+    "Le maître de l'ouvrage doit exécuter les engagements que le promoteur a contractés en son nom en vertu des pouvoirs que lui confèrent la loi ou la convention.",
+],
+    "Réécriture à droit constant : les pouvoirs ordinaires du promoteur sont séparés de ceux qui exigent un mandat spécial ; l'obligation du maître de l'ouvrage est exprimée directement. Le texte n'est plus présenté comme une citation. Aucune réforme de fond n'est introduite.",
+    "Quatre alinéas conservés. Coordination rédactionnelle avec l'article 1831-2 du code civil, hors des cinq codes. Maintien de la limite du prix global convenu, de la réception des travaux, de la liquidation des marchés, du mandat spécial contenu dans le contrat ou un acte postérieur et des pouvoirs issus tant de la loi que de la convention."
+)
+
+article("L221-3", [
+    "La cession des droits sur le programme, l'exécution du contrat et son opposabilité aux tiers sont régies par l'article 1831-3 du code civil dans les conditions suivantes :",
+    "Si le maître de l'ouvrage cède ses droits sur le programme avant son achèvement, le cessionnaire le remplace de plein droit dans l'ensemble des droits et obligations résultant du contrat. Le cédant garantit l'exécution des obligations que le contrat cédé met à la charge du maître de l'ouvrage.",
+    "Les mandats spéciaux donnés au promoteur continuent de produire leurs effets entre celui-ci et le cessionnaire.",
+    "Le promoteur ne peut, sans l'accord du maître de l'ouvrage, se substituer à un tiers dans l'exécution des obligations qu'il a contractées envers ce maître de l'ouvrage.",
+    "Le contrat de promotion immobilière devient opposable aux tiers à la date de sa mention au fichier immobilier.",
+],
+    "Réécriture à droit constant : la substitution du cessionnaire est explicitée comme portant sur les droits et les obligations ; la garantie du cédant, la continuation des mandats et la publicité foncière sont conservées séparément. Aucune réforme de fond n'est introduite.",
+    "Cinq alinéas conservés. Coordination rédactionnelle nécessaire avec l'article 1831-3 du code civil, hors des cinq codes. La formule source « se substituer à un tiers » est conservée : elle présente une ambiguïté préexistante sur le sens de la substitution et ne doit pas être transformée silencieusement en faculté de confier l'exécution à un tiers. Le contrôle de cette formule doit porter conjointement sur le code civil. La cession reste antérieure à l'achèvement et l'opposabilité commence à la mention au fichier immobilier."
+)
+
+article("L221-4", [
+    "L'achèvement de la mission du promoteur est régi par l'article 1831-4 du code civil dans les conditions suivantes :",
+    "À la livraison de l'ouvrage, la mission du promoteur ne prend fin que si les comptes de construction ont été définitivement arrêtés entre lui et le maître de l'ouvrage. Cette fin de mission ne porte pas atteinte aux actions en responsabilité dont le maître de l'ouvrage peut disposer contre le promoteur.",
+],
+    "Réécriture à droit constant : la condition d'arrêté définitif des comptes et la préservation des actions en responsabilité font l'objet de deux phrases. Le texte n'est plus une citation. Aucune réforme de fond n'est introduite.",
+    "Deux alinéas conservés. Coordination rédactionnelle avec l'article 1831-4 du code civil, hors des cinq codes. La seule livraison ne suffit toujours pas à terminer la mission. L'article R. 222-8 du corpus local renvoie également à l'achèvement de mission défini par l'article 1831-4 pour le paiement du solde de rémunération ; le sens de cette condition est maintenu."
+)
+
+article("L221-5", [
+    "Les effets du règlement judiciaire ou de la liquidation des biens sur le contrat de promotion immobilière sont régis par l'article 1831-5 du code civil dans les conditions suivantes :",
+    "Le règlement judiciaire ou la liquidation des biens ne résilie pas de plein droit le contrat de promotion immobilière. Une stipulation prévoyant le contraire est réputée non écrite.",
+],
+    "Réécriture à droit constant : l'absence de résiliation automatique et le sort des clauses contraires sont énoncés directement. Le texte n'est plus présenté comme une citation. Aucune réforme de fond n'est introduite.",
+    "Deux alinéas conservés. Coordination rédactionnelle avec l'article 1831-5 du code civil, hors des cinq codes. Terminologie historique « règlement judiciaire » et « liquidation des biens » conservée : elle ne peut être remplacée sans examen des régimes et transitions des procédures collectives, notamment dans le code de commerce, hors du périmètre. La source ne justifie aucune extension à toutes les procédures actuelles."
+)
+
+article("L221-6", [
+    "Pour l'application de l'article 28-2° du décret n° 55-22 du 4 janvier 1955 portant réforme de la publicité foncière, le contrat de promotion immobilière est réputé comporter une restriction au droit de disposer, au sens de cet article.",
+],
+    "Réécriture à droit constant : le fondement de publicité foncière est placé en tête et la qualification légale du contrat est formulée plus directement. Aucune réforme de fond n'est introduite.",
+    "Un alinéa conservé. Maintien de la présomption légale de restriction au droit de disposer et du renvoi exact à l'article 28-2° du décret n° 55-22 du 4 janvier 1955. Ce renvoi historique n'est ni supprimé ni étendu à un autre mécanisme de publicité."
+)
+
+article("L222-1", [
+    "Lorsqu'une personne s'engage envers le maître de l'ouvrage à faire construire un immeuble d'habitation ou un immeuble à usage professionnel et d'habitation, le contrat est soumis aux articles 1831-1 à 1831-5 du code civil, reproduits aux articles L. 221-1 à L. 221-5 du présent code, ainsi qu'au présent chapitre, si cette personne n'intervient ni en qualité de vendeur ni en l'une des qualités indiquées au 3° de l'article 1779 du code civil.",
+    "Toutefois, l'application des règles mentionnées au premier alinéa n'est pas obligatoire lorsque le maître de l'ouvrage est une personne qui construit un ou plusieurs immeubles en vue de les vendre. Elle n'est pas non plus obligatoire lorsque le maître de l'ouvrage est une société qui fait construire plus de deux locaux à usage professionnel ou d'habitation et qui n'est mentionnée ni au chapitre II ni au chapitre III du titre Ier du présent livre.",
+],
+    "Réécriture à droit constant : la qualification du contrat est présentée avec ses conditions cumulatives ; les deux catégories de maîtres de l'ouvrage bénéficiant d'une application facultative sont distinguées en deux phrases. Aucune réforme de fond n'est introduite.",
+    "Deux alinéas conservés, notamment le premier auquel renvoie L. 222-2. Maintien des immeubles d'habitation ou mixtes, de l'exclusion des qualités de vendeur et du 3° de l'article 1779 du code civil, du seuil strictement supérieur à deux locaux et de l'exclusion des sociétés des chapitres II et III du titre Ier. La reproduction des articles 1831-1 à 1831-5 suppose leur coordination rédactionnelle avec L. 221-1 à L. 221-5 ; aucune modification du code civil n'est réputée faite par ce lot."
+)
+
+article("L222-2", [
+    "L'application du premier alinéa de l'article L. 222-1 n'est pas non plus obligatoire, quel que soit le maître de l'ouvrage, lorsque la personne qui s'engage à faire construire est une société d'économie mixte dont plus de la moitié du capital appartient à des personnes morales de droit public.",
+    "Ces dispositions ne sont pas non plus obligatoires lorsque la personne qui s'engage envers le maître de l'ouvrage en l'une des qualités indiquées au 3° de l'article 1779 du code civil n'accomplit que les opérations administratives prévues à l'article 1831-1 du même code, reproduit à l'article L. 221-1 du présent code.",
+    "Les sociétés relevant des chapitres Ier, II et III du titre précédent ne sont pas tenues de conclure un contrat de promotion avec le vendeur lorsqu'elles achètent une fraction d'un terrain sur lequel elles construiront et s'engagent envers ce vendeur, qui conserve le surplus du terrain, à faire édifier pour son compte les immeubles correspondant à ce surplus et à en assumer le coût.",
+    "Dans le cas prévu à l'alinéa précédent, les obligations de la société envers le vendeur sont garanties par la personne avec laquelle elle a conclu un contrat de promotion ou, s'il y a lieu, par son représentant légal ou statutaire assumant les obligations du promoteur.",
+],
+    "Réécriture à droit constant : chaque dérogation est formulée avec ses bénéficiaires et ses conditions, puis la garantie due au vendeur est rattachée expressément à l'opération précédente. Aucune réforme de fond n'est introduite.",
+    "Quatre alinéas conservés. Maintien de la majorité strictement supérieure à la moitié du capital public, de la limitation aux seules opérations administratives pour la deuxième exception, des chapitres Ier à III du titre précédent, de la conservation du surplus du terrain par le vendeur et de la prise en charge de son coût. Le renvoi source « 3. » de l'article 1779 est uniformisé en « 3° », comme dans L. 222-1, sans changement de subdivision. L'articulation préexistante de la deuxième exception avec l'exclusion des qualités visées au 3° de l'article 1779 déjà prévue par L. 222-1 mérite contrôle ; les deux formulations sont maintenues. Les deux garants alternatifs restent prévus."
+)
+
+article("L222-3", [
+    "Avant tout commencement d'exécution, le contrat de promotion immobilière doit être constaté par un écrit comportant les indications suivantes :<br />"
+    "a) La situation et la contenance du terrain sur lequel le bâtiment doit être édifié ;<br />"
+    "b) La consistance et les caractéristiques techniques du bâtiment à construire ;<br />"
+    "c) Les devis descriptifs et les conditions techniques d'exécution des travaux ;<br />"
+    "d) Le prix convenu, ainsi que les limites et les conditions de sa révision. Si le prix comprend un poste pour imprévu et si le contrat ne subordonne pas l'utilisation des sommes correspondantes à l'accord préalable du maître de l'ouvrage, le promoteur doit, à la fin de l'opération, restituer à ce dernier la totalité des sommes appelées dont il ne peut justifier avoir eu besoin pour exécuter sa mission ;<br />"
+    "e) Les moyens et les conditions de financement, ainsi que les modalités de règlement à mesure de l'avancement des travaux ;<br />"
+    "f) La rémunération du promoteur pour ses soins, peines et débours ;<br />"
+    "g) Le délai d'édification du bâtiment ;<br />"
+    "h) La garantie fournie par le promoteur pour la bonne exécution de sa mission.",
+    "Par dérogation au premier alinéa, le contrat peut être constaté par plusieurs actes séparés, chacun limité aux indications concernant une phase ou une partie de l'ensemble des opérations à réaliser. Toutefois, aucun travail matériel ne peut être effectué sur le terrain avant la signature des actes concernant toutes les opérations à réaliser, à l'exception des travaux nécessaires aux études préliminaires.",
+    "Le non-respect du présent article entraîne la nullité du contrat de promotion immobilière. Seul le maître de l'ouvrage peut invoquer cette nullité, et seulement jusqu'à l'achèvement des travaux.",
+    "Ce non-respect rend également inopposables au maître de l'ouvrage les contrats conclus par le promoteur.",
+],
+    "Réécriture à droit constant : les mentions obligatoires restent intégrales, les deux conditions de restitution du poste pour imprévu sont explicites et les sanctions sont formulées avec leur bénéficiaire. L'exception des études préliminaires est maintenue. Aucune réforme de fond n'est introduite.",
+    "L'énumération a à h reste dans le premier alinéa ; la faculté de plusieurs actes et les études préliminaires restent au deuxième alinéa. Cette structure maintient les destinations des renvois vérifiés dans le corpus local : R. 222-2 et R. 222-4 au deuxième alinéa, R. 222-6 au d, R. 222-7 aux d et e, R. 222-8 au f du premier alinéa. Aucun montant appelé au titre des imprévus n'est remplacé par une seule somme encaissée. Maintien de l'exclusivité du maître de l'ouvrage pour invoquer la nullité jusqu'à l'achèvement, et de l'inopposabilité distincte des contrats conclus par le promoteur."
+)
+
+article("L222-4", [
+    "Toute stipulation contraire est sans effet : les clauses de résolution de plein droit relatives aux versements que le contrat impose au maître de l'ouvrage ne produisent effet qu'un mois après une mise en demeure restée infructueuse.",
+    "Pendant ce mois, un délai peut être demandé conformément à l'article 1343-5 du code civil.",
+    "Les effets des clauses de résolution de plein droit sont suspendus pendant les délais accordés en application de l'article 1343-5 du code civil. Ces clauses sont réputées n'avoir jamais produit effet si le débiteur se libère dans les conditions fixées par le juge.",
+],
+    "Réécriture à droit constant : la règle impérative, le délai de demande et les effets d'un délai judiciaire sont distingués. La fiction d'absence d'effet des clauses en cas de paiement conforme est explicitée. Aucune réforme de fond n'est introduite.",
+    "Trois alinéas conservés. Délai d'un mois après mise en demeure infructueuse, demande possible pendant ce mois et double renvoi à l'article 1343-5 du code civil maintenus. Les clauses ne sont réputées n'avoir jamais joué que si le débiteur respecte les conditions fixées par le juge. Ce régime du contrat de promotion ne reçoit pas les mesures de traitement des impayés locatifs de policy.json. Leur mise en œuvre appelle notamment une coordination de l'article 24 de la loi n° 89-462 du 6 juillet 1989, hors des cinq codes ; aucune modification de ce régime locatif n'est opérée ici."
+)
+
+article("L222-5", [
+    "Avant la signature du contrat, il est interdit au promoteur d'exiger ou même d'accepter du maître de l'ouvrage un versement, un dépôt, une souscription ou une acceptation d'effets de commerce. Il est également interdit d'exiger ou d'accepter un paiement avant la date d'exigibilité de la créance.",
+],
+    "Réécriture à droit constant : les deux interdictions sont exprimées directement, en distinguant la période antérieure à la signature et celle antérieure à l'exigibilité. Aucune réforme de fond n'est introduite.",
+    "Un alinéa conservé. Les quatre formes visées avant signature restent énumérées et l'interdiction d'accepter demeure aussi étendue que celle d'exiger. La seconde interdiction reste liée à l'exigibilité de la créance, sans création d'une possibilité de paiement anticipé."
+)
+
+
+def main():
+    sources = json.loads(Path("source.json").read_text())
+    assert len(sources) == 24
+    assert set(drafts) == {s["number"] for s in sources}
+    result = []
+    for source in sources:
+        output = {key: source[key] for key in ("code_id", "source_id", "source_sha256", "number")}
+        output.update(drafts[source["number"]])
+        output["status"] = "rewrite_draft"
+        result.append(output)
+    Path("answer.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+
+
+if __name__ == "__main__":
+    main()
