@@ -1,0 +1,415 @@
+import json
+from html import unescape
+from html.parser import HTMLParser
+from pathlib import Path
+
+
+sources = json.loads(Path('source.json').read_text())
+by_number = {a['number']: a for a in sources}
+answers = {}
+
+
+class TextParser(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts = []
+
+    def handle_data(self, data):
+        self.parts.append(data)
+
+
+def plain(xml):
+    p = TextParser()
+    p.feed(xml)
+    return ''.join(p.parts)
+
+
+def impact(classification, assessment, limitations, burdens, effects=None):
+    return dict(version=1, classification=classification,
+                assessment=assessment, scope_limitations=limitations,
+                new_burdens_review=burdens, effects=effects or [])
+
+
+def base(number, reason, notes):
+    s = by_number[number]
+    return {k: s[k] for k in ('code_id', 'source_id', 'source_sha256', 'number')} | {
+        'reason': reason, 'review_notes': notes,
+    }
+
+
+def retain(number, reason, notes, assessment, limitations, burdens):
+    answers[number] = base(number, reason, notes) | {
+        'proposed_xml': None, 'status': 'retained_unchanged',
+        'classification': 'retained_necessary',
+        'substantive_impact': impact('retained_necessary', assessment, limitations, burdens),
+    }
+
+
+def effect(kind, measure_id, description, before, after, unit, population,
+           transition, burdens, source_quote, proposed_quote):
+    return dict(kind=kind, measure_id=measure_id, description=description,
+                before=before, after=after, unit=unit,
+                affected_population=population,
+                conditions_and_transition=transition,
+                replacement_or_new_burdens=burdens,
+                source_quote=source_quote, proposed_quote=proposed_quote)
+
+
+def rewrite(number, xml, reason, notes, assessment, limitations, burdens,
+            effects, removed=None, classification='material_reduction'):
+    a = base(number, reason, notes) | {
+        'proposed_xml': xml, 'status': 'rewrite_draft',
+        'substantive_impact': impact(classification, assessment, limitations, burdens, effects),
+    }
+    if removed:
+        a.update(change_type='normative_reduction',
+                 reform_policy_id='editorial_direction_2026_10_19',
+                 removed_provisions=removed)
+    answers[number] = a
+
+
+retain(
+    'R122-12-1',
+    "Maintien intégral nécessaire, sans réécriture stylistique. L'avis conforme n'est demandé que dans les cas où le régime d'examen environnemental le requiert ; il évite qu'une dispense d'évaluation soit décidée sans contrôle des incidences. Ce contrôle préalable a une fonction de protection démontrée et ne constitue pas un agrément économique supplémentaire à supprimer.",
+    "Lecture croisée de R104-17-2 et R104-33 à R104-37 : l'évaluation systématique et l'examen au cas par cas gardent leurs champs respectifs, avec les délais, la complétude et les effets du silence de R104-35. La note de l'article 26 du décret du 13 octobre 2021 concerne des transitions anciennes ; elle ne date pas la réforme proposée. L'annulation partielle du 26 juin 2019 signalée dans les sources voisines interdit de traiter l'évaluation des UTN comme une simple formalité facultative. Aucun lien avec l'abolition des quotas SRU n'est établi.",
+    "La source entière est maintenue : saisine conditionnelle de l'autorité environnementale et renvoi au contrôle de dispense. Aucun prélèvement ni dossier supplémentaire n'est retiré.",
+    "Le maintien ne valide pas globalement la conformité européenne du dispositif. Il ne modifie ni les seuils des UTN ni les délais propres à R104-35.",
+    "Aucune charge nouvelle n'est identifiée : aucun texte nouveau, justificatif, registre ou procédure de substitution n'est créé. Le contrôle environnemental existant reste seul applicable.",
+)
+
+retain(
+    'R122-13',
+    "Maintien intégral de l'identification du demandeur public compétent et de la preuve des délibérations autorisant sa démarche. Ces décisions expriment la volonté des collectivités dont le territoire est engagé ; elles ne sont pas remplacées par une simple déclaration de l'opérateur. Aucune reformulation à droit constant n'est comptée comme simplification.",
+    "L122-20 et L122-21 maintiennent les autorisations pour les communes dépourvues respectivement de SCoT ou de PLU. R122-8 et R122-9 conservent leurs champs distincts. La note du Conseil d'Etat du 26 juin 2019 impose de préserver l'évaluation environnementale. Les droits de saisine électronique et de réemploi déjà ouverts par le CRPA gardent leur portée : le maintien ne les écarte pas et leur simple rappel ne serait pas un gain nouveau. Une délibération déjà légalement disponible ne justifie pas un second dépôt contraire à ce droit existant.",
+    "Aucune réduction nouvelle n'est démontrée par rapport aux deux alinéas officiels. Compétence territoriale, décision des organes délibérants et réception traçable restent nécessaires à l'autorisation.",
+    "Aucune exclusivité postale ne peut être opposée aux droits de saisine électronique légalement applicables. Le présent maintien ne prétend ni ouvrir une nouvelle téléprocédure ni supprimer les autorisations législatives.",
+    "Aucune charge nouvelle n'est identifiée : ni attestation ni déclaration de remplacement. La source est conservée sous réserve des dispenses et modes de saisine déjà prévus par les textes supérieurs.",
+)
+
+s = by_number['R122-15']['source_xml']
+old = "Si la première réunion de la commission compétente se tient moins de trois mois après la date de la notification prévue au premier alinéa, la commission dispose d'un délai supplémentaire de trois mois à compter de la date de cette première réunion pour se réunir et examiner la demande. Si la première réunion de la commission compétente se tient plus de trois mois après la date de la notification prévue au premier alinéa, la commission doit examiner la demande lors de cette première réunion."
+new = "La commission compétente examine la demande lors de sa première réunion suivant la transmission du dossier complet. Elle ne dispose d'aucun délai supplémentaire pour reporter cet examen à une autre réunion."
+assert old in s
+x = s.replace(old, new).strip() + "\n<p>Ces dispositions s'appliquent aux demandes dont l'examen n'a pas encore eu lieu à la date d'entrée en vigueur de la loi portant la présente réforme. Pour les dossiers déjà transmis à cette date, l'examen a lieu lors de la première réunion tenue après cette entrée en vigueur. Aucun nouveau dépôt ni nouvelle transmission du dossier n'est requis et les délais de notification déjà courus ne recommencent pas. Les avis déjà rendus conservent leurs effets.</p>"
+rewrite(
+    'R122-15', x,
+    "Réforme de fond : suppression de la faculté de différer de trois mois l'examen d'un dossier lorsque la première réunion intervient dans les trois mois de la notification. La demande complète doit être examinée à la première réunion. Transmission sans délai, information sous quinze jours et consultation de la commission législativement requise sont conservées.",
+    "L122-20 et L122-21 imposent les avis, non le report supplémentaire. R122-16 conserve la participation électronique et R122-17 le mois suivant sa synthèse pour notifier la décision. Aucun délai global de trois mois ou de quinze jours pour autoriser le projet n'est promis. La source laissait aussi sans solution explicite une réunion tenue exactement trois mois après notification : la règle uniforme de première réunion couvre ce cas. Pas de conversion des mois civils en quatre-vingt-dix jours. Transition des seules étapes non accomplies, sans reprise des dossiers ; les transitions environnementales historiques de la note source restent distinctes.",
+    "L'article entier conserve ses deux premiers alinéas et retire effectivement le droit à une réunion différée. Il supprime une marge réglementaire d'attente, sans supprimer la consultation ou ses exigences scientifiques.",
+    "La date de la première réunion n'est pas plafonnée par ce texte. Le gain de durée réelle et le coût de fonctionnement des commissions ne sont pas chiffrés ; les étapes environnementales et de participation subsistent.",
+    "Aucun dossier, avis ou donnée nouveau n'est ajouté. La commission doit effectuer le même examen plus tôt, à sa première réunion ; cette contrainte de calendrier est explicitée, sans procédure ni pièce de remplacement.",
+    [effect(
+        'deadline_reduced', 'utn-premiere-reunion-sans-report',
+        "Suppression du délai supplémentaire d'examen en commission des unités touristiques nouvelles.",
+        "Pour une première réunion tenue moins de trois mois après notification, possibilité de reporter l'examen jusqu'à trois mois à compter de cette réunion ; aucun équivalent en jours calendaires n'est fixé.",
+        "Examen à la première réunion après transmission du dossier complet, sans délai supplémentaire ; pour un dossier déjà transmis et non examiné, première réunion après entrée en vigueur.",
+        'other', "Communes et EPCI demandeurs d'autorisation d'UTN ; commissions compétentes et préfets.",
+        "Demandes non encore examinées lors de l'entrée en vigueur ; avis acquis et délais de notification déjà courus conservés.",
+        "Aucune saisine nouvelle ; calendrier de travail resserré pour la commission, sans suppression de l'avis ni du contrôle environnemental.",
+        old.split(' Si la première réunion')[0], new,
+    )],
+    ["Faculté de tenir une seconde réunion pour examiner la demande dans un délai supplémentaire de trois mois après la première réunion rapprochée."],
+)
+
+retain(
+    'R122-16',
+    "Maintien intégral de la participation électronique du public, qui donne accès au dossier avant l'autorisation d'UTN. L'avis de la commission et, le cas échéant, l'avis environnemental permettent une participation informée ; les supprimer ou ouvrir la participation sur un dossier incomplet retirerait une protection essentielle.",
+    "R122-14 définit le contenu du dossier et R122-17 fixe la décision après synthèse. R104-25 prévoit déjà mise en ligne et, dans son champ, transmission préfectorale de l'avis environnemental : aucune retransmission de données déjà détenues n'est présentée ici comme un nouveau gain CRPA. Le renvoi à R122-15 reste opérant après suppression de son report d'examen. Le texte intégral du code de l'environnement R123-46-1 n'est pas fourni dans le corpus des cinq codes ; ce renvoi n'est ni supprimé ni déclaré réécrit. La note transitoire de 2021 ne constitue pas une date nouvelle de réforme.",
+    "La participation du public reste intégralement applicable. Aucun rapport supplémentaire, prélèvement ou délai minimal supprimable n'a été identifié dans ce seul alinéa, au-delà des garanties de consultation à conserver.",
+    "L'examen ne remplace pas la vérification du règlement environnemental hors corpus. Aucun raccourcissement de la participation, des recours ou du délai de décision n'est revendiqué.",
+    "Aucune charge nouvelle n'est identifiée : maintien de la procédure existante, sans consultation, registre, justificatif ou délai ajouté en remplacement d'une formalité.",
+)
+
+retain(
+    'R122-18',
+    "Maintien intégral de la faculté de faire examiner les orientations d'un projet d'UTN avant le dépôt. Ce conseil est demandé volontairement par les collectivités compétentes ; il ne conditionne pas la recevabilité de l'autorisation et peut prévenir un dossier inutilement coûteux.",
+    "Le renvoi à R122-13 reste exact et ne crée pas de seconde demande obligatoire. L'avis préliminaire ne vaut ni autorisation ni dispense d'évaluation environnementale. La possibilité reste ouverte aux projets futurs, sans limitation aux démarches déjà engagées et sans tarif ou délai nouveau.",
+    "L'article ne crée qu'une option de conseil en amont. Sa conservation ne supprime aucune obligation existante et n'est comptée ni comme réécriture ni comme allègement nouveau.",
+    "Aucune économie liée au recours volontaire à ce conseil n'est mesurée. Le demandeur peut toujours déposer directement sa demande sans ce préalable facultatif.",
+    "Aucune charge nouvelle n'est identifiée : pas de demande préliminaire imposée, de nouvel agrément, de pièces ou de délai obligatoire avant le dépôt principal.",
+)
+
+s = by_number['R122-19']['source_xml']
+x = s.replace("l'article L. 122-24", "l'article L. 122-26").strip()
+rewrite(
+    'R122-19', x,
+    "Coordination nécessaire du seul renvoi législatif : les prescriptions particulières de massif sont prévues par L122-26 ; L122-24 régit la caducité des autorisations d'UTN. L'enquête publique est intégralement maintenue, sans nouvelle obligation ni suppression fictive de procédure.",
+    "Erreur préexistante constatée par lecture entière de L122-24 et L122-26 dans le corpus public. La correction est explicite et ne change ni l'objet ni les formes de l'enquête. Les articles environnementaux R123-7 à R123-23 sont hors du corpus fourni et ne sont pas présentés comme réécrits. La note source sur l'annulation partielle du décret UTN du 10 mai 2017 ne permet pas de supprimer cette enquête de massif distincte.",
+    "La proposition rétablit la bonne cible du renvoi, sans réduction normative de l'enquête. L'obligation résulte aussi directement de L122-26 et garde son contenu.",
+    "Aucun coût, délai ni nombre d'enquêtes évitées n'est démontré. Le détail des formes environnementales hors corpus demeure à son champ propre.",
+    "Aucune charge nouvelle n'est identifiée : la même enquête reste exigée sur le même projet, avec correction de sa seule référence législative.",
+    [effect(
+        'coordination', 'massif-prescriptions-renvoi-exact',
+        "Correction de la référence aux prescriptions particulières de massif.",
+        "Renvoi à L122-24, article de caducité des autorisations d'UTN.",
+        "Renvoi à L122-26, qui prévoit les prescriptions de massif après enquête publique.",
+        'other', "Comités de massif, autorités préparant les prescriptions et public de l'enquête.",
+        "Correction de concordance, sans rouvrir les actes ni les procédures antérieurement achevées.",
+        "Aucune enquête ni formalité nouvelle ; pas d'allègement supplémentaire compté.",
+        "Le projet de prescriptions particulières de massif mentionnées à l'article L. 122-24 est soumis à enquête publique dans les formes prévues aux articles R. 123-7 à R. 123-23 du code de l'environnement.",
+        "Le projet de prescriptions particulières de massif mentionnées à l'article L. 122-26 est soumis à enquête publique dans les formes prévues aux articles R. 123-7 à R. 123-23 du code de l'environnement.",
+    )], classification='coordination_only',
+)
+
+retain(
+    'R122-20',
+    "Maintien intégral d'une faculté d'expertise pour les zones sensibles, notamment la haute montagne. Les recommandations et le recours aux services techniques ou aux CAUE ne sont pas obligatoires ; supprimer cette possibilité ne réduirait aucune charge et retirerait un appui utile à la prévention des risques et à l'adaptation locale.",
+    "La recommandation n'est pas transformée en prescription opposable ou en agrément. L122-26 et L122-27, relatifs aux prescriptions et à leur préparation, conservent leur objet distinct. La note d'annulation du décret UTN ne crée pas une nouvelle obligation dans le présent article ; aucun coût de conseil ni condition d'accès supplémentaire n'est fixé.",
+    "Maintien d'une faculté administrative de recommandation et d'appui technique. Aucune cotisation, déclaration ou autorisation n'est contenue dans la source entière.",
+    "Les coûts réels d'une expertise volontaire ne sont pas chiffrés. Le texte ne rend pas les recommandations contraignantes et ne remplace pas les règles de protection applicables.",
+    "Aucune charge nouvelle n'est identifiée : absence de corps normatif nouveau et maintien du caractère facultatif des recommandations comme du recours aux services.",
+)
+
+retain(
+    'R123-1',
+    "Maintien intégral nécessaire des sept rubriques d'évaluation environnementale du SDRIF : état initial, incidences et Natura 2000, solutions raisonnables, prévention et compensation, suivi et résumé accessible. Ces exigences servent la protection de l'environnement et l'information du public ; aucun doublon matériel obligatoire n'est démontré, et la source permet déjà le renvoi à d'autres études. Une réécriture stylistique ou la suppression d'une rubrique utile ne constituerait pas un allègement justifié.",
+    "Articulation préexistante signalée explicitement : le 6° rappelle une analyse au plus tard à dix ans, tandis que L123-12 exige un bilan général présenté six mois avant l'expiration de six ans. Les deux objets ne peuvent être tenus pour identiques sur la seule base de leurs intitulés ; dix ans ne reporte en aucun cas le bilan légal, et le suivi précoce des incidences imprévues reste exigé par le 6°. Aucun délai n'est silencieusement corrigé et aucune nouvelle analyse anticipée n'est créée. L104-4 et L104-5 conservent leur évaluation proportionnée ; les exigences européennes et Natura 2000 gardent leur champ. La note de transition de 2021, formulée pour certains PLU, ne constitue ni une date de réforme future ni une nouvelle périodicité du SDRIF.",
+    "La source entière est maintenue, avec tous les facteurs environnementaux, qualifications, indicateurs, modalités de suivi et facultés de réemploi. Aucune obligation distincte supprimable ni fusion de rapports matériellement séparés n'est démontrée.",
+    "L'articulation entre l'analyse annoncée à dix ans et le bilan général avant six ans est signalée, sans affirmer leur identité ni une contradiction certaine. Aucun allègement chiffré ou audit global de conformité européenne n'est revendiqué.",
+    "Aucune charge nouvelle n'est identifiée : aucun indicateur, rapport ou registre supplémentaire, aucune avance nouvelle d'échéance. Les deux calendriers existants gardent leur champ et le bilan légal n'est pas différé.",
+)
+
+retain(
+    'R123-2',
+    "Maintien intégral de la désignation du préfet de région comme autorité compétente de l'Etat pour le SDRIF. Cette règle identifie un interlocuteur et ne crée ni demande, ni pièce, ni visa supplémentaire à fusionner ou à supprimer.",
+    "La désignation est cohérente avec les consultations de L123-9 et ne transfère pas au préfet de département la compétence régionale. Elle ne préjuge pas de la compétence propre de l'autorité environnementale, distincte de l'Etat associé à l'élaboration.",
+    "La source entière est une attribution de compétence administrative nécessaire. Son maintien ne modifie aucun taux, délai ou circuit imposé au public.",
+    "Aucun gain de coût ou de durée ne résulte de ce maintien. Les compétences législatives de la région et les autres autorités gardent leur régime.",
+    "Aucune charge nouvelle n'est identifiée : aucun corps nouveau, guichet parallèle, envoi, registre ou justificatif n'est créé.",
+)
+
+retain(
+    'R123-3',
+    "Maintien intégral du silence favorable au terme de trois mois pour les avis de L123-9. Il s'agit d'un délai maximal de réponse, non d'une attente minimale imposée ; le supprimer ferait disparaître une garantie contre le blocage du schéma. Une réduction indifférenciée affecterait aussi l'avis environnemental, dont R104-25 conserve le délai de trois mois.",
+    "L123-9 a été lu avec sa liste complète : Etat, organismes associés, autorité environnementale et conférence territoriale. R104-25 précise l'absence d'observations environnementales en cas de silence et la publicité de cet état ; l'avis réputé favorable ne dispense pas d'une évaluation requise. Aucun avis déjà rendu n'est à redemander et aucun droit de recours n'est fermé.",
+    "Le mécanisme favorable reste ouvert à toutes les consultations futures éligibles. Aucun nouveau délai d'attente ni nouvelle transmission n'est créé et aucune simplification nouvelle n'est comptée.",
+    "Le maintien ne démontre pas un traitement effectif en trois mois de l'ensemble du schéma. Les évaluations, consultations et voies de recours distinctes subsistent.",
+    "Aucune charge nouvelle n'est identifiée : conservation d'un plafond de réponse et de son effet favorable, sans agrément ou justificatif substitutif.",
+)
+
+retain(
+    'R123-4',
+    "Maintien intégral de la responsabilité de l'Etablissement public d'aménagement de Paris-Saclay pour élaborer le projet de périmètre. L'identification de l'auteur du projet est nécessaire à la sécurité de la procédure et n'ajoute pas d'autorisation au propriétaire ou au constructeur.",
+    "L123-28 et L123-29 prévoient la délimitation par décret après avis et enquête ; L321-37 et L321-38 identifient l'établissement et ses missions. Le présent article ne dispense pas du débat public et ne crée pas de quota SRU.",
+    "La source est une attribution de tâche publique, sans formalité privée autonome. Son maintien ne retire aucune charge et n'est pas compté comme réécriture.",
+    "La protection légale de la zone non urbanisable reste distincte du seul choix du rédacteur du projet. Aucun effet sur les droits à construire n'est revendiqué ici.",
+    "Aucune charge nouvelle n'est identifiée : pas de nouvelle instance, de donnée ou de demande ; la tâche publique existante est conservée.",
+)
+
+s = by_number['R123-5']['source_xml']
+x = s.strip() + "\n<p>Les informations prévues aux 1° et 3° peuvent figurer sur un même document graphique, dès lors que le périmètre envisagé et le mode d'occupation du sol à la date du 6 juin 2010 y sont lisibles. Dans ce cas, aucun second document graphique n'est exigé. Ce document commun tient lieu de la carte mentionnée au dernier alinéa de l'article L. 123-28.</p>\n<p>Cette faculté s'applique dès l'entrée en vigueur de la loi portant la présente réforme, y compris aux dossiers en cours, sans réfection des pièces déjà établies ni recommencement des consultations ou de l'enquête.</p>"
+rewrite(
+    'R123-5', x,
+    "Réforme de fond limitée aux supports : suppression de l'exigibilité d'une seconde carte lorsque le périmètre envisagé et l'occupation du sol du 6 juin 2010 figurent lisiblement sur une carte commune. Les 1°, 2° et 3°, la notice motivée, l'état actuel de la zone et l'annexe cartographique législative sont conservés. Le regroupement est une faculté, pas une nouvelle mise en forme obligatoire.",
+    "L123-28 impose une carte annexée au décret, non deux supports graphiques distincts : le document commun remplit explicitement cette fonction. R123-10 continue d'inclure toutes les informations du dossier d'enquête. La date du 6 juin 2010 n'est pas remplacée par l'état actuel, qui reste décrit au 2°. Les consultations et l'enquête L123-29 sont conservées, sans nouvelle pièce ouvrant la faculté de regroupement.",
+    "Deux supports graphiques peuvent devenir un seul, à contenu cartographique complet. Cette dispense matérielle expresse va au-delà d'un simple rappel du réemploi de données ; aucune information environnementale ou historique n'est supprimée.",
+    "Le gain existe seulement si un support lisible réunit les deux contenus. Aucune fusion forcée, suppression de la carte annexée au décret ou économie monétaire chiffrée n'est revendiquée.",
+    "Aucune charge nouvelle n'est identifiée : option de présentation commune, informations déjà requises et aucune attestation de lisibilité. Les dossiers existants n'ont pas à être recomposés.",
+    [effect(
+        'obligation_merged', 'saclay-dossier-carte-commune',
+        "Dispense du second support graphique lorsque les deux contenus cartographiques requis sont réunis.",
+        "Le dossier énumère un document graphique de périmètre au 1° et une carte d'occupation du sol au 6 juin 2010 au 3°.",
+        "Un même document peut fournir les deux contenus et servir de carte annexée au décret ; la notice reste due.",
+        'legal_duty', "Etablissement public d'aménagement de Paris-Saclay préparant un dossier de délimitation ou de révision du périmètre.",
+        "Faculté ouverte aux dossiers nouveaux et en cours à l'entrée en vigueur ; aucune réfection ou reprise de consultation.",
+        "Aucune pièce de substitution ni certification ; condition de lisibilité des informations existantes seulement.",
+        "3° La carte prévue au dernier alinéa de l'article L. 123-28, qui précise le mode d'occupation du sol à la date du 6 juin 2010 dans le périmètre ainsi délimité.",
+        "Dans ce cas, aucun second document graphique n'est exigé.",
+    )],
+    ["Exigence de produire un second support graphique pour la carte du 3° lorsque toutes ses informations sont déjà réunies avec le périmètre sur un document commun lisible."],
+)
+
+s = by_number['R123-6']['source_xml']
+old = "au comité consultatif institué auprès du conseil d'administration de l'Etablissement public d'aménagement de Paris-Saclay et aux organes délibérants"
+assert old in s
+x = s.replace(old, 'aux organes délibérants').strip() + "\n<p>L'avis du comité consultatif institué auprès du conseil d'administration de l'Etablissement public d'aménagement de Paris-Saclay n'est pas requis pour la délimitation de cette zone.</p>\n<p>Cette dispense s'applique, à compter de l'entrée en vigueur de la loi portant la présente réforme, aux procédures nouvelles et aux procédures en cours pour lesquelles cet avis n'a pas été rendu. Les autres consultations engagées se poursuivent sans nouveau dossier ni reprise de leurs délais. Les avis déjà rendus demeurent au dossier.</p>"
+rewrite(
+    'R123-6', x,
+    "Réforme de fond : suppression de la consultation obligatoire supplémentaire du comité consultatif de l'établissement pour la délimitation de la zone. L123-28 exige déjà les avis des collectivités, organismes sectoriels et associations ; cet avis interne additionnel n'a pas une fonction essentielle distincte démontrée. Les destinataires légaux, les deux mois de réponse et le silence favorable sont conservés.",
+    "Lecture entière de L123-28 : ce comité n'y figure pas. Les associations sont consultées par R123-7, dont le déclencheur est coordonné dans ce lot ; leur participation n'est pas supprimée. R123-8 conserve l'arrêt du projet par le conseil d'administration et R123-11 les reconsultations nécessaires après enquête. La dispense est spéciale à la délimitation : elle ne dissout pas le comité ni ne supprime ses autres missions. Les dispositions organiques du décret n° 2010-911 du 3 août 2010 et de ses modifications sont hors lot et restent à confronter à cette dispense expresse ; elles ne sont pas présentées comme réécrites.",
+    "L'envoi obligatoire pour avis au comité et l'attente de cet avis sont retirés dans cette procédure. Les consultations législatives, les avis tacites favorables et l'enquête publique restent intacts ; aucune disparition de tout contrôle de Saclay n'est revendiquée.",
+    "Le gain de durée effective n'est pas chiffré car les consultations pouvaient être parallèles. Le maintien éventuel de missions organiques autonomes du comité hors de cette délimitation n'est pas supprimé ni compté.",
+    "Aucune charge nouvelle n'est identifiée : aucun avis, déclaration ou contrôle remplace celui du comité. Les envois légaux existants continuent et les dossiers en cours ne sont pas refaits.",
+    [effect(
+        'obligation_removed', 'saclay-fin-avis-comite-delimitation',
+        "Suppression de l'avis obligatoire du comité consultatif de l'établissement dans la procédure de périmètre.",
+        "Transmission imposée au comité consultatif en plus des destinataires légaux ; avis dans le régime de deux mois.",
+        "Aucun avis du comité requis pour la délimitation ; avis légaux des autres destinataires conservés pendant deux mois avec silence favorable.",
+        'legal_duty', "EPA Paris-Saclay et comité consultatif pour la délimitation ou révision du périmètre de protection.",
+        "Procédures nouvelles et avis non encore rendus dans les procédures en cours ; avis déjà obtenus conservés au dossier.",
+        "Aucune déclaration ou consultation de remplacement ; coordination du départ de R123-7 seulement.",
+        "Le projet est transmis au comité consultatif institué auprès du conseil d'administration de l'Etablissement public d'aménagement de Paris-Saclay et aux organes délibérants des collectivités territoriales, établissements publics et société énumérés à l'article L. 123-28, qui disposent de deux mois à compter de la réception du dossier pour faire connaître leur avis.",
+        "L'avis du comité consultatif institué auprès du conseil d'administration de l'Etablissement public d'aménagement de Paris-Saclay n'est pas requis pour la délimitation de cette zone.",
+    )],
+    ["Transmission obligatoire du projet de périmètre au comité consultatif de l'établissement et recueil de son avis en supplément des consultations légales de L123-28."],
+)
+
+s = by_number['R123-7']['source_xml']
+old = "A compter de la date de transmission du projet au comité consultatif institué auprès du conseil d'administration de l'Etablissement public d'aménagement de Paris-Saclay,"
+new = "A compter de la date de la première transmission du projet effectuée en application de l'article R. 123-6,"
+assert old in s
+x = s.replace(old, new).strip() + "\n<p>Pour les mises à disposition en cours à la date d'entrée en vigueur de la loi portant la présente réforme, la date d'ouverture, la date de référence de l'agrément des associations et le terme du délai initialement applicable sont conservés. La suppression de la consultation du comité consultatif ne commande ni nouvelle mise à disposition ni recommencement du délai.</p>\n<p>Pour les procédures en cours dont la mise à disposition n'a pas commencé, celle-ci est ouverte à compter de cette entrée en vigueur ou, si elle est postérieure, de la première transmission prévue à l'article R. 123-6. Le délai de deux mois et la date de référence de l'agrément des associations sont déterminés à compter de cette ouverture, sous réserve du délai d'un mois applicable aux nouvelles consultations prévues à l'article R. 123-11.</p>"
+rewrite(
+    'R123-7', x,
+    "Coordination nécessaire avec la suppression de l'avis du comité dans R123-6 : la mise à disposition des associations commence à la première transmission aux destinataires qui restent consultés. Les associations éligibles, leur information par courrier, l'accès au siège et au site internet et leurs deux mois pour répondre sont intégralement maintenus.",
+    "La référence à une saisine supprimée ne doit pas fermer la consultation associative exigée par L123-28, 8°. La nouvelle date de référence demeure celle de l'ouverture de la mise à disposition, sans réserver la consultation aux seules procédures anciennes. Les consultations déjà ouvertes conservent leur durée entière et leur date de référence d'agrément ; aucune réouverture ni réduction rétroactive. Pour une procédure en cours non encore ouverte au public, le nouveau départ ne peut être antérieur à l'entrée en vigueur : deux mois complets sont garantis même si les organismes avaient déjà reçu le projet. R123-10 continue de joindre les avis et R123-11 conserve la reconsultation nécessaire d'un mois. Aucun avis associatif n'est remplacé par une simple publication.",
+    "Le changement de déclencheur rend opérante la consultation après suppression du comité. Il ne supprime aucune seconde obligation autonome et n'est pas compté comme nouvelle réduction en plus de R123-6.",
+    "Deux mois de mise à disposition et l'information individuelle restent dus. Le nouveau départ ne garantit pas une date identique à celle d'une ancienne saisine du comité, qui n'a plus lieu ; aucune durée de participation n'est raccourcie.",
+    "Aucune charge nouvelle n'est identifiée : mêmes destinataires associatifs, courrier et supports existants. Seule une date de départ est rattachée à une transmission qui reste déjà obligatoire.",
+    [effect(
+        'coordination', 'saclay-fin-avis-comite-delimitation',
+        "Remplacement du déclencheur fondé sur la consultation supprimée pour préserver l'accès des associations.",
+        "Départ de la mise à disposition à la transmission au comité consultatif.",
+        "Départ à la première transmission de R123-6 ; mêmes deux mois, agréments et information des associations, sous réserve du délai d'un mois de reconsultation de R123-11.",
+        'other', "Associations agréées concernées et EPA Paris-Saclay.",
+        "Nouveaux départs après entrée en vigueur ; dates et termes conservés pour les mises à disposition en cours. Pour une procédure en cours non encore ouverte, départ au plus tôt à l'entrée en vigueur et deux mois complets, sous réserve de la reconsultation spéciale d'un mois de R123-11.",
+        "Aucune saisine supplémentaire ; coordination de la même mesure que R123-6, sans compter une seconde suppression.",
+        plain(s).strip(), plain(s).strip().replace(old, new),
+    )], classification='coordination_only',
+)
+
+retain(
+    'R123-8',
+    "Maintien intégral de l'arrêt du projet par le conseil d'administration après prise en compte des avis. Cette décision assure la responsabilité de l'auteur du périmètre et la traçabilité du projet soumis à enquête ; elle n'est pas un second agrément imposé aux propriétaires.",
+    "Les avis restent ceux requis après la réduction de R123-6 et la coordination de R123-7. La formule ne rétablit pas l'avis du comité consultatif supprimé : elle vise les seuls avis qui restent légalement recueillis. La délibération reste une pièce du dossier R123-10, 3°, sans nouvelle copie ou transmission distincte ajoutée.",
+    "La décision de l'organe dirigeant reste nécessaire et n'est pas remplacée par une autorisation supplémentaire. Aucun allègement autonome ne résulte du maintien de cet article.",
+    "L'examen ne supprime pas les compétences législatives de délimitation ni l'enquête. L'effet de la suppression d'un avis dans R123-6 est compté uniquement à cet autre article.",
+    "Aucune charge nouvelle n'est identifiée : la délibération existante conserve son objet et aucun avis supprimé n'est réintroduit par la référence générale aux avis recueillis.",
+)
+
+retain(
+    'R123-9',
+    "Maintien intégral de l'enquête publique sur la délimitation d'une zone non urbanisable et de l'autorité qui l'organise. Elle protège l'information, la discussion du périmètre et les droits des propriétaires et du public ; les consultations d'organismes ne remplissent pas cette fonction à sa place.",
+    "L123-29 impose expressément l'enquête, portant également sur les mises en compatibilité de L123-32. Le préfet organisateur reste désigné par le préfet de région. Les formes de R123-7 à R123-23 du code de l'environnement sont hors corpus et ne sont pas déclarées réécrites ; aucun raccourcissement de leurs garanties n'est supposé.",
+    "L'enquête obligatoire conserve sa fonction essentielle pour une servitude territoriale. Aucun dossier, délai ou prélèvement n'est supprimé dans le présent article.",
+    "Les gains ciblés sur d'autres pièces et publicités n'abolissent pas cette enquête. Aucun effet net sur le coût de la procédure entière n'est établi.",
+    "Aucune charge nouvelle n'est identifiée : même enquête, même désignation de l'organisateur et aucune procédure de substitution.",
+)
+
+s = by_number['R123-10']['source_xml']
+old = "1° Un tableau parcellaire établi d'après les documents cadastraux donnant, pour chaque parcelle ou partie de parcelle incluse dans la zone à protéger, le territoire communal, la section et le numéro de la matrice cadastrale, la contenance et le nom du propriétaire ;"
+new = "1° Un tableau parcellaire établi d'après les documents cadastraux donnant, pour chaque parcelle ou partie de parcelle incluse dans la zone à protéger, le territoire communal, la section et le numéro de la matrice cadastrale et la contenance ;"
+assert old in s
+x = s.replace(old, new).strip() + "\n<p>Le nom du propriétaire n'est pas une mention exigible du tableau parcellaire prévu au 1°. Cette dispense s'applique aux dossiers dont l'enquête n'est pas encore ouverte à la date d'entrée en vigueur de la loi portant la présente réforme ; aucun dossier déjà établi n'a à être refait pour ce seul motif. Les enquêtes ouvertes et les actes antérieurs conservent leur régime.</p>"
+rewrite(
+    'R123-10', x,
+    "Réforme de fond : suppression du nom du propriétaire dans le tableau parcellaire obligatoire. L'identification et l'étendue des parcelles suffisent à délimiter la servitude ; cette procédure n'est ni une acquisition ni une indemnisation exigeant un état nominatif. Commune, section, numéro de matrice cadastrale, contenance, toutes les autres pièces et les informations de R123-5 restent maintenus.",
+    "L123-28 à L123-32 ont été lus : délimitation, enquête, révision et mise en compatibilité ne prescrivent pas ce relevé nominatif. Le retrait ne dispense ni des notifications individualisées éventuellement dues sur un autre fondement, ni des règles de propriété ou de protection des données. Les mots 'numéro de la matrice cadastrale' sont ceux de la source : leur adéquation à l'identifiant parcellaire utilisé dans les documents cadastraux demeure un point technique à contrôler, sans substitution silencieuse. Les 2°, 3° et 4° et la totalité du renvoi à R123-5 restent inchangés.",
+    "Une catégorie de données obligatoire est réellement retirée du tableau publié pour l'enquête. Les quatre subdivisions et la traçabilité géographique restent présentes ; aucune dispense générale d'identifier les parcelles n'est créée.",
+    "La mesure vise ce dossier de périmètre seulement, sans supprimer les fichiers cadastraux, l'identité nécessaire à une acquisition ou les notifications ayant un fondement autonome. Le coût évité n'est pas chiffré.",
+    "Aucune charge nouvelle n'est identifiée : pas d'identifiant supplémentaire, de fichier de remplacement ou de certification. Les autres colonnes existantes et les pièces de participation demeurent.",
+    [effect(
+        'obligation_removed', 'saclay-tableau-sans-noms-proprietaires',
+        "Suppression de la collecte et de la présence obligatoires du nom des propriétaires dans le tableau de cette enquête.",
+        "Le tableau devait donner le nom du propriétaire pour chaque parcelle ou partie de parcelle incluse.",
+        "Le tableau conserve les références géographiques et cadastrales et la contenance, sans nom du propriétaire exigible.",
+        'legal_duty', "EPA Paris-Saclay établissant le dossier et propriétaires des parcelles incluses dans le périmètre proposé.",
+        "Enquêtes non encore ouvertes à l'entrée en vigueur ; pas de réfection imposée aux dossiers déjà établis ; enquêtes ouvertes inchangées.",
+        "Aucun registre, identifiant ou justificatif de remplacement ; obligations autonomes de notification et de propriété préservées.",
+        old, new,
+    )],
+    ["Mention nominative obligatoire du propriétaire de chaque parcelle ou partie de parcelle dans le tableau parcellaire du dossier d'enquête de délimitation."],
+)
+
+retain(
+    'R123-11',
+    "Maintien intégral de la reconsultation seulement lorsque les modifications après enquête la rendent nécessaire, avec délai favorable ramené de deux mois à un mois. Supprimer cette seconde consultation même en présence d'un périmètre substantiellement modifié retirerait la possibilité de se prononcer sur le projet réellement adopté.",
+    "Les renvois à R123-6 et R123-7 restent opérants : le premier ne demande plus l'avis du comité, le second garde les associations. Ils ne rétablissent donc pas la consultation supprimée. Le mois demeure une durée maximale de la reconsultation nécessaire, pas une nouvelle attente préalable à toute modification.",
+    "La source entière conserve une condition de nécessité et un délai déjà réduit. Le maintien ne crée pas une obligation générale de refaire les avis ni un nouvel allègement.",
+    "Aucune reconsultation n'est supprimée quand les changements la justifient. Le nombre et l'ampleur de telles modifications ne sont pas mesurés dans ce lot.",
+    "Aucune charge nouvelle n'est identifiée : mêmes consultations nécessaires dans leur champ réduit par R123-6, même délai favorable d'un mois et aucune pièce nouvelle.",
+)
+
+s = by_number['R123-12']['source_xml']
+old = "La publication au Journal officiel de ce décret fait l'objet d'une mention dans deux journaux diffusés dans les départements de l'Essonne et des Yvelines."
+new = "Le décret reste publié au Journal officiel. Aucune mention de cette publication dans un journal n'est exigée au titre du présent article."
+assert old in s
+x = s.replace(old, new).strip() + "\n<p>La dispense d'insertion dans la presse s'applique aux décrets publiés au Journal officiel à compter de l'entrée en vigueur de la loi portant la présente réforme. Les formalités et les effets des publications des décrets antérieurs, ainsi que les droits de recours correspondants, restent régis par les dispositions antérieurement applicables.</p>"
+rewrite(
+    'R123-12', x,
+    "Réforme de fond : suppression des deux insertions dans la presse annonçant la publication du décret, doublonnant le Journal officiel et l'affichage local du décret et de sa carte pendant deux mois. Ces moyens publics d'accès sont conservés ; aucune publication de remplacement n'est instituée.",
+    "L123-28 maintient le décret en Conseil d'Etat et sa carte ; L123-31 maintient l'annexion de la servitude aux documents locaux. La publicité locale complète et sa durée de deux mois ne sont pas réduites. La dispense vise uniquement les décrets publiés après entrée en vigueur et ne remet pas en cause les formalités ou les délais de recours des décrets anciens. Aucun coût d'annonce ni effet sur le délai contentieux n'est chiffré.",
+    "L'obligation de payer et organiser deux mentions dans des journaux disparaît pour les nouveaux décrets. Le Journal officiel et l'affichage dans chaque commune subsistent intégralement, sans nouveau support imposé.",
+    "La suppression ne concerne pas les publicités autonomes d'une enquête ni les décrets antérieurs. Aucune économie nationale ou réduction nette du coût de l'ensemble de la zone n'est établie.",
+    "Aucune charge nouvelle n'est identifiée : la publication au Journal officiel et l'affichage préexistaient ; aucun portail, certification ou insertion de substitution n'est ajouté.",
+    [effect(
+        'obligation_removed', 'saclay-decret-insertions-presse-supprimees',
+        "Suppression des deux annonces de presse de la publication du décret de périmètre.",
+        "Deux mentions dans des journaux diffusés dans l'Essonne et les Yvelines, en plus de la publication au Journal officiel et de deux mois d'affichage local.",
+        "Zéro insertion de presse au titre de cet article pour les nouveaux décrets ; Journal officiel et deux mois d'affichage du décret et de la carte conservés.",
+        'legal_duty', "Autorités assurant la publicité du décret de délimitation ou de révision de la zone de Paris-Saclay.",
+        "Décrets publiés au Journal officiel à compter de l'entrée en vigueur ; ancien régime et recours conservés pour les décrets antérieurs.",
+        "Aucune publicité nouvelle de remplacement ; moyens publics existants conservés.",
+        old, "Aucune mention de cette publication dans un journal n'est exigée au titre du présent article.",
+    )],
+    ["Insertion obligatoire de la mention de publication du décret dans deux journaux diffusés dans les départements de l'Essonne et des Yvelines."],
+)
+
+retain(
+    'R123-13',
+    "Maintien intégral de la cohérence du programme d'action avec les protections et modes de gestion environnementaux déjà applicables aux espaces concernés. Il ne demande ni nouvelle autorisation ni rapport distinct ; sa suppression permettrait des orientations contradictoires avec les protections autonomes des espaces.",
+    "L123-33, lu en entier, fixe l'objet du programme : agriculture, forêt, espaces naturels et paysages, avec concertation communale. Les livres III et IV du code de l'environnement restent leur fondement autonome, non une conséquence des quotas SRU ; ils ne sont pas présentés comme réécrits par ce lot.",
+    "La source ne crée qu'une cohérence substantielle avec des protections existantes. Aucun prélèvement ou formalité autonome supprimable n'y a été identifié après lecture entière.",
+    "Les normes environnementales hors corpus ne sont pas auditées ici en totalité. Aucun effet chiffré sur les coûts de gestion ni extension d'interdiction n'est revendiqué.",
+    "Aucune charge nouvelle n'est identifiée : pas de plan, étude ou certification supplémentaire ; les obligations environnementales gardent leurs seuls fondements existants.",
+)
+
+retain(
+    'R123-14',
+    "Maintien intégral de l'avis agricole ciblé et du silence favorable après deux mois. La compétence de la chambre apporte l'expertise liée à l'objectif légal de maintien de l'exploitation agricole ; il ne s'agit pas d'un agrément général conditionnant une activité privée. Le délai est maximal et ne force pas à attendre deux mois lorsqu'un avis est reçu plus tôt.",
+    "L123-33 confie au programme une fonction agricole explicite ; la consultation communale ne remplace pas cette expertise sectorielle. R123-16 conserve l'approbation publique du programme sans ajout de dossier. Le bénéfice du silence favorable reste ouvert aux futurs programmes et évolutions relevant de cette consultation.",
+    "La consultation reste limitée à la gestion agricole et comporte déjà un mécanisme empêchant le blocage par silence. Aucun nouvel allègement ni suppression de prélèvement n'est démontré.",
+    "Les délais agricoles ne sont pas confondus avec ceux de la délimitation du périmètre ou de l'autorisation d'UTN. Le coût et la durée réelle de l'avis ne sont pas chiffrés.",
+    "Aucune charge nouvelle n'est identifiée : même avis sectoriel, même réception du programme et même silence favorable, sans donnée ni justificatif nouveau.",
+)
+
+retain(
+    'R123-15',
+    "Maintien intégral de la consultation forestière ciblée de l'ONF et du centre régional, avec accord acquis au silence après deux mois. Elle protège les modes de gestion et les responsabilités propres aux forêts concernées ; supprimer l'accord sans coordination du droit forestier exposerait les gestionnaires à des décisions contradictoires.",
+    "Le champ est uniquement la gestion forestière du programme de L123-33, non l'ensemble des projets de construction. Le délai de deux mois est un maximum, pas un minimum d'attente. La dénomination territoriale de l'organisme est conservée telle que dans la source ; une éventuelle évolution organique du code forestier hors corpus n'est ni supposée ni corrigée silencieusement. L'accord tacite favorable subsiste aussi pour les situations futures éligibles.",
+    "La source entière conserve une consultation sectorielle et son accord tacite favorable. Aucun nouveau prélèvement, nouveau circuit de données ou nouvelle pièce n'est ajouté.",
+    "La réforme ne supprime pas les compétences ou droits de gestion forestiers autonomes. L'absence de lecture du code forestier interdit de prétendre les avoir coordonnés ou supprimés.",
+    "Aucune charge nouvelle n'est identifiée : maintien du programme transmis aux deux organismes existants, sans agrément de substitution et sans allongement des deux mois.",
+)
+
+s = by_number['R123-16']['source_xml']
+old = "La délibération et le programme d'action font l'objet d'une mention au recueil des actes administratifs des préfectures de l'Essonne et des Yvelines et sont affichés pendant deux mois dans les mairies de chacune des communes dont tout ou partie du territoire est inclus dans le périmètre de la zone de protection."
+new = "La délibération et le programme d'action sont affichés pendant deux mois dans les mairies de chacune des communes dont tout ou partie du territoire est inclus dans le périmètre de la zone de protection."
+assert old in s
+x = s.replace(old, new).strip() + "\n<p>Aucune mention dans les recueils des actes administratifs des préfectures de l'Essonne et des Yvelines n'est requise au titre du présent article pour les délibérations approuvant le programme d'action prises à compter de l'entrée en vigueur de la loi portant la présente réforme. Les délibérations antérieures et les effets de leurs publicités restent soumis au régime antérieurement applicable. Les règles autonomes de publicité, de caractère exécutoire et de recours demeurent applicables.</p>"
+rewrite(
+    'R123-16', x,
+    "Réforme de fond : suppression des mentions supplémentaires de la délibération et du programme dans les recueils des deux préfectures. Approbation par le conseil d'administration, affichage de deux mois de l'intégralité des documents dans toutes les communes concernées et accès au programme au siège et par voie électronique sont intégralement maintenus. Aucune plateforme de remplacement n'est créée.",
+    "L123-33 ne prescrit pas ces deux mentions départementales. Le public conserve les supports préexistants contenant le programme et l'affichage de la délibération ; les règles autonomes de publicité et d'entrée en vigueur d'un acte administratif ne sont pas supprimées. La dispense propre à cet article ne prétend donc pas supprimer une éventuelle publication due sur un autre fondement. Elle concerne les délibérations nouvelles, sans modifier les effets et recours des anciennes. Le gain d'argent n'est pas chiffré et la publicité électronique existante n'est pas comptée comme un apport nouveau.",
+    "Deux mentions de publicité réglementaire deviennent non exigibles sous ce fondement, sans retirer l'approbation, l'affichage local ou l'accès existant au programme. La réduction porte sur ces envois et insertions seulement.",
+    "Le texte ne garantit pas que toute publication en recueil serait exclue si une règle autonome l'imposait. Les actes antérieurs, le caractère exécutoire et les délais contentieux ne sont pas requalifiés ; solde financier non établi.",
+    "Aucune charge nouvelle n'est identifiée : affichage, accès au siège et accès électronique étaient déjà obligatoires. Aucune formalité, donnée ou attestation ne remplace les mentions retirées.",
+    [effect(
+        'obligation_removed', 'saclay-programme-mentions-recueils-supprimees',
+        "Suppression des mentions préfectorales supplémentaires prescrites par cet article pour le programme d'action.",
+        "Mention de la délibération et du programme dans les recueils de l'Essonne et des Yvelines, outre l'affichage communal et la mise à disposition du programme.",
+        "Aucune mention dans ces deux recueils exigée au titre de R123-16 ; approbation, affichage de deux mois et accès au siège et électronique inchangés.",
+        'legal_duty', "EPA Paris-Saclay et services préfectoraux publiant les mentions du programme d'action.",
+        "Délibérations d'approbation prises à compter de l'entrée en vigueur ; actes anciens et obligations de publicité autonomes préservés.",
+        "Aucun support ou envoi de remplacement ; maintien des seules publicités déjà dues, dans leurs champs propres.",
+        old,
+        "Aucune mention dans les recueils des actes administratifs des préfectures de l'Essonne et des Yvelines n'est requise au titre du présent article pour les délibérations approuvant le programme d'action prises à compter de l'entrée en vigueur de la loi portant la présente réforme.",
+    )],
+    ["Mentions supplémentaires obligatoires de la délibération et du programme d'action dans les recueils des actes administratifs des préfectures de l'Essonne et des Yvelines au seul titre de R123-16."],
+)
+
+retain(
+    'R132-1',
+    "Maintien intégral de la communication par l'Etat des règles, servitudes, projets et études qu'il détient. Ce porter à connaissance évite aux collectivités de rechercher seules des données nécessaires à un document opposable et à la prévention des risques ; le supprimer transférerait cette charge et fragiliserait les protections utiles, y compris les dérogations littorales dans leur cadre légal.",
+    "L132-2, lu en entier, garantit la transmission des études et précise que ses retards ou omissions n'arrêtent pas les procédures locales. Les trois subdivisions de R132-1 conservent toutes leurs catégories, notamment eau, agriculture, forêt, patrimoine mondial, risques et environnement. Le renvoi aux chapitres littoral et montagne ne ferme ni schémas de plage ni dérogations favorables et ne rétablit aucun quota SRU. Aucun accès nouveau à des données personnelles n'est créé et aucune nouvelle collecte n'est prescrite.",
+    "Le texte impose une mise à disposition d'informations existantes par l'Etat, utile aux collectivités et aux garanties territoriales. Aucune formalité privée ou taxe supprimable n'a été identifiée dans l'article entier.",
+    "Le maintien ne crée pas à lui seul une fiche de parcelle opposable ni un nouveau portail. Les simplifications CRPA existantes ne sont pas revendiquées comme un gain supplémentaire ; le coût de transmission reste non chiffré.",
+    "Aucune charge nouvelle n'est identifiée : mêmes informations détenues et mêmes destinataires, sans registre, relevé périodique ou déclaration de remplacement.",
+)
+
+
+result = [answers[s['number']] for s in sources]
+assert len(result) == len(sources) == 24
+assert len(answers) == 24
+Path('answer.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
+print('answer.json:', len(result), 'articles')

@@ -1,0 +1,275 @@
+import json
+from pathlib import Path
+
+
+SOURCES = json.loads(Path('source.json').read_text())
+
+# Pour chaque maintien, l'analyse porte sur le texte source intégral.
+REVIEWS = {
+    'L2352-7': {
+        'reason': "Maintien intégral, sans réécriture stylistique : l'ajustement de la composition du groupe n'est exigé qu'en présence de changements substantiels susceptibles de modifier la représentation. Il assure que les salariés et les Etats concernés restent effectivement représentés pendant la négociation. Supprimer cette adaptation permettrait de négocier avec une représentation devenue inexacte ; l'article ne prescrit ni dossier, ni autorisation, ni périodicité de contrôle supplémentaire.",
+        'review_notes': "Lecture du texte entier, sans tableau ni note source. Articulation vérifiée avec L2352-3, L2352-4 et L2352-13 : proportion des effectifs, sièges supplémentaires de fusion et poids des voix doivent rester cohérents. L2354-4 régit distinctement les changements postérieurs à l'immatriculation ; il ne constitue pas un second ajustement automatique de la même période. Cadre européen de l'implication des salariés à préserver ; aucune suppression nationale de ce cadre n'est proposée.",
+        'assessment': "La source entière est conservée : aucune obligation ni aucun prélèvement n'est supprimé. L'adaptation ponctuelle de la représentation à un changement substantiel demeure une garantie nécessaire de négociation représentative.",
+        'scope_limitations': "Aucun allègement n'est revendiqué pour le calcul des sièges ou des voix. Les modalités réglementaires et le contrôle complet du cadre européen ne sont pas réécrits dans cet article.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : le texte reste inchangé, sans registre d'effectifs, déclaration périodique, pièce ni délai ajoutés. Le coût global du dispositif n'est pas chiffré.",
+    },
+    'L2352-8': {
+        'reason': "Maintien intégral de l'accès au juge judiciaire pour les contestations des désignations et de son champ territorial. Cette attribution de compétence protège la régularité de la représentation sans imposer un recours préalable supplémentaire. Son recoupement avec L2353-11 pour le comité n'oblige pas à engager deux procès et ne démontre donc pas une charge procédurale doublonnée à supprimer.",
+        'review_notes': "L2353-11, R2352-18 et R2353-3 ont été lus : les règlements nomment le tribunal judiciaire et fixent leurs voies de contestation. Leurs renvois à R2324-24 et R2324-25 appellent une concordance réglementaire avec les règles du CSE, hors du lot ; ils ne sont pas réputés corrigés ici. Ne pas confondre leurs délais de recours de quinze jours avec le préavis individuel de rupture du contrat de travail.",
+        'assessment': "Aucune réduction de charge n'est constatée par rapport à la source entière. La compétence judiciaire et l'accès des salariés concernés à la contestation restent nécessaires ; la répétition partielle d'une compétence ne crée pas deux saisines obligatoires.",
+        'scope_limitations': "Le présent maintien n'achève pas la coordination des renvois réglementaires anciens de R2352-18 et R2353-3. Il ne modifie ni le juge compétent ni les délais de recours.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : aucune saisine supplémentaire, pièce, autorisation préalable ou condition de recevabilité n'est ajoutée au texte conservé.",
+    },
+    'L2352-9': {
+        'reason': "Maintien intégral : l'invitation, l'identité des sociétés et les effectifs permettent de constituer et de faire négocier un groupe représentatif ; l'information directe des salariés sans représentants évite leur exclusion. Les six mois constituent une durée de négociation plafonnée, prolongeable seulement d'un commun accord dans la limite d'un an, et non un délai minimal d'attente. L'information sur le processus de création a un objet distinct de la seule information initiale ; aucune répétition documentaire obligatoire n'est créée par cet article.",
+        'review_notes': "D2352-1 à D2352-4 et D2352-14 à D2352-15 lus : informations initiales, destinataires et convocation sont distingués. Divergence préexistante à coordonner : la loi rattache le début des négociations à la constitution du groupe, tandis que D2352-14 fait courir les six mois de la première réunion. Cette divergence n'est pas corrigée silencieusement ; l'articulation de ces deux événements et l'alignement réglementaire restent à documenter, sans permettre de différer les négociations exigées dès la constitution. D2352-14 conserve aussi une lettre recommandée avec avis de réception, dont l'éventuel allègement doit viser ce règlement et n'est pas compté ici. Les six mois et le maximum d'un an sont conservés. L2353-1 et L2353-2 règlent l'issue sans accord. La directive 2001/86/CE et le règlement (CE) 2157/2001 sont le cadre européen à confronter ; leurs textes intégraux ne sont pas joints à ce lot local et aucune conformité européenne exhaustive n'est affirmée.",
+        'assessment': "Le maintien conserve les trois alinéas de la source, y compris l'information des salariés sans représentants et l'extension négociée. Il ne supprime ni formalité ni délai : six mois et un an restent des bornes de négociation, pas un temps d'attente nouvellement raccourci.",
+        'scope_limitations': "Aucun gain n'est attribué au réemploi de données ou à une notification électronique non rédigés ici. La forme postale de D2352-14 et la vérification européenne complète restent hors de cette proposition.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : les informations, destinataires, durées et accord de prolongation sont conservés sans formulaire, relevé périodique ou justification nouvelle.",
+    },
+    'L2352-10': {
+        'reason': "Maintien intégral de l'assimilation du temps de réunion à du temps de travail et du paiement à l'échéance normale. La dépense salariale finance l'exercice effectif de la représentation ; la supprimer ferait supporter la négociation aux salariés. Aucun état spécifique, justificatif nouveau, prélèvement accessoire ni délai minimal administratif n'est institué par cette disposition.",
+        'review_notes': "Le texte entier ne comporte ni plafond de rémunération ni exception à retrancher. Ne pas lui appliquer le plafond de cent vingt heures de L2353-25, qui relève du comité et exclut lui-même les séances de son décompte. Le contrat unique et ses règles de rupture ne modifient pas le caractère payé des réunions. Les modalités générales de paie et de preuve restent distinctes.",
+        'assessment': "La source entière est maintenue pour préserver un droit salarial nécessaire. Aucun versement ni temps de travail payé n'est supprimé et aucune baisse de prélèvement n'est revendiquée.",
+        'scope_limitations': "Le maintien ne chiffre pas le coût des réunions et ne modifie ni les autres temps de représentation ni les régimes de rémunération et de cotisations qui leur sont applicables.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : le même temps de réunion reste payé à l'échéance normale, sans attestation ni circuit de remboursement supplémentaire.",
+    },
+    'L2352-11': {
+        'reason': "Maintien intégral de la prise en charge, par les sociétés participantes, des seules dépenses nécessaires à la bonne exécution de la mission. Ce financement conditionne une négociation effective et n'est ni une taxe ni une autorisation préalable. L2352-12 précise l'expertise sans créer un second remboursement d'une même dépense ; supprimer le principe général retirerait le financement d'autres frais nécessaires.",
+        'review_notes': "Les termes limitatifs « nécessaires » et « mission du groupe spécial de négociation » restent entiers. L2352-12 a été relu pour distinguer les dépenses générales et l'assistance d'un expert financé. Aucune solidarité financière d'un montant nouveau, aucun barème de frais et aucune obligation de déclaration séparée ne sont inventés. Les dispositions européennes d'effectivité des négociations doivent rester coordonnées.",
+        'assessment': "Aucun allègement n'est démontré par rapport à la source complète : les dépenses nécessaires restent financées par les sociétés participantes afin que la représentation ne soit pas financée par ses membres.",
+        'scope_limitations': "Le montant des frais, leur répartition entre sociétés et le coût consolidé des négociations ne sont pas évalués. La prise en charge d'une même dépense ne devient pas double du fait de L2352-12.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : maintien du financeur et du critère de nécessité existants, sans taxe, budget minimum, registre spécial ou justificatif ajouté.",
+    },
+    'L2352-12': {
+        'reason': "Maintien intégral de la liberté de recourir aux experts choisis par le groupe, de leur voix consultative et de la prise en charge de l'assistance d'un seul expert par les sociétés. La liberté de choix permet une négociation informée ; le financement limité à un expert protège déjà les sociétés d'une multiplication obligatoire des frais. Supprimer ce financement viderait l'assistance de son effectivité, sans supprimer une formalité redondante.",
+        'review_notes': "Les deux alinéas sont conservés, sans assimiler la liberté de choisir plusieurs experts à une obligation pour les sociétés de tous les financer. L2352-11 reste le principe des dépenses nécessaires ; pas de double remboursement. L2353-22 porte sur l'expertise du comité après sa mise en place et n'est pas une seconde expertise obligatoire du même groupe. Aucune autorisation administrative de l'expert n'est ajoutée.",
+        'assessment': "La source entière est maintenue, y compris l'avantage de financement d'un expert et la limitation de la dépense imposée aux sociétés. Aucun expert obligatoire supplémentaire ni réduction de coût nouvelle ne sont créés.",
+        'scope_limitations': "Aucun coût d'expertise n'est chiffré ; les experts librement choisis au-delà de l'expert financé ne deviennent pas financés par la loi. Le régime distinct du comité n'est pas modifié.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : maintien du choix du groupe, de la voix consultative et du financement d'un seul expert, sans agrément ni attestation supplémentaires.",
+    },
+    'L2352-13': {
+        'reason': "Maintien intégral des trois alinéas : la double majorité absolue donne leur assise aux décisions ordinaires ; la double majorité des deux tiers, issue d'au moins deux Etats, encadre la faculté de renoncer à la négociation et la réduction de droits de participation. La dispense de chapitre III reste ouverte dans les cas autorisés, tandis que la transformation d'une société déjà participative en est exclue. Abaisser ou effacer ces garanties au titre d'une simplification porterait atteinte au consentement collectif et aux droits antérieurs.",
+        'review_notes': "Contrôle des seuils : majorité absolue des membres ET des salariés ; deux tiers des membres issus d'au moins deux Etats ET représentant au moins deux tiers des salariés ; participation préalable d'au moins 25 % en fusion et d'au moins 50 % en holding ou filiale commune. D2352-16 lu pour la pondération des sièges ; L2352-18, L2352-19, L2353-28 et L2354-3 lus pour la transformation, le choix de forme et la réouverture des négociations. Aucun de ces seuils n'est remplacé par ceux des accords d'entreprise L2232. La dispense de chapitre III ne supprime pas l'information-consultation nationale.",
+        'assessment': "La totalité de la source est conservée. La faculté collective d'éviter la négociation et le régime de référence, les conditions renforcées de consentement et les protections contre une baisse de participation demeurent ; elles ne sont pas comptées comme des réductions nouvelles.",
+        'scope_limitations': "Aucun allègement des majorités, du nombre d'Etats ou des protections en transformation n'est proposé. Le contrôle complet des transpositions nationales et européennes n'est pas une opération achevée par ce maintien.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : mêmes assiettes de vote, mêmes seuils et mêmes exceptions, sans vote supplémentaire, certification, déclaration ou délai ajouté.",
+        'benefit_review': "La dérogation du deuxième alinéa permet, pour les situations futures aussi, de ne pas entamer ou de clore les négociations et d'écarter le chapitre III, sous les deux majorités des deux tiers et la représentation d'au moins deux Etats. L'information-consultation nationale subsiste. L'interdiction de cette renonciation en transformation lorsqu'un système de participation existe et le vote renforcé en cas de réduction de participation protègent les salariés ; ils restent entiers, avec les seuils de 25 % en fusion et de 50 % en holding ou filiale commune. La double majorité absolue ordinaire est également conservée. Aucun de ces avantages ou garanties n'est réservé aux seules sociétés déjà constituées.",
+    },
+    'L2352-14': {
+        'reason': "Maintien intégral de l'interdiction de sanctionner ou licencier un salarié en raison de l'exercice du droit de L2352-13 et de la nullité des actes contraires. Il s'agit d'une protection essentielle contre les représailles, non d'une autorisation ou d'une formalité redondante. La réduction du coût ordinaire de rupture et le préavis individuel du contrat unique ne peuvent légitimer une rupture discriminatoire ou portant atteinte à cette liberté collective.",
+        'review_notes': "L2352-13 a été intégralement relu : la protection ne se limite pas à la décision majoritaire finalement adoptée. La nullité de plein droit demeure. Les règles du contrat unique, leurs transitions et l'absence d'indemnité ordinaire avant un an n'effacent ni cette nullité ni les réparations d'une illégalité. Aucun nouveau contrôle préalable des décisions du groupe n'est institué.",
+        'assessment': "La source entière reste applicable. L'interdiction des représailles et la nullité sont des protections nécessaires ; aucune charge formelle ou taxe supprimable n'est identifiée dans cet article.",
+        'scope_limitations': "Le maintien ne réforme pas le statut protecteur d'autres mandats ni les procédures de rupture distinctes. Aucune réduction d'indemnité réparatrice ou de recours n'est avancée.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : même interdiction et même nullité, sans autorisation, déclaration de conformité ou procédure de contrôle supplémentaires.",
+    },
+    'L2352-16': {
+        'reason': "Maintien intégral des sept rubriques de l'accord et de la réserve de L2352-13. Le champ des sociétés, la représentation, les attributions, les réunions, les ressources, les procédures alternatives et la vie de l'accord rendent le dispositif négocié opératoire et contrôlable. La fréquence reste négociée, sans minimum nouveau. Le 6° permet déjà une procédure d'information-consultation à la place d'un organe ; supprimer son fondement fermerait une faculté favorable plutôt que retirer une charge.",
+        'review_notes': "L2352-2 confirme le caractère écrit de l'accord ; L2352-13 deuxième alinéa autorise l'option de non-négociation dans son champ ; L2352-17 à L2352-20 précisent participation, transformation et recours volontaire au régime de référence. Les numéros 1° à 7° sont conservés sans fusion qui rendrait un renvoi incertain. L2354-2 et L2354-4 organisent des négociations ultérieures distinctes. Aucun rapport annuel supplémentaire ni double dépôt n'est prévu par la source.",
+        'assessment': "Les sept éléments de la source complète sont maintenus : ils définissent le contenu utile d'un accord autonome et sa faculté de substituer des procédures à un organe. Aucun allègement nouveau n'est revendiqué.",
+        'scope_limitations': "Le maintien ne réforme pas les modalités de dépôt ou de publicité situées ailleurs. Il ne fixe ni nombre de réunions ni budget nouveau et ne vérifie pas chaque accord particulier.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : les mêmes rubriques sont conservées, sans annexe, pièce justificative, registre, agrément ou minimum de réunion ajouté.",
+    },
+    'L2352-17': {
+        'reason': "Maintien intégral du contenu de l'accord de participation lorsqu'il est décidé d'en fixer les modalités. Le nombre de sièges, les modes d'élection, désignation, recommandation ou opposition et les droits des membres évitent une participation purement nominale. La condition initiale n'impose pas de négocier une participation dans tous les cas ; retirer la définition de ses procédures ne supprimerait pas une charge administrative autonome.",
+        'review_notes': "Le caractère conditionnel « Si, au cours des négociations » et « le cas échéant » est conservé. L2352-13 fixe les majorités en cas de baisse de participation ; L2352-18 préserve le niveau antérieur en transformation ; L2352-19 règle le choix entre plusieurs formes. Aucune transposition des majorités L2232 ni nouvelle élection indépendante des modalités négociées n'est introduite.",
+        'assessment': "La source entière reste inchangée : elle rend effectifs les droits de participation librement organisés dans le champ légal, sans créer un régime général de participation supplémentaire. Aucun coût supprimé n'est démontré.",
+        'scope_limitations': "Le maintien ne modifie ni le nombre de sièges négocié ni les règles nationales d'administration des sociétés, qui doivent être articulées avec l'accord concerné.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : mêmes choix et mêmes procédures à préciser si une participation est instituée, sans agrément ou justificatif supplémentaire.",
+    },
+    'L2352-18': {
+        'reason': "Maintien intégral du niveau d'information, de consultation et de participation au moins équivalent lors d'une transformation en société européenne. La forme sociétaire ne doit pas effacer les droits collectifs préexistants. Ce plancher protège les salariés ; il n'est ni une taxe, ni une obligation déclarative, ni un délai minimal dont la suppression serait compatible avec l'orientation de conservation des protections essentielles.",
+        'review_notes': "Le champ demeure limité à la constitution par transformation. Ne pas remplacer « au moins équivalent » par un simple droit d'être informé ou l'appliquer indistinctement à une fusion, holding ou filiale commune. L2352-13 deuxième alinéa et L2353-28 1° ont été lus pour la continuité de la participation. Les exigences européennes de conservation des droits sont à coordonner, sans les tenir pour supprimées par la réforme nationale.",
+        'assessment': "La source complète conserve le plancher de droits collectifs en transformation, pour les opérations futures aussi. Il s'agit d'un maintien nécessaire, sans réduction de charge ni élargissement artificiel de son champ.",
+        'scope_limitations': "L'équivalence concrète dépend de la société transformée et de ses droits antérieurs ; elle n'est pas évaluée ici. Les autres modes de constitution conservent leurs propres règles.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : le même plancher d'équivalence et le même champ demeurent, sans mesure, attestation ou autorisation nouvelle.",
+    },
+    'L2352-19': {
+        'reason': "Maintien intégral du choix collectif préalable entre plusieurs formes de participation lorsque le groupe décide d'en mettre une en oeuvre. Ce choix permet un régime applicable identifiable et ne cumule pas automatiquement toutes les formes nationales. Le renvoi aux conditions de L2352-13 préserve le consentement et la protection contre une réduction des droits ; le supprimer rendrait le choix moins contrôlable sans retirer de démarche administrative distincte.",
+        'review_notes': "L2352-17 et les trois alinéas de L2352-13 ont été relus. La condition « plusieurs formes » n'est pas étendue aux sociétés n'en ayant qu'une. La décision ne permet pas de descendre sous le niveau protégé de L2352-18 en transformation. Le mot « préalable » fixe l'ordre du choix, pas une durée minimale d'attente. Pas de seconde procédure d'approbation administrative.",
+        'assessment': "La source entière est conservée : le choix d'une forme de participation évite une application indéterminée de plusieurs systèmes et reste soumis aux majorités pertinentes. Aucun allègement nouveau n'est compté.",
+        'scope_limitations': "La proposition ne choisit pas la forme applicable à une société déterminée et ne modifie pas les régimes nationaux de participation ou les garanties de transformation.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : même décision collective préalable, sans nouveau vote distinct imposé, agrément, dépôt ni délai ajouté.",
+    },
+    'L2352-20': {
+        'reason': "Maintien intégral de la faculté, par accord, de retenir les dispositions de référence du chapitre III. Elle dispense les parties de construire de toutes pièces un régime négocié et reste ouverte aux futures sociétés éligibles. Ce recours volontaire ne constitue ni une autorisation administrative ni une obligation supplémentaire à abroger ; sa suppression retirerait un choix favorable aux deux parties.",
+        'review_notes': "Le chapitre III a été vérifié dans ses articles pertinents du lot, ainsi que L2351-3 et L2352-16. L'option par accord ne se confond pas avec l'application subsidiaire à l'issue d'une négociation sans accord de L2353-1. Les conditions d'immatriculation de L2353-2 et les règles de participation de L2353-28 restent distinctes. Le renvoi conserve ses effets, sans quota ni prélèvement nouveau.",
+        'assessment': "La source entière conserve une option volontaire de recours au régime de référence ; elle n'impose pas une nouvelle instance en plus du régime choisi. Aucun gain matériel nouveau n'est attribué à cette option existante.",
+        'scope_limitations': "Le coût comparé d'un accord spécifique et du régime de référence n'est pas établi. Les conditions de validité d'un accord particulier restent à examiner dans leur contexte.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : même faculté d'accord, sans nouvelle autorisation, déclaration ni obligation de cumuler deux dispositifs.",
+    },
+    'L2353-2': {
+        'reason': "Maintien intégral de l'alternative entre décision des parties et engagement des dirigeants d'appliquer le régime légal avant immatriculation dans le cas de L2353-1. Cette condition assure l'effectivité du régime subsidiaire et empêche l'immatriculation de servir à éluder la représentation. Elle ne peut être supprimée comme un agrément administratif inutile : le statut de la société européenne et l'implication des salariés sont coordonnés au niveau européen.",
+        'review_notes': "L2353-1, les quatre articles L2354-1 à L2354-4 et D2353-1 ont été lus. D2353-1 exige l'accord ou, à défaut, l'engagement écrit joint à l'immatriculation : aucun dépôt doublonné n'est créé par L2353-2. Le règlement (CE) 2157/2001, notamment ses conditions d'immatriculation, et la directive 2001/86/CE sont à confronter avant toute suppression de ce verrou ; leurs textes complets ne sont pas disponibles dans les sources locales consultées et aucune dispense européenne n'est présumée. La référence de D2353-1 à L2352-15 doit suivre la correction de confidentialité du présent lot, sans rétablir L2325-5.",
+        'assessment': "La source entière conserve la condition d'effectivité du régime d'implication avant immatriculation. L'examen ne démontre pas qu'il s'agisse d'un agrément administratif doublonné supprimable indépendamment du statut européen.",
+        'scope_limitations': "Aucune procédure d'immatriculation n'est supprimée ni annoncée conforme après allègement. Le code de commerce, le règlement européen et le détail des pièces d'immatriculation ne sont pas réécrits ici.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : maintien de l'alternative existante, sans seconde approbation, nouvel engagement ou pièce supplémentaire par rapport au régime lu.",
+    },
+    'L2353-3': {
+        'reason': "Maintien intégral de la limitation de compétence du comité aux questions concernant la société européenne elle-même, une filiale ou un établissement situé dans un autre Etat membre, ou excédant les pouvoirs décisionnels d'un seul Etat. Cette délimitation évite une extension générale du comité à tous les sujets locaux et organise la complémentarité de représentation ; la retirer ne réduirait pas une obligation déclarative mais risquerait d'élargir son champ.",
+        'review_notes': "Lecture comparée de L2351-4 pour le champ de l'information. Les alternatives de la source sont conservées, notamment la société européenne elle-même et les décisions excédant les pouvoirs dans un seul Etat ; elles ne sont pas réécrites en une condition cumulative de présence dans deux Etats. Aucun retrait des instances nationales autonomes ni chevauchement procédural nouveau n'est décidé.",
+        'assessment': "La source entière conserve une limite de compétence utile ; aucune obligation n'est supprimée mais aucune extension de compétence, de collecte ou de consultation n'est créée.",
+        'scope_limitations': "L'appréciation du caractère transnational d'une opération dépend des pouvoirs de décision et du périmètre réel ; elle ne peut être tranchée abstraitement par ce maintien.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : mêmes catégories de questions, sans nouvelle consultation locale, transmission de données ou justification préalable.",
+    },
+    'L2353-4': {
+        'reason': "Maintien intégral de la réunion au moins annuelle et de ses dix thèmes. Cette réunion assure un minimum effectif d'information et de consultation en l'absence d'accord ; elle n'est pas le minimum de trois réunions de branche supprimé dans L2232. Les dix rubriques portent sur des objets distincts utiles à l'emploi et à l'activité, sans imposer dix rapports ou réunions séparés. Leur suppression retirerait du contenu à la représentation et non un doublon démontré.",
+        'review_notes': "Contrôle intégral des 1° à 10° : situation économique et financière ; évolution des activités ; production et ventes ; emploi ; investissements ; organisation, méthodes et procédés ; transferts ; fusions ; réductions et fermetures ; licenciements collectifs. L2353-16 précise la convocation et les rapports d'activité ; son éventuelle simplification doit viser ce texte, sans annoncer ici un rapport supprimé. L2353-5 conserve les consultations exceptionnelles et ne peut être absorbé dans une réunion annuelle tardive. Cadre européen du régime subsidiaire préservé.",
+        'assessment': "La totalité de la source, y compris ses dix thèmes, est maintenue. Une réunion annuelle d'information utile ne constitue pas un rapport administratif doublonné ; aucun allègement nouveau n'est revendiqué.",
+        'scope_limitations': "Les supports d'information et le coût des réunions ne sont pas chiffrés. Aucun assouplissement de L2353-16 ni regroupement des consultations exceptionnelles n'est réputé accompli.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : même minimum annuel et mêmes thèmes, sans dix rapports distincts, registre, certification ni fréquence supplémentaire.",
+    },
+    'L2353-5': {
+        'reason': "Maintien intégral de la réunion demandée par le comité ou, sur son choix, par le bureau lorsque des circonstances exceptionnelles affectent considérablement les salariés. Les délocalisations, fermetures et licenciements collectifs nécessitent une information-consultation effective, qui ne peut attendre la réunion annuelle. L'option du bureau allège déjà l'organisation sans supprimer le droit des salariés concernés à être représentés.",
+        'review_notes': "Les trois exemples restent non limitatifs et le seuil d'atteinte considérable est conservé. L2353-19 prévoit une nouvelle réunion si la direction ne suit pas l'avis, sur demande, et L2353-20 permet la participation des membres représentant les salariés directement concernés à une réunion de bureau. Ces droits ne sont pas effacés. Le préavis individuel de quinze jours ne remplace ni ces consultations collectives ni les autorisations de rupture distinctes.",
+        'assessment': "La source complète conserve une consultation exceptionnelle conditionnée à une atteinte considérable et à une demande, avec l'option du bureau. Aucun circuit administratif ou prélèvement inutile n'est identifié dans cet article.",
+        'scope_limitations': "Aucune réduction des procédures collectives de licenciement ou des autorisations de salariés protégés n'est revendiquée. Les calendriers sectoriels restent à leur champ propre.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : mêmes circonstances, même demande et même possibilité de bureau, sans réunion automatique supplémentaire ou justificatif nouveau.",
+    },
+    'L2353-8': {
+        'reason': "Maintien intégral du calcul des sièges par renvoi à L2352-3. Le renvoi évite de répéter une seconde règle de proportion des salariés entre Etats et assure la cohérence avec la négociation initiale. Supprimer le calcul empêcherait la représentation effective ; créer un nombre forfaitaire reviendrait à inventer un paramètre sans décision de réforme.",
+        'review_notes': "L2352-3 et R2352-5 ont été lus en entier : proportions d'effectifs et dix tranches de sièges de 1 à 10 restent applicables. Le renvoi de L2353-8 ne reprend pas à lui seul les sièges supplémentaires de fusion de L2352-4. L2353-12 et L2353-15 règlent les adaptations de composition après mise en place ; ils ne justifient pas de retirer la règle initiale. Aucun chiffre n'est modifié.",
+        'assessment': "La source entière conserve une règle commune de calcul des sièges plutôt que deux barèmes concurrents. Il s'agit d'une cohérence existante, sans fusion nouvelle ni réduction supplémentaire.",
+        'scope_limitations': "Le maintien ne calcule pas les sièges d'une société concrète et ne réforme pas les dix tranches réglementaires ou les règles d'adaptation ultérieure de la composition.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : même renvoi et mêmes effectifs de référence, sans déclaration, nouveau seuil ou justification supplémentaire.",
+    },
+    'L2353-9': {
+        'reason': "Maintien intégral du renvoi aux règles de désignation de L2352-5 pour les représentants travaillant en France d'une société européenne ayant son siège en France. La désignation à partir des élections, des collèges et de la représentation syndicale garantit la légitimité sans imposer un second scrutin quand le régime de désignation s'applique. Retirer le renvoi créerait un vide plutôt qu'une formalité supprimée.",
+        'review_notes': "L2352-5 a été lu en entier, ainsi que D2353-2, D2352-6 à D2352-13 et L2353-10 pour l'élection en l'absence d'organisation syndicale. La concordance CSE de L2352-5 est active ; les anciens renvois réglementaires de D2352-11 à R2324-18 et suivants restent à coordonner séparément. Ne pas étendre le champ du présent article aux désignations régies par le droit d'un autre Etat membre.",
+        'assessment': "La source complète conserve la désignation sur la base des résultats électoraux et du régime commun du groupe de négociation. Aucun second vote ni formalité nouvelle ne sont imposés, mais aucun allègement nouveau n'est réalisé.",
+        'scope_limitations': "Le maintien n'achève pas la coordination du règlement d'élection sans représentants et ne réforme pas les règles propres aux sociétés européennes situées dans les autres Etats.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : même désignation par renvoi, sans élection supplémentaire, nouvelle notification ni condition d'accès au mandat.",
+    },
+    'L2353-10': {
+        'reason': "Maintien intégral des deux hypothèses d'élection directe selon les règles du CSE en l'absence d'organisation syndicale. Cette voie évite que les salariés sans syndicat soient privés de représentants. Les deux alinéas couvrent respectivement la société européenne située en France et l'entreprise ou l'établissement français qui lui appartient ; les fusionner sans précaution risquerait d'en perdre un champ. Le scrutin n'est pas un doublon d'une désignation syndicale inexistante.",
+        'review_notes': "L2352-6, L2352-5, D2353-2 et D2352-11 lus : conserver les deux champs territoriaux et l'accès au vote sans organisation syndicale. D2352-11 conserve des renvois anciens à R2324-18 et suivants, appelant une coordination réglementaire hors lot. R2353-3 doit aussi être coordonné pour ses renvois procéduraux anciens. Le présent renvoi législatif au CSE est actif ; aucune refonte générale des règles électorales n'est présentée comme réalisée.",
+        'assessment': "La source entière maintient une voie nécessaire d'élection pour les salariés non représentés syndicalement, dans ses deux champs. Aucun scrutin doublonné ou prélèvement supprimable n'est démontré.",
+        'scope_limitations': "Le présent maintien ne réécrit pas les règlements d'élection et de recours ni l'ensemble du régime électoral du CSE. Les coordinations réglementaires identifiées demeurent à traiter dans leurs articles.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : mêmes deux hypothèses d'élection et même renvoi au CSE, sans élection additionnelle, donnée ou justificatif ajouté.",
+    },
+}
+
+
+DRAFTS = {
+    'L2352-15': {
+        'proposed_xml': "<p>Les membres du groupe spécial de négociation ainsi que les experts qui les assistent sont tenus au secret professionnel et à l'obligation de discrétion prévus à l'article L. 2315-3.</p>",
+        'reason': "Coordination nécessaire, sans baisse de charge revendiquée : le renvoi à L2325-5, absent du corpus actif, est remplacé par L2315-3, disposition actuelle du CSE sur le secret des procédés de fabrication et la discrétion relative aux informations confidentielles présentées comme telles. Les destinataires de l'obligation restent les membres du groupe et leurs experts. Ce remplacement ne crée ni engagement écrit de confidentialité ni faculté de classer confidentielle toute information.",
+        'review_notes': "Source entière relue. L2315-3 et sa note d'entrée en vigueur issue de l'ordonnance 2017-1386 ont été lus intégralement : le secret des procédés de fabrication et la discrétion sur les informations confidentielles présentées comme telles ont des objets distincts. Le renvoi adapte ces obligations aux membres et experts expressément désignés par le présent article. L'ancienne version intégrale de L2325-5 n'est pas dans le corpus actif consulté ; la concordance historique exhaustive n'est pas attestée. Les renvois parallèles de L2353-23 et L2353-26 à L2325-5 sont à coordonner dans leurs articles, non modifiés ici. Pas de rétroactivité répressive ni d'extinction des obligations de confidentialité antérieurement nées.",
+        'classification': 'coordination_only',
+        'assessment': "Par rapport à la source complète, seul le numéro de l'article de confidentialité est coordonné au CSE. Les mêmes personnes restent soumises au secret et à la discrétion ; aucune formalité, taxe ou obligation autonome n'est annoncée supprimée.",
+        'scope_limitations': "La concordance historique de l'ancien texte n'est pas documentée par sa version intégrale locale. Les renvois analogues de L2353-23 et L2353-26 ne sont pas réécrits dans ce lot ; aucun audit européen exhaustif n'est revendiqué.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée dans cette coordination : elle ne demande ni accord de confidentialité, ni marquage supplémentaire, ni registre ou pièce ; les sujets et les objets légaux du secret restent délimités.",
+        'effects': [{
+            'kind': 'coordination',
+            'measure_id': 'se-confidentialite-renvoi-cse',
+            'description': "Rattachement de la confidentialité du groupe et de ses experts à la disposition actuelle du CSE, sans comptabiliser une suppression d'obligation.",
+            'before': "Membres du groupe et experts soumis au secret et à la discrétion par renvoi à L2325-5, absent du corpus actif consulté.",
+            'after': "Mêmes membres et experts ; renvoi à L2315-3 sur les procédés de fabrication et les informations confidentielles présentées comme telles ; aucun taux ni assiette fiscale concernés.",
+            'unit': 'other',
+            'affected_population': "Membres du groupe spécial de négociation de la société européenne et experts qui les assistent.",
+            'conditions_and_transition': "Coordination du fondement de l'obligation pour l'avenir ; aucun engagement écrit additionnel, aucune remise en cause des obligations de confidentialité déjà nées ni rétroactivité répressive.",
+            'replacement_or_new_burdens': "Numéro du renvoi remplacé ; pas de déclaration, registre, attestation ou obligation autonome de remplacement.",
+            'source_quote': "Les membres du groupe spécial de négociation ainsi que les experts qui les assistent sont tenus au secret professionnel et à l'obligation de discrétion prévus à l'article L. 2325-5.",
+            'proposed_quote': "Les membres du groupe spécial de négociation ainsi que les experts qui les assistent sont tenus au secret professionnel et à l'obligation de discrétion prévus à l'article L. 2315-3.",
+        }],
+    },
+    'L2353-1': {
+        'proposed_xml': "<p>Un comité de la société européenne est institué lorsque, à l'issue de la période de négociation prévue à l'article L. 2352-9, aucun accord n'a été conclu et que le groupe spécial de négociation n'a pas pris la décision mentionnée au deuxième alinéa de l'article L. 2352-13.</p>",
+        'reason': "Coordination nécessaire du renvoi, sans régime ou obligation nouvelle : la décision qui écarte le comité subsidiaire est précisément celle du deuxième alinéa de L2352-13, de ne pas entamer ou de clore les négociations. Le renvoi indifférencié à tout L2352-13 pourrait viser aussi ses décisions ordinaires ou de participation. Le fait générateur, l'absence d'accord, la période de négociation et la dispense favorable restent inchangés.",
+        'review_notes': "L2352-9 et les trois alinéas de L2352-13 relus en entier. L2353-28 emploie déjà le renvoi précis au deuxième alinéa ; il confirme la concordance retenue. L2353-2 et D2353-1 conservent leurs conditions d'immatriculation. La précision n'impose pas un comité après une renonciation valablement décidée, ne modifie pas les majorités et ne rouvre ni négociation ni immatriculation antérieure. Aucun changement autonome de durée, de document ou de taxe n'est compté.",
+        'classification': 'coordination_only',
+        'assessment': "La seule modification par rapport à la source entière identifie l'alinéa qui autorise à écarter le régime subsidiaire. Il ne s'agit pas d'une seconde suppression du comité, d'un délai raccourci ni d'un nouveau vote.",
+        'scope_limitations': "La coordination ne supprime pas l'instance en l'absence d'accord lorsque la décision dérogatoire n'a pas été prise. Les conditions européennes et les pièces d'immatriculation demeurent à leur champ propre.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : mêmes conditions d'institution et même dispense, sans instance additionnelle, vote, attestation, délai ou dépôt nouveau.",
+        'effects': [{
+            'kind': 'coordination',
+            'measure_id': 'se-renonciation-negociation-renvoi',
+            'description': "Identification de l'alinéa de renonciation qui exclut l'institution subsidiaire du comité.",
+            'before': "Institution du comité à l'issue de la négociation sans accord, sauf décision mentionnée sans précision d'alinéa à L2352-13.",
+            'after': "Mêmes conditions et même dispense ; renvoi expressément limité à la renonciation du deuxième alinéa, avec ses majorités existantes.",
+            'unit': 'other',
+            'affected_population': "Sociétés européennes et groupes spéciaux de négociation parvenus sans accord au terme de la période de négociation.",
+            'conditions_and_transition': "Précision du renvoi sans réouverture des décisions ou immatriculations antérieures et sans modification des durées de six mois ou d'un an de L2352-9.",
+            'replacement_or_new_burdens': "Aucune formalité de remplacement ; aucun nouveau comité après une décision dérogatoire régulièrement prise.",
+            'source_quote': "aucun accord n'a été conclu et que le groupe spécial de négociation n'a pas pris la décision mentionnée à l'article L. 2352-13.",
+            'proposed_quote': "aucun accord n'a été conclu et que le groupe spécial de négociation n'a pas pris la décision mentionnée au deuxième alinéa de l'article L. 2352-13.",
+        }],
+    },
+    'L2353-6': {
+        'proposed_xml': "<p>Le dirigeant de la société européenne qui décide de lancer une offre publique d'acquisition sur une entreprise peut n'informer le comité de la société européenne qu'une fois l'offre rendue publique.</p><p>Dans ce cas, par dérogation aux délais de communication de l'ordre du jour prévus aux deuxième et troisième alinéas de l'article L. 2353-17, il réunit le comité dans les huit jours suivant la publication de l'offre en vue de lui transmettre des informations écrites et précises sur le contenu de l'offre et sur les conséquences qu'elle est susceptible d'entraîner sur l'emploi.</p><p>La dérogation prévue au deuxième alinéa s'applique aux convocations adressées à compter de l'entrée en vigueur de la loi. Elle ne rouvre aucun délai expiré et ne dispense d'aucune information ou réunion déjà due.</p>",
+        'reason': "Coordination explicite d'une incohérence de calendrier préexistante : la source impose la réunion sous huit jours après publicité de l'offre, alors que L2353-17 impose en principe un ordre du jour quinze jours avant, ou dix jours en cas de désaccord. La proposition donne expressément priorité au délai spécial de huit jours pour les seules deux anticipations incompatibles. Elle conserve intégralement le report favorable de l'information jusqu'à publicité, l'information écrite et précise et ses conséquences sur l'emploi. Aucun délai de réunion supplémentaire n'est présenté comme supprimé.",
+        'review_notes': "L2353-17 lu en entier : ses deuxième et troisième alinéas portent respectivement les quinze et dix jours ; son premier alinéa sur l'ordre du jour conjoint et son dernier sur les documents demeurent. Les huit jours de L2353-6 sont conservés sans les qualifier de jours ouvrés ni de délai minimal. La proposition ne supprime ni le contenu de l'information, ni le droit de consultation applicable, ni les réunions exceptionnelles de L2353-5. Transition aux convocations futures, sans remise en cause d'un manquement antérieur. La coordination des exigences propres aux offres publiques dans le code de commerce, le code monétaire et financier et la réglementation de marché reste hors du lot ; aucune conformité de marché complète n'est affirmée.",
+        'classification': 'coordination_only',
+        'assessment': "Par rapport aux deux alinéas de la source entière, le délai spécial de huit jours et le contenu de l'information demeurent. La priorité sur les quinze et dix jours de L2353-17 est explicitée ; elle ne constitue pas une nouvelle réduction de la durée légale de réunion déjà fixée à huit jours.",
+        'scope_limitations': "L'allègement net de coût n'est pas établi et aucun gain de jours n'est compté par rapport à L2353-6. Les obligations de marché et les autres consultations des opérations d'acquisition ne sont pas réécrites.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : la réunion et son information écrite existaient déjà ; aucune convocation distincte, pièce, donnée ou condition nouvelle n'est créée. Le solde global des coûts reste inconnu.",
+        'effects': [{
+            'kind': 'coordination',
+            'measure_id': 'se-opa-coordination-delais-reunion',
+            'description': "Priorité expresse du délai spécial de réunion sur les anticipations générales incompatibles de communication de l'ordre du jour.",
+            'before': "Réunion dans les huit jours suivant la publication de l'offre, avec information écrite précise ; L2353-17 prévoit parallèlement quinze ou dix jours d'anticipation de l'ordre du jour.",
+            'after': "Même réunion sous huit jours et mêmes informations ; seules les anticipations de quinze et dix jours sont expressément écartées dans ce cas spécial.",
+            'unit': 'other',
+            'affected_population': "Sociétés européennes lançant une offre publique d'acquisition et leurs comités de société européenne.",
+            'conditions_and_transition': "Dérogation pour les convocations adressées dès l'entrée en vigueur ; aucun délai expiré rouvert et aucune information ou réunion déjà due effacée. Aucun raccourcissement du délai de huit jours n'est revendiqué.",
+            'replacement_or_new_burdens': "Pas de formalité ou d'information de remplacement ; l'ordre du jour et les obligations de fond subsistent hors des deux anticipations expressément visées.",
+            'source_quote': "il réunit le comité dans les huit jours suivant la publication de l'offre en vue de lui transmettre des informations écrites et précises sur le contenu de l'offre et sur les conséquences qu'elle est susceptible d'entraîner sur l'emploi.",
+            'proposed_quote': "Dans ce cas, par dérogation aux délais de communication de l'ordre du jour prévus aux deuxième et troisième alinéas de l'article L. 2353-17, il réunit le comité dans les huit jours suivant la publication de l'offre en vue de lui transmettre des informations écrites et précises sur le contenu de l'offre et sur les conséquences qu'elle est susceptible d'entraîner sur l'emploi.",
+        }],
+    },
+    'L2353-7': {
+        'proposed_xml': "<p>Le comité de la société européenne est composé :</p><p>1° Du dirigeant de la société européenne ou de son représentant, qui peut être assisté de deux collaborateurs au plus, de son choix, ayant voix consultative ;</p><p>2° De représentants du personnel des sociétés participantes, filiales et établissements concernés, désignés conformément à l'article L. 2353-9.</p><p>Le 1° s'applique aux réunions convoquées à compter de l'entrée en vigueur de la loi. Les accords valablement conclus avant cette date conservent leurs effets.</p>",
+        'reason': "Réduction normative ciblée : l'assistance du dirigeant ou de son représentant par deux collaborateurs cesse d'être imposée et devient une faculté de zéro, un ou deux collaborateurs. L'employeur peut toujours bénéficier de cette assistance, avec voix seulement consultative. Le siège de la direction, l'ensemble des représentants du personnel et leur mode de désignation sont conservés. L'allègement vise la mobilisation obligatoire d'accompagnants, sans réduire les droits d'information, de consultation ou de vote des salariés.",
+        'review_notes': "Les deux subdivisions et le renvoi à L2353-9 sont conservés ; ce dernier renvoie à L2352-5, lu intégralement. L2353-13 conserve la présidence du dirigeant, et L2353-14 sa règle de vote ; aucune voix délibérative n'est donnée aux collaborateurs. L2353-24 continue de financer les moyens nécessaires aux représentants. Application aux convocations futures ; les accords valablement conclus antérieurement gardent leurs effets. L'économie de présence est éventuelle, non chiffrée : aucune dépense fixe évitée dans toute société n'est postulée. Le maintien du cadre européen d'information-consultation ne vaut pas vérification exhaustive de sa conformité.",
+        'classification': 'material_reduction',
+        'assessment': "La source entière imposait une direction assistée de deux collaborateurs ; la règle proposée conserve la composition représentative mais laisse le dirigeant choisir zéro, un ou deux accompagnants. Seule cette obligation de mobilisation est retirée ; aucun impôt ni droit salarial n'est réduit.",
+        'scope_limitations': "Aucun coût total ou solde national n'est établi ; le gain dépend des réunions où la direction renonce à tout ou partie de l'assistance. Les accords antérieurs conservés peuvent continuer à organiser cette présence, et les moyens nécessaires au comité restent dus.",
+        'new_burdens_review': "Aucune charge nouvelle n'est identifiée : l'option ne demande ni déclaration ni justification ; le plafond reste de deux collaborateurs à voix consultative, sans substitution par une autre présence obligatoire ou de nouvelles données.",
+        'change_type': 'normative_reduction',
+        'reform_policy_id': 'editorial_direction_2026_10_19',
+        'removed_provisions': ["L'obligation d'assister le dirigeant de la société européenne ou son représentant de deux collaborateurs dans la composition du comité ; leur présence devient facultative pour les réunions futures, sous réserve des accords antérieurs conservés."],
+        'effects': [{
+            'kind': 'obligation_removed',
+            'measure_id': 'se-assistance-direction-facultative',
+            'description': "Suppression de la présence légalement imposée de deux collaborateurs auprès de la direction au comité, remplacée par une faculté plafonnée au même nombre.",
+            'before': "Direction ou représentant assisté de deux collaborateurs de son choix, avec voix consultative, au comité de la société européenne ; aucun taux ni assiette fiscale concernés.",
+            'after': "Direction ou représentant maintenu ; zéro, un ou deux collaborateurs au choix, avec voix consultative seulement ; représentants du personnel et désignation inchangés.",
+            'unit': 'legal_duty',
+            'affected_population': "Dirigeants des sociétés européennes relevant du comité légal et leurs collaborateurs ; représentants des salariés dont les sièges restent conservés.",
+            'conditions_and_transition': "Réunions convoquées dès l'entrée en vigueur de la loi ; maintien des effets des accords valablement conclus avant cette date. Aucun renouvellement d'instance requis.",
+            'replacement_or_new_burdens': "Aucune présence, déclaration, autorisation ou justification de remplacement. La direction peut conserver l'assistance de deux collaborateurs et leurs voix demeurent consultatives.",
+            'source_quote': "Du dirigeant de la société européenne ou de son représentant, assisté de deux collaborateurs de son choix ayant voix consultative ;",
+            'proposed_quote': "Du dirigeant de la société européenne ou de son représentant, qui peut être assisté de deux collaborateurs au plus, de son choix, ayant voix consultative ;",
+        }],
+    },
+}
+
+
+answer = []
+for source in SOURCES:
+    number = source['number']
+    draft = DRAFTS.get(number)
+    review = draft if draft is not None else REVIEWS[number]
+    item = {key: source[key] for key in ('code_id', 'source_id', 'source_sha256', 'number')}
+    item.update({
+        'proposed_xml': draft['proposed_xml'] if draft else None,
+        'reason': review['reason'],
+        'review_notes': review['review_notes'],
+        'status': 'rewrite_draft' if draft else 'retained_unchanged',
+    })
+    if not draft:
+        item['classification'] = 'retained_necessary'
+    for field in ('benefit_review', 'change_type', 'reform_policy_id', 'removed_provisions'):
+        if field in review:
+            item[field] = review[field]
+    item['substantive_impact'] = {
+        'version': 1,
+        'classification': draft['classification'] if draft else 'retained_necessary',
+        'assessment': review['assessment'],
+        'scope_limitations': review['scope_limitations'],
+        'new_burdens_review': review['new_burdens_review'],
+        'effects': draft['effects'] if draft else [],
+    }
+    answer.append(item)
+
+Path('answer.json').write_text(json.dumps(answer, ensure_ascii=False, indent=2) + '\n')

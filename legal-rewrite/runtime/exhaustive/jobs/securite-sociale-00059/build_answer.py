@@ -1,4 +1,6 @@
+import html
 import json
+import re
 from pathlib import Path
 
 sources = json.loads(Path('source.json').read_text())
@@ -16,6 +18,12 @@ def effect(kind, measure, description, before, after, unit, population, transiti
                 after=after, unit=unit, affected_population=population,
                 conditions_and_transition=transition, replacement_or_new_burdens=burdens,
                 source_quote=source_quote, proposed_quote=proposed_quote)
+
+def passage(xml, first, last):
+    """Un passage continu et entier, sans balises, pour la preuve textuelle."""
+    start = xml.index(first)
+    end = xml.index(last, start) + len(last)
+    return html.unescape(re.sub(r'<[^>]*>', '', xml[start:end]))
 
 def retain(number, reason, notes, assessment, limitations):
     a = by_number[number]
@@ -142,7 +150,7 @@ retain('L412-3',
 old = "Sans préjudice des obligations qui lui incombent à l'égard de son employeur en exécution des dispositions de l'article L. 441-1, la victime d'un accident du travail doit en informer ou en faire informer l'utilisateur."
 new = "La victime d'un accident du travail informe ou fait informer l'utilisateur dans le délai prévu à l'article L. 441-1, sous les réserves de force majeure, d'impossibilité absolue ou de motifs légitimes prévues au même article. Cette information vaut information de son employeur pour l'application de cet article ; aucune information distincte de l'employeur ne peut être exigée de la victime au titre du même accident."
 xml = by_number['L412-4']['source_xml'].replace(old,new)
-xml += "<p>La dispense de seconde information s'applique aux accidents survenus à compter de l'entrée en vigueur de la loi portant cette dispense. Elle s'applique également aux informations restant à accomplir à cette date pour un accident antérieur, sans obligation de renouveler une information déjà régulièrement donnée. Elle ne modifie ni la déclaration de l'accident à la caisse par l'employeur, ni les obligations d'information de l'utilisateur prévues au deuxième alinéa. Les droits à réparation, prescriptions et recours sont conservés, sous réserve de l'application des dispositions répressives plus douces aux sanctions non définitives.</p>"
+xml += "<p>La dispense de seconde information s'applique aux accidents survenus à compter de l'entrée en vigueur de la loi portant cette dispense. Elle s'applique également aux informations restant à accomplir à cette date pour un accident antérieur, sans obligation de renouveler une information déjà régulièrement donnée. La déclaration de l'accident à la caisse par l'employeur, ses modalités et son délai, y compris le point de départ de ce délai, restent régis par les dispositions qui leur sont applicables. Les obligations d'information de l'utilisateur prévues au deuxième alinéa sont maintenues. Les droits à réparation, prescriptions et recours sont conservés, sous réserve de l'application des dispositions répressives plus douces aux sanctions non définitives.</p>"
 rewrite('L412-4',xml,
     "Réduction de fond : le signalement effectué à l'utilisateur libère la victime du second signalement à l'entreprise de travail temporaire. L'utilisateur conserve sa transmission à cette entreprise au deuxième alinéa, et celle-ci sa déclaration à la caisse ; aucun signalement ou registre de remplacement n'est créé. Les exceptions légitimes au délai sont explicitées et le lieu de travail comprenant le siège et les lieux de mission est intégralement conservé.",
     "L441-1 et L441-2, R412-1 et R412-2 lus dans le corpus local. Coordonner R412-1 pour rendre la dispense de seconde information effective ; son délai de vingt-quatre heures et les formes du signalement unique ne sont pas réécrits dans ce lot. R412-2 conserve la transmission existante sous vingt-quatre heures à l'entreprise, au service de prévention et à l'inspection : aucune suppression de ces destinataires n'est décidée. Le deuxième alinéa reste exactement à sa place pour L412-5 ; le troisième conserve le trajet de L411-2. L412-9 étend ces règles aux catégories qu'il vise. Ni durée de mission ni signalement d'accident ne constituent un terme de l'emploi nouveau.",
@@ -212,19 +220,14 @@ o = rewrite('L412-8',xml,
     "Coordination uniquement : pas de baisse de taux ou de base des cotisations, pas de suppression de condition de séjour du 5° ni de l'exclusion L434-1 pour a, b et f. Les décrets de chaque catégorie, le CASF et les textes extérieurs gardent leur champ. La concordance avec la version annoncée au 1er janvier 2029 reste documentairement à établir ; aucun solde global n'est établi.",
     "Aucune charge nouvelle n'est identifiée : les catégories, conditions de couverture et débiteurs des obligations restent ; aucune attestation, autorisation ou déclaration de remplacement n'est ajoutée. L'activité privée relève de la réforme du contrat unique déjà coordonnée ailleurs, sans étendre celle-ci aux stages non salariés ou aux régimes publics.",
     [effect('coordination','accidents-travail-renvois-formation-actualisation',
-        "Actualisation du fondement de la formation continue et des formations hors temps de travail, avec maintien des accidents anciens.",
-        "Livre IX et liste mêlant textes de formation, anciens règlements et disposition actuelle de financement.",
-        "Définition de L6311-1 et conditions pertinentes de L6321-6 à12 ; accidents des anciennes formations préservés.",
-        'regime',"Stagiaires de formation continue, y compris personnes détenues et salariés formés hors temps de travail.",
-        "Couverture maintenue des formations anciennes et nouvelles ; aucune fin automatique du contrat unique à la fin de la phase pédagogique.",
-        "Aucune nouvelle pièce, aucun droit social retiré, aucune suppression du prélèvement autonome de L6331-69.",old_c,new_c),
-     effect('coordination','accidents-travail-renvois-formation-actualisation',
-        "Actualisation des formations CHSCT/CE vers les formations CSE, sans effacer les accidents des anciennes formations.",
-        "Renvois notamment à L4614-14 à16, L2325-44 et R2325-8 pour les anciens organes.",
-        "Renvois à L2315-18 et L2315-63 pour les formations actuelles ; anciennes formations expressément protégées.",
-        'regime',"Salariés en formation de santé-sécurité, économique ou syndicale, selon les conditions de chaque dispositif.",
-        "Aucune rétroactivité défavorable aux formations anciennes ; conditions et durées des formations ne deviennent pas celles de l'emploi.",
-        "Aucune formalité ou coût de formation supplémentaire institué par cet article.",old_9,new_9),
+        "Actualisation groupée des renvois de formation continue, de stages non salariés et de formation des représentants : un seul effet de coordination, avec maintien des accidents anciens.",
+        "Au c et au f du 2°, référence au livre IX ; au c, liste mêlant formation, anciens règlements et financement ; au 9°, renvois aux anciens CHSCT et comités d'entreprise.",
+        "Aux c et f, définition de L6311-1 ; au c, conditions de L6321-6 à12 ; au 9°, L2315-18 et L2315-63 pour le CSE, avec les autres formations maintenues et les accidents anciens protégés.",
+        'regime',"Stagiaires de formation continue, personnes détenues, stagiaires sans contrat, salariés formés hors temps de travail et représentants en formation de santé-sécurité, économique ou syndicale.",
+        "Couverture maintenue des formations anciennes et nouvelles selon chaque catégorie ; la durée pédagogique ne fixe pas la fin de l'emploi nouveau et les anciens contrats gardent leurs droits.",
+        "Aucune nouvelle pièce ni formalité ; aucun droit social retiré ni suppression de la contribution autonome de L6331-69. Ces corrections ne sont pas comptées comme plusieurs réductions.",
+        passage(by_number['L412-8']['source_xml'],old_c,old_9),
+        passage(xml,new_c,new_9)),
      effect('coordination','accidents-travail-renvoi-conge-representation',
         "Rattachement précis du 12° aux dispositions actuelles du congé de représentation.",
         "Plage L3142-51 à66 mêlant plusieurs congés.",
@@ -235,21 +238,21 @@ o = rewrite('L412-8',xml,
 o['benefit_review'] = "Tous les avantages de couverture sont conservés pour les situations futures recevables : 1° délégués mineurs ; 2° a élèves techniques, b autres élèves et étudiants en ateliers/laboratoires ou stages, c formation continue et détenus, d allocations de reclassement, e CSP, f stages non salariés, g doctorants et chercheurs étrangers ; 3° réadaptation, rééducation et actions pendant l'arrêt, assurés L324-1, invalides et stagiaires ONAC ; 4° pupilles ; 5° travail pénitentiaire sous sa réserve de séjour, TIG et travail non rémunéré pénal ; 6° bénévoles d'organismes sociaux ; 7° instances administratives ou paritaires ; 8° marins et faute inexcusable ; 9° formations des représentants et syndicats ; 10° RSA ; 11° actions prescrites de création ou recherche d'emploi ; 12° représentation et missions syndicales ; 13° service civique ; 14° appui à la création/reprise ; 14° bis aide bénévole au repreneur ; 15° volontaires pour l'insertion ; 16° mandats locaux ; 17° entrepreneurs salariés ou associés ; 18° sportifs de haut niveau ; 19° mises en situation handicap. Les qualifications, conditions d'accident, non-cumuls et décrets propres à chaque catégorie restent. Le plafond de champ excluant certains enseignements commerciaux et l'exclusion de l'indemnité en capital L434-1 pour a, b et f ne sont pas des avantages : ils restent des limites du régime, sans extension silencieuse. Les bases spéciales des cotisations et indemnités des personnes sans rémunération normale restent intactes, comme la désignation du débiteur ; aucun taux d'exonération n'est retiré. Les anciens stages restent couverts, et les actions de formation et de reclassement demeurent accessibles dans les futurs contrats uniques sans transformer leur durée pédagogique en terme d'emploi. Les garanties de faute inexcusable et les assimilations de risques sont maintenues."
 
 old_1 = "groupements d'employeurs mentionnés au chapitre VII du titre II du livre premier du code du travail"
-new_1 = "groupements d'employeurs mentionnés à l'article L. 1253-1 du code du travail"
+new_1 = "groupements d'employeurs mentionnés au chapitre III du titre V du livre II de la première partie du code du travail"
 old_2 = "associations intermédiaires mentionnées à l'article L. 128 (1) du code du travail"
 new_2 = "associations intermédiaires mentionnées à l'article L. 5132-7 du code du travail"
 xml = by_number['L412-9']['source_xml'].replace(old_1,new_1).replace(old_2,new_2)
 xml += "<p>Ces coordinations de références s'appliquent à compter de l'entrée en vigueur de la loi qui les prévoit, sans remettre en cause les droits, obligations, créances et recours afférents aux accidents et maladies antérieurs. Elles ne modifient ni le champ du régime général et du régime agricole, ni l'application des règles spéciales prévues aux articles L. 412-3 à L. 412-7.</p>"
 rewrite('L412-9',xml,
     "Coordination nécessaire de deux références devenues obsolètes : identification actuelle des groupements d'employeurs et associations intermédiaires. Les deux régimes AT-MP, les entreprises membres et les règles spéciales de L412-3 à L412-7 restent intacts, notamment la fusion du signalement de la victime proposée dans L412-4. Aucune seconde réduction de formalité n'est comptée ici.",
-    "La note source mentionne expressément l'abrogation de L128 par la loi du 29 juillet 1998 : elle est signalée, non ignorée. Nouveaux renvois L1253-1 et L5132-7 non fournis comme cibles dans reference-targets, lus en entier dans travail.json du corpus public local : mise à disposition par groupements sans but lucratif ; associations intermédiaires conventionnées de l'insertion. Aucun contenu des dispositions de ces cibles n'est inventé ou réécrit. Leurs éventuels renvois anciens au temps partiel sont distincts et ne rétablissent pas le plancher supprimé dans la réforme propre du travail. Les obligations de l'utilisateur et de prévention restent ; le régime agricole n'est pas absorbé par le contrat privé.",
+    "La note source mentionne expressément l'abrogation de L128 par la loi du 29 juillet 1998 : elle est signalée, non ignorée. Nouveaux renvois au chapitre III du titre V du livre II de la première partie et à L5132-7, non fournis comme cibles dans reference-targets, lus dans travail.json du corpus public local. Le chapitre a été lu dans tous ses articles présents, L1253-1 à L1253-24, y compris L1253-8-1 et L1253-8-2. Le renvoi au chapitre entier préserve les groupements de conventions différentes (L1253-17), les formes assimilées (L1253-3) et les groupements mixtes avec personnes publiques (L1253-19) ; une référence au seul L1253-1 aurait un champ trop étroit. L5132-7 identifie les associations intermédiaires conventionnées de l'insertion. Aucun contenu de ces cibles n'est inventé ou réécrit. Le renvoi ancien au temps partiel de L5132-7 reste à coordonner dans cet article et ne rétablit pas ici le plancher supprimé dans la réforme propre du travail. Les obligations de l'utilisateur et de prévention restent ; le régime agricole n'est pas absorbé par le contrat privé.",
     "La source complète comporte des renvois à une ancienne structure du code du travail et à un article abrogé. Leur actualisation rétablit une identification opératoire des mêmes catégories, sans démontrer une réduction supplémentaire de taxe ou d'obligation.",
     "Les textes réglementaires de tarification et les coordinations du code rural restent hors de ce lot. La fusion du signalement de L412-4 est une seule mesure et n'est pas une seconde obligation supprimée dans L412-9.",
     "Aucune charge nouvelle n'est identifiée : les mêmes acteurs restent soumis aux mêmes règles spéciales ; les références actualisées ne créent ni convention supplémentaire, ni déclaration, ni registre ou délai.",
     [effect('coordination','accidents-travail-groupements-renvois-actualisation',
         "Actualisation des références identifiant groupements d'employeurs et associations intermédiaires.",
         "Chapitre VII du titre II du livre premier et L128 abrogé.",
-        "L1253-1 et L5132-7 pour les mêmes catégories ; règles L412-3 à L412-7 et régimes général/agricole conservés.",
+        "Chapitre III du titre V du livre II de la première partie et L5132-7, sans limiter les groupements au seul L1253-1 ; règles L412-3 à L412-7 et régimes général/agricole conservés.",
         'regime',"Groupements d'employeurs, entreprises membres, associations intermédiaires et leurs salariés.",
         "Coordination prospective sans remise en cause des droits, obligations et créances relatifs aux sinistres antérieurs.",
         "Aucun dépôt ou agrément supplémentaire institué par cette actualisation.",old_2,new_2)])
@@ -305,7 +308,7 @@ specific = {
  ('L382-43','L172-1'):"L172-1 porte le versement global des indemnités maladie/maternité entre régime général et salariés agricoles et leur compensation. Le renvoi ne change ni débiteur de l'emploi pénitentiaire ni délai de rupture ; aucune ancienneté ou notification de licenciement n'est exigée pour cette totalisation, dont L172-2 et L172-3 gardent les règles propres.",
  ('L382-43','L161-8'):"L161-8 maintient les prestations en espèces après cessation des conditions d'activité, sous résidence/séjour et jusqu'à une nouvelle ouverture de droits, avec prolongation chômage et cas d'indemnités nulles ou faibles. Le renvoi protège les sorties de détention sans importer le préavis privé ni son ancienneté ; la proposition fournie ne réduit pas ces avantages futurs.",
  ('L382-44','L321-1'):"L321-1 vise la constatation de l'incapacité par les professionnels compétents, avec les règles de prescription et l'exception des cures. Ce renvoi de constatation médicale subsiste après retrait de la carence ; la grossesse ne doit pas être subordonnée à une ancienneté ou une notification de rupture du contrat privé. La note d'effet immédiat de 2025 reste distincte de la réforme.",
- ('L382-44','L323-6'):"L323-6 fixe les prescriptions et contrôles de l'arrêt, l'information de reprise et d'adresse, les restitutions volontaires et l'exception des élus locaux. Sa proposition retire les heures de sortie et certaines doubles informations, sans modifier le besoin médical. L382-44 suit sa version applicable sans recréer ces obligations ; aucun préavis ou seuil d'un an ne s'y substitue.",
+ ('L382-44','L323-6'):"L323-6 fixe les prescriptions et contrôles de l'arrêt, l'information de reprise et d'adresse, la restitution en cas d'inobservation volontaire et l'exception des élus locaux. Sa proposition retire les heures de sortie et certaines doubles informations, sans modifier le besoin médical. L382-44 suit sa version applicable sans recréer ces obligations ; aucun préavis ou seuil d'un an ne s'y substitue.",
  ('L382-45','L331-3'):"L331-3 fixe notamment six semaines avant et dix après, les durées de naissances multiples, huit semaines minimales d'arrêt et les protections de prématurité/hospitalisation. L382-45 conserve ce champ entier ; les jours de préavis et le seuil de l'indemnité ordinaire n'altèrent ni congé ni ancienneté d'assurance pertinente. La note spéciale de 2006 reste à son objet.",
  ('L382-45','L331-5'):"L331-5 permet le report après hospitalisation jusqu'à la sixième semaine et prévoit jusqu'à deux semaines supplémentaires sur prescription, avec la réserve de la période de prématurité. Ces avantages demeurent pour les détenues éligibles futures ; la durée du congé n'est pas celle d'un contrat nouveau et aucune notification de rupture ne conditionne ces reports.",
  ('L382-45','L331-6'):"L331-6 transfère après décès de la mère l'indemnisation restante au père qui cesse son travail, sans conditions L313-1, avec report et bénéficiaire subsidiaire. Le nouveau L382-45 réserve expressément cette dispense pour lever l'ambiguïté du renvoi général ; ni ancienneté d'un an ni préavis de rupture ne peut la refermer, et les bénéficiaires futurs restent couverts.",
@@ -352,7 +355,7 @@ for o in answer:
                     "La couverture ou responsabilité ne dépend pas d'un terme d'emploi ; elle demeure dans les contrats uniques futurs comme pour les anciens contrats, sans ajouter d'ancienneté ni de notification de rupture.")
             else:
                 analysis = (f"Pour {number}, {subject} est distinct de l'indemnité ordinaire de rupture. "
-                    "La cible proposée retient un an à la fin effective, préavis inclus, puis 0,20 mois par année totale et prorata des mois complets, plafond six mois, employeur seul ; droits anciens et indemnités spéciales demeurent. Ce seuil, cette base et une notification de licenciement ne conditionnent pas les droits de cet article.")
+                    "La source officielle prévoit huit mois et une exception de faute grave. La cible proposée retient un an à la fin effective, préavis inclus, puis 0,20 mois par année totale et prorata des mois complets, plafond six mois, employeur seul, avec l'exception de faute grave indiquée dans cette cible ; droits anciens et indemnités spéciales demeurent. Ce seuil, cette base, cette exception et une notification de licenciement ne conditionnent pas les droits de cet article.")
                 if prison:
                     analysis += " Le contrat pénitentiaire reste un régime spécial."
         else:
@@ -362,4 +365,10 @@ for o in answer:
 
 assert len(answer)==len(sources)==24
 assert [a['number'] for a in answer]==[a['number'] for a in sources]
+for article in answer:
+    seen = set()
+    for item in article['substantive_impact']['effects']:
+        key = (item['measure_id'], item['kind'])
+        assert key not in seen, (article['number'], 'Duplicate measure and effect', key)
+        seen.add(key)
 Path('answer.json').write_text(json.dumps(answer,ensure_ascii=False,indent=2)+'\n')
