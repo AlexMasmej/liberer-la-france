@@ -1,0 +1,349 @@
+[
+  {
+    "code_id": "LEGITEXT000006069577",
+    "source_id": "LEGIARTI000053542939",
+    "number": "219",
+    "source_sha256": "8ae94a9e47a23d0d8257c98ff4899affbb54929c1d080ab1a8fd3db786868331",
+    "source_body_sha256": "1aa652a37f7497d1765c6214d82828f1d795bb5de64fb903e47792b2cac86fb5",
+    "source_notes_sha256": "96b660fd0cbb89410dcbc56a7b9596693d2602f440d231d3c61affc9ff9c9303",
+    "source_document_sha256": "8ae94a9e47a23d0d8257c98ff4899affbb54929c1d080ab1a8fd3db786868331",
+    "proposed_sha256": "1e37147999278a65249d803784a61703f51862873c83bf4ad5f8e7c5d1261378",
+    "archive": "LEGI_20260907-214720.tar.gz",
+    "state": "VIGUEUR",
+    "valid_from": "2026-02-21",
+    "valid_until": "2999-01-01",
+    "source_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053542939",
+    "full_source_notes_xml": "<p>Conformément au II de l'article 15 de la loi n° 2026-103 du 19 février 2026, ces dispositions, dans leur rédaction résultant du I de l'article précité, s'appliquent aux exercices clos à compter du 31 décembre 2025.</p>",
+    "source_capture": "source.json",
+    "full_text_read": true,
+    "proposed_text_read": true,
+    "current_draft_status": "rewrite_draft",
+    "decision": "Aucun défaut opératoire concret identifié dans les quatre articles et les coordinations bornées lues ; ceci ne clôt pas tout le corpus.",
+    "national_net_savings_eur": null,
+    "budget_compensation_identified": false,
+    "benefit_review": "Les conditions PMECA≤10M€, capital libéré détenu75%, tranche42500€/12moisà15%, taux IP10%,PV15/19%, catégories0%et quotepart12% sont gardés. La tranche n’est pas renouvelée chaque mois ;209 protège anciens bénéfices et pertes et interdit doubles imputations. L’assiette normale ne devient pas20%du dividende net. Le salaire effectif, achat, investissement et dette professionnelle ne sont pas taxés comme distributions ; prêts simulés/avantages personnels couverts sans taxer tout prêt légitime.",
+    "before_after_metrics": [
+      {
+        "measure": "taux_normal",
+        "before": 25,
+        "after": 20,
+        "unit": "percent",
+        "base": "Bénéfice avant IS de la fraction normale ; annuel avant, distribué après",
+        "limits": "Ni taux effectif universel ni baisse de toutes catégories."
+      },
+      {
+        "measure": "exemple_distribution_integrale",
+        "gross_profit": 100,
+        "before_ordinary_IS": 25,
+        "after_ordinary_IS": 20,
+        "unit": "euro",
+        "limits": "Exemple statique normal sans crédit/déficit/minimum/fiscalité personnelle/contributions résiduelles ; pas recette nationale."
+      },
+      {
+        "measure": "benefice_conserve",
+        "profit": 100,
+        "annual_ordinary_IS_before_normal": 25,
+        "annual_ordinary_IS_after": 0,
+        "unit": "euro",
+        "limits": "Gain de caisse initial25, pas économie définitive25 : taxation future à distribution et coût public de financement distincts."
+      }
+    ],
+    "transition": "V/VIappliqués aux distributions des exercices ouverts après entrée en vigueur ; dettes/recours anciens conservés. Exemptions personnelles/sectorielles206, stock protégé209, anciens acomptes/remboursements1668 restent distincts.",
+    "necessary_references_read": [
+      "206",
+      "209",
+      "1668",
+      "223 VJ",
+      "223 VL"
+    ],
+    "references_partially_read": {
+      "223 VK": [
+        "39° complet",
+        "45° complet"
+      ]
+    },
+    "unresolved_scope": [
+      "Hors revue présente : compatibilité entière des régimes de groupe145/216/223, sorties221et toutes contributions/exigences européennes.",
+      "Les contributions235terZC/ZAAet compagnonloi2025article48sont exclus de l’exemple normal par clause expresse, mais leur source entière n’est pas re-auditée ici.",
+      "Aucune suppression CIR/Bpifrance ; déficit déjà sansIS et CIRremboursable ne sont pas remplacés automatiquement.",
+      "Autofinancement, innovation, dette privée, crise, emploi, IR/TVA/cotisations et aides évitées : scénarios à estimer, pas recettes acquises."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "mixed",
+      "assessment": "Deux effets distincts sont démontrés : report d’IS jusqu’à distribution et baisse du taux normal25à20. Le régime crée aussi un suivi spécifique par compartiment et une formule nouvelle ; il ne peut être présenté comme une simplification nette prouvée de toutes les obligations. Le taux20n’est pas le taux estonien courant.",
+      "scope_limitations": "Audit borné :206/209/1668et223VJlues entières,223VLentier et223VK39°/45°vérifiés ; pas de revue intégrale actuelle de tous les groupes, sorties221, crédits, conventions, contributions et annexes. Minimum annuel15%et condition antériorité1juillet2021 empêchent une promesse de zéro impôt total. Aucun solde budgétaire français ni financement/compensation démontré.",
+      "new_burdens_review": "Les comptes protégés et compartiments, choix d’imputation, justification des taux et déclaration/paiement mensuels en cas de distribution sont des charges de mise en œuvre. Le rapprochement annuel reste. Les exigences professionnelles anti-distributions déguisées ne permettent pas de qualifier tous les prêts, salaires ou investissements de distributions. Leur coût net est inconnu.",
+      "effects": [
+        {
+          "kind": "tax_reduced",
+          "measure_id": "is-distribution-ordinaire",
+          "description": "Réduire le taux normal de société, séparément du changement de fait générateur.",
+          "before": "Taux normal25% sur bénéfice imposable annuel ; ni taux PME ni taux spéciaux ne sont nécessairement25%.",
+          "after": "Nouveau taux normal20% du bénéfice avant IS distribué, soit20/80 du montant net ; cela reste un impôt à distribution.",
+          "unit": "percent",
+          "source_quote": "Le taux normal de l'impôt est fixé à 25 %.",
+          "proposed_quote": "2. Après imputation du compte protégé prévu au 1 du XI de l’article 209 et exclusion des apports réels, le taux normal est de 20 % du bénéfice avant IS affecté à la distribution, soit 20/80 du montant net attribué au bénéficiaire avant sa fiscalité personnelle. Ainsi,100 € de bénéfice conservé ne donne lieu à aucun IS ordinaire ;100 € affectés, IS compris, à une distribution au taux normal donnent 20 € d’IS et 80 € attribués. L’impôt personnel, les retenues et prélèvements sociaux éventuellement dus par le bénéficiaire restent régis par leurs textes. L’IS de la société est à sa charge et n’est pas une retenue sur le dividende relevant de l’article 119 bis.",
+          "affected_population": "Entreprises et fractions de bénéfices ordinaires du12de206 ; associés imposés personnellement distincts.",
+          "conditions_and_transition": "Exercices ouverts après entrée en vigueur ; anciens exercices et leurs dettes conservés ; minimum international et régimes annuels particuliers distincts.",
+          "replacement_or_new_burdens": "Le taux20est notre paramètre français ; il ne résulte pas du taux estonien actuel et ne supprime ni IR/PFU ni minimum. Aucun rendement budgétaire national mesuré."
+        },
+        {
+          "kind": "payment_deferred",
+          "measure_id": "is-distribution-ordinaire",
+          "description": "Différer l’IS ordinaire des bénéfices conservés sans exiger un réinvestissement.",
+          "before": "L’IS porte annuellement sur le bénéfice imposable ; conserver ce bénéfice n’est pas une exonération générale.",
+          "after": "Aucun IS ordinaire avant distribution sur réserves, reports ou liquidités ; achats, salaires et investissements réels ne déclenchent pas l’impôt.",
+          "unit": "other",
+          "source_quote": "I.-Pour le calcul de l'impôt, le bénéfice imposable est arrondi à l'euro le plus proche. La fraction d'euro égale à 0,50 est comptée pour 1.",
+          "proposed_quote": "V. –1. Pour les personnes et bénéfices relevant du 12 de l’article 206, l’IS ordinaire est dû seulement lors d’une distribution. Le fait de réaliser un bénéfice, de le conserver en réserves, report à nouveau ou liquidités, ou de l’utiliser dans une activité ou un investissement professionnel, ne constitue pas une distribution. Aucun montant minimal, délai d’emploi, acquisition ou investissement imposé ne conditionne cette absence d’IS.",
+          "affected_population": "Même champ ordinaire, y compris entreprises qui conservent de la trésorerie.",
+          "conditions_and_transition": "Seuil d’entrée lié aux exercices ; réserves déjà taxées et déficits via209, paiement à distribution via1668 ; taxes de sortie et minimum mondial distincts.",
+          "replacement_or_new_burdens": "Report seul ne vaut pas suppression définitive ; la baisse25→20est un effet séparé. Le coût initial de trésorerie et le stock terminal reporté restent inconnus."
+        },
+        {
+          "kind": "complexity_added",
+          "measure_id": "is-distribution-ordinaire",
+          "description": "Mettre en place la distinction des compartiments et une formule de liquidation à distribution.",
+          "before": "Le présent article détermine les catégories et taux du bénéfice imposable ; la source ne contient pas la nouvelle formule àN/q/t/D et le débitN+S par compartiment.",
+          "after": "La proposition exige un rattachement justifié aux compartiments, une formule avec déficits et quotités, et un suivi coordonné avec209/1668.",
+          "unit": "other",
+          "source_quote": "I.-Pour le calcul de l'impôt, le bénéfice imposable est arrondi à l'euro le plus proche. La fraction d'euro égale à 0,50 est comptée pour 1.",
+          "proposed_quote": "4. Pour chaque fraction rattachée à un compartiment justifié, on désigne par N le montant net de la distribution, par q la fraction du bénéfice avant IS légalement comprise dans l’assiette et par t le taux applicable à cette assiette. Le montant S de l’IS est égal au plus élevé de zéro et de t×(q×N−D)/(1−t×q), D étant le déficit légalement imputé sur cette fraction d’assiette. Les taux sont exprimés en nombres décimaux ; D ne peut excéder q×(N+S) et ne peut être déduit que sous les limites et conditions du XI de l’article 209. Le compartiment est débité de N+S, la fraction d’assiette consommant la tranche PME est q×(N+S)−D. En cas de dépassement du plafond PME, la distribution est répartie entre les fractions correspondant aux taux applicables pour ne pas excéder ce plafond. Sans déficit et pour q égal à 1, S est égal à t/(1−t)×N. Pour une fraction totalement exonérée, q est égal à zéro et aucun déficit n’est consommé.",
+          "affected_population": "Entreprises du régime nouveau, leurs comptables et l’administration.",
+          "conditions_and_transition": "Comptes209, déclaration mensuelle uniquement en présence d’une distribution taxable et rapprochement annuel1668 ; conservation des preuves antérieures.",
+          "replacement_or_new_burdens": "Charges de suivi et fréquence éventuelle accrue à déclarer : aucun solde net national de formalités ni de coûts n’est établi. Les anciennes obligations comptables ne sont pas toutes nouvelles."
+        }
+      ]
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006069577",
+    "source_id": "LEGIARTI000024453202",
+    "number": "750 ter",
+    "source_sha256": "274cf9b5faf0e25bc186abc6240e71e70a3d25893e63cba154efe0482a04119b",
+    "source_body_sha256": "26b3ea5eb0bc527282c2b43ec392d5badbbd4d90b03e666945b6e60b26a96b9f",
+    "source_notes_sha256": "b334bd68d78b7ebfee5cf670bc16dc818f8a30cbeab829055b8eebc3ed65f05e",
+    "source_document_sha256": "274cf9b5faf0e25bc186abc6240e71e70a3d25893e63cba154efe0482a04119b",
+    "proposed_sha256": "306663e1d7c2799d5c59b39567a8bb22bff4153a82279d58f5155ae8c38684b8",
+    "archive": "Freemium_legi_global_20250713-140000.tar.gz",
+    "state": "VIGUEUR",
+    "valid_from": "2011-07-31",
+    "valid_until": "2999-01-01",
+    "source_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000024453202",
+    "full_source_notes_xml": "<p>Loi n° 2011-900 du 29 juillet 2011 de finances rectificative pour 2011 article 14 III : Les 2° à 4° du I et le II s'appliquent aux donations consenties et pour des décès intervenus à compter de la publication de la présente loi.</p>\n<br />\n<br />",
+    "source_capture": "source.json",
+    "full_text_read": true,
+    "proposed_text_read": true,
+    "current_draft_status": "rewrite_draft",
+    "decision": "Aucun défaut opératoire concret identifié dans les quatre articles et les coordinations bornées lues ; ceci ne clôt pas tout le corpus.",
+    "national_net_savings_eur": null,
+    "budget_compensation_identified": false,
+    "benefit_review": "Donations : réserve conventions, territoireFrance/étranger, détention indirecte>moitié avec famille/chaînes, créances/sièges, prépondérance immobilière et exclusion immeubles affectés à propre exploitation demeurent. Résidence bénéficiaire6des10années reste. Aucune franchise de donation n’est supprimée par cet article ; tous décès futurs sont hors taxation sans seuil.",
+    "before_after_metrics": [
+      {
+        "measure": "droits_deces",
+        "before": "Imposition selon territorialité et autres articles de barème/exonérations",
+        "after": "0droit français sur décès futur, sans seuil",
+        "unit": "regime",
+        "limits": "Ne prétend pas que tout décès était imposé avant ; donations et impôts étrangers distincts."
+      }
+    ],
+    "transition": "Critère date du décès, pas date tardive de paiement ; anciens contrôles/restitutions/recours conservés.",
+    "necessary_references_read": [
+      "757 B",
+      "792-0 bis"
+    ],
+    "unresolved_scope": [
+      "Audit ne clôt pas tous certificats, comptes assurance, LPF, Code assurances, droit civil ou accords internationaux.",
+      "Baisse de recette réelle attendue pour successions qui auraient été imposées, montant national et compensation inconnus."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Suppression générale concrète de la taxation française au décès pour les décès futurs, avec règles de donation réécrites et conservées. Le même identifiant de mesure que990Iévite de compter deux fois la décision successorale. L’article ne donne pas le barème complet : aucune baisse forfaitaire chiffrée par succession n’est déduite.",
+      "scope_limitations": "750terne suffit pas à certifier toutes formalités, assurances, garanties et renvois externes coordonnés.757Bet792-0bislus dans cette revue ; barèmes777, annexes et Code assurances/LPF non réexaminés entièrement ici. La suppression française ne supprime pas un impôt étranger, une donation ou les autres impôts.",
+      "new_burdens_review": "Aucune nouvelle formalité ni impôt de remplacement identifié dans750ter. Les critères de donation demeurent : contrôle des détentions indirectes, biens professionnels exclus des tests immobiliers et résidence6sur10ans conservés ; ce maintien ne constitue pas une charge nouvelle. Solde national de coût et recettes inconnu.",
+      "effects": [
+        {
+          "kind": "tax_removed",
+          "measure_id": "succession-zero-france",
+          "description": "Supprimer l’imposition française des transmissions au décès, sans supprimer les donations entre vifs.",
+          "before": "DMTG couvrant les biens selon domicile du donateur/défunt ou bénéficiaire et situationFrance/étranger, sous critères du1°/2°/3°.",
+          "after": "Zéro DMTG français pour décès futurs, tous montants/résidences/parentés ; donations restent taxables selon territorialité conservée.",
+          "unit": "regime",
+          "source_quote": "1° Les biens meubles et immeubles situés en France ou hors de France, et notamment les fonds publics, parts d'intérêts, biens ou droits composant un trust défini à l'article 792-0 bis et produits qui y sont capitalisés, créances et généralement toutes les valeurs mobilières françaises ou étrangères de quelque nature qu'elles soient, lorsque le donateur ou le défunt a son domicile fiscal en France au sens de l'article 4 B ;",
+          "proposed_quote": "II. – Aucun droit de mutation à titre gratuit n'est dû en France à raison d'un décès survenu à compter de l'entrée en vigueur de la présente loi, quels que soient la valeur des biens transmis, leur situation, le domicile, la nationalité ou le lien de parenté des personnes concernées.",
+          "affected_population": "Héritiers, légataires et bénéficiaires de transmissions/trust/assurance/PERàraison d’un décès futur.",
+          "conditions_and_transition": "Décès à compter de l’entrée en vigueur ; décès antérieurs même payés plus tard restent régis par ancien droit ; aucun remboursement général.",
+          "replacement_or_new_burdens": "Pas de taxe décès de remplacement. Droits civils, impôts étrangers et faits générateurs distincts restent ; recettes perdues et économies de gestion non chiffrées."
+        }
+      ]
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006069577",
+    "source_id": "LEGIARTI000047288653",
+    "number": "990 I",
+    "source_sha256": "1ce6e5c458216f8bc2b3fc7b819245bc213a64cfe60383823bc676c880bfff48",
+    "source_body_sha256": "9da945bd452d27378a12a6c18c8d3e1f35ffdcaeebeec72457523b818afa7add",
+    "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source_document_sha256": "1ce6e5c458216f8bc2b3fc7b819245bc213a64cfe60383823bc676c880bfff48",
+    "proposed_sha256": "a2c56d1d7356008bc608e7189d61d3aedd3b8c718bc1100593e9e393fe2e3924",
+    "archive": "LEGI_20260505-215314.tar.gz",
+    "state": "VIGUEUR",
+    "valid_from": "2023-03-11",
+    "valid_until": "2999-01-01",
+    "source_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047288653",
+    "full_source_notes_xml": "",
+    "source_capture": "source.json",
+    "full_text_read": true,
+    "proposed_text_read": true,
+    "current_draft_status": "rewrite_draft",
+    "decision": "Aucun défaut opératoire concret identifié dans les quatre articles et les coordinations bornées lues ; ceci ne clôt pas tout le corpus.",
+    "national_net_savings_eur": null,
+    "budget_compensation_identified": false,
+    "benefit_review": "Avant : abattement152500€,abattementproportionnel20%contratséligibles, exonérations bénéficiaires et rentesretraite sousconditions. Après : plus aucun prélèvement pour décès futur donc leur suppression technique ne retire pas un avantage tant que la taxe reste entièrement absente. Pour anciens décès tous avantages/conditions sont gardés ; contrats/information/prudentielautonomes intacts.",
+    "before_after_metrics": [
+      {
+        "measure": "prelevement_deces_assurance",
+        "before": "20%part taxable≤700000€,31,25%au-delà après abattement152500€et20%siéligible",
+        "after": "0pour décès nouveaux",
+        "unit": "percent",
+        "limits": "Taxe distincte desDMTG hors757B ; aucune économie uniforme sur capital brut et aucun double compte de la décision750ter."
+      },
+      {
+        "measure": "attestation_abattements",
+        "before": "Attestation obligatoire pour le prélèvement",
+        "after": "Non requise exclusivement pour décès nouvellement exonérés",
+        "unit": "legal_duty",
+        "limits": "Pas suppression de toute information contractuelle/prudentielle ni de toutes pièces sur anciens décès."
+      }
+    ],
+    "transition": "Décès antérieurs : ancien régime complet même paiement ultérieur ; décès futurs exclus même lors d’un paiementCDC après dépôt.",
+    "necessary_references_read": [
+      "757 B",
+      "792-0 bis"
+    ],
+    "unresolved_scope": [
+      "Coordination extérieure des contrats vie-génération et des obligations assureurs : pas de clôture générale revendiquée.",
+      "Le prélèvement distinct990Jannuel ou autres impôts à fait générateur autonome ne sont pas supprimés par cet audit."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Prélèvement spécifique décès20%/31,25%et formalités exclusivement associées sont retirés pour nouveaux décès. C’est une composante fiscale distincte de l’assurance-vie, nécessaire à la décision globale succession zéro, sous le même measure_id750ter. Aucune addition mécanique de deux gains sur une même assiette n’est permise.",
+      "scope_limitations": "Abrogation complète future du prélèvement permet de ne pas maintenir ses propres conditions d’abattement comme charge, mais ne dénoue ni contrats ni règles prudentielles. Les autres textes assurance-vie/PERet déclarations ne sont pas tous relus ici. Les montants et compensations nationaux ne sont pas établis.",
+      "new_burdens_review": "Aucune nouvelle taxe ou formalité de remplacement dans990I. Les anciens décès, même avec paiementCDCultérieur, conservent taux, abattements, investissement, recours et remboursements ; ces charges anciennes ne deviennent pas des obligations pour nouveaux décès. Aucun coût de gestion ou financement net national chiffré.",
+      "effects": [
+        {
+          "kind": "tax_removed",
+          "measure_id": "succession-zero-france",
+          "description": "Supprimer le prélèvement décès autonome d’assurance-vie pour rendre effective la même suppression successorale.",
+          "before": "Prélèvement hors757Bsur part revenant àchaque bénéficiaire après abattement152500€et, siéligible, abattement20%; taux20%jusqu’à700000€taxables puis31,25%.",
+          "after": "Prélèvement0pour nouveaux décès, quelle que soit résidence/bénéficiaire/datecontrat/composition ; anciens décès gardent les avantages et prélèvements anciens.",
+          "unit": "percent",
+          "source_quote": "I. – Lorsqu'elles n'entrent pas dans le champ d'application de l'article 757 B, les sommes, rentes ou valeurs quelconques dues directement ou indirectement par un ou plusieurs organismes d'assurance et assimilés, à raison du décès de l'assuré, sont assujetties à un prélèvement à concurrence de la part revenant à chaque bénéficiaire de ces sommes, rentes ou valeurs correspondant à la fraction rachetable des contrats et des primes versées au titre de la fraction non rachetable des contrats autres que ceux mentionnés au 1° du I de l'article 199 septies, que ceux mentionnés à l'article 154 bis et au 1° de l'article 998, à l'exception des contrats relevant des articles L. 224-1 et suivants du code monétaire et financier des contrats relevant de l'article L. 225-1 du même code, ainsi que ceux mentionnés à l'article L. 7342-2 du code du travail et souscrits dans le cadre d'une activité professionnelle, diminuée d'un abattement proportionnel de 20 % pour les seules sommes, valeurs ou rentes issues des contrats mentionnés au 1 du I bis et répondant aux conditions prévues au 2 du même I bis, puis d'un abattement fixe de 152 500 €. Le prélèvement s'élève à 20 % pour la fraction de la part taxable de chaque bénéficiaire inférieure ou égale à 700 000 €, et à 31,25 % pour la fraction de la part taxable de chaque bénéficiaire excédant cette limite.",
+          "proposed_quote": "Aucun prélèvement prévu par le présent article n'est dû sur les sommes, rentes ou valeurs versées à raison de ces décès, quels que soient le bénéficiaire, son lien de parenté, son domicile fiscal, le montant reçu, la date de souscription ou la composition des placements. Il en va de même des sommes versées par la Caisse des dépôts et consignations au titre de contrats dont l'assuré est décédé à compter de cette entrée en vigueur.",
+          "affected_population": "Bénéficiaires d’assurance et de sommesCDCinitialement imposables à990I ; champ complémentaire aux droits757B.",
+          "conditions_and_transition": "Date décès futur ; versementCDCultérieur suit ce décès ; anciens décès et leurs abattements/conditions/recours préservés.",
+          "replacement_or_new_burdens": "Ce prélèvement a une assiette et des taux distincts desDMTG : c’est une branche nécessaire de la mesure unique, pas une seconde abolition de la même taxe ni un gain à ajouter deux fois sur la même somme."
+        },
+        {
+          "kind": "obligation_removed",
+          "measure_id": "succession-zero-france",
+          "description": "Retirer les attestations et justificatifs uniquement nécessaires au prélèvement supprimé.",
+          "before": "Attestation sur l’honneur des abattements déjà appliqués et justificatifs d’investissement pour l’abattement.",
+          "after": "Ces pièces exclusivement fiscales ne sont plus requises pour décès nouveaux ; obligations contractuelles/prudentielles/autres fondements gardés.",
+          "unit": "legal_duty",
+          "source_quote": "Le bénéficiaire doit produire auprès des organismes d'assurance et assimilés une attestation sur l'honneur indiquant le montant des abattements déjà appliqués aux sommes, rentes ou valeurs quelconques reçues d'un ou plusieurs organismes d'assurance et assimilés à raison du décès du même assuré.",
+          "proposed_quote": "Pour ces décès, les attestations d'abattements et les justificatifs de respect des proportions d'investissement exigés uniquement pour l'application du prélèvement ou de ses abattements ne sont plus requis. Les obligations contractuelles et les règles prudentielles ou d'information ayant un autre fondement demeurent applicables.",
+          "affected_population": "Bénéficiaires, assureurs et organismes produisant les justificatifs exclusivement990I.",
+          "conditions_and_transition": "Uniquement décès nouveaux ; anciennes périodes peuvent encore justifier pièces et contrôles ; aucun contrat dénoué de force.",
+          "replacement_or_new_burdens": "Aucun formulaire de remplacement identifié dans cet article. Le maintien des obligations prudentielles/contractuelles interdit de présenter toutes conditions d’investissement comme abolies dans tous les textes."
+        }
+      ]
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006069577",
+    "source_id": "LEGIARTI000053562172",
+    "number": "1600",
+    "source_sha256": "07c945919d93df55ef04429b43f7b1b1e93d195c68bb2e34222ddf3d0e83a726",
+    "source_body_sha256": "1623977ea1b24b6c0cb2f291e1377c8c03617a965bb1b394f8ce8a09be1cf86d",
+    "source_notes_sha256": "490de2684efea84e54cdf453a9c8e8ba575ec75ff6af8a115151c524a69dbaca",
+    "source_document_sha256": "07c945919d93df55ef04429b43f7b1b1e93d195c68bb2e34222ddf3d0e83a726",
+    "proposed_sha256": "2325cd243b0cf7747a0c232d06e1cca91168f7f34aa6f0c29745fd632a38ce47",
+    "archive": "LEGI_20260708-215132.tar.gz",
+    "state": "ABROGE_DIFF",
+    "valid_from": "2026-03-01",
+    "valid_until": "2027-01-01",
+    "source_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053562172",
+    "full_source_notes_xml": "<p>Conformément au IX de l'article 69 de la loi n° 2026-103 du 19 février 2026, ces dispositions, dans leur rédaction résultant de l'article précité, entrent en vigueur le 1<sup>er</sup> mars 2026.</p>",
+    "source_capture": "source.json",
+    "full_text_read": true,
+    "proposed_text_read": true,
+    "current_draft_status": "rewrite_draft",
+    "decision": "Aucun défaut opératoire concret identifié dans les quatre articles et les coordinations bornées lues ; ceci ne clôt pas tout le corpus.",
+    "national_net_savings_eur": null,
+    "budget_compensation_identified": false,
+    "benefit_review": "Les douze catégories duI sont reprises motpourmot, ycompris exonération liée à la cotisationminimum1647D et règlementUE2023/2831. Demi-baseartisans et1,12%CFE exacts.1647Dseuil5000€et conditions/modesfixation non modifiés par1600. Aucun relèvement d’une base ni transfert additionnelleCVAEversautreimpôt.",
+    "before_after_metrics": [
+      {
+        "measure": "additionnelle_CVAE_CCI",
+        "before": 9.23,
+        "after": 0,
+        "unit": "percent",
+        "base": "Montant CVAE dû après1586quater, nonVA",
+        "limits": "Années supprimées seulement ; taux de source et non taux unique de tous calendriers futurs."
+      },
+      {
+        "measure": "additionnelle_CFE",
+        "before": 1.12,
+        "after": 1.12,
+        "unit": "percent",
+        "base": "Base CFE, moitié pour artisans concernés",
+        "limits": "Aucun nouvel allègementCFE à compter ici."
+      },
+      {
+        "measure": "exonerations_CFE_CCI",
+        "before": 12,
+        "after": 12,
+        "unit": "categories",
+        "limits": "Toutes catégories et conditions maintenues ; pas12suppressionstaxes."
+      }
+    ],
+    "transition": "Nouvelle année1janvier suivantentrée ; anciennes impositions, exonérations, restitutions, procédures/recours inchangés.",
+    "necessary_references_read": [
+      "1586 ter",
+      "1647 D"
+    ],
+    "unresolved_scope": [
+      "Calendriers2027–2030etcompagnonsCCI/LPFnoncertifiés par seule présente relecture.",
+      "LaCFE nette peut varier viafin plafonnementCET ancienincluantCVAE : nepasgarantir gainbrutCVAEniCFE netteidentique àtous.",
+      "RecettesCCI supprimées sans budgetdecompensationidentifié ; nepascompter leur suppression comme dépense publique économisée."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Une composante de taxe CCI est réellement supprimée : l’additionnelleCVAE. Elle partage la mesureCVAE et ne constitue pas une abolition deCFE. Les douze exemptions, demi-baseartisans et taux1,12%CFE restent identiques. Pas de gain égal à9,23%deVA ni de suppressiondeuxfoisdu principal et de son additionnelle sur même ligne comptable.",
+      "scope_limitations": "La source1600est la version retenue dans le corpus public actuel, marquéeABROGE_DIFF ; les calendriers futurs extérieurs ont un paquet séparé non réaudité en entier ici. Aucun financementCCI ou effet net individuel du plafonnementCFE n’est chiffré.1586teret1647Dlues ; pas tous renvoisCCI/LPF/compensations.",
+      "new_burdens_review": "Aucune obligation ni nouvelle taxe de remplacement dans1600. Conditions des douzeexemptions, deminimis et inscriptionartisans ne sont pas durcies ; anciennes années gardent leurs règles. La perte de financementCCI peut avoir des conséquences budgétaires à évaluer, pas une économie de dépense certaine.",
+      "effects": [
+        {
+          "kind": "tax_removed",
+          "measure_id": "cvae-suppression",
+          "description": "Supprimer la composante additionnelle CCI de laCVAE, sans hausse de la composanteCFE.",
+          "before": "Taxe additionnelle égale à9,23%de la cotisationCVAE due après1586quater ; ce n’est pas9,23%de la valeur ajoutée.",
+          "after": "Taxe additionnelleCVAE0àcompter des années suivant entrée en vigueur ; aucun transfert de son produit versCFE.",
+          "unit": "percent",
+          "source_quote": "Son taux est égal à 9,23 %.",
+          "proposed_quote": "III. – La taxe additionnelle à la cotisation sur la valeur ajoutée des entreprises est supprimée pour les années d’imposition commençant à compter du 1er janvier de l’année suivant celle au cours de laquelle la présente loi entre en vigueur. Aucune taxe additionnelle ne peut être calculée au titre d’une CVAE supprimée et aucun montant de cette taxe n’est transféré à la taxe additionnelle à la CFE. Les impositions additionnelles afférentes aux années antérieures demeurent régies par les règles applicables à ces années, avec leurs exonérations, dégrèvements, restitutions, procédures et recours.",
+          "affected_population": "Entreprises redevables de la taxe additionnelleCVAE non exonérées ; CCIaffectataires.",
+          "conditions_and_transition": "Années commençant1janvieraprèsannéeentréeen vigueur ; antérieures gardées avec exonérations/dégrèvements/restitutions/recours.",
+          "replacement_or_new_burdens": "CFEadditionnelle1,12%et base inchangées,12exonérations et moitiébaseartisans gardées ; financementCCI/perte recettes non chiffrés, aucun prélèvement substitut prévu."
+        }
+      ]
+    }
+  }
+]

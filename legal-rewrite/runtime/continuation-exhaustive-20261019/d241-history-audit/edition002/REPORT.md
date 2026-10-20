@@ -1,0 +1,13 @@
+# D241-10 — édition002 : périodes successives sans double compte
+
+Cette édition ne modifie pas le dossier historique initial. `source.json` et `target-source.json` sont des copies identiques octet par octet ; les gardes des textes et des avant-images sont conservées. Seul le quatrième alinéa du corps proposé est précisé par rapport à l’édition001 : les « périodes antérieure et postérieure à chaque évolution » deviennent les **périodes successives de l’année pendant lesquelles a demeure constante**, chaque période comptée une seule fois.
+
+Ainsi, deux changements de a produisent trois périodes distinctes, et le produit annuel corrigé se compose de `a1 × S1 + a2 × S2 + a3 × S3`. Il ne s’agit pas de sommer deux découpages annuels avant/après qui réutiliseraient une même période. Les montants S restent ceux déterminés selon D241-7. Les dix autres alinéas, la formule et tous les nombres sont identiques au texte proposé de l’édition001 ; les facteurs favorables et le salaire minimum de référence ne changent pas.
+
+Une appréciation `substantive_impact` et son certificat version1 ont été ajoutés : `classification=coordination_only`, `kind=coordination`, `measure_id=d241-variable-a-periods`. Aucun allègement supplémentaire et aucune économie chiffrée ne sont revendiqués ; le solde financier global reste inconnu. Les citations exacte source/proposition et les cinq empreintes ont été validées par le validateur courant.
+
+La politique active a entre-temps reçu substantive_outcomes_2026_10_19. Le snapshot historique initial est donc conservé intégralement dans `reference-targets.before-policy-refresh.json` ; le snapshot d’intégration `reference-targets.json` conserve toutes ses gardes de textes mais met explicitement à jour `policy_sha256`. Aucun autre champ de garde n’a changé. Les avant-images D241-10/D241-7 et les gardes de cible étaient encore actuelles lors de la vérification figurant dans `validation.json`.
+
+Le parent doit recontrôler ces gardes sous le verrou d’inscription avec `review_prior.commit(rows,sources,reference_snapshot=snapshot)` ; le script général register_pack.py ne transmet pas automatiquement ce snapshot. Le certificat substantif n’est pas un audit indépendant et le snapshot de cible reste volontairement borné à cette réparation historique. Aucun enregistrement, module actif, politique ou site n’a été modifié par cette édition.
+
+Les réserves historiques demeurent celles du rapport initial : réparation normative proposée, pas rectificatif officiel retrouvé ; XML DILA et restitutions officielles documentés, sans confrontation visuelle au PDF authentifié du JO.

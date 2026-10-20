@@ -1,0 +1,15 @@
+--- a/legal-rewrite/reference_queue.py
++++ b/legal-rewrite/reference_queue.py
+@@ -64,5 +64,11 @@
+         print('REFERENCE REVIEW',len(queue),'jobs;',len(report['pending']),'articles requiring current target checks',flush=True)
+         with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
+             futures=[pool.submit(coordinator.run_in_slot,j,codex,sources,workers,True) for j in queue]
+-            for future in concurrent.futures.as_completed(futures):future.result()
++            try:
++                for future in concurrent.futures.as_completed(futures):future.result()
++            except BaseException:
++                # Stop waiting slot holders before the pool drains queued work.
++                coordinator.STOP.set()
++                for future in futures:future.cancel()
++                raise
+     return pending(sources)[1]

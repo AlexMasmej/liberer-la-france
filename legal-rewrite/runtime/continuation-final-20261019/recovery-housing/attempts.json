@@ -1,0 +1,28 @@
+[
+  {
+    "url": "https://www.legifrance.gouv.fr/download/pdf?id=Sg8D8XoPE4qUiyh8_0ztpeDH88V2_zW0rTU0Ov0dQlU%3D",
+    "origin": "official link from decree2016-855",
+    "result": "Wrapper read via web tool; PDF click fails. Normal curl HTTP403 and Chrome security verification. No CAPTCHA solved, no cookies or headers exported to bypass.",
+    "evidence": [
+      "jo2016.headers",
+      "jo2016-download.html"
+    ]
+  },
+  {
+    "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000017767416",
+    "origin": "canonical source D453-7, JO303 du30Dec2007 texte157 décret2007-1941 NOR MLVU0762969D",
+    "result": "Normal web openings fail; prior normal browser blocks retained in existing attachment audit, no exact facsimile copy recovered."
+  },
+  {
+    "url": "https://www.bulletin-officiel.developpement-durable.gouv.fr/recherche?recherche=MLVU0762969D",
+    "result": "Normal Chrome search visibly returned Aucun document trouvé. Search légende also no document. Direct curl page timed out after30seconds, no retry loop."
+  },
+  {
+    "url": "https://www.gironde.gouv.fr/contenu/telechargement/22784/144138/file/Standard_CNIG_PLU_V2_oct2014.pdf",
+    "result": "Official PDF downloaded; pages79–82 extracted and page80 rendered/read. These are adapted PLU symbols, not complete1984legend."
+  },
+  {
+    "url": "https://www.financement-logement-social.logement.gouv.fr/IMG/pdf/note_ouverture_galion_2017_cle132e84.pdf",
+    "result": "Official ministry scan downloaded;34pages. Cover/signature/TOC/pages5 and20–21 read visually. BRI sections explain software financing categories, not R254-5 formula. No claim entire document read or model1984 recovered."
+  }
+]

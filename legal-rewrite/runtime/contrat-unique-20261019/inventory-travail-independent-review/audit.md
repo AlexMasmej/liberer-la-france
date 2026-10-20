@@ -1,0 +1,37 @@
+# Revue indépendante du noyau travail — 45 articles
+
+Édition lue et copiée avant revue : answer SHA-256 `06d53565cf029c1a16470d2e4be3425115803c2055f63700190660a193565fec`, source `2a871004635978ec1d26f6cb955ff79e76a686c085455142e7364ca9e18b5f40`. Les 45 sources, notes, propositions et avant-images disponibles ont été examinées. Le contrôle structurel passe mais ne constitue pas la conclusion juridique. Aucune modification de la base, des lots actifs ou d'une publication.
+
+## Paramètres centraux cohérents
+
+L1234-9, L1234-11 et R1234-1/2 retiennent le seuil d'un an à la fin effective du contrat, préavis ordinaire exécuté ou payé inclus. L'exception d'essai ne crée pas une ancienneté fictive après son terme. Le calcul après ouverture est bien `min(0,20 × salaire mensuel de référence × ancienneté reconnue, 6 × ce salaire)`, avec prorata des mois complets et aucune année de franchise retranchée. À un an : 0,20 mois ; dix ans : deux mois ; trente ans et au-delà : six mois. Avant un an : zéro indemnité ordinaire, sans effacer salaire/préavis/congés ou minima spéciaux.
+
+L'initiative du salarié ne produit pas l'indemnité ordinaire. Les licenciements des anciens contrats gardent leur seuil de huit mois, leur composante acquise au barème antérieur et une composante nouvelle seule plafonnée. Les parts emploient une même base actualisée, sans geler le salaire historique ni doubler un mois à cheval. Les garanties plus favorables et réparations distinctes restent hors plafond. L'exception de faute grave à l'indemnité est explicitement maintenue ; sa suppression n'a pas été déduite d'une consigne générale. Elle ne supprime pas les quinze jours payés du nouveau préavis.
+
+Les minima spéciaux de L1226-4-3, L1226-20, L1237-7 et L1237-13 écartent expressément la condition d'ouverture d'un an. R1234-2 vise seulement l'indemnité *ordinaire* lorsqu'il prévoit zéro avant un an : il n'annule donc pas le calcul spécial sans seuil. Le minimum professionnel doublé est distinct du plafond de l'indemnité simple ; pas de plafond global silencieux du double, ni cumul de deux indemnités de même nature.
+
+Les quinze jours sont rédigés comme durée fixe symétrique du nouveau régime, y compris en essai, avec protection des anciens délais. La compensation d'un reliquat d'essai employeur ne prolonge pas l'évaluation ; la poursuite après l'essai ne permet pas une nouvelle rupture d'essai. La notification du salarié ne crée pas un second préavis à son issue. Les protections contre discrimination, la procédure et les régimes particuliers demeurent distincts. La règle de force majeure n'est pas étendue à une fermeture choisie ou économique.
+
+## Défaut opératoire et correctifs entiers isolés
+
+1. **L1226-20 : renvoi cassé.** Le projet rétablit les « deuxième et dernier alinéas » de L1226-12. Or sa proposition actuelle comporte sept paragraphes, dont un deuxième introductif suivi de trois cas numérotés : le deuxième ne contient plus les conditions exclues. L'avant-image de L1226-20 avait justement abandonné ces ordinaux. Le correctif vise les cas 1° à 3° et la procédure par leur objet, et conserve l'information écrite et le reclassement dans le reste de leur champ.
+2. **L1524-1 : alinéa déplacé.** La référence historique au deuxième alinéa de L1221-22 est remise en texte alors que le nouveau deuxième alinéa règle les accords plus courts du régime nouveau. La règle autonome de l'avant-image est préférable ; le correctif reprend l'ancien champ temporel sans substitution d'alinéa ni prolongation de la limite historique de cinq ans.
+3. **L1221-25 : notification d'essai.** Le renvoi à L1234-3 utilise une règle écrite pour la lettre recommandée de licenciement et n'énonce pas la notification propre de l'essai. Le correctif rend la réception probante et les quinze jours entiers autonomes, sans imposer une lettre de licenciement à l'essai. Compensation et fin d'essai demeurent identiques.
+4. **L1221-21 : sauvegarde retirée du corps.** L'avant-image exigeait expressément l'accord du salarié à l'exercice du renouvellement ancien. Le nouveau texte ne conserve que l'accord de branche ; la note de L1221-23 dit certes que la clause ne vaut pas consentement, mais ce n'est plus une règle écrite. Le correctif rétablit cette garantie explicite pour les seuls contrats anciens sans permettre aucun renouvellement nouveau. Il ne prétend pas que l'exigence jurisprudentielle aurait autrement disparu du droit.
+5. **L1221-19 : coquille**, « à les contrats » → « aux contrats », sans modification de fond.
+
+Les cinq textes entiers et sources/avant-images/empreintes sont dans `corrected-answer.json` et `corrected-source.json`. Le champ `audited_candidate_sha256` identifie aussi le texte candidat remplacé. Ces fichiers ne sont pas intégrés.
+
+## Risque de salaire de référence à résoudre avant intégration
+
+R1234-4 remplace les fenêtres « précédant le licenciement » par « avant la rupture » et fixe le salaire « à la date de rupture ». L1234-9 définit dans ce même paquet la fin effective après préavis. Ce glissement peut diminuer la base des droits anciens lorsqu'une prime sort de la fenêtre entre notification et fin effective : par exemple, une moyenne de douze mois à 3 100 € (3 000 € ordinaires et une prime de 1 200 € dans le premier mois) peut tomber à 3 000 € après le décalage, alors que les trois derniers mois restent à 3 000 €. La composante d'ancienneté ancienne serait ainsi réduite.
+
+Il faut distinguer le maintien du salaire actualisé et la date de la fenêtre : conserver les fenêtres historiques pour le licenciement de l'ancien contrat, ou prévoir au moins un plancher comparatif si le parent veut garder la nouvelle fenêtre. Il s'agit d'un risque matériel démontrable à arbitrer, pas d'une erreur dans le coefficient 0,20. Aucun correctif de date n'a été intégré arbitrairement par le relecteur.
+
+## Coordinations directes encore distinctes du présent lot
+
+Sources et projets de L1226-4/12/14, L1231-2, L1233-67/69 et L1237-11/14/15 ont été lus entièrement et archivés dans `references.json`. L1226-4 conserve actuellement la fin à notification et l'absence de compensation du préavis non professionnel : coordination nouvelle nécessaire si les quinze jours payés doivent être uniformes. L1226-14 conserve son propre refus abusif et sa règle spéciale ; les minima et le préavis doivent être harmonisés sans supprimer les avantages autonomes. Le parent prend ces textes dans le lot complémentaire.
+
+Le CSP reste un dispositif de formation/accompagnement distinct d'un contrat salarié : sa durée et ses droits ne sont pas supprimés. Les versements représentatifs ne deviennent pas trois mois fictifs lorsque le préavis n'est que quinze jours. L1233-67/69, les modalités conventionnelles et les anciennes périodes requièrent leur propre coordination. Les phases de reclassement/mobilité ne peuvent provoquer la fin automatique d'un nouvel emploi ; leur reliquat et leur financement restent distincts.
+
+Les droits des journalistes, salariés handicapés, VRP et les dispenses spéciales, ainsi que l'apprentissage, professionnalisation, missions et financements, appartiennent au lot complémentaire. L1237-14 et L1237-15 conservent leurs délais distincts d'homologation et d'autorisation ; aucune prétendue réduction de ces contrôles à quinze jours calendaires n'a été validée ici. La conventionnalité internationale du préavis uniforme ne se trouve pas tranchée par cette revue de cohérence interne.

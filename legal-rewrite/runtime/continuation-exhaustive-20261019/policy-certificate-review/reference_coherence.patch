@@ -1,0 +1,51 @@
+--- a/legal-rewrite/reference_coherence.py
++++ b/legal-rewrite/reference_coherence.py
+@@ -13,11 +13,15 @@
+ HERE=Path(__file__).resolve().parent
+ WORK='LEGITEXT000006072050'
+ BASE={'L1221-2','L1234-1','L1234-9'}
+-VERSION=2
++VERSION=3
+ 
+ def digest(value):return hashlib.sha256((value or '').encode()).hexdigest()
+ def key(a):return a['code_id']+'|'+a.get('source_id',a.get('id',''))
+ def normalize(value):return re.sub(r'[\s.]','',value).upper()
++
++def policy_state():
++    return {name:hashlib.sha256((HERE/name).read_bytes()).hexdigest() if (HERE/name).exists() else 'missing'
++            for name in ('policy-coordinations.json','site-summaries.json')}
+ 
+ @lru_cache(maxsize=1)
+ def focus():
+@@ -110,6 +114,7 @@
+         needs[key(article)]=sorted(requirements(article,body,catalog,db))
+     wanted=set().union(*(set(v) for v in needs.values())) if needs else set()
+     return {'version':VERSION,'scope':'contract_unique_and_related_severance',
++            'policy_sha256':policy_state(),
+             'requirements':needs,'targets':{k:view(db,k) for k in sorted(wanted)},
+             'referrers':{key(a):referrer_source(db,key(a)) for a in articles if needs[key(a)]},
+             'semantic_review_by_jurist':False}
+@@ -138,6 +143,7 @@
+ 
+ def check_guards(db,snapshot):
+     if snapshot.get('version')!=VERSION:raise ValueError('Reference snapshot version changed; recapture')
++    if snapshot.get('policy_sha256')!=policy_state():raise ValueError('Reference policy changed during drafting; recapture')
+     for identifier,expected in snapshot.get('referrers',{}).items():
+         if referrer_source(db,identifier)!=expected:raise ValueError('Referrer source changed during drafting: '+identifier)
+     for identifier,target in snapshot.get('targets',{}).items():
+@@ -164,6 +170,7 @@
+         if set(found)!=needed:raise ValueError('A required reference has no explicit assessment')
+         assessments=[{field:found[k][field] for field in ('target_key','view_sha256','assessment')} for k in sorted(needed)]
+         row['reference_coherence']={'version':VERSION,'referrer_sha256':digest(row['proposed_xml']),
++            'policy_sha256':dict(snapshot['policy_sha256']),
+             'referrer_source':snapshot['referrers'][key(row)],
+             'targets':{k:guard(snapshot['targets'][k]) for k in sorted(needed)},
+             'assessments':assessments,'assessments_sha256':assessment_digest(assessments),
+@@ -174,6 +181,7 @@
+     needed=requirements(article,body,catalog,db)
+     if not needed:return True
+     if not isinstance(certificate,dict) or certificate.get('version')!=VERSION or certificate.get('referrer_sha256')!=digest(body):return False
++    if certificate.get('policy_sha256')!=policy_state():return False
+     guards=certificate.get('targets')
+     if not isinstance(guards,dict) or set(guards)!=needed:return False
+     if certificate.get('semantic_review_by_jurist') is not False:return False

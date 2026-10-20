@@ -1,0 +1,256 @@
+import json
+from pathlib import Path
+
+sources = json.loads(Path('source.json').read_text())
+drafts = {}
+
+
+def add(number, xml, reason, notes):
+    assert number not in drafts
+    drafts[number] = {
+        'proposed_xml': xml.strip(),
+        'reason': reason,
+        'review_notes': notes,
+        'status': 'rewrite_draft',
+    }
+
+
+add('50-0', '''
+<p>1. Le régime prévu au présent article s'applique à l'imposition des bénéfices des entreprises dont le chiffre d'affaires hors taxes ne dépasse pas les limites suivantes au titre de l'année civile précédente ou de la pénultième année. Ce chiffre d'affaires est, s'il y a lieu, ajusté au prorata du temps d'exploitation au cours de l'année de référence :<br /><br />
+1° 203 100 € pour les entreprises dont le commerce principal consiste à vendre des marchandises, objets, fournitures et denrées à emporter ou à consommer sur place, ou à fournir le logement. La location directe ou indirecte de locaux d'habitation meublés ou destinés à être loués meublés est exclue de cette catégorie ;</p>
+<p>1° bis 15 000 € pour les entreprises dont l'activité principale consiste à louer, directement ou indirectement, des meublés de tourisme au sens du I de l'article L. 324-1-1 du code du tourisme, autres que ceux mentionnés aux 1° et 2° du I de l'article 1414 bis du présent code ;<br /><br />
+2° 83 600 € pour les autres entreprises.</p>
+<p>Lorsqu'une entreprise exerce des activités relevant de plusieurs des catégories définies aux 1°, 1° bis et 2°, le présent régime ne s'applique que si son chiffre d'affaires hors taxes global respecte la limite du 1° et si son chiffre d'affaires hors taxes afférent aux activités des 1° bis et 2° ne dépasse pas les limites respectivement prévues aux mêmes 1° bis et 2°.<br /><br />
+Avant prise en compte des plus-values ou moins-values de cession des biens affectés à l'exploitation, le résultat imposable est égal au chiffre d'affaires hors taxes diminué d'un abattement de 71 % pour le chiffre d'affaires provenant des activités de la catégorie du 1°, de 50 % pour le chiffre d'affaires provenant des activités de la catégorie du 2° et de 30 % pour le chiffre d'affaires provenant des activités de la catégorie du 1° bis. Ces abattements ne peuvent être inférieurs à 305 €.<br /><br />
+Les plus-values ou moins-values mentionnées au sixième alinéa sont déterminées et imposées selon les articles 39 duodecies à 39 quindecies, sous réserve de l'article 151 septies. Pour l'application de la première phrase du présent alinéa, les abattements mentionnés au sixième alinéa du présent 1 sont réputés tenir compte des amortissements pratiqués selon le mode linéaire.<br /><br />
+À l'exception du seuil du 1° bis, les seuils du présent 1 sont actualisés tous les trois ans dans la même proportion que l'évolution triennale de la première tranche du barème de l'impôt sur le revenu. Ils sont arrondis à la centaine d'euros la plus proche.</p>
+<p>2. Sont exclus du présent régime :</p>
+<p>a. Les contribuables qui exploitent plusieurs entreprises lorsque le total de leurs chiffres d'affaires dépasse les limites des 1°, 1° bis et 2° du 1, appréciées, s'il y a lieu, dans les conditions prévues au cinquième alinéa du même 1 ;</p>
+<p>b. (Abrogé) ;</p>
+<p>c. Les sociétés ou organismes dont les résultats sont imposés selon le régime des sociétés de personnes défini à l'article 8, sauf les sociétés à responsabilité limitée dont l'associé unique est une personne physique qui dirige la société ;</p>
+<p>d. Les personnes morales passibles de l'impôt sur les sociétés ;</p>
+<p>e. Les opérations portant sur des immeubles, des fonds de commerce ou des actions ou parts de sociétés immobilières, lorsque leurs résultats doivent être compris dans les bases de l'impôt sur le revenu au titre des bénéfices industriels et commerciaux ;</p>
+<p>f. (Abrogé) ;</p>
+<p>g. Les opérations mentionnées au 8° du I de l'article 35 ;</p>
+<p>h. Les contribuables dont tout ou partie des biens affectés à l'exploitation sont compris dans un patrimoine fiduciaire en application d'une opération de fiducie définie à l'article 2011 du code civil ;</p>
+<p>i) Les contribuables qui exercent une activité occulte au sens du deuxième alinéa de l'article L. 169 du livre des procédures fiscales.</p>
+<p>j) Les contribuables qui perçoivent des revenus d'un fonds de placement immobilier imposables dans les conditions définies au e du 1 du II de l'article 239 nonies.</p>
+<p>3. Les contribuables concernés inscrivent directement sur la déclaration prévue à l'article 170 le chiffre d'affaires annuel ainsi que les plus-values ou moins-values réalisées ou subies au cours de la même année. Les règles de réutilisation et de rectification des informations prévues au premier alinéa de l'article 53 A s'appliquent à cette déclaration.</p>
+<p>4. Les entreprises qui relèvent du présent article peuvent opter pour un régime réel d'imposition. Elles exercent l'option dans le délai de dépôt de la déclaration prévue à l'article 170 au titre de l'année précédant celle pour laquelle l'option s'applique. Toutefois, lorsqu'une entreprise était soumise de plein droit à un régime réel d'imposition au titre de la période précédant son entrée dans le champ du présent article, elle exerce l'option dans le délai de dépôt de la déclaration au titre de l'année pour laquelle l'option s'applique. En cas de création d'entreprise, l'option est exercée dans le délai de dépôt de la déclaration au titre de l'année de la première période d'activité.</p>
+<p>L'option pour un régime réel d'imposition est valable un an. Elle est reconduite tacitement chaque année civile pour un an. L'entreprise peut y renoncer dans le délai de dépôt de la déclaration des résultats de l'année précédant celle pour laquelle la renonciation s'applique.</p>
+<p>5. Les entreprises qui n'ont pas exercé l'option prévue au 4 tiennent un livre-journal renseigné au jour le jour, qui détaille leurs recettes professionnelles et s'appuie sur les factures et toutes autres pièces justificatives. Elles le présentent à la demande de l'administration. Lorsque leur commerce principal consiste à vendre des marchandises, objets, fournitures et denrées à emporter ou à consommer sur place, ou à fournir le logement, elles tiennent également un registre, récapitulé par année, détaillant leurs achats. Elles le présentent à la demande de l'administration.</p>
+''',
+    "À droit constant, clarification des catégories de chiffre d'affaires, des abattements, des exclusions, des délais d'option et des livres obligatoires, sans déplacer les alinéas du 1. Réforme de fond : application au 3 du mécanisme de réutilisation des données et de rectification rédigé à l'article 53 A, conformément à la mesure « déclarer une fois » de policy.json.",
+    "Seuils maintenus : 203 100 €, 15 000 € et 83 600 € ; abattements de 71 %, 50 % et 30 %, minimum de 305 €. Le seuil du 1° bis demeure exclu de l'actualisation triennale. Renvois aux cinquième et sixième alinéas du 1 maintenus à leur cible ; renvoi à l'article 1414 bis vérifié dans le corpus public (meublés classés et chambres d'hôtes). La coordination au 3 suppose l'adoption concomitante du premier alinéa proposé de l'article 53 A ; elle ne dispense pas des livres et justificatifs du 5. Note source : le B du VII de l'article 110 de la loi n° 2025-127 du 14 février 2025 rend le I, sauf le b du 8°, et les II à VI applicables aux impositions établies au titre de 2025 ; ce repère historique ne fixe pas la date d'effet de la réforme proposée.")
+
+add('53 A', '''
+<p>Sous réserve de l'article 302 septies A bis, les contribuables autres que ceux soumis au régime défini à l'article 50-0 (1) déposent chaque année, dans les conditions et délais prévus aux articles 172 et 175, une déclaration permettant de déterminer et de contrôler le résultat imposable de l'année ou de l'exercice précédent. Pour cette déclaration et les documents qui l'accompagnent, l'administration réutilise les informations qu'elle détient légalement, lorsqu'elles sont à jour et que leur réutilisation à cette fin est autorisée dans le respect des secrets protégés par la loi. Elle ne peut demander au contribuable de fournir à nouveau ces mêmes informations. Elle lui rend accessibles les informations réutilisées et lui permet de les corriger ou d'en demander la rectification auprès de l'administration qui les détient.</p>
+<p>Un décret fixe le contenu de cette déclaration et la liste des documents à y joindre. Il définit les notions et les règles d'évaluation que les entreprises doivent respecter. Il précise les modalités de réutilisation et de rectification des informations prévues au premier alinéa.</p>
+<p>Un arrêté fixe les modèles des imprimés de la déclaration et des documents mentionnés au deuxième alinéa.</p>
+<p>(1) L'obligation annuelle de déclaration s'applique à la détermination des résultats des années 1999 et suivantes.</p>
+''',
+    "À droit constant, formulation directe de l'obligation annuelle, des compétences du décret et de l'arrêté, avec maintien des réserves et du repère de 1999. Réforme de fond : obligation pour l'administration de réutiliser les données légalement détenues, actuelles et réutilisables, interdiction de leur demande en double et accès à leur correction à la source. Cette mesure concrétise l'orientation de simplification déclarative de policy.json.",
+    "Le dépôt annuel, les délais des articles 172 et 175 et les obligations de justification de l'article 54 subsistent. La réutilisation porte aussi sur les états joints, notamment ceux des articles 54 bis, 54 ter, 54 quater, 54 sexies et 54 septies, sans supprimer leurs renseignements propres. Coordinations expresses rédigées aux articles 50-0, 54 octies et 64 bis ; l'article 72 conserve son renvoi général aux règles des entreprises industrielles et commerciales. Adapter le décret relatif à la déclaration de résultats et les arrêtés de formulaires ; définir les circuits de correction, les finalités autorisées et les accès, sans déroger aux secrets fiscaux ou aux autres secrets protégés. Les échanges interadministratifs qui excéderaient les habilitations existantes appellent une disposition dans le livre des procédures fiscales, notamment une coordination de son article L. 103 et, selon les destinataires, des dérogations qui le suivent ; aucun nouveau renvoi d'habilitation n'est supposé acquis. La mention de 1999 reste une note historique ; aucune date future de promulgation n'est inventée.")
+
+add('54', '''
+<p>À toute demande de l'administration, les contribuables mentionnés à l'article 53 A présentent tous les documents comptables, inventaires, copies de lettres et pièces de recettes et de dépenses propres à justifier l'exactitude des résultats indiqués dans leur déclaration.</p>
+<p>Lorsque la comptabilité est tenue dans une langue étrangère, ils présentent, à toute demande de l'administration, une traduction certifiée par un traducteur juré.</p>
+<p>(Abrogé).</p>
+''',
+    "Réécriture à droit constant : les contribuables sont désignés comme sujets des deux obligations et les documents exigibles sont énumérés directement. Aucune réforme de fond de la justification comptable ou de la traduction n'est introduite.",
+    "Conserver l'exigibilité sur réquisition de tous les documents énumérés, la certification par un traducteur juré et l'alinéa abrogé. La réutilisation de données déclaratives proposée à l'article 53 A ne supprime pas le pouvoir de demander les pièces permettant de contrôler les résultats.")
+
+add('54 bis', '''
+<p>Les contribuables mentionnés à l'article 53 A joignent à la déclaration des résultats de chaque exercice un état indiquant l'affectation de chacun des véhicules de tourisme, au sens de l'article L. 421-2 du code des impositions sur les biens et services, qui a figuré à leur actif ou dont l'entreprise a assumé les frais au cours de cet exercice.</p>
+<p>Ils inscrivent également en comptabilité, de manière explicite, la nature et la valeur des avantages en nature accordés à leur personnel.</p>
+''',
+    "Réécriture à droit constant : présentation de l'état comme document joint à la déclaration, identification des deux catégories de véhicules et formulation directe de l'obligation comptable relative aux avantages en nature. Aucun régime fiscal de fond n'est modifié dans cet article.",
+    "Maintien du renvoi à l'article L. 421-2 du code des impositions sur les biens et services et de l'obligation pour chaque véhicule, y compris ceux dont seuls les frais ont été assumés. L'état joint relève du mécanisme de réutilisation proposé à l'article 53 A ; aucune information propre à l'affectation des véhicules n'est supprimée. Note source : entrée en vigueur le 1er janvier 2022 en application de l'article 40 de l'ordonnance n° 2021-1843 du 22 décembre 2021.")
+
+add('54 ter', '''
+<p>Pour l'application des articles 39 bis à 39 bis B, les entreprises concernées joignent à chaque déclaration souscrite pour l'établissement de l'impôt sur le revenu un relevé indiquant le montant des dépenses effectuées, pendant la période couverte par la déclaration, pour les objets prévus par ces articles. Ce relevé distingue les montants prélevés sur les bénéfices de cette période de ceux prélevés sur les provisions constituées, en application des mêmes articles, au moyen des bénéfices des périodes précédentes.</p>
+''',
+    "Réécriture à droit constant : séparation de l'obligation de joindre le relevé et de son contenu, en explicitant la distinction entre financement sur les bénéfices de la période et prélèvement sur les provisions antérieures. Aucune modification de fond des régimes des articles 39 bis à 39 bis B.",
+    "Conserver le champ de l'impôt sur le revenu, la périodicité de chaque déclaration et les deux origines des sommes dépensées. Le relevé demeure un document joint, soumis au mécanisme de réutilisation proposé à l'article 53 A lorsqu'il s'applique ; aucun montant ni aucune condition des provisions n'est modifié.")
+
+add('54 quater', '''
+<p>Les entreprises joignent à la déclaration des résultats de chaque exercice un relevé détaillé des catégories de dépenses mentionnées au 5 de l'article 39 (1), lorsque ces dépenses dépassent le montant fixé par arrêté du ministre chargé de l'économie et des finances. Elles joignent également un relevé détaillé des dépenses mentionnées au troisième alinéa de l'article 238 A qu'elles ont déduites pour l'établissement de leur impôt.</p>
+<p>(1) Les renseignements à faire figurer dans ce relevé sont précisés à l'article 36 de l'annexe II et aux articles 4 J à 4 L de l'annexe IV.</p>
+''',
+    "Réécriture à droit constant : deux phrases distinguent le relevé soumis à un seuil ministériel et celui des dépenses de l'article 238 A déduites fiscalement. Les renvois de la note intégrée sont explicités. Aucune modification de fond des seuils ou dépenses déclarables.",
+    "Le seuil fixé par arrêté reste limité au premier relevé ; il n'est pas étendu aux dépenses du troisième alinéa de l'article 238 A. Conserver la coordination avec l'annexe II, article 36, et l'annexe IV, articles 4 J à 4 L, lors de l'adaptation des formulaires à l'article 53 A proposé. Note source : article 22, VII, 2 de la loi n° 2009-1674 du 30 décembre 2009, application aux exercices ouverts à compter du 1er janvier 2011.")
+
+add('54 sexies', '''
+<p>Les sociétés débitrices d'intérêts versés au titre de sommes mises à leur disposition par leurs associés ou actionnaires et inscrites à un compte bloqué individuel joignent à leur déclaration de résultats un état de ces sommes.</p>
+<p>Le non-respect de l'obligation du premier alinéa rend immédiatement exigibles, malgré toute disposition contraire, les impôts dont les associés ou actionnaires et la société ont été dispensés. Ces impôts sont assortis, le cas échéant, de l'intérêt de retard prévu à l'article 1727, calculé à partir de la date à laquelle ils auraient dû être acquittés.</p>
+''',
+    "Réécriture à droit constant : identification directe des sociétés débitrices et scission de la conséquence du défaut d'état entre exigibilité des impôts et intérêt de retard. Aucune modification de fond des dispenses, de leur reprise ou du point de départ de l'intérêt.",
+    "Conserver le compte bloqué individuel, la reprise des impôts tant des associés ou actionnaires que de la société et la primauté sur les dispositions contraires. Le mécanisme de réutilisation de l'article 53 A proposé concerne les données de l'état, sans supprimer son dépôt ni la sanction. Note source : article 9, VI de la loi n° 2012-1509 du 29 décembre 2012, application aux revenus perçus à compter du 1er janvier 2013.")
+
+add('54 septies', '''
+<p>I. – Les entreprises relevant de l'un des régimes prévus aux 5 bis, 5 ter et 7 à 7 ter de l'article 38, à l'article 38 septies, au II bis de l'article 208 C et aux articles 151 octies, 151 octies A, 151 octies B, 210 A, 210 B, 210 D et 238 quater K du présent code joignent à leur déclaration de résultat un état conforme au modèle fourni par l'administration. Pour chaque nature d'élément, cet état contient les renseignements nécessaires au calcul du résultat imposable lors de sa cession ultérieure. Un décret en précise le contenu.</p>
+<p>II. – L'entreprise qui inscrit à l'actif de son bilan des éléments non amortissables porte sur un registre les plus-values dégagées sur ces éléments lors d'opérations d'échange, de cessions, de fusion, d'apport, de scission ou de transformation, lorsque leur imposition a été reportée en application des 5 bis, 5 ter et 7 à 7 ter de l'article 38, de l'article 38 septies, du 2 de l'article 115, du II bis de l'article 208 C ou des articles 151 octies, 151 octies A, 151 octies B, 210 A, 210 B, 210 D, 248 A et 248 E. Elle porte également sur ce registre les plus-values dégagées sur des éléments d'actif non amortissables lors de leur transfert dans ou hors d'un patrimoine fiduciaire, lorsque leur imposition a été reportée en application de l'article 238 quater B ou de l'article 238 quater K. En cas de report fondé sur l'article 238 quater B, le fiduciaire qui a inscrit les biens dans les écritures du patrimoine fiduciaire tient le registre.</p>
+<p>Le registre indique la date de l'opération, la nature des biens transférés, leur valeur comptable d'origine, leur valeur fiscale et leur valeur d'échange ou d'apport. Il est conservé, dans les conditions prévues à l'article L. 102 B du livre des procédures fiscales, jusqu'à la fin de la troisième année suivant celle au titre de laquelle le dernier bien inscrit au registre est sorti de l'actif de l'entreprise ou du patrimoine fiduciaire. Il est présenté à toute demande de l'administration.</p>
+''',
+    "Réécriture à droit constant : séparation du modèle d'état et de son contenu, désignation de l'entreprise ou du fiduciaire chargé du registre, et clarification du terme de conservation. Les listes distinctes de régimes au I et au II et les obligations de suivi des plus-values sont conservées, sans réforme de fond propre à cet article.",
+    "Listes de renvois maintenues séparément : le 2 de l'article 115, les articles 248 A, 248 E et 238 quater B ne sont pas ajoutés au I ; le traitement de 238 quater K au I et au II est conservé. Le délai de trois années court après l'année de sortie du dernier bien et concerne aussi le patrimoine fiduciaire. L'état du I relève de l'article 53 A proposé ; le registre, sa conservation et sa présentation restent obligatoires. Note source : article 21, II de la loi n° 2021-1900 du 30 décembre 2021, application aux scissions réalisées à compter de l'entrée en vigueur du I de l'article 77 de la loi n° 2019-486 du 22 mai 2019 ; aucune date calendaire de cette entrée en vigueur n'est déduite de la note.")
+
+add('54 octies', '''
+<p>Les contribuables mentionnés au premier alinéa du 1 du II de l'article 39 C déposent, dans le mois suivant le début de l'amortissement admis en déduction du résultat imposable, une déclaration conforme au modèle fourni par l'administration. Cette déclaration indique notamment certains éléments du contrat et le résultat prévisionnel de ces contribuables pendant l'application du contrat. Les règles de réutilisation et de rectification des informations prévues au premier alinéa de l'article 53 A s'appliquent à cette déclaration. Un décret en précise le contenu et les conditions de dépôt.</p>
+''',
+    "À droit constant, scission de la phrase pour faire apparaître le délai, le contenu prévisionnel et la compétence du décret. Réforme de fond : extension expresse à cette déclaration particulière du mécanisme de réutilisation des données et de rectification proposé à l'article 53 A, au titre de la mesure « déclarer une fois ».",
+    "Conserver le renvoi au premier alinéa du 1 du II de l'article 39 C et le délai d'un mois, dont le point de départ reste le début de l'amortissement fiscalement déductible. Le résultat prévisionnel demeure celui des contribuables durant le contrat. Adapter le décret de contenu et de dépôt à la réutilisation prévue à l'article 53 A proposé ; aucune modification des contrats ni des règles d'amortissement n'est introduite.")
+
+add('55', '''
+<p>Le service des impôts vérifie les déclarations. Il peut les rectifier en respectant la procédure prévue à l'article L. 55 du livre des procédures fiscales (1).</p>
+<p>(1) Voir également les articles L. 10 et L. 15 du livre des procédures fiscales.</p>
+''',
+    "Réécriture à droit constant : la seconde phrase lie directement le pouvoir de rectification au respect de la procédure contradictoire visée par la source, sans répéter le complément « déclarations ». Aucun pouvoir ni garantie de procédure n'est modifié.",
+    "Les renvois aux articles L. 55, L. 10 et L. 15 du livre des procédures fiscales sont conservés. Le contrôle des données réutilisées au titre de l'article 53 A proposé demeure soumis à ces règles ; aucune dérogation procédurale n'est créée.")
+
+add('56', '''
+<p>Les ingénieurs des mines peuvent être appelés à vérifier les déclarations des contribuables mentionnés au deuxième alinéa de l'article 34 et des entreprises qui exploitent des carrières. Ils interviennent à la place des agents des impôts ou concurremment avec eux.</p>
+''',
+    "Réécriture à droit constant : la première phrase précise les déclarations concernées et la seconde les deux modalités d'intervention des ingénieurs des mines. Aucune réforme de fond de compétence ou de champ.",
+    "Maintien du renvoi au deuxième alinéa de l'article 34, de la catégorie distincte des entreprises de carrières et de la possibilité d'intervenir en remplacement ou concurremment avec les agents des impôts.")
+
+add('57', '''
+<p>Pour établir l'impôt sur le revenu dû par une entreprise qui dépend d'entreprises situées hors de France ou qui les contrôle, les bénéfices qu'elle leur transfère indirectement sont réintégrés dans les résultats de sa comptabilité. Sont concernés les transferts opérés par majoration ou diminution des prix d'achat ou de vente, ainsi que par tout autre moyen. La même règle s'applique à une entreprise qui dépend d'une entreprise ou d'un groupe contrôlant également des entreprises situées hors de France.</p>
+<p>La dépendance ou le contrôle n'a pas à être établi lorsque le transfert s'effectue avec des entreprises établies dans un État étranger ou un territoire situé hors de France dont le régime fiscal est privilégié au sens du deuxième alinéa de l'article 238 A, ou avec des entreprises établies ou constituées dans un État ou territoire non coopératif au sens de l'article 238-0 A.</p>
+<p>En l'absence de réponse à une demande présentée en application de l'article L. 13 B du livre des procédures fiscales, ou en cas de défaut de production ou de production partielle de la documentation mentionnée au III de l'article L. 13 AA et à l'article L. 13 AB du même livre, l'administration évalue les bases d'imposition concernées par la demande à partir des éléments dont elle dispose. Elle suit la procédure contradictoire définie aux articles L. 57 à L. 61 du même livre.</p>
+<p>Si les éléments précis nécessaires aux rectifications prévues aux premier, deuxième et troisième alinéas font défaut, les produits imposables sont déterminés par comparaison avec ceux d'entreprises similaires exploitées normalement.</p>
+<p>Lorsque la méthode de détermination des prix de transfert diffère de celle prévue par la documentation qu'une personne morale met à la disposition de l'administration en application du III de l'article L. 13 AA ou de l'article L. 13 AB du livre des procédures fiscales, l'écart constaté entre le résultat et le montant qu'il aurait atteint si cette documentation avait été respectée est réputé constituer un bénéfice indirectement transféré au sens du premier alinéa du présent article. Cette présomption ne s'applique pas si la personne morale démontre l'absence de transfert par majoration ou diminution des prix d'achat ou de vente, comme par tout autre moyen.</p>
+''',
+    "Réécriture à droit constant : phrases plus courtes sur la réintégration des bénéfices transférés, les cas dispensés de lien de dépendance, l'évaluation contradictoire et la présomption liée à la documentation. Les cinq alinéas, le champ international et la preuve contraire sont conservés. Aucune réforme de fond des prix de transfert.",
+    "Les renvois aux premier, deuxième et troisième alinéas gardent leurs cibles. Ne pas confondre la documentation visée cumulativement au troisième alinéa et les fondements alternatifs du cinquième alinéa : les conjonctions de la source sont conservées. La preuve d'absence de transfert reste ouverte pour tous les moyens de transfert. Note source : article 116, III de la loi n° 2023-1322 du 29 décembre 2023, application aux exercices ouverts à compter du 1er janvier 2024. La baisse d'IS envisagée par policy.json ne modifie ni les conditions ni les procédures de cet article.")
+
+add('60', '''
+<p>Dans tous les cas, le bénéfice des sociétés mentionnées à l'article 8 est déterminé selon les règles applicables aux exploitants individuels.</p>
+<p>Ces sociétés respectent les obligations qui incombent normalement aux exploitants individuels.</p>
+''',
+    "Réécriture à droit constant : formulation directe de la détermination du bénéfice et du respect des obligations, en conservant deux alinéas et l'application dans tous les cas. Aucune réforme de fond du régime des sociétés de personnes.",
+    "Le renvoi à l'article 8 et l'ensemble des obligations normalement applicables aux exploitants individuels sont maintenus. L'article ne transforme pas ces sociétés en contribuables soumis à l'impôt sur les sociétés ; aucun taux du projet d'IS n'y est introduit.")
+
+add('61 A', '''
+<p>Les copropriétés mentionnées aux articles 8 quater et 8 quinquies déterminent les résultats qu'elles doivent déclarer selon les règles applicables aux exploitants individuels soumis au régime du bénéfice réel. Elles les déterminent avant de déduire, selon le cas, l'amortissement du navire, du cheval de course ou de l'étalon.</p>
+<p>Ces copropriétés respectent les obligations qui incombent à ces exploitants (1).</p>
+<p>(1) Voir également l'article L. 53 du livre des procédures fiscales.</p>
+''',
+    "Réécriture à droit constant : les copropriétés deviennent le sujet explicite de l'obligation de déterminer leurs résultats ; la règle préalable à l'amortissement est isolée dans une phrase. Aucun changement de fond du résultat à déclarer ou des obligations.",
+    "Conserver les articles 8 quater et 8 quinquies, la détermination avant amortissement propre au navire ou au cheval de course ou à l'étalon, et le renvoi à l'article L. 53 du livre des procédures fiscales. La même référence L. 53 figure aussi dans source_notes_xml ; cette répétition éditoriale n'ajoute pas une obligation et n'est pas dupliquée dans la proposition.")
+
+add('62', '''
+<p>Les traitements, remboursements forfaitaires de frais et autres rémunérations alloués aux personnes énumérées ci-après sont soumis à l'impôt sur le revenu au nom de leurs bénéficiaires lorsqu'ils sont admis en déduction des bénéfices soumis à l'impôt sur les sociétés en application de l'article 211. Cette imposition s'applique même si les résultats de l'exercice social sont déficitaires :</p>
+<p>Aux gérants majoritaires des sociétés à responsabilité limitée qui n'ont pas opté pour le régime fiscal des sociétés de personnes dans les conditions prévues à l'article 3-IV du décret n° 55-594 du 20 mai 1955 modifié, à l'article 239 bis AA ou à l'article 239 bis AB ;</p>
+<p>Aux gérants des sociétés en commandite par actions ;</p>
+<p>Aux associés en nom des sociétés de personnes, aux membres des sociétés en participation et aux associés mentionnés aux 4° et 5° de l'article 8, lorsque ces sociétés ou exploitations ont opté pour le régime fiscal des sociétés de capitaux.</p>
+<p>Le montant imposable des rémunérations mentionnées au premier alinéa est déterminé selon les règles des traitements et salaires, après déduction des cotisations et primes mentionnées à l'article 154 bis.</p>
+''',
+    "Réécriture à droit constant : la condition de déductibilité au niveau de la société est distinguée de l'imposition du bénéficiaire, puis les trois catégories de personnes restent dans leurs alinéas d'origine. La règle de calcul après déduction des cotisations et primes est reformulée sans réforme de fond.",
+    "Maintien de l'imposition même en cas de déficit, de la condition de l'article 211, de toutes les options citées et de l'article 154 bis. La référence historique à l'article 3-IV du décret n° 55-594 du 20 mai 1955 modifié est conservée ; elle ne constitue pas une date de réforme future. Les gérants et associés de cet article ne sont pas assimilés automatiquement aux salariés privés pour les mesures de CSG ou de capitalisation de policy.json.")
+
+add('63', '''
+<p>Pour l'application de l'impôt sur le revenu, les revenus tirés de l'exploitation de biens ruraux par les fermiers, les métayers ou les propriétaires exploitant eux-mêmes constituent des bénéfices de l'exploitation agricole.</p>
+<p>Ces bénéfices comprennent notamment ceux de la production forestière, même lorsque les propriétaires se limitent à vendre les coupes de bois sur pied.</p>
+<p>Ils comprennent aussi les produits des champignonnières exploitées en galeries souterraines, ceux des exploitations apicoles, avicoles, piscicoles, ostréicoles et mytilicoles, ainsi que les profits des obtenteurs de nouvelles variétés végétales au sens des articles L. 623-1 à L. 623-35 du code de la propriété intellectuelle.</p>
+<p>Les revenus des activités de préparation et d'entraînement des équidés domestiques en vue de leur exploitation dans des activités autres que le spectacle constituent également des bénéfices de l'exploitation agricole.</p>
+<p>Les revenus de la vente de biomasse sèche ou humide constituent des bénéfices de l'exploitation agricole lorsque cette biomasse est majoritairement issue de produits ou sous-produits de l'exploitation. Il en va de même des revenus de la production d'énergie à partir de produits ou sous-produits majoritairement issus de l'exploitation agricole. La prépondérance s'apprécie en masse pour chaque produit commercialisé par l'exploitant.</p>
+<p>Relèvent également des bénéfices de l'exploitation agricole les revenus de la mise à disposition de droits au paiement au titre du régime de paiement de base prévu par le règlement (UE) n° 1307/2013 du Parlement européen et du Conseil du 17 décembre 2013 établissant les règles relatives aux paiements directs en faveur des agriculteurs au titre des régimes de soutien relevant de la politique agricole commune et abrogeant le règlement (CE) n° 637/2008 du Conseil et le règlement (CE) n° 73/2009 du Conseil.</p>
+<p>Les revenus des courses en attelage, de l'enseignement de la conduite et du travail avec les chiens, ainsi que des prestations de transports en traîneaux ou de louage de traîneaux constituent aussi des bénéfices de l'exploitation agricole lorsque ces activités sont exercées par des conducteurs de chiens attelés titulaires du diplôme d'État de la jeunesse, de l'éducation populaire et du sport, mention « attelages canins ».</p>
+<p>Constituent également des bénéfices de l'exploitation agricole les revenus des actions que les personnes mentionnées aux sept premiers alinéas réalisent sur le périmètre de leur exploitation et qui contribuent à restaurer ou à maintenir des écosystèmes dont la société tire des avantages.</p>
+''',
+    "Réécriture à droit constant de la définition et des huit catégories ou extensions de bénéfices agricoles, avec des sujets explicites et une formulation plus directe des conditions de biomasse, d'énergie et d'activités canines. Les huit alinéas sont maintenus ; aucune réforme de fond ni extension de champ.",
+    "Les cinquième et sixième alinéas conservent leur place pour l'application de l'article 69 E, et le huitième continue de viser les sept premiers. Maintien de la majorité appréciée en masse par produit, de l'exclusion du spectacle pour les équidés, du diplôme canin et du périmètre de l'exploitation pour les actions écosystémiques. La référence au régime de paiement de base du règlement n° 1307/2013 et aux deux règlements qu'il abroge est conservée comme dans la source ; l'articulation de cette référence ancienne avec les paiements de la PAC postérieurs doit être contrôlée dans les textes agricoles et européens, sans substitution silencieuse.")
+
+add('64 bis', '''
+<p>I. – Sous réserve des articles 76 et 76 A, le présent article détermine le bénéfice imposable des exploitants agricoles qui ne relèvent pas du régime d'imposition défini à l'article 69.</p>
+<p>Avant prise en compte des plus-values ou moins-values de cession des biens affectés à l'exploitation, le bénéfice imposable est égal à la moyenne des recettes hors taxes de l'année d'imposition et des deux années précédentes, diminuée d'un abattement de 87 %. Cet abattement ne peut être inférieur à 305 €. Les recettes comprennent les sommes encaissées pendant l'année civile dans le cadre de l'exploitation, augmentées de la valeur des produits prélevés dans l'exploitation et alloués au personnel salarié ou au propriétaire du fonds en paiement du fermage. Sont exclues les recettes encaissées au titre des cessions d'éléments de l'actif immobilisé, des remboursements de charges engagées dans le cadre de l'entraide agricole, des indemnités compensatoires de handicap naturel, des subventions et primes d'équipement et des redevances ayant leur origine dans le droit de propriété.</p>
+<p>En cas de création d'activité, les recettes retenues pour l'application du deuxième alinéa du présent article sont celles de l'année de création pour cette année et, pour l'année suivante, la moyenne des recettes de l'année d'imposition et de l'année précédente.</p>
+<p>Pour l'année suivant la sortie d'un régime réel d'imposition, les recettes mentionnées au même deuxième alinéa sont diminuées du montant hors taxes des créances inscrites au bilan du dernier exercice imposé selon un régime réel. Cette diminution intervient avant l'application de l'abattement prévu au même alinéa.</p>
+<p>Les plus-values ou moins-values mentionnées au même deuxième alinéa sont déterminées et imposées selon les règles du régime réel d'imposition. L'abattement prévu à cet alinéa est réputé tenir compte des amortissements pratiqués selon le mode linéaire.</p>
+<p>II. – (Abrogé).</p>
+<p>III. – Les contribuables mentionnés au I du présent article inscrivent directement sur la déclaration prévue à l'article 170 les recettes de l'année d'imposition, celles des deux années précédentes et les plus-values ou moins-values réalisées ou subies au cours de l'année. Les règles de réutilisation et de rectification des informations prévues au premier alinéa de l'article 53 A s'appliquent à cette déclaration.</p>
+<p>IV. – Les contribuables mentionnés au I du présent article tiennent un document détaillant, jour par jour, leurs recettes professionnelles. À la demande du service des impôts, ils présentent ce document ainsi que les factures et toute autre pièce justificative de ces recettes.</p>
+<p>V. – L'option prévue au a du II de l'article 69 est valable un an. Elle est reconduite tacitement chaque année pour un an. Les contribuables peuvent y renoncer dans le délai de dépôt de la déclaration des résultats de la période précédant celle pour laquelle la renonciation s'applique.</p>
+''',
+    "À droit constant, clarification de la moyenne triennale, des recettes comprises ou exclues, du démarrage d'activité, de la sortie du réel et de l'option annuelle, sans modifier les subdivisions. Réforme de fond : application expresse au III de la réutilisation des données et de leur rectification prévue à l'article 53 A proposé, notamment pour les recettes des années précédentes déjà déclarées.",
+    "Maintien de l'abattement de 87 %, du minimum de 305 €, de toutes les exclusions de recettes et de la diminution des créances hors taxes avant abattement après sortie du réel. Le deuxième alinéa garde sa place et tous ses renvois internes. La coordination déclarative au III nécessite l'adoption concomitante de l'article 53 A proposé et l'adaptation du formulaire de l'article 170 ; elle ne supprime ni la déclaration annuelle ni les pièces du IV. Note source : article 7, II de la loi n° 2021-1900 du 30 décembre 2021, application aux options et renonciations exercées à compter du 1er janvier 2022.")
+
+add('69', '''
+<p>I. Lorsque la moyenne des recettes hors taxes d'un exploitant agricole, calculée sur trois années consécutives pour l'ensemble de ses exploitations, dépasse 129 200 €, cet exploitant relève obligatoirement d'un régime réel d'imposition à compter de l'imposition des revenus de la première année suivant cette période triennale.</p>
+<p>II. Le régime simplifié d'imposition s'applique aux petits et moyens exploitants agricoles relevant de l'impôt sur le revenu :</p>
+<p>a. Sur option, aux exploitants qui relèvent normalement du régime prévu à l'article 64 bis ;</p>
+<p>b. De plein droit, aux autres exploitants dont la moyenne des recettes hors taxes, calculée sur trois années consécutives, ne dépasse pas 421 000 €.</p>
+<p>III. Les exploitants qui dépassent la limite prévue au b du II relèvent de plein droit du régime réel normal d'imposition à compter du premier exercice suivant la période triennale considérée.</p>
+<p>Les exploitants des deux catégories prévues au II, ainsi que ceux qui relèvent du régime simplifié d'imposition en application de l'article 69 C, peuvent opter pour le régime réel normal.</p>
+<p>IV. Les options prévues au a du II et au deuxième alinéa du III sont exercées dans le délai de déclaration des résultats de l'année ou de l'exercice précédant celui pour lequel elles s'appliquent.</p>
+<p>Les exploitants qui souhaitent relever d'un régime réel d'imposition dès leur premier exercice d'activité exercent l'option dans le délai de dépôt de la déclaration au titre de leur première période d'activité.</p>
+<p>V. Pour apprécier les limites prévues au b du II, les recettes retenues correspondent aux créances acquises déterminées dans les conditions prévues au 2 bis de l'article 38.</p>
+<p>VI. – Les seuils des I et II sont actualisés tous les trois ans dans la même proportion que l'évolution triennale de la limite supérieure de la première tranche du barème de l'impôt sur le revenu. Ils sont arrondis, respectivement, à la centaine d'euros la plus proche et au millier d'euros le plus proche.</p>
+<p>Pour l'application du présent article et des II et IV de l'article 151 septies, les recettes provenant d'opérations d'élevage ou de culture portant sur des animaux ou des produits appartenant à des tiers sont multipliées par trois.</p>
+''',
+    "Réécriture à droit constant : précision du calcul des moyennes, des dates de passage au réel, des deux possibilités d'option et des arrondis distincts. Les subdivisions I à VI et les alinéas sont conservés. Aucune réforme de fond des seuils agricoles ni du coefficient appliqué aux opérations pour tiers.",
+    "Seuils maintenus à 129 200 € et 421 000 € hors taxes, période de trois années consécutives, arrondis respectifs à la centaine et au millier. Le V reste limité au b du II et n'est pas étendu silencieusement au I. La multiplication par trois demeure applicable aussi aux II et IV de l'article 151 septies. Le renvoi du IV au deuxième alinéa du III conserve sa cible. Note source : article 94, V, A de la loi n° 2023-1322 du 29 décembre 2023, application à l'impôt sur le revenu dû au titre de 2024 et des années suivantes ; cette note ne fournit pas à elle seule l'origine de l'actualisation des seuils affichés dans la version source de 2026.")
+
+add('69 C', '''
+<p>Les personnes qui réalisent des opérations commerciales d'importation, de vente, de commission et de courtage portant sur des animaux vivants de boucherie et de charcuterie, ainsi que celles qui réalisent des opérations commerciales d'achat portant sur des animaux de boucherie et de charcuterie, sont imposées d'après le bénéfice réel pour les profits de leurs activités agricoles. Ce régime s'applique quel que soit le montant des recettes agricoles, que ces profits soient réalisés à titre personnel ou comme membres d'une société ne relevant pas de l'impôt sur les sociétés.</p>
+''',
+    "Réécriture à droit constant : séparation du champ des opérations commerciales et de l'application du réel aux profits agricoles, puis explicitation de l'absence de seuil et des deux modes d'exercice. Aucune réforme de fond.",
+    "Conserver l'ensemble des opérations visées ; le qualificatif « vivants » porte, comme dans la source, sur l'importation, la vente, la commission et le courtage, sans être ajouté aux opérations d'achat. Le régime réel concerne les profits agricoles de ces personnes, y compris comme membres d'une société non soumise à l'IS, et non les seuls profits des opérations commerciales énumérées.")
+
+add('69 D', '''
+<p>Les sociétés exerçant une activité agricole qui ont été créées à compter du 1er janvier 1997 et dont les résultats sont imposés selon l'article 8 relèvent du régime d'imposition d'après le bénéfice réel, sauf celles mentionnées à l'article 71.</p>
+<p>Toutefois, une exploitation agricole à responsabilité limitée peut bénéficier du régime fiscal prévu à l'article 64 bis lorsque son associé unique est une personne physique qui dirige cette exploitation.</p>
+''',
+    "Réécriture à droit constant : regroupement des conditions tenant à l'activité, à la création et au régime des résultats, et formulation de l'exception des EARL unipersonnelles comme condition explicite. Aucune réforme de fond ni extension aux sociétés antérieures.",
+    "Maintien de la date du 1er janvier 1997, de l'exclusion des sociétés de l'article 71, du renvoi à l'article 8 et de la double qualité de personne physique et de dirigeant de l'associé unique. L'accès à l'article 64 bis demeure une faculté soumise à son champ, non une dispense générale de réel.")
+
+add('69 E', '''
+<p>Un régime réel d'imposition s'applique aux exploitants qui exercent une activité mentionnée au cinquième ou au sixième alinéa de l'article 63.</p>
+<p>Ce régime s'applique également aux exploitants dont tout ou partie des biens affectés à l'exploitation sont compris dans un patrimoine fiduciaire en application d'une opération de fiducie définie à l'article 2011 du code civil.</p>
+''',
+    "Réécriture à droit constant : énoncé direct des deux cas d'assujettissement au régime réel et reprise explicite du régime dans le second alinéa. Aucune réforme de fond des activités ou patrimoines concernés.",
+    "Les renvois aux cinquième et sixième alinéas de l'article 63 restent exacts dans la proposition : biomasse et énergie au cinquième, droits au paiement au sixième. Ne pas étendre ce régime aux activités canines ou écosystémiques des septième et huitième alinéas. Le renvoi à la fiducie de l'article 2011 du code civil et le champ « tout ou partie » sont maintenus.")
+
+add('70', '''
+<p>Pour l'application des articles 69, 69 C, 69 D et 72, les recettes du contribuable comprennent celles des sociétés et groupements non soumis à l'impôt sur les sociétés dont il est membre, à proportion de ses droits dans leurs bénéfices comptables. Le régime fiscal de ces sociétés et groupements reste toutefois déterminé uniquement d'après le montant global de leurs propres recettes.</p>
+<p>Pour l'application de l'article 151 septies, les plus-values réalisées par une société civile agricole non soumise à l'impôt sur les sociétés sont imposables au nom de chaque associé mentionné au I de l'article 151 nonies. Les règles des exploitants individuels s'appliquent en tenant compte de la quote-part de cet associé dans les recettes de la société.</p>
+''',
+    "Réécriture à droit constant : distinction entre l'ajout proportionnel des recettes pour le contribuable et le régime propre de la société ou du groupement, puis scission de la règle d'imposition des plus-values par associé. Aucune réforme de fond de la transparence fiscale.",
+    "La proportion reste fondée sur les droits dans les bénéfices comptables, non sur une clé nouvelle de capital ou de vote. Maintien des renvois limitatifs aux articles 69, 69 C, 69 D et 72, puis à l'article 151 septies et au I de l'article 151 nonies. Note source : application à compter de l'imposition des revenus de 2016.")
+
+add('71', '''
+<p>Les règles suivantes s'appliquent aux groupements agricoles d'exploitation en commun dont tous les associés participent effectivement et régulièrement à l'activité du groupement par leur travail personnel :</p>
+<p>1° La moyenne des recettes au-delà de laquelle le groupement relève d'un régime d'imposition d'après le bénéfice réel est égale à 60 % du produit de la limite prévue pour les exploitants individuels par le nombre d'associés. Toutefois, lorsque la moyenne des recettes du groupement ne dépasse pas 517 000 €, la limite applicable est égale à la limite prévue pour les exploitants individuels multipliée par le nombre d'associés.</p>
+<p>Le seuil mentionné au premier alinéa du présent 1° est actualisé tous les trois ans dans la même proportion que l'évolution triennale de la limite supérieure de la première tranche du barème de l'impôt sur le revenu. Il est arrondi au millier d'euros le plus proche ;</p>
+<p>1° bis Les seuils de 50 % et de 100 000 € prévus à l'article 75 s'apprécient au niveau du groupement. Le montant de 100 000 € est multiplié par le nombre d'associés exploitants, retenu dans la limite de quatre (1) ;</p>
+<p>2° (Abrogé)</p>
+<p>3° (Abrogé)</p>
+<p>4° (Abrogé)</p>
+<p>5° (Transféré) ;</p>
+<p>6° (Transféré).</p>
+''',
+    "Réécriture à droit constant : identification du groupement comme bénéficiaire des règles, formulation directe de l'alternative de calcul et précision que le nombre d'associés exploitants est plafonné à quatre pour le 1° bis. Les numéros abrogés ou transférés sont conservés. Aucune réforme de fond des seuils ou coefficients.",
+    "Maintien de 60 %, 517 000 €, 50 %, 100 000 €, du plafond de quatre associés exploitants et de l'actualisation triennale au millier. Le renvoi à l'article 75 a été vérifié dans le corpus public pour ses deux seuils ; les périodes transitoires de cet article ne sont pas réécrites dans l'article 71. Anomalies éditoriales préexistantes signalées : l'appel de note (1) n'a aucun texte de note correspondant dans la source assignée ; il est conservé sans invention. La formule « le seuil mentionné au premier alinéa du présent 1° » suit un alinéa qui comporte à la fois une limite calculée et le montant de 517 000 € ; l'imprécision de cette désignation est conservée et doit être levée par une coordination expresse si une clarification normative est retenue.")
+
+add('72', '''
+<p>I. Sous réserve des articles 71 et 72 A à 73 E, le bénéfice réel de l'exploitation agricole est déterminé et imposé selon les principes généraux applicables aux entreprises industrielles et commerciales. Toutes les dispositions législatives et leurs textes d'application applicables aux industriels ou commerçants ayant opté pour le régime réel s'appliquent sans restriction ni réserve, notamment de vocabulaire. Leurs règles et modalités sont toutefois adaptées aux contraintes et caractéristiques particulières de la production agricole et à leur incidence sur la gestion, notamment :</p>
+<p>Le faible niveau du chiffre d'affaires par rapport au capital investi, qui entraîne une rotation lente des capitaux ;</p>
+<p>La proportion exagérément importante des éléments non amortissables dans le bilan : foncier non bâti, amélioration foncière permanente, parts de coopératives et de SICA ;</p>
+<p>L'irrégularité importante des revenus.</p>
+<p>II. Des décrets précisent les adaptations prévues au I. Ils précisent également les règles particulières relatives aux dates de dépôt des déclarations que les exploitants agricoles doivent souscrire et aux documents qu'ils doivent produire (1).</p>
+<p>III. Les I et II s'appliquent à tous les contribuables relevant du régime du bénéfice réel.</p>
+<p>(1) Annexe III, articles 38 sexdecies A à 38 sexdecies J, 38 sexdecies JE à 38 sexdecies OD et 38 sexdecies P à 38 sexdecies RA.</p>
+''',
+    "Réécriture à droit constant : scission du principe général de rattachement aux règles industrielles et commerciales et de leur adaptation agricole, puis formulation directe des compétences des décrets. Les trois particularités agricoles, les subdivisions et les renvois sont maintenus. Aucune réforme de fond propre à cet article.",
+    "Conserver l'application de toutes les dispositions et de leurs textes, sans réserve de vocabulaire, les réserves des articles 71 et 72 A à 73 E et le champ de tous les contribuables au réel. L'application agricole de la réutilisation déclarative proposée à l'article 53 A passe par le principe général du I ; coordonner les décrets du II et les dispositions citées de l'annexe III, sans supprimer les adaptations agricoles. La plage de renvois de la note est reproduite telle qu'elle figure dans la source, sans substituer une autre borne à 38 sexdecies OD. Note source : modifications effectuées en conséquence de l'article 86 de la loi n° 2009-1674 du 30 décembre 2009.")
+
+assert len(sources) == 24
+assert set(drafts) == {a['number'] for a in sources}
+answer = []
+for source in sources:
+    answer.append({
+        **{key: source[key] for key in ('code_id', 'source_id', 'source_sha256', 'number')},
+        **drafts[source['number']],
+    })
+Path('answer.json').write_text(json.dumps(answer, ensure_ascii=False, indent=2) + '\n')

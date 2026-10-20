@@ -1,0 +1,202 @@
+import json
+from pathlib import Path
+
+
+def paragraphs(*items):
+    return "\n".join(f"<p>{item}</p>" for item in items)
+
+
+drafts = {}
+
+drafts["199-0"] = {
+    "proposed_xml": paragraphs(
+        "La date limite de paiement ou de prélèvement des impôts, droits, taxes et redevances prévus par le code général des impôts est reportée au premier jour ouvrable suivant lorsqu'elle tombe un samedi, un dimanche ou un jour férié."
+    ),
+    "reason": "Réécriture à droit constant : la phrase désigne expressément la date reportée et présente directement la règle de report. Le champ des prélèvements et les jours déclenchant ce report sont conservés. Aucune réforme de fond de policy.json ne concerne cette règle de calendrier.",
+    "review_notes": "Le report demeure fixé au premier jour ouvrable suivant, et non au premier jour ouvré. Il vaut pour la date limite de paiement comme pour celle de prélèvement des impôts, droits, taxes et redevances prévus par le CGI. Aucun nouveau délai n'est créé."
+}
+
+drafts["199"] = {
+    "proposed_xml": paragraphs(
+        "Les droits, taxes, redevances, soultes, produits des monopoles et autres sommes dues au Trésor peuvent être payés par chèque, sous réserve des dispositions spéciales des articles suivants et de toute autre mesure que l'administration pourrait prescrire."
+    ),
+    "reason": "Réécriture à droit constant : la faculté de payer par chèque est énoncée en premier, puis ses deux réserves sont rattachées à cette faculté. Toutes les catégories de sommes dues au Trésor sont maintenues. Aucune réforme de fond n'est appliquée.",
+    "review_notes": "La réserve visant les dispositions spéciales des articles suivants et celle visant les autres mesures que pourrait prescrire l'administration sont conservées. La faculté de paiement par chèque ne devient donc pas inconditionnelle."
+}
+
+drafts["200"] = {
+    "proposed_xml": paragraphs(
+        "Les chèques sont remis directement au comptable chargé du recouvrement ou lui sont adressés par la poste. Les chèques remis directement sont datés du jour de leur remise ou de la veille. Ceux qui sont envoyés par la poste sont datés du jour même de leur expédition."
+    ),
+    "reason": "Réécriture à droit constant : les modalités de remise et les deux règles de datation sont réparties entre trois phrases au sein du même alinéa. La distinction entre remise directe et envoi postal est explicite. Aucune réforme de fond n'est introduite.",
+    "review_notes": "Pour la remise directe, les deux dates admises restent le jour de la remise et la veille. Pour l'envoi postal, seule la date du jour même de l'expédition est prévue. Le destinataire reste le comptable chargé du recouvrement."
+}
+
+drafts["201"] = {
+    "proposed_xml": paragraphs(
+        "Les chèques sont obligatoirement barrés et émis à l'ordre du Trésor public.",
+        "Le contribuable qui ne respecte pas cette prescription s'expose aux conséquences de droit pouvant résulter d'un encaissement frauduleux."
+    ),
+    "reason": "Réécriture à droit constant : l'obligation relative au chèque puis les conséquences de son non-respect sont exprimées directement, dans les deux alinéas d'origine. Aucune sanction ni réforme de fond n'est ajoutée.",
+    "review_notes": "Les deux exigences sont cumulatives : chèque barré et émis à l'ordre du Trésor public. La seconde phrase conserve le caractère éventuel des conséquences de droit d'un encaissement frauduleux ; elle ne crée ni responsabilité automatique ni sanction forfaitaire."
+}
+
+drafts["202"] = {
+    "proposed_xml": paragraphs(
+        "Les chèques envoyés par la poste doivent être accompagnés des actes, déclarations, avis d'imposition, sommations ou de toute autre pièce nécessaire à la liquidation de l'impôt ou à l'imputation du versement."
+    ),
+    "reason": "Réécriture à droit constant : la phrase identifie immédiatement les chèques concernés et rend explicite l'obligation de les accompagner des pièces nécessaires. L'énumération et les deux finalités des pièces sont conservées. Aucune réforme de fond n'est appliquée.",
+    "review_notes": "L'obligation reste limitée à l'envoi postal. La clause visant toute autre pièce nécessaire est maintenue, de même que l'alternative entre liquidation de l'impôt et imputation du versement. La réforme de réemploi des données ne justifie pas, à elle seule, de supprimer ces pièces dans cet article."
+}
+
+drafts["204"] = {
+    "proposed_xml": paragraphs(
+        "En échange du chèque, le comptable délivre, s'il y a lieu et selon le cas, un reçu sous forme de quittance ou d'extrait de quittance, d'ampliation de titre de mouvement ou de facture.",
+        "La pièce délivrée doit mentionner, sur son volant et sur son talon, que le versement est effectué par chèque."
+    ),
+    "reason": "Réécriture à droit constant recherchée : les conditions de délivrance du reçu sont regroupées et la mention obligatoire est rattachée explicitement aux deux parties de la pièce. Les formes de reçu et les deux alinéas sont conservés. Une difficulté de ponctuation de la source est signalée dans review_notes ; aucune réforme de fond n'est recherchée.",
+    "review_notes": "La source juxtapose « extrait de quittance  d'ampliation de titre de mouvement » sans ponctuation. La proposition explicite une énumération en insérant une virgule après « quittance » : cette lecture de la forme des reçus doit être contrôlée sur le texte d'origine. Elle n'est pas présentée comme une réforme. Les réserves « s'il y a lieu » et « suivant le cas », ainsi que la double mention sur le volant et le talon, sont maintenues."
+}
+
+drafts["207 sexies"] = {
+    "proposed_xml": paragraphs(
+        "En application du 10 de l'article 396 bis de l'annexe II au code général des impôts, les bordereaux d'inscription, les attestations de contestation, les attestations de paiement et les certificats de subrogation prévus aux 3, 5, 6 et 7 de cet article doivent avoir un contenu conforme aux modèles annexés à l'arrêté du 17 avril 2007 (Journal officiel du 19 avril 2007)."
+    ),
+    "reason": "Réécriture à droit constant recherchée : les documents concernés sont énumérés distinctement et l'obligation de conformité de leur contenu aux modèles est exprimée directement. Les renvois et les dates sont maintenus. Le décalage préexistant avec l'article 396 bis du corpus est signalé, sans lui substituer une réforme de fond.",
+    "review_notes": "Coordination nécessaire avec l'article 396 bis de l'annexe II, vérifié dans le corpus public fourni : sa rédaction applicable depuis le 1er janvier 2023 comporte un 5 abrogé ; son 10 ne vise plus que les attestations de paiement partiel ou de subrogation et son 7 parle d'une attestation, non d'un certificat, de subrogation. Les références anciennes aux 3, 5, 6 et 7 et les dénominations de la source sont conservées ici, sans prétendre résoudre cette discordance. La suite « attestations de paiement de certificats de subrogation » de la source présente aussi une liaison ambiguë : la proposition distingue les attestations de paiement des certificats de subrogation, lecture à contrôler avec les modèles de l'arrêté du 17 avril 2007, publié au JO du 19 avril 2007. Ces dates historiques ne fixent aucune entrée en vigueur future."
+}
+
+drafts["212"] = {
+    "proposed_xml": paragraphs(
+        "I. – Une délégation de signature accordée sur le fondement de l'article 408 de l'annexe II au code général des impôts peut habiliter tout agent à :",
+        "1° Décider d'une décharge, d'une réduction, d'une restitution ou d'un rejet en matière contentieuse ;",
+        "2° Décider d'une remise, d'une modération, d'une transaction ou d'un rejet en matière gracieuse ;",
+        "3° Statuer sur les demandes de dégrèvement de taxe foncière pour pertes de récoltes ;",
+        "4° Signer les documents nécessaires à l'exécution comptable des décisions prises en matière gracieuse ou contentieuse ;",
+        "5° Accorder les prorogations de délai prévues aux IV et IV bis de l'article 1594-0 G du code général des impôts.",
+        "II. – Les agents qui exercent leurs fonctions dans les services de direction peuvent, en outre, être habilités par délégation de signature à :",
+        "1° Présenter des requêtes, mémoires, conclusions ou observations devant les juridictions administratives ou judiciaires ;",
+        "2° Statuer sur les contestations relatives au recouvrement prévues aux articles L. 281 et L. 283 du livre des procédures fiscales ;",
+        "3° Statuer sur les demandes de décharge de responsabilité solidaire présentées en application de l'article 1691 bis du code général des impôts ou de l'article L. 247 du livre des procédures fiscales."
+    ),
+    "reason": "Réécriture à droit constant : les habilitations sont formulées avec des verbes directs, en distinguant les pouvoirs ouverts à tout agent de ceux réservés aux agents des services de direction. Les I et II, chaque numéro et chaque alinéa sont conservés. Aucune réforme fiscale de fond n'est appliquée à cette règle de compétence.",
+    "review_notes": "Renvois internes maintenus pour les articles 213 à 219 : les objets des 1°, 2°, 3°, 4° et 5° du I et des trois numéros du II gardent leur place. L'article 408 de l'annexe II a été vérifié dans le corpus fourni. Les IV et IV bis de l'article 1594-0 G y concernent toujours les prolongations de délai. Les pouvoirs restent subordonnés aux conditions et limites de délégation ; l'article ne confère pas une compétence générale sans délégation."
+}
+
+drafts["213"] = {
+    "proposed_xml": paragraphs(
+        "I. – Les directeurs qui relèvent de la direction générale des finances publiques et sont mentionnés au I de l'article 408 de l'annexe II au code général des impôts peuvent déléguer leur signature :",
+        "1° Aux agents qui exercent leurs fonctions dans les services de direction, pour prendre l'ensemble des actes et décisions mentionnés à l'article 212, dans les limites que ces directeurs fixent eux-mêmes ;",
+        "2° Aux autres agents, pour prendre :",
+        "a) Les décisions mentionnées aux 1° et 2° du I de l'article 212, dans les limites suivantes : 120 000 € pour les cadres ayant au moins le grade d'administrateur de l'Etat ou un grade équivalent ; 100 000 € pour les autres agents de catégorie A titulaires d'un grade supérieur à celui d'inspecteur des finances publiques ; 50 000 € pour les inspecteurs des finances publiques ; 30 000 € pour les agents de catégorie B ; 5 000 € pour les agents de catégorie C ;",
+        "b) Les actes et décisions mentionnés aux 3°, 4° et 5° du I de l'article 212, sans limitation de montant.",
+        "II. – Les directeurs qui relèvent de la direction générale des douanes et droits indirects et sont mentionnés au I de l'article 408 de l'annexe II au code général des impôts peuvent déléguer leur signature :<br /><br />1° Aux agents de catégories A et B qui exercent leurs fonctions dans les services de direction, pour prendre l'ensemble des actes et décisions mentionnés aux 1°, 2° et 4° du I et au II de l'article 212, dans les limites que ces directeurs fixent eux-mêmes ;<br /><br />2° Aux autres agents, pour prendre les actes et décisions mentionnés aux 1°, 2° et 4° du I de l'article 212 :<br /><br />a) Pour les agents de catégorie A titulaires d'un grade supérieur à celui d'inspecteur des douanes, dans les limites que ces directeurs fixent eux-mêmes ;<br /><br />b) Pour les inspecteurs des douanes placés sous leur autorité, dans la limite de 40 000 € ;<br /><br />c) Pour les agents de catégorie B placés sous leur autorité, dans la limite de 30 000 € ;<br /><br />d) Pour les agents de catégorie C placés sous leur autorité, dans la limite de 20 000 €."
+    ),
+    "reason": "Réécriture à droit constant : l'administration dont relève chaque délégant est précisée en tête, les objets de délégation sont rapprochés des bénéficiaires et les plafonds du I, 2°, a sont séparés par des points-virgules. Les subdivisions et les alinéas de la source sont conservés, y compris le bloc du II. Aucune réforme de fond n'est appliquée.",
+    "review_notes": "Contrôle des plafonds conservés : DGFiP 120 000 €, 100 000 €, 50 000 €, 30 000 € et 5 000 € ; douanes 40 000 €, 30 000 € et 20 000 €, avec les limites fixées par le directeur pour les grades supérieurs visés. Les agents de direction des douanes restent limités aux catégories A et B et aux objets énumérés ; le I, 2°, b reste sans plafond. Incohérence de datation de la source : valid_from indique le 1er juillet 2026, tandis que source_notes_xml vise l'article 2 de l'arrêté du 9 janvier 2026 et une entrée en vigueur le 1er février 2026. Cette divergence n'est pas tranchée et aucune de ces dates ne devient une date de la réécriture. Renvois à l'article 408 de l'annexe II et aux subdivisions de l'article 212 maintenus."
+}
+
+drafts["214"] = {
+    "proposed_xml": paragraphs(
+        "I. – 1° La délégation automatique de signature prévue au III de l'article 408 de l'annexe II au code général des impôts bénéficie aux agents de la direction générale des finances publiques qui exercent les fonctions de responsable d'un service opérationnel rattaché, selon le cas, à une direction départementale des finances publiques ou à une direction spécialisée en matière de contrôle fiscal. Elle s'exerce :",
+        "a) Pour les décisions mentionnées aux 1° et 2° du I de l'article 212, dans la limite de 120 000 € pour les agents ayant au moins le grade d'administrateur de l'Etat ou un grade équivalent, et de 100 000 € pour les autres cadres ;",
+        "b) Pour les demandes de remboursement de crédit de taxe sur la valeur ajoutée, dans la limite de 200 000 € ;",
+        "c) Sans limite de montant, pour les demandes de plafonnement de la contribution économique territoriale en fonction de la valeur ajoutée présentées par une entreprise dont tous les établissements sont situés dans le ressort territorial d'un service des impôts des entreprises, ainsi que pour les actes et demandes mentionnés aux 3°, 4° et 5° du I de l'article 212.",
+        "2° Si plusieurs services sont regroupés sur un même site, la délégation de signature dont leurs responsables bénéficient en application du 1° couvre le ressort territorial de tous les services de ce site.",
+        "II. – Les directeurs régionaux et les chefs des services spécialisés des douanes et droits indirects bénéficient de la délégation automatique de signature prévue au troisième alinéa du III de l'article 408 de l'annexe II au code général des impôts. Cette délégation leur permet de prendre l'ensemble des actes et décisions mentionnés aux 1°, 2° et 4° du I et au II de l'article 212, dans les limites de la compétence du directeur mentionné au I de l'article 408 de l'annexe II au code général des impôts.",
+        "III. – Le directeur mentionné au I de l'article 408 de l'annexe II au code général des impôts peut, si nécessaire, réduire l'étendue de la délégation dont bénéficient, en application du I ou du II du présent article, les responsables placés sous son autorité. Il procède par un acte publié dans les conditions prévues au V de l'article 408 de l'annexe II au code général des impôts, en excluant certaines affaires ou en fixant des plafonds inférieurs à ceux du présent article.",
+        "IV. – Pour les demandes de remboursement de crédit d'impôt, les directeurs régionaux ou départementaux des finances publiques peuvent, si nécessaire, relever jusqu'à 200 000 € le plafond de la délégation de signature prévue au 1° du I dont bénéficient les responsables de service placés sous leur autorité. Ils procèdent par un acte publié dans les conditions prévues au V de l'article 408 de l'annexe II au code général des impôts."
+    ),
+    "reason": "Réécriture à droit constant : les bénéficiaires de la délégation automatique sont placés en sujet et les phrases relatives à ses effets ou à sa réduction sont scindées au sein de leur alinéa. Les plafonds, le champ territorial et la possibilité de relèvement pour les crédits d'impôt restent distincts. Les subdivisions ne sont pas déplacées. Aucune réforme de fond n'est introduite.",
+    "review_notes": "Montants conservés : 120 000 € et 100 000 € au I, 1°, a ; 200 000 € pour les crédits de TVA au b ; relèvement possible jusqu'à 200 000 € au IV pour les crédits d'impôt. L'absence de plafond au c conserve la condition relative à tous les établissements de l'entreprise et son ressort territorial. Les actes de réduction ou de relèvement restent soumis à publication au V de l'article 408 de l'annexe II, vérifié dans le corpus fourni ; son troisième alinéa du III vise les responsables douaniers mentionnés au II. La note source fixe historiquement l'entrée en vigueur de la rédaction issue de l'arrêté du 9 janvier 2026 au 1er février 2026, conformément à son article 2 ; elle ne fixe aucune date future."
+}
+
+drafts["215"] = {
+    "proposed_xml": paragraphs(
+        "I. – 1. Les responsables de service mentionnés au I de l'article 214 peuvent subdéléguer la signature du directeur pour les décisions et actes mentionnés au I de l'article 212. Cette subdélégation peut être donnée :",
+        "1° A leurs adjoints, sans condition de grade, dans les limites qu'ils fixent eux-mêmes, sans dépasser la délégation dont ils disposent ;",
+        "2° Aux autres agents de catégorie A placés sous leur autorité, dans la limite de 50 000 € ;",
+        "3° Aux autres agents de catégorie B placés sous leur autorité, dans la limite de 30 000 € ;",
+        "4° Aux agents de catégorie C placés sous leur autorité, dans la limite de 5 000 €.",
+        "2. Les directeurs régionaux et les chefs des services spécialisés des douanes et droits indirects mentionnés au II de l'article 214 peuvent subdéléguer la signature du directeur mentionné au I de l'article 408 de l'annexe II au code général des impôts aux agents suivants :",
+        "1° Aux agents de catégories A et B qui exercent leurs fonctions dans les services de direction, pour prendre l'ensemble des actes et décisions mentionnés aux 1°, 2° et 4° du I et au II de l'article 212, dans les limites que les subdélégants fixent eux-mêmes, sans dépasser la délégation dont ils disposent ;",
+        "2° Aux autres agents, pour prendre les actes et décisions mentionnés aux 1°, 2° et 4° du I de l'article 212 :",
+        "a) Pour les agents de catégorie A titulaires d'un grade supérieur à celui d'inspecteur des douanes, dans les limites que les subdélégants fixent eux-mêmes, sans dépasser la délégation dont ils disposent ;",
+        "b) Pour les inspecteurs des douanes placés sous leur autorité, dans la limite de 40 000 € ;",
+        "c) Pour les agents de catégorie B placés sous leur autorité, dans la limite de 30 000 € ;",
+        "d) Pour les agents de catégorie C placés sous leur autorité, dans la limite de 20 000 €.",
+        "II. – Le directeur mentionné au I de l'article 408 de l'annexe II au code général des impôts peut, si nécessaire, restreindre l'étendue des délégations que peuvent accorder, en application du I du présent article, les responsables de service mentionnés au I de l'article 214 ainsi que les directeurs régionaux et les chefs des services spécialisés mentionnés au II de cet article. Il procède par un acte publié dans les conditions prévues au V de l'article 408 de l'annexe II au code général des impôts.",
+        "Ce même directeur peut également s'opposer à l'octroi de délégations, en limiter l'étendue ou les retirer en tout ou partie."
+    ),
+    "reason": "Réécriture à droit constant : l'acte de subdélégation et ses bénéficiaires sont explicités, les pronoms ambigus sont remplacés par la désignation des subdélégants et les pouvoirs de restriction du directeur sont répartis en phrases plus courtes. Les I, 1 et 2, leurs numéros et lettres, ainsi que les deux alinéas du II sont conservés. Aucune réforme de fond n'est appliquée.",
+    "review_notes": "Plafonds maintenus : 50 000 €, 30 000 € et 5 000 € au I, 1 ; 40 000 €, 30 000 € et 20 000 € au I, 2, b à d. L'absence de condition de grade des adjoints reste assortie des limites de la délégation du responsable. Les distinctions entre agents des services de direction et autres agents des douanes, ainsi que les objets des renvois à l'article 212, sont maintenus. L'article 408, IV, de l'annexe II, vérifié dans le corpus, borne déjà la subdélégation aux affaires déléguées : aucun pouvoir supérieur à celui du délégant n'est créé. La note source vise l'article 2 de l'arrêté du 9 janvier 2026 et le 1er février 2026 comme date historique d'entrée en vigueur de cette rédaction, sans fixer celle de la réécriture."
+}
+
+drafts["216"] = {
+    "proposed_xml": paragraphs(
+        "Pour apprécier si une décision respecte les limites de la délégation dont bénéficie un agent en application des articles 213, 214, 215, 218 ou 219, le montant retenu est celui sur lequel porte la demande de l'usager. Pour une décision prise d'office, le montant retenu est celui du dégrèvement.",
+        "En matière contentieuse, ce montant est apprécié séparément pour les droits et pour les pénalités, par impôt, puis par cote, année, exercice ou affaire.",
+        "En matière gracieuse, les droits et les pénalités sont additionnés pour apprécier ce montant, par impôt, puis par cote, année, exercice ou affaire.",
+        "Pour les demandes portant sur les frais de poursuite prévus à l'article 1912 du code général des impôts et celles portant sur les intérêts moratoires prévus à l'article L. 209 du livre des procédures fiscales, le seuil de compétence de l'agent délégataire est apprécié d'après le montant de l'affaire.",
+        "Les agents de catégories A et B peuvent prononcer, sans limite de montant, le dégrèvement contentieux correspondant à une erreur manifeste commise soit par le contribuable lors de l'établissement de sa déclaration, soit par le service lors de l'intégration d'une déclaration dans le système d'informations de l'administration."
+    ),
+    "reason": "Réécriture à droit constant : le montant de référence est identifié directement, la séparation ou l'addition des droits et pénalités est explicitée et les deux origines possibles de l'erreur manifeste sont mises en parallèle. Les cinq alinéas et leurs objets restent à la même place. Aucune réforme de fond n'est introduite.",
+    "review_notes": "Les cinq articles déterminant les délégations restent 213, 214, 215, 218 et 219. En contentieux, droits et pénalités restent distincts ; en matière gracieuse, ils restent cumulés. L'ordre d'appréciation par impôt puis par cote, année, exercice ou affaire est conservé. Le régime spécial des frais de poursuite et intérêts moratoires se réfère au montant de l'affaire, non au seul montant de ces accessoires. L'exception sans plafond ne vise que les agents A et B et les erreurs manifestes dans les deux circonstances énoncées. La note source rappelle l'article 2 de l'arrêté du 9 janvier 2026 et l'entrée en vigueur historique au 1er février 2026 ; aucune date future n'en est déduite."
+}
+
+drafts["217"] = {
+    "proposed_xml": paragraphs(
+        "I. – Un agent délégataire relevant de la direction générale des finances publiques ne peut statuer sur les demandes suivantes :",
+        "a) Les demandes pour lesquelles les services de direction ou ceux de l'administration centrale doivent être consultés ou sont déjà saisis ;",
+        "b) Les demandes portant sur une imposition dont il est lui-même redevable ou dont est redevable l'un de ses descendants, l'un de ses ascendants, l'un de ses parents collatéraux, son conjoint, la personne à laquelle il est lié par un pacte civil de solidarité ou celle avec laquelle il vit en concubinage ;",
+        "c) Les demandes portant sur une imposition due par un autre agent de son service, sauf s'il est lui-même responsable de ce service ;",
+        "d) Les demandes portant sur une imposition qui fait suite à une proposition de rectification qu'il a signée ;",
+        "e) Les demandes contentieuses portant sur une imposition qui fait suite à une procédure de contrôle dont il a eu à connaître dans le cadre du visa prévu à l'article L. 80 E du livre des procédures fiscales ou d'un recours hiérarchique de premier ou de deuxième niveau. Cette interdiction s'applique aussi à ces demandes lorsqu'il a eu à connaître de la procédure en visant le rapport à la commission des impôts directs et des taxes sur le chiffre d'affaires, à la Commission nationale des impôts directs et des taxes sur le chiffre d'affaires ou à la commission départementale de conciliation, prévues respectivement aux articles 1651, 1651 H et 1653 A du code général des impôts.",
+        "II. – Un agent délégataire relevant de la direction générale des douanes et droits indirects ne peut statuer sur les demandes suivantes :",
+        "a) Les demandes pour lesquelles les services de direction ou ceux de l'administration centrale doivent être consultés ou sont déjà saisis ;",
+        "b) Les demandes portant sur une imposition dont il est lui-même redevable ou dont est redevable l'un de ses descendants, l'un de ses ascendants, l'un de ses parents collatéraux, son conjoint, la personne à laquelle il est lié par un pacte civil de solidarité ou celle avec laquelle il vit en concubinage ;",
+        "c) Les demandes portant sur une imposition due par un autre agent de son service, sauf s'il est lui-même responsable de ce service."
+    ),
+    "reason": "Réécriture à droit constant : les demandes exclues sont rattachées directement à chaque interdiction, les liens personnels sont explicités et les cas d'intervention dans le contrôle sont répartis en deux phrases au sein du e. Les subdivisions I, a à e, et II, a à c, ainsi que leurs alinéas, sont conservées. Aucune réforme de fond ni extension d'un régime à l'autre n'est appliquée.",
+    "review_notes": "Les liens familiaux et personnels restent tous visés, sans ajout d'une limite de degré pour les parents collatéraux. L'exception concernant le responsable de service est maintenue aux seuls c. Les exclusions liées à la rectification et au contrôle restent propres au I ; le e reste limité aux demandes contentieuses et conserve le visa L. 80 E, les deux niveaux de recours et les trois commissions, dans l'ordre des articles 1651, 1651 H et 1653 A. Incohérence de datation de la source : valid_from indique le 1er juillet 2026, alors que la note vise l'article 2 de l'arrêté du 9 janvier 2026 et une entrée en vigueur le 1er février 2026. Cette divergence reste signalée sans arbitrage ni création d'une date future."
+}
+
+drafts["218"] = {
+    "proposed_xml": paragraphs(
+        "I. – Par dérogation à l'article 213, le directeur chargé de la direction des grandes entreprises peut déléguer sa signature pour les décisions contentieuses de décharge, de réduction, de restitution ou de rejet et pour les documents d'exécution correspondants. Cette délégation permet de signer en son nom et peut être accordée :",
+        "a) Aux inspecteurs divisionnaires responsables d'un service interlocuteur fiscal unique, dans la limite de 8 millions d'euros ;",
+        "b) Aux inspecteurs appartenant à un service interlocuteur fiscal unique, dans la limite de 2 millions d'euros ;",
+        "c) Aux contrôleurs appartenant à un service interlocuteur fiscal unique, dans la limite de 1 million d'euros.",
+        "II. – Par dérogation aux articles 212 et 213, le directeur chargé de la direction des grandes entreprises peut, dans les limites qu'il fixe lui-même, accorder une délégation pour signer en son nom :",
+        "a) Au comptable secondaire, à son adjoint et aux autres agents de catégorie A placés sous l'autorité hiérarchique du comptable secondaire et titulaires d'un grade supérieur à celui d'inspecteur des finances publiques, pour les décisions prises sur les contestations relatives au recouvrement prévues aux articles L. 281 et L. 283 du livre des procédures fiscales ainsi que pour les requêtes, mémoires, conclusions ou observations adressés aux juridictions dans les litiges afférents à ces contestations ;",
+        "b) Au comptable secondaire et à son adjoint, pour les décisions gracieuses de rejet, de remise, de modération ou de transaction ainsi que pour les documents d'exécution comptable correspondants."
+    ),
+    "reason": "Réécriture à droit constant : les décisions couvertes sont distinguées des bénéficiaires et, au II, chaque lettre commence par les agents pouvant recevoir délégation avant d'énoncer son objet. Les régimes dérogatoires, plafonds, qualifications et subdivisions restent identiques. Aucune réforme de fond n'est appliquée.",
+    "review_notes": "Plafonds particuliers du I conservés : 8 millions d'euros pour les inspecteurs divisionnaires responsables, 2 millions pour les inspecteurs et 1 million pour les contrôleurs, tous dans le cadre du service interlocuteur fiscal unique précisé. Le II, a reste limité aux contestations du recouvrement et aux écrits juridictionnels afférents, avec les conditions de catégorie, de grade et d'autorité hiérarchique applicables aux autres agents. Le II, b reste réservé au comptable secondaire et à son adjoint. La note source rappelle l'article 2 de l'arrêté du 9 janvier 2026 et le 1er février 2026 comme date historique d'entrée en vigueur de la rédaction, non comme date d'une réforme à venir."
+}
+
+drafts["219"] = {
+    "proposed_xml": paragraphs(
+        "I. – Par dérogation à l'article 213, le directeur chargé de la direction des impôts des non-résidents peut déléguer sa signature aux agents de cette direction qui exercent leurs fonctions au sein du service des impôts des entreprises étrangères, pour signer les décisions de restitution ou de rejet relatives aux demandes de remboursement de crédit de taxe sur la valeur ajoutée. Cette délégation s'exerce dans les limites suivantes :",
+        "a. 300 000 €, pour les agents de catégorie A titulaires d'un grade supérieur à celui d'inspecteur des finances publiques ;",
+        "b. 80 000 €, pour les inspecteurs des finances publiques ;",
+        "c. 30 000 €, pour les agents de catégorie B ;",
+        "d. 5 000 €, pour les agents de catégorie C.",
+        "II. – Par dérogation à l'article 213, le directeur mentionné au I peut déléguer sa signature aux agents de cette direction qui exercent leurs fonctions au sein du service des impôts des particuliers non-résidents, pour signer les décisions de dégrèvement ou de rejet relatives au sursis de paiement prévu à l'article 167 bis du code général des impôts. Cette délégation s'exerce dans les limites suivantes :<br /><br />a. 300 000 €, pour le responsable du service et ses adjoints ;<br /><br />b. 80 000 €, pour les autres agents de catégorie A ;<br /><br />c. 30 000 €, pour les agents de catégorie B ;<br /><br />d. 5 000 €, pour les agents de catégorie C."
+    ),
+    "reason": "Réécriture à droit constant : chaque délégation distingue le service concerné, les décisions pouvant être signées et les plafonds applicables. Les phrases introductives sont scindées au sein du même alinéa et les lettres a à d sont conservées, comme le bloc du II. Aucune réforme de fond n'est introduite.",
+    "review_notes": "Les plafonds de 300 000 €, 80 000 €, 30 000 € et 5 000 € sont conservés dans chacun des deux régimes. Au I, ils concernent les restitutions ou rejets de crédits de TVA du service des entreprises étrangères ; au II, les dégrèvements ou rejets liés au sursis de paiement de l'article 167 bis pour le service des particuliers non-résidents. Le premier plafond du II reste propre au responsable et à ses adjoints. Cet article 219 de l'annexe IV est une règle de délégation : il est distinct de l'article 219 du CGI relatif à l'impôt sur les sociétés, seul concerné par la coordination du taux national normal proposée dans coordination.json."
+}
+
+
+sources = json.loads(Path("source.json").read_text())
+assert len(sources) == 15
+assert set(drafts) == {source["number"] for source in sources}
+answer = []
+for source in sources:
+    record = {key: source[key] for key in ("code_id", "source_id", "source_sha256", "number")}
+    record.update(drafts[source["number"]])
+    record["status"] = "rewrite_draft"
+    answer.append(record)
+Path("answer.json").write_text(json.dumps(answer, ensure_ascii=False, indent=2) + "\n")
+print(f"answer.json : {len(answer)} articles, {Path('answer.json').stat().st_size} octets")

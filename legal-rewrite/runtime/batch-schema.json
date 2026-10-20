@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "properties": {
+    "articles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code_id": {
+            "type": "string"
+          },
+          "source_id": {
+            "type": "string"
+          },
+          "source_sha256": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string"
+          },
+          "proposed_xml": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "review_notes": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code_id",
+          "source_id",
+          "source_sha256",
+          "number",
+          "proposed_xml",
+          "reason",
+          "review_notes"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "articles"
+  ],
+  "additionalProperties": false
+}

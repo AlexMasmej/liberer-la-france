@@ -1,0 +1,28 @@
+--- a/legal-rewrite/run_exhaustive.py
++++ b/legal-rewrite/run_exhaustive.py
+@@ -4,7 +4,7 @@
+ this coordinator, no paid credits are bought, no source is counted as a draft.
+ """
+ from pathlib import Path
+-import argparse,concurrent.futures,fcntl,hashlib,html,json,os,re,shutil,sqlite3,subprocess,threading,time,signal,sys
++import argparse,concurrent.futures,fcntl,hashlib,html,json,os,re,shutil,sqlite3,subprocess,tempfile,threading,time,signal,sys
+ from register_batches import Markup,references,register,writer_lock,full_repeal,authorized_reduction
+ import substantive_impact as impact_audit
+ from ingest import HERE,open_db,source_notes,source_evidence
+@@ -24,7 +24,15 @@
+ 
+ def atomic(path,value):
+     path.parent.mkdir(parents=True,exist_ok=True)
+-    temporary=path.with_suffix(path.suffix+'.tmp');temporary.write_text(json.dumps(value,ensure_ascii=False,indent=2));temporary.replace(path)
++    temporary=None
++    try:
++        with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8',dir=path.parent,
++                                         prefix='.'+path.name+'.',suffix='.tmp',delete=False) as stream:
++            temporary=Path(stream.name)
++            json.dump(value,stream,ensure_ascii=False,indent=2)
++        temporary.replace(path)
++    finally:
++        if temporary is not None:temporary.unlink(missing_ok=True)
+ 
+ def normalized(body):
+     p=Markup(False);p.feed(body or '');return p.result()

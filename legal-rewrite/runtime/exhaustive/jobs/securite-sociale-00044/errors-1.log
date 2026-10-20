@@ -1,0 +1,51 @@
+2026-10-20T04:07:54.715926Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T04:07:54.716018Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T04:07:54.731139Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T04:07:54.738516Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T04:07:54.746903Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T04:07:54.753162Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T04:07:54.760350Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T04:07:54.767466Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T04:07:54.773978Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T04:07:54.780611Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T04:07:54.786531Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T04:07:55.279112Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T04:07:55.279143Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T04:12:10.810647Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 213ms)... turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 retries=1 max_retries=5 sampling_error=stream disconnected before completion: IO error: Connection reset by peer (os error 54)
+2026-10-20T04:24:00.187414Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)
+2026-10-20T04:26:00.879515Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request
+2026-10-20T04:28:50.543363Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 206ms)... turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 retries=1 max_retries=5 sampling_error=stream disconnected before completion: idle timeout waiting for websocket
+2026-10-20T04:28:50.920549Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: failed to lookup address information: nodename nor servname provided, or not known, url: wss://chatgpt.com/backend-api/codex/responses
+2026-10-20T04:28:50.920660Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (2/5 in 398ms)... turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 retries=2 max_retries=5 sampling_error=stream disconnected before completion: failed to lookup address information: nodename nor servname provided, or not known
+2026-10-20T04:28:51.491410Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: failed to lookup address information: nodename nor servname provided, or not known, url: wss://chatgpt.com/backend-api/codex/responses
+2026-10-20T04:28:51.491507Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (3/5 in 832ms)... turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 retries=3 max_retries=5 sampling_error=stream disconnected before completion: failed to lookup address information: nodename nor servname provided, or not known
+2026-10-20T04:28:52.548022Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: failed to lookup address information: nodename nor servname provided, or not known, url: wss://chatgpt.com/backend-api/codex/responses
+2026-10-20T04:28:52.548196Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (4/5 in 1.572s)... turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 retries=4 max_retries=5 sampling_error=stream disconnected before completion: failed to lookup address information: nodename nor servname provided, or not known
+2026-10-20T04:28:54.340534Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: failed to lookup address information: nodename nor servname provided, or not known, url: wss://chatgpt.com/backend-api/codex/responses
+2026-10-20T04:28:54.340669Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (5/5 in 3.376s)... turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 retries=5 max_retries=5 sampling_error=stream disconnected before completion: failed to lookup address information: nodename nor servname provided, or not known
+2026-10-20T04:28:57.911995Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: failed to lookup address information: nodename nor servname provided, or not known, url: wss://chatgpt.com/backend-api/codex/responses
+2026-10-20T04:28:57.912104Z  WARN codex_core::client: falling back to HTTP
+2026-10-20T04:29:00.824028Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=5s
+2026-10-20T04:29:08.912063Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=10s
+2026-10-20T04:29:22.140814Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=20s
+2026-10-20T04:29:45.236873Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=40s
+2026-10-20T04:30:28.385495Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:30:33.770151Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request
+2026-10-20T04:31:31.421425Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:32:34.565616Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:33:37.537698Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:34:40.668532Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:35:06.912694Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request
+2026-10-20T04:35:43.669423Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:36:46.591997Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:37:49.558095Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:38:52.687766Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:39:39.974964Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request
+2026-10-20T04:39:55.686743Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:40:58.717595Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:42:01.846488Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:43:04.849831Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:44:07.965341Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:44:13.014559Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request
+2026-10-20T04:45:11.015428Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a1577e-90c2-7a90-9c3c-fd1fb4a50360 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T04:46:13.477945Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at AbsolutePathBuf("/Users/alexandremasmejean/.codex/shell_snapshots/01a1577e-904a-7981-b434-1bb085b2b526.1792469274720949000.sh"): Os { code: 2, kind: NotFound, message: "No such file or directory" }

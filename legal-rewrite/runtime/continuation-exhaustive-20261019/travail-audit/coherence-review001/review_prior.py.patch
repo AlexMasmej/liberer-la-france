@@ -1,0 +1,26 @@
+--- a/legal-rewrite/review_prior.py
++++ b/legal-rewrite/review_prior.py
+@@ -6,7 +6,7 @@
+ from pathlib import Path
+ import json,hashlib,re
+ import concurrent.futures,subprocess,sys,itertools
+-from register_batches import writer_lock,register
++from register_batches import writer_lock,register,_register as register_locked
+ from ingest import HERE,open_db
+ from sru_context import priority as sru_priority
+ from contrat_unique_priority import article_priority as cu_article_priority, priority as cu_priority
+@@ -89,10 +89,11 @@
+                 folder=HERE/'batches/radical-review-legacy';folder.mkdir(exist_ok=True)
+                 index=1+max((int(p.stem) for p in folder.glob('*.json')),default=0)
+                 (folder/f'{index:05d}.json').write_text(json.dumps(legacy,ensure_ascii=False,indent=2)+'\n')
++            # Keep the same non-reentrant writer lock from target checks through
++            # canonical registration. The public register() wrapper would lock
++            # again; use its already-locked implementation here.
++            register_locked(db,HERE/'batches',True)
+         finally:db.close()
+-    db=open_db(HERE/'corpus.sqlite')
+-    try:register(db,HERE/'batches',True)
+-    finally:db.close()
+     with writer_lock():
+         report=json.loads(revisions_manifest().read_text());done={(a['code_id'],a['source_id']) for a in rows}
+         for article in report['prior_articles']:

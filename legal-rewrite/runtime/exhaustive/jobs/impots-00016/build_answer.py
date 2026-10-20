@@ -1,0 +1,167 @@
+import json
+from pathlib import Path
+
+
+sources = json.loads(Path('source.json').read_text())
+drafts = {}
+
+
+def add(number, xml, reason, review_notes):
+    assert number not in drafts
+    drafts[number] = {
+        'proposed_xml': xml.strip(),
+        'reason': reason,
+        'review_notes': review_notes,
+        'status': 'rewrite_draft',
+    }
+
+
+add('119 quinquies', '''
+<p>Les retenues ou prélèvements à la source prévus aux articles 119 bis, 182 A bis, 182 B, 244 bis, 244 bis A et 244 bis B ne s'appliquent pas aux revenus et profits perçus ou réalisés par une personne morale si celle-ci justifie, auprès du débiteur ou de la personne qui assure le paiement de ces revenus, qu'elle remplit toutes les conditions suivantes au titre de l'exercice au cours duquel elle les perçoit ou les réalise :</p>
+<p>1° Son siège et, le cas échéant, l'établissement stable dans le résultat duquel les revenus et profits sont inclus sont situés dans un État membre de l'Union européenne ou dans un autre État partie à l'accord sur l'Espace économique européen ayant conclu avec la France une convention d'assistance administrative en vue de lutter contre la fraude et l'évasion fiscales ainsi qu'une convention d'assistance mutuelle en matière de recouvrement ayant une portée similaire à celle de la directive 2010/24/UE du Conseil du 16 mars 2010 concernant l'assistance mutuelle en matière de recouvrement des créances relatives aux taxes, impôts, droits et autres mesures et n'étant pas non coopératif au sens de l'article 238-0 A. Pour les retenues à la source prévues à l'article 119 bis, le siège et, le cas échéant, l'établissement stable peuvent également être situés dans un État non membre de l'Union européenne ou qui n'est pas partie à l'accord sur l'Espace économique européen, ayant conclu avec la France les conventions mentionnées au présent 1°. Dans ce dernier cas, l'État ne doit pas être non coopératif au sens de l'article 238-0 A et la participation détenue dans la société ou l'organisme distributeur ne doit pas permettre au bénéficiaire de participer de manière effective à sa gestion ou à son contrôle ;</p>
+<p>2° Son résultat fiscal ou, le cas échéant, celui de l'établissement stable dans le résultat duquel les revenus et profits sont inclus est déficitaire. Ce résultat est calculé selon les règles de l'État ou du territoire où est situé son siège ou l'établissement stable ;</p>
+<p>3° À la date de la perception du revenu ou de la réalisation du profit, elle fait l'objet d'une procédure comparable à celle mentionnée à l'article L. 640-1 du code de commerce. À défaut d'existence d'une telle procédure, elle doit, à cette même date, être en état de cessation des paiements et son redressement doit être manifestement impossible.</p>
+''',
+    "Réécriture à droit constant : les trois conditions cumulatives demeurent à leur place ; les deux branches géographiques du 1° sont séparées en phrases et le calcul du déficit est explicité au 2°. Aucune réforme de fond de policy.json ne vise cette exonération de retenues ou prélèvements.",
+    "Conserver les six renvois de l'alinéa introductif. L'ouverture aux États tiers du 1° reste limitée aux retenues de l'article 119 bis et aux participations sans pouvoir effectif de gestion ou de contrôle. Les deux conventions, l'exclusion des États non coopératifs, le déficit et la situation de liquidation ou de cessation des paiements demeurent requis dans leurs champs respectifs. La note source, II de l'article 42 de la loi n° 2019-1479 du 28 décembre 2019, fixe l'application aux exercices ouverts à compter du 1er janvier 2020 ; cette date historique n'est pas celle d'une réforme future. Les quatre alinéas sont conservés.")
+
+add('120', '''
+<p>Constituent des revenus au sens du présent article :</p>
+<p>1° Les dividendes, intérêts, arrérages et tous autres produits des actions de toute nature et des parts de fondateur des sociétés, compagnies ou entreprises financières, industrielles, commerciales, civiles ou de toute autre nature dont le siège social est situé à l'étranger, quelle que soit la date de leur création ;</p>
+<p>2° Les intérêts, produits et bénéfices des parts d'intérêt et commandites dans les sociétés, compagnies et entreprises dont le siège social est situé à l'étranger et dont le capital n'est pas divisé en actions. Sont toutefois exclus :</p>
+<p>a. Les produits de parts dans les sociétés commerciales en nom collectif ;</p>
+<p>b. Les produits des sociétés en commandite simple revenant aux associés en nom ;</p>
+<p>3° Les répartitions faites aux associés, aux actionnaires et aux porteurs de parts de fondateur des mêmes sociétés, à un titre autre que le remboursement d'apports ou de primes d'émission. Une répartition n'est réputée constituer un remboursement d'apport ou de prime que si tous les bénéfices ou réserves ont été préalablement répartis. Toutefois, les sommes ou valeurs attribuées aux associés ou actionnaires lors du rachat de leurs parts ou actions relèvent du même régime fiscal que les sommes ou valeurs mentionnées au 6° de l'article 112.</p>
+<p>Pour l'application de cette disposition, les éléments suivants ne constituent pas des apports :</p>
+<p>a. Les réserves incorporées au capital ;</p>
+<p>b. Les sommes incorporées au capital ou aux réserves (primes de fusion ou de scission) lors d'une fusion ou d'une scission de sociétés ou d'un apport partiel d'actif donnant lieu à l'attribution de titres dans les conditions prévues au 2 de l'article 115 ;</p>
+<p>4° Les remboursements forfaitaires de frais et toutes les autres rémunérations revenant, à quelque titre que ce soit, aux administrateurs ou aux membres du conseil de surveillance des sociétés anonymes visées au 1° ;</p>
+<p>5° Les jetons de présence versés aux actionnaires des sociétés visées au 1° à l'occasion des assemblées générales ;</p>
+<p>6° Les intérêts, arrérages et tous autres produits des obligations des sociétés, compagnies et entreprises désignées aux 1° et 2°. Sont notamment compris les produits attachés aux bons ou contrats de capitalisation et aux placements de même nature souscrits auprès d'entreprises d'assurance établies hors de France, lors du dénouement du contrat, ainsi que les gains de cession de ces mêmes placements ;</p>
+<p>6° bis Les produits attachés aux prestations de retraite versées sous forme de capital et perçues en exécution d'un contrat souscrit auprès d'une entreprise établie hors de France. Cette qualification suppose que le bénéficiaire justifie que les sommes versées durant la phase de constitution des droits, y compris, le cas échéant, par l'employeur, n'étaient pas déductibles du revenu imposable et n'étaient pas afférentes à un revenu exonéré dans l'État auquel était attribué le droit d'imposer ce revenu ;</p>
+<p>7° Les intérêts, arrérages et tous autres produits de rentes, obligations et autres effets publics des gouvernements étrangers, des corporations, villes et provinces étrangères ainsi que de tout autre établissement public étranger ;</p>
+<p>8° Les lots et primes de remboursement versés aux créanciers et aux porteurs des titres visés aux 6° et 7° ;</p>
+<p>9° Les produits distribués par un trust défini à l'article 792-0 bis, quels que soient les biens ou droits placés dans ce trust ;</p>
+<p>10° Les redevances (royalties) ou fractions de redevances dues pour l'exploitation des nappes de pétrole ou de gaz naturel ;</p>
+<p>11° Les produits des fonds de placement ou d'investissement constitués à l'étranger, indépendamment de la nature ou de l'origine des produits distribués.</p>
+<p>12° (Abrogé).</p>
+''',
+    "Réécriture à droit constant de la liste intégrale : les exclusions du 2°, la qualification des remboursements au 3° et la preuve exigée pour les capitaux de retraite au 6° bis sont rendues plus lisibles. Tous les numéros, lettres et alinéas sont maintenus. Aucune réforme de fond n'est appliquée aux revenus étrangers ou aux contrats de retraite existants.",
+    "Les renvois au 6° de l'article 112, au 2 de l'article 115 et à l'article 792-0 bis sont conservés. Écart préexistant constaté dans le corpus : le 1° de l'article 112 exclut la réserve légale de la distribution préalable et comporte un c relatif aux fusions ou scissions sans échange de titres ; le 3° du présent article ne reprend ni cette exclusion ni ce c. Ces différences ne sont pas corrigées sans réforme expresse. Le 6° bis maintient cumulativement l'absence de déductibilité des versements et l'absence de rattachement à un revenu exonéré, y compris pour les versements de l'employeur. La nouvelle capitalisation collective de policy.json n'est pas assimilée aux contrats étrangers de ce 6° bis ; son éventuel raccordement fiscal requerrait une disposition expresse. Le 12° reste abrogé.")
+
+add('121', '''
+<p>1. Pour l'application de l'article 120, l'impôt sur le revenu n'a pas pour fait générateur l'incorporation de réserves au capital social d'une société étrangère.</p>
+<p>Le 1 de l'article 115 s'applique aux fusions ou scissions concernant des sociétés dont l'une au moins est étrangère.</p>
+<p>Le 2 de l'article 115 s'applique aux apports partiels d'actif effectués par une société étrangère et placés sous un régime fiscal comparable à celui de l'article 210 A.</p>
+<p>2. Les opérations suivantes ne constituent pas des revenus au sens de l'article 120 :</p>
+<p>1° Les amortissements de tout ou partie du capital social, des parts d'intérêts ou commandites effectués par les sociétés concessionnaires de l'État, des départements, des communes et des autres collectivités publiques, ainsi que par les sociétés concessionnaires de Saint-Pierre-et-Miquelon, de Mayotte, de Nouvelle-Calédonie, de Polynésie française, des îles Wallis et Futuna et des Terres australes et antarctiques françaises, ou des communes et autres collectivités publiques de ces collectivités. Ces amortissements doivent être justifiés par la caducité de tout ou partie de l'actif social, notamment par son dépérissement progressif ou par l'obligation de le remettre à l'autorité concédante en fin de concession ;</p>
+<p>2° Les remboursements sur les réserves incorporées au capital avant le 1er janvier 1949, ainsi que les sommes incorporées avant cette date au capital ou aux réserves à l'occasion d'une fusion.</p>
+''',
+    "Réécriture à droit constant : les règles relatives aux incorporations de réserves, aux restructurations et aux amortissements de concessions sont formulées avec des sujets explicites. La condition de caducité de l'actif est isolée dans une phrase au sein du même alinéa. Aucune réforme de fond n'est appliquée à ces opérations.",
+    "Conserver les subdivisions 1 et 2, les 1° et 2° ainsi que les six alinéas matériels de la source présentée avec des br. Tous les territoires énumérés et leurs communes ou autres collectivités publiques sont maintenus. La date du 1er janvier 1949 conserve son rôle pour les réserves et les sommes issues de fusions. Les renvois aux 1 et 2 de l'article 115 et au régime comparable à l'article 210 A restent dynamiques : le corpus de l'article 115 comporte notamment des conditions propres et un 2 bis sur agrément, qui ne sont pas remplacés ici par une neutralité générale.")
+
+add('122', '''
+<p>1. Sous réserve du 2, le revenu est égal à la valeur brute, en euros, des produits encaissés, calculée au cours du change du jour de leur paiement. Seuls peuvent être déduits les impôts établis dans le pays d'origine dont le paiement incombe au bénéficiaire.</p>
+<p>Pour les lots, le revenu est égal au montant du lot exprimé en euros.</p>
+<p>Pour les primes de remboursement, le revenu est égal à la différence entre la somme remboursée et le taux d'émission des emprunts, dans les conditions prévues au 3° de l'article 119.</p>
+<p>2. Les produits des bons ou contrats de capitalisation et des placements de même nature mentionnés au 6° de l'article 120 sont égaux à la différence entre les sommes brutes remboursées au bénéficiaire et le montant des primes versées. Lorsqu'un bon ou contrat a été acquis, les primes prises en compte sont celles versées depuis son acquisition et leur montant est augmenté du prix d'acquisition du bon ou contrat.</p>
+<p>Lorsque ces produits sont attachés à des bons ou contrats souscrits auprès d'entreprises d'assurance établies hors de France, dans un État membre de l'Union européenne ou dans un autre État partie à l'accord sur l'Espace économique européen ayant conclu avec la France une convention d'assistance administrative en vue de lutter contre la fraude et l'évasion fiscales, l'abattement prévu au I de l'article 125-0 A s'applique dans les mêmes conditions. Les limites de cet abattement s'apprécient globalement pour les produits définis au présent alinéa et ceux définis à l'article 125-0 A.</p>
+<p>Le calcul des gains de cession des bons ou contrats obéit aux règles de l'article 124 C.</p>
+''',
+    "Réécriture à droit constant : la conversion en euros et la seule déduction autorisée sont distinguées ; le calcul des produits après acquisition d'un contrat est expliqué sans modifier la formule. Les six alinéas et les deux subdivisions sont conservés. Aucune réforme de fond ne modifie l'assiette ou l'abattement de ces placements.",
+    "Maintenir la réserve du 2, le cours au jour du paiement, les sommes brutes, les primes postérieures à l'acquisition et l'ajout du prix d'acquisition. La locution « taux d'émission » est conservée, bien qu'inhabituelle pour une soustraction de montants : elle figure aussi au 3° de l'article 119 vérifié dans le corpus ; aucune substitution silencieuse par un prix n'est faite. Le renvoi au I de l'article 125-0 A conserve les conditions de durée et les règles propres aux contrats anciens, ainsi que les plafonds partagés avec les produits français. Les gains de cession restent régis par l'article 124 C, sans extension de l'abattement à ces gains.")
+
+add('123', '''
+<p>Le fait générateur de l'impôt applicable aux titres funding émis par les États étrangers est reporté à la première négociation de ces titres.</p>
+<p>Le revenu imposable correspond alors au prix auquel les titres sont négociés.</p>
+''',
+    "Réécriture à droit constant des deux alinéas : l'événement qui déclenche l'impôt et la valeur retenue pour le revenu imposable sont énoncés directement. Aucune réforme de fond ne concerne les titres funding.",
+    "Le report demeure attaché à la première négociation des seuls titres funding émis par les États étrangers. La base reste le prix de négociation, sans déduction nouvelle, sans assimilation aux intérêts encaissés et sans modification du terme technique funding.")
+
+add('123 bis', '''
+<p>1. Lorsqu'une personne physique domiciliée en France détient, directement ou indirectement, au moins 10 % des actions, parts, droits financiers ou droits de vote dans une entité juridique (personne morale, organisme, fiducie ou institution comparable) établie ou constituée hors de France et soumise à un régime fiscal privilégié, les bénéfices ou revenus positifs de cette entité sont réputés constituer un revenu de capitaux mobiliers de cette personne physique. Ce revenu est retenu dans la proportion des actions, parts ou droits financiers qu'elle détient directement ou indirectement. Cette règle s'applique lorsque l'actif ou les biens de l'entité sont principalement constitués de valeurs mobilières, de créances, de dépôts ou de comptes courants.</p>
+<p>Pour l'application du premier alinéa, le caractère privilégié du régime fiscal est apprécié conformément à l'article 238 A, par comparaison avec le régime fiscal applicable à une société ou collectivité mentionnée au 1 de l'article 206.</p>
+<p>2. La détention indirecte par la personne physique mentionnée au 1 comprend la détention d'actions, de parts, de droits financiers ou de droits de vote par l'intermédiaire d'une chaîne d'actions, de parts, de droits financiers ou de droits de vote. Le pourcentage ainsi détenu est calculé en multipliant entre eux les taux successifs de détention de ces actions, parts, droits financiers ou droits de vote.</p>
+<p>La détention indirecte comprend également les actions, parts, droits financiers ou droits de vote détenus, directement ou indirectement, par le conjoint de la personne physique ou par leurs ascendants ou descendants. Toutefois, ces actions, parts ou droits ne sont pas pris en compte pour calculer le revenu de capitaux mobiliers de la personne physique mentionné au 1.</p>
+<p>3. Les bénéfices ou revenus positifs mentionnés au 1 sont réputés acquis le premier jour du mois suivant la clôture de l'exercice de l'entité juridique établie ou constituée hors de France. Lorsqu'aucun exercice n'est clos au cours d'une année, ils sont réputés acquis le 31 décembre. Ils sont calculés selon les règles du présent code, comme si l'entité juridique était imposable à l'impôt sur les sociétés en France. L'impôt acquitté localement par l'entité sur ces bénéfices ou revenus positifs peut être déduit du revenu réputé constituer un revenu de capitaux mobiliers de la personne physique, dans la proportion mentionnée au 1, à condition que cet impôt soit comparable à l'impôt sur les sociétés.</p>
+<p>Toutefois, lorsque l'entité juridique est établie ou constituée dans un État ou territoire qui n'a pas conclu de convention d'assistance administrative avec la France ou qui est non coopératif au sens de l'article 238-0 A, le revenu imposable de la personne physique ne peut être inférieur au montant suivant : la fraction de l'actif net ou de la valeur nette des biens de la personne morale, de l'organisme, de la fiducie ou de l'institution comparable, calculée dans les conditions fixées au 1, multipliée par un taux égal à celui mentionné au 3° du 1 de l'article 39.</p>
+<p>4. Les revenus distribués ou payés par une entité juridique à une personne physique mentionnée au 1 ne constituent des revenus imposables au sens de l'article 120 que pour la partie qui excède le revenu imposable mentionné au 3.</p>
+<p>4 bis. Lorsque l'entité juridique est établie ou constituée dans un État membre de l'Union européenne ou dans un autre État ou territoire ayant conclu avec la France une convention d'assistance administrative en vue de lutter contre la fraude et l'évasion fiscales ainsi qu'une convention d'assistance mutuelle en matière de recouvrement ayant une portée similaire à celle de la directive 2010/24/UE du Conseil du 16 mars 2010 concernant l'assistance mutuelle en matière de recouvrement des créances relatives aux taxes, impôts, droits et autres mesures et qui n'est pas non coopératif au sens de l'article 238-0 A, le 1 ne s'applique pas si l'exploitation de l'entreprise ou la détention des actions, parts, droits financiers ou droits de vote de l'entité par la personne domiciliée en France ne peut être regardée comme un montage artificiel dont le but serait de contourner la législation fiscale française.</p>
+<p>Lorsque l'entité juridique est établie ou constituée dans un État ou territoire qui ne répond pas aux conditions du premier alinéa du présent 4 bis, le 1 ne s'applique pas si la personne domiciliée en France démontre que l'exploitation de l'entreprise ou la détention des actions, parts, droits financiers ou droits de vote de l'entité a principalement un objet et un effet autres que de permettre la localisation de bénéfices ou de revenus dans un État ou territoire où cette entité est soumise à un régime fiscal privilégié.</p>
+<p>4 ter. La condition de détention de 10 % prévue au 1 est présumée remplie :<br/>a) Par le constituant ou le bénéficiaire réputé constituant d'un trust au sens de l'article 792-0 bis. Le seul caractère irrévocable du trust et le pouvoir discrétionnaire de gestion de son administrateur ne suffisent pas à apporter la preuve contraire ;<br/>b) Ou par la personne physique qui a transféré des biens ou droits à une entité juridique située dans un État ou territoire non coopératif au sens de l'article 238-0 A.</p>
+<p>5. Un décret en Conseil d'État précise les conditions d'application du présent article, notamment les obligations déclaratives des personnes physiques.</p>
+''',
+    "Réécriture à droit constant : le seuil d'assujettissement est distingué de la proportion de revenu retenue ; les participations indirectes, la date d'acquisition, le plancher et les deux clauses de sauvegarde sont exposés en phrases plus courtes. Les subdivisions, lettres et alinéas restent à leur place. Aucune nouvelle règle de fond n'est ajoutée au dispositif anti-délocalisation.",
+    "Le seuil reste de 10 %, y compris pour les présomptions du 4 ter ; les droits de vote interviennent pour le seuil et non pour la quote-part de revenu. Les titres détenus par la famille restent exclus de ce calcul de revenu. Conserver le premier jour du mois suivant la clôture, le 31 décembre à défaut d'exercice clos, la proportion de déduction de l'impôt local comparable et le renvoi de taux au 3° du 1 de l'article 39. Les deux branches du 4 bis conservent leurs conditions et leurs règles de preuve distinctes ; le 4 reste une prévention de double imposition limitée au revenu déjà imposable. Coordination avec le projet d'article 219 : la baisse du taux normal d'IS peut modifier indirectement la comparaison prévue aux articles 238 A et 206, 1 ; l'article 238 A du corpus retient un écart d'au moins 40 %. Aucun taux de comparaison chiffré nouveau ni mécanisme territorial non encore défini n'est introduit ici. La portée de cette coordination doit être évaluée dans la réforme de l'IS, sans neutraliser silencieusement le renvoi existant.")
+
+add('124', '''
+<p>Les intérêts, arrérages, primes de remboursement et tous autres produits énumérés ci-après constituent des revenus au sens du présent article lorsqu'ils ne figurent pas dans les recettes provenant de l'exercice d'une profession industrielle, commerciale, artisanale ou agricole, ou d'une exploitation minière :</p>
+<p>1° Les produits des créances hypothécaires, privilégiées et chirographaires, à l'exclusion des créances représentées par des obligations, effets publics et autres titres d'emprunts négociables relevant des articles 118 à 123 ;</p>
+<p>2° Les produits des dépôts de sommes d'argent à vue ou à échéance fixe, quels que soient le dépositaire et l'affectation du dépôt ;</p>
+<p>3° Les produits des cautionnements en numéraire ;</p>
+<p>4° Les produits des comptes courants ;</p>
+<p>5° Les produits des clauses d'indexation afférentes aux sommes mises ou laissées à la disposition d'une société par ses associés ou ses actionnaires.</p>
+''',
+    "Réécriture à droit constant : chaque élément de la liste désigne expressément les produits concernés, et la réserve relative aux recettes professionnelles demeure dans l'alinéa introductif. Les cinq catégories et leurs exclusions sont intégralement conservées. Aucune réforme de fond ne vise cette qualification de revenus.",
+    "Le champ professionnel exclu conserve les activités industrielles, commerciales, artisanales, agricoles et l'exploitation minière. Le 1° maintient l'exclusion des créances représentées par les titres relevant des articles 118 à 123 ; le 5° reste limité aux sommes mises ou laissées à disposition par les associés ou actionnaires. Les six alinéas matériels et les numéros 1° à 5° sont conservés.")
+
+add('124 A', '''
+<p>Les profits que les contribuables tirent de placements en report sont des revenus de créances. Ils sont soumis à l'impôt sur le revenu dans les conditions prévues aux articles 125 et 125 A.</p>
+''',
+    "Réécriture à droit constant : la qualification des profits et leur régime d'imposition sont énoncés dans deux phrases au sein de l'unique alinéa. Aucune réforme de fond n'est appliquée aux placements en report.",
+    "Le terme technique de placement en report et les deux renvois aux articles 125 et 125 A sont conservés ; aucun régime de plus-value ni taux autonome n'est substitué au régime des revenus de créances.")
+
+add('124 B', '''
+<p>Les gains que les personnes physiques retirent de la cession, directement ou par personnes interposées, de titres de créances négociables sur un marché réglementé en application d'une disposition législative particulière et non susceptibles d'être cotés sont soumis au même régime d'imposition que les produits de ces titres.</p>
+<p>Le premier alinéa s'applique aussi aux cessions de parts de fonds communs de créances dont la durée à l'émission est inférieure ou égale à cinq ans.</p>
+<p>Sous réserve de l'article 150-0 A, ces règles s'appliquent également aux cessions de tout autre bon ou contrat dont les revenus sont visés à l'article 124 ou au I de l'article 125-0 A.</p>
+''',
+    "Réécriture à droit constant : les gains soumis au régime des produits sont définis directement, puis les deux extensions sont énoncées dans leurs alinéas d'origine. La réserve de l'article 150-0 A est maintenue. Aucune réforme de fond ne modifie les placements ou les durées visés.",
+    "Conserver le champ des personnes physiques, les cessions directes ou par personnes interposées, l'exigence d'une disposition législative particulière et la durée à l'émission inférieure ou égale à cinq ans des fonds communs de créances. L'articulation des termes « négociables sur un marché réglementé » et « non susceptibles d'être cotés », déjà présente dans la source, est maintenue ; sa portée technique appelle contrôle sans suppression silencieuse d'une condition. Les renvois à l'article 124, au I de l'article 125-0 A et à l'article 150-0 A sont inchangés.")
+
+add('124 C', '''
+<p>Les gains mentionnés à l'article 124 B sont calculés dans les conditions prévues au premier alinéa du 1 et au 2 de l'article 150-0 D. Toutefois, les frais d'acquisition à titre onéreux ne peuvent pas être évalués forfaitairement.</p>
+<p>Pour calculer les gains nets de cession des bons ou contrats mentionnés au I de l'article 125-0 A, le prix d'acquisition tient compte des primes versées par le cédant sur le bon ou contrat cédé qui n'ont pas été remboursées en capital à la date de la cession. Le quatrième alinéa du même I ne s'applique pas à ces gains.</p>
+<p>Les pertes subies lors des cessions définies à l'article 124 B ne peuvent être imputées que sur les produits et les gains de cession de titres ou de contrats dont les produits sont soumis au même régime d'imposition. Cette imputation est possible au cours de l'année de la perte et des cinq années suivantes.</p>
+''',
+    "Réécriture à droit constant : les modalités de calcul, le traitement des primes non remboursées et la durée d'imputation des pertes sont formulés plus directement dans les trois alinéas existants. L'interdiction d'évaluer forfaitairement les frais demeure. Aucune réforme de fond n'est introduite.",
+    "Maintenir les renvois au premier alinéa du 1 et au 2 de l'article 150-0 D, ainsi qu'à l'article 124 B. Le renvoi au quatrième alinéa du I de l'article 125-0 A est conservé dans sa formulation source : l'abattement figure dans le corpus au quatrième alinéa du 1° de ce I ; ne pas déplacer cet alinéa sans coordination. Les seules primes retenues sont celles du cédant non remboursées en capital à la date de cession. Les pertes restent imputables exclusivement sur des produits et gains du même régime, l'année de la perte et les cinq années suivantes. La note source, article 17, III de la loi n° 2013-1278 du 29 décembre 2013 de finances pour 2014, prévoit l'application aux gains réalisés et distributions perçues à compter du 1er janvier 2013 ; cette portée historique est conservée.")
+
+add('124 D', '''
+<p>Pour l'établissement de l'impôt sur le revenu, les titres de créances mentionnés au premier alinéa de l'article 124 B doivent être inscrits en compte ou faire l'objet d'un dépôt nominatif auprès des personnes mentionnées à l'article 242 ter.</p>
+<p>Les personnes mentionnées à l'article 242 ter doivent fournir à l'administration tous les renseignements nécessaires à l'établissement de l'impôt. Les contribuables doivent leur communiquer le montant des cessions qu'ils effectuent.</p>
+''',
+    "Réécriture à droit constant : les deux modes de conservation des titres sont énoncés clairement ; les obligations d'information de l'intermédiaire et du contribuable sont réparties en deux phrases dans le second alinéa. Aucune réforme de fond n'ajoute ni ne retire d'obligation déclarative.",
+    "Conserver les renvois au premier alinéa de l'article 124 B et à l'article 242 ter. La règle demeure limitée à ces titres, avec inscription en compte ou dépôt nominatif. Le premier alinéa reste à sa place, notamment parce que l'article 41 duodecies J de l'annexe III le vise. Les principes de réemploi des données de policy.json ne dispensent pas, à eux seuls, de ces déclarations.")
+
+add('124 E', '''
+<p>Un décret précise les conditions d'application des articles 124 B à 124 D (1).</p>
+<p>(1) Les dispositions correspondantes figurent aux articles 41 duodecies J à 41 duodecies P de l'annexe III.</p>
+''',
+    "Réécriture à droit constant : le décret est présenté comme le sujet de la règle et la note de renvoi est formulée explicitement. La portée réglementaire et la totalité de la référence à l'annexe III sont conservées. Aucune réforme de fond n'est introduite.",
+    "Le renvoi aux articles 41 duodecies J à 41 duodecies P de l'annexe III est vérifié dans le corpus ; les sept articles y figurent. La note (1), présente dans source_xml, reste une note de renvoi et n'est pas transformée en condition supplémentaire. Le décret prévu demeure un décret simple, sans ajout d'une exigence de Conseil d'État. La réécriture ne modifie pas les règles réglementaires d'option ou de prélèvement de ces articles.")
+
+add('125', '''
+<p>Le revenu correspond au montant brut des intérêts, arrérages, primes de remboursement et tous autres produits des valeurs désignées à l'article 124.</p>
+<p>L'impôt est dû dès que les intérêts sont payés, quelle que soit la forme du paiement, ou qu'ils sont inscrits au débit ou au crédit d'un compte.</p>
+<p>Lorsque les intérêts d'un prix de vente de fonds de commerce sont capitalisés, le fait générateur de l'impôt est reporté à la date de leur paiement effectif.</p>
+''',
+    "Réécriture à droit constant : le montant brut servant de revenu et les faits rendant l'impôt dû sont énoncés directement ; le report propre à la capitalisation des intérêts d'un prix de fonds de commerce conserve son alinéa. Aucune réforme de fond de l'assiette ou du fait générateur n'est appliquée.",
+    "Le montant brut, le renvoi à l'article 124 et les deux possibilités d'inscription au débit ou au crédit sont conservés. Le report au paiement effectif reste propre aux intérêts capitalisés du prix de vente d'un fonds de commerce et ne devient pas une règle générale pour les comptes ou créances.")
+
+add('125-00 A', '''
+<p>Une personne physique qui, dans le cadre de la gestion de son patrimoine privé, subit une perte en capital en raison du non-remboursement d'un prêt consenti dans les conditions du 7 de l'article L. 511-6 du code monétaire et financier ou d'un prêt à titre gratuit mentionné à l'article L. 548-1 du même code peut imputer cette perte sur les intérêts générés par des prêts consentis dans les mêmes conditions. Cette imputation est possible à compter de l'année au cours de laquelle la créance du prêteur devient définitivement irrécouvrable au sens de l'article 272 du présent code. Elle porte sur les intérêts perçus au cours de cette année ou des cinq années suivantes.</p>
+<p>Pour l'application du premier alinéa, le total des pertes imputables au titre d'une même année est plafonné à 8 000 €.</p>
+''',
+    "Réécriture à droit constant : le titulaire du droit à imputation, les prêts admissibles, le constat d'irrécouvrabilité et la période d'imputation sont explicités dans le premier alinéa. Le plafond annuel reste dans le second. Aucune réforme de fond n'étend l'avantage aux autres placements ou à la nouvelle capitalisation de retraite.",
+    "Conserver les deux types de prêts, les renvois au 7 de l'article L. 511-6 et à l'article L. 548-1 du code monétaire et financier ainsi qu'à l'article 272 du CGI. Le simple défaut de paiement ne remplace pas l'irrécouvrabilité définitive ; l'imputation porte sur les intérêts de prêts consentis dans les mêmes conditions, l'année de cette irrécouvrabilité ou les cinq suivantes. Le plafond de 8 000 € concerne le total annuel des pertes imputables. La note source, II de l'article 5 de la loi n° 2022-1726 du 30 décembre 2022, précise que ces dispositions ne s'appliquent pas aux minibons souscrits jusqu'au 10 novembre 2023 : cette exclusion est maintenue et le régime antérieur de ces minibons nécessite une vérification de sa version propre, sans les intégrer au texte présent. La source porte l'état ABROGE_DIFF et une fin de validité au 1er janvier 2027 ; la proposition couvre la version assignée, sans prolonger sa validité ni anticiper le contenu de la version suivante.")
+
+
+assert len(sources) == len(drafts) == 14
+answer = []
+for source in sources:
+    item = {key: source[key] for key in ['code_id', 'source_id', 'source_sha256', 'number']}
+    item.update(drafts[source['number']])
+    answer.append(item)
+
+Path('answer.json').write_text(json.dumps(answer, ensure_ascii=False, indent=2) + '\n')

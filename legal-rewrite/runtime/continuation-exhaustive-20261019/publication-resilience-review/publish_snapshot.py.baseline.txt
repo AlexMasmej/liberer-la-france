@@ -1,0 +1,51 @@
+"""Build and check a coherent working edition; optionally publish existing sites.
+
+An edition with unprocessed articles never claims exhaustive rewriting.
+"""
+from pathlib import Path
+from contextlib import redirect_stdout
+import argparse,fcntl,json,subprocess,sys,time
+from ingest import HERE,open_db
+from register_batches import register
+
+PROJECTS={
+    'liberer-la-retraite':'prj_9PB01NleDnTt1V2QqsH8gwRrHIPb',
+    'nouveaudroitdutravail':'prj_zahNFYxGRdJXSMA8mbNwl4POToxM',
+    'liberer-le-revenu':'prj_FY6QVdGPCjjfSnDG6j7Z1UL3yC6g',
+    'liberer-lentreprise':'prj_jWrUP6fckXn68VHV08S6NtVD0cPQ',
+    'liberer-le-logement':'prj_t5M7thvfbgoLQpQkHp1GSnzPsqC3',
+}
+
+
+def publish(deploy=False):
+    runtime=HERE/'runtime';runtime.mkdir(exist_ok=True)
+    with (runtime/'publication.lock').open('a') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX)
+        db=open_db(HERE/'corpus.sqlite')
+        try:
+            with (runtime/'publication-validation.json').open('w') as log,redirect_stdout(log):register(db,HERE/'batches',False)
+        finally:db.close()
+        for name in ['build_reader.py','build_downloads.py','build_compact_sites.py','check_downloads.py']:
+            with (runtime/(name+'.log')).open('w') as output:
+                subprocess.run([sys.executable,str(HERE/name)],cwd=HERE.parent,stdout=output,stderr=subprocess.STDOUT,check=True)
+        manifest=json.loads((HERE.parent/'sites/liberer-la-retraite/dist/downloads/manifest.json').read_text())
+        report={'updated_at_unix':int(time.time()),'drafted_articles':manifest['drafted_articles'],'source_records':manifest['source_records'],'exhaustive_rewriting_complete':False,'local_checks_passed':True,'deployments':{},'deployment_requested':deploy}
+        if deploy:
+            # Verify every destination before the first deployment.
+            for slug,project in PROJECTS.items():
+                folder=HERE.parent/'sites'/slug/'dist'
+                linked=json.loads((folder/'.vercel/project.json').read_text())
+                if linked.get('projectId')!=project or linked.get('orgId')!='team_m7zLS15LnoyaB6RyJ0zKsHYj':raise ValueError('Vercel project mismatch: '+slug)
+            for slug in PROJECTS:
+                folder=HERE.parent/'sites'/slug/'dist'
+                with (runtime/('deploy-'+slug+'.log')).open('w') as output:
+                    subprocess.run(['vercel','deploy','--prod','--yes','--scope','personal-9062d8ea'],cwd=folder,stdout=output,stderr=subprocess.STDOUT,check=True)
+                report['deployments'][slug]={'published':True,'log':'runtime/deploy-'+slug+'.log'}
+                (runtime/'publication.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+            (runtime/'last-published.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+        (runtime/'publication.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+        print(json.dumps(report,ensure_ascii=False,indent=2));return report
+
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--deploy',action='store_true');args=parser.parse_args();publish(args.deploy)

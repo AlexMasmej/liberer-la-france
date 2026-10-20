@@ -1,0 +1,40 @@
+from pathlib import Path
+import json,hashlib,re,sys,xml.etree.ElementTree as ET
+P=Path(__file__).resolve().parent;B=P.parents[3];sys.path.insert(0,str(B))
+from ingest import xml_contents
+from substantive_impact import validate,plain
+all_sources=json.loads((P/'source.json').read_text()); names={'150-0 A','157','91 quater G','91 quater J'}
+transition="La réduction de cinq à trois ans des délais propres au plan d’épargne en actions s’applique aux retraits, rachats, clôtures et dénouements intervenant à compter de l’entrée en vigueur de la loi portant cette réduction, y compris pour les plans déjà ouverts, sans remise à zéro de leur ancienneté. Elle ne remet pas en cause les faits générateurs antérieurs, paiements, créances, imputations, restitutions et recours régis par leurs règles applicables. Les autres conditions, plafonds, exclusions et exceptions favorables demeurent dans leur champ ; les prélèvements sociaux ne sont pas supprimés par la réduction du délai fiscal."
+sources=[];answers=[]
+for a in all_sources:
+    if a['number']not in names:continue
+    body=a['previous_draft']['proposed_xml']; paragraphs=re.findall(r'<p[^>]*>.*?</p>',body,re.S);changed=[]
+    for p in paragraphs:
+        q=p
+        if a['number']=='150-0 A'and (p.startswith('<p>2. a)')or p.startswith('<p>2 bis.')):
+            assert 'cinquième année'in p;q=p.replace('cinquième année','troisième année')
+        elif a['number']=='157'and p.startswith('<p>5° ter '):
+            assert 'après cinq ans'in p;q=p.replace('après cinq ans','au moins trois ans après son ouverture')
+        elif a['number']in {'91 quater G','91 quater J'}and 'cinquième année'in p:
+            q=p.replace('cinquième année','troisième année')
+        if q!=p:body=body.replace(p,q,1);changed.append((p,q))
+    assert len(changed)==(2 if a['number']=='150-0 A'else 1)
+    body+='\n<p>'+transition+'</p>\n'
+    row={k:a[k]for k in ['code_id','source_id','source_sha256','number']}
+    row.update(status='rewrite_draft',proposed_xml=body,change_type='normative_reduction',reform_policy_id='editorial_direction_2026_10_19',removed_provisions=['Le délai de cinq ans propre au PEA est ramené à trois ans pour les opérations futures, sans recommencer l’ancienneté des plans existants.'],reason='Applique la décision explicite de l’auteur : délai propre au PEA ramené de cinq à trois ans. Les autres délais et tous les passages sans rapport avec cette mesure sont conservés exactement dans le projet antérieur.',review_notes='Révision ciblée du texte intégral avec avant-image conservée. Les paragraphes modifiés sont isolés dans changed-paragraphs.json ; tous les autres passages sont identiques au projet antérieur. Une contrelecture intégrale indépendante des sources, notes et propositions est requise avant inscription. L.221-32 CMF est fourni entier dans le complément externe et doit être adopté ensemble ; L.221-32-3 étend son fonctionnement au PEA-PME. Les conditions sociales de L136-7 restent applicables ; aucun taux social n’est ramené à zéro. Les cinq ans des autres fonds, durées de détention et participations ne sont pas modifiés.',benefit_review='Les dérogations anticipées pour création ou reprise d’entreprise, licenciement, invalidité et retraite anticipée restent ouvertes dans leur champ. Le traitement des titres163bisH, plafonds des titres non cotés et obligations remboursables en actions, calcul des gains et moins-values et droits antérieurs ne sont pas supprimés. Les PEA existants bénéficient de leur ancienneté réelle, sans réouverture ni rétroactivité fiscale générale.')
+    material=a['number']in {'150-0 A','157'}
+    source_quote=next(p for p in re.findall(r'<p[^>]*>.*?</p>',a['source_xml'],re.S)if ('2. a)'in p or '5° ter'in p or 'cinquième année'in p))
+    effect=dict(kind='relief_extended'if material else'coordination',measure_id='pea-delai-fiscal-trois-ans',description='PEA : avantage et traitement des retraits à trois ans au lieu de cinq, avec coordination des déclarations.',before='Délai propre au PEA de cinq ans à compter de son ouverture.',after='Délai propre au PEA de trois ans, ancienneté réelle du plan conservée.',unit='legal_duty',affected_population='Titulaires de PEA et PEA-PME, organismes teneurs des plans pour les déclarations coordonnées.',conditions_and_transition=transition,replacement_or_new_burdens='Aucun nouveau plan, formulaire ou dépôt ; mêmes règles de calcul et prélèvements sociaux. Coût fiscal national non chiffré.',source_quote=plain(source_quote),proposed_quote=plain(changed[0][1]))
+    row['substantive_impact']=dict(version=1,classification='material_reduction'if material else'coordination_only',assessment='La condition temporelle du PEA est réellement raccourcie de deux ans ; la coordination déclarative conserve la même clé de mesure et ne compte pas comme une seconde économie. Les autres règles de l’article entier sont conservées dans leur rédaction proposée antérieure.',scope_limitations='La réduction porte sur le délai du PEA, sans suppression des prélèvements sociaux ni des plafonds ou exclusions des titres. Adoption coordonnée du complément CMF nécessaire. Aucun coût fiscal ni solde national n’est établi.',new_burdens_review='Aucune obligation de réouverture, d’attestation, de registre ou de déclaration supplémentaire n’est créée. Les mêmes déclarations suivent seulement le seuil de trois ans ; les droits et conditions de calcul autonomes demeurent.',effects=[effect])
+    validate(row,a,required=True);sources.append(a);answers.append(row)
+    (P/(a['source_id']+'.changed-paragraphs.json')).write_text(json.dumps([dict(before=p,after=q)for p,q in changed],ensure_ascii=False,indent=2)+'\n')
+(P/'context.json').write_text(json.dumps(all_sources,ensure_ascii=False,indent=2)+'\n')
+(P/'source.json').write_text(json.dumps(sources,ensure_ascii=False,indent=2)+'\n')
+(P/'answer.json').write_text(json.dumps(answers,ensure_ascii=False,indent=2)+'\n')
+raw=(P/'external/LEGIARTI000053543872.xml').read_bytes();r=ET.fromstring(raw);source=xml_contents(r.find('./BLOC_TEXTUEL/CONTENU'));notes=xml_contents(r.find('./NOTA/CONTENU'))
+proposal=source.replace('Au-delà de la cinquième année','À compter du troisième anniversaire de son ouverture').replace("Avant l'expiration de la cinquième année",'Avant le troisième anniversaire de son ouverture').replace('au cours des cinq années suivant', 'au cours des trois années suivant')+'\n<p>'+transition+'</p>\n'
+assert source.count('cinquième')==2 and source.count('cinq années')==2
+article=dict(number='L221-32',title='Code monétaire et financier — article L.221-32',source_url='https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053543872/',source_date='Version en vigueur depuis le 21 février 2026, archive DILA du23février2026 confrontée à Légifrance.',valid_from='2026-02-21',valid_until='2999-01-01',source_state='VIGUEUR',source_xml=source,source_notes_xml=notes,source_sha256=hashlib.sha256(source.encode()).hexdigest(),official_document_sha256=hashlib.sha256(raw).hexdigest(),proposed_xml=proposal,reason='Retraits partiels sans clôture à compter de trois ans, avec dérogations anticipées conservées ; coordination indispensable du délai fiscal.',review_notes='Texte DILA entier et notes conservés. I/II et fenêtres de dérogation passent de cinq à trois ans ; délais de trois mois de création, protections, frais plafonnés, liquidation judiciaire et régime163bisH conservés. Le renvoi de L221-32-3 applique ces règles au PEA-PME ; ce texte devra être fourni comme référence entière. Proposition à contre-lire avant publication.')
+manifest=dict(title='PEA : délai de trois ans et retraits coordonnés',outside_code_inventory=True,groups=['impots'],scope_note='Complément du CGI : le fonctionnement du PEA relève aussi du Code monétaire et financier. Aucune suppression générale des prélèvements sociaux.',articles=[article],supporting_sources=[])
+(P/'external-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+print('Quatre articles intégraux candidats et un complément CMF ; contrôle indépendant requis, non enregistrés.')

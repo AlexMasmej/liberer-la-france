@@ -1,0 +1,53 @@
+{
+  "read_transaction": "SQLite mode=ro BEGIN",
+  "guards": [
+    {
+      "source_id": "LEGIARTI000043587337",
+      "number": "R613-7",
+      "guards": {
+        "source_sha256": true,
+        "source_xml": true,
+        "source_notes_xml": true,
+        "source_document_xml": true,
+        "previous_draft": true
+      },
+      "all_match": true
+    },
+    {
+      "source_id": "LEGIARTI000048683570",
+      "number": "L613-7",
+      "guards": {
+        "source_sha256": true,
+        "source_xml": true,
+        "source_notes_xml": true,
+        "source_document_xml": true,
+        "previous_draft": true
+      },
+      "all_match": true
+    },
+    {
+      "source_id": "LEGIARTI000042684001",
+      "number": "L613-2",
+      "guards": {
+        "source_sha256": true,
+        "source_xml": true,
+        "source_notes_xml": true,
+        "source_document_xml": true,
+        "previous_draft": true
+      },
+      "all_match": true
+    }
+  ],
+  "all_match": true,
+  "reference_guards_pass": true,
+  "validate_answer_pass": true,
+  "only_body_change": {
+    "from": "31 octobre",
+    "to": "31 décembre",
+    "count": 1
+  },
+  "all_other_body_bytes_identical": true,
+  "source_body_sha256": "959967d316bf5fae25c0349baf1f3cc9c4b44e2283e239fc8d317efdcf23b64e",
+  "proposed_body_sha256": "a63254fb7d17584b3915c8e6f423582c3c1f79e534c4e18188e37620ebd92322",
+  "canonical_mutation": false
+}

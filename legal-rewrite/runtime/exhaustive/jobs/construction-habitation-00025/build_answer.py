@@ -1,0 +1,201 @@
+import json
+from pathlib import Path
+
+
+drafts = {}
+
+
+def add(number, paragraphs, reason, review_notes):
+    drafts[number] = {
+        'proposed_xml': '\n'.join('<p>' + p + '</p>' for p in paragraphs),
+        'reason': reason,
+        'review_notes': review_notes,
+        'status': 'rewrite_draft',
+    }
+
+
+add('L321-4', [
+    "Le propriétaire qui s'engage, par convention, à respecter des obligations peut bénéficier d'une aide particulière. La convention doit être conforme aux conventions types prévues par décret. Elle détermine notamment :",
+    "a) Les travaux d'amélioration à la charge du bailleur, le cas échéant ;",
+    "b) Le plafond des loyers ;",
+    "c) Les conditions d'occupation du logement et, le cas échéant, ses modalités d'attribution ;",
+    "d) La durée de la convention, qui ne peut être inférieure à six ans ;",
+    "e) Les conditions de révision et de résiliation de la convention ;",
+    "f) Les pénalités applicables en cas de non-respect des engagements conventionnels.",
+    "L'Agence nationale de l'habitat contrôle le respect de la convention.",
+    "L'Agence nationale de l'habitat peut communiquer à l'administration fiscale, de sa propre initiative ou à la demande de celle-ci, tous les renseignements et documents recueillis dans l'exercice de sa mission. Le secret professionnel ne peut être opposé à cette communication. Celle-ci peut notamment porter sur les conventions signées en application du présent article ; elle précise alors l'identifiant unique des logements concernés et le nom de leur propriétaire.",
+], "Réécriture à droit constant : les conditions de l'aide, le contenu de la convention et le pouvoir de transmission fiscale sont exprimés dans des phrases distinctes. Les lettres a) à f), le caractère non exhaustif de la liste et le contrôle de l'Anah sont conservés. Aucune réforme de fond n'est introduite dans ce régime conventionnel.",
+    "Durée minimale de six ans conservée au d), sans substitution du délai de rénovation de vingt-quatre mois prévu par policy.json. Ce futur parcours nécessite une disposition distincte et une coordination de la loi n° 89-462 du 6 juillet 1989, notamment de ses articles 6 et 20-1, pour les exigences de décence, le contrôle des travaux et la compensation des surcoûts énergétiques ; ses bénéficiaires et sa transition restent à définir. Les conventions existantes ne sont pas modifiées par cette proposition. La transmission fiscale conserve sa dérogation au secret professionnel et les deux éléments d'identification des logements et de leur propriétaire.")
+
+add('L321-5', [
+    "Pendant la durée de la convention, les rapports entre le bailleur et les locataires du logement sont régis par la loi n° 89-462 du 6 juillet 1989 tendant à améliorer les rapports locatifs et portant modification de la loi n° 86-1290 du 23 décembre 1986, ainsi que par les dispositions du présent chapitre dans la mesure où elles dérogent à la législation en vigueur. Pour les logements loués dans le cadre d'un bail à ferme, ces rapports sont régis par le titre Ier du livre IV du code rural et de la pêche maritime et par les dispositions du présent chapitre dans la mesure où elles dérogent à la législation en vigueur.",
+], "Réécriture à droit constant : le champ temporel commun est placé en tête et le régime particulier du bail à ferme est distingué du régime locatif général. Les deux règles de dérogation sont maintenues ; aucune réforme de fond n'est appliquée à ces baux.",
+    "Renvois aux lois des 6 juillet 1989 et 23 décembre 1986 et au titre Ier du livre IV du code rural et de la pêche maritime conservés. Conformément à coordination.json, la voie de rénovation de vingt-quatre mois appelle une modification expresse des articles 6 et 20-1 de la loi n° 89-462 et de ses textes d'application. Le traitement judiciaire des impayés appelle notamment l'article 24 de cette loi et, pour l'exécution des décisions d'expulsion, le livre IV du code des procédures civiles d'exécution, notamment ses articles L. 411-1 et L. 412-1 ; le présent renvoi ne les modifie pas et ne les étend pas aux baux à ferme.")
+
+add('L321-6', [
+    "Si les travaux nécessitent l'évacuation temporaire des lieux, le bailleur doit mettre provisoirement à la disposition du locataire ou de l'occupant un logement au moins équivalent à celui qui fait l'objet des travaux ou correspondant aux besoins de l'intéressé. Ce logement doit se situer dans le périmètre géographique défini à l'article 13 bis de la loi du 1er septembre 1948.",
+], "Réécriture à droit constant : l'obligation de relogement provisoire et sa condition géographique sont exposées en deux phrases dans le même alinéa. L'alternative entre logement au moins équivalent et logement correspondant aux besoins est conservée, sans réforme de fond.",
+    "Le bénéfice reste ouvert au locataire comme à l'occupant. Renvoi à l'article 13 bis de la loi du 1er septembre 1948 maintenu ; aucune durée maximale ni nouvelle dérogation au relogement n'est ajoutée pour le parcours de rénovation envisagé.")
+
+add('L321-7', [
+    "Pendant toute la durée de la convention, le bailleur doit tenir la convention prévue à l'article L. 321-4 à la disposition du locataire ou de l'occupant du logement. Si le loyer excède le montant fixé par cette convention, le locataire ou l'occupant peut saisir le juge compétent afin d'obtenir la modification du bail et le remboursement de la part des loyers indûment versée.",
+], "Réécriture à droit constant : le document que le bailleur doit tenir à disposition est désigné directement et les deux mesures que le locataire ou l'occupant peut demander au juge sont explicitées. Aucune réforme de fond ne modifie ce recours.",
+    "Renvoi à L. 321-4 et maintien, dans le même alinéa, de la modification du bail et du remboursement du trop-perçu. Aucun délai de recours, automatisme de remboursement ou pouvoir de sanction nouveau n'est créé.")
+
+add('L321-8', [
+    "La convention conclue avec l'Agence nationale de l'habitat en application de l'article L. 321-4 tient lieu de la convention prévue à l'article L. 353-2 pour les logements mentionnés au 2° de l'article L. 831-1 ou pour les logements mentionnés au 4° du même article qui bénéficient d'une aide de l'agence. Ces logements relèvent de la section 2 et de la présente section.",
+], "Réécriture à droit constant : l'effet de substitution de la convention Anah est placé en tête, puis ses deux catégories de logements sont indiquées. La condition d'aide demeure attachée à la catégorie du 4°. Aucune réforme de fond n'est introduite.",
+    "Renvois à L. 321-4, L. 353-2 et aux 2° et 4° de L. 831-1 conservés et vérifiés dans le corpus public. Les logements restent soumis à la section 2 et à la présente section ; l'effet de substitution ne supprime ni leurs obligations conventionnelles ni les exceptions prévues à L. 321-9.")
+
+add('L321-9', [
+    "Les dispositions du chapitre III du titre V du présent livre ne s'appliquent pas aux logements mentionnés à l'article L. 321-8, à l'exception des articles L. 353-6 à L. 353-9-2, L. 353-19-2 et L. 353-20, qui leur restent applicables.",
+], "Réécriture à droit constant : le principe de non-application précède la liste complète des articles qui restent applicables. Cette formulation explicite la portée de l'exception sans réforme de fond.",
+    "Plage L. 353-6 à L. 353-9-2 et références distinctes L. 353-19-2 et L. 353-20 intégralement conservées. L'exception reste limitée aux logements de L. 321-8 ; aucune suppression d'obligations de logement social n'en résulte.")
+
+add('L321-10', [
+    "Les logements mentionnés aux articles L. 321-4 ou L. 321-8 peuvent être donnés en location à des organismes publics ou privés pour être sous-loués, meublés ou non, à des personnes mentionnées au II de l'article L. 301-1 ou à des personnes physiques dont la situation nécessite une solution locative de transition.",
+    "Les logements mentionnés aux articles L. 321-4 et L. 321-8 peuvent être donnés en location à des organismes publics ou privés pour héberger des personnes mentionnées au II de l'article L. 301-1 ou des personnes physiques dont la situation nécessite une solution locative de transition.",
+], "Réécriture à droit constant : chaque alinéa identifie la location à un organisme et sa finalité, sous-location ou hébergement. Les catégories de bénéficiaires et le caractère meublé ou non de la sous-location sont maintenus. Aucune réforme de fond n'est étendue à ces dispositifs.",
+    "Les deux alinéas et les renvois au II de L. 301-1 sont conservés. La source utilise « ou » entre L. 321-4 et L. 321-8 au premier alinéa, mais « et » au second : cette différence de rédaction est maintenue et sa portée éventuelle doit être contrôlée, sans harmonisation silencieuse. La durée minimale des baux prévue à L. 321-10-1 demeure distincte de ces sous-locations et hébergements.")
+
+add('L321-10-1', [
+    "Pour les logements conventionnés en application de l'article L. 321-8, la durée du contrat de location ne peut être inférieure à trois ans lorsque le bailleur est une personne physique ou un bailleur défini à l'article 13 de la loi n° 89-462 du 6 juillet 1989 précitée. Elle ne peut être inférieure à six ans lorsque le bailleur est une personne morale.",
+    "Ces durées minimales ne s'appliquent ni aux contrats de sous-location ni à l'hébergement prévus à l'article L. 321-10.",
+], "Réécriture à droit constant : les durées minimales de trois et six ans sont exprimées dans deux phrases du même alinéa ; l'exclusion des sous-locations et de l'hébergement demeure dans le second alinéa. Aucune réforme de fond ne modifie les contrats.",
+    "Trois ans pour les personnes physiques et les bailleurs de l'article 13 de la loi du 6 juillet 1989 ; six ans pour les personnes morales : catégories et chiffres conservés. La source juxtapose ces catégories, dont l'articulation doit continuer à tenir compte de la catégorie spéciale de l'article 13. L'exclusion de L. 321-10 n'est ni supprimée ni étendue.")
+
+add('L321-11', [
+    "Lorsqu'un bien soumis à une convention mentionnée à l'article L. 321-4 ou à l'article L. 321-8 change de propriétaire, la convention en cours s'impose de plein droit au nouveau propriétaire. L'acte de mutation doit mentionner les engagements de cette convention. Le nouveau propriétaire et l'Agence nationale de l'habitat signent un avenant qui précise l'identité de ce propriétaire. À défaut, l'Agence nationale de l'habitat peut appliquer au propriétaire vendeur les sanctions prévues à l'article L. 321-2.",
+], "Réécriture à droit constant : les effets de la mutation, le contenu obligatoire de l'acte et la signature de l'avenant sont énoncés avec leurs sujets explicites. Le pouvoir de sanction conserve son destinataire, le vendeur, sans réforme de fond.",
+    "Maintien des renvois à L. 321-4, L. 321-8 et L. 321-2, ce dernier vérifié dans le corpus public. La formule « À défaut » conserve sa place après l'obligation d'avenant et les sanctions restent facultatives à l'égard du propriétaire vendeur ; elles ne sont pas transférées au nouvel acquéreur.")
+
+add('L321-11-1', [
+    "Par dérogation au VI de l'article 40 de la loi n° 89-462 du 6 juillet 1989 précitée, si le terme du contrat de location intervient après l'expiration de la convention visée au II de l'article L. 321-1 du présent code, le bailleur peut notifier ou signifier au locataire une offre de renouvellement prévoyant un loyer supérieur au plafond inscrit dans la convention en cours. Il exerce cette faculté dans les conditions prévues au I de l'article 17-2 de la loi n° 89-462 du 6 juillet 1989 précitée.",
+    "Le bailleur doit notifier cette offre au locataire par lettre recommandée avec demande d'avis de réception ou la lui signifier par acte d'huissier au moins six mois avant le terme du contrat. Ce délai court à compter du jour de la réception de la lettre recommandée ou de la signification de l'acte d'huissier.",
+], "Réécriture à droit constant : la condition tenant au terme du bail est séparée des modalités de l'offre, dans les deux alinéas d'origine. Le délai de six mois et ses points de départ sont maintenus ; aucune réforme de fond du loyer ou du renouvellement n'est ajoutée.",
+    "Renvois au VI de l'article 40, au I de l'article 17-2 de la loi du 6 juillet 1989 et au II de L. 321-1 conservés ; ce dernier renvoi a été vérifié dans le corpus. La source emploie encore « acte d'huissier » : terminologie conservée, avec coordination à examiner avec celle de commissaire de justice. La proposition ne permet pas d'écarter le plafond pendant l'exécution de la convention.")
+
+add('L321-12', [
+    "Un décret fixe les obligations des bailleurs envers les organismes chargés de liquider et de payer l'aide personnalisée au logement.",
+    "Ces organismes doivent transmettre à l'Agence nationale de l'habitat toutes les informations nécessaires à l'exercice de son contrôle.",
+], "Réécriture à droit constant : le décret est désigné comme l'acte fixant les obligations et les organismes payeurs comme les débiteurs de la transmission d'informations. Les deux alinéas et leurs objets sont maintenus, sans réforme de fond.",
+    "Le champ reste celui de l'aide personnalisée au logement et des informations nécessaires au contrôle de l'Anah. Le texte ne crée pas de dispense nouvelle de transmission ni d'élargissement à toutes les données détenues par les organismes.")
+
+add('L324-1', [
+    "Les travaux d'amélioration de l'habitat rural peuvent bénéficier d'une aide financière de l'État, de subventions et de primes d'encouragement. Leur attribution est soumise aux conditions prévues aux articles D. 346-1 à D. 346-4 du code rural et de la pêche maritime et aux textes pris pour leur application.",
+], "Réécriture à droit constant : les aides possibles sont énoncées avant le renvoi qui en fixe les conditions. La faculté d'attribution, les trois formes de soutien et les textes d'application sont conservés, sans réforme de fond.",
+    "Renvoi réglementaire D. 346-1 à D. 346-4 conservé. Le code rural et de la pêche maritime n'appartient pas au corpus des cinq codes fourni : le contenu et l'actualité de ces dispositions ne sont pas certifiés par cette réécriture. Aucun montant, crédit nouveau ou droit automatique à une aide n'est créé.")
+
+add('L326-1', [
+    "Le service public de la performance énergétique de l'habitat est régi par les dispositions des articles L. 232-1 et L. 232-2 du code de l'énergie.",
+], "Réécriture à droit constant : la phrase présente directement le service public et les dispositions qui le régissent, tout en conservant intégralement l'objet du renvoi et ses deux références. Aucune réforme de fond n'est créée par cet article de renvoi.",
+    "Renvois à L. 232-1 et L. 232-2 du code de l'énergie maintenus ; ce code n'est pas dans le corpus fourni. Le parcours de rénovation locative de vingt-quatre mois prévu par policy.json exige une disposition propre et la coordination des articles 6 et 20-1 de la loi du 6 juillet 1989 et des exigences réglementaires de décence, notamment le décret n° 2002-120 du 30 janvier 2002. Le champ des biens, le contrôle des travaux, la compensation énergétique et les règles transitoires doivent y être définis ; le présent renvoi ne crée aucune autorisation temporaire de louer.")
+
+add('L341-1', [
+    "En cas de cession à titre onéreux du logement aidé, les personnes qui bénéficient, depuis l'entrée en vigueur de la loi n° 77-1 du 3 janvier 1977, d'aides publiques à l'investissement pour la construction et l'amélioration de logements doivent reverser à l'État tout ou partie de l'aide reçue dans les cas et les conditions fixés par un décret en Conseil d'État. L'aide personnalisée au logement est exclue de ce dispositif.",
+], "Réécriture à droit constant : l'exclusion de l'aide personnalisée au logement est isolée dans une seconde phrase du même alinéa. Le fait générateur, la portée totale ou partielle du reversement et le champ historique sont conservés, sans réforme de fond.",
+    "La référence à l'entrée en vigueur de la loi n° 77-1 du 3 janvier 1977 délimite les aides concernées ; elle ne constitue pas une date d'entrée en vigueur d'une réforme future. La cession reste à titre onéreux et les cas de reversement restent fixés par décret en Conseil d'État.")
+
+add('L342-1', [
+    "L'Agence nationale de contrôle du logement social est un établissement public de l'État à caractère administratif. Elle contrôle et évalue le logement social et la participation des employeurs à l'effort de construction, dans les conditions prévues au présent chapitre.",
+], "Réécriture à droit constant : les verbes « contrôle » et « évalue » rendent directement lisible la double mission de l'agence. Le statut de l'établissement et ses deux domaines d'intervention sont conservés, sans réforme de fond.",
+    "Le renvoi aux conditions du présent chapitre maintient les limites et modalités des missions détaillées à L. 342-2 et suivants. Aucune compétence nouvelle ni suppression du contrôle du logement social n'est introduite.")
+
+add('L342-2', [
+    "I. ― L'agence exerce les missions suivantes :",
+    "1° Elle contrôle, de manière individuelle et thématique :",
+    "a) Le respect, par les organismes mentionnés au II autres que ceux mentionnés au 4° de ce II, des dispositions législatives et réglementaires qui leur sont applicables. Sur saisine de la Caisse de garantie du logement locatif social ou sur saisine conjointe des ministres chargés du logement et de l'économie, elle contrôle également le respect, par ces mêmes organismes, des engagements pris pour la mise en œuvre des concours financiers mentionnés au troisième alinéa et à la première phrase du quatrième alinéa de l'article L. 452-1 ;",
+    "b) L'utilisation, conformément à leur objet, des subventions, prêts ou avantages accordés par l'État ou ses établissements publics et par les collectivités territoriales ou leurs établissements publics ;",
+    "c) Le respect, par les organismes mentionnés au II, de la décision 2012/21/UE de la Commission européenne du 20 décembre 2011 relative à l'application de l'article 106, paragraphe 2, du traité sur le fonctionnement de l'Union européenne aux aides d'État sous forme de compensations de service public octroyées à certaines entreprises chargées de la gestion de services d'intérêt économique général ;",
+    "d) Les procédures de contrôle interne et d'audit interne mises en place par les organismes mentionnés au II, à l'exception de ceux mentionnés au 4° de ce II ;",
+    "e) Pour les personnes morales et physiques mentionnées au 4° du II du présent article, et conformément à l'article L. 353-11, l'application des conventions ouvrant droit à l'aide personnalisée au logement mentionnées à l'article L. 831-1, y compris les conventions en cours, à l'exception de celles mentionnées à l'article L. 321-8. Ce contrôle porte notamment sur le respect des règles d'accès des locataires sous condition de ressources et de plafonnement des loyers auxquelles ces logements demeurent soumis, ainsi que sur les conditions d'application de ces règles ;",
+    "2° Elle évalue :",
+    "a) La contribution de la participation des employeurs à l'effort de construction aux catégories d'emplois mentionnées à l'article L. 313-3, dans le respect de la mise en œuvre des conventions prévues à cet article ;",
+    "b) L'efficacité avec laquelle les organismes mentionnés aux 1° et 2° du II du présent article accomplissent la mission d'intérêt général qui leur est confiée au titre de l'article L. 411-2 ;",
+    "c) Pour les organismes mentionnés au II du présent article autres que ceux mentionnés au 4° de ce II, la gouvernance, l'efficience de la gestion, l'organisation territoriale et l'ensemble de l'activité consacrée à la mission de construction et de gestion du logement social ;",
+    "d) Pour les personnes morales et physiques mentionnées au 4° du II du présent article, la capacité technique et financière à entretenir leur patrimoine locatif et, le cas échéant, à monter des opérations nouvelles, ainsi que leur capacité de gestion locative lorsqu'elles gèrent elles-mêmes les logements ;",
+    "e) L'efficacité avec laquelle les organismes mentionnés aux articles L. 313-18, L. 313-19 et L. 313-20 accomplissent les missions découlant des compétences que la loi leur reconnaît ;",
+    "f) La mise en œuvre du principe de non-discrimination mentionné à l'article L. 313-17-3.",
+    "3° Elle gère les suites des contrôles dans les conditions définies à la section 4 du présent chapitre ;",
+    "4° Elle assure la production annuelle de données statistiques et financières relatives à la participation des employeurs à l'effort de construction.",
+    "L'agence remplit sa mission d'évaluation par des études transversales ou ciblées. Ces études peuvent prendre la forme d'une évaluation d'ensemble de l'activité de l'organisme contrôlé, dans ses aspects administratifs, techniques, sociaux et financiers.",
+    "II. ― Les missions de l'agence portent sur :",
+    "1° Les organismes d'habitations à loyer modéré mentionnés à l'article L. 411-2 ;",
+    "2° Les sociétés d'économie mixte exerçant une activité de construction et de gestion de logements sociaux mentionnées à l'article L. 481-1, pour les logements à usage locatif et les logements-foyers relevant du domaine d'application de l'aide personnalisée au logement défini à l'article L. 831-1 ou, dans les départements d'outre-mer, construits, acquis ou améliorés avec le concours financier de l'État en application de l'article L. 472-1-1 ;",
+    "3° Les organismes bénéficiant de l'agrément prévu à l'article L. 365-2, pour les logements locatifs sociaux mentionnés à l'article L. 302-5, à l'exception des organismes détenant ou gérant uniquement des logements conventionnés mentionnés à l'article L. 321-8 ;",
+    "4° Toute autre personne morale, quel que soit son statut, ou personne physique qui construit ou gère un ou plusieurs logements locatifs sociaux mentionnés à l'article L. 302-5, à l'exception des personnes concernées uniquement au titre de logements conventionnés mentionnés à l'article L. 321-8 ;",
+    "5° Les entités du groupe Action Logement défini à l'article L. 313-17 ainsi que les organismes agréés mentionnés au deuxième alinéa de l'article L. 313-1 ;",
+    "6° Les organismes bénéficiant, directement ou indirectement, de concours financiers de la société mentionnée à l'article L. 313-19 ou d'un organisme agréé mentionné au deuxième alinéa de l'article L. 313-1, à l'exclusion de l'Agence nationale pour la rénovation urbaine, de l'Agence nationale d'information sur le logement et des agences départementales d'information sur le logement ;",
+    "7° Les groupements d'intérêt économique constitués en application du chapitre Ier du titre V du livre II du code de commerce et toute autre structure de coopération, quel que soit son statut, qui visent à faciliter ou à développer l'activité de leurs membres et qui comptent, directement ou indirectement, parmi leurs membres au moins un organisme mentionné aux 1° à 6° du présent II.",
+], "Réécriture à droit constant : chaque mission est formulée avec l'agence comme sujet, les phrases les plus longues sont scindées à l'intérieur de leur alinéa et les catégories d'organismes sont rendues plus lisibles. Les I et II, les 1° à 4° du I, leurs lettres et les 1° à 7° du II sont intégralement maintenus. Aucune réforme de fond ne réduit les contrôles ou n'étend leurs dérogations.",
+    "Les exclusions du 4° du II aux a) et d) du 1° du I et au c) du 2° du I sont conservées ; l'exclusion des conventions de L. 321-8 demeure au e) du 1° et aux 3° et 4° du II. Vérification dans le corpus des concours financiers visés au troisième alinéa et à la première phrase du quatrième alinéa de L. 452-1 : ces cibles ne sont pas déplacées. Références à la décision 2012/21/UE du 20 décembre 2011, à l'article 106, paragraphe 2, du TFUE, à la non-discrimination, aux départements d'outre-mer et aux trois exclusions nominatives du 6° du II conservées. Le renvoi à L. 353-11 est maintenu avec la réserve propre aux conventions Anah ; aucune convention locale ne dispense des obligations de logement social.")
+
+add('L342-3', [
+    "La Caisse de garantie du logement locatif social, les collectivités territoriales et les établissements publics de coopération intercommunale peuvent demander à l'Agence nationale de contrôle du logement social de contrôler les opérations et les écritures des organismes mentionnés aux 1° à 3° du II de l'article L. 342-2 auxquels ils ont accordé des prêts ou des aides ou dont ils ont garanti les emprunts.",
+    "Le ministre chargé du logement ou le représentant de l'État dans le département saisit l'agence des manquements aux obligations de toute nature des organismes mentionnés au même II dont il a connaissance.",
+    "L'agence communique ses rapports définitifs à la Caisse de garantie du logement locatif social lorsqu'ils portent sur des organismes mentionnés aux 1° à 3° du II de l'article L. 342-2.",
+], "Réécriture à droit constant : les conditions de saisine sont rattachées directement aux organismes bénéficiaires et l'agence est désignée comme auteur de la communication des rapports. La saisine obligatoire de l'autorité informée des manquements reste distincte des saisines facultatives, sans réforme de fond.",
+    "Les premier et troisième alinéas restent limités aux 1° à 3° du II de L. 342-2 ; le deuxième conserve la référence au même II dans son ensemble. Prêts, aides et garanties d'emprunts sont maintenus comme trois liens possibles. Les paragraphes vides de mise en page de la source sont retirés sans déplacement des trois alinéas substantiels.")
+
+add('L342-3-1', [
+    "La Caisse de garantie du logement locatif social peut demander à l'Agence nationale de contrôle du logement social d'effectuer sur place le contrôle des cotisations recouvrées par la caisse.",
+], "Réécriture à droit constant : la saisine est formulée comme une demande de contrôle sur place, avec un rattachement direct des cotisations à la caisse qui les recouvre. Le caractère facultatif de la saisine est conservé, sans réforme de fond.",
+    "Le contrôle porte toujours sur les cotisations recouvrées par la Caisse de garantie du logement locatif social et reste réalisé sur place par l'Agence nationale de contrôle du logement social. Aucun pouvoir de recouvrement n'est transféré.")
+
+add('L342-4', [
+    "Le contrôle est réalisé sur pièces ou sur place. Avant le début des opérations de contrôle sur place, l'organisme ou la personne concernée doit en être averti.",
+    "Les personnels chargés du contrôle ont accès à tous les documents, justificatifs ou renseignements. L'agence peut étendre ses investigations aux sociétés et organismes dans lesquels l'organisme contrôlé détient une participation directe ou indirecte, ainsi qu'aux sociétés détenues majoritairement et conjointement par cet organisme et d'autres organismes.",
+    "Dans l'intérêt exclusif du contrôle sur place, les personnels qui en sont chargés peuvent consulter, dans les bureaux des entrepreneurs ou des architectes ayant traité avec des organismes soumis à ce contrôle, tous les documents comptables, contrats, copies de lettres et pièces de recettes et de dépenses.",
+], "Réécriture à droit constant : l'avertissement préalable est exprimé comme une obligation et les investigations dans les participations et chez les cocontractants sont distinguées dans les alinéas d'origine. L'accès documentaire et la finalité exclusive du contrôle sur place sont maintenus, sans réforme de fond.",
+    "Maintien du contrôle sur pièces ou sur place, de l'avertissement avant les opérations sur place, des participations directes ou indirectes et de la détention majoritaire conjointe. L'accès chez les entrepreneurs et architectes reste limité à leurs bureaux et à l'intérêt exclusif du contrôle ; toutes les catégories de pièces sont conservées.")
+
+add('L342-5', [
+    "L'agence peut demander tout document, toute donnée ou toute justification nécessaire à l'exercice des missions mentionnées à l'article L. 342-1.",
+    "Pour exercer ces missions, l'agence reçoit toutes les informations nécessaires sur les éléments d'assiette et de calcul des participations mentionnées à l'article L. 313-1 du présent code et à l'article L. 716-2 du code rural et de la pêche maritime, concernant les entreprises soumises aux obligations prévues par ces articles.",
+    "Pour exercer ces missions, l'agence reçoit toutes les informations transmises chaque année au ministère chargé du logement pour établir le répertoire des logements locatifs sociaux et de leurs occupants mentionné à l'article L. 411-10 du présent code.",
+], "Réécriture à droit constant : les trois alinéas distinguent la demande de pièces et les deux flux d'informations reçus par l'agence. Les bases de calcul, les entreprises assujetties et le répertoire des logements et de leurs occupants restent dans le champ, sans réforme de fond.",
+    "Renvois à L. 342-1, L. 313-1, L. 716-2 du code rural et de la pêche maritime et L. 411-10 maintenus. La réception du flux annuel ne se substitue pas au pouvoir de demander les pièces nécessaires ; aucune autorisation nouvelle de réutilisation ou de diffusion des données personnelles n'est ajoutée.")
+
+add('L342-6', [
+    "L'agence peut transmettre à l'administration fiscale, de sa propre initiative ou à la demande de celle-ci, tous les renseignements et documents recueillis dans l'exercice des missions mentionnées à l'article L. 342-1. Le secret professionnel ne peut être opposé à cette transmission.",
+], "Réécriture à droit constant : le pouvoir de transmission et la dérogation au secret professionnel sont énoncés dans deux phrases du même alinéa. Le destinataire, les deux modes de déclenchement et le champ documentaire sont conservés, sans réforme de fond.",
+    "Renvoi à L. 342-1 maintenu. La dérogation au secret concerne la transmission à l'administration fiscale des éléments recueillis dans ces missions ; elle ne devient pas une autorisation de publication ni une levée générale du secret.")
+
+add('L342-7', [
+    "I. ― L'agence peut demander aux commissaires aux comptes des organismes soumis à son contrôle de lui communiquer toute information recueillie dans l'exercice de leur mission.",
+    "Elle peut également leur adresser des observations écrites sur les organismes qu'elle contrôle. Les commissaires aux comptes doivent alors y répondre par écrit.",
+    "II. ― Les commissaires aux comptes doivent signaler à l'agence, dans les meilleurs délais, tout fait ou toute décision concernant la personne soumise à son contrôle dont ils ont connaissance dans l'exercice de leur mission et qui est de nature à :",
+    "1° Constituer une violation des dispositions législatives ou réglementaires applicables à cette personne, susceptible d'avoir des effets significatifs sur sa situation financière, sa solvabilité, son résultat ou son patrimoine ;",
+    "2° Porter atteinte à la continuité de son exploitation ;",
+    "3° Imposer l'émission de réserves ou le refus de la certification de ses comptes.",
+    "La même obligation de signalement s'applique aux faits et aux décisions mentionnés aux 1° à 3° dont les commissaires aux comptes ont connaissance dans l'exercice de leur mission auprès d'une société mère ou d'une filiale de la personne contrôlée.",
+    "III. ― Pour l'application de la présente section, les commissaires aux comptes sont déliés du secret professionnel à l'égard de l'agence. Leur responsabilité ne peut être engagée en raison des informations ou des signalements de faits qu'ils transmettent en exécution des obligations prévues par la présente section.",
+], "Réécriture à droit constant : les demandes de l'agence, les réponses écrites et les signalements obligatoires sont formulés avec des sujets explicites. La levée du secret et la protection de responsabilité sont séparées dans le III. Toutes les subdivisions et les trois causes de signalement sont conservées, sans réforme de fond.",
+    "Maintien du délai « dans les meilleurs délais », du seuil d'effets significatifs au 1° et des quatre éléments financiers visés. L'extension aux sociétés mères et filiales est conservée ; la protection de responsabilité reste attachée à l'exécution des obligations de la présente section. Seuls les paragraphes vides de présentation sont retirés, sans déplacement des alinéas substantiels des I, II et III.")
+
+add('L342-8', [
+    "Si elle a connaissance d'une infraction ou d'un manquement aux dispositions législatives ou réglementaires applicables aux commissaires aux comptes, commis par un commissaire aux comptes d'une personne soumise à son contrôle, l'agence peut demander au tribunal compétent de relever ce commissaire de ses fonctions, selon les modalités prévues à l'article L. 821-50 du code de commerce.",
+    "L'agence peut également dénoncer cette infraction ou ce manquement au ministère public compétent pour engager des poursuites disciplinaires. Elle peut, à cette fin, lui transmettre tous les renseignements qu'elle estime nécessaires à sa bonne information.",
+    "L'agence peut transmettre à la Haute autorité de l'audit tout renseignement qu'elle estime nécessaire à la bonne information de cette autorité.",
+], "Réécriture à droit constant : le commissaire concerné est nommé directement et les facultés de saisine du tribunal, de dénonciation au ministère public et d'information de la Haute autorité sont distinguées dans les trois alinéas d'origine. Aucune réforme de fond ne modifie ces pouvoirs.",
+    "Renvoi à L. 821-50 du code de commerce conservé ; ce code n'est pas dans le corpus fourni. La source présente une discordance de genre dans « bonne information de celui-ci » après « Haute autorité de l'audit » : la proposition désigne expressément cette autorité, sans changer le destinataire. La note source indique une entrée en vigueur le 1er janvier 2024 conformément à l'article 32 de l'ordonnance n° 2023-1142 ; cette donnée historique est conservée ici, sans être présentée comme la date d'une réforme future.")
+
+add('L342-9', [
+    "L'agence communique le rapport provisoire à la personne concernée, au président ou au dirigeant de l'organisme concerné. Le destinataire est mis en mesure de présenter ses observations dans un délai d'un mois.",
+    "Le rapport définitif et, le cas échéant, les observations de l'organisme contrôlé et les suites apportées au contrôle sont communiqués au conseil de surveillance, au conseil d'administration ou à l'organe délibérant qui en tient lieu. Ils sont soumis à sa délibération lors de sa plus proche réunion.",
+    "Si une personne morale détient plus de la moitié du capital de l'organisme contrôlé ou contrôle cet organisme au sens de l'article L. 233-3 du code de commerce, l'agence peut lui communiquer les mêmes informations, de sa propre initiative ou à la demande de cette personne morale.",
+    "Si l'organisme contrôlé est un office public de l'habitat mentionné à l'article L. 421-1 du présent code, l'agence peut communiquer les mêmes informations à la collectivité ou à l'organisme auquel cet office est rattaché en application de l'article L. 421-6 et, si l'office en est membre, à la société de coordination mentionnée à l'article L. 423-1-2.",
+], "Réécriture à droit constant : les destinataires et les conditions de communication sont explicités, les obligations de contradiction et de délibération sont séparées en phrases plus courtes et le rattachement de l'office est nommé directement. Les quatre alinéas et leurs champs respectifs sont conservés, sans réforme de fond.",
+    "Délai d'un mois, délibération à la plus proche réunion et seuil strict de plus de la moitié du capital maintenus. La détention du capital et le contrôle au sens de L. 233-3 du code de commerce restent deux critères alternatifs ; aucune communication facultative ne devient obligatoire. Renvois à L. 421-1, L. 421-6 et L. 423-1-2 maintenus ; la communication à la société de coordination demeure subordonnée à l'appartenance de l'office.")
+
+
+sources = json.loads(Path('source.json').read_text())
+assert len(sources) == 24
+assert set(drafts) == {s['number'] for s in sources}
+answer = []
+for source in sources:
+    row = {key: source[key] for key in ('code_id', 'source_id', 'source_sha256', 'number')}
+    row.update(drafts[source['number']])
+    answer.append(row)
+Path('answer.json').write_text(json.dumps(answer, ensure_ascii=False, indent=2) + '\n')
+print(f'{len(answer)} articles écrits dans answer.json')

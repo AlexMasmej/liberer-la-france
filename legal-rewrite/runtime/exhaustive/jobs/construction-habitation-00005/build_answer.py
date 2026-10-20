@@ -1,0 +1,175 @@
+import json
+from html import escape
+from pathlib import Path
+
+sources = json.loads(Path('source.json').read_text())
+drafts = {}
+def add(number, paragraphs, reason, notes):
+    drafts[number] = {
+        'proposed_xml': '\n'.join('<p>' + escape(p, quote=False) + '</p>' for p in paragraphs),
+        'reason': reason,
+        'review_notes': notes,
+    }
+
+add('L183-10', [
+"À l'expiration du délai fixé par le jugement, si la démolition, la mise en conformité ou la remise en état ordonnée n'est pas entièrement achevée, le maire ou le fonctionnaire compétent peut faire exécuter d'office tous les travaux nécessaires à l'exécution de la décision de justice. Ces travaux sont réalisés aux frais et risques du bénéficiaire des travaux irréguliers ou de l'utilisation irrégulière du sol.",
+"Si les travaux portent atteinte à des droits acquis par des tiers sur les lieux ou ouvrages concernés, le maire ou le fonctionnaire compétent ne peut faire exécuter les travaux mentionnés à l'alinéa précédent qu'après une décision du tribunal judiciaire. Celui-ci ordonne, le cas échéant, l'expulsion de tous les occupants."
+], "Réécriture à droit constant : la condition tenant à l'achèvement des travaux est isolée, la charge des frais et risques est explicitée et l'intervention préalable du tribunal en présence de droits acquis par des tiers est formulée au présent. Aucune réforme de fond des pouvoirs d'exécution n'est introduite.",
+"Deux alinéas conservés, ainsi que le renvoi à l'alinéa précédent, les droits acquis des tiers et la compétence du tribunal judiciaire pour l'expulsion. La note relative à l'article 8 de l'ordonnance n° 2022-1076 du 29 juillet 2022 et à l'échéance du 1er janvier 2024 concerne l'entrée en vigueur historique de la source ; elle ne fixe pas celle du projet. Aucun pouvoir d'expulsion privée n'est créé.")
+
+add('L183-11', [
+"Toute personne qui fait obstacle à l'exercice des fonctions des autorités, fonctionnaires et agents habilités à rechercher et à constater les infractions prévues par le présent code est punie de six mois d'emprisonnement et de 7 500 € d'amende."
+], "Réécriture à droit constant : l'auteur de l'obstacle et les fonctions protégées sont désignés directement, en supprimant l'enchaînement de nominalisations. Aucune réforme de fond de l'infraction ou des peines.",
+"Peines maintenues : six mois d'emprisonnement et 7 500 € d'amende. Le champ reste celui des missions de recherche et de constatation des infractions au présent code. La note d'entrée en vigueur au plus tard le 1er juillet 2021 est historique.")
+
+add('L183-12', [
+"Le propriétaire qui n'exécute pas les travaux de ravalement dans les délais prévus à l'article L. 126-3 encourt une amende de 3 750 €."
+], "Réécriture à droit constant : le manquement du propriétaire est formulé au présent et la peine est rattachée directement à son auteur. Aucune réforme de fond du ravalement ou de sa sanction.",
+"Renvoi à l'article L. 126-3 et amende de 3 750 € conservés. Le renvoi couvre les délais du dispositif de ravalement sans les redéfinir. Le corpus de L. 126-3 comporte encore la mention du tribunal de grande instance : cette difficulté de coordination, extérieure au présent article, n'est pas corrigée ici. La note relative au 1er juillet 2021 est historique.")
+
+add('L183-13', [
+"Le non-respect des règles de sécurité des piscines prévues à l'article L. 134-10 est puni d'une amende de 45 000 €.",
+"Les personnes morales déclarées pénalement responsables de l'infraction définie au premier alinéa, dans les conditions prévues à l'article 121-2 du code pénal, encourent l'amende selon les modalités prévues à l'article 131-38 de ce code. Elles encourent également les peines prévues aux 2° à 9° de l'article 131-39 du même code.",
+"L'interdiction prévue au 2° de l'article 131-39 du code pénal s'applique à l'activité dans l'exercice ou à l'occasion de l'exercice de laquelle l'infraction a été commise."
+], "Réécriture à droit constant : les peines applicables aux personnes morales sont réparties en deux phrases dans le même alinéa et le champ de l'interdiction d'activité est énoncé directement. Aucune réforme de fond de la sécurité des piscines ou des sanctions.",
+"Trois alinéas conservés ; maintien de 45 000 €, des conditions de l'article 121-2 et des renvois aux articles 131-38 et 131-39, 2° à 9°, du code pénal. L'article L. 134-10 reste la seule définition des obligations sanctionnées, sans extension à toutes les piscines. La note d'entrée en vigueur au plus tard le 1er juillet 2021 est historique.")
+
+add('L183-14', [
+"Lorsqu'une opération de division conduisant à la création de locaux à usage d'habitation dans un immeuble existant est réalisée sans l'autorisation préalable prévue aux articles L. 126-18 et L. 126-19, le représentant de l'État dans le département peut ordonner le paiement d'une amende d'un montant maximal de 15 000 €. Il doit, au préalable, informer l'intéressé de la possibilité de présenter ses observations dans un délai déterminé. En cas de nouveau manquement dans un délai de trois ans, le montant maximal de l'amende est porté à 25 000 €.",
+"Le produit de l'amende prévue au premier alinéa est versé en totalité à l'Agence nationale de l'habitat.",
+"Le montant de l'amende est proportionné à la gravité des manquements constatés. L'amende ne peut être prononcée plus d'un an après leur constatation."
+], "Réécriture à droit constant : la procédure contradictoire préalable, les plafonds et le délai de prononcé sont exprimés dans des phrases distinctes, sans déplacer les alinéas. Aucune réforme de fond des autorisations de division ou des sanctions.",
+"Maintien des trois alinéas, des plafonds de 15 000 € et 25 000 €, du délai de trois ans pour le nouveau manquement et du délai d'un an à compter de la constatation. Le dossier coordonné prévu par les orientations ne dispense pas de l'autorisation de division : les renvois L. 126-18 et L. 126-19 sont conservés. L. 126-18 prévoit déjà les conditions dans lesquelles l'autorisation d'urbanisme tient lieu d'autorisation de division. La note relative au 1er juillet 2021 est historique.")
+
+add('L183-15', [
+"Les personnes qui mettent en vente, en location ou à la disposition d'autrui des locaux destinés à l'habitation issus d'une division réalisée en violation des interdictions prévues aux articles L. 126-17 et L. 126-21 sont punies de deux ans d'emprisonnement et de 75 000 € d'amende.",
+"Les personnes physiques encourent également l'interdiction d'exercer une activité professionnelle ou sociale pour une durée maximale de cinq ans, lorsque les facilités procurées par cette activité ont été sciemment utilisées pour préparer ou commettre l'infraction. Cette peine complémentaire ne peut toutefois interdire l'exercice d'un mandat électif ou de responsabilités syndicales.",
+"Les personnes morales encourent les peines suivantes :",
+"1° L'amende, selon les modalités prévues à l'article 131-38 du code pénal ;",
+"2° Les peines complémentaires prévues aux 2°, 4°, 8° et 9° de l'article 131-39 du même code. Pour l'application du 8°, la confiscation porte sur le fonds de commerce ou sur l'immeuble destiné à l'hébergement des personnes et ayant servi à commettre l'infraction."
+], "Réécriture à droit constant : l'auteur et les actes sanctionnés ouvrent la disposition ; les conditions de l'interdiction professionnelle et ses exceptions sont exprimées plus directement. Les cinq alinéas et les deux subdivisions des peines des personnes morales sont maintenus. Aucune réforme de fond.",
+"Maintien des deux ans d'emprisonnement, de 75 000 €, des cinq ans au plus et de l'exigence d'utilisation consciente des facilités de l'activité. Mandat électif et responsabilités syndicales restent exclus de l'interdiction. Les renvois L. 126-17, L. 126-21, 131-38 et 131-39 (2°, 4°, 8°, 9°), ainsi que l'objet de la confiscation, sont conservés. La facilitation des divisions prévue par policy.json ne supprime pas ces protections. La note relative au 1er juillet 2021 est historique.")
+
+add('L183-16', [
+"Lorsque tout ou partie d'un bâtiment est occupé par des locataires ou des occupants de bonne foi et que les travaux effectués présentent un caractère abusif et vexatoire, le juge saisi en référé peut en prescrire l'interdiction ou l'interruption. Il peut assortir cette interdiction ou cette interruption d'une astreinte.",
+"Toute personne qui exécute ou fait exécuter les travaux mentionnés au premier alinéa malgré la décision judiciaire les interdisant ou les interrompant est punie de deux ans d'emprisonnement et de 4 500 € d'amende.",
+"Le juge peut également ordonner que les lieux soient remis en état aux frais du condamné."
+], "Réécriture à droit constant : la répétition des pouvoirs d'interdiction et d'interruption est condensée dans le premier alinéa, en maintenant la faculté de prononcer une astreinte. L'infraction et la remise en état sont rattachées explicitement à leurs auteurs et débiteurs. Aucune réforme de fond.",
+"Trois alinéas maintenus ; conditions d'occupation et caractère à la fois abusif et vexatoire conservés. L'astreinte reste facultative, comme la remise en état ; les peines restent de deux ans et 4 500 €. Le renvoi au premier alinéa conserve sa cible. La note relative au 1er juillet 2021 est historique. Cette protection des occupants n'est pas une procédure de traitement des impayés.")
+
+add('L183-17', [
+"Toute violation de l'article L. 123-6 est passible des sanctions prévues à l'article L. 243-3 du code des assurances."
+], "Réécriture à droit constant : le manquement ouvre la phrase et le renvoi détermine directement les sanctions applicables. Aucune réforme de fond de l'obligation d'assurance ou des sanctions.",
+"Renvois à L. 123-6 et à L. 243-3 du code des assurances maintenus sans reproduction ni modification du régime répressif externe. Le corpus confirme que L. 123-6 vise l'assurance de responsabilité civile professionnelle du vendeur professionnel d'un bâtiment à rénover. Le code des assurances n'est pas fourni dans le corpus autorisé. La note relative au 1er juillet 2021 est historique.")
+
+add('L183-18', [
+"Un décret en Conseil d'État détermine les sanctions applicables aux propriétaires, personnes physiques ou morales, qui ne respectent pas les obligations relatives à la lutte contre les termites et la mérule prévues aux articles L. 126-4 à L. 126-6, L. 126-24, L. 126-25 et L. 131-3."
+], "Réécriture à droit constant : l'habilitation réglementaire est formulée directement et l'objet des obligations précède leur énumération. Aucune réforme de fond des personnes sanctionnables ou des obligations visées.",
+"Tous les renvois sont conservés, y compris L. 131-3. Le corpus fait apparaître une hétérogénéité préexistante : L. 126-4 et L. 126-5 imposent d'abord la déclaration à l'occupant, tandis que L. 131-3 organise la délimitation préfectorale des zones. Le présent article vise cependant les propriétaires ; ce champ et ces renvois ne sont pas étendus ni corrigés silencieusement. La note relative au 1er juillet 2021 est historique.")
+
+add('L184-1', [
+"Lorsqu'un établissement recevant du public est à usage total ou partiel d'hébergement et que le maire a prescrit par arrêté à l'exploitant et au propriétaire les mesures nécessaires pour faire cesser la situation d'insécurité constatée par la commission de sécurité et, le cas échéant, des aménagements et travaux à réaliser dans un délai fixé, le maire peut faire exécuter d'office les travaux nécessaires pour mettre fin à la situation d'insécurité manifeste. Il ne peut le faire qu'à défaut d'exécution volontaire et après une mise en demeure restée sans effet. Dans ces conditions, il peut aussi obtenir la condamnation de l'exploitant à lui verser une provision sur le coût des travaux. Le juge des référés statue sur les litiges relatifs aux conditions d'entrée dans le bâtiment.",
+"Lorsqu'elle exécute d'office les travaux, la commune agit à la place des propriétaires, pour leur compte et à leurs frais. Elle recouvre sa créance comme en matière de contributions directes.",
+"Le maire peut également interdire temporairement d'habiter ou d'utiliser les lieux. Cette interdiction s'applique jusqu'à la réalisation des mesures prescrites.",
+"Lorsqu'une interdiction temporaire d'habiter ou d'utiliser les lieux est prononcée, ou lorsque l'état des locaux impose la fermeture définitive de l'établissement, les occupants bénéficient d'un hébergement ou d'un relogement dans les conditions fixées aux articles L. 521-1 et suivants du présent code.",
+"À Paris, le préfet de police exerce les pouvoirs attribués au maire par la présente section."
+], "Réécriture à droit constant : la longue phrase initiale est décomposée entre prescription, carence après mise en demeure, travaux d'office, provision et contrôle de l'accès. Les pouvoirs du maire et les garanties des occupants sont rendus explicites. Aucune réforme de fond de la police de sécurité.",
+"Cinq alinéas maintenus : le troisième reste celui de l'interdiction temporaire, visé par L. 184-6, 2°. La provision reste due par l'exploitant, tandis que les travaux d'office sont réalisés pour le compte et aux frais des propriétaires ; cette répartition source n'est pas uniformisée. Maintien de la commission de sécurité, de la mise en demeure, du juge des référés, des droits d'hébergement/relogement de L. 521-1 et suivants et de la compétence parisienne du préfet de police. La note relative au 1er juillet 2021 est historique.")
+
+add('L184-2', [
+"L'arrêté prévu à l'article L. 184-1 indique que l'exploitant et le propriétaire doivent payer une astreinte par jour de retard si les mesures et travaux prescrits ne sont pas exécutés à l'expiration du délai fixé. Le propriétaire de l'immeuble et l'exploitant du fonds de commerce sont solidairement tenus de payer cette astreinte à compter de la notification, par le maire à chacun d'eux, de l'arrêté qui l'applique.",
+"Si l'arrêté prévu à l'article L. 184-1 concerne un bâtiment en indivision, l'astreinte s'applique dans les conditions fixées à l'article L. 541-2-1."
+], "Réécriture à droit constant : l'information contenue dans l'arrêté est distinguée de la solidarité et de son point de départ ; la règle d'indivision est formulée directement dans le second alinéa. Aucune réforme de fond de l'astreinte.",
+"Deux alinéas maintenus. Ne pas confondre l'arrêté de prescription de L. 184-1 et l'arrêté appliquant l'astreinte, dont la notification à chacun des débiteurs conditionne la solidarité. Renvoi L. 541-2-1 conservé ; cet article vise expressément l'astreinte de L. 184-3 pour l'indivision. La note relative au 1er juillet 2021 est historique.")
+
+add('L184-3', [
+"Si les mesures et travaux prescrits par l'arrêté prévu à l'article L. 184-1 ne sont pas réalisés à l'expiration du délai fixé, l'exploitant et le propriétaire défaillants doivent payer une astreinte dont le montant ne peut dépasser 1 000 € par jour de retard. Le maire prononce cette astreinte par arrêté.",
+"Le montant de l'astreinte est modulé selon l'ampleur des mesures et travaux prescrits et les conséquences de leur non-exécution.",
+"L'astreinte court à compter de la notification de l'arrêté qui la prononce et jusqu'à l'exécution complète des mesures et travaux prescrits. Le recouvrement des sommes est engagé à l'issue de chaque trimestre échu.",
+"Lors de la liquidation trimestrielle de l'astreinte, le maire peut accorder une exonération partielle ou totale de son produit si le redevable établit que des circonstances qui ne sont pas de son fait l'ont empêché d'exécuter l'intégralité de ses obligations. Le total des sommes demandées ne peut dépasser le montant de l'amende prévue à l'article L. 184-4.",
+"L'astreinte est recouvrée selon les dispositions relatives aux produits communaux, au bénéfice de la commune sur le territoire de laquelle se trouve l'établissement visé par l'arrêté. Si l'arrêté a été pris par le président d'un établissement public de coopération intercommunale en application de l'article L. 5211-9-2 du code général des collectivités territoriales, l'astreinte est recouvrée au bénéfice de cet établissement public.",
+"Si le maire ou, le cas échéant, le président de l'établissement public de coopération intercommunale ne liquide pas le produit de l'astreinte, ne dresse pas l'état nécessaire à son recouvrement et ne le transmet pas au représentant de l'État dans le département dans le mois qui suit la demande de celui-ci, l'État liquide et recouvre la créance. Après prélèvement de 4 % pour frais de recouvrement, les sommes perçues sont versées au budget de l'Agence nationale de l'habitat.",
+"L'application et la liquidation de l'astreinte n'empêchent pas l'autorité administrative d'exécuter d'office les mesures et travaux prescrits par l'arrêté prévu à l'article L. 184-1. L'astreinte cesse à la date à laquelle l'exécution d'office de ces mesures et travaux est notifiée à l'exploitant et au propriétaire. Dans ce cas, son montant s'ajoute au coût des mesures et travaux exécutés d'office et bénéficie de la garantie prévue au 8° de l'article 2374 du code civil. Les articles L. 541-1 et suivants du présent code s'appliquent."
+], "Réécriture à droit constant : les étapes de fixation, de liquidation, de recouvrement et de cessation de l'astreinte sont explicitées dans les sept alinéas d'origine. Le rôle respectif du maire, de l'établissement public et de l'État est rendu plus lisible. Aucune réforme de fond des montants, garanties ou conditions d'exonération.",
+"Maintien de 1 000 € par jour, du plafond total par renvoi à l'amende de L. 184-4 (50 000 €), du trimestre échu, du délai d'un mois après la demande du représentant de l'État et du prélèvement de 4 %. Le renvoi source au 8° de l'article 2374 du code civil appelle un contrôle de la numérotation des sûretés dans la version applicable : le code civil n'est pas fourni et aucun remplacement n'est inventé. Renvois L. 541-1 et suivants et L. 5211-9-2 du CGCT conservés. Le sixième alinéa conserve la liste des trois diligences requises de la collectivité ; il ne crée pas un nouveau délai d'exécution des travaux. La note relative au 1er juillet 2021 est historique.")
+
+add('L184-4', [
+"Toute personne qui refuse délibérément et sans motif légitime d'exécuter les travaux prescrits en application de l'article L. 184-1 est punie d'un an d'emprisonnement et de 50 000 € d'amende, lorsque ce refus est constaté après une mise en demeure."
+], "Réécriture à droit constant : l'auteur du refus devient le sujet de la phrase et les éléments de l'infraction sont exprimés directement. Aucune réforme de fond des conditions de répression ni des peines.",
+"Maintien du caractère délibéré, de l'absence de motif légitime et de la constatation après mise en demeure. Peines inchangées : un an d'emprisonnement et 50 000 € d'amende. Ce montant reste la référence du plafond total de l'astreinte de L. 184-3. La note relative au 1er juillet 2021 est historique.")
+
+add('L184-5', [
+"Toute personne qui loue des chambres ou des locaux dans des conditions conduisant manifestement à leur suroccupation est punie de deux ans d'emprisonnement et de 75 000 € d'amende."
+], "Réécriture à droit constant : le bailleur auteur des actes est désigné par une proposition active, en conservant la qualification de suroccupation manifeste. Aucune réforme de fond de l'infraction ou des peines.",
+"Deux ans d'emprisonnement et 75 000 € d'amende maintenus. Le caractère manifeste des conditions conduisant à la suroccupation est conservé, sans création d'un seuil d'occupation. Les peines complémentaires de L. 184-7 et L. 184-8 restent articulées avec cette infraction. La note relative au 1er juillet 2021 est historique.")
+
+add('L184-6', [
+"Les faits suivants sont punis de trois ans d'emprisonnement et de 100 000 € d'amende :",
+"1° Dégrader, détériorer ou détruire des locaux, ou les rendre impropres à l'hébergement par quelque moyen que ce soit, dans le but d'en faire partir les occupants, lorsque ces locaux sont mentionnés dans un arrêté fondé sur l'article L. 184-1 ;",
+"2° Ne pas respecter, de mauvaise foi, une interdiction d'habiter et d'utiliser les lieux prononcée en application du troisième alinéa de l'article L. 184-1."
+], "Réécriture à droit constant recherchée : l'énoncé des deux comportements est directement verbal et les peines figurent dans une phrase d'ouverture commune. Au 1°, une réparation syntaxique explicite de la phrase source défectueuse est proposée, sous le contrôle décrit dans les notes ; aucune réforme de fond des sanctions n'est poursuivie.",
+"La source du 1° comporte la séquence incohérente « lorsque ces locaux sont mentionnés les lieux par un arrêté ». La proposition retient « lorsque ces locaux sont mentionnés dans un arrêté » : cette lecture minimale du rattachement à l'arrêté doit être contrôlée sur le texte authentique, sans être présentée comme une correction certaine. Au 2°, la conjonction « et » est conservée ; L. 184-1, troisième alinéa, emploie « ou » entre habiter et utiliser. Cette discordance préexistante est signalée sans harmonisation silencieuse. Trois alinéas, numéros 1° et 2°, mauvaise foi, finalité de départ des occupants, peines de trois ans et 100 000 € conservés. Le troisième alinéa de L. 184-1 reste en place. La note relative au 1er juillet 2021 est historique.")
+
+add('L184-7', [
+"Outre les peines prévues aux articles L. 184-4 à L. 184-6, les personnes physiques encourent les peines complémentaires suivantes :",
+"1° La confiscation du fonds de commerce ou du bâtiment destiné à l'hébergement des personnes et ayant servi à commettre l'infraction. Si les biens immeubles qui appartenaient à la personne condamnée au moment de la commission de l'infraction ont été expropriés pour cause d'utilité publique, le montant de la confiscation en valeur prévue au dixième alinéa de l'article 131-21 du code pénal est égal au montant de l'indemnité d'expropriation ;",
+"2° L'interdiction d'exercer une activité professionnelle ou sociale pendant cinq ans au plus, lorsque les facilités procurées par cette activité ont été sciemment utilisées pour préparer ou commettre l'infraction. Cette interdiction ne s'applique toutefois pas à l'exercice d'un mandat électif ou de responsabilités syndicales ;",
+"3° L'interdiction, pendant dix ans au plus, d'acheter un bien immobilier à usage d'habitation ou un fonds de commerce d'un établissement recevant du public à usage total ou partiel d'hébergement, ou d'être usufruitier d'un tel bien ou fonds de commerce. Cette interdiction s'applique à l'acquisition ou à l'usufruit réalisés à titre personnel, en qualité d'associé ou de mandataire social de la société civile immobilière ou en nom collectif qui se porte acquéreur ou usufruitier, ou sous forme de parts immobilières. Elle ne s'applique toutefois pas à l'acquisition ou à l'usufruit d'un bien immobilier à usage d'habitation destiné à l'occupation personnelle de l'intéressé.",
+"La juridiction doit prononcer les peines complémentaires mentionnées aux 1° et 3° à l'encontre de toute personne coupable d'une infraction prévue par le présent chapitre. Elle peut toutefois décider de ne pas les prononcer par une décision spécialement motivée tenant compte des circonstances de l'infraction et de la personnalité de son auteur."
+], "Réécriture à droit constant : les durées, modes d'acquisition et exceptions sont répartis en phrases plus courtes au sein des subdivisions conservées. L'obligation de prononcer les peines et la faculté motivée d'y déroger ont un sujet explicite. Aucune réforme de fond des confiscations ou interdictions.",
+"Cinq alinéas et 1° à 3° maintenus. Conservation des cinq ans et dix ans au plus, de la condition d'usage conscient de l'activité, des exceptions élective et syndicale et de l'exception d'occupation personnelle. L'obligation finale demeure rattachée au présent chapitre, sans restriction nouvelle aux seuls articles cités en ouverture. La valeur de confiscation reste égale à l'indemnité d'expropriation pour les immeubles appartenant au condamné au moment des faits. Renvoi au dixième alinéa de l'article 131-21 du code pénal conservé ; son ciblage nécessite vérification dans ce code, absent du corpus. La date de version du 26 juin 2024 n'est pas utilisée comme date d'une réforme future.")
+
+add('L184-8', [
+"Outre l'amende prévue à l'article 131-38 du code pénal, les personnes morales encourent les peines complémentaires prévues aux 2°, 4°, 8° et 9° de l'article 131-39 du même code.",
+"Elles encourent aussi, à titre de peine complémentaire et pour une durée maximale de dix ans, l'interdiction d'acheter un bien immobilier à usage d'habitation ou un fonds de commerce d'un établissement recevant du public à usage total ou partiel d'hébergement, ou d'être usufruitier d'un tel bien ou fonds de commerce.",
+"La confiscation prévue au 8° du même article 131-39 porte sur le fonds de commerce ou sur le bâtiment destiné à l'hébergement des personnes et ayant servi à commettre l'infraction.",
+"La juridiction doit prononcer la confiscation mentionnée au même 8° et l'interdiction d'acheter ou d'être usufruitier mentionnée au deuxième alinéa à l'encontre de toute personne coupable d'une infraction prévue au présent article. Elle peut toutefois décider de ne pas prononcer ces peines par une décision spécialement motivée tenant compte des circonstances de l'infraction et de la personnalité de son auteur.",
+"Si les biens immeubles qui appartenaient à la personne condamnée au moment de la commission de l'infraction ont été expropriés pour cause d'utilité publique, le montant de la confiscation en valeur prévue au dixième alinéa de l'article 131-21 du code pénal est égal au montant de l'indemnité d'expropriation."
+], "Réécriture à droit constant : les objets de l'interdiction et de la confiscation sont exprimés dans un ordre direct et la juridiction devient le sujet de l'obligation de prononcer les peines. Les cinq alinéas sont conservés. Aucune réforme de fond ni extension de l'exception personnelle prévue pour les personnes physiques.",
+"Incohérence préexistante maintenue et signalée : le quatrième alinéa vise une « infraction prévue au présent article », alors que celui-ci énumère des peines complémentaires sans définir de comportement incriminé. Ne pas remplacer silencieusement cette référence par « présent chapitre » ; une coordination expresse du champ pénal est nécessaire après contrôle du texte authentique. Maintien de dix ans au plus, des renvois 131-38, 131-39 (2°, 4°, 8°, 9°), du deuxième alinéa et du dixième alinéa de 131-21. Le code pénal n'est pas fourni pour vérifier ce dernier ciblage. Aucune exception d'occupation personnelle n'est ajoutée aux personnes morales. La date de version du 26 juin 2024 ne vaut pas date du projet.")
+
+add('L184-9', [
+"L'article L. 651-10 s'applique lorsque des poursuites sont engagées contre des exploitants de fonds de commerce destinés à l'hébergement."
+], "Réécriture à droit constant : le texte applicable ouvre la phrase et la condition de poursuite est formulée sans tournure impersonnelle. Aucune réforme de fond des garanties ou mesures associées aux poursuites.",
+"Renvoi intégral à L. 651-10 conservé, sans en étendre les conditions. Dans le corpus, le I de cet article cite encore L. 184-1 comme fondement de poursuites, alors que L. 184-1 décrit les pouvoirs de police et que L. 184-4 à L. 184-6 définissent les délits : articulation préexistante à contrôler dans cet article hors lot, sans remplacement de renvoi ici. La note relative au 1er juillet 2021 est historique.")
+
+add('L185-1', [
+"Les fonctionnaires et agents publics mentionnés à l'article L. 242-1 du code de l'énergie peuvent rechercher et constater les infractions et manquements à l'article L. 174-2. Pour exercer cette mission, ils disposent des pouvoirs prévus au titre VII du livre Ier du code de l'environnement."
+], "Réécriture à droit constant : l'habilitation et les pouvoirs nécessaires à sa mise en œuvre sont exprimés dans deux phrases directes. Aucune réforme de fond du contrôle énergétique ou de ses agents.",
+"Renvois L. 242-1 du code de l'énergie, L. 174-2 et titre VII du livre Ier du code de l'environnement conservés. Le champ n'est pas limité au seul chauffage malgré l'intitulé de section : L. 174-2 traite aussi du refroidissement et de l'eau chaude. Les codes de l'énergie et de l'environnement ne sont pas fournis pour contrôler le détail des habilitations et pouvoirs. La note relative au 1er juillet 2021 est historique.")
+
+add('L185-2', [
+"À la demande des fonctionnaires et agents chargés des contrôles, le propriétaire d'un bâtiment collectif pourvu d'un chauffage commun ou, en cas de copropriété, le syndicat des copropriétaires représenté par le syndic doit communiquer, dans un délai d'un mois à compter de la réception de la demande, l'ensemble des documents qui prouvent le respect de l'article L. 174-2 ou les raisons justifiant sa dispense de l'obligation prévue à cet article."
+], "Réécriture à droit constant : l'origine de la demande, le débiteur de la communication et le point de départ du délai sont rendus plus lisibles dans l'alinéa unique. Aucune réforme de fond des justificatifs ou dispenses.",
+"Maintien du délai d'un mois à compter de la réception, de l'intégralité des documents probants et de l'alternative relative aux raisons de dispense. Le syndic reste représentant du syndicat, sans devenir personnellement débiteur. La source limite ici le champ au bâtiment collectif pourvu d'un chauffage commun, tandis que L. 174-2 vise aussi d'autres équipements ; ce décalage préexistant n'est pas corrigé par une extension au froid. La note relative au 1er juillet 2021 est historique.")
+
+add('L185-3', [
+"L'autorité administrative met toute personne qui manque aux obligations de l'article L. 174-2 en demeure de s'y conformer dans un délai qu'elle fixe."
+], "Réécriture à droit constant : l'autorité administrative est le sujet de l'obligation de mise en demeure et la personne concernée est désignée par son manquement. Aucune réforme de fond du délai ou de la procédure.",
+"L'autorité administrative conserve la détermination du délai ; aucune durée nouvelle n'est fixée. Renvoi L. 174-2 maintenu pour l'ensemble de ses obligations et dispenses, sans limitation ou extension matérielle autonome. Coordination avec le délai fixé visé par L. 185-4. La note relative au 1er juillet 2021 est historique.")
+
+add('L185-4', [
+"L'autorité administrative peut prononcer une sanction pécuniaire contre l'intéressé s'il ne répond pas dans le délai d'un mois à la demande prévue à l'article L. 185-2 ou s'il ne se conforme pas, dans le délai fixé, à la mise en demeure prévue à l'article L. 185-3. Cette sanction peut être prononcée chaque année, jusqu'à la mise en conformité. Elle est fixée par bâtiment et ne peut dépasser 1 500 € par logement.",
+"Avant le prononcé de la sanction, l'intéressé doit recevoir notification des griefs et être mis en mesure de consulter le dossier et de présenter ses observations. Il peut se faire assister par une personne de son choix.",
+"L'amende est recouvrée selon les règles applicables aux créances de l'État étrangères à l'impôt et au domaine."
+], "Réécriture à droit constant : les deux faits permettant la sanction, sa périodicité et son plafond sont séparés en phrases distinctes dans le premier alinéa. Les garanties contradictoires sont formulées directement dans le deuxième. Aucune réforme de fond du contrôle énergétique.",
+"Trois alinéas maintenus. Les conditions alternatives d'absence de réponse sous un mois et de non-exécution dans le délai de mise en demeure restent distinctes. Maintien de la faculté annuelle jusqu'à mise en conformité, du calcul par bâtiment et du plafond de 1 500 € par logement. Notification des griefs, consultation du dossier, observations et assistance par une personne librement choisie conservées. Renvois L. 185-2 et L. 185-3 inchangés ; la note relative au 1er juillet 2021 est historique.")
+
+add('L185-5', [
+"Les fonctionnaires et agents publics commissionnés à cette fin par le ministre chargé de l'énergie, le ministre chargé de la construction ou le maire peuvent rechercher et constater les infractions et manquements à l'obligation d'afficher le diagnostic de performance énergétique prévue à l'article L. 126-30. Pour exercer cette mission, ils disposent des pouvoirs prévus au titre VII du livre Ier du code de l'environnement."
+], "Réécriture à droit constant : l'autorité de commissionnement, la mission de contrôle et les pouvoirs correspondants sont présentés dans des phrases plus directes. Aucune réforme de fond des obligations d'affichage ou de décence énergétique.",
+"Commissionnement alternatif par chacun des deux ministres ou par le maire conservé, ainsi que le renvoi L. 126-30 et les pouvoirs du titre VII du livre Ier du code de l'environnement. Ces contrôles d'affichage ne créent pas la voie de rénovation locative de vingt-quatre mois de policy.json. Celle-ci appelle une disposition expresse hors des cinq codes dans la loi n° 89-462 du 6 juillet 1989, notamment son article 6 (décence du logement) et son article 20-1 (mise en conformité et pouvoirs du juge), avec travaux contrôlés, compensation des surcoûts énergétiques et transition précisée ; aucun renvoi fictif ni dérogation à ces textes n'est inséré. La note relative au 1er juillet 2021 est historique.")
+
+add('L185-6', [
+"L'autorité administrative met toute personne qui manque aux obligations de l'article L. 126-30 en demeure de s'y conformer dans un délai qu'elle fixe.",
+"Si l'intéressé ne se conforme pas à cette mise en demeure dans le délai fixé, l'autorité administrative peut lui infliger une sanction pécuniaire d'un montant maximal de 1 500 €."
+], "Réécriture à droit constant : l'autorité et le destinataire de la mise en demeure sont désignés directement ; la sanction est rattachée dans le second alinéa au défaut d'exécution dans le délai fixé. Aucune réforme de fond des sanctions de l'affichage énergétique.",
+"Deux alinéas conservés, ainsi que le renvoi à L. 126-30, la détermination administrative du délai et le plafond de 1 500 €. Aucune périodicité annuelle ou multiplication par logement, propres au régime distinct de L. 185-4, n'est importée. La note relative au 1er juillet 2021 est historique. L'accélération judiciaire des impayés prévue par policy.json exige une coordination hors de ce régime, notamment de l'article 24 de la loi n° 89-462 du 6 juillet 1989 et des règles procédurales d'expulsion du code des procédures civiles d'exécution ; aucune procédure ni expulsion privée n'est créée ici.")
+
+assert len(sources) == len(drafts) == 24
+out=[]
+for s in sources:
+    d=drafts[s['number']]
+    out.append({**{k:s[k] for k in ('code_id','source_id','source_sha256','number')}, **d, 'status':'rewrite_draft'})
+Path('answer.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
+print('answer.json :',len(out),'articles,',Path('answer.json').stat().st_size,'octets')

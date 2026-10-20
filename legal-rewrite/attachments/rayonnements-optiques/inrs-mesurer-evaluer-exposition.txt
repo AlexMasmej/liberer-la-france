@@ -1,0 +1,2091 @@
+   Mesurer et évaluer l’exposition
+professionnelle aux rayonnements
+    optiques artificiels (hors laser).
+                   Guide méthodologique
+                                 NS
+                                 NS ???
+                                    347   NOTE SCIENTIFIQUE ET TECHNIQUE
+    Mesurer et évaluer l’exposition
+ professionnelle aux rayonnements
+     optiques artificiels (hors laser).
+                                                               Guide méthodologique
+
+
+
+
+                                                                                      Annick Barlier-Salsi
+
+
+
+
+                                                                                                          NS 347
+                                                                                                       septembre 2016
+
+Institut national de recherche et de sécurité pour la prévention des accidents du travail et des maladies professionnelles
+                                                Siège social : 65, boulevard Richard-Lenoir 75011 Paris • Tél. 01 40 44 30 00
+                  Centre de Lorraine : 1, rue du Morvan CS 60027 54519 Vandœuvre-les-Nancy cedex • Tél. 03 83 50 20 00
+Sommaire
+1. Préambule ........................................................................................................... 3
+2. Objet et domaine d’application ........................................................................... 5
+  2.1.      Quels sont les rayonnements concernés ? ........................................................................... 5
+  2.2.      Dans quel cas recourir à la mesure ? .................................................................................... 5
+  2.3.      A qui s’adresse ce guide ? ..................................................................................................... 5
+3. Recommandations, normes et réglementation.................................................... 7
+  3.1.      Les recommandations ........................................................................................................... 7
+  3.2.      Les normes ............................................................................................................................ 7
+  3.3.      La réglementation ................................................................................................................. 7
+4. Grandeurs à déterminer, Valeurs Limites d’Exposition (VLE) et Limites
+d’Exposition Recommandées (LER) ............................................................................ 9
+  4.1.      Grandeurs à déterminer ....................................................................................................... 9
+  4.2.      Valeurs Limites d'Exposition (VLE) et Limites d’Exposition Recommandées (LER) ............ 10
+5. Méthodes et moyens de mesure ....................................................................... 15
+  5.1.      Les appareils de mesures .................................................................................................... 15
+     5.1.1.    Les radiomètres ....................................................................................................................... 15
+     5.1.2.    Les spectroradiomètres ........................................................................................................... 16
+       5.1.2.1.     Spectroradiomètre à balayage et double monochromateurs ......................................... 16
+       5.1.2.2.     Spectroradiomètre ou spectromètre à barrette de détecteurs........................................ 17
+     5.1.3.    Avantages et inconvénients de chaque appareil ..................................................................... 19
+  5.2.      Optique d’entrée................................................................................................................. 20
+     5.2.1.        Eclairement énergétique ......................................................................................................... 20
+     5.2.2.        Luminance énergétique ........................................................................................................... 21
+     5.2.3.        Fibre optique ........................................................................................................................... 21
+  5.3. Méthode alternative pour déterminer les grandeurs exprimées en luminance énergétique
+  à partir des grandeurs en éclairement énergétique ...................................................................... 21
+6. Analyse des situations d’exposition ................................................................... 23
+  6.1.      Implantation des sources et des travailleurs ...................................................................... 23
+  6.2.      Fiche technique des sources ............................................................................................... 24
+  6.3.      Fiche d’exposition ............................................................................................................... 25
+7. Mesurage ........................................................................................................... 27
+  7.1.      Géométrie du mesurage ..................................................................................................... 27
+  7.2.      Angle d’admission des appareils ......................................................................................... 28
+  7.3.      Durée du mesurage............................................................................................................. 29
+  7.4.      Signal d’obscurité ................................................................................................................ 29
+  7.5.      Ajustement du temps d’intégration des spectromètres CCD ............................................. 30
+  7.6.      Domaine spectral à mesurer selon le type de source ........................................................ 30
+
+
+
+
+                                                                                                                                                                  1
+8. Evaluation des risques ....................................................................................... 33
+  8.1. Comparaison aux Valeurs Limites d’Exposition (VLE) ou aux Limites d’Exposition
+  Recommandées (LER) .................................................................................................................... 33
+  8.2. Outil d’aide à l’évaluation des risques : CatRayon ............................................................. 34
+     8.2.1.       Le module MesSourcesCatRayon............................................................................................. 35
+     8.2.2.       Le module CatRayon ................................................................................................................ 35
+
+9. Démarche CARSAT/CRAMIF-INRS pour la mesure des rayonnements optiques au
+poste de travail ........................................................................................................ 39
+  9.1.     Appareillage ........................................................................................................................ 39
+  9.2.     Interfaçage des spectroradiomètres................................................................................... 39
+  9.3.     Evaluation des risques et moyens de protection................................................................ 41
+Bibliographie ............................................................................................................ 43
+Annexe 1 : Grandeurs, symboles, termes et unités .................................................. 45
+Annexe 2 : Spécificité des appareils de mesure ........................................................ 47
+Annexe 3 : Méthode détaillée du calcul de LB et LR .................................................. 51
+
+
+
+
+                                                                                                                                                           2
+1. Préambule
+Bien avant les années 2000, des organismes tels que l’ACGIH (American Conference of Governmental
+Industrial Hygienists) et l’ICNIRP (International Commission on Non-Ionizing Radiation Protection) se sont
+préoccupés des risques pour la santé des travailleurs exposés aux Rayonnements Optiques Artificiels (ROA).
+Leurs travaux ont conduit à la publication de recommandations [1]–[4] visant notamment à proposer des
+Valeurs Limites d’Exposition (VLE). Ces dernières évoluent au fur et à mesure des nouvelles connaissances
+sur les effets des rayonnements optiques sur la santé. C’est pourquoi les recommandations dispensées par
+ces 2 organismes sont mises à jour régulièrement.
+Les risques potentiels des rayonnements sur la santé des travailleurs sont également une préoccupation de
+l’INRS. Un certain nombre d’études conduites sur le terrain et en laboratoire ont permis de quantifier les
+niveaux d’exposition des salariés aux ROA produits par des sources diverses telles que les lampes à
+ultraviolets[5], les projecteurs scéniques[6], les fours de verrerie[7], de forge[8] et d’aciérie[9] , ainsi que par les
+arcs de soudages [10]. L’INRS a aussi développé un logiciel CatRayon [11] permettant de simuler différentes
+situations d’exposition aux ROA à partir des caractéristiques de sources présentes dans ses bases de
+données ou mesurées par les utilisateurs.
+Sur le plan réglementaire, la protection des travailleurs contre les ROA a été prise en compte, à partir de
+2006, par la directive européenne 2006/25/CE [12] transposée en droit français par le décret n° 2010-750 [13]
+du 2 juillet 2010. Ces textes règlementent l’exposition des travailleurs aux ROA en fixant les VLE, ainsi que
+les obligations des employeurs et les conditions de surveillance de la santé des travailleurs. Dans ce cadre,
+l’employeur procède d’abord à une analyse a priori des risques basée sur des documents ou des calculs. En
+l’absence d’information ou si les données à sa disposition ne sont pas suffisantes, une évaluation des
+risques par la mesure s’impose. Toutefois, comme le précise le guide européen de bonnes pratiques [14]
+« mesurer des rayonnements optiques sur le lieu de travail est complexe. Les appareils de mesure sont
+souvent assez chers et ne peuvent être utilisés correctement que par une personne qualifiée. Une
+personne inexpérimentée peut facilement commettre des erreurs et ainsi fournir des données très
+inexactes. En outre, l’évaluation des risques requiert souvent de combiner les données en termes de temps
+et de mouvements associés aux tâches accomplies ».
+Le présent guide se propose de répondre aux préoccupations des personnes chargées de mesurer les ROA
+sur les lieux de travail. Fondé sur l’expérience acquise par l’INRS en matière de mesurage des ROA au poste
+de travail, sur les études métrologiques [15],[16] conduites dans ses laboratoires ainsi que sur les différentes
+normes[17]–[19], il fournit les éléments essentiels concernant la méthodologie de mesure des ROA et
+l’évaluation des risques à partir des mesurages, tant sur le plan réglementaire que dans le cadre plus
+général d’une démarche de prévention.
+L’évaluation des risques sans mesure, basée uniquement sur des documents ou des calculs, fera l’objet
+d’un autre guide spécifique.
+
+  Important
+
+  Ce guide s’adresse à des personnes ayant des connaissances de base sur la radiométrie, la métrologie
+  des rayonnements optiques et l’évaluation des risques dus aux ROA à partir des VLE. Il ne peut en aucun
+  cas remplacer une formation sur ce sujet.
+
+
+
+
+                                                                                                                           3
+4
+2. Objet et domaine d’application
+L’une des premières difficultés pour mesurer les ROA provient de la multiplicité de leurs effets et de
+l’étendue spectrale recouvrant sept domaines représentés par différentes grandeurs. Par conséquent sept
+grandeurs à comparer aux VLE sont à déterminer, dont certaines ne sont pas toujours simples à
+appréhender. S’ajoute à cela, la diversité des moyens de mesures et des sources rencontrées in-situ.
+L’objectif de ce document est donc de guider les personnes chargées d’effectuer des mesures sur les lieux
+de travail, en dressant un état des recommandations, normes et réglementations existantes, en rappelant
+les grandeurs à déterminer et les Valeurs Limites d’Expositions (VLE) associées et en décrivant les moyens
+de mesure disponibles et leur fiabilité, la méthodologie de mesure au poste de travail et la méthode
+d’évaluation des risques à partir de mesurages.
+Le but n’est pas de lister toutes les méthodes et moyens de mesure des ROA au poste de travail, mais
+plutôt de rechercher, chaque fois que la situation le permet, à optimiser et à pérenniser les mesures de
+manière à prendre en compte les évolutions du poste de travail (et, éventuellement, de la réglementation,
+donc des VLE) et à proposer une protection efficace sans procéder à de nouvelles mesures.
+
+2.1. Quels sont les rayonnements concernés ?
+Le présent document s’applique aux Rayonnement Optiques Artificiel (ROA) incohérents entre 180 et 3000
+nm, produits par des sources présentes sur les lieux de travail intérieurs ou extérieurs. Les rayonnements
+cohérents (laser) n’y sont pas traités.
+
+2.2. Dans quel cas recourir à la mesure ?
+Absence d’information : la réalisation de mesure est nécessaire lorsque tous les moyens documentaires :
+notice du constructeur, normes, guides pratiques… n’ont pas permis de conclure qu’il n’y avait pas de
+risque et/ou que les outils de calcul disponibles, comme CatRayon[11], ne permettent pas d’évaluer les
+niveaux d’exposition des salariés.
+Rayonnements indirects : on peut citer aussi toutes les situations dans lesquelles la source est suspectée de
+provoquer un risque mais n’est pas visible directement. Par exemple, pour le contrôle qualité, l’opérateur
+n’est exposé qu’au rayonnement réfléchi par l’objet inspecté ; à l’entrée d’un tunnel de séchage l’opérateur
+n’est exposé qu’au rayonnement réfléchi par les parois.
+Il existe également des procédés industriels spécifiques émettant des ROA parasites et pour lesquels
+aucune information n’est disponible.
+
+2.3. A qui s’adresse ce guide ?
+Ce guide a été rédigé principalement à l’intention des Centres de Mesure Physique des CARSAT (CRAMIF) et
+des autres organismes chargés d’évaluer les risques dus aux ROA sur les lieux de travail à partir de
+mesurage. Il peut également servir de base aux organismes accrédités dans le cadre des arrêtés[20],[21], mais
+n’a pas pour vocation à se limiter aux exigences réglementaires. En termes d’évaluation des risques et de
+méthode de mesure, il fait également référence aux recommandations de l’ICNIRP.
+En règle générale, ce guide ne concerne pas directement les employeurs ou les préventeurs en entreprise.
+Ils peuvent cependant y trouver des informations utiles pour évaluer les prestations d’organismes auxquels
+ils auraient sous-traité les mesures.
+
+
+
+
+                                                                                                                5
+6
+3. Recommandations, normes et réglementation
+3.1. Les recommandations
+L’organisme de référence en matière de protection contre les rayonnements optiques artificiels ou naturels
+est l’ICNIRP (International Commission on Non-Ionizing Radiation Protection). Ses compétences sont
+reconnues internationalement, notamment au travers des Limites d’Exposition aux rayonnements optiques
+qu’il publie. Ces Limites d’Exposition Recommandées (LER) s’appuient sur la littérature scientifique relative
+aux effets biologiques des rayonnements optiques sur la santé et sont mises à jour chaque fois que de
+nouvelles connaissances dans le domaine l’exigent. Celles qui sont prises comme référence dans le présent
+guide sont :
+    •   «Guidelines on limits of exposure to ultraviolet radiation of wavelengths 180 nm to 400 nm
+        (incoherent optical radiation)» [2], publié en 2004
+    •   «Guidelines on limits exposure to incoherent visible and infrared radiation» [3], publié en 2013.
+Au-delà des LER, l’ICNIRP publie également des recommandations plus ciblées comme celles relatives à la
+protection des travailleurs contre le rayonnement ultraviolet [4].
+Par ailleurs, l’ACGIH (American Conference of Governmental Industrial Hygienists) publie chaque année un
+recueil de LER [1] aux agents chimiques, physiques et biologiques, dont une part concerne l’exposition aux
+rayonnements optiques. A ce jour, les LER préconisées par cet organisme sont extrêmement proches de
+celles proposées par l’ICNIRP, c’est pourquoi il n’y sera pas fait spécifiquement mention dans la suite de ce
+guide.
+
+3.2. Les normes
+Une norme européenne, en 4 parties, référencée NF EN 14255 et intitulée « Mesurage et évaluation de
+l’exposition des personnes aux rayonnements optiques incohérents » permet de répondre en grande partie
+aux préoccupations des préventeurs chargés de mesurer les ROA sur les lieux de travail. Les parties de la
+norme qui nous intéressent dans ce guide se déclinent comme suit :
+    •   NF EN 14255-1 [17] : Rayonnements ultraviolets émis par des sources artificielles sur les lieux de
+        travail.
+    •   NF EN 14255-2 [18] : Rayonnements visibles et infrarouges émis par des sources artificielles sur les
+        lieux de travail.
+    •   NF EN 14255-4 [19]: Terminologie et grandeurs utilisées pour le mesurage de l’exposition au
+        rayonnement ultraviolet, visible et infrarouge.
+Il n’est pas fait état ici de la partie 3 de la norme qui est consacrée au rayonnement solaire.
+En ce qui concerne les méthodes de mesure des ROA, il est souvent fait référence à la norme NF EN
+62471,[22]dont l’objectif est de classer les sources électriques émettant des ROA selon les risques
+photobiologiques qu’elles présentent. Cette norme définit des techniques de mesurage des ROA en
+laboratoire et concerne plus spécifiquement les fabricants de sources électriques. Il ne sera donc pas fait
+référence à cette norme dans le présent document.
+
+3.3. La réglementation
+Depuis 2006, l’exposition des travailleurs aux ROA est réglementée par la directive européenne
+2006/25/CE[12] transposée en droit français par le décret n° 2010-750 [13]. Ces textes fixent des Valeurs
+Limites d’Exposition (VLE), lesquelles sont issues des recommandations de l’ICNIRP parues avant 2006.
+Ainsi, la réglementation est en concordance avec les dernières recommandations ICNIRP sur le domaine
+ultraviolet qui datent de 2004. En revanche, il n’en est pas de même sur les domaines visible et
+infrarouge puisque les VLE et grandeurs associées qui figurent dans la directive 2006/25/CE [12] sont issues
+
+
+
+                                                                                                                7
+des recommandations de l’ICNIRP de 1997[23]. L’évolution des connaissances relatives aux effets sur la santé
+des rayonnements visible et infrarouge a conduit à la publication de nouvelles recommandations de
+l’ICNIRP en 2013.
+La directive européenne 2006/25/CE[12] et le décret n° 2010-750 [13] ne fixent aucune condition quant aux
+configurations de mesure. Mais l’arrêté[20]de mars 2016 précise les moyens à mettre en œuvre pour
+réaliser l’évaluation des risques et des niveaux d’exposition, notamment les conditions de mesurage.
+L’article 4 précise que le mesurage des grandeurs radiométriques caractéristiques de l’exposition, doit être
+réalisé conformément aux normes NF EN 14255-1[17], NF EN 14255-2[18] et NF EN 14255-4[19] (cf. §
+précédent). Un second arrêté[21] spécifie les conditions d’accréditation des organismes pouvant procéder
+aux mesurages des niveaux d’exposition aux rayonnements optiques artificiels en milieu de travail.
+
+
+Remarque
+
+Afin de distinguer facilement les exigences spécifiques à la réglementation et les éléments issus des
+recommandations de l’ICNIRP, le code couleur suivant a été adopté dans ce document :
+
+
+           Réglementation      Recommandations ICNIRP         Spécifications communes à       la
+                                                              réglementation et à l’ICNIRP
+
+
+
+
+                                                                                                               8
+4. Grandeurs à déterminer, Valeurs Limites
+ d’Exposition (VLE) et Limites d’Exposition
+ Recommandées (LER)
+4.1. Grandeurs à déterminer
+Les VLE et LER aux rayonnements optiques sont basées sur 2 grandeurs physiques qui sont l’éclairement
+énergétique spectrique Eλ exprimé en W.m-2.nm-1 et la luminance énergétique spectrique Lλ exprimée en
+W.m-2.sr-1.nm-1. (Ces grandeurs sont définies dans l’annexe 1). Sur cette base, les grandeurs à déterminer
+pour l’évaluation des risques sont, selon les domaines spectraux, exprimées en
+    •   Eclairement énergétique global : EUVA, EIR, EPeau,
+    •   Eclairement énergétique efficace : Eeff pondéré par la courbe S(λ) tient compte de l’action du
+        rayonnement ultraviolet, selon sa longueur d’onde, sur les yeux et la peau, et EB pondéré par la
+        courbe B(λ) tient compte de l’action du rayonnement visible, selon sa longueur d’onde, sur les
+        yeux,
+    •   Luminance énergétique efficace : LB pondérée par la courbe B(λ) tient compte de l’action du
+        rayonnement visible, selon sa longueur d’onde, sur les yeux et LR pondéré par la courbe R(λ) tient
+        compte de l’action du rayonnement visible et proche infrarouge, selon sa longueur d’onde, sur les
+        yeux.
+Tableau I : Grandeurs à déterminer et à comparer aux VLE pour évaluer les risques dus aux ROA selon la directive
+            [12]                  [13]                               [2],[3]
+2006/25/CE , le décret 2010-750        ou les recommandations ICNIRP         . Les symboles utilisés sont détaillés dans
+l’annexe 1.
+
+                                                             Grandeurs à déterminer
+   Domaine                                                   [12]
+                       Selon directive 2006/25/CE                   et
+   spectral                                                                         Selon recommandations ICNIRP [2],[3]
+                             décret 2010-750 [13]
+                                                      400
+ 180 – 400 nm                              E         = ∑ E λ .S(λ ).∆λ               W.m-2
+                                               eff
+                                                      180
+                                                       400
+ 315 – 400 nm                             E          = ∑ E λ .∆λ                     W.m-2
+                                            UVA
+                                                       315
+                                                     700
+                                           LB = ∑ Lλ .B(λ ). ∆λ                      W.m-2.sr-1
+                                                     300
+ 300 – 700 nm
+                                                      700
+                                           E B = ∑ E λ .B(λ ). ∆λ                    W.m-2
+                                                      300
+
+                        1400                                                            1400
+ 380 – 1400 nm LR = ∑ Lλ .R (λ )[12],[13] . ∆λ             W.m-2.sr-1             LR = ∑ Lλ .R (λ )[2],[3] . ∆λ         W.m-2.sr-1
+                         380                                                            380
+                        1400
+ 780 – 1400 nm LR = ∑ Lλ .R (λ ). ∆λ                        W.m-2.sr-1                          Pas de LER spécifique
+                        780
+                         3000                                                         1000                 3000
+ 780 – 3000 nm    EIR = ∑ E λ . ∆λ                          W.m-2               E IR = ∑ 0.3.E λ . ∆λ + ∑ E λ . ∆λ           W.m-2
+                          780                                                          780                 1000
+
+                                                                         3000
+ 380 – 3000 nm                                               E Peau = ∑ E λ . ∆λ             W.m-2
+                                                                         380
+
+
+
+
+                                                                                                                                     9
+Le mode de calcul de ces différentes grandeurs est présenté au Tableau I. On notera quelques différences
+selon que ces grandeurs émanent de la directive 2006/25/CE [12] ou des dernières recommandations de
+l’ICNIRP [2] (cf. § Réglementation). Les différences portent sur les points suivants :
+    •                                        Le domaine spectral 780-1400 nm : l’ICNIRP [2] ne définit plus de grandeur spécifique à déterminer
+                                             sur ce domaine.
+    •                                        Le mode de calcul de EIR : l’ICNIRP [2] a introduit un facteur de pondération égal à 0,3 entre 780 et
+                                             1000 nm.
+    •                                        La pondération spectrale R(λ) : Comme le montre la figure 1, la courbe de pondération spectrale
+                                             R(λ) a été modifiée entre 380 et 500 nm. En revanche, sur le domaine 500-1400 nm, les valeurs de
+                                             pondération n’ont pas changé.
+                                                                                                          S(λ)
+                                                                                                         S(l)
+                                               10
+
+
+
+
+    Pondération spectrale (sans dimension)
+                                                                                                          B(λ)
+                                                                                                         B(l)
+                                                                                                                                              [12]
+                                                1                                                         R(λ)
+                                                                                                         R(l     Selon
+                                                                                                             ) selon   directive 2006/25/CE
+                                                                                                                     directive                       et
+                                                                                                                 décret 2010-750 [13]
+                                                                                                                                              [2]
+                                                                                                          R(λ)
+                                                                                                         R(l ) selon ICNIRP
+                                                                                                                 Selon      2013
+                                                                                                                       recommandations ICNIRP
+                                               0,1
+
+
+                                              0,01
+
+
+                                             0,001
+
+
+                                        0,0001
+                                                     100   300    500     700     900     1100    1300    1500
+                                                                    Longueur d'onde λ (nm)
+
+  Figure 1 : Courbes de pondération spectrale, relatives aux effets du rayonnement ultraviolet sur les yeux et la peau :
+  S(λ), aux lésions rétiniennes par effet photochimique de la lumière bleue : B(λ) et aux lésions rétiniennes par effet
+  thermique : R(λ) selon la directive 2006/25/CE et le décret 2010-750         et R(λ) selon les recommandations ICNIRP
+                                                [12]                      [13]
+  [3]
+      de 2013.
+
+
+  Remarque
+  Dans le domaine ultraviolet, l’évaluation des risques prend en compte les rayonnements optiques à
+  partir de 180 nm. Or, les valeurs d’émission des sources étalon couramment utilisées dans les
+  laboratoires chargés de l’étalonnage ne sont pas disponibles pour les longueurs d’onde inférieures à 200
+  nm.
+
+
+
+4.2. Valeurs Limites d'Exposition (VLE) et Limites d’Exposition
+   Recommandées (LER)
+Selon les domaines spectraux, les grandeurs déterminées au tableau I peuvent être, soit comparées
+directement aux VLE ou LER, qui sont alors exprimées en W.m-2 ou en W.m-2.sr-1, soit associées à la durée
+d’exposition journalière t (en s), on parle alors d’exposition (H) exprimée en J.m-2 ou de dose de luminance
+énergétique (D) exprimée en J.m-2.sr-1. Les VLE dans les différents domaines spectraux selon la directive
+2006/25/CE[12] et le décret 2010-750[13]sont données aux tableaux II, III, V et VIII ; les LER selon l’ICNIRP[2],[3]
+sont données aux tableaux II, IV, VI et VIII.
+
+
+
+
+                                                                                                                                                          10
+Les VLE ou LER des tableaux IV à VII font intervenir l’angle α
+sous lequel la source est observée (Cf. figure 2). L’angle
+α, exprimé en radians, est défini par le quotient de la dimension                    Source
+apparente de la source par la distance d à laquelle elle est
+observée [19] (hypothèse simplificatrice applicable aux petits                                                φ
+angles):
+                                                                                                          α               d
+                                l cos(φ )
+                          α≈ s
+                             d
+Dans le cas d’une source circulaire, ls correspond au diamètre   Surface
+                                                                 réceptrice
+de la source. Pour une source non circulaire, ls est déterminé
+                                                                 réceptri
+par la moyenne arithmétique de la plus petite et de la plus Figure 2 : Angle α sous-tendu par la source.
+grande dimension de la source.
+
+                                                                                                                  [12]
+Tableau II : Domaine ultraviolet : Valeurs Limites d'Exposition (VLE) selon directive 2006/25/CE                         et décret 2010-
+   [13]                                                         [2],[3]
+750 et Limites d’Exposition Recommandées(LER) selon l’ICNIRP            .
+
+                                                                                       VLE selon directive 2006/25/CE[12],
+                                                                 Domaine
+Partie du corps                     Risque                                           décret 2010-750
+                                                                                                          [13]
+                                                                                                                 et LER selon ICNIRP
+                                                                 spectral                                  [2],[3]
+
+
+Œil : Cornée,         - Photokératite, conjonctivite
+                                                                                                    VLE
+conjonctive           - Erythème, élastose, cancer            180 – 400 nm                       H eff = 30 J.m −2
+Peau :                de la peau
+Œil : Cristallin      Cataracte                               315 – 400 nm                       H VLE
+                                                                                                   UVA
+                                                                                                       = 10 4 J.m−2
+
+
+
+Tableau III : Valeurs Limites d'Exposition (VLE) dans le domaine visible pour le risque lumière bleue selon la directive
+            [12]                     [13]
+2006/25/CE et le décret 2010-750
+
+                                                                                                              VLE
+Partie du                                 Domaine            Angle sous-tendu                                                      [12]
+                     Risque                                                                   Selon directive 2006/25/CE                  ,
+ corps                                    spectral            par la source α                                               [13]
+                                                                                                   décret 2010-750
+Œil :          Photorétinite                                                           Pour t ≤ 10 000 s
+rétine                                                                                          10 6
+                                                                                        LVLE  =      W.m - 2 .sr -1
+                                                                α ≥ 0.011 rad            B
+                                                                                                 t
+                                                                                       Pour t > 10 000 s
+                                                                                        LVLE
+                                                                                         B
+                                                                                              = 100 W.m-2 .sr -1
+                                        300 – 700 nm
+                                                                                       Pour t ≤ 10 000 s
+                                                                                                100
+                                                                                        E VLE
+                                                                                          B
+                                                                                              =      W.m - 2
+                                                                α < 0.011 rad                     t
+                                                                                       Pour t > 10 000 s                            (1)
+                                                                                        E VLE
+                                                                                          B
+                                                                                              = 0.01 W.m -2
+(1) Mention de la directive : Normalement, cela ne s’applique qu’aux instruments ophtalmologiques ou à un œil stabilisé lors d’une
+anesthésie. La durée maximale pendant laquelle on peut fixer une source se détermine en appliquant la formule suivante : tmax =
+100/EB. Du fait des mouvements des yeux lors de tâches visuelles normales, cette durée n’excède pas 100 s
+
+
+
+
+                                                                                                                                              11
+Tableau IV : Limites d'Exposition Recommandées (LER) dans le domaine visible pour le risque lumière bleue selon
+         [3]
+l’ICNIRP
+
+Partie du                              Domaine            Angle sous-tendu
+                    Risque                                                                     LER selon l’ICNIRP [3]
+ corps                                 spectral            par la source α
+Œil :         Photorétinite                                                          Pour 0,25 ≤ t ≤ 10 000 s
+rétine                                                                                D BLER = 10 6 J.m -2 .sr -1
+                                                             α ≥ 0.011 rad           Pour t > 10 000 s
+                                                                                      LLER
+                                                                                       B
+                                                                                            = 100 W.m-2 .sr -1
+                                     300 – 700 nm
+                                                                                     Pour 0,25 ≤ t ≤ 100 s
+                                                                                      H BLER = 100 J.m -2
+                                                             α < 0.011 rad           Pour t > 100 s
+                                                                                      E BLER = 1 W.m-2
+
+
+
+Tableau V : Valeurs Limites d'Exposition (VLE) dans le domaine visible et proche infrarouge selon la directive
+           [12]                       [13]
+2006/25/CE      et le décret 2010-750
+
+                                                                                   VLE selon directive 2006/25/CE [12] et
+Partie du                        Domaine             Angle sous-tendu                                        [13]
+                Risque                                                                     décret 2010-750
+ corps                           spectral             par la source α
+                                                                                           α exprimé en radians
+Œil :         Brûlure                                                          Pour 10µs ≤ t ≤ 10 s                     (1)
+rétine        rétinienne      380 – 1400 nm        0.0017 ≤ α ≤ 0.1 rad               5.10 4
+                                                                               LVLE
+                                                                                R
+                                                                                    =           W.m - 2 .sr -1
+                                                                                      α .t 0.25
+
+                              Source émettant uniquement dans l’infrarouge (stimulus visuel faible)
+                                                                               Pour t > 10s                             (2)
+                              780 – 1400 nm         0.011 ≤ α ≤ 0.1 rad               6000
+                                                                               LVLE
+                                                                                R
+                                                                                    =       W.m- 2 .sr -1
+                                                                                           α
+(1) Si t < 10 µs ou t >10 s, la VLE est calculée en prenant respectivement t = 10 µs ou t = 10 s. Si α < 0.0017 rad ou α >
+0,1 rad, la VLE est calculée en prenant respectivement α = 0.0017 rad ou α = 0,1 rad.
+(2) Si α < 0.011 rad ou α > 0,1 rad, la VLE est calculée en prenant respectivement α = 0.011 rad ou α = 0,1 rad.
+
+
+
+
+                                                                                                                              12
+                                                                                                                              [3]
+Tableau VI : Limites d'Exposition Recommandées (LER) dans le domaine visible et proche infrarouge selon l’ICNIRP
+
+                                    Domaine
+Partie du                                             Angle sous-tendu par la                   LER selon l’ICNIRP [3]
+                 Risque             spectral
+ corps                                                       source α                               α exprimé en rad
+
+Œil :         Brûlure                                                                Pour 10µs ≤ t ≤ 0,25s             (1) (2)
+rétine        rétinienne                                                                           4
+                                                                                               2.10 0.75
+                                                                                     D RLER =         .t   J.m -2 .sr -1
+                                                      0.0015 ≤ α ≤ αmax rad                      α
+                                                      (pour valeur de αmax cf.       Pour t > 0,25s                        (2)
+                                                      tableau VII)                                   4
+                                                                                              2,8.10
+                                                                                     LLER
+                                                                                      R
+                                                                                           =             W.m -2 .sr -1
+                                                                                                 α
+                                                      Source émettant uniquement dans l’infrarouge (stimulus visuel faible)
+                                 380 – 1400 nm
+                                                                                     Pour 0,25s < t < 100s                      (2)
+                                                                                              2.10 4
+                                                                                       LLER
+                                                                                        R
+                                                                                            =           W.m -2 .sr -1
+                                                      0.0015 ≤ α ≤ αmax rad                   α .t 0.25
+
+                                                         (pour valeur de αmax cf.
+                                                               tableau VII)
+                                                                                     Pour t ≥ 100s                                  (2)
+                                                                                               6300
+                                                                                       LLER
+                                                                                        R
+                                                                                            =       W.m -2 .sr -1
+                                                                                                    α
+(1) Si t < 10 µs, la LER est calculée en prenant t = 10 µs.
+(2) Si α < 0.0015 rad ou α > αmax, la LER est calculée en prenant respectivement α = 0.0015 rad ou α = αmax.
+
+Tableau VII : valeur de αmax en fonction de la durée d'exposition journalière t.
+
+Durée d’exposition journalière t (s)           αmax (rad)
+              t < 625.10-6                        0.005
+                  -6
+            625.10 ≤ t < 0,25                    0,2. t0,5
+                t ≥ 0,25                           0,1
+
+
+
+                                                                                                          [12]
+Tableau VIII : Domaine Infrarouge : Valeurs Limites d'Exposition (VLE) selon la directive 2006/25/CE             , le décret 2010-
+    [13]                                                           [3]
+750      et Limites d'Exposition Recommandées (LER)selon l’ICNIRP
+
+                                                                                      VLE selon directive 2006/25/CE [12],
+                                                             Domaine spectral                                     [13]
+Partie du corps                   Risque                                                     décret 2010-750             et
+                                                                Ultraviolet                                          [3]
+                                                                                              LER selon l’ICNIRP
+Œil : Cornée,          Brûlure cornéenne, cataracte                                 Pour t ≤ 1000 s
+cristallin                                                                          E IRVLE = 1,8.10 4.t -0,75 W.m-2
+                                                              780 – 3000 nm
+                                                                                    Pour t > 1000 s
+                                                                                    E IRVLE = 100 W.m-2
+Peau :                 Brûlure                                                      Pour t < 10 s
+                                                              380 – 3000 nm           VLE
+                                                                                    H Peau = 2.10 4.t 0,25 J.m-2
+
+
+
+
+                                                                                                                                          13
+14
+5. Méthodes et moyens de mesure
+Deux méthodes (Cf. Figure 3) sont possibles pour déterminer les grandeurs décrites au tableau I :
+    •   mesurer directement les grandeurs requises (Eeff, EUVA…) à l’aide d’un radiomètre,
+    •   mesurer les grandeurs énergétiques spectriques Eλ, Lλ à l’aide d’un spectroradiomètre et calculer
+        ensuite les grandeurs nécessaires.
+
+
+
+
+                   Eλ          Source                                           S(λ)
+
+
+                                                λ (nm)                                                λ (nm)
+
+             180    220     260     300   340   380                       180     220   260   300   340    380
+                                                                                    Donnée
+
+                          180 – 400 nm
+                                                                            400
+
+               Eλ*S(λ)                                                E eff = ∑ E λ .S(λ ).∆λ
+                                                                            180
+
+
+
+
+                                                   λ (nm)
+             180    220      260    300   340   380
+
+         Figure 3 : Illustration des méthodes de mesures des ROA – Exemple de détermination de la
+         grandeur Eeff.
+
+
+
+5.1. Les appareils de mesures
+5.1.1. Les radiomètres
+Un radiomètre permet d’afficher directement la grandeur à déterminer sur le domaine spectral concerné.
+La sonde radiométrique se compose :
+    •   d’un détecteur dont l’étendue de la sensibilité spectrale est supérieure ou égale au domaine
+        spectral concerné,
+    •   de filtres passe bandes permettant de délimiter le domaine spectral, par exemple entre 315 et 400
+        nm pour la détermination de EUVA, ou
+    •   pour les grandeurs efficaces, d’un filtre dont la réponse spectrale correspond à la courbe
+        d’efficacité spectrale du rayonnement concerné, soit S (λ) pour déterminer Eeff, B (λ) pour LB et EB
+        et R (λ) pour LR.
+La détermination des sept grandeurs radiométriques décrites au tableau I implique donc l’utilisation de
+sept configurations de détecteurs. Certains radiomètres sont constitués de sondes modulaires : les
+différents éléments optiques sont alors montés à la demande. D’autres sont équipés de systèmes intégrés :
+chaque sonde correspond à une grandeur à déterminer.
+
+
+
+
+                                                                                                                 15
+Les radiomètres présentent l’avantage de fournir une réponse directe et instantanée. En revanche,
+l’utilisation de filtres optiques pour prendre en compte les courbes d’efficacité spectrale S(λ), B(λ) et R(λ)
+ou pour délimiter les domaines spectraux comme par exemple dans le domaine UVA (entre 315 et 400 nm):
+      •   peut être source d’erreur si la réponse des filtres ne correspond pas exactement aux courbes
+          d’efficacité spectrale S(λ), B(λ) et R(λ) ou si les longueurs d’onde de coupures des filtres ne
+          coïncident pas avec les longueurs d’onde délimitant un domaine spectral (Voir détail en annexe 2).
+      •   rendent les mesures dépendantes du mode de calcul des grandeurs à comparer aux VLE. En cas de
+          modification de ces grandeurs (par exemple les courbes d’efficacité, les bornes d’intégration…), les
+          mesures de sources réalisées antérieurement aux modifications, ainsi que le matériel deviennent
+          obsolètes.
+Par ailleurs un radiomètre nécessite que la source à mesurer ait une répartition spectrale proche de la
+source utilisée pour son étalonnage. Cette condition est quasiment toujours satisfaite pour les mesures sur
+le domaine infrarouge. En effet, sur ce domaine les sources étalon sont généralement des lampes de type
+tungstène halogène dont le spectre continu est proche de celui des sources infrarouges rencontrées dans
+l’industrie, puisqu’il s’agit dans les 2 cas de corps portés à haute température. En revanche, sur le domaine
+ultraviolet, bon nombre de sources émettent sur un spectre étroit, voire de quelques raies, donc très
+éloigné du spectre large d’une lampe étalon, qui, elle, est au deutérium. Ce fait peut conduire à une sous-
+estimation du risque.
+
+    Important
+
+    Pour la mesure de LR s’assurer auprès du fabricant du radiomètre que le filtre R(λ) monté sur le
+    radiomètre a une courbe de réponse adaptée à la référence (réglementation ou ICNIRP) sur laquelle est
+    basée l’évaluation des risques. Pour rappel, la courbe R(λ) définie dans la réglementation est différente
+    de celle définie par l’ICNIRP [3] (Cf. Figure 1).
+
+
+5.1.2. Les spectroradiomètres
+Un spectroradiomètre permet de mesurer la répartition spectrale d’une source en éclairement énergétique
+Eλ ou en luminance énergétique Lλ. L’élément de base est donc l’élément dispersif ; le plus courant est un
+réseau de diffraction, dont la fonction est de séparer le rayonnement émis par la source selon les
+différentes longueurs d’onde. A l’aide de détecteurs spécifiques, le rayonnement émis sur chacune des
+longueurs d’onde est mesuré, soit successivement, cas des spectroradiomètres à balayage (Cf. Figure 4) soit
+simultanément, cas des spectroradiomètres à barrettes de détecteurs comme les CCD1 (Cf. Figure 5).
+5.1.2.1. Spectroradiomètre à balayage et double monochromateurs
+A ce jour, le spectroradiomètre à balayage et double monochromateur est l’appareil de référence en
+matière de mesures spectrales des rayonnements optiques. Il est constitué de :
+      •   fentes d’entrée, intermédiaires et de sortie qui conditionnent la largeur minimale de la bande
+          spectrale analysée à chaque mesure,
+      •   deux éléments dispersifs (réseaux de diffraction) montés en cascade. Le recours à un second
+          élément dispersif a pour objectif de limiter les erreurs dues à la lumière parasite (stray-light),
+      •   d’une roue équipée de filtres permettant de rejeter les ordres de diffractions non désirés,
+      •   2 ou 3 détecteurs de sensibilités spécifiques à un domaine spectral.
+Son coût élevé, son encombrement, sa fragilité ainsi que le temps nécessaire pour réaliser des mesures
+(analyse successive de chacune des longueurs d’onde), en font un appareil réservé aux mesures en
+laboratoire. Toutefois, lorsque la source à analyser est transportable et a une émission stable dans le
+
+1
+    Charge coupled device
+
+
+
+                                                                                                                 16
+temps, la détermination de la répartition spectrale en laboratoire à l’aide de cet instrument est tout-à-fait
+envisageable et même recommandée. En effet, comparativement à une mesure in-situ, la mesure en
+laboratoire est plus fiable du fait des performances de l’appareil et d’une meilleure maîtrise de
+l’environnement.
+
+
+
+                                                                     Fentes                               Optique
+                                                                                                          d’entrée
+
+
+
+
+               Détecteurs spécifiques
+               à chaque domaine
+               spectral                                                   Elément         Elément
+                                                                          dispersif       dispersif
+                                                                              2               1
+                                    Roue à filtres
+                                      d’ordre
+
+
+               Figure 4 : Schéma d'un spectroradiomètre à balayage et à double
+               monochromateur.
+
+5.1.2.2. Spectroradiomètre ou spectromètre à barrette de détecteurs
+Contrairement aux spectroradiomètres à balayage, la mesure avec un spectroradiomètre à barrettes de
+détecteurs est instantanée car chaque détecteur ou pixel est dédié à une longueur d’onde : voir sa
+représentation schématisée à la figure 5. Les éléments constitutifs notés sur le schéma, tels qu’élément
+dispersif, fentes et filtres d’ordre, ont les mêmes fonctions que sur un spectroradiomètre à balayage.
+
+
+Mesure des rayonnements ultraviolet et visible
+Dans le domaine ultraviolet, visible (200 - 1000 nm), les détecteurs utilisés sont du type CCD. Les
+spectromètres CCD sont utilisés dans des applications diverses (chimie, radiométrie…). Lorsqu’ils sont
+dédiés spécifiquement à la radiométrie, ils sont alors nommés spectroradiomètres et sont le plus souvent
+vendus par des fournisseurs spécialisés en radiométrie.
+
+
+
+
+                                        Filtres d’ordre      Fente                             Optique
+                                                                                               d’entrée
+
+
+
+
+                                                Détecteurs                    Elément
+                                                                              dispersif
+
+
+
+
+                                        Figure 5 : Schéma d'un spectroradiométre à
+                                        barrette de détecteurs
+
+
+La gamme des spectromètres est très étendue et il souvent difficile de faire un choix. Parmi les
+caractéristiques proposées dans la gamme des spectromètres les plus courants et non dédiés
+
+
+
+
+                                                                                                                     17
+spécifiquement à la radiométrie, les critères minimaux suivants sont à retenir pour effectuer des mesures
+correctes dans le cadre d’une évaluation des risques in-situ:
+       •     Les détecteurs doivent avoir une bonne sensibilité notamment dans l’ultraviolet. A ce jour, les
+             détecteurs CCD rétro-éclairés (back-thinned ou back-illuminated) satisfont le mieux à cette
+             condition.
+       •     Présence de filtres d’ordre. Tous n’en sont pas pourvus.
+       •     Le couple « largeur de fente-caractéristiques (nombre de traits /mm) du réseau de diffraction »,
+             doit permettre d’obtenir une résolution (FWHM2) inférieure ou égale à 5 nm sur les domaines UV –
+             Visible, puisque les spectres sont destinés à être multipliés par des courbes de pondération
+             comportant un pic.
+Malgré leurs nombreux avantages, le défaut le plus important de ces appareils est le niveau de lumière
+parasite (stray light). Il est observé lorsque les sources mesurées ont un niveau d’émission faible (ou
+inexistant) dans l’ultraviolet, comparativement au niveau d’émission dans le visible (LED, lampes
+tungstènes halogènes et plus globalement tous les corps portés à haute température). Des erreurs de
+l’ordre de 5000% dans la détermination de Eeff peuvent être trouvées lors de mesures sur une LED par
+exemple (Cf. Figure A2-3 en annexe 2). Dans une situation d’évaluation des risques in-situ, une mesure de
+ce type avec un spectroradiomètre CCD non corrigé conduirait à préconiser une protection contre les
+ultraviolets même si la source a une émission négligeable sur ce domaine spectral.
+Une méthode de correction de la lumière parasite développée au NIST3 [22] a été reprise et simplifiée par
+l’INRS[16]. Elle est décrite brièvement dans l’annexe 2, qui détaille également un exemple de correction sur
+la mesure de la LED citée précédemment.
+Le niveau de lumière parasite est moins élevé sur les spectroradiomètres CCD haut de gamme. Par ailleurs,
+certains constructeurs commencent à commercialiser des spectromètres intégrant des dispositifs optiques
+ou numériques de réduction de la lumière parasite.
+
+    Important
+
+    Le niveau de lumière parasite (stray light) est un critère important à prendre en compte dans l’achat
+    d’un spectromètre CCD. Pour le quantifier lors de la démonstration de l’appareil par le fournisseur, faire
+    une mesure sur une lampe tungstène halogène ou une LED dont on connaît le spectre. Ensuite,
+    comparer les valeurs de Eeff déterminées à partir des mesures avec le spectromètre et celle calculées à
+    partir du spectre de référence de la lampe. Cette lumière parasite est souvent observable dans la
+    représentation spectrale de l’éclairement énergétique. Elle prend généralement la forme d’un remontée
+    de signal dans les longueurs d’ondes les plus courtes.
+    Si une lampe tungstène est utilisée pour l’étalonnage du spectromètre dans l’UVA, une correction de la
+    lumière parasite doit également être appliquée sur les mesures avec la lampe étalon.
+
+
+
+Mesure des rayonnements infrarouges
+Les spectromètres infrarouge fonctionnent sur le même principe que ceux utilisés dans les domaines
+ultraviolet et visible. Sur ces appareils, les détecteurs du type InGaAs ont une sensibilité qui couvre le
+domaine 1000-2500 nm. Ces derniers nécessitent généralement un système de refroidissement. Les
+résultats d’une évaluation en laboratoire d’un appareil de ce type sont donnés en annexe 2.
+
+
+
+
+2
+    Full Width at Half Maximum
+3
+    National Institute of Standards and Technology (USA)
+
+
+
+
+                                                                                                                 18
+5.1.3. Avantages et inconvénients de chaque appareil
+Les tableaux IX, X et XI résument les avantages et inconvénients de chacune des méthodes de mesure.
+
+
+Tableau IX : Avantages et inconvénients du mesurage à l'aide d'un radiomètre
+
+                                                   Radiomètre
+                      Avantages                                                Inconvénients
+•   Lecture directe de la grandeur à comparer aux •            Erreurs possibles si la réponse des filtres ne
+    VLE.                                                       correspond pas exactement aux courbes
+•   Mesurage instantané.                                       d’efficacité spectrale S(λ), B(λ) et R(λ) ou si les
+•   Possibilité de mesurer la valeur moyenne d’une             filtres passe-bande délimitant les domaines
+    grandeur lorsque l’émission d’une source est               spectraux ne coïncident pas exactement avec
+    variable au cours du temps.                                les bornes du domaine.
+•   Simplicité d’utilisation.                      •           Erreurs possibles si la source à mesurer a un
+•   Faible encombrement du matériel.                           spectre éloigné de la source utilisée pour
+                                                               l’étalonnage du radiomètre.
+•   Robustesse (pas de pièces en mouvement).
+•   Coût abordable.
+                                                   •           Nécessite autant de configurations du matériel
+                                                               que de grandeurs à déterminer.
+                                                           •   Les mesures sont dépendantes du mode de
+                                                               calcul des grandeurs à comparer aux VLE :
+                                                               → Elles sont liées à un référentiel
+                                                                    (Réglementation, ICNIRP...),
+                                                               → Les mesures et le matériel deviennent
+                                                                    obsolètes si ces grandeurs changent.
+
+
+
+Tableau X : Avantages et inconvénients du mesurage à l'aide d'un spectroradiomètre à balayage.
+
+                                         Spectroradiomètre à balayage
+                      Avantages                                                Inconvénients
+•   Détermination exacte des grandeurs pondérées •             Pas de lecture directe, nécessite un calcul des
+    et non pondérées.                                          grandeurs à comparer aux VLE.
+•   Pas d’erreur (ou erreur négligeable) dû à la •             Durée de la mesure allongée par le balayage
+    lumière parasite (stray light)                             séquentiel des longueurs d’onde.
+• Les mesures sont indépendantes du mode de                •   Nécessite que l’émission de la source soit
+  calcul des grandeurs à comparer aux VLE :                    stable.
+  → Elles ne sont pas liées à un référentiel               •   Encombrement, portabilité restreinte.
+     (Réglementation, ICNIRP...),                          •   Coût très élevé.
+  → Les mesures et le matériel restent valides si          •   Fragilité (nombreuses pièces en mouvement).
+     ces grandeurs changent.
+• Permet d’évaluer avec précision l’efficacité d’un
+  équipement de protection (à partir du spectre
+  de la source et du facteur spectral de
+  transmission du protecteur).
+Tableau XI : Avantages et inconvénients du mesurage à l'aide d'un spectroradiomètre à barrettes de détecteurs.
+
+
+
+
+                                                                                                                     19
+                                    Spectroradiomètre à barrettes détecteurs
+                       Avantages                                                       Inconvénients
+•   Détermination exacte des grandeurs pondérées •                    Pas de lecture directe, nécessite un calcul des
+    et non pondérées.                                                 grandeurs à comparer aux VLE.
+•   Les mesures sont indépendantes du mode de •                       Erreurs importantes possibles si l’appareil n’est
+    calcul des grandeurs à comparer aux VLE :                         pas corrigé contre la lumière parasite (stray
+    → Elles ne sont pas liées à un référentiel                        light).
+       (Réglementation, ICNIRP...),
+    → Les mesures et le matériel restent valides si
+       ces grandeurs changent.
+•   Permet d’évaluer avec précision l’efficacité d’un
+    équipement de protection (à partir du spectre
+    de la source et du facteur spectral de
+    transmission du protecteur).
+•   Mesurage instantané.
+•   Possibilité de mesurer le spectre moyen d’une
+    source dont l’émission est variable au cours du
+    temps.
+•   Faible encombrement du matériel.
+•   Robustesse (pas de pièces en mouvement).
+
+
+
+5.2. Optique d’entrée
+5.2.1. Eclairement énergétique
+Pour mesurer les grandeurs exprimées en éclairement énergétique, l’optique d’entrée des appareils
+utilisables in-situ se limite souvent à un diffuseur permettant de prendre en compte les rayonnements
+provenant de toutes les directions de l’espace. Il est souvent nommé « correcteur d’incidence » ou
+« correcteur de cosinus » (Cf. figure 6a) du fait que l’éclairement reçu par une surface varie comme le
+cosinus de l’angle d’incidence. Selon les domaines spectraux, certains référentiels imposent de limiter
+l’angle d’admission γ au niveau de l’optique d’entrée. La solution idéale pour limiter l’angle d’admission
+consiste à disposer un diaphragme au niveau de la source. Cependant cette opération est difficilement
+applicable lors de mesures au poste de travail. Une autre solution consiste par exemple à disposer le
+correcteur de cosinus dans un tube cylindrique, à condition que le diamètre du tube soit très supérieur au
+diamètre du diffuseur. Il s’agit de limiter les différences d’exposition entre le centre et la périphérie du
+détecteur[25]. Le diamètre du tube et la distance séparant le correcteur de cosinus de l’entrée du tube
+détermineront alors l’angle d’admission (Cf. figure 6b).
+
+
+                                                                                 γ
+                          γ                                                                               Dispositif (tube
+                                                                                                       cylindrique) limitant
+                                               Diffuseur correcteur                                    l’angle d’admission
+                                                    de cosinus
+
+
+
+                              (a)                                                    (b)
+    Figure 6 : Optique d'entrée pour la mesure de l'éclairement énergétique : correcteur de cosinus seul (a) et correcteur
+    de cosinus avec limitation de l'angle d'admission (b).
+
+
+
+
+                                                                                                                               20
+ Important
+
+ S’assurer que le matériau composant le diffuseur a un domaine spectral de transmission compatible
+ avec le domaine spectral à mesurer.
+
+
+5.2.2. Luminance énergétique
+Pour les mesures en luminance énergétique, l’optique d’entrée est constituée d’un système optique
+permettant de délimiter la surface de la source sur laquelle la luminance énergétique sera moyennée
+comme décrit à la figure 7. L’angle sous lequel est vue cette surface est le champ de vision ou angle
+d’admission γ. Un dispositif à visée reflex complète généralement le système optique pour visualiser les
+contours de la surface de la source visée.
+
+
+
+                            Surface visée de la source                Diaphragmes
+                            correspondant à un angle
+                Source            d’admission γ
+
+                                                                                          Appareil de
+                                              γ                              γ             mesure
+
+
+
+                                                         Objectif   Image de la portion
+                                                                     de source prise en
+                                                                      compte pour la
+                                                                          mesure
+     Figure 7 : Schéma de principe de l’optique d’entrée utilisée pour la mesure de la luminance énergétique.
+
+
+5.2.3. Fibre optique
+L’optique d’entrée est montée soit directement sur l’appareil de mesure, soit reliée à celui-ci au moyen
+d’une fibre optique. Cette dernière solution présente un avantage lorsque le rayonnement, notamment
+thermique, émis par la source est susceptible d’endommager l’appareil de mesure.
+
+ Important
+
+     •   S’assurer que le domaine spectral de transmission de la fibre optique est bien compatible avec le
+         domaine spectral à mesurer.
+     •   Dans le domaine ultraviolet, utiliser de préférence des fibres traitées contre la solarisation.
+     •   Attention : une fibre optique présente l’avantage d’être souple mais avec un rayon de courbure
+         limité. Enrouler la fibre avec un rayon de courbure trop faible, comme un cordon électrique,
+         risque fortement de l’endommager, avec des conséquences sur la mesure et sur l’étalonnage.
+     •   L’étalonnage de l’appareil doit être réalisé avec la fibre optique montée sur l’appareil. Une fois
+         l’étalonnage terminé, la fibre ne devrait normalement plus être déconnectée de l’appareil.
+
+
+
+
+5.3. Méthode alternative pour déterminer les grandeurs exprimées en
+   luminance énergétique à partir des grandeurs en éclairement
+   énergétique
+Du fait de l’expression des grandeurs soit en éclairement énergétique, soit en luminance énergétique (Cf.
+tableau I), il est nécessaire de disposer d’appareils équipés des 2 types d’optiques d’entrée et étalonnés
+
+
+
+                                                                                                                21
+selon les 2 grandeurs. Cependant, lorsque les mesures sont effectuées à l’aide d’un spectroradiomètre, les
+grandeurs en luminance énergétique LB et LR peuvent être déduites de l’éclairement énergétique spectrique
+mesuré Eλ et d’une mesure de la luminance lumineuse LV (le calcul est détaillé en annexe 3) :
+
+                                  700                                                           1400
+                  LV                                                               LV
+LB =        780
+                                 . ∑ E λ .B(λ ).∆λ             LR =          780
+                                                                                                . ∑ E λ .R (λ ).∆λ
+       683. ∑ E λ .V (λ ).∆λ                                           683. ∑ E λ .V (λ ).∆λ
+                                  300                                                            380
+
+            380                                                              380
+
+
+   Avec V(λ) : Fonction d’efficacité lumineuse spectrale relative pour la vision de jour définie par la CIE (Commission Internationale
+                  [26]
+   de l’Eclairage) .
+
+
+En effet, les appareils de mesure des grandeurs lumineuses sont d’un usage plus courant. Les laboratoires
+ou organismes réalisant des mesures d’éclairage disposent soit de luminancemètres avec viseur reflex
+comme décrit à la figure 7, soit de systèmes d’imagerie numérique, vidéophotomètre ou appareil photo,
+étalonnés en luminance lumineuse (Cf. figure 8).
+
+
+                       La luminance est
+                       moyennée     sur    la
+                       surface de la source
+                       correspondant à un
+                       angle d’admission γ
+
+
+
+
+                        Figure 8 : Exemple de cartographie délivrée par un dispositif de
+                        mesure de luminance par imagerie numérique.
+
+
+
+
+                                                                                                                                         22
+6. Analyse des situations d’exposition
+Une analyse détaillée des tâches doit être effectuée pour déterminer l’exposition des salariés aux
+rayonnements optiques. Toutes les activités au cours desquelles les travailleurs sont susceptibles d’être
+exposés à ces rayonnements doivent être considérées, même quand ces activités ne sont pas l’activité
+principale des salariés. Il s’agit aussi de bien identifier les zones exposées ainsi que l’origine du
+rayonnement reçu (Cf. exemple figure 9).
+
+
+                                                                Yeux exposés au
+                                                                rayonnement
+                                                                réfléchi
+
+
+
+
+                                                            Mains exposées au
+                                                            rayonnement direct
+
+
+                           Figure 9 : Identification des zones exposées.
+
+Les normes NF EN 14255 -1 et 2 proposent des exemples de tableaux d’analyse des tâches, qui regroupent
+à la fois les caractéristiques des sources, les conditions d’exposition, les données médicales des salariés…
+Ils constituent une bonne base pour établir une analyse des situations d’expositions mais nécessitent
+cependant d’être clarifiés et complétés notamment en ce qui concerne la géométrie de l’exposition. Une
+analyse des situations d’exposition basée sur les éléments suivants est proposée :
+    •   Un schéma d’implantation des sources de rayonnement optique et des emplacements des salariés
+        travaillant à un poste fixe
+    •   Une fiche technique des sources
+    •   Une fiche d’exposition pour chaque emplacement de travail et le cas échéant pour les travailleurs
+        susceptibles d’être exposés lors de la réalisation de tâches annexes dans l’environnement des
+        sources. Si les mesurages sont réalisés dans les conditions géométriques de l’exposition (en
+        disposant les détecteurs en lieu et place des zones exposées), une seule fiche «exposition et
+        mesurage» peut par exemple regrouper l’ensemble des données.
+Les fiches décrites ci-après peuvent sembler très détaillées au regard des informations nécessaires à
+l’évaluation des risques à partir d’un mesurage au poste de travail. Mais, un poste de travail est susceptible
+d’évoluer au fil du temps : remplacement d’une lampe par un modèle approchant mais avec des
+caractéristiques optiques différentes, réaménagement d’un poste de travail, changement de processus… Il
+est alors très important de connaître les conditions exactes d’exposition au moment du mesurage.
+
+6.1. Implantation des sources et des travailleurs
+Un exemple de schéma d’implantation des sources repérées S1, S2… et des salariés repérés P1, P2… est
+donné à la figure 10. Le schéma d’implantation peut servir de base à l’élaboration des fiches d’exposition
+en faisant apparaitre par exemple, qu’à l’emplacement P1, la personne est effectivement exposée à la
+sources S1 présente à son poste de travail, mais aussi au rayonnement émis par la source S2 du poste
+voisin. Il est également important d’indiquer la nature des cloisons. Dans le cas de cloisons totalement
+opaques, les travailleurs ne sont exposés qu’aux sources présentes à leur poste. Dans le cas de rideaux
+translucides, il faudra tenir compte de leur efficacité.
+
+
+
+
+                                                                                                                 23
+                              S1
+                                         P1
+                                                                    P3
+                                                                                P4                P5
+                               P2
+                                              S2                                        S4             S5
+                                                                   S3
+                                              P’2
+
+ A préciser :
+      →    Cloisons, machines, écran de protection…
+      →    Totalement opaque, translucide…
+                 Figure 10 : Exemple de schéma d'implantation des sources et des personnes
+
+
+
+6.2. Fiche technique des sources
+La fiche technique regroupe tous les éléments qui permettront à la source d’être identifiée facilement, a
+posteriori, tant par la personne ayant effectué les mesurages que par l’entreprise. Elle doit également
+comporter toutes les caractéristiques techniques de la source, les paramètres utilisés pour son
+fonctionnement et tout autre élément spécifique à un type de source. Un exemple de fiche technique est
+donné au tableau XII.
+
+
+Tableau XII : Exemple de fiche technique permettant de décrire chaque source.
+
+ Repère sur le schéma               S1
+ Nom ou référence donné T5 XX48 -16
+ par l’entreprise
+ Type de source                     Appareillage équipés de lampes, four de fusion, arc de soudage, processus
+                                    spécifique…
+ Description sommaire du Polymérisation de vernis, détection de défauts, réchauffage de pièces
+ processus               métalliques, fabrication de fibres de verre …
+
+ Paramètres                         Equipement intégrant des lampes : nombre de lampes, type, référence
+                                    commerciale, puissance…
+                                    Soudage : type MIG, MAG, TIG… matériaux d’apport : électrode, fil, référence
+                                    commerciale, intensité, tension, gaz de protection, matériau soudé…
+                                    Four : type : fonte, réchauffage…, Nature du mode chauffage : électrique, gaz…,
+                                    matériaux fondu ou entreposé : acier, aluminium, verre…
+ Géométrie de la source             Rectangulaire : Longueur, largeur
+                                    Circulaire : rayon
+                                    Elliptique : grand rayon, petit rayon
+                                    Triangulaire : côtés, angles
+                                    Complexe : décomposer en formes simples et donner les dimensions de chaque
+                                    forme simple
+                                                                                     [27]
+ Présence d’un dispositif de        Vitrage transparent, rideau de soudage orange
+ protection collective
+
+
+
+
+                                                                                                                      24
+6.3. Fiche d’exposition
+Un exemple de fiche d’exposition, qui résume toutes les données importantes à relever au poste de travail,
+est donné au tableau XIII. Cette fiche concerne une personne exposée à une ou plusieurs sources, soit
+simultanément, soit successivement. Les paramètres entrés dans la colonne « géométrie d’exposition »
+doivent être suffisants pour repérer, d’une part la position de la zone exposée par rapport au centre de la
+source (de, h, e), d’autre part son inclinaison par rapport à l’axe de la source (XV, YV), tels qu’ils sont décrits à
+la figure 11. Ces paramètres pourraient aussi être remplacés par les angles correspondants.
+Dans le cas d’exposition indirecte, la source (secondaire) à considérer est l’objet (ouverture d’une cabine,
+l’entrée ou sortie de tunnel d’exposition…) qui réfléchit le rayonnement émis par la source primaire. Si la
+source secondaire a des contours bien définis, les paramètres, similaires à ceux décrits précédemment,
+seront repérés par rapport à la source secondaire. Sinon, les différentes distances ou orientations pourront
+être relevées par rapport à d’autres repères facilement identifiables.
+
+
+
+
+             Y
+                       YV X                         h
+                                   de                    Figure 11 : Paramètres permettant de décrire la géométrie
+                                                         d'exposition, c'est-à dire la position de la zone exposée par
+                                                e        rapport au centre de la source (de, h, e) et son inclinaison par
+   Source                                                rapport à l’axe de la source (XV, YV).
+
+
+
+
+Tableau XIII : Exemple de fiche d'exposition.
+
+       Repère sur le schéma                                         P1
+                                Chargement de pièces dans le four, maintenance du four, passage d’articles de
+  Mode opératoire de l’activité
+                                       maroquinerie sous la lampe UV pour détection de défauts….
+             Zones                         Equipement de        Durée d’exposition
+ Sources             Rayonnement                                                   Géométrie d’exposition : Cf. figure 11
+            exposées                         protection            journalière
+                                        Lunettes : référence,
+                                                                                            de=3m ; h=0,80m ; e=1m;
+             yeux             direct         classe de               3 heures
+                                                                                             XV=0,70m ; YV=0,60m
+    S1                                    protection[28]–[31]
+                                                                                            de=2,5m ; h=0,20m ; e=0;
+             mains            direct      Gants : matière            3 heures
+                                                                                                  XV=0 ; YV=0
+    S2           cou      indirect                  ….                   …                             ….
+
+
+
+
+                                                                                                                            25
+26
+7. Mesurage
+7.1. Géométrie du mesurage
+L’analyse des situations d’exposition a permis d’identifier toute les zones du corps (yeux, mains, autre
+partie du corps…) exposées et de relever leur géométrie par rapport à la ou les sources de rayonnement
+optique. Le mesurage sera réalisé selon la géométrie d’exposition définie dans la fiche correspondante (Cf.
+tableau XIII), c’est-à dire en disposant les optiques d’entrées des détecteurs en lieu et place des zones
+exposées (Cf. figure 11). Cependant, il peut être nécessaire de réaliser le mesurage dans une autre
+configuration pour les raisons suivantes : saturation du détecteur, signal insuffisant ou pouvant être
+amélioré (Cf. §7.5.), nécessité d’éloigner le détecteur (chaleur, projections… à proximité de la source),
+volonté d’isoler la source ou d’effectuer un relevé dans la direction d’émission maximale de la source. Dans
+ce cas, il sera nécessaire de relever les paramètres de mesurage tels que décrit à la figure 12. Les niveaux
+d’exposition seront alors recalculés en tenant compte à la fois des paramètres de mesurage, des
+paramètres d’expositions et des caractéristiques géométriques de la source (Cf. § 8.2.2.).
+Un exemple de fiche de mesurage est donné au tableau XIV.
+
+  Important
+
+  Le mesurage dans une configuration autre que la configuration d’exposition n’est possible que dans
+  le cas de rayonnement direct de la source, pour lequel les caractéristiques géométriques de la
+  source sont bien définies et à condition de connaitre ou de mesurer la répartition spatiale du
+  rayonnement émis par la source.
+
+
+
+Tableau XIV : Exemple de fiche de mesurage
+
+                 Repère sur le schéma                        P1
+                             Zone                      Géométrie de         Grandeur Appareil de mesure
+         Sources                    Rayonnement
+                            exposée                     mesurage            mesurée        utilisé
+                                                                                Eλ
+                                                                         Entre 200 et Spectroradiomètre
+                                                    dM=3m ; hM=0,80m ;     1000 nm         (Marque, référence)
+                             yeux        direct          eM=1m;        γ = 80° (cf. §7.2.)
+                                                       XM=0 ; YM=0
+                                                                                                Marque,
+            S1                                                                EIR
+                                                                                              référence…
+                                                                                Eλ         Spectroradiomètre
+                                                        dM=2,5m ;
+                                                                            Entre 200 et
+                            mains        direct      hM=0,20m ; Me=0;                            Marque,
+                                                                             1000 nm
+                                                       XM=0 ; YM=0                              référence…
+                                                                              γ = 80°
+                             Obligatoirement les
+                            mêmes paramètres pour            ….
+   S2   cou      Indirect                                                                  ….
+                               le mesurage et              γ = 180°
+                                 l’exposition
+
+
+
+
+                                                                                                                 27
+           Y
+                       X
+                 YM                   hM                  Figure 12: Paramètres permettant de décrire la
+                           dM                             géométrie de mesurage
+  Source                             eM
+
+
+
+
+7.2. Angle d’admission des appareils
+Il existe des contraintes sur les angles d’admission des appareils (Cf. § 5.2.1 et 5.2.2.), selon les domaines
+spectraux analysés et les grandeurs mesurées.
+La peau étant une surface plane, tout le rayonnement susceptible de l’atteindre est mesuré avec un
+détecteur ayant une réponse en cosinus, soit un angle d’admission de 180° [4].
+Pour toutes les mesures en éclairement énergétique qui concernent l’œil (segment antérieur) seuls les
+rayonnements compris dans un angle de 80 ° sont collectés[3],[4]. Les rayonnements en dehors de cet angle
+ne nécessitent pas d’être comptabilisés puisqu’ils sont stoppés par les paupières.
+Pour les risques photochimiques rétiniens (risque lumière bleue), la luminance énergétique est moyennée
+sur un angle d’admission γ, lequel varie selon la durée d’exposition (Cf. tableau XV) afin de tenir compte
+des mouvements des yeux lors de la réalisation d’une tâche. Ainsi, comme le montre la figure 13a, l’angle
+d’admission γ peut être plus petit que l’angle α sous tendu par la source. Dans ce cas, si la luminance de la
+source est uniforme, la valeur enregistrée sera égale à la luminance propre de la source. En revanche dans
+le second cas (Cf. figure 13b), où l’angle d’admission γ est supérieur à l’angle sous tendu α par la source, la
+luminance mesurée sera plus faible que la luminance propre de la source, puisque moyennée sur une
+surface plus importante.
+Pour le risque thermique de la rétine, la luminance énergétique est moyennée en respectant un angle
+d’admission γ notée au tableau XVI, si la source n’est pas spatialement régulière et comporte des pics de
+luminance dans une direction (hot-spots). Si l’angle α sous tendu par la source, utilisé dans la
+détermination de la VLE, est plus petit que l’angle d’admission γ (utilisé pour la mesure) et que la luminance
+est moyennée sur cet angle d’admission γ, alors l’angle α utilisé pour déterminer la VLE (Cf. tableaux V et
+VI) ne peut pas être inférieur à l’angle d’admission γ.
+
+
+Tableau XV : Spécification des angles d'admission pour les mesures réalisées dans le domaine visible.
+
+    Domaine           Grandeurs               Angle d’admission γ                 Diamètre de la zone visée à une
+                                                                [3]                  distance de 1 m (exemple)
+    spectral          à mesurer                  Selon ICNIRP
+
+                                   0,011 rad (0,63°)            pour t <100 s                 11 mm
+  300 – 700 nm             LB      0,0011.t0.5rad pour 100 ≤ t ≤10 000 s                         -
+                                    0,110 rad (6,3°)        pour t >10 000 s                  11 cm
+
+
+
+
+                                                                                                                    28
+                                                 Surface sur laquelle la
+                                               luminance sera moyennée
+                                              selon la taille de la source et
+                                                  la durée d’exposition
+
+
+
+                                α         γ                                               α            γ
+                                                  Optique                                                   Optique
+                 Source                           d’entrée                       Source                     d’entrée
+
+
+                                    (a)                                                          (b)
+   Figure 13 : Représentation des relations possibles entre la taille de la source vue sous un angle α et l'angle
+   d'admission γ à prendre en compte selon la durée d'exposition.
+
+
+
+Tableau XVI : Spécification des angles d'admission pour les mesures réalisées dans le domaine visible + infrarouge
+
+    Domaine          Grandeurs                     Angle d’admission γ                    Diamètre de la zone visée à une
+                                                                         [3]                 distance de 1 m (exemple)
+    spectral         à mesurer                          Selon ICNIRP
+
+                                    0,005 rad (0,29°)                   Source pulsée                      5 mm
+ 380 – 1400 nm            LR         0,011 rad (0,63°)                 Source continue
+                                                                                                           11 mm
+                                                                             (t≥ 0,25s)
+
+                                                                          [17]            [18]
+Note : La réglementation ainsi que les normes NF EN 14255-1 , NF EN 14255-2 , auxquelles elle fait référence, ne
+fixent pas de valeurs pour les angles d’amission γ ; les normes renvoient aux exigences spécifiées par les VLE utilisées.
+La norme NF EN 14255-2 spécifie que les valeurs de γ données dans son tableau E1, le sont à titre d’exemple et
+                          [18]
+
+proviennent des anciennes (1993) LER de l’ICNIRP. C’est pourquoi elles ne sont pas reprises dans le présent document,
+même si la réglementation est basée sur ces anciennes LER. Les angles d’admission γ préconisés dans le présent
+                                                                        [2]–[4]
+document sont donc issus des dernières recommandations de l’ICNIRP              , basées sur des travaux scientifiques plus
+récents.
+
+7.3. Durée du mesurage
+Si la source émet de manière continue et stable, la durée du mesurage doit être suffisamment longue pour
+permettre un mesurage exact. La durée dépend donc du type d’appareil utilisé et du niveau de
+rayonnement de la source dans le domaine spectral considéré. Si l’émission est variable dans le temps, la
+durée sera choisie de manière à obtenir un résultat moyen représentatif.
+Dans le cas des sources pulsées (durée d’impulsion ou du groupe d’impulsions < 0,25s) le mesurage doit
+être effectué sur la durée d’une impulsion. La durée d’impulsion correspond à la largeur à mi-hauteur du
+pic d’émission.
+
+7.4. Signal d’obscurité
+Tous les appareils de mesure délivrent un signal résiduel plus ou moins important même en l’absence
+d’émission de rayonnement. Ainsi, ce signal mesuré dans l’obscurité (Dark Current) SigDC doit être déduit du
+signal mesuré Sigmes en présence de rayonnement, pour obtenir le signal vrai Sig. Sur les appareils élaborés
+disposant d’un shutter automatique, cette opération est effectuée automatiquement. Elle est donc
+transparente pour l’utilisateur et la valeur fournie par l’appareil est le signal vrai Sig.
+Si ce n’est pas le cas, cette opération doit être effectuée manuellement en obturant le détecteur lors de la
+mesure du signal d’obscurité SigDC .
+
+
+
+                                                                                                                              29
+   Les radiomètres : La plupart d’entre eux permettent de mémoriser la valeur du signal d’obscurité SigDC
+   qui sera alors soustraite directement à celle du signal mesuré Sigmes en présence de rayonnement. La
+   valeur qui sera affichée correspondra donc au signal vrai. Sinon, lors de chaque mesure, le signal
+   d’obscurité SigDC devra être déduit manuellement du signal mesuré Sigmes. La mesure du signal
+   d’obscurité doit être effectuée avant la première mesure et être répétée à intervalle régulier au cours
+   de la journée.
+   Les spectromètres CCD : La valeur du signal d’obscurité est liée d’une part à chaque détecteur ou pixel
+   (donc fonction de la longueur d’onde) d’autre part au temps d’intégration choisi. La plupart des
+   spectromètres proposent de mémoriser le signal d’obscurité SigDC(λ) et de le déduire directement du
+   signal mesuré Sigmes(λ). Si le signal fourni est exprimé directement en grandeurs radiométriques Eλ ou Lλ
+   l’utilisateur ne pourra qu’opter pour cette solution. En revanche, s’il s’agit du signal brut exprimé en
+   counts, il est préférable de ne pas choisir cette solution. En effet, la réponse des détecteurs en fonction
+   du temps d’intégration n’est pas forcément linéaire. Le choix du temps d’intégration étant conditionné
+   par le niveau du signal mesuré Sigmes(λ) en présence de rayonnement (Cf. §7.5.), la mesure du signal
+   d’obscurité SigDC(λ) devra donc être réalisée une fois le temps d’intégration connu, c’est-à dire à la suite
+   de chaque mesure. La déduction s’effectuera donc manuellement sur le signal brut.
+
+7.5. Ajustement du temps d’intégration des spectromètres CCD
+Sur les spectromètres CCD, l’amplitude du signal est ajustée en faisant varier le temps d’intégration. La
+plage d’ajustement du temps peut s’étendre de quelques µs à quelques minutes. Cependant, plus le temps
+d’intégration est élevé, plus le signal mesuré dans l’obscurité (Dark Current) SigDC est important. Au-delà de
+5 à 10 s, on constate une réduction significative de la dynamique de mesure du signal. A l’inverse, on peut
+aussi observer une saturation du signal avec un temps d’intégration ajusté au seuil minimal. Dans l’une ou
+l’autre de ces situations il est alors préférable, si les conditions de mesure le permettent, de faire varier la
+distance de mesure pour avoir un meilleur compromis « amplitude du signal-temps d’intégration ».
+Une technique dite de « bracketing » est également utilisable pour améliorer la précision d’acquisition du
+signal de faible niveau. Elle a notamment un intérêt lorsqu’il existe des différences importantes de niveau
+dans le spectre (spectre de raies par exemple). Elle consiste à réaliser la mesure en 2 temps :
+    •   Mesure n°1 avec un temps d’intégration adapté à l’émission maximale du spectre,
+    •   Mesure n°2 avec un temps d’intégration plus élevé pour améliorer le rapport « signal – bruit ». Bien
+        entendu, durant la mesure n°2, le signal est saturé dans la région correspondant à l’émission
+        maximale.
+ Le spectre final est reconstitué en remplaçant dans le spectre n°1, tous les signaux de faibles niveaux par
+les signaux relevés lors de la mesure n°2.
+
+7.6. Domaine spectral à mesurer selon le type de source
+L’opérateur réalisant des mesures de rayonnements optiques est souvent amené à se poser ces questions :
+    •   Faut-il systématiquement mesurer les sources sur l’ensemble du domaine spectral 200 – 3000 nm ?
+    •   Sinon, à quel domaine se limiter selon le type de source rencontrée ?
+
+
+Compte tenu de la diversité des sources rencontrées sur les lieux de travail, il n’existe bien sûr pas de
+réponse universelle à ces questions, mais les pistes suivantes peuvent l’aider dans sa réflexion.
+    •   Une analyse sur le domaine spectral 200-400 nm est suffisante pour les sources utilisées
+        spécifiquement pour les effets du rayonnement ultraviolet : désinfection de l’air, stérilisation,
+        détection de défauts avec sans fluorescence, polymérisation des encres ou des vernis…
+
+
+
+
+                                                                                                                   30
+•   Les lampes de type tube fluorescent, lampes fluo compactes ou LED dédiées à l’éclairage général
+    des locaux de travail ne nécessitent généralement pas de mesure sur les lieux de travail, mais si des
+    mesures devaient être effectuées, elles pourraient se limiter au domaine 300-700 nm.
+•   Une analyse sur la totalité du domaine spectral est nécessaire dans les cas suivants :
+        o Appareils d’éclairage spécifiques : industrie du spectacle…
+        o Procédés industriels : soudage à l’arc, coupage plasma…
+        o Fours ou produits en fusion : métaux et verre en fusion, fours de fusion, de réchauffage…
+        o Appareils radiants utilisés pour le séchage : industrie du papier…
+        o En l’absence d’informations sur la source.
+
+
+
+
+                                                                                                            31
+32
+8. Evaluation des risques
+8.1. Comparaison aux Valeurs Limites d’Exposition (VLE) ou aux Limites
+   d’Exposition Recommandées (LER)
+La première étape consiste à calculer les VLE ou LER (Cf. § 4.2.) qui le nécessitent comme celles de LB, EB, LR
+et EIR fonction de la durée d’exposition ou d’impulsion. De plus, les VLE et LER correspondant à LR sont
+aussi liées à l’angle α sous lequel la source est observée. Ce dernier est déterminé selon la formule du §
+4.2. à partir des caractéristiques relevées sur la source.
+En ce qui concerne les valeurs mesurées, selon l’appareil utilisé, elles nécessitent ou non un traitement
+préalable :
+    •   Un radiomètre, fournit directement les grandeurs (Eeff, EUVA, LB, …), données dans la colonne 2 du
+        tableau XVII,
+    •   Un spectroradiomètre mesure la répartition spectrale d’une source en éclairement Eλ ou en
+        luminance Lλ énergétique. Les grandeurs (Eeff, EUVA, LB, …), données dans la colonne 2 du tableau
+        XVII, devront donc être calculées à l’aide des équations du tableau I avant être comparées aux VLE.
+Ensuite, selon les domaines spectraux, les grandeurs (Eeff, EUVA, LB …), sont soit comparées directement aux
+VLE ou LER, soit transformées en exposition (Heff, HUVA…) ou en dose de luminance énergétique (DB, DR) à
+comparer aux VLE ou LER.
+
+
+Tableau XVII : Grandeurs à comparer aux VLE ou LER.
+
+                      Grandeurs mesurées
+ Domaine spectral                                                      Grandeurs à comparer aux VLE ou LER
+                          ou calculées
+                                                           t
+    180 – 400 nm       Eeff (W.m-2)            H eff = ∑ E eff .∆t           ou      H eff = E eff .t (J.m -2 )
+                                                           0
+                                                               t
+    315 – 400 nm       EUVA (W.m-2)            H UVA = ∑ E UVA .∆t              ou     H UVA = EUVA .t (J.m -2 )
+                                                               0
+                                                      t
+                                               DB = ∑ LB .∆t               ou     DB = LB .t     (J.m -2 .sr -1 )         ou
+                                    -2    -1
+                       LB     (W.m .sr )              0
+
+
+                                               LB      (W.m-2.sr-1)
+    300 – 700 nm
+                                                       t
+                                               H B = ∑ E B .∆t             ou     H B = E B .t     (J.m-2 )          ou
+                                     -2
+                       EB     (W.m )                   0
+
+
+                                                EB         (W.m-2)
+                                                       t
+
+ 380 – 1400 nm ou                              DR = ∑ LR .∆t               ou     DR = LR .t      (J.m -2 .sr -1 )        ou
+                                     -2   -1
+                       LR      (W.m .sr )             0
+   780 – 1400 nm
+                                               LR          (W.m-2.sr-1)
+   780 – 3000 nm       EIR     (W.m-2)          EIR            (W.m-2)
+                                                                   t
+   380 – 3000 nm       EPeau (W.m-2)           H Peau = ∑ E Peau .∆t              ou    H Peau = E Peau .t        (J.m-2 )
+                                                               0
+
+
+
+
+                                                                                                                               33
+Dans la colonne 3 du tableau XVII, les grandeurs exprimées en termes d’exposition (H) ou de doses de
+luminance énergétique (D) sont à utiliser comme suit :
+    •   Si la source est stable et que l’exposition est continue, l’exposition H ou la dose de luminance
+        énergétique D est obtenue en multipliant simplement l’éclairement ou la luminance énergétique
+        par la durée d’exposition t. Sur le domaine 780-1400 nm, par exemple, on utilisera donc l’équation :
+                                                  DR = LR .t
+
+    •   Si la source est pulsée ou que son émission n’est pas constante dans le temps ou dans le cas
+        d’expositions intermittentes à une même source ou à différentes sources (intervention à un poste à
+        plusieurs moments de la journée, personne occupant plusieurs postes), l’exposition H ou la dose de
+        luminance énergétique D est obtenue par intégration de l’éclairement ou la luminance énergétique
+        sur la durée d’exposition t. Sur le domaine 780-1400 nm, par exemple, on utilisera donc l’équation :
+                                                         t
+                                                 DR = ∑ LR .∆t
+                                                         0
+
+
+         avec ∆t : durée d’une impulsion dans le cas d’une source pulsée.
+
+
+        Ceci conduit simplement à moyenner l’éclairement ou la luminance énergétique sur la totalité de la
+        durée d’exposition t.
+        Cependant, pour qu’une situation soit considérée sans risque [3], il faut que H ou D correspondant à
+        chaque impulsion soit inférieur à la VLE ou LER applicable à cette durée et que la somme des
+        expositions ou des doses soit aussi inférieure à la VLE ou LER applicable à la durée t. Sur le domaine
+        780-1400 nm, par exemple on aura donc :
+                                                                                     t
+         LR1.∆t1 < LVLE(t1) , LR 2 .∆t 2 < LVLE(t2) , ....            et      DR = ∑ LR .∆t < LVLE(t)
+                                                                                               R
+                    R                       R
+                                                                                     0
+
+
+
+        Seuls les principes généraux applicables aux expositions répétées et sources pulsées sont repris
+        dans ce document. Les cas particuliers, comme par exemple les sources pulsées dont la fréquence
+        est supérieure à 5 Hz, sont décrits en détail dans les recommandations de l’ICNIRP[3].
+
+
+Dans cette même colonne 3 du tableau XVII, les grandeurs LB, EB et LR mesurées ou calculées (colonne2)
+sont comparées directement aux VLE exprimées W.m-2 ou en W.m-2. sr-1, donc indépendantes de la durée
+d’exposition, lorsque la durée d’exposition a atteint la durée d’exposition maximale prise en compte par la
+VLE (par exemple t > 10 000 s pour LB).
+
+8.2. Outil d’aide à l’évaluation des risques : CatRayon
+Afin de faciliter la démarche de détermination des niveaux d’exposition et de comparaison aux VLE, l’INRS a
+développé le logiciel CatRayon [11]. A partir de configurations de travail définies par l’utilisateur, il permet
+d’évaluer les risques présentés par une ou plusieurs sources émettant des rayonnements optiques. Il
+comprend notamment une base de données d’environ 400 sources dont les caractéristiques spectrales ont
+été mesurées en laboratoire ou sur site, de manière à ce qu’un utilisateur puisse procéder à une évaluation
+des risques sans recourir à la mesure. Mais un module de saisie indépendant, nommé
+MesSourcesCatRayon, est également joint au logiciel CatRayon pour permettre à l'utilisateur de créer ses
+propres bases de données, à partir de mesures réalisées en laboratoire ou relevées à des postes de travail.
+Le package comprenant ces 2 modules est téléchargeable gratuitement sur le site de l’INRS via le lien :
+http://www.inrs.fr/media.html?refINRS=outil03
+
+
+
+
+                                                                                                                   34
+8.2.1. Le module MesSourcesCatRayon
+Le module MesSourcesCatRayon (Cf. figure 14) permet de saisir les caractéristiques techniques et générales
+des sources ainsi que la configuration dans laquelle elles ont été mesurées. Il est donc nécessaire d’entrer
+les données suivantes:
+    •   la répartition spectrale du rayonnement mesuré avec un spectroradiomètre ou les grandeurs
+        radiométriques mesurées dans les différents domaines spectraux à l’aide de radiomètres.
+    •   la répartition spatiale relative (courbe de directivité) du rayonnement. Cette donnée n’est pas
+        toujours facilement disponible, mais des courbes prédéfinies sont présentes dans le logiciel. A
+        noter que cette donnée est uniquement importante dans le cas d’une évaluation des risques dans
+        des configurations autres que celle des mesures.
+    •   la forme et les dimensions de la source ainsi que la configuration dans laquelle ont été effectuées
+        les mesures.
+Les sources mesurées sont regroupées dans une base de données (nommée « catalogue » dans le logiciel)
+créée par l’utilisateur. Un catalogue peut par exemple regrouper toutes les sources analysées dans une
+même entreprise.
+Un guide d’utilisation au format pdf est joint au logiciel et permet à l’utilisateur d’en découvrir
+progressivement les fonctionnalités.
+
+
+
+
+            Figure 14 : Fenêtre principale du module de saisie MesSourcesCatRayon.
+
+
+
+8.2.2. Le module CatRayon
+Le catalogue de sources ainsi créé, est directement accessible dans CatRayon, soit pour une analyse rapide
+des risques dans la configuration de mesure, soit en complément des catalogues déjà implantés dans
+CatRayon pour des analyses dans d’autres configurations.
+
+
+
+
+                                                                                                               35
+Le module d’évaluation des risques CatRayon est également accompagné d’un guide d’utilisation qui décrit
+toutes les fonctionnalités du logiciel ; elles ne seront donc pas reprises dans le présent document. Seule la
+fonctionnalité d’analyse des risques dans la configuration de mesure est décrite brièvement ci-après.
+
+
+Comme pour toutes les analyses de risques effectuées dans CatRayon, la première étape consiste à créer
+un projet.
+Ensuite, l'évaluation rapide des risques dans la configuration de mesure est accessible depuis le menu
+Configuration ou directement par la première barre d'icônes (Cf. figure 15).
+
+
+
+
+             Figure 15 : Sélectionner l'analyse rapide des risques.
+
+
+Dans ce mode d’évaluation, il n’est pas nécessaire d’implanter la source et le poste de travail dans le local,
+cette opération s’effectue automatiquement et l’on considère qu'au poste de travail analysé :
+    •   l'opérateur est situé à l'emplacement de l'appareil de mesure,
+    •   son regard est orienté dans la direction de la mesure.
+Après avoir sélectionné le nom du catalogue et choisi la source à analyser, la fenêtre de la figure 16
+apparaît. L’utilisateur saisit alors la durée d’exposition journalière à ce poste de travail avant de valider.
+
+
+
+
+  Figure 16 : Fenêtre affichant les caractéristiques de la source sélectionnée et permettant
+  de saisir la durée d'exposition journalière.
+
+
+
+                                                                                                                 36
+La fenêtre dans laquelle s’affichent les résultats de l’évaluation des risques dans la configuration de mesure
+est identique à celle utilisée pour les postes de travail mobiles (Cf. figure 17).
+
+
+
+
+       Figure 17 : Fenêtre présentant les résultats de l'analyse des risques.
+
+
+Pour connaître les fonctionnalités accessibles depuis cette fenêtre de résultats, il est nécessaire de se
+reporter au guide d’utilisation de CatRayon.
+
+
+ Important
+ CatRayon dispose d'un catalogue de filtres qui permet de rechercher une protection adaptée aux
+ risques évalués. Cependant, cette fonction est disponible uniquement pour les sources dont les
+ données sont saisies sous forme spectrale, donc mesurées à l’aide d’un spectroradiomètre.
+
+
+
+
+                                                                                                                 37
+38
+9. Démarche CARSAT/CRAMIF-INRS pour la
+ mesure des rayonnements optiques au poste
+ de travail
+9.1. Appareillage
+Le choix s’est porté sur 2 spectroradiomètres à barrettes de détecteurs, l’un couvrant le domaine 200- 1000
+nm et le second le domaine 1000-2500 nm. Leurs caractéristiques sont présentées dans le tableau XVIII.
+A noter qu’il n’existe pas d’appareil de ce type couvrant le domaine infrarouge jusqu’à 3000 nm. Mais,
+comme les infrarouges proviennent principalement des corps chauffés, le spectre sur ce domaine est
+continu. La portion de spectre entre 2500 et 3000 nm peut donc facilement être extrapolée.
+
+
+Tableau XVIII : Caractéristiques des spectroradiomètres
+
+        Domaine spectral                   200 - 1000 nm                          1000-2500 nm
+          Détecteurs              CCD - 2048 pixels rétro éclairés   InGaAs - 256 pixels avec refroidissement
+            Réseaux                        300 traits/mm                           300 traits/mm
+            Fentes                               50 µ                                  200 µ
+ Largeur de bande (FWHM)                       2,5 nm                                  30 nm
+     Temps d’intégration                      2 µs – 20s                          10 µs – 100 ms
+
+
+Comme indiqué au § 5.1.2.2, le défaut le plus important des spectroradiomètres CCD est leur niveau de
+lumière parasite (stray light). Ainsi, pour chaque appareil à détecteur CCD, une matrice de correction de la
+lumière parasite est construite selon la méthode décrite dans l’annexe 2. La construction de la matrice ainsi
+que l’étalonnage des appareils en éclairement énergétique spectrique sont réalisés dans les laboratoires de
+l’INRS.
+
+9.2. Interfaçage des spectroradiomètres
+Du fait, de la correction numérique de la lumière parasite, l’utilisation du logiciel d’acquisition fourni par le
+constructeur nécessiterait un post traitement des spectres mesurés. C’est pourquoi une interface
+spécifique à ces appareils et adaptée à des mesures au poste de travail a été développée. Elle offre les
+possibilités suivantes :
+    •    Saisie des caractéristiques générales du poste de travail et de la configuration de mesure (Cf. figure
+         18).
+    •    Ajustement automatique du temps d’intégration.
+    •    Acquisition du signal (Cf. figure 19) en 2 temps :
+          mesure du signal émis par la source avec un temps d’intégration donné,
+          mesure du signal dans l’obscurité avec le même temps d’intégration.
+    •    Affichage du spectre final en éclairement énergétique spectrique (Cf. figure 20), intégrant (pour
+         chaque spectroradiomètres CCD) la correction préalable du signal par la matrice de correction de la
+         lumière parasite.
+    •    Possibilité de fusion de 2 spectres issus d’une même source en utilisant une méthode de
+         « braketing ».
+
+
+
+
+                                                                                                                    39
+Figure 18 : Interface des spectroradiomètres : volet de saisie des
+caractéristiques du poste de travail et de la configuration de
+mesure.
+
+
+
+
+Figure 19 : Interface des spectromètres : volet d'acquisition du signal
+
+
+
+
+Figure 20 : Interface des spectroradiomètres : volet d'affichage du
+spectre final.
+
+
+
+
+                                                                          40
+9.3. Evaluation des risques et moyens de protection
+Les spectres mesurés via l’interface spécifique décrite ci-dessus, sont enregistrés dans des fichiers textes
+compatibles avec le module MesSourcesCatRayon. Ensuite, l’évaluation des risques est réalisée à l’aide du
+logiciel CatRayon. Comme les mesures sont données sous forme spectrale, il est alors possible de faire
+appel à la base de données de filtres présente dans CatRayon pour rechercher des moyens de protection
+adaptés. En effet, une fonctionnalité permet de lister automatiquement tous les filtres de protections
+collectives et individuelles efficaces au poste de travail analysé.
+
+
+
+
+                                                                                                               41
+42
+      Bibliographie
+[1]    ACGIH. Threshold limit Values for chemical substances and physical agents& biological exposure
+       indices. ACGIH, Cincinnati, Ohio. ACGIH, Cincinnati, Ohio; 2015. 252 p.
+
+[2]    ICNIRP. Guidelines on limits of exposure to ultraviolet radiation of wavelengths 180 nm to 400 nm
+       (incoherent optical radiation). Health Phys 2004;87:171‑86.
+
+[3]    ICNIRP. ICNIRP guidelines on limits exposure to incoherent visible and infrared radiation. Health Phys
+       2013;105:74‑91.
+
+[4]    ICNIRP. ICNIRP Statement - Protection of Workers against Ultraviolet Radiation. Health Phys
+       2010;99:66‑87.
+
+[5]    Barlier-Salsi A, Salsi S. Lampes à rayonnement ultraviolet - quantification des risques associés à leur
+       utilisation. Cah Notes Doc 1998;170:49‑56.
+
+[6]    Salsi S, Barlier-Salsi A. Exposition aux dispositifs d’éclairage scénique : risque pour la santé des
+       professionnels du spectacle vivant ou enregistré. Radioprotection 2013;48:391‑410.
+
+[7]    Salsi S, Barlier A. Rayonnements optiques dans les verreries à main - Etude de 21 postes de travail.
+       Cah Notes Doc 1987;126:75‑87.
+
+[8]    Barlier A. Rayonnements optiques dans une forge - mesures et moyens de protection. Cah Notes Doc
+       1994;155:181‑93.
+
+[9]    Barlier A, Salsi S. Rayonnement infrarouge et cataracte -Evaluation des risques à proximité d’un four à
+       induction. Cah Notes Doc 1995;161:469‑75.
+
+[10] Salsi S, Barlier A. Rayonnements optiques émis lors du soudage à l’arc avec électrodes enrobées -
+     Risques et moyens de prévention. Cah Notes Doc 1991;143:223‑33.
+
+[11] INRS. CatRayon 4, logiciel d’évaluation de l’exposition aux rayonnements optiques dans les locaux de
+     travail. [Internet]. 2012; Hyperlien : http://www.inrs.fr/media.html?refINRS=outil03
+
+[12] Parlement européen. Directive 2006/25/CE du parlement européen et du conseil, du 5 avril 2006,
+     relative aux prescriptions minimales de sécurité et de santé relatives à l’exposition des travailleurs
+     aux risques dus aux agents physiques (rayonnements optiques artificiels). J. Off. 2006;38‑59.
+
+[13] République française. Décret n° 2010-750 du 2 juillet 2010 relatif à la protection des travailleurs
+     contre les risques dus aux rayonnements optiques artificiels. J. Off. 4 Juillet 2010. :Texte 11.
+
+[14] Commission Européenne. Guide non contraignant pour la mise en oeuvre de la directive 2006/25/CE
+     sur les rayonnements optiques artificiels [Internet]. Luxembourg: Union européenne; 2011.
+     Hyperlien : http://bookshop.europa.eu
+
+[15] Barlier-Salsi A, Salsi S. Mesures des rayonnements optiques aux postes de travail : comparaison de
+     différentes méthodes et matériels de mesure. Radioprotection 2010;45:307‑20.
+
+[16] Barlier-Salsi A. Stray light correction on array spectroradiometers for optical radiation risk assessment
+     in the workplace. J Radiol Prot 2014;34:915‑30.
+
+
+
+
+                                                                                                                 43
+[17] NF EN 14255-1. Mesurage et évaluation de l’exposition des personnes aux rayonnements optiques
+     incohérents- Partie 1: Rayonnements ultraviolets émis par des sources artificielles sur les lieux de
+     travail. AFNOR. 2005;29.
+
+[18] NF EN 14255-2. Mesurage et évaluation de l’exposition des personnes aux rayonnements optiques
+     incohérents- Partie 2: Rayonnements visibles et infrarouges émis par des sources artificielles sur les
+     lieux de travail. AFNOR. 2006;43.
+
+[19] NF EN 14255-4. Mesurage et évaluation de l’exposition des personnes aux rayonnements optiques
+     incohérents- Partie 4: Terminologie et grandeurs utilisées pour le mesurage de l’exposition au
+     rayonnement ultraviolet, visible et infrarouge. AFNOR. 2006;15.
+
+[20] République française. Arrêté du 1er mars 2016 relatif aux modalités de l’évaluation des risques
+     résultant de l’exposition aux rayonnements optiques artificiels en milieu de travail. J. Off. 18 Mars
+     2016. :Texte 30.
+
+[21] République française. Arrêté du 1er mars 2016 relatif aux conditions d’accréditation des organismes
+     pouvant procéder au mesurage de l’exposition aux rayonnements optiques artificiels en milieu de
+     travail. J. Off. 18 Mars 2016. :Texte 31.
+
+[22] NF EN 62471. Sécurité photobiologique des lampes et appareils utilisant des lampes. AFNOR. 2008;46.
+
+[23] ICNIRP. Guidelines on limits of exposure to broad-band incoherent optical radiation (0.38 to 3 µm).
+     Health Phys 1997;73:539‑54.
+
+[24] Zong Y, Brown SW, Johnson BC, Lyckke KR, Ohno Y. Simple spectral stray light correction method for
+     array spectroradiometer. Appl Opt 2006;45:1111‑9.
+
+[25] Schulmeister K. Concepts in dosimetry related to laser safety and optical-radiation hazard evaluation
+     [Internet]. In: Stuck BE, Belkin M, éditeurs. . 2001. p. 104‑16. Hyperlien :
+     http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=899537
+
+[26] CIE. e-ILV CIE [Internet]. Hyperlien : http://eilv.cie.co.at/
+
+[27] NF EN ISO 25980. Hygiène et sécurité en soudage et techniques connexes - Rideaux, lanières et
+     écrans transparents pour les procédés de soudage à l’arc. AFNOR. 2014;8.
+
+[28] NF EN 169. Protection individuelle de l’oeil - Filtres pour le soudage et les techniques connexes -
+     Exigences relatives au facteur de transmission et utilisation recommandée. AFNOR. 2003;15.
+
+[29] NF EN 170. Protection individuelle de l’oeil - Filtres pour l’ultraviolet - Exigences relatives au facteur
+     de transmission et utilisation recommandée. AFNOR. 2003;13.
+
+[30] NF EN 171. Protection individuelle de l’oeil - Filtres pour l’infrarouge - Exigences relatives au facteur
+     de transmission et utilisation recommandée. AFNOR. 2002;12.
+
+[31] NF EN 172. Protection individuelle de l’oeil - Filtres de protection solaires pour usage industriel.
+     AFNOR. 1995;15.
+
+
+
+
+                                                                                                                  44
+   Annexe 1 : Grandeurs, symboles, termes et
+   unités
+Rayonnement optique : rayonnement électromagnétique dont les longueurs d’onde sont comprises entre
+100 nm et 1 mm. Il comprend :
+    •   Le rayonnement ultraviolet :
+              UVC : 100 nm – 280 nm
+              UVB : 280 nm – 315 nm
+              UVA : 315 nm – 400 nm
+    •   Le rayonnement visible, seul rayonnement perceptible par l’œil humain : 400 – 780 nm
+    •   Le rayonnement infrarouge :
+              IRA : 780 nm – 1400 nm
+              IRB : 1400 nm – 3000 nm
+              IRC : 3000 nm – 1 mm
+
+Radiométrie : mesure des grandeurs associées aux rayonnements optiques
+Photométrie : mesure des grandeurs associées aux rayonnements optiques qui tient compte des effets
+visuels de la lumière selon une fonction d’efficacité relative spectrale donnée, comme V(λ).
+Eclairement (énergétique ou lumineux) : Flux de rayonnement (énergétique ou lumineux) reçu par unité
+de surface. Dans le cas présent, la surface réceptrice est soit la peau, soit les yeux.
+Luminance (énergétique ou lumineuse) : Elle caractérise la source et correspond au flux de rayonnement
+(énergétique ou lumineux) émis par unité de surface (de la source) et d’angle solide.
+Eclairement (énergétique ou lumineux) spectrique : Quotient de l’éclairement (énergétique ou
+lumineux) contenu dans un intervalle de longueur d’onde, encadrant une longueur d’onde donnée, par la
+largeur de cet intervalle.
+Luminance (énergétique ou lumineuse) spectrique : Quotient de la luminance (énergétique ou
+lumineux) contenue dans un intervalle de longueur d’onde, encadrant une longueur d’onde donnée, par la
+largeur de cet intervalle.
+
+
+
+Tableau A1 - 1 : Grandeurs radiométriques et photométriques et unités.
+
+
+ Grandeurs radiométriques             Unités        Grandeurs photométriques             Unités
+
+
+ Eclairement énergétique E            W.m-2          Eclairement (lumineux) Ev           lux (lx)
+
+
+  Luminance énergétique L           W.m-2.sr-1       Luminance (lumineuse) Lv    Candéla par m2 (cd.m-2)
+
+
+
+
+                                                                                                           45
+Symboles :
+λ : Longueur d’onde (nm).
+Eλ : Eclairement énergétique spectrique (W.m-2.nm-1).
+Lλ : Luminance énergétique spectrique (W.m-2.nm-1.sr-1).
+∆λ : Largeur de bande (nm).
+S(λ) : Pondération spectrale qui tient compte des effets du rayonnement ultraviolet sur les yeux et la peau.
+B(λ) : Pondération spectrale qui tient compte des effets photochimiques de la lumière bleue sur l’œil.
+R(λ) : Pondération spectrale qui tient compte des effets thermiques des rayonnements visible et IRA sur
+l’oeil.
+V(λ) : Efficacité lumineuse relative spectrale pour la vision de jour, définie par la CIE (Commission
+internationale de l’éclairage)
+Eeff : Eclairement énergétique efficace (UV), (W.m-2).
+EUVA : Eclairement énergétique total (UVA), (W.m-2).
+EB : Eclairement énergétique efficace (lumière bleue), (W.m-2).
+LB : Luminance énergétique efficace (lumière bleue), (W.m-2.sr-1).
+LR : Luminance énergétique efficace (lésion par effet thermique), (W.m-2.sr-1).
+EIR : Eclairement énergétique total (lésion par effet thermique), (W.m-2).
+EPeau : Eclairement énergétique total (visible, IRA et IRB) (W.m-2).
+
+
+
+
+                                                                                                               46
+   Annexe 2 : Spécificité des appareils de mesure
+A2- 1. Les radiomètres
+L’exemple décrit ci-après concerne la détermination de la grandeur EUVA à l’aide d’un radiomètre. Dans ce
+domaine spectral (315-400 nm), il n’y a pas de courbe de pondération, EUVA correspond donc à la totalité de
+l’éclairement énergétique reçu entre 315 et 400 nm ; ce domaine est délimité par la courbe théorique
+tracée en pointillés rouge à la figure A2 – 1. Sur le radiomètre, ce domaine est délimité à l’aide d’un filtre
+passe-bande dont la réponse est donnée à la figure A2-1 (courbe en pointillés bleu). Pour toute source dont
+l’émission est située à l’intérieur de la courbe de réponse du filtre, la mesure à l’aide de ce radiomètre est
+correcte. En revanche, dans le cas d’une LED UV dont l’émission maximale se situe aux environs de 400 nm,
+soit aux limites du domaine spectral à analyser, l’éclairement énergétique EUVA mesuré par le radiomètre
+représente seulement une portion (zone hachurée en bleu) de l’éclairement énergétique réel (zone
+hachurée en bleu + zone hachurée en rouge). Dans le cas présent, plus de 60% (zone hachurée en rouge) du
+rayonnement émis par la LED UV, n’est pas pris en compte dans l’évaluation des risques dus aux UVA.
+
+
+
+                                                                              Exemple de réponse du filtre
+                1
+                                                                              optique d'un radiomètre
+                                                                              Courbe théorique sur le
+               0,8                                                            domaine spectral 315-400nm
+                                                                               Spectre d'une LED UV
+               0,6
+
+               0,4
+
+               0,2
+
+                0
+                     300   320    340     360     380     400    420     440
+                                                        Longueur d'onde λ (nm)
+              Figure A2 - 1 : Exemple d’erreur possible commise lors de la mesure d'une LED UV à l'aide d'un
+              radiomètre.
+
+
+
+A2- 2. Les spectroradiomètres CCD
+Correction de la lumière parasite par calcul
+Sur le domaine ultraviolet et visible, un signal parasite est observé lors de la mesure de certaines sources
+avec les spectroradiomètres CCD. Il est dû, au niveau de chaque détecteur composant la barrette, à la
+réception d’un rayonnement de longueur d’onde sans rapport avec la longueur d’onde associée à ce
+détecteur. Les erreurs les plus importantes apparaissent notamment lorsque les sources ont un niveau
+d’émission faible dans l’ultraviolet comparativement au niveau d’émission dans le visible. C’est pourquoi
+une méthode de correction de la lumière parasite, développée au NIST [24], a été reprise à l’INRS[16].
+Elle consiste à injecter dans l’appareil des raies monochromatiques à l’aide de lasers et à relever pour
+chaque raie émise, le signal sur la totalité du domaine spectral (Cf. Figure A2 - 2). Ainsi, le signal vrai
+correspond au signal enregistré sur la bande spectrale de longueur d’onde égale à la raie d’émission du
+laser, alors que le signal en dehors de la bande d’émission correspond à la lumière parasite. Le signal
+enregistré à partir de chacune des raies d’émission (80 environ pour le NIST, réduit à 9 dans l’étude INRS)
+conduit à la construction d’une matrice qui, appliquée au signal mesuré sur la source, permet de réduire
+
+
+
+
+                                                                                                                 47
+considérablement les erreurs dues à cette lumière parasite. La méthode complète est détaillée dans le
+document référencé [16].
+
+
+                                                                        Raies UV Visible                  Infrarouge
+                                                                        laser 266 405 447 473 532 589 633 808 980 nm
+
+
+
+
+                                         Signal vrai
+
+
+
+
+                                                                2048 pixels
+                       Signal parasite
+                                                                                           Elément
+                                                                                           dispersif
+
+
+
+
+           Figure A2 - 2 : Illustration de la méthode de correction de la lumière parasite (stray light)
+
+Un exemple de spectre mesuré sur une LED à l’aide d’une part d’un spectroradiomètre à balayage et
+double monochromateur pris comme référence, d’autre part d’un spectroradiomètre CCD corrigé et non
+corrigé, est présenté à la figure A2-3. En comparant le spectre mesuré avec CCD non corrigé au spectre de
+référence, le signal correspondant à la lumière parasite apparaît clairement pour les longueurs d’onde
+inférieures à 400 nm mais également pour celles supérieures à 800 nm. A la figure A2-3, la détermination
+de la grandeur Eeff dans les 3 configurations montre que l’erreur commise en utilisant un spectroradiomètre
+CCD non corrigé est de l’ordre de 5000 %. En revanche, la grandeur Eeff calculée à partir du spectre corrigé
+est semblable à celle déterminée à partir du spectre de référence.
+
+   1,E+0
+
+
+   1,E-1
+                                                                                                       Référence             Eeff <= 0,1xVLE
+   1,E-2                                                                                               CCD sans correction   Eeff = 5xVLE
+                                                                                                       CCD avec correction   Eeff <= 0,1xVLE
+   1,E-3
+                                             Référence (OL 750)
+
+                                             Sans correction
+   1,E-4
+                                             Avec correction
+
+   1,E-5                                                                          λ (nm)
+       200,00     400,00                               600,00          800,00   1000,00
+
+
+  Figure A2 - 3 : Répartition spectrale relative d'une LED mesurée à l'aide d'un spectroradiomètre à balayage et
+  double monochromateur, pris comme référence, et avec un spectroradiomètre CCD corrigé et non corrigé –
+  détermination de Eeff à même distance de la source.
+
+
+A2- 3. Les spectroradiomètres InGaAs
+Sur le domaine infrarouge, une étude réalisée à l’INRS a comparé les résultats obtenus sur 3 lampes (lampe
+à arc au xénon, lampe tungstène halogène et lampe infrarouge) avec un spectroradiomètre à détecteurs
+inGaAs et un spectroradiomètre à balayage et double monochromateurs pris comme référence. Elle
+montre que la valeur maximale des écarts enregistrés sur la grandeur EIR, limitée au domaine 1000-
+
+
+                                                                                                                                               48
+2500 nm, est inférieure à 10%. Sachant que les normes NF EN 14255-1[19] et NF EN 14255-2[18], relatives aux
+mesures des ROA au poste de travail, admettent une incertitude maximale de 30% pour les mesurages, on
+peut considérer que ce type d’appareil est adapté aux mesures du rayonnement infrarouge au poste de
+travail.
+
+
+
+
+                                                                                                              49
+50
+   Annexe 3 : Méthode détaillée du calcul de LB et
+   LR
+La répartition spectrale relative Sp(λ) est définie[26] par le rapport de la répartition spectrale d’une grandeur
+X(λ) à une valeur de référence donnée R, qui peut être une valeur moyenne, une valeur maximale ou une
+valeur arbitrairement choisie de cette répartition.
+                                                                             -2      -1
+                                                                       E (W.m .nm )                                  -2
+                                                                                                       L (W.m .nm .sr )
+                                                                                                                          -1   -1
+                                                                        λ
+                                                                                                           λ
+
+
+
+
+                          X (λ )
+             S p (λ ) =
+                                                                                                          Sp(λ)
+                            R
+
+
+
+                                                                                                          Longueur d'onde (λ)
+                                                                   Figure A3-1 : illustration de la répartition spectrale
+                                                                   relative.
+
+Les grandeurs prises en compte étant les répartitions spectrales en éclairement énergétique E(λ) et en
+luminance énergétique L(λ) d’une même source, avec comme valeurs de référence respectives :
+l’éclairement lumineux EV et la luminance lumineuse LV, la relation s’écrit :
+
+                         E (λ )       L(λ )                                                         E (λ )
+            S p (λ ) =            =                          donc                         L(λ ) =              .LV
+                          EV          LV                                                             EV
+
+                            700                                                                     700
+                                                                                             LV
+Ainsi, la relation LB = ∑ Lλ .B(λ ).∆λ               du tableau I, devient :          LB =          . ∑ E λ .B( λ ).∆λ
+                            300
+                                                                                             EV 300
+Dans ces conditions, seule la luminance lumineuse LV nécessite d’être mesurée, puisque l’éclairement
+lumineux EV peut être déterminé à partir des valeurs mesurées de Eλ :
+
+                                                           780
+                                               EV = 683. ∑ E λ .V (λ ).∆λ
+                                                           380
+
+
+L’expression finale de LB devient :
+
+                                                                 700
+                                                    LV
+                               LB =           780
+                                                                 . ∑ E λ .B(λ ).∆λ
+                                       683. ∑ E λ .V ( λ ).∆λ
+                                                                 300
+
+                                              380
+
+
+Sur ce même principe LR a pour expression :
+
+                                                                 1400
+                                                    LV
+                               LR =           780
+                                                                 . ∑ E λ .R(λ ).∆λ
+                                       683. ∑ E λ .V (λ ).∆λ
+                                                                  380
+
+                                              380
+
+
+
+
+                                                                                                                                    51
+

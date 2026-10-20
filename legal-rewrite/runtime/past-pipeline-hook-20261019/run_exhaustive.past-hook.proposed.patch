@@ -1,0 +1,70 @@
+--- a/legal-rewrite/run_exhaustive.py
++++ b/legal-rewrite/run_exhaustive.py
+@@ -154,6 +154,50 @@
+ Avant de terminer, relis la source et ta proposition article par article, contrôle tout spécialement chiffres, dates, exceptions, renvois et tableaux. Corrige les omissions. Ne diffère aucun article de ton lot, ne masque aucune troncature, ne marque aucune relecture par un juriste. Le JSON final de réponse ne contient que le nom du fichier et le nombre d’articles ; le texte entier est dans answer.json.
+ '''
+ 
++def past_job_enabled():
++    """An absent, invalid or non-opt-in integration never activates memory."""
++    try:
++        settings=json.loads((HERE/'past-setup/integration.json').read_text())
++    except (OSError,ValueError):
++        return False
++    return (isinstance(settings,dict) and settings.get('enabled') is True
++            and settings.get('recall_mode')=='only_when_useful')
++
++
++def past_before_job():
++    """Changed-body updates only; bounded failure never aborts legal drafting."""
++    enabled=past_job_enabled()
++    # Always suppress the account-level server in this worker, even on opt-out.
++    options=['-c','mcp_servers.past.enabled=false',
++             '-c','mcp_servers.legal_rewrite_memory.enabled=false']
++    if not enabled:
++        return options
++    try:
++        # The subprocess bounds network latency and suppresses response/secret
++        # logging. Synchronizer itself skips credentials/network if unchanged.
++        # Its durable pending intent and idempotency key survive a timeout.
++        subprocess.run([sys.executable,'-c',
++                        'from past_sync import Synchronizer as SyncEngine; '
++                        'SyncEngine().run("updates")'],
++                       cwd=HERE,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,
++                       stderr=subprocess.DEVNULL,timeout=30,check=True)
++    except Exception:
++        print('MEMORY updates unavailable; continuing with local sources',flush=True)
++    server=HERE/'past_memory_mcp.py'
++    if not server.is_file():
++        print('MEMORY local recall unavailable; continuing with local sources',flush=True)
++        return options
++    # Only the fixed read-only tool is exposed. Initialization lists the tool
++    # without reading credentials or performing a recall. No prompt hook.
++    readonly='{'+','.join([
++        'command='+json.dumps(sys.executable,ensure_ascii=False),
++        'args='+json.dumps([str(server)],ensure_ascii=False),
++        'cwd='+json.dumps(str(HERE),ensure_ascii=False),
++        'enabled=true','required=false','enabled_tools=["past_recall"]',
++        'startup_timeout_sec=10','tool_timeout_sec=120'])+'}'
++    return options+['-c','mcp_servers.legal_rewrite_memory='+readonly]
++
++
+ def run_job(job,codex,sources,review=False):
+     slug,index,expected=job
+     # Manual coordinations may finish while this long-lived queue is running.
+@@ -166,6 +210,7 @@
+     if not expected:
+         print('SKIPPED',slug,index,'already completed by a parallel author',flush=True)
+         return
++    memory_options=past_before_job()
+     name=(f"review-{slug}-{expected[0]['source_id']}-{index:05d}" if review else f'{slug}-{index:05d}')
+     folder=RUNTIME/'jobs'/name;folder.mkdir(parents=True,exist_ok=True)
+     atomic(folder/'source.json',expected)
+@@ -181,7 +226,7 @@
+     for attempt in range(1,4):
+         if STOP.is_set():return
+         with (folder/f'events-{attempt}.jsonl').open('w') as events,(folder/f'errors-{attempt}.log').open('w') as errors:
+-            cmd=[codex,'exec','--ephemeral','--skip-git-repo-check','--sandbox','workspace-write','--output-schema',str(folder/'result-schema.json'),'--output-last-message',str(folder/'result.json'),'--json','-']
++            cmd=[codex,'exec',*memory_options,'--ephemeral','--skip-git-repo-check','--sandbox','workspace-write','--output-schema',str(folder/'result-schema.json'),'--output-last-message',str(folder/'result.json'),'--json','-']
+             try:
+                 process=subprocess.run(cmd,input=prompt+('\nLe précédent contrôle a échoué : '+failure if failure else ''),text=True,stdout=events,stderr=errors,cwd=folder,timeout=3600)
+             except subprocess.TimeoutExpired:

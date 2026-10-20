@@ -1,0 +1,17 @@
+# Bilan public des effets matériels — livraison
+
+Nouveau module : `legal-rewrite/build_substantive_report.py`.
+
+API : `build(out, exportroot, dbpath, batchesroot)`. Le parent peut l’appeler dans `build_reader.py` avec `out=OUT`, `exportroot=STAGING`, `dbpath=HERE/'corpus.sqlite'`, `batchesroot=HERE/'batches'`. L’appel écrit seulement `out/'substantive-impact.json'` et `out.parent/'bilan-allegements.html'`.
+
+Le module lit les exports bruts de l’édition, les lots et le fichier de politique courant. Il ne prend aucun verrou et n’ouvre jamais la base. Le verrou de publication doit déjà être détenu par l’appelant en production. Une base avancée par les workers ne rend donc pas artificiellement invalide l’édition exportée. Aucun appel de construction sur les vrais fichiers de sortie des sites n’a été effectué pendant ce travail.
+
+Chaque appréciation publiée doit avoir un certificat version1 concordant avec les cinq empreintes convenues : source officielle, notes, proposition (SHA du texte vide pour null), appréciation JSON canonique, politique brute actuelle. Les citations et la cohérence de classification sont revérifiées avec `substantive_impact.validate(..., enforce_workflow=False)` ; cela ne fabrique pas une preuve d’avant-image historique pour les anciens brouillons. Une politique modifiée pendant la lecture remet les appréciations en non évaluées. Aucun certificat absent ou périmé ne permet de publier les effets de l’agent.
+
+La page distingue explicitement déclarations des agents et relectures indépendantes approuvées. Le fichier optionnel `runtime/substantive-audits.json`, version1, peut contenir `audits:[{code_id,source_id,assessment,certificate,reviewed_by,approved_at}]`. Les noms workers `substantive_impact` et `substantive_impact_certificate` sont également reconnus. Un audit périmé ne gagne aucune autorité ; une déclaration worker encore actuelle reste identifiée comme telle. Aucune relecture par un juriste n’est déduite.
+
+Les `measure_id` sont regroupés une fois, en conservant les variantes et coordinations de tous les articles. Aucun montant, impôt, obligation ou coût multiarticles n’est additionné. Taux et assiettes, conditions, populations, transitions, unités de délai, remplacements et charges nouvelles restent présentés. Les transferts de financement et les paiements différés sont distincts des baisses permanentes. Les anciens textes sans appréciation restent non évalués ; la conservation d’une norme ne compte pas comme réécriture. Le montant de l’économie nationale reste null/inconnu et le solde net global non établi. Aucun score d’objectif n’est généré.
+
+17 tests isolés passent, uniquement sur répertoires temporaires. Ils couvrent les cinq gardes périmées, les ancrages fabriqués malgré recalcul des empreintes, les doublons, les effets mixtes, les nouvelles charges, le null conservé, l’absence de méta/certificat, l’audit approuvé puis périmé, l’indépendance envers une DB plus récente, le changement de politique pendant la lecture, l’échappement HTML et l’absence de modification des entrées. Les 11 tests actuels de `test_substantive_impact.py` passent également. Les tests n’appellent aucun modèle, réseau, base canonique ni publication.
+
+Le défaut concret signalé pendant la lecture (une vraie norme pouvant être classée « reserved ») a été corrigé séparément par le parent dans son module et est couvert par sa suite. Aucun autre blocage identifié dans le périmètre de ce bilan. Les gardes attestent la concordance de fichiers, pas la véracité économique indépendante des déclarations.

@@ -1,0 +1,32 @@
+--- a/legal-rewrite/review_prior.py
++++ b/legal-rewrite/review_prior.py
+@@ -9,6 +9,7 @@
+ from register_batches import writer_lock,register
+ from ingest import HERE,open_db
+ from sru_context import priority as sru_priority
++from contrat_unique_priority import article_priority as cu_article_priority, priority as cu_priority
+ 
+ def digest(value):return hashlib.sha256((value or '').encode()).hexdigest()
+ 
+@@ -99,18 +100,18 @@
+ def build_jobs(sources):
+     pending=pending_sources(sources);per_code=[]
+     for slug,articles in pending.items():
+-        articles.sort(key=lambda a:not bool(a.get('sru_context')))
++        articles.sort(key=lambda a:(cu_article_priority(a),not bool(a.get('sru_context'))))
+         chunk=[];size=0;index=0;jobs=[]
+         for article in articles:
+             amount=len(article['source_xml'])+len(article['previous_draft']['proposed_xml'] or '')+len(json.dumps(article.get('sru_context',[]),ensure_ascii=False))
+-            if chunk and (size+amount>45000 or len(chunk)>=12):
++            if chunk and (cu_article_priority(chunk[0])!=cu_article_priority(article) or size+amount>45000 or len(chunk)>=12):
+                 index+=1;jobs.append((slug,index,chunk));chunk=[];size=0
+             chunk.append(article);size+=amount
+         if chunk:
+             index+=1;jobs.append((slug,index,chunk))
+         per_code.append(jobs)
+     # Review every code while new drafting also progresses.
+-    return sorted([job for group in itertools.zip_longest(*per_code) for job in group if job is not None],key=sru_priority)
++    return sorted([job for group in itertools.zip_longest(*per_code) for job in group if job is not None],key=lambda job:(cu_priority(job),sru_priority(job)))
+ 
+ def run(coordinator,sources,codex,maximum=3):
+     jobs=build_jobs(sources)

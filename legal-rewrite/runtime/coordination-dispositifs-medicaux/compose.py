@@ -1,0 +1,333 @@
+"""Full proposed regulatory articles, coordinated with the new L165 batch.
+
+The immutable source and its application notes are in source.json. This file
+authors proposals only; registration performs the canonical-source checks.
+"""
+from pathlib import Path
+import html
+import json
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+sources = json.loads((HERE / "source.json").read_text())
+answers = {}
+
+
+def article(number, body, reason, notes, removed=None, repeal=None):
+    source = next(a for a in sources if a["number"] == number)
+    row = {key: source[key] for key in ("code_id", "source_id", "source_sha256", "number")}
+    row.update(
+        proposed_xml="\n".join(
+            "<p>" + html.escape(" ".join(part.split()), quote=False) + "</p>"
+            for part in body.strip().split("\n\n")
+        ),
+        reason=reason,
+        review_notes=notes,
+        status="rewrite_draft",
+    )
+    if removed:
+        row.update(
+            change_type="normative_reduction",
+            reform_policy_id="editorial_direction_2026_10_19",
+            removed_provisions=removed,
+        )
+    if repeal:
+        row.update(
+            change_type="full_repeal",
+            repeal_policy_id="editorial_direction_2026_10_19",
+            repeal_scope=repeal,
+        )
+    answers[number] = row
+
+
+article(
+    "R165-75",
+    """
+I. - La Haute Autorité de santé rend l'avis prévu au premier alinéa de l'article L. 165-1-3 dans les quarante-cinq jours suivant sa saisine.
+
+II. - Pour l'avis relatif à la prise en compte des données d'utilisation prévu au sixième alinéa de l'article L. 165-1-3, la Commission nationale d'évaluation des dispositifs médicaux et des technologies de santé peut examiner les conditions de bon usage du dispositif et de ses accessoires, le cas échéant pour chaque indication. Elle s'appuie sur les connaissances médicales avérées et, lorsqu'elles existent, sur les références médicales ou les recommandations de bonne pratique. Au regard des données collectées, elle peut recommander un seuil minimal ou une durée minimale d'utilisation. Ces recommandations éclairent le suivi médical et la modulation prévue au III ; elles ne peuvent, à elles seules, justifier un refus, une suspension ou une réduction de la prise en charge du patient.
+
+III. - Pour moduler le tarif de responsabilité ou le prix dans les conditions du sixième alinéa de l'article L. 165-1-3, le Comité économique des produits de santé peut fixer par convention ou, à défaut, par décision un tarif ou un prix de référence. Ce montant correspond à celui que le comité retient pour un bon usage du dispositif. Des décotes peuvent lui être appliquées en fonction du niveau d'utilisation constaté. Elles ne peuvent augmenter la participation de l'assuré par rapport à celle qui résulterait du tarif et du prix de référence, ni affecter la qualité de sa prise en charge.
+
+La règle du II excluant une diminution des droits du patient et les garanties du III s'appliquent aux soins et prestations délivrés à compter de l'entrée en vigueur de la nouvelle rédaction de l'article L. 165-1-3, y compris sur une prescription antérieure. Les créances et recours relatifs aux périodes antérieures restent régis par les dispositions qui leur étaient applicables.
+""",
+    "Coordination de fond avec L165-1-3 : les seuils recommandés restent des outils cliniques et tarifaires, sans devenir une condition financière opposable au patient. Réécriture complète du délai d'avis, de la recommandation et des décotes fournisseur ; protection de la qualité et du reste à charge maintenue.",
+    "La source vise au II et au III le quatrième alinéa de L165-1-3, renvoi déjà décalé dans la source législative. La nouvelle proposition législative place ensemble avis et modulation au sixième alinéa : coordination expresse, sans déplacement implicite. Conserver les quarante-cinq jours et la distinction entre le montant payé au fournisseur et les droits du patient. La recommandation ne dispense pas des conditions médicales de L165-1 ; le prescripteur conserve son appréciation clinique. Le refus de collecte ou transmission et les attestations périodiques sont traités par L165-1-3 lui-même.",
+    ["Suppression de toute utilisation du seul seuil minimal recommandé comme condition de remboursement du patient, en coordination avec la nouvelle rédaction législative."],
+)
+
+article(
+    "R165-77",
+    """
+Les prestataires mentionnés à l'article L. 5232-3 du code de la santé publique sont les responsables, au sens du règlement (UE) 2016/679, des traitements de données à caractère personnel qu'ils mettent en œuvre en application de l'article L. 165-1-3 du présent code. Ils respectent ce règlement et la loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés.
+
+Le recueil et la transmission des données d'utilisation restent soumis à l'accord du patient et aux règles de protection des données applicables. La désignation d'un responsable de traitement ne permet ni d'imposer ce recueil ou cette transmission comme condition de prise en charge, ni d'élargir les données ou les destinataires autorisés par l'article L. 165-1-3.
+""",
+    "Réécriture complète de la désignation du responsable de traitement et coordination avec le caractère volontaire du suivi prévu au nouveau L165-1-3. Mise à jour expresse du renvoi historique à l'article 3 de la loi du 6 janvier 1978, remplacé par le règlement (UE) 2016/679 et la loi applicable. La responsabilité et les garanties de confidentialité sont maintenues ; aucune déclaration de données nouvelle n'est créée.",
+    "Le renvoi source à l'article 3 de la loi du 6 janvier 1978 est historique et n'est pas reproduit comme une définition actuelle du responsable. Sa mise à jour est une coordination explicite, sans changement du prestataire désigné ni réduction de ses obligations. La responsabilité effective, les habilitations, la sécurité et les droits du patient ne sont pas suspendus. Aucun transfert plus large ni effacement des obligations passées n'est prévu.",
+)
+
+article(
+    "R165-84",
+    """
+L'arrêté des ministres chargés de la santé et de la sécurité sociale prévu à l'article R. 165-1 fixe les règles de distribution et les obligations prévues au I de l'article L. 165-1-4. Il peut notamment déterminer comment le fabricant ou le distributeur rend disponibles et propose certains produits ou prestations appartenant aux classes à prise en charge renforcée.
+
+Un arrêté de ces ministres définit les normes et les modalités de l'information orale et écrite que le distributeur doit fournir aux assurés en application du V de l'article L. 165-1-4 lorsqu'il n'entend pas respecter les obligations du I du même article ou de l'article L. 165-9. L'information indique, de façon suffisamment visible, distincte et non équivoque, quels produits ou prestations ainsi proposés à la vente ne sont pas remboursables en raison de ce manquement. Elle ne peut présenter comme non remboursables pour ce motif les autres produits et prestations distribués par le même distributeur. Celui-ci veille à ce que l'assuré comprenne cette information.
+
+La limitation de l'information aux produits et prestations concernés s'applique aux distributions effectuées à compter de l'entrée en vigueur de la nouvelle rédaction du V de l'article L. 165-1-4, y compris au titre d'un contrat antérieur. Elle ne modifie pas les règles applicables aux distributions antérieures.
+""",
+    "Réforme coordonnée avec L165-1-4 V : suppression de l'exclusion et de l'annonce de non-remboursement de tout le catalogue pour un manquement limité à certains produits. Maintien de l'offre à prise en charge renforcée, de l'information orale et écrite et de sa compréhension par le patient.",
+    "Les deux arrêtés, R165-1 et les renvois I et V de L165-1-4 ainsi que L165-9 sont maintenus. Le II de L165-1-4 relatif à la participation administrative supprimée n'est pas réintroduit par la formule générale sur les obligations. Réviser les arrêtés d'information dans le même sens ; les exigences de prescription, qualité, sécurité et distribution demeurent. La transition suit exactement les distributions futures visées au VI de la nouvelle rédaction législative.",
+    ["Suppression de l'information de non-remboursement portant sur les produits étrangers au manquement du distributeur, en cohérence avec la fin de l'exclusion de tout son catalogue."],
+)
+
+article(
+    "R165-85",
+    """
+Le présent article est abrogé à compter de l'entrée en vigueur de la suppression du dispositif administratif d'évaluation obligatoire prévue au II de l'article L. 165-1-4. Aucune participation d'un prescripteur ou d'un distributeur à l'enquête organisée sur son fondement ne peut être exigée pour une prescription ou une distribution effectuée à compter de cette date. Les arrêtés pris sur ce seul fondement cessent d'imposer une participation ou une transmission de données pour ces opérations.
+
+Cette abrogation ne supprime ni les exigences de qualité et de sécurité des dispositifs, ni les études cliniques, ni la matériovigilance, ni les contrôles prévus sur un autre fondement légal. Les données déjà recueillies demeurent soumises aux règles de protection des données personnelles, de conservation et d'effacement qui leur sont applicables ; leur responsable reste tenu de ces obligations. L'abrogation ne constitue pas un nouveau fondement de traitement ou de communication de ces données.
+
+Les situations antérieures demeurent régies par les dispositions qui leur étaient applicables, sous réserve de l'application des dispositions répressives plus douces aux sanctions qui ne sont pas devenues définitives.
+""",
+    "Abrogation opératoire de l'enquête administrative obligatoire, de l'obligation de participation des distributeurs et des transmissions imposées uniquement pour cette enquête. Il ne s'agit pas de supprimer l'évaluation scientifique, les contrôles de sécurité ou les droits des personnes dont les données ont déjà été collectées.",
+    "Coordination directe du II et du 3° du IV de L165-1-4. Les arrêtés décrivant questions, participants et restitution ne peuvent servir à rétablir l'obligation supprimée. Le renvoi source à l'article 3 et au chapitre IV de la loi n°78-17 est historique ; aucune dispense de conformité au règlement (UE) 2016/679 et à la loi en vigueur n'en résulte. Ne pas confondre cette enquête administrative avec les protocoles cliniques du II bis de L165-1-5 ou les obligations européennes de vigilance.",
+    repeal="Suppression du dispositif réglementaire d'enquête administrative obligatoire auprès des patients, des obligations de participation des distributeurs et des transmissions exigées uniquement au titre du II supprimé de L165-1-4 ; maintien des protections de données et de la sécurité clinique.",
+)
+
+article(
+    "R165-86",
+    """
+I. - Lorsqu'il envisage une pénalité pour un manquement aux obligations du I de l'article L. 165-1-4 ou de l'article L. 165-9, dans les conditions du IV de l'article L. 165-1-4, le directeur de l'organisme d'assurance maladie compétent informe le fabricant ou le distributeur concerné des motifs de cette mesure par tout moyen donnant date certaine à la réception. Dans le mois suivant cette réception, l'intéressé peut adresser ses observations écrites au directeur ou demander à être entendu par lui ou par son représentant.
+
+Dans le même délai, le fabricant ou le distributeur communique les éléments de chiffre d'affaires nécessaires à la fixation de la pénalité. Il peut se référer aux éléments exacts et à jour déjà légalement détenus par l'organisme au lieu de les remettre une seconde fois ; il les complète ou les rectifie si nécessaire. L'organisme ne peut exiger des données sans rapport avec l'assiette de la pénalité envisagée.
+
+II. - Le directeur notifie au fabricant ou au distributeur, par tout moyen donnant date certaine à la réception, sa décision motivée sur le principe et le montant de la pénalité. La notification indique le délai de paiement ainsi que les voies et délais de recours. Le directeur communique sa décision à l'organisme de recouvrement compétent.
+
+Le fabricant ou le distributeur paie la pénalité au directeur comptable et financier de l'organisme d'assurance maladie compétent dans le mois suivant sa notification.
+
+La présente procédure ne peut sanctionner l'absence de participation au dispositif administratif d'évaluation supprimé au II de l'article L. 165-1-4. La suppression de cette sanction suit la transition du VI du même article, notamment pour les sanctions qui ne sont pas devenues définitives. La faculté de réutiliser les données déjà détenues s'applique aux demandes de communication notifiées à compter de l'entrée en vigueur du décret portant la présente rédaction.
+""",
+    "Réécriture complète du contradictoire, de la notification et du paiement, limitée aux sanctions subsistantes après L165-1-4. Réduction de fond supplémentaire : le chiffre d'affaires déjà légalement connu ne fait pas l'objet d'une seconde déclaration, sans empêcher le contrôle ou la correction des données.",
+    "Les deux délais d'un mois, les observations écrites ou l'audition, les motifs, les voies et délais de recours et le destinataire du paiement sont conservés. Ne pas confondre transmission à l'organisme de recouvrement et paiement au directeur comptable et financier prévu ici. Les plafonds de 5 % et 10 % restent ceux du IV législatif, avec leurs assiettes distinctes. Aucune période de référence absente de la loi n'est inventée. La réutilisation n'ouvre pas un accès général aux fichiers d'autres administrations.",
+    ["Suppression de la remise en double des éléments de chiffre d'affaires exacts et à jour déjà légalement détenus par l'organisme ; exclusion expresse de la sanction attachée à l'enquête administrative supprimée."],
+)
+
+article(
+    "R165-89",
+    """
+I. - L'entreprise qui sollicite, pour une indication, la prise en charge transitoire d'un produit ou d'une prestation au titre du I de l'article L. 165-1-5 dépose auprès des ministres chargés de la santé et de la sécurité sociale un dossier unique contenant les informations nécessaires à la décision et à l'estimation de ses effets. Un arrêté de ces ministres fixe la liste de ces informations. Dans le champ et selon la transition du dossier unique prévu au même I, ce dépôt vaut également demande d'inscription sur la liste prévue à l'article L. 165-1 pour la même indication.
+
+Le service destinataire transmet simultanément les éléments nécessaires à la commission mentionnée à l'article L. 165-1. L'entreprise n'a pas à lui adresser une copie distincte.
+
+Si le produit ou la prestation intègre un dispositif médical numérique défini au premier alinéa du II de l'article L. 162-48, le dossier contient également les éléments justifiant le respect des règles de protection des données personnelles et des référentiels mentionnés à l'article L. 1470-5 du code de la santé publique. Le service les adresse simultanément au groupement d'intérêt public mentionné à l'article L. 1111-24 du même code ; aucun second envoi de l'entreprise n'est requis.
+
+Les ministres délivrent à l'exploitant un accusé de réception attestant la présence de toutes les pièces nécessaires à l'instruction de la prise en charge transitoire. Cet accusé ne vaut ni accord de prise en charge ni constat que les éléments propres à l'inscription définitive sont déjà tous disponibles.
+
+Si les éléments sont insuffisants, le ministre chargé de la santé ou de la sécurité sociale notifie la liste des renseignements complémentaires nécessaires par tout moyen donnant date certaine à la réception, le cas échéant sur proposition de la commission ou du groupement précités. Seules les pièces manquantes ou devenues inexactes peuvent être demandées. Si l'entreprise ne complète pas le dossier dans les quinze jours suivant cette réception, la demande est réputée abandonnée. Ce délai porte sur les compléments nécessaires à la prise en charge transitoire ; il ne permet pas d'exiger un second dépôt d'inscription supprimé par l'article L. 165-1-5 ni d'avancer les échéances propres aux études cliniques.
+
+II. - Au plus tard le 1er mai de chaque année, l'entreprise met à jour, pour chaque indication susceptible d'être encore prise en charge au titre de l'article L. 165-1-5, les éléments du I désignés par arrêté des ministres chargés de la santé et de la sécurité sociale. Elle ne transmet que les éléments modifiés depuis leur dernière communication. Si aucun de ces éléments n'a changé, aucune déclaration de confirmation ou d'absence de changement n'est exigée. Cette dispense n'affecte pas les obligations de signalement, de suivi clinique ou de vigilance relevant d'un autre fondement.
+
+III. - Pour demander le renouvellement d'une prise en charge transitoire suspendue, au titre du III de l'article L. 165-1-5, l'entreprise adresse aux ministres les informations nécessaires à l'appréciation des conditions de levée de la suspension, selon la liste fixée par arrêté. Les informations et pièces déjà fournies dans le dossier d'inscription sont réutilisées lorsqu'elles sont exactes et à jour. La demande de renouvellement n'impose pas une nouvelle demande d'inscription.
+
+La suppression des envois distincts, des pièces déjà fournies et de la confirmation annuelle sans changement s'applique aux transmissions dont l'échéance est postérieure à l'entrée en vigueur du décret portant la présente rédaction. Elle ne fait pas recommencer les délais en cours. La reconnaissance du dossier unique d'inscription et la suppression du second dépôt suivent les conditions et l'option pour les dossiers antérieurs prévues à l'article L. 165-1-5. Les obligations et créances déjà nées ne sont pas effacées.
+""",
+    "Réforme de fond : un seul dépôt est transmis par le service aux évaluateurs, sans copies imposées à l'entreprise ; les pièces exactes déjà reçues ne sont pas redemandées. Suppression de la confirmation annuelle lorsque rien n'a changé, sans suppression des mises à jour utiles ni de la vigilance. Coordination du renouvellement avec le dossier unique législatif et réécriture complète des trois subdivisions.",
+    "Le quatrième alinéa reste consacré à l'accusé de réception, cible du III de R165-90 ; ses destinataires et l'objet transitoire sont explicites. Préserver les quinze jours pour les compléments de cette procédure, le 1er mai pour les éléments ayant changé et les deux avis distincts. Le transfert administratif des copies ne dispense ni d'un avis ni d'une certification numérique. La note source renvoie aux conditions d'application de l'article 2 du décret 2023-232 : ce régime historique n'est pas remplacé rétroactivement ni pris pour la date du nouveau décret. Coordonner les arrêtés de pièces et de mise à jour, ainsi que les dispositions d'instruction de l'inscription définitive hors du présent lot ; aucune inscription tacite nouvelle n'est créée.",
+    ["Suppression des copies et envois distincts du même dossier à la commission et au groupement numérique, remplacés par la transmission du service destinataire.", "Suppression des pièces exactes et à jour déjà présentes au dossier et de la déclaration annuelle de confirmation lorsqu'aucun élément n'a changé.", "Suppression d'une nouvelle demande d'inscription à l'occasion du renouvellement, dans le champ du dossier unique législatif."],
+)
+
+article(
+    "R165-90",
+    """
+I. - Pour chaque indication considérée, la prise en charge transitoire d'un produit et, le cas échéant, d'une prestation associée au titre de l'article L. 165-1-5 est subordonnée aux conditions cumulatives suivantes :
+
+1° Le produit et la prestation sont destinés à traiter une maladie grave ou rare ou à compenser un handicap ;
+
+2° Au regard des connaissances médicales avérées, il n'existe pas de comparateurs pertinents ; le produit ou la prestation répond ainsi à un besoin médical non ou mal couvert ;
+
+3° Le traitement est fortement susceptible d'améliorer de façon significative l'état de santé ou la compensation du handicap des patients ;
+
+4° Le produit et la prestation sont susceptibles d'être innovants, notamment par une nouveauté qui dépasse une simple évolution technique des technologies de santé utilisées dans les indications revendiquées ;
+
+5° Les résultats des études cliniques rendent probable une efficacité cliniquement pertinente et un effet important au regard desquels les effets indésirables sont acceptables ;
+
+6° (Abrogé) ;
+
+7° (Abrogé) ;
+
+8° Il n'a pas déjà été mis fin à une prise en charge transitoire du produit ou de la prestation au titre de l'article L. 165-1-5 dans les conditions des II et III de l'article R. 165-95 ;
+
+9° Le produit ou la prestation n'a pas fait l'objet d'un refus de prise en charge au titre du I de l'article L. 165-1-5 dans les indications considérées ;
+
+10° Le produit ne bénéficie pas, dans l'indication considérée, d'une prise en charge au titre des prestations d'hospitalisation mentionnées à l'article L. 162-22-3 ;
+
+11° S'il s'agit d'un dispositif médical, aucune décision de suspension ou d'interdiction prise en application de l'article L. 5312-1 du code de la santé publique ne vise le produit ;
+
+12° Des études en cours sur le produit ou la prestation dans les indications considérées sont de nature à fournir, dans les douze mois suivant la demande de prise en charge transitoire, les données suffisantes pour que la commission visée à l'article R. 165-18 rende un avis sur la demande d'inscription sur la liste prévue à l'article L. 165-1 ;
+
+13° Le produit n'est pas un dispositif médical numérique défini au quatrième alinéa de l'article L. 162-48 à visée thérapeutique ou utilisé pour les activités de télésurveillance médicale définies au même article ;
+
+14° Si le produit ou la prestation intègre un dispositif médical numérique défini au premier alinéa du II de l'article L. 162-48, celui-ci respecte les règles de protection des données personnelles et les référentiels mentionnés à l'article L. 1470-5 du code de la santé publique.
+
+II. - Pour chaque indication, la commission mentionnée à l'article L. 165-1 apprécie les conditions des 1° à 5°, 12° et 13° du I du présent article. Elle rend son avis dans les soixante jours suivant la réception, par le ministre chargé de la sécurité sociale, de la demande complète prévue au I de l'article R. 165-89.
+
+L'avis est communiqué aux ministres chargés de la santé et de la sécurité sociale et à l'entreprise exploitante. Il est rendu public sans délai.
+
+III. - Si le produit ou la prestation intègre un dispositif médical numérique défini au premier alinéa du II de l'article L. 162-48, le groupement d'intérêt public mentionné à l'article L. 1111-24 du code de la santé publique apprécie le respect de la condition du 14° du I. En cas d'avis favorable, il établit le certificat de conformité aux référentiels mentionnés à l'article L. 1470-5 du même code.
+
+Le groupement rend cet avis dans les soixante jours suivant la délivrance de l'accusé de réception prévu au quatrième alinéa de l'article R. 165-89.
+
+Il communique simultanément son avis aux ministres chargés de la santé et de la sécurité sociale et à l'exploitant.
+
+IV. - Pour chaque patient, le prescripteur fournit oralement et par écrit une information sur le caractère précoce et dérogatoire de la prise en charge au titre de l'article L. 165-1-5, ainsi que sur les conditions d'une éventuelle interruption ou suspension. La prise en charge est subordonnée à cette information. Le prescripteur veille à sa bonne compréhension. Un arrêté des ministres chargés de la santé et de la sécurité sociale précise les mentions à porter sur l'ordonnance.
+
+L'abrogation des 6° et 7° du I suit le champ et la transition du dossier unique prévu au I de l'article L. 165-1-5, y compris l'option ouverte aux dossiers antérieurs. Elle ne supprime ni les compléments nécessaires à l'inscription, ni la condition d'études dans les douze mois prévue au 12°, ni les avis et garanties de sécurité, ni les obligations antérieurement nées. Les numéros des autres conditions sont conservés.
+""",
+    "Réforme de fond : suppression des deux conditions qui imposaient un second dépôt d'inscription et sa notification distincte, devenues incompatibles avec le dossier unique de L165-1-5. L'article complet maintient toutes les autres conditions cliniques, les exclusions, les deux avis de soixante jours, la certification numérique et l'information du patient ; les numéros des conditions sont conservés.",
+    "Ne pas confondre le délai administratif de second dépôt supprimé avec les données scientifiques attendues dans les douze mois au 12°, qui restent exigées. Les avis des II et III demeurent distincts, et le renvoi du III au quatrième alinéa de R165-89 reste exact dans sa nouvelle rédaction. Le 8° continue à viser les II et III de R165-95 avec leur champ médical maintenu ; la suppression du 5° du II de cet article ne neutralise pas les autres fins de prise en charge. La source comporte une entrée immédiate au 1er janvier 2025 issue du décret 2024-1267 : date historique conservée dans les notes source, sans antidater la présente réforme. Les exigences européennes relatives aux dispositifs et données personnelles demeurent applicables.",
+    ["Suppression des conditions numérotées 6° et 7° imposant un nouveau dépôt de demande d'inscription dans les douze mois et sa notification administrative distincte, pour les dossiers relevant du guichet unique."],
+)
+
+article(
+    "R165-91",
+    """
+I. - Lorsque les ministres chargés de la santé et de la sécurité sociale envisagent la prise en charge transitoire d'un produit ou d'une prestation pour une ou plusieurs indications au titre du I de l'article L. 165-1-5, ils le notifient à l'exploitant par tout moyen donnant date certaine à la réception. Ils disposent de dix jours à compter de la réception du dernier des avis requis aux II et III de l'article R. 165-90. Lorsqu'un seul de ces avis est requis, ce délai court à compter de sa réception.
+
+II. - Si le produit ou la prestation n'est pris en charge sur la liste prévue à l'article L. 165-1 pour aucune de ses indications, l'exploitant propose aux ministres le montant de la compensation maximale qu'il réclamera, le cas échéant, aux établissements de santé. Il dispose de dix jours suivant la notification prévue au I. S'il ne présente aucune proposition dans ce délai, sa demande de prise en charge transitoire est réputée abandonnée.
+
+III. - Les ministres disposent de quarante-cinq jours suivant la réception de cette proposition pour l'accepter ou s'y opposer.
+
+En cas d'opposition, les ministres chargés de la santé ou de la sécurité sociale notifient à l'exploitant, par tout moyen donnant date certaine à la réception, le montant qu'ils proposent pour les indications considérées. Leur proposition tient notamment compte de la mise à disposition du produit et, le cas échéant, de la prestation associée ainsi que d'un ou plusieurs critères de l'article L. 165-2.
+
+IV. - L'exploitant dispose de dix jours suivant cette notification pour accepter la compensation proposée. Son refus ou son absence de réponse dans ce délai entraîne l'abandon de la demande de prise en charge transitoire.
+
+V. - En cas de demande de renouvellement au titre du III de l'article L. 165-1-5, les ministres délivrent un accusé de réception attestant la présence des pièces requises. Les pièces exactes et à jour du dossier antérieur sont réutilisées. Si les informations restent insuffisantes, le ministre chargé de la santé ou de la sécurité sociale notifie, par tout moyen donnant date certaine à la réception, la liste des seuls renseignements complémentaires nécessaires. Si l'entreprise ne les fournit pas dans les quinze jours suivant cette réception, la demande de renouvellement est réputée abandonnée. Aucune nouvelle demande d'inscription sur la liste prévue à l'article L. 165-1 n'est requise dans le champ du dossier unique législatif.
+
+Si le produit ou la prestation intègre un dispositif médical numérique défini au premier alinéa du II de l'article L. 162-48 et si les référentiels de l'article L. 1470-5 du code de la santé publique ont évolué, l'exploitant fait établir avant sa demande de renouvellement un nouveau certificat de conformité par le groupement mentionné à l'article L. 1111-24 du même code, selon l'article R. 165-5-2. Aucun nouveau certificat n'est requis sur le fondement du présent alinéa si les référentiels n'ont pas évolué et si le certificat reste applicable au dispositif.
+
+Les ministres notifient la décision relative au renouvellement par tout moyen donnant date certaine à la réception dans les dix jours suivant la réception de l'ensemble des informations prévues au III de l'article R. 165-89, y compris celles réutilisées à partir du dossier.
+
+Si le renouvellement est accordé, le montant de la compensation maximale, le cas échéant déterminé en application du II de l'article L. 165-1-5, s'applique.
+
+La réutilisation des pièces s'applique aux demandes de complément notifiées à compter de l'entrée en vigueur du décret portant la présente rédaction, sans reprise des délais écoulés. La suppression du second dépôt d'inscription suit la transition et l'option pour les dossiers antérieurs prévues à l'article L. 165-1-5. Les compensations, remises et obligations antérieurement nées restent applicables.
+""",
+    "Réécriture intégrale de l'enchaînement de décision et de compensation avec conservation des cinq subdivisions et de tous les délais. Réduction de fond au renouvellement : réutilisation des pièces valides et suppression du second dépôt d'inscription conformément au dossier unique. Précision expresse du point de départ lorsque seul l'avis scientifique est légalement requis.",
+    "Délais vérifiés : dix jours de notification initiale, dix jours de proposition de l'entreprise, quarante-cinq jours de réponse des ministres, dix jours d'acceptation de leur contre-proposition, quinze jours pour compléter un renouvellement, dix jours pour notifier sa décision. L'avis numérique n'est requis que pour le champ du III de R165-90 : la phrase source sur le dernier de deux avis est clarifiée, sans créer un avis nouveau pour les autres produits. Le nouveau certificat reste obligatoire en cas d'évolution des référentiels ; les autres causes de renouvellement d'un certificat ne sont pas écartées. Le III de R165-89 reste la cible des informations de renouvellement. Préserver les conditions historiques de l'article 2 du décret 2023-232, mentionnées dans les notes source ; ne pas les remplacer par la date du nouveau décret.",
+    ["Suppression de la remise de pièces exactes et à jour déjà au dossier lors du renouvellement et d'un nouveau dépôt d'inscription distinct, sans suppression des compléments nécessaires ni du certificat lié à des référentiels modifiés."],
+)
+
+article(
+    "R165-95",
+    """
+I. - Pour chaque indication, l'absence d'un second dépôt de demande d'inscription sur la liste prévue à l'article L. 165-1 ne peut entraîner la suspension de la prise en charge transitoire lorsque le dossier unique prévu au I de l'article L. 165-1-5 s'applique. Cette règle ne supprime aucun motif clinique ou de sécurité de suspension ou de cessation prévu par les dispositions applicables.
+
+II. - Pour chaque indication, la prise en charge d'un produit et, le cas échéant, de sa prestation associée au titre de l'article L. 165-1-5, même suspendue, cesse dans les cas suivants :
+
+1° Une décision d'inscription ou de refus d'inscription de l'indication sur la liste prévue à l'article L. 165-1 est prise et, lorsqu'un tel avis est requis, l'avis fixant le tarif de responsabilité est publié ;
+
+2° L'entreprise retire sa demande d'inscription sur cette liste ;
+
+3° Pour un dispositif médical, le marquage CE est retiré dans l'indication considérée ;
+
+4° Pour un dispositif médical, le produit fait l'objet d'une décision prise en application de l'article L. 5312-1 du code de la santé publique ;
+
+5° (Abrogé).
+
+III. - Les ministres chargés de la santé et de la sécurité sociale peuvent également, par arrêté, mettre fin pour une indication à la prise en charge d'un produit ou d'une prestation au titre du I ou du III de l'article L. 165-1-5, même suspendue, si une des conditions de l'article R. 165-90 n'est plus remplie.
+
+La suppression de la suspension pour absence de second dépôt et celle de la cessation prévue à l'ancien 5° du II suivent le champ et la transition du dossier unique de l'article L. 165-1-5. Pour un dossier antérieur, elles s'appliquent si l'exploitant exerce l'option prévue à cet article ; elles ne rétablissent aucun remboursement pour une période antérieure. Une décision antérieure fondée sur la sécurité, l'absence des conditions cliniques, un retrait de demande ou un refus d'inscription conserve ses effets. Les compensations, remises et obligations de continuité des traitements déjà nées demeurent applicables.
+""",
+    "Réforme de fond coordonnée : suppression de la suspension puis de la cessation fondées sur l'absence de second dossier, avec transition alignée sur le dossier unique. Réécriture complète des fins de prise en charge pour inscription, refus, retrait, marquage CE ou sécurité, sans neutraliser leurs effets.",
+    "Conserver I, II et III ainsi que les numéros 1° à 5° afin que les renvois, notamment le 8° du I de R165-90, restent identifiables. Le 5° supprimé n'éteint aucune décision clinique ou de sécurité antérieure. L'ancien I et l'ancien 5° continuent à s'appliquer aux dossiers antérieurs non basculés, selon la transition législative : la rédaction ne crée pas de remboursement rétroactif. Le délai de douze mois pour les données scientifiques au 12° du I de R165-90 demeure. Le déclencheur distinct de trente mois pour le prix de référence au V de L165-1-5 n'est pas une fin automatique de prise en charge.",
+    ["Suppression de la suspension après douze mois pour absence de dépôt distinct d'inscription et de la cessation après douze mois de suspension sur ce même motif, dans le champ du dossier unique législatif."],
+)
+
+article(
+    "R165-101",
+    """
+I. - Dans les conditions de l'article L. 165-2-2, le Comité économique des produits de santé peut demander à l'exploitant ou au fournisseur d'un distributeur au détail, au sens de l'article L. 165-1-1-1, des données sur les produits ou prestations inscrits sur la liste prévue à l'article L. 165-1. La demande précise la fixation ou la révision de tarif, de prix ou de remise qu'elle prépare, les produits et prestations concernés, la période considérée et les données nécessaires. Elle ne constitue pas une déclaration annuelle générale.
+
+II. - Seuls les éléments nécessaires à cette fixation ou révision peuvent être demandés parmi les suivants :
+
+1° Pour un produit associé à une prestation inscrite sur la liste prévue à l'article L. 165-1, dont la prise en charge est indissociable d'autres produits selon les conditions de cette liste :
+
+a) Le ou les codes de l'article L. 165-5 correspondant aux prestations avec lesquelles le produit peut être associé ;
+
+b) Les dénominations ou références commerciales du produit ;
+
+c) Pour le produit utilisé dans ces prestations, la distribution par décile des prix de vente nets des remises et taxes en vigueur ;
+
+d) Le volume des ventes du produit utilisé dans ces prestations pendant la période demandée ;
+
+e) Le cas échéant, la part de ce volume correspondant à chaque dénomination ou référence du b ;
+
+2° Pour tout autre produit inscrit sur la liste prévue à l'article L. 165-1 :
+
+a) Le code de l'article L. 165-5 correspondant à son inscription ou, pour un produit sous description générique, le code de l'article L. 165-5-1 ;
+
+b) Les dénominations ou références commerciales prises en charge sous ce code ;
+
+c) La distribution par décile des prix de vente correspondant à ce code, nets des remises et taxes en vigueur ;
+
+d) Le volume des ventes correspondant à ce code pendant la période demandée ;
+
+e) Le cas échéant, la part de ce volume correspondant à chaque dénomination ou référence du b.
+
+Le comité ne peut demander systématiquement tous ces éléments pour l'ensemble des produits ni transformer une succession de demandes en déclaration annuelle générale. Les données qu'il détient déjà légalement ou qu'il peut obtenir légalement d'un autre organisme public ne sont pas demandées de nouveau. L'entreprise peut en indiquer la référence et les corriger si nécessaire.
+
+Ces dispositions s'appliquent aux demandes notifiées à compter de l'entrée en vigueur du décret portant la présente rédaction. Les déclarations annuelles dont l'échéance est postérieure à l'entrée en vigueur de la nouvelle rédaction de l'article L. 165-2-2 ne sont plus exigibles, même si elles portent sur une année antérieure. Les déclarations déjà exigibles, les créances et les recours demeurent régis par les dispositions antérieures, sous réserve des dispositions répressives plus douces pour les sanctions non définitives. Une demande ciblée ne peut exiger une seconde remise d'une déclaration déjà fournie.
+""",
+    "Réforme de fond : la déclaration annuelle de tout le catalogue est remplacée par une demande ciblée liée à une décision tarifaire déterminée. Les catégories de données des 1° et 2°, lettres a à e, sont conservées comme possibilités strictement nécessaires, sans devenir un reporting récurrent. Les pièces déjà disponibles ne sont pas redéclarées.",
+    "Coordination directe avec L165-2-2, R165-102 et R165-103. Les codes L165-5 et L165-5-1, les déciles nets de remises et taxes, les références et les parts de volumes demeurent identifiables. La période demandée remplace l'année civile systématique ; une année peut être pertinente pour une demande justifiée, mais n'entraîne plus d'obligation annuelle générale. La note source sur le premier exercice 2020 et l'échéance dérogatoire du 1er septembre 2021 reste historique et ne rétablit aucune déclaration future. La transition distingue l'échéance déclarative et l'année des ventes ; aucun crédit, remise ou remboursement ancien n'est effacé.",
+    ["Suppression de la déclaration annuelle systématique pour chaque produit ou prestation et chaque opérateur, remplacée par les seules données nécessaires à une décision tarifaire identifiée.", "Suppression de la répétition des données déjà légalement détenues ou accessibles et de la reconstitution indirecte d'un reporting annuel général par demandes successives."],
+)
+
+article(
+    "R165-102",
+    """
+I. - Le Comité économique des produits de santé créé à l'article L. 162-17-3 notifie la demande ciblée prévue à l'article R. 165-101 par tout moyen donnant date certaine à sa réception. La réponse peut être transmise par voie dématérialisée au moyen du formulaire disponible sur le site internet du ministère chargé de la sécurité sociale, selon les modalités fixées par arrêté du ministre. Un autre moyen donnant date certaine à la réception et assurant la sécurité des informations peut également être utilisé ; l'emploi d'un formulaire déterminé ne peut conditionner la prise en compte d'une réponse complète. Les membres du comité ont accès aux données reçues dans l'exercice de leurs missions.
+
+II. - L'exploitant ou le fournisseur dispose d'un mois à compter de la réception de la demande pour transmettre les données nécessaires qu'il n'a pas déjà fournies ou pour indiquer la référence des données réutilisables dans les conditions de l'article L. 165-2-2. Aucune échéance annuelle au 31 mars ni aucune transmission en l'absence de demande ciblée n'est exigée au titre du présent article.
+
+III. - Si la réponse est incomplète ou imprécise, le comité peut demander les seuls compléments ou précisions nécessaires, par tout moyen donnant date certaine à la réception. L'exploitant ou le fournisseur dispose d'un mois à compter de cette réception pour les fournir. Le comité ne peut redemander des pièces déjà disponibles selon l'article L. 165-2-2 ni renouveler une demande identique pour faire naître une nouvelle obligation sur les mêmes données et la même période.
+
+IV. - Pour vérifier l'exactitude des données reçues, le comité peut à tout moment demander des justificatifs nécessaires par tout moyen donnant date certaine à la réception. L'exploitant ou le fournisseur dispose d'un mois à compter de cette réception pour les transmettre. Cette vérification reste limitée à la demande ciblée et n'autorise ni collecte annuelle systématique ni production répétée des mêmes justificatifs exacts et à jour.
+
+Les présentes modalités s'appliquent aux demandes notifiées à compter de l'entrée en vigueur du décret portant la présente rédaction. La suppression de l'échéance annuelle suit la transition de l'article L. 165-2-2 ; les déclarations déjà exigibles avant la suppression restent régies par les dispositions antérieures, sous réserve des règles répressives plus douces. La présente rédaction ne fait pas recommencer un délai de réponse en cours et ne crée pas de seconde déclaration pour une période déjà couverte.
+""",
+    "Réforme de fond : suppression de l'échéance annuelle du 31 mars et du formulaire obligatoire, remplacés par une réponse à une demande tarifaire ciblée. Un délai initial d'un mois est expressément institué pour cette nouvelle procédure, aligné sur les délais existants de complément et de justification, tous conservés. L'information exacte reste contrôlable sans nouvelle collecte générale.",
+    "Le délai initial d'un mois est une modalité nouvelle de la procédure à la demande, et non un délai déjà présent dans la source pour une première réponse. Les délais d'un mois des III et IV sont maintenus. Le formulaire reste utilisable mais n'est plus exclusif ; l'alternative doit assurer date certaine et sécurité. Maintenir les habilitations légales, les secrets protégés et la protection des données : l'accès des membres du CEPS n'est pas un accès public. Les modalités de l'arrêté doivent être adaptées. Le régime inaugural 2020/1er septembre 2021 mentionné par la note source n'est pas appliqué aux demandes futures.",
+    ["Suppression de l'échéance annuelle obligatoire du 31 mars et de toute déclaration sans demande tarifaire ciblée.", "Suppression du formulaire électronique exclusif et de la production répétée de pièces exactes déjà disponibles, sans suppression des contrôles nécessaires."],
+)
+
+article(
+    "R165-103",
+    """
+I. - Avant de prononcer la pénalité prévue à l'article L. 165-2-2 pour absence de réponse ou réponse manifestement inexacte à une demande remplissant les conditions de cet article, le Comité économique des produits de santé informe l'exploitant ou le fournisseur des motifs de la pénalité envisagée, par tout moyen donnant date certaine à la réception. L'intéressé dispose de vingt jours à compter de cette réception pour présenter ses observations écrites. Il peut demander à être entendu dans les huit jours suivant cette même réception. L'audition, dont le comité fixe la date, a lieu au plus tard quarante-cinq jours après la réception de cette demande.
+
+Dans le délai de vingt jours, l'exploitant ou le fournisseur communique les éléments de son chiffre d'affaires hors taxes pour les ventes concernées qui sont nécessaires à la fixation de la pénalité, ou indique la référence d'éléments exacts et à jour déjà légalement détenus par le comité. L'assiette correspond aux ventes concernées par la demande au cours du dernier exercice clos. Si, à l'expiration de ce délai, les éléments nécessaires restent incomplets, le comité met l'intéressé en demeure de les fournir dans les quinze jours. Aucune donnée déjà disponible dans les conditions de l'article L. 165-2-2 ne peut être exigée une seconde fois.
+
+II. - Le président du comité notifie la décision de sanction à l'exploitant ou au fournisseur par tout moyen donnant date certaine à sa réception. Cette décision est communiquée à l'organisme de recouvrement compétent.
+
+L'exploitant ou le fournisseur paie la pénalité à l'agent comptable de cet organisme dans le mois suivant la notification.
+
+Les organismes mentionnés à l'article L. 213-1 désignés par le directeur de l'Agence centrale des organismes de sécurité sociale recouvrent la pénalité. Les deux premiers alinéas de l'article L. 137-3 et l'article L. 137-4 s'appliquent à ce recouvrement.
+
+III. - L'organisme de recouvrement compétent au titre de l'article L. 165-2-2 informe le comité des montants perçus.
+
+La procédure ne peut sanctionner l'absence d'une déclaration annuelle supprimée par la nouvelle rédaction de l'article L. 165-2-2. Les mêmes données et la même période ne peuvent donner lieu à des pénalités successives par simple réitération de la demande. Les manquements aux anciennes déclarations déjà exigibles restent soumis aux dispositions antérieures, sous réserve des dispositions répressives plus douces pour les sanctions non définitives. La faculté de se référer au chiffre d'affaires déjà connu s'applique aux demandes de communication notifiées à compter de l'entrée en vigueur du décret portant la présente rédaction.
+""",
+    "Réécriture intégrale de la procédure contradictoire et du recouvrement pour les seules demandes ciblées subsistant après L165-2-2. Suppression de la déclaration répétée du chiffre d'affaires et de toute sanction fondée sur un reporting annuel désormais supprimé ; interdiction des sanctions successives par répétition artificielle de la demande.",
+    "Délais et destinataires source conservés : vingt jours d'observations et de communication du chiffre d'affaires, huit jours pour demander l'audition, audition sous quarante-cinq jours de la demande, mise en demeure de quinze jours, paiement sous un mois à l'agent comptable. L'assiette du dernier exercice clos est celle de L165-2-2 proposé, limitée aux ventes concernées, avec plafond légal de 5 % ; elle n'est pas étendue au catalogue entier. Le recours de pleine juridiction et l'affectation CNAM restent dans la loi. La note source sur les premières déclarations de 2020 n'est pas un nouveau fait générateur. La loi répressive plus douce reste expressément réservée pour les sanctions antérieures non définitives.",
+    ["Suppression de la remise en double du chiffre d'affaires exact et à jour déjà connu et des pénalités pour absence de déclaration annuelle supprimée.", "Suppression des pénalités successives produites par la seule réitération d'une demande portant sur les mêmes données et la même période."],
+)
+
+assert set(answers) == {a["number"] for a in sources}
+rows = [answers[a["number"]] for a in sources]
+destination = ROOT / "batches" / "coordination-dispositifs-medicaux" / "001.json"
+destination.parent.mkdir(parents=True, exist_ok=True)
+temporary = destination.with_suffix(".json.tmp")
+temporary.write_text(json.dumps(rows, ensure_ascii=False, indent=2))
+temporary.replace(destination)
+print(json.dumps({"file": str(destination), "articles": len(rows)}, ensure_ascii=False))

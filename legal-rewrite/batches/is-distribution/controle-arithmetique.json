@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "case": "normal",
+      "net": "80",
+      "rate": ".2",
+      "taxable_fraction": "1",
+      "loss_used": "0",
+      "corporate_tax": "20",
+      "budget_before_tax": "100"
+    },
+    {
+      "case": "PME",
+      "net": "85",
+      "rate": ".15",
+      "taxable_fraction": "1",
+      "loss_used": "0",
+      "corporate_tax": "15",
+      "budget_before_tax": "100"
+    },
+    {
+      "case": "IP",
+      "net": "90",
+      "rate": ".1",
+      "taxable_fraction": "1",
+      "loss_used": "0",
+      "corporate_tax": "10",
+      "budget_before_tax": "100"
+    },
+    {
+      "case": "PV15",
+      "net": "85",
+      "rate": ".15",
+      "taxable_fraction": "1",
+      "loss_used": "0",
+      "corporate_tax": "15",
+      "budget_before_tax": "100"
+    },
+    {
+      "case": "PV19",
+      "net": "81",
+      "rate": ".19",
+      "taxable_fraction": "1",
+      "loss_used": "0",
+      "corporate_tax": "19",
+      "budget_before_tax": "100"
+    },
+    {
+      "case": "titres_QP12",
+      "net": "97.6",
+      "rate": ".2",
+      "taxable_fraction": ".12",
+      "loss_used": "0",
+      "corporate_tax": "2.4",
+      "budget_before_tax": "100.0"
+    },
+    {
+      "case": "titres_QP12_PME",
+      "net": "98.2",
+      "rate": ".15",
+      "taxable_fraction": ".12",
+      "loss_used": "0",
+      "corporate_tax": "1.8",
+      "budget_before_tax": "100.0"
+    },
+    {
+      "case": "deficit_partiel",
+      "net": "100",
+      "rate": ".2",
+      "taxable_fraction": "1",
+      "loss_used": "50",
+      "corporate_tax": "12.5",
+      "budget_before_tax": "112.5"
+    },
+    {
+      "case": "deficit_total",
+      "net": "40",
+      "rate": ".2",
+      "taxable_fraction": "1",
+      "loss_used": "40",
+      "corporate_tax": "0",
+      "budget_before_tax": "40"
+    },
+    {
+      "case": "exonere",
+      "net": "100",
+      "rate": "0",
+      "taxable_fraction": "0",
+      "loss_used": "0",
+      "corporate_tax": "0",
+      "budget_before_tax": "100"
+    },
+    {
+      "case": "plafond_PME_plus100_normal",
+      "net": "36205",
+      "corporate_tax": "6395",
+      "budget_before_tax": "42600",
+      "PME_taxable": "42500",
+      "normal_taxable": "100"
+    },
+    {
+      "case": "plafond_deficit_1M_plus50",
+      "net": "2000000",
+      "loss_used": "1555555.555555555555555555556",
+      "corporate_tax": "111111.111111111111111111111",
+      "base_before_loss": "2111111.111111111111111111111"
+    }
+  ],
+  "limits": "Checks arithmetic only; not legal validation. Retained profits have no distribution and therefore no ordinary corporate tax. Personal taxes and global minimum remain separate."
+}

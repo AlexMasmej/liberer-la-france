@@ -1,0 +1,40 @@
+--- a/legal-rewrite/run_exhaustive.py
++++ b/legal-rewrite/run_exhaustive.py
+@@ -9,6 +9,7 @@
+ from ingest import HERE,open_db,source_notes,source_evidence
+ from source_assets import graphic_markers,load_companions,recovery_complete,recovered_content_present
+ from sru_context import contexts as sru_contexts, priority as sru_priority
++from contrat_unique_priority import article_priority as cu_article_priority, priority as cu_priority, mixed_priority as cu_mixed_priority
+ 
+ ROOT=HERE.parent
+ CORPUS=ROOT/'sites/liberer-la-retraite/dist/corpus'
+@@ -340,17 +341,17 @@
+             if needs_graphic_source(article):
+                 held.append({'slug':slug,'source_id':article['source_id'],'number':article['number'],'reason':'Normative formula/table must be recovered from the referenced official Journal PDF before drafting.'})
+             else:pending.append(article)
+-        pending.sort(key=lambda a:not bool(a.get('sru_context')))
++        pending.sort(key=lambda a:(cu_article_priority(a),not bool(a.get('sru_context'))))
+         previous=HERE/'batches'/('automatic-'+slug)
+         index=1+max((int(p.stem) for p in previous.glob('*.json') if p.stem.isdigit()),default=0)
+         chunk=[];size=0
+         for article in pending:
+             n=len(article['source_xml'])+len(article['source_notes_xml'])+len(json.dumps(article.get('sru_context',[]),ensure_ascii=False))
+-            if chunk and (size+n>45000 or len(chunk)>=24):jobs.append((slug,index,chunk));index+=1;chunk=[];size=0
++            if chunk and (cu_article_priority(chunk[0])!=cu_article_priority(article) or size+n>45000 or len(chunk)>=24):jobs.append((slug,index,chunk));index+=1;chunk=[];size=0
+             chunk.append(article);size+=n
+         if chunk:jobs.append((slug,index,chunk))
+     # Round-robin across codes; do not starve annexes or the very long articles.
+-    jobs.sort(key=lambda j:(sru_priority(j),j[1],SLUGS.index(j[0])))
++    jobs.sort(key=lambda j:(cu_priority(j),sru_priority(j),j[1],SLUGS.index(j[0])))
+     if args.max_jobs is not None and not args.interleave_review:jobs=jobs[:args.max_jobs]
+     atomic(RUNTIME/'queue.json',[{'slug':s,'index':i,'source_ids':[a['source_id'] for a in rows]} for s,i,rows in jobs])
+     atomic(RUNTIME/'held-graphic-sources.json',held)
+@@ -365,6 +366,8 @@
+     if args.interleave_review:
+         import review_prior
+         scheduled=interleave_jobs(jobs,review_prior.build_jobs(sources))
++        # Keep stable new/review interleaving within each contract-priority band.
++        scheduled.sort(key=cu_mixed_priority)
+         if args.max_jobs is not None:scheduled=scheduled[:args.max_jobs]
+         atomic(RUNTIME/'mixed-queue.json',[{'slug':job[0],'index':job[1],'review':review,'source_ids':[a['source_id'] for a in job[2]]} for job,review in scheduled])
+         print('MIXED QUEUE',sum(not review for _,review in scheduled),'new jobs;',sum(review for _,review in scheduled),'review jobs',flush=True)

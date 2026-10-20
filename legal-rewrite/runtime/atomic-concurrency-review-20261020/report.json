@@ -1,0 +1,29 @@
+{
+  "baseline_concurrent_regression": "fails as expected",
+  "baseline_error_contains_ENOENT": true,
+  "changed_implementation_targeted_tests": 18,
+  "targeted_test_command": "python3 -m unittest test_atomic_status test_publication_resilience.Coordinator test_drafting_queue -v",
+  "new_concurrency_test": {
+    "writers": 8,
+    "writes_per_writer": 25,
+    "total_unique_temporary_files": 200,
+    "continuous_reader": "JSON parsed and entire payload checked on each read; observed at least one writer value",
+    "contention": "All writers synchronized immediately before every rename",
+    "partial_values_or_writer_exceptions": 0
+  },
+  "failure_cleanup_tests": [
+    "serialization error keeps existing JSON",
+    "replacement error keeps existing JSON",
+    "initial serialization error leaves no target"
+  ],
+  "limits": [
+    "Atomic replace keeps a whole last-writer-wins snapshot; it does not merge concurrent read-modify-write state.",
+    "No fsync or power-loss durability guarantee added.",
+    "No running process reloaded, restarted, signalled or otherwise modified.",
+    "No active corpus, policy or site mutated."
+  ],
+  "sha256": {
+    "run_exhaustive.py": "3f113eaaf923c48d8a3b1d07e759ac35aefae583aa7fa10b7fa3e5c1a7428f75",
+    "test_atomic_status.py": "71f61ee2d74892f8ae9da72e4095d4f3db45f972556a2a9f7f7f17e5cb657310"
+  }
+}

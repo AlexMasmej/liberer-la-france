@@ -1,0 +1,33 @@
+test_concurrent_writers_and_continuous_reader_observe_whole_json (test_atomic_status.AtomicStatus.test_concurrent_writers_and_continuous_reader_observe_whole_json) ... ERROR
+
+======================================================================
+ERROR: test_concurrent_writers_and_continuous_reader_observe_whole_json (test_atomic_status.AtomicStatus.test_concurrent_writers_and_continuous_reader_observe_whole_json)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/test_atomic_status.py", line 54, in test_concurrent_writers_and_continuous_reader_observe_whole_json
+    for future in futures:future.result(timeout=30)
+                          ~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 450, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/test_atomic_status.py", line 44, in write
+    for sequence in range(rounds):coordinator.atomic(path,value(writer,sequence))
+                                  ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<saved-atomic-only>", line 27, in atomic
+  File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/test_atomic_status.py", line 30, in synchronized_replace
+    return original_replace(temporary,target)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 1091, in replace
+    os.replace(self, target)
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/1s/s6q5k4sj7z94rk_zjrxyn5280000gn/T/tmpcgmmbbyw/status.json.tmp' -> '/var/folders/1s/s6q5k4sj7z94rk_zjrxyn5280000gn/T/tmpcgmmbbyw/status.json'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.007s
+
+FAILED (errors=1)

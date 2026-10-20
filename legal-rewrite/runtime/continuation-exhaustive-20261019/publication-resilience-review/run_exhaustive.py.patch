@@ -1,0 +1,64 @@
+--- a/legal-rewrite/run_exhaustive.py
++++ b/legal-rewrite/run_exhaustive.py
+@@ -29,6 +29,35 @@
+     p=Markup(False);p.feed(body or '');return p.result()
+ 
+ def digest(value):return hashlib.sha256((value or '').encode()).hexdigest()
++
++def publish_checkpoint(deploy=False):
++    """Only a reported deployment failure is nonfatal; local defects still stop."""
++    command=[sys.executable,str(HERE/'publish_snapshot.py')]+(['--deploy'] if deploy else [])
++    result=subprocess.run(command,cwd=ROOT,check=False)
++    if result.returncode not in {0,20}:
++        raise subprocess.CalledProcessError(result.returncode,command)
++    if result.returncode==0 and not deploy:return True
++    report=json.loads((HERE/'runtime/publication.json').read_text())
++    if not report.get('local_checks_passed') or not report.get('deployment_requested'):
++        raise ValueError('Unconfirmed publication result; local validation must remain blocking')
++    pending=result.returncode==20
++    if pending and (not report.get('publication_pending') or report.get('all_sites_published')):
++        raise ValueError('Inconsistent pending-publication report')
++    if not pending and (report.get('publication_pending') or not report.get('all_sites_published')):
++        raise ValueError('Publication success is not confirmed for all sites')
++    marker={'publication_pending':pending,'updated_at_unix':int(time.time()),
++            'drafted_articles':report.get('drafted_articles'),
++            'failed_sites':[slug for slug,item in report.get('deployments',{}).items() if not item.get('published')],
++            'report':'runtime/publication.json'}
++    with LOCK:
++        atomic(RUNTIME/'publication-state.json',marker)
++        status_path=RUNTIME/'status.json'
++        if status_path.exists():
++            status=json.loads(status_path.read_text());status['publication_pending']=pending
++            atomic(status_path,status)
++    if pending:print('PUBLICATION PENDING; local checks passed; article drafting continues.',flush=True)
++    return not pending
++
+ 
+ def policy_is_current(folder):
+     """Reject work frozen before an author changes the reform instructions."""
+@@ -97,6 +126,8 @@
+         report=json.loads(report_path.read_text())
+         result['prior_drafts_reviewed']=report.get('completed_second_pass',0)
+         result['prior_drafts_awaiting_review']=sum(a['review_status']=='pending' for a in report['prior_articles'])
++    publication_state=RUNTIME/'publication-state.json'
++    result['publication_pending']=bool(json.loads(publication_state.read_text()).get('publication_pending')) if publication_state.exists() else False
+     atomic(RUNTIME/'status.json',result)
+     return result
+ 
+@@ -398,7 +429,7 @@
+                 if args.export_every and not STOP.is_set():
+                     state=progress(sources)
+                     if state['drafted_articles']-last_export_count+state.get('prior_drafts_reviewed',0)-last_review_count>=args.export_every:
+-                        subprocess.run([sys.executable,str(HERE/'publish_snapshot.py')]+(['--deploy'] if args.deploy_on_export else []),cwd=ROOT,check=True)
++                        publish_checkpoint(args.deploy_on_export)
+                         last_export_count=state['drafted_articles']
+                         last_review_count=state.get('prior_drafts_reviewed',0)
+             except Exception as error:
+@@ -423,6 +454,6 @@
+             progress(sources,'blocked',str(error))
+             print('BLOCKED REFERENCE REVIEW',str(error),flush=True)
+     if args.export_every or args.publish_at_end:
+-        subprocess.run([sys.executable,str(HERE/'publish_snapshot.py')]+(['--deploy'] if args.publish_at_end else []),cwd=ROOT,check=True)
++        publish_checkpoint(args.publish_at_end)
+ 
+ if __name__=='__main__':main()

@@ -2,7 +2,7 @@
 
 Sources des cinq sites et propositions indépendantes de simplification du droit français, portées par Alex Masmej avec ses agents IA.
 
-Snapshot of the five websites and their published assets and downloads, exported on 20 October 2026.
+Snapshot of the five websites and their shared legal drafting project, exported on 20 October 2026.
 
 | Site | Published files |
 | --- | --- |
@@ -12,8 +12,20 @@ Snapshot of the five websites and their published assets and downloads, exported
 | Libérer l’entreprise | `sites/liberer-lentreprise/dist/` |
 | Nouveau droit du travail | `sites/nouveaudroitdutravail/dist/` |
 
-Each `dist/` directory is a static website. The retirement site also hosts the shared corpus reader and published code downloads. Serve the corresponding `dist/` directory as the website root. Existing Vercel project bindings and available site build files are included. This GitHub import does not configure automatic deployment.
+Each `dist/` directory contains a static website, including its available assets and downloads. The retirement website also hosts the shared corpus reader and code downloads. Existing Vercel project bindings are retained under each site's `.vercel/` directory. Pushing this snapshot does not configure automatic deployment.
 
-The legal rewrite is unfinished; the published proposals are not represented as lawyer-validated or a completed rewrite. The internal shared drafting/research archive is not included in this export. References in the original site README to `legal-rewrite/` concern that separate local archive.
+`legal-rewrite/` contains the drafting scripts, tests, batches, archived revisions, source attachments, and available research/validation state. See its README for provenance, editorial rules, rebuilding, and limitations. The legal rewrite is unfinished; these materials are not represented as lawyer-validated or a completed rewrite.
 
-All 189 included site files were verified byte-for-byte against the local originals. Credentials and Python caches are excluded.
+## Restore the databases
+
+The SQLite databases exceed GitHub's ordinary file limit. Consistent SQLite snapshots are compressed and split into parts below 50 MiB. Restore them with Python 3.11 or later:
+
+```sh
+python3 restore-databases.py
+```
+
+The restoration verifies SHA-256 checksums and refuses to replace existing databases. `database-parts.json` lists the files and checksums. After restoration, follow `legal-rewrite/README.md` to build or continue work.
+
+## Export scope
+
+The export includes the available files from `sites/` and `legal-rewrite/`. Credentials, environment files, Python caches, locks, database sidecars, detected secret-bearing files, and local memory-service account/operational records are omitted. `export-exclusions.json` records omitted paths. Unrelated video material and the read-only synced project folder are outside this website export.

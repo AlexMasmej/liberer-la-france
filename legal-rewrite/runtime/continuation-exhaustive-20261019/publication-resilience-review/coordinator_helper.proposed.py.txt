@@ -1,0 +1,28 @@
+def publish_checkpoint(deploy=False):
+    """Only a reported deployment failure is nonfatal; local defects still stop."""
+    command=[sys.executable,str(HERE/'publish_snapshot.py')]+(['--deploy'] if deploy else [])
+    result=subprocess.run(command,cwd=ROOT,check=False)
+    if result.returncode not in {0,20}:
+        raise subprocess.CalledProcessError(result.returncode,command)
+    if result.returncode==0 and not deploy:return True
+    report=json.loads((HERE/'runtime/publication.json').read_text())
+    if not report.get('local_checks_passed') or not report.get('deployment_requested'):
+        raise ValueError('Unconfirmed publication result; local validation must remain blocking')
+    pending=result.returncode==20
+    if pending and (not report.get('publication_pending') or report.get('all_sites_published')):
+        raise ValueError('Inconsistent pending-publication report')
+    if not pending and (report.get('publication_pending') or not report.get('all_sites_published')):
+        raise ValueError('Publication success is not confirmed for all sites')
+    marker={'publication_pending':pending,'updated_at_unix':int(time.time()),
+            'drafted_articles':report.get('drafted_articles'),
+            'failed_sites':[slug for slug,item in report.get('deployments',{}).items() if not item.get('published')],
+            'report':'runtime/publication.json'}
+    with LOCK:
+        atomic(RUNTIME/'publication-state.json',marker)
+        status_path=RUNTIME/'status.json'
+        if status_path.exists():
+            status=json.loads(status_path.read_text());status['publication_pending']=pending
+            atomic(status_path,status)
+    if pending:print('PUBLICATION PENDING; local checks passed; article drafting continues.',flush=True)
+    return not pending
+

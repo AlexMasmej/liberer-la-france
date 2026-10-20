@@ -1,0 +1,248 @@
+import json
+import re
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+SOURCES = json.loads(Path('source.json').read_text())
+FRAGMENTS = Path('fragments')
+FRAGMENTS.mkdir(exist_ok=True)
+
+
+def p(*lines):
+    return '<p>' + '<br /><br />\n'.join(lines) + '</p>'
+
+
+root = ET.fromstring('<root>' + SOURCES[0]['source_xml'] + '</root>')
+blocks = {}
+blocks[0] = p(
+    "Les équipements de chauffage et de production d'eau chaude sanitaire qui utilisent une source d'énergie renouvelable, mentionnés au 2° de l'article 30-0 D, sont énumérés ci-dessous :",
+    "1° Les pompes à chaleur autres qu'air/air, destinées à produire du chauffage ou de l'eau chaude sanitaire et appartenant aux catégories suivantes :",
+    "a) Les pompes à chaleur dont la fonction essentielle est de produire du chauffage. Leur efficacité énergétique saisonnière pour le chauffage doit être supérieure ou égale à 126 % pour les pompes à chaleur à basse température et à 111 % pour celles à moyenne et haute température. Sont concernées les pompes à chaleur suivantes :",
+    "i) Les pompes à chaleur géothermiques eau/eau, y compris l'échangeur de chaleur souterrain, les pompes à chaleur solarothermiques et les pompes à chaleur air/eau. Leur efficacité énergétique saisonnière pour le chauffage est calculée conformément au règlement (UE) n° 813/2013 de la Commission du 2 août 2013 portant application de la directive 2009/125/CE du Parlement européen et du Conseil en ce qui concerne les exigences d'écoconception applicables aux dispositifs de chauffage des locaux et aux dispositifs de chauffage mixtes ;",
+    "ii) Les pompes à chaleur géothermiques sol/eau, y compris l'échangeur de chaleur souterrain. Leur efficacité énergétique saisonnière pour le chauffage est calculée conformément au règlement (UE) n° 813/2013 de la Commission du 2 août 2013 précité, avec une température du bain d'eau glycolée de 4 degrés Celsius, selon la norme NF EN 15879-1 ou toute autre méthode équivalente, et une température de condensation de 35 degrés Celsius ;",
+    "iii) Les pompes à chaleur géothermiques sol/sol, y compris l'échangeur de chaleur souterrain. Leur efficacité énergétique saisonnière pour le chauffage est calculée conformément au règlement (UE) n° 813/2013 de la Commission du 2 août 2013 susvisé, avec une température d'évaporation fixe de -5 degrés Celsius et une température de condensation de 35 degrés Celsius.",
+    "L'efficacité énergétique saisonnière retenue est celle de la pompe à chaleur seule, pour le chauffage des locaux et sans le dispositif de régulation.",
+    "Le professionnel établit une note qui dimensionne le générateur au regard des déperditions calculées à la température de base. Il prend en compte les déperditions des pièces du logement desservies par le réseau de chauffage, indépendamment des autres générateurs éventuellement présents. Il remet cette note au bénéficiaire à l'achèvement des travaux.",
+    "Lorsqu'une pompe à chaleur air/eau comporte un dispositif d'appoint utilisant un combustible liquide ou gazeux et une régulation pilotant les deux dispositifs, son taux de couverture, hors appoint, doit être supérieur ou égal à 70 %. Ce taux est le rapport entre l'énergie fournie par la pompe à chaleur hors appoint et les besoins annuels de chaleur pour le chauffage du logement. Le professionnel qui réalise l'installation le calcule pour le mode de régulation qu'il a choisi et l'indique dans la note de dimensionnement ;",
+    "b) Les pompes à chaleur dédiées à la production d'eau chaude sanitaire. Leur efficacité énergétique pour le chauffage de l'eau, établie selon le profil de soutirage conformément au règlement (UE) n° 814/2013 de la Commission du 2 août 2013 portant application de la directive 2009/125/CE du Parlement européen et du Conseil en ce qui concerne les exigences d'écoconception applicables aux chauffe-eau et aux ballons d'eau chaude, doit atteindre au moins les valeurs du tableau suivant :",
+)
+blocks[2] = p(
+    "c) Les systèmes centralisés comprenant une ou plusieurs pompes à chaleur dédiées à la production d'eau chaude sanitaire collective. Ils doivent respecter les exigences suivantes :",
+    "i) Pour les pompes à chaleur relevant du règlement (UE) n° 814/2013 de la Commission du 2 août 2013 portant application de la directive 2009/125/CE du Parlement européen et du Conseil en ce qui concerne les exigences d'écoconception applicables aux chauffe-eau et aux ballons d'eau chaude, l'efficacité énergétique pour le chauffage de l'eau doit être supérieure ou égale à 61 % pour le profil de soutirage XXL et à 65 % pour les profils de soutirage 3XL et plus ;",
+    "ii) Pour les pompes à chaleur relevant du règlement (UE) n° 813/2013 de la Commission du 2 août 2013 portant application de la directive 2009/125/CE du Parlement européen et du Conseil en ce qui concerne les exigences d'écoconception applicables aux dispositifs de chauffage des locaux et aux dispositifs de chauffage mixtes, l'efficacité énergétique saisonnière doit être supérieure ou égale à 111 % ;",
+    "iii) Le coefficient de performance (COP) doit être supérieur ou égal à 2,8. Il est déterminé selon les normes et dans les conditions suivantes :",
+)
+blocks[3] = p(
+    "- Pour un chauffe-eau thermodynamique collectif, le COP est déterminé à 7 degrés Celsius, selon la norme NF EN 16147 ou toute autre méthode équivalente, pour le profil de soutirage concerné ;",
+    "- Pour une pompe à chaleur utilisant le dioxyde de carbone comme fluide frigorigène, le COP sur l'air extérieur est déterminé à 7 degrés Celsius, avec une température d'eau froide de 15 degrés Celsius et une température de départ d'eau supérieure ou égale à 55 degrés Celsius, selon la norme NF EN 14511 ou toute autre méthode équivalente ;",
+    "- Pour les autres pompes à chaleur, le COP est déterminé selon la norme NF EN 14511 ou toute autre méthode équivalente, aux températures, exprimées en degrés Celsius (° C), indiquées dans le tableau suivant :",
+)
+blocks[5] = p("Pour les pompes à chaleur caractérisées en mode chauffage selon la norme NF EN 14511 à des températures de sortie de l'échangeur thermique intérieur de 35 degrés Celsius et de 55 degrés Celsius, le COP à 45 degrés Celsius peut être calculé par interpolation linéaire entre ces deux valeurs.")
+blocks[6] = p(
+    "1° bis Les pompes à chaleur air/air réversibles fixes, destinées à une installation permanente dans les bâtiments, dont le cycle à compression de vapeur est entraîné par un moteur électrique. Elles doivent remplir les conditions suivantes :",
+    "a) Pour les pompes à chaleur air/air dont la puissance thermique nominale est inférieure ou égale à 12 kW, la classe d'efficacité énergétique doit être au moins A+ pour une pompe à chaleur multi-split et A++ pour une pompe à chaleur mono-split, aussi bien pour le chauffage (SCOP) que pour le refroidissement (SEER). Cette classe est déterminée conformément au règlement délégué (UE) n° 626/2011 de la Commission du 4 mai 2011 complétant la directive 2010/30/UE du Parlement européen et du Conseil en ce qui concerne l'indication, par voie d'étiquetage, de la consommation d'énergie des climatiseurs ;",
+    "b) Pour les pompes à chaleur air/air dont la puissance thermique nominale est supérieure à 12 kW, l'efficacité énergétique saisonnière est déterminée par le règlement européen (UE) 2016/2281 de la Commission du 30 novembre 2016 mettant en œuvre la directive 2009/125/CE du Parlement européen et du Conseil établissant un cadre pour la fixation d'exigences en matière d'écoconception applicables aux produits liés à l'énergie, en ce qui concerne les exigences d'écoconception applicables aux appareils de chauffage à air, aux appareils de refroidissement, aux refroidisseurs industriels haute température et aux ventilo-convecteurs. Elle doit être supérieure ou égale aux valeurs suivantes :",
+    "i) 145 % pour le chauffage et 250 % pour le refroidissement, sauf pour une pompe à chaleur air/air en toiture ;",
+    "ii) 130 % pour le chauffage et 150 % pour le refroidissement, pour une pompe à chaleur air/air en toiture qui intègre le chauffage, le refroidissement, la ventilation, le rafraîchissement par surventilation nocturne et la filtration ;",
+    "c) À la date de signature du devis, le fluide frigorigène utilisé par la pompe à chaleur doit respecter strictement les seuils de potentiel de réchauffement planétaire et le calendrier d'interdiction de mise sur le marché applicables en vertu du règlement (UE) 2024/573 du Parlement européen et du Conseil du 7 février 2024 relatif aux gaz à effet de serre fluorés ;",
+    "d) La pompe à chaleur doit pouvoir être connectée à un réseau numérique pour communiquer, transmettre et recevoir des consignes de température sur des plages horaires, en mode chauffage comme en mode refroidissement, et pour piloter son mode de fonctionnement.",
+)
+
+for index in (1, 4, 8, 10, 14, 17):
+    table = root[index]
+    for element in table.iter():
+        element.attrib = {key: value for key, value in element.attrib.items() if key in ('rowspan', 'colspan') and value.isdigit()}
+    blocks[index] = ET.tostring(table, encoding='unicode').strip()
+
+def write_fragment(name, indices):
+    content = '\n\n'.join(blocks[index] for index in indices)
+    (FRAGMENTS / name).write_text(content + '\n')
+
+
+write_fragment('30-0-D-ter-1.xml', range(7))
+
+blocks[7] = p(
+    "2° Les équipements suivants, qui permettent le raccordement à un réseau de chaleur ou de froid alimenté majoritairement par des énergies renouvelables ou de récupération, ou par une installation de cogénération :",
+    "a) Le branchement privatif composé de tuyaux et de vannes qui raccorde le réseau de chaleur ou de froid au poste de livraison de l'immeuble ;",
+    "b) Le poste de livraison ou la sous-station qui assure l'échange entre le réseau de chaleur ou de froid et l'immeuble ;",
+    "c) Les matériels nécessaires à l'équilibrage et à la mesure de la chaleur ou du froid pour en assurer une répartition correcte. Ces matériels doivent être installés avec le poste de livraison, dans les parties communes de l'immeuble collectif ou dans le logement.",
+    "3° Les chaudières à bois ou autres biomasses dont la puissance est inférieure ou égale à 300 kilowatts. Elles doivent respecter les exigences du tableau suivant, au sens du règlement (UE) n° 2015/1189 de la Commission du 28 avril 2015 précité :",
+)
+blocks[9] = p(
+    "Les émissions de monoxyde de carbone, de particules, de composés organiques gazeux et d'oxydes d'azote sont calculées ou mesurées à 10 % O<sub>2</sub>, conformément au règlement (UE) 2015/1189 de la Commission du 24 avril 2015 portant application de la directive 2009/125/CE du Parlement européen et du Conseil en ce qui concerne les exigences d'écoconception applicables aux dispositifs de chauffage décentralisés à combustible solide.",
+    "Les chaudières relevant du présent 3° doivent être équipées d'un régulateur appartenant à l'une des classes IV, V, VI, VII ou VIII définies au paragraphe 6.1 de la communication de la Commission du 3 juillet 2014-2014 dans le cadre du règlement (UE) n° 813/2013 de la Commission portant application de la directive 2009/125/CE du Parlement européen et du Conseil en ce qui concerne les exigences d'écoconception applicables aux dispositifs de chauffage des locaux et aux dispositifs de chauffage mixtes et du règlement délégué (UE) n° 811/2013 de la Commission complétant la directive 2010/30/UE du Parlement européen et du Conseil en ce qui concerne l'étiquetage énergétique des dispositifs de chauffage des locaux, des dispositifs de chauffage mixtes, des produits combinés constitués d'un dispositif de chauffage des locaux, d'un régulateur de température et d'un dispositif solaire et des produits combinés constitués d'un dispositif de chauffage mixte, d'un régulateur de température et d'un dispositif solaire (2014/C 207/02).",
+    "4° Les équipements indépendants de chauffage ou de production d'eau chaude à bois ou autres biomasses. Ils doivent respecter les exigences du tableau suivant, au sens du règlement (UE) 2015/1185 de la Commission du 24 avril 2015 portant application de la directive 2009/125/CE du Parlement européen et du Conseil en ce qui concerne les exigences d'écoconception applicables aux dispositifs de chauffage décentralisés à combustible solide :",
+)
+blocks[11] = p(
+    "Les émissions de monoxyde de carbone, de particules, de composés organiques gazeux et d'oxydes d'azote sont calculées ou mesurées à 13 % O<sub>2</sub>, conformément au règlement (UE) 2015/1185 de la Commission du 24 avril 2015 précité.",
+    "L'efficacité énergétique saisonnière et les émissions de polluants sont mesurées selon les référentiels suivants :",
+    "a) Pour les poêles : la norme NF EN 13240 + A2, NF EN 14785, NF EN 15250 ou NF EN 16510, ou toute autre méthode équivalente ;",
+    "b) Pour les foyers fermés et les inserts de cheminées intérieures : la norme NF EN 13229 + A2, NF EN 14785 ou NF EN 16510, ou toute autre méthode équivalente ;",
+    "c) Pour les cuisinières utilisées comme mode de chauffage : la norme NF EN 12815 + A1 ou NF EN 16510, ou toute autre méthode équivalente.",
+    "Pour les appareils de masse artisanaux de conception unitaire, les valeurs d'émissions et de rendement sont exprimées selon le référentiel de la norme NF EN 15544 ou toute autre méthode équivalente. L'appareil comprend la chambre de combustion, l'accumulateur de chaleur et le conduit de fumée. Son dimensionnement repose sur une note de calcul détaillée, établie avec un logiciel de dimensionnement dont les références sont rendues publiques sur le site internet du ministère chargé de l'énergie ;",
+    "5° Les équipements de production de chauffage ou de fourniture d'eau chaude sanitaire qui fonctionnent à l'énergie solaire, sont dotés de capteurs solaires et sont installés avec un appoint intégré, ainsi que les dispositifs solaires installés sur un appoint séparé, neuf ou existant, pour produire du chauffage ou de l'eau chaude sanitaire. Ils doivent respecter les exigences suivantes :",
+    "a) Les capteurs utilisés doivent disposer d'une certification QB, Solar Keymark ou équivalente, fondée sur les normes EN 12975-1 + A1 et NF EN ISO 9806 ou sur toute autre méthode équivalente. Dans les conditions de pose et d'utilisation de l'équipement, ils peuvent être thermiques à circulation d'eau, d'eau glycolée ou d'air, ou hybrides thermiques et électriques à circulation d'eau ou d'eau glycolée ;",
+    "b) Pour les équipements de production de chauffage fonctionnant à l'énergie solaire et les dispositifs solaires installés sur un appoint séparé, neuf ou existant, pour produire du chauffage :",
+    "i) L'efficacité énergétique saisonnière, établie conformément au règlement (UE) n° 813/2013 de la Commission du 2 août 2013 portant application de la directive 2009/125/CE du Parlement européen et du Conseil en ce qui concerne les exigences d'écoconception applicables aux dispositifs de chauffage des locaux et aux dispositifs de chauffage mixtes, doit respecter les seuils suivants :",
+)
+blocks[12] = p(
+    "- Elle doit être supérieure ou égale à 82 % lorsque l'efficacité énergétique saisonnière de l'appoint séparé est inférieure à 82 % ;",
+    "- Elle doit être supérieure ou égale à 90 % lorsque l'efficacité énergétique saisonnière de l'appoint est inférieure à 90 % ;",
+    "- Elle doit être supérieure ou égale à 98 % lorsque l'efficacité énergétique saisonnière de l'appoint est supérieure ou égale à 90 % et inférieure à 98 % ;",
+    "- Dans les autres cas, elle doit dépasser d'au moins 5 points de pourcentage l'efficacité énergétique saisonnière de l'appoint ;",
+)
+write_fragment('30-0-D-ter-2.xml', range(7, 13))
+
+blocks[13] = p(
+    "ii) La surface hors tout des capteurs installés doit être supérieure ou égale à 8 mètres carrés ;",
+    "iii) Les capteurs installés doivent être associés à un ou plusieurs ballons d'eau chaude solaires. La capacité de stockage du ou des ballons doit être strictement supérieure à 400 litres ;",
+    "iv) Lorsque la capacité de stockage du ou des ballons d'eau chaude solaires est inférieure ou égale à 500 litres, leur classe d'efficacité énergétique doit être au moins C. Cette classe est déterminée conformément à l'annexe II, point 2 du règlement délégué (UE) n° 812/2013 de la Commission du 18 février 2013 complétant la directive 2010/30/UE du Parlement européen et du Conseil en ce qui concerne l'étiquetage énergétique des chauffe-eau, des ballons d'eau chaude et des produits combinés constitués d'un chauffe-eau et d'un dispositif solaire ;",
+    "c) Pour les équipements de fourniture d'eau chaude sanitaire fonctionnant à l'énergie solaire et les dispositifs solaires installés sur un appoint séparé, neuf ou existant, pour produire de l'eau chaude sanitaire :",
+    "i) L'efficacité énergétique pour le chauffage de l'eau doit atteindre au moins les valeurs du tableau suivant. Elle est établie selon le profil de soutirage, conformément au règlement (UE) n° 814/2013 de la Commission du 2 août 2013 portant application de la directive 2009/125/CE du Parlement européen et du Conseil en ce qui concerne les exigences d'écoconception applicables aux chauffe-eau et aux ballons d'eau chaude :",
+)
+blocks[15] = p(
+    "ii) La surface hors tout des capteurs installés doit être supérieure ou égale à 2 mètres carrés ;",
+    "iii) Les capteurs installés doivent être associés à un ou plusieurs ballons d'eau chaude solaires. Lorsque la capacité de stockage du ou des ballons est inférieure ou égale à 500 litres, leur classe d'efficacité énergétique doit être au moins C. Cette classe est déterminée conformément à l'annexe II, point 2 du règlement délégué (UE) n° 812/2013 de la Commission du 18 février 2013 complétant la directive 2010/30/UE du Parlement européen et du Conseil en ce qui concerne l'étiquetage énergétique des chauffe-eau, des ballons d'eau chaude et des produits combinés constitués d'un chauffe-eau et d'un dispositif solaire.",
+    "L'efficacité énergétique saisonnière prévue au b et l'efficacité énergétique pour le chauffage de l'eau prévue au c du présent 5° sont appréciées dans les conditions climatiques moyennes au sens du règlement (UE) n° 813/2013 de la Commission du 2 août 2013 portant application de la directive 2009/125/CE du Parlement européen et du Conseil en ce qui concerne les exigences d'écoconception applicables aux dispositifs de chauffage des locaux et aux dispositifs de chauffage mixtes.",
+    "Pour les dispositifs solaires mentionnés aux b et c précités, l'installateur calcule l'efficacité énergétique saisonnière ou l'efficacité énergétique pour le chauffage de l'eau à l'aide d'un logiciel dont les références sont rendues publiques sur le site internet du ministère chargé de l'énergie. Pour calculer l'efficacité énergétique saisonnière, il utilise les données communiquées par le fabricant ou le distributeur, ou celles qui figurent sur les composants séparés. Il remet au contribuable la fiche de résultats produite par le logiciel.",
+    "Lorsque l'appoint assure à la fois le chauffage des locaux et celui de l'eau sanitaire, l'installateur renseigne son efficacité énergétique saisonnière dans le logiciel, pour calculer les efficacités mentionnées aux b et c du présent 5°, selon les règles suivantes :",
+)
+blocks[16] = p(
+    "- Pour les appoints soumis à la directive 2009/125/CE du Parlement européen et du Conseil du 21 octobre 2009 établissant un cadre pour la fixation d'exigences en matière d'écoconception applicables aux produits liés à l'énergie et les appoints relevant du règlement (UE) 2017/1369 du Parlement européen et du Conseil du 4 juillet 2017 établissant un cadre pour l'étiquetage énergétique et abrogeant la directive 2010/30/UE, l'installateur retient la valeur indiquée sur la fiche produit ;",
+    "- Pour les appoints dont l'efficacité énergétique saisonnière n'est pas connue, l'installateur retient les valeurs conventionnelles du tableau suivant :",
+)
+blocks[18] = p(
+    "Pour les chaudières fonctionnant au bois ou à d'autres biomasses et utilisées comme appoint, le critère requis porte sur l'indice d'efficacité énergétique au sens du règlement délégué (UE) 2015/1187 de la Commission du 27 avril 2015 complétant la directive 2010/30/UE du Parlement européen et du Conseil en ce qui concerne l'étiquetage énergétique des chaudières à combustible solide et des produits combinés constitués d'une chaudière à combustible solide, de dispositifs de chauffage d'appoint, de régulateurs de température et de dispositifs solaires. Si l'indice d'efficacité énergétique de l'appoint n'est pas connu, la valeur conventionnelle à utiliser est de 98 %.",
+    "Pour les équipements mentionnés au b du présent 5° qui sont installés sur des planchers chauffants, l'efficacité énergétique saisonnière est calculée avec un logiciel, en retenant pour le ballon de stockage un volume conventionnel de 2 000 litres et une classe d'efficacité énergétique conventionnelle A +. Les références du logiciel sont rendues publiques sur le site internet du ministère chargé de l'énergie.",
+)
+write_fragment('30-0-D-ter-3.xml', range(13, 19))
+
+proposals = {
+    '30-0 D ter': '\n\n'.join((FRAGMENTS / name).read_text().strip() for name in (
+        '30-0-D-ter-1.xml', '30-0-D-ter-2.xml', '30-0-D-ter-3.xml'
+    ))
+}
+
+proposals['30-0 D quater'] = p(
+    "I.-Les systèmes de ventilation mécanique contrôlée double flux mentionnés au 3 de l'article 30-0 D doivent remplir les conditions suivantes :",
+    "1° Pour les installations individuelles :",
+    "a) La centrale double flux doit être autoréglable ou à modulation hygroréglable. Sa classe d'efficacité énergétique doit être au moins A, au sens du règlement délégué (UE) n° 1254/2014 de la Commission du 11 juillet 2014 complétant la directive 2010/30/UE du Parlement européen et du Conseil en ce qui concerne l'étiquetage énergétique des unités de ventilation résidentielles ;",
+    "b) Le rapport de température de la centrale double flux, mesuré selon la norme NF EN 13141-7 ou toute autre méthode équivalente, doit être supérieur ou égal à 85 %. La centrale doit être certifiée par un organisme établi dans l'Espace économique européen et accrédité selon la norme NF EN ISO/CEI 17065 par le Comité français d'accréditation (COFRAC) ou par tout autre organisme d'accréditation signataire de l'accord européen multilatéral pertinent dans le cadre de la coordination européenne des organismes d'accréditation. Une centrale double flux certifiée NF 205 est réputée satisfaire à l'exigence de rapport de température ;",
+    "c) La puissance électrique absorbée pondérée du caisson de ventilation doit être inférieure ou égale à 47,6 WThC dans une configuration T4 comprenant une salle de bain et un WC. Une centrale double flux certifiée NF 205 est réputée satisfaire à cette exigence de puissance ;",
+    "2° Pour les installations collectives :",
+    "a) La centrale double flux doit être collective et autoréglable ;",
+    "b) L'échangeur de chaleur doit être collectif. Son rendement en température, déterminé selon la norme NF EN 308 ou toute autre méthode équivalente, doit être supérieur ou égal à 75 %. L'échangeur doit être certifié par un organisme établi dans l'Espace économique européen et accrédité selon la norme NF EN ISO/CEI 17065 par le Comité français d'accréditation (COFRAC) ou par tout autre organisme d'accréditation signataire de l'accord européen multilatéral pertinent pris dans le cadre de la coordination européenne des organismes d'accréditation. Un échangeur de chaleur collectif dont le rendement en température est supérieur ou égal à 75 % selon la certification Eurovent Certified Performance Echangeur à plaques air-air (AAHE) ou échangeur régénératif air-air (AARE) est réputé satisfaire à l'exigence de rendement en température.",
+    "II.-Les systèmes de ventilation mécanique simple flux hygroréglable mentionnés au 3° de l'article 30-0 D doivent remplir les conditions suivantes :",
+    "1° Pour les installations individuelles :",
+    "a) L'installation doit porter sur une ventilation mécanique contrôlée simple flux hygroréglable ;",
+    "b) Le caisson de ventilation doit avoir une classe d'efficacité énergétique au moins égale à B, au sens du règlement (UE) n° 1254/2014 de la Commission du 11 juillet 2014 précité ;",
+    "c) Le caisson de ventilation doit être à basse consommation. Sa puissance électrique absorbée pondérée doit être inférieure ou égale à 15 WThC dans une configuration T4 comprenant une salle de bain et un WC ;",
+    "2° Pour les installations collectives :",
+    "a) L'installation doit porter sur une ventilation mécanique contrôlée simple flux hygroréglable ou sur une ventilation mécanique basse pression simple flux hygroréglable ;",
+    "b) Pour les ventilations mécaniques contrôlées simple flux hygroréglables, la puissance électrique absorbée pondérée du caisson de ventilation doit être inférieure ou égale à 0,25 WThC/(m3/h) ;",
+    "c) Pour les ventilations mécaniques basse pression simple flux hygroréglables, la puissance électrique absorbée pondérée du caisson de ventilation doit être inférieure ou égale à 0,12 WThC/(m3/h).",
+    "III.-Pour les systèmes de ventilation hybride hygroréglable mentionnés au 3° de l'article 30-0 D, la puissance électrique spécifique de l'extracteur doit être strictement inférieure à 0,25 Wh/m3.",
+    "IV.-Les systèmes de ventilation à modulation hygroréglable relevant du I, du II ou du III du présent article doivent disposer d'un avis technique délivré par la Commission chargée de formuler des avis techniques (CCFAT), en cours de validité lors de la réalisation du fait générateur. À défaut, ils doivent présenter des caractéristiques de performance et de qualité équivalentes, établies par un organisme implanté dans l'Espace économique européen et accrédité selon la norme NF EN ISO/ICE 17065 par le Comité français d'accréditation (COFRAC) ou par tout autre organisme d'accréditation signataire de l'accord européen multilatéral pertinent dans le cadre de la coordination européenne des organismes d'accréditation.",
+)
+
+proposals['30-0 D quinquies'] = p("Le calorifugeage mentionné au 4° de l'article 30-0 D, qui concerne les installations de production ou de distribution de chaleur ou d'eau chaude sanitaire, doit porter sur tout ou partie d'un réseau hydraulique de chauffage ou d'eau chaude sanitaire existant, situé hors du volume chauffé. L'isolant posé doit relever au moins de la classe 3, déterminée selon la norme NF EN 12828 + A1 ou toute autre méthode équivalente.")
+
+proposals['30-0 D sexies'] = p(
+    "Les appareils de régulation de chauffage mentionnés au 5° de l'article 30-0 D sont énumérés ci-dessous selon le type de bâtiment dans lequel ils sont installés :",
+    "1° Dans une maison individuelle :",
+    "a) Les systèmes qui assurent la régulation centrale des installations de chauffage en tenant compte de l'évolution de la température d'ambiance de la pièce ou de la température extérieure, avec une horloge de programmation ou un programmateur monozone ou multizone ;",
+    "b) Les systèmes qui assurent la régulation et la programmation de la production d'eau chaude sanitaire ;",
+    "c) Les systèmes qui assurent les régulations individuelles terminales des émetteurs de chaleur ;",
+    "d) Les systèmes qui limitent la puissance électrique du chauffage électrique ;",
+    "e) Les systèmes gestionnaires d'énergie, à condition qu'ils permettent de moduler la puissance du chauffage électrique ou la production d'eau chaude sanitaire selon les signaux tarifaires du système électrique ;",
+    "f) Les systèmes de délestage de puissance du chauffage électrique, à condition qu'ils permettent d'arrêter temporairement les appareils concernés lorsque la puissance appelée est amenée à dépasser la puissance souscrite ;",
+    "2° Dans un immeuble collectif :",
+    "a) Les systèmes énumérés au 1° du présent article ;",
+    "b) Les matériels nécessaires à l'équilibrage des installations de chauffage, afin de répartir correctement entre les logements la chaleur délivrée ;",
+    "c) Les matériels qui permettent la mise en cascade de chaudières, à l'exclusion de l'installation de nouvelles chaudières ;",
+    "d) Les systèmes de télégestion de chaufferie qui assurent la régulation et la programmation du chauffage ;",
+    "e) Les systèmes qui assurent la régulation centrale des équipements de production d'eau chaude sanitaire lorsque cette production est combinée avec celle de l'eau destinée au chauffage.",
+)
+
+proposals['30-0 D septies'] = p("Les appareils d'individualisation des frais de chauffage ou d'eau chaude sanitaire mentionnés au 6° de l'article 30-0 D sont soit des répartiteurs électroniques installés sur chaque radiateur, soit des compteurs d'énergie thermique installés à l'entrée du logement. Ces appareils doivent être conformes aux prescriptions du décret n° 2001-387 du 3 mai 2001 relatif au contrôle des instruments de mesure.")
+
+proposals['30-0 D octies'] = p(
+    "Les brasseurs d'air plafonniers fixes mentionnés au 7° de l'article 30-0 D doivent être équipés de pales et remplir les conditions suivantes :",
+    "a) Leur diamètre doit être au moins égal à 1,32 mètre ;",
+    "b) Ils doivent proposer au moins trois vitesses de fonctionnement ;",
+    "c) Leur niveau sonore ne doit pas dépasser 45 décibels à vitesse maximale et 35 décibels à vitesse minimale ;",
+    "d) Leur efficacité énergétique à vitesse maximale doit être strictement supérieure à 250 m3/(Wh). Les valeurs du débit d'air et de la puissance sont mesurées selon le référentiel de la norme NF EN IEC 60879 ou toute autre méthode équivalente.",
+)
+
+proposals['30-0 D nonies'] = p(
+    "Les prestations d'entretien et de réparation mentionnées au 8° de l'article 30-0 D doivent porter sur des chaudières à très haute performance énergétique qui ne relèvent pas de l'article 30-0 D ter et qui satisfont aux exigences suivantes :",
+    "1° Pour une chaudière dont la puissance thermique nominale est inférieure ou égale à 70 kilowatt, l'efficacité énergétique saisonnière pour le chauffage doit être supérieure ou égale à 92 %. Cette efficacité est établie conformément au règlement (UE) n° 813/2013 de la Commission du 2 août 2013 portant application de la directive 2009/125/CE du Parlement européen et du Conseil en ce qui concerne les exigences d'écoconception applicables aux dispositifs de chauffage des locaux et aux dispositifs de chauffage mixtes ;",
+    "2° Pour une chaudière dont la puissance thermique nominale est supérieure à 70 kilowatt, l'efficacité utile pour le chauffage, établie conformément au règlement (UE) n° 813/2013 de la Commission du 2 août 2013 précité, doit être supérieure ou égale aux valeurs suivantes :",
+    "a) 87 %, pour une mesure à 100 % de la puissance thermique nominale ;",
+    "b) 95,5 %, pour une mesure à 30 % de la puissance thermique nominale.",
+    "Les chaudières relevant du présent article doivent être équipées d'un régulateur appartenant à l'une des classes IV, V, VI, VII ou VIII définies au paragraphe 6.1 de la communication de la Commission du 3 juillet 2014 dans le cadre du règlement (UE) n° 813/2013 de la Commission portant application de la directive 2009/125/CE du Parlement européen et du Conseil en ce qui concerne les exigences d'écoconception applicables aux dispositifs de chauffage des locaux et aux dispositifs de chauffage mixtes et du règlement délégué (UE) n° 811/2013 de la Commission complétant la directive 2010/30/UE du Parlement européen et du Conseil en ce qui concerne l'étiquetage énergétique des dispositifs de chauffage des locaux, des dispositifs de chauffage mixtes, des produits combinés constitués d'un dispositif de chauffage des locaux, d'un régulateur de température et d'un dispositif solaire et des produits combinés constitués d'un dispositif de chauffage mixte, d'un régulateur de température et d'un dispositif solaire (2014/C 207/02).",
+)
+
+proposals['30-0 E'] = p(
+    "1. Pour bénéficier, au titre de leur livraison et de leur installation, du taux réduit de taxe sur la valeur ajoutée mentionné au P de l'article 278-0 bis du code général des impôts, les équipements de production d'électricité utilisant l'énergie radiative du soleil, d'une puissance inférieure ou égale à 9 kilowatts-crête (kWc), doivent respecter l'ensemble des critères suivants :",
+    "a) Le bilan carbone des modules doit être strictement inférieur à 530 kg CO<sub>2 </sub>eq/kWc ;",
+    "b) La quantité d'argent des cellules doit être strictement inférieure à 14 mg/W ;",
+    "c) La teneur en plomb des modules doit être strictement inférieure à 0,1 % ;",
+    "d) La teneur en cadmium des modules doit être strictement inférieure à 0,01 % ;",
+    "e) Un système gestionnaire d'énergie doit être associé aux équipements du présent 1. Ce système doit permettre de collecter en temps réel les données de production et de consommation et de piloter le comportement de consommation des équipements électriques, afin de maximiser la consommation électrique sur le lieu de production.",
+    "2. Le bilan carbone, la quantité d'argent et les teneurs en plomb et en cadmium mentionnés aux a à d du 1 sont évalués selon une méthodologie précisée par un arrêté conjoint des ministres chargés de l'économie et de l'énergie.",
+)
+
+proposals['30-0 H'] = '\n'.join((
+    p("1. Pour l'application du présent article, les termes « infrastructure de recharge », « borne de recharge » et « point de recharge » ont les sens définis, respectivement, aux 2°, 4° et 5° de l'article 2 du décret n° 2017-26 du 12 janvier 2017 relatif aux infrastructures de recharge pour véhicules électriques et portant diverses mesures de transposition de la directive 2014/94/UE du Parlement européen et du Conseil du 22 octobre 2014 sur le déploiement d'une infrastructure pour carburants alternatifs."),
+    p("2. Les infrastructures de recharge pour véhicules électriques mentionnées au premier alinéa du N de l'article 278-0 bis du code général des impôts doivent présenter une configuration conforme aux exigences techniques suivantes :"),
+    p("a) Les infrastructures relevant des articles L. 353-12 ou L. 353-13 du code de l'énergie doivent respecter les exigences déterminées par l'arrêté du 23 décembre 2020 relatif à l'application de l'article R. 111-14-2 du code de la construction et de l'habitation ;"),
+    p("b) Les infrastructures qui ne relèvent pas du a du présent 2 doivent correspondre à l'une des deux configurations suivantes :"),
+    p("- Soit une borne de recharge équipée d'un socle de prise de courant de type 2 ou d'un connecteur de type 2, tels que décrits dans la norme NF EN 62196-2 ;"),
+    p("- Soit un point de recharge équipé d'un socle de prise de courant de type E, tel que décrit dans la norme NF C61-314, adapté à la recharge d'un véhicule électrique pour une intensité supérieure ou égale à 14 A, dit « prise renforcée »."),
+    p("3. Les personnes mentionnées au 3° du N de l'article 278-0 bis du code général des impôts doivent répondre aux critères de qualification suivants :"),
+    p("a) Pour les prestations qui ne relèvent pas du b du présent 3, elles doivent disposer de l'habilitation et, le cas échéant, de la qualification instituées au I ou au II de l'article D. 353-2 du code de l'énergie ;"),
+    p("b) Pour les prestations réalisées sous l'autorité du gestionnaire de réseau, elles doivent remplir les critères prescrits par la réglementation et par ce gestionnaire pour intervenir sur ce réseau."),
+))
+
+REASONS = {
+    '30-0 D ter': "Réécriture à droit constant de l'ensemble de la prose : séparation des conditions techniques et de leurs méthodes de mesure, explicitation des obligations du professionnel et de l'installateur, et clarification des conditions propres à chaque catégorie d'équipement. Les subdivisions 1°, 1° bis et 2° à 5°, leurs lettres, leurs sous-divisions et leur ordre sont conservés. Les six tableaux sont repris intégralement, sans réécriture de leurs données ; seuls leurs attributs de présentation non autorisés sont retirés. Aucune réforme de fond de policy.json ou de coordination.json ne modifie ces critères de TVA.",
+    '30-0 D quater': "Réécriture à droit constant des conditions applicables à chaque type de ventilation : les caractéristiques, mesures, certifications et présomptions de conformité sont formulées dans des phrases distinctes. Les obligations d'accréditation et l'alternative entre avis technique valide et caractéristiques équivalentes restent explicites. Les I à IV et toutes leurs subdivisions sont maintenus. Aucune réforme de fond n'est appliquée à ce régime technique de TVA.",
+    '30-0 D quinquies': "Réécriture à droit constant qui distingue le champ du calorifugeage, la localisation du réseau existant et la classe minimale de l'isolant. La formulation rend l'exigence de classe 3 explicite sans modifier le champ ni la méthode équivalente admise. Aucune réforme de fond ne concerne cette disposition.",
+    '30-0 D sexies': "Réécriture à droit constant de la liste des appareils selon le bâtiment concerné. Les fonctions techniques sont rattachées directement aux systèmes, les conditions des gestionnaires d'énergie et du délestage sont explicitées et l'exclusion des nouvelles chaudières est conservée. Les 1° et 2° ainsi que toutes leurs lettres sont maintenus. Aucune réforme de fond ne concerne cette liste.",
+    '30-0 D septies': "Réécriture à droit constant en deux phrases : la première distingue les deux catégories d'appareils et leur emplacement ; la seconde formule expressément l'obligation de conformité au décret relatif aux instruments de mesure. Aucune catégorie d'équipement n'est ajoutée et aucune réforme de fond n'est appliquée.",
+    '30-0 D octies': "Réécriture à droit constant des quatre caractéristiques exigées : chaque lettre énonce directement l'obligation de l'appareil, et la méthode de mesure est séparée du seuil d'efficacité énergétique. Les minima, maxima et le caractère strict du seuil de 250 m3/(Wh) sont conservés. Aucune réforme de fond ne concerne ces critères.",
+    '30-0 D nonies': "Réécriture à droit constant qui rattache les exigences de performance aux chaudières faisant l'objet de l'entretien ou de la réparation, distingue les deux classes de puissance et explicite les conditions de mesure. L'exclusion du régime de l'article 30-0 D ter et les classes de régulateurs sont maintenues, comme les subdivisions 1°, 2°, a et b. Aucune réforme de fond ne modifie ces prestations.",
+    '30-0 E': "Réécriture à droit constant des critères des équipements photovoltaïques : les quatre seuils environnementaux sont exprimés comme des obligations strictes, les fonctions du gestionnaire d'énergie sont précisées dans une phrase distincte et la règle méthodologique reste au 2. Le caractère cumulatif des critères et les lettres a à e sont conservés. Aucun nouveau taux, financement ou dispositif de réforme n'est introduit.",
+    '30-0 H': "Réécriture à droit constant qui explicite les définitions par renvoi, les obligations techniques propres à chaque infrastructure et les critères que doivent remplir les intervenants. Les deux configurations alternatives restent dans leurs alinéas respectifs ; l'habilitation, la qualification éventuelle et le régime des interventions sous l'autorité du gestionnaire de réseau sont distingués. Les 1, 2 et 3 et leurs lettres sont maintenus. Aucune réforme de fond n'est appliquée.",
+}
+
+HISTORY_2025 = "La note source fixe l'entrée en vigueur au 1er janvier 2025, en application du premier alinéa de l'article 2 de l'arrêté du 4 décembre 2024 (NOR : BCPE2431738A) ; cette date historique n'est pas une date de réforme. "
+TRANSITION = "Le renvoi à l'article 30-0 D a été vérifié dans le corpus public : sa note maintient le régime antérieur pour les opérations ayant fait l'objet d'un devis daté, accepté par les deux parties et d'un acompte encaissé avant le 1er janvier 2025. Cette transition reste applicable selon son champ et n'est pas remplacée par la réécriture. "
+RECODIFICATION = "Les notes du CGI consultées annoncent une abrogation à compter du 1er janvier 2027 par l'ordonnance n° 2025-1247 du 17 décembre 2025, sous les réserves qui y figurent : les renvois au CGI devront être coordonnés avec la recodification dans le code des impositions sur les biens et services. Aucun article de remplacement non vérifié n'est inventé."
+
+REVIEWS = {
+    '30-0 D ter': "Contrôle effectué sur les six tableaux complets, les températures, les puissances, les pourcentages, les volumes et surfaces, les normes, les méthodes équivalentes et les exceptions. Le 1° bis air/air de la version assignée, applicable depuis le 10 septembre 2026 selon ses métadonnées, est intégralement maintenu, avec l'appréciation du fluide frigorigène à la signature du devis. Incohérences préexistantes conservées et à vérifier : au 3°, le règlement 2015/1189 est daté du 28 avril 2015 puis du 24 avril 2015 et reçoit ensuite l'intitulé relatif aux dispositifs de chauffage décentralisés à combustible solide ; sa première mention est qualifiée de « précité » sans mention antérieure dans l'article. La communication y porte la date « 3 juillet 2014-2014 ». Le tableau du 4° parle d'efficacité de la « chaudière » pour des appareils indépendants. Au 5°, b, i, les deux premières branches se chevauchent : un appoint séparé inférieur à 82 % est aussi inférieur à 90 % ; aucun ordre de priorité ni borne nouvelle n'est ajouté. " + TRANSITION + "Le champ de l'article 278-0 bis A du CGI et ses exclusions demeurent réservés ; la voie de rénovation locative de vingt-quatre mois du projet ne résulte pas de ces critères fiscaux et appelle les dispositions distinctes de la loi n° 89-462, signalées dans coordination.json. " + RECODIFICATION,
+    '30-0 D quater': HISTORY_2025 + "Les seuils de 85 %, 47,6 WThC, 75 %, 15 WThC, 0,25 WThC/(m3/h), 0,12 WThC/(m3/h) et le seuil strictement inférieur à 0,25 Wh/m3 sont conservés, de même que la configuration T4, les classes A et B, les certifications NF 205 et Eurovent et la validité de l'avis au fait générateur. Incohérences de la source conservées : le I vise le « 3 » de l'article 30-0 D là où les II et III visent le « 3° » ; le IV écrit « NF EN ISO/ICE 17065 », tandis que le I emploie « NF EN ISO/CEI 17065 ». Le 3° de l'article 30-0 D consulté porte bien sur ces ventilations. Aucun renvoi ni référentiel n'est corrigé silencieusement. " + TRANSITION + RECODIFICATION,
+    '30-0 D quinquies': HISTORY_2025 + "Contrôle du renvoi au 4° de l'article 30-0 D, de l'exigence d'un réseau hydraulique existant hors du volume chauffé, de la possibilité de calorifuger seulement une partie de ce réseau et de la classe au moins égale à 3 selon NF EN 12828 + A1 ou méthode équivalente. " + TRANSITION + RECODIFICATION,
+    '30-0 D sexies': HISTORY_2025 + "Contrôle du renvoi au 5° de l'article 30-0 D et du maintien de chaque lettre : le renvoi du 2°, a au 1° conserve l'accès des immeubles collectifs à toute cette liste ; le 2°, c exclut toujours l'installation de nouvelles chaudières. Les signaux tarifaires, le risque de dépassement de la puissance souscrite et la condition de production combinée d'eau chaude sont conservés. " + TRANSITION + RECODIFICATION,
+    '30-0 D septies': HISTORY_2025 + "Contrôle du renvoi au 6° de l'article 30-0 D, des emplacements respectifs des répartiteurs et des compteurs et de la référence au décret n° 2001-387 du 3 mai 2001. Le champ du 6° de l'article 30-0 D, vérifié dans le corpus, reste celui des bâtiments équipés d'une installation centrale ou alimentés par un réseau de chaleur. " + TRANSITION + RECODIFICATION,
+    '30-0 D octies': HISTORY_2025 + "Contrôle du renvoi au 7° de l'article 30-0 D, du diamètre minimal de 1,32 mètre, des trois vitesses au moins, des plafonds de 45 et 35 décibels et de l'efficacité strictement supérieure à 250 m3/(Wh). Les unités et le référentiel NF EN IEC 60879, avec méthode équivalente, sont maintenus. " + TRANSITION + RECODIFICATION,
+    '30-0 D nonies': HISTORY_2025 + "Contrôle du renvoi au 8° de l'article 30-0 D, de l'exclusion de l'article 30-0 D ter, de la frontière de 70 kilowatt, du seuil de 92 %, des seuils de 87 % à 100 % et de 95,5 % à 30 %, ainsi que des classes IV à VIII. Cet article reste limité à l'entretien et à la réparation : il ne crée aucune éligibilité pour la fourniture ou l'installation d'une chaudière utilisant des combustibles fossiles, exclues par le III bis de l'article 278-0 bis A du CGI dans le corpus consulté, sous réserve de ses transitions propres. " + TRANSITION + RECODIFICATION,
+    '30-0 E': "La note source renvoie à l'annexe de l'arrêté du 8 septembre 2025 (NOR : ECOR2524069A) pour la méthodologie du 2, conformément à son article 2 ; elle fixe l'entrée en vigueur au 1er octobre 2025, conformément à son article 3. Ces données historiques sont conservées sans création d'une nouvelle date. Contrôle de la limite inclusive de 9 kWc, des quatre limites strictes (530 kg CO2 eq/kWc, 14 mg/W, 0,1 % de plomb, 0,01 % de cadmium), du cumul des cinq critères et du pilotage en temps réel. Le P de l'article 278-0 bis du CGI, consulté dans le corpus, impose également le champ des logements et des conditions de qualification professionnelle : les critères du présent article ne les remplacent pas. " + RECODIFICATION,
+    '30-0 H': "La note source indique une coordination résultant de l'article 2 du décret n° 2024-649 du 30 juin 2024 ; il ne s'agit pas d'une date de réforme future. Contrôle des définitions aux 2°, 4° et 5° du décret n° 2017-26 du 12 janvier 2017, des articles L. 353-12 et L. 353-13 et des I ou II de l'article D. 353-2 du code de l'énergie, ainsi que du renvoi historique à R. 111-14-2 du CCH dans l'intitulé de l'arrêté du 23 décembre 2020. Les normes NF EN 62196-2 et NF C61-314, l'alternative type 2/type E et l'intensité minimale de 14 A sont conservées. Les renvois au premier alinéa et au 3° du N de l'article 278-0 bis du CGI ont été vérifiés dans le corpus ; le champ des locaux d'habitation destinés aux résidents n'est pas étendu. " + RECODIFICATION,
+}
+
+answer = []
+for source in SOURCES:
+    number = source['number']
+    answer.append({
+        **{key: source[key] for key in ('code_id', 'source_id', 'source_sha256', 'number')},
+        'proposed_xml': proposals[number],
+        'reason': REASONS[number],
+        'review_notes': REVIEWS[number],
+        'status': 'rewrite_draft',
+    })
+
+Path('answer.json').write_text(json.dumps(answer, ensure_ascii=False, indent=2) + '\n')
+print(f'answer.json : {len(answer)} articles')

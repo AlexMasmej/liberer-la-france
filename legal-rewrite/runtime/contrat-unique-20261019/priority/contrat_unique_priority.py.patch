@@ -1,0 +1,108 @@
+--- /dev/null
++++ b/legal-rewrite/contrat_unique_priority.py
+@@ -0,0 +1,105 @@
++"""Read-only, source-guarded priority for the contract-unique coordination.
++
++No inference from a vague word at queue runtime. The reviewed snapshot lists
++exact identities and source hashes. It never reopens a review by itself.
++"""
++from functools import lru_cache
++from pathlib import Path
++import copy
++import hashlib
++import json
++import re
++
++HERE = Path(__file__).resolve().parent
++TARGETS = HERE / 'runtime/contrat-unique-20261019/priority/priority-targets.proposed.json'
++
++
++def digest(value):
++    return hashlib.sha256((value or '').encode()).hexdigest()
++
++
++def object_digest(value):
++    return digest(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(',', ':')))
++
++
++@lru_cache(maxsize=4)
++def load_targets(path=TARGETS):
++    data = json.loads(Path(path).read_text())
++    if data.get('schema_version') != 1 or not isinstance(data.get('targets'), list):
++        raise ValueError('Contract-unique priority inventory must be reviewed and regenerated')
++    targets = {}
++    for row in data['targets']:
++        key = row['code_id'], row['source_id']
++        sha = row.get('source_sha256')
++        if key in targets or not isinstance(sha, str) or not re.fullmatch('[0-9a-f]{64}', sha):
++            raise ValueError('Invalid contract-unique priority source guard')
++        targets[key] = sha
++    return targets
++
++
++def article_priority(article, targets=None):
++    if targets is None:
++        targets = load_targets()
++    key = article.get('code_id'), article.get('source_id')
++    sha = article.get('source_sha256')
++    return 0 if sha is not None and targets.get(key) == sha else 1
++
++
++def priority(job, targets=None):
++    return min((article_priority(article, targets) for article in job[2]), default=1)
++
++
++def mixed_priority(item):
++    """Stable-sort after interleaving so no SRU job passes a contract job."""
++    return priority(item[0])
++
++
++def propose_review_manifest(manifest, operations, current_sources, current_drafts,
++                            expected_manifest_sha256):
++    """Pure guarded proposal. Caller owns any later serialization/approval.
++
++    This does not open a DB, update a manifest, mark an article as rewritten,
++    or discard an earlier audit. Prior status/hash are kept in each entry.
++    """
++    if object_digest(manifest) != expected_manifest_sha256:
++        raise ValueError('Review manifest changed since contract inventory; regenerate proposal')
++    result = copy.deepcopy(manifest)
++    entries = result['prior_articles']
++    existing = {(row['code_id'], row['source_id']): row for row in entries}
++    seen = set()
++    for operation in operations:
++        key = operation['code_id'], operation['source_id']
++        if key in seen:
++            raise ValueError('Duplicate contract-unique reopen operation')
++        seen.add(key)
++        if current_sources.get(key) != operation['source_sha256']:
++            raise ValueError('Canonical source changed before contract-unique reopen')
++        if current_drafts.get(key) != operation['proposed_sha256']:
++            raise ValueError('Draft changed before contract-unique reopen')
++        row = existing.get(key)
++        before = operation['previous_manifest_entry']
++        if row != before:
++            raise ValueError('Review entry changed before contract-unique reopen')
++        if row is None:
++            row = {'code_id': key[0], 'source_id': key[1]}
++            entries.append(row)
++            existing[key] = row
++        history = row.setdefault('contract_unique_review_history', [])
++        history.append({'review_id': 'contrat_unique_2026_10_19',
++                        'previous_entry': copy.deepcopy(before),
++                        'reopen_reason': operation['reason']})
++        row.update(source_sha256=operation['source_sha256'],
++                   proposed_sha256=operation['proposed_sha256'],
++                   review_status='pending',
++                   contract_unique_review_required=True)
++    result['completed_second_pass'] = sum(row['review_status'] == 'completed' for row in entries)
++    # Do not rewrite the historical population/count at the original directive.
++    result['current_review_inventory_entries'] = len(entries)
++    result['prior_current_articles'] = sum(row['review_status'] != 'outside_current_inventory' for row in entries)
++    result['contract_unique_reopen_proposal'] = {
++        'review_id': 'contrat_unique_2026_10_19',
++        'previous_completed_second_pass': manifest.get('completed_second_pass'),
++        'reopened_or_refreshed': len(operations),
++        'counts_as_rewritten': False,
++        'requires_normal_source_and_full_article_review': True}
++    return result

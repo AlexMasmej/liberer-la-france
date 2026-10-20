@@ -1,0 +1,78 @@
+{
+  "completed": [
+    {
+      "source_id": "LEGIARTI000049356901",
+      "number": "49 septies ZZB bis",
+      "batch": "011.json",
+      "companion": "attachments/records/fiscalite-zzb-bis.json",
+      "documentary_recovery_complete": true,
+      "authenticated_jo_crosscheck_complete": false,
+      "source_pdf": "https://bofip.impots.gouv.fr/export/pdf/287189",
+      "page": 3
+    }
+  ],
+  "unresolved": [
+    {
+      "source_id": "LEGIARTI000049362876",
+      "number": "49 septies ZZH",
+      "missing": [
+        "facteur β_t",
+        "équation définissant i"
+      ],
+      "urls": [
+        {
+          "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023333871",
+          "result": "Page officielle consultable dans web ; téléchargement local HTTP403."
+        },
+        {
+          "url": "https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000023333871",
+          "result": "URL not accessible dans web ; aucun octet PDF récupéré."
+        },
+        {
+          "url": "https://www11.minefi.gouv.fr/boi/boi2012/4fepub/textes/4a612/4a612.pdf",
+          "result": "PDF officiel récupéré ; page32 omet aussi les deux formules et renvoie au JO."
+        },
+        {
+          "url": "https://bofip.impots.gouv.fr/bofip/6965-PGP.html/identifiant=BOI-BIC-RICI-10-140-20-10-20210310",
+          "result": "Paragraphes30–40 renvoient à49septiesZZH sans transcription."
+        }
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000019493914",
+      "number": "15 (annexe IV)",
+      "missing": [
+        "CERFA30-0812",
+        "CERFA30-0813"
+      ],
+      "urls": [
+        {
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000019493914/2026-02-24",
+          "result": "Deux modèles explicitement non reproduits ; aucun lien PDF de modèle."
+        },
+        {
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069576/LEGISCTA000006191485/2026-09-10/",
+          "result": "Même omission dans la section canonique."
+        }
+      ],
+      "searches": [
+        "CERFA 30-0812",
+        "CERFA 30-0813",
+        "CERFA 0812 coupons",
+        "CERFA 0813 coupons",
+        "30 0812 CERFA",
+        "30.0812 CERFA",
+        "300812 CERFA",
+        "30-0812 bofip",
+        "30-0813 bofip"
+      ],
+      "result": "Aucun modèle officiel récupéré ; cela ne prouve pas leur inexistence."
+    }
+  ],
+  "jo_crosscheck_reserve": {
+    "url": "https://www.legifrance.gouv.fr/download/file/TmVaNIYzTnEE-9w16jjJ29e7NQ0Bwz--rDCJlG3YNd0%3D/JOE_TEXTE",
+    "result": "L’extrait authentifié2019-839 est lisible par web en4pages ; les captures de web__run renvoient seulement une chaîne de référence sans pixels et le téléchargement curl renvoieHTTP403. Formules récupérées dans le BOFiP primaire et vérifiées sur rendu local, mais confrontation JO non faite."
+  },
+  "no_security_challenge_attempted": true,
+  "notes": "Aucun contournement Cloudflare, CAPTCHA, changement d’agent utilisateur ou contournement TLS. L’inventaire navigateur a montré un onglet existant Just a moment ; aucune interaction avec cet onglet. Aucune modification DB ou site public."
+}

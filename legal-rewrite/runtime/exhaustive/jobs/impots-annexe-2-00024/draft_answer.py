@@ -1,0 +1,282 @@
+import json
+from pathlib import Path
+
+
+drafts = {}
+
+
+def add(number, xml, reason, notes):
+    assert number not in drafts
+    drafts[number] = (xml.strip(), reason, notes)
+
+
+add('370 C', '''
+<p>I. – Les déclarations de souscription et de dénouement prévues au I de l'article 1649 ter du code général des impôts indiquent :</p>
+<p>1° Le nom ou la raison sociale de l'organisme et sa domiciliation ;</p>
+<p>2° La nature du contrat ou du placement ;</p>
+<p>3° La date de souscription du contrat ou du placement ;</p>
+<p>4° La référence du contrat ou du placement, ou son numéro de police ;</p>
+<p>5° Pour chaque souscripteur personne physique, ses nom, prénoms, date et lieu de naissance et domicile ; pour chaque souscripteur personne morale, sa raison sociale, l'adresse de son siège et son numéro SIREN ou RNA ;</p>
+<p>6° Pour chaque assuré, ses nom, prénoms, date et lieu de naissance et domicile ;</p>
+<p>7° En cas de dénouement du contrat ou du placement, la date et la cause du dénouement ;</p>
+<p>8° En cas de décès du souscripteur sans dénouement du contrat, la date du décès et, pour chaque ayant droit, ses nom, prénoms, date et lieu de naissance et domicile.</p>
+<p>II. – Lorsque le contrat ou le placement se dénoue par le décès de l'assuré, les déclarations comprennent également les éléments prévus aux articles 292 B ou 306-0 F, ainsi que les indications suivantes :</p>
+<p>1° Pour chaque bénéficiaire personne physique, ses nom, prénoms, date et lieu de naissance et domicile ;</p>
+<p>2° Pour chaque bénéficiaire personne morale, sa raison sociale, l'adresse de son siège et son numéro SIREN ou RNA ;</p>
+<p>3° Le montant des sommes, rentes ou valeurs quelconques à verser à chacun des bénéficiaires ;</p>
+<p>4° Lorsque la clause bénéficiaire est démembrée, la qualité de nu-propriétaire ou d'usufruitier des bénéficiaires concernés et la part qui leur revient dans les sommes, rentes ou valeurs quelconques à verser.</p>
+<p>III. – Lorsque des sommes sont versées à la Caisse des dépôts et consignations en application des articles L. 132-27-2 du code des assurances et L. 223-25-4 du code de la mutualité, la déclaration indique également la date et le montant de ce versement.</p>
+<p>IV. – Les déclarations prévues au II de l'article 1649 ter du code général des impôts comprennent les indications énumérées aux 1° à 5° du I du présent article.</p>
+<p>V. – Les déclarations prévues aux I et II de l'article 1649 ter du code général des impôts sont transmises par voie dématérialisée. Celles prévues au I de cet article sont transmises, selon le cas, dans les soixante jours suivant la souscription ou le dénouement du contrat. Lorsque le dénouement résulte du décès de l'assuré, ce délai de soixante jours court à compter de la date à laquelle le décès de l'assuré est connu. La déclaration prévue au II du même article est transmise au plus tard le 15 juin de l'année.</p>
+<p>Ces déclarations alimentent un traitement informatisé dénommé « gestion du fichier des contrats de capitalisation et d'assurance-vie ». Ce traitement recense, sur support informatique, les contrats et placements mentionnés à l'article 1649 ter du code général des impôts. Pour chaque contrat ou placement, il met à la disposition des services autorisés à consulter le fichier les éléments prévus à cet article et aux I à IV du présent article.</p>
+<p>VI. – Lorsque les éléments mentionnés aux I à IV sont modifiés, les personnes morales mentionnées au I de l'article 1649 ter du code général des impôts transmettent une nouvelle déclaration contenant les éléments modifiés. Elles la transmettent dans les conditions prévues au V, dans les soixante jours suivant la date à laquelle elles ont connaissance des modifications.</p>
+<p>VII. – Si les éléments mentionnés au II ne peuvent être déclarés dans les soixante jours suivant la date à laquelle le décès de l'assuré est connu, les personnes morales mentionnées au I de l'article 1649 ter du code général des impôts transmettent une nouvelle déclaration contenant les nouveaux éléments. Elles la transmettent dans les conditions prévues au V, dans les soixante jours suivant la date à laquelle elles ont connaissance de ces nouveaux éléments.</p>
+<p>Si les éléments mentionnés au 8° du I ne peuvent être déclarés dans les soixante jours suivant la date à laquelle le décès du souscripteur est connu, une nouvelle déclaration est transmise dans les mêmes conditions que celles prévues au premier alinéa du présent VII.</p>
+<p>VIII. – Pour les contrats souscrits avant le 1er janvier 1998 et placés sous le régime fiscal de l'anonymat, la déclaration prévue au présent article est effectuée lorsque le souscripteur ou le bénéficiaire opte pour la levée de l'anonymat.</p>
+<p>IX. – Les déclarations prévues à l'article 1649 ter du code général des impôts sont conservées jusqu'à la fin de la trentième année suivant celle du dépôt de la déclaration de dénouement.</p>
+<p>Par exception à l'alinéa précédent, lorsqu'un versement est effectué dans les conditions prévues au III, les déclarations sont conservées jusqu'à la fin de la vingtième année suivant celle de ce versement.</p>
+''',
+    "Réécriture à droit constant : les données à déclarer sont présentées par personne concernée, les transmissions complémentaires ont un débiteur explicite et les points de départ des délais sont distingués. Les neuf subdivisions, les données nominatives, les régimes historiques et les durées de conservation sont conservés. Aucune réforme de fond de policy.json ne vise ces obligations déclaratives.",
+    "Renvois vérifiés dans le corpus fourni : CGI, article 1649 ter, et annexe II, articles 292 B et 306-0 F ; les renvois de ces deux derniers aux I, II et V à VII du présent article restent opérants. Contrôler les délais de soixante jours, l'échéance du 15 juin, la date du 1er janvier 1998 et les durées de trente et vingt années. La règle historique de l'anonymat est maintenue sans être étendue aux comptes de capitalisation collective envisagés par la réforme des retraites.")
+
+add('371', '''
+<p>Les personnes sans domicile ni résidence fixe accomplissent leurs obligations fiscales auprès des services des impôts compétents pour la commune dans laquelle se trouve l'organisme auprès duquel elles ont élu domicile dans les conditions prévues à l'article L. 264-1 du code de l'action sociale et des familles.</p>
+<p>Si plusieurs services des impôts disposent d'une compétence territoriale déterminée pour cette commune, ces personnes accomplissent leurs obligations fiscales auprès du service désigné par l'administration des impôts.</p>
+''',
+    "Réécriture à droit constant : la compétence fiscale est rattachée directement à la commune de l'organisme de domiciliation et le sujet de la règle applicable en présence de plusieurs services est explicité. Les deux alinéas sont conservés ; aucune réforme de fond n'est appliquée.",
+    "Maintien de la référence à l'article L. 264-1 du code de l'action sociale et des familles et de la désignation du service par l'administration en cas de pluralité de services. Cet article extérieur aux cinq codes traités n'a pas été vérifié dans le corpus fourni.")
+
+add('371 A', '''
+<p>Pour obtenir l'agrément prévu à l'article 1649 quater C du code général des impôts, un centre de gestion doit avoir la forme d'une association légalement constituée. Ses membres fondateurs sont soit des experts-comptables ou des sociétés membres de l'ordre, soit des chambres de commerce et d'industrie territoriales, des chambres de métiers et de l'artisanat de région ou des chambres d'agriculture, soit des organisations professionnelles légalement constituées d'industriels, de commerçants, d'artisans ou d'agriculteurs.</p>
+<p>Les organisations professionnelles visées au premier alinéa comprennent les syndicats professionnels et leurs unions institués conformément aux articles L. 2111-1 et suivants du code du travail. Elles comprennent également les associations professionnelles de personnes exerçant la même profession, des métiers similaires ou des métiers connexes, ainsi que leurs unions.</p>
+<p>Le centre doit avoir pour objet de fournir à ses adhérents industriels, commerçants, artisans ou agriculteurs :<br/>1° Une assistance en matière de gestion, comprenant l'assistance technique ainsi que la formation et l'information relatives au droit, à la fiscalité, à la comptabilité ou à la gestion ;<br/>2° Une analyse des informations économiques, comptables et financières destinée à prévenir les difficultés économiques et financières.<br/>Les formations proposées par l'organisme agréé sont également offertes au représentant de l'adhérent.</p>
+<p>Le centre ne peut agir comme mandataire de ses membres.</p>
+<p>Par exception, le centre doit recevoir mandat de ses membres pour télétransmettre les déclarations de résultats, leurs annexes et les autres documents qui les accompagnent, selon la procédure prévue par le système de transfert des données fiscales et comptables.</p>
+''',
+    "Réécriture à droit constant : les conditions de constitution, les catégories de fondateurs, les missions et l'exception à l'interdiction du mandat sont formulées avec un sujet explicite. Les cinq alinéas et les 1° et 2° sont conservés. Aucune réforme de fond n'est introduite.",
+    "Le renvoi à l'article 1649 quater C du CGI est conservé, mais cet article n'est pas présent dans le corpus public fourni : contrôler le maintien de la base légale de l'agrément et la coordination de toute la section. Maintenir distincts l'interdiction générale du mandat et le mandat obligatoire de télétransmission, ainsi que l'accès du représentant aux formations.")
+
+add('371 A bis', '''
+<p>Les centres agréés au titre de l'article 1649 quater C du code général des impôts peuvent fournir des services d'assistance en matière de gestion à toute entreprise exerçant une activité industrielle, commerciale, artisanale ou agricole. Ces services peuvent notamment porter sur les domaines suivants :<br/>1° La dématérialisation et la télétransmission des déclarations fiscales de l'entreprise ;<br/>2° La formation et l'information relatives au droit, à la fiscalité, à la comptabilité ou à la gestion ;<br/>3° La restitution de statistiques ;<br/>4° L'examen de conformité fiscale prévu par le décret n° 2021-25 du 13 janvier 2021 portant création de l'examen de conformité fiscale ;<br/>5° L'audit technique lié à l'activité de l'entreprise ;<br/>6° Pour les microentreprises au sens de l'article 3 du décret n° 2008-1354 du 18 décembre 2008 relatif aux critères permettant de déterminer la catégorie d'appartenance d'une entreprise pour les besoins de l'analyse statistique et économique, l'aide à la création de microentreprise et l'accompagnement commercial, en matière de communication et de transition numérique.</p>
+''',
+    "Réécriture à droit constant : le bénéficiaire des services est identifié avant l'énumération et les compléments des 1°, 5° et 6° sont explicités. Le caractère non limitatif des six domaines et la définition statistique de la microentreprise sont maintenus. Aucune réforme de fond n'est appliquée.",
+    "Le renvoi au CGI, article 1649 quater C, demeure, mais sa cible est absente du corpus fourni ; vérifier la base légale de l'agrément. Les décrets n° 2021-25 du 13 janvier 2021 et n° 2008-1354 du 18 décembre 2008, article 3, sont conservés sans assimiler la microentreprise statistique aux régimes fiscaux des articles 50-0 ou 64 bis. Les services restent ouverts à toute entreprise des secteurs énumérés, sans nouvelle condition d'adhésion.")
+
+add('371 B', '''
+<p>Un centre doit compter au moins cinq cents adhérents appartenant aux catégories suivantes : les personnes physiques ou morales ayant la qualité d'industriel, de commerçant, d'artisan ou d'agriculteur et imposées à l'impôt sur le revenu d'après leur bénéfice réel, ainsi que tous les contribuables disposant de revenus non professionnels imposés dans la catégorie des bénéfices industriels et commerciaux selon le régime simplifié ou le régime normal d'imposition d'après le bénéfice réel.</p>
+<p>L'agrément du centre n'est pas renouvelé si le nombre de ses adhérents n'atteint pas mille dans les trois ans suivant la date de l'agrément.</p>
+<p>Pour ouvrir ou maintenir chaque bureau secondaire, le centre doit justifier de cinq cents adhérents supplémentaires au-delà du seuil prévu au deuxième alinéa. Il confie à ce bureau les contrôles prévus à l'article 1649 quater E du code général des impôts pour au moins cinq cents adhérents.</p>
+<p>Les conditions relatives au nombre d'adhérents prévues au présent article ne s'appliquent pas aux centres et aux bureaux secondaires établis :</p>
+<p>– en Corse ;</p>
+<p>– en Guadeloupe, en Guyane, en Martinique, à Mayotte et à La Réunion.</p>
+''',
+    "Réécriture à droit constant : le seuil initial, le seuil de renouvellement et les deux conditions propres à chaque bureau secondaire sont énoncés séparément dans leurs alinéas d'origine. Les catégories de contribuables et les exceptions territoriales restent intégrales. Aucune réforme de fond n'est introduite.",
+    "Seuils maintenus : cinq cents adhérents au minimum ; mille dans les trois ans ; cinq cents supplémentaires et cinq cents dossiers contrôlés par bureau secondaire. Les exemptions territoriales portent sur les règles de nombre d'adhérents. Le deuxième alinéa reste à sa place pour les renvois. L'article 1649 quater E du CGI est absent du corpus fourni : vérifier la base des contrôles sans supprimer leur mention. Coordonner les articles 371 K, 371 K bis et les exceptions de l'article 371 L si le régime devait être supprimé.")
+
+add('371 C', '''
+<p>En application de l'article 1649 quater E du code général des impôts, chaque centre conclut avec l'administration fiscale une convention qui définit le rôle du ou des agents de cette administration chargés de lui apporter une assistance technique (1). Le ministre chargé du budget fixe par arrêté le modèle de cette convention.</p>
+<p>L'administration fiscale peut refuser de conclure cette convention lorsque le centre a été créé ou est dirigé en fait par des syndicats ou organisations professionnelles qui ont eux-mêmes été dirigés, au cours des cinq dernières années, par des personnes condamnées depuis moins de cinq ans pour avoir organisé ou tenté d'organiser le refus collectif de l'impôt au sens de l'article 1747 du code général des impôts.</p>
+<p>(1) Annexe IV, art. 164 F vicies.</p>
+''',
+    "Réécriture à droit constant : la conclusion de la convention et la fixation de son modèle ont chacune un sujet explicite ; la chaîne de conditions permettant un refus est rendue plus lisible. La double référence temporelle de cinq ans et la note de renvoi sont maintenues. Aucune réforme de fond n'est appliquée.",
+    "Les articles 1649 quater E du CGI et 164 F vicies de l'annexe IV ne figurent pas dans le corpus fourni ; leur absence appelle une vérification de la base légale et du modèle, sans substitution de renvoi. Conserver les deux conditions temporelles distinctes : direction du syndicat ou de l'organisation au cours des cinq dernières années et condamnation datant de moins de cinq ans. La simple tentative d'organisation du refus collectif reste visée.")
+
+add('371 D', '''
+<p>Les centres produisent des certificats délivrés par l'administration fiscale à la demande des intéressés pour établir que leurs dirigeants ou administrateurs ont respecté leurs obligations déclaratives et de paiement en matière fiscale pendant les cinq années précédant la demande d'agrément et ne font pas l'objet des mesures prévues à l'article 1750 du code général des impôts ou n'ont pas fait l'objet, au cours des cinq dernières années :</p>
+<p>D'une condamnation inscrite au bulletin n° 2 prévu à l'article 775 du code de procédure pénale, à l'exception des condamnations pour blessures, coups ou homicide involontaires et pour infraction au code de la route ;</p>
+<p>D'une amende fiscale prononcée par un tribunal ;</p>
+<p>D'une sanction fiscale prononcée par l'administration pour manœuvres frauduleuses.</p>
+<p>Les centres produisent également des attestations sur l'honneur établies par les intéressés pour justifier que leurs administrateurs ne sont pas frappés des interdictions prévues aux articles 371 K bis et 371 V bis.</p>
+''',
+    "Réécriture à droit constant : les pièces à produire et leur objet sont placés en tête des deux obligations probatoires. La distinction entre dirigeants et administrateurs, les trois catégories de sanctions, les exclusions pénales et les cinq alinéas sont conservés. Aucune réforme de fond n'est introduite.",
+    "Ambiguïté préexistante maintenue : la source relie par « ou » l'absence de mesures au titre de l'article 1750 et l'absence de sanctions au cours des cinq dernières années ; une rédaction cumulative exigerait un arbitrage de fond. Ne pas confondre les cinq ans précédant la demande avec la formulation des cinq dernières années. Les attestations de cet article visent seulement 371 K bis et 371 V bis, tandis que le 11° de 371 F vise aussi 371 Z terdecies ; différence conservée et à contrôler.")
+
+add('371 E', '''
+<p>Les statuts du centre définissent les conditions dans lesquelles les personnes ou organismes à l'origine de sa création participent à sa gestion. Les adhérents doivent être représentés à hauteur d'au moins un tiers des sièges au conseil d'administration ou dans tout autre organe dirigeant. Les personnes ou organismes qui ne sont ni des membres mentionnés à l'article 1649 quater C du code général des impôts ni des adhérents peuvent devenir membres associés et participer au conseil d'administration ou à tout autre organe dirigeant, dans la limite d'un tiers des sièges.</p>
+<p>Chaque membre du conseil d'administration dispose d'une voix.<br/>Les personnes exerçant une activité salariée, libérale ou d'administrateur bénévole au sein d'une même personne morale, de personnes morales liées entre elles au sens du 12 de l'article 39 du code général des impôts, ou de personnes morales adhérentes ou affiliées les unes aux autres, ne peuvent se voir attribuer plus d'un tiers des sièges.</p>
+<p>Les statuts comportent également les stipulations suivantes :</p>
+<p>1° Le centre remet à ses membres adhérents imposés d'après leur bénéfice réel un dossier comprenant les éléments ci-dessous. Il le remet dans les deux mois suivant la réception de leur déclaration de résultats par le centre et, lorsque leur exercice comptable ne coïncide pas avec l'année civile, au plus tard neuf mois après la clôture de cet exercice :</p>
+<p>a. Les ratios et les autres éléments caractérisant la situation financière et économique de l'entreprise. Leur nature est fixée par arrêté du ministre du budget, du ministre de l'agriculture, du ministre de l'industrie et du ministre du commerce et de l'artisanat (1) ;</p>
+<p>b. Un commentaire sur la situation financière et économique de l'entreprise ;</p>
+<p>c. À compter de la clôture du deuxième exercice suivant celui de l'adhésion, et dans les délais prévus au premier alinéa du présent 1°, une analyse comparative des bilans et des comptes de résultat de l'entreprise. Pour les entreprises soumises au régime simplifié d'imposition, seule l'analyse comparative des comptes d'exploitation doit toutefois être fournie ;</p>
+<p>d. Un document de synthèse analysant les informations économiques, comptables et financières de l'entreprise et lui indiquant, le cas échéant, les démarches à accomplir ;</p>
+<p>2° À la demande de ses membres adhérents placés sous un régime réel d'imposition, le centre établit les déclarations relatives à leur exploitation destinées à l'administration fiscale.</p>
+<p>Ces déclarations ne peuvent toutefois concerner qu'une période pendant laquelle les intéressés étaient membres du centre ;</p>
+<p>3° Pour les membres adhérents imposés d'après leur bénéfice réel, l'adhésion au centre emporte les engagements, obligations et autorisation suivants :</p>
+<p>a. L'engagement de fournir à la personne ou à l'organisme chargé de tenir et de présenter leurs documents comptables tous les éléments nécessaires à l'établissement d'une comptabilité sincère de leur exploitation ;</p>
+<p>b. Abrogé ;</p>
+<p>c. L'obligation de communiquer au centre le bilan, les comptes de résultat, tous les documents annexes et tout document que le centre demande pour les contrôles réalisés en application de l'article 1649 quater E du code général des impôts ;</p>
+<p>d. Abrogé ;</p>
+<p>e. L'autorisation donnée au centre de communiquer à l'administration fiscale, dans le cadre de l'assistance qu'elle lui apporte, les documents mentionnés au présent article. Sont exclus de cette communication tous les documents fournissant une vision exhaustive des opérations comptables de l'entreprise.</p>
+<p>L'adhérent qui manque gravement ou de manière répétée aux engagements ou obligations énoncés ci-dessus est exclu du centre. Avant toute décision d'exclusion, le centre le met en mesure de présenter sa défense sur les faits qui lui sont reprochés.</p>
+<p>4° Le centre procède à un examen périodique de sincérité des pièces justificatives de ses adhérents pour vérifier que leurs déclarations fiscales sont correctement établies. Il établit et applique une méthode commune à l'ensemble de ses adhérents. Pour déterminer les adhérents dont les pièces justificatives sont examinées au titre d'une année donnée, il les sélectionne selon une méthode fixée par arrêté du ministre chargé du budget. Cette méthode assure un examen au moins tous les six ans lorsque les comptes de l'adhérent sont tenus ou présentés chaque année par un professionnel de l'expertise comptable, et au moins tous les trois ans dans les autres cas. Le nombre de pièces examinées varie selon la taille de l'entreprise. Pour choisir les pièces à examiner, le centre s'appuie sur un document remis par l'adhérent et donnant une vision exhaustive des opérations comptables de l'entreprise. Le centre détruit ce document une fois l'examen achevé et ne le communique en aucun cas à l'administration fiscale. Il met l'adhérent en mesure de présenter ses observations en réponse aux éventuelles questions et critiques formulées au cours de l'examen.</p>
+<p>Cet examen donne lieu au compte rendu de mission prévu à l'article 1649 quater E du code général des impôts ;</p>
+<p>5° Le centre assure la traçabilité de toutes ses missions de contrôle ;</p>
+<p>6° Le centre vérifie la capacité de ses adhérents à respecter, le cas échéant, le I de l'article L. 47 A du livre des procédures fiscales ;</p>
+<p>7° Le centre se soumet au contrôle de l'administration destiné à vérifier que son organisation et ses travaux sont conformes aux dispositions du code général des impôts.</p>
+<p>(1) Voir annexe IV, art. 164 F unvicies.</p>
+''',
+    "Réécriture à droit constant : les règles de représentation, la composition du dossier de gestion et le déroulement de l'examen de sincérité sont reformulés en phrases distinctes. Les sept numéros, leurs lettres, les emplacements abrogés et tous les alinéas sont maintenus. Les limites de transmission, la destruction du document comptable exhaustif et les garanties de défense restent explicites. Aucune réforme de fond n'est appliquée.",
+    "Contrôler les trois plafonds ou minima d'un tiers, les délais de deux et neuf mois, le début de l'analyse au deuxième exercice suivant l'adhésion, et les cycles de six ou trois ans. Le premier alinéa du 1° reste la cible du c. Les articles 1649 quater C et E du CGI ainsi que 164 F unvicies de l'annexe IV sont absents du corpus fourni : vérifier la base légale et le texte d'application. Les dérogations de régime simplifié et les deux garanties de défense sont conservées. Aucun réemploi de données détenues par l'administration n'est institué : la réforme générale de simplification ne suffit pas à autoriser une nouvelle communication de documents couverts par le secret.")
+
+add('371 EA', '''
+<p>Les statuts des centres prévoient les engagements suivants :</p>
+<p>1° Lorsque le centre fait de la publicité, il respecte, quel que soit le support utilisé, l'indépendance, la dignité et l'honneur de l'institution, les règles du secret professionnel et la loyauté envers les adhérents et les autres centres exerçant la même activité. Il ne recourt au démarchage que pour apporter au public visé une information utile, dépourvue de tout élément comparatif, qui ne contient aucune inexactitude et n'induit pas ce public en erreur. Cette information est diffusée avec discrétion et formulée de manière décente et avec retenue ;</p>
+<p>2° Le centre fait figurer sa qualité de centre de gestion agréé et les références de la décision d'agrément sur sa correspondance et sur tous les documents qu'il établit ;</p>
+<p>3° Le centre informe l'administration fiscale de toute modification de ses statuts et de tout changement concernant ses dirigeants ou administrateurs, dans le mois suivant la réalisation de la modification ou du changement. Il fournit à l'administration fiscale, pour les personnes concernées, le certificat prévu à l'article 371 D ;</p>
+<p>4° Le centre souscrit, auprès d'une société d'assurance ou d'un assureur agréé en application du livre III du code des assurances, un contrat le garantissant contre les conséquences pécuniaires de la responsabilité civile professionnelle qu'il peut encourir du fait des négligences et fautes commises dans l'exercice de ses activités ;</p>
+<p>5° En cas de retrait de son agrément, le centre en informe ses adhérents dès réception de la notification de la décision de retrait ;</p>
+<p>6° Le centre demande une cotisation d'un montant identique à tous ses adhérents. Il peut toutefois réduire la cotisation des adhérents relevant des régimes prévus aux articles 64 bis ou 50-0 du code général des impôts et des entreprises qui adhèrent à un centre au cours de leur première année d'activité ;</p>
+<p>7° Le centre ne sous-traite pas les missions prévues à l'article 1649 quater E du même code aux professionnels de l'expertise comptable ou aux avocats dont l'adhérent a utilisé les services au titre de l'exercice contrôlé, ni aux structures dans lesquelles ces professionnels ou avocats exercent.</p>
+''',
+    "Réécriture à droit constant : chaque engagement statutaire est formulé comme une action du centre ; les conditions de publicité et de démarchage sont séparées en phrases lisibles. Les sept engagements et leurs alinéas sont conservés, notamment les seules possibilités de réduction de cotisation et l'interdiction de sous-traitance liée à l'exercice contrôlé. Aucune réforme de fond n'est introduite.",
+    "Conserver le délai d'un mois et l'information immédiate dès réception du retrait. Les critères de démarchage restent cumulatifs et l'exception tarifaire n'est pas étendue aux microentreprises définies à des fins statistiques. Le renvoi à 371 D est maintenu. La cible CGI 1649 quater E est absente du corpus fourni : contrôler le fondement des missions sans élargir les communications couvertes par le secret professionnel.")
+
+add('371 EB', '''
+<p>Les centres s'engagent à imposer le respect du secret professionnel à toute personne qui collabore à leurs travaux.</p>
+''',
+    "Réécriture à droit constant : la phrase indique directement l'obligation que les centres s'engagent à imposer et les personnes concernées. Le secret couvre toujours tout collaborateur ; aucune réforme de fond n'est appliquée.",
+    "L'engagement reste celui que le 7° de l'article 371 F impose de joindre à la demande d'agrément. Aucune exception au secret ni nouvelle autorisation de transmission n'est ajoutée.")
+
+add('371 F', '''
+<p>Le centre de gestion dépose sa demande d'agrément auprès du directeur départemental ou, le cas échéant, régional des finances publiques du département où il a son siège.</p>
+<p>Il joint à sa demande les documents suivants :</p>
+<p>1° Un exemplaire de ses statuts et, s'il en existe un, de son règlement intérieur ;</p>
+<p>2° Les justificatifs de l'accomplissement des formalités prévues par la législation en vigueur pour la création de l'association et la régularité de son fonctionnement ;</p>
+<p>3° La liste de ses dirigeants ou administrateurs, indiquant pour chacun ses nom, prénoms, date et lieu de naissance, domicile, profession et la nature de l'activité qu'il exerce dans le centre ;</p>
+<p>4° Pour chaque dirigeant ou administrateur, le certificat prévu à l'article 371 D ;</p>
+<p>5° La liste des membres à la date de présentation de la demande, indiquant leur nom, leur profession et le lieu où ils l'exercent ;</p>
+<p>6° Une copie du contrat d'assurance prévu au 4° de l'article 371 EA ;</p>
+<p>7° L'engagement prévu à l'article 371 EB ;</p>
+<p>8° Le texte de la convention conclue avec l'administration fiscale ;</p>
+<p>9° Une notice décrivant la nature des services rendus par le centre à ses membres adhérents ;</p>
+<p>10° Un rapport des personnes ou organismes à l'origine de la création du centre ;</p>
+<p>11° Une attestation sur l'honneur de chaque administrateur indiquant qu'il n'est pas frappé des interdictions prévues aux articles 371 K bis, 371 V bis et 371 Z terdecies.</p>
+<p>Après avoir vérifié que le dossier est complet, le directeur départemental ou, le cas échéant, régional des finances publiques délivre un récépissé au centre.</p>
+''',
+    "Réécriture à droit constant : le centre devient le sujet explicite du dépôt et de la production des pièces ; les onze pièces sont décrites sans changer leur contenu ni leur ordre. La délivrance du récépissé reste subordonnée à la complétude du dossier. Aucune réforme de fond n'est appliquée.",
+    "Le récépissé du dernier alinéa reste le point de départ du délai de 371 H. Les renvois à 371 D, au 4° de 371 EA et à 371 EB sont conservés. Le 11° vise trois interdictions, dont 371 Z terdecies, alors que le dernier alinéa de 371 D n'en vise que deux : différence préexistante à contrôler. Les articles 371 V bis et 371 Z terdecies du corpus confirment des interdictions de deux ans. La réforme de réemploi des données ne permet pas de présumer que ces pièces sont déjà légalement détenues par l'administration.")
+
+add('371 G', '''
+<p>Le directeur régional des finances publiques de la région où le centre demandeur a son siège statue sur la demande d'agrément.</p>
+''',
+    "Réécriture à droit constant : l'autorité compétente est le sujet direct de la décision et son ressort reste déterminé par le siège du centre. Aucune réforme de fond n'est introduite.",
+    "L'autorité reste distincte de celle qui reçoit le dossier à l'article 371 F. Les renvois des articles 371 H et 371 K au directeur mentionné au présent article restent opérants.")
+
+add('371 H', '''
+<p>Le directeur mentionné à l'article 371 G statue dans les quatre mois suivant la date de délivrance du récépissé prévu à l'article 371 F.</p>
+<p>Si aucune décision n'est prise dans ce délai, la demande est acceptée. Toute décision de refus d'agrément est motivée.</p>
+''',
+    "Réécriture à droit constant : le délai est exprimé directement et l'effet du silence est formulé comme la conséquence de l'absence de décision. Les deux alinéas, l'acceptation tacite et la motivation du refus sont conservés. Aucune réforme de fond n'est appliquée.",
+    "Le délai demeure de quatre mois à compter de la délivrance du récépissé, et non du dépôt initial de la demande. Les articles 371 F et 371 G restent les cibles des renvois. La procédure est également visée par l'article 371 J pour le renouvellement.")
+
+add('371 J', '''
+<p>L'agrément est accordé pour trois ans. Son renouvellement peut être demandé selon la procédure prévue aux articles 371 F à 371 H. La demande est présentée au plus tard six mois avant l'expiration de l'agrément en cours.</p>
+<p>À l'exception du premier renouvellement, l'agrément est renouvelé tous les six ans.</p>
+<p>Pour examiner la demande de renouvellement, l'administration tient compte de l'action du centre pour améliorer la gestion des entreprises adhérentes et s'assurer de la sincérité des résultats qu'elles déclarent.</p>
+''',
+    "Réécriture à droit constant : la durée de délivrance, le dépôt de la demande et la périodicité des renouvellements sont exprimés dans des phrases distinctes. Le critère d'examen du renouvellement et les trois alinéas sont conservés. Aucune réforme de fond n'est introduite.",
+    "Maintien de la durée de trois ans, de l'anticipation de six mois et de la périodicité de six ans sauf premier renouvellement. L'articulation entre cette durée générale et la périodicité des renouvellements est conservée sans fixer de durée nouvelle. La procédure des articles 371 F à 371 H demeure applicable.")
+
+add('371 K', '''
+<p>Le directeur mentionné à l'article 371 G peut retirer l'agrément du centre dans les cas suivants, après l'avoir mis en demeure de présenter ses observations sur les faits qui lui sont reprochés :</p>
+<p>1° Le centre n'exécute pas ses engagements ou méconnaît les obligations prévues par ses statuts ou son règlement intérieur ;</p>
+<p>2° Le non-respect de la convention prévue à l'article 371 C conduit l'administration fiscale à la dénoncer ;</p>
+<p>3° Le nombre d'adhérents du centre, défini à l'article 371 B, reste inférieur pendant plus d'un an au seuil fixé par cet article ;</p>
+<p>4° Le centre conserve un dirigeant ou un administrateur qui n'a pas respecté ses obligations déclaratives ou de paiement en matière fiscale ou qui a fait l'objet, après l'agrément, de l'une des sanctions prévues à l'article 371 D ;</p>
+<p>5° Le centre n'exclut pas les adhérents qui ne respectent pas les obligations prévues par les statuts ou le règlement intérieur ;</p>
+<p>6° Le centre maintient pendant plus d'un an un bureau secondaire qui ne remplit pas les conditions prévues à l'article 371 B.</p>
+''',
+    "Réécriture à droit constant : chaque motif de retrait est formulé avec un sujet et un fait précis. Le pouvoir de retrait demeure facultatif et précédé d'une mise en demeure de présenter des observations. Les six cas et leurs conditions sont conservés. Aucune réforme de fond n'est introduite.",
+    "Les 3° et 6° conservent la condition de plus d'un an et les renvois à 371 B, y compris ses exemptions territoriales. Le 4° maintient l'antériorité relative de l'agrément pour les sanctions. Le 2° exige toujours la dénonciation de la convention. La garantie contradictoire et l'effet éventuel de 371 K bis ne sont pas supprimés.")
+
+add('371 K bis', '''
+<p>Lorsqu'un centre fait l'objet d'un non-renouvellement ou d'un retrait d'agrément pour un motif autre que les conditions prévues à l'article 371 B, il ne peut présenter de nouvelle demande d'agrément pendant les deux années suivant cette décision.</p>
+<p>Ses administrateurs ne peuvent siéger au conseil d'administration d'un centre, d'une association agréée ou d'un organisme mixte de gestion agréé pendant les deux années suivant la décision de non-renouvellement ou de retrait d'agrément.</p>
+''',
+    "Réécriture à droit constant : les deux interdictions sont formulées directement et leur durée est rattachée à la décision qui la déclenche. Les deux alinéas et l'exception du premier alinéa sont maintenus ; l'accord grammatical d'« association agréée » est corrigé. Aucune réforme de fond n'est appliquée.",
+    "Maintien de deux ans pour chaque interdiction. L'exception liée à 371 B figure seulement au premier alinéa ; la portée de « ses administrateurs » au second peut dépendre de son rattachement au premier. Cette articulation préexistante est conservée sans trancher son extension aux décisions fondées sur 371 B. Les articles 371 D et 371 F continuent de viser la présente interdiction ; coordonner toute modification avec 371 V bis et 371 Z terdecies.")
+
+add('371 L', '''
+<p>Pour l'application du 7 de l'article 158 du code général des impôts, un contribuable visé au 1° de ce 7 n'est considéré comme adhérent d'un centre de gestion agréé que s'il a été membre adhérent d'un tel centre pendant toute la durée de l'exercice concerné.</p>
+<p>Cette condition ne s'applique toutefois pas dans les cas suivants :</p>
+<p>a) Lorsque l'agrément est accordé après l'adhésion, pour l'imposition du bénéfice de l'exercice ouvert depuis moins de trois mois à la date de l'agrément ;</p>
+<p>b) En cas de première adhésion à un centre agréé, pour l'imposition du bénéfice de l'exercice ouvert depuis moins de cinq mois à la date de l'adhésion. Le contribuable qui reprend une activité après l'avoir cessée est considéré comme adhérant pour la première fois ;</p>
+<p>c) En cas de retrait ou de non-renouvellement de l'agrément, pour l'imposition du bénéfice de l'année ou de l'exercice en cours déclaré dans les conditions prévues à l'article 53 A du code général des impôts ;</p>
+<p>d) Lorsque le contribuable démissionne d'un centre de gestion agréé puis adhère à un autre centre de gestion agréé dans un délai maximal de trente jours à compter de sa démission ;</p>
+<p>e) Lorsque le contribuable franchit les limites de chiffre d'affaires des régimes définis aux articles 64 bis ou 50-0 du code général des impôts et adhère pour la première fois à un centre de gestion agréé avant la clôture de l'exercice comptable.</p>
+<p>Les membres adhérents d'un centre de gestion agréé mentionnés au premier alinéa joignent à leur déclaration de résultats une attestation délivrée par le centre. Cette attestation indique la date d'adhésion et, le cas échéant, la date de perte de la qualité d'adhérent. Elle identifie le centre de gestion agréé et le membre adhérent.</p>
+''',
+    "Réécriture à droit constant : la durée d'adhésion requise, les cinq exceptions et les informations de l'attestation sont formulées en phrases plus directes. Les huit alinéas et les lettres a) à e) sont maintenus. Aucune réforme de fond n'est introduite ; le renvoi incohérent de la source n'est pas corrigé silencieusement.",
+    "Incohérence vérifiée dans le corpus fourni : le 1° du 7 de l'article 158 du CGI, qui définit ici les contribuables visés, y est indiqué « Abrogé ». Le présent article reste pourtant fourni comme en vigueur. Déterminer formellement son champ résiduel ou son abrogation, avec les dispositions transitoires utiles aux exercices antérieurs ; aucune nouvelle cible de renvoi n'est inventée. Conserver les délais strictement inférieurs à trois et cinq mois, le maximum de trente jours et l'adhésion avant clôture prévue au e).")
+
+add('371 LA', '''
+<p>Pour l'application de l'article 1649 quater E bis du code général des impôts, les industriels, commerçants, artisans et agriculteurs informent leur clientèle de leur adhésion à un centre de gestion agréé et des conséquences de cette adhésion sur l'acceptation des règlements par chèque ou par carte bancaire. Ils donnent cette information selon les modalités prévues aux articles 371 LB à 371 LE.</p>
+''',
+    "Réécriture à droit constant : les professionnels deviennent les sujets explicites de l'obligation d'information et la règle de forme est isolée dans une seconde phrase. Les deux moyens de paiement et tous les renvois sont maintenus. Aucune réforme de fond n'est appliquée.",
+    "L'article 1649 quater E bis du CGI est absent du corpus fourni : contrôler la base légale de l'obligation d'acceptation et d'information, sans remplacer ce renvoi. Les modalités demeurent celles de 371 LB à 371 LE ; aucune obligation d'accepter simultanément les deux moyens de paiement n'est ajoutée.")
+
+add('371 LB', '''
+<p>L'information prévue à l'article 371 LA est donnée selon les deux modalités suivantes :</p>
+<p>1° Le professionnel affiche un document écrit dans les locaux destinés à recevoir sa clientèle ainsi que dans les emplacements ou véhicules aménagés pour les ventes ou les prestations de services. Ce document reproduit de façon apparente le texte prévu à l'article 371 LC et indique le nom du centre de gestion auquel le professionnel adhère. Il est placé de manière à être lu sans difficulté par la clientèle ;</p>
+<p>2° Le professionnel reproduit le texte prévu à l'article 371 LC dans la correspondance et sur les documents professionnels qu'il adresse ou remet à ses clients. Ce texte est nettement distinct des mentions relatives à l'activité professionnelle figurant sur ces correspondances et documents.</p>
+''',
+    "Réécriture à droit constant : le professionnel est désigné comme responsable de l'affichage et des mentions écrites. Les supports, les trois exigences de l'affichage et la séparation visuelle des mentions sont conservés dans les deux subdivisions d'origine. Aucune réforme de fond n'est introduite.",
+    "Les 1° et 2° conservent leur caractère cumulatif. Le nom du centre demeure exigé pour le document affiché ; cette exigence n'est pas étendue par la rédaction au texte reproduit au 2°. Le libellé obligatoire reste fixé à 371 LC.")
+
+add('371 LC', '''
+<p>Les supports mentionnés à l'article 371 LB reproduisent la mention suivante :</p>
+<p>« Acceptant le règlement des sommes dues par chèques libellés à son nom ou par carte bancaire en sa qualité de membre d'un centre de gestion agréé par l'administration fiscale. »</p>
+''',
+    "Réécriture à droit constant de la phrase prescriptive : elle identifie les supports et l'action de reproduction. Le libellé obligatoire cité est conservé mot pour mot, car le modifier changerait la mention imposée aux professionnels ; seule sa présentation typographique est harmonisée. Aucune réforme de fond n'est appliquée.",
+    "Maintien de l'alternative « ou », des chèques libellés au nom du professionnel et de la qualité de membre d'un centre agréé. La validité actuelle du dispositif dépend aussi du contrôle du renvoi à l'article 1649 quater E bis du CGI, absent du corpus fourni et visé à 371 LA. Les renvois de 371 LB, 371 LD et 371 LE au présent article sont conservés.")
+
+add('371 LD', '''
+<p>Les centres de gestion agréés informent leurs adhérents des obligations prévues aux articles 371 LB et 371 LC.</p>
+<p>Les adhérents indiquent par écrit au centre dont ils sont membres qu'ils ont exécuté ces obligations. Le centre vérifie qu'elles sont effectivement exécutées.</p>
+''',
+    "Réécriture à droit constant : les deux débiteurs successifs sont explicités, avec une information donnée par le centre, une confirmation écrite par l'adhérent et un contrôle effectif par le centre. Les deux alinéas sont maintenus. Aucune réforme de fond n'est introduite.",
+    "L'écrit demeure une information donnée par l'adhérent au centre ; aucune forme ou pièce justificative nouvelle n'est exigée. Les renvois à 371 LB et 371 LC sont maintenus.")
+
+add('371 LE', '''
+<p>Le centre exclut les adhérents qui manquent gravement ou de manière répétée aux dispositions des articles 371 LA et 371 LC, dans les conditions prévues à l'article 371 E.</p>
+''',
+    "Réécriture à droit constant : le centre est le sujet explicite de l'exclusion et les conditions de gravité ou de répétition sont exprimées directement. Les renvois et la garantie procédurale qu'ils emportent sont conservés. Aucune réforme de fond n'est appliquée.",
+    "La source vise 371 LA et 371 LC mais ne vise pas expressément 371 LB, qui fixe pourtant les modalités matérielles de l'information. Cette articulation préexistante est conservée et doit être contrôlée. Le renvoi à 371 E maintient la possibilité pour l'adhérent de présenter sa défense avant toute exclusion.")
+
+add('371 M', '''
+<p>Pour obtenir l'agrément prévu à l'article 1649 quater F du code général des impôts, les associations de membres de professions libérales et de titulaires de charges et offices doivent être légalement constituées. Leurs membres fondateurs sont exclusivement soit des ordres professionnels ou des organisations professionnelles légalement constituées de membres de professions libérales ou de titulaires de charges et offices, soit des experts-comptables ou des sociétés d'expertise comptable.</p>
+<p>Les organisations professionnelles visées au premier alinéa comprennent les organismes professionnels dont l'existence est prévue par la législation applicable aux professions concernées, les syndicats professionnels et leurs unions institués conformément aux articles L. 2111-1 et suivants du code du travail, ainsi que les associations professionnelles de personnes exerçant la même profession et leurs unions.</p>
+<p>Les unions ou fédérations d'associations professionnelles réunissant des professions différentes peuvent également prendre l'initiative de créer une association agréée, à condition que chacune des associations qui les composent puisse être regardée, prise individuellement, comme ayant vocation à en créer une.</p>
+<p>Les associations doivent avoir pour objet :<br/>1° De développer chez leurs membres l'usage de la comptabilité, sous réserve des dispositions de l'ordonnance n° 45-2138 du 19 septembre 1945 portant institution de l'ordre des experts-comptables et réglementant le titre et la profession d'expert-comptable ;<br/>2° De faciliter l'accomplissement des obligations administratives et fiscales de leurs membres ;<br/>3° De leur fournir une assistance en matière de gestion, comprenant l'assistance technique ainsi que la formation et l'information relatives au droit, à la fiscalité, à la comptabilité ou à la gestion ;<br/>4° De leur fournir une analyse des informations économiques, comptables et financières destinée à prévenir les difficultés économiques et financières.<br/>Les formations proposées par l'organisme agréé sont également offertes au représentant de l'adhérent.</p>
+<p>Les associations ne peuvent agir comme mandataires de leurs membres.</p>
+<p>Par exception, elles doivent recevoir mandat de leurs membres pour télétransmettre les déclarations de résultats, leurs annexes et les autres documents qui les accompagnent, selon la procédure prévue par le système de transfert des données fiscales et comptables.</p>
+''',
+    "Réécriture à droit constant : la composition des associations, la condition applicable aux unions interprofessionnelles et les quatre objets sont formulés plus directement. Les six alinéas, la réserve relative à la profession comptable et l'exception obligatoire de mandat pour la télétransmission sont maintenus. Aucune réforme de fond n'est introduite.",
+    "L'article 1649 quater F du CGI est absent du corpus fourni : vérifier la base de l'agrément et la coordination de la section. Maintenir le caractère exclusif des catégories de fondateurs, l'appréciation individuelle de la vocation de chaque association regroupée, l'ordonnance n° 45-2138 du 19 septembre 1945 et l'accès du représentant aux formations. Le mandat spécial ne devient pas un mandat général.")
+
+add('371 M bis', '''
+<p>Les associations agréées au titre de l'article 1649 quater F du code général des impôts peuvent fournir des services d'assistance en matière de gestion à tout professionnel exerçant une profession libérale ou titulaire de charges et offices. Ces services peuvent notamment porter sur les domaines suivants :<br/>1° La dématérialisation et la télétransmission des déclarations fiscales du professionnel ;<br/>2° La formation et l'information relatives au droit, à la fiscalité, à la comptabilité ou à la gestion ;<br/>3° La restitution de statistiques ;<br/>4° L'examen de conformité fiscale prévu par le décret n° 2021-25 du 13 janvier 2021 portant création de l'examen de conformité fiscale ;<br/>5° L'audit technique lié à l'activité du professionnel ;<br/>6° Pour les microentreprises au sens de l'article 3 du décret n° 2008-1354 du 18 décembre 2008 relatif aux critères permettant de déterminer la catégorie d'appartenance d'une entreprise pour les besoins de l'analyse statistique et économique, l'aide à la création de microentreprise et l'accompagnement commercial, en matière de communication et de transition numérique.</p>
+''',
+    "Réécriture à droit constant : le champ des bénéficiaires précède une énumération dont les compléments sont explicités. Les six domaines, leur caractère non limitatif et la restriction du 6° aux microentreprises au sens statistique sont maintenus. Aucune réforme de fond n'est appliquée.",
+    "Le renvoi au CGI, article 1649 quater F, est conservé mais sa cible est absente du corpus fourni ; vérifier la base légale de l'agrément. Les décrets n° 2021-25 du 13 janvier 2021 et n° 2008-1354 du 18 décembre 2008, article 3, restent inchangés. Ne pas confondre la microentreprise statistique avec un régime fiscal ni ajouter une condition d'adhésion pour les bénéficiaires des services.")
+
+
+sources = json.loads(Path('source.json').read_text())
+assert len(sources) == 24
+assert set(drafts) == {s['number'] for s in sources}
+answer = []
+for s in sources:
+    xml, reason, notes = drafts[s['number']]
+    answer.append({
+        'code_id': s['code_id'],
+        'source_id': s['source_id'],
+        'source_sha256': s['source_sha256'],
+        'number': s['number'],
+        'proposed_xml': xml,
+        'reason': reason,
+        'review_notes': notes,
+        'status': 'rewrite_draft',
+    })
+Path('answer.json').write_text(json.dumps(answer, ensure_ascii=False, indent=2) + '\n')
+print(f'answer.json : {len(answer)} articles')

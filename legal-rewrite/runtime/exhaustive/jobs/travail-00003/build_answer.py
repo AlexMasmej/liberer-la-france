@@ -1,0 +1,215 @@
+import json
+from pathlib import Path
+
+sources = json.loads(Path('source.json').read_text())
+drafts = {}
+
+
+def article(number, paragraphs, reason, review_notes):
+    assert number not in drafts
+    drafts[number] = {
+        'proposed_xml': '\n'.join(f'<p>{p}</p>' for p in paragraphs),
+        'reason': reason,
+        'review_notes': review_notes,
+        'status': 'rewrite_draft',
+    }
+
+
+article('L1233-57-19', [
+    "L'employeur consulte le comité social et économique sur chaque offre de reprise à laquelle il souhaite donner suite. Il explique les raisons qui le conduisent à accepter cette offre, notamment au regard de la capacité de son auteur à garantir la pérennité de l'activité et de l'emploi de l'établissement. Le comité social et économique rend son avis sur l'offre dans un délai fixé en application de l'article L. 2323-3.",
+    "Lorsque la procédure est aménagée en application de l'article L. 1233-24-2 pour favoriser un projet de transfert d'une ou de plusieurs entités économiques mentionné à l'article L. 1233-61, l'employeur consulte le comité social et économique sur l'offre de reprise dans le délai fixé par l'accord collectif mentionné à l'article L. 1233-24-2.",
+], "Réécriture à droit constant : la première phrase longue est divisée pour distinguer la consultation, la justification du choix et l'avis du comité. Le délai conventionnel propre au projet de transfert demeure dans le second alinéa. Aucune réforme de fond des obligations de consultation n'est introduite.",
+    "Le renvoi préexistant à L. 2323-3 est conservé ; cet article est absent du corpus fourni. Une coordination de ce renvoi avec les règles applicables au comité social et économique doit être examinée explicitement, sans substitution silencieuse. Les renvois à L. 1233-24-2 et L. 1233-61 et les deux alinéas sont maintenus.")
+
+article('L1233-57-20', [
+    "Si aucune offre de reprise n'a été reçue ou si l'employeur n'a souhaité donner suite à aucune des offres reçues, il réunit le comité social et économique et lui présente un rapport avant la fin de la procédure d'information et de consultation prévue à l'article L. 1233-30. Ce rapport est communiqué à l'autorité administrative. Il indique :",
+    "1° Les démarches entreprises pour rechercher un repreneur ;",
+    "2° Les offres de reprise reçues et leurs caractéristiques ;",
+    "3° Les raisons pour lesquelles l'employeur a, le cas échéant, refusé la cession de l'établissement.",
+], "Réécriture à droit constant : les deux situations déclenchant le rapport sont placées en tête et l'échéance de présentation est rendue plus lisible. Les trois rubriques du rapport et sa communication à l'administration sont conservées. Aucune réforme de fond.",
+    "La réunion et le rapport doivent toujours intervenir avant la fin de la procédure de L. 1233-30. La numérotation 1° à 3° et la réserve « le cas échéant » au 3° sont maintenues. Ce rapport reste celui visé par L. 1233-57-21.")
+
+article('L1233-57-21', [
+    "La convention de revitalisation conclue entre l'entreprise et l'autorité administrative en application des articles L. 1233-84 à L. 1233-90 tient compte des actions engagées par l'employeur pour satisfaire à son obligation de rechercher un repreneur.",
+    "L'autorité administrative peut demander le remboursement des aides pécuniaires attribuées à l'entreprise par une personne publique, en matière d'installation, de développement économique, de recherche ou d'emploi, au titre de l'établissement concerné par le projet de fermeture. Elle tient compte, pour cette demande, de la capacité de l'employeur à éviter les licenciements ou à en limiter le nombre par la cession de cet établissement, telle qu'elle est attestée par les rapports mentionnés aux articles L. 1233-57-17 et L. 1233-57-20. Seules sont concernées les aides attribuées au cours des deux années précédant la réunion prévue au I de l'article L. 1233-30 et après l'entrée en vigueur de la loi n° 2014-856 du 31 juillet 2014 relative à l'économie sociale et solidaire.",
+], "Réécriture à droit constant : le rôle de la convention de revitalisation est formulé directement. Le second alinéa distingue le pouvoir de demander le remboursement, son critère d'appréciation et les deux limites temporelles cumulatives. Aucun nouveau remboursement ni aucune suppression d'aide n'est créé.",
+    "Maintien des quatre catégories d'aides, du rattachement à l'établissement, de la période de deux ans et de la borne liée à l'entrée en vigueur de la loi n° 2014-856 du 31 juillet 2014. La note source prévoit l'application de la section L. 1233-57-9 à L. 1233-57-22 aux procédures de licenciement collectif engagées à compter du 1er avril 2014, conformément à l'article 1, III, de la loi n° 2014-384 du 29 mars 2014 ; cette transition historique demeure distincte de toute réforme future.")
+
+article('L1233-57-22', [
+    "Les modalités d'application de la présente section sont fixées par décret en Conseil d'État.",
+], "Réécriture à droit constant : la phrase désigne d'abord l'objet du décret, en conservant la compétence du Conseil d'État et le périmètre de la section. L'attribut de présentation de la source est retiré. Aucune réforme de fond.",
+    "La note source rend la section L. 1233-57-9 à L. 1233-57-22 applicable aux procédures de licenciement collectif engagées à compter du 1er avril 2014, conformément à l'article 1, III, de la loi n° 2014-384 du 29 mars 2014. Cette règle historique d'application n'est pas une date d'entrée en vigueur d'une réforme à venir.")
+
+article('L1233-58', [
+    "I.-En cas de redressement ou de liquidation judiciaire, l'employeur, l'administrateur ou le liquidateur, selon le cas, doit mettre en œuvre un plan de licenciement lorsqu'il envisage des licenciements économiques. Ce plan est mis en œuvre dans les conditions prévues aux articles L. 1233-24-1 à L. 1233-24-4.",
+    "L'employeur, l'administrateur ou le liquidateur, selon le cas, réunit et consulte le comité social et économique dans les conditions prévues à l'article L. 2323-31 ainsi qu'aux articles suivants :",
+    "1° L. 1233-8, lorsque le licenciement collectif concerne moins de dix salariés ;",
+    "2° Premier alinéa de l'article L. 1233-29, lorsque le licenciement concerne au moins dix salariés dans une entreprise de moins de cinquante salariés ;",
+    "3° I de l'article L. 1233-30, à l'exception de son dernier alinéa, et dernier alinéa du II du même article, lorsque le licenciement concerne au moins dix salariés dans une entreprise d'au moins cinquante salariés ;",
+    "4° L. 1233-34 et premier alinéa de l'article L. 1233-35 et, le cas échéant, articles L. 2325-35 et L. 4614-12-1 du code du travail, relatifs au recours à l'expert ;",
+    "5° L. 1233-31 à L. 1233-33, L. 1233-48 et L. 1233-63, relatifs à la nature des renseignements et au contenu des mesures sociales communiqués aux représentants du personnel et à l'autorité administrative ;",
+    "6° L. 1233-49, L. 1233-61 et L. 1233-62, relatifs au plan de sauvegarde de l'emploi ;",
+    "7° L. 1233-57-5 et L. 1233-57-6, lorsque le licenciement concerne au moins dix salariés dans une entreprise d'au moins cinquante salariés.",
+    "II.-Lorsque le licenciement concerne au moins dix salariés dans une entreprise d'au moins cinquante salariés, l'autorité administrative valide l'accord mentionné à l'article L. 1233-24-1 et homologue le document mentionné à l'article L. 1233-24-4, élaboré par l'employeur, l'administrateur ou le liquidateur, dans les conditions prévues aux articles L. 1233-57-1 à L. 1233-57-3, aux deuxième et troisième alinéas de l'article L. 1233-57-4 et à l'article L. 1233-57-7.",
+    "Par dérogation au 1° de l'article L. 1233-57-3, l'autorité administrative homologue le plan de sauvegarde de l'emploi après avoir vérifié qu'il respecte les articles L. 1233-61 à L. 1233-63 au regard des moyens dont dispose l'entreprise. Cette règle ne dispense pas l'administrateur, le liquidateur ou l'employeur, selon le cas, de rechercher, en cas de redressement ou de liquidation judiciaire, les moyens du groupe auquel l'employeur appartient pour établir ce plan.",
+    "À titre exceptionnel, l'autorité administrative peut prendre une décision d'homologation au vu des circonstances et des motifs qui justifient le défaut d'établissement du procès-verbal de carence mentionné à l'article L. 2324-8.",
+    "Les délais prévus au premier alinéa de l'article L. 1233-57-4 sont réduits à huit jours en cas de redressement judiciaire et à quatre jours en cas de liquidation judiciaire. Ils courent à compter de la dernière réunion du comité social et économique.",
+    "Sous peine d'irrégularité, l'employeur, l'administrateur ou le liquidateur ne peut rompre les contrats de travail qu'après la notification d'une décision favorable de validation ou d'homologation ou l'expiration des délais mentionnés au quatrième alinéa du présent II.",
+    "En cas de décision refusant la validation ou l'homologation, l'employeur, l'administrateur ou le liquidateur consulte le comité social et économique dans un délai de trois jours. Selon le cas, il transmet à l'autorité administrative le document modifié accompagné de l'avis du comité, ou un avenant à l'accord collectif. L'autorité administrative se prononce dans un délai de trois jours.",
+    "Lorsque des licenciements interviennent sans aucune décision relative à la validation ou à l'homologation, ou lorsqu'une décision de validation ou d'homologation est annulée, le juge accorde au salarié une indemnité à la charge de l'employeur. Cette indemnité ne peut être inférieure aux salaires des six derniers mois. L'article L. 1235-16 n'est pas applicable.",
+    "Si une décision de validation mentionnée à l'article L. 1233-57-2 ou d'homologation mentionnée à l'article L. 1233-57-3 est annulée pour insuffisance de motivation, l'autorité administrative prend une nouvelle décision suffisamment motivée dans les quinze jours suivant la notification du jugement à l'administration. L'employeur porte cette nouvelle décision à la connaissance des salariés licenciés à la suite de la première décision, par tout moyen donnant date certaine à cette information.",
+    "Dès que l'autorité administrative a pris cette nouvelle décision, l'annulation de sa première décision pour le seul motif d'insuffisance de motivation n'affecte pas la validité du licenciement et n'ouvre droit à aucune indemnité à la charge de l'employeur.",
+    "III.-Lorsque le plan de sauvegarde arrêté conformément à l'article L. 626-10 du code de commerce prévoit le licenciement d'au moins dix salariés dans une entreprise d'au moins cinquante salariés, les délais prévus au premier alinéa de l'article L. 1233-57-4 du présent code sont réduits à huit jours. Ils courent à compter de la réception de la demande de validation ou d'homologation, qui est postérieure au jugement arrêtant le plan.",
+    "Si l'autorité administrative refuse la validation ou l'homologation, l'employeur consulte le comité social et économique dans un délai de trois jours. Selon le cas, il transmet à l'autorité administrative le document modifié accompagné de l'avis du comité, ou un avenant à l'accord collectif. L'autorité administrative se prononce dans un délai de trois jours.",
+], "Réécriture à droit constant : les phrases des II et III sont divisées pour identifier les décisions, les responsables, les points de départ et les effets des délais. Les trois subdivisions, les sept rubriques du I et les vingt alinéas sont conservés. Aucune réforme de fond : le contrôle administratif, les moyens du groupe à rechercher et les sanctions restent applicables.",
+    "Les renvois préexistants à L. 2323-31, L. 2325-35, L. 4614-12-1 et L. 2324-8 sont conservés mais leurs cibles sont absentes du corpus fourni ; leur coordination avec le régime du comité social et économique reste à examiner explicitement. Le quatrième alinéa du II reste celui des délais de huit et quatre jours ; le renvoi du cinquième alinéa vise donc toujours la même disposition. Maintien des délais distincts de trois jours, quinze jours et huit jours au III et de leurs points de départ. Le minimum des salaires des six derniers mois sanctionne ici une irrégularité propre au licenciement collectif : le plafond de six mois de la composante nouvelle de l'indemnité légale de L. 1234-9 ne lui est pas appliqué. Le renvoi au code de commerce L. 626-10 est conservé ; ce code n'est pas fourni dans le corpus de vérification.")
+
+article('L1233-59', [
+    "En cas de redressement ou de liquidation judiciaire, l'envoi des lettres de licenciement pour motif économique n'est pas soumis aux délais prévus à l'article L. 1233-15.",
+    "Les modalités d'application du présent article sont fixées par décret en Conseil d'État.",
+], "Réécriture à droit constant : l'exception aux délais d'envoi est placée immédiatement après son champ d'application. Les deux alinéas de fond, auparavant séparés par des sauts de ligne, sont balisés en paragraphes. Aucune réforme de fond.",
+    "La dérogation reste limitée aux délais de L. 1233-15 et aux situations de redressement ou de liquidation judiciaire. Elle ne dispense pas des décisions administratives ni des délais propres à L. 1233-58.")
+
+article('L1233-60', [
+    "En cas de redressement ou de liquidation judiciaire, l'employeur, l'administrateur ou le liquidateur, selon le cas, doit informer l'autorité administrative avant de procéder aux licenciements pour motif économique. Cette information est donnée dans les conditions prévues aux articles L. 631-17, L. 631-19 (II), L. 641-4, dernier alinéa, L. 641-10, troisième alinéa, et L. 642-5 du code de commerce.",
+], "Réécriture à droit constant : l'obligation d'information préalable est énoncée dans une phrase autonome, puis les références qui en fixent les conditions sont regroupées dans une seconde phrase du même alinéa. Aucune réforme de fond.",
+    "Conservation des trois acteurs possibles, de l'antériorité de l'information et de tous les renvois au code de commerce, y compris le II de L. 631-19 et les alinéas ciblés de L. 641-4 et L. 641-10. Le code de commerce n'est pas fourni dans le corpus de vérification ; aucune actualisation de ses renvois n'est présumée.")
+
+article('L1233-60-1', [
+    "En cas de redressement ou de liquidation judiciaire, l'employeur qui envisage de modifier un élément essentiel du contrat de travail pour l'un des motifs économiques énoncés à l'article L. 1233-3 propose cette modification au salarié par lettre recommandée avec avis de réception.",
+    "La lettre indique au salarié qu'il dispose de quinze jours à compter de sa réception pour faire connaître son refus.",
+    "Si le salarié ne répond pas dans ce délai, il est réputé avoir accepté la modification proposée.",
+], "Réécriture à droit constant : les phrases désignent directement l'employeur et le salarié, puis distinguent la proposition, le délai de refus et l'effet du silence. Les trois alinéas et le formalisme sont maintenus. Aucune réforme autonome des motifs économiques.",
+    "Le délai reste de quinze jours à compter de la réception de la lettre recommandée avec avis de réception. Le renvoi à L. 1233-3 demeure : le motif d'adaptation documentée prévu par la coordination relève de cet article, sans supprimer ici ni le droit de refus ni la procédure spéciale des entreprises en procédure collective.")
+
+article('L1233-61', [
+    "Dans une entreprise d'au moins cinquante salariés, l'employeur établit et met en œuvre un plan de sauvegarde de l'emploi lorsque le projet de licenciement concerne au moins dix salariés au cours d'une même période de trente jours. Ce plan a pour objet d'éviter les licenciements ou d'en limiter le nombre.",
+    "Le plan de sauvegarde de l'emploi comprend un plan de reclassement destiné à faciliter, sur le territoire national, le reclassement des salariés dont le licenciement ne peut être évité. Ce plan vise notamment les salariés âgés et ceux dont les caractéristiques sociales ou la qualification rendent la réinsertion professionnelle particulièrement difficile.",
+    "Lorsque le plan de sauvegarde de l'emploi prévoit, pour éviter la fermeture d'un ou de plusieurs établissements, le transfert d'une ou de plusieurs entités économiques nécessaire à la sauvegarde d'une partie des emplois, et que les entreprises concernées souhaitent accepter une offre de reprise, les dispositions de l'article L. 1224-1 relatives au transfert des contrats de travail ne s'appliquent que dans la limite du nombre d'emplois qui, à la date d'effet du transfert, n'ont pas été supprimés à la suite des licenciements.",
+], "Réécriture à droit constant : les seuils déclenchant le plan sont distingués de son objectif, puis le champ territorial et les salariés particulièrement concernés par le reclassement sont explicités. Les conditions cumulatives et la limite du transfert des contrats restent au troisième alinéa. Aucune réforme de fond.",
+    "Maintien des seuils d'au moins cinquante salariés et d'au moins dix licenciements sur trente jours, du reclassement sur le territoire national et du renvoi à L. 1224-1. La note source réserve l'application aux procédures de licenciement économique engagées après la publication de l'ordonnance n° 2017-1387 du 22 septembre 2017, conformément à son article 40, V ; cette transition historique est conservée. La réforme du motif économique ne dispense pas de ce plan.")
+
+article('L1233-62', [
+    "Le plan de sauvegarde de l'emploi prévoit des mesures qui peuvent notamment prendre les formes suivantes :",
+    "1° Des actions visant le reclassement interne des salariés sur le territoire national, dans des emplois de la même catégorie que ceux qu'ils occupent ou dans des emplois équivalents. Le reclassement dans un emploi de catégorie inférieure est subordonné à l'accord exprès du salarié concerné ;",
+    "1° bis Des actions facilitant la reprise de tout ou partie des activités afin d'éviter la fermeture d'un ou de plusieurs établissements ;",
+    "2° La création d'activités nouvelles par l'entreprise ;",
+    "3° Des actions facilitant le reclassement hors de l'entreprise, notamment par un soutien à la réactivation du bassin d'emploi ;",
+    "4° Des actions aidant les salariés à créer des activités nouvelles ou à reprendre des activités existantes ;",
+    "5° Des actions de formation, de validation des acquis de l'expérience ou de reconversion propres à faciliter le reclassement interne ou externe des salariés dans des emplois équivalents ;",
+    "6° Des mesures de réduction ou d'aménagement du temps de travail, ainsi que des mesures de réduction du volume des heures supplémentaires régulièrement effectuées. Ces dernières mesures sont prévues lorsque ce volume révèle que l'organisation du travail de l'entreprise repose sur une durée collective manifestement supérieure à trente-cinq heures par semaine ou à 1 600 heures par an, et que sa réduction pourrait préserver tout ou partie des emplois dont la suppression est envisagée.",
+], "Réécriture à droit constant : les mesures sont exprimées par des actions directes et l'accord exprès requis pour un reclassement de catégorie inférieure est isolé dans le 1°. Au 6°, les conditions de réduction des heures supplémentaires sont séparées de la désignation des mesures. La liste demeure illustrative et toutes ses rubriques sont maintenues ; aucune réforme de fond du plan.",
+    "Les repères de trente-cinq heures hebdomadaires et de 1 600 heures annuelles sont ceux de la source et restent propres aux mesures de sauvegarde de l'emploi. Ils ne fixent pas le seuil de majoration des heures supplémentaires : le passage à quarante heures pour les nouveaux contrats dans L. 3121-27 ne les relève pas automatiquement. Écart préexistant à contrôler avec la référence de 1 607 heures de L. 3121-41 et L. 3121-44, sans remplacement silencieux de 1 600. Maintien de la numérotation 1°, 1° bis, 2° à 6° et des deux conditions cumulatives du 6°.")
+
+article('L1233-63', [
+    "Le plan de sauvegarde de l'emploi fixe les modalités de suivi de l'exécution effective des mesures du plan de reclassement prévu à l'article L. 1233-61.",
+    "Le comité social et économique est consulté de manière régulière et détaillée sur ce suivi. Son avis est transmis à l'autorité administrative.",
+    "L'autorité administrative est associée au suivi de ces mesures. L'employeur établit un bilan de la mise en œuvre effective du plan de sauvegarde de l'emploi et le lui transmet.",
+], "Réécriture à droit constant : les trois alinéas distinguent le dispositif de suivi, la consultation du comité et l'association de l'administration. Les phrases sont divisées sans modifier l'étendue du bilan ni la transmission de l'avis. Aucune réforme de fond.",
+    "Le premier alinéa vise toujours les mesures du plan de reclassement de L. 1233-61 ; le troisième conserve un bilan de l'ensemble du plan de sauvegarde de l'emploi établi par l'employeur. La fréquence régulière et le caractère détaillé de la consultation demeurent requis.")
+
+article('L1233-64', [
+    "Les maisons de l'emploi peuvent participer à la mise en œuvre des mesures du plan de sauvegarde de l'emploi. Les conditions de leur participation sont fixées par convention avec les entreprises intéressées.",
+], "Réécriture à droit constant : la possibilité de participation et son encadrement conventionnel sont énoncés en deux phrases dans le même alinéa. Aucune compétence obligatoire ni aucun financement nouveau n'est créé.",
+    "Le caractère facultatif de la participation des maisons de l'emploi et l'exigence d'une convention avec les entreprises intéressées sont conservés. Coordination de rédaction avec L. 1233-74, qui concerne un autre dispositif, le congé de reclassement.")
+
+article('L1233-65', [
+    "Le contrat de sécurisation professionnelle a pour objet d'organiser un parcours de retour à l'emploi et d'en assurer le déroulement. Ce retour à l'emploi peut, le cas échéant, passer par une reconversion ou par la création ou la reprise d'une entreprise.",
+    "Le parcours commence par une phase de prébilan, d'évaluation des compétences et d'orientation professionnelle destinée à élaborer un projet professionnel. Ce projet prend en compte l'évolution des métiers et la situation du marché du travail sur le territoire concerné.",
+    "Le parcours comprend des mesures d'accompagnement, notamment un appui au projet professionnel, ainsi que des périodes de formation et de travail.",
+], "Réécriture à droit constant : l'objet du contrat est exprimé par un verbe direct, les voies de retour à l'emploi sont distinguées, et la prise en compte du contexte territorial est formulée plus simplement. La phase initiale et toutes les composantes du parcours décrites dans les trois alinéas sont conservées. Aucune réforme de fond.",
+    "Le prébilan, l'évaluation des compétences, l'orientation professionnelle, l'appui au projet, la formation et les périodes de travail sont tous maintenus. L'article ne crée ni une durée ni un montant d'allocation supplémentaires ; leurs modalités relèvent notamment de L. 1233-68.")
+
+article('L1233-66', [
+    "Dans les entreprises qui ne sont pas soumises à l'article L. 1233-71, l'employeur doit proposer le bénéfice du contrat de sécurisation professionnelle à chaque salarié dont il envisage le licenciement pour motif économique. Il fait cette proposition lors de l'entretien préalable ou à l'issue de la dernière réunion des représentants du personnel. Si le licenciement donne lieu à un plan de sauvegarde de l'emploi dans les conditions prévues aux articles L. 1233-24-2 et L. 1233-24-4, la proposition intervient après la notification de la décision de validation ou d'homologation de l'autorité administrative prévue à l'article L. 1233-57-4.",
+    "Si l'employeur n'a pas fait cette proposition, l'institution mentionnée à l'article L. 5312-1 propose le contrat de sécurisation professionnelle au salarié. L'employeur verse alors à l'organisme chargé de la gestion du régime d'assurance chômage mentionné à l'article L. 5427-1 une contribution égale à deux mois de salaire brut. Cette contribution est portée à trois mois lorsque l'ancien salarié adhère au contrat sur proposition de l'institution mentionnée à l'article L. 5312-1.",
+    "L'institution mentionnée à l'article L. 5312-1 détermine le montant de cette contribution et en assure le recouvrement selon les règles et sous les garanties et sanctions mentionnées au premier alinéa de l'article L. 5422-16. Un décret en Conseil d'État précise les conditions dans lesquelles la contribution devient exigible.",
+], "Réécriture à droit constant : l'obligation de proposition, son calendrier spécial en présence d'un plan et les conséquences de l'omission sont séparés en phrases courtes. Le rôle de l'institution dans le calcul et le recouvrement est formulé à la voix active. Aucune réforme de fond du contrat ni de sa contribution.",
+    "La contribution reste de deux mois de salaire brut, portée à trois mois seulement en cas d'adhésion sur proposition de l'institution de L. 5312-1 ; elle n'est pas l'indemnité de licenciement de L. 1234-9. Maintien de l'exclusion des entreprises soumises à L. 1233-71, de la notification préalable propre au plan de sauvegarde et du renvoi au premier alinéa de L. 5422-16.")
+
+article('L1233-67', [
+    "L'adhésion du salarié au contrat de sécurisation professionnelle rompt le contrat de travail. Toute contestation de cette rupture ou de son motif doit être exercée dans un délai de douze mois à compter de l'adhésion. Ce délai de prescription n'est opposable au salarié que si la proposition de contrat de sécurisation professionnelle le mentionne.",
+    "Cette rupture ne comporte ni préavis ni indemnité compensatrice de préavis. Elle ouvre droit à l'indemnité prévue à l'article L. 1234-9 et à toute indemnité conventionnelle qui aurait été due en cas de licenciement pour motif économique au terme du préavis. Le salarié a également droit, le cas échéant, au solde de l'indemnité compensatrice de préavis qui aurait été due en cas de licenciement, après déduction du versement de l'employeur représentatif de cette indemnité mentionné au 10° de l'article L. 1233-68. Ce solde est soumis aux régimes social et fiscal des indemnités compensatrices de préavis.",
+    "Après son adhésion au contrat de sécurisation professionnelle, le bénéficiaire peut utiliser le compte personnel de formation mentionné à l'article L. 6323-1.",
+    "Pendant l'exécution du contrat de sécurisation professionnelle, le salarié a le statut de stagiaire de la formation professionnelle.",
+    "Le contrat de sécurisation professionnelle peut inclure des périodes de travail dans les conditions prévues au 3° de l'article L. 1233-68.",
+], "Réécriture à droit constant : le déclenchement de la prescription et sa condition d'opposabilité sont explicités. Le deuxième alinéa distingue les indemnités de rupture, le solde éventuel du préavis et son régime social et fiscal. Les cinq alinéas sont conservés ; le texte n'introduit pas de barème autonome.",
+    "Le renvoi à L. 1234-9 conserve la coordination avec sa nouvelle rédaction : 0,20 mois par année pour l'ancienneté postérieure à l'entrée en vigueur, plafond de six mois pour cette seule composante, et protection de la composante antérieure. Ce renvoi ne plafonne ni les indemnités conventionnelles plus favorables ni le solde de préavis. Maintien du délai de douze mois à compter de l'adhésion et de la mention obligatoire dans la proposition, des renvois aux 10° et 3° de L. 1233-68 et de la référence au terme du préavis pour l'indemnité conventionnelle.")
+
+article('L1233-68', [
+    "Un accord conclu et agréé selon les conditions de la section 5 du chapitre II du titre II du livre IV de la cinquième partie fixe les modalités de mise en œuvre du contrat de sécurisation professionnelle. L'article L. 5422-20-1 et le second alinéa de l'article L. 5422-22 sont exclus de ces conditions. L'accord définit notamment :",
+    "1° L'ancienneté requise pour bénéficier du contrat ;",
+    "2° Les formalités d'adhésion au contrat et les délais dont dispose le salarié pour répondre à la proposition de l'employeur ;",
+    "3° La durée du contrat et les modalités de son adaptation éventuelle aux spécificités des entreprises et à la situation des salariés concernés, notamment au moyen de périodes de travail pour le compte de tout employeur, à l'exception des particuliers. Ces périodes sont effectuées dans le cadre des contrats de travail à durée déterminée prévus à l'article L. 1242-3, renouvelables une fois par dérogation à l'article L. 1243-13, ou des contrats de travail temporaire prévus à l'article L. 1251-7 ;",
+    "4° Le contenu des mesures mentionnées à l'article L. 1233-65, leurs modalités de financement, notamment au titre du compte personnel de formation, et leurs modalités de mise en œuvre par l'un des organismes mentionnés aux articles L. 5311-2 à L. 5311-4 qui assurent le service public de l'emploi, y concourent ou y participent ;",
+    "5° Les dispositions assurant la continuité des formations commencées pendant le contrat ;",
+    "6° Les modalités selon lesquelles le contrat peut éventuellement reprendre après une interruption due à une reprise d'emploi ;",
+    "7° Les obligations du bénéficiaire et les conditions dans lesquelles, en cas de manquement à ces obligations, les organismes chargés de mettre en œuvre les mesures mentionnées au 4° peuvent prendre l'initiative de rompre le contrat ;",
+    "8° Le montant de l'allocation et, le cas échéant, des incitations financières au reclassement que l'institution mentionnée à l'article L. 5312-1 verse au bénéficiaire pour le compte de l'organisme chargé de la gestion du régime d'assurance chômage mentionné à l'article L. 5427-1, ainsi que les conditions dans lesquelles cette allocation peut être suspendue, interrompue de manière anticipée ou cumulée avec d'autres revenus de remplacement ;",
+    "9° Les conditions d'application des règles de l'assurance chômage aux bénéficiaires du contrat, en particulier celles de l'imputation de la durée d'exécution du contrat sur la durée de versement de l'allocation d'assurance mentionnée à l'article L. 5422-1 ;",
+    "10° Les conditions dans lesquelles les personnes suivantes participent au financement des mesures prévues au 4° :",
+    "a) L'organisme chargé de la gestion du régime d'assurance chômage mentionné à l'article L. 5427-1 ;",
+    "b) Les employeurs, par un versement représentatif de l'indemnité compensatrice de préavis, dans la limite de trois mois de salaire majoré de l'ensemble des cotisations et contributions obligatoires afférentes.",
+    "En l'absence d'accord ou d'agrément de cet accord, un décret en Conseil d'État fixe les modalités de mise en œuvre et de financement du contrat de sécurisation professionnelle.",
+], "Réécriture à droit constant : les exclusions du régime d'agrément sont isolées, les modalités sont énoncées directement et le 3° est divisé en deux phrases dans le même alinéa. Les dix rubriques, les lettres a) et b), les quatorze alinéas et le mécanisme réglementaire de substitution sont conservés. Aucune réforme de fond du financement ou des périodes de travail.",
+    "Maintien d'un seul renouvellement au 3°, de l'exclusion des employeurs particuliers, de la limite de trois mois de salaire majoré des cotisations et contributions au b) et des renvois internes 3°, 4° et 10° utilisés par d'autres articles. Divergence préexistante : le 3° ne vise que L. 1243-13, tandis que L. 1233-72-1 vise aussi L. 1243-13-1 ; ces deux articles excluent par ailleurs de leur champ les contrats de L. 1242-3 dans le corpus. Ces renvois sont conservés et appellent un contrôle explicite, sans ajout silencieux. Le plafond de l'indemnité légale de licenciement n'est pas étendu au financement du préavis.")
+
+article('L1233-69', [
+    "Pour financer le contrat de sécurisation professionnelle, l'employeur effectue un versement représentatif de l'indemnité compensatrice de préavis. Ce versement est limité à trois mois de salaire majoré de l'ensemble des cotisations et contributions obligatoires afférentes.",
+    "L'institution mentionnée à l'article L. 5312-1 détermine le montant de ce versement et en assure le recouvrement selon les règles et sous les garanties et sanctions mentionnées au premier alinéa de l'article L. 5422-16. Un décret en Conseil d'État précise les conditions dans lesquelles ce versement devient exigible.",
+    "L'État et l'organisme mentionné à l'article L. 5427-1 peuvent participer au financement des dépenses du contrat de sécurisation professionnelle, y compris les coûts pédagogiques des formations.",
+    "Les régions peuvent participer au financement de ces mesures de formation dans le cadre de la programmation inscrite dans le contrat de plan régional de développement des formations et de l'orientation professionnelles mentionné à l'article L. 214-13 du code de l'éducation.",
+], "Réécriture à droit constant : la contribution de l'employeur et sa limite sont distinguées, puis le calcul et le recouvrement sont attribués directement à l'institution compétente. La participation facultative de l'État, du régime d'assurance chômage et des régions est conservée dans ses alinéas respectifs. Aucune réforme de fond.",
+    "Le plafond reste de trois mois de salaire majoré des cotisations et contributions obligatoires ; il est distinct de l'indemnité légale de licenciement réformée. L'accord grammatical de la source « leur recouvrement » est clarifié par « en assure le recouvrement », sans modification de l'objet recouvré. Maintien du renvoi au premier alinéa de L. 5422-16 et du cadre régional prévu à L. 214-13 du code de l'éducation, code non fourni dans le corpus de vérification.")
+
+article('L1233-70', [
+    "Une convention pluriannuelle conclue entre l'État et des organisations syndicales de salariés et d'employeurs représentatives au niveau national et interprofessionnel fixe les modalités d'organisation du parcours de retour à l'emploi mentionné à l'article L. 1233-65. Elle fixe aussi les modalités de mise en œuvre, de suivi et d'évaluation des mesures de ce parcours. Elle précise notamment les attributions des représentants territoriaux de l'État dans cette mise en œuvre et les modalités de désignation des opérateurs qui en sont chargés.",
+    "Une convention pluriannuelle conclue entre l'État et l'organisme chargé de la gestion du régime d'assurance chômage mentionné à l'article L. 5427-1 fixe les modalités de financement du parcours de retour à l'emploi mentionné à l'article L. 1233-65 et des mesures qu'il comprend. L'État et l'organisme chargé de la gestion du régime d'assurance chômage mentionné à l'article L. 5427-1 négocient chaque année une annexe financière.",
+    "À défaut de ces conventions, un décret en Conseil d'État fixe les dispositions qu'elles doivent comporter.",
+], "Réécriture à droit constant : l'objet de la convention d'organisation est réparti en phrases plus courtes et les parties qui négocient l'annexe financière sont désignées directement. L'organisation et le financement demeurent régis par deux conventions distinctes ; la négociation annuelle de l'annexe et le mécanisme supplétif sont maintenus. Aucune réforme de fond.",
+    "La représentativité exigée reste nationale et interprofessionnelle. Les deux conventions restent pluriannuelles, tandis que l'annexe financière est négociée annuellement. Le décret supplétif demeure prévu en l'absence des conventions, sans présumer de financements nouveaux.")
+
+article('L1233-71', [
+    "Dans les entreprises ou les établissements d'au moins mille salariés, ainsi que dans les entreprises mentionnées à l'article L. 2331-1 et celles qui remplissent les conditions des articles L. 2341-1 et L. 2341-2, dès lors qu'elles emploient au total au moins mille salariés, l'employeur doit proposer un congé de reclassement à chaque salarié dont il envisage le licenciement pour motif économique. Ce congé permet au salarié de bénéficier d'actions de formation et des prestations d'une cellule qui l'accompagne dans ses démarches de recherche d'emploi.",
+    "Le congé de reclassement est d'une durée maximale de douze mois. Cette durée peut être portée à vingt-quatre mois en cas de formation de reconversion professionnelle.",
+    "Si nécessaire, le congé commence par un bilan de compétences permettant au salarié de définir un projet professionnel et, le cas échéant, de déterminer les actions de formation nécessaires à son reclassement. Ces actions de formation sont mises en œuvre pendant la période prévue au premier alinéa.",
+    "Le financement de l'ensemble de ces actions est à la charge de l'employeur.",
+], "Réécriture à droit constant : l'obligation de proposer le congé est séparée de son objet. Les deux durées maximales sont exprimées dans deux phrases et le rôle du bilan de compétences est simplifié. Les quatre alinéas et la charge de financement de l'employeur sont conservés. Aucune réforme de fond.",
+    "Maintien du seuil de mille salariés et des champs des articles L. 2331-1, L. 2341-1 et L. 2341-2, ainsi que des maxima de douze et vingt-quatre mois. Incohérence préexistante conservée et signalée : le troisième alinéa renvoie à la « période prévue au premier alinéa », alors que les durées figurent au deuxième alinéa ; une correction de renvoi demande une coordination explicite. La note source maintient l'application aux avantages dus à compter du 1er janvier 2021, conformément au VII de l'article 8 de la loi n° 2020-1576 du 14 décembre 2020. L'exclusion des entreprises en redressement ou liquidation judiciaire reste portée par L. 1233-75.")
+
+article('L1233-72', [
+    "Le salarié prend le congé de reclassement pendant son préavis, qu'il est dispensé d'exécuter.",
+    "Si le congé de reclassement dure plus longtemps que le préavis, le terme du préavis est reporté jusqu'à la fin de ce congé.",
+    "Pour la période du congé qui dépasse la durée du préavis, le salarié reçoit une rémunération égale au montant de l'allocation de conversion mentionnée au 3° de l'article L. 5123-2. Les dispositions de l'article L. 5122-4 s'appliquent à cette rémunération.",
+], "Réécriture à droit constant : le salarié et le préavis sont nommés explicitement. L'expression de la source relative à la rémunération qui excède une durée est clarifiée en visant la rémunération de la période au-delà du préavis. Les trois alinéas et la règle de calcul par renvoi sont conservés. Aucune réforme de fond.",
+    "Maintien de la dispense d'exécuter le préavis, de son report jusqu'à la fin du congé et des renvois au 3° de L. 5123-2 et à L. 5122-4, sans création d'un taux. La note source maintient l'application aux avantages dus à compter du 1er janvier 2021, conformément au VII de l'article 8 de la loi n° 2020-1576 du 14 décembre 2020. Ces règles ne sont pas plafonnées par la réforme de l'indemnité légale de licenciement.")
+
+article('L1233-72-1', [
+    "Le congé de reclassement peut inclure des périodes de travail pendant lesquelles il est suspendu. Ces périodes sont effectuées pour le compte de tout employeur, à l'exception des particuliers, dans le cadre des contrats de travail à durée déterminée prévus à l'article L. 1242-3, renouvelables une fois par dérogation aux articles L. 1243-13 et L. 1243-13-1, ou des contrats de travail temporaire prévus à l'article L. 1251-7. Le congé de reclassement reprend à la fin de ces périodes. L'employeur peut reporter son terme initial d'une durée égale à celle des périodes de travail effectuées.",
+], "Réécriture à droit constant : la suspension, la reprise du congé et le report facultatif de son terme sont formulés directement. L'alinéa unique, les types de contrats autorisés, le renouvellement et l'exclusion des particuliers sont conservés. Aucune réforme de fond.",
+    "Le report du terme reste une faculté de l'employeur et ne dépasse pas la durée des périodes de travail effectuées. Maintien du renouvellement unique et des deux renvois L. 1243-13 et L. 1243-13-1. Ces articles excluent eux-mêmes les contrats de L. 1242-3 dans le corpus : articulation préexistante à contrôler. L. 1233-68, 3°, ne cite que L. 1243-13 ; cette différence est signalée sans harmonisation silencieuse.")
+
+article('L1233-73', [
+    "Un accord national interprofessionnel conclu par les partenaires sociaux peut prévoir une contribution aux actions mises en œuvre dans le cadre du congé de reclassement.",
+], "Réécriture à droit constant : l'accord national interprofessionnel devient le sujet de la disposition, en maintenant sa conclusion par les partenaires sociaux et le caractère facultatif de la contribution. Aucune réforme de fond.",
+    "Aucun montant, taux ni débiteur de contribution n'est ajouté : le texte laisse à l'accord national interprofessionnel le soin de prévoir cette contribution aux actions du congé de reclassement.")
+
+article('L1233-74', [
+    "Les maisons de l'emploi peuvent participer à la mise en œuvre des mesures du congé de reclassement. Les conditions de leur participation sont fixées par convention avec les entreprises intéressées.",
+], "Réécriture à droit constant : la participation facultative des maisons de l'emploi est distinguée de ses conditions conventionnelles dans deux phrases du même alinéa. Aucune obligation de financement ni aucune réforme de fond n'est ajoutée.",
+    "Le champ demeure le congé de reclassement. La formulation est coordonnée avec L. 1233-64, qui concerne le plan de sauvegarde de l'emploi, sans confondre les dispositifs. La convention avec les entreprises intéressées reste requise.")
+
+article('L1233-75', [
+    "La présente sous-section ne s'applique pas aux entreprises en redressement judiciaire ou en liquidation judiciaire.",
+], "Réécriture à droit constant : la négation est formulée directement et le caractère judiciaire des deux procédures est explicite. L'exclusion de l'ensemble de la sous-section est maintenue. Aucune réforme de fond.",
+    "L'exclusion vise toujours toute la sous-section relative au congé de reclassement. Elle ne supprime pas le régime du contrat de sécurisation professionnelle des articles L. 1233-65 et suivants, qui relève d'une autre sous-section.")
+
+
+assert len(sources) == 24
+assert set(drafts) == {s['number'] for s in sources}
+answer = []
+for source in sources:
+    row = {key: source[key] for key in ('code_id', 'source_id', 'source_sha256', 'number')}
+    row.update(drafts[source['number']])
+    answer.append(row)
+Path('answer.json').write_text(json.dumps(answer, ensure_ascii=False, indent=2) + '\n')

@@ -1,0 +1,610 @@
+{
+  "observed_at_utc": "2026-10-19T22:09:50.845199+00:00",
+  "read_only_audit": true,
+  "complete": false,
+  "scope": "Observed continuation configuration and documented activity; not a legal validation or proof that the rewriting is complete.",
+  "workers": {
+    "configured": 3,
+    "manual_slots": [],
+    "coordinator_pid_record": 77663,
+    "process_exists_probe": "permission_denied",
+    "observed_process_command": "run_exhaustive.py --workers 3 --interleave-review --wait-for-coordinator --export-every 200 --deploy-on-export --publish-at-end",
+    "command_evidence": "Read-only /bin/ps of PID 77663 returned this command and elapsed 17:24. A PID record alone was not treated as process evidence.",
+    "simultaneous_active_worker_processes_proved": true,
+    "worker_process_observation": {
+      "coordinator_pid": 77663,
+      "direct_codex_child_pids": [
+        83248,
+        84580,
+        85161
+      ],
+      "observation": "Read-only ps returned these three direct codex children at the same instant; this proves process presence, not future completion or legal correctness."
+    }
+  },
+  "queue": {
+    "new_jobs": 1095,
+    "mixed_jobs": 1734,
+    "mixed_new_jobs": 1095,
+    "mixed_review_jobs": 639,
+    "held_source_in_new_queue": [],
+    "resume_guard": "run_job re-reads drafts before starting and skips sources already accepted; registration refuses conflicting overwrite."
+  },
+  "recent_policy_checks": [
+    {
+      "job": "construction-habitation-00038",
+      "source_mtime_unix": 1792447748.8603196,
+      "coordination_semantically_current": true,
+      "site_policy_semantically_current": true,
+      "fingerprint_present": true,
+      "stored_coordination_hash_matches_frozen_file": true,
+      "frozen_coordination_sha256": "16497a34b35ca783160b16d1049febad6341dfa7431ebe7d4e13e9aada4a26ff"
+    },
+    {
+      "job": "urbanisme-00038",
+      "source_mtime_unix": 1792447678.4238143,
+      "coordination_semantically_current": true,
+      "site_policy_semantically_current": true,
+      "fingerprint_present": true,
+      "stored_coordination_hash_matches_frozen_file": true,
+      "frozen_coordination_sha256": "16497a34b35ca783160b16d1049febad6341dfa7431ebe7d4e13e9aada4a26ff"
+    },
+    {
+      "job": "review-impots-annexe-3-LEGIARTI000047480561-00001",
+      "source_mtime_unix": 1792447553.5514948,
+      "coordination_semantically_current": true,
+      "site_policy_semantically_current": true,
+      "fingerprint_present": true,
+      "stored_coordination_hash_matches_frozen_file": true,
+      "frozen_coordination_sha256": "16497a34b35ca783160b16d1049febad6341dfa7431ebe7d4e13e9aada4a26ff"
+    },
+    {
+      "job": "impots-00038",
+      "source_mtime_unix": 1792447406.8347602,
+      "coordination_semantically_current": true,
+      "site_policy_semantically_current": true,
+      "fingerprint_present": true,
+      "stored_coordination_hash_matches_frozen_file": true,
+      "frozen_coordination_sha256": "16497a34b35ca783160b16d1049febad6341dfa7431ebe7d4e13e9aada4a26ff"
+    },
+    {
+      "job": "construction-habitation-00037",
+      "source_mtime_unix": 1792447243.2003372,
+      "coordination_semantically_current": true,
+      "site_policy_semantically_current": true,
+      "fingerprint_present": true,
+      "stored_coordination_hash_matches_frozen_file": true,
+      "frozen_coordination_sha256": "16497a34b35ca783160b16d1049febad6341dfa7431ebe7d4e13e9aada4a26ff"
+    },
+    {
+      "job": "review-construction-habitation-LEGIARTI000006824746-00001",
+      "source_mtime_unix": 1792447130.9799225,
+      "coordination_semantically_current": true,
+      "site_policy_semantically_current": true,
+      "fingerprint_present": true,
+      "stored_coordination_hash_matches_frozen_file": true,
+      "frozen_coordination_sha256": "16497a34b35ca783160b16d1049febad6341dfa7431ebe7d4e13e9aada4a26ff"
+    },
+    {
+      "job": "urbanisme-00037",
+      "source_mtime_unix": 1792446929.4994795,
+      "coordination_semantically_current": true,
+      "site_policy_semantically_current": true,
+      "fingerprint_present": true,
+      "stored_coordination_hash_matches_frozen_file": true,
+      "frozen_coordination_sha256": "16497a34b35ca783160b16d1049febad6341dfa7431ebe7d4e13e9aada4a26ff"
+    },
+    {
+      "job": "impots-00037",
+      "source_mtime_unix": 1792446893.4182446,
+      "coordination_semantically_current": true,
+      "site_policy_semantically_current": true,
+      "fingerprint_present": true,
+      "stored_coordination_hash_matches_frozen_file": true,
+      "frozen_coordination_sha256": "16497a34b35ca783160b16d1049febad6341dfa7431ebe7d4e13e9aada4a26ff"
+    },
+    {
+      "job": "review-urbanisme-LEGIARTI000052866530-00001",
+      "source_mtime_unix": 1792446689.4502304,
+      "coordination_semantically_current": true,
+      "site_policy_semantically_current": true,
+      "fingerprint_present": true,
+      "stored_coordination_hash_matches_frozen_file": true,
+      "frozen_coordination_sha256": "16497a34b35ca783160b16d1049febad6341dfa7431ebe7d4e13e9aada4a26ff"
+    },
+    {
+      "job": "urbanisme-00036",
+      "source_mtime_unix": 1792446689.4233277,
+      "coordination_semantically_current": true,
+      "site_policy_semantically_current": true,
+      "fingerprint_present": true,
+      "stored_coordination_hash_matches_frozen_file": true,
+      "frozen_coordination_sha256": "16497a34b35ca783160b16d1049febad6341dfa7431ebe7d4e13e9aada4a26ff"
+    },
+    {
+      "job": "construction-habitation-00036",
+      "source_mtime_unix": 1792446689.4223032,
+      "coordination_semantically_current": true,
+      "site_policy_semantically_current": true,
+      "fingerprint_present": true,
+      "stored_coordination_hash_matches_frozen_file": true,
+      "frozen_coordination_sha256": "16497a34b35ca783160b16d1049febad6341dfa7431ebe7d4e13e9aada4a26ff"
+    }
+  ],
+  "policy_files": {
+    "coordination_sha256": "9abc315a2b3fea045e445a44bac9d22af6fc22fba122d368a08b82ae2287a2a0",
+    "site_summary_sha256": "4a2b25b11a7c366b9f0ee9e24485f9834f8795aff5cd8980a8e5cc6b1c55a06b"
+  },
+  "database_counts": {
+    "source_records": 30317,
+    "drafted": 6459,
+    "retained_unchanged": 0,
+    "pending": 23858,
+    "codes": {
+      "travail": {
+        "source_records": 11593,
+        "drafted": 1142,
+        "retained_unchanged": 0,
+        "pending": 10451
+      },
+      "impots": {
+        "source_records": 2375,
+        "drafted": 618,
+        "retained_unchanged": 0,
+        "pending": 1757
+      },
+      "securite-sociale": {
+        "source_records": 7427,
+        "drafted": 755,
+        "retained_unchanged": 0,
+        "pending": 6672
+      },
+      "urbanisme": {
+        "source_records": 2459,
+        "drafted": 989,
+        "retained_unchanged": 0,
+        "pending": 1470
+      },
+      "construction-habitation": {
+        "source_records": 4126,
+        "drafted": 949,
+        "retained_unchanged": 0,
+        "pending": 3177
+      },
+      "impots-annexe-1": {
+        "source_records": 71,
+        "drafted": 71,
+        "retained_unchanged": 0,
+        "pending": 0
+      },
+      "impots-annexe-2": {
+        "source_records": 674,
+        "drafted": 674,
+        "retained_unchanged": 0,
+        "pending": 0
+      },
+      "impots-annexe-3": {
+        "source_records": 1115,
+        "drafted": 785,
+        "retained_unchanged": 0,
+        "pending": 330
+      },
+      "impots-annexe-4": {
+        "source_records": 477,
+        "drafted": 476,
+        "retained_unchanged": 0,
+        "pending": 1
+      }
+    },
+    "normalized_source_copies_counted_as_drafts": [],
+    "canonical_source_mismatches": [],
+    "improper_retained_normative_sources": []
+  },
+  "status_snapshot": {
+    "reported_status": "running",
+    "reported_drafted": 6459,
+    "reported_pending": 23858,
+    "updated_at_unix": 1792447748,
+    "exhaustive_rewriting_complete": false,
+    "jurist_reviewed_articles": 0
+  },
+  "held_graphics": [
+    {
+      "slug": "securite-sociale",
+      "source_id": "LEGIARTI000030400105",
+      "number": "D351-9",
+      "reason": "Normative formula/table must be recovered from the referenced official Journal PDF before drafting.",
+      "database_draft_present": false,
+      "pending": true
+    },
+    {
+      "slug": "securite-sociale",
+      "source_id": "LEGIARTI000023395852",
+      "number": "D643-7",
+      "reason": "Normative formula/table must be recovered from the referenced official Journal PDF before drafting.",
+      "database_draft_present": false,
+      "pending": true
+    },
+    {
+      "slug": "securite-sociale",
+      "source_id": "LEGIARTI000038774726",
+      "number": "D653-4",
+      "reason": "Normative formula/table must be recovered from the referenced official Journal PDF before drafting.",
+      "database_draft_present": false,
+      "pending": true
+    },
+    {
+      "slug": "securite-sociale",
+      "source_id": "LEGIARTI000028675462",
+      "number": "Annexe I à l'art. R434-32 (7)",
+      "reason": "Normative formula/table must be recovered from the referenced official Journal PDF before drafting.",
+      "database_draft_present": false,
+      "pending": true
+    },
+    {
+      "slug": "urbanisme",
+      "source_id": "LEGIARTI000006813811",
+      "number": "A123-1",
+      "reason": "Normative formula/table must be recovered from the referenced official Journal PDF before drafting.",
+      "database_draft_present": false,
+      "pending": true
+    },
+    {
+      "slug": "construction-habitation",
+      "source_id": "LEGIARTI000032792438",
+      "number": "R254-5",
+      "reason": "Normative formula/table must be recovered from the referenced official Journal PDF before drafting.",
+      "database_draft_present": false,
+      "pending": true
+    },
+    {
+      "slug": "construction-habitation",
+      "source_id": "LEGIARTI000039048613",
+      "number": "D453-7",
+      "reason": "Normative formula/table must be recovered from the referenced official Journal PDF before drafting.",
+      "database_draft_present": false,
+      "pending": true
+    },
+    {
+      "slug": "impots-annexe-3",
+      "source_id": "LEGIARTI000049362876",
+      "number": "49 septies ZZH",
+      "reason": "Normative formula/table must be recovered from the referenced official Journal PDF before drafting.",
+      "database_draft_present": false,
+      "pending": true
+    },
+    {
+      "slug": "impots-annexe-4",
+      "source_id": "LEGIARTI000019493914",
+      "number": "15",
+      "reason": "Normative formula/table must be recovered from the referenced official Journal PDF before drafting.",
+      "database_draft_present": false,
+      "pending": true
+    }
+  ],
+  "rejection_gates": {
+    "source_hash_and_ids_checked": true,
+    "complete_assignment_required": true,
+    "normalized_copy_rejected": true,
+    "unresolved_graphic_rejected_except_explicit_repeal": true,
+    "stale_policy_checked_before_acceptance": true,
+    "benefit_review_required_when_flagged": true,
+    "transactional_batch_acceptance": true,
+    "failed_jobs_registry": [],
+    "failure_or_stale_marker_jobs": [],
+    "limitation": "Structural gates do not prove the legal correctness of an article; a failed marker may be historical and is distinguished from a currently invalid answer.",
+    "observed_rejection_limitation": "No validation-failure or stale-policy markers were present in current job directories. Rejection handling is confirmed by source inspection, not by observing a failing batch in this audit.",
+    "read_only_active_batch_validation": {
+      "observed_at_utc": "2026-10-19T22:14:10.112548+00:00",
+      "validated_batch_files": 352,
+      "validated_articles": 6457,
+      "editorial_diagnostics": 850,
+      "database_body_mismatches": [],
+      "batch_files_changed_during_read": [],
+      "register_or_commit_called": false,
+      "limitation": "Integrity diagnostics require editorial review and are not legal approval. Source inspection confirms rejection gates; no actual currently rejected job was observed."
+    }
+  },
+  "publication": {
+    "configured_every_new_or_reviewed_articles": 200,
+    "configured_deploy_on_export": true,
+    "configured_publish_at_end": true,
+    "time_based_schedule": false,
+    "pipeline_validation_before_build_and_deploy": true,
+    "last_published_report": {
+      "updated_at_unix": 1792446118,
+      "drafted_articles": 6382,
+      "source_records": 30317,
+      "exhaustive_rewriting_complete": false,
+      "local_checks_passed": true,
+      "deployments": {
+        "liberer-la-retraite": {
+          "published": true,
+          "log": "runtime/deploy-liberer-la-retraite.log"
+        },
+        "nouveaudroitdutravail": {
+          "published": true,
+          "log": "runtime/deploy-nouveaudroitdutravail.log"
+        },
+        "liberer-le-revenu": {
+          "published": true,
+          "log": "runtime/deploy-liberer-le-revenu.log"
+        },
+        "liberer-lentreprise": {
+          "published": true,
+          "log": "runtime/deploy-liberer-lentreprise.log"
+        },
+        "liberer-le-logement": {
+          "published": true,
+          "log": "runtime/deploy-liberer-le-logement.log"
+        }
+      },
+      "deployment_requested": true
+    },
+    "latest_local_publication_report": {
+      "updated_at_unix": 1792447346,
+      "drafted_articles": 6422,
+      "source_records": 30317,
+      "exhaustive_rewriting_complete": false,
+      "local_checks_passed": true,
+      "deployments": {},
+      "deployment_requested": false
+    },
+    "current_live_http_verification_performed": false,
+    "limitation": "Last publication report proves a prior successful pipeline run, not that every current DB article is already live or a future deployment will succeed."
+  },
+  "activity_evidence": {
+    "log_path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive-run.log",
+    "log_size_bytes": 3923428,
+    "log_modified_at_unix": 1792447748.7792568,
+    "last_acceptance_lines": [
+      "RADICAL REVIEW review-construction-habitation-LEGIARTI000006824746-00001 5 articles checked against the new direction",
+      "ACCEPTED construction-habitation-00037 9 articles; 6458 drafted; 23859 pending",
+      "ACCEPTED impots-00038 1 articles; 6459 drafted; 23858 pending"
+    ],
+    "second_observation": {
+      "log_size_bytes": 3923493,
+      "log_modified_at_unix": 1792447836.8007617,
+      "sampled_at_unix": 1792447847.682224
+    },
+    "log_grew_during_audit": true
+  },
+  "material_findings": [],
+  "registration_inventory": {
+    "drafts_with_body": 6465,
+    "registry_missing": [
+      "LEGITEXT000006074075|LEGIARTI000037666425",
+      "LEGITEXT000006074075|LEGIARTI000031210261",
+      "LEGITEXT000006074096|LEGIARTI000038970859",
+      "LEGITEXT000006069577|LEGIARTI000046868562",
+      "LEGITEXT000006073189|LEGIARTI000051287395",
+      "LEGITEXT000006069577|LEGIARTI000047288608",
+      "LEGITEXT000006073189|LEGIARTI000053278668",
+      "LEGITEXT000006073189|LEGIARTI000054336623",
+      "LEGITEXT000006069577|LEGIARTI000006302214",
+      "LEGITEXT000006074075|LEGIARTI000043965974",
+      "LEGITEXT000006074096|LEGIARTI000049356983",
+      "LEGITEXT000006074096|LEGIARTI000049356981"
+    ],
+    "registry_hash_mismatches": [],
+    "read_only": true,
+    "missing_detail": [
+      {
+        "key": "LEGITEXT000006074075|LEGIARTI000037666425",
+        "in_current_inventory": true,
+        "number": "L102-12",
+        "valid_from": "2018-11-25",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR"
+      },
+      {
+        "key": "LEGITEXT000006074075|LEGIARTI000031210261",
+        "in_current_inventory": true,
+        "number": "L112-6",
+        "valid_from": "2016-01-01",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR"
+      },
+      {
+        "key": "LEGITEXT000006074096|LEGIARTI000038970859",
+        "in_current_inventory": true,
+        "number": "D304-1",
+        "valid_from": "2019-09-01",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR"
+      },
+      {
+        "key": "LEGITEXT000006069577|LEGIARTI000046868562",
+        "in_current_inventory": false,
+        "number": "219",
+        "valid_from": "2023-01-01",
+        "valid_until": "2026-02-21",
+        "state": "MODIFIE"
+      },
+      {
+        "key": "LEGITEXT000006073189|LEGIARTI000051287395",
+        "in_current_inventory": false,
+        "number": "L136-8",
+        "valid_from": "2025-07-01",
+        "valid_until": "2025-12-31",
+        "state": "MODIFIE"
+      },
+      {
+        "key": "LEGITEXT000006069577|LEGIARTI000047288608",
+        "in_current_inventory": false,
+        "number": "154 quinquies",
+        "valid_from": "2023-03-11",
+        "valid_until": "2026-06-27",
+        "state": "MODIFIE"
+      },
+      {
+        "key": "LEGITEXT000006073189|LEGIARTI000053278668",
+        "in_current_inventory": false,
+        "number": "L136-8",
+        "valid_from": "2025-12-31",
+        "valid_until": "2026-06-27",
+        "state": "MODIFIE"
+      },
+      {
+        "key": "LEGITEXT000006073189|LEGIARTI000054336623",
+        "in_current_inventory": true,
+        "number": "L136-8",
+        "valid_from": "2026-06-27",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR"
+      },
+      {
+        "key": "LEGITEXT000006069577|LEGIARTI000006302214",
+        "in_current_inventory": true,
+        "number": "12",
+        "valid_from": "1979-07-01",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR"
+      },
+      {
+        "key": "LEGITEXT000006074075|LEGIARTI000043965974",
+        "in_current_inventory": true,
+        "number": "L111-26",
+        "valid_from": "2021-08-25",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR"
+      },
+      {
+        "key": "LEGITEXT000006074096|LEGIARTI000049356983",
+        "in_current_inventory": true,
+        "number": "D319-6",
+        "valid_from": "2024-04-01",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR"
+      },
+      {
+        "key": "LEGITEXT000006074096|LEGIARTI000049356981",
+        "in_current_inventory": true,
+        "number": "D319-7",
+        "valid_from": "2024-04-01",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR"
+      }
+    ],
+    "current_inventory_registry_missing": [
+      {
+        "key": "LEGITEXT000006074075|LEGIARTI000037666425",
+        "in_current_inventory": true,
+        "number": "L102-12",
+        "valid_from": "2018-11-25",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR",
+        "source_hash_matches_current": true,
+        "frozen_source_evidence_matches_current": true,
+        "initial_draft_provenance": [
+          "first_drafts.json"
+        ],
+        "proposed_sha256": "8f11ac572e4eb01a9204febbf0f6bd5c801a9f12ade2622a4b1067cbfa8ed014"
+      },
+      {
+        "key": "LEGITEXT000006074075|LEGIARTI000031210261",
+        "in_current_inventory": true,
+        "number": "L112-6",
+        "valid_from": "2016-01-01",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR",
+        "source_hash_matches_current": true,
+        "frozen_source_evidence_matches_current": true,
+        "initial_draft_provenance": [
+          "first_drafts.json"
+        ],
+        "proposed_sha256": "279d6220d124a0c9d0f71358ae4c0517cfaaf46dec1267b5ea2cb870151c2937"
+      },
+      {
+        "key": "LEGITEXT000006074096|LEGIARTI000038970859",
+        "in_current_inventory": true,
+        "number": "D304-1",
+        "valid_from": "2019-09-01",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR",
+        "source_hash_matches_current": true,
+        "frozen_source_evidence_matches_current": true,
+        "initial_draft_provenance": [
+          "first_drafts.json"
+        ],
+        "proposed_sha256": "6461be85871eb740b89fb80b12929bc920875488f0d96912d8b734f20c136d7e"
+      },
+      {
+        "key": "LEGITEXT000006073189|LEGIARTI000054336623",
+        "in_current_inventory": true,
+        "number": "L136-8",
+        "valid_from": "2026-06-27",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR",
+        "source_hash_matches_current": true,
+        "frozen_source_evidence_matches_current": true,
+        "initial_draft_provenance": [
+          "tax-drafts-bound.json"
+        ],
+        "proposed_sha256": "f8f90f02cc218473e87117b19e3e1894df10c4e4ce483b67b03fd2b2bbf40a35"
+      },
+      {
+        "key": "LEGITEXT000006069577|LEGIARTI000006302214",
+        "in_current_inventory": true,
+        "number": "12",
+        "valid_from": "1979-07-01",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR",
+        "source_hash_matches_current": true,
+        "frozen_source_evidence_matches_current": true,
+        "initial_draft_provenance": [
+          "first_drafts.json"
+        ],
+        "proposed_sha256": "f2d3bdfab778ff34f5d48bd77a00f6808e3d07bc7273a4a0ee7818f3669caa6f"
+      },
+      {
+        "key": "LEGITEXT000006074075|LEGIARTI000043965974",
+        "in_current_inventory": true,
+        "number": "L111-26",
+        "valid_from": "2021-08-25",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR",
+        "source_hash_matches_current": true,
+        "frozen_source_evidence_matches_current": true,
+        "initial_draft_provenance": [
+          "first_drafts.json"
+        ],
+        "proposed_sha256": "90274c8ea88c66e195d35e22d6b994e2b7692ed35c46ea351cb2bef2df2e914c"
+      },
+      {
+        "key": "LEGITEXT000006074096|LEGIARTI000049356983",
+        "in_current_inventory": true,
+        "number": "D319-6",
+        "valid_from": "2024-04-01",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR",
+        "source_hash_matches_current": true,
+        "frozen_source_evidence_matches_current": true,
+        "initial_draft_provenance": [
+          "first_drafts.json"
+        ],
+        "proposed_sha256": "477b667b95964fcc7e272ebc31720c25dbb7fc6d05231629b1803041917e9422"
+      },
+      {
+        "key": "LEGITEXT000006074096|LEGIARTI000049356981",
+        "in_current_inventory": true,
+        "number": "D319-7",
+        "valid_from": "2024-04-01",
+        "valid_until": "2999-01-01",
+        "state": "VIGUEUR",
+        "source_hash_matches_current": true,
+        "frozen_source_evidence_matches_current": true,
+        "initial_draft_provenance": [
+          "first_drafts.json"
+        ],
+        "proposed_sha256": "7ff9a1fbec9770430d9268a377c8989b45486ea64029ac2d920c31f4dd60163a"
+      }
+    ],
+    "interpretation": "The numeric-batch registry is rebuilt only from active numeric batches. Eight current drafts absent from that registry match initial authored-draft files exactly; all eight source hashes and source/notes before-images match. Four other absent entries are historical versions outside the current 30317 inventory. Absence from this limited registry is not evidence of a failed batch. Those baseline drafts were not newly legally reviewed in this audit."
+  },
+  "informational_findings": [
+    "Eight current baseline drafts are tracked through initial authored files and source evidence rather than the numeric-batch registry; their provenance is detailed below.",
+    "Counts, logs, registry and process observations were sampled at different instants during an active run and are explicitly snapshots.",
+    "Nine graphic sources remain unresolved; rewriting is incomplete."
+  ],
+  "audit_finalized_at_utc": "2026-10-19T22:14:10.121350+00:00"
+}

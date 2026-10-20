@@ -1,0 +1,154 @@
+{
+  "scope": [
+    "urbanisme",
+    "construction-habitation"
+  ],
+  "new_drafts": 327,
+  "batches": [
+    {
+      "file": "batch001.json",
+      "articles": 33
+    },
+    {
+      "file": "batch002.json",
+      "articles": 21
+    },
+    {
+      "file": "batch003.json",
+      "articles": 23
+    },
+    {
+      "file": "batch004.json",
+      "articles": 13
+    },
+    {
+      "file": "batch005.json",
+      "articles": 19
+    },
+    {
+      "file": "batch006.json",
+      "articles": 20
+    },
+    {
+      "file": "batch007.json",
+      "articles": 19
+    },
+    {
+      "file": "batch008.json",
+      "articles": 15
+    },
+    {
+      "file": "batch009.json",
+      "articles": 15
+    },
+    {
+      "file": "batch010.json",
+      "articles": 15
+    },
+    {
+      "file": "batch011.json",
+      "articles": 15
+    },
+    {
+      "file": "batch012.json",
+      "articles": 12
+    },
+    {
+      "file": "batch013.json",
+      "articles": 15
+    },
+    {
+      "file": "batch014.json",
+      "articles": 15
+    },
+    {
+      "file": "batch015.json",
+      "articles": 15
+    },
+    {
+      "file": "batch016.json",
+      "articles": 12
+    },
+    {
+      "file": "batch017.json",
+      "articles": 10
+    },
+    {
+      "file": "batch018.json",
+      "articles": 13
+    },
+    {
+      "file": "batch019.json",
+      "articles": 12
+    },
+    {
+      "file": "batch020.json",
+      "articles": 15
+    }
+  ],
+  "policy_changes": {
+    "urbanisme": [
+      "L151-4",
+      "L151-26",
+      "L410-1",
+      "L423-1"
+    ]
+  },
+  "next_structure_positions": {
+    "urbanisme": 177,
+    "construction-habitation": 140
+  },
+  "coverage_notes": [
+    "Les positions sont des indices zéro dans les exports JSON fournis ; ne pas les utiliser sans revérifier la structure si le corpus change.",
+    "Les177 premières entrées urbanisme sont couvertes par les lots et les trois propositions déjà existantes ;13 textes supplémentaires ciblés sont dans batch004.",
+    "Les140 premières entrées construction-habitation sont couvertes par les lots.",
+    "Aucun de ces codes n’est terminé. Les textes sont des propositions sans validation juridique ; la majorité est réécrite à droit constant.",
+    "L112-16 urbanisme : renvoi fiscal obsolète signalé par la note source, coordination non résolue.",
+    "L122-8 et L122-12 CCH : renvoi L.1792-1 du code civil de la source signalé, non rectifié silencieusement."
+  ],
+  "validation": {
+    "unique_ids": 327,
+    "by_code": {
+      "LEGITEXT000006074075": 187,
+      "LEGITEXT000006074096": 140
+    },
+    "proposed_characters": 226200,
+    "checks": [
+      "JSON valide",
+      "fragments XML valides",
+      "empreintes concordantes",
+      "aucun doublon",
+      "aucune collision avec une proposition déjà présente dans export",
+      "aucun renvoi L/R/D/A manquant"
+    ],
+    "issues": []
+  },
+  "outside_scope_coordination": [
+    {
+      "measure": "Voie provisoire de rénovation énergétique de24mois avec compensation des surcoûts pour le locataire",
+      "texts_needed": "Loi89-462 et ses textes de décence et de diagnostic, autres règles locatives applicables ; coordination avec CCH",
+      "status": "Non rédigée dans ces lots. Aucune exception fictive insérée dans les seuls articles de diagnostic CCH."
+    },
+    {
+      "measure": "Traitement judiciaire des impayés, obligations du bail, sécurité juridique de la location",
+      "texts_needed": "Loi89-462, règles judiciaires et procédures civiles d’exécution ; financement des moyens de justice",
+      "status": "Non rédigée dans ces lots. Aucune accélération judiciaire présentée comme réalisée par un article du CCH."
+    },
+    {
+      "measure": "Réduction progressive des droits de mutation",
+      "texts_needed": "CGI et compensation financière des collectivités ; coordination avec agent fiscalité",
+      "status": "Hors de mes deux codes ; aucun nouveau taux inventé dans les lots logement."
+    }
+  ],
+  "open_review_points": [
+    "L112-16 urbanisme : note source annonce remplacement du renvoi fiscal, non résolu ici.",
+    "L122-8 et L122-12 CCH : renvoi L.1792-1 du code civil dans la source conservé et signalé.",
+    "L126-23 CCH : source comporte deux6° et deux7°, numérotation conservée avec signalement.",
+    "L126-3/L126-6 et L126-8 CCH : intitulé TGI et référence de garantie civile ancienne à coordonner après vérification.",
+    "L132-7 CCH : champ source bâtiment collectif/pas plus de deux logements conservé et signalé.",
+    "Renvois externes aux alinéas : contrôle juridique à faire, les vérifications automatiques ne le remplacent pas.",
+    "Les quatre changements de fond du lot004 nécessitent examen des compétences, coûts et décrets, et coordination avec les dispositions réglementaires."
+  ],
+  "last_batch": "batch020.json",
+  "status": "checkpoint_complete_at_parent_request_not_exhaustive"
+}

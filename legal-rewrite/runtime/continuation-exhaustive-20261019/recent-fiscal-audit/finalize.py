@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,hashlib,sqlite3,sys,collections
+P=Path(__file__).resolve().parent;B=P.parents[2];sys.path.insert(0,str(B));from ingest import source_notes;from run_exhaustive import validate_answer;import substantive_impact
+sha=lambda x:hashlib.sha256(x if isinstance(x,bytes)else x.encode()).hexdigest()
+sources=json.loads((P/'audited-source.json').read_text());findings=json.loads((P/'article-findings.json').read_text());by={(x['code_id'],x['source_id']):x for x in sources}
+assert len(sources)==len(findings)==32
+for f in findings:
+    s=by[f['code_id'],f['source_id']];row={**s['previous_draft'],'substantive_impact':f['substantive_impact']};substantive_impact.validate(row,s,required=True);assert f['current_proposed_xml']==s['previous_draft']['proposed_xml']and f['proposed_sha256']==sha(f['current_proposed_xml']);assert f['source_notes_xml']==s['source_notes_xml']
+cs=json.loads((P/'source.json').read_text());ca=json.loads((P/'answer.json').read_text());validate_answer(ca,cs);substantive_impact.validate(ca[0],cs[0],required=True)
+c=sqlite3.connect('file:'+str(B/'corpus.sqlite')+'?mode=ro',uri=True);c.row_factory=sqlite3.Row;c.execute('BEGIN');guards=[]
+for x in sources:
+    k=x['code_id'],x['source_id'];a=c.execute('select source_sha256,content_xml from articles where code_id=? and id=?',k).fetchone();d=c.execute('select source_sha256,proposed_xml from drafts where code_id=? and source_id=?',k).fetchone();raw=c.execute('select xml from documents where code_id=? and id=? and kind="ARTICLE"',k).fetchone()[0];g={'code_id':k[0],'source_id':k[1],'number':x['number'],'source_exact':tuple(a)==(x['source_sha256'],x['source_xml']),'document_sha256_exact':sha(raw)==x['source_sha256'],'notes_exact':source_notes(c,*k)==x['source_notes_xml'],'beforeimage_exact':tuple(d)==(x['previous_draft']['source_sha256'],x['previous_draft']['proposed_xml'])};guards.append(g)
+c.rollback();c.close();assert all(all(v for k,v in x.items()if k.endswith('_exact'))for x in guards)
+(P/'guards.json').write_text(json.dumps(guards,ensure_ascii=False,indent=2)+'\n')
+m=json.loads((P/'manifest.json').read_text());m.update(findings_sha256=sha((P/'article-findings.json').read_bytes()),guards_sha256=sha((P/'guards.json').read_bytes()),candidate_answer_sha256=sha((P/'answer.json').read_bytes()),candidate_impact_classification=ca[0]['substantive_impact']['classification'],candidate_effect_kind='payment_deferred',candidate_effect_unit='other',substantive_impact_version=1,substantive_impact_module_sha256=sha((B/'substantive_impact.py').read_bytes()),all32_impact_assessments_validated=True,impact_classification_counts=dict(collections.Counter(x['substantive_impact']['classification']for x in findings)),national_budget_cost='unknown; no euro claim or automatic savings inferred',candidate_beforeimage_still_exact=True)
+(P/'manifest.json').write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n');print(json.dumps({'manifest_sha256':sha((P/'manifest.json').read_bytes()),'findings_sha256':m['findings_sha256'],'candidate_source_sha256':m['candidate_source_sha256'],'candidate_answer_sha256':m['candidate_answer_sha256'],'candidate_impact_classification':m['candidate_impact_classification'],'all32_and_candidate_guards':'passed'},indent=2))

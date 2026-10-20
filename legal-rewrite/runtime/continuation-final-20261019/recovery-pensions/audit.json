@@ -1,0 +1,362 @@
+{
+  "status": "documentary_recovery_incomplete",
+  "canonical_articles": 3,
+  "missing_expression_count": 5,
+  "recovered_expression_count": 0,
+  "no_inference_or_fabrication": true,
+  "no_activation": true,
+  "no_db_batch_or_manifest_mutation": true,
+  "source_notes_all_empty_verified": true,
+  "existing_attachments_checked": {
+    "attachments_records": "No record matching any of the three source IDs; ten existing record files inspected by filename and ID search.",
+    "runtime_export_and_gap_files": "Only canonical export, source-image-gaps.json and held-graphic-sources.json mention these IDs.",
+    "sources": "No files enumerated under sources/ by rg --files; no source modified."
+  },
+  "attempts": [
+    {
+      "log": "fetch-log-2.json",
+      "file": "cnav-2011-37.pdf",
+      "url": "https://legislation.lassuranceretraite.fr/Pdf/circulaire_cnav_2011_37_12052011.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "log": "fetch-log-2.json",
+      "file": "cnav-2004-11.pdf",
+      "url": "https://legislation.lassuranceretraite.fr/Pdf/circulaire_cnav_2004_11_26022004.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "log": "fetch-log-2.json",
+      "file": "cnavpl-2024.pdf",
+      "url": "https://www.cnavpl.fr/wp-content/uploads/2024/03/Guide-2024.pdf",
+      "final_url": "https://www.cnavpl.fr/wp-content/uploads/2024/03/Guide-2024.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 1363783,
+      "sha256": "6d3afaf41f9ed639a402eb7c2729fcc1356d06211188459dfb72736853defa38",
+      "pdf_header": true
+    },
+    {
+      "log": "fetch-log-2.json",
+      "file": "sante-bo-2004-24.html",
+      "url": "https://sante.gouv.fr/fichiers/bo/2004/04-24/a024.htm",
+      "error": "[Errno 54] Connection reset by peer"
+    },
+    {
+      "log": "fetch-log-2.json",
+      "file": "dila-index.html",
+      "url": "https://echanges.dila.gouv.fr/OPENDATA/",
+      "final_url": "https://echanges.dila.gouv.fr/OPENDATA/",
+      "status": 200,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "bytes": 14355,
+      "sha256": "f12ec07a5c2ae0d75800c18a9e90fbc95596ef8b6544ec8ae188247170819d2e",
+      "pdf_header": false
+    },
+    {
+      "log": "fetch-log-3.json",
+      "file": "cnav-2004-11.html",
+      "url": "https://legislation.lassuranceretraite.fr/Pages/texte.aspx?Nom=c_cnav_2004_011_26022004",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "log": "fetch-log-3.json",
+      "file": "cnav-2011-37.html",
+      "url": "https://legislation.lassuranceretraite.fr/Pages/texte.aspx?Nom=c_cnav_2011_037_12052011",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "log": "fetch-log-3.json",
+      "file": "sante-bo-2004-24.html",
+      "url": "https://sante.gouv.fr/fichiers/bo/2004/04-24/a024.htm",
+      "error": "[Errno 54] Connection reset by peer"
+    },
+    {
+      "log": "fetch-log-3.json",
+      "file": "sante-bo-2004-1.html",
+      "url": "https://sante.gouv.fr/fichiers/bo/2004/04-01/a001.htm",
+      "error": "[Errno 54] Connection reset by peer"
+    },
+    {
+      "log": "fetch-log-3.json",
+      "file": "dila-jorf-index.html",
+      "url": "https://echanges.dila.gouv.fr/OPENDATA/JORF/",
+      "final_url": "https://echanges.dila.gouv.fr/OPENDATA/JORF/",
+      "status": 200,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "bytes": 146108,
+      "sha256": "817b66bf63b2d3a1e474aa2c43f3499bd3cb8841f5c1d53a2303042e2b877e00",
+      "pdf_header": false
+    },
+    {
+      "log": "fetch-log-4.json",
+      "file": "cnav-index.html",
+      "url": "https://legislation.lassuranceretraite.fr/",
+      "final_url": "https://legislation.lassuranceretraite.fr/",
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 27152,
+      "sha256": "f5dd3bf4defc26e24d376e79e159a6d8ab3398845041b7a45715fe24ee0a6785",
+      "pdf_header": false
+    },
+    {
+      "log": "fetch-log-4.json",
+      "file": "cnavpl-2020.pdf",
+      "url": "https://www.cnavpl.fr/wp-content/uploads/2020/10/guide-site-2020.pdf",
+      "final_url": "https://www.cnavpl.fr/wp-content/uploads/2020/10/guide-site-2020.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 1344808,
+      "sha256": "d65a3e07e529f50235a7c62ee0371cf62923aee3e8a8e433674fc452598e6a5c",
+      "pdf_header": true
+    },
+    {
+      "log": "fetch-log-4.json",
+      "file": "cnbf-documents.html",
+      "url": "https://www.cnbf.fr/medias/documents/",
+      "final_url": "https://www.cnbf.fr/medias/documents/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 67817,
+      "sha256": "bc03956a643509efc080f885379c82a43902622002160a478c14eef53da837bc",
+      "pdf_header": false
+    },
+    {
+      "log": "fetch-log-4.json",
+      "file": "cnav-2015-26.pdf",
+      "url": "https://legislation.lassuranceretraite.fr/Pdf/circulaire_cnav_2015_26_28042015.pdf",
+      "final_url": "https://legislation.lassuranceretraite.fr/Pdf/circulaire_cnav_2015_26_28042015.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 332429,
+      "sha256": "f47e80f9b2c7ac0a46a78dea2d621033705cbd6f5cdb132209d25dec5bf1377a",
+      "pdf_header": true
+    },
+    {
+      "log": "fetch-log-5.json",
+      "file": "cnav-main.js",
+      "url": "https://legislation.lassuranceretraite.fr/main.149138adfd9345b9.js",
+      "final_url": "https://legislation.lassuranceretraite.fr/main.149138adfd9345b9.js",
+      "status": 200,
+      "content_type": "application/javascript",
+      "bytes": 472525,
+      "sha256": "8e729ba21686cf17d2b16710da68b5776f28efa9df43a41fe89a760df4bfc5c5",
+      "pdf_header": false
+    },
+    {
+      "log": "fetch-log-5.json",
+      "file": "cnbf-statuts-2026.pdf",
+      "url": "https://www.cnbf.fr/wp-content/uploads/2026/04/Statuts-CNBF-2026-JO-2-Avril.pdf",
+      "final_url": "https://www.cnbf.fr/wp-content/uploads/2026/04/Statuts-CNBF-2026-JO-2-Avril.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 260620,
+      "sha256": "10b97781f29a994e575a5229a07afa52d515e1480b629f0205fedfb8e5d2dcd3",
+      "pdf_header": true
+    },
+    {
+      "log": "fetch-log-6.json",
+      "file": "cnav-search-2004.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/search/custom",
+      "error": "<urlopen error _ssl.c:1063: The handshake operation timed out>"
+    },
+    {
+      "log": "fetch-log-6.json",
+      "file": "cnav-search-2011.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/search/custom",
+      "error": "<urlopen error _ssl.c:1063: The handshake operation timed out>"
+    },
+    {
+      "log": "fetch-log-6.json",
+      "file": "cnav-search-actuariel.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/search/custom",
+      "error": "<urlopen error _ssl.c:1063: The handshake operation timed out>"
+    },
+    {
+      "log": "fetch-log-6.json",
+      "file": "cnav-2004-candidate.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/reference/referencesByFileLeafRef/c_cnav_2004_011_26022004.htm",
+      "error": "<urlopen error _ssl.c:1063: The handshake operation timed out>"
+    },
+    {
+      "log": "fetch-log-7.json",
+      "file": "sre-rachat-2025.pdf",
+      "url": "https://retraitesdeletat.gouv.fr/files/files/Professionnels/CAS/Fiches/NI%20909_rachat%20annees%20etudes_20250210.pdf",
+      "final_url": "https://retraitesdeletat.gouv.fr/files/files/Professionnels/CAS/Fiches/NI%20909_rachat%20annees%20etudes_20250210.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 1783200,
+      "sha256": "2056d5764b2eac9713be980ebe1b64147e1b24ce776d1ec548056abaee2cdca1",
+      "pdf_header": true
+    },
+    {
+      "log": "fetch-log-7.json",
+      "file": "cnav-2004-11-aspx.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/reference/referencesByFileLeafRef/c_cnav_2004_011_26022004.aspx",
+      "error": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "log": "fetch-log-7.json",
+      "file": "cnav-2004-011.pdf",
+      "url": "https://legislation.lassuranceretraite.fr/Pdf/circulaire_cnav_2004_011_26022004.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "log": "fetch-log-8.json",
+      "file": "cnav-search-2004.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/search/custom",
+      "final_url": "https://legislation.lassuranceretraite.fr/api/v1/search/custom",
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 3800356,
+      "sha256": "1eaf59e20c0c8db016c42338e549766d508faa03e82729b17178f531fc32b45a",
+      "pdf_header": false
+    },
+    {
+      "log": "fetch-log-8.json",
+      "file": "cnav-search-2011.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/search/custom",
+      "final_url": "https://legislation.lassuranceretraite.fr/api/v1/search/custom",
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 1815143,
+      "sha256": "8d38f0048af056a96c5f3a6b1fa2f4dae9bd18623249b08df131cc348e6a5518",
+      "pdf_header": false
+    },
+    {
+      "log": "fetch-log-8.json",
+      "file": "cnav-search-actuariel.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/search/custom",
+      "final_url": "https://legislation.lassuranceretraite.fr/api/v1/search/custom",
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "pdf_header": false
+    },
+    {
+      "log": "fetch-log-9.json",
+      "file": "cnav-css-D351-9.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/reference/referencesByFileLeafRef/LO_CSS_D351-9.aspx",
+      "final_url": "https://legislation.lassuranceretraite.fr/api/v1/reference/referencesByFileLeafRef/LO_CSS_D351-9.aspx",
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 745,
+      "sha256": "4a6f41dcc1260c02e367462f2a193d9f182f5befd0a0c5d60f07f832fd0d98df",
+      "pdf_header": false
+    },
+    {
+      "log": "fetch-log-9.json",
+      "file": "cnav-decret-2003-1376.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/reference/referencesByFileLeafRef/DEC_20031376_31122003.aspx",
+      "final_url": "https://legislation.lassuranceretraite.fr/api/v1/reference/referencesByFileLeafRef/DEC_20031376_31122003.aspx",
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 1112,
+      "sha256": "0d372156edcffc5bff4605a1f1da1042967bcfedaefceffa233ff75279e7f56b",
+      "pdf_header": false
+    },
+    {
+      "log": "fetch-log-9.json",
+      "file": "cnav-decret-2010-1737.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/reference/referencesByFileLeafRef/DEC_20101737_30122010.aspx",
+      "error": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "log": "fetch-log-9.json",
+      "file": "cnav-css-D653-4.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/reference/referencesByFileLeafRef/LO_CSS_D653-4.aspx",
+      "error": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "log": "fetch-log-9.json",
+      "file": "cnav-css-D643-7.json",
+      "url": "https://legislation.lassuranceretraite.fr/api/v1/reference/referencesByFileLeafRef/LO_CSS_D643-7.aspx",
+      "error": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "log": "fetch-log.json",
+      "file": "2010-1737.html",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023334387",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "log": "fetch-log.json",
+      "file": "2010-1737.pdf",
+      "url": "https://www.legifrance.gouv.fr/download/pdf?id=63svbPxxA_9vv0UbiiKxBdygrRYNmELc4MrM4SFNwfQ=",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "log": "fetch-log.json",
+      "file": "2019-718.html",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000038731196",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "log": "fetch-log.json",
+      "file": "2003-1376.html",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFSCTA000000893867",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "web_primary_checks": [
+    {
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023395852",
+      "finding": "Consolidated full article matches canonical formula omission and variable definitions."
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038774726",
+      "finding": "Consolidated full article matches three omissions."
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030400105/2021-12-01",
+      "finding": "Consolidated article text agrees with canonical omission; historical dated page does not independently establish consolidation2026."
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023334387",
+      "finding": "Initial2010decree article1 details current formula-bound substitutions; does not reproduce E itself."
+    },
+    {
+      "url": "https://www.assemblee-nationale.fr/12/dossiers/reforme_retraites.asp",
+      "finding": "Official application chronology identifies original decrees and rectificatif4September2004 for2004-461."
+    }
+  ],
+  "browser_attempt": {
+    "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000628806",
+    "result": "Normal Chrome navigation remains on Cloudflare Performing security verification. No challenge interaction, no CAPTCHA solution and no bypass. iab not available; one ephemeral Chrome tab created."
+  },
+  "recovered_public_cnav_reference_records": {
+    "2004_11": "CR_CN_2004011_26022004.aspx.html",
+    "2011_37": "CR_CN_2011037_12052011.aspx.html",
+    "review_extent": "Targeted search for the missing formulas and source links; these circulars are not used to reconstruct any expression.",
+    "formula_result": "No missing E expression certified; code and original-decree reference records contain only Légifrance links."
+  },
+  "downloaded_documents_without_usable_recovery": [
+    {
+      "file": "cnavpl-2024.pdf",
+      "review_extent": "Full PDF text extracted; no D643-7 or terme actuariel occurrence. Does not recover the expression."
+    },
+    {
+      "file": "cnavpl-2020.pdf",
+      "review_extent": "Full PDF text extracted; no D643-7 or terme actuariel occurrence. Does not recover the expression."
+    },
+    {
+      "file": "cnbf-statuts-2026.pdf",
+      "review_extent": "Full PDF text extracted; no D653-4 or terme actuariel occurrence. Does not recover any of the three expressions."
+    },
+    {
+      "file": "cnav-2015-26.pdf",
+      "review_extent": "Official description of discounted VPLR; targeted text extraction. Not a formula source."
+    },
+    {
+      "file": "sre-rachat-2025.pdf",
+      "review_extent": "20pages rendered, contact-sheet inspected. Annex on pages14–15 has E for the distinct civil-service decree2003-1310. This is not D351-9, D643-7 or D653-4 and was not substituted or used to infer their expressions."
+    }
+  ],
+  "required_next_evidence": [
+    "Exact facsimile2003-1376 and31January2004rectificatif, with later2010/2015consolidation chain.",
+    "Exact facsimile2004-461 and4September2004rectificatif, with2010amendments.",
+    "Exact facsimile2004-1457 (oldD723-7) plus2010amendment and2019recodification, or full2019facsimile reproducing the equations."
+  ],
+  "limitations": "No recovered expression is certified; all three articles must remain held. Metadata-only companions below are intentionally incomplete and cannot be activated or counted as a rewrite."
+}

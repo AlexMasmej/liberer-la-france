@@ -1,0 +1,40 @@
+{
+  "reviewed_on": "2026-10-19",
+  "purpose": "Adaptation du mécanisme estonien dans le projet français, pas description du droit français en vigueur.",
+  "verified_facts": [
+    {
+      "fact": "En Estonie le bénéfice conservé ne supporte pas l’impôt ordinaire sur le bénéfice ; dividendes et distributions monétaires ou en nature déclenchent l’impôt. Dépenses non professionnelles et avantages obéissent à leurs règles propres.",
+      "url": "https://www.emta.ee/en/business-client/taxes-and-payment/income-and-social-taxes"
+    },
+    {
+      "fact": "Depuis 2025, taux estonien sur dividendes de22/78 du montant net distribué, équivalant à22% du bénéfice avant cet impôt. Une dette de dividende convertie en prêt ne supprime pas la distribution.",
+      "url": "https://www.emta.ee/en/business-client/taxes-and-payment/income-and-social-taxes/taxation-dividends"
+    },
+    {
+      "fact": "Définition du régime de distribution admissible : imposition à distribution, taux au moins égal au minimum et régime en vigueur au plus tard le1juillet2021. Le régime français proposé en2026 ne peut pas être réputé éligible automatiquement.",
+      "url": "https://eur-lex.europa.eu/legal-content/EN-PL/ALL/?uri=CELEX%3A32022L2523",
+      "provisions": [
+        "Article3(42)",
+        "Article40"
+      ]
+    },
+    {
+      "fact": "Les dispositions françaises du minimum mondial sont déjà dans le corpus courant :223VJ (annuel),223VK39°(régime admissible) et45°(15%),223VL(seuil750M€sur2des4exercices).",
+      "basis": "Fonds officiel DILA consolidé au18octobre2026, lu intégralement pour les dispositions concernées par is_transition."
+    }
+  ],
+  "french_proposal": {
+    "ordinary_retained_earnings_tax": 0,
+    "normal_distribution_rate_on_pretax_profit": 0.2,
+    "normal_company_tax_to_net_dividend_fraction": "20/80",
+    "example": {
+      "pretax_profit_allocated": 100,
+      "company_tax": 20,
+      "dividend_before_personal_tax": 80
+    },
+    "existing_lower_rate_benefits": "Préserver taux PME et autres catégories à taux inférieur, sans prélèvement annuel sur leurs bénéfices conservés.",
+    "personal_shareholder_tax": "Maintenue ; le dividende indiqué est avant cette fiscalité.",
+    "minimum_tax": "Maintenu pour groupes entrant dans son champ légal.",
+    "budget": "Aucun autofinancement ou montant de recettes compensées présumé."
+  }
+}
