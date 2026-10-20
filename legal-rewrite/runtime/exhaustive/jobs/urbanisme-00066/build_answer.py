@@ -1,0 +1,466 @@
+import html
+import json
+import re
+from pathlib import Path
+
+
+SOURCES = json.loads(Path('source.json').read_text())
+BY_NUMBER = {a['number']: a for a in SOURCES}
+ANSWERS = {}
+
+
+def impact(classification, assessment, scope, burdens, effects=None):
+    return {
+        'version': 1,
+        'classification': classification,
+        'assessment': assessment,
+        'scope_limitations': scope,
+        'new_burdens_review': burdens,
+        'effects': effects or [],
+    }
+
+
+def base(number):
+    a = BY_NUMBER[number]
+    return {k: a[k] for k in ['code_id', 'source_id', 'source_sha256', 'number']}
+
+
+def retain(number, reason, notes, assessment, scope, burdens):
+    a = base(number)
+    a.update(
+        proposed_xml=None,
+        reason=reason,
+        review_notes=notes,
+        status='retained_unchanged',
+        classification='retained_necessary',
+        substantive_impact=impact('retained_necessary', assessment, scope, burdens),
+    )
+    ANSWERS[number] = a
+
+
+def rewrite(number, xml, reason, notes, assessment, scope, burdens, effects,
+            removed=None, classification='material_reduction', benefit=None):
+    a = base(number)
+    a.update(
+        proposed_xml=xml,
+        reason=reason,
+        review_notes=notes,
+        status='rewrite_draft',
+        substantive_impact=impact(classification, assessment, scope, burdens, effects),
+    )
+    if removed:
+        a.update(change_type='normative_reduction',
+                 reform_policy_id='editorial_direction_2026_10_19',
+                 removed_provisions=removed)
+    if benefit:
+        a['benefit_review'] = benefit
+    ANSWERS[number] = a
+
+
+def effect(kind, measure, description, before, after, unit, population,
+           transition, replacements, source_quote, proposed_quote):
+    return {
+        'kind': kind,
+        'measure_id': measure,
+        'description': description,
+        'before': before,
+        'after': after,
+        'unit': unit,
+        'affected_population': population,
+        'conditions_and_transition': transition,
+        'replacement_or_new_burdens': replacements,
+        'source_quote': source_quote,
+        'proposed_quote': proposed_quote,
+    }
+
+
+retain(
+    'R151-25',
+    "Maintien intégral nécessaire, après examen des charges : cet article ouvre en zone N les constructions agricoles et forestières, le stockage et l'entretien du matériel des CUMA ainsi que les possibilités prévues par L. 151-11 à L. 151-13. Supprimer ce support réglementaire retirerait des possibilités de construire, d'étendre, de changer de destination ou d'aménager ; aucune déclaration ou autorisation supplémentaire n'est instituée ici. Aucun toilettage stylistique n'est proposé.",
+    "Les 1° et 2° et leurs champs sont conservés. L. 151-11, L. 151-12 et L. 151-13 ont été lus dans le corpus : équipements collectifs, changements de destination, activités prolongeant la production, extensions, annexes et secteurs de taille et de capacité d'accueil limitées restent soumis à leurs conditions propres. La qualité de CUMA agréée renvoie à L. 525-1 du code rural ; cet agrément sectoriel n'est ni supprimé ni remplacé par une déclaration dans ce lot. Les dérogations littorales ne sont pas fermées par cette conservation du régime général des zones N.",
+    "La source entière est maintenue : les deux voies d'admission en zone N demeurent ouvertes aux opérations futures éligibles ; aucun gain fiscal ou administratif nouveau n'est revendiqué.",
+    "Ce maintien ne vaut pas réécriture du code rural ni suppression des avis et autorisations prévus par les lois auxquelles le 2° renvoie. Les protections des espaces naturels et les régimes littoraux restent distincts.",
+    "Aucune charge nouvelle identifiée : aucun dossier, registre, délai ou condition ne s'ajoute à la source, dont les conditions et les renvois sont conservés sans modification.",
+)
+
+
+xml = """<p>L'avis de la commission départementale de la préservation des espaces naturels, agricoles et forestiers prévu aux articles L. 151-12 et L. 151-13 est réputé favorable s'il n'est pas intervenu dans un délai d'un mois à compter de la saisine.</p>
+<p>Le délai d'un mois s'applique aux saisines effectuées à compter de l'entrée en vigueur de la loi portant la présente réforme. Les saisines antérieures restent soumises au délai de trois mois et les avis déjà acquis conservent leurs effets. La présente réduction de délai ne dispense d'aucune évaluation environnementale ni d'aucune participation du public légalement requise.</p>"""
+rewrite(
+    'R151-26', xml,
+    "Réforme de fond : le délai au terme duquel le silence de la CDPENAF vaut avis favorable est ramené de trois mois à un mois pour les dispositions réglementaires et les secteurs relevant de L. 151-12 et L. 151-13. La saisine et l'examen de fond sont maintenus ; aucune déclaration de remplacement n'est ajoutée. La coupe porte sur l'attente maximale de cet avis, non sur les garanties environnementales.",
+    "L. 151-12 et L. 151-13 ont été lus en entier ; ils prévoient ici un avis, non un nouvel agrément individuel. Ne pas appliquer ce délai aux avis conformes de changement de destination de L. 151-11 ni à une autre commission. La note source sur CE, 26 juin 2019, n° 414931, concerne l'évaluation environnementale des unités touristiques nouvelles : cette évaluation demeure exigible dans son champ. Les saisines anciennes conservent les trois mois et les avis acquis ; pas de date future de promulgation inventée. L'adaptation du calendrier de la commission est à organiser sans nouveau dossier à la charge du demandeur.",
+    "Par rapport à la source entière, le silence favorable intervient après un mois au lieu de trois pour les seules nouvelles saisines visées. Il s'agit d'une réduction de délai, sans suppression de la consultation ni démonstration d'une réduction identique de la durée totale d'élaboration du PLU.",
+    "Les procédures déjà saisies, les autres consultations et les délais d'évaluation ou de participation du public ne sont pas raccourcis. L'effet réel sur le calendrier dépend de l'intervention éventuelle d'un avis exprès et des autres étapes du plan ; aucun coût national n'est chiffré.",
+    "Aucune formalité nouvelle identifiée : la même saisine produit un silence favorable plus tôt, sans pièce, attestation ou envoi supplémentaire. La commission doit traiter les nouvelles saisines plus rapidement ; l'effet de cette contrainte de calendrier sur son organisation et ses moyens n'est pas chiffré.",
+    [effect(
+        'deadline_reduced', 'cdpenaf-avis-plu-silence-un-mois',
+        "Réduction du délai de formation de l'avis favorable tacite de la CDPENAF pour L. 151-12 et L. 151-13.",
+        "Avis favorable tacite après trois mois à compter de la saisine de la commission pour les dispositions et secteurs visés par L. 151-12 et L. 151-13.",
+        "Avis favorable tacite après un mois à compter de la même saisine pour les nouvelles saisines ; délai ancien de trois mois conservé pour les saisines antérieures.",
+        'other', "Collectivités élaborant les dispositions ou délimitant les secteurs concernés et porteurs des projets qui en dépendent.",
+        "Saisines effectuées à compter de l'entrée en vigueur de la loi ; avis acquis et saisines antérieures protégés. Unité : mois, sans conversion fictive en jours calendaires.",
+        "Pas de nouvelle formalité ; consultation maintenue, délai administratif de traitement raccourci, moyens nécessaires non évalués.",
+        "un délai de trois mois à compter de la saisine.",
+        "un délai d'un mois à compter de la saisine.",
+    )],
+    removed=["Délai d'attente de trois mois avant avis favorable tacite, remplacé par un mois pour les nouvelles saisines relevant de L. 151-12 et L. 151-13."],
+)
+
+
+retain(
+    'R151-27',
+    "Maintien intégral nécessaire de la nomenclature commune des cinq destinations. Ces catégories ne constituent ni cinq agréments ni cinq dossiers : elles permettent de déterminer les règles et le régime des changements de destination. Les fusionner isolément déplacerait le champ des permis et des dérogations sans suppression maîtrisée d'une charge. Aucune réécriture de vocabulaire n'est présentée comme un allègement.",
+    "Les cinq destinations, y compris les autres activités des secteurs primaire, secondaire ou tertiaire au 5°, sont conservées. Lecture coordonnée de R. 151-28 et R. 151-29 : les sous-destinations et la règle des locaux accessoires demeurent utilisables. La note source fixe l'entrée en vigueur au 1er juillet 2023 et réserve les conditions des deuxième et troisième alinéas de l'article 2 du décret n° 2023-195 ; ce maintien ne modifie pas ces dispositions transitoires externes, dont le texte intégral n'est pas joint au lot. Aucune reclassification rétroactive des PLU anciens n'est proposée.",
+    "La comparaison avec la source entière ne révèle pas de formalité autonome à supprimer : maintien des cinq catégories, sans fusion de régimes ni réduction revendiquée.",
+    "Le présent examen ne réforme pas les déclencheurs de permis ou de déclaration des changements de destination. Une fusion générale exigerait leurs sources et leurs coordinations propres, ainsi que le contrôle des avantages attachés aux catégories concernées.",
+    "Aucune charge nouvelle identifiée : les cinq destinations et leur numérotation sont maintenues à l'identique, sans nouveau classement, document ou délai.",
+)
+
+
+retain(
+    'R151-28',
+    "Maintien intégral nécessaire de toutes les sous-destinations. Le détail distingue notamment logement et hébergement, commerce et entrepôt, hôtels et autres hébergements touristiques, équipements de santé, lieux de culte et cuisines dédiées à la vente en ligne. Ces différences servent à appliquer les règles à l'activité réelle ; aucune pièce ni autorisation propre n'est imposée par cette liste. Une suppression isolée risquerait de déplacer des restrictions ou de fermer des régimes favorables.",
+    "Les 1° à 5° et chaque catégorie ont été contrôlés, sans omission de commerce de gros, cinéma, action sociale, équipements sportifs, centre de congrès et d'exposition ou cuisine dédiée à la vente en ligne. Renvois R. 151-27 et R. 151-29 conservés. La note d'entrée en vigueur au 1er juillet 2023 et les conditions d'application externes de l'article 2 du décret n° 2023-195 restent à leur champ ; le maintien n'en modifie pas les transitions. L'arrêté ministériel de définition n'est pas présenté comme réécrit.",
+    "Toutes les sous-destinations de la source sont conservées. L'article est une nomenclature d'application commune ; aucune diminution démontrée d'impôt, de dossier ou de délai ne résulte du maintien.",
+    "Les effets détaillés de chaque sous-destination dans les PLU, les arrêtés de définition et les régimes sectoriels ne sont pas reconfigurés par ce lot. Aucun regroupement supposé neutre n'est affirmé.",
+    "Aucune charge nouvelle identifiée : aucune sous-destination, donnée à fournir, attestation ou procédure n'est ajoutée ; la liste source demeure intégrale.",
+)
+
+
+retain(
+    'R151-29',
+    "Maintien intégral nécessaire : la définition ministérielle commune évite des définitions locales concurrentes et l'assimilation des locaux accessoires au local principal évite de leur appliquer un changement de destination artificiel. Ce dernier bénéfice est conservé pour les situations futures aussi. L'article ne crée pas d'agrément ni de déclaration spécifique à alléger.",
+    "Les deux règles sont maintenues : habilitation relative aux seules sous-destinations de R. 151-28 et double assimilation de destination et de sous-destination des locaux accessoires. Ne pas substituer la seule destination à cette double assimilation. L'arrêté ministériel visé n'est pas joint comme source assignée et n'est pas modifié ici ; aucune condition nouvelle d'accessorité n'est introduite.",
+    "La source entière reste applicable, notamment l'assimilation favorable des locaux accessoires ; aucune nouvelle dispense n'est comptée puisqu'elle existe déjà.",
+    "Ce maintien n'atteste pas la suppression des exigences propres aux locaux soumis à des règles de sécurité ou d'accessibilité. Il ne réécrit pas les définitions de l'arrêté ministériel.",
+    "Aucune charge nouvelle identifiée : la même règle de rattachement s'applique sans attestation d'accessorité, fichier, autorisation ou délai supplémentaire.",
+)
+
+
+xml = """<p>Pour des raisons de sécurité ou de salubrité, le règlement peut, dans le respect de la vocation générale des zones, interdire :<br />1° Certains usages et affectations des sols ainsi que certains types d'activités qu'il définit ;<br />2° Les constructions ayant certaines destinations ou sous-destinations.</p>
+<p>La seule cohérence avec le projet d'aménagement et de développement durables ne peut fonder une interdiction prise en application du présent article. Les interdictions édictées sur ce seul fondement cessent d'être opposables aux décisions prises à compter de l'entrée en vigueur de la loi portant la présente réforme, y compris lorsque le règlement a été approuvé antérieurement et lorsque la demande est en cours d'instruction.</p>
+<p>Les règles relatives à la vocation générale des zones et les protections fondées sur des dispositions législatives ou réglementaires distinctes, notamment en matière de risques, de ressources naturelles, d'environnement, de littoral et de patrimoine, demeurent applicables. Les prescriptions des autorisations délivrées avant cette entrée en vigueur conservent leur régime, ainsi que leurs possibilités de modification selon le droit commun. Aucun nouveau dépôt ni recommencement des délais d'instruction n'est exigé du seul fait de la présente réforme ; les décisions définitives antérieures ne sont pas rouvertes.</p>"""
+rewrite(
+    'R151-30', xml,
+    "Réforme de fond : retirer la cohérence générale avec le PADD comme justification autonome d'une interdiction d'usage, d'activité, de destination ou de sous-destination. La sécurité, la salubrité, la vocation générale des zones et les protections spéciales restent opérantes. Les interdictions seulement programmatiques cessent aussi de produire effet dans les PLU déjà approuvés pour les décisions futures ; aucune autorisation ni déclaration ne les remplace.",
+    "Les 1° et 2° sont conservés intégralement. L. 151-9 a été lu : la délimitation des zones et ses pouvoirs législatifs ne sont pas abrogés par ce texte ; une coordination législative de son deuxième et de son troisième alinéa est nécessaire pour empêcher qu'une interdiction identique soit réédictée sur le seul fondement programmatique supprimé. R. 151-31 et R. 151-34 conservent leurs protections spéciales, de même que les règles patrimoniales et littorales. Coordination avec R. 151-33 dans ce lot, sans supprimer les régimes autonomes ni prétendre rendre toute destination libre dans toute zone. Dossiers en cours sans reprise des délais, autorisations anciennes et décisions définitives préservées.",
+    "La source permettait l'interdiction sur le seul motif de cohérence avec le PADD ; cette branche est retirée pour les décisions futures, y compris sous un PLU existant. La mesure ne supprime pas les autres motifs ni tous les pouvoirs législatifs du PLU ; son bouclage avec L. 151-9 reste nécessaire.",
+    "Le gain porte sur les seules interdictions sans autre fondement légal ou réglementaire. Le zonage et les protections de sécurité, de salubrité, de ressources, d'environnement et de patrimoine subsistent ; L. 151-9 reste hors du lot et doit être coordonné simultanément. Aucun nombre de projets libérés ni solde net de coût n'est établi.",
+    "Aucune charge nouvelle identifiée pour le porteur de projet : aucune attestation de cohérence, déclaration ou autorisation de remplacement. Les services doivent appliquer la non-opposabilité dans les dossiers ordinaires ; le coût de ce réexamen et de l'adaptation des PLU n'est pas chiffré.",
+    [effect(
+        'obligation_removed', 'plu-fin-restrictions-generales-non-essentielles',
+        "Retrait du seul fondement programmatique permettant d'interdire usages, activités et destinations dans le règlement du PLU.",
+        "Dans le respect de la vocation des zones, interdictions possibles pour sécurité, salubrité ou simple cohérence avec le PADD, sans taux ni assiette fiscale.",
+        "Au titre de R. 151-30, interdictions possibles pour sécurité ou salubrité seulement ; les interdictions seulement fondées sur le PADD ne sont plus opposables aux décisions futures. Les fondements spéciaux distincts demeurent.",
+        'legal_duty', "Porteurs de projets soumis aux interdictions d'usage, d'activité ou de destination des PLU.",
+        "Décisions prises dès l'entrée en vigueur, demandes en cours incluses ; autorisations antérieures et décisions définitives préservées. Coordination de L. 151-9 à réaliser.",
+        "Aucune procédure privée de remplacement ; application par les services et adaptation des documents à coût non évalué.",
+        "Pour des raisons de sécurité ou salubrité ou en cohérence avec le projet d'aménagement et de développement durables",
+        "La seule cohérence avec le projet d'aménagement et de développement durables ne peut fonder une interdiction prise en application du présent article.",
+    )],
+    removed=["Possibilité de fonder une interdiction d'usage, d'activité ou de destination sur la seule cohérence générale avec le PADD, sans motif de sécurité ou de salubrité ni fondement spécial distinct."],
+)
+
+
+retain(
+    'R151-31',
+    "Maintien intégral nécessaire : la représentation des espaces boisés classés, des secteurs d'interdiction pour services publics, hygiène, nuisances, ressources ou risques et des zones humides précisément cartographiées rend ces protections identifiables et opposables. Supprimer cette information ne supprimerait pas légalement les protections et rendrait les contraintes moins prévisibles. Aucune pièce supplémentaire du pétitionnaire n'est imposée par cet article.",
+    "Conservation des zones U, AU, A et N, des trois subdivisions et de toutes les opérations visées au 2°, y compris plantations, dépôts, affouillements, forages et exhaussements, permanents ou non. Le 3° reste limité aux interdictions d'asséchement, d'imperméabilisation, de mise en eau ou de remblai des zones humides cartographiées précisément dans le SAGE. La note du décret n° 2024-1098, article 12, est conservée dans sa portée : exclusion des PLU dont élaboration ou révision a été prescrite avant la publication, sauf choix de l'autorité L. 153-8 avant l'arrêt du projet L. 153-14. Aucune application rétroactive du 3° n'est décidée ici.",
+    "La source entière est conservée, avec son obligation d'information graphique conditionnelle et ses protections essentielles. La baisse des pouvoirs généraux de R. 151-30 et R. 151-33 ne retire pas ces fondements spéciaux ; aucune suppression supplémentaire n'est comptée.",
+    "Le maintien ne réforme ni le classement des bois de L. 113-1 ni les interdictions des SAGE relevant du code de l'environnement. Les contraintes européennes sur l'eau et les milieux ne sont pas réputées supprimées.",
+    "Aucune charge nouvelle identifiée : mêmes zones, mêmes informations graphiques et même condition de cartographie précise ; aucun nouveau relevé, inventaire ou dossier privé n'est exigé.",
+)
+
+
+retain(
+    'R151-32',
+    "Maintien intégral nécessaire : tant que la servitude législative d'attente de L. 151-41, 5°, existe, rendre visibles son périmètre, son seuil de surface et surtout sa date de levée protège le propriétaire contre un gel indéterminé. Supprimer seulement la représentation graphique ne libérerait pas le terrain. L'article n'impose aucun dépôt ni justificatif au propriétaire ; aucune reformulation n'est utile.",
+    "L. 151-41 a été lu en entier : son 5° limite l'attente à cinq ans, exige une justification particulière et préserve adaptation, changement de destination, réfection et extension limitée. Le projet législatif consultable conserve cette servitude ; il ne s'agit pas du sursis de L. 424-1 déjà réformé. Une éventuelle abolition de ce gel doit viser L. 151-41, 5°, et ses effets, pas effacer ici la seule date de fin. Aucune servitude nouvelle ni prolongation n'est décidée.",
+    "La source entière est maintenue pour rendre la restriction existante prévisible et sa fin vérifiable. Ce maintien ne constitue ni une réduction de sa durée ni une suppression de la servitude.",
+    "Les seules zones U et AU restent concernées. Le régime législatif de la servitude d'attente n'est pas abrogé dans ce lot ; aucune libération de terrain ni raccourcissement des cinq ans n'est revendiqué.",
+    "Aucune charge nouvelle identifiée : aucune cartographie, pièce ou délai supplémentaire ; les informations déjà exigées, notamment la date de levée favorable au propriétaire, restent intégrales.",
+)
+
+
+xml = """<p>Le règlement peut, en fonction des situations locales et pour des raisons de sécurité ou de salubrité, soumettre à conditions particulières :<br />1° Les types d'activités qu'il définit ;<br />2° Les constructions ayant certaines destinations ou sous-destinations.</p>
+<p>Les seules situations locales ne peuvent justifier d'autres conditions particulières sur le fondement du présent article. Les conditions édictées sur ce seul fondement et étrangères à la sécurité ou à la salubrité cessent d'être opposables aux décisions prises à compter de l'entrée en vigueur de la loi portant la présente réforme, y compris sous un règlement approuvé antérieurement et pour une demande en cours d'instruction.</p>
+<p>Cette limitation ne modifie pas les prescriptions fondées sur des dispositions législatives ou réglementaires distinctes relatives aux services publics, aux risques, aux nuisances, aux ressources naturelles, à l'environnement, au littoral, au patrimoine ou aux réseaux, notamment celles des articles R. 151-31, R. 151-34, R. 151-41 à R. 151-43, R. 151-47 et R. 151-49. Les prescriptions des autorisations délivrées avant cette entrée en vigueur et les décisions définitives conservent leur régime, ainsi que les possibilités de modification des autorisations selon le droit commun. La réforme n'exige aucun nouveau dépôt ni recommencement des délais d'instruction.</p>"""
+rewrite(
+    'R151-33', xml,
+    "Réforme de fond complémentaire de R. 151-30 : retirer le pouvoir général de soumettre une activité ou une destination à n'importe quelle condition particulière au seul motif de la situation locale. Ce pouvoir général est limité à la sécurité et à la salubrité ; les pouvoirs spéciaux de protection restent autonomes. La suppression atteint les prescriptions générales correspondantes des PLU existants pour les décisions futures, sans procédure de remplacement.",
+    "Les 1° et 2° demeurent à leur place. Les protections spéciales des R. 151-31, R. 151-34, R. 151-41 à R. 151-43, R. 151-47 et R. 151-49 restent intégrales dans leur champ : l'absence de motif de sécurité ne fait pas disparaître, par exemple, une continuité écologique ou un élément patrimonial protégé. L. 151-9, troisième alinéa, et les habilitations spéciales conservées doivent être articulés avec cette limitation générale pour ne pas rétablir le même pouvoir indifférencié ; cette coordination législative n'est pas rédigée hors lot. Même famille de mesure que R. 151-30, mais ici il s'agit des conditions et non des interdictions. Aucun dossier ancien n'est à redéposer.",
+    "La source autorisait des conditions particulières en fonction de la seule situation locale ; la proposition retire cette habilitation générale hors sécurité et salubrité. Les pouvoirs spéciaux ne sont pas supprimés, et aucune réduction des conditions qu'ils fondent n'est imputée à cet article.",
+    "Seules les conditions dépourvues de fondement spécial et étrangères à la sécurité ou à la salubrité sont retirées. Le nombre de conditions effectivement concernées et les économies ne sont pas connus ; la coordination de l'habilitation générale de L. 151-9 reste à mener.",
+    "Aucune charge nouvelle identifiée pour les demandeurs : ni agrément, ni déclaration, ni justification périodique de remplacement. Les services doivent distinguer fondement général retiré et protection spéciale maintenue ; le coût de cette application n'est pas établi.",
+    [effect(
+        'obligation_removed', 'plu-fin-restrictions-generales-non-essentielles',
+        "Suppression du pouvoir général de conditions particulières motivées seulement par la situation locale, hors sécurité, salubrité ou fondement spécial.",
+        "Conditions particulières possibles pour les activités et destinations en fonction des seules situations locales ; aucun plafond de coût ou critère substantiel n'est énoncé par R. 151-33.",
+        "Conditions générales de R. 151-33 limitées à la sécurité ou à la salubrité ; les autres conditions reposant seulement sur cet article deviennent inopposables aux décisions futures. Les protections spéciales subsistent.",
+        'legal_duty', "Porteurs de projets d'activités ou de constructions soumis aux conditions générales des règlements de PLU.",
+        "Décisions futures, y compris dossiers en cours et PLU antérieurs ; maintien du régime des autorisations et décisions définitives anciennes. Habilitation législative générale à coordonner.",
+        "Pas de nouvelle procédure privée ; travail d'application des services non chiffré. Les conditions spéciales ne sont ni nouvellement créées ni comptées comme supprimées.",
+        "Le règlement peut, en fonction des situations locales, soumettre à conditions particulières :",
+        "Les seules situations locales ne peuvent justifier d'autres conditions particulières sur le fondement du présent article.",
+    )],
+    removed=["Habilitation générale à imposer aux activités et destinations des conditions particulières étrangères à la sécurité et à la salubrité sur le seul fondement de la situation locale, hors protections spéciales maintenues."],
+)
+
+
+retain(
+    'R151-34',
+    "Maintien intégral nécessaire après examen des quatre rubriques : rendre visibles les secteurs soumis à conditions pour services, hygiène, nuisances, ressources et risques ; protéger l'autorisation des installations valorisant les ressources du sol et du sous-sol ; identifier une condition de démolition légalement permise ; préciser la destination et le bénéficiaire des emplacements réservés. Effacer les cartes ne supprimerait pas leurs fondements et fragiliserait l'information des propriétaires. Aucun dossier individuel n'est créé ici.",
+    "Les 1° à 4°, les quatre zones et toutes les opérations du 1° sont conservés. L. 151-10 et L. 151-41 ont été lus : le premier conserve la faculté législative de conditionner le permis à une démolition, le second les emplacements réservés. Une suppression de la condition de démolition doit viser L. 151-10, et ne peut être obtenue par disparition de sa seule publicité graphique. Le 2° autorisant la valorisation des ressources demeure ouvert aux opérations futures éligibles. Les pouvoirs spéciaux du 1° ne sont pas effacés par la limitation générale de R. 151-33.",
+    "La source entière est maintenue : information sur les restrictions et bénéficiaires ainsi que possibilité favorable de mise en valeur des ressources. Aucune suppression supplémentaire de condition ou d'emplacement n'est démontrée ni comptée.",
+    "Le régime de démolition préalable et celui des emplacements réservés ne sont pas abrogés ici. Le maintien des représentations graphiques ne préjuge pas la légalité de chaque prescription locale ni ne valide une atteinte disproportionnée au droit de propriété.",
+    "Aucune charge nouvelle identifiée : mêmes représentations conditionnelles, sans nouvelle pièce privée, nouvelle enquête ou déclaration de substitution.",
+)
+
+
+retain(
+    'R151-35',
+    "Maintien intégral nécessaire d'une possibilité favorable : le repérage des bâtiments en zones A et N permet leur changement de destination sous réserve de l'activité agricole et de la qualité paysagère. La suppression du repérage isolément risquerait de fermer la voie législative correspondante au lieu de simplifier une demande. Aucun nouveau justificatif ou avis n'est institué dans cet article.",
+    "Les deux zones A et N et les deux intérêts protégés restent inchangés. L. 151-11, I, 2°, lu en entier, distingue la désignation au PLU des avis conformes lors du changement de destination, hors des secteurs L. 151-13. Leur éventuelle simplification exigerait de traiter cet article législatif ; le délai d'avis du R. 151-26 proposé n'est pas étendu à ces avis conformes. Ne pas ajouter ici une zone ou une construction non visée par la source.",
+    "Le bénéfice du changement de destination demeure accessible aux futures opérations éligibles comme auparavant. La cartographie utile est conservée ; aucune dispense nouvelle n'est présentée comme acquise.",
+    "Ce maintien ne supprime ni les autorisations d'urbanisme ni les avis conformes de L. 151-11. Le repérage favorable n'est pas une autorisation automatique et ne fait pas disparaître les protections littorales ou agricoles.",
+    "Aucune charge nouvelle identifiée : le repérage et ses conditions restent ceux de la source, sans inventaire privé, attestation ou demande supplémentaire.",
+)
+
+
+retain(
+    'R151-36',
+    "Maintien intégral nécessaire du repérage des secteurs de transfert des possibilités de construction. Ce mécanisme permet le regroupement de constructions dans les zones N paysagères ; retirer sa représentation rendrait plus incertaine l'utilisation du bénéfice et la portée des servitudes. L'article n'ajoute pas de demande de transfert distincte ni de justificatif à la charge du propriétaire.",
+    "L. 151-25 a été lu en entier : transferts internes à la même zone, cumul des possibilités propres et transférées, densité maximale, servitude sur la totalité du terrain d'origine, acte authentique publié et levée par décret après avis conforme du Conseil d'Etat restent distincts. Le présent maintien n'invente pas une levée automatique ni un transfert entre zones. Les futures opérations répondant aux conditions restent recevables ; les secteurs ne sont pas fermés aux nouveaux transferts.",
+    "La source entière reste en vigueur dans le projet, afin de préserver le mécanisme favorable et sa lisibilité ; aucun gain nouveau ni suppression de servitude n'est revendiqué.",
+    "Le transfert demeure conditionné par L. 151-25, dont les charges civiles et foncières ne sont pas supprimées dans ce lot. Les droits du terrain d'origine ne sont pas comptés une seconde fois comme une nouvelle capacité.",
+    "Aucune charge nouvelle identifiée : mêmes secteurs et même représentation graphique, sans registre, pièce ou délai ajouté.",
+)
+
+
+xml = BY_NUMBER['R151-38']['source_xml'].strip() + """
+<p>Les dispositions du présent article ne peuvent être utilisées pour maintenir ou rétablir un quota communal de logements sociaux, un objectif de rattrapage ou une restriction fondée sur le seul classement d'une commune comme déficitaire ou carencée au titre des articles L. 302-5, L. 302-8 et L. 302-9-1 du code de la construction et de l'habitation dans leur rédaction antérieure à la loi supprimant ces obligations. Les prescriptions reposant sur ce seul fondement cessent d'être opposables aux décisions prises à compter de l'entrée en vigueur de cette loi, y compris pour les demandes en cours, sans nouveau dépôt ni recommencement des délais.</p>
+<p>Les emplacements et prescriptions qui reposent sur un fondement d'urbanisme autonome conservent leur régime ; ce fondement ne peut consister à poursuivre sous une autre forme les obligations communales supprimées. Les majorations de constructibilité, aides, exonérations et dérogations favorables légalement ouvertes demeurent accessibles aux opérations futures éligibles. Les contrats valablement conclus, les droits des occupants et des tiers et les prescriptions des autorisations déjà régulièrement délivrées sont préservés ; les clauses qui ne font que rappeler les quotas communaux supprimés cessent toutefois de les imposer pour l'avenir.</p>"""
+rewrite(
+    'R151-38', xml,
+    "Coordination nécessaire de la suppression des quotas communaux SRU : les trois rubriques graphiques sont conservées pour leurs fondements autonomes, mais ne peuvent servir à reconduire le quota communal, le rattrapage ou une contrainte liée au seul déficit ou à la carence. Les restrictions reposant uniquement sur ces obligations cessent pour les décisions futures. Il ne s'agit ni d'une nouvelle suppression de quota comptée séparément ni de l'abrogation indistincte des dispositifs locaux et avantages de construction.",
+    "L. 151-14, L. 151-15 et L. 151-41 ont été lus en entier ; le corpus conserve leurs pouvoirs locaux autonomes. Le 1° reste un emplacement réservé à un programme défini, le 2° un pourcentage de taille minimale fixé localement, le 3° une affectation locale à des catégories définies : ce ne sont pas, par leur seule numérotation ou leur rédaction, les quotas communaux de 20/25 %. Aucun historique SRU complet de ces trois fondements n'est joint dans source.json et aucune filiation intégrale n'est affirmée. Leur abolition générale exigerait une décision et des corps législatifs propres sur L. 151-14, L. 151-15 et L. 151-41, 4°, non rédigés ici. R. 151-37 et L. 151-28, lus dans le corpus, conservent les bonus volontaires ; ne pas transformer leurs proportions d'éligibilité en quotas obligatoires. La coordination ne rétablit inventaire, transmission ou prélèvement SRU. Le volet des 209 articles n'est pas déclaré achevé.",
+    "Par comparaison avec la source entière, ajout de la non-opposabilité des seules prescriptions dépendant des obligations communales supprimées, sans effacer les trois instruments locaux autonomes. C'est une coordination de la mesure SRU déjà décidée, pas trois obligations ou une taxe de plus supprimées.",
+    "Les tailles minimales, catégories locales et emplacements réservés justifiés de manière autonome ne sont pas supprimés. La filiation historique de chacun de ces pouvoirs n'est pas entièrement établie par le lot ; aucun achèvement du périmètre SRU ni gain net global n'est revendiqué.",
+    "Aucune charge nouvelle identifiée : aucune collecte, transmission, attestation d'autonomie ou procédure de classement n'est créée. Les services appliquent la distinction entre fondement autonome et quota supprimé dans les procédures existantes ; ce travail et son coût ne sont pas chiffrés.",
+    [effect(
+        'coordination', 'sru-suppression-quotas-communaux',
+        "Empêcher que les instruments graphiques du PLU maintiennent les seuls quotas et restrictions communaux SRU supprimés.",
+        "Trois représentations graphiques de dispositifs locaux prévues sans clause explicite écartant les prescriptions seulement dépendantes du quota communal ou du classement déficitaire ou carencé.",
+        "Même représentation des dispositifs autonomes ; aucune prescription ne peut maintenir ou recréer le quota communal, le rattrapage ou une restriction liée au seul classement supprimé.",
+        'legal_duty', "Communes et porteurs de programmes de logements dans les zones U et AU, lorsqu'une prescription dépend uniquement des anciennes obligations communales SRU.",
+        "Décisions futures, dossiers en cours inclus ; contrats et droits acquis protégés, sauf clauses rappelant seulement le quota pour l'avenir. Dispositifs locaux autonomes et avantages futurs conservés.",
+        "Aucune procédure ou collecte de remplacement ; pas de réduction autonome supplémentaire imputée à cette coordination.",
+        "Les documents graphiques du règlement délimitent dans les zones U et AU, s'il y a lieu :",
+        "Les dispositions du présent article ne peuvent être utilisées pour maintenir ou rétablir un quota communal de logements sociaux, un objectif de rattrapage",
+    )],
+    classification='coordination_only',
+    benefit="Les réservations destinées à réaliser des logements, les bonus de volume de R. 151-37 et L. 151-28 et les aides, exonérations et dérogations favorables conservent leur fondement autonome, y compris pour les opérations futures éligibles. Les règles locales de taille ou d'affectation ne sont pas assimilées sans preuve à une exonération, ni supprimées au seul motif d'une origine SRU supposée. La clause nouvelle retire uniquement la dépendance au quota communal ou à la carence et protège les contrats, occupants et tiers.",
+)
+
+
+xml = """<p>Afin d'assurer l'intégration urbaine, paysagère et environnementale des constructions, déterminer la constructibilité des terrains, préserver ou faire évoluer la morphologie du tissu urbain et les continuités visuelles, le règlement peut notamment prévoir des règles maximales d'emprise au sol et de hauteur des constructions.</p>
+<p>Il ne peut fixer de règle minimale d'emprise au sol ou de hauteur des constructions. Les règles fixant directement une densité minimale de constructions en application de l'article L. 151-26 demeurent possibles ; elles ne peuvent imposer séparément un minimum d'emprise au sol ou de hauteur.</p>
+<p>Les règles prévues par le présent article peuvent être exprimées par rapport aux voies et emprises publiques, aux limites séparatives et aux autres constructions sur une même propriété ainsi qu'en fonction des objectifs de continuité visuelle, urbaine et paysagère attendus.</p>
+<p>Les minima d'emprise au sol ou de hauteur prévus par les règlements approuvés avant l'entrée en vigueur de la loi portant la présente réforme cessent d'être opposables aux décisions prises à compter de cette entrée en vigueur, y compris pour les demandes en cours d'instruction. Les prescriptions des autorisations déjà délivrées conservent leur régime et leurs possibilités de modification selon le droit commun ; les décisions définitives antérieures ne sont pas rouvertes. La suppression des minima n'exige aucun nouveau dépôt ni recommencement des délais d'instruction et ne supprime aucune majoration ou dérogation favorable de constructibilité.</p>"""
+rewrite(
+    'R151-39', xml,
+    "Réforme de fond : supprimer les minima distincts de hauteur et d'emprise au sol qui peuvent obliger à construire plus haut ou à occuper plus de terrain que le projet ne le requiert. La règle maximale d'insertion et les rapports aux voies, limites et autres constructions sont conservés. La densité minimale législative peut rester exprimée directement sans imposer séparément ces deux moyens ; les bonus et dérogations de construction restent ouverts.",
+    "Les trois alinéas fonctionnels de la source restent à leur emplacement ; le deuxième est remplacé, sans déplacer les deux autres. L. 151-26 a été lu : son premier alinéa permet une densité minimale et son projet conserve l'enveloppe de division, extension et surélévation avec diagnostic des équipements et transition pour les futures élaborations ou révisions. Ni cette densité ni ces garanties ne sont abrogées ; la coordination doit empêcher que les mêmes minima séparés soient simplement rebaptisés densité. La délimitation des secteurs de densité reste régie par L. 151-26 ; seule disparaît l'obligation graphique liée aux minima supprimés de cet article. L. 151-28 et les transferts L. 151-25 restent distincts et favorables.",
+    "La source autorisait des minima séparés de hauteur et d'emprise au sol ; cette faculté et l'opposabilité de ces minima dans les PLU existants sont retirées pour les décisions futures. La densité minimale directe et les plafonds demeurent : la proposition ne prouve donc pas la disparition de toute obligation de densifier ni un gain identique pour chaque terrain.",
+    "Les projets doivent encore respecter la densité minimale légalement fixée, les règles maximales, les servitudes et les protections spéciales. L'articulation des expressions de densité avec L. 151-26 doit être contrôlée lors de la coordination législative et réglementaire ; aucun coût de construction moyen ni solde net global n'est établi.",
+    "Aucune charge nouvelle identifiée pour le pétitionnaire : aucun plan ou calcul supplémentaire n'est créé par la suppression. Les services doivent écarter les seuls minima retirés, tout en appliquant les autres règles ; le coût d'adaptation des documents n'est pas mesuré.",
+    [effect(
+        'obligation_removed', 'plu-suppression-minima-hauteur-emprise',
+        "Suppression des minima distincts de hauteur et d'emprise au sol du règlement, avec maintien de la densité minimale législative directement exprimée.",
+        "Règlement pouvant fixer et cartographier des minima d'emprise au sol et de hauteur pour traduire un objectif de densité justifié ; valeurs locales variables, sans taux national.",
+        "Aucun minimum distinct de hauteur ou d'emprise au sol opposable au titre du règlement pour les décisions futures ; densité minimale directe, règles maximales et avantages conservés.",
+        'legal_duty', "Porteurs de constructions soumises à un minimum de hauteur ou d'emprise au sol dans un PLU.",
+        "Décisions dès l'entrée en vigueur, demandes en cours et PLU anciens inclus ; prescriptions des autorisations délivrées et décisions définitives antérieures préservées.",
+        "Aucun nouveau minimum, dossier ou déclaration ; obligations de densité existantes conservées sans les compter comme nouvelle charge ni comme réduction.",
+        "des règles minimales d'emprise au sol et de hauteur.",
+        "Il ne peut fixer de règle minimale d'emprise au sol ou de hauteur des constructions.",
+    )],
+    removed=["Faculté d'imposer des minima distincts d'emprise au sol et de hauteur pour traduire une densité, ainsi que la représentation graphique obligatoire des seuls secteurs correspondant à ces minima supprimés."],
+    benefit="Les maxima, bonus de volume et dérogations de constructibilité ne sont pas réduits : L. 151-28 et les possibilités de transfert de L. 151-25 restent à leur champ, pour les futures opérations éligibles aussi. La densité minimale de L. 151-26 est une obligation distincte conservée, non une exonération retirée. Les droits des permis déjà délivrés restent protégés ; la suppression des minima séparés n'impose pas de renoncer à une majoration favorable.",
+)
+
+
+retain(
+    'R151-40',
+    "Maintien intégral nécessaire de l'outil facultatif de plan masse coté en trois dimensions. Il permet de définir lisiblement l'enveloppe dans les zones U et AU, les secteurs de taille et de capacité d'accueil limitées et les zones de transfert de constructibilité. Le supprimer ne retirerait pas les règles de hauteur ou d'implantation et pourrait rendre plus difficile l'utilisation des possibilités de construire ; aucun modèle obligatoire du dossier individuel n'est créé ici.",
+    "Les trois champs sont conservés et les renvois L. 151-13 et L. 151-25, lus dans le corpus, gardent leurs conditions propres. La source écrit « plan masse côté » : cette graphie est signalée mais n'est pas corrigée sous couvert de réforme. Le plan masse est un outil du règlement, non une obligation nouvelle de maquette numérique à produire par le pétitionnaire. La suppression des minima de R. 151-39 ne supprime pas ce mode de représentation des règles restantes.",
+    "Maintien de la source entière : instrument graphique facultatif utile aux possibilités de construire et à leur prévisibilité, sans réduction normative nouvelle revendiquée.",
+    "Les conditions des secteurs L. 151-13 et des transferts L. 151-25 restent applicables. Ce maintien ne vaut ni autorisation individuelle ni suppression des autres pièces requises par les articles du dossier de permis.",
+    "Aucune charge nouvelle identifiée : aucune maquette, copie ou donnée à remettre n'est ajoutée ; la faculté locale et son périmètre restent ceux de la source.",
+)
+
+
+retain(
+    'R151-41',
+    "Maintien intégral nécessaire après examen des trois pouvoirs : le 1° ouvre des règles alternatives d'insertion, le 2° permet de traiter l'impact extérieur des façades, toitures et clôtures, et le 3° identifie précisément le patrimoine protégé et ses procédures. L'article n'exige pas de dossier architectural autonome supplémentaire ; la protection de l'insertion et du patrimoine ne peut être remplacée indistinctement par une simple absence de règle. Les alternatives favorables restent utilisables à l'avenir.",
+    "R. 151-13 et L. 151-19 ont été lus : les alternatives ne remplacent ni adaptations mineures ni dérogations légales, et L. 151-19 conserve l'exception des coupes et abattages de L. 421-4. L. 151-18 et R. 111-27, lus dans le corpus, ont des objets distincts : règles locales d'aspect d'une part et contrôle d'une atteinte aux lieux d'autre part ; leur coexistence ne démontre pas un double dossier à supprimer. R. 151-39 proposé conserve les règles maximales auxquelles les alternatives peuvent s'appliquer. La déclaration préalable et le permis de démolir du 3° restent limités au patrimoine identifié, sans extension à tout bâtiment.",
+    "La source entière est maintenue, y compris les règles alternatives favorables et la protection du patrimoine identifié. Aucune nouvelle suppression d'autorisation ou réduction de coût n'est démontrée par un simple effacement de ce support.",
+    "La proportionnalité de prescriptions locales déterminées n'est pas établie par la seule habilitation source. Le maintien ne valide pas toute prescription de matériau ni ne réforme les procédures patrimoniales du code du patrimoine.",
+    "Aucune charge nouvelle identifiée : les mêmes trois facultés et les mêmes procédures patrimoniales sont conservées ; aucun avis, registre ou justificatif supplémentaire n'est imposé.",
+)
+
+
+retain(
+    'R151-42',
+    "Maintien intégral nécessaire des quatre instruments, après examen du risque de doublon : les obligations de performance et leur sectorisation sont articulées à L. 151-21 ; le 3° ouvre une majoration favorable de volume pour l'exemplarité énergétique ou environnementale ; le 4° permet une adaptation aux risques d'inondation et de submersion. La seule coexistence avec les normes nationales ne prouve pas que toute prescription locale soit une répétition inutile. Le bonus et les protections contre les risques ne sont pas supprimés.",
+    "L. 151-21 et L. 151-28 ont été lus en entier : le premier conserve les exigences renforcées et les localisations possibles d'une production renouvelable ; le second, 3°, conserve le plafond de 30 % et son champ d'exemplarité ou de procédés d'énergies renouvelables. La source réglementaire mentionne aussi les constructions à énergie positive ; cette qualification n'est pas retranchée. Les différences de rédaction entre source réglementaire de 2016 et source législative plus récente ne sont pas corrigées silencieusement. Les décrets techniques et normes européennes de performance ne sont pas entièrement joints et aucune dispense générale n'est affirmée. La différenciation rez-de-chaussée/étages pour risques reste autonome.",
+    "La source entière demeure : aucun bonus de constructibilité n'est fermé aux futures opérations éligibles et les adaptations aux risques restent possibles. Aucun allègement nouveau ni suppression d'une norme européenne n'est revendiqué.",
+    "Aucun audit technique n'établit ici quelles exigences locales répètent exactement le socle national ni lesquelles dépassent utilement ce socle ; leur suppression indifférenciée risquerait de retirer des protections ou de désarticuler le bonus. Le coût net des régimes n'est pas chiffré.",
+    "Aucune charge nouvelle identifiée : mêmes quatre facultés et mêmes conditions de bonus ; aucune attestation énergétique supplémentaire, nouveau suivi ou procédure de substitution n'est ajouté.",
+)
+
+
+xml = BY_NUMBER['R151-43']['source_xml'].strip().replace(
+    "Imposer des obligations en matière de réalisation d'espaces libres et de plantations, d'aires de jeux et de loisir ;",
+    "Imposer des obligations en matière de réalisation d'espaces libres et de plantations ;",
+) + """
+<p>Le règlement ne peut imposer la réalisation d'aires de jeux ou de loisir sur le fondement du 2°. Les prescriptions ayant cet objet cessent d'être opposables aux décisions prises à compter de l'entrée en vigueur de la loi portant la présente réforme, y compris lorsque le règlement a été approuvé antérieurement et pour les demandes en cours d'instruction, sans nouveau dépôt ni recommencement des délais.</p>
+<p>La présente suppression ne remet pas en cause les prescriptions des autorisations déjà délivrées ni les conventions valablement conclues, qui conservent leur régime et leurs possibilités de modification selon le droit commun. Elle n'interdit pas les aires de jeux ou de loisir volontairement prévues et ne modifie ni les règles de sécurité qui leur sont applicables ni les obligations propres à un établissement spécialisé fondées sur des dispositions distinctes.</p>"""
+rewrite(
+    'R151-43', xml,
+    "Réforme de fond ciblée au 2° : retirer la faculté générale du PLU d'obliger un projet à réaliser des aires de jeux ou de loisir. Le maintien d'espaces libres, de plantations, de pleine terre ou de surfaces éco-aménageables répond à une fonction environnementale distincte et reste intégral. Les huit subdivisions, les continuités écologiques, le patrimoine paysager, les eaux et les caractéristiques des clôtures sont conservés sans résumé ; les équipements de loisir restent possibles volontairement.",
+    "Seuls les mots relatifs aux aires de jeux et de loisir sont retirés du corps source, puis la portée temporelle est définie. Les 1° à 8° demeurent numérotés, avec tous leurs renvois et le coefficient d'équivalence à la pleine terre du 1°. L. 151-22 et L. 151-23 ont été lus : exclusions favorables des rénovations sans modification d'emprise et régime d'exception pour les arbres ne sont pas refermés. Le projet de L. 151-22 coordonne déjà la liste autonome des communes sans inventaire SRU ; cet article réglementaire ne réintroduit pas le quota. Les emplacements réservés aux espaces verts et continuités écologiques restent au 3°. Les prescriptions d'un établissement spécialisé et les sécurités des aires existantes ne sont pas supprimées par l'allègement général.",
+    "Par rapport à la source entière, une obligation de réalisation matérielle facultativement imposable par le PLU disparaît : les aires de jeux et de loisir. Toutes les autres catégories environnementales restent dans le texte ; aucune économie de surface, de coût ou de fonctionnement n'est chiffrée d'avance.",
+    "La coupe ne porte ni sur les espaces libres et plantations ni sur les obligations légales propres à un établissement spécialisé. Les prescriptions des permis antérieurs et les conventions valides gardent leur régime. Le nombre de PLU utilisant cette faculté et le solde public ou privé ne sont pas établis.",
+    "Aucune charge nouvelle identifiée : l'aire de jeux obligatoire n'est remplacée ni par une contribution, ni par une déclaration, ni par un équipement de substitution. Les règles de sécurité déjà applicables aux aires volontairement aménagées restent inchangées ; l'application par les services n'est pas chiffrée.",
+    [effect(
+        'obligation_removed', 'plu-fin-aires-jeux-loisirs-obligatoires',
+        "Suppression du pouvoir du PLU d'imposer une aire de jeux ou de loisir au titre de ses prescriptions générales d'espaces non bâtis.",
+        "Le 2° permet d'imposer à un projet des espaces libres et plantations ainsi que des aires de jeux et de loisir, sans seuil national de surface ou de coût.",
+        "Le 2° ne permet plus d'imposer d'aire de jeux ou de loisir ; espaces libres, plantations et obligations environnementales des autres subdivisions maintenus.",
+        'legal_duty', "Porteurs de projets auxquels un règlement de PLU impose des aires de jeux ou de loisir sur ce seul fondement.",
+        "Décisions futures, PLU déjà approuvés et demandes en cours inclus ; prescriptions des autorisations antérieures et conventions valablement conclues protégées.",
+        "Aucune contribution, déclaration ou aire de remplacement ; sécurités autonomes et règles d'établissements spécialisés maintenues.",
+        "Imposer des obligations en matière de réalisation d'espaces libres et de plantations, d'aires de jeux et de loisir ;",
+        "Le règlement ne peut imposer la réalisation d'aires de jeux ou de loisir sur le fondement du 2°.",
+    )],
+    removed=["Faculté générale du règlement du PLU d'imposer la réalisation d'aires de jeux et de loisir aux projets, ainsi que l'opposabilité future des prescriptions édictées sur ce seul fondement."],
+)
+
+
+xml = """<p>Afin d'assurer le stationnement des vélos hors des voies publiques, dans le respect des objectifs de diminution de déplacements motorisés, de développement des transports alternatifs à l'usage individuel de l'automobile et de réduction de la consommation d'espace ainsi que de l'imperméabilisation des sols, le règlement peut prévoir des obligations de réalisation d'aires de stationnement pour les vélos, sans préjudice des obligations et dérogations prévues par le code de la construction et de l'habitation et dans les conditions du présent paragraphe.</p>
+<p>Ces obligations tiennent compte de la qualité de la desserte en transport collectif, de la densité urbaine et des besoins propres au projet au regard des capacités de stationnement ouvertes au public à proximité.</p>
+<p>Le règlement ne peut imposer la réalisation d'un nombre minimal d'aires de stationnement pour les véhicules motorisés. Il ne peut exiger, en remplacement de cette réalisation, l'acquisition ou la concession de places, une participation financière ou un autre engagement ayant le même objet. La délivrance d'une autorisation d'urbanisme ne peut être subordonnée à une telle exigence du règlement.</p>
+<p>Les plafonds de stationnement autorisés par la loi demeurent applicables. Les obligations relatives aux vélos déjà prévues par un règlement demeurent applicables dans leur champ et avec leurs dérogations, sans pouvoir être aggravées du seul fait de la suppression des minima motorisés. Les obligations imposées par la loi ou par une réglementation nationale prise pour son application en matière de sécurité, d'accessibilité, d'équipement électrique et de protection de l'environnement ne sont pas modifiées. La réalisation volontaire d'aires de stationnement pour les véhicules motorisés demeure possible dans le respect des règles applicables.</p>
+<p>La suppression des exigences minimales du règlement pour les véhicules motorisés s'applique aux décisions prises à compter de l'entrée en vigueur de la loi portant la présente réforme, même lorsque le règlement a été approuvé antérieurement et pour les demandes en cours, sans nouveau dépôt ni recommencement des délais d'instruction. Les prescriptions des autorisations délivrées avant cette date et les contrats valablement conclus conservent leur régime, y compris leurs dispenses, réductions et possibilités de modification selon le droit commun. Aucune décision définitive antérieure n'est rouverte.</p>"""
+rewrite(
+    'R151-44', xml,
+    "Réforme de fond : supprimer les obligations minimales de stationnement motorisé imposées par le règlement du PLU, et non seulement en alléger la rédaction. Le règlement ne peut les remplacer par une acquisition, une concession ou un paiement. Les obligations vélo déjà autorisées, les plafonds légaux, la sécurité, l'accessibilité, les équipements électriques et les protections environnementales nationales restent à leur champ. Les PLU existants ne conservent pas leurs minima pour les décisions futures ; les autorisations déjà délivrées gardent leurs droits et leurs allègements.",
+    "L. 151-30 à L. 151-37 ont été lus en entier, y compris L. 151-36-1 : il s'agit de conditions et plafonds d'un pouvoir local, non d'un nombre minimal national général imposé par ces textes. Le renvoi global de l'ancienne première phrase à ces articles est retiré du champ vélo afin de ne pas faire dépendre celui-ci d'un minimum motorisé supprimé. L. 151-30 doit être coordonné simultanément pour maintenir à champ constant les obligations vélo ; la proposition réglementaire conserve expressément les obligations locales préexistantes, sans aggravation du seul fait de la coupe. CCH L. 113-18 à L. 113-20 ont été lus avec leurs notes : sécurisation, modalités nationales, possibilité de réalisation sur la même unité foncière et dérogations demeurent à leur champ, sans extension aux bâtiments non visés. L. 151-31 et L. 151-33 à L. 151-36-1 conservent leurs réductions, substitutions et dispenses pour toute obligation ancienne restant applicable, y compris lors de procédures ultérieures. R. 151-45 est coordonné dans ce lot et R. 151-46 conserve son calcul favorable. Les plafonds L. 151-32 et L. 151-37 restent distincts des minima. Les dérogations de L. 152-6, notamment ses 3°, 4°, 5° bis et les opérations de réhabilitation en centre-ville, conservent leur utilité pour toute obligation ancienne restante ; aucun avantage n'est retiré. Le champ des règles nationales d'accessibilité, de recharge et de sécurité reste autonome ; aucune conformité européenne globale n'est présumée. Pas de taxe de remplacement ni de disparition automatique des places accessibles imposées par un fondement national distinct. Les corps législatifs hors lot ne sont pas présentés comme déjà coordonnés.",
+    "La source autorisait des obligations locales de réalisation de stationnement motorisé ou vélo ; la proposition retire les minima motorisés et leurs substituts financiers pour les décisions futures. Elle ne supprime ni le stationnement volontaire, ni les plafonds, ni les prescriptions nationales autonomes, ni les obligations historiques des autorisations antérieures. Le coût évité dépend des minima locaux, non d'un montant national fixé par cet article.",
+    "La réforme vise les minima imposés par le règlement du PLU ; elle ne supprime pas les normes nationales autonomes ni les contrats déjà conclus. La coordination du déclencheur vélo de L. 151-30 demeure nécessaire et le coût des reports éventuels vers le stationnement public ou la voirie n'est pas établi. Aucun solde national net de complexité, de dépense ou d'émissions n'est démontré.",
+    "Aucune obligation privée nouvelle identifiée : les minima motorisés sont retirés sans déclaration, contribution ou achat de remplacement. Les obligations vélo et normes nationales sont préexistantes. Les collectivités peuvent supporter des effets de stationnement ou d'adaptation de leurs documents ; aucune nouvelle prestation publique obligatoire n'est créée ici et leur coût éventuel reste inconnu.",
+    [effect(
+        'obligation_removed', 'plu-suppression-minima-stationnement-motorise',
+        "Suppression des minima de stationnement motorisé des règlements de PLU et de leurs substituts imposés pour obtenir le titre d'urbanisme.",
+        "Obligations locales possibles de réalisation d'aires motorisées, de niveau variable selon le PLU et sous plafonds, minorations et dispenses légales ; aucun taux ni coût national uniforme.",
+        "Aucun minimum d'aires motorisées ni acquisition, concession ou participation équivalente ne peut être imposé par le règlement pour les décisions futures. Vélo, plafonds et normes nationales autonomes maintenus.",
+        'legal_duty', "Porteurs de projets soumis à un minimum de stationnement motorisé fixé par le règlement du PLU.",
+        "Décisions à compter de l'entrée en vigueur, PLU anciens et demandes en cours inclus ; obligations des autorisations déjà délivrées et contrats valides préservés avec leurs allègements. Coordination législative vélo L. 151-30 à réaliser.",
+        "Aucun prélèvement, déclaration, concession ou équipement de remplacement ; effets éventuels sur les services publics et coût net non évalués.",
+        "le règlement peut prévoir des obligations de réalisation d'aires de stationnement dans les conditions mentionnées aux articles L. 151-30 à L. 151-37",
+        "Le règlement ne peut imposer la réalisation d'un nombre minimal d'aires de stationnement pour les véhicules motorisés.",
+    )],
+    removed=[
+        "Pouvoir du règlement du PLU d'imposer un nombre minimal d'aires de stationnement pour les véhicules motorisés aux projets faisant l'objet de décisions futures.",
+        "Possibilité de maintenir l'équivalent de cette obligation motorisée supprimée par une acquisition ou concession de places, une participation financière ou un autre engagement de même objet imposé par le règlement.",
+    ],
+    benefit="Les allègements de L. 151-31 et L. 151-33 à L. 151-36-1 ainsi que le calcul favorable de R. 151-46 restent applicables à toute obligation historique encore opposable, y compris si sa modification ou sa mise en œuvre intervient après la réforme. Pour les nouvelles décisions, la suppression complète du minimum motorisé local est plus favorable que sa seule réduction : aucune place ni charge équivalente n'est exigée à ce titre, même pour une nouvelle opération précédemment éligible à une dispense. Le stationnement vélo et les plafonds motorisés sont distincts ; aucune aide ou exonération fiscale n'est supprimée.",
+)
+
+
+xml = """<p>En matière d'aires de stationnement, dans le champ de l'article R. 151-44, le règlement peut :<br />1° En préciser le type ainsi que les principales caractéristiques ;<br />2° Minorer ces obligations pour les véhicules motorisés quand les projets comportent plusieurs destinations ou sous-destinations permettant la mutualisation de tout ou partie des aires de stationnement ;<br />3° Dans les conditions définies par la loi, fixer un nombre maximal d'aires de stationnement pour les véhicules motorisés dans des secteurs qu'il délimite.</p>
+<p>Le 1° ne permet pas de rétablir une obligation minimale relative aux véhicules motorisés supprimée par l'article R. 151-44. Le 2° demeure applicable aux obligations relatives aux véhicules motorisés qui restent opposables à une autorisation délivrée avant l'entrée en vigueur de la loi portant la présente réforme, y compris lors d'une modification ultérieure de cette autorisation. Les plafonds mentionnés au 3° peuvent être fixés dans les conditions définies par la loi même en l'absence d'obligation de réaliser un nombre minimal d'aires de stationnement.</p>
+<p>La présente coordination s'applique aux décisions prises à compter de cette entrée en vigueur. Elle ne remet en cause ni les minorations déjà accordées ni les autres dispenses et réductions favorables applicables aux obligations qui subsistent ; elle n'exige aucun nouveau dépôt ni recommencement des délais d'instruction.</p>"""
+rewrite(
+    'R151-45', xml,
+    "Coordination nécessaire avec la suppression des minima motorisés de R. 151-44 : borner le pouvoir de préciser les caractéristiques, conserver la minoration par mutualisation pour les obligations historiques encore opposables et distinguer les plafonds légaux des minima abolis. Les trois subdivisions sont maintenues et aucune seconde suppression d'une obligation de stationnement n'est comptée.",
+    "Le 1° conserve son emplacement ; son antécédent vise les aires de stationnement et les obligations subsistant dans le champ de R. 151-44. Au 2°, toutes les conditions de mutualisation de la source demeurent, sans exiger une seule destination ou fermer la minoration aux modifications futures d'autorisations antérieures. L. 151-32 a été lu : il permet un maximum dans certains secteurs desservis pour les bâtiments autres que d'habitation ; le 3° ne l'étend pas aux logements ni ne crée un plafond national. L. 151-37 conserve son champ propre. La disparition du minimum futur ne supprime aucun bonus fiscal ni aucune dérogation littorale. La coordination de L. 151-30, signalée à R. 151-44, reste hors du présent lot.",
+    "Le texte entier est coordonné avec la seule mesure de suppression des minima motorisés : pas de seconde obligation supprimée. La minoration historique et le pouvoir légal de plafond demeurent, les caractéristiques ne pouvant recréer le minimum aboli.",
+    "Les obligations antérieures encore opposables continuent de bénéficier de la mutualisation ; les conditions légales des plafonds ne sont pas élargies. La coordination ne prouve aucun gain distinct de celui de R. 151-44 et ne chiffre pas le coût net des changements locaux.",
+    "Aucune charge nouvelle identifiée : aucun formulaire de mutualisation, nouveau plafond obligatoire ou justificatif de remplacement n'est créé. Le pouvoir de plafond est préexistant dans la loi et ses conditions restent inchangées ; son maintien n'est pas compté comme une contrainte nouvelle.",
+    [effect(
+        'coordination', 'plu-suppression-minima-stationnement-motorise',
+        "Articuler caractéristiques, mutualisation historique et plafonds avec la suppression unique des minima motorisés.",
+        "Les trois facultés du règlement étaient présentées sous le chapeau de l'existence d'obligations de réalisation d'aires de stationnement.",
+        "Facultés limitées au champ restant de R. 151-44 ; mutualisation conservée pour les obligations anciennes, plafonds légaux distingués de tout minimum futur.",
+        'legal_duty', "Collectivités et porteurs de projets, notamment titulaires d'autorisations anciennes comportant encore des obligations motorisées.",
+        "Décisions futures ; minorations déjà accordées et accès ultérieur des obligations historiques à la mutualisation conservés. Aucune extension des conditions légales de plafond.",
+        "Pas de formalité de substitution ni de nouvelle réduction indépendante : même mesure que R. 151-44.",
+        "Lorsque le règlement comporte des obligations de réalisation d'aires de stationnement, il peut :",
+        "Le 1° ne permet pas de rétablir une obligation minimale relative aux véhicules motorisés supprimée par l'article R. 151-44.",
+    )],
+    classification='coordination_only',
+    benefit="La minoration de stationnement liée à la mutualisation n'est pas abrogée : son texte et les conditions de plusieurs destinations ou sous-destinations sont conservés. Elle reste utilisable lors de procédures futures portant sur une autorisation ancienne qui demeure soumise à une obligation motorisée. Les nouvelles décisions bénéficient de la disparition du minimum de R. 151-44 lui-même, sans acquisition, concession ou contribution équivalente. Les autres dispenses et réductions ne sont pas refermées.",
+)
+
+
+retain(
+    'R151-46',
+    "Maintien intégral nécessaire d'un calcul favorable : trois places d'hébergement d'EHPAD ou de résidence universitaire équivalent à un logement, avec exclusion du reste du quotient. Supprimer cet arrondi pourrait augmenter l'obligation pour les autorisations historiques auxquelles elle reste opposable. Pour les décisions futures, le minimum motorisé du PLU disparaît selon R. 151-44 ; maintenir le calcul ne le rétablit pas.",
+    "Le renvoi L. 151-35 a été lu dans le corpus avec ses plafonds de stationnement et ses dispenses. Le rapport de trois places à un logement et l'arrondi par omission du reste sont conservés sans les transformer en arrondi supérieur ni en quotient de trois logements. Le calcul reste utile aux obligations historiques et à leurs procédures ultérieures ; il n'a pas pour effet de recréer un minimum pour une nouvelle autorisation sous R. 151-44. Le plafonnement et l'arrondi ne sont pas présentés comme deux nouvelles réductions.",
+    "La source entière est maintenue pour préserver la limitation favorable des obligations restantes. Aucune nouvelle réduction ni suppression de stationnement n'est imputée à cet article ; la mesure de R. 151-44 reste unique.",
+    "Seuls les deux types d'hébergement de la source sont concernés ; aucune extension à tout hébergement collectif n'est créée. L'effet résiduel dépend d'une obligation antérieure encore opposable, la règle ne rétablissant aucune obligation locale future.",
+    "Aucune charge nouvelle identifiée : même équivalence et même arrondi, sans attestation supplémentaire, nouveau calcul périodique ou condition d'âge des bâtiments.",
+)
+
+
+retain(
+    'R151-47',
+    "Maintien intégral nécessaire : la desserte et l'accès aux voies doivent permettre la mobilité et la sécurité, notamment l'intervention des secours ; la collecte des déchets assure la salubrité. Les deux facultés répondent à des fonctions concrètes et n'imposent ici ni autorisation séparée ni relevé périodique. Aucune suppression de dossier n'est démontrée par la seule coexistence avec des règles de voirie ; le texte reste entier.",
+    "L. 151-39, lu dans le corpus, concerne les terrains susceptibles de recevoir des constructions ou des aménagements. Les voies publiques ou privées, les voies ouvertes au public et la collecte des déchets conservent leurs champs distincts. Cette conservation ne fixe aucune largeur de voie ou dimension de local de déchets supplémentaire et n'autorise pas une transmission ou un agrément nouveau. Les restrictions générales retirées de R. 151-33 ne suppriment pas ce fondement spécial de desserte.",
+    "La source entière est conservée pour ses fonctions de desserte, de sécurité et de salubrité. Aucun retrait de formalité ou d'équipement ni réduction de délai n'est revendiqué.",
+    "La proportionnalité de prescriptions techniques d'un PLU déterminé reste contrôlable, mais leur détail et leurs coûts ne figurent pas dans cet article. Les obligations nationales des services de secours, de voirie et de déchets ne sont pas réécrites ici.",
+    "Aucune charge nouvelle identifiée : les deux facultés et le renvoi restent inchangés, sans plan, contrôle, registre ou délai supplémentaire créé.",
+)
+
+
+retain(
+    'R151-48',
+    "Maintien intégral nécessaire de la visibilité des voies, itinéraires cyclables, transports publics, emplacements réservés et possibilités d'aménagement pour le ski et les remontées mécaniques. Les tracés, dimensions, destinations et bénéficiaires rendent les contraintes vérifiables et les aménagements permis prévisibles. Supprimer cette information n'abrogerait pas les fondements législatifs et pourrait fermer ou rendre incertaines des possibilités favorables ; aucun dossier privé supplémentaire n'est créé ici.",
+    "Les trois rubriques et les zones U, AU, A et N sont conservées. L. 151-41, 1°, a été lu : il conserve la localisation et les caractéristiques des voies et ouvrages publics. L. 151-38 a été lu en entier : les renvois à son premier et à son deuxième alinéa sont maintenus sans les fusionner, circulation et ski étant des champs distincts. Les itinéraires piétonniers et cyclables, voies et espaces de transport public, voies à conserver et équipements et aménagements éventuellement prévus au 3° ne sont pas omis. Aucune filiation SRU n'est présumée du seul numéro ni aucune suppression des régimes montagne ou littoral n'est décidée.",
+    "La source entière est maintenue, sans nouvelle réservation, nouveau tracé imposé ou suppression de possibilité d'aménager. La publication graphique n'est pas comptée comme une autorisation administrative supprimable isolément.",
+    "Le maintien ne valide pas chaque emplacement réservé ni chaque projet de remontée mécanique. Il ne modifie pas les compétences, autorisations environnementales et régimes législatifs de ces opérations, ni ne déclare leur filiation historique exhaustive.",
+    "Aucune charge nouvelle identifiée : mêmes informations graphiques conditionnelles, sans déclaration, inventaire privé, consultation ou donnée supplémentaire.",
+)
+
+
+retain(
+    'R151-49',
+    "Maintien intégral nécessaire après examen des trois catégories de réseaux : eau, énergie et assainissement protègent la desserte et la salubrité ; maîtrise des eaux pluviales et du ruissellement prévient des risques graves ; les infrastructures de communications électroniques rendent les secteurs urbanisés desservis. Cet article n'exige ni contrat d'abonnement imposé ni formulaire de raccordement supplémentaire. La présence de normes nationales ne démontre pas à elle seule une double obligation matérielle identique à supprimer.",
+    "Les 1° à 3° et tous les termes du 2° restent conservés, notamment collecte, stockage et traitement éventuel. L. 151-39 et L. 151-40 ont été lus : le dernier réserve les critères de qualité renforcés aux secteurs ouverts à l'urbanisation ; le 3° ne doit pas être interprété comme une habilitation illimitée à imposer ces critères ailleurs. R. 151-50, lu dans le corpus, prévoit l'identification graphique correspondante. Les renvois aux 2°, 3° et 4° de L. 2224-10 du CGCT restent distincts ; le texte complet du CGCT n'est pas joint au lot et n'est pas déclaré réécrit. Il n'est pas prétendu que cet article abroge une obligation européenne relative aux eaux. Les exigences techniques précises de télécommunication ne sont pas inventées.",
+    "Maintien de la source entière pour la desserte, la salubrité et les risques pluviaux, avec les communications dans leur champ législatif. Aucune économie, fusion de raccordements ou suppression d'une obligation nationale n'est démontrée ni revendiquée.",
+    "Les normes techniques sectorielles et les conditions locales de raccordement ne sont pas toutes fournies ; aucun doublon matériel précis n'est établi par cette seule habilitation. L'article ne permet pas de conclure à la nécessité de chaque prescription locale ni à un solde national de coût.",
+    "Aucune charge nouvelle identifiée : les mêmes trois catégories et leurs renvois sont maintenus, sans nouvel agrément de réseau, justificatif, collecte de données ou délai.",
+)
+
+
+def plain(xml):
+    return ' '.join(html.unescape(re.sub(r'<[^>]*>', ' ', xml)).split())
+
+
+# Cite complete source bodies or complete items, never an ellipsis or a cut sentence.
+for number in ['R151-26', 'R151-30', 'R151-33', 'R151-38', 'R151-44', 'R151-45']:
+    ANSWERS[number]['substantive_impact']['effects'][0]['source_quote'] = plain(BY_NUMBER[number]['source_xml'])
+ANSWERS['R151-39']['substantive_impact']['effects'][0]['source_quote'] = "Il peut également prévoir, pour traduire un objectif de densité minimale de construction qu'il justifie de façon circonstanciée, des règles minimales d'emprise au sol et de hauteur. Il délimite, dans le ou les documents graphiques, les secteurs dans lesquels il les impose."
+ANSWERS['R151-43']['substantive_impact']['effects'][0]['source_quote'] = "2° Imposer des obligations en matière de réalisation d'espaces libres et de plantations, d'aires de jeux et de loisir ;"
+ANSWERS['R151-26']['substantive_impact']['effects'][0]['proposed_quote'] = "L'avis de la commission départementale de la préservation des espaces naturels, agricoles et forestiers prévu aux articles L. 151-12 et L. 151-13 est réputé favorable s'il n'est pas intervenu dans un délai d'un mois à compter de la saisine."
+ANSWERS['R151-38']['substantive_impact']['effects'][0]['proposed_quote'] = "Les dispositions du présent article ne peuvent être utilisées pour maintenir ou rétablir un quota communal de logements sociaux, un objectif de rattrapage ou une restriction fondée sur le seul classement d'une commune comme déficitaire ou carencée au titre des articles L. 302-5, L. 302-8 et L. 302-9-1 du code de la construction et de l'habitation dans leur rédaction antérieure à la loi supprimant ces obligations."
+ANSWERS['R151-39']['substantive_impact']['effects'][0]['proposed_quote'] = "Il ne peut fixer de règle minimale d'emprise au sol ou de hauteur des constructions. Les règles fixant directement une densité minimale de constructions en application de l'article L. 151-26 demeurent possibles ; elles ne peuvent imposer séparément un minimum d'emprise au sol ou de hauteur."
+
+
+assert set(ANSWERS) == set(BY_NUMBER)
+result = [ANSWERS[a['number']] for a in SOURCES]
+Path('answer.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
+print(f'answer.json: {len(result)} articles')

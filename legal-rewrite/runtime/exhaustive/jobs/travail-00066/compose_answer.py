@@ -1,0 +1,330 @@
+import json
+from html import unescape
+from html.parser import HTMLParser
+from pathlib import Path
+
+sources = json.loads(Path('source.json').read_text())
+by_number = {a['number']: a for a in sources}
+answers = {}
+
+class Plain(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.parts = []
+    def handle_data(self, data): self.parts.append(data)
+    def handle_starttag(self, tag, attrs):
+        if tag in ('p', 'br', 'div', 'li', 'tr', 'td', 'th'): self.parts.append(' ')
+    def handle_endtag(self, tag):
+        if tag in ('p', 'div', 'li', 'tr', 'td', 'th'): self.parts.append(' ')
+
+def plain(xml):
+    p = Plain(); p.feed(xml or ''); return ' '.join(unescape(''.join(p.parts)).split())
+
+def paragraphs(*paras):
+    return ''.join('<p>' + p + '</p>' for p in paras)
+
+def base(number, reason, notes):
+    s = by_number[number]
+    return {k: s[k] for k in ('code_id','source_id','source_sha256','number')} | {'proposed_xml': None, 'reason': reason, 'review_notes': notes}
+
+def retain(number, reason, notes, assessment, scope, burdens):
+    a = base(number, reason, notes)
+    a.update(status='retained_unchanged', classification='retained_necessary', substantive_impact={
+        'version':1, 'classification':'retained_necessary', 'assessment':assessment,
+        'scope_limitations':scope, 'new_burdens_review':burdens, 'effects':[]})
+    answers[number] = a
+
+def draft(number, xml, reason, notes, assessment, scope, burdens, effects, removed=None):
+    a = base(number, reason, notes)
+    a.update(status='rewrite_draft', proposed_xml=xml, substantive_impact={
+        'version':1, 'classification':'material_reduction' if removed else 'coordination_only',
+        'assessment':assessment, 'scope_limitations':scope, 'new_burdens_review':burdens, 'effects':effects})
+    if removed:
+        a.update(change_type='normative_reduction', reform_policy_id='editorial_direction_2026_10_19', removed_provisions=removed)
+    answers[number] = a
+
+def effect(kind, measure, description, before, after, unit, population, transition, burdens, source_quote, proposed_quote):
+    return dict(kind=kind, measure_id=measure, description=description, before=before, after=after, unit=unit,
+                affected_population=population, conditions_and_transition=transition,
+                replacement_or_new_burdens=burdens, source_quote=source_quote, proposed_quote=proposed_quote)
+
+retain('L2353-11',
+    "Maintien intégral après examen : l'attribution au juge judiciaire des contestations de désignation garantit un recours effectif pour les représentants en France. Elle n'institue ni autorisation de désignation, ni déclaration, ni prélèvement à supprimer. Retirer cette règle créerait une incertitude de compétence sans alléger la désignation elle-même.",
+    "L2353-9 et L2353-10 lus pour les désignations et élections. R2353-3 lu intégralement : tribunal judiciaire du siège intéressé et recours de quinze jours après notification de la désignation à l'employeur ; ses renvois à R2324-24 et R2324-25 sont anciens et appellent une coordination réglementaire hors lot. Le présent maintien ne réécrit pas cette procédure et ne confond pas ce recours avec le préavis individuel. Cadre européen de recours et de protection de la représentation à préserver.",
+    "La source officielle entière est maintenue : aucune compétence de recours, charge de procédure ou taxe n'est retirée ; la nécessité tient à l'identification du juge des désignations transnationales impliquant la France.",
+    "Le maintien ne démontre aucune baisse de coût contentieux. Les modalités réglementaires et leurs renvois anciens restent à coordonner dans R2353-3, qui n'est pas une source assignée.",
+    "Aucune charge nouvelle n'est identifiée : aucun recours préalable, formulaire, pièce, registre ou délai supplémentaire n'est ajouté au droit de saisir le juge judiciaire.")
+
+retain('L2353-12',
+    "Maintien de la faculté d'adapter par accord interne la composition du comité aux changements de structure ou de dimension. Cette souplesse évite un dispositif d'autorisation extérieur et ne commande ni nouvelle élection systématique ni rapport périodique. Son abrogation supprimerait une faculté favorable plutôt qu'une charge.",
+    "L2353-8, L2352-3 et L2354-4 lus : répartition initiale des sièges et nouvelle négociation en cas de changements substantiels gardent leur objet distinct. L'accord interne de cet article n'écarte pas les droits de représentation ni la procédure de L2354-4 lorsqu'elle s'impose. Le renvoi de L2363-4, lu, étend les règles de composition aux sociétés coopératives européennes.",
+    "Aucun changement de fond par rapport à la source entière : l'adaptation par accord demeure possible pour les modifications futures de structure ou de dimension, sans procédure administrative nouvelle.",
+    "Aucune suppression de siège ou de négociation substantielle n'est autorisée par ce maintien ; le contenu des accords existants et les économies d'organisation ne sont pas établis.",
+    "Aucune charge nouvelle n'est identifiée : même faculté d'accord au sein du comité, sans dépôt, homologation, réexamen périodique ou justificatif supplémentaire.")
+
+# La composition du bureau est assouplie, sans disparition de l'organe.
+xml13 = paragraphs(
+    "Le comité de la société européenne a la personnalité juridique.",
+    "Il est présidé par le dirigeant de la société européenne.",
+    "Le comité désigne un secrétaire.",
+    "Il élit un bureau de trois membres au plus lorsqu'il comprend au moins dix représentants du personnel.",
+    "La possibilité de composer le bureau de moins de trois membres s'applique aux élections de bureau intervenant à compter de l'entrée en vigueur de la loi. Elle ne met pas fin aux mandats en cours et n'impose pas de nouvelle élection.")
+draft('L2353-13', xml13,
+    "Réduction de fond ciblée : le bureau reste obligatoire dès dix représentants du personnel, mais le comité peut élire un ou deux membres au lieu d'être tenu d'en élire exactement trois. La personnalité juridique, la présidence et le secrétaire sont intégralement conservés. Le plafond de trois préserve un organe restreint ; aucun mandat en cours n'est écourté.",
+    "R2353-4 lu : secrétaire et bureau choisis parmi les membres ; cette règle reste opérante sans nouveau scrutin imposé. L2353-14, L2353-18 à L2353-20 et L2353-24 à L2353-26 conservent vote, autonomie préparatoire, présence des représentants concernés, moyens, temps et confidentialité. L2363-6 et L2373-3, lus, rendent aussi ces règles de fonctionnement applicables aux comités des sociétés coopératives européennes et des sociétés issues d'opérations transfrontalières dans leur champ. Examiner l'articulation avec l'annexe de la directive 2001/86/CE, le cadre 2003/72/CE et les règles européennes des opérations transfrontalières : les textes européens intégraux ne sont pas joints et aucune conformité générale n'est attestée. Le seuil de dix est conservé, seul le nombre fixe de trois est retiré.",
+    "La source entière imposait trois membres au bureau dès dix représentants ; la proposition retire cette composition fixe au profit d'un à trois membres. Il s'agit d'une souplesse d'organisation démontrée, sans suppression du bureau ni diminution du crédit de cent vingt heures attaché à chaque représentant.",
+    "La réduction ne concerne que les prochaines élections de bureau ; elle ne réduit ni le nombre des membres du comité, ni leurs moyens, ni un prélèvement. Aucun montant de coût évité ou solde global de complexité n'est établi ; les cadres européens des renvois restent à confronter.",
+    "Aucune charge nouvelle n'est identifiée : le bureau et son élection existaient déjà, aucun organe, registre ou vote supplémentaire n'est imposé et les mandats en cours continuent. Le choix d'une composition plus petite reste facultatif.",
+    [effect('obligation_removed','societe-europeenne-bureau-taille-libre',
+        "Retrait de l'obligation de pourvoir exactement trois postes au bureau, avec maintien d'un bureau élu dès le seuil existant.",
+        "Comité comprenant au moins dix représentants du personnel : élection obligatoire d'un bureau de trois membres exactement.",
+        "Même seuil de dix représentants et même élection ; bureau comprenant un, deux ou trois membres au choix du comité.",
+        'legal_duty',
+        "Comités des sociétés européennes régis par L2353-13 ; comités auxquels ce fonctionnement est rendu applicable par L2363-6 ou L2373-3, dans leur champ propre.",
+        "Élections de bureau à compter de l'entrée en vigueur de la loi ; mandats en cours maintenus sans obligation de réélection.",
+        "Aucune procédure de remplacement ; personnalité, présidence, secrétaire, vote majoritaire et droits des représentants restent applicables.",
+        "Il élit un bureau de trois membres lorsqu'il comprend au moins dix représentants du personnel.",
+        "Il élit un bureau de trois membres au plus lorsqu'il comprend au moins dix représentants du personnel.")],
+    ["Obligation de pourvoir exactement trois sièges au bureau lorsque le comité comprend au moins dix représentants du personnel ; le bureau lui-même demeure obligatoire."])
+
+retain('L2353-14',
+    "Maintien de la majorité des membres comme règle de décision. Cette règle rend les décisions vérifiables et protège leur légitimité ; elle ne constitue pas une transmission ou une autorisation extérieure. Aucun doublon n'est identifié avec la désignation du secrétaire ou l'élection du bureau.",
+    "L2353-7 lu pour la composition et la voix seulement consultative des collaborateurs du dirigeant. Ne pas substituer une majorité des seuls présents à la majorité des membres. L'assouplissement du nombre de membres du bureau dans L2353-13 ne change ni la composition du comité ni cette assiette de vote. Renvois de fonctionnement L2363-6 et L2373-3 conservés.",
+    "La source entière demeure : décisions à la majorité des membres, sans baisse revendiquée de charge ou de prélèvement. La règle est nécessaire à la validité des choix collectifs du comité.",
+    "Ce maintien ne détermine pas les modalités de chaque vote secret et ne chiffre aucun coût de réunion. Les majorités distinctes du groupe spécial de négociation ne sont pas modifiées.",
+    "Aucune charge nouvelle n'est identifiée : aucune majorité renforcée, attestation, homologation, registre ou condition de présence supplémentaire n'est créée.")
+
+retain('L2353-15',
+    "Maintien du règlement intérieur nécessaire à l'organisation du comité et de ses facultés d'adaptation. Le deuxième alinéa permet, sans l'imposer, d'examiner les changements lors de la réunion annuelle : il ne crée ni rapport ni réunion supplémentaire à abroger. Supprimer ce cadre interne compromettrait le fonctionnement de l'instance sans retirer une formalité administrative.",
+    "L2353-12, L2353-4 et L2354-4 lus : adaptation de composition, réunion annuelle et renégociation substantielle gardent des objets distincts. L'examen à l'occasion de la réunion annuelle reste une possibilité, sans révision annuelle obligatoire du règlement. Cadre d'organisation de l'organe représentatif à confronter à l'annexe de la directive 2001/86/CE ; aucune réécriture de cette directive n'est opérée.",
+    "Aucune réduction par rapport aux deux alinéas officiels : règlement de fonctionnement maintenu, adaptations et examen annuel toujours facultatifs, sans inventer une formalité annuelle supprimée.",
+    "Le contenu des règlements internes n'est pas fourni. Le maintien n'annule ni leurs clauses valables ni la renégociation substantielle prévue ailleurs et ne démontre aucune économie administrative.",
+    "Aucune charge nouvelle n'est identifiée : pas d'approbation extérieure, de dépôt, de modèle, de certification ou de révision périodique ajouté au règlement existant.")
+
+retain('L2353-16',
+    "Maintien des rapports réguliers servant à l'information-consultation annuelle et de l'information des directeurs locaux. Leur contenu relie l'évolution des activités aux perspectives du groupe et permet la préparation des échanges ; aucune transmission administrative ou déclaration fiscale doublonnée n'est identifiée. La source n'impose pas un second rapport autonome de synthèse que l'on pourrait prétendre supprimer.",
+    "L2353-4 et L2351-4 à L2351-5 lus en entier pour le contenu et l'utilité de la réunion annuelle. Les directeurs des filiales et établissements restent destinataires de l'information sur les rapports ; aucun nouveau support distinct n'est prescrit. Le socle de réunion annuelle sur rapports et d'information de la direction locale relève du cadre de la directive 2001/86/CE, dont le texte intégral n'est pas joint. Les demandes ponctuelles ou autres rapports ayant une base autonome ne sont pas modifiés.",
+    "La source entière est maintenue : mêmes rapports du président sur les activités et perspectives et mêmes destinataires locaux. Aucun rapport supplémentaire ni gain de suppression documentaire n'est fabriqué.",
+    "Ni le nombre réel de rapports ni leurs coûts ne sont documentés ; le maintien ne démontre pas que tous les rapports de la société se cumulent obligatoirement sur des supports séparés.",
+    "Aucune charge nouvelle n'est identifiée : contenu et destinataires inchangés, sans formulaire, périodicité additionnelle, certification, dépôt ou double imposé.")
+
+xml17 = paragraphs(
+    "L'ordre du jour des réunions du comité de la société européenne est arrêté par le président et le secrétaire.",
+    "Il est communiqué aux membres du comité au moins quinze jours avant la date de la réunion.",
+    "A défaut d'accord sur le contenu de l'ordre du jour de la réunion obligatoire, celui-ci est fixé par le président ou le secrétaire et communiqué aux membres du comité au moins dix jours avant la date de la réunion.",
+    "Le dirigeant de la société européenne fournit au comité l'ordre du jour des réunions de l'organe d'administration ou de surveillance ainsi que des copies de tous les documents soumis à l'assemblée générale des actionnaires.",
+    "Les délais de quinze jours et de dix jours prévus aux deuxième et troisième alinéas peuvent être réduits par l'accord libre, exprès et unanime du président et des représentants des salariés au comité pour la réunion concernée, si les informations et documents nécessaires sont disponibles et si les représentants disposent d'un temps suffisant pour les examiner, se réunir sans le président et préparer la consultation. Le silence ne vaut pas accord. Cette réduction ne vaut ni accord sur le contenu de l'ordre du jour ni renonciation aux droits d'information et de consultation prévus aux articles L. 2351-4 et L. 2351-5.",
+    "Le cinquième alinéa s'applique aux ordres du jour communiqués à compter de l'entrée en vigueur de la loi, sans écarter les stipulations conventionnelles plus favorables à la préparation des représentants. Les communications antérieures restent régies par les dispositions antérieures.")
+quote17 = "Les délais de quinze jours et de dix jours prévus aux deuxième et troisième alinéas peuvent être réduits par l'accord libre, exprès et unanime du président et des représentants des salariés au comité pour la réunion concernée, si les informations et documents nécessaires sont disponibles et si les représentants disposent d'un temps suffisant pour les examiner, se réunir sans le président et préparer la consultation. Le silence ne vaut pas accord. Cette réduction ne vaut ni accord sur le contenu de l'ordre du jour ni renonciation aux droits d'information et de consultation prévus aux articles L. 2351-4 et L. 2351-5."
+draft('L2353-17', xml17,
+    "Réduction de fond de la rigidité des délais : les minima de quinze et dix jours peuvent être raccourcis pour une réunion identifiée avec l'accord libre, exprès et unanime du président et des représentants des salariés, sous garantie de préparation effective. Les quatre alinéas initiaux restent en place, y compris le pouvoir alternatif du président ou du secrétaire en cas de désaccord sur le contenu et la communication des documents des organes sociaux. Il ne s'agit pas du préavis individuel de rupture.",
+    "L2351-4 et L2351-5 lus pour l'information et la consultation, L2353-18 pour la réunion préparatoire autonome. Le cinquième alinéa vise exactement les deuxième et troisième alinéas, sans déplacer le quatrième. L'accord de réduction n'est pas présumé par la fixation unilatérale du contenu ; une opposition suffit à laisser jouer les délais initiaux. Les renvois L2363-6 et L2373-3 étendent le fonctionnement dans leurs champs ; cadres européens 2001/86/CE, 2003/72/CE et opérations transfrontalières à confronter sur textes intégraux non joints. Même famille de mesure que l'assouplissement déjà proposé pour L2343-10 : pas deux délais de procédure supprimés en plus de leur dérogation commune.",
+    "Par rapport à l'intégralité de la source, les deux minima cessent d'être absolus lorsqu'une réduction est librement et unanimement acceptée pour une réunion déterminée. Aucune consultation, information, copie ou rémunération n'est supprimée ; le gain démontré est une souplesse de calendrier.",
+    "Sans accord valable ou préparation suffisante, les quinze et dix jours demeurent. Aucun nombre uniforme de jours économisés ni solde global de complexité n'est établi ; les jours ne sont pas requalifiés en jours calendaires ou ouvrés par rapport à la source.",
+    "Aucune charge nouvelle autonome n'est identifiée : l'accord unanime conditionne seulement l'option nouvelle, sans registre, formulaire ou dépôt ; la voie et les délais existants restent accessibles. La préparation effective relève déjà de L2351-4, L2351-5 et L2353-18. Le coût pratique de l'accord n'est pas chiffré.",
+    [effect('deadline_reduced','cee-ordre-du-jour-delais-assouplis',
+        "Faculté consentie de raccourcir les minima de communication de l'ordre du jour, sans changer son contenu requis ni les documents transmis.",
+        "Ordre du jour conjoint : au moins quinze jours avant la réunion ; faute d'accord sur le contenu de la réunion obligatoire, fixation par le président ou le secrétaire et au moins dix jours. La source ne qualifie pas ces jours.",
+        "Mêmes délais par défaut ; délai plus court possible pour une réunion avec accord exprès unanime du président et des représentants, documents disponibles et préparation suffisante, sans nouveau minimum chiffré.",
+        'other',
+        "Président et représentants au comité de la société européenne, ainsi qu'aux comités soumis à ce fonctionnement par L2363-6 ou L2373-3 dans leur champ.",
+        "Ordres du jour communiqués à compter de l'entrée en vigueur ; communications précédentes et garanties conventionnelles plus favorables conservées. Aucun silence ne vaut consentement.",
+        "Pas de nouveau délai de remplacement, dépôt ou attestation. Accord nécessaire seulement pour utiliser la dérogation facultative ; temps de préparation et information-consultation demeurent.",
+        "Il est communiqué aux membres du comité au moins quinze jours avant la date de la réunion. A défaut d'accord sur le contenu de l'ordre du jour de la réunion obligatoire, celui-ci est fixé par le président ou le secrétaire et communiqué aux membres du comité au moins dix jours avant la date de la réunion.",
+        quote17)],
+    ["Caractère impératif des minima de quinze et dix jours pour les réunions dont le délai réduit est accepté librement, expressément et unanimement avec une préparation effective ; minima maintenus dans les autres cas."])
+
+retain('L2353-18',
+    "Maintien de la réunion préparatoire sans président, qui protège l'autonomie des représentants et ne commande aucune formalité administrative. La source habilite les représentants ou le bureau à se réunir, sans imposer une réunion supplémentaire dans tous les cas. L'abroger retirerait un droit collectif utile plutôt qu'un doublon.",
+    "Lire conjointement L2353-17 proposé : le raccourcissement consenti d'un délai ne ferme pas la possibilité effective de préparation autonome. L2353-24 et L2353-25 préservent moyens, rémunération et décompte du temps. Le choix des représentants ou, le cas échéant, du bureau reste inchangé ; aucune présence patronale n'est introduite.",
+    "La source entière est conservée : habilitation à une préparation sans président avant toute réunion, nécessaire à l'indépendance de l'information-consultation et non comptée comme une simplification nouvelle.",
+    "Aucune réunion préparatoire effectivement évitée ou ajoutée n'est documentée. La règle ne fixe ni fréquence propre ni durée d'emploi et ne modifie pas les autres moyens du comité.",
+    "Aucune charge nouvelle n'est identifiée : pas de réunion obligatoire supplémentaire, de compte rendu imposé, de demande d'autorisation ou de présence de la direction.")
+
+retain('L2353-19',
+    "Maintien du droit à une seconde réunion demandée par le comité lorsque la direction écarte son avis. Il s'agit d'une garantie de dialogue ciblée, déclenchée par la demande du comité, et non d'une réunion périodique doublonnée. La tentative d'accord n'impose pas un accord ni un veto sur la décision patronale.",
+    "L2353-5 et L2351-5 lus pour les circonstances exceptionnelles et la consultation. La nouvelle réunion sur demande et la recherche d'accord relèvent du socle européen d'information-consultation ; leur suppression nécessiterait une analyse des contraintes de la directive 2001/86/CE, dont le texte intégral n'est pas joint. La visioconférence assouplie par L2353-27-1 ne retire ni ce droit ni le temps de consultation.",
+    "Aucun changement par rapport à la source entière : la seconde réunion demeure de droit sur demande lorsque la direction ne suit pas l'avis ; aucune prétendue réunion automatique annuelle n'est supprimée.",
+    "Le nombre de demandes, le coût des réunions et la possibilité de parvenir à un accord ne sont pas chiffrés. Ce droit ne supprime pas les procédures de licenciement collectif distinctes.",
+    "Aucune charge nouvelle n'est identifiée : même déclencheur, même demande du comité et même objectif, sans homologation, rapport ou délai additionnel.")
+
+retain('L2353-20',
+    "Maintien de l'accès à la réunion du bureau des membres représentant les salariés directement concernés. Cette faculté évite qu'une organisation restreinte écarte les représentants pertinents ; elle ne crée ni siège nouveau ni procédure parallèle. La retirer serait défavorable à une représentation effective.",
+    "L2353-5 lu pour le recours au bureau en circonstances exceptionnelles. Le choix possible d'un bureau de moins de trois membres dans L2353-13 ne restreint pas la participation des représentants directement concernés prévue ici. Le droit de présence demeure ouvert aux situations futures dans les mêmes conditions.",
+    "La source officielle entière est maintenue : participation possible des membres directement concernés aux réunions avec le bureau, sans suppression ou ajout de poste représentatif.",
+    "Le maintien ne permet pas de compter le bureau et les participants comme deux nouvelles obligations distinctes supprimées ; aucun coût réel de présence ou déplacement n'est établi.",
+    "Aucune charge nouvelle n'est identifiée : aucune invitation générale de tous les salariés, désignation supplémentaire, pièce justificative ou registre de présence nouveau n'est imposé.")
+
+xml21 = paragraphs(
+    "Les documents communiqués aux représentants des salariés comportent au moins une version en français.",
+    "Par dérogation au premier alinéa, les représentants des salariés peuvent, par leur accord libre, exprès et unanime portant sur des documents identifiés, accepter de recevoir ces documents dans une autre langue qu'ils maîtrisent, sans version en français. Chacun d'eux peut, à tout moment, retirer son accord ou demander une version en français ; celle-ci est alors communiquée à l'ensemble des représentants sans frais et en temps utile pour leur permettre d'examiner les informations et de préparer la consultation. Le silence ne vaut pas acceptation. La dérogation cesse pour les documents concernés dès la désignation d'un nouveau représentant, sauf accord de celui-ci dans les mêmes conditions.",
+    "Les obligations prévues à l'article L. 1321-6 demeurent applicables.",
+    "Les deuxième et troisième alinéas s'appliquent aux documents communiqués à compter de l'entrée en vigueur de la loi. Les documents communiqués antérieurement restent soumis aux dispositions antérieures.")
+quote21 = "Par dérogation au premier alinéa, les représentants des salariés peuvent, par leur accord libre, exprès et unanime portant sur des documents identifiés, accepter de recevoir ces documents dans une autre langue qu'ils maîtrisent, sans version en français. Chacun d'eux peut, à tout moment, retirer son accord ou demander une version en français ; celle-ci est alors communiquée à l'ensemble des représentants sans frais et en temps utile pour leur permettre d'examiner les informations et de préparer la consultation. Le silence ne vaut pas acceptation. La dérogation cesse pour les documents concernés dès la désignation d'un nouveau représentant, sauf accord de celui-ci dans les mêmes conditions."
+draft('L2353-21', xml21,
+    "Réduction de fond : une traduction française systématique peut être évitée pour des documents identifiés si tous les représentants maîtrisent l'autre langue et l'acceptent librement et expressément. La version française reste la règle et peut être rétablie par une seule personne, gratuitement et en temps utile. Ce choix facultatif allège une duplication linguistique sans fermer le bénéfice de la traduction pour les représentants actuels ou futurs.",
+    "L1321-6 lu intégralement : ses règles françaises pour le règlement intérieur et les documents d'obligations ou d'exécution du travail, ainsi que ses exceptions, demeurent autonomes. L2351-4, L2351-5, L2353-17 et L2353-24 lus : compréhension, préparation et interprétariat nécessaire aux réunions restent garantis. Le nouveau représentant doit consentir pour que la dérogation continue. L2363-6 et L2373-3 rendent ce fonctionnement applicable dans leurs champs. Même mesure que celle proposée pour L2343-17, dédupliquée sous une clé commune. Articulation avec la loi n° 94-665 du 4 août 1994 et avec les cadres européens 2001/86/CE, 2003/72/CE et opérations transfrontalières à confronter hors lot ; leurs textes intégraux ne sont pas joints et leur réécriture n'est pas prétendue.",
+    "Par rapport à la source officielle entière, la production automatique d'une version française est retirée pour les seuls documents unanimement acceptés dans une langue maîtrisée. Le droit individuel de retrouver la version française demeure ; les traductions réellement évitées et leurs coûts ne sont pas chiffrés.",
+    "Aucune dispense pour une langue non maîtrisée, un document non identifié, un représentant non consentant ou un document auquel L1321-6 impose le français. Les communications antérieures et l'interprétariat gardent leur régime ; la coordination des textes extérieurs n'est pas achevée.",
+    "Aucune charge nouvelle autonome n'est identifiée : accord et maîtrise de la langue conditionnent seulement la dispense facultative, sans test, attestation, registre ni dépôt. La version gratuite rétablie sur demande était déjà comprise dans l'obligation initiale plus large ; le coût pratique de l'accord et le solde global ne sont pas établis.",
+    [effect('obligation_removed','cee-traduction-francaise-option-consentie',
+        "Dispense conditionnelle de production systématique d'une version française, avec maintien de son accès individuel et des règles linguistiques autonomes.",
+        "Tous les documents communiqués aux représentants comportent au moins une version française, sans possibilité expresse d'accepter une autre langue à sa place.",
+        "Version française par défaut ; dispense pour les documents identifiés acceptés librement, expressément et unanimement dans une langue maîtrisée. Une seule demande rétablit la version française pour tous sans frais, en temps utile.",
+        'legal_duty',
+        "Sociétés et représentants des salariés des comités soumis à L2353-21, y compris par L2363-6 et L2373-3 dans leur champ.",
+        "Communications à compter de l'entrée en vigueur de la loi ; communications anciennes sous droit antérieur. Retrait à tout moment et nouvel accord lors de l'arrivée d'un représentant ; L1321-6 réservé.",
+        "Aucun test linguistique, registre ou attestation. L'accord est une condition facultative de dispense, sans fermer le droit initial à la version française ni l'interprétariat nécessaire.",
+        "Les documents communiqués aux représentants des salariés comportent au moins une version en français.", quote21)],
+    ["Production systématique d'une version française pour les documents identifiés unanimement acceptés dans une autre langue maîtrisée, sous réserve du droit individuel de rétablissement et de L1321-6."])
+
+retain('L2353-22',
+    "Maintien du libre recours aux experts nécessaires et de la prise en charge d'un expert pour la réunion annuelle. Ce financement rend l'assistance accessible et constitue un avantage de représentation à conserver, y compris pour les réunions futures éligibles. Le texte ne commande ni expert systématique ni agrément préalable et limite déjà la prise en charge annuelle à un seul expert.",
+    "L2353-4 lu pour la réunion annuelle et L2353-24 pour les autres moyens : assistance experte et dépenses courantes n'ont pas le même objet. Tous les niveaux utiles d'expertise et le critère de nécessité restent conservés. Le cadre de la directive 2001/86/CE relatif aux moyens d'expertise reste à son champ ; aucune extension de prise en charge illimitée ou suppression de l'avantage n'est introduite.",
+    "La source entière est maintenue : choix des experts nécessaires et financement d'un expert à la réunion annuelle, sans prétendre supprimer une consultation d'expert déjà facultative.",
+    "Le maintien ne garantit pas le financement de tout expert à toute réunion ; aucune dépense ou économie nationale n'est calculée et les autres moyens du comité demeurent distincts.",
+    "Aucune charge nouvelle n'est identifiée : même nombre d'experts financés, aucune mission annuelle obligatoire, qualification additionnelle, déclaration ou contrôle préalable nouveau.")
+
+xml23 = paragraphs("Les représentants du personnel siégeant au comité de la société européenne informent les représentants du personnel des établissements et filiales de la société européenne ou, à défaut, l'ensemble des salariés, de la teneur et des résultats des travaux de ce comité, dans le respect du secret professionnel et de l'obligation de discrétion prévus à l'article L. 2353-26.")
+draft('L2353-23', xml23,
+    "Coordination nécessaire, sans réduction de fond de l'information : le renvoi à L2325-5, absent du corpus en vigueur, est remplacé par celui à L2353-26, rédigé dans le même lot pour la confidentialité des membres du comité et de leurs experts. Les destinataires, le relais subsidiaire à l'ensemble des salariés et la teneur des informations restent intégralement conservés.",
+    "L2315-3 lu en entier pour les procédés de fabrication et les informations confidentielles présentées comme telles. L2353-26 proposé vise cette règle actuelle ; le renvoi interne de L2353-23 évite de maintenir une cible ancienne manquante. Le secret et la discrétion ne deviennent pas un pouvoir de classer toute information ; le caractère confidentiel réel reste requis. Cadre de confidentialité et de relais aux salariés de la directive 2001/86/CE à conserver. Aucun historique intégral de l'ancien L2325-5 n'est fourni ; la coordination est explicite et ne prétend pas valider toutes ses versions antérieures.",
+    "La comparaison avec la source entière révèle seulement une correction du support juridique de la confidentialité ; l'obligation d'informer les représentants locaux ou, à défaut, tous les salariés ne diminue pas.",
+    "Aucune nouvelle économie, suppression de transmission ou réduction de droits n'est démontrée. La portée historique de l'ancien L2325-5 n'a pas été vérifiée sur un texte intégral absent ; les régimes autonomes d'information et de protection des données demeurent.",
+    "Aucune charge nouvelle n'est identifiée : mêmes personnes, même contenu et même secret, sans rapport normalisé, liste de diffusion nouvelle, registre ou délai ajouté. Le renvoi corrigé n'institue pas de nouvelle déclaration.",
+    [effect('coordination','societe-europeenne-secret-discretion-renvoi',
+        "Rattachement de l'information descendante au régime interne de confidentialité coordonné, sans retirer le relais d'information.",
+        "Information des représentants locaux ou, à défaut, de tous les salariés, sous renvoi de confidentialité à l'ancien L2325-5 absent du corpus actuel.",
+        "Même information et mêmes destinataires, sous renvoi à L2353-26 coordonné avec la règle actuelle L2315-3.",
+        'legal_duty', "Représentants au comité, représentants des établissements et filiales et salariés destinataires ; champs d'application par renvoi conservés.",
+        "Coordination applicable à l'entrée en vigueur de la loi ; aucune autorisation de divulguer des informations antérieurement couvertes et aucune obligation de refaire les informations passées.",
+        "Aucun circuit, rapport ou autorisation de remplacement ; seule la cible du renvoi est corrigée.", plain(by_number['L2353-23']['source_xml']), plain(xml23))])
+
+retain('L2353-24',
+    "Maintien des moyens financiers et matériels nécessaires, des frais de réunion, d'interprétariat, de séjour et de déplacement. Ils assurent l'exercice réel de la représentation transnationale et ne sont ni taxe accessoire ni aide à supprimer. La source ne fixe ni budget forfaitaire, ni certification, ni transmission périodique que l'on pourrait retirer séparément.",
+    "L2353-22 et L2353-25 lus : expert et temps de travail ont leur régime propre, sans déduire leurs droits des ressources nécessaires ici. La faculté linguistique de L2353-21 ne supprime pas l'interprétariat nécessaire et la visioconférence ne transforme pas des déplacements nécessaires en frais à la charge du salarié. Cadre de financement effectif de la directive 2001/86/CE à maintenir ; le montant concret des moyens n'est pas fourni.",
+    "Les deux alinéas officiels demeurent intégralement : financement des moyens nécessaires et des frais énumérés. Aucune baisse de prélèvement ou dépense évitée n'est déduite de ce maintien d'une protection essentielle.",
+    "Les besoins et dépenses effectifs du comité ne sont pas connus. L'assouplissement de ses modalités de réunion ne prouve pas une économie nette et ne plafonne pas les moyens garantis ici.",
+    "Aucune charge nouvelle n'est identifiée : mêmes postes de frais, même critère de nécessité, sans forfait, plafond de justificatifs, organisme agréé, rapport ou dépôt nouveau.")
+
+retain('L2353-25',
+    "Maintien intégral du temps nécessaire dans la limite de cent vingt heures annuelles sauf circonstances exceptionnelles, de sa rémunération normale et du recours au juge pour les contestations. Le temps des séances du comité et des réunions du bureau reste hors de ce crédit. Ces garanties rendent le mandat effectif ; elles ne sont pas des cotisations accessoires ou des formalités supprimables.",
+    "Quatre alinéas relus : chacun bénéficie du plafond de cent vingt heures, les circonstances exceptionnelles restent possibles, la contestation incombe au dirigeant devant le juge judiciaire et les réunions ne sont pas déduites du crédit. Aucun préavis de quinze jours, seuil d'un an ou plafond d'indemnité de rupture ne s'applique à cette rémunération. Le nombre plus libre des membres du bureau ne réduit pas les droits des membres du comité.",
+    "La source officielle entière reste applicable, avec ses cent vingt heures, son exception et le paiement normal ; aucune réduction de temps, de salaire ou de prélèvement n'est revendiquée.",
+    "L'article ne chiffre ni un salaire individuel ni le coût annuel réel du mandat ; le temps des réunions demeure distinct du crédit. Aucune économie globale n'est établie.",
+    "Aucune charge nouvelle n'est identifiée : pas de demande d'autorisation du crédit, relevé additionnel, condition d'ancienneté ou procédure préalable supplémentaire avant le paiement.")
+
+xml26 = paragraphs("Les membres du comité de la société européenne ainsi que les experts qui les assistent sont tenus au secret professionnel et à l'obligation de discrétion prévus à l'article L. 2315-3.")
+draft('L2353-26', xml26,
+    "Coordination explicite : L2315-3, lu dans le corpus actuel, remplace la référence défectueuse à L2325-5. Le secret professionnel et la discrétion des membres et des experts sont conservés ; il ne s'agit pas d'une suppression de contrôle ni d'une restriction nouvelle de leur information.",
+    "L2315-3 distingue le secret professionnel sur les procédés de fabrication et la discrétion sur les informations qui sont confidentielles et présentées comme telles par l'employeur. Le renvoi les rend applicables aux personnes expressément visées par L2353-26 ; il ne change pas ces personnes en membres du CSE. L2353-23 est coordonné dans le même lot. L'ancien L2325-5 n'est pas présent dans le corpus fourni, ce qui est une incohérence préexistante signalée, non une preuve de suppression de son contenu. Les exceptions légales autonomes de communication et de recours restent à leur champ.",
+    "Seule la cible de renvoi diffère de la source entière. Les membres et experts restent soumis au secret et à la discrétion ; aucune baisse de charge ni extension déclarée du secret n'est attribuée à cette coordination.",
+    "Aucun historique intégral de l'ancien L2325-5 n'est joint. La comparaison de toutes ses versions et des règles extérieures de confidentialité n'est pas déclarée accomplie ; aucun gain national n'est démontré.",
+    "Aucune charge nouvelle n'est identifiée : mêmes personnes tenues au secret et à la discrétion, sans engagement individuel à signer, registre confidentiel, agrément ou déclaration supplémentaire.",
+    [effect('coordination','societe-europeenne-secret-discretion-renvoi',
+        "Correction de la cible ancienne de confidentialité vers le régime actuel, sans nouvelle formalité.",
+        "Membres et experts soumis au secret et à la discrétion par référence à L2325-5, absent du corpus actuel.",
+        "Mêmes membres et experts soumis au secret et à la discrétion par référence à L2315-3, lu intégralement.",
+        'legal_duty', "Membres des comités et experts soumis à L2353-26, notamment dans les champs rendus applicables par renvoi.",
+        "Coordination à l'entrée en vigueur de la loi, sans déclassification des informations antérieures ni nouvelle attestation à produire.",
+        "Aucune procédure de remplacement ; les conditions matérielles du secret et de la confidentialité restent celles de L2315-3.", plain(by_number['L2353-26']['source_xml']), plain(xml26))])
+
+xml27 = paragraphs(
+    "Les membres du comité de la société européenne ont droit à un congé de formation économique dans les conditions fixées à l'article L. 2315-63. Pour l'application de cet article, le financement de la formation est pris en charge par le comité de la société européenne.",
+    "Cette formation est renouvelée lorsque les représentants ont exercé leur mandat pendant quatre ans, consécutifs ou non.",
+    "Les congés de formation accordés avant l'entrée en vigueur de la loi demeurent acquis. Les périodes de mandat antérieures à cette date sont prises en compte pour le renouvellement de la formation.")
+draft('L2353-27', xml27,
+    "Coordination nécessaire du congé de formation : le renvoi à L2325-44, absent du corpus actuel, est remplacé par L2315-63, disposition actuelle de formation économique. L'imputation du financement au comité de la société européenne est précisée pour ne pas renvoyer à un CSE extérieur. Le renouvellement quadriennal est expressément conservé selon la règle lue dans L2315-17, avec prise en compte des mandats antérieurs et protection des congés déjà accordés. Aucun allègement de cotisation ou de temps de formation n'est revendiqué.",
+    "L2315-63, L2315-17 et L2145-11 lus en entier : maximum de cinq jours, règles et limites du congé, financement par le comité, imputation au congé de formation économique, sociale, environnementale et syndicale, renouvellement après quatre ans consécutifs ou non. Le renvoi conserve les conditions de L2315-63 ; il n'est pas présenté comme un droit illimité de stage ou une nouvelle formation obligatoire. L'ancien L2325-44 n'est pas joint dans ses versions historiques : vérifier avant adoption sa concordance complète, notamment les conditions d'accès des membres désignés et élus, sans prétendre que le contrôle de citations règle cette question. L2353-24 et L2353-25 conservent moyens et temps à leur champ. L2145-8, hors lot et lu, comporte lui aussi des renvois anciens de formation à coordonner, non corrigés ici. Durée du congé ou du mandat ne signifie pas durée de l'emploi ; les renvois de L2363-6 et L2373-3 et leurs cadres européens demeurent identifiés.",
+    "La source entière conférait un droit à formation par renvoi ancien. La proposition lui donne une référence actuelle et une adaptation du financeur, conserve le renouvellement sans remise à zéro des mandats et les congés déjà accordés. C'est une coordination de protection, sans réduction matérielle démontrée.",
+    "Le texte historique intégral de L2325-44 manque ; la concordance de toutes les qualifications d'accès ne peut être certifiée. Les coûts pédagogiques, l'application aux différentes désignations et les coordinations réglementaires extérieures ne sont pas chiffrés ni déclarés entièrement réglés.",
+    "Aucune charge nouvelle autonome n'est identifiée : le droit à congé et son financement ne deviennent ni formation obligatoire, ni agrément ou dossier supplémentaire ; le renouvellement protège un droit de formation. La coordination ne démontre pas un surcoût nul pour tous les comités, faute de concordance historique complète.",
+    [effect('coordination','societe-europeenne-conge-formation-renvoi',
+        "Actualisation du fondement du congé économique et explicitation du comité financeur et du renouvellement, sans réduction revendiquée des droits.",
+        "Droit des membres du comité à congé de formation par renvoi à L2325-44, article absent du corpus en vigueur fourni.",
+        "Droit à congé économique par référence à L2315-63, financé par le comité de la société européenne ; renouvellement après quatre ans de mandat consécutifs ou non, mandats antérieurs inclus et congés accordés protégés.",
+        'legal_duty', "Membres des comités de la société européenne et des comités auxquels le régime est rendu applicable, sous les conditions du renvoi de formation.",
+        "Coordination dès l'entrée en vigueur, sans extinction des congés accordés et sans remise à zéro des périodes de mandat antérieures ; formations futures éligibles couvertes.",
+        "Aucun stage supplémentaire obligatoire ni registre, agrément ou déclaration nouveau ; le financement et le renouvellement sont explicités sans prétendre chiffrer leur solde historique.",
+        plain(by_number['L2353-27']['source_xml']),
+        "Les membres du comité de la société européenne ont droit à un congé de formation économique dans les conditions fixées à l'article L. 2315-63. Pour l'application de cet article, le financement de la formation est pris en charge par le comité de la société européenne.")])
+
+xml271 = paragraphs(
+    "Le recours à la visioconférence pour réunir le comité de la société européenne peut être organisé par accord entre le président et les représentants du personnel siégeant au comité. En l'absence d'accord, ce recours est possible sans limitation du nombre de réunions par année civile. Un décret détermine les conditions dans lesquelles le comité de la société européenne peut, dans ce cadre, procéder à un vote à bulletin secret.",
+    "Les réunions en visioconférence sont tenues dans les conditions prévues aux articles D. 2315-1 et D. 2315-2, appliquées aux membres et au président du comité de la société européenne. Elles garantissent l'identification des membres, leur participation effective et la retransmission continue et simultanée du son et de l'image, sans faire obstacle aux suspensions de séance. Les moyens techniques sont accessibles à l'ensemble des membres avant l'engagement des délibérations. Le vote secret garantit l'absence de lien entre l'identité du votant et son vote, la confidentialité et la sécurité des opérations ; tous les participants disposent d'une durée identique pour voter simultanément.",
+    "La suppression de la limite annuelle s'applique aux réunions convoquées à compter de l'entrée en vigueur de la loi. Elle ne rend pas la visioconférence obligatoire et ne remet pas en cause les modalités d'organisation résultant d'accords valablement conclus, tant qu'elles demeurent applicables. Les réunions déjà convoquées restent soumises aux dispositions antérieures.")
+draft('L2353-27-1', xml271,
+    "Réduction de fond : suppression du plafond de trois visioconférences annuelles sans accord et, par conséquent, de l'accord nécessaire pour le dépasser. Le recours reste facultatif et les accords valables sont préservés. Coordination indispensable en même temps : D2353-6 renvoie à des dispositions anciennes absentes ; le corps proposé donne un fondement exprès aux garanties actuelles lues dans D2315-1 et D2315-2, sans supprimer l'accès effectif, les suspensions ni le secret du vote.",
+    "D2353-6 lu : renvoi préexistant à D2325-1-1 et suivants, absents du corpus. D2315-1 et D2315-2 lus intégralement ; les conditions de vote électronique, y compris authentification, émargement, enregistrement et dépouillement, restent couvertes par leur renvoi complet. D2353-6 doit être coordonné réglementairement vers ces cibles ; cette modification hors lot n'est pas présentée comme réalisée. L2353-18, L2353-24 et L2353-25 préservent préparation autonome, moyens et rémunération. L2363-6 et L2373-3 étendent ce fonctionnement dans leur champ : garanties européennes 2001/86/CE, 2003/72/CE et opérations transfrontalières à confronter sur textes intégraux non joints, sans en effacer les contraintes. Clé commune avec la mesure proposée pour L2341-12 ; aucun décompte additionnel pour la seule coordination technique.",
+    "La source entière autorisait déjà trois visioconférences sans accord. Seul le plafond au-delà de trois et l'accord requis à raison de ce nombre sont retirés. La coordination technique répare un renvoi ancien sans réduire les garanties ; aucune consultation ou rémunération n'est supprimée.",
+    "Aucune économie nette de déplacement ou de technique n'est calculée. Les accords applicables, l'accès de chaque membre, le secret du vote et les cadres européens restent opposables. Le règlement D2353-6 reste à coordonner et les réunions déjà convoquées ne basculent pas automatiquement.",
+    "Aucune charge nouvelle autonome n'est identifiée : la visioconférence n'est pas obligatoire, les garanties techniques existaient dans le circuit réglementaire et aucun compte, équipement personnel, abonnement salarié, registre ou dépôt nouveau n'est imposé. Le texte ne présume ni un coût technique nul ni un solde global de complexité établi.",
+    [effect('authorization_removed','cee-visioconference-sans-plafond-annuel',
+        "Suppression du plafond annuel de visioconférences sans accord, avec maintien des garanties techniques et des accords existants.",
+        "Sans accord président-représentants, au plus trois réunions par année civile en visioconférence ; accord nécessaire pour dépasser ce nombre.",
+        "Sans accord, aucune limite légale annuelle ; mêmes consultations requises et garanties d'accès, de participation, de rémunération et de vote secret, sans atteinte aux accords applicables.",
+        'legal_duty',
+        "Comités de la société européenne et comités auxquels L2363-6 ou L2373-3 rendent ce fonctionnement applicable, dans leur champ propre.",
+        "Réunions convoquées à compter de l'entrée en vigueur de la loi ; convocations précédentes et modalités conventionnelles valables préservées.",
+        "Pas d'autorisation, déclaration ou formalité substitutive au-delà de trois réunions. Garanties techniques actuelles rendues expressément applicables pour remédier au renvoi réglementaire ancien.",
+        "En l'absence d'accord, ce recours est limité à trois réunions par année civile.",
+        "En l'absence d'accord, ce recours est possible sans limitation du nombre de réunions par année civile.")],
+    ["Plafond légal de trois réunions en visioconférence par année civile en l'absence d'accord, et nécessité de cet accord pour dépasser ce plafond."])
+
+retain('L2353-28',
+    "Maintien intégral du socle de participation en l'absence d'accord : continuité de tous les éléments lors d'une transformation et examen des systèmes nationaux dans les autres modes de constitution atteignant les seuils. Ce dispositif préserve la représentation dans les organes sociaux et relève du cadre européen ; il n'est ni taxe ni agrément accessoire. Les deux branches et leurs conditions ne sont pas fusionnées au prix d'une perte de droits.",
+    "L2352-13 lu en entier : le deuxième alinéa porte la décision qualifiée de ne pas négocier et l'exception de transformation ; le troisième contient les seuils d'au moins 25 % pour la fusion et 50 % pour holding ou filiale commune, ainsi que la décision de réduction des droits. L2353-29 à L2353-32 lus pour les modalités subséquentes. Conserver la distinction entre transformation et autres constitutions, ainsi que le cadre de la directive 2001/86/CE, notamment la participation. Ce lot ne modifie ni les seuils ni la négociation préalable.",
+    "La source entière est conservée, y compris ses 1° et 2° : protection des éléments de participation antérieurs et mécanisme subsidiaire sous seuils légaux. Aucune réduction de charge n'est revendiquée pour ce socle nécessaire.",
+    "Le maintien ne prouve pas la conformité de chaque constitution ni la portée de tous les droits nationaux étrangers ; les textes européens intégraux et les situations d'entreprise ne sont pas joints.",
+    "Aucune charge nouvelle n'est identifiée : mêmes conditions de déclenchement, pas de nouvel examen périodique, autorisation, taxe, déclaration ou donnée supplémentaire.")
+
+retain('L2353-29',
+    "Maintien de la règle de continuité au niveau le plus élevé lorsqu'une seule forme de participation existe et du choix par le groupe spécial de négociation lorsqu'il en existe plusieurs. Elle évite une perte de droits à l'occasion de la constitution transnationale ; sa suppression ne serait pas une simplification neutre. Aucun choix administratif extérieur n'est exigé.",
+    "L2353-28 et L2353-30 lus : cet article s'insère dans le régime subsidiaire et laisse à L2353-30 le traitement d'un défaut d'accord. Conserver les deux critères alternatifs, proportion ou nombre le plus élevé, et le rôle du groupe spécial de négociation. La correction du renvoi de L2353-32 vers la plage L2353-29 à L2353-31 est effectuée dans ce lot ; elle ne modifie pas le nombre de sièges ici. Les règles de participation de la directive 2001/86/CE restent à leur champ.",
+    "Les deux alinéas officiels sont maintenus : système existant au niveau le plus élevé ou choix entre systèmes par les négociateurs. Aucun siège, prélèvement ou acte de procédure n'est retiré.",
+    "Le nombre concret de sièges dépend des systèmes des sociétés participantes ; aucune réduction de gouvernance, de coût ou d'effectif ne peut être chiffrée à partir de cet article seul.",
+    "Aucune charge nouvelle n'est identifiée : pas d'approbation administrative, consultation distincte, dossier, rapport annuel ou condition de délai supplémentaire.")
+
+retain('L2353-30',
+    "Maintien du mécanisme de déblocage en cas de désaccord sur la forme de participation, avec conservation obligatoire du niveau de participation le plus élevé. La faculté des dirigeants d'arrêter la forme évite une impasse sans remettre en cause le nombre ou la proportion protégée. L'abroger retirerait une solution de fonctionnement et exposerait les droits représentatifs.",
+    "L2353-28 et L2353-29 lus pour la séquence ; L2353-31 porte ensuite sur l'exercice de la forme choisie. Le nombre ou la proportion le plus élevé reste applicable dans tous les cas visés par cet article. L2353-32 proposé rattache expressément la détermination des sièges à la plage L2353-29 à L2353-31, sans écarter les règles de mise en œuvre de ce dernier. Aucun pouvoir de fixer librement un nombre inférieur n'est créé.",
+    "La source entière est conservée : choix subsidiaire par les dirigeants et niveau de participation obligatoire inchangé. Il n'y a aucune nouvelle suppression d'autorisation ou de siège à compter.",
+    "Le maintien ne tranche pas les conflits relatifs à la détermination concrète du niveau le plus élevé et ne démontre aucun gain financier ; les voies de recours générales restent distinctes.",
+    "Aucune charge nouvelle n'est identifiée : aucune saisine, attestation, registre, approbation extérieure ou délai de négociation supplémentaire n'est ajouté.")
+
+retain('L2353-31',
+    "Maintien des deux voies de participation : conditions fixées par le comité pour la recommandation ou l'opposition, et procédure électorale du code de commerce avec exclusion de l'exigence territoriale. Cette exception est favorable à la représentation transnationale et demeure ouverte aux élections futures. La source ne crée pas d'agrément ni de rapport supplémentaire à supprimer.",
+    "L2351-6, L2353-28 à L2353-30 lus : les formes et la détermination du niveau de participation sont distinctes. Le renvoi aux articles L225-28 à L225-34 et L225-80 du code de commerce ainsi que l'exception visant le premier alinéa de L225-28 sont conservés ; le code de commerce intégral n'est pas fourni dans le corpus autorisé, donc sa concordance actuelle et toutes ses règles électorales ne sont pas présentées comme vérifiées. Le niveau de participation est directement fixé par L2353-29 et L2353-30 : le renvoi de L2353-32 à L2353-31 seul est complété dans le lot sans retirer les procédures de cet article ni ses renvois au code de commerce.",
+    "La source entière demeure, avec la faculté d'organisation de la recommandation-opposition et la dérogation territoriale électorale. Aucune procédure nouvelle n'est créée et aucune réduction nouvelle n'est revendiquée.",
+    "Les cibles du code de commerce ne sont pas jointes ; leur contrôle intégral reste une coordination extérieure explicitement identifiée. Aucun nombre d'élections ou coût évité n'est démontré.",
+    "Aucune charge nouvelle n'est identifiée : mêmes voies de participation, même renvoi électoral et même exception territoriale, sans dossier, agrément, quota additionnel ou déclaration nouvelle.")
+
+xml32 = paragraphs(
+    "Dès lors que le nombre de sièges au sein de l'organe de gestion concerné a été déterminé dans les conditions prévues aux articles L. 2353-29 à L. 2353-31, le comité de la société européenne veille à leur répartition, proportionnellement au nombre de salariés de la société européenne employés dans chaque Etat membre.",
+    "Par dérogation à ces dispositions, le comité assure, dans la mesure du possible, à chaque Etat membre disposant d'un système de participation avant l'immatriculation de la société européenne l'attribution d'au moins un siège.")
+draft('L2353-32', xml32,
+    "Coordination nécessaire et limitée : le nombre ou la proportion de membres participants relève de L2353-29 et L2353-30, tandis que L2353-31 règle l'exercice des formes de participation et l'élection par ses renvois au code de commerce. Le renvoi isolé à L2353-31 est complété par la plage L2353-29 à L2353-31, sans retirer les procédures de ce dernier. La répartition proportionnelle par Etat et la dérogation favorable d'au moins un siège, dans la mesure du possible, sont conservées intégralement et pour les constitutions futures éligibles.",
+    "L2353-29, L2353-30 et L2353-31 relus : le renvoi préexistant à L2353-31 seul est incomplet sur le niveau de participation fixé par les deux articles précédents. La plage complète conserve aussi les règles de mise en œuvre de L2353-31 ; les cibles extérieures du code de commerce ne sont pas intégralement jointes. Les deux alinéas restent à leur place, notamment le premier visé par L2363-10, lu en entier : la garantie propre de siège de l'Etat du siège de la société coopérative européenne n'est pas retirée. L2363-9 rend ce régime de participation applicable aux sociétés coopératives européennes ; il reste opérant. L'expression source « organe de gestion concerné » est conservée, sans transformer silencieusement les organes d'administration ou de surveillance. Cadres de participation 2001/86/CE et 2003/72/CE à confronter aux textes européens intégraux non joints.",
+    "Au regard de la source officielle entière, seule l'identification des articles déterminant les sièges est corrigée. La proportionnalité et la dérogation favorable d'au moins un siège restent inchangées ; aucune baisse d'impôt ou de formalité n'est revendiquée.",
+    "Aucune répartition réelle ni nombre additionnel de sièges n'est établi ; la garantie est toujours limitée par la mesure du possible. Les systèmes nationaux et les textes européens intégraux ne sont pas tous fournis.",
+    "Aucune charge nouvelle n'est identifiée : mêmes critères, mêmes Etats bénéficiaires, même réserve de possibilité, sans calcul déclaratif, dossier, registre ou siège supplémentaire imposé par la correction de renvoi.",
+    [effect('coordination','societe-europeenne-participation-renvoi-sieges',
+        "Correction du fondement de détermination des sièges avant leur répartition, sans modification de la répartition ou de sa dérogation.",
+        "Le premier alinéa renvoie à L2353-31, qui traite des formes et procédures ; la proportionnalité et la garantie conditionnelle d'au moins un siège suivent.",
+        "Le premier alinéa vise L2353-29 à L2353-31 : niveau le plus élevé et règles de mise en œuvre conservés ensemble ; proportionnalité et garantie conditionnelle d'au moins un siège inchangées.",
+        'regime', "Sociétés européennes et représentants des Etats membres ; sociétés coopératives européennes selon L2363-9 et la garantie propre de L2363-10.",
+        "Correction dès l'entrée en vigueur de la loi, sans annulation des répartitions ou mandats antérieurs ; dérogation conservée pour les répartitions futures recevables.",
+        "Aucun nouveau dossier ou procédure ; le contrôle du nombre de sièges et de la proportionnalité conserve son objet existant.",
+        "Dès lors que le nombre de sièges au sein de l'organe de gestion concerné a été déterminé dans les conditions prévues à l'article L. 2353-31, le comité de la société européenne veille à leur répartition, proportionnellement au nombre de salariés de la société européenne employés dans chaque Etat membre.",
+        "Dès lors que le nombre de sièges au sein de l'organe de gestion concerné a été déterminé dans les conditions prévues aux articles L. 2353-29 à L. 2353-31, le comité de la société européenne veille à leur répartition, proportionnellement au nombre de salariés de la société européenne employés dans chaque Etat membre.")])
+answers['L2353-32']['benefit_review'] = "Deux avantages de représentation sont examinés : la répartition proportionnelle aux salariés employés dans chaque Etat membre, conservée sans changement de base, et la dérogation attribuant, dans la mesure du possible, au moins un siège à chaque Etat membre qui disposait d'un système de participation avant l'immatriculation. Le second alinéa est reproduit intégralement ; ces droits restent ouverts aux futures constitutions et répartitions éligibles, sans les réserver aux mandats anciens. Le renvoi de détermination des sièges est complété vers L2353-29 à L2353-31, sans réduire leur niveau ni retirer les procédures de mise en œuvre. La garantie autonome de l'Etat du siège pour les sociétés coopératives européennes dans L2363-10 demeure. Il ne s'agit ni d'une exonération fiscale devenue sans objet ni d'une taxe supprimée."
+
+retain('L2354-1',
+    "Maintien de la faculté conventionnelle de supprimer ou d'aménager les institutions appelées à disparaître avec la perte d'autonomie juridique de sociétés participantes en France. Cette disposition est déjà un moyen de réduire les doublons avec consentement collectif ; l'abroger retirerait cette souplesse. La suppression ne devient ni automatique ni étendue aux institutions dont le fondement autonome subsiste.",
+    "L2352-16 lu en entier : accord sur l'implication, composition, attributions, ressources, réunions et renégociation. L2352-13 lu pour les règles de majorité applicables à la négociation. Les deux voies, accord d'implication ou accord collectif au niveau approprié, et le lien avec la perte d'autonomie juridique restent conservés. Le périmètre national peut être redéfini sans effacer les droits de représentation transnationaux. Aucun droit de veto ou procédure nouvelle n'est ajouté, aucune disparition d'instance n'est tenue pour déjà décidée.",
+    "La source entière reste applicable : une souplesse conventionnelle existante permet déjà d'éviter certains doublons institutionnels. La conserver ne constitue pas une nouvelle fusion de régime ni une obligation supprimée par ce lot.",
+    "Aucun accord concret, institution effectivement supprimée ou coût évité n'est fourni. Les protections et règles autonomes des institutions hors de cette perte d'autonomie ne sont pas modifiées.",
+    "Aucune charge nouvelle n'est identifiée : mêmes voies d'accord, même périmètre et même déclencheur, sans nouvelle approbation, publicité, étude, registre ou déclaration.")
+
+out = [answers[s['number']] for s in sources]
+Path('answer.json').write_text(json.dumps(out,ensure_ascii=False,indent=2) + '\n')
+print('Écrit answer.json :', len(out), 'articles')
