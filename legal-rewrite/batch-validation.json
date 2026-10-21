@@ -1,6 +1,6 @@
 {
   "validation": "integrity only; not legal review",
-  "authored_articles": 10630,
+  "authored_articles": 10788,
   "batches": [
     {
       "file": "batches/automatic-construction-habitation/00001.json",
@@ -169,12 +169,12 @@
     },
     {
       "file": "batches/automatic-construction-habitation/00034.json",
-      "sha256": "3b6a5242ff9f61c03dac73ea6234738ffbf056d7d3b76d34c17bf95aa39c9174",
+      "sha256": "680b4d88479b09de4d566a3a4fa094bef1cacd1b280e2b88c0aafac197c10876",
       "articles": 5
     },
     {
       "file": "batches/automatic-construction-habitation/00035.json",
-      "sha256": "afd699f367ba11354304327fbadd17b51627340d4542a640b59e03c3af871c21",
+      "sha256": "17a3390bf98bb678d766b6c80821b54e4e236637bdca7a440a5113301a505dd7",
       "articles": 7
     },
     {
@@ -345,6 +345,11 @@
     {
       "file": "batches/automatic-construction-habitation/00069.json",
       "sha256": "0cce1877f23ab4ef494499f3e52ddf62e590eff1b1dd7eda56ccc9ae4ddcbf4f",
+      "articles": 24
+    },
+    {
+      "file": "batches/automatic-construction-habitation/00070.json",
+      "sha256": "4d2bff956ed82fc124b0dab387e172b539938b8a39eff8e0782b162e90b85dd0",
       "articles": 24
     },
     {
@@ -696,6 +701,11 @@
       "file": "batches/automatic-impots/00070.json",
       "sha256": "75920fbce6c14d0ad0cb40290d15db7b88b79155e17a9e2f2778559d497f4322",
       "articles": 24
+    },
+    {
+      "file": "batches/automatic-impots/00071.json",
+      "sha256": "8b9fe6ca111fa938e1b1d94d317ce91b5597e564dd86188b9e5a5f2dff21dc7e",
+      "articles": 14
     },
     {
       "file": "batches/automatic-impots-annexe-2/00001.json",
@@ -1538,6 +1548,11 @@
       "articles": 24
     },
     {
+      "file": "batches/automatic-securite-sociale/00071.json",
+      "sha256": "2191aa63add287283eca7288a3d3b297c56d64699cd0845420eebcae2689ba5d",
+      "articles": 24
+    },
+    {
       "file": "batches/automatic-travail/00001.json",
       "sha256": "9fdc65cefdd3bc0369165611f9cab07402a11b25e308e50f84a295d5eee78050",
       "articles": 24
@@ -1888,6 +1903,16 @@
       "articles": 24
     },
     {
+      "file": "batches/automatic-travail/00071.json",
+      "sha256": "f53fc4fde6d0d6be61c1dd5cccd61019483f0e07be5fc30991162f4d734d71df",
+      "articles": 24
+    },
+    {
+      "file": "batches/automatic-travail/00072.json",
+      "sha256": "1a60fa8d5ec9af440ed34208a721347386577f49a7fe63d1d32bec56148f54d0",
+      "articles": 24
+    },
+    {
       "file": "batches/automatic-urbanisme/00001.json",
       "sha256": "34a1ed212ce7de5161fd85cd9b923956b9108ef6619169f2f7ac10a0d97ad1f1",
       "articles": 24
@@ -2228,6 +2253,16 @@
       "articles": 24
     },
     {
+      "file": "batches/automatic-urbanisme/00070.json",
+      "sha256": "592b716a84defe4fdd2c266df285466aba7bf2af376608f333192040f90f1d4f",
+      "articles": 24
+    },
+    {
+      "file": "batches/automatic-urbanisme/00071.json",
+      "sha256": "8a6f8de845cfd8336ff03880f3456b8cd86a516710cfc320e525610bf0be23f3",
+      "articles": 24
+    },
+    {
       "file": "batches/branch-reporting/001.json",
       "sha256": "33ce7cc2bc8f71348e0581fc8c12aec5280b892b57361b81595a83aebabbc8c2",
       "articles": 3
@@ -2514,7 +2549,7 @@
     },
     {
       "file": "batches/logement/batch019.json",
-      "sha256": "39073d0a58cc2d6ecf2dcdfe08cbd0836a19dc246fa46ae8f8546fb23fd22dea",
+      "sha256": "db441d627e0bb125f072df3d969adbd2c1cb37f35dc5b7a2304b645204039fcc",
       "articles": 12
     },
     {
@@ -3950,8 +3985,19 @@
       "number": "L441-2",
       "check": "explicit_normative_reduction",
       "scope": [
-        "Obligation de créer une commission d'attribution supplémentaire sur la seule demande territoriale lorsqu'un organisme possède plus de 2 000 logements sur le territoire concerné.",
-        "Adjonction de droit, pour les logements confiés en gérance avec attribution, du président de la commission de l'organisme mandant à celle de l'organisme gérant."
+        "Obligation de créer une commission territoriale supplémentaire sur la seule demande locale au-delà de 2 000 logements ; la faculté de création subsiste.",
+        "Siège délibératif de droit du président de la commission de l'organisme mandant du seul fait d'une convention de gérance incluant les attributions.",
+        "Autorisations spécifiques préalables des programmes prioritaires pour les personnes en perte d'autonomie ou les jeunes de moins de trente ans, leur extension aux autres bailleurs et l'habilitation à en organiser l'octroi.",
+        "Transmission systématique à la commission des éléments familiaux et financiers détaillés et de l'offre acceptée après un relogement relevant de L. 353-15 ou L. 442-6."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000045211440",
+      "number": "L441-2",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L302-1"
       ]
     },
     {
@@ -3959,16 +4005,16 @@
       "number": "L441-2-1",
       "check": "explicit_normative_reduction",
       "scope": [
-        "Possibilité d'exiger à nouveau des pièces justificatives exactes et à jour déjà enregistrées et légalement accessibles dans le système national pour la même instruction.",
-        "Interdiction absolue d'examiner une candidature ou d'attribuer un logement faute d'enregistrement ou de numéro lorsque ce défaut résulte du seul retard administratif après un dépôt établi.",
-        "Saisine obligatoire pour avis du comité d'orientation à chaque évolution du système ayant une incidence sur les demandeurs, bailleurs ou réservataires."
+        "Blocage de l'examen et de l'attribution dû au seul retard administratif d'enregistrement ou de numéro après un dépôt établi, sans suppression de l'obligation d'enregistrement.",
+        "Consultation obligatoirement préalable du comité d'orientation sur chaque évolution du système national affectant les demandeurs, bailleurs ou réservataires.",
+        "Agrément préfectoral préalable des systèmes particuliers de traitement automatisé et désignation préfectorale tenant lieu de cette approbation, sans procédure de remplacement."
       ]
     },
     {
       "source_id": "LEGIARTI000048853505",
       "number": "L441-3",
       "check": "explicit_normative_reduction",
-      "scope": "Suppression, pour toutes périodes d'occupation à compter de l'entrée en vigueur de la réforme, de la perception obligatoire du supplément de loyer de solidarité et des enquêtes, liquidations, indemnités de dossier et suivis ayant cette seule finalité, y compris pour les baux et conventions déjà conclus ; maintien des créances et protections afférentes aux périodes antérieures."
+      "scope": "Suppression intégrale du supplément de loyer de solidarité pour les périodes d'occupation dès l'entrée en vigueur, baux en cours et futurs et extensions par renvoi compris ; fin des seules formalités exclusivement attachées à ce supplément, sans hausse de remplacement du loyer ou des charges."
     },
     {
       "source_id": "LEGIARTI000048853505",
@@ -3986,6 +4032,14 @@
     {
       "source_id": "LEGIARTI000045211579",
       "number": "L442-8-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Information préalable obligatoire de l'organisme bailleur par le locataire procédant à la sous-location partielle autorisée au II, sans autorisation, attestation ou déclaration équivalente en remplacement."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000045211579",
+      "number": "L442-8-1",
       "check": "references_changed",
       "removed": [
         "L1242-2"
@@ -3993,14 +4047,34 @@
       "added": []
     },
     {
+      "source_id": "LEGIARTI000038833779",
+      "number": "L442-8-2",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Approbation préalable du plan d'apurement par l'organisme payeur incorporée, pour le protocole tripartite de sous-location du sixième alinéa, par les renvois à L353-15-2 et L442-6-5 et exigée par D824-15 pour l'ouverture et le rappel de l'aide."
+      ]
+    },
+    {
       "source_id": "LEGIARTI000033972860",
       "number": "L442-9",
       "check": "explicit_normative_reduction",
       "scope": [
-        "Autorisation administrative particulière préalable pour mettre en gérance les immeubles des offices et sociétés d'habitations à loyer modéré.",
-        "Dossier de demande, avis préalable et délai d'attente attachés au seul visa de mise en gérance, sans déclaration de remplacement.",
-        "Transmission systématique du mandat signé aux autorités administratives au titre de la procédure d'autorisation supprimée, hors demandes nécessaires aux contrôles légaux."
+        "Autorisation administrative particulière de mise en gérance des immeubles HLM et circuit systématique attaché à ce visa : dossier, avis financier préalable, attente de deux mois et transmission de copie du mandat, sans déclaration de remplacement."
       ]
+    },
+    {
+      "source_id": "LEGIARTI000006825457",
+      "number": "L443-6-2",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Exclusivité de la lettre recommandée imposée par les clauses types pour le retrait, le rachat de parts et les questions écrites de gestion des associés ; aucune confirmation recommandée n'est requise après une transmission alternative valable."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006825457",
+      "number": "L443-6-2",
+      "check": "length_change",
+      "ratio": 2.69
     },
     {
       "source_id": "LEGIARTI000038834120",
@@ -7097,6 +7171,159 @@
       ]
     },
     {
+      "source_id": "LEGIARTI000043818441",
+      "number": "D122-12",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Exigence d'un plan intérieur distinct du plan des cheminements extérieurs dans le dossier d'accessibilité.",
+        "Présentation de la notice d'accessibilité sur une pièce matériellement distincte des plans lorsque toutes ses informations sont intégrées au support commun."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043818441",
+      "number": "D122-12",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "R122-13"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043818445",
+      "number": "R122-14",
+      "check": "references_changed",
+      "removed": [
+        "R164-2"
+      ],
+      "added": [
+        "D122-12"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043818451",
+      "number": "R122-16",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Rejet automatique de l'autorisation ERP faute de pièces complémentaires dans le délai fixé par l'autorité ou, à défaut, dans un mois suivant leur demande."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043818451",
+      "number": "R122-16",
+      "check": "references_changed",
+      "removed": [
+        "R423-48"
+      ],
+      "added": []
+    },
+    {
+      "source_id": "LEGIARTI000048562991",
+      "number": "R122-22",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Document d'attestation de conception thermique matériellement distinct pour chaque bâtiment d'une même opération.",
+        "Obligation d'établir l'attestation de conception thermique sur un formulaire, indépendamment de la présence de toutes les informations requises sur un autre support."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000048562984",
+      "number": "R122-24",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Séparation matérielle obligatoire de l'attestation finale thermique par bâtiment, dans les deux configurations de mission du maître d'œuvre.",
+        "Utilisation obligatoire d'un formulaire pour l'attestation finale thermique alors que son contenu requis est fourni sur un autre support."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000048562975",
+      "number": "R122-24-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Mention obligatoire dans l'attestation de l'engagement exprès du maître d'ouvrage à justifier le plafond d'impact carbone après ouverture du chantier.",
+        "Document de conception énergétique et environnementale distinct pour chaque bâtiment ou partie de bâtiment au sein d'une même opération."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000048562968",
+      "number": "R122-24-3",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Attestation finale énergétique et environnementale matériellement séparée pour chaque bâtiment ou partie de bâtiment d'une même opération."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000048562962",
+      "number": "R122-26",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Utilisation obligatoire d'un formulaire pour l'attestation finale de rénovation énergétique alors que les informations requises sont fournies sur un autre support."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000044390557",
+      "number": "R122-29",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Fourniture de deux documents d'attestation nécessairement distincts pour l'extension et la rénovation simultanées d'un même bâtiment."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000044390557",
+      "number": "R122-29",
+      "check": "length_change",
+      "ratio": 2.86
+    },
+    {
+      "source_id": "LEGIARTI000044390557",
+      "number": "R122-29",
+      "check": "references_changed",
+      "removed": [
+        "R122-27"
+      ],
+      "added": [
+        "R122-26",
+        "R122-28"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000048562939",
+      "number": "R122-30",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Transmission à l'auteur de l'attestation d'accessibilité de tous les documents détenus, y compris ceux sans nécessité pour son examen."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000048562939",
+      "number": "R122-30",
+      "check": "references_changed",
+      "removed": [
+        "L122-9"
+      ],
+      "added": [
+        "L122-10",
+        "L181-1"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000048562930",
+      "number": "R122-32",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Transmission de tous les documents détenus à l'auteur de l'attestation acoustique, au-delà de ceux nécessaires à sa mission.",
+        "Document d'attestation acoustique matériellement spécifique à chaque tranche même lorsque toutes les attestations peuvent être identifiées dans un document commun."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000048562930",
+      "number": "R122-32",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L181-1"
+      ]
+    },
+    {
       "source_id": "LEGIARTI000053542680",
       "number": "39",
       "check": "references_changed",
@@ -9438,6 +9665,60 @@
         "Déclaration sur ce seul fondement des revenus totalement exonérés sans utilité légale pour le revenu fiscal de référence, les avantages et plafonds fiscaux.",
         "Dépôts multiples d'une même opération de prêt par chacun des intervenants lorsqu'une déclaration complète a été souscrite."
       ]
+    },
+    {
+      "source_id": "LEGIARTI000042909872",
+      "number": "242 quater",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Echéance obligatoire du 30 novembre précédant l'année du paiement pour solliciter les dispenses des articles 117 quater et 125 A.",
+        "Production et conservation d'une attestation sur l'honneur distincte de la demande de dispense du prélèvement."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000032701583",
+      "number": "242 quinquies",
+      "check": "explicit_normative_reduction",
+      "scope": "Suppression des déclarations détaillées annuelles et états de quotas semestriels et de répartitions/distributions exigés des gestionnaires et sociétés de capital-risque, pour toutes transmissions futures."
+    },
+    {
+      "source_id": "LEGIARTI000042912633",
+      "number": "242 septies",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Inscription obligatoire au registre public professionnel et renouvellement triennal conditionnant l'accès à l'activité.",
+        "Justificatifs particuliers d'aptitude, de régularité fiscale et sociale, casier judiciaire entièrement vierge, certification annuelle spéciale des comptes et signature obligatoire d'une charte.",
+        "Déclaration fiscale annuelle de toutes les opérations par le professionnel et transmission systématique de ses données au représentant de l'Etat pour les collectivités concernées.",
+        "Obligation de mise en concurrence pour les opérations dont le professionnel était déjà missionné avant la promulgation de la loi de finances pour 2012, par extension favorable de la dispense historique ambiguë."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006304154",
+      "number": "243 bis",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Rappel obligatoire dans les rapports et résolutions d'affectation des dividendes et distributions des trois exercices antérieurs, avec leurs ventilations fiscales et par catégorie de titres."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000048806274",
+      "number": "244 bis A",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Désignation obligatoire d'un représentant fiscal établi en France, accréditation administrative, conditions de celle-ci, garanties et procédure d'octroi et de retrait pour les nouvelles cessions.",
+        "Déclaration distincte pour les plus-values intégralement exonérées au-delà des cas déjà dispensés, et refus de dépôt ou d'enregistrement fondé sur la seule absence de mention d'exonération."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000048806274",
+      "number": "244 bis A",
+      "check": "references_changed",
+      "removed": [
+        "L651-2",
+        "L653-2",
+        "L653-8"
+      ],
+      "added": []
     },
     {
       "source_id": "LEGIARTI000006293732",
@@ -15785,6 +16066,104 @@
       "check": "explicit_normative_reduction",
       "scope": [
         "Forclusion de dix ans après la fin des études pour l'accès au montant abaissé du rachat et limite d'âge propre à cet abaissement appliquée par renvoi réglementaire."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000037062649",
+      "number": "L645-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Condition d'exercice conventionné pendant une durée minimale fixée par décret, qui excluait les carrières de moins d'un an du bénéfice des prestations complémentaires."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000037062633",
+      "number": "L645-3",
+      "check": "explicit_normative_reduction",
+      "scope": "Suppression de l'habilitation et de l'appel de la cotisation annuelle obligatoire d'ajustement des régimes L645-1 pour les périodes nouvelles ; maintien des dettes, participations, points et recours attachés aux périodes antérieures."
+    },
+    {
+      "source_id": "LEGIARTI000037062633",
+      "number": "L645-3",
+      "check": "references_changed",
+      "removed": [
+        "L162-14",
+        "L162-14-1",
+        "L645-1",
+        "L646-1"
+      ],
+      "added": []
+    },
+    {
+      "source_id": "LEGIARTI000037053474",
+      "number": "L646-2",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Restriction de l'option des médecins au début d'activité ou à une fenêtre de changement de l'option conventionnelle et aux délais de cette fenêtre.",
+        "Restriction de l'option des pédicures-podologues au seul moment du début de leur activité professionnelle conventionnée."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000048683487",
+      "number": "L646-3",
+      "check": "explicit_normative_reduction",
+      "scope": "Suppression pour les nouvelles périodes de toute la contribution supplémentaire de 3,25 % due par les praticiens et auxiliaires médicaux conventionnés sur les dépassements et activités hors convention ; anciennes assiettes, exclusions, créances et recours conservés."
+    },
+    {
+      "source_id": "LEGIARTI000048683487",
+      "number": "L646-3",
+      "check": "references_changed",
+      "removed": [
+        "L131-6",
+        "L131-6-1",
+        "L131-6-2",
+        "L1435-5",
+        "L162-14-1",
+        "L162-5",
+        "L162-5-13",
+        "L646-1"
+      ],
+      "added": []
+    },
+    {
+      "source_id": "LEGIARTI000044628911",
+      "number": "L646-4",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Condition générale d'acquittement des cotisations échues avant l'ouverture du risque pour bénéficier des prestations en espèces du régime.",
+        "Cessation des prestations pendant une interdiction juridictionnelle de soins supérieure à trois mois, distincte de la sanction professionnelle elle-même.",
+        "Renvois à la durée minimale d'affiliation du II 2° de L313-1 pour les prestations familiales et le capital décès, coordonnés à sa suppression dans la cible fournie."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000044628911",
+      "number": "L646-4",
+      "check": "references_changed",
+      "removed": [
+        "L313-1"
+      ],
+      "added": []
+    },
+    {
+      "source_id": "LEGIARTI000037063247",
+      "number": "L652-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Approbation administrative préalable par arrêté interministériel conditionnant l'entrée en vigueur des statuts de la Caisse nationale des barreaux français."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000037063247",
+      "number": "L652-1",
+      "check": "length_change",
+      "ratio": 5.03
+    },
+    {
+      "source_id": "LEGIARTI000037055548",
+      "number": "L652-2",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Assistance imposée du représentant du garde des sceaux à toutes les séances du conseil d'administration de la CNBF et de ses commissions délégataires."
       ]
     },
     {
@@ -22834,6 +23213,26 @@
       ]
     },
     {
+      "source_id": "LEGIARTI000035652507",
+      "number": "L2421-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Suppression du second exemplaire papier de la demande et de ses pièces imposé par R2421-1, ainsi que de tout jeu destiné à la seule reproduction ou circulation entre services, dans la procédure de licenciement du présent article et de L2421-2."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000035652507",
+      "number": "L2421-1",
+      "check": "length_change",
+      "ratio": 2.63
+    },
+    {
+      "source_id": "LEGIARTI000006902357",
+      "number": "L2421-10",
+      "check": "length_change",
+      "ratio": 5.49
+    },
+    {
       "source_id": "LEGIARTI000042655490",
       "number": "L121-32",
       "check": "explicit_normative_reduction",
@@ -26290,6 +26689,208 @@
       "ratio": 3.11
     },
     {
+      "source_id": "LEGIARTI000054551660",
+      "number": "R163-8",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Communication systématique par le maire ou le président compétent de l'annexe des servitudes à la direction départementale ou régionale des finances publiques."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000031720349",
+      "number": "R172-3",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Transmission systématique de l'analyse des résultats aux régions, départements, communes et groupements compétents en aménagement ou urbanisme."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006817587",
+      "number": "R211-2",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Insertion obligatoire de la mention de chaque délibération dans deux journaux diffusés dans le département, et condition d'effet attachée à ces insertions."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000039346727",
+      "number": "R211-3",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Envoi systématique de copies des actes de périmètre du DPU aux barreaux et aux greffes des tribunaux judiciaires territorialement concernés."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000029007741",
+      "number": "R211-7",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Fourniture de quatre exemplaires par le propriétaire pour sa proposition d'acquisition au titre du droit de délaissement, remplacée par un seul dépôt et les copies des services."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006817609",
+      "number": "R211-8",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L213-14"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006817653",
+      "number": "R212-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Obligation de recourir à un décret en Conseil d'État pour créer une zone par la voie étatique au seul motif qu'aucun avis n'a été émis dans les deux mois, sans avis défavorable exprimé."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006817653",
+      "number": "R212-1",
+      "check": "references_changed",
+      "removed": [
+        "L212-4"
+      ],
+      "added": [
+        "L212-1"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000039346735",
+      "number": "R212-2",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Insertion d'une mention de création de ZAD dans deux journaux publiés dans le ou les départements concernés.",
+        "Envoi systématique d'une copie de la décision créant la ZAD aux barreaux et greffes des tribunaux judiciaires du ressort."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000039346731",
+      "number": "R212-2-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Insertion obligatoire de la mention du périmètre provisoire dans deux journaux publiés dans le ou les départements.",
+        "Envoi systématique de la décision de périmètre provisoire aux barreaux et greffes des tribunaux judiciaires territorialement concernés."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006817671",
+      "number": "R212-6",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L213-11",
+        "R213-17",
+        "R213-18"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033231329",
+      "number": "R213-5",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Fourniture de trois des quatre exemplaires papier de la déclaration d'intention d'aliéner.",
+        "Remise par le déclarant d'exemplaires supplémentaires destinés à la circulation administrative de la DIA."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033231329",
+      "number": "R213-5",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "R213-6"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033231343",
+      "number": "R213-6",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Transmission systématique par le maire de chaque déclaration au service des finances publiques sans avis ni acquisition envisagée."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033231343",
+      "number": "R213-6",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L213-2",
+        "R213-21"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033231371",
+      "number": "R213-7",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Communication imposable des extraits de l'avant-contrat de vente prévue au 6° du II.",
+        "Communication des livres de la société civile immobilière prévue au 10° du II, les documents de l'exercice demeurant accessibles dans ce cadre.",
+        "Établissement et certification par le gérant d'un état spécial de l'actif, du passif et du bénéfice en remplacement des documents manquants, prévu au 12° du II."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000030003496",
+      "number": "R213-11",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Dépôt du second exemplaire du mémoire du titulaire joint à la lettre de saisine de la juridiction de l'expropriation."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000049855928",
+      "number": "R213-13",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Information distincte obligatoire du titulaire par le propriétaire sur le prix auquel la vente a finalement été réalisée."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000049855920",
+      "number": "D213-13-2",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Établissement obligatoire le jour de la visite d'un constat contradictoire distinct précisant sa date et les noms et qualité des présents.",
+        "Signature obligatoire de ce constat par le propriétaire ou son représentant et par le titulaire ou son mandataire."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033231407",
+      "number": "R213-15",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Délai minimal de trente jours entre l'envoi au maire de la déclaration d'adjudication et la date fixée pour la vente."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006817756",
+      "number": "R213-16",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "R213-25"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006817760",
+      "number": "R213-18",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L212-2-2"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000054550521",
+      "number": "R213-21",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Consultation obligatoire du directeur des finances publiques quel que soit le prix dans les ZAD, leurs périmètres provisoires et les secteurs communaux de préemption renforcée."
+      ]
+    },
+    {
       "source_id": "LEGIARTI000030788347",
       "number": "D912-14",
       "check": "explicit_normative_reduction",
@@ -29576,9 +30177,9 @@
       "number": "L121-24",
       "check": "explicit_normative_reduction",
       "scope": [
-        "Consultation obligatoire de la commission départementale de la nature, des paysages et des sites imposée par le seul article L121-24, avec suppression de l'attente et de la majoration d'instruction exclusivement liées à cet avis.",
-        "Délai préalable d'au moins huit jours entre l'information du public sur les documents et modalités et l'ouverture de la mise à disposition, sans réduction des quinze jours effectifs de participation.",
-        "Obligation d'organiser une mise à disposition supplémentaire lorsque le même projet fait déjà l'objet d'une enquête ou d'une participation légalement organisée assurant les mêmes garanties documentaires, de durée, d'observations et de bilan."
+        "Consultation obligatoire de la commission départementale de la nature, des paysages et des sites fondée exclusivement sur le deuxième alinéa de L121-24, avec cessation de la majoration d'instruction qui n'aurait que ce fondement.",
+        "Délai minimal distinct d'au moins huit jours entre l'information préalable du public et le début de la mise à disposition, sans retrait de l'information préalable elle-même ni des quinze jours effectifs de participation.",
+        "Obligation de recommencer une mise à disposition spéciale lorsque le même aménagement bénéficie déjà d'une participation légalement organisée garantissant les documents, quinze jours au moins, les observations, leur enregistrement et conservation et le bilan avant décision."
       ]
     },
     {
@@ -29595,7 +30196,7 @@
       "number": "L121-25",
       "check": "explicit_normative_reduction",
       "scope": [
-        "L'obligation systématique de soumettre la réalisation de tous les ouvrages de cet article à une enquête publique sur ce seul fondement, même sans obligation d'enquête résultant d'un autre texte."
+        "Enquête publique systématique obligatoire pour la réalisation des atterrages de canalisations et de leurs jonctions sur le seul fondement du troisième alinéa de L121-25, sans suppression des enquêtes ou participations légalement requises sur un fondement autonome."
       ]
     },
     {
