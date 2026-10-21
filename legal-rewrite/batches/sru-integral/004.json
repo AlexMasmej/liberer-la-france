@@ -117,13 +117,48 @@
     "source_id": "LEGIARTI000006825542",
     "source_sha256": "b4dd1cbe5c479a88578f375c0aba79abe1c2ce95f37666fee9a42cdc50234e6a",
     "number": "L453-2",
-    "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur de la loi portant suppression des dispositions issues de la loi n° 2000-1208 du 13 décembre 2000. L'activité de vente mentionnée au premier alinéa de l'article L. 453-1 n'est plus soumise à une comptabilité distincte sur le seul fondement du présent article.</p>\n<p>Les comptes des exercices clos et les écritures enregistrées avant cette entrée en vigueur restent soumis aux règles qui leur étaient applicables. Les documents et justificatifs antérieurs sont conservés pendant les durées légalement requises ; la présente abrogation n'autorise ni leur suppression ni la modification rétroactive des comptes approuvés.</p>\n<p>Les obligations de comptabilité générale, les séparations de comptes imposées par le régime des services d'intérêt économique général et les conditions de contrôle résultant d'un autre fondement demeurent applicables. Les garanties, cotisations, contrats et créances valablement nés avant cette entrée en vigueur ne sont ni éteints ni modifiés par la présente abrogation.</p>",
-    "reason": "Suppression de la comptabilité distincte spéciale de l'activité de vente des organismes HLM créée par SRU164. Les comptes généraux et les séparations de comptes sur fondement autonome demeurent ; les comptes et écritures antérieurs, garanties et créances sont préservés.",
-    "review_notes": "Article entier inchangé sur le fond depuis la création SRU164, en vigueur depuis le1erjuillet2003 après reports législatifs. Les notes mentionnent les lois2001-1168 et2002-1575 ; la seconde note comporte une coquille « loi2002-1208 », conservée dans la source et non utilisée pour inventer une autre origine. L'activité reste définie par L453-1 ; la présente proposition ne supprime pas la garantie ni la cotisation et ne présume pas leur maintien final dans le chantier allSRU, qui exige leur revue séparée. La suppression est immédiate pour les opérations futures, sans effacer l'historique ni les exigences indépendantes de séparation SIEG. Aucun nouveau rapport ou déclaration de remplacement.",
+    "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur de la loi portant la présente réforme. L'obligation de tenir une comptabilité distincte de l'activité de vente sur le seul fondement du présent article cesse à cette date.</p>\n<p>Les comptes des exercices clos et les écritures enregistrées avant cette entrée en vigueur restent soumis aux règles qui leur étaient applicables. Les documents et justificatifs antérieurs sont conservés pendant les durées légalement requises ; la présente abrogation n'autorise ni leur suppression ni la modification rétroactive des comptes approuvés. Aucun état spécial de clôture ni aucune déclaration de remplacement ne sont exigés sur ce seul fondement.</p>\n<p>Les obligations de comptabilité générale, les séparations de comptes imposées par le régime des services d'intérêt économique général et les conditions de contrôle résultant d'un autre fondement demeurent applicables. Les garanties, contrats et créances valablement nés avant cette entrée en vigueur ne sont ni éteints ni modifiés par la présente abrogation. La conservation ou l'exécution de ces engagements ne permet pas de percevoir une cotisation à raison d'un fait générateur postérieur à cette entrée en vigueur sur les fondements abrogés de la garantie spéciale des organismes d'habitations à loyer modéré.</p>",
+    "reason": "Suppression de fond de la comptabilité distincte spéciale de l'activité de vente, déjà retenue dans la proposition antérieure. Cette seconde passe enlève le renvoi opératoire à la définition de L453-1 désormais abrogé et écarte toute déclaration ou clôture spéciale de remplacement. La comptabilité générale et les séparations autonomes SIEG sont maintenues pour retracer les fonds et prévenir la surcompensation ; aucune simple réécriture de ces devoirs n'est comptée comme coupe supplémentaire.",
+    "review_notes": "Source et deux notes lues intégralement, avec le brouillon et SRU 164 initial : l'obligation comptable spéciale y a bien été créée. Les reports d'entrée en vigueur par les lois 2001-1168 et2002-1575 sont historiques ; le 1er juillet 2003 n'est pas la date de la réforme proposée. La seconde note écrit à tort «loi 2002-1208» ; cette incohérence de source reste signalée, sans correction silencieuse de sa provenance. Le brouillon disait ne pas présumer le sort de la garantie et de la cotisation : cette réserve est dépassée par l'abrogation prospective SGA expressément retenue dans coordination.json et dans L453-1 de ce lot. L'ancien renvoi de définition au premier alinéa de L453-1 n'est donc pas maintenu dans le texte abrogatoire. Les comptes clos, écritures et durées de conservation antérieurs restent intacts ; aucune comptabilité rétroactive n'est à refaire. La séparation SIEG et les garanties de remboursement sur d'autres fondements ne sont pas retirées. La réduction effective peut être limitée pour un organisme déjà astreint à une séparation équivalente par un autre texte ; aucun montant de coût évité n'est établi.",
     "status": "rewrite_draft",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "La totalité de l'obligation spéciale portée par la source entière est supprimée pour les écritures futures ; elle n'est remplacée par aucun état. Les obligations comptables autonomes ne disparaissent pas et peuvent limiter le gain matériel selon l'organisme.",
+      "scope_limitations": "Les écritures antérieures, archives, contrôles, comptabilité générale et séparations SIEG subsistent sur leur fondement propre. La part de doubles écritures réellement évitée n'est pas quantifiée et aucune économie globale de conformité n'est établie.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : ni état de clôture exceptionnel, ni déclaration, registre ou reconstitution des comptes. Les obligations d'archives et de séparation qui restent opposables préexistaient et servent la traçabilité des aides et engagements.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "hlm-fin-comptabilite-accession-speciale",
+          "description": "Suppression du fondement spécial imposant une comptabilité distincte de l'activité de vente HLM.",
+          "before": "Toute activité de vente définie au premier alinéa de L453-1 doit avoir une comptabilité distincte dans les écritures de chaque organisme HLM.",
+          "after": "Aucune comptabilité distincte exigée sur L453-2 pour les écritures futures ; seules les obligations comptables et SIEG d'un autre fondement demeurent.",
+          "unit": "legal_duty",
+          "affected_population": "Organismes HLM exerçant l'activité de vente visée par l'ancien article.",
+          "conditions_and_transition": "Entrée en vigueur ; comptes clos et écritures enregistrées auparavant soumis à leur ancien régime et conservés pendant les durées requises.",
+          "replacement_or_new_burdens": "Aucun rapport, état spécial de clôture ou dépôt substitutif ; coût effectivement évité dépendant des séparations autonomes encore applicables.",
+          "source_quote": "L'activité de vente définie au premier alinéa de l'article L. 453-1 fait l'objet d'une comptabilité distincte dans les écritures de chaque organisme d'habitations à loyer modéré.",
+          "proposed_quote": "L'obligation de tenir une comptabilité distincte de l'activité de vente sur le seul fondement du présent article cesse à cette date."
+        }
+      ]
+    },
     "change_type": "full_repeal",
     "repeal_policy_id": "editorial_direction_2026_10_19",
-    "repeal_scope": "Obligation créée par SRU164 de tenir, dans les écritures de chaque organisme HLM, une comptabilité distincte de l'activité de vente couverte par la société de garantie de l'accession sociale."
+    "repeal_scope": "Suppression pour l'avenir de la comptabilité distincte spéciale de l'activité de vente HLM, sans effacement des écritures anciennes ni des séparations comptables imposées sur un fondement autonome.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "b4dd1cbe5c479a88578f375c0aba79abe1c2ce95f37666fee9a42cdc50234e6a",
+      "source_notes_sha256": "29e65528879af8b145fb5c8f4af44ffcd42efe1dbaee95e3ae048265b6002acd",
+      "proposed_sha256": "8c56e99d06fb6cae8c9b66ce5efc78c251ac31e629a42baa2fd81a54c30220da",
+      "assessment_sha256": "692c5d7fc29dd262138b2956c9fba0938e1a19f1f6e165b36bb3b120af97ece8",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "76ad42800d75a67ad2e154c85055e376e42cfa4ac66e9af4373e97114e5db3ca"
   },
   {
     "code_id": "LEGITEXT000006074096",
