@@ -6,6 +6,7 @@ existing coordinator. No credentials or account configuration are read.
 """
 from pathlib import Path
 import datetime,fcntl,json,os,shlex,shutil,sqlite3,subprocess,sys,tempfile,time
+from worker_capacity import settings as worker_settings
 
 HERE=Path(__file__).resolve().parent
 RUNTIME=HERE/'runtime/exhaustive'
@@ -145,7 +146,7 @@ def checkpoint_metadata(folder):
 
 
 def launch(folder):
-    command=[sys.executable,'-u',str(RUNNER),'--workers','3','--interleave-review',
+    command=[sys.executable,'-u',str(RUNNER),'--workers',str(worker_settings(RUNTIME)['capacity']),'--interleave-review',
              '--export-every','1000','--deploy-on-export','--publish-at-end']
     with (folder/'continuation.log').open('ab',buffering=0) as output:
         child=subprocess.Popen(command,cwd=HERE,stdin=subprocess.DEVNULL,
@@ -184,6 +185,7 @@ def check():
                'consecutive_unexpected_exits':failures,
                'next_start_after_unix':previous.get('next_start_after_unix',0),
                'fresh_pending_reference_reviews':reference_pending,
+               'worker_configuration':worker_settings(RUNTIME),
                'exhaustive_rewriting_complete':False,'semantic_review_by_jurist':False}
         if decision=='restart':
             stamp=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')

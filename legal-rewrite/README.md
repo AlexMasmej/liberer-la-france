@@ -153,7 +153,7 @@ les lots déjà en cours. Les dispositions nouvelles ne sont pas réputées
 financées ou validées juridiquement du fait de leur rédaction.
 
 ```sh
-python3 legal-rewrite/run_exhaustive.py --workers 3 --interleave-review --export-every 200 --publish-at-end
+python3 legal-rewrite/run_exhaustive.py --workers 6 --interleave-review --export-every 1000 --deploy-on-export --publish-at-end
 ```
 
 La reprise alterne deux lots d’articles jamais réécrits et un lot de seconde
@@ -165,6 +165,30 @@ qui doit exceptionnellement terminer toute la seconde passe avant de rédiger.
 
 Le fichier `runtime/exhaustive/worker-limit.json` permet de réduire le nombre
 de rédacteurs simultanés pour réserver un créneau à une vérification manuelle.
+La capacité préparée est de six rédacteurs. Le plan autorisé du 21 octobre
+commence à quatre, puis prévoit six après au moins deux heures de mesure
+concluante. `runtime/exhaustive/parallelism-plan.json` conserve la référence à
+trois agents, le palier courant et les conditions de progression. La limite
+peut changer pendant le traitement; une réduction laisse finir les tâches
+déjà lancées. La libération d'un créneau manuel respecte le palier courant.
+
+Les lots actifs réservent leurs articles écrits et les cibles du catalogue
+de renvois lues. Plusieurs lecteurs d'une même cible peuvent avancer ensemble;
+une écriture en conflit attend. Une nouvelle cible au nouvel essai provoque
+une acquisition complète des réservations et une recapture des textes après
+l'attente. Ces réservations couvrent le catalogue configuré, notamment le
+contrat unique; elles ne prouvent pas tous les renvois des cinq codes. Les
+gardes à l'inscription et la passe finale de concordance restent nécessaires,
+y compris lorsqu'une cible est modifiée dans le même lot.
+
+Les nouvelles relectures figent aussi toute la ligne de batch, avec ses motifs,
+impacts et certificats; changer seulement les métadonnées ne peut donc pas
+faire écraser une relecture plus récente. Les anciens jobs restent compatibles
+avec des contrôles stricts des champs de leur avant-image en base.
+`runtime/exhaustive/job-metrics.jsonl` enregistre les durées, essais et résultats
+par lot sans contenu de raisonnement. Le passage à six dépend du débit observé
+et des reprises, sans assouplissement des validations ni augmentation des lots.
+
 Un verrou empêche deux coordinateurs et un second verrou protège les écritures
 en base et le registre de lots. Les réformes et leurs coordinations sont dans
 `site-summaries.json` et `policy-coordinations.json`.
@@ -175,7 +199,7 @@ Le service macOS de cet utilisateur `com.libererfrance.exhaustive-rewrite`
 exécute `supervise_exhaustive.py` chaque minute, indépendamment de la durée
 du chat. Il est installé dans `~/Library/LaunchAgents/` et reprend à la
 prochaine ouverture de session. Il adopte le coordinateur actif sans
-l'interrompre et relance un coordinateur disparu avec les trois agents, les
+l'interrompre et relance un coordinateur disparu avec la capacité configurée, les
 cinq codes, les annexes et la seconde passe. L'identité du processus et les
 verrous sont contrôlés avant tout lancement. Les tentatives antérieures sont
 conservées dans des dossiers distincts, sans acceptation automatique.

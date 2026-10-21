@@ -85,6 +85,16 @@ class QueueCycle(unittest.TestCase):
         self.assertEqual(report['current_reference_certificates'], 1)
         self.assertTrue(report['all_detected_contract_reference_checks_current'])
 
+    def test_reference_recheck_pins_complete_batch_metadata(self):
+        self.draft('A');row=self.certify()
+        # Changing B makes A's old certificate require a fresh whole-target read.
+        self.draft('B')
+        rows,_=self.pending()
+        from review_prior import batch_row_sha256
+        self.assertEqual(rows['test'][0]['previous_draft']['batch_row_sha256'],batch_row_sha256(row))
+        changed=row|{'review_notes':'A newer independent assessment was added.'}
+        self.assertNotEqual(rows['test'][0]['previous_draft']['batch_row_sha256'],batch_row_sha256(changed))
+
     def test_changed_referrer_body_requeues_existing_certificate(self):
         self.draft('A'); self.certify(); self.draft('A', '<p>L20-1 : autre règle entière.</p>')
         rows, report = self.pending()

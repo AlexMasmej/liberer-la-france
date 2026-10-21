@@ -20,6 +20,10 @@ LOCK=threading.Lock()
 STOP=threading.Event()
 SLOTS=threading.Condition()
 ACTIVE=0
+ACTIVE_LEASES={}
+LEASE_CONTEXT=threading.local()
+METRICS_LOCK=threading.Lock()
+MAX_WORKERS=6
 SLUGS=['travail','impots','securite-sociale','urbanisme','construction-habitation',*[f'impots-annexe-{i}' for i in range(1,5)]]
 
 def atomic(path,value):
@@ -283,7 +287,8 @@ def past_before_job():
     return options+['-c','mcp_servers.legal_rewrite_memory='+readonly]
 
 
-def run_job(job,codex,sources,review=False):
+def _run_job(job,codex,sources,review=False,measurement=None):
+    measurement={} if measurement is None else measurement
     slug,index,expected=job
     # Manual coordinations may finish while this long-lived queue is running.
     # Re-read their state before assigning work and never overwrite them.
@@ -293,12 +298,14 @@ def run_job(job,codex,sources,review=False):
     finally:db.close()
     if not review:expected=[a for a in expected if completed.get((a['code_id'],a['source_id']))!=a['source_sha256']]
     if not expected:
+        measurement['outcome']='skipped'
         print('SKIPPED',slug,index,'already completed by a parallel author',flush=True)
         return
     memory_options=past_before_job()
     name=(f"review-{slug}-{expected[0]['source_id']}-{index:05d}" if review else f'{slug}-{index:05d}')
     if review and all(a.get("reference_recheck_only") for a in expected):name="reference-"+name
     folder=job_directory(name)
+    measurement.update(job=folder.name,articles=len(expected))
     atomic(folder/'source.json',expected)
     atomic(folder/'policy.json',json.loads((HERE/'site-summaries.json').read_text()))
     atomic(folder/'coordination.json',json.loads((HERE/'policy-coordinations.json').read_text()))
@@ -313,13 +320,13 @@ def run_job(job,codex,sources,review=False):
     failure=None
     for attempt in range(1,4):
         if STOP.is_set():return
+        measurement['attempts']=attempt
         provisional=[]
         if (folder/'answer.json').exists():
             try:provisional=json.loads((folder/'answer.json').read_text())
             except (ValueError,OSError):pass
-        db=open_db(HERE/'corpus.sqlite')
-        try:reference_snapshot=reference_audit.capture(db,expected,provisional)
-        finally:db.close()
+        reference_snapshot=capture_for_attempt(expected,provisional)
+        if reference_snapshot is None:return
         atomic(folder/'reference-targets.json',reference_snapshot)
         reference_hash=digest((folder/'reference-targets.json').read_text())
         reference_prompt=reference_audit.PROMPT if reference_snapshot['targets'] else ''
@@ -336,19 +343,23 @@ def run_job(job,codex,sources,review=False):
             try:
                 process=invoke_agent(cmd,input=prompt+reference_prompt+('\nLe précédent contrôle a échoué : '+failure if failure else ''),text=True,stdout=events,stderr=errors,cwd=folder,timeout=3600)
             except subprocess.TimeoutExpired:
+                measurement.setdefault('retries',[]).append('timeout')
                 failure='Agent timed out; no article accepted';continue
         if process.returncode:
             # Stop on auth/quota failures instead of silently retrying indefinitely.
             tail=(folder/f'events-{attempt}.jsonl').read_text()[-8000:]+(folder/f'errors-{attempt}.log').read_text()[-4000:]
             if re.search(r'rate.limit|usage.limit|quota|unauthori[sz]ed|authentication|sign.in|insufficient',tail,re.I):
+                measurement['outcome']='blocked_auth_or_usage'
                 STOP.set()
                 with LOCK:progress(sources,'blocked','Codex authentication or usage limit; see job '+folder.name)
                 print('BLOCKED',folder.name,'authentication or usage limit',flush=True);return
+            measurement.setdefault('retries',[]).append('invocation')
             failure='Agent invocation failed; inspect local job logs';continue
         try:
             if digest((folder/'source.json').read_text())!=source_hash:raise ValueError('Assigned source file was modified')
             if digest((folder/'reference-targets.json').read_text())!=reference_hash:raise ValueError('Frozen reference targets were modified')
             if not policy_is_current(folder):
+                measurement['outcome']='stale_policy'
                 STOP.set()
                 atomic(folder/'stale-policy.json',{'accepted':False,'reason':'Author instructions changed during drafting; restart with the current policy'})
                 with LOCK:progress(sources,'checkpoint','Author instructions changed; stale-policy answers were not accepted')
@@ -363,6 +374,7 @@ def run_job(job,codex,sources,review=False):
                 review_prior.commit(rows,expected,reference_snapshot=reference_snapshot)
                 with LOCK:progress(sources)
                 print('RADICAL REVIEW',folder.name,len(rows),'articles checked against the new direction',flush=True)
+                measurement['outcome']='reviewed'
                 return
             with LOCK,writer_lock():
                 db=open_db(HERE/'corpus.sqlite')
@@ -406,12 +418,17 @@ def run_job(job,codex,sources,review=False):
                         STOP.set()
                         progress(sources,'blocked','Accepted SQLite rows need filesystem reconciliation; see '+folder.name)
                         print('BLOCKED',folder.name,'registration mirror requires reconciliation;',type(error).__name__,flush=True)
+                        measurement['outcome']='blocked_registration'
                         return
                 state=progress(sources)
             print('ACCEPTED',folder.name,len(accepted),'articles;',state['drafted_articles'],'drafted;',state['pending'],'pending',flush=True)
+            measurement.update(outcome='accepted',articles=len(accepted))
             return
         except Exception as error:
             failure=str(error);atomic(folder/'validation-failure.json',{'attempt':attempt,'error':failure})
+            category=('reference_changed' if failure.startswith('Reference target changed during drafting:')
+                      else 'new_reference' if failure.startswith('New reference needs its complete target text;') else 'validation')
+            measurement.setdefault('retries',[]).append(category)
     with LOCK:
         path=RUNTIME/'failed-jobs.json'
         failures=json.loads(path.read_text()) if path.exists() else []
@@ -421,26 +438,94 @@ def run_job(job,codex,sources,review=False):
         atomic(path,failures)
         progress(sources)
     print('DEFERRED',folder.name,'unverified and still pending;',failure,flush=True)
+    measurement['outcome']='deferred'
+
+def run_job(job,codex,sources,review=False):
+    measurement={'coordinator_pid':os.getpid(),'slug':job[0],'index':job[1],
+                 'kind':'review' if review else 'new','started_at_unix':time.time(),
+                 'outcome':'stopped','attempts':0,'retries':[]}
+    started=time.monotonic()
+    try:return _run_job(job,codex,sources,review,measurement)
+    except BaseException:
+        measurement['outcome']='exception';raise
+    finally:
+        measurement.update(finished_at_unix=time.time(),duration_seconds=time.monotonic()-started)
+        try:
+            with METRICS_LOCK:
+                RUNTIME.mkdir(parents=True,exist_ok=True)
+                with (RUNTIME/'job-metrics.jsonl').open('a') as stream:
+                    stream.write(json.dumps(measurement,ensure_ascii=False)+'\n')
+        except OSError:
+            # Missing telemetry holds any later ramp-up; it must never undo a
+            # validated transaction or invoke a second authoring attempt.
+            print('METRICS unavailable; accepted article state is preserved.',flush=True)
 
 def run_review_job(job,codex,sources):
     return run_job(job,codex,sources,review=True)
 
+def job_lease(job):
+    writes={reference_audit.key(a) for a in job[2]};reads=set()
+    db=open_db(HERE/'corpus.sqlite')
+    try:
+        for article in job[2]:reads.update(reference_audit.requirements(article,db=db))
+    finally:db.close()
+    return {'writes':writes,'reads':reads-writes}
+
+def leases_conflict(left,right):
+    return bool(left['writes']&(right['writes']|right['reads']) or right['writes']&left['reads'])
+
+def capture_for_attempt(expected,provisional):
+    def snapshot():
+        db=open_db(HERE/'corpus.sqlite')
+        try:
+            db.execute('BEGIN')
+            return reference_audit.capture(db,expected,provisional)
+        finally:db.close()
+    frozen=snapshot();token=getattr(LEASE_CONTEXT,'token',None)
+    if token is None:return frozen
+    writes={reference_audit.key(a) for a in expected}
+    updated={'writes':writes,'reads':set(frozen['targets'])-writes}
+    with SLOTS:
+        if ACTIVE_LEASES.get(token)==updated:return frozen
+        # Acquire the entire new footprint, never hold one write reservation
+        # while waiting for a second (two opposite new references can deadlock).
+        ACTIVE_LEASES.pop(token,None);SLOTS.notify_all()
+        while any(leases_conflict(updated,other) for other in ACTIVE_LEASES.values()):
+            if STOP.is_set():return None
+            SLOTS.wait(timeout=2)
+        if STOP.is_set():return None
+        ACTIVE_LEASES[token]=updated
+    # A target could change while admission was waiting. Read its complete
+    # current text again; the existing commit-time guards remain mandatory.
+    return snapshot()
+
+def worker_limit(maximum):
+    if type(maximum) is not int or not 1<=maximum<=MAX_WORKERS:raise ValueError('Invalid worker capacity; expected an integer from 1 to 6')
+    path=RUNTIME/'worker-limit.json'
+    value=json.loads(path.read_text())['workers'] if path.exists() else maximum
+    if type(value) is not int or not 1<=value<=MAX_WORKERS:raise ValueError('Invalid worker limit; expected an integer from 1 to 6')
+    return min(maximum,value)
+
 def run_in_slot(job,codex,sources,maximum,review=False):
     global ACTIVE
+    if STOP.is_set():return
+    lease=job_lease(job);token=object()
     with SLOTS:
         while True:
-            limit_path=RUNTIME/'worker-limit.json'
-            limit=min(maximum,int(json.loads(limit_path.read_text())['workers'])) if limit_path.exists() else maximum
+            limit=worker_limit(maximum)
             if STOP.is_set():return
-            if ACTIVE<limit:
-                ACTIVE+=1;break
+            if ACTIVE<limit and not any(leases_conflict(lease,other) for other in ACTIVE_LEASES.values()):
+                ACTIVE+=1;ACTIVE_LEASES[token]=lease;break
             SLOTS.wait(timeout=2)
+    LEASE_CONTEXT.token=token
     try:run_job(job,codex,sources,review=review)
     finally:
-        with SLOTS:ACTIVE-=1;SLOTS.notify_all()
+        LEASE_CONTEXT.token=None
+        with SLOTS:
+            ACTIVE-=1;ACTIVE_LEASES.pop(token,None);SLOTS.notify_all()
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--workers',type=int,choices=[1,2,3],default=1);parser.add_argument('--slugs',default=','.join(SLUGS));parser.add_argument('--max-jobs',type=int);parser.add_argument('--export-every',type=int,default=0);parser.add_argument('--publish-at-end',action='store_true');parser.add_argument('--review-prior-after',action='store_true');parser.add_argument('--wait-for-coordinator',action='store_true')
+    parser=argparse.ArgumentParser();parser.add_argument('--workers',type=int,choices=range(1,MAX_WORKERS+1),default=1);parser.add_argument('--slugs',default=','.join(SLUGS));parser.add_argument('--max-jobs',type=int);parser.add_argument('--export-every',type=int,default=0);parser.add_argument('--publish-at-end',action='store_true');parser.add_argument('--review-prior-after',action='store_true');parser.add_argument('--wait-for-coordinator',action='store_true')
     parser.add_argument('--deploy-on-export',action='store_true',help='Publish each checked checkpoint to the existing sites')
     order=parser.add_mutually_exclusive_group();order.add_argument('--review-prior-first',action='store_true');order.add_argument('--interleave-review',action='store_true')
     args=parser.parse_args()
@@ -455,6 +540,8 @@ def main():
     signal.signal(signal.SIGINT,stop_after_current_jobs)
     lockfile=(RUNTIME/'coordinator.lock').open('a');fcntl.flock(lockfile,fcntl.LOCK_EX|(0 if args.wait_for_coordinator else fcntl.LOCK_NB))
     (RUNTIME/'coordinator.pid').write_text(str(os.getpid()))
+    atomic(RUNTIME/'coordinator-run.json',{'pid':os.getpid(),'capacity':args.workers,
+           'started_at_unix':int(time.time()),'dependency_leases':True})
     codex=shutil.which('codex')
     if not codex:raise SystemExit('Codex CLI is not installed; no job launched')
     db=open_db(HERE/'corpus.sqlite');register(db,HERE/'batches',True)

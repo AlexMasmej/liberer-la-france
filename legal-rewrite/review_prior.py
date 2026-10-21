@@ -1,10 +1,11 @@
 """Second pass requested by the author, preserving every earlier draft.
 
 Called under the coordinator lock, either separately or between new drafts.
-No old draft is overwritten unless both source and proposal match the audit.
+No old draft is overwritten unless its full database before-image matches.
+New jobs also pin the complete active batch row, including audit metadata.
 """
 from pathlib import Path
-import json,hashlib,re
+import json,hashlib,re,sqlite3
 import concurrent.futures,subprocess,sys,itertools
 from register_batches import writer_lock,register,_register as register_locked
 from ingest import HERE,open_db
@@ -15,25 +16,56 @@ def digest(value):return hashlib.sha256((value or '').encode()).hexdigest()
 
 def revisions_manifest():return HERE/'runtime/radical-review-20261019.json'
 
+def batch_row_sha256(row):
+    """Hash one whole JSON row, independent of file layout or key order."""
+    return digest(json.dumps(row,ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False))
+
+def batch_owners(keys,root=None):
+    """Caller holds writer_lock from this scan through capture or revision."""
+    owners={};files={}
+    for path in sorted(((HERE if root is None else root)/'batches').glob('*/*.json')):
+        if not re.fullmatch(r'(?:batch)?\d+\.json',path.name):continue
+        items=json.loads(path.read_text())
+        for index,item in enumerate(items):
+            key=(item['code_id'],item['source_id'])
+            if key not in keys:continue
+            if key in owners:raise ValueError('Duplicate active batch owner: '+str(key))
+            owners[key]=(path,index);files[path]=items
+    return owners,files
+
+def draft_values(row):
+    return (row['source_sha256'],row.get('status','rewrite_draft'),row['proposed_xml'],row['reason'],row['review_notes'])
+
 def pending_sources(sources):
-    report=json.loads(revisions_manifest().read_text())
-    wanted={(a['code_id'],a['source_id']):a for a in report['prior_articles'] if a['review_status']=='pending'}
-    db=open_db(HERE/'corpus.sqlite');result={};changed=[];seen=set()
-    try:
-        for slug,articles in sources.items():
-            rows=[]
-            for source in articles:
-                key=(source['code_id'],source['source_id']);prior=wanted.get(key)
-                if not prior:continue
-                seen.add(key)
-                old=db.execute('SELECT source_sha256,status,proposed_xml,reason,review_notes FROM drafts WHERE code_id=? AND source_id=?',key).fetchone()
-                if not old or old[0]!=source['source_sha256'] or digest(old[2])!=prior['proposed_sha256']:
-                    changed.append({'code_id':key[0],'source_id':key[1],'reason':'Source or proposal changed; manual comparison required'});continue
-                rows.append(source|{'previous_draft':{'source_sha256':old[0],'status':old[1],'proposed_xml':old[2],'reason':old[3],'review_notes':old[4],'proposed_sha256':digest(old[2])}})
-            result[slug]=rows
-    finally:db.close()
+    result={};changed=[];seen=set()
     with writer_lock():
         report=json.loads(revisions_manifest().read_text())
+        wanted={(a['code_id'],a['source_id']):a for a in report['prior_articles'] if a['review_status']=='pending'}
+        owners,files=batch_owners(wanted)
+        # The writer lock keeps batch metadata and DB fields from different
+        # registrations out of the same job. BEGIN pins all DB reads as well.
+        db=sqlite3.connect((HERE/'corpus.sqlite').resolve().as_uri()+'?mode=ro',uri=True,timeout=600)
+        db.execute('BEGIN')
+        try:
+            for slug,articles in sources.items():
+                rows=[]
+                for source in articles:
+                    key=(source['code_id'],source['source_id']);prior=wanted.get(key)
+                    if not prior:continue
+                    seen.add(key)
+                    old=db.execute('SELECT source_sha256,status,proposed_xml,reason,review_notes FROM drafts WHERE code_id=? AND source_id=?',key).fetchone()
+                    if not old or old[0]!=source['source_sha256'] or digest(old[2])!=prior['proposed_sha256']:
+                        changed.append({'code_id':key[0],'source_id':key[1],'reason':'Source or proposal changed; manual comparison required'});continue
+                    batch=None
+                    if key in owners:
+                        path,index=owners[key];batch=files[path][index]
+                        if draft_values(batch)!=old:
+                            changed.append({'code_id':key[0],'source_id':key[1],'reason':'Active batch and database before-images differ; manual comparison required'});continue
+                    # Present with null means a captured legacy absence; an
+                    # absent key identifies historical jobs without this guard.
+                    rows.append(source|{'previous_draft':{'source_sha256':old[0],'status':old[1],'proposed_xml':old[2],'reason':old[3],'review_notes':old[4],'proposed_sha256':digest(old[2]),'batch_row_sha256':batch_row_sha256(batch) if batch is not None else None}})
+                result[slug]=rows
+        finally:db.close()
         report['changed_since_inventory']=changed
         outside=set(wanted)-seen
         report['outside_current_inventory']=[{'code_id':c,'source_id':i,'reason':'Historical draft not included in the current official article inventory; preserved separately'} for c,i in sorted(outside)]
@@ -45,13 +77,7 @@ def pending_sources(sources):
 def commit(rows,expected,reference_snapshot=None):
     prior={(a['code_id'],a['source_id']):a['previous_draft'] for a in expected}
     with writer_lock():
-        owners={};files={}
-        for path in sorted((HERE/'batches').glob('*/*.json')):
-            if not re.fullmatch(r'(?:batch)?\d+\.json',path.name):continue
-            items=json.loads(path.read_text())
-            for index,item in enumerate(items):
-                key=(item['code_id'],item['source_id'])
-                if key in prior:owners[key]=(path,index);files[path]=items
+        owners,files=batch_owners(prior)
         archive=[];legacy=[]
         db=open_db(HERE/'corpus.sqlite')
         try:
@@ -61,8 +87,15 @@ def commit(rows,expected,reference_snapshot=None):
             for row in rows:
                 key=(row['code_id'],row['source_id']);old=prior[key]
                 current=db.execute('SELECT source_sha256,status,proposed_xml,reason,review_notes FROM drafts WHERE code_id=? AND source_id=?',key).fetchone()
-                if not current or current[0]!=old['source_sha256'] or digest(current[2])!=old['proposed_sha256']:
+                if not current or current!=draft_values(old) or digest(current[2])!=old['proposed_sha256']:
                     raise ValueError('Refusing to replace a changed draft during radical review: '+str(key))
+                if 'batch_row_sha256' in old:
+                    batch=None
+                    if key in owners:
+                        path,index=owners[key];batch=files[path][index]
+                    actual=batch_row_sha256(batch) if batch is not None else None
+                    if actual!=old['batch_row_sha256']:
+                        raise ValueError('Refusing to replace a changed active batch row during radical review: '+str(key))
                 canonical=db.execute('SELECT source_sha256 FROM articles WHERE code_id=? AND id=?',key).fetchone()
                 if not canonical or canonical[0]!=row['source_sha256']:
                     raise ValueError('Refusing to revise a changed canonical source: '+str(key))

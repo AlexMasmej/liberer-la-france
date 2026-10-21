@@ -127,8 +127,8 @@ def validate_batches(db,root):
     return records,diagnostics,batch_files
 
 @contextmanager
-def writer_lock():
-    with (HERE/'draft-writer.lock').open('a') as lock:
+def writer_lock(root=None):
+    with ((HERE if root is None else root)/'draft-writer.lock').open('a') as lock:
         fcntl.flock(lock,fcntl.LOCK_EX)
         try:yield
         finally:fcntl.flock(lock,fcntl.LOCK_UN)
