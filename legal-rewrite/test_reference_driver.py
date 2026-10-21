@@ -8,6 +8,7 @@ from contextlib import contextmanager,redirect_stdout
 import io,json,sys,threading
 from test_reference_integrity_regressions import audit,P,LEGAL
 from ingest import open_db
+from test_execution_fixture import emit_cli_startup
 
 class DriverBranches(TestCase):
     def setUp(self):
@@ -41,6 +42,7 @@ class DriverBranches(TestCase):
             guard_checks.append(snapshot)
             return original_guard(db,snapshot)
         def worker(*args,**kwargs):
+            emit_cli_startup(kwargs)
             folder=kwargs['cwd'];snapshot=json.loads((folder/'reference-targets.json').read_text())
             self.assertFalse((folder/'answer.json').exists(),'Old worker answer must be removed before retry')
             self.assertFalse((folder/'result.json').exists(),'Old worker result must be removed before retry')

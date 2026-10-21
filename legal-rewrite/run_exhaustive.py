@@ -12,6 +12,7 @@ from source_assets import graphic_markers,load_companions,recovery_complete,reco
 from sru_context import contexts as sru_contexts, priority as sru_priority
 from contrat_unique_priority import article_priority as cu_article_priority, priority as cu_priority, mixed_priority as cu_mixed_priority
 import reference_coherence as reference_audit
+from worker_execution import requested_execution,cli_options as execution_options,verify_execution
 
 ROOT=HERE.parent
 CORPUS=ROOT/'sites/liberer-la-retraite/dist/corpus'
@@ -57,8 +58,10 @@ def invoke_agent(command,*,input,text,stdout,stderr,cwd,timeout):
     child=subprocess.Popen(command,stdin=subprocess.PIPE,text=text,stdout=stdout,
                            stderr=stderr,cwd=cwd,start_new_session=True)
     record=Path(cwd)/f'process-{child.pid}.json'
+    process_record={'pid':child.pid,'process_group':child.pid,'started_at_unix':int(time.time()),
+                    'stderr_log':str(getattr(stderr,'name','')),'stdout_log':str(getattr(stdout,'name',''))}
     try:
-        atomic(record,{'pid':child.pid,'process_group':child.pid,'started_at_unix':int(time.time())})
+        atomic(record,process_record)
         child.communicate(input=input,timeout=timeout)
     except BaseException:
         try:os.killpg(child.pid,signal.SIGTERM)
@@ -72,8 +75,7 @@ def invoke_agent(command,*,input,text,stdout,stderr,cwd,timeout):
         raise
     finally:
         if child.poll() is not None:
-            atomic(record,{'pid':child.pid,'process_group':child.pid,'ended_at_unix':int(time.time()),
-                           'returncode':child.returncode})
+            atomic(record,process_record|{'ended_at_unix':int(time.time()),'returncode':child.returncode})
     return subprocess.CompletedProcess(command,child.returncode)
 
 def publish_checkpoint(deploy=False):
@@ -338,8 +340,12 @@ def _run_job(job,codex,sources,review=False,measurement=None):
             (folder/'previous-answer.json').unlink()
         for stale in ['answer.json','result.json']:
             if (folder/stale).exists():(folder/stale).unlink()
-        with (folder/f'events-{attempt}.jsonl').open('w') as events,(folder/f'errors-{attempt}.log').open('w') as errors:
-            cmd=[codex,'exec',*memory_options,'--ephemeral','--skip-git-repo-check','--sandbox','workspace-write','--output-schema',str(folder/'result-schema.json'),'--output-last-message',str(folder/'result.json'),'--json','-']
+        execution=requested_execution(RUNTIME)
+        atomic(folder/f'execution-requested-{attempt}.json',execution)
+        with (folder/f'events-{attempt}.log').open('w') as events,(folder/f'errors-{attempt}.log').open('w') as errors:
+            # Text mode retains the native resolved-session header on stderr.
+            # JSON mode drops the model and effort from its thread.started event.
+            cmd=[codex,'exec',*memory_options,*execution_options(execution),'--ephemeral','--skip-git-repo-check','--sandbox','workspace-write','--output-schema',str(folder/'result-schema.json'),'--output-last-message',str(folder/'result.json'),'-']
             try:
                 process=invoke_agent(cmd,input=prompt+reference_prompt+('\nLe précédent contrôle a échoué : '+failure if failure else ''),text=True,stdout=events,stderr=errors,cwd=folder,timeout=3600)
             except subprocess.TimeoutExpired:
@@ -347,7 +353,7 @@ def _run_job(job,codex,sources,review=False,measurement=None):
                 failure='Agent timed out; no article accepted';continue
         if process.returncode:
             # Stop on auth/quota failures instead of silently retrying indefinitely.
-            tail=(folder/f'events-{attempt}.jsonl').read_text()[-8000:]+(folder/f'errors-{attempt}.log').read_text()[-4000:]
+            tail=(folder/f'events-{attempt}.log').read_text()[-8000:]+(folder/f'errors-{attempt}.log').read_text()[-4000:]
             if re.search(r'rate.limit|usage.limit|quota|unauthori[sz]ed|authentication|sign.in|insufficient',tail,re.I):
                 measurement['outcome']='blocked_auth_or_usage'
                 STOP.set()
@@ -355,6 +361,15 @@ def _run_job(job,codex,sources,review=False,measurement=None):
                 print('BLOCKED',folder.name,'authentication or usage limit',flush=True);return
             measurement.setdefault('retries',[]).append('invocation')
             failure='Agent invocation failed; inspect local job logs';continue
+        observed=verify_execution(folder,execution,folder/f'errors-{attempt}.log')
+        atomic(folder/f'execution-observed-{attempt}.json',observed)
+        if not observed['verified']:
+            STOP.set();measurement['outcome']='blocked_execution_evidence'
+            with LOCK:progress(sources,'blocked','Effective worker model or reasoning effort is unverified; see job '+folder.name)
+            print('BLOCKED',folder.name,'execution model evidence failed;',observed['status'],flush=True)
+            return
+        measurement.update(model=observed['model'],reasoning_effort=observed['reasoning_effort'],
+                           execution_session_id=observed['session_id'],execution_verified=True)
         try:
             if digest((folder/'source.json').read_text())!=source_hash:raise ValueError('Assigned source file was modified')
             if digest((folder/'reference-targets.json').read_text())!=reference_hash:raise ValueError('Frozen reference targets were modified')
@@ -541,7 +556,8 @@ def main():
     lockfile=(RUNTIME/'coordinator.lock').open('a');fcntl.flock(lockfile,fcntl.LOCK_EX|(0 if args.wait_for_coordinator else fcntl.LOCK_NB))
     (RUNTIME/'coordinator.pid').write_text(str(os.getpid()))
     atomic(RUNTIME/'coordinator-run.json',{'pid':os.getpid(),'capacity':args.workers,
-           'started_at_unix':int(time.time()),'dependency_leases':True})
+           'started_at_unix':int(time.time()),'dependency_leases':True,
+           'requested_execution':requested_execution(RUNTIME)})
     codex=shutil.which('codex')
     if not codex:raise SystemExit('Codex CLI is not installed; no job launched')
     db=open_db(HERE/'corpus.sqlite');register(db,HERE/'batches',True)

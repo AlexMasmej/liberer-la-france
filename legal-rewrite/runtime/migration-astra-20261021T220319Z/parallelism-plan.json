@@ -1,0 +1,152 @@
+{
+  "capacity": 6,
+  "current_workers": 4,
+  "target_workers": 6,
+  "stage": "four_worker_trial",
+  "approved_scope": "five complete codes and CGI annexes; existing source, impact, benefit and reference checks remain mandatory",
+  "authorized_by": "User request to accelerate with more parallel agents without sacrificing quality or reference checks",
+  "prepared_at_utc": "2026-10-21T20:54:19.620343+00:00",
+  "proof_directory": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/parallelisme-20261021T205419Z",
+  "promotion": {
+    "minimum_hours_at_four_workers": 2,
+    "minimum_successful_jobs": 12,
+    "maximum_extra_retry_fraction_over_baseline": 0.1,
+    "require_no_new_deferred_or_blocked_jobs": true,
+    "minimum_job_throughput_gain_over_baseline": 0.1,
+    "decision_by": "hourly continuation agent after reviewing measured outcomes; hold at four if evidence is insufficient",
+    "maximum_retry_job_fraction": 0.31126760563380285,
+    "baseline_successful_jobs_per_hour": 11.833333333333334,
+    "new_confirmation_required": false
+  },
+  "baseline_three_worker_status": {
+    "status": "running",
+    "updated_at_unix": 1792615817,
+    "source_records": 30317,
+    "drafted_articles": 9996,
+    "retained_unchanged": 3981,
+    "pending": 16340,
+    "exhaustive_rewriting_complete": false,
+    "jurist_reviewed_articles": 0,
+    "codes": [
+      {
+        "slug": "travail",
+        "source_records": 11593,
+        "drafted": 1817,
+        "retained_unchanged": 1030,
+        "pending": 8746
+      },
+      {
+        "slug": "impots",
+        "source_records": 2375,
+        "drafted": 1198,
+        "retained_unchanged": 510,
+        "pending": 667
+      },
+      {
+        "slug": "securite-sociale",
+        "source_records": 7427,
+        "drafted": 1566,
+        "retained_unchanged": 911,
+        "pending": 4950
+      },
+      {
+        "slug": "urbanisme",
+        "source_records": 2459,
+        "drafted": 1573,
+        "retained_unchanged": 754,
+        "pending": 132
+      },
+      {
+        "slug": "construction-habitation",
+        "source_records": 4126,
+        "drafted": 1533,
+        "retained_unchanged": 750,
+        "pending": 1843
+      },
+      {
+        "slug": "impots-annexe-1",
+        "source_records": 71,
+        "drafted": 71,
+        "retained_unchanged": 0,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-2",
+        "source_records": 674,
+        "drafted": 674,
+        "retained_unchanged": 0,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-3",
+        "source_records": 1115,
+        "drafted": 1088,
+        "retained_unchanged": 26,
+        "pending": 1
+      },
+      {
+        "slug": "impots-annexe-4",
+        "source_records": 477,
+        "drafted": 476,
+        "retained_unchanged": 0,
+        "pending": 1
+      }
+    ],
+    "failure": null,
+    "prior_drafts_reviewed": 751,
+    "prior_drafts_awaiting_review": 6812,
+    "publication_pending": false
+  },
+  "baseline_metrics": {
+    "window_hours": 6,
+    "measured_at_utc": "2026-10-21T20:52:35Z",
+    "workers": 3,
+    "new_entries_per_hour": 192,
+    "new_entries": 1152,
+    "new_proposals": 525,
+    "new_retained": 627,
+    "reviews_per_hour": 3.8333333333333335,
+    "successful_jobs_per_hour": 11.833333333333334,
+    "successful_jobs": 71,
+    "jobs_requiring_retry": 15,
+    "retry_job_fraction": 0.2112676056338028,
+    "extra_attempts": 17,
+    "deferred_registry_entries": 44,
+    "new_job_median_minutes": 17.9,
+    "new_job_p90_minutes": 29.4,
+    "review_job_median_minutes": 4.4,
+    "review_job_p90_minutes": 7.6,
+    "timing_method": "last event file mtime for accepted jobs; excludes still-open jobs; code mix and source length affect comparison"
+  },
+  "manual_agent_reservations_preserved": true,
+  "stage_started_at_utc": "2026-10-21T21:02:24.650551+00:00",
+  "stage_coordinator_pid": 95424,
+  "warmup_excluded_from_performance_window": true,
+  "verified_active_workers": 4,
+  "regression_tests_passed": 140,
+  "explicit_promotion_authorization": {
+    "approved": true,
+    "recorded_at_utc": "2026-10-21T21:18:17.810904+00:00",
+    "new_confirmation_required": false,
+    "continue_after_promotion": true,
+    "scope": "five complete codes and four CGI annexes",
+    "instruction": "Passer à six dès que le palier est validé, sans redemander, puis continuer jusqu’au bout avec les mêmes vérifications."
+  },
+  "latest_trial_evaluation": {
+    "checked_at_utc": "2026-10-21T21:45:01.242531+00:00",
+    "coordinator_pid": 95424,
+    "hours_since_first_measured_job": 0.7292328816652298,
+    "successful_jobs": 10,
+    "successful_jobs_per_hour": 13.713040444863973,
+    "retry_job_fraction": 0.5,
+    "outcomes": {
+      "reviewed": 3,
+      "accepted": 7
+    },
+    "deferred_registry_entries": 44,
+    "decision": "hold_at_four",
+    "reason": "Minimum two-hour observation window not yet reached; early retry fraction exceeds promotion threshold, all observed retries resolved by the existing validators.",
+    "promotion_validated": false,
+    "confirmation_required": false
+  }
+}

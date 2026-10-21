@@ -9,6 +9,7 @@ import threading
 from contextlib import redirect_stdout
 from types import SimpleNamespace
 import run_exhaustive as coordinator
+from test_execution_fixture import emit_cli_startup
 from ingest import open_db
 
 from run_exhaustive import interleave_jobs, policy_is_current, mentions_possible_relief, validate_answer, needs_graphic_source
@@ -32,6 +33,7 @@ class DraftingQueue(TestCase):
             def child(*args,**kwargs):
                 folder=kwargs['cwd']
                 if folder.name.endswith('00001'):return SimpleNamespace(returncode=1)
+                emit_cli_startup(kwargs)
                 row={k:sources[1][k] for k in ['code_id','source_id','source_sha256','number']}
                 row.update(proposed_xml='<p>Le délai applicable est fixé à trois mois.</p>',reason='Clarifie le délai.',review_notes='Les trois mois sont conservés.')
                 (folder/'answer.json').write_text(json.dumps([row]))

@@ -193,6 +193,20 @@ Un verrou empêche deux coordinateurs et un second verrou protège les écriture
 en base et le registre de lots. Les réformes et leurs coordinations sont dans
 `site-summaries.json` et `policy-coordinations.json`.
 
+Les nouveaux rédacteurs sélectionnent explicitement `gpt-6-astra` et l'effort
+`medium` via `worker_execution.py` et `runtime/exhaustive/model-policy.json`.
+Ils n'héritent pas du modèle global et cette sélection ne modifie pas les
+réglages globaux. L'interface installée appelle cet effort « Moyen / Medium »;
+la correspondance avec le libellé « Normal » n'est pas établie localement.
+Chaque tentative conserve le journal natif de démarrage et une preuve limitée
+aux champs modèle, effort, fournisseur, session et dossier, avec observation
+du début de réponse. La configuration et les arguments seuls ne valent pas
+preuve d'exécution. Une preuve absente ou discordante bloque l'acceptation.
+Ces traces locales ne constituent pas une attestation cryptographique du
+serveur. Les lots déjà lancés finissent avant la reprise sur le nouveau modèle.
+La mesure du palier de quatre repart avec cette nouvelle cohorte; les résultats
+de l'ancien modèle et le temps de transition ne doivent pas y être inclus.
+
 ## Supervision de la poursuite exhaustive
 
 Le service macOS de cet utilisateur `com.libererfrance.exhaustive-rewrite`

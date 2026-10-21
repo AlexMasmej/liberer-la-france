@@ -7,6 +7,7 @@ existing coordinator. No credentials or account configuration are read.
 from pathlib import Path
 import datetime,fcntl,json,os,shlex,shutil,sqlite3,subprocess,sys,tempfile,time
 from worker_capacity import settings as worker_settings
+from worker_execution import requested_execution,verify_execution
 
 HERE=Path(__file__).resolve().parent
 RUNTIME=HERE/'runtime/exhaustive'
@@ -62,9 +63,16 @@ def job_workers(rows):
         except (ValueError,IndexError,OSError):continue
         if target.name!='result.json' or not target.is_relative_to((RUNTIME/'jobs').resolve()):continue
         job=target.parent
-        modified=max((p.stat().st_mtime for p in job.glob('events-*.jsonl')),default=0)
+        # Native text mode writes progress to stderr; stdout may stay empty
+        # until the final answer. Keep both old JSON and new native logs.
+        logs=[p for p in job.glob('events-*.*') if p.suffix in {'.jsonl','.log'}]
+        logs.extend(job.glob('errors-*.log'))
+        modified=max((p.stat().st_mtime for p in logs),default=0)
+        process_file=job/f'process-{row["pid"]}.json'
+        process=read_json(process_file,{})
+        evidence=verify_execution(job,requested_execution(RUNTIME),process.get('stderr_log') or None)
         result.append({'pid':row['pid'],'ppid':row['ppid'],'job':job.name,
-                       'last_event_unix':int(modified)})
+                       'last_event_unix':int(modified),'execution':evidence})
     return result
 
 

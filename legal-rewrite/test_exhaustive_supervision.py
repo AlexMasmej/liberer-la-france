@@ -2,13 +2,14 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest import TestCase,main
 from unittest.mock import patch
-import fcntl,json,subprocess,sys
+import fcntl,json,subprocess,sys,os
 import hashlib,io,threading,time
 from contextlib import redirect_stdout
 from types import SimpleNamespace
 from ingest import open_db
 import supervise_exhaustive as supervisor
 import run_exhaustive as coordinator
+from test_execution_fixture import emit_cli_startup
 
 
 class Decisions(TestCase):
@@ -113,6 +114,15 @@ class FilesAndProcesses(TestCase):
         with patch.object(supervisor,'processes',return_value=rows),patch.object(supervisor,'launch') as launch:
             self.assertEqual(supervisor.check()['state'],'orphan_workers');launch.assert_not_called()
 
+    def test_native_stderr_progress_counts_while_stdout_is_empty(self):
+        job=self.runtime/'jobs/native';job.mkdir(parents=True)
+        stdout=job/'events-1.log';stdout.touch();os.utime(stdout,(100,100))
+        stderr=job/'errors-1.log';stderr.write_text('native progress\n');os.utime(stderr,(200,200))
+        rows=[{'pid':7,'ppid':1,'args':['/local/bin/codex','exec','--output-last-message',str(job/'result.json')]}]
+        worker=supervisor.job_workers(rows)[0]
+        self.assertEqual(worker['last_event_unix'],200)
+        self.assertFalse(worker['execution']['verified'])
+
     def test_real_subprocess_death_then_health_check_restarts(self):
         script=self.root/'fake_coordinator.py'
         script.write_text('import time; time.sleep(30)\n')
@@ -166,6 +176,7 @@ class FilesAndProcesses(TestCase):
         db.execute('INSERT INTO articles VALUES(?,?,?,?,?,?,?,?,?,?)',('CODE','ARTICLE','L1','2020-01-01','2999-01-01','VIGUEUR',body,body,sha,'archive'))
         db.commit();db.close()
         def child(*args,**kwargs):
+            emit_cli_startup(kwargs)
             row={k:source[k] for k in ['code_id','source_id','source_sha256','number']}
             row.update(proposed_xml='<p>Le délai applicable est fixé à trois mois.</p>',reason='Clarifier le délai.',review_notes='Trois mois conservés.')
             folder=kwargs['cwd']
