@@ -39,6 +39,39 @@ def normalized(body):
 
 def digest(value):return hashlib.sha256((value or '').encode()).hexdigest()
 
+def job_directory(name):
+    """A resumed assignment must never overwrite an earlier attempt's evidence."""
+    parent=RUNTIME/'jobs';parent.mkdir(parents=True,exist_ok=True)
+    folder=parent/name
+    try:folder.mkdir()
+    except FileExistsError:
+        folder=Path(tempfile.mkdtemp(prefix=name+'-resume-',dir=parent))
+    return folder
+
+def invoke_agent(command,*,input,text,stdout,stderr,cwd,timeout):
+    """Isolate each attempt so a timeout cannot leave commands writing behind."""
+    child=subprocess.Popen(command,stdin=subprocess.PIPE,text=text,stdout=stdout,
+                           stderr=stderr,cwd=cwd,start_new_session=True)
+    record=Path(cwd)/f'process-{child.pid}.json'
+    try:
+        atomic(record,{'pid':child.pid,'process_group':child.pid,'started_at_unix':int(time.time())})
+        child.communicate(input=input,timeout=timeout)
+    except BaseException:
+        try:os.killpg(child.pid,signal.SIGTERM)
+        except ProcessLookupError:pass
+        try:child.wait(timeout=2)
+        except subprocess.TimeoutExpired:pass
+        # The group may contain a command after its Codex parent has exited.
+        try:os.killpg(child.pid,signal.SIGKILL)
+        except ProcessLookupError:pass
+        child.wait()
+        raise
+    finally:
+        if child.poll() is not None:
+            atomic(record,{'pid':child.pid,'process_group':child.pid,'ended_at_unix':int(time.time()),
+                           'returncode':child.returncode})
+    return subprocess.CompletedProcess(command,child.returncode)
+
 def publish_checkpoint(deploy=False):
     """Only a reported deployment failure is nonfatal; local defects still stop."""
     command=[sys.executable,str(HERE/'publish_snapshot.py')]+(['--deploy'] if deploy else [])
@@ -265,7 +298,7 @@ def run_job(job,codex,sources,review=False):
     memory_options=past_before_job()
     name=(f"review-{slug}-{expected[0]['source_id']}-{index:05d}" if review else f'{slug}-{index:05d}')
     if review and all(a.get("reference_recheck_only") for a in expected):name="reference-"+name
-    folder=RUNTIME/'jobs'/name;folder.mkdir(parents=True,exist_ok=True)
+    folder=job_directory(name)
     atomic(folder/'source.json',expected)
     atomic(folder/'policy.json',json.loads((HERE/'site-summaries.json').read_text()))
     atomic(folder/'coordination.json',json.loads((HERE/'policy-coordinations.json').read_text()))
@@ -301,7 +334,7 @@ def run_job(job,codex,sources,review=False):
         with (folder/f'events-{attempt}.jsonl').open('w') as events,(folder/f'errors-{attempt}.log').open('w') as errors:
             cmd=[codex,'exec',*memory_options,'--ephemeral','--skip-git-repo-check','--sandbox','workspace-write','--output-schema',str(folder/'result-schema.json'),'--output-last-message',str(folder/'result.json'),'--json','-']
             try:
-                process=subprocess.run(cmd,input=prompt+reference_prompt+('\nLe précédent contrôle a échoué : '+failure if failure else ''),text=True,stdout=events,stderr=errors,cwd=folder,timeout=3600)
+                process=invoke_agent(cmd,input=prompt+reference_prompt+('\nLe précédent contrôle a échoué : '+failure if failure else ''),text=True,stdout=events,stderr=errors,cwd=folder,timeout=3600)
             except subprocess.TimeoutExpired:
                 failure='Agent timed out; no article accepted';continue
         if process.returncode:
@@ -350,11 +383,30 @@ def run_job(job,codex,sources,review=False):
                         db.execute('INSERT INTO draft_sources VALUES(?,?,?,?,?)',(*key,source_evidence(src[1],source_notes(db,*key)),src[2],src[3]))
                         registry['|'.join(key)]={'source_sha256':row['source_sha256'],'proposed_sha256':digest(row['proposed_xml'])}
                         accepted.append(row)
+                    # Durable before the SQLite commit: a failed filesystem
+                    # mirror must not trigger another authoring attempt or lose
+                    # the accepted rows and their validation evidence.
+                    batch_path=HERE/'batches'/('automatic-'+slug)/f'{index:05d}.json'
+                    if accepted:
+                        atomic(folder/'registration-intent.json',{'batch_path':str(batch_path),
+                               'rows':accepted,'source_sha256':source_hash,
+                               'reference_sha256':reference_hash,'prepared_at_unix':int(time.time())})
                     db.commit()
                 except Exception:db.rollback();raise
                 finally:db.close()
-                atomic(HERE/'batches'/('automatic-'+slug)/f'{index:05d}.json',accepted)
-                atomic(registry_path,registry)
+                if accepted:
+                    try:
+                        if batch_path.exists() and json.loads(batch_path.read_text())!=accepted:
+                            raise ValueError('Refusing to replace a different existing batch')
+                        atomic(batch_path,accepted)
+                        atomic(registry_path,registry)
+                        atomic(folder/'registration-complete.json',{'batch_path':str(batch_path),
+                               'accepted_articles':len(accepted),'completed_at_unix':int(time.time())})
+                    except Exception as error:
+                        STOP.set()
+                        progress(sources,'blocked','Accepted SQLite rows need filesystem reconciliation; see '+folder.name)
+                        print('BLOCKED',folder.name,'registration mirror requires reconciliation;',type(error).__name__,flush=True)
+                        return
                 state=progress(sources)
             print('ACCEPTED',folder.name,len(accepted),'articles;',state['drafted_articles'],'drafted;',state['pending'],'pending',flush=True)
             return
@@ -396,6 +448,7 @@ def main():
     RUNTIME.mkdir(parents=True,exist_ok=True)
     def stop_after_current_jobs(signum,frame):
         STOP.set()
+        atomic(RUNTIME/'stop-request.json',{'pid':os.getpid(),'signal':signum,'requested_at_unix':int(time.time())})
         with SLOTS:SLOTS.notify_all()
         print('STOP requested; preserving current jobs and all accepted batches.',flush=True)
     signal.signal(signal.SIGTERM,stop_after_current_jobs)
@@ -480,4 +533,16 @@ def main():
     if args.export_every or args.publish_at_end:
         publish_checkpoint(args.publish_at_end)
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    exit_code=0;exit_type=None
+    try:main()
+    except BaseException as error:
+        exit_code=130 if isinstance(error,KeyboardInterrupt) else 1
+        exit_type=type(error).__name__
+        raise
+    finally:
+        pid_path=RUNTIME/'coordinator.pid'
+        # A failed duplicate invocation must not replace the real owner's exit.
+        if pid_path.exists() and pid_path.read_text().strip()==str(os.getpid()):
+            atomic(RUNTIME/'coordinator-exit.json',{'pid':os.getpid(),'ended_at_unix':int(time.time()),
+                   'exit_code':exit_code,'exit_type':exit_type,'stop_requested':STOP.is_set()})

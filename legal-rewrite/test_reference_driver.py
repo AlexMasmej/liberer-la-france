@@ -63,7 +63,7 @@ class DriverBranches(TestCase):
                 db=open_db(self.root/'corpus.sqlite');db.execute('UPDATE drafts SET proposed_xml=? WHERE source_id=?',('<p>Garantie B modifiée par un auteur concurrent.</p>','B'));db.commit();db.close()
             calls.append(snapshot|{'draft_body':body})
             return SimpleNamespace(returncode=0)
-        with patch.object(self.module,'HERE',self.root),patch.object(self.module,'ROOT',self.root),patch.object(self.module,'RUNTIME',self.runtime),patch.object(self.module,'STOP',threading.Event()),patch.object(self.module,'past_before_job',return_value=[]),patch.object(self.module,'writer_lock',lock),patch.object(self.module.subprocess,'run',side_effect=worker),patch.object(audit,'focus',return_value=self.catalog),patch.object(audit,'check_guards',side_effect=guarded),redirect_stdout(io.StringIO()):
+        with patch.object(self.module,'HERE',self.root),patch.object(self.module,'ROOT',self.root),patch.object(self.module,'RUNTIME',self.runtime),patch.object(self.module,'STOP',threading.Event()),patch.object(self.module,'past_before_job',return_value=[]),patch.object(self.module,'writer_lock',lock),patch.object(self.module,'invoke_agent',side_effect=worker),patch.object(audit,'focus',return_value=self.catalog),patch.object(audit,'check_guards',side_effect=guarded),redirect_stdout(io.StringIO()):
             self.module.run_job(('travail',1,[self.rows[0]]),'NO_MODEL',{'travail':self.rows})
         self.assertEqual(len(calls),2)
         answer=json.loads((self.runtime/'jobs/travail-00001/answer.json').read_text())[0]

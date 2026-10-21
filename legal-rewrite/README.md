@@ -169,6 +169,39 @@ Un verrou empêche deux coordinateurs et un second verrou protège les écriture
 en base et le registre de lots. Les réformes et leurs coordinations sont dans
 `site-summaries.json` et `policy-coordinations.json`.
 
+## Supervision de la poursuite exhaustive
+
+Le service macOS de cet utilisateur `com.libererfrance.exhaustive-rewrite`
+exécute `supervise_exhaustive.py` chaque minute, indépendamment de la durée
+du chat. Il est installé dans `~/Library/LaunchAgents/` et reprend à la
+prochaine ouverture de session. Il adopte le coordinateur actif sans
+l'interrompre et relance un coordinateur disparu avec les trois agents, les
+cinq codes, les annexes et la seconde passe. L'identité du processus et les
+verrous sont contrôlés avant tout lancement. Les tentatives antérieures sont
+conservées dans des dossiers distincts, sans acceptation automatique.
+
+Le suivi vérifié des processus est dans `runtime/supervision/status.json` et
+son historique dans `runtime/supervision/events.jsonl`. Le compteur d'articles
+reste dans `runtime/exhaustive/status.json` : son ancienne mention `running`
+ne prouve pas à elle seule qu'un processus travaille. Les futurs arrêts
+propres et erreurs Python produisent `runtime/exhaustive/coordinator-exit.json`;
+un arrêt externe brutal peut toujours empêcher cette écriture.
+
+Un contrôle horaire de ce chat, « Poursuivre les cinq codes », examine les
+blocages qui nécessitent une intervention de l'agent : agents orphelins,
+validations refusées, reprises documentaires ou audits finaux. Il reste
+silencieux lors d'un fonctionnement normal. La supervision ne contourne
+aucun contrôle juridique et ne déclare jamais l'achèvement à partir d'une
+sortie réussie ou d'une file vide. Les quotas, connexions nécessaires et
+sources indisponibles restent signalés. Le traitement local reprend au réveil
+de la machine; il ne travaille pas pendant son extinction ou sa veille.
+
+Pour une pause demandée par l'utilisateur, créer d'abord
+`runtime/supervision/disabled`, puis arrêter proprement le coordinateur.
+Le marqueur empêche toute relance du service. Suspendre également le contrôle
+horaire dans l'application. La suppression de ce marqueur réactive la reprise
+au prochain contrôle. Aucun fichier `sources/` n'est modifié par ce dispositif.
+
 ## Formules, tableaux et autres éléments non reproduits
 
 Le fonds texte contient 18 articles qui renvoient à des formules, images,

@@ -37,7 +37,7 @@ class DraftingQueue(TestCase):
                 (folder/'answer.json').write_text(json.dumps([row]))
                 (folder/'result.json').write_text(json.dumps({'output_file':'answer.json','article_count':1}))
                 return SimpleNamespace(returncode=0)
-            with patch.object(coordinator,'HERE',root),patch.object(coordinator,'RUNTIME',runtime),patch.object(coordinator,'STOP',threading.Event()),patch.object(coordinator.subprocess,'run',side_effect=child),redirect_stdout(io.StringIO()):
+            with patch.object(coordinator,'HERE',root),patch.object(coordinator,'RUNTIME',runtime),patch.object(coordinator,'STOP',threading.Event()),patch.object(coordinator,'invoke_agent',side_effect=child),redirect_stdout(io.StringIO()):
                 coordinator.run_job(('travail',1,[sources[0]]),'mock',{'travail':sources})
                 self.assertFalse(coordinator.STOP.is_set())
                 coordinator.run_job(('travail',2,[sources[1]]),'mock',{'travail':sources})

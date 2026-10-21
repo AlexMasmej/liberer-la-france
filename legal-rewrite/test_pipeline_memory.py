@@ -137,7 +137,7 @@ class PipelinePatch(unittest.TestCase):
         options=['-c','mcp_servers.past.enabled=false','-c','mcp_servers.legal_rewrite_memory.enabled=false']
         with patch.object(self.m,'open_db',return_value=DB()),patch.object(self.m,'progress'), \
              patch.object(self.m,'past_before_job',return_value=options) as before, \
-             patch.object(self.m.subprocess,'run',return_value=subprocess.CompletedProcess([],1)) as run, \
+             patch.object(self.m,'invoke_agent',return_value=subprocess.CompletedProcess([],1)) as run, \
              contextlib.redirect_stdout(io.StringIO()):
             self.m.run_job(('test',1,expected),'codex',{})
         self.assertEqual(before.call_count,1)
@@ -151,7 +151,7 @@ class PipelinePatch(unittest.TestCase):
             def close(self):pass
         with patch.object(self.m,'open_db',return_value=DB()), \
              patch.object(self.m,'past_before_job',side_effect=AssertionError('Skipped job synced')), \
-             patch.object(self.m.subprocess,'run',side_effect=AssertionError('Skipped job invoked')), \
+             patch.object(self.m,'invoke_agent',side_effect=AssertionError('Skipped job invoked')), \
              contextlib.redirect_stdout(io.StringIO()):
             self.m.run_job(('test',1,expected),'codex',{})
 

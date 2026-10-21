@@ -1,0 +1,58 @@
+{
+  "recorded_at": "2026-10-21T00:26:13.342592+00:00",
+  "incident": {
+    "former_coordinator_pid": 93280,
+    "last_recorded_activity_utc": "2026-10-20T23:15:56Z",
+    "last_event": "ACCEPTED travail-00069",
+    "finish_or_exception_recorded": false,
+    "root_cause": "not_demonstrated",
+    "observed_failure": "process absent while article status still running",
+    "previous_automatic_restart": false
+  },
+  "protection": {
+    "launch_agent": "com.libererfrance.exhaustive-rewrite",
+    "interval_seconds": 60,
+    "login_persistence_installed": true,
+    "heartbeat_automation_id": "poursuivre-les-cinq-codes",
+    "heartbeat_interval_hours": 1,
+    "existing_coordinator_adopted_without_interruption": 92516,
+    "existing_worker_code_changes_apply_on_next_coordinator_launch": true,
+    "scopes": [
+      "travail",
+      "impots",
+      "securite-sociale",
+      "urbanisme",
+      "construction-habitation",
+      "impots-annexe-1",
+      "impots-annexe-2",
+      "impots-annexe-3",
+      "impots-annexe-4"
+    ],
+    "sources_read_only": true,
+    "local_machine_required": true
+  },
+  "verification": {
+    "regression_tests_passed": 76,
+    "real_process_death_and_real_replacement_test_passed": true,
+    "timeout_descendant_cleanup_test_passed": true,
+    "post_commit_filesystem_failure_preserves_rows_test_passed": true,
+    "launch_agent_successful_checks_observed": 5,
+    "initial_pending": 19868,
+    "latest_observed_pending": 19844,
+    "active_agents": 3
+  },
+  "file_sha256": {
+    "run_exhaustive.py": "0a504b12b0c635c6c0f845e6093802744d5f1e9222d7f95fa40b671b4b969ef7",
+    "supervise_exhaustive.py": "e124e8cc333a6950040b03c4c8a103f5acf17d15b2151c5f46d9328aec329501",
+    "test_exhaustive_supervision.py": "3b68b4146e2ed3bd6665595ce4c7674f67fa8d0869f95e57475b8664f9975464",
+    "test_drafting_queue.py": "01a745cd934696ef9406ac30d77615c99208b7f7efd517aec7e8cf959a753ee4",
+    "test_reference_driver.py": "c56ffc6dc24cb02df30f3d342e98bb7e8bba93edda107499d20062725c6f3ff2",
+    "test_pipeline_memory.py": "2e5dec2f33efe1289920abc6efb9c174311436f19b0e2852da780d6bf9458050"
+  },
+  "exhaustive_rewriting_complete": false,
+  "next_actions": [
+    "Continue current validated jobs across all codes and annexes.",
+    "Keep diagnosing validation and documentary blocks through the hourly task.",
+    "Require fresh canonical coverage and reference audits before claiming completion."
+  ]
+}
