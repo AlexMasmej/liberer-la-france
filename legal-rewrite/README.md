@@ -129,8 +129,13 @@ préservent leurs ressources publiques et leur présentation initiale, avec
 un encart identifiant clairement le chantier intégral et l’avant-projet court.
 
 Le projet est éditorial et juridique. Conserver le crédit aux agents IA
-d’@alexmasmej et les sources des orientations retenues. Les appels d’adhésion
-politique ont été retirés de la présentation.
+d’@alexmasmej et les sources des orientations retenues. À la demande de
+l’utilisateur, les cinq pages d’accueil comportent un lien de soutien vers
+Nouvelle Énergie, le mouvement de David Lisnard :
+`https://soutenir.unenouvelleenergie.fr/adhesion`. Ce lien est généré par
+`build_compact_sites.py` et doit être conservé lors des reconstructions.
+Les propositions restent indépendantes et ne sont pas présentées comme
+validées par David Lisnard ou Nouvelle Énergie.
 
 ## Rédaction répartie et reprise
 

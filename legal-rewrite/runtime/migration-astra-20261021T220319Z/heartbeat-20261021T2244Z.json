@@ -1,0 +1,90 @@
+{
+  "checked_at_utc": "2026-10-21T22:45:05.355181+00:00",
+  "coordinator_pid": 21959,
+  "hours_since_verified_four_worker_start": 0.3392616622315513,
+  "successful_jobs": 13,
+  "successful_jobs_per_hour": 38.31850588271686,
+  "retry_job_fraction": 0.23076923076923078,
+  "outcomes": {
+    "reviewed": 4,
+    "accepted": 9
+  },
+  "codes": {
+    "urbanisme": 6,
+    "impots": 2,
+    "travail": 2,
+    "construction-habitation": 1,
+    "securite-sociale": 2
+  },
+  "new_deferred_entries": 0,
+  "deferred_registry_entries": 44,
+  "all_completed_sessions_execution_verified": true,
+  "active_workers_execution_verified": 3,
+  "launch_agent_registered": true,
+  "decision": "hold_at_four",
+  "promotion_validated": false,
+  "confirmation_required": false,
+  "reason": "The new Astra/medium cohort has not reached the mandatory two-hour observation window; continue without interrupting valid jobs.",
+  "active_workers": [
+    {
+      "pid": 31817,
+      "ppid": 21959,
+      "job": "construction-habitation-00104",
+      "last_event_unix": 1792622692,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/construction-habitation-00104/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a160a2-7622-77d1-8819-66d534a3c27b",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/construction-habitation-00104",
+        "header_sha256": "b3c9d8f2f22b473663555ac2dc15ff84188b24075dd45575377f5c960e987c51",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      }
+    },
+    {
+      "pid": 31844,
+      "ppid": 21959,
+      "job": "impots-00105",
+      "last_event_unix": 1792622703,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/impots-00105/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a160a2-7dd2-77e1-99c6-741bacec198d",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/impots-00105",
+        "header_sha256": "101735e7b844838521b285c8061bca16cfec12f3dcf3a1e649d25ed964796e20",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      }
+    },
+    {
+      "pid": 32082,
+      "ppid": 21959,
+      "job": "securite-sociale-00105",
+      "last_event_unix": 1792622701,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/securite-sociale-00105/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a160a2-8a57-74e2-b013-35f9ed0c11a0",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/securite-sociale-00105",
+        "header_sha256": "0f3bc245a6bf1fec5096690f339667075f9624240daac87ee08ca145743ab5b3",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      }
+    }
+  ]
+}

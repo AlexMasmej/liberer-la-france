@@ -1,0 +1,83 @@
+{
+  "checked_at_utc": "2026-10-21T23:02:37.130473+00:00",
+  "coordinator_pid": 21959,
+  "hours_since_verified_four_worker_start": 0.6314534013801151,
+  "successful_jobs": 25,
+  "successful_jobs_per_hour": 39.591203318185606,
+  "new_entries_per_hour": 625.5410124273326,
+  "reviewed_articles_per_hour": 14.252833194546819,
+  "retry_job_fraction": 0.2,
+  "new_deferred_entries": 0,
+  "deferred_registry_entries": 44,
+  "active_workers_execution_verified": 2,
+  "active_worker_count": 2,
+  "all_active_execution_verified": true,
+  "coordinator_count": 1,
+  "launch_agent_registered": true,
+  "decision": "hold_at_four",
+  "promotion_validated": false,
+  "confirmation_required": false,
+  "reason": "Mandatory two-hour Astra/medium observation window not yet reached.",
+  "kind_statistics": {
+    "new": {
+      "jobs_done": 17,
+      "articles_done": 395,
+      "median_job_minutes": 5.3695543722327175,
+      "mean_job_minutes": 6.1137926173187545,
+      "remaining_scheduled_jobs": 702,
+      "remaining_scheduled_article_assignments": 15588,
+      "remaining_batch_median_articles": 24.0
+    },
+    "review": {
+      "jobs_done": 8,
+      "articles_done": 9,
+      "median_job_minutes": 3.8431974406247416,
+      "mean_job_minutes": 4.14214103819783,
+      "remaining_scheduled_jobs": 718,
+      "remaining_scheduled_article_assignments": 6794,
+      "remaining_batch_median_articles": 12.0
+    }
+  },
+  "active_workers": [
+    {
+      "pid": 38519,
+      "ppid": 21959,
+      "job": "impots-00106",
+      "last_event_unix": 1792623740,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/impots-00106/errors-2.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a160ae-db40-7333-8a44-092b183e7f35",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/impots-00106",
+        "header_sha256": "4fd344e2138b2407e654e2145038fb27b1542df8f2ba9cdb73fe6b6b9fdf941b",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      }
+    },
+    {
+      "pid": 39247,
+      "ppid": 21959,
+      "job": "travail-00107",
+      "last_event_unix": 1792623664,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00107/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a160b1-0f2a-7542-bf12-4479b338b70e",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00107",
+        "header_sha256": "72a2ff64c29173fb4aa387c3217423f792c02f07bae77860b1f13d5719cf45d6",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      }
+    }
+  ]
+}
