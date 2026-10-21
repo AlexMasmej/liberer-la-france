@@ -1,6 +1,6 @@
 {
   "validation": "integrity only; not legal review",
-  "authored_articles": 10894,
+  "authored_articles": 11041,
   "batches": [
     {
       "file": "batches/automatic-construction-habitation/00001.json",
@@ -179,12 +179,12 @@
     },
     {
       "file": "batches/automatic-construction-habitation/00036.json",
-      "sha256": "01833435c1608bf352f949aec2d1396c67cb480762903ff454e529a2aa7acc84",
+      "sha256": "bc6411f9048ea02f9b63bb6912cafec2f23216f437c43aedeaf24c0561668204",
       "articles": 4
     },
     {
       "file": "batches/automatic-construction-habitation/00037.json",
-      "sha256": "8582ece0fa7c4567b7dfd3bf8df0766d8ba99ba8f1cf4b121f41fc609c762f9d",
+      "sha256": "a56a9596feb302929189716f56a6ebfe9a8dca48c77fd8ee543179c7c96c5d8b",
       "articles": 9
     },
     {
@@ -360,6 +360,11 @@
     {
       "file": "batches/automatic-construction-habitation/00072.json",
       "sha256": "41231fc9c7e3ff206bfe0c2ba326f60db35eea4fcf193f7795344058d2e5a185",
+      "articles": 24
+    },
+    {
+      "file": "batches/automatic-construction-habitation/00073.json",
+      "sha256": "42cc16fa82d8b5f76e55cf2447a3cf58ec236f58187c2e9995b9928b1743a4ec",
       "articles": 24
     },
     {
@@ -726,6 +731,11 @@
       "file": "batches/automatic-impots/00073.json",
       "sha256": "d842b8a57e7c9b399d946c30a9a91d4642f320581aa747739770779785894472",
       "articles": 5
+    },
+    {
+      "file": "batches/automatic-impots/00074.json",
+      "sha256": "3f91a427d4dc408300946a28887bd7caa2786cabdd1915b119f7c8cff5ac53ff",
+      "articles": 3
     },
     {
       "file": "batches/automatic-impots-annexe-2/00001.json",
@@ -1578,6 +1588,16 @@
       "articles": 24
     },
     {
+      "file": "batches/automatic-securite-sociale/00073.json",
+      "sha256": "60db8227480eed6bd4b92fe00e58fb79c178ac25acab7a39ecb5b73fb5822545",
+      "articles": 24
+    },
+    {
+      "file": "batches/automatic-securite-sociale/00074.json",
+      "sha256": "47d1d626984dcb70a594249548f30e14c802ddd16a1890756684f98ddc84f50a",
+      "articles": 24
+    },
+    {
       "file": "batches/automatic-travail/00001.json",
       "sha256": "9fdc65cefdd3bc0369165611f9cab07402a11b25e308e50f84a295d5eee78050",
       "articles": 24
@@ -1938,8 +1958,18 @@
       "articles": 24
     },
     {
+      "file": "batches/automatic-travail/00073.json",
+      "sha256": "a1c37dccb6be90c1397630817dc1ba692d040f99b07af4eeb22ce7d93063ac2b",
+      "articles": 24
+    },
+    {
+      "file": "batches/automatic-travail/00074.json",
+      "sha256": "68adc4d8325a266c8239fa18531fa2847b32124ac260a518d07fa6b0f3f8ba8d",
+      "articles": 24
+    },
+    {
       "file": "batches/automatic-urbanisme/00001.json",
-      "sha256": "8571a665124ded3d8a294593d21767677057cd5ed7fe2f60c7363b1dcade3db1",
+      "sha256": "80606523b40dce635588acf9a721b50782433bcd2073a1f8db78018afd27110b",
       "articles": 24
     },
     {
@@ -2290,6 +2320,11 @@
     {
       "file": "batches/automatic-urbanisme/00072.json",
       "sha256": "e19b9fbbefc08613a9cafc58c6df6db350559dc7f70a75155f22408fcf897956",
+      "articles": 24
+    },
+    {
+      "file": "batches/automatic-urbanisme/00073.json",
+      "sha256": "d205327ef11940b888313318dd44df6ee52936b34b09e7c7ec2906f03a83db63",
       "articles": 24
     },
     {
@@ -4133,16 +4168,25 @@
       "number": "L452-1",
       "check": "explicit_normative_reduction",
       "scope": [
-        "Approbation ministérielle individuelle des subventions relevant du septième alinéa, alors que leur financement reste soumis au budget et aux contrôles de la caisse.",
-        "Approbation ministérielle spécifique des conventions avec l'Union sociale pour l'habitat et les fédérations visées au septième alinéa, sans procédure déclarative de remplacement."
+        "Suppression de l'approbation ministérielle individuelle distincte du budget pour les subventions visées au septième alinéa et les conventions avec l'Union sociale pour l'habitat ou les fédérations, sans formalité de remplacement."
       ]
+    },
+    {
+      "source_id": "LEGIARTI000048849256",
+      "number": "L452-1",
+      "check": "references_changed",
+      "removed": [
+        "L452-1-1"
+      ],
+      "added": []
     },
     {
       "source_id": "LEGIARTI000028808976",
       "number": "L452-2",
       "check": "explicit_normative_reduction",
       "scope": [
-        "Avis préalable obligatoire des représentants des organismes d'habitations à loyer modéré avant la désignation ministérielle de la personnalité qualifiée du conseil d'administration."
+        "Suppression de l'avis obligatoire des représentants des organismes HLM avant la désignation ministérielle de la personnalité qualifiée.",
+        "Suppression de l'association annuelle obligatoire des représentants des collectivités territoriales aux orientations de l'exercice suivant ; participation facultative sans condition de validité maintenue."
       ]
     },
     {
@@ -4150,18 +4194,23 @@
       "number": "L452-3",
       "check": "explicit_normative_reduction",
       "scope": [
-        "Autorisation du ministre chargé des finances pour chaque emprunt de la caisse et approbation ministérielle spécifique équivalente de la délibération d'emprunt.",
-        "Inscription parmi les ressources futures des cotisations générales et majorations de L. 452-4 supprimées pour les nouvelles années de contribution ; seuls les droits des années antérieures subsistent."
+        "Suppression de l'autorisation du ministre chargé des finances pour les emprunts de la caisse et de l'approbation ministérielle spécifique équivalente, sans nouveau visa, avis ou dépôt substitutif."
       ]
+    },
+    {
+      "source_id": "LEGIARTI000041466661",
+      "number": "L452-3",
+      "check": "length_change",
+      "ratio": 4.08
     },
     {
       "source_id": "LEGIARTI000041473209",
       "number": "L452-4",
       "check": "explicit_normative_reduction",
       "scope": [
-        "Cotisation générale annuelle sur les loyers, redevances, indemnités d'occupation et supplément de loyer de solidarité pour les années de contribution commençant l'année suivant l'entrée en vigueur de la loi.",
-        "Majoration effectivement payable au titre de la modulation du II, 1°, et majorations de la cotisation générale pour les années supprimées, y compris le mécanisme de L. 445-1.",
-        "Déclaration générale, acomptes, garanties et obligations de paiement de la cotisation supprimée pour les années nouvelles, sans déclaration équivalente de remplacement ni justificatifs déjà légalement disponibles."
+        "Obligation annuelle de verser la cotisation générale CGLLS pour les années commençant le 1er janvier suivant l'entrée en vigueur de la loi, y compris sa composante assise sur le supplément de loyer de solidarité.",
+        "Exigibilité de la majoration de modulation du II, 1°, pour les années supprimées ; son calcul résiduel ne sert qu'à préserver le versement favorable du II.",
+        "Déclaration générale, acompte, garantie et sanction de paiement exclusivement attachés à cette cotisation pour les années supprimées, sans démarche de remplacement."
       ]
     },
     {
@@ -4185,10 +4234,25 @@
       "number": "L452-5",
       "check": "explicit_normative_reduction",
       "scope": [
-        "Exclusivité du paiement électronique et majoration de 0,2 %, assortie d'un minimum de 60 euros, pour le seul recours à un autre moyen de paiement.",
-        "Obligation de déclaration périodique lorsque les données exactes et à jour légalement détenues par la caisse permettent déjà de calculer la cotisation.",
-        "Usage obligatoire du modèle administratif de déclaration et retransmission des mêmes renseignements exacts et à jour.",
-        "Disposition du quatrième alinéa autorisant le cumul de la pénalité propre au paiement non électronique avec les autres sanctions."
+        "Déclaration périodique spontanée obligatoire et modèle administratif imposé pour les démarches futures, même au titre d'une cotisation d'une ancienne année.",
+        "Liquidation spontanée à la charge des organismes : la caisse établit désormais la cotisation exigible, sans recréer un dépôt général annuel de remplacement.",
+        "Exclusivité du paiement électronique et majoration propre de 0,2 %, avec plancher de 60 euros, pour le seul emploi d'un autre moyen de paiement admis.",
+        "Cumul de la majoration de mode de paiement avec les autres sanctions, ainsi que sanctions ou taxation d'office fondées sur le seul défaut d'une déclaration désormais supprimée."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000048839976",
+      "number": "L452-5",
+      "check": "length_change",
+      "ratio": 3.43
+    },
+    {
+      "source_id": "LEGIARTI000048839976",
+      "number": "L452-5",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L452-4"
       ]
     },
     {
@@ -4196,8 +4260,24 @@
       "number": "L452-6",
       "check": "explicit_normative_reduction",
       "scope": [
-        "Production répétée par l'organisme de pièces exactes et à jour déjà légalement disponibles auprès de la caisse, notamment après un contrôle de l'ANCOLS.",
-        "Second contrôle sur place ayant pour seul objet de recueillir des éléments exacts et à jour déjà communiqués par l'ANCOLS."
+        "Habilitation ministérielle préalable des seuls personnels de la CGLLS chargés du contrôle sur place, sans autorisation, déclaration ou agrément de remplacement.",
+        "Nouvelle transmission par l'organisme des mêmes éléments exacts et à jour déjà légalement détenus, sans compter le simple réemploi légal comme une réduction nouvelle distincte.",
+        "Second contrôle sur place de la caisse ayant pour seul objet de recueillir les mêmes éléments déjà reçus de l'ANCOLS, sous réserve des vérifications d'exactitude ou de faits nouveaux."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033974451",
+      "number": "L452-6",
+      "check": "length_change",
+      "ratio": 2.93
+    },
+    {
+      "source_id": "LEGIARTI000033974451",
+      "number": "L452-6",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L452-4"
       ]
     },
     {
@@ -7691,6 +7771,139 @@
       "added": []
     },
     {
+      "source_id": "LEGIARTI000043818555",
+      "number": "R126-2",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Signature obligatoire de la déclaration en mairie, distincte de l'identification et de la date qui restent exigées."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043818557",
+      "number": "R126-3",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Obligation de produire exclusivement une attestation de traitement, même lorsqu'une facture acquittée ou un compte rendu établit les travaux réalisés."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043818559",
+      "number": "R126-4",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Signature obligatoire de la déclaration en mairie, distincte de l'identification et de la date qui restent exigées."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043818569",
+      "number": "R126-7",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Obligation de recueillir exclusivement un récépissé lors de la restitution du moyen matériel d'accès aux parties communes."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043824305",
+      "number": "R126-10",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Achèvement obligatoire du diagnostic PEMD avant dépôt d'une demande d'autorisation d'urbanisme ou de travaux ERP, remplacé par le jalon déjà requis avant devis ou marchés."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043824785",
+      "number": "R126-11",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Mention cumulée du SIREN et du SIRET de l'auteur du diagnostic, remplacée par un seul de ces identifiants selon sa disponibilité."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043824785",
+      "number": "R126-11",
+      "check": "references_changed",
+      "removed": [
+        "L133-6"
+      ],
+      "added": [
+        "L126-24"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043827913",
+      "number": "D126-12",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Demande et collecte obligatoires avant diagnostic des justificatifs de compétence par le maître d'ouvrage, sans suppression des compétences, équivalences ou garanties d'assurance."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043824922",
+      "number": "R126-14",
+      "check": "explicit_normative_reduction",
+      "scope": "Suppression du formulaire général de récolement PEMD de fin de chantier, de ses rubriques et des justificatifs de dépôt exigés sur ce seul fondement, pour toutes formalités futures, y compris de chantiers anciens."
+    },
+    {
+      "source_id": "LEGIARTI000043824922",
+      "number": "R126-14",
+      "check": "references_changed",
+      "removed": [
+        "R541-7"
+      ],
+      "added": []
+    },
+    {
+      "source_id": "LEGIARTI000043827676",
+      "number": "R126-14-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Transmission obligatoire au CSTB du formulaire de récolement dans les quatre-vingt-dix jours de l'achèvement des travaux.",
+        "Présentation obligatoire par le CSTB au ministre d'un rapport annuel sur l'application du dispositif PEMD.",
+        "Habilitation à réglementer la transmission, la gestion et l'exploitation des formulaires de récolement supprimés."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043827676",
+      "number": "R126-14-1",
+      "check": "references_changed",
+      "removed": [
+        "R126-14"
+      ],
+      "added": []
+    },
+    {
+      "source_id": "LEGIARTI000043818599",
+      "number": "R126-17",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Fourniture obligatoire au titre du DPE des modalités de répartition financière des frais des équipements collectifs, distinctes de leurs caractéristiques techniques et de leurs consommations."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043818605",
+      "number": "R126-20",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Intervention nécessaire du professionnel auteur du DPE lors de sa présentation à l'assemblée générale suivante, sans suppression de cette présentation ou du document détaillé."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043818609",
+      "number": "R126-21",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Exigence de majuscules pour les mentions de classe énergie et de classe climat dans les annonces immobilières de la presse écrite."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000043818611",
+      "number": "R126-22",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Obligation de reproduire en couleur les deux échelles de classement du DPE dans les annonces affichées en locaux professionnels ou présentées par réseau électronique."
+      ]
+    },
+    {
       "source_id": "LEGIARTI000053542680",
       "number": "39",
       "check": "references_changed",
@@ -10155,6 +10368,30 @@
       "check": "explicit_normative_reduction",
       "scope": [
         "Suppression du caractère exclusif de la condition fiscale d'adhésion au 31 décembre : pour une utilisation effectuée en qualité d'adhérent, il n'est plus nécessaire d'être encore ou de nouveau adhérent à cette date ; la voie actuelle de fin d'année est préservée."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000049641580",
+      "number": "244 quater T",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Condition préalable de conventionnement distinct avec l'Etat pour ouvrir le crédit d'impôt des prêteurs de prêts avance mutation sans intérêt ; aucune déclaration ou autorisation équivalente n'est créée."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000051202287",
+      "number": "244 quater U",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Condition préalable de conventionnement distinct avec l'Etat pour bénéficier du crédit d'impôt au titre des éco-prêts ; maintien de la convention de gestion existante sans formalité équivalente ajoutée."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000031781860",
+      "number": "244 quater V",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Obligation de fixer à nouveau chaque année par décret les conditions et modalités des prêts d'accession sans intérêt, et de joindre à ce renouvellement obligatoire une étude d'impact même sans modification des paramètres."
       ]
     },
     {
@@ -16665,6 +16902,102 @@
       "number": "L654-4",
       "check": "length_change",
       "ratio": 4.23
+    },
+    {
+      "source_id": "LEGIARTI000037056322",
+      "number": "L655-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Suppression de la dérogation hospitalière permettant une saisie ou cession de la pension au-delà des limites applicables aux salaires, sans retirer la borne maximale favorable de 90 %. "
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000037056327",
+      "number": "L655-2",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Suppression du délai réglementaire de forclusion pour présenter la demande d'affiliation volontaire à la Caisse nationale des barreaux français.",
+        "Suppression de la cotisation spéciale additionnelle imposée aux adhérents volontaires pour les périodes d'affiliation nouvelles, cotisations ordinaires maintenues."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000037053502",
+      "number": "L663-3",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Suppression de la forclusion au 31 décembre 2020 qui fermait la faculté de demander le rachat de périodes d'activité du conjoint collaborateur."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000020039076",
+      "number": "L711-1-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Suppression de l'envoi distinct obligatoire au Parlement de l'évaluation prospective déjà rendue publique par le régime spécial.",
+        "Suppression de l'annexe obligatoirement distincte au rapport annuel ; une publication publique existante peut satisfaire la diffusion de l'évaluation."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000020039076",
+      "number": "L711-1-1",
+      "check": "length_change",
+      "ratio": 2.62
+    },
+    {
+      "source_id": "LEGIARTI000047452660",
+      "number": "L711-7",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Suppression du paiement de la participation forfaitaire par acte, consultation ou biologie prévue au II de L. 160-13 pour les prestations nouvelles des assurés des régimes spéciaux.",
+        "Suppression de la franchise médicale annuelle du III de L. 160-13 pour les prestations et produits nouveaux des assurés des régimes spéciaux, sans charge équivalente de remplacement.",
+        "Retrait de l'application de ces paiements par le renvoi à L. 432-1, coordonné à la suppression déjà proposée pour le risque professionnel, sans double comptage."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000047452660",
+      "number": "L711-7",
+      "check": "length_change",
+      "ratio": 3.53
+    },
+    {
+      "source_id": "LEGIARTI000006744017",
+      "number": "L712-11-3",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Obligation de passer une convention entre les mutuelles et la caisse calédonienne pour mettre en œuvre le service des prestations en nature."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006744017",
+      "number": "L712-11-3",
+      "check": "references_changed",
+      "removed": [
+        "L712-6"
+      ],
+      "added": []
+    },
+    {
+      "source_id": "LEGIARTI000042683994",
+      "number": "L713-13",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Application de l'indemnité forfaitaire de frais de recours au régime militaire pour les remboursements nouveaux, y compris son maintien par un fondement réglementaire propre aux accidents de circulation."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000042683994",
+      "number": "L713-13",
+      "check": "length_change",
+      "ratio": 13.4
+    },
+    {
+      "source_id": "LEGIARTI000006744036",
+      "number": "L713-18",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L713-1-1"
+      ]
     },
     {
       "source_id": "LEGIARTI000031014016",
@@ -23733,6 +24066,252 @@
       "ratio": 5.49
     },
     {
+      "source_id": "LEGIARTI000006902379",
+      "number": "L2512-3",
+      "check": "explicit_normative_reduction",
+      "scope": "Suppression de l'obligation générale de synchroniser les cessations et reprises du travail et de l'interdiction des grèves échelonnées ou par roulement concerté dans les services publics."
+    },
+    {
+      "source_id": "LEGIARTI000006902379",
+      "number": "L2512-3",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L2512-2"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000054139717",
+      "number": "L2522-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Exclusion de la voie régionale, dans la rédaction du deuxième alinéa, des conflits déjà soumis à une procédure conventionnelle de conciliation.",
+        "Exigence de demande écrite et motivée réitérée pour la médiation directe de branche, coordonnée à L2523-1."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902388",
+      "number": "L2522-2",
+      "check": "explicit_normative_reduction",
+      "scope": "Suppression du devoir indéterminé imposé aux parties de donner toute facilité aux commissions de conciliation, sans suppression des obligations autonomes précisément définies."
+    },
+    {
+      "source_id": "LEGIARTI000006902388",
+      "number": "L2522-2",
+      "check": "length_change",
+      "ratio": 5.17
+    },
+    {
+      "source_id": "LEGIARTI000006902389",
+      "number": "L2522-3",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Condition et justification d'un empêchement grave imposées à la partie qui choisit de se faire représenter en conciliation."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902390",
+      "number": "L2522-4",
+      "check": "explicit_normative_reduction",
+      "scope": "Suppression du rapport obligatoire pour non-comparution en conciliation et du circuit de transmission au procureur, sans abrogation de l'obligation de comparaître ni des signalements autonomes."
+    },
+    {
+      "source_id": "LEGIARTI000006902392",
+      "number": "L2522-6",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Soumission légale nécessaire à une procédure de médiation ou d'arbitrage du seul fait de l'échec de la conciliation."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902392",
+      "number": "L2522-6",
+      "check": "length_change",
+      "ratio": 3.52
+    },
+    {
+      "source_id": "LEGIARTI000054139720",
+      "number": "L2522-7",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Obligation générale d'organiser des sections compétentes pour toutes les circonscriptions départementales au sein des commissions régionales."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902398",
+      "number": "L2522-9",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Accord obligatoire du ministre de tutelle pour l'établissement et la modification du protocole particulier de conciliation."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902398",
+      "number": "L2522-9",
+      "check": "length_change",
+      "ratio": 2.54
+    },
+    {
+      "source_id": "LEGIARTI000006902399",
+      "number": "L2522-10",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Présidence obligatoire du ministre de tutelle pour les séances de la procédure particulière de conciliation.",
+        "Intervention obligatoire des représentants des ministres du travail, du budget et de l'économie pour les différends de rémunération des actifs ou retraités."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902399",
+      "number": "L2522-10",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L2522-9"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902401",
+      "number": "L2522-12",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Restriction de l'accès à la conciliation de droit commun aux seules entreprises publiques et EPIC à statut dépourvus de procédure particulière."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000018764689",
+      "number": "L2523-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Forme écrite obligatoire et motivation distincte de la demande de médiation présentée par une partie à l'autorité administrative."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902406",
+      "number": "L2523-4",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Justification d'un empêchement grave pour la représentation devant le médiateur, résultant des conditions de L2522-3 auxquelles renvoie la source."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902406",
+      "number": "L2523-4",
+      "check": "length_change",
+      "ratio": 5.91
+    },
+    {
+      "source_id": "LEGIARTI000006902408",
+      "number": "L2523-6",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Suppression de la motivation obligatoire du rejet de la proposition du médiateur, sans limitation du droit de refus.",
+        "Suppression de l'exclusivité réglementaire du courrier recommandé pour le rejet et l'information des autres parties, avec réception prouvable de la notification du rejet."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902409",
+      "number": "L2523-7",
+      "check": "explicit_normative_reduction",
+      "scope": "Suppression du rapport d'échec de médiation, de l'envoi ministériel de la recommandation et des rejets, du délai d'attente de quarante-huit heures et de la publication imposée dans les trois mois."
+    },
+    {
+      "source_id": "LEGIARTI000006902410",
+      "number": "L2523-8",
+      "check": "explicit_normative_reduction",
+      "scope": "Suppression du rapport obligatoire du médiateur et du circuit de transmission administrative au parquet fondés sur la seule absence ou non-représentation d'une partie convoquée."
+    },
+    {
+      "source_id": "LEGIARTI000006902410",
+      "number": "L2523-8",
+      "check": "length_change",
+      "ratio": 2.91
+    },
+    {
+      "source_id": "LEGIARTI000006902410",
+      "number": "L2523-8",
+      "check": "references_changed",
+      "removed": [
+        "L2523-4"
+      ],
+      "added": []
+    },
+    {
+      "source_id": "LEGIARTI000006902411",
+      "number": "L2523-9",
+      "check": "explicit_normative_reduction",
+      "scope": "Suppression du rapport obligatoire et de la transmission administrative au parquet déclenchés par le refus sciemment opposé au médiateur de communiquer des documents utiles."
+    },
+    {
+      "source_id": "LEGIARTI000006902411",
+      "number": "L2523-9",
+      "check": "length_change",
+      "ratio": 4.53
+    },
+    {
+      "source_id": "LEGIARTI000006902411",
+      "number": "L2523-9",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L2525-2"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902416",
+      "number": "L2524-2",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Suppression de la conciliation ou de la médiation préalable comme condition légale de l'arbitrage supplétif librement choisi par les parties."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902418",
+      "number": "L2524-4",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "L2524-2"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000006902428",
+      "number": "L2525-1",
+      "check": "explicit_normative_reduction",
+      "scope": "Suppression du délit passible de 3 750 euros pour méconnaissance des obligations de comparution ou représentation en conciliation et médiation, et neutralisation de la sanction réglementaire parallèle de non-comparution."
+    },
+    {
+      "source_id": "LEGIARTI000006902428",
+      "number": "L2525-1",
+      "check": "length_change",
+      "ratio": 9.75
+    },
+    {
+      "source_id": "LEGIARTI000006902429",
+      "number": "L2525-2",
+      "check": "explicit_normative_reduction",
+      "scope": "Suppression de l'amende pénale de 3 750 euros attachée au refus de communiquer des documents utiles au médiateur, sans sanction ou prélèvement équivalent de remplacement."
+    },
+    {
+      "source_id": "LEGIARTI000006902429",
+      "number": "L2525-2",
+      "check": "length_change",
+      "ratio": 7.44
+    },
+    {
+      "source_id": "LEGIARTI000035902442",
+      "number": "L2622-1",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Suppression de l'obligation d'insérer une clause spéciale relative à l'attestation du service militaire adapté comme condition supplémentaire d'extension des conventions collectives ultramarines visées."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000035902442",
+      "number": "L2622-1",
+      "check": "length_change",
+      "ratio": 4.1
+    },
+    {
       "source_id": "LEGIARTI000042655490",
       "number": "L121-32",
       "check": "explicit_normative_reduction",
@@ -23785,8 +24364,8 @@
       "number": "L121-41",
       "check": "explicit_normative_reduction",
       "scope": [
-        "La consultation préalable obligatoire de la région sur la compatibilité de l'urbanisation envisagée avec les orientations du schéma d'aménagement régional est supprimée, sans formalité de remplacement.",
-        "La décision ministérielle conjointe prévue pour cet accord par R121-34 est écartée au profit d'un accord du seul représentant de l'État dans le département ; aucun contreseing ministériel ne conditionne cet accord."
+        "La consultation obligatoire de la région sur la compatibilité de l'urbanisation avec les orientations du schéma d'aménagement régional est supprimée, sans déclaration ni attestation de remplacement.",
+        "L'attribution de l'accord aux trois ministres par R121-34 est écartée pour les décisions nouvelles au profit du seul représentant de l'État dans le département, sans approbation ni contreseing ministériel."
       ]
     },
     {
@@ -27549,6 +28128,93 @@
       "check": "explicit_normative_reduction",
       "scope": [
         "Exclusivité de l'envoi recommandé postal du projet de rétrocession et du cahier des charges, désormais également satisfaisable par remise contre décharge."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000039346739",
+      "number": "R215-2",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "L'obligation de faire paraître une mention dans chacun de deux journaux régionaux ou locaux, et la condition d'accomplissement de ces mentions avant la prise d'effet de la zone, sont supprimées pour les délibérations nouvelles."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000031724901",
+      "number": "R215-5",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "L'obligation de retransmettre au département les éléments du registre déjà régulièrement reçus dans une décision, un acte ou une information est supprimée ; restent les éléments manquants et les mises à jour nécessaires."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000031724901",
+      "number": "R215-5",
+      "check": "length_change",
+      "ratio": 3.19
+    },
+    {
+      "source_id": "LEGIARTI000031724898",
+      "number": "R215-6",
+      "check": "length_change",
+      "ratio": 4.55
+    },
+    {
+      "source_id": "LEGIARTI000031724898",
+      "number": "R215-6",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "R462-1"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033223760",
+      "number": "R215-10",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "L'obligation faite au déclarant d'adresser ou déposer quatre exemplaires papier est remplacée par le dépôt d'un seul exemplaire ; les trois copies de circulation supplémentaires ne lui incombent plus."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033223760",
+      "number": "R215-10",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "R215-11"
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033232344",
+      "number": "R215-14",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "L'obligation du Conservatoire de retransmettre pour le registre les éléments déjà régulièrement reçus par le département est retirée ; les informations manquantes et mises à jour restent exigibles."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033232370",
+      "number": "R215-16",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "L'obligation de retransmettre au département les éléments du registre qu'il a déjà régulièrement reçus est supprimée dans la substitution locale, sans retirer les informations nouvelles, manquantes ou modifiées."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033232394",
+      "number": "R215-18",
+      "check": "explicit_normative_reduction",
+      "scope": [
+        "Le délai minimal obligatoire d'un mois avant la vente pour adresser la déclaration d'adjudication ENS est supprimé pour les déclarations nouvelles ; la déclaration reste préalable et le délai de substitution de trente jours après adjudication demeure."
+      ]
+    },
+    {
+      "source_id": "LEGIARTI000033232394",
+      "number": "R215-18",
+      "check": "references_changed",
+      "removed": [],
+      "added": [
+        "R215-11"
       ]
     },
     {
