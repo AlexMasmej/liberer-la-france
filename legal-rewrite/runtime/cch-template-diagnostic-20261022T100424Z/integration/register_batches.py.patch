@@ -1,0 +1,19 @@
+--- a/register_batches.py
++++ b/register_batches.py
+@@ -3,6 +3,7 @@
+ Integrity checks do not constitute legal review. Completion is never inferred
+ from source coverage or from the mere existence of a batch file.
+ """
++from template_fields import validate_placeholders
+ from pathlib import Path
+ import argparse,hashlib,html,json,re,sqlite3,sys,fcntl
+ from contextlib import contextmanager
+@@ -104,7 +105,7 @@
+                     raise ValueError('A retained normative source needs an explicit necessity assessment')
+             elif not proposed:raise ValueError('Empty draft '+str(key))
+             elif proposed==original:raise ValueError('Unchanged source cannot count as rewritten: '+str(key))
+-            if re.search(r'\[\s*(?:\.\.\.|…|à compléter|texte inchangé)\s*\]|<placeholder>|TODO',proposed,re.I):raise ValueError('Placeholder in article '+str(key))
++            validate_placeholders({'code_id':key[0], 'source_id':key[1], 'source_sha256':sha, 'source_xml':body, 'source_notes_xml':impact_source['source_notes_xml']}, row['proposed_xml'] or '')
+             if not retained and not reduced and source_tables and tables<source_tables:raise ValueError('Source table missing from draft: '+str(key))
+             source_parser=Markup(False);source_parser.feed(body)
+             draft_parser=Markup();draft_parser.feed(row['proposed_xml'] or '');draft_parser.result()

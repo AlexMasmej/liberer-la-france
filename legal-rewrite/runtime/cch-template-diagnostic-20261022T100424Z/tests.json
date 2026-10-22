@@ -1,0 +1,165 @@
+{
+  "scope": "Placeholder gate only; no DB, no registration, no full validation",
+  "tests": [
+    {
+      "test": "LEGIARTI000039049511 authentic fields",
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "test": "LEGIARTI000032660331 authentic fields",
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "test": "LEGIARTI000045646952 authentic fields",
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "test": "LEGIARTI000045646952 new […]",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 new [...]",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 new [ … ]",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 new [à compléter]",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 new [texte inchangé]",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 new TODO",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 new &lt;placeholder&gt;",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 new [&#8230;]",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 filled invented value",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 omitted capital words",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 missing entire capital clause",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 source altered",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 unknown identity",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646952 no registry",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 authentic fields",
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "test": "LEGIARTI000045646995 new […]",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 new [...]",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 new [ … ]",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 new [à compléter]",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 new [texte inchangé]",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 new TODO",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 new &lt;placeholder&gt;",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 new [&#8230;]",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 filled invented value",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 omitted capital words",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 missing entire capital clause",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 source altered",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 unknown identity",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "test": "LEGIARTI000045646995 no registry",
+      "accepted": false,
+      "expected": false
+    }
+  ]
+}

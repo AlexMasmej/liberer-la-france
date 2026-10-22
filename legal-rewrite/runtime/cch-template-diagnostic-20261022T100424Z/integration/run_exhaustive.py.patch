@@ -1,0 +1,19 @@
+--- a/run_exhaustive.py
++++ b/run_exhaustive.py
+@@ -3,6 +3,7 @@
+ Each child can write only its isolated job directory. No secrets are read by
+ this coordinator, no paid credits are bought, no source is counted as a draft.
+ """
++from template_fields import validate_placeholders
+ from pathlib import Path
+ import argparse,concurrent.futures,fcntl,hashlib,html,json,os,re,shutil,sqlite3,subprocess,tempfile,threading,time,signal,sys
+ from register_batches import Markup,references,register,writer_lock,full_repeal,authorized_reduction
+@@ -225,7 +226,7 @@
+             if not reduced and p.tables<source_parser.tables:raise ValueError('Missing source table')
+             if not reduced and (p.rows<source_parser.rows or p.cells<source_parser.cells):raise ValueError('Missing source table rows or cells')
+             if original==proposed:raise ValueError('Copied source cannot count as rewritten')
+-            if re.search(r'TODO|\[(?:…|\.\.\.|à compléter|texte inchangé)\]',proposed,re.I):raise ValueError('Incomplete placeholder')
++            validate_placeholders(s, body)
+             if not reduced and len(proposed)<len(original)*.45:raise ValueError('Possible summary: draft less than 45 percent of original. A repeal or normative reduction needs its explicit metadata; otherwise supply the whole proposed rule')
+         else:raise ValueError('Unsupported completion status')
+     return rows

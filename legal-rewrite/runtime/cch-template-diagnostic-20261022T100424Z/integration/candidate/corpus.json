@@ -1,0 +1,40 @@
+{
+  "purpose": "Réécriture intégrale des cinq codes, avec texte officiel intégral, proposition intégrale et correspondance article par article.",
+  "scope_confirmed_by_user": true,
+  "codes": [
+    {"id":"LEGITEXT000006072050","slug":"travail","title":"Code du travail","site":"https://libererlembauche.com"},
+    {"id":"LEGITEXT000006069577","slug":"impots","title":"Code général des impôts","sites":["https://libererlerevenu.com","https://libererlentreprise.com"]},
+    {"id":"LEGITEXT000006073189","slug":"securite-sociale","title":"Code de la sécurité sociale","sites":["https://libererlerevenu.com","https://libererlaretraite.com"]},
+    {"id":"LEGITEXT000006074075","slug":"urbanisme","title":"Code de l'urbanisme","site":"https://libererlelogement.com"},
+    {"id":"LEGITEXT000006074096","slug":"construction-habitation","title":"Code de la construction et de l'habitation","site":"https://libererlelogement.com"}
+  ],
+  "annexes": [
+    {"id":"LEGITEXT000006069568","slug":"impots-annexe-1","title":"Code général des impôts — annexe I","parent":"LEGITEXT000006069577"},
+    {"id":"LEGITEXT000006069569","slug":"impots-annexe-2","title":"Code général des impôts — annexe II","parent":"LEGITEXT000006069577"},
+    {"id":"LEGITEXT000006069574","slug":"impots-annexe-3","title":"Code général des impôts — annexe III","parent":"LEGITEXT000006069577"},
+    {"id":"LEGITEXT000006069576","slug":"impots-annexe-4","title":"Code général des impôts — annexe IV","parent":"LEGITEXT000006069577"}
+  ],
+  "coverage_rules": {
+    "include_legislative_and_regulatory_parts": true,
+    "retain_tables_annexes_notes_and_cross_references": true,
+    "keep_original_article_numbers_and_identifiers": true,
+    "do_not_count_unchanged_source_as_ai_rewriting": true,
+    "do_not_publish_as_complete_until_inventory_reconciles": true,
+    "statuses":["source_imported","rewrite_draft","reviewed","retained_unchanged","repeal_proposed","addition_proposed"]
+  },
+  "official_source": {
+    "producer":"DILA",
+    "dataset":"https://www.data.gouv.fr/datasets/legi-codes-lois-et-reglements-consolides",
+    "index":"https://echanges.dila.gouv.fr/OPENDATA/LEGI/",
+    "base_archive":"Freemium_legi_global_20250713-140000.tar.gz",
+    "required_daily_updates_from":"20250713",
+    "available_updates_through":"20261018",
+    "source_url_pattern":"https://www.legifrance.gouv.fr/codes/article_lc/{article_id}/"
+  },
+  "additional_dependencies_to_inventory":[
+    "Annexes I à IV du CGI, qui peuvent être diffusées dans des entrées LEGI distinctes",
+    "Code monétaire et financier pour la création du nouvel étage retraite",
+    "Code des assurances et textes des régimes de retraite concernés",
+    "Lois non codifiées citées et règles supra-législatives à contrôler"
+  ]
+}

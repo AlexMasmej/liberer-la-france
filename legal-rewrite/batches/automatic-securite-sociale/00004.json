@@ -4,110 +4,961 @@
     "source_id": "LEGIARTI000048688011",
     "source_sha256": "47fef97956bc88fce2e16427ec7bf593ebdb03812c59fa09dde367b938daf7e5",
     "number": "L114-19-1",
-    "proposed_xml": "<p>Les entreprises mentionnées à l'article 242 bis du code général des impôts doivent informer les personnes qui réalisent des transactions commerciales par leur intermédiaire des obligations sociales qui en résultent. Elles fournissent cette information dans les conditions fixées par le même article.</p>\n<p>L'administration fiscale transmet à l'Agence centrale des organismes de sécurité sociale et à la Caisse nationale des allocations familiales le document mentionné au I de l'article 1649 ter A du code général des impôts ainsi que les informations similaires reçues d'autres États. Elle effectue cette transmission au plus tard le 31 décembre de l'année au cours de laquelle elle a reçu le document ou les informations. Elle y joint les informations permettant de faciliter l'identification de chaque vendeur ou prestataire et les échanges avec eux, selon des modalités définies par un décret en Conseil d'État pris après avis de la Commission nationale de l'informatique et des libertés. Les données ainsi obtenues peuvent être interconnectées avec celles des organismes mentionnés aux articles L. 212-1, L. 213-1 et L. 752-1 du présent code, pour l'accomplissement des missions de contrôle, de vérification et de lutte contre le travail dissimulé de ces organismes.</p>",
-    "reason": "Réécriture à droit constant : distinction entre l'information due par les entreprises et la transmission assurée par l'administration fiscale ; décomposition du calendrier, des données d'identification et de la faculté d'interconnexion. Aucune réforme de fond n'est appliquée à ces échanges.",
-    "review_notes": "Les renvois aux articles 242 bis et 1649 ter A du CGI ont été rapprochés des sources du corpus. Maintien des deux destinataires, du 31 décembre de l'année de réception, des trois finalités et de l'avis de la CNIL. La note source fixe l'entrée en vigueur au 1er janvier 2024, en application du A du II de l'article 6 de la loi n° 2023-1250 du 26 décembre 2023 ; elle ne date aucune réforme future. Les deux alinéas sont conservés.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien intégral nécessaire après seconde passe : l'information sociale des utilisateurs est celle de CGI 242 bis, et non un second document autonome dont le retrait allégerait effectivement les plateformes. La transmission fiscale aux organismes sociaux réemploie la déclaration existante de CGI 1649 ter A ; sa suppression ferait perdre un contrôle sans retirer cette déclaration fiscale. Le calendrier et la limitation des interconnexions protègent la finalité de l'échange. Le brouillon n'apportait qu'une reformulation, écartée.",
+    "review_notes": "Lecture intégrale de CGI 242 bis et 1649 ter A dans le corpus : information à chaque transaction d'une part, déclaration fiscale au 31 janvier de l'année suivante d'autre part. Ici, le 31 décembre est celui de l'année de réception par le fisc, non l'échéance déclarative de la plateforme. Les destinataires ACOSS et CNAF, puis les organismes L212-1/L213-1/L752-1 pour les interconnexions restent identiques. La note du 1er janvier 2024 ne date pas la réforme. Le cadre européen des plateformes et la protection des données ne sont pas abrogés. Aucun nouveau renvoi introduit.",
+    "status": "retained_unchanged",
+    "benefit_review": "L'information sociale aide les utilisateurs à connaître leurs droits et obligations ; aucune exonération de plateforme ou de vendeur n'est supprimée. Le réemploi des données fiscales demeure, sans nouvelle déclaration sociale des personnes et sans extension de l'assiette des cotisations.",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral nécessaire après seconde passe : l'information sociale des utilisateurs est celle de CGI 242 bis, et non un second document autonome dont le retrait allégerait effectivement les plateformes. La transmission fiscale aux organismes sociaux réemploie la déclaration existante de CGI 1649 ter A ; sa suppression ferait perdre un contrôle sans retirer cette déclaration fiscale. Le calendrier et la limitation des interconnexions protègent la finalité de l'échange. Le brouillon n'apportait qu'une reformulation, écartée.",
+      "scope_limitations": "Maintien limité à cet article et à ses fonctions précisées ci-dessus ; aucune baisse de prélèvement ni nouvelle simplification n'est revendiquée. Les contrôles des renvois extérieurs non fournis restent bornés comme indiqué dans review_notes.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de données, registre, délai, condition d'accès ou formalité de remplacement. Ce constat ne chiffre pas le solde de l'ensemble des codes.",
+      "effects": []
+    },
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+        "assessment": "Pour L114-19-1 : La cible porte sur le préavis de licenciement : ancien droit différencié par ancienneté, proposition de quinze jours calendaires pour les nouveaux contrats. Cet article social ne renvoie pas à cette règle de rupture ; ses transmissions ou contrôles ne sont pas un préavis. La notification de rupture, les anciens contrats et les procédures spéciales ne sont donc pas modifiés ici."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+        "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+        "assessment": "Pour L114-19-1 : La cible proposée interdit les nouveaux CDD et distingue durée de mission ou formation et durée de l'emploi ; la source officielle autorise encore les CDD. L'article social ne crée ni terme d'emploi ni nouveau contrat spécial. Son contrôle ou échange d'informations conserve son champ, y compris auprès d'organismes publics, sans leur imposer artificiellement un contrat privé."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+        "assessment": "Pour L114-19-1 : La cible proposée fixe l'indemnité patronale ordinaire à zéro avant un an au terme effectif, préavis inclus, puis 0,20 mois par année totale, fractions en mois complets et plafond six mois, avec transition et indemnités spéciales distinctes. Cet article social ne calcule aucune indemnité de rupture : ni ce seuil ni les huit mois du droit source n'y deviennent une condition d'aide, de contrôle ou de transmission."
+      },
+      {
+        "target_key": "LEGITEXT000006073189|LEGIARTI000048701101",
+        "view_sha256": "b5bc6e2808d1ab646f56042f6c678af34d4baf21e9b43e8a4b22e0584ea44021",
+        "assessment": "Pour L114-19-1 : La cible identifie les Urssaf et leurs missions ; sa proposition borne la C3S aux anciens faits après sa suppression et exclut le CPF-CDD pour les périodes futures. La désignation des organismes dans cet article n'est pas un fait générateur et ne rétablit aucun recouvrement supprimé. Le réemploi des informations reste dans ses finalités légales ; le préavis individuel de quinze jours et l'ancienneté d'indemnité ne régissent pas ces contrôles."
+      }
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "47fef97956bc88fce2e16427ec7bf593ebdb03812c59fa09dde367b938daf7e5",
+      "source_notes_sha256": "8c957f58ad991a7101128e6534824a946ef22423bed6cf63c0589a995160ebab",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "735dd41df1446968979d4ac86960b81b9bef824d07eca72bc023318a4bad75bc",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "reference_coherence": {
+      "version": 3,
+      "referrer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "policy_sha256": {
+        "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+      },
+      "referrer_source": {
+        "code_id": "LEGITEXT000006073189",
+        "source_id": "LEGIARTI000048688011",
+        "source_sha256": "47fef97956bc88fce2e16427ec7bf593ebdb03812c59fa09dde367b938daf7e5",
+        "source_xml_sha256": "5267d3f0ec9b9264a82366bc9814db6f015440e857fbfe33d17c1322547c5cd0",
+        "source_notes_sha256": "8c957f58ad991a7101128e6534824a946ef22423bed6cf63c0589a995160ebab"
+      },
+      "targets": {
+        "LEGITEXT000006072050|LEGIARTI000006901112": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000006901112",
+          "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+          "view_kind": "proposal",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "source_xml_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000019071087": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000019071087",
+          "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+          "view_kind": "proposal",
+          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000035644154": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000035644154",
+          "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+          "view_kind": "proposal",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "source_xml_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
+          "source_notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b"
+        },
+        "LEGITEXT000006073189|LEGIARTI000048701101": {
+          "code_id": "LEGITEXT000006073189",
+          "source_id": "LEGIARTI000048701101",
+          "source_sha256": "e0fa98952d5e7b447d2c647c4154a3519319257e8f0f360f9273e5a80f7862f7",
+          "view_kind": "proposal",
+          "view_sha256": "b5bc6e2808d1ab646f56042f6c678af34d4baf21e9b43e8a4b22e0584ea44021",
+          "source_xml_sha256": "566fabcf1a3baa718adebd374daf00463fe15b20aa13632d2973e97e7bbe7a3e",
+          "source_notes_sha256": "3b822908416a6d489249a56070e33b12f6533a8d0fd64f720926c380c64b8ac7"
+        }
+      },
+      "assessments": [
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "assessment": "Pour L114-19-1 : La cible porte sur le préavis de licenciement : ancien droit différencié par ancienneté, proposition de quinze jours calendaires pour les nouveaux contrats. Cet article social ne renvoie pas à cette règle de rupture ; ses transmissions ou contrôles ne sont pas un préavis. La notification de rupture, les anciens contrats et les procédures spéciales ne sont donc pas modifiés ici."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "assessment": "Pour L114-19-1 : La cible proposée interdit les nouveaux CDD et distingue durée de mission ou formation et durée de l'emploi ; la source officielle autorise encore les CDD. L'article social ne crée ni terme d'emploi ni nouveau contrat spécial. Son contrôle ou échange d'informations conserve son champ, y compris auprès d'organismes publics, sans leur imposer artificiellement un contrat privé."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "assessment": "Pour L114-19-1 : La cible proposée fixe l'indemnité patronale ordinaire à zéro avant un an au terme effectif, préavis inclus, puis 0,20 mois par année totale, fractions en mois complets et plafond six mois, avec transition et indemnités spéciales distinctes. Cet article social ne calcule aucune indemnité de rupture : ni ce seuil ni les huit mois du droit source n'y deviennent une condition d'aide, de contrôle ou de transmission."
+        },
+        {
+          "target_key": "LEGITEXT000006073189|LEGIARTI000048701101",
+          "view_sha256": "b5bc6e2808d1ab646f56042f6c678af34d4baf21e9b43e8a4b22e0584ea44021",
+          "assessment": "Pour L114-19-1 : La cible identifie les Urssaf et leurs missions ; sa proposition borne la C3S aux anciens faits après sa suppression et exclut le CPF-CDD pour les périodes futures. La désignation des organismes dans cet article n'est pas un fait générateur et ne rétablit aucun recouvrement supprimé. Le réemploi des informations reste dans ses finalités légales ; le préavis individuel de quinze jours et l'ancienneté d'indemnité ne régissent pas ces contrôles."
+        }
+      ],
+      "assessments_sha256": "c78a8d13b2733e5a00911c07e97d1a5e31ec4b474050abcb97ac92944b9fb8f8",
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "a52bad9e09aa7dfa269d9e72a7636f64cccfa83b113170c4654b860c6c8395b8"
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000043169809",
     "source_sha256": "79a27afc7dec77d83076651d633805bbb645d4dbf6cc39d2fc9ff26b72f078f6",
     "number": "L114-20",
-    "proposed_xml": "<p>Le droit de communication défini à l'article L. 114-19 s'exerce dans les conditions prévues à la section 1 du chapitre II du titre II du livre des procédures fiscales et auprès des personnes qui y sont mentionnées. Sont toutefois exclues les personnes mentionnées aux articles L. 82 C, L. 83 A, L. 84, L. 84 A, L. 91, L. 95 et L. 96 B à L. 96 F de ce livre. Les autres dispositions législatives applicables aux échanges d'informations demeurent applicables.</p>",
-    "reason": "Réécriture à droit constant : présentation successive du régime applicable, des personnes exclues et du maintien des autres dispositions législatives. Aucune réforme de fond du droit de communication.",
-    "review_notes": "Le renvoi à L. 114-19 est maintenu, ainsi que la section du livre des procédures fiscales et chacune des exclusions, notamment la plage L. 96 B à L. 96 F. L'article reste constitué d'un seul alinéa.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien intégral nécessaire : ce renvoi borne les personnes et conditions du droit de communication, avec des exclusions expresses. Le retirer ne supprime pas un doublon documentaire mais priverait le pouvoir de contrôle de ses limites. Les allègements apportés à L114-19 s'appliquent sans modifier ce renvoi intégral. Aucune reformulation stylistique du brouillon n'est comptée comme réforme.",
+    "review_notes": "Le renvoi à L114-19 demeure entier après la réduction du lot ; les exclusions L82 C, L83 A, L84, L84 A, L91, L95 et L96 B à L96 F sont conservées exactement. Le LPF ne figure pas parmi les corpus fournis : sa section entière n'a pas fait l'objet d'une vérification documentaire indépendante ici, et aucune modification de son champ n'est prétendue. Aucune cible extérieure nouvelle n'est créée.",
+    "status": "retained_unchanged",
+    "benefit_review": "Les exclusions expresses de personnes sollicitées constituent des limites favorables au droit de communication ; elles sont toutes conservées pour les demandes futures. Aucun avantage fiscal ni dispense existante n'est retiré par ce maintien intégral.",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral nécessaire : ce renvoi borne les personnes et conditions du droit de communication, avec des exclusions expresses. Le retirer ne supprime pas un doublon documentaire mais priverait le pouvoir de contrôle de ses limites. Les allègements apportés à L114-19 s'appliquent sans modifier ce renvoi intégral. Aucune reformulation stylistique du brouillon n'est comptée comme réforme.",
+      "scope_limitations": "Maintien limité à cet article et à ses fonctions précisées ci-dessus ; aucune baisse de prélèvement ni nouvelle simplification n'est revendiquée. Les contrôles des renvois extérieurs non fournis restent bornés comme indiqué dans review_notes.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de données, registre, délai, condition d'accès ou formalité de remplacement. Ce constat ne chiffre pas le solde de l'ensemble des codes.",
+      "effects": []
+    },
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+        "assessment": "Pour L114-20 : La cible porte sur le préavis de licenciement : ancien droit différencié par ancienneté, proposition de quinze jours calendaires pour les nouveaux contrats. Cet article social ne renvoie pas à cette règle de rupture ; ses transmissions ou contrôles ne sont pas un préavis. La notification de rupture, les anciens contrats et les procédures spéciales ne sont donc pas modifiés ici."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+        "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+        "assessment": "Pour L114-20 : La cible proposée interdit les nouveaux CDD et distingue durée de mission ou formation et durée de l'emploi ; la source officielle autorise encore les CDD. L'article social ne crée ni terme d'emploi ni nouveau contrat spécial. Son contrôle ou échange d'informations conserve son champ, y compris auprès d'organismes publics, sans leur imposer artificiellement un contrat privé."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+        "assessment": "Pour L114-20 : La cible proposée fixe l'indemnité patronale ordinaire à zéro avant un an au terme effectif, préavis inclus, puis 0,20 mois par année totale, fractions en mois complets et plafond six mois, avec transition et indemnités spéciales distinctes. Cet article social ne calcule aucune indemnité de rupture : ni ce seuil ni les huit mois du droit source n'y deviennent une condition d'aide, de contrôle ou de transmission."
+      },
+      {
+        "target_key": "LEGITEXT000006073189|LEGIARTI000054335637",
+        "view_sha256": "6ce0b6d991185b9245259cb538ca950e903ba6f07212891bdd5e34a2b5e63422",
+        "assessment": "Pour L114-20 : La cible fournie est le précédent brouillon à droit constant ; le présent lot retire seulement la voie dématérialisée imposée et le doublement des pénalités, sans déplacer les catégories ni le huitième alinéa. Le renvoi intégral reste cohérent avec ces changements et ne rétablit pas les charges retirées. Les trente jours de réponse ne sont pas le préavis de quinze jours du contrat unique ; aucune ancienneté salariale n'est exigée."
+      }
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "79a27afc7dec77d83076651d633805bbb645d4dbf6cc39d2fc9ff26b72f078f6",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "8539681d550f1544e51a6a7a68d0d1f2137e0bc07386fdce6b15f357b0fafb7e",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "reference_coherence": {
+      "version": 3,
+      "referrer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "policy_sha256": {
+        "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+      },
+      "referrer_source": {
+        "code_id": "LEGITEXT000006073189",
+        "source_id": "LEGIARTI000043169809",
+        "source_sha256": "79a27afc7dec77d83076651d633805bbb645d4dbf6cc39d2fc9ff26b72f078f6",
+        "source_xml_sha256": "c56dfe9be6a3fb99a3119d0a888c27c091125000e605fec9337fc3e5b2c5f48b",
+        "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "targets": {
+        "LEGITEXT000006072050|LEGIARTI000006901112": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000006901112",
+          "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+          "view_kind": "proposal",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "source_xml_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000019071087": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000019071087",
+          "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+          "view_kind": "proposal",
+          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000035644154": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000035644154",
+          "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+          "view_kind": "proposal",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "source_xml_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
+          "source_notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b"
+        },
+        "LEGITEXT000006073189|LEGIARTI000054335637": {
+          "code_id": "LEGITEXT000006073189",
+          "source_id": "LEGIARTI000054335637",
+          "source_sha256": "39e931d7611a6c90adb6cebf9db6df9a0911aa9c4a9eab05e334e21e778e2d42",
+          "view_kind": "proposal",
+          "view_sha256": "6ce0b6d991185b9245259cb538ca950e903ba6f07212891bdd5e34a2b5e63422",
+          "source_xml_sha256": "9fe7b2694d75bb0ba8ec6c92352780fbb593e6f50628da8e48f6aabcda6fa1b8",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assessments": [
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "assessment": "Pour L114-20 : La cible porte sur le préavis de licenciement : ancien droit différencié par ancienneté, proposition de quinze jours calendaires pour les nouveaux contrats. Cet article social ne renvoie pas à cette règle de rupture ; ses transmissions ou contrôles ne sont pas un préavis. La notification de rupture, les anciens contrats et les procédures spéciales ne sont donc pas modifiés ici."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "assessment": "Pour L114-20 : La cible proposée interdit les nouveaux CDD et distingue durée de mission ou formation et durée de l'emploi ; la source officielle autorise encore les CDD. L'article social ne crée ni terme d'emploi ni nouveau contrat spécial. Son contrôle ou échange d'informations conserve son champ, y compris auprès d'organismes publics, sans leur imposer artificiellement un contrat privé."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "assessment": "Pour L114-20 : La cible proposée fixe l'indemnité patronale ordinaire à zéro avant un an au terme effectif, préavis inclus, puis 0,20 mois par année totale, fractions en mois complets et plafond six mois, avec transition et indemnités spéciales distinctes. Cet article social ne calcule aucune indemnité de rupture : ni ce seuil ni les huit mois du droit source n'y deviennent une condition d'aide, de contrôle ou de transmission."
+        },
+        {
+          "target_key": "LEGITEXT000006073189|LEGIARTI000054335637",
+          "view_sha256": "6ce0b6d991185b9245259cb538ca950e903ba6f07212891bdd5e34a2b5e63422",
+          "assessment": "Pour L114-20 : La cible fournie est le précédent brouillon à droit constant ; le présent lot retire seulement la voie dématérialisée imposée et le doublement des pénalités, sans déplacer les catégories ni le huitième alinéa. Le renvoi intégral reste cohérent avec ces changements et ne rétablit pas les charges retirées. Les trente jours de réponse ne sont pas le préavis de quinze jours du contrat unique ; aucune ancienneté salariale n'est exigée."
+        }
+      ],
+      "assessments_sha256": "250945d6d9a57e364377d9e627b09c42bea7f5eca8808bb31199f23d66f07e12",
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "95a87607ccedd6aad5478a33841aaa3e51136e6a71e5401e3114734c82a399dc"
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000054312929",
     "source_sha256": "641b065113a1071b6f2ba197f44b3c1e99facb200e5c958e5a280df9fdb2ec7b",
     "number": "L114-20-1",
-    "proposed_xml": "<p>Les organismes mentionnés aux articles L. 213-1 et L. 752-4 du présent code et à l'article L. 725-3 du code rural et de la pêche maritime transmettent à l'organisme unique mentionné au deuxième alinéa de l'article L. 123-33 du code de commerce des informations concernant les personnes qui exercent un travail dissimulé au sens des articles L. 8221-3 et L. 8221-5 du code du travail. Cette transmission s'effectue dans les conditions prévues au 2° de l'article L. 123-50 du code de commerce. Elle porte sur les seules informations strictement nécessaires à l'immatriculation de ces personnes au registre prévu à l'article L. 123-36 du même code ou, lorsqu'elles sont déjà immatriculées, à une inscription modificative relative à l'activité ou à l'établissement concerné.</p>\n<p>Un décret en Conseil d'État définit les informations mentionnées au premier alinéa du présent article.</p>",
-    "reason": "Réécriture à droit constant : identification explicite des personnes concernées, séparation des conditions de transmission et de la limitation aux informations strictement nécessaires. Aucune réforme de fond ni extension du partage de données.",
-    "review_notes": "Conservation des trois catégories d'organismes émetteurs, du guichet unique désigné au deuxième alinéa de L. 123-33, du 2° de L. 123-50 et du registre de L. 123-36 du code de commerce. L'immatriculation et l'inscription modificative restent deux cas distincts ; le renvoi au premier alinéa demeure exact.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien intégral nécessaire : la transmission ciblée des seules données strictement nécessaires régularise l'immatriculation ou l'inscription modificative des activités dissimulées. Ce circuit entre organismes n'impose pas de déclaration répétée à un employeur régulier et sert la lutte contre la fraude. La limitation des informations et leur définition réglementaire restent utiles. Le brouillon stylistique n'est pas retenu comme nouveau corps.",
+    "review_notes": "Conservation des trois organismes émetteurs, du deuxième alinéa de commerce L123-33, du 2° de L123-50 et du registre L123-36. Les deux hypothèses, immatriculation et inscription modificative, sont distinctes. Le code de commerce et le code rural ne sont pas fournis dans le corpus indiqué ; leur concordance externe reste à contrôler, sans nouvelle référence inventée ni conclusion d'audit externe. Les articles du travail visés caractérisent la dissimulation, pas la durée du contrat.",
+    "status": "retained_unchanged",
+    "benefit_review": "La limitation aux informations strictement nécessaires protège les personnes concernées et reste entière pour les transmissions futures. Aucun taux, exonération, aide ou dispense sociale n'est supprimé ; la régularisation ne conditionne pas ici un nouveau bénéfice.",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral nécessaire : la transmission ciblée des seules données strictement nécessaires régularise l'immatriculation ou l'inscription modificative des activités dissimulées. Ce circuit entre organismes n'impose pas de déclaration répétée à un employeur régulier et sert la lutte contre la fraude. La limitation des informations et leur définition réglementaire restent utiles. Le brouillon stylistique n'est pas retenu comme nouveau corps.",
+      "scope_limitations": "Maintien limité à cet article et à ses fonctions précisées ci-dessus ; aucune baisse de prélèvement ni nouvelle simplification n'est revendiquée. Les contrôles des renvois extérieurs non fournis restent bornés comme indiqué dans review_notes.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de données, registre, délai, condition d'accès ou formalité de remplacement. Ce constat ne chiffre pas le solde de l'ensemble des codes.",
+      "effects": []
+    },
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+        "assessment": "Pour L114-20-1 : La cible porte sur le préavis de licenciement : ancien droit différencié par ancienneté, proposition de quinze jours calendaires pour les nouveaux contrats. Cet article social ne renvoie pas à cette règle de rupture ; ses transmissions ou contrôles ne sont pas un préavis. La notification de rupture, les anciens contrats et les procédures spéciales ne sont donc pas modifiés ici."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+        "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+        "assessment": "Pour L114-20-1 : La cible proposée interdit les nouveaux CDD et distingue durée de mission ou formation et durée de l'emploi ; la source officielle autorise encore les CDD. L'article social ne crée ni terme d'emploi ni nouveau contrat spécial. Son contrôle ou échange d'informations conserve son champ, y compris auprès d'organismes publics, sans leur imposer artificiellement un contrat privé."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+        "assessment": "Pour L114-20-1 : La cible proposée fixe l'indemnité patronale ordinaire à zéro avant un an au terme effectif, préavis inclus, puis 0,20 mois par année totale, fractions en mois complets et plafond six mois, avec transition et indemnités spéciales distinctes. Cet article social ne calcule aucune indemnité de rupture : ni ce seuil ni les huit mois du droit source n'y deviennent une condition d'aide, de contrôle ou de transmission."
+      },
+      {
+        "target_key": "LEGITEXT000006073189|LEGIARTI000048701101",
+        "view_sha256": "b5bc6e2808d1ab646f56042f6c678af34d4baf21e9b43e8a4b22e0584ea44021",
+        "assessment": "Pour L114-20-1 : La cible identifie les Urssaf et leurs missions ; sa proposition borne la C3S aux anciens faits après sa suppression et exclut le CPF-CDD pour les périodes futures. La désignation des organismes dans cet article n'est pas un fait générateur et ne rétablit aucun recouvrement supprimé. Le réemploi des informations reste dans ses finalités légales ; le préavis individuel de quinze jours et l'ancienneté d'indemnité ne régissent pas ces contrôles."
+      }
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "641b065113a1071b6f2ba197f44b3c1e99facb200e5c958e5a280df9fdb2ec7b",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "e1856d4bcec0044e47b2c7011d940921fb347c27cde29dcfce4609d1faf56432",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "reference_coherence": {
+      "version": 3,
+      "referrer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "policy_sha256": {
+        "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+      },
+      "referrer_source": {
+        "code_id": "LEGITEXT000006073189",
+        "source_id": "LEGIARTI000054312929",
+        "source_sha256": "641b065113a1071b6f2ba197f44b3c1e99facb200e5c958e5a280df9fdb2ec7b",
+        "source_xml_sha256": "d300e24b4649af5eeabf3ccddbdd1fa38712149a7b5e419b0b50c6f5d286b51b",
+        "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "targets": {
+        "LEGITEXT000006072050|LEGIARTI000006901112": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000006901112",
+          "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+          "view_kind": "proposal",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "source_xml_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000019071087": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000019071087",
+          "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+          "view_kind": "proposal",
+          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000035644154": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000035644154",
+          "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+          "view_kind": "proposal",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "source_xml_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
+          "source_notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b"
+        },
+        "LEGITEXT000006073189|LEGIARTI000048701101": {
+          "code_id": "LEGITEXT000006073189",
+          "source_id": "LEGIARTI000048701101",
+          "source_sha256": "e0fa98952d5e7b447d2c647c4154a3519319257e8f0f360f9273e5a80f7862f7",
+          "view_kind": "proposal",
+          "view_sha256": "b5bc6e2808d1ab646f56042f6c678af34d4baf21e9b43e8a4b22e0584ea44021",
+          "source_xml_sha256": "566fabcf1a3baa718adebd374daf00463fe15b20aa13632d2973e97e7bbe7a3e",
+          "source_notes_sha256": "3b822908416a6d489249a56070e33b12f6533a8d0fd64f720926c380c64b8ac7"
+        }
+      },
+      "assessments": [
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "assessment": "Pour L114-20-1 : La cible porte sur le préavis de licenciement : ancien droit différencié par ancienneté, proposition de quinze jours calendaires pour les nouveaux contrats. Cet article social ne renvoie pas à cette règle de rupture ; ses transmissions ou contrôles ne sont pas un préavis. La notification de rupture, les anciens contrats et les procédures spéciales ne sont donc pas modifiés ici."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "assessment": "Pour L114-20-1 : La cible proposée interdit les nouveaux CDD et distingue durée de mission ou formation et durée de l'emploi ; la source officielle autorise encore les CDD. L'article social ne crée ni terme d'emploi ni nouveau contrat spécial. Son contrôle ou échange d'informations conserve son champ, y compris auprès d'organismes publics, sans leur imposer artificiellement un contrat privé."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "assessment": "Pour L114-20-1 : La cible proposée fixe l'indemnité patronale ordinaire à zéro avant un an au terme effectif, préavis inclus, puis 0,20 mois par année totale, fractions en mois complets et plafond six mois, avec transition et indemnités spéciales distinctes. Cet article social ne calcule aucune indemnité de rupture : ni ce seuil ni les huit mois du droit source n'y deviennent une condition d'aide, de contrôle ou de transmission."
+        },
+        {
+          "target_key": "LEGITEXT000006073189|LEGIARTI000048701101",
+          "view_sha256": "b5bc6e2808d1ab646f56042f6c678af34d4baf21e9b43e8a4b22e0584ea44021",
+          "assessment": "Pour L114-20-1 : La cible identifie les Urssaf et leurs missions ; sa proposition borne la C3S aux anciens faits après sa suppression et exclut le CPF-CDD pour les périodes futures. La désignation des organismes dans cet article n'est pas un fait générateur et ne rétablit aucun recouvrement supprimé. Le réemploi des informations reste dans ses finalités légales ; le préavis individuel de quinze jours et l'ancienneté d'indemnité ne régissent pas ces contrôles."
+        }
+      ],
+      "assessments_sha256": "054992e81d02cfa8f816a2adef33e9097b073371c131e5c229ca08911c4bc8d3",
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "3ed2a777b11b278be4e10b93ee5bceb04515289740e9fff7c739871f6813591f"
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000043169843",
     "source_sha256": "854c2d4d11e45b91dd42df82132db6217928c9718612eb76f2d30d3f37b1507a",
     "number": "L114-21",
-    "proposed_xml": "<p>Lorsqu'un organisme a exercé le droit de communication prévu à l'article L. 114-19 et décide de supprimer le service d'une prestation ou de mettre des sommes en recouvrement, il doit informer la personne physique ou morale concernée de la teneur et de l'origine des informations et documents obtenus auprès de tiers sur lesquels il a fondé sa décision. Si cette personne le demande, l'organisme lui communique une copie de ces documents avant la mise en recouvrement ou la suppression du service de la prestation.</p>",
-    "reason": "Réécriture à droit constant : formulation des obligations de l'organisme à partir de la décision prise et désignation explicite du bénéficiaire de l'information et de la copie. Aucune réforme de fond des garanties contradictoires.",
-    "review_notes": "Maintien de la distinction entre l'information obligatoire et la copie fournie sur demande. La copie doit toujours précéder le recouvrement ou la suppression du service de la prestation ; la source ne fixe pas ici de délai chiffré supplémentaire. Le renvoi à L. 114-19 et l'alinéa unique sont conservés.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien intégral nécessaire : l'information sur la teneur et l'origine des preuves et leur copie sur demande avant décision exécutée constituent une garantie contradictoire, non un reporting supprimable. Retirer la demande en imposant une copie systématique déplacerait la charge sur l'organisme sans besoin démontré. Les deux obligations de protection sont donc maintenues, sans reformulation du brouillon.",
+    "review_notes": "La copie intervient avant recouvrement ou suppression du service et seulement sur demande ; l'information sur teneur et origine est obligatoire. Aucun délai chiffré n'est ajouté. Le renvoi entier à L114-19 suit ses allègements de support et de sanction sans restreindre le contradictoire ni transformer la réception d'une demande de contrôle en notification de rupture du travail.",
+    "status": "retained_unchanged",
+    "benefit_review": "Le droit d'être informé de la teneur et de l'origine des preuves, puis d'en obtenir copie avant exécution sur demande, est maintenu intégralement pour les décisions futures. Aucune dispense ni protection favorable du bénéficiaire n'est fermée.",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral nécessaire : l'information sur la teneur et l'origine des preuves et leur copie sur demande avant décision exécutée constituent une garantie contradictoire, non un reporting supprimable. Retirer la demande en imposant une copie systématique déplacerait la charge sur l'organisme sans besoin démontré. Les deux obligations de protection sont donc maintenues, sans reformulation du brouillon.",
+      "scope_limitations": "Maintien limité à cet article et à ses fonctions précisées ci-dessus ; aucune baisse de prélèvement ni nouvelle simplification n'est revendiquée. Les contrôles des renvois extérieurs non fournis restent bornés comme indiqué dans review_notes.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de données, registre, délai, condition d'accès ou formalité de remplacement. Ce constat ne chiffre pas le solde de l'ensemble des codes.",
+      "effects": []
+    },
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+        "assessment": "Pour L114-21 : La cible porte sur le préavis de licenciement : ancien droit différencié par ancienneté, proposition de quinze jours calendaires pour les nouveaux contrats. Cet article social ne renvoie pas à cette règle de rupture ; ses transmissions ou contrôles ne sont pas un préavis. La notification de rupture, les anciens contrats et les procédures spéciales ne sont donc pas modifiés ici."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+        "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+        "assessment": "Pour L114-21 : La cible proposée interdit les nouveaux CDD et distingue durée de mission ou formation et durée de l'emploi ; la source officielle autorise encore les CDD. L'article social ne crée ni terme d'emploi ni nouveau contrat spécial. Son contrôle ou échange d'informations conserve son champ, y compris auprès d'organismes publics, sans leur imposer artificiellement un contrat privé."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+        "assessment": "Pour L114-21 : La cible proposée fixe l'indemnité patronale ordinaire à zéro avant un an au terme effectif, préavis inclus, puis 0,20 mois par année totale, fractions en mois complets et plafond six mois, avec transition et indemnités spéciales distinctes. Cet article social ne calcule aucune indemnité de rupture : ni ce seuil ni les huit mois du droit source n'y deviennent une condition d'aide, de contrôle ou de transmission."
+      },
+      {
+        "target_key": "LEGITEXT000006073189|LEGIARTI000054335637",
+        "view_sha256": "6ce0b6d991185b9245259cb538ca950e903ba6f07212891bdd5e34a2b5e63422",
+        "assessment": "Pour L114-21 : La cible fournie est le précédent brouillon à droit constant ; le présent lot retire seulement la voie dématérialisée imposée et le doublement des pénalités, sans déplacer les catégories ni le huitième alinéa. Le renvoi intégral reste cohérent avec ces changements et ne rétablit pas les charges retirées. Les trente jours de réponse ne sont pas le préavis de quinze jours du contrat unique ; aucune ancienneté salariale n'est exigée."
+      }
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "854c2d4d11e45b91dd42df82132db6217928c9718612eb76f2d30d3f37b1507a",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "5e0a8e26be352a33dd885f5214a0ec8dbdff13b49e72554aaed74524f6b8fd33",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "reference_coherence": {
+      "version": 3,
+      "referrer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "policy_sha256": {
+        "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+      },
+      "referrer_source": {
+        "code_id": "LEGITEXT000006073189",
+        "source_id": "LEGIARTI000043169843",
+        "source_sha256": "854c2d4d11e45b91dd42df82132db6217928c9718612eb76f2d30d3f37b1507a",
+        "source_xml_sha256": "3856caf336e12b8387c13780914e73fcd522cc7148779db3e0c597acaeb49a0c",
+        "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "targets": {
+        "LEGITEXT000006072050|LEGIARTI000006901112": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000006901112",
+          "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+          "view_kind": "proposal",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "source_xml_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000019071087": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000019071087",
+          "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+          "view_kind": "proposal",
+          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000035644154": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000035644154",
+          "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+          "view_kind": "proposal",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "source_xml_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
+          "source_notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b"
+        },
+        "LEGITEXT000006073189|LEGIARTI000054335637": {
+          "code_id": "LEGITEXT000006073189",
+          "source_id": "LEGIARTI000054335637",
+          "source_sha256": "39e931d7611a6c90adb6cebf9db6df9a0911aa9c4a9eab05e334e21e778e2d42",
+          "view_kind": "proposal",
+          "view_sha256": "6ce0b6d991185b9245259cb538ca950e903ba6f07212891bdd5e34a2b5e63422",
+          "source_xml_sha256": "9fe7b2694d75bb0ba8ec6c92352780fbb593e6f50628da8e48f6aabcda6fa1b8",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assessments": [
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "assessment": "Pour L114-21 : La cible porte sur le préavis de licenciement : ancien droit différencié par ancienneté, proposition de quinze jours calendaires pour les nouveaux contrats. Cet article social ne renvoie pas à cette règle de rupture ; ses transmissions ou contrôles ne sont pas un préavis. La notification de rupture, les anciens contrats et les procédures spéciales ne sont donc pas modifiés ici."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "assessment": "Pour L114-21 : La cible proposée interdit les nouveaux CDD et distingue durée de mission ou formation et durée de l'emploi ; la source officielle autorise encore les CDD. L'article social ne crée ni terme d'emploi ni nouveau contrat spécial. Son contrôle ou échange d'informations conserve son champ, y compris auprès d'organismes publics, sans leur imposer artificiellement un contrat privé."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "assessment": "Pour L114-21 : La cible proposée fixe l'indemnité patronale ordinaire à zéro avant un an au terme effectif, préavis inclus, puis 0,20 mois par année totale, fractions en mois complets et plafond six mois, avec transition et indemnités spéciales distinctes. Cet article social ne calcule aucune indemnité de rupture : ni ce seuil ni les huit mois du droit source n'y deviennent une condition d'aide, de contrôle ou de transmission."
+        },
+        {
+          "target_key": "LEGITEXT000006073189|LEGIARTI000054335637",
+          "view_sha256": "6ce0b6d991185b9245259cb538ca950e903ba6f07212891bdd5e34a2b5e63422",
+          "assessment": "Pour L114-21 : La cible fournie est le précédent brouillon à droit constant ; le présent lot retire seulement la voie dématérialisée imposée et le doublement des pénalités, sans déplacer les catégories ni le huitième alinéa. Le renvoi intégral reste cohérent avec ces changements et ne rétablit pas les charges retirées. Les trente jours de réponse ne sont pas le préavis de quinze jours du contrat unique ; aucune ancienneté salariale n'est exigée."
+        }
+      ],
+      "assessments_sha256": "f413ddb80cbd518a4ba1c5f925dcb6efbecb389744b66de22fd4fe80fdd7fecf",
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "d4bf04591c20c5b321c2426d6498bfb0ecad92c3dab92d405adef8a1d22659d6"
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000048600709",
     "source_sha256": "9289ca02a0b3ec47737bb900a374d37fd1d9dbd37b2cca1f57c135dedf0dc22e",
     "number": "L114-22",
-    "proposed_xml": "<p>Les organismes chargés de la gestion d'un régime obligatoire de sécurité sociale et du recouvrement des cotisations de sécurité sociale ou du service des allocations et prestations mentionnées au présent code, ainsi que l'opérateur France Travail, peuvent échanger des données à caractère personnel, y compris des données relatives aux revenus des personnes, avec les organismes et institutions chargés de gérer un régime équivalent dans un État membre de l'Union européenne, dans un autre État partie à l'accord sur l'Espace économique européen ou dans un État inscrit sur une liste fixée par voie réglementaire. Dans ce dernier cas, cet État doit imposer à ses organismes et institutions des conditions de protection des données à caractère personnel équivalentes à celles qui existent en France. Ces échanges ont les finalités suivantes :</p>\n<p>1° Déterminer la législation applicable et prévenir ou sanctionner le cumul indu de prestations ;</p>\n<p>2° Déterminer l'éligibilité aux prestations et contrôler le droit au bénéfice de prestations lié à la résidence, à l'appréciation des ressources, à l'exercice ou non d'une activité professionnelle et à la composition de la famille ;</p>\n<p>3° Recouvrer les cotisations et contributions dues et contrôler leur assiette.</p>",
-    "reason": "Réécriture à droit constant : séparation de la liste des États et de la condition de protection équivalente applicable aux États inscrits sur la liste réglementaire. Les trois finalités numérotées sont conservées. Aucune réforme de fond des échanges internationaux.",
-    "review_notes": "Maintien de France Travail, des données de revenus, de la notion de régime équivalent et des quatre critères du 2°. La note source prévoit l'entrée en vigueur au 1er janvier 2024 conformément au V de l'article 6 de la loi n° 2023-1196 du 18 décembre 2023. Aucune date future n'en est déduite. Les 1° à 3° restent dans leur ordre et à leur place.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien intégral nécessaire : faculté d'échanges internationaux ciblés permettant la détermination du régime applicable, l'ouverture des prestations, la prévention des cumuls indus et le recouvrement. Il ne s'agit ni d'un nouvel agrément de l'assuré ni d'une déclaration périodique imposée à celui-ci. La protection équivalente des données et les trois finalités ne peuvent être retirées comme formalités inutiles. Le brouillon stylistique est écarté.",
+    "review_notes": "Conservation des États UE, EEE et liste réglementaire, du régime équivalent et de la condition de protection des données, sans réinterpréter sa portée par une phrase nouvelle. Aucun prélèvement ni nouveau traitement obligatoire n'est créé. Les coordinations européennes et conventionnelles ne sont pas déclarées vérifiées en dehors des textes locaux. La note d'entrée en vigueur du 1er janvier 2024 est historique. France Travail demeure nommé.",
+    "status": "retained_unchanged",
+    "benefit_review": "La détermination de la législation et l'éligibilité aux prestations permettent aussi l'ouverture correcte des droits des personnes mobiles. Ces fonctions et la protection des données restent applicables aux situations futures, sans suppression d'exonération ni changement de taux.",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral nécessaire : faculté d'échanges internationaux ciblés permettant la détermination du régime applicable, l'ouverture des prestations, la prévention des cumuls indus et le recouvrement. Il ne s'agit ni d'un nouvel agrément de l'assuré ni d'une déclaration périodique imposée à celui-ci. La protection équivalente des données et les trois finalités ne peuvent être retirées comme formalités inutiles. Le brouillon stylistique est écarté.",
+      "scope_limitations": "Maintien limité à cet article et à ses fonctions précisées ci-dessus ; aucune baisse de prélèvement ni nouvelle simplification n'est revendiquée. Les contrôles des renvois extérieurs non fournis restent bornés comme indiqué dans review_notes.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de données, registre, délai, condition d'accès ou formalité de remplacement. Ce constat ne chiffre pas le solde de l'ensemble des codes.",
+      "effects": []
+    },
+    "reference_checks": [],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "9289ca02a0b3ec47737bb900a374d37fd1d9dbd37b2cca1f57c135dedf0dc22e",
+      "source_notes_sha256": "12d4b13259f6dd8d21c3a91a9b4a88f34789804965aa2eede26b621c32e41b0f",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "cd71850e4cabf61101af3a4110a63c9975133b57b518a0c0bc8ed460b7b6d49e",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "fb93e8907158111c3bd832883a1a9cc5081800afa0ae11fa0e8dbc8a6b89d555"
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000043169863",
     "source_sha256": "fc03a3e4a157b2f8d9cf0797a3237d2dc75b04754a3e443c12b2e21045e81995",
     "number": "L114-22-1",
-    "proposed_xml": "<p>Les employeurs qui relèvent d'un régime de protection sociale agricole sont soumis aux dispositions de l'article L. 243-15.</p>",
-    "reason": "Réécriture à droit constant : les employeurs agricoles deviennent le sujet explicite de la règle d'application par renvoi. Aucune réforme de fond du régime agricole.",
-    "review_notes": "Le contenu de L. 243-15 a été consulté dans le corpus ; le renvoi intégral est conservé, sans en extraire une obligation isolée ni supprimer ses exceptions. Les réformes de cotisations et de retraite du premier champ privé non agricole ne sont pas étendues ici.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien intégral nécessaire : l'application de L243-15 aux employeurs agricoles préserve la vigilance contre le travail dissimulé et toutes ses exceptions. Le renvoi entier est cohérent avec sa proposition actuelle, notamment l'accès allégé à l'attestation provisoire ; il ne rétablit pas les conditions que cette proposition retire. Aucun régime de rupture ou de cotisation salariale privée n'est étendu à l'agriculture par ce texte. Le brouillon ne changeait que l'ordre des mots.",
+    "review_notes": "L243-15 lu en entier dans les deux versions fournies : vigilance contractuelle, plan d'apurement respecté ou contestation contentieuse hors travail dissimulé, garantie financière de l'intérim, attestation provisoire et exemption des particuliers. La proposition retire la condition d'accomplissement intégral des formalités de création pour cette attestation ; le présent renvoi n'en fige pas l'ancienne version. L'allègement appartient à L243-15 et n'est pas compté une seconde fois ici.",
+    "status": "retained_unchanged",
+    "benefit_review": "Le renvoi préserve l'exemption des particuliers pour les usages personnels ou familiaux, la délivrance sous plan d'apurement ou contestation admissible et l'attestation provisoire des débutants. L'assouplissement proposé de L243-15 bénéficie aux futurs dossiers éligibles sans formalité agricole supplémentaire.",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral nécessaire : l'application de L243-15 aux employeurs agricoles préserve la vigilance contre le travail dissimulé et toutes ses exceptions. Le renvoi entier est cohérent avec sa proposition actuelle, notamment l'accès allégé à l'attestation provisoire ; il ne rétablit pas les conditions que cette proposition retire. Aucun régime de rupture ou de cotisation salariale privée n'est étendu à l'agriculture par ce texte. Le brouillon ne changeait que l'ordre des mots.",
+      "scope_limitations": "Maintien limité à cet article et à ses fonctions précisées ci-dessus ; aucune baisse de prélèvement ni nouvelle simplification n'est revendiquée. Les contrôles des renvois extérieurs non fournis restent bornés comme indiqué dans review_notes.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de données, registre, délai, condition d'accès ou formalité de remplacement. Ce constat ne chiffre pas le solde de l'ensemble des codes.",
+      "effects": []
+    },
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+        "assessment": "Pour L114-22-1 : La cible porte sur le préavis de licenciement : ancien droit différencié par ancienneté, proposition de quinze jours calendaires pour les nouveaux contrats. Cet article social ne renvoie pas à cette règle de rupture ; ses transmissions ou contrôles ne sont pas un préavis. La notification de rupture, les anciens contrats et les procédures spéciales ne sont donc pas modifiés ici."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+        "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+        "assessment": "Pour L114-22-1 : La cible proposée interdit les nouveaux CDD et distingue durée de mission ou formation et durée de l'emploi ; la source officielle autorise encore les CDD. L'article social ne crée ni terme d'emploi ni nouveau contrat spécial. Son contrôle ou échange d'informations conserve son champ, y compris auprès d'organismes publics, sans leur imposer artificiellement un contrat privé."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+        "assessment": "Pour L114-22-1 : La cible proposée fixe l'indemnité patronale ordinaire à zéro avant un an au terme effectif, préavis inclus, puis 0,20 mois par année totale, fractions en mois complets et plafond six mois, avec transition et indemnités spéciales distinctes. Cet article social ne calcule aucune indemnité de rupture : ni ce seuil ni les huit mois du droit source n'y deviennent une condition d'aide, de contrôle ou de transmission."
+      },
+      {
+        "target_key": "LEGITEXT000006073189|LEGIARTI000044627403",
+        "view_sha256": "8d11004c63e0a285c0041de91837a864304212164671aede981ff4ad31a246ab",
+        "assessment": "Pour L114-22-1 : L114-22-1 applique toute la cible aux employeurs agricoles : vigilance sur les contrats de prestations, attestation, plan d'apurement, recours, garantie d'intérim, provisoire des débutants et exemption des particuliers. La proposition dispense le débutant de prouver toutes les formalités de création ; le renvoi ne rétablit pas cette condition. La durée d'exécution du marché n'est pas un CDD, et ni seuil d'ancienneté ni notification de rupture ne s'y appliquent."
+      }
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "fc03a3e4a157b2f8d9cf0797a3237d2dc75b04754a3e443c12b2e21045e81995",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "ebb7b13c55a58c22c19add80a2aab453000288843c3d05839d5d4652977f05d3",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "reference_coherence": {
+      "version": 3,
+      "referrer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "policy_sha256": {
+        "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+      },
+      "referrer_source": {
+        "code_id": "LEGITEXT000006073189",
+        "source_id": "LEGIARTI000043169863",
+        "source_sha256": "fc03a3e4a157b2f8d9cf0797a3237d2dc75b04754a3e443c12b2e21045e81995",
+        "source_xml_sha256": "57045a5b5b81663dbd137d98627b1f4a17228cbf76f2f9351b5cd7cbfb8a7ae4",
+        "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "targets": {
+        "LEGITEXT000006072050|LEGIARTI000006901112": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000006901112",
+          "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+          "view_kind": "proposal",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "source_xml_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000019071087": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000019071087",
+          "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+          "view_kind": "proposal",
+          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000035644154": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000035644154",
+          "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+          "view_kind": "proposal",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "source_xml_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
+          "source_notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b"
+        },
+        "LEGITEXT000006073189|LEGIARTI000044627403": {
+          "code_id": "LEGITEXT000006073189",
+          "source_id": "LEGIARTI000044627403",
+          "source_sha256": "63783f00d1361036af1746d1c361fe246ca3131c77e07fc6c0a0d6c5168b3c29",
+          "view_kind": "proposal",
+          "view_sha256": "8d11004c63e0a285c0041de91837a864304212164671aede981ff4ad31a246ab",
+          "source_xml_sha256": "a8a4f78633d579fa501d0398e52b680f433a940984f3c5525167d1cc59f266f8",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assessments": [
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "assessment": "Pour L114-22-1 : La cible porte sur le préavis de licenciement : ancien droit différencié par ancienneté, proposition de quinze jours calendaires pour les nouveaux contrats. Cet article social ne renvoie pas à cette règle de rupture ; ses transmissions ou contrôles ne sont pas un préavis. La notification de rupture, les anciens contrats et les procédures spéciales ne sont donc pas modifiés ici."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "assessment": "Pour L114-22-1 : La cible proposée interdit les nouveaux CDD et distingue durée de mission ou formation et durée de l'emploi ; la source officielle autorise encore les CDD. L'article social ne crée ni terme d'emploi ni nouveau contrat spécial. Son contrôle ou échange d'informations conserve son champ, y compris auprès d'organismes publics, sans leur imposer artificiellement un contrat privé."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "assessment": "Pour L114-22-1 : La cible proposée fixe l'indemnité patronale ordinaire à zéro avant un an au terme effectif, préavis inclus, puis 0,20 mois par année totale, fractions en mois complets et plafond six mois, avec transition et indemnités spéciales distinctes. Cet article social ne calcule aucune indemnité de rupture : ni ce seuil ni les huit mois du droit source n'y deviennent une condition d'aide, de contrôle ou de transmission."
+        },
+        {
+          "target_key": "LEGITEXT000006073189|LEGIARTI000044627403",
+          "view_sha256": "8d11004c63e0a285c0041de91837a864304212164671aede981ff4ad31a246ab",
+          "assessment": "Pour L114-22-1 : L114-22-1 applique toute la cible aux employeurs agricoles : vigilance sur les contrats de prestations, attestation, plan d'apurement, recours, garantie d'intérim, provisoire des débutants et exemption des particuliers. La proposition dispense le débutant de prouver toutes les formalités de création ; le renvoi ne rétablit pas cette condition. La durée d'exécution du marché n'est pas un CDD, et ni seuil d'ancienneté ni notification de rupture ne s'y appliquent."
+        }
+      ],
+      "assessments_sha256": "0d660f69634df1e70960dc7044eb590ef283b9e9007f5250df7c6dd8d50ade80",
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "ccd82d096a628fabc01efa1f955636a2ede4102a0b7b9f4cf770f54955a3f8c7"
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000042670725",
     "source_sha256": "8db98f1ee8774f8533d2012e0006e396b604e4e71ee57c3f0d36b8252538e375",
     "number": "L114-22-2",
-    "proposed_xml": "<p>Lorsqu'une personne fait l'objet d'une condamnation pénale définitive à une peine complémentaire la privant de droits ou de prestations prévus par le présent code et par le code de l'action sociale et des familles, le ministère public près la juridiction pénale qui a prononcé cette condamnation en informe sans délai la caisse nationale mentionnée au second alinéa du présent article. Il tient également cette caisse informée de l'actualisation des informations relatives aux modalités d'exécution de la peine.<br/><br/>L'une des caisses nationales mentionnées au livre II met en œuvre un traitement automatisé, selon des modalités précisées par voie réglementaire. Ce traitement assure la réception et la conservation des informations transmises par le ministère public sur les peines mentionnées au premier alinéa du présent article. Il assure aussi leur utilisation par les seuls organismes de sécurité sociale et de retraite complémentaire dont relèvent les personnes concernées.</p>",
-    "reason": "Réécriture à droit constant : identification du ministère public comme auteur de l'information et séparation des fonctions du traitement automatisé. Aucune réforme de fond des peines, des destinataires ou de l'accès aux données.",
-    "review_notes": "La condamnation doit rester définitive et porter sur une peine complémentaire. L'information sans délai et son actualisation sont conservées. Les deux alinéas textuels, séparés par le double saut de ligne de la source, gardent leur place pour les renvois réciproques au premier et au second alinéa. L'usage des données demeure réservé aux organismes dont relève la personne.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien intégral nécessaire : exécuter les seules condamnations définitives et actualiser leurs modalités empêche tant le versement contraire au jugement que la poursuite d'une privation après modification de la peine. Le traitement central limite l'utilisation aux organismes dont relève la personne. Supprimer l'actualisation ou ce circuit ne serait pas une simplification compatible avec ces garanties ; aucune formalité nouvelle de l'assuré n'est prévue. Le brouillon était stylistique.",
+    "review_notes": "La source présente deux alinéas textuels dans un même p avec un double saut : maintien intégral, renvois au premier et second alinéas conservés. La décision doit être définitive et la peine complémentaire ; ni peine nouvelle ni extension des organismes autorisés. L'actualisation ne peut être supprimée au nom d'une réduction des échanges sans risquer de maintenir une privation devenue inapplicable.",
+    "status": "retained_unchanged",
+    "benefit_review": "Les seules condamnations définitives sont visées ; l'actualisation des modalités d'exécution protège le rétablissement des droits après modification ou fin de peine. La restriction des destinataires subsiste pour les cas futurs ; aucune exonération n'est retirée.",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral nécessaire : exécuter les seules condamnations définitives et actualiser leurs modalités empêche tant le versement contraire au jugement que la poursuite d'une privation après modification de la peine. Le traitement central limite l'utilisation aux organismes dont relève la personne. Supprimer l'actualisation ou ce circuit ne serait pas une simplification compatible avec ces garanties ; aucune formalité nouvelle de l'assuré n'est prévue. Le brouillon était stylistique.",
+      "scope_limitations": "Maintien limité à cet article et à ses fonctions précisées ci-dessus ; aucune baisse de prélèvement ni nouvelle simplification n'est revendiquée. Les contrôles des renvois extérieurs non fournis restent bornés comme indiqué dans review_notes.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de données, registre, délai, condition d'accès ou formalité de remplacement. Ce constat ne chiffre pas le solde de l'ensemble des codes.",
+      "effects": []
+    },
+    "reference_checks": [],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "8db98f1ee8774f8533d2012e0006e396b604e4e71ee57c3f0d36b8252538e375",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "60eb7feb1b1f7c046bef095476fd4208ff9acc56b0dfe3f1b6c12cb7b034c5ae",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "f0b16cb75d2fc9dd6c1403ada3228d81339f33d2fa09f4bb3b500bbe4859f1ec"
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000054318692",
     "source_sha256": "2587a274b037099aa231d9f0a661b3b87fde6f75ed053b56e1b65b4b1e61dc34",
     "number": "L114-22-2-1",
-    "proposed_xml": "<p>La présente section s'applique également aux sommes soumises à l'impôt sur le revenu en application de l'article 1649 quater-0 B bis du code général des impôts. Ces sommes sont notamment prises en compte dans les ressources du bénéficiaire lorsqu'une prestation ou une allocation est attribuée sous condition de ressources ou lorsque son montant est réduit en fonction de celles-ci.</p>",
-    "reason": "Réécriture à droit constant : séparation du champ d'application de la section et de son effet sur les prestations soumises aux ressources. Aucune réforme de fond de l'imposition ou des prestations.",
-    "review_notes": "L'article 1649 quater-0 B bis du CGI a été consulté dans le corpus. Le renvoi reste intégral : la rédaction ne crée ni présomption fiscale supplémentaire ni règle nouvelle de montant. Les deux hypothèses, condition de ressources et réduction en fonction des ressources, sont maintenues, ainsi que le caractère non exhaustif de l'exemple introduit par « notamment ».",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien intégral nécessaire : le renvoi permet de tenir compte de ressources issues d'activités illicites dans les prestations sous condition de ressources. Il ne crée pas une taxe supplémentaire ni une déclaration autonome ; le supprimer avantagerait la dissimulation et romprait l'appréciation des ressources. Le champ demeure celui des sommes effectivement soumises à l'IR selon CGI 1649 quater-0 B bis, avec les possibilités de preuve contraire de ce régime. Le brouillon stylistique est écarté.",
+    "review_notes": "CGI 1649 quater-0 B bis lu en entier avec sa note du 1er juillet 2025 : présomptions réfragables, libre disposition, répartition entre plusieurs personnes et preuve contraire par tout moyen y sont prévues. Ce renvoi ne transforme pas un soupçon en ressource irréfragable. Les références historiques de ce CGI à des articles CCH et à des catégories d'armes demandent une concordance propre dans le lot fiscal ; elles ne sont pas corrigées implicitement par cet article social.",
+    "status": "retained_unchanged",
+    "benefit_review": "Ce texte ne crée pas d'avantage fiscal autonome : il articule les ressources avec une imposition légale. La preuve contraire et les exclusions de revenu imposable du renvoi fiscal restent accessibles ; aucune présomption sociale irréfragable ni retrait des autres abattements de prestations n'est ajouté.",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral nécessaire : le renvoi permet de tenir compte de ressources issues d'activités illicites dans les prestations sous condition de ressources. Il ne crée pas une taxe supplémentaire ni une déclaration autonome ; le supprimer avantagerait la dissimulation et romprait l'appréciation des ressources. Le champ demeure celui des sommes effectivement soumises à l'IR selon CGI 1649 quater-0 B bis, avec les possibilités de preuve contraire de ce régime. Le brouillon stylistique est écarté.",
+      "scope_limitations": "Maintien limité à cet article et à ses fonctions précisées ci-dessus ; aucune baisse de prélèvement ni nouvelle simplification n'est revendiquée. Les contrôles des renvois extérieurs non fournis restent bornés comme indiqué dans review_notes.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de données, registre, délai, condition d'accès ou formalité de remplacement. Ce constat ne chiffre pas le solde de l'ensemble des codes.",
+      "effects": []
+    },
+    "reference_checks": [],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "2587a274b037099aa231d9f0a661b3b87fde6f75ed053b56e1b65b4b1e61dc34",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "3878a6fdea36307962c8ec2e28040007ffcc5f34c4f50d4b138c25d69878a1a0",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "a7dd752cfe97860c51c580317694ec926833b4c133f2f09e8ab8f889f2865464"
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000054336565",
     "source_sha256": "74023e8c49296e4ff413cbeb86d50afc199afe15ae143da45bc0b6c2e4cdc0e2",
     "number": "L114-22-3",
-    "proposed_xml": "<p>I. – Les agents de contrôle mentionnés à l'article L. 114-10 du présent code, à l'article L. 724-7 du code rural et de la pêche maritime et à l'article L. 5312-13-1 du code du travail sont habilités, lorsqu'ils sont commissionnés par le directeur général ou le directeur de l'organisme national dont relève l'organisme qui les emploie, à rechercher et à constater les infractions mentionnées aux articles 313-1, 313-3, 441-1, 441-6 et 441-7 du code pénal lorsqu'elles sont de nature à porter préjudice aux organismes de protection sociale, ainsi que les infractions mentionnées aux articles L. 114-13 et L. 114-18 du présent code. Les agents de contrôle employés par l'organisme mentionné à l'article L. 382-17 du présent code ou par l'un des organismes gestionnaires des régimes spéciaux mentionnés à l'article L. 711-1 ou du régime spécial des clercs et employés de notaires disposent de la même habilitation lorsqu'ils sont commissionnés par le directeur de cet organisme.</p>\n<p>Pour accomplir ces missions, ces agents sont compétents sur l'ensemble du territoire national.</p>\n<p>Les agents constatent les infractions par des procès-verbaux qui font foi jusqu'à preuve du contraire. Ces procès-verbaux sont transmis directement au procureur de la République.</p>\n<p>II. – Lorsque les nécessités de l'enquête le justifient, ces agents peuvent, sans être pénalement responsables, accomplir sous pseudonyme les actes suivants, aux seules fins de constater les infractions mentionnées au I commises par la voie des communications électroniques :</p>\n<p>1° Participer à des échanges électroniques, y compris avec les personnes susceptibles d'être les auteurs de ces infractions ;</p>\n<p>2° Extraire ou conserver, par ce moyen, les données relatives aux personnes susceptibles d'être les auteurs de ces infractions et tout élément de preuve.</p>\n<p>Ces actes ne doivent pas constituer une incitation à commettre une infraction, à peine de nullité.</p>\n<p>III. – Ces agents peuvent également recueillir tout renseignement et toute justification nécessaires à l'accomplissement de leur mission. Ils peuvent se faire remettre copie des documents de toute nature nécessaires à cette mission, quel que soit leur support et quelle que soit la personne qui les détient. En cas de support informatisé, ils peuvent accéder aux logiciels et aux données stockées correspondants ainsi qu'à la restitution en clair des informations propres à faciliter l'accomplissement de leur mission. Ils peuvent demander que ces informations soient transcrites, par tout traitement approprié, en documents directement utilisables pour les besoins de leur mission.</p>\n<p>IV. – Ces agents peuvent aussi entendre, sur convocation ou sur place, toute personne susceptible d'apporter des éléments utiles à leurs constatations. Ils dressent un procès-verbal de l'audition, qui doit comporter les questions auxquelles il a été répondu. Les personnes entendues lisent elles-mêmes ce procès-verbal, peuvent y faire consigner leurs observations et le signent. Lorsqu'elles déclarent ne pas pouvoir lire, l'agent leur en donne lecture avant la signature. Tout refus de signer est mentionné sur le procès-verbal.</p>\n<p>V. – Un décret en Conseil d'État fixe les modalités d'application du présent article.</p>",
-    "reason": "Réécriture à droit constant : séparation, dans le premier alinéa, des deux circuits de commissionnement ; formulation distincte des pouvoirs documentaires et des étapes de l'audition. Les habilitations, leurs conditions et les garanties de preuve restent inchangées. Aucune réforme de fond des pouvoirs d'enquête.",
-    "review_notes": "Les I à V et les 1° et 2° du II sont conservés sans déplacement d'alinéa. Maintien des cinq infractions du code pénal, de la condition de préjudice, des deux infractions du CSS, des régimes spéciaux et des notaires. L. 382-17 a été consulté dans le corpus. Contrôler ensemble le commissionnement national du premier groupe et celui du directeur employeur du second groupe lors de toute modification ultérieure de L. 114-10. La compétence nationale, la preuve contraire, la transmission directe au procureur, la nécessité de l'enquête, la nullité pour incitation et les garanties de lecture, d'observations et de signature sont toutes reprises.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>I.-Les agents de contrôle mentionnés à l'article L. 114-10 du présent code, à l'article L. 724-7 du code rural et de la pêche maritime et à l'article L. 5312-13-1 du code du travail, commissionnés par le directeur général ou le directeur de l'organisme national dont relève l'organisme qui les emploie ainsi que les agents de contrôle employés par l'organisme mentionné à l'article L. 382-17 du présent code ou l'un des organismes gestionnaires des régimes spéciaux mentionnés à l'article L. 711-1 ou du régime spécial des clercs et employés de notaires, commissionnés par le directeur de cet organisme, sont habilités à rechercher et à constater les infractions mentionnées aux articles 313-1, 313-3, 441-1, 441-6 et 441-7 du code pénal, lorsqu'elles sont de nature à porter préjudice aux organismes de protection sociale, ainsi que celles mentionnées aux articles L. 114-13 et L. 114-18 du présent code.</p>\n<p>Ils ont, pour l'exercice de ces missions, compétence sur l'ensemble du territoire national.</p>\n<p>Les infractions sont constatées par des procès-verbaux, qui font foi jusqu'à preuve du contraire. Ces procès-verbaux sont transmis directement au procureur de la République.</p>\n<p>II.-Aux seules fins de constater les infractions mentionnées au I commises par la voie des communications électroniques et lorsque les nécessités de l'enquête le justifient, ces agents peuvent procéder sous pseudonyme aux actes suivants, sans être pénalement responsables :</p>\n<p>1° Participer à des échanges électroniques, y compris avec les personnes susceptibles d'être les auteurs de ces infractions ;</p>\n<p>2° Extraire ou conserver par ce moyen les données sur les personnes susceptibles d'être les auteurs de ces infractions et tout élément de preuve.</p>\n<p>A peine de nullité, ces actes ne peuvent constituer une incitation à commettre une infraction.</p>\n<p>III.-Ces agents peuvent également recueillir tout renseignement et toute justification et se faire remettre copie des documents de toute nature, quel que soit leur support et en quelques mains qu'ils se trouvent, nécessaires à l'accomplissement de leur mission. Ils peuvent, en cas de support informatisé, avoir accès aux logiciels et aux données stockées correspondants ainsi qu'à la restitution en clair des informations propres à faciliter l'accomplissement de leur mission. Lorsque les documents ou données remis dans leur format existant sont lisibles et directement utilisables pour les besoins de leur mission, les agents ne peuvent exiger leur transcription par un traitement informatique spécifique. Dans les autres cas, ils peuvent en demander la transcription par tout traitement approprié en des documents directement utilisables pour les besoins de leur mission. Cette dispense de transcription spécifique s'applique aux transmissions effectuées à compter de l'entrée en vigueur de la loi portant la présente modification, y compris dans les enquêtes en cours, sans remise en cause des actes régulièrement accomplis.</p>\n<p>IV.-Ces agents peuvent aussi procéder, sur convocation ou sur place, aux auditions de toute personne susceptible d'apporter des éléments utiles à leurs constatations. Ils en dressent un procès-verbal, qui doit comporter les questions auxquelles il est répondu. Les personnes entendues procèdent elles-mêmes à sa lecture, peuvent y faire consigner leurs observations et y apposent leur signature. Si elles déclarent ne pas pouvoir lire, lecture leur en est faite par l'agent préalablement à la signature. En cas de refus de signer le procès-verbal, mention en est faite sur celui-ci.</p>\n<p>V.-Les modalités d'application du présent article sont fixées par décret en Conseil d'Etat.</p>",
+    "reason": "Réforme de fond limitée au III : suppression de la transcription informatique spécifique imposée lorsque les documents ou données fournis dans leur format existant sont lisibles et directement utilisables. Cette fabrication supplémentaire n'apporte alors aucune preuve nécessaire. Le contenu requis, l'accès aux logiciels, le commissionnement, les procès-verbaux, l'interdiction de provoquer l'infraction et les garanties d'audition restent intégralement maintenus. Le brouillon antérieur, seulement stylistique, est remplacé par cette réduction ciblée.",
+    "review_notes": "I à V, 1° et 2° du II et tous les alinéas maintenus dans leur ordre ; la transition est incorporée au III. La dispense concerne uniquement une transcription spéciale sans nécessité technique, non la remise des données nécessaires ou leur restitution intelligible lorsqu'elles ne sont pas utilisables. Aucun registre, logiciel, format imposé ou déclaration de remplacement. Coordonner le décret d'application du V sur cette limite. L114-10 du corpus comporte une anomalie matérielle finale (tarifcation et chevrons), signalée sans correction de ce fichier. Les infractions pénales et le commissionnement ne sont pas supprimés ; la protection contre la provocation et les observations en audition restent intégrales.",
+    "status": "rewrite_draft",
+    "benefit_review": "La preuve contraire aux procès-verbaux, la nécessité de l'enquête sous pseudonyme, la nullité en cas d'incitation et les droits de lecture, observations et refus de signature restent entiers. La dispense de transcription s'ouvre aux transmissions futures, y compris dans les enquêtes en cours, sans affecter les avantages sociaux légitimes.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Obligation de réaliser une transcription informatique spécifique lorsque les documents ou données dans leur format existant sont déjà lisibles et directement utilisables."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond limitée au III : suppression de la transcription informatique spécifique imposée lorsque les documents ou données fournis dans leur format existant sont lisibles et directement utilisables. Cette fabrication supplémentaire n'apporte alors aucune preuve nécessaire. Le contenu requis, l'accès aux logiciels, le commissionnement, les procès-verbaux, l'interdiction de provoquer l'infraction et les garanties d'audition restent intégralement maintenus. Le brouillon antérieur, seulement stylistique, est remplacé par cette réduction ciblée.",
+      "scope_limitations": "La dispense ne vise que les transcriptions inutiles au III. Aucun pouvoir essentiel ni obligation de fournir une donnée manquante n'est retiré ; l'économie dépend des demandes évitées, sans chiffrage ni solde global établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun format, registre ou logiciel de remplacement n'est exigé. Les enquêteurs exploitent les éléments déjà lisibles et utilisables ; leurs autres pouvoirs et la remise des informations nécessaires sont inchangés.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "enquete-sociale-dispense-transcription-specifique",
+          "description": "Retrait des transformations informatiques spécifiques lorsque les fichiers existants suffisent au contrôle.",
+          "before": "Pouvoir de demander une transcription par tout traitement approprié, sans dispense expresse pour le format déjà utilisable.",
+          "after": "Aucune transcription spécifique exigible si le format remis est lisible et directement utilisable ; données nécessaires et transcription utile dans les autres cas conservées.",
+          "unit": "legal_duty",
+          "affected_population": "Détenteurs de documents ou données requis par les enquêteurs habilités",
+          "conditions_and_transition": "Transmissions futures dans les enquêtes nouvelles ou en cours ; actes déjà accomplis préservés.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement : seuls les documents nécessaires et les garanties de transmission déjà applicables subsistent.",
+          "source_quote": "Ils peuvent en demander la transcription par tout traitement approprié en des documents directement utilisables pour les besoins de leur mission.",
+          "proposed_quote": "Lorsque les documents ou données remis dans leur format existant sont lisibles et directement utilisables pour les besoins de leur mission, les agents ne peuvent exiger leur transcription par un traitement informatique spécifique."
+        }
+      ]
+    },
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+        "assessment": "Pour L114-22-3 : La cible porte sur le préavis de licenciement : ancien droit différencié par ancienneté, proposition de quinze jours calendaires pour les nouveaux contrats. Cet article social ne renvoie pas à cette règle de rupture ; ses transmissions ou contrôles ne sont pas un préavis. La notification de rupture, les anciens contrats et les procédures spéciales ne sont donc pas modifiés ici."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+        "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+        "assessment": "Pour L114-22-3 : La cible proposée interdit les nouveaux CDD et distingue durée de mission ou formation et durée de l'emploi ; la source officielle autorise encore les CDD. L'article social ne crée ni terme d'emploi ni nouveau contrat spécial. Son contrôle ou échange d'informations conserve son champ, y compris auprès d'organismes publics, sans leur imposer artificiellement un contrat privé."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+        "assessment": "Pour L114-22-3 : La cible proposée fixe l'indemnité patronale ordinaire à zéro avant un an au terme effectif, préavis inclus, puis 0,20 mois par année totale, fractions en mois complets et plafond six mois, avec transition et indemnités spéciales distinctes. Cet article social ne calcule aucune indemnité de rupture : ni ce seuil ni les huit mois du droit source n'y deviennent une condition d'aide, de contrôle ou de transmission."
+      }
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "74023e8c49296e4ff413cbeb86d50afc199afe15ae143da45bc0b6c2e4cdc0e2",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "25ea17424f3fc10398d53e3a81719c47c703f7026c1488d055c6f3b3be04581e",
+      "assessment_sha256": "bfd816aa2d3ec5f7467ae27c316c959ab557f376a7b0b967d8c11b32b74670d5",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "reference_coherence": {
+      "version": 3,
+      "referrer_sha256": "25ea17424f3fc10398d53e3a81719c47c703f7026c1488d055c6f3b3be04581e",
+      "policy_sha256": {
+        "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+      },
+      "referrer_source": {
+        "code_id": "LEGITEXT000006073189",
+        "source_id": "LEGIARTI000054336565",
+        "source_sha256": "74023e8c49296e4ff413cbeb86d50afc199afe15ae143da45bc0b6c2e4cdc0e2",
+        "source_xml_sha256": "f1b1eb99af41e3c5ac9b62ba3f6edb50f9dfcdaac9922b684adf22d1c4a57382",
+        "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "targets": {
+        "LEGITEXT000006072050|LEGIARTI000006901112": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000006901112",
+          "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+          "view_kind": "proposal",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "source_xml_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000019071087": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000019071087",
+          "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+          "view_kind": "proposal",
+          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000035644154": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000035644154",
+          "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+          "view_kind": "proposal",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "source_xml_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
+          "source_notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b"
+        }
+      },
+      "assessments": [
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "assessment": "Pour L114-22-3 : La cible porte sur le préavis de licenciement : ancien droit différencié par ancienneté, proposition de quinze jours calendaires pour les nouveaux contrats. Cet article social ne renvoie pas à cette règle de rupture ; ses transmissions ou contrôles ne sont pas un préavis. La notification de rupture, les anciens contrats et les procédures spéciales ne sont donc pas modifiés ici."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "assessment": "Pour L114-22-3 : La cible proposée interdit les nouveaux CDD et distingue durée de mission ou formation et durée de l'emploi ; la source officielle autorise encore les CDD. L'article social ne crée ni terme d'emploi ni nouveau contrat spécial. Son contrôle ou échange d'informations conserve son champ, y compris auprès d'organismes publics, sans leur imposer artificiellement un contrat privé."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "assessment": "Pour L114-22-3 : La cible proposée fixe l'indemnité patronale ordinaire à zéro avant un an au terme effectif, préavis inclus, puis 0,20 mois par année totale, fractions en mois complets et plafond six mois, avec transition et indemnités spéciales distinctes. Cet article social ne calcule aucune indemnité de rupture : ni ce seuil ni les huit mois du droit source n'y deviennent une condition d'aide, de contrôle ou de transmission."
+        }
+      ],
+      "assessments_sha256": "0afcce44e7b81da6c9adc5cd375ba39a0ba97c4eac2cce5cfc00d4e1208ff6bf",
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "5a45e052f2c51914c5d7fb6722bd9a2be230b038b6f44bdd47893149f3509227"
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000048673028",
     "source_sha256": "730725c94c3a79adfdf20c31544dd2f4bee9a7b109da3547502631febc71d5fe",
     "number": "L114-22-4",
-    "proposed_xml": "<p>L'habilitation à rechercher et à constater les infractions mentionnées aux articles L. 114-13 et L. 114-18 est accordée aux agents chargés du contrôle mentionnés à l'article L. 243-7.</p>",
-    "reason": "Réécriture à droit constant : la règle présente directement l'objet de l'habilitation puis les agents qui en bénéficient. Aucune réforme de fond ni assimilation aux autres pouvoirs d'enquête.",
-    "review_notes": "Les trois renvois sont conservés. Cet article ne reprend que l'habilitation à rechercher et constater les infractions de L. 114-13 et L. 114-18 ; il n'importe pas automatiquement tous les moyens prévus à L. 114-22-3.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien intégral nécessaire : l'habilitation des agents de recouvrement pour les infractions de L114-13 et L114-18 complète celle d'autres catégories d'agents prévue à L114-22-3. Un doublon supprimable n'est pas établi : les populations d'agents et les pouvoirs attribués ne se confondent pas. Le texte ne crée ni prélèvement ni formalité générale d'employeur. La reformulation passive du brouillon est écartée.",
+    "review_notes": "L114-13 et L114-18 ont été lus intégralement dans le corpus : facilitation de fraude, refus d'affiliation et incitation ou organisation du refus gardent leur champ. L243-7 désigne les contrôleurs du recouvrement. La présente habilitation ne confère pas à elle seule les pouvoirs sous pseudonyme et d'audition de L114-22-3. Aucun nouveau renvoi ni délai n'est introduit.",
+    "status": "retained_unchanged",
+    "benefit_review": "L'article n'institue pas d'exonération : il habilite des agents pour des infractions identifiées. Son maintien ne supprime aucune aide, dispense ni recours ; il n'étend pas par lui-même les pouvoirs d'enquête ou les sanctions contre les personnes contrôlées.",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral nécessaire : l'habilitation des agents de recouvrement pour les infractions de L114-13 et L114-18 complète celle d'autres catégories d'agents prévue à L114-22-3. Un doublon supprimable n'est pas établi : les populations d'agents et les pouvoirs attribués ne se confondent pas. Le texte ne crée ni prélèvement ni formalité générale d'employeur. La reformulation passive du brouillon est écartée.",
+      "scope_limitations": "Maintien limité à cet article et à ses fonctions précisées ci-dessus ; aucune baisse de prélèvement ni nouvelle simplification n'est revendiquée. Les contrôles des renvois extérieurs non fournis restent bornés comme indiqué dans review_notes.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de données, registre, délai, condition d'accès ou formalité de remplacement. Ce constat ne chiffre pas le solde de l'ensemble des codes.",
+      "effects": []
+    },
+    "reference_checks": [],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "730725c94c3a79adfdf20c31544dd2f4bee9a7b109da3547502631febc71d5fe",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "80298099b7fe7c6eed03cfac84beb99e7adcb18f1eea9d10debe221214ea4f0a",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "7688dc51d57518edbb3bb9651114b77f61f2742b46a3e4559d69244c80cb2fc1"
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000054318247",
     "source_sha256": "0466456f7f5867e64013ad67deab19248b7b40de906200eb7029a23329c1bee5",
     "number": "L114-22-5",
-    "proposed_xml": "<p>Dans l'exercice de leur mission de lutte contre la fraude, les agents de contrôle assermentés et agréés mentionnés à l'article L. 114-10 peuvent interroger les services du ministre des affaires étrangères qui tiennent le registre mentionné à l'article L. 12 du code électoral. Cette interrogation a pour seule finalité de contrôler le respect de la condition de résidence en France pour l'attribution et le service des prestations de l'assurance maladie.</p>",
-    "reason": "Réécriture à droit constant : distinction entre les agents autorisés, les services interrogés et la finalité exclusive de la consultation. Aucune réforme de fond ni élargissement à d'autres prestations.",
-    "review_notes": "L'assermentation et l'agrément demeurent cumulatifs. Maintien des renvois à L. 114-10 et à L. 12 du code électoral, et du champ limité à la résidence en France pour l'attribution et le service des prestations de l'assurance maladie. Les modalités restent celles de L. 114-22-7.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien intégral nécessaire : la consultation ciblée du registre consulaire permet un contrôle de résidence sans demander systématiquement de nouvelles pièces à l'assuré. L'assermentation, l'agrément et la finalité exclusive encadrent l'accès à des données personnelles ; les supprimer élargirait les pouvoirs plutôt qu'alléger une charge des assurés. Aucune formalité supplémentaire de bénéficiaire n'est identifiée. Le brouillon stylistique n'est pas conservé comme réécriture.",
+    "review_notes": "L114-10 et L114-22-7 consultés dans le corpus : le second exige un décret en Conseil d'État après avis de la CNIL. Maintien de la seule assurance maladie, de la résidence en France et des deux qualifications des agents. Le code électoral n'est pas fourni dans les corpus autorisés ; le contenu entier de L12 n'est pas présenté comme vérifié. Une inscription au registre n'est pas transformée ici en présomption irréfragable de non-résidence.",
+    "status": "retained_unchanged",
+    "benefit_review": "La limitation aux agents assermentés et agréés et à la résidence pour la seule assurance maladie protège les personnes. La consultation ne ferme aucune exemption de résidence prévue ailleurs et ne crée pas de nouvelle condition d'attribution pour les futurs assurés.",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral nécessaire : la consultation ciblée du registre consulaire permet un contrôle de résidence sans demander systématiquement de nouvelles pièces à l'assuré. L'assermentation, l'agrément et la finalité exclusive encadrent l'accès à des données personnelles ; les supprimer élargirait les pouvoirs plutôt qu'alléger une charge des assurés. Aucune formalité supplémentaire de bénéficiaire n'est identifiée. Le brouillon stylistique n'est pas conservé comme réécriture.",
+      "scope_limitations": "Maintien limité à cet article et à ses fonctions précisées ci-dessus ; aucune baisse de prélèvement ni nouvelle simplification n'est revendiquée. Les contrôles des renvois extérieurs non fournis restent bornés comme indiqué dans review_notes.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de données, registre, délai, condition d'accès ou formalité de remplacement. Ce constat ne chiffre pas le solde de l'ensemble des codes.",
+      "effects": []
+    },
+    "reference_checks": [],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "0466456f7f5867e64013ad67deab19248b7b40de906200eb7029a23329c1bee5",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "3c1727b733c4f7329641d52428804ab7dcec3ec55eca93ec02f157a5e053164b",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "4f2555a7e799227200fe02468acd22ebe949b83df823a78f9e2ea0f7d5b2174d"
   },
   {
     "code_id": "LEGITEXT000006073189",
