@@ -1,0 +1,58 @@
+{
+  "status": "candidate_validated",
+  "baseline_failures": [
+    {
+      "number": "L111-2-1",
+      "source_id": "LEGIARTI000047452779",
+      "passed": false,
+      "error_type": "ValueError",
+      "error": "A financing transfer alone is not a tax or contribution cut"
+    }
+  ],
+  "candidate_impact_passes": 12,
+  "source_guards": true,
+  "references_current": {
+    "passed": true,
+    "result": null
+  },
+  "isolated_integrity": {
+    "passed": true,
+    "result": {
+      "article_count": 12,
+      "diagnostics": [
+        {
+          "source_id": "LEGIARTI000047452779",
+          "number": "L111-2-1",
+          "check": "references_changed",
+          "removed": [],
+          "added": [
+            "L241-3"
+          ]
+        },
+        {
+          "source_id": "LEGIARTI000031686322",
+          "number": "L111-2-3",
+          "check": "length_change",
+          "ratio": 9.47
+        },
+        {
+          "source_id": "LEGIARTI000045354067",
+          "number": "LO111-3-3",
+          "check": "explicit_normative_reduction",
+          "scope": [
+            "Obligation de reproduire dans la loi les prévisions, tableaux et objectifs strictement inchangés, lorsque le maintien explicite par renvoi précis est choisi."
+          ]
+        }
+      ],
+      "files": [
+        {
+          "file": "runtime/css-impact-metadata-review-20261022/isolated-batches/candidate/00001.json",
+          "sha256": "393cb9ca755b50651893128d710f38acd29315d5a5fc949c3a5ee3aa99a6482a",
+          "articles": 12
+        }
+      ]
+    }
+  },
+  "original_job_intact": true,
+  "commit_called": false
+}
