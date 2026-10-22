@@ -1,0 +1,106 @@
+{
+  "source_id": "LEGIARTI000038774726",
+  "historical_article": "D723-7",
+  "current_article": "D653-4",
+  "original_decree": "2004-1457 du 23 décembre 2004",
+  "NOR": "SANS0423730D",
+  "journal": "JORF n°0303 du 30 décembre 2004, texte39",
+  "document_path": "documents/joe_20041230_0303_0039.pdf",
+  "document_sha256": "740c8316ba182397f2b0e20414d112033842a274bc543ac2823790c915d55c03",
+  "document_bytes": 54793,
+  "pages_total": 3,
+  "formula_pdf_page": 2,
+  "original_page_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000628806",
+  "observed_download_page_url": "https://www.legifrance.gouv.fr/download/pdf?id=uSNk84CRAvAVN2kVnHsPSR-a2mQGLEMfNcfE5ZmY-HQ=",
+  "observed_file_url": "https://www.legifrance.gouv.fr/download/file/uSNk84CRAvAVN2kVnHsPSR-a2mQGLEMfNcfE5ZmY-HQ=/JOE_TEXTE",
+  "acquisition": "Normal browser navigation and download by root in IAB; copied into this isolated folder; no cookies exported or challenge solved. Advertised viewer size differs from actual downloaded bytes; actual PDF header, 3 pages, title, date, NOR and text number verified locally.",
+  "read_scope": "All three pages rendered and visually inspected; all text extracted; page2 formulas absent from text extraction and read directly from the facsimile.",
+  "transcriptions": [
+    {
+      "marker": 1,
+      "text": "P × (1 − 1/D) × C × E × (1 + 10 %)",
+      "latex": "P \\times \\left(1-\\frac{1}{D}\\right) \\times C \\times E \\times (1+10\\%)",
+      "current_applicability": "No mathematical change in 2008, 2010 or 2019 identified. 2019 changes article references surrounding the expression.",
+      "render": "registry-proposal/media/css-d653-4-option-a.png",
+      "visual_checks": [
+        "Whole page2 at 1800px",
+        "Separate 300dpi native page render crop; each operator and parenthesis checked"
+      ]
+    },
+    {
+      "marker": 2,
+      "text": "P × [1 − (1 − 1/D) × (1 − C)] × E × (1 + 10 %)",
+      "latex": "P \\times \\left[1-\\left(1-\\frac{1}{D}\\right)\\times(1-C)\\right]\\times E\\times(1+10\\%)",
+      "current_applicability": "No mathematical change in 2008, 2010 or 2019 identified. Multiplicand order preserved as printed, without algebraic rearrangement.",
+      "render": "registry-proposal/media/css-d653-4-option-b.png",
+      "visual_checks": [
+        "Whole page2 at 1800px",
+        "Separate 300dpi native page render crop; brackets, order of factors and minus signs checked"
+      ]
+    },
+    {
+      "marker": 3,
+      "version": "historical_2004_only",
+      "text": "E = [∑_{k=0}^{k=52 à 57} (1/(1+i)^k × L(A+k)/L(A)) − 3/8 − 1/4] × (1/(1+i)^(A−B) × L(A)/L(B))",
+      "latex": "E=\\left[\\sum_{k=0}^{k=52\\,\\text{à}\\,57}\\left(\\frac{1}{(1+i)^k}\\times\\frac{L(A+k)}{L(A)}\\right)-\\frac{3}{8}-\\frac{1}{4}\\right]\\times\\left(\\frac{1}{(1+i)^{A-B}}\\times\\frac{L(A)}{L(B)}\\right)",
+      "render": "pages/cnbf2004-E-detail.png",
+      "current_applicability": "Local 2010 PDF page3 art1 point8 1° visually checked against extraction: 52 and57 expressly replaced by51 and55. All other operations preserved.",
+      "visual_checks": [
+        "Whole page2 at1800px",
+        "Separate300dpi crop: k=0; upper label k=52à57; separate −3/8−1/4; exponent A−B; final L(A)/L(B)"
+      ]
+    }
+  ],
+  "normative_concordance": [
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000019986224",
+      "locator": "article5 III",
+      "finding": "Changes the request date phrasing only; mathematical expressions unchanged.",
+      "evidence": "web/open-10-2008-initial.json"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023334387",
+      "locator": "article1, point8, 1°",
+      "finding": "At the fourteenth paragraph formula of D723-7,52 and57 expressly replaced by51 and55.",
+      "evidence": "web/open-11-consolidation-primary.json"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/eli/decret/2019/7/5/SSAS1909535D/jo/texte",
+      "locator": "article5 III4° and12°",
+      "finding": "D723-7 transferred toD653-4; surrounding D723-6/D723-5/R723-43 references replaced; no mathematical change.",
+      "evidence": "web/search-26-2019-transfer.json; web/search-27-transfer-mapping.json; source-snapshot.json: D653-4 LIEN CONCORDE D723-7"
+    }
+  ],
+  "no_algebraic_simplification": true,
+  "current_E_complete": true,
+  "ready_for_activation": true,
+  "current_E": {
+    "text": "E = [∑_{k=0}^{k=51 à 55} (1/(1+i)^k × L(A+k)/L(A)) − 3/8 − 1/4] × (1/(1+i)^(A−B) × L(A)/L(B))",
+    "latex": "E=\\left[\\sum_{k=0}^{k=51\\,\\text{à}\\,55}\\left(\\frac{1}{(1+i)^k}\\times\\frac{L(A+k)}{L(A)}\\right)-\\frac{3}{8}-\\frac{1}{4}\\right]\\times\\left(\\frac{1}{(1+i)^{A-B}}\\times\\frac{L(A)}{L(B)}\\right)",
+    "changes": [
+      {
+        "literal_before": "52",
+        "literal_after": "51"
+      },
+      {
+        "literal_before": "57",
+        "literal_after": "55"
+      }
+    ],
+    "authority": "Décret2010-1737, article1, point8,1°, PDFpage3",
+    "no_other_mathematical_change": true
+  },
+  "activation_performed": false,
+  "amendment_pdf": {
+    "path": "documents/joe_20101231_0303_0083.pdf",
+    "sha256": "94d6d0371ba915b95321e1335dee0248ac53df1df5af76c2ab15741d7199afd8",
+    "bytes": 119779,
+    "pages_total": 3,
+    "read_scope": "All3pages rendered, visually read and compared with extracted text; D723-7 amendment page3.",
+    "source_page_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023334387",
+    "download_page_url": "https://www.legifrance.gouv.fr/download/pdf?id=63svbPxxA_9vv0UbiiKxBdygrRYNmELc4MrM4SFNwfQ=",
+    "file_url": "https://www.legifrance.gouv.fr/download/file/63svbPxxA_9vv0UbiiKxBdygrRYNmELc4MrM4SFNwfQ=/JOE_TEXTE",
+    "journal": "JORF0303du31décembre2010texte83",
+    "NOR": "ETSS1033015D"
+  }
+}
