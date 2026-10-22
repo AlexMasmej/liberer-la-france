@@ -1,0 +1,49 @@
+{
+  "all_passed": true,
+  "recorded_at_utc": "2026-10-22T06:45:37.392318+00:00",
+  "regression_tests": 188,
+  "independent_tests": 23,
+  "total_distinct_checks": 211,
+  "regression_log": "regression-isolated.log",
+  "fixture_recheck_log": "regression-fixture-recheck.log",
+  "notes": "183 initial isolated tests passed; four checks lacked two reference fixture files and one needed process-read permission. All five affected checks then passed. Independent reload-based tests ran in their own process as documented; the initial combined run was discarded and preserved. No live corpus test mutations.",
+  "independent_log": "independent-tests.log",
+  "quality_gate_ast_unchanged": {
+    "validate_answer": true,
+    "_run_job": true,
+    "capture_for_attempt": true,
+    "job_lease": true,
+    "leases_conflict": true,
+    "run_job": true,
+    "policy_is_current": true,
+    "load_sources": true,
+    "publish_checkpoint": true,
+    "progress": true
+  },
+  "author_instructions_unchanged": true,
+  "implementation_sha256": {
+    "run_exhaustive.py": "1c66699d0b54334c099460546c8bd1cfced0a831336a544caf17b7b928538f7e",
+    "worker_capacity.py": "ce7fa5595d1b015be9c30d61ba632db458e7c0fe5ec99ae15218e478cf91e347",
+    "release_agent_slot.py": "341a276c3ab5bf6f289c939601485a7bec5944993a24dc82d1a4c6365f9285f1",
+    "supervise_exhaustive.py": "127adf400228b62b0d33577bbd0736f9404a14ef3f8107d342597585ed9514eb",
+    "review_lanes.py": "5a0fbfc04e9e2e4d6e6b315308425e6a807e5b2134a4dddd09ac65cfae22a1c5",
+    "review_lane_observation.py": "92106dd87688df70f3096a2065777b3bf114a1435118c9b9b9d611201dcc7c52",
+    "test_parallelism.py": "c578706a39489cc3622ea42de8ba5635a7b1ad59710ccc3280fcdb1806814006",
+    "test_worker_capacity_roles.py": "ddce06d8f6f3f7ba5a8bb608b8c1f78bdabf2bf9482c0c9153e8e09adf184016",
+    "test_review_lane_observation.py": "591618afead7bd84d921d7e524d28226a8b1ffce4b6e007e46b5128ba868707a"
+  },
+  "activation_sha256": "5543c0675ff676067625d5ad534b2496633392c980dd00a3f2b18cb158a262d2",
+  "activate_files": [
+    "run_exhaustive.py",
+    "worker_capacity.py",
+    "release_agent_slot.py",
+    "supervise_exhaustive.py",
+    "review_lanes.py",
+    "review_lane_observation.py",
+    "test_parallelism.py",
+    "test_worker_capacity_roles.py",
+    "test_review_lane_observation.py"
+  ],
+  "automation_updated": true,
+  "legal_validation_claimed": false
+}

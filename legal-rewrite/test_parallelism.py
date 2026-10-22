@@ -96,7 +96,7 @@ class Parallelism(TestCase):
         self.assertEqual(capacity.drafting_slots(self.runtime,['manual-A','manual-B']),2)
         coordinator.atomic(self.runtime/'parallelism-plan.json',{'capacity':6,'current_workers':6})
         self.assertEqual(capacity.drafting_slots(self.runtime,['manual-A','manual-B']),4)
-        self.assertEqual(capacity.MAX_WORKERS,6)
+        self.assertEqual(capacity.MAX_WORKERS,8)
 
     def test_invalid_task_plan_cannot_exceed_six_or_use_bool(self):
         for plan in [{'capacity':7,'current_workers':6},{'capacity':6,'current_workers':7},

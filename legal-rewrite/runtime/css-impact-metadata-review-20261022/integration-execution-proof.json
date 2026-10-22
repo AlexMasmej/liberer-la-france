@@ -1,0 +1,30 @@
+{
+  "at_utc": "2026-10-22T06:34:22.682205+00:00",
+  "command": [
+    "python3",
+    "-B",
+    "runtime/css-impact-metadata-review-20261022/integrate_guarded.py"
+  ],
+  "returncode": 3,
+  "stderr": "",
+  "stdout_file": "integration-dry-run.json",
+  "stdout_sha256": "13505577e69a19fda51100853ca26d75361d40e2f6a69b9ce73cd5140dacc470",
+  "script_sha256": "f0b2cf197d2919a6c473d239af514fdab8a2c56702ce1b1bd22f55d35854da30",
+  "integration_manifest_sha256": "c4b5bbf7d7a7608f9b6446fbb82db405307ca7edeb26f8f9c3b6a63d8094c07c",
+  "pure_tests": {
+    "passed": true,
+    "single_approved_leaf": true,
+    "normative_mutation_detected": true,
+    "ledger_preserves_unrelated_entries": true,
+    "ledger_idempotent": true,
+    "ledger_conflicts_and_duplicates_refused": true,
+    "single_commit_call_site": true,
+    "no_process_operations_or_direct_DB_mutations": true,
+    "commit_called": false,
+    "apply_executed": false
+  },
+  "apply_executed": false,
+  "commit_called": false,
+  "integration_intent_created": false,
+  "integration_complete_created": false
+}

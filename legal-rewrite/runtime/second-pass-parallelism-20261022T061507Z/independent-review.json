@@ -1,0 +1,80 @@
+{
+  "at_utc": "2026-10-22T06:41:24.027692+00:00",
+  "status": "no_blocking_finding_remaining_in_tested_staging",
+  "test_count": 23,
+  "test_returncode": 0,
+  "staged_module_sha256": {
+    "run_exhaustive.py": "1c66699d0b54334c099460546c8bd1cfced0a831336a544caf17b7b928538f7e",
+    "worker_capacity.py": "ce7fa5595d1b015be9c30d61ba632db458e7c0fe5ec99ae15218e478cf91e347",
+    "review_lanes.py": "5a0fbfc04e9e2e4d6e6b315308425e6a807e5b2134a4dddd09ac65cfae22a1c5",
+    "review_lane_observation.py": "92106dd87688df70f3096a2065777b3bf114a1435118c9b9b9d611201dcc7c52",
+    "review_prior.py": "0f92e59f5df1e761ddc9bfbd0246ffbf2c34b1456db58356dd8423d80322be8e",
+    "test_review_lanes_independent.py": "aef97d4b35052ce8e481c854b7ba2806698fa8a40f4b9984e8dec7546f9d908a"
+  },
+  "test_methods": [
+    "test_eight_requires_explicit_role_authorization_and_never_means_eight_new",
+    "test_six_new_and_two_reviews_overlap_without_borrowing_review_capacity",
+    "test_real_pool_dispatch_reaches_two_reviews_behind_a_large_new_backlog",
+    "test_real_pool_dispatch_skips_conflicts_instead_of_occupying_all_new_threads",
+    "test_real_pool_dispatch_with_review_zero_finishes_without_running_paused_reviews",
+    "test_slow_completed_future_consumer_does_not_pause_new_or_review_admissions",
+    "test_dispatcher_delivers_worker_error_then_stop_drains_without_thread_leak",
+    "test_fatal_worker_stops_refill_even_while_completed_future_consumer_is_paused",
+    "test_cancelled_future_that_never_started_releases_its_reserved_role_and_lease",
+    "test_closing_completed_iterator_cancels_future_admissions_and_joins_dispatcher",
+    "test_pool_submission_failure_releases_the_preacquired_role_and_lease",
+    "test_conflicts_serialize_across_lanes_but_independent_review_can_start",
+    "test_hot_zero_review_limit_drains_active_reviews_and_keeps_six_new_slots",
+    "test_stop_cancels_waiters_in_both_lanes_and_drains_existing_jobs",
+    "test_expanded_review_footprint_releases_partial_lease_and_recaptures_after_writers",
+    "test_stop_during_expanded_review_footprint_returns_no_snapshot",
+    "test_real_pool_transfers_the_reserved_lease_context_to_review_threads",
+    "test_exceptions_in_either_lane_release_global_count_and_dependency_lease",
+    "test_native_execution_evidence_is_required_before_validation_in_both_lanes",
+    "test_native_eight_proof_rejects_an_additional_unverified_active_worker",
+    "test_native_eight_positive_control_uses_all_eight_distinct_sessions_and_roles",
+    "test_native_eight_proof_requires_authorized_coordinator_capacity",
+    "test_normative_validation_and_commit_pipeline_are_unchanged_from_baseline"
+  ],
+  "scope": "Independent, synthetic concurrent jobs; no active coordinator or model invoked.",
+  "resolved_preparation_defects": [
+    {
+      "issue": "main_consumer_blocked_pool_refill",
+      "evidence_before": "independent-slow-consumer-initial.log",
+      "status": "corrected_in_tested_staging",
+      "final_test": "test_slow_completed_future_consumer_does_not_pause_new_or_review_admissions"
+    },
+    {
+      "issue": "fatal_worker_not_stopping_admissions_until_main_consumed_error",
+      "evidence_before": "independent-fatal-consumer-initial.log",
+      "status": "corrected_in_tested_staging",
+      "final_test": "test_fatal_worker_stops_refill_even_while_completed_future_consumer_is_paused"
+    },
+    {
+      "issue": "native_eight_proof_ignored_extra_unverified_worker_or_capacity_mismatch",
+      "status": "corrected_in_tested_staging",
+      "final_tests": [
+        "test_native_eight_proof_rejects_an_additional_unverified_active_worker",
+        "test_native_eight_proof_requires_authorized_coordinator_capacity",
+        "test_native_eight_positive_control_uses_all_eight_distinct_sessions_and_roles"
+      ]
+    }
+  ],
+  "cancellation_cleanup_checked": true,
+  "unchanged_normative_validation_and_beforeimage_commit_pipeline_ast_checked": true,
+  "active_files_modified_by_this_review": false,
+  "model_calls": 0,
+  "real_slot_reservations": 0,
+  "account_settings_or_credits_changed": false,
+  "production_eight_sessions_verified_by_this_review": false,
+  "performance_gain_claimed": false,
+  "limits": [
+    "New-article admission priority is preserved. Reviews modifying shared targets can wait for readers in this finite queue; no global writer-intent lock was added.",
+    "Conflicting footprints serialize; six plus two are maxima and dedicated capacities, not a promise of eight simultaneous compatible jobs.",
+    "Targeted concurrent interleavings are tested; this is not a formal exhaustive concurrency proof.",
+    "Root owns the safe handoff, native evidence from eight actual sessions and measured throughput after activation.",
+    "No legal approval or claim of full reference coherence is made."
+  ],
+  "report": "runtime/second-pass-parallelism-20261022T061507Z/INDEPENDENT-REVIEW.md",
+  "test_evidence": "runtime/second-pass-parallelism-20261022T061507Z/independent-test-evidence.json"
+}

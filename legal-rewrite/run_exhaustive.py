@@ -13,6 +13,8 @@ from sru_context import contexts as sru_contexts, priority as sru_priority
 from contrat_unique_priority import article_priority as cu_article_priority, priority as cu_priority, mixed_priority as cu_mixed_priority
 import reference_coherence as reference_audit
 from worker_execution import requested_execution,cli_options as execution_options,verify_execution
+from worker_capacity import admission_limits,settings as worker_settings
+import review_lanes
 
 ROOT=HERE.parent
 CORPUS=ROOT/'sites/liberer-la-retraite/dist/corpus'
@@ -21,10 +23,11 @@ LOCK=threading.Lock()
 STOP=threading.Event()
 SLOTS=threading.Condition()
 ACTIVE=0
+ACTIVE_BY_KIND={'new':0,'review':0}
 ACTIVE_LEASES={}
 LEASE_CONTEXT=threading.local()
 METRICS_LOCK=threading.Lock()
-MAX_WORKERS=6
+MAX_WORKERS=8
 SLUGS=['travail','impots','securite-sociale','urbanisme','construction-habitation',*[f'impots-annexe-{i}' for i in range(1,5)]]
 
 def atomic(path,value):
@@ -515,29 +518,147 @@ def capture_for_attempt(expected,provisional):
     return snapshot()
 
 def worker_limit(maximum):
-    if type(maximum) is not int or not 1<=maximum<=MAX_WORKERS:raise ValueError('Invalid worker capacity; expected an integer from 1 to 6')
-    path=RUNTIME/'worker-limit.json'
-    value=json.loads(path.read_text())['workers'] if path.exists() else maximum
-    if type(value) is not int or not 1<=value<=MAX_WORKERS:raise ValueError('Invalid worker limit; expected an integer from 1 to 6')
-    return min(maximum,value)
+    return admission_limits(RUNTIME,maximum)['workers']
 
-def run_in_slot(job,codex,sources,maximum,review=False):
+def try_reserve_slot(job,maximum,review=False,*,wait=False,lease=None):
+    """Reserve shared total, role and footprint together, before pool submission."""
     global ACTIVE
     if STOP.is_set():return
-    lease=job_lease(job);token=object()
+    lease=job_lease(job) if lease is None else lease
+    token=object();kind='review' if review else 'new'
     with SLOTS:
         while True:
-            limit=worker_limit(maximum)
+            current=admission_limits(RUNTIME,maximum);roles=current['role_limits']
             if STOP.is_set():return
-            if ACTIVE<limit and not any(leases_conflict(lease,other) for other in ACTIVE_LEASES.values()):
-                ACTIVE+=1;ACTIVE_LEASES[token]=lease;break
+            if roles is not None and roles[kind]==0:return
+            role_available=roles is None or ACTIVE_BY_KIND[kind]<roles[kind]
+            if ACTIVE<current['workers'] and role_available and not any(leases_conflict(lease,other) for other in ACTIVE_LEASES.values()):
+                ACTIVE+=1;ACTIVE_BY_KIND[kind]+=1;ACTIVE_LEASES[token]=lease
+                return {'token':token,'kind':kind,'released':False}
+            if not wait:return
             SLOTS.wait(timeout=2)
+
+def release_slot(reservation):
+    global ACTIVE
+    with SLOTS:
+        if reservation['released']:return
+        reservation['released']=True
+        ACTIVE-=1;ACTIVE_BY_KIND[reservation['kind']]-=1
+        ACTIVE_LEASES.pop(reservation['token'],None);SLOTS.notify_all()
+
+def run_in_slot(job,codex,sources,maximum,review=False,*,reservation=None):
+    if reservation is None:
+        reservation=try_reserve_slot(job,maximum,review,wait=True)
+    if reservation is None:return
+    token=reservation['token']
     LEASE_CONTEXT.token=token
-    try:run_job(job,codex,sources,review=review)
+    try:
+        if not STOP.is_set():return run_job(job,codex,sources,review=review)
     finally:
         LEASE_CONTEXT.token=None
-        with SLOTS:
-            ACTIVE-=1;ACTIVE_LEASES.pop(token,None);SLOTS.notify_all()
+        release_slot(reservation)
+
+def scheduled_futures(scheduled,codex,sources,maximum):
+    """Keep legacy mixed execution, or isolate new/review pools under a role plan."""
+    current=admission_limits(RUNTIME,maximum)
+    if current['role_limits'] is None:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=maximum) as pool:
+            futures=[pool.submit(run_in_slot,job,codex,sources,maximum,review) for job,review in scheduled]
+            yield from concurrent.futures.as_completed(futures)
+        return
+    footprints={}
+    def submit(pool,job,review):
+        # A saved initial footprint is not execution evidence. capture_for_attempt
+        # still acquires each entire current footprint and commit guards persist.
+        key=(id(job),review)
+        if key not in footprints:footprints[key]=job_lease(job)
+        reservation=try_reserve_slot(job,maximum,review,lease=footprints[key])
+        if reservation is None:return
+        try:
+            future=pool.submit(run_in_slot,job,codex,sources,maximum,review,reservation=reservation)
+            # Cancellation before the worker starts cannot reach run_in_slot's
+            # finally. Release that pre-submission reservation exactly once.
+            future.add_done_callback(lambda done:release_slot(reservation) if done.cancelled() else None)
+            return future
+        except BaseException:
+            release_slot(reservation);raise
+    def changed(value):
+        atomic(RUNTIME/'admission-status.json',value|{'coordinator_pid':os.getpid(),
+               'updated_at_unix':int(time.time()),'role_pools':{'new':6,'review':2}})
+    def deferred(value):
+        atomic(RUNTIME/'admission-deferred.json',{'coordinator_pid':os.getpid(),
+               'updated_at_unix':int(time.time()),'jobs':value,'accepted':False,
+               'resume_note':'Jobs remain pending in the persistent queues; no invocation or review is claimed.'})
+    def wait_for_change(timeout):
+        with SLOTS:SLOTS.wait(timeout=timeout)
+    def describe(job,review):
+        return {'kind':'review' if review else 'new','slug':job[0],'index':job[1],
+                'source_ids':[a['source_id'] for a in job[2]]}
+    def unconsumed(futures):
+        atomic(RUNTIME/'admission-unconsumed-completions.json',{
+            'coordinator_pid':os.getpid(),'updated_at_unix':int(time.time()),
+            'note':'Consumer closed after admission; native job evidence and accepted state are preserved.',
+            'completed_futures':len(futures),
+            'errors':[str(f.exception()) for f in futures if not f.cancelled() and f.exception() is not None]})
+    def worker_failed(future):
+        # Never wait for publication/progress locks to stop new invocations.
+        STOP.set()
+        with SLOTS:SLOTS.notify_all()
+        atomic(RUNTIME/'admission-worker-failure.json',{
+            'coordinator_pid':os.getpid(),'updated_at_unix':int(time.time()),
+            'action':'stop_new_admissions_and_drain_current_jobs',
+            'cancelled':future.cancelled(),
+            'error':None if future.cancelled() else str(future.exception()),
+            'accepted':False,'review_verification_claimed':False})
+    # Clear only this run's admission telemetry, never canonical queue/state.
+    deferred([])
+    yield from review_lanes.completed_futures(scheduled,
+        limits=lambda:admission_limits(RUNTIME,maximum),submit=submit,
+        stopped=STOP.is_set,wait_for_change=wait_for_change,describe=describe,
+        state_changed=changed,deferred_changed=deferred,unconsumed=unconsumed,
+        worker_failed=worker_failed)
+
+def role_reviews_paused(maximum):
+    roles=admission_limits(RUNTIME,maximum)['role_limits']
+    return roles is not None and roles['review']==0
+
+def run_prior_review_phase(sources,codex,maximum):
+    """Same prior-review commits/checkpoints, with bounded role admissions."""
+    import review_prior
+    if admission_limits(RUNTIME,maximum)['role_limits'] is None:
+        return review_prior.run(sys.modules[__name__],sources,codex,maximum)
+    jobs=review_prior.build_jobs(sources)
+    print('RADICAL REVIEW START',len(jobs),'jobs; dedicated review lane',flush=True)
+    report=json.loads(review_prior.revisions_manifest().read_text());exported=report.get('completed_second_pass',0)
+    for future in scheduled_futures([(job,True) for job in jobs],codex,sources,maximum):
+        try:future.result()
+        except Exception as error:
+            STOP.set();progress(sources,'blocked',str(error));raise
+        report=json.loads(review_prior.revisions_manifest().read_text())
+        if report.get('completed_second_pass',0)-exported>=200:
+            subprocess.run([sys.executable,str(HERE/'publish_snapshot.py')],check=True,cwd=HERE.parent)
+            exported=report['completed_second_pass']
+    print('RADICAL REVIEW CHECKPOINT',json.loads(review_prior.revisions_manifest().read_text()).get('completed_second_pass',0),'articles',flush=True)
+
+def run_reference_review_phase(sources,codex,maximum):
+    """Preserve convergence checks; a disabled lane returns pending, not failure."""
+    import reference_queue
+    if admission_limits(RUNTIME,maximum)['role_limits'] is None:
+        return reference_queue.run(sys.modules[__name__],sources,codex,maximum)
+    seen=set()
+    while not STOP.is_set():
+        queue,report=reference_queue.jobs(sources)
+        if not queue or role_reviews_paused(maximum):return report
+        fingerprint=tuple((a['code_id'],a['source_id'],a['proposed_sha256'],a['dependency_fingerprint']) for a in report['pending'])
+        if fingerprint in seen:raise ValueError('Reference review did not converge; unresolved full-article checks preserved in runtime/reference-coherence.json')
+        seen.add(fingerprint)
+        print('REFERENCE REVIEW',len(queue),'jobs; dedicated review lane',flush=True)
+        for future in scheduled_futures([(job,True) for job in queue],codex,sources,maximum):
+            try:future.result()
+            except BaseException:
+                STOP.set();raise
+        if role_reviews_paused(maximum):return reference_queue.pending(sources)[1]
+    return reference_queue.pending(sources)[1]
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--workers',type=int,choices=range(1,MAX_WORKERS+1),default=1);parser.add_argument('--slugs',default=','.join(SLUGS));parser.add_argument('--max-jobs',type=int);parser.add_argument('--export-every',type=int,default=0);parser.add_argument('--publish-at-end',action='store_true');parser.add_argument('--review-prior-after',action='store_true');parser.add_argument('--wait-for-coordinator',action='store_true')
@@ -554,10 +675,15 @@ def main():
     signal.signal(signal.SIGTERM,stop_after_current_jobs)
     signal.signal(signal.SIGINT,stop_after_current_jobs)
     lockfile=(RUNTIME/'coordinator.lock').open('a');fcntl.flock(lockfile,fcntl.LOCK_EX|(0 if args.wait_for_coordinator else fcntl.LOCK_NB))
+    initial_limits=admission_limits(RUNTIME,args.workers)
+    role_ceiling=worker_settings(RUNTIME).get('role_limits')
     (RUNTIME/'coordinator.pid').write_text(str(os.getpid()))
     atomic(RUNTIME/'coordinator-run.json',{'pid':os.getpid(),'capacity':args.workers,
            'started_at_unix':int(time.time()),'dependency_leases':True,
-           'requested_execution':requested_execution(RUNTIME)})
+           'requested_execution':requested_execution(RUNTIME),
+           'role_limits':role_ceiling,
+           'initial_admission_limits':initial_limits,
+           'borrowing_enabled':False})
     codex=shutil.which('codex')
     if not codex:raise SystemExit('Codex CLI is not installed; no job launched')
     db=open_db(HERE/'corpus.sqlite');register(db,HERE/'batches',True)
@@ -589,9 +715,9 @@ def main():
     last_export_count=state['drafted_articles']+state['retained_unchanged']
     last_review_count=state.get('prior_drafts_reviewed',0)
     print('START',len(jobs),'jobs;',args.workers,'workers;',state['pending'],'articles pending',flush=True)
+    if role_ceiling is not None:print('START ROLE LIMITS',json.dumps(role_ceiling,sort_keys=True),'effective',json.dumps(initial_limits,sort_keys=True),flush=True)
     if args.review_prior_first:
-        import review_prior
-        review_prior.run(sys.modules[__name__],sources,codex,args.workers)
+        run_prior_review_phase(sources,codex,args.workers)
     scheduled=[(job,False) for job in jobs]
     if args.interleave_review:
         import review_prior
@@ -601,21 +727,26 @@ def main():
         if args.max_jobs is not None:scheduled=scheduled[:args.max_jobs]
         atomic(RUNTIME/'mixed-queue.json',[{'slug':job[0],'index':job[1],'review':review,'source_ids':[a['source_id'] for a in job[2]]} for job,review in scheduled])
         print('MIXED QUEUE',sum(not review for _,review in scheduled),'new jobs;',sum(review for _,review in scheduled),'review jobs',flush=True)
-    with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures=[pool.submit(run_in_slot,job,codex,sources,args.workers,review) for job,review in scheduled]
-        for future in concurrent.futures.as_completed(futures):
-            try:
-                future.result()
-                if args.export_every and not STOP.is_set():
-                    state=progress(sources)
-                    if state['drafted_articles']+state['retained_unchanged']-last_export_count+state.get('prior_drafts_reviewed',0)-last_review_count>=args.export_every:
-                        publish_checkpoint(args.deploy_on_export)
-                        last_export_count=state['drafted_articles']+state['retained_unchanged']
-                        last_review_count=state.get('prior_drafts_reviewed',0)
-            except Exception as error:
-                STOP.set()
-                with LOCK:progress(sources,'blocked',str(error))
-                print('BLOCKED',str(error),flush=True)
+    if initial_limits['role_limits'] is not None:
+        print('ROLE POOLS','6 new / 2 review; no borrowing; admissions do not certify execution',flush=True)
+        atomic(RUNTIME/'queue-admission-plan.json',{
+            'coordinator_pid':os.getpid(),'capacity':args.workers,'role_limits':role_ceiling,
+            'initial_admission_limits':initial_limits,'borrowing_enabled':False,'max_jobs':args.max_jobs,
+            'queue_file':'mixed-queue.json' if args.interleave_review else 'queue.json',
+            'scheduled_by_kind':{'new':sum(not r for _,r in scheduled),'review':sum(r for _,r in scheduled)}})
+    for future in scheduled_futures(scheduled,codex,sources,args.workers):
+        try:
+            future.result()
+            if args.export_every and not STOP.is_set():
+                state=progress(sources)
+                if state['drafted_articles']+state['retained_unchanged']-last_export_count+state.get('prior_drafts_reviewed',0)-last_review_count>=args.export_every:
+                    publish_checkpoint(args.deploy_on_export)
+                    last_export_count=state['drafted_articles']+state['retained_unchanged']
+                    last_review_count=state.get('prior_drafts_reviewed',0)
+        except Exception as error:
+            STOP.set()
+            with LOCK:progress(sources,'blocked',str(error))
+            print('BLOCKED',str(error),flush=True)
     if not STOP.is_set():
         state=progress(sources,'drafting_finished' if not progress(sources)['pending'] else 'checkpoint')
         print('FINISH',state['drafted_articles'],'drafted;',state['pending'],'still pending. Exhaustiveness requires final validation.',flush=True)
@@ -623,12 +754,11 @@ def main():
         previous=json.loads((RUNTIME/'status.json').read_text())
         progress(sources,'blocked' if previous.get('status')=='blocked' else 'checkpoint',previous.get('failure'))
     if args.review_prior_after and not STOP.is_set():
-        import review_prior
-        review_prior.run(sys.modules[__name__],sources,codex,args.workers)
+        run_prior_review_phase(sources,codex,args.workers)
     if not STOP.is_set() and args.max_jobs is None:
         import reference_queue
         try:
-            reference_queue.run(sys.modules[__name__],sources,codex,args.workers)
+            run_reference_review_phase(sources,codex,args.workers)
         except Exception as error:
             STOP.set()
             progress(sources,'blocked',str(error))

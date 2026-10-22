@@ -73,6 +73,7 @@ def job_workers(rows):
         process=read_json(process_file,{})
         evidence=verify_execution(job,requested_execution(RUNTIME),process.get('stderr_log') or None)
         result.append({'pid':row['pid'],'ppid':row['ppid'],'job':job.name,
+                       'kind':'review' if job.name.startswith('review-') else 'new',
                        'last_event_unix':int(modified),'execution':evidence})
     return result
 
@@ -206,6 +207,11 @@ def check():
                'worker_configuration':worker_settings(RUNTIME),
                'exhaustive_rewriting_complete':False,'semantic_review_by_jurist':False}
         if promotion is not None:state['parallelism_evaluation']=promotion
+        role_plan=state['worker_configuration'].get('role_limits')
+        if role_plan is not None:
+            from review_lane_observation import observe
+            observation=observe(RUNTIME,live,workers,now)
+            state['review_lane_observation']=observation
         if decision=='restart':
             stamp=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
             folder=SUPERVISION/'restarts'/stamp
