@@ -124,8 +124,10 @@ def main():
                     raise ValueError('Source changed before activation')
                 before = target.read_bytes() if target.exists() else None
                 previous = json.loads(before) if before is not None else None
+                active_record = record | {'status': 'verified_documentary_recovery_active',
+                                          'activation_performed': True, 'ready_for_activation': False}
                 already_active = bool(previous and previous.get('canonical_guard') == guard
-                                      and all(previous.get(k) == v for k, v in record.items()))
+                                      and all(previous.get(k) == v for k, v in active_record.items()))
                 item = {'source_id': record['source_id'], 'number': record['number'],
                         'target': str(target), 'guard': guard,
                         'candidate_sha256': sha(json.dumps(record, ensure_ascii=False, sort_keys=True)),
@@ -136,8 +138,8 @@ def main():
                     archive_name = record['source_id'] + '-' + (sha(before) if before is not None else 'absent') + '.json'
                     if not (archive / archive_name).exists():
                         atomic(archive / archive_name, {'target': str(target), 'previous_record': previous})
-                    activated = record | {'documentary_activation': report['at_utc'],
-                                          'canonical_guard': guard, 'count_as_completed': False}
+                    activated = active_record | {'documentary_activation': report['at_utc'],
+                                                 'canonical_guard': guard, 'count_as_completed': False}
                     atomic(target, activated)
                 report['records'].append(item)
         if args.apply:
