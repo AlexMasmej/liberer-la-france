@@ -7,6 +7,7 @@ import json
 import zipfile
 from source_assets import asset_path,load_companions
 from coordination_downloads import load as load_coordinations, add_to_archive, unique_records
+from initiative_notice import annotate
 
 HERE = Path(__file__).resolve().parent
 PUBLIC = HERE.parent / 'sites/liberer-la-retraite/dist'
@@ -71,7 +72,7 @@ def document(code, records, working, date):
             parts.append('<aside><strong>Changement proposé</strong><p>'+E(a.get('reason') or '')+'</p><strong>Points à vérifier</strong><p>'+E(a.get('review_notes') or '')+'</p></aside>')
         parts.append('</article>')
     parts.append('</body></html>')
-    return ''.join(parts)
+    return annotate(''.join(parts))
 
 
 def build():

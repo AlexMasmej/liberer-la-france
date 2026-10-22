@@ -1,0 +1,50 @@
+{
+  "checked_at_utc": "2026-10-21T23:56:40.786560+00:00",
+  "coordinator_pid": 21959,
+  "hours_since_verified_four_worker_start": 1.5324703197346794,
+  "successful_jobs": 60,
+  "successful_jobs_per_hour": 39.1524711619785,
+  "retry_job_fraction": 0.18333333333333332,
+  "outcomes": {
+    "reviewed": 20,
+    "accepted": 40
+  },
+  "successful_by_code": {
+    "urbanisme": 23,
+    "impots": 10,
+    "travail": 9,
+    "construction-habitation": 9,
+    "securite-sociale": 9
+  },
+  "new_deferred_entries": 0,
+  "deferred_registry_entries": 44,
+  "all_completed_execution_verified": true,
+  "active_workers_execution_verified": 1,
+  "launch_agent_registered": true,
+  "decision": "hold_at_four",
+  "promotion_validated": false,
+  "confirmation_required": false,
+  "reason": "The mandatory two-hour observation window of the Astra/medium cohort is not yet reached; existing valid jobs continue.",
+  "active_workers": [
+    {
+      "pid": 63536,
+      "ppid": 21959,
+      "job": "construction-habitation-00112",
+      "last_event_unix": 1792626832,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/construction-habitation-00112/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a160e0-f093-7dc3-b937-1dadc16885d8",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/construction-habitation-00112",
+        "header_sha256": "e711d606dda4541c38ac148c8bb481704bc081dce9a3997ac9f11c78bc23e8fb",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      }
+    }
+  ]
+}

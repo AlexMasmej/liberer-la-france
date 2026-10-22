@@ -8,6 +8,7 @@ from pathlib import Path
 import datetime,fcntl,json,os,shlex,shutil,sqlite3,subprocess,sys,tempfile,time
 from worker_capacity import settings as worker_settings
 from worker_execution import requested_execution,verify_execution
+from automatic_parallelism import promote_if_ready
 
 HERE=Path(__file__).resolve().parent
 RUNTIME=HERE/'runtime/exhaustive'
@@ -134,7 +135,9 @@ def action(status,live,workers,locked,previous,held,now,reference_pending=None):
 
 def save_state(state,previous):
     atomic(SUPERVISION/'status.json',state)
-    signature=lambda s:(s.get('state'),s.get('reason'),tuple(s.get('coordinator_pids',[])),s.get('launch_pid'))
+    signature=lambda s:(s.get('state'),s.get('reason'),tuple(s.get('coordinator_pids',[])),s.get('launch_pid'),
+                        s.get('worker_configuration',{}).get('current_workers'),
+                        bool(s.get('worker_configuration',{}).get('effective_six_verified_at_utc')))
     if signature(state)!=signature(previous):
         # Events contain identifiers and operational facts, no agent output.
         with (SUPERVISION/'events.jsonl').open('a') as stream:
@@ -187,6 +190,13 @@ def check():
             remaining,held,reference_pending=fresh_tail()
             status=status|{'pending':remaining}
         decision,reason=action(status,live,workers,locked,previous,held,now,reference_pending)
+        promotion=None
+        if decision=='monitoring':
+            def refresh_promotion_inputs():
+                current_rows=processes()
+                return (coordinator_processes(current_rows),job_workers(current_rows),
+                        coordinator_locked(),read_json(RUNTIME/'status.json',{}))
+            promotion=promote_if_ready(RUNTIME,refresh_promotion_inputs,now)
         state={'state':decision,'reason':reason,'checked_at_unix':now,
                'coordinator_pids':[p['pid'] for p in live],'active_agents':workers,
                'scope':SCOPE,'counters':counters,'progress_signature':signature,
@@ -195,6 +205,7 @@ def check():
                'fresh_pending_reference_reviews':reference_pending,
                'worker_configuration':worker_settings(RUNTIME),
                'exhaustive_rewriting_complete':False,'semantic_review_by_jurist':False}
+        if promotion is not None:state['parallelism_evaluation']=promotion
         if decision=='restart':
             stamp=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
             folder=SUPERVISION/'restarts'/stamp

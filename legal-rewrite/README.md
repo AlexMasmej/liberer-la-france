@@ -132,10 +132,19 @@ Le projet est éditorial et juridique. Conserver le crédit aux agents IA
 d’@alexmasmej et les sources des orientations retenues. À la demande de
 l’utilisateur, les cinq pages d’accueil comportent un lien de soutien vers
 Nouvelle Énergie, le mouvement de David Lisnard :
-`https://soutenir.unenouvelleenergie.fr/adhesion`. Ce lien est généré par
-`build_compact_sites.py` et doit être conservé lors des reconstructions.
+`https://soutenir.unenouvelleenergie.fr/adhesion`. Le bouton figure en haut
+à droite de l’en-tête, avec une disposition adaptée aux petits écrans, et
+dans le pied de page. Il est généré par `build_compact_sites.py` et doit être
+conservé lors des reconstructions.
 Les propositions restent indépendantes et ne sont pas présentées comme
 validées par David Lisnard ou Nouvelle Énergie.
+Le guide des initiatives impose sur chaque page la mention exacte :
+« Initiative indépendante de soutiens. Ce site ne dépend ni de Nouvelle Énergie
+ni de David Lisnard. » `initiative_notice.py` la conserve hors des articles,
+y compris dans les documents HTML des téléchargements avant calcul des
+empreintes et création des archives. Les sites conservent leur identité propre,
+sans reprendre les logos officiels comme identité. L’inscription à l’annuaire
+et la connexion adhérent ne font pas partie de cette publication.
 
 ## Rédaction répartie et reprise
 
@@ -193,6 +202,18 @@ avec des contrôles stricts des champs de leur avant-image en base.
 `runtime/exhaustive/job-metrics.jsonl` enregistre les durées, essais et résultats
 par lot sans contenu de raisonnement. Le passage à six dépend du débit observé
 et des reprises, sans assouplissement des validations ni augmentation des lots.
+
+À la demande explicite de l’utilisateur, le contrôle macOS effectué chaque
+minute déclenche désormais le passage de quatre à six dès que les seuils sont
+remplis, sans attendre le contrôle horaire. `automatic_parallelism.py` exclut
+les anciens PID et les lots de démarrage, contrôle les cinq codes et les deux
+types de lots, puis repasse les validations existantes sur les preuves locales
+en lecture seule. Un nouveau différé, une limite d’accès, un modèle non attesté
+ou une validation manquante empêche la promotion. Les réservations manuelles
+sont déduites sous verrou. `promotion-intent.json` permet de réparer une écriture
+interrompue; `promotion-evidence.json` conserve la décision. La présence réelle
+de six sessions distinctes est attestée séparément dans `promotion-execution.json`.
+Le suivi horaire reste chargé des incidents, de la poursuite et des audits finaux.
 
 Un verrou empêche deux coordinateurs et un second verrou protège les écritures
 en base et le registre de lots. Les réformes et leurs coordinations sont dans

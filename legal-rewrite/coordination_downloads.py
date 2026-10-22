@@ -8,6 +8,7 @@ from urllib.parse import urlsplit
 
 from register_batches import text as legal_text
 from source_assets import safe_html
+from initiative_notice import annotate
 
 HERE = Path(__file__).resolve().parent
 
@@ -118,7 +119,7 @@ def document(item):
             if reference.get('source_notes_xml'):
                 parts += ['<h3>Notes du texte source</h3>', safe_html(reference['source_notes_xml'])]
             parts += ['</details>']
-    return ''.join(parts)+'</html>'
+    return annotate(''.join(parts)+'</html>')
 
 
 def add_to_archive(archive, output, group, items):

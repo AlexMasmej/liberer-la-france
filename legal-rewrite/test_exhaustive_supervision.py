@@ -94,6 +94,16 @@ class FilesAndProcesses(TestCase):
                 self.assertEqual(supervisor.check()['state'],'already_checking')
                 launch.assert_not_called()
 
+    def test_live_health_check_runs_task_promotion_without_an_hourly_wakeup(self):
+        rows=[{'pid':12,'ppid':1,'args':['/bin/python3',str(supervisor.RUNNER)]}]
+        with patch.object(supervisor,'processes',return_value=rows),\
+             patch.object(supervisor,'promote_if_ready',return_value={'decision':'hold_at_four'}) as promote,\
+             patch.object(supervisor,'launch') as launch:
+            result=supervisor.check()
+        promote.assert_called_once()
+        self.assertEqual(result['parallelism_evaluation']['decision'],'hold_at_four')
+        launch.assert_not_called()
+
     def test_launch_failure_persists_backoff_and_counts_failed_attempt(self):
         with patch.object(supervisor,'processes',return_value=[]),patch.object(supervisor,'launch',side_effect=OSError('simulated')):
             result=supervisor.check()
