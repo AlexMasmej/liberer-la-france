@@ -4,20 +4,140 @@
     "source_id": "LEGIARTI000006293984",
     "source_sha256": "e69ccebde081d2d31423032517404de3452b81133fb515536f0619afaa092ab5",
     "number": "102 I",
-    "proposed_xml": "<p>Pour l'imposition des plus-values ou moins-values que les caisses de crédit agricole réalisent lors de la cession d'éléments d'actif immobilisé ou de titres de placement, seule la fraction acquise à compter du 1er janvier 1979 est retenue.</p>\n<p>Pour les titres cotés, cette fraction est calculée en prenant pour prix de revient le cours moyen des titres pendant le mois de décembre 1978.</p>\n<p>Pour les titres de participation non cotés, les autres éléments d'actif immobilisé et les titres de placement non cotés, cette fraction est calculée au prorata de la durée de détention du bien depuis le 1er janvier 1979 par rapport à sa durée totale de détention. Pour les biens amortissables détenus depuis plus de deux ans, la fraction de la plus-value ou moins-value réputée à court terme est, en outre, limitée au montant des amortissements déduits pour le calcul de l'impôt à compter du 1er janvier 1979.</p>",
-    "reason": "Réécriture à droit constant : la règle d'imposition est formulée directement, puis les méthodes de calcul propres aux titres cotés et aux autres biens sont distinguées. Le plafond de la fraction à court terme reste dans le troisième alinéa. Aucune réforme de fond du régime historique des caisses de crédit agricole n'est appliquée.",
-    "review_notes": "Conserver les dates distinctes du 1er janvier 1979 et de décembre 1978, le prorata de durée de détention et la condition de détention de plus de deux ans. La limitation porte sur les amortissements fiscalement déduits depuis le 1er janvier 1979, non sur la totalité des amortissements du bien.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Les plus-values ou moins-values réalisées par les caisses de crédit agricole lors de la cession d'éléments d'actif immobilisé ou de titres de placement ne sont soumises à l'impôt que pour leur fraction acquise à compter du 1er janvier 1979.</p>\n<p>Pour les titres cotés cette fraction est calculée en retenant comme prix de revient leur cours moyen pendant le mois de décembre 1978.</p>\n<p>Pour les titres de participation non cotés et les autres éléments d'actif immobilisés, ainsi que pour les titres de placement non cotés, la fraction acquise à compter du 1er janvier 1979 est calculée en proportion de la durée de détention du bien depuis cette date par rapport à sa durée totale de détention. En outre, pour les biens amortissables détenus depuis plus de deux ans, la partie de la plus-value ou moins-value réputée à court terme ne peut excéder le montant des amortissements déduits à compter du 1er janvier 1979 pour le calcul de l'impôt.</p>\n<p>Pour les caisses relevant du régime de l'impôt sur les sociétés à la distribution, ces règles déterminent les fractions de plus-values et moins-values prises en compte dans ce régime ; la cession et la conservation de son produit, y compris en trésorerie, ne rendent pas à elles seules exigible l'impôt ordinaire sur les sociétés. La fraction acquise avant le 1er janvier 1979 demeure exclue de cet impôt, y compris lors d'une distribution ultérieure. Les bénéfices déjà imposés, les déficits, les crédits et les fractions relevant d'un taux réduit ou d'un régime plus favorable conservent leur traitement propre, sans double emploi ni double imposition. Le minimum international et les régimes distincts restent applicables dans leur champ.</p>\n<p>Cette coordination s'applique à compter de l'entrée en vigueur du régime d'imposition à la distribution. Les impositions, déductions, restitutions, prescriptions et recours relatifs aux périodes antérieures demeurent régis par les dispositions qui leur sont applicables.</p>",
+    "reason": "Coordination nécessaire avec l’IS à la distribution : les trois alinéas historiques sont maintenus intégralement, mais la cession ne doit pas être lue comme une exigibilité immédiate de l’IS sur un bénéfice conservé. L’exclusion de la fraction antérieure à 1979 reste acquise à la distribution. Aucune coupe de la méthode d’assiette ne serait favorable de façon démontrée : supprimer la méthode pourrait réintégrer une plus-value historique exonérée.",
+    "review_notes": "Dates 1er janvier 1979 et décembre 1978, prorata de détention et plafond des amortissements pour les biens détenus plus de deux ans contrôlés et conservés. La coordination doit accompagner 206, 209, 219 et 1668, hors du présent lot, sans inventer de nouveau renvoi. Le calcul annuel des valeurs n’est pas un impôt annuel. La réforme ne supprime ni régime bancaire distinct ni minimum international et ne crée pas de crédit remboursable.",
+    "status": "rewrite_draft",
+    "reference_checks": [],
+    "benefit_review": "L’exclusion de la fraction acquise avant le 1er janvier 1979, le prix de revient au cours moyen de décembre 1978, le prorata pour les titres non cotés et autres immobilisations et la limite de la fraction à court terme aux amortissements déduits depuis 1979 demeurent. Ces méthodes continuent de couvrir les cessions futures de biens concernés et la distribution ultérieure ; aucune réserve exonérée historique n’est rendue taxable par la coordination.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "L’allègement historique d’assiette est préservé intégralement et coordonné au fait générateur de distribution ; ce texte ne constitue pas une seconde abolition de l’IS annuel.",
+      "scope_limitations": "Le montant et le calendrier de l’IS dépendent des dispositions générales hors lot. Aucune recette, économie ou absence totale d’impôt bancaire n’est démontrée.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun formulaire, registre, donnée ni autorisation de remplacement ne sont créés. Le solde de coût de l’ensemble des codes n’est pas chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "is-distribution",
+          "description": "Préservation de la fraction historique exclue dans le régime de distribution.",
+          "before": "Plus-values et moins-values de cession limitées à leur fraction acquise depuis le 1er janvier 1979.",
+          "after": "Même limitation ; aucune exigibilité du seul fait de conserver le produit, fraction antérieure exclue même distribuée.",
+          "unit": "other",
+          "affected_population": "Caisses de crédit agricole relevant de l’IS à distribution",
+          "conditions_and_transition": "Bascule au nouveau régime ; situations fiscales antérieures, avantages et régimes distincts conservés.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les garanties autonomes restent applicables.",
+          "source_quote": "ne sont soumises à l'impôt que pour leur fraction acquise à compter du 1er janvier 1979.",
+          "proposed_quote": "La fraction acquise avant le 1er janvier 1979 demeure exclue de cet impôt, y compris lors d'une distribution ultérieure."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "e69ccebde081d2d31423032517404de3452b81133fb515536f0619afaa092ab5",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "2cc163c7f45a1756d6a0e8bc975e9e087fc3dc3a108ee41665b2985727aa3fca",
+      "assessment_sha256": "f9be365d2406c4c1a49ceb31426ad3f4a60273e3424acc1d8d77324308132689",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "5eb66a54095807116e333e9994604392886a89daa6534d4612bcdefd4f8b8374"
   },
   {
     "code_id": "LEGITEXT000006069569",
     "source_id": "LEGIARTI000006295293",
     "source_sha256": "a9aa4267b352498bd3c501b467ce6178618c19403782866e15887e987d85b046",
     "number": "102 J",
-    "proposed_xml": "<p>Les caisses de crédit agricole doivent inscrire à leur bilan du 1er janvier 1979 la provision prévue au quinzième alinéa du 5° du 1 de l'article 39 du code général des impôts, au taux de 0,50 %. Cette obligation ne s'applique pas si elles ont constitué, au 31 décembre 1978, des provisions individualisées destinées à couvrir les risques liés à leurs opérations de crédit à moyen et à long terme, répondant aux conditions du premier alinéa du même 5° et dont le montant total est au moins égal à 0,50 % de l'encours de ces crédits.</p>",
-    "reason": "Réécriture à droit constant : l'obligation d'inscription au bilan et son taux précèdent désormais l'exception, dont les conditions cumulatives sont explicitées dans le même alinéa. Aucune réforme de fond n'est apportée à cette disposition transitoire historique.",
-    "review_notes": "Le seuil d'exemption est inclusif : un montant égal à 0,50 % suffit. Incohérence de renvoi préexistante : dans l'article 39 du corpus public fourni, le quinzième alinéa du 5° du 1 concerne la reprise de provisions, non la constitution de la provision ici visée. Le renvoi source est conservé ; son articulation avec la version applicable à la transition de 1978-1979 nécessite un contrôle historique, sans substitution silencieuse d'un numéro d'alinéa.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Pour le bilan du 1er janvier 1979, à moins que les caisses de crédit agricole n'aient constitué au 31 décembre 1978, en vue de faire face aux risques afférents à leurs opérations de crédit à moyen et à long terme, des provisions individualisées répondant aux conditions du premier alinéa du 5° du 1 de l'article 39 du code général des impôts dans sa rédaction applicable à cette date, pour un montant total égal ou supérieur à 0,50 % de l'encours de ces crédits, elles étaient tenues d'inscrire la provision pour risques afférents à ces crédits prévue par le quinzième alinéa du même 5° dans sa rédaction applicable au bilan du 1er janvier 1979. Le taux de cette provision est fixé à 0,50 %.</p>\n<p>À compter de l'entrée en vigueur de la présente réforme, aucune constitution nouvelle, reconstitution ni rectification du bilan du 1er janvier 1979 n'est imposée sur le seul fondement du présent article. Cette dispense ne retire aucun effet fiscal favorable des provisions régulièrement constituées ni de l'exception relative aux provisions individualisées. Les caisses peuvent établir ces effets par les pièces probantes dont elles disposent, sans établir un nouveau bilan historique.</p>\n<p>Les créances, déductions, reprises, restitutions, prescriptions et recours relatifs aux provisions anciennes demeurent régis par les dispositions qui leur sont applicables, sous réserve de la dispense de reconstitution prévue au deuxième alinéa. Le présent article ne crée aucune provision obligatoire pour un exercice postérieur au 1er janvier 1979 et ne modifie pas les obligations comptables ou prudentielles ayant un fondement autonome. Dans le régime de l'impôt sur les sociétés à la distribution, il ne rend aucun impôt ordinaire exigible du seul fait de la conservation de bénéfices, sans double déduction ni double imposition des mêmes sommes.</p>",
+    "reason": "Réduction de fond limitée : retrait de toute exigence résiduelle de refaire un bilan de 1979, sans effacer les effets fiscaux favorables des provisions et de l’exception. Le renvoi mobile au quinzième alinéa de 39, aujourd’hui consacré aux reprises, est expressément replacé dans la rédaction applicable au bilan historique ; aucune formule actuelle n’y est substituée. Le brouillon maintenait à tort un renvoi contemporain incohérent.",
+    "review_notes": "L’article 39 entier, ses notes et sa proposition ont été lus : son premier alinéa du 5° fixe les conditions générales des provisions ; son quinzième porte désormais les reprises, non la provision sectorielle de 1979. La version historique n’est pas fournie : elle reste à documenter, sans inventer de numéro d’alinéa substitutif ni de formule. La source de 102 J fournit elle-même l’assiette (encours des crédits moyens/longs), le taux et le seuil inclusif de 0,50 %, conservés. Aucun état nouveau n’est demandé. L’IS à distribution et les règles prudentielles restent distincts. La portée pratique résiduelle de la dispense historique n’est pas chiffrée.",
+    "status": "rewrite_draft",
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006069577|LEGIARTI000053542680",
+        "view_sha256": "4966cf42515afe2b48508b5ea22090c25e257b044741eb5cb12b5b7688732d30",
+        "assessment": "102 J vise les provisions de crédit au bilan du 1er janvier 1979, non les charges salariales de l’article 39. Le premier alinéa du 5° donne les conditions générales des provisions ; le quinzième actuel traite leur reprise et ne peut constituer la provision de 1979. Le renvoi est figé à sa rédaction historique applicable, dont le texte manque ; aucun numéro actuel n’est inventé. Les ajouts proposés sur le contrat unique, les congés et les indemnités ne transforment pas ce renvoi bancaire en condition d’ancienneté ou de notification d’un salarié. Le taux et l’exception à 0,50 % ainsi que les effets anciens sont préservés ; aucune annualité d’IS n’est rétablie."
+      }
+    ],
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suppression pour l’avenir de toute exigence de constitution ou de reconstitution du bilan du 1er janvier 1979 sur le seul fondement de cette obligation historique."
+    ],
+    "benefit_review": "L’exception en présence de provisions individualisées au 31 décembre 1978 atteignant au moins 0,50 % de l’encours, y compris exactement ce montant, est préservée. Les effets fiscaux favorables de la provision forfaitaire à 0,50 % restent invocables dans les situations futures relatives à ce stock historique ; aucune déduction ni restitution existante n’est supprimée. Aucune nouvelle provision annuelle de ce taux n’est créée.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Suppression limitée de toute reconstitution obligatoire du bilan historique ; les droits liés à la provision et l’exception sont conservés, avec renvoi temporel explicite.",
+      "scope_limitations": "Le nombre de caisses encore concernées et le coût évité peuvent être nuls ; aucun volume de charge actuel n’est démontré. La version de 39 applicable en 1979 manque au dossier.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun formulaire, registre, donnée ni autorisation de remplacement ne sont créés. Le solde de coût de l’ensemble des codes n’est pas chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "credit-agricole-fin-reconstitution-bilan-1979",
+          "description": "Retrait de l’exigence résiduelle de refaire le bilan historique.",
+          "before": "Obligation d’inscrire au bilan du 1er janvier 1979 la provision à 0,50 %, sauf provisions individualisées suffisantes.",
+          "after": "Aucune constitution ou reconstitution imposée après réforme sur ce seul fondement ; effets fiscaux anciens protégés.",
+          "unit": "legal_duty",
+          "affected_population": "Caisses de crédit agricole concernées par le bilan du 1er janvier 1979",
+          "conditions_and_transition": "Dispense pour les démarches futures, sans effacer les effets fiscaux favorables des provisions anciennes.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les garanties autonomes restent applicables.",
+          "source_quote": "les caisses de crédit agricole sont tenues de faire figurer au 1er janvier 1979 à leur bilan la provision prévue au quinzième alinéa du même 5°.",
+          "proposed_quote": "À compter de l'entrée en vigueur de la présente réforme, aucune constitution nouvelle, reconstitution ni rectification du bilan du 1er janvier 1979 n'est imposée sur le seul fondement du présent article."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "a9aa4267b352498bd3c501b467ce6178618c19403782866e15887e987d85b046",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "2af6dde20b598f28d963e469f1fe0adafbf80f4243c6a7cd66493a3d95ec1582",
+      "assessment_sha256": "64479fe22a19feb22bfdc8edad04d2f467a2de2d29cc808e7466e418183fb06d",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "reference_coherence": {
+      "version": 3,
+      "referrer_sha256": "2af6dde20b598f28d963e469f1fe0adafbf80f4243c6a7cd66493a3d95ec1582",
+      "policy_sha256": {
+        "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+      },
+      "referrer_source": {
+        "code_id": "LEGITEXT000006069569",
+        "source_id": "LEGIARTI000006295293",
+        "source_sha256": "a9aa4267b352498bd3c501b467ce6178618c19403782866e15887e987d85b046",
+        "source_xml_sha256": "57aba96f23666b34888ff5b1787a9f6c22a1895a781698c3fee663b2d30950d8",
+        "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "targets": {
+        "LEGITEXT000006069577|LEGIARTI000053542680": {
+          "code_id": "LEGITEXT000006069577",
+          "source_id": "LEGIARTI000053542680",
+          "source_sha256": "a3504700986f2218daa93697e0fb4891f05a138ce19e3ae58203917343f93072",
+          "view_kind": "proposal",
+          "view_sha256": "4966cf42515afe2b48508b5ea22090c25e257b044741eb5cb12b5b7688732d30",
+          "source_xml_sha256": "722aa852714ed341e2c33fc2a72125ddc45f7207bb052b962f85e4d534274c25",
+          "source_notes_sha256": "f031c2141960bea9a02a41f42fbda53df81fe03e87641a74076219416f0f492d"
+        }
+      },
+      "assessments": [
+        {
+          "target_key": "LEGITEXT000006069577|LEGIARTI000053542680",
+          "view_sha256": "4966cf42515afe2b48508b5ea22090c25e257b044741eb5cb12b5b7688732d30",
+          "assessment": "102 J vise les provisions de crédit au bilan du 1er janvier 1979, non les charges salariales de l’article 39. Le premier alinéa du 5° donne les conditions générales des provisions ; le quinzième actuel traite leur reprise et ne peut constituer la provision de 1979. Le renvoi est figé à sa rédaction historique applicable, dont le texte manque ; aucun numéro actuel n’est inventé. Les ajouts proposés sur le contrat unique, les congés et les indemnités ne transforment pas ce renvoi bancaire en condition d’ancienneté ou de notification d’un salarié. Le taux et l’exception à 0,50 % ainsi que les effets anciens sont préservés ; aucune annualité d’IS n’est rétablie."
+        }
+      ],
+      "assessments_sha256": "1430d553a3f18c2975f42aa881a0f493580f03aa421e4fa8f847c6aee10ed7d0",
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "2f8dfcd78137e480727d36ef88e22dae5280bcfc9e85437c1e2a763716c8bd9d"
   },
   {
     "code_id": "LEGITEXT000006069569",
