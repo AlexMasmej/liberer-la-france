@@ -1,0 +1,36 @@
+{
+  "at_utc": "2026-10-22T10:22:05.813099+00:00",
+  "state": "storage_recovered_rewrite_resumed_audit_revalidated",
+  "cause": "New global audit copy exhausted shared disk capacity; previous coordinator stopped safely after ENOSPC",
+  "old_coordinator_pid": 58514,
+  "new_coordinator_pid": 75807,
+  "same_single_supervisor": true,
+  "capacity": 8,
+  "role_limits": {
+    "new": 6,
+    "review": 2
+  },
+  "eight_distinct_native_sessions_verified": true,
+  "resumption_proof": "resumption-proof.json",
+  "all_132_interrupted_entries_requeued_or_guarded_complete": true,
+  "post_restart_accepted_results": 1,
+  "post_restart_accepted_entries": 24,
+  "latest_status": "running",
+  "latest_failure": null,
+  "space_available_bytes": 10000601088,
+  "losslessly_archived_files": 20,
+  "saved_bytes": 12843769972,
+  "all_archives_decompression_and_original_hash_verified": true,
+  "current_audit_uncompressed_and_validated": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T101405Z",
+  "current_audit_validation_passed": true,
+  "source_records": 30317,
+  "semantic_reviews_requiring_new_review": [
+    "CVAE"
+  ],
+  "canonical_sources_modified_by_maintenance": false,
+  "legal_validation_gates_weakened": false,
+  "exhaustive_work_complete": false,
+  "jurist_review": false,
+  "preventive_check": "At least 6GiB free before a new audit snapshot; archive only completed non-current audits with byte proof first; keep current audit intact.",
+  "automation_updated": true
+}
