@@ -1,0 +1,134 @@
+{
+  "code_id": "LEGITEXT000006073189",
+  "source_id": "LEGIARTI000030400105",
+  "number": "D351-9",
+  "source_sha256": "c3c358fa0c7fc2e30f40ba163b29fa4d1561ec57a3eb5cd9ada3137450aec1b2",
+  "expected_markers": 1,
+  "documentary_recovery_complete": false,
+  "graphic_recovery_complete": true,
+  "official_jo_crosscheck_complete": true,
+  "canonical_version_concordance_complete": false,
+  "authenticated_jo_crosscheck_complete": false,
+  "cryptographic_signature_validation_complete": false,
+  "ready_for_activation": false,
+  "count_as_completed": false,
+  "activation_performed": false,
+  "status": "held_canonical_version_definition_discrepancy",
+  "source_and_notes_read_in_full": true,
+  "source_notes_empty": true,
+  "source_body_sha256": "055be0fcad27297d79eb12926317cdd8da5aabafa9f1fc6f52c3ef5a482019ba",
+  "source_document_xml_sha256": "c3c358fa0c7fc2e30f40ba163b29fa4d1561ec57a3eb5cd9ada3137450aec1b2",
+  "source_notes_xml_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "documents": [
+    {
+      "path": "documents/css-d351-original-20040101-pages46-47.pdf",
+      "sha256": "13d5629ae9eea219849482fa551f89413c28c2d6ddb220c82ddadc685a0ba411",
+      "bytes": 1236581,
+      "pages": 2,
+      "original_pdf_pages": [
+        46,
+        47
+      ],
+      "printed_pages": [
+        46,
+        47
+      ],
+      "parent_document_path": "documents/JORF_20040101_1.pdf",
+      "parent_document_sha256": "516a4fa89aa3c30784ca3da39149e1a1875a2bea80ad800e38e8323beed9f7f5",
+      "parent_document_bytes": 80692660,
+      "local_extract": true,
+      "original_whole_document": false,
+      "cryptographic_signature_preserved": false,
+      "extraction_method": "pypdf full-page content/resources copied; no cropping or recomposition",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000433712",
+      "title": "Décret 2003-1376, JO 1 janvier 2004, pages 46-47, article D351-9",
+      "read_scope": "Both entire pages visually read; whole 176-page JO not claimed visually reviewed"
+    },
+    {
+      "path": "documents/css-decree-2010-1737.pdf",
+      "sha256": "94d6d0371ba915b95321e1335dee0248ac53df1df5af76c2ab15741d7199afd8",
+      "pages": 3,
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023334387",
+      "title": "Décret 2010-1737, art. 1 point 3, page 2",
+      "read_scope": "All 3 pages visually read in earlier pass; relevant page 2 read again"
+    }
+  ],
+  "media": [],
+  "transcriptions": [
+    {
+      "marker": 1,
+      "text": "E = [∑_{k=0}^{k=55} (1/(1+i)^k × L(A+k)/L(A)) − 11/24 − 1/12] × (1/(1+i)^(A−B) × L(A)/L(B))",
+      "latex": "E=\\left[\\sum_{k=0}^{k=55}\\left(\\frac{1}{(1+i)^k}\\times\\frac{L(A+k)}{L(A)}\\right)-\\frac{11}{24}-\\frac{1}{12}\\right]\\times\\left(\\frac{1}{(1+i)^{A-B}}\\times\\frac{L(A)}{L(B)}\\right)",
+      "source_document": "documents/css-d351-original-20040101-pages46-47.pdf",
+      "pdf_page": 2,
+      "original_pdf_page": 47,
+      "amendment_document": "documents/css-decree-2010-1737.pdf",
+      "amendment_pdf_page": 2,
+      "amendment_locator": "article 1, point 3, 3°",
+      "verified_against_explicit_primary_chain": true,
+      "primary_graphic_verified_visually": true,
+      "express_amendments_only": true,
+      "current_facsimile_available": false,
+      "method": "Exact historical monthly graphic read at whole-page and native 300 dpi detail; only express 2010 change k=57→55 applied. Separate −11/24 and −1/12 preserved."
+    }
+  ],
+  "historical_transcription": "E = [∑_{k=0}^{k=57} (1/(1+i)^k × L(A+k)/L(A)) − 11/24 − 1/12] × (1/(1+i)^(A−B) × L(A)/L(B))",
+  "historical_media": [
+    {
+      "path": "historical-media/css-d351-E-2004-original-detail.png",
+      "sha256": "fee274dd1204f7610320ab37626a1297f9c233eaf86271085ce871930d2f5b43",
+      "historical_only": true,
+      "registered_as_current_media": false,
+      "verified_visually": true,
+      "source_document": "documents/css-d351-original-20040101-pages46-47.pdf",
+      "pdf_page": 2,
+      "extraction": "Faithful crop of native 300 dpi page rendering, no reconstruction"
+    }
+  ],
+  "unresolved_content": {
+    "kind": "canonical_definition_conflicts_with_express_2010_amendment",
+    "canonical_literal": "L (A) est l’effectif à l’âge de soixante ans",
+    "canonical_body_exact_match": "L (A) est l'effectif à l'âge de soixante ans",
+    "primary_locator": "Décret 2010-1737, art. 1 point 3, 2°, official PDF page 2",
+    "primary_instruction": "Aux a, b et c du 4° et à l’avant-dernier alinéa, les mots « de soixante ans » sont remplacés par « de soixante-deux ans ».",
+    "finding": "The penultimate paragraph is L(A). The canonical XML still defines it at sixty, while A is sixty-two. The recovered graphic itself uses L(A), without numerical age. No silent change is made.",
+    "resolution": "Held: full canonical version concordance cannot be certified. Parent to independently review the explicit discrepancy; no canonical correction authorized here.",
+    "proof": "d351-canonical-conflict.md",
+    "pre2010_official_version": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019993446/2009-06-26",
+    "pre2010_target_position_verified": true
+  },
+  "concordance": [
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000249142",
+      "locator": "whole rectificatif, JO 31 January 2004 text 2",
+      "finding": "Seven textual/reference corrections; none changes E graphic.",
+      "evidence": "primary-texts/rectificatif-2003-1376-20040131.txt",
+      "evidence_sha256": "8c1f2a8da26c58bed324e7ea3857e2a019b9b74f3da23b115149e078e73cff26"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000790599",
+      "locator": "article 1 III and article 7",
+      "finding": "2006 changes projected ceiling increments and B date definition, plus transitional 2006 B rule; no E operator change.",
+      "evidence": "web-9.json; web-11.json"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000019986224",
+      "locator": "article 2 III",
+      "finding": "2008 changes acceptance-date wording to request-date wording; no E operator change.",
+      "evidence": "../web/open-10-2008-initial.json"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023334387",
+      "locator": "article 1 point 3, 1° to 4°, PDF page 2",
+      "finding": "2010 changes formula 57→55, changes A to 62, and expressly changes sixty to sixty-two at the penultimate paragraph. This last instruction conflicts with canonical L(A) wording.",
+      "evidence": "../pages/modif2010-2.png; web-11.json"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000030398366",
+      "locator": "article 2",
+      "finding": "2015 changes mortality table reference and D 167→172; no E operator change and no resolution of L(A) wording discrepancy.",
+      "evidence": "web-8.json; web-9.json; web-11.json"
+    }
+  ],
+  "provenance_notes": "The official monthly graphic has been recovered, but the candidate remains held because full canonical version concordance fails on a surrounding definition. No source text or notes are changed and no active registry or DB is opened. Historical image is not registered as current because its upper bound is historical."
+}

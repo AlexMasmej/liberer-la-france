@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-22T01:39:03.770234+00:00",
+  "scope": "Four CSS sources only; isolated documentary research; no live DB read or write; existing source snapshots used read-only.",
+  "result": "one_complete_normative_documentary_recovery",
+  "sources_examined": 4,
+  "missing_elements": 6,
+  "recovered_elements": 3,
+  "new_normative_documents": [
+    {
+      "path": "registry-proposal/documents/css-decree-2004-1457.pdf",
+      "sha256": "740c8316ba182397f2b0e20414d112033842a274bc543ac2823790c915d55c03",
+      "url": "https://www.legifrance.gouv.fr/download/file/uSNk84CRAvAVN2kVnHsPSR-a2mQGLEMfNcfE5ZmY-HQ=/JOE_TEXTE",
+      "source_page_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000628806",
+      "title": "Décret2004-1457, JORF0303du30décembre2004, texte39",
+      "pages": 3,
+      "read_scope": "All3pages visually inspected; formulas page2",
+      "registry_relative_path": "documents/css-decree-2004-1457.pdf"
+    },
+    {
+      "path": "registry-proposal/documents/css-decree-2010-1737.pdf",
+      "sha256": "94d6d0371ba915b95321e1335dee0248ac53df1df5af76c2ab15741d7199afd8",
+      "url": "https://www.legifrance.gouv.fr/download/file/63svbPxxA_9vv0UbiiKxBdygrRYNmELc4MrM4SFNwfQ=/JOE_TEXTE",
+      "source_page_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023334387",
+      "title": "Décret2010-1737, JORF0303du31décembre2010, texte83",
+      "pages": 3,
+      "read_scope": "All3pages visually inspected; D723-7 amendment page3",
+      "registry_relative_path": "documents/css-decree-2010-1737.pdf"
+    }
+  ],
+  "normative_transcriptions": [
+    {
+      "marker": 1,
+      "text": "P × (1 − 1/D) × C × E × (1 + 10 %)",
+      "latex": "P \\times \\left(1-\\frac{1}{D}\\right) \\times C \\times E \\times (1+10\\%)",
+      "pdf_page": 2,
+      "source_document": "documents/css-decree-2004-1457.pdf",
+      "method": "Facsimile whole page plus separate 300 dpi formula detail checked",
+      "verified_visually": true
+    },
+    {
+      "marker": 2,
+      "text": "P × [1 − (1 − 1/D) × (1 − C)] × E × (1 + 10 %)",
+      "latex": "P \\times \\left[1-\\left(1-\\frac{1}{D}\\right)\\times(1-C)\\right]\\times E\\times(1+10\\%)",
+      "pdf_page": 2,
+      "source_document": "documents/css-decree-2004-1457.pdf",
+      "method": "Facsimile whole page plus separate 300 dpi formula detail checked",
+      "verified_visually": true
+    },
+    {
+      "marker": 3,
+      "text": "E = [∑_{k=0}^{k=51 à 55} (1/(1+i)^k × L(A+k)/L(A)) − 3/8 − 1/4] × (1/(1+i)^(A−B) × L(A)/L(B))",
+      "latex": "E=\\left[\\sum_{k=0}^{k=51\\,\\text{à}\\,55}\\left(\\frac{1}{(1+i)^k}\\times\\frac{L(A+k)}{L(A)}\\right)-\\frac{3}{8}-\\frac{1}{4}\\right]\\times\\left(\\frac{1}{(1+i)^{A-B}}\\times\\frac{L(A)}{L(B)}\\right)",
+      "pdf_page": 2,
+      "source_document": "documents/css-decree-2004-1457.pdf",
+      "amendment_document": "documents/css-decree-2010-1737.pdf",
+      "amendment_pdf_page": 3,
+      "amendment_locator": "article 1, point 8, 1°",
+      "method": "Literal transcription of 2004 graphic with only express 52→51 and 57→55 substitutions authorized by 2010 decree; no algebraic simplification",
+      "verified_against_explicit_primary_chain": true,
+      "primary_graphic_verified_visually": true,
+      "express_amendments_only": true,
+      "current_facsimile_available": false
+    }
+  ],
+  "records": [
+    {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000030400105",
+      "number": "D351-9",
+      "source_sha256": "c3c358fa0c7fc2e30f40ba163b29fa4d1561ec57a3eb5cd9ada3137450aec1b2",
+      "source_document_xml_sha256": "c3c358fa0c7fc2e30f40ba163b29fa4d1561ec57a3eb5cd9ada3137450aec1b2",
+      "source_notes_xml_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_and_notes_read_in_full": true,
+      "source_page_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030400105",
+      "status": "held_primary_graphic_not_acquired",
+      "missing_content_type": "monthly_annuity_E",
+      "expected_markers": 1,
+      "missing_elements": 1,
+      "recovered_elements": 0,
+      "documentary_recovery_complete": false,
+      "exact_normative_extractions": [],
+      "graphic_page": null,
+      "normative_proof": null,
+      "primary_targets": [
+        "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000433712",
+        "https://www.legifrance.gouv.fr/jorf/jo/2004/01/31/0026",
+        "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023334387",
+        "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000030398366"
+      ],
+      "missing_primary_piece": "Expression mensuelle E entière avec bornes, fractions et exposants ; confronter le JO du 1 janvier 2004, texte 17 et le rectificatif du 31 janvier 2004, puis les modifications 2006/2008/2010/2015. Ne pas transformer x/60/omega en A/B ni corriger L(A) par déduction.",
+      "finding": "Source courante : un marqueur, k de 0 à 55, A fixé à 62 ans et définition de L(A) à 60 ans conservée. Le résultat indexé du décret initial est une équation linéarisée/dupliquée. Aucune formule graphique certifiée.",
+      "ready_for_activation": false,
+      "source_sha256_semantics": "Inherited canonical source_sha256 from preserved source snapshot; not the hash of the body string alone.",
+      "source_xml_body_sha256": "055be0fcad27297d79eb12926317cdd8da5aabafa9f1fc6f52c3ef5a482019ba"
+    },
+    {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000023395852",
+      "number": "D643-7",
+      "source_sha256": "4aa19a84c4d0aa70a437d6eb8cd7572211c93e2237afaef369b9ad08f83df1aa",
+      "source_document_xml_sha256": "4aa19a84c4d0aa70a437d6eb8cd7572211c93e2237afaef369b9ad08f83df1aa",
+      "source_notes_xml_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_and_notes_read_in_full": true,
+      "source_page_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023395852",
+      "status": "held_primary_graphic_not_acquired",
+      "missing_content_type": "quarterly_annuity_E",
+      "expected_markers": 1,
+      "missing_elements": 1,
+      "recovered_elements": 0,
+      "documentary_recovery_complete": false,
+      "exact_normative_extractions": [],
+      "graphic_page": null,
+      "normative_proof": null,
+      "primary_targets": [
+        "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000437935",
+        "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000001095573",
+        "https://www.legifrance.gouv.fr/jorf/jo/2004/09/04/0206",
+        "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023334387"
+      ],
+      "missing_primary_piece": "Terme trimestriel E intégral de D643-7 ; vérifier spécialement le rectificatif JO du 4 septembre 2004, texte 19, et les modifications de 2010. Aucun passage du mensuel au trimestriel par calcul.",
+      "finding": "La source courante et la reproduction ILO indexée portent toujours formule non reproduite. Les sommaires officiels confirment le rectificatif ; ils ne livrent pas la formule. Aucune transcription normative.",
+      "ready_for_activation": false,
+      "source_sha256_semantics": "Inherited canonical source_sha256 from preserved source snapshot; not the hash of the body string alone.",
+      "source_xml_body_sha256": "28e518f7b22e26c6e356e8a9df623f612601b89e933cfc868aba3d05e5ad7917"
+    },
+    {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000038774726",
+      "number": "D653-4",
+      "source_sha256": "d8520441ad5ca65a7e93a7810866ebee9331c78a1b86cab25dac01c3a7bdb9f2",
+      "source_document_xml_sha256": "d8520441ad5ca65a7e93a7810866ebee9331c78a1b86cab25dac01c3a7bdb9f2",
+      "source_notes_xml_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_and_notes_read_in_full": true,
+      "source_page_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038774726",
+      "status": "complete_documentary_candidate_not_activated",
+      "missing_content_type": "two_purchase_options_and_quarterly_annuity_E",
+      "expected_markers": 3,
+      "missing_elements": 3,
+      "recovered_elements": 3,
+      "documentary_recovery_complete": true,
+      "exact_normative_extractions": [
+        {
+          "marker": 1,
+          "text": "P × (1 − 1/D) × C × E × (1 + 10 %)",
+          "latex": "P \\times \\left(1-\\frac{1}{D}\\right) \\times C \\times E \\times (1+10\\%)",
+          "pdf_page": 2,
+          "source_document": "documents/css-decree-2004-1457.pdf",
+          "method": "Facsimile whole page plus separate 300 dpi formula detail checked",
+          "verified_visually": true
+        },
+        {
+          "marker": 2,
+          "text": "P × [1 − (1 − 1/D) × (1 − C)] × E × (1 + 10 %)",
+          "latex": "P \\times \\left[1-\\left(1-\\frac{1}{D}\\right)\\times(1-C)\\right]\\times E\\times(1+10\\%)",
+          "pdf_page": 2,
+          "source_document": "documents/css-decree-2004-1457.pdf",
+          "method": "Facsimile whole page plus separate 300 dpi formula detail checked",
+          "verified_visually": true
+        },
+        {
+          "marker": 3,
+          "text": "E = [∑_{k=0}^{k=51 à 55} (1/(1+i)^k × L(A+k)/L(A)) − 3/8 − 1/4] × (1/(1+i)^(A−B) × L(A)/L(B))",
+          "latex": "E=\\left[\\sum_{k=0}^{k=51\\,\\text{à}\\,55}\\left(\\frac{1}{(1+i)^k}\\times\\frac{L(A+k)}{L(A)}\\right)-\\frac{3}{8}-\\frac{1}{4}\\right]\\times\\left(\\frac{1}{(1+i)^{A-B}}\\times\\frac{L(A)}{L(B)}\\right)",
+          "pdf_page": 2,
+          "source_document": "documents/css-decree-2004-1457.pdf",
+          "amendment_document": "documents/css-decree-2010-1737.pdf",
+          "amendment_pdf_page": 3,
+          "amendment_locator": "article 1, point 8, 1°",
+          "method": "Literal transcription of 2004 graphic with only express 52→51 and 57→55 substitutions authorized by 2010 decree; no algebraic simplification",
+          "verified_against_explicit_primary_chain": true,
+          "primary_graphic_verified_visually": true,
+          "express_amendments_only": true,
+          "current_facsimile_available": false
+        }
+      ],
+      "graphic_page": 2,
+      "normative_proof": "cnbf2004-transcription.json",
+      "primary_targets": [
+        "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000628806",
+        "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000001098539",
+        "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023334387",
+        "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000038731196",
+        "https://temps.travail.gouv.fr/fichiers/bo/2005/05-02/bo0502.pdf"
+      ],
+      "missing_primary_piece": null,
+      "finding": "All3expressions recovered from2004facsimile; Eupper numbers changed only as expressly prescribed by2010facsimile. 2008date wording and2019transfer verified in primary text. Not activated.",
+      "ready_for_activation": true,
+      "source_sha256_semantics": "Inherited canonical source_sha256 from preserved source snapshot; not the hash of the body string alone.",
+      "source_xml_body_sha256": "ff913fa390435eeb4fc51f3a0070e29c76989f6868347eca543b93a10108bae1",
+      "official_jo_crosscheck_complete": true,
+      "canonical_version_concordance_complete": true,
+      "authenticated_jo_crosscheck_complete": false,
+      "cryptographic_signature_validation_complete": false
+    },
+    {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000028675462",
+      "number": "Annexe I à l'art. R434-32 (7)",
+      "source_sha256": "6480175466b1d4d3b260371d14191f9ddeafa7251d4b99d33aa07607abe45df7",
+      "source_document_xml_sha256": "6480175466b1d4d3b260371d14191f9ddeafa7251d4b99d33aa07607abe45df7",
+      "source_notes_xml_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_and_notes_read_in_full": true,
+      "source_page_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000028675462",
+      "status": "held_primary_graphic_not_acquired",
+      "missing_content_type": "quadranopsia_quadrant_figure",
+      "expected_markers": 1,
+      "missing_elements": 1,
+      "recovered_elements": 0,
+      "documentary_recovery_complete": false,
+      "exact_normative_extractions": [],
+      "graphic_page": null,
+      "normative_proof": null,
+      "primary_targets": [
+        "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000701656",
+        "https://www.legifrance.gouv.fr/jorf/jo/id/JORFCONT000000024082",
+        "https://circulaires.ameli.fr/circulaire/cir-152013",
+        "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054050196"
+      ],
+      "missing_primary_piece": "Cliché AT français qui suit Les quadranopsies peuvent être évaluées en assignant à chaque quadrant une valeur de. Vérifier le JO du 30 décembre 1982 et son numéro complémentaire, puis la chaîne de codification 1985/2006.",
+      "finding": "La notice officielle du décret 82-1135 annonce deux PDF numérisés de 47,4 et 66,8 Mo, mais le téléchargement est protégé et non obtenu. Les recherches CNAM ne livrent pas le cliché. Le résultat indexé de 2026 reproduit aussi le marqueur ; aucun taux de droit commun ni étranger ne remplace le cliché.",
+      "ready_for_activation": false,
+      "source_sha256_semantics": "Inherited canonical source_sha256 from preserved source snapshot; not the hash of the body string alone.",
+      "source_xml_body_sha256": "3db06ed2e54ea32e02f8eba7336e375f811ceaa0ba6a8e7a720dbf0894ac7a37"
+    }
+  ],
+  "evidence_reference_roots": [
+    "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/continuation-exhaustive-20261019/graphic-recovery",
+    "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/continuation-final-20261019/recovery-pensions",
+    "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/poursuite-20261020-d/graphic-sources"
+  ],
+  "PDF_review": {
+    "skill_read": "/Users/alexandremasmejean/.codex/plugins/cache/openai-primary-runtime/pdf/26.1017.11052/skills/pdf/SKILL.md",
+    "new_requested_PDF_download_success": true,
+    "reason": "Initial CLI/mirror access failed. Root later accessed official IAB normally and supplied2real JORF PDFs. Local whole-document renders, visual reading, original image details and exact express amendment comparison completed.",
+    "existing_document_rechecked": {
+      "path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/continuation-exhaustive-20261019/graphic-recovery/documents/cor-doc-865.pdf",
+      "url": "https://www.cor-retraites.fr/sites/default/files/2019-06/doc-865.pdf",
+      "sha256": "682509f99704ebfcf11af7eb9efcfe00ad3921e217db1d4e578c0521737d82a3",
+      "total_pages": 79,
+      "pdf_page_reviewed": 45,
+      "printed_page": 114,
+      "render": "pages/cor865-p45-recheck.png",
+      "text_extraction": "pages/cor865-p45-extracted.txt",
+      "review_extent": "Full relevant page rendered and visually read, then compared with independent PDF text extraction; not a review of all 79 pages.",
+      "finding": "Monthly research formula uses x, 60, omega and +11/24 with k=1 lower bound. Not an authenticated reproduction of current D351-9 nor of any quarterly term.",
+      "normative_role": "excluded_research_document"
+    },
+    "new_documents_reviewed": [
+      {
+        "path": "documents/joe_20041230_0303_0039.pdf",
+        "pages": 3,
+        "all_pages_rendered_and_visually_read": true,
+        "formula_page": 2,
+        "formulas_absent_from_text_extraction": true,
+        "detail_images": "pages/cnbf2004-E-detail.png and registry-proposal/media/css-d653-4-option-a.png / css-d653-4-option-b.png"
+      },
+      {
+        "path": "documents/joe_20101231_0303_0083.pdf",
+        "pages": 3,
+        "all_pages_rendered_and_visually_read": true,
+        "relevant_amendment_page": 3,
+        "finding": "Only upper label numbers52 and57 changed into51 and55; k/A lists agree with canonical source."
+      }
+    ]
+  },
+  "safe_process": {
+    "sources_modified": false,
+    "synced_project_files_modified": false,
+    "DB_opened": false,
+    "active_batches_modified": false,
+    "active_attachments_modified": false,
+    "policies_changed": false,
+    "writer_slots_reserved_or_reduced": false,
+    "writer_process_stopped_or_restarted": false,
+    "credits_purchased": false,
+    "other_agent_created": false,
+    "captcha_or_auth_bypassed": false
+  },
+  "schema_validation": "companion-validation.json",
+  "companion_proposals": "registry-proposal/records/*.json; D653-4 is a complete isolated candidate, the other three remain incomplete; none activated by this subagent",
+  "limits": "This is a documented broad targeted search, not proof that every possible archive has been exhausted. No missing formula or quadrant value has been inferred.",
+  "status": "documentary_pass_complete_one_CSS_source_recovered_others_held",
+  "complete_normative_sources": 1,
+  "remaining_missing_elements": 3,
+  "browser_scope": {
+    "Chrome_subagent_attempt": "Passive Cloudflare; no interactive action. Own tabs1399865406/1399865409 only.",
+    "IAB_subagent_availability": "BrowserID2 and iab alias unavailable; inventory showed onlyChromeID1. Root alone acquired PDFs via itsIAB.",
+    "root_legacy_scan_status": "Root reports explicit interactive CAPTCHA for1982, January2004 andMay2004facsimiles; not solved by thissubagent. User handoff handled byroot.",
+    "no_browser_cookie_export": true
+  },
+  "normative_transcription_document_path_base": "registry-proposal/"
+}

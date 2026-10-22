@@ -1,3 +1,9 @@
+# Mise à jour après téléchargements autorisés
+
+D643-7 est désormais complété : **2 sources CSS certifiées documentalement sur4, 4éléments sur6** avec D653-4. Le graphique mensuel D351-9 est récupéré, mais la concordance demeure réservée en raison d’un conflit L(A)60/62 avec le décret2010. Le PDF1982 fournit un renvoi à l’édition Documentsadministratifs ; il ne certifie pas le schéma. Voir [audit de suivi](captcha-authorized-followup/audit.md), [D643](captcha-authorized-followup/d643-report.json), [conflit D351](captcha-authorized-followup/d351-canonical-conflict.md). Les JO entiers restent locaux ; les compagnons nouveaux contiennent seulement les pages pertinentes complètes. Aucun actif/DB modifié par ce sous-agent.
+
+Le bilan antérieur ci-dessous est conservé comme état historique ; il n’annule pas cette mise à jour.
+
 # Sources graphiques CSS — bilan du 22 octobre 2026
 
 **D653-4 est documentalement complété : ses trois expressions sont récupérées et contrôlées.** Le candidat reste isolé, sans activation. D351-9, D643-7 et le cliché des quadranopsies restent réservés. Bilan : **1 source sur4 ;3 éléments sur6**.

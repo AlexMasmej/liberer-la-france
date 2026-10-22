@@ -1,0 +1,25 @@
+[
+  {
+    "name": "gallica-bareme",
+    "url": "https://gallica.bnf.fr/SRU?version=1.2&operation=searchRetrieve&query=%28gallica+all+%22bar%C3%A8me+indicatif+invalidit%C3%A9%22%29&maximumRecords=50",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "ia-docadmin1983",
+    "url": "https://archive.org/advancedsearch.php?q=%28title%3A%28%22documents+administratifs%22%29+OR+title%3A%28%22document+administratif%22%29%29+AND+%28year%3A1983+OR+year%3A1982%29&output=json&rows=50",
+    "status": 200,
+    "bytes": 1615
+  },
+  {
+    "name": "ia-4010",
+    "url": "https://archive.org/advancedsearch.php?q=%28title%3A%28%22accidents+travail%22%29+AND+title%3A%28%22bareme%22%29%29+OR+isbn%3A2110710454&output=json&rows=50",
+    "status": 200,
+    "bytes": 346
+  },
+  {
+    "name": "sudoc-isbn",
+    "url": "https://www.sudoc.fr/services/isbn2ppn/2110710454",
+    "status": 200,
+    "bytes": 171
+  }
+]

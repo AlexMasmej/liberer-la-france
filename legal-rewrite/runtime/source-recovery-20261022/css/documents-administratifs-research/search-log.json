@@ -1,0 +1,39 @@
+{
+  "at_utc": "2026-10-22T03:15:44.129818+00:00",
+  "note": "Representative searches actually run; negative results are bounded discovery observations, not proof of nonexistence.",
+  "web_query_groups": [
+    [
+      "\"barème indicatif\" \"1983\" \"4010\"",
+      "\"Documents administratifs\" \"1983\" \"invalidité\"",
+      "\"82-1135\" \"annexe\" \"documents\""
+    ],
+    [
+      "\"barème\" \"accidents du travail\" \"Documents administratifs\" \"1983\"",
+      "\"invalidité\" \"J.O.\" \"1983\" \"D.A.\"",
+      "\"barème\" \"1983\" \"Documents administratifs\" \"janvier\""
+    ],
+    [
+      "site:francearchives.gouv.fr \"barème\" \"invalidité\" \"1982\"",
+      "site:archives-nationales.culture.gouv.fr \"82-1135\"",
+      "site:dila.premier-ministre.gouv.fr \"archives\" \"documents administratifs\""
+    ],
+    [
+      "site:circulaires.ameli.fr \"82-1135\"",
+      "site:circulaires.ameli.fr \"indicatif\" \"invalidité\" \"1983\"",
+      "site:circulaires.ameli.fr \"barème\" \"quadranopsies\""
+    ]
+  ],
+  "catalogue_fetch_logs": [
+    "bnf-fetches.json",
+    "catalogue-crosssearch-fetches.json",
+    "sudoc-record-fetches.json",
+    "additional-fetches.json"
+  ],
+  "negative_or_failed_routes": [
+    "Internet Archive Documents administratifs title/year1982-1983 query returned one unrelated Québec vocabulary; no target annex.",
+    "Internet Archive barème title or ISBN2110710454 query returned no records.",
+    "Gallica SRU returned403; no circumvention attempted.",
+    "Ameli public date/title query connection reset; indexed web searches did not locate an original1983 annex facsimile.",
+    "Some direct catalogue/Légifrance web opens returned403 or unavailable; public BnF and SUDOC catalogue APIs succeeded."
+  ]
+}
