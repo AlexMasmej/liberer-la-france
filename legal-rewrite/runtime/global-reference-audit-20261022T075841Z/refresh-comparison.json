@@ -1,0 +1,58 @@
+{
+  "audit_id": "628d66aa630a7e4b3b647767e97a2a84b1eef94542b23758d27ff10e9e537e45",
+  "previous_audit_id": "dad1c0671216e42d4c063367c738273e6cdc4e7f3a929c8ad23b87f9942c5038",
+  "as_of": "2026-10-18",
+  "metrics": {
+    "entries_scanned": {
+      "previous": 30317,
+      "current": 30317,
+      "change": 0
+    },
+    "findings_count": {
+      "previous": 83523,
+      "current": 84100,
+      "change": 577
+    },
+    "distinct_articles_with_priority_1_findings": {
+      "previous": 656,
+      "current": 663,
+      "change": 7
+    },
+    "proposed_repeal_targets_with_detected_referrers": {
+      "previous": 427,
+      "current": 436,
+      "change": 9
+    }
+  },
+  "occurrences": {
+    "previous": 460196,
+    "current": 461143
+  },
+  "priority_1": {
+    "previous": 1087,
+    "current": 1096
+  },
+  "progress_before_capture": {
+    "observed_at_utc": "2026-10-22T07:58:41.847659+00:00",
+    "method": "Conservative atomic status observation before the read-only SQLite capture; not transactionally synchronous with the snapshot.",
+    "source": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/status.json",
+    "status_sha256": "7ec3c6cce7a54fcb695190c2ece6f9999bbfd4e069af49d6a3afb76eef763dcb",
+    "status_updated_at_unix": 1792655842,
+    "counters": {
+      "drafted_articles": 11716,
+      "retained_unchanged": 8203,
+      "prior_drafts_reviewed": 1339
+    },
+    "source_records": 30317,
+    "pending": 10398,
+    "additional_treatments_since_previous_baseline": 1260
+  },
+  "frozen_snapshot_counts": {
+    "proposals_in_canonical_inventory": 11716,
+    "retained_unchanged_in_canonical_inventory": 8203,
+    "proposals_identical_to_source_body": 0
+  },
+  "additional_treatments_since_previous_baseline": 1260,
+  "structural_findings_are_confirmed_legal_errors": false,
+  "automatic_change": false
+}
