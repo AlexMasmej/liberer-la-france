@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-23T01:25:05.795513+00:00",
+  "generated_at": "2026-10-23T02:10:08.527941+00:00",
   "source_snapshot": "2026-10-18",
   "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
   "scope": "Current exported proposals only; hash checks do not establish independent semantic review.",
@@ -21,22 +21,22 @@
   },
   "coverage": {
     "exported_articles": 30317,
-    "exported_proposals": 13600,
-    "retained_sources": 14866,
-    "current_worker_declarations": 22686,
+    "exported_proposals": 13602,
+    "retained_sources": 14888,
+    "current_worker_declarations": 22722,
     "current_approved_independent_reviews": 132,
-    "unassessed_proposals": 5536,
+    "unassessed_proposals": 5524,
     "unassessed_retained_sources": 112
   },
   "classification_counts": {
-    "coordination_only": 2911,
+    "coordination_only": 2915,
     "editorial_only": 3,
     "financing_transfer": 12,
-    "material_reduction": 4782,
+    "material_reduction": 4792,
     "mixed": 327,
     "payment_timing_relief": 29,
     "reserved": 7,
-    "retained_necessary": 14747
+    "retained_necessary": 14769
   },
   "measures": [
     {
@@ -19722,6 +19722,34 @@
       ]
     },
     {
+      "measure_id": "apprentissage-deduction-renvoi",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "apprentissage-deduction-renvoi",
+          "description": "Rétablissement du renvoi à la définition des dépenses.",
+          "before": "Renvoi D. 6142-29 erroné dans le texte fourni.",
+          "after": "Renvoi D. 6241-29 cohérent avec la section.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs et centres de formation d’apprentis",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; droits antérieurs préservés.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+          "source_quote": "au titre de l'article D. 6142-29",
+          "proposed_quote": "au titre de l'article D. 6241-29",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000044972545",
+            "number": "D6241-32",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
       "measure_id": "apprentissage-diplome-superieur-sans-delai",
       "kinds": [
         "relief_extended"
@@ -19743,6 +19771,34 @@
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000006903999",
             "number": "L6222-3",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "apprentissage-fin-rapports-annuels",
+      "kinds": [
+        "obligation_removed"
+      ],
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "apprentissage-fin-rapports-annuels",
+          "description": "Suppression du double circuit annuel de rapports agrégés.",
+          "before": "Rapport annuel de chaque mission puis synthèse annuelle du préfet au comité régional.",
+          "after": "Aucun de ces rapports annuels restant à transmettre n’est exigé.",
+          "unit": "legal_duty",
+          "affected_population": "Missions de contrôle pédagogique, préfets et comité régional",
+          "conditions_and_transition": "Dès l’entrée en vigueur, même pour les années antérieures ; conservation des rapports déjà déposés.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+          "source_quote": "Les missions de contrôle pédagogique transmettent chaque année au préfet de région un rapport d'activité.",
+          "proposed_quote": "Les rapports annuels d’activité des missions de contrôle pédagogique, leur synthèse annuelle préfectorale et sa présentation au comité régional ne sont plus exigés",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000037872704",
+            "number": "R6251-4",
             "slug": "travail"
           },
           "evidence_origin": "worker_declaration"
@@ -19827,6 +19883,90 @@
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000024410833",
             "number": "L6226-1",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "apprentissage-local-conciliation-facultative",
+      "kinds": [
+        "obligation_removed"
+      ],
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "apprentissage-local-conciliation-facultative",
+          "description": "Suppression du préalable de conciliation imposé.",
+          "before": "Conciliation obligatoire sauf infraction ; saisine faute de conciliation dans le mois.",
+          "after": "Saisine directe possible immédiatement, conciliation volontaire.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs, apprentis et représentants légaux relevant des chambres de métiers locales",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; droits antérieurs préservés.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+          "source_quote": "La procédure de conciliation n'a pas à être mise en œuvre lorsqu'une infraction a été constatée.",
+          "proposed_quote": "peuvent être portés directement devant la juridiction compétente, sans tentative préalable obligatoire de conciliation ni délai d’attente.",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000023098352",
+            "number": "R6261-5",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "apprentissage-local-fin-avis-derogation",
+      "kinds": [
+        "obligation_removed"
+      ],
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "apprentissage-local-fin-avis-derogation",
+          "description": "Retrait de l’avis préalable à l’usage de la dérogation.",
+          "before": "Avis des chambres compétentes demandé avant dépôt.",
+          "after": "Dérogation sans avis préalable ni déclaration spéciale.",
+          "unit": "legal_duty",
+          "affected_population": "Maîtres d’apprentissage et employeurs en Moselle, Bas-Rhin et Haut-Rhin",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; droits antérieurs préservés.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+          "source_quote": "Dans ce cas, l'avis des chambres des métiers et de l'artisanat compétentes pour les départements du Haut-Rhin, du Bas-Rhin et de la Moselle est demandé avant le dépôt du contrat d'apprentissage.",
+          "proposed_quote": "Cette dérogation n’est subordonnée ni à l’avis préalable des chambres de métiers et de l’artisanat ni à une déclaration spéciale de remplacement.",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000041771589",
+            "number": "R6261-10",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "apprentissage-nouveaute-offre-cfa",
+      "kinds": [
+        "relief_extended"
+      ],
+      "effects": [
+        {
+          "kind": "relief_extended",
+          "measure_id": "apprentissage-nouveaute-offre-cfa",
+          "description": "Extension de la déduction aux offres nouvelles du CFA.",
+          "before": "Nouveauté exigée sur le territoire national pour les investissements déductibles, plafond inchangé de 10 % de la part principale.",
+          "after": "Nouveauté exigée au niveau du CFA bénéficiaire, mêmes dépenses et plafond de 10 % de la part principale.",
+          "unit": "other",
+          "affected_population": "Employeurs et centres de formation d’apprentis",
+          "conditions_and_transition": "Versements effectués à compter de l’entrée en vigueur ; versements antérieurs sous leur régime antérieur.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+          "source_quote": "sur le territoire national avant l'ouverture de la session de formation",
+          "proposed_quote": "par le centre de formation d’apprentis bénéficiaire des versements avant l'ouverture de la session de formation",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000041770375",
+            "number": "D6241-31",
             "slug": "travail"
           },
           "evidence_origin": "worker_declaration"
@@ -37801,6 +37941,34 @@
       ]
     },
     {
+      "measure_id": "capital-risque-suppression-etats-242-quinquies",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "capital-risque-suppression-etats-242-quinquies",
+          "description": "Suppression des modalités d'états déjà retirés par la réforme de 242 quinquies.",
+          "before": "État principal et états complémentaires au titre du II de 242 quinquies.",
+          "after": "Aucun dépôt ni formulaire d'exécution, mêmes avantages et quotas.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés de capital-risque",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+          "source_quote": "Les sociétés de capital-risque qui ont investi dans des sociétés mentionnées à la première phrase du f du 1° de l'article 1er-1 de la loi n° 85-695 du 11 juillet 1985 ou dans des entités mentionnées au d du même 1° joignent en outre à l'état mentionné au I :",
+          "proposed_quote": "Aucune transmission de remplacement n'est instituée.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000006294297",
+            "number": "171 AS bis",
+            "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
       "measure_id": "capital-variable-mention-gratuit-suppression",
       "kinds": [
         "obligation_removed"
@@ -42419,6 +42587,34 @@
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000037386088",
             "number": "L6231-2",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "cfa-suppression-attestation-entreprise",
+      "kinds": [
+        "obligation_removed"
+      ],
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "cfa-suppression-attestation-entreprise",
+          "description": "Retrait d’une pièce spéciale, sans retrait de la déclaration générale.",
+          "before": "Attestation spéciale de situation jointe à la déclaration du CFA.",
+          "after": "Aucune attestation distincte de situation à joindre.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs et centres de formation d’apprentis",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; droits antérieurs préservés.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+          "source_quote": "accompagnée d'une attestation de l'entreprise précisant la situation du centre de formation en fonction des modalités prévues aux 1° à 4° du présent article.",
+          "proposed_quote": "aucune attestation distincte de l’entreprise sur les conditions prévues aux 1° à 4° n’est jointe à cette déclaration",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000041770378",
+            "number": "D6241-30",
             "slug": "travail"
           },
           "evidence_origin": "worker_declaration"
@@ -59705,6 +59901,26 @@
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000018533910",
             "number": "D3211-1",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "contrat-unique-apprentissage",
+          "description": "Séparation de la durée pédagogique aidée et de l’emploi.",
+          "before": "La proratisation se réfère à la durée du contrat inférieure à un an.",
+          "after": "La proratisation porte sur la période pédagogique ; le nouvel emploi reste indéterminé.",
+          "unit": "regime",
+          "affected_population": "Employeurs et centres de formation d’apprentis",
+          "conditions_and_transition": "Contrats privés nouveaux sous contrat unique ; contrats anciens, droits acquis et transition du premier mois de novembre 2025 préservés.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+          "source_quote": "Lorsque la durée du contrat est inférieure à un an",
+          "proposed_quote": "Lorsque la durée de la période d’apprentissage ouvrant droit à l’aide est inférieure à un an",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000052476041",
+            "number": "D6243-2",
             "slug": "travail"
           },
           "evidence_origin": "worker_declaration"
@@ -108219,6 +108435,34 @@
             "source_id": "LEGIARTI000042308974",
             "number": "D114-8",
             "slug": "securite-sociale"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "fonds-risque-fin-notifications-redondantes",
+      "kinds": [
+        "obligation_removed"
+      ],
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "fonds-risque-fin-notifications-redondantes",
+          "description": "Dispense expresse des communications distinctes déjà couvertes par les documents ou opérations du gestionnaire.",
+          "before": "Information du gestionnaire sans dispense expresse pour les données déjà reçues ou les cessions exécutées par lui.",
+          "after": "Pas de notification distincte dans ces seuls cas ; autres informations et engagements maintenus.",
+          "unit": "legal_duty",
+          "affected_population": "Porteurs personnes physiques de FCPR ou FPCI",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+          "source_quote": "ainsi que de la cession de parts.",
+          "proposed_quote": "Aucune notification distincte n'est exigée pour les engagements et modalités figurant dans les documents de souscription déjà remis à la société de gestion ni pour les cessions qu'elle a elle-même exécutées ou enregistrées.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000027799302",
+            "number": "171 AT",
+            "slug": "impots-annexe-2"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -195155,6 +195399,34 @@
       ]
     },
     {
+      "measure_id": "reevaluation-1976-suppression-etat-special",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "reevaluation-1976-suppression-etat-special",
+          "description": "Retrait réglementaire des documents spéciaux déjà supprimés dans 238 bis J.",
+          "before": "Annexe spéciale et extrait conforme au modèle ministériel joints aux déclarations.",
+          "after": "Plus de dépôt spécial, pièces comptables autonomes préservées.",
+          "unit": "legal_duty",
+          "affected_population": "Personnes physiques ou morales ayant réévalué leurs immobilisations amortissables au 31 décembre 1976",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+          "source_quote": "Ces montants sont présentés séparément par grandes rubriques comptables et selon les mêmes postes que ceux des immobilisations au bilan.",
+          "proposed_quote": "Aucun état spécial de remplacement n'est institué.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000006294243",
+            "number": "171 P",
+            "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
       "measure_id": "reevaluation-capital-mention-annexe-suppression",
       "kinds": [
         "obligation_removed"
@@ -214391,6 +214663,230 @@
             "source_id": "LEGIARTI000020849905",
             "number": "2 octodecies B",
             "slug": "impots-annexe-3"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "scr-cessation-fin-distribution-forcee",
+      "kinds": [
+        "obligation_removed"
+      ],
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "scr-cessation-fin-distribution-forcee",
+          "description": "Suppression du délai de distribution imposé.",
+          "before": "Répartition au plus tard à la clôture de l'exercice suivant la réalisation.",
+          "after": "Conservation sans délai obligatoire, engagements envers actionnaires préservés.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés de capital-risque",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+          "source_quote": "qui doit intervenir au plus tard à la clôture de l'exercice suivant leur réalisation",
+          "proposed_quote": "sans délai de distribution imposé par le présent article.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000018621145",
+            "number": "171 AQ",
+            "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "scr-cessation-liberte-tresorerie",
+      "kinds": [
+        "obligation_removed"
+      ],
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "scr-cessation-liberte-tresorerie",
+          "description": "Retrait du plafond de placement de trésorerie.",
+          "before": "Trésorerie placée limitée à 20 % de la situation nette comptable.",
+          "after": "Trésorerie placée sans plafond de proportion après cessation, autres conditions préservées.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés de capital-risque",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+          "source_quote": "c) Le placement d'une trésorerie au plus égale à 20 % de sa situation nette comptable.",
+          "proposed_quote": "c) Le placement de sa trésorerie, sans limite de proportion de sa situation nette comptable.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000018621145",
+            "number": "171 AQ",
+            "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "scr-cessation-sans-information-prealable",
+      "kinds": [
+        "obligation_removed"
+      ],
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "scr-cessation-sans-information-prealable",
+          "description": "Retrait de la notification préalable distincte.",
+          "before": "Information du service fiscal avant cessation.",
+          "after": "Décision de l'assemblée sans notification préalable spécifique.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés de capital-risque",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+          "source_quote": "après en avoir informé le service des impôts mentionné à l'article 171 AN",
+          "proposed_quote": "Aucune déclaration de remplacement n'est exigée.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000018621145",
+            "number": "171 AQ",
+            "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "scr-option-mention-declaration",
+      "kinds": [
+        "obligation_merged"
+      ],
+      "effects": [
+        {
+          "kind": "obligation_merged",
+          "measure_id": "scr-option-mention-declaration",
+          "description": "Fusion facultative du support de l'option avec la déclaration de résultats.",
+          "before": "Option uniquement par lettre simple distincte.",
+          "after": "Lettre simple ou mention expresse dans la déclaration, mêmes délais légaux.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés de capital-risque",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+          "source_quote": "s'effectue par lettre simple adressée au service des impôts",
+          "proposed_quote": "Elle peut également être exercée par une mention expresse dans cette déclaration, sans lettre distincte et sans modification des délais légaux d'option.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000018621140",
+            "number": "171 AR",
+            "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "scr-regularisation-manquements-repetes",
+      "kinds": [
+        "relief_extended"
+      ],
+      "effects": [
+        {
+          "kind": "relief_extended",
+          "measure_id": "scr-regularisation-manquements-repetes",
+          "description": "Ouverture du maintien du régime aux manquements ultérieurs régularisés.",
+          "before": "Faculté réservée au premier manquement.",
+          "after": "Faculté ouverte à chaque manquement régularisé au plus tard à l'inventaire suivant.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés de capital-risque",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+          "source_quote": "qu'il s'agisse du premier manquement",
+          "proposed_quote": "Ce maintien n'est subordonné ni à une information particulière du service des impôts ni au caractère de premier manquement.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000006294287",
+            "number": "171 AN",
+            "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "scr-regularisation-sans-notification",
+      "kinds": [
+        "obligation_removed"
+      ],
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "scr-regularisation-sans-notification",
+          "description": "Suppression de la notification spécifique sous un mois.",
+          "before": "Information du service dans le mois de l'inventaire obligatoire pour conserver le régime.",
+          "after": "Régularisation au prochain inventaire sans information particulière.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés de capital-risque",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+          "source_quote": "dans le mois qui suit l'inventaire ayant fait apparaître que le quota n'a pas été respecté",
+          "proposed_quote": "Ce maintien n'est subordonné ni à une information particulière du service des impôts ni au caractère de premier manquement.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000006294287",
+            "number": "171 AN",
+            "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "scr-suppression-etat-reserves",
+      "kinds": [
+        "obligation_removed"
+      ],
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "scr-suppression-etat-reserves",
+          "description": "Retrait de l'état normalisé des bénéfices et réserves distribuables.",
+          "before": "Pièce spéciale jointe à chaque déclaration de résultats.",
+          "after": "Plus de pièce spéciale jointe ; comptabilité et contrôle autonomes conservés.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés de capital-risque",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+          "source_quote": "un état, établi selon un modèle fourni par l'administration, des bénéfices et réserves distribuables",
+          "proposed_quote": "Aucun modèle ou document de remplacement n'est exigé.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000018621136",
+            "number": "171 AS",
+            "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "scr-suppression-releves-accessoires",
+      "kinds": [
+        "obligation_removed"
+      ],
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "scr-suppression-releves-accessoires",
+          "description": "Retrait du relevé spécial des prestations accessoires.",
+          "before": "Pièce spéciale jointe à chaque déclaration de résultats.",
+          "after": "Plus de pièce spéciale jointe ; comptabilité et contrôle autonomes conservés.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés de capital-risque",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+          "source_quote": "le montant du chiffre d'affaires hors taxes et du bénéfice retirés de ces prestations.",
+          "proposed_quote": "Aucun modèle ou document de remplacement n'est exigé.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000018621136",
+            "number": "171 AS",
+            "slug": "impots-annexe-2"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -438721,6 +439217,488 @@
       "evidence_status": "unassessed",
       "assessment": null,
       "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000047842838",
+      "number": "R6241-28-4",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Le régime comptable du fonds affecté au solde de la taxe garantit la traçabilité des sommes destinées aux établissements. Aucun dépôt supplémentaire ni prélèvement autonome ne résulte de cet article ; maintien intégral nécessaire.",
+        "scope_limitations": "Le deuxième alinéa du II de L6131-4, lu dans le corpus, institue le fonds et son compte spécifique. La taxe et ses affectations ne sont pas supprimées dans ce lot.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000047842840",
+      "number": "R6241-28-5",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "La certification annuelle indépendante protège les sommes mutualisées des employeurs et les établissements destinataires. Aucun doublon de certification n’est établi ; sa suppression affaiblirait le contrôle financier du fonds.",
+        "scope_limitations": "Le renvoi à L6131-4 II vise le fonds dédié de la Caisse des dépôts, non une certification imposée individuellement aux employeurs. Aucun gain de coût n’est revendiqué.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000044972548",
+      "number": "D6241-29",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien des deux catégories de dépenses déductibles : équipements du CFA d’entreprise et investissements pour une offre nouvelle formant ses apprentis. Ces conditions rattachent la déduction à des dépenses réelles de formation et protègent un avantage fiscal.",
+        "scope_limitations": "L6241-2 I, lu dans le corpus, autorise les deux déductions avec plafonnement réglementaire. D6241-31 est élargi dans ce lot ; la durée indéterminée de l’emploi ne ferme aucune de ces déductions.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000041770378",
+      "number": "D6241-30",
+      "slug": "travail",
+      "status": "rewrite_draft",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "Suppression effective de l’attestation spéciale jointe par le CFA d’entreprise à sa déclaration d’activité. Les quatre voies de reconnaissance et la déclaration générale demeurent ; aucun formulaire de remplacement.",
+        "scope_limitations": "R6351-1 à R6351-7 restent le circuit de déclaration autonome. La note du décret du 30 mars 2020 reste pertinente pour les contrats anciens ; la dispense documentaire nouvelle vaut aussi pour les dossiers en cours.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : les conditions conservées ne sont pas renforcées et aucune déclaration, autorisation ou pièce de remplacement n’est créée. Le solde financier global n’est pas chiffré.",
+        "effects": [
+          {
+            "kind": "obligation_removed",
+            "measure_id": "cfa-suppression-attestation-entreprise",
+            "description": "Retrait d’une pièce spéciale, sans retrait de la déclaration générale.",
+            "before": "Attestation spéciale de situation jointe à la déclaration du CFA.",
+            "after": "Aucune attestation distincte de situation à joindre.",
+            "unit": "legal_duty",
+            "affected_population": "Employeurs et centres de formation d’apprentis",
+            "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; droits antérieurs préservés.",
+            "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+            "source_quote": "accompagnée d'une attestation de l'entreprise précisant la situation du centre de formation en fonction des modalités prévues aux 1° à 4° du présent article.",
+            "proposed_quote": "aucune attestation distincte de l’entreprise sur les conditions prévues aux 1° à 4° n’est jointe à cette déclaration"
+          }
+        ]
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000041770375",
+      "number": "D6241-31",
+      "slug": "travail",
+      "status": "rewrite_draft",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "La nouveauté s’apprécie désormais dans le CFA bénéficiaire et non sur tout le territoire national. La déduction est ainsi ouverte aux investissements créant localement une offre déjà dispensée ailleurs ; les offres auparavant éligibles restent couvertes.",
+        "scope_limitations": "D6241-29 2° conserve les équipements et matériels, les investissements et la formation d’au moins un apprenti de l’entreprise. L6241-2 I autorise les offres nouvelles ; le plafond de 10 % et la non-restitution de D6241-32 ne changent pas. Aucun rendement fiscal estimé.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : les conditions conservées ne sont pas renforcées et aucune déclaration, autorisation ou pièce de remplacement n’est créée. Le solde financier global n’est pas chiffré.",
+        "effects": [
+          {
+            "kind": "relief_extended",
+            "measure_id": "apprentissage-nouveaute-offre-cfa",
+            "description": "Extension de la déduction aux offres nouvelles du CFA.",
+            "before": "Nouveauté exigée sur le territoire national pour les investissements déductibles, plafond inchangé de 10 % de la part principale.",
+            "after": "Nouveauté exigée au niveau du CFA bénéficiaire, mêmes dépenses et plafond de 10 % de la part principale.",
+            "unit": "other",
+            "affected_population": "Employeurs et centres de formation d’apprentis",
+            "conditions_and_transition": "Versements effectués à compter de l’entrée en vigueur ; versements antérieurs sous leur régime antérieur.",
+            "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+            "source_quote": "sur le territoire national avant l'ouverture de la session de formation",
+            "proposed_quote": "par le centre de formation d’apprentis bénéficiaire des versements avant l'ouverture de la session de formation"
+          }
+        ]
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000044972545",
+      "number": "D6241-32",
+      "slug": "travail",
+      "status": "rewrite_draft",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "coordination_only",
+        "assessment": "Coordination du renvoi erroné D6142-29 vers D6241-29, qui définit effectivement les dépenses déductibles. Maintien intégral du plafond de 10 %, de l’année de paiement, de l’absence de report ou restitution et de la borne de taxe due.",
+        "scope_limitations": "Erreur préexistante explicitement relevée, non imputable au contrat unique. La concordance de D6241-29 avec L6241-2 I est vérifiée. Aucune nouvelle baisse de taxe ni extension du plafond n’est comptée.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : les conditions conservées ne sont pas renforcées et aucune déclaration, autorisation ou pièce de remplacement n’est créée. Le solde financier global n’est pas chiffré.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "apprentissage-deduction-renvoi",
+            "description": "Rétablissement du renvoi à la définition des dépenses.",
+            "before": "Renvoi D. 6142-29 erroné dans le texte fourni.",
+            "after": "Renvoi D. 6241-29 cohérent avec la section.",
+            "unit": "legal_duty",
+            "affected_population": "Employeurs et centres de formation d’apprentis",
+            "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; droits antérieurs préservés.",
+            "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+            "source_quote": "au titre de l'article D. 6142-29",
+            "proposed_quote": "au titre de l'article D. 6241-29"
+          }
+        ]
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000039680587",
+      "number": "D6241-33",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Les seuils d’une action dans au moins deux régions et de dix bénéficiaires matérialisent une activité nationale effective, condition législative d’accès au solde de taxe. Maintien de ces seuils modestes et des critères de ressources, sans dossier nouveau.",
+        "scope_limitations": "Le 13° de L6241-5 lu dans le corpus exige une action au plan national, une liste triennale et un niveau suffisant. La règle concerne les organismes bénéficiaires, pas la durée du contrat des apprentis.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000041461005",
+      "number": "D6243-1",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien intégral du droit à l’aide pour les entreprises de moins de 250 salariés et les formations au plus au baccalauréat. Le texte ne conditionne pas l’aide à un emploi à durée déterminée ; aucune restriction nouvelle n’est nécessaire.",
+        "scope_limitations": "Concordance vérifiée avec L6243-1 dans le corpus. D6243-2 précise dans ce lot la période pédagogique aidée du contrat unique ; les futures embauches éligibles restent couvertes.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000052476041",
+      "number": "D6243-2",
+      "slug": "travail",
+      "status": "rewrite_draft",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "coordination_only",
+        "assessment": "Coordination de l’aide avec le contrat unique : la période pédagogique et sa première année déterminent la durée d’aide sans fixer le terme de l’emploi. Maintien de 5 000 euros, de 6 000 euros pour le handicap, des conditions de dépôt, de non-cumul, des avances mensuelles, suspensions et indus.",
+        "scope_limitations": "L1221-2, L1234-1 et L1234-9 ont été confrontés aux propositions fournies. L6222-7 officiel, lu dans le corpus, admet déjà une période pédagogique en CDI ; sa faculté de contrat limité doit être coordonnée législativement. Les règles spéciales de rupture de l’apprentissage doivent être coordonnées hors lot, sans les abroger implicitement. La règle de départ du préavis reprend coordination.json ; aucun nouveau renvoi à L1234-3 non fourni. Transition du 1er novembre 2025 expressément conservée. Aucun montant d’aide supplémentaire ni nouvelle ancienneté exigée pour l’aide.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : les conditions conservées ne sont pas renforcées et aucune déclaration, autorisation ou pièce de remplacement n’est créée. Le solde financier global n’est pas chiffré.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "contrat-unique-apprentissage",
+            "description": "Séparation de la durée pédagogique aidée et de l’emploi.",
+            "before": "La proratisation se réfère à la durée du contrat inférieure à un an.",
+            "after": "La proratisation porte sur la période pédagogique ; le nouvel emploi reste indéterminé.",
+            "unit": "regime",
+            "affected_population": "Employeurs et centres de formation d’apprentis",
+            "conditions_and_transition": "Contrats privés nouveaux sous contrat unique ; contrats anciens, droits acquis et transition du premier mois de novembre 2025 préservés.",
+            "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+            "source_quote": "Lorsque la durée du contrat est inférieure à un an",
+            "proposed_quote": "Lorsque la durée de la période d’apprentissage ouvrant droit à l’aide est inférieure à un an"
+          }
+        ]
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000051239916",
+      "number": "D6243-3",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "La transmission administrative vaut déjà décision d’attribution et évite une demande ou décision supplémentaire à l’employeur. La conserver est nécessaire au paiement effectif de l’aide, sans revendiquer une nouvelle fusion.",
+        "scope_limitations": "D6243-4 identifie l’ASP ; le circuit ministériel est distinct du dépôt initial et n’impose pas une seconde demande au bénéficiaire. Aucun préavis ou seuil d’ancienneté n’est visé.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000051239913",
+      "number": "D6243-4",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien du paiement mensuel, de la notification, du traitement des recours et du recouvrement des indus par l’ASP. Les renseignements complémentaires doivent être nécessaires : le contrôle protège les fonds sans créer ici une attestation systématique supplémentaire.",
+        "scope_limitations": "Les bulletins ne sont exigibles que dans la mesure nécessaire au paiement ou au contrôle ; les règles générales de réemploi des données restent applicables. La transmission ministérielle sert au pilotage budgétaire. Transition du décret de 2018 conservée, sans nouvelle date.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000051400212",
+      "number": "D6243-5",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien intégral du plafond de 50 % du SMIC mensuel pour l’exonération salariale des apprentis concernés. Supprimer le plafond réglementaire sans modifier la loi ne permettrait pas une exonération supérieure : L6243-2 borne expressément ce plafond.",
+        "scope_limitations": "L6243-2 et ses notes ont été lus : seuil applicable aux contrats conclus depuis le 1er mars 2025. Les anciens contrats ne doivent pas perdre leur régime antérieur ; aucune assimilation de ce plafond au montant de l’aide.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000037872712",
+      "number": "R6251-1",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "La composition pluraliste, la nomination pour cinq ans et les incompatibilités préviennent les conflits d’intérêts dans le contrôle des diplômes. Maintien du contrôle et de sa suppléance après mise en demeure, sans agrément de formation supplémentaire.",
+        "scope_limitations": "R6251-2 prévoit déjà le contrôle sans experts non désignés après mise en demeure. Le rapport annuel de R6251-4 est supprimé séparément ; les rapports individuels et arrêtés d’organisation ne sont pas abrogés.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000037872706",
+      "number": "R6251-2",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien du droit de solliciter le contrôle, du référentiel du diplôme, du contrôle sur pièces et sur place et du secret professionnel. Ces garanties protègent la formation réelle des apprentis ; le pluralisme comporte déjà une exception en cas de défaut de désignation.",
+        "scope_limitations": "Le renvoi à R6251-1 vise exactement les trois catégories et sa mise en demeure. Les exceptions territoriales de R6261-15 et R6261-16 subsistent. Les articles 226-13 et 226-14 du code pénal restent dans leur champ de secret professionnel, non du contrat unique.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000037872700",
+      "number": "R6251-3",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Le délai minimal de trente jours protège le contradictoire du CFA et des employeurs, avec droit d’être entendus. La transmission du rapport final et sa communication sur demande au certificateur servent le contrôle de qualité ; aucun doublon systématique n’est démontré.",
+        "scope_limitations": "Le délai de défense n’est ni un délai d’embauche ni un préavis de rupture. Le dernier alinéa entré en vigueur le 1er janvier 2021 reste applicable. La suppression des rapports annuels agrégés ne supprime pas ce rapport individuel.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000037872704",
+      "number": "R6251-4",
+      "slug": "travail",
+      "status": "rewrite_draft",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "Suppression des deux niveaux de compte rendu annuel agrégé : rapports des missions et synthèse préfectorale présentée au comité régional. Les contrôles et rapports individuels utiles à la qualité des formations et au contradictoire subsistent.",
+        "scope_limitations": "R6251-1 à R6251-3 restent applicables, ainsi que leurs adaptations locales. Les arrêtés ministériels d’organisation devront supprimer les prescriptions imposées sur le seul fondement de R6251-4. Aucun rapport périodique de remplacement ; aucun chiffrage de coût public.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : les conditions conservées ne sont pas renforcées et aucune déclaration, autorisation ou pièce de remplacement n’est créée. Le solde financier global n’est pas chiffré.",
+        "effects": [
+          {
+            "kind": "obligation_removed",
+            "measure_id": "apprentissage-fin-rapports-annuels",
+            "description": "Suppression du double circuit annuel de rapports agrégés.",
+            "before": "Rapport annuel de chaque mission puis synthèse annuelle du préfet au comité régional.",
+            "after": "Aucun de ces rapports annuels restant à transmettre n’est exigé.",
+            "unit": "legal_duty",
+            "affected_population": "Missions de contrôle pédagogique, préfets et comité régional",
+            "conditions_and_transition": "Dès l’entrée en vigueur, même pour les années antérieures ; conservation des rapports déjà déposés.",
+            "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+            "source_quote": "Les missions de contrôle pédagogique transmettent chaque année au préfet de région un rapport d'activité.",
+            "proposed_quote": "Les rapports annuels d’activité des missions de contrôle pédagogique, leur synthèse annuelle préfectorale et sa présentation au comité régional ne sont plus exigés"
+          }
+        ]
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000041771594",
+      "number": "R6261-1",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien de l’application territoriale du livre avec ses dérogations et de la consultation des instances locales avant modification. La consultation garantit l’examen des spécificités locales et ne constitue pas une autorisation d’embauche individuelle.",
+        "scope_limitations": "Les décrets de 1972 et les exceptions R6261-2 à R6261-14 gardent leur champ. Les modifications locales proposées dans ce lot nécessitent cette consultation ; elle n’est pas présumée réalisée. Aucun droit public n’est assimilé au contrat privé.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000023098898",
+      "number": "R6261-2",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "La concordance territoriale permet l’application des règles aux ressortissants des chambres de métiers locales sans nouvelle procédure. Sa suppression risquerait de fermer des droits par défaut d’équivalence de champ.",
+        "scope_limitations": "Le décret de 1983 est une référence externe dont la consolidation n’est pas fournie ; aucune modification silencieuse de son champ. La règle d’équivalence n’institue ni durée de l’emploi ni seuil d’indemnité.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000023098352",
+      "number": "R6261-5",
+      "slug": "travail",
+      "status": "rewrite_draft",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "Suppression de la conciliation obligatoire préalable et de l’attente pouvant durer un mois avant la saisine du juge. La conciliation locale demeure volontaire ; l’accès immédiat déjà ouvert en cas d’infraction est conservé et généralisé.",
+        "scope_limitations": "Champ territorial déterminé par R6261-1 et R6261-2 maintenus. Les procédures judiciaires et les délais légaux de recours restent distincts ; aucune suspension automatique inventée. Les accords de conciliation anciens gardent leurs effets.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : les conditions conservées ne sont pas renforcées et aucune déclaration, autorisation ou pièce de remplacement n’est créée. Le solde financier global n’est pas chiffré.",
+        "effects": [
+          {
+            "kind": "obligation_removed",
+            "measure_id": "apprentissage-local-conciliation-facultative",
+            "description": "Suppression du préalable de conciliation imposé.",
+            "before": "Conciliation obligatoire sauf infraction ; saisine faute de conciliation dans le mois.",
+            "after": "Saisine directe possible immédiatement, conciliation volontaire.",
+            "unit": "legal_duty",
+            "affected_population": "Employeurs, apprentis et représentants légaux relevant des chambres de métiers locales",
+            "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; droits antérieurs préservés.",
+            "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+            "source_quote": "La procédure de conciliation n'a pas à être mise en œuvre lorsqu'une infraction a été constatée.",
+            "proposed_quote": "peuvent être portés directement devant la juridiction compétente, sans tentative préalable obligatoire de conciliation ni délai d’attente."
+          }
+        ]
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000023098350",
+      "number": "R6261-9",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien du brevet de maîtrise ou du diplôme ou titre équivalent comme garantie de qualification pédagogique locale. La dérogation de R6261-10 est conservée et débarrassée de son avis préalable : la qualification ne devient pas une interdiction absolue.",
+        "scope_limitations": "La source comporte la répétition « de région de région » ; anomalie préexistante signalée, sans reformulation stylistique du texte maintenu. Le diplôme équivalent et la dérogation future restent ouverts.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000041771589",
+      "number": "R6261-10",
+      "slug": "travail",
+      "status": "rewrite_draft",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "Suppression de l’avis consulaire préalable au dépôt du contrat lorsque le maître d’apprentissage bénéficie d’une dérogation au titre. Maintien de la dérogation pour métiers nouveaux ou cas particuliers nécessaires, aussi bien pour l’avenir que pour les droits antérieurs.",
+        "scope_limitations": "R6261-9 conserve le brevet ou titre équivalent ; R6261-1 impose la consultation institutionnelle avant modification locale, distincte de l’avis individuel supprimé. La dispense ne supprime pas les conditions de sécurité et de compétence autonomes.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : les conditions conservées ne sont pas renforcées et aucune déclaration, autorisation ou pièce de remplacement n’est créée. Le solde financier global n’est pas chiffré.",
+        "effects": [
+          {
+            "kind": "obligation_removed",
+            "measure_id": "apprentissage-local-fin-avis-derogation",
+            "description": "Retrait de l’avis préalable à l’usage de la dérogation.",
+            "before": "Avis des chambres compétentes demandé avant dépôt.",
+            "after": "Dérogation sans avis préalable ni déclaration spéciale.",
+            "unit": "legal_duty",
+            "affected_population": "Maîtres d’apprentissage et employeurs en Moselle, Bas-Rhin et Haut-Rhin",
+            "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; droits antérieurs préservés.",
+            "replacement_or_new_burdens": "Aucune obligation de remplacement ; les règles autonomes conservées restent applicables.",
+            "source_quote": "Dans ce cas, l'avis des chambres des métiers et de l'artisanat compétentes pour les départements du Haut-Rhin, du Bas-Rhin et de la Moselle est demandé avant le dépôt du contrat d'apprentissage.",
+            "proposed_quote": "Cette dérogation n’est subordonnée ni à l’avis préalable des chambres de métiers et de l’artisanat ni à une déclaration spéciale de remplacement."
+          }
+        ]
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000044969984",
+      "number": "R6261-13",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien du taux réduit territorial de taxe d’apprentissage et de l’affectation au financement de l’apprentissage. Il s’agit d’un avantage autonome à conserver tant que la taxe générale existe, non d’une taxe à supprimer par coordination.",
+        "scope_limitations": "Lecture de L6241-1-1 II : 0,44 % pour les établissements des trois départements, contre 0,68 % normalement ; assiette salariale légale inchangée. Le renvoi au I de L6241-2 concerne l’affectation et ne relève pas le taux local.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000039115793",
+      "number": "R6261-15",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "La clause d’application territoriale conserve les exceptions et règles spéciales du contrôle pédagogique. Aucun contrôle additionnel n’est créé par cette articulation ; supprimer la réserve menacerait les régimes locaux favorables.",
+        "scope_limitations": "R6261-16 maintient les experts consulaires compétents. La suppression du rapport annuel de R6251-4 s’applique aussi ici par le renvoi au chapitre, sans recréer cette obligation.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000046074439",
+      "number": "R6261-16",
+      "slug": "travail",
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien des deux contrôles locaux spécialisés, assurés respectivement par les experts de la chambre de métiers Grand Est et des CCI territoriales. La règle spéciale évite d’imposer la composition nationale complète dans ces entreprises.",
+        "scope_limitations": "Le renvoi au 3° de R6251-1 identifie les experts consulaires, non un contrat public. Champ du décret de 1998 inchangé ; note d’entrée en vigueur au 1er janvier 2023 conservée. Pas de rapport annuel rétabli par cette spécialité.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans dossier, délai, registre ou condition supplémentaire. Aucun solde global de coût des codes n’est chiffré.",
+        "effects": []
+      }
     },
     {
       "code_id": "LEGITEXT000006072050",
@@ -790090,29 +791068,61 @@
       "number": "171 P",
       "slug": "impots-annexe-2",
       "status": "rewrite_draft",
-      "evidence_status": "unassessed",
-      "assessment": null,
-      "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "coordination_only",
+        "assessment": "Coordination de fond avec la suppression déjà proposée de l'état spécial au II de 238 bis J : retrait de l'annexe spéciale, de son extrait fiscal et du modèle obligatoire, au lieu de leur reformulation dans le brouillon. Ce n'est pas une seconde réduction d'impôt ni une modification des amortissements.",
+        "scope_limitations": "Sources et propositions de 238 bis J et 171 E lues dans le corpus : 171 E conserve les valeurs au bilan, tandis que 238 bis J retire déjà l'état spécial. Retirer les modèles des arrêtés des 16 octobre 1978 et 14 février 1979 dans ce seul champ ; ces arrêtés hors lot ne sont pas réputés réécrits. Aucun IS annuel sur bénéfices conservés n'est rétabli par les écritures subsistantes.",
+        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un agrément, ni par un registre, ni par une déclaration équivalente. Les contrôles et obligations autonomes restent à leur champ propre ; leur coût global n'est pas chiffré.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "reevaluation-1976-suppression-etat-special",
+            "description": "Retrait réglementaire des documents spéciaux déjà supprimés dans 238 bis J.",
+            "before": "Annexe spéciale et extrait conforme au modèle ministériel joints aux déclarations.",
+            "after": "Plus de dépôt spécial, pièces comptables autonomes préservées.",
+            "unit": "legal_duty",
+            "affected_population": "Personnes physiques ou morales ayant réévalué leurs immobilisations amortissables au 31 décembre 1976",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+            "source_quote": "Ces montants sont présentés séparément par grandes rubriques comptables et selon les mêmes postes que ceux des immobilisations au bilan.",
+            "proposed_quote": "Aucun état spécial de remplacement n'est institué."
+          }
+        ]
+      }
     },
     {
       "code_id": "LEGITEXT000006069569",
       "source_id": "LEGIARTI000018621151",
       "number": "171 AL",
       "slug": "impots-annexe-2",
-      "status": "rewrite_draft",
-      "evidence_status": "unassessed",
-      "assessment": null,
-      "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien nécessaire de la moyenne sur deux années qui amortit les dépassements des limites d'accès au régime SCR. Le texte ne prescrit aucun formulaire, agrément ou justificatif autonome à supprimer ; retirer la règle réduirait un avantage. Le brouillon ne comportait qu'une reformulation, non conservée comme réforme.",
+        "scope_limitations": "Les trois limites (bilan, chiffre d'affaires hors taxes des services accessoires, bénéfice correspondant) et l'exception au premier exercice d'option sont conservées. L'expression source « moyenne de cette limite constatée » est ambiguë ; le texte de la loi 85-695, extérieur au corpus fourni, doit être confronté avant toute correction. Le 3° septies de 208 lu dans le corpus préserve l'exonération spéciale, distincte de l'IS ordinaire à la distribution.",
+        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien intégral de la source, sans nouvelle déclaration, donnée ni condition. Aucun solde global des codes n'est chiffré.",
+        "effects": []
+      }
     },
     {
       "code_id": "LEGITEXT000006069569",
       "source_id": "LEGIARTI000024446655",
       "number": "171 AM",
       "slug": "impots-annexe-2",
-      "status": "rewrite_draft",
-      "evidence_status": "unassessed",
-      "assessment": null,
-      "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien nécessaire des modalités du quota de 50 %, en particulier des maintiens fictifs favorables après difficultés, cession ou échange et des deux preuves alternatives d'investissement direct. Les exclusions du double compte et du risque assumé par des tiers assurent la réalité du quota ; aucune pièce périodique distincte n'est prescrite ici. Le brouillon était seulement stylistique.",
+        "scope_limitations": "Conserver a à f et II : cinq ans à la valeur d'acquisition au b, deux ans à la valeur nette comptable aux c et d, durée d'engagement supérieure au d, inventaire ou engagements au e. Le II renvoie au CMF R.214-35 II, non fourni : concordance extérieure non certifiée, sans contradiction locale démontrée ni nouveau renvoi inventé. La discordance dépréciation/provision du b est préexistante et signalée.",
+        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien intégral de la source, sans nouvelle déclaration, donnée ni condition. Aucun solde global des codes n'est chiffré.",
+        "effects": []
+      }
     },
     {
       "code_id": "LEGITEXT000006069569",
@@ -790120,39 +791130,90 @@
       "number": "171 AN",
       "slug": "impots-annexe-2",
       "status": "rewrite_draft",
-      "evidence_status": "unassessed",
-      "assessment": null,
-      "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "Réduction de fond supplémentaire : suppression de la notification sous un mois et de la limitation au premier manquement. Le quota de 50 % et le rétablissement au plus tard à l'inventaire suivant suffisent à borner le droit de régularisation ; un incident passé ou une formalité omise ne justifient plus la perte de l'exonération.",
+        "scope_limitations": "Le renvoi de 171 AQ au service mentionné dans cet article est retiré dans le même lot. La loi 85-695 demeure le fondement du quota et doit être coordonnée si elle contient des restrictions autonomes ; elle n'est pas réputée réécrite. Pas de suppression de quota, de contrôle ni de droit fiscal des associés.",
+        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un agrément, ni par un registre, ni par une déclaration équivalente. Les contrôles et obligations autonomes restent à leur champ propre ; leur coût global n'est pas chiffré.",
+        "effects": [
+          {
+            "kind": "obligation_removed",
+            "measure_id": "scr-regularisation-sans-notification",
+            "description": "Suppression de la notification spécifique sous un mois.",
+            "before": "Information du service dans le mois de l'inventaire obligatoire pour conserver le régime.",
+            "after": "Régularisation au prochain inventaire sans information particulière.",
+            "unit": "legal_duty",
+            "affected_population": "Sociétés de capital-risque",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+            "source_quote": "dans le mois qui suit l'inventaire ayant fait apparaître que le quota n'a pas été respecté",
+            "proposed_quote": "Ce maintien n'est subordonné ni à une information particulière du service des impôts ni au caractère de premier manquement."
+          },
+          {
+            "kind": "relief_extended",
+            "measure_id": "scr-regularisation-manquements-repetes",
+            "description": "Ouverture du maintien du régime aux manquements ultérieurs régularisés.",
+            "before": "Faculté réservée au premier manquement.",
+            "after": "Faculté ouverte à chaque manquement régularisé au plus tard à l'inventaire suivant.",
+            "unit": "legal_duty",
+            "affected_population": "Sociétés de capital-risque",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+            "source_quote": "qu'il s'agisse du premier manquement",
+            "proposed_quote": "Ce maintien n'est subordonné ni à une information particulière du service des impôts ni au caractère de premier manquement."
+          }
+        ]
+      }
     },
     {
       "code_id": "LEGITEXT000006069569",
       "source_id": "LEGIARTI000006294288",
       "number": "171 AO",
       "slug": "impots-annexe-2",
-      "status": "rewrite_draft",
-      "evidence_status": "unassessed",
-      "assessment": null,
-      "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien nécessaire de la diversification : le plafond de 25 % empêche qu'un régime fiscal destiné au capital-risque serve principalement à une seule participation. Le délai de cinq exercices protège les sociétés dont la situation nette diminue. Aucun agrément, relevé ou justificatif autonome n'est imposé ici ; aucune coupe supplémentaire suffisamment justifiée n'est retenue et le brouillon stylistique est abandonné.",
+        "scope_limitations": "Renvoi interne à 171 AM lu intégralement et conservé ; son mode d'appréciation de la situation nette n'est pas modifié. Le cinquième exercice suit celui du dépassement et la tolérance reste liée à une diminution de la situation nette. Le régime spécial ne devient pas un nouvel impôt sur les bénéfices conservés.",
+        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien intégral de la source, sans nouvelle déclaration, donnée ni condition. Aucun solde global des codes n'est chiffré.",
+        "effects": []
+      }
     },
     {
       "code_id": "LEGITEXT000006069569",
       "source_id": "LEGIARTI000006294290",
       "number": "171 AP",
       "slug": "impots-annexe-2",
-      "status": "rewrite_draft",
-      "evidence_status": "unassessed",
-      "assessment": null,
-      "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien nécessaire de la formule de transparence pour les investissements indirects : supprimer la pondération empêcherait de déterminer la fraction éligible ou compterait deux fois des actifs. Il n'existe ici ni dépôt ni agrément autonome ; le brouillon ne modifiait que la rédaction.",
+        "scope_limitations": "I, 1°, 2°, dénominateur et II conservés. Prix de souscription ou d'acquisition, valeur brute comptable des avances et actif brut comptable demeurent distincts. Renvois au f et aux troisième et quatrième alinéas de la loi 85-695 : source externe non fournie, sans concordance extérieure affirmée.",
+        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien intégral de la source, sans nouvelle déclaration, donnée ni condition. Aucun solde global des codes n'est chiffré.",
+        "effects": []
+      }
     },
     {
       "code_id": "LEGITEXT000006069569",
       "source_id": "LEGIARTI000006294291",
       "number": "171 AP bis",
       "slug": "impots-annexe-2",
-      "status": "rewrite_draft",
-      "evidence_status": "unassessed",
-      "assessment": null,
-      "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+      "status": "retained_unchanged",
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "retained_necessary",
+        "assessment": "Maintien nécessaire du calcul applicable aux entités de placement : il permet de reconnaître les souscriptions libérées et les investissements indirects dans le quota, sans assimilation erronée à l'actif brut comptable de 171 AP. Aucune obligation documentaire autonome n'est créée ici ; la reformulation antérieure n'apportait aucun allègement.",
+        "scope_limitations": "Dernier inventaire, souscriptions effectivement libérées, prix des titres, montant des avances et actif de l'entité conservés, ainsi que le II relatif au quatrième alinéa du 1° de l'article 1er-1. Les renvois externes à la loi 85-695 ne sont pas présentés comme vérifiés sur un texte non fourni.",
+        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien intégral de la source, sans nouvelle déclaration, donnée ni condition. Aucun solde global des codes n'est chiffré.",
+        "effects": []
+      }
     },
     {
       "code_id": "LEGITEXT000006069569",
@@ -790160,9 +791221,55 @@
       "number": "171 AQ",
       "slug": "impots-annexe-2",
       "status": "rewrite_draft",
-      "evidence_status": "unassessed",
-      "assessment": null,
-      "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "Réduction de fond : retrait de la notification fiscale préalable, du plafond de trésorerie de 20 % et de la distribution imposée à la clôture suivante. La gestion progressive d'un portefeuille en extinction ne nécessite ni sortie forcée de trésorerie ni information séparée préalable. La décision de l'assemblée, le délai initial de cinq exercices, l'interdiction de nouvelles augmentations de capital et les restrictions d'investissement restent les garanties du régime spécial.",
+        "scope_limitations": "Le renvoi devenu vide à 171 AN est retiré. Le 3° septies de 208 lu dans le corpus protège le régime SCR ; la loi 85-695 doit être coordonnée si elle comporte une obligation autonome correspondante, sans la déclarer réécrite. Il s'agit d'allégements du régime spécial, non d'une extension automatique de l'IS ordinaire. II a conserve la dispense des quotas de 50 % et 25 % ; II b à d et III a/b restent inchangés, y compris l'ambiguïté de rattachement de « dont les titres ou droits figurent déjà à son actif ».",
+        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un agrément, ni par un registre, ni par une déclaration équivalente. Les contrôles et obligations autonomes restent à leur champ propre ; leur coût global n'est pas chiffré.",
+        "effects": [
+          {
+            "kind": "obligation_removed",
+            "measure_id": "scr-cessation-sans-information-prealable",
+            "description": "Retrait de la notification préalable distincte.",
+            "before": "Information du service fiscal avant cessation.",
+            "after": "Décision de l'assemblée sans notification préalable spécifique.",
+            "unit": "legal_duty",
+            "affected_population": "Sociétés de capital-risque",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+            "source_quote": "après en avoir informé le service des impôts mentionné à l'article 171 AN",
+            "proposed_quote": "Aucune déclaration de remplacement n'est exigée."
+          },
+          {
+            "kind": "obligation_removed",
+            "measure_id": "scr-cessation-liberte-tresorerie",
+            "description": "Retrait du plafond de placement de trésorerie.",
+            "before": "Trésorerie placée limitée à 20 % de la situation nette comptable.",
+            "after": "Trésorerie placée sans plafond de proportion après cessation, autres conditions préservées.",
+            "unit": "legal_duty",
+            "affected_population": "Sociétés de capital-risque",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+            "source_quote": "c) Le placement d'une trésorerie au plus égale à 20 % de sa situation nette comptable.",
+            "proposed_quote": "c) Le placement de sa trésorerie, sans limite de proportion de sa situation nette comptable."
+          },
+          {
+            "kind": "obligation_removed",
+            "measure_id": "scr-cessation-fin-distribution-forcee",
+            "description": "Suppression du délai de distribution imposé.",
+            "before": "Répartition au plus tard à la clôture de l'exercice suivant la réalisation.",
+            "after": "Conservation sans délai obligatoire, engagements envers actionnaires préservés.",
+            "unit": "legal_duty",
+            "affected_population": "Sociétés de capital-risque",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+            "source_quote": "qui doit intervenir au plus tard à la clôture de l'exercice suivant leur réalisation",
+            "proposed_quote": "sans délai de distribution imposé par le présent article."
+          }
+        ]
+      }
     },
     {
       "code_id": "LEGITEXT000006069569",
@@ -790170,9 +791277,29 @@
       "number": "171 AR",
       "slug": "impots-annexe-2",
       "status": "rewrite_draft",
-      "evidence_status": "unassessed",
-      "assessment": null,
-      "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "Réduction de fond ciblée : la mention expresse dans la déclaration peut désormais remplacer l'envoi d'une lettre distincte. La lettre simple reste possible pour ne pas fermer la voie favorable existante, notamment lorsque le délai d'option précède celui de la déclaration. La volonté d'opter reste prouvable sans second support imposé.",
+        "scope_limitations": "Le 3° septies de 208 et son exonération SCR sont conservés. Le délai fixé par la loi 85-695, non reproduit dans la source et non inventé ici, n'est pas modifié ; la déclaration doit permettre l'exercice dans ce délai. Aucun agrément ni confirmation annuelle ajoutés. Les services doivent accepter la mention expresse sans formulaire supplémentaire.",
+        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un agrément, ni par un registre, ni par une déclaration équivalente. Les contrôles et obligations autonomes restent à leur champ propre ; leur coût global n'est pas chiffré.",
+        "effects": [
+          {
+            "kind": "obligation_merged",
+            "measure_id": "scr-option-mention-declaration",
+            "description": "Fusion facultative du support de l'option avec la déclaration de résultats.",
+            "before": "Option uniquement par lettre simple distincte.",
+            "after": "Lettre simple ou mention expresse dans la déclaration, mêmes délais légaux.",
+            "unit": "legal_duty",
+            "affected_population": "Sociétés de capital-risque",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+            "source_quote": "s'effectue par lettre simple adressée au service des impôts",
+            "proposed_quote": "Elle peut également être exercée par une mention expresse dans cette déclaration, sans lettre distincte et sans modification des délais légaux d'option."
+          }
+        ]
+      }
     },
     {
       "code_id": "LEGITEXT000006069569",
@@ -790180,9 +791307,42 @@
       "number": "171 AS",
       "slug": "impots-annexe-2",
       "status": "rewrite_draft",
-      "evidence_status": "unassessed",
-      "assessment": null,
-      "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "Réduction de fond : suppression des deux annexes fiscales spécifiques, l'une sur les services accessoires, l'autre sur les bénéfices et réserves distribuables. Les données de comptabilité nécessaires à l'exonération et aux distributions restent contrôlables sans état annuel spécial ni modèle imposé. Le I était déjà abrogé et n'est pas compté comme nouvelle coupe.",
+        "scope_limitations": "Le 3° septies de 208 lu dans le corpus maintient l'exonération. Cette mesure vise les pièces propres à 171 AS, distinctes de celles de 242 quinquies déjà supprimées dans le projet. Adapter les modèles administratifs correspondants, sans les reconstituer sous couvert d'IS à la distribution ; aucune suppression de la comptabilité des réserves taxées ou exonérées n'est affirmée.",
+        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un agrément, ni par un registre, ni par une déclaration équivalente. Les contrôles et obligations autonomes restent à leur champ propre ; leur coût global n'est pas chiffré.",
+        "effects": [
+          {
+            "kind": "obligation_removed",
+            "measure_id": "scr-suppression-releves-accessoires",
+            "description": "Retrait du relevé spécial des prestations accessoires.",
+            "before": "Pièce spéciale jointe à chaque déclaration de résultats.",
+            "after": "Plus de pièce spéciale jointe ; comptabilité et contrôle autonomes conservés.",
+            "unit": "legal_duty",
+            "affected_population": "Sociétés de capital-risque",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+            "source_quote": "le montant du chiffre d'affaires hors taxes et du bénéfice retirés de ces prestations.",
+            "proposed_quote": "Aucun modèle ou document de remplacement n'est exigé."
+          },
+          {
+            "kind": "obligation_removed",
+            "measure_id": "scr-suppression-etat-reserves",
+            "description": "Retrait de l'état normalisé des bénéfices et réserves distribuables.",
+            "before": "Pièce spéciale jointe à chaque déclaration de résultats.",
+            "after": "Plus de pièce spéciale jointe ; comptabilité et contrôle autonomes conservés.",
+            "unit": "legal_duty",
+            "affected_population": "Sociétés de capital-risque",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+            "source_quote": "un état, établi selon un modèle fourni par l'administration, des bénéfices et réserves distribuables",
+            "proposed_quote": "Aucun modèle ou document de remplacement n'est exigé."
+          }
+        ]
+      }
     },
     {
       "code_id": "LEGITEXT000006069569",
@@ -790190,9 +791350,29 @@
       "number": "171 AS bis",
       "slug": "impots-annexe-2",
       "status": "rewrite_draft",
-      "evidence_status": "unassessed",
-      "assessment": null,
-      "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "coordination_only",
+        "assessment": "Coordination nécessaire avec l'abrogation déjà proposée de 242 quinquies : supprimer les mentions et les états complémentaires réglementaires qui rétabliraient le dépôt. Le papier libre et le formulaire ne sont plus exigés ; les quotas de 50 % et 20 % et les avantages subsistent. Ce retrait d'exécution n'est pas une seconde suppression indépendante.",
+        "scope_limitations": "Source et proposition de 242 quinquies lues intégralement ; la suppression vise toutes transmissions restantes, y compris les exercices anciens, conformément à cette proposition. La note historique relative aux articles 10 et 11 du décret 2006-1726 ne fixe pas l'entrée en vigueur future. Les calculs de 171 AP et AP bis sont conservés ; la loi 85-695 et les obligations de marché autonomes ne sont pas abrogées.",
+        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un agrément, ni par un registre, ni par une déclaration équivalente. Les contrôles et obligations autonomes restent à leur champ propre ; leur coût global n'est pas chiffré.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "capital-risque-suppression-etats-242-quinquies",
+            "description": "Suppression des modalités d'états déjà retirés par la réforme de 242 quinquies.",
+            "before": "État principal et états complémentaires au titre du II de 242 quinquies.",
+            "after": "Aucun dépôt ni formulaire d'exécution, mêmes avantages et quotas.",
+            "unit": "legal_duty",
+            "affected_population": "Sociétés de capital-risque",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+            "source_quote": "Les sociétés de capital-risque qui ont investi dans des sociétés mentionnées à la première phrase du f du 1° de l'article 1er-1 de la loi n° 85-695 du 11 juillet 1985 ou dans des entités mentionnées au d du même 1° joignent en outre à l'état mentionné au I :",
+            "proposed_quote": "Aucune transmission de remplacement n'est instituée."
+          }
+        ]
+      }
     },
     {
       "code_id": "LEGITEXT000006069569",
@@ -790200,9 +791380,29 @@
       "number": "171 AT",
       "slug": "impots-annexe-2",
       "status": "rewrite_draft",
-      "evidence_status": "unassessed",
-      "assessment": null,
-      "unassessed_reason": "missing_stale_or_ambiguous_assessment"
+      "evidence_status": "worker_declaration",
+      "assessment": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "Réduction de fond ciblée : suppression de la communication distincte des engagements et modalités déjà remis lors de la souscription ainsi que des cessions exécutées ou enregistrées par le gestionnaire. Le gestionnaire conserve l'information utile à l'exonération sans notification répétée ; les engagements, le réinvestissement et l'information sur les autres cessions demeurent.",
+        "scope_limitations": "Lecture intégrale de 163 quinquies B officiel et de sa proposition fournie : cinq ans de conservation, réinvestissement immédiat et indisponibilité, limite familiale de 25 % et période antérieure de cinq ans demeurent dans leur champ ; il ne s'agit pas du délai PEA réduit à trois ans. Le III protège invalidité, décès, retraite et licenciement. Le renvoi explicite nouveau au III vise la même cible fournie. Aucun contrat public, préavis de quinze jours ou seuil d'indemnité n'est visé par 171 AT.",
+        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un agrément, ni par un registre, ni par une déclaration équivalente. Les contrôles et obligations autonomes restent à leur champ propre ; leur coût global n'est pas chiffré.",
+        "effects": [
+          {
+            "kind": "obligation_removed",
+            "measure_id": "fonds-risque-fin-notifications-redondantes",
+            "description": "Dispense expresse des communications distinctes déjà couvertes par les documents ou opérations du gestionnaire.",
+            "before": "Information du gestionnaire sans dispense expresse pour les données déjà reçues ou les cessions exécutées par lui.",
+            "after": "Pas de notification distincte dans ces seuls cas ; autres informations et engagements maintenus.",
+            "unit": "legal_duty",
+            "affected_population": "Porteurs personnes physiques de FCPR ou FPCI",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi proposée ; droits et périodes antérieurs préservés selon le texte.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de comptabilité et de contrôle ne sont pas supprimées.",
+            "source_quote": "ainsi que de la cession de parts.",
+            "proposed_quote": "Aucune notification distincte n'est exigée pour les engagements et modalités figurant dans les documents de souscription déjà remis à la société de gestion ni pour les cessions qu'elle a elle-même exécutées ou enregistrées."
+          }
+        ]
+      }
     },
     {
       "code_id": "LEGITEXT000006069569",
