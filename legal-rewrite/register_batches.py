@@ -148,9 +148,17 @@ def _register(db,root,commit=False):
         try:
             db.execute('BEGIN IMMEDIATE')
             for key,(row,body,start,end) in records.items():
-                db.execute('INSERT INTO drafts VALUES(?,?,?,?,?,?,?) ON CONFLICT(code_id,source_id) DO UPDATE SET status=excluded.status,proposed_xml=excluded.proposed_xml,reason=excluded.reason,review_notes=excluded.review_notes',(*key,row['source_sha256'],row.get('status','rewrite_draft'),row['proposed_xml'],row['reason'],row['review_notes']))
-                notes=source_notes(db,*key)
-                db.execute('INSERT INTO draft_sources VALUES(?,?,?,?,?) ON CONFLICT(code_id,source_id) DO NOTHING',(*key,source_evidence(body,notes),start,end))
+                values=(*key,row['source_sha256'],row.get('status','rewrite_draft'),row['proposed_xml'],row['reason'],row['review_notes'])
+                current=db.execute('SELECT code_id,source_id,source_sha256,status,proposed_xml,reason,review_notes FROM drafts WHERE code_id=? AND source_id=?',key).fetchone()
+                # Full validation and batch-hash recheck above remain mandatory.
+                # Compare every stored field, preserving None versus empty text.
+                if current!=values:
+                    db.execute('INSERT INTO drafts VALUES(?,?,?,?,?,?,?) ON CONFLICT(code_id,source_id) DO UPDATE SET status=excluded.status,proposed_xml=excluded.proposed_xml,reason=excluded.reason,review_notes=excluded.review_notes',values)
+                # Existing source evidence is deliberately immutable (the previous
+                # INSERT used DO NOTHING). Parse notes only when evidence is absent.
+                if db.execute('SELECT 1 FROM draft_sources WHERE code_id=? AND source_id=?',key).fetchone() is None:
+                    notes=source_notes(db,*key)
+                    db.execute('INSERT INTO draft_sources VALUES(?,?,?,?,?) ON CONFLICT(code_id,source_id) DO NOTHING',(*key,source_evidence(body,notes),start,end))
             db.commit()
         except Exception:
             db.rollback();raise
