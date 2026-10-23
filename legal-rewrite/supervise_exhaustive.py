@@ -109,7 +109,7 @@ def fresh_tail():
     return len(remaining),held,report['pending_reference_reviews']
 
 
-def action(status,live,workers,locked,previous,held,now,reference_pending=None):
+def action(status,live,workers,locked,previous,held,now,reference_pending=None,tail_paused=False):
     """Decide without mutating corpus, files or processes; easy to regression-test."""
     if live:
         if len(live)>1:return 'needs_attention','Multiple coordinators detected; no new process launched'
@@ -123,6 +123,8 @@ def action(status,live,workers,locked,previous,held,now,reference_pending=None):
             # reset time or make an unbounded series of authenticated requests.
             return 'needs_attention','Authentication or usage limit requires resolution'
         return 'needs_attention','Validation blocked the coordinator; checks remain binding'
+    if tail_paused and type(status.get('pending')) is int and status['pending']<=len(held):
+        return 'review_tail_paused','Explicit review-tail limit is zero and current canonical inventory has no accessible new work'
     if status.get('pending')==0 and status.get('prior_drafts_awaiting_review')==0 and reference_pending==0:
         return 'awaiting_final_audit','Coverage is not a complete legal or reference audit'
     if status.get('pending') is not None and held and status['pending']<=len(held) and status.get('prior_drafts_awaiting_review')==0 and reference_pending==0:
@@ -158,7 +160,9 @@ def checkpoint_metadata(folder):
 
 
 def launch(folder):
-    command=[sys.executable,'-u',str(RUNNER),'--workers',str(worker_settings(RUNTIME)['capacity']),'--interleave-review',
+    plan=worker_settings(RUNTIME)
+    mode='--recover-new-before-reviews' if plan.get('continuation_mode')=='recover_new_before_reviews' else '--interleave-review'
+    command=[sys.executable,'-u',str(RUNNER),'--workers',str(plan['capacity']),mode,
              '--export-every','1000','--deploy-on-export','--publish-at-end']
     with (folder/'continuation.log').open('ab',buffering=0) as output:
         child=subprocess.Popen(command,cwd=HERE,stdin=subprocess.DEVNULL,
@@ -190,7 +194,23 @@ def check():
         if not live and not workers and not locked and status.get('pending') is not None and status['pending']<=len(held) and status.get('prior_drafts_awaiting_review')==0:
             remaining,held,reference_pending=fresh_tail()
             status=status|{'pending':remaining}
-        decision,reason=action(status,live,workers,locked,previous,held,now,reference_pending)
+        control=read_json(RUNTIME/'worker-limit.json',{})
+        plan=worker_settings(RUNTIME)
+        tail_paused=False;recovery_state=None
+        if (not live and not workers and not locked and plan.get('continuation_mode')=='recover_new_before_reviews' and
+                type(control.get('review_tail_limit')) is int and control['review_tail_limit']==0):
+            import run_exhaustive
+            from continuation_tail import fresh_recovery_state
+            recovery_state=fresh_recovery_state(run_exhaustive)
+            held=recovery_state['held']
+            status=status|{'pending':recovery_state['open_accessible_new']+len(held)}
+            phase=read_json(RUNTIME/'continuation-phase.json',{})
+            run=read_json(RUNTIME/'coordinator-run.json',{})
+            tail_paused=(recovery_state['open_accessible_new']==0 and phase.get('phase') in {'review_tail','review_tail_drained'} and
+                         type(run.get('pid')) is int and phase.get('coordinator_pid')==run['pid'] and
+                         phase.get('complete_inventory',{}).get('complete') is True and
+                         phase['complete_inventory'].get('identity_sha256')==recovery_state['inventory'].get('identity_sha256'))
+        decision,reason=action(status,live,workers,locked,previous,held,now,reference_pending,tail_paused)
         promotion=None
         if decision=='monitoring':
             def refresh_promotion_inputs():
@@ -204,6 +224,7 @@ def check():
                'consecutive_unexpected_exits':failures,
                'next_start_after_unix':previous.get('next_start_after_unix',0),
                'fresh_pending_reference_reviews':reference_pending,
+               'fresh_recovery_state':recovery_state,
                'worker_configuration':worker_settings(RUNTIME),
                'exhaustive_rewriting_complete':False,'semantic_review_by_jurist':False}
         if promotion is not None:state['parallelism_evaluation']=promotion

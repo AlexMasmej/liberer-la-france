@@ -4,6 +4,14 @@ import json
 MAX_WORKERS=8
 LEGACY_MAX_WORKERS=6
 
+def known_empty_manual_slots(runtime):
+    """Unknown reservations are never equivalent to an empty inventory."""
+    try:agents=json.loads((runtime/'manual-agent-slots.json').read_text())
+    except (OSError,ValueError) as error:raise ValueError('Manual reservation inventory is unknown') from error
+    if not isinstance(agents,list) or agents:
+        raise ValueError('Manual reservation inventory must be explicitly empty')
+    return agents
+
 def _roles(value, *, ceiling=None):
     if not isinstance(value,dict) or set(value)!={'new','review'}:
         raise ValueError('Both drafting and review limits must be explicit')
@@ -30,6 +38,12 @@ def settings(runtime):
             raise ValueError('Role capacities must sum to the authorized worker count')
     elif plan['capacity']>LEGACY_MAX_WORKERS:
         raise ValueError('Extra capacity requires separate drafting and review limits')
+    tail=plan.get('review_tail_capacity')
+    if tail is not None and (type(tail) is not int or not 1<=tail<=MAX_WORKERS or roles is None):
+        raise ValueError('Invalid explicit review-tail authorization')
+    mode=plan.get('continuation_mode')
+    if mode is not None and (mode!='recover_new_before_reviews' or tail is None):
+        raise ValueError('Invalid explicit continuation mode')
     return plan
 
 def drafting_slots(runtime,manual_agents=()):
@@ -37,6 +51,12 @@ def drafting_slots(runtime,manual_agents=()):
 
 def slot_document(runtime,manual_agents=()):
     plan=settings(runtime)
+    phase_path=runtime/'continuation-phase.json'
+    phase=json.loads(phase_path.read_text()) if phase_path.exists() else {}
+    if phase.get('phase')=='review_tail':
+        if manual_agents:raise ValueError('Manual reservations require a new coordination and fully drained review tail')
+        admission_limits(runtime,plan['capacity'],review_tail=True)
+        return json.loads((runtime/'worker-limit.json').read_text())
     if plan.get('role_limits') is None:
         return {'workers':max(1,plan['current_workers']-len(manual_agents))}
     roles=dict(plan['role_limits'])
@@ -45,7 +65,7 @@ def slot_document(runtime,manual_agents=()):
     roles['new']-=len(manual_agents)
     return {'workers':sum(roles.values()),'role_limits':roles}
 
-def admission_limits(runtime,maximum):
+def admission_limits(runtime,maximum,*,review_tail=False):
     """One atomic control file may pause reviews without borrowing drafting slots."""
     if type(maximum) is not int or not 1<=maximum<=MAX_WORKERS:
         raise ValueError('Invalid coordinator worker capacity')
@@ -65,4 +85,13 @@ def admission_limits(runtime,maximum):
     roles=_roles(document.get('role_limits',ceiling),ceiling=ceiling)
     if sum(roles.values())>min(maximum,total):
         raise ValueError('Role limits exceed the effective worker limit')
+    if review_tail:
+        tail=plan.get('review_tail_capacity')
+        if tail is None:raise ValueError('Review-tail reallocation requires explicit task authorization')
+        known_empty_manual_slots(runtime)
+        limit=document.get('review_tail_limit')
+        if type(limit) is not int or not 0<=limit<=min(total,tail):
+            raise ValueError('Explicit review_tail_limit must be within the effective task capacity')
+        total=min(maximum,total,tail)
+        return {'workers':total,'role_limits':{'new':0,'review':min(limit,total)}}
     return {'workers':min(maximum,total),'role_limits':roles}
