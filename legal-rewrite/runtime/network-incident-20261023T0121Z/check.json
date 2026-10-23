@@ -1,0 +1,54 @@
+{
+  "captured_at_utc": "2026-10-23T01:23:05.002961+00:00",
+  "state": "routing_recurrence_unresolved",
+  "coordinator_pid": 3122,
+  "configured_limits": {
+    "workers": 7,
+    "role_limits": {
+      "new": 6,
+      "review": 1
+    }
+  },
+  "workers_observed": 7,
+  "fresh_native_responses_verified": 0,
+  "deferred_jobs": 22,
+  "new_deferred_jobs": 19,
+  "review_deferred_jobs": 3,
+  "new_failed_source_identities": 456,
+  "new_failed_identities_still_absent": 456,
+  "prior_failed_review_identities": 36,
+  "prior_failed_reviews_still_pending": 36,
+  "all_failed_source_notes_version_guards_match": true,
+  "all_failed_ids_retained_in_persistent_startup_queue": true,
+  "persistent_queue_does_not_prove_live_readmission": true,
+  "last_accepted_metric": {
+    "coordinator_pid": 3122,
+    "slug": "travail",
+    "index": 410,
+    "kind": "new",
+    "started_at_unix": 1792708459.583241,
+    "outcome": "accepted",
+    "attempts": 2,
+    "retries": [
+      "invocation"
+    ],
+    "job": "travail-00410",
+    "articles": 24,
+    "model": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "execution_session_id": "01a165c9-c414-7532-8840-b5e3b7686f51",
+    "execution_verified": true,
+    "finished_at_unix": 1792711542.0321898,
+    "duration_seconds": 3082.497008999999
+  },
+  "last_accepted_at_utc": "2026-10-22T23:25:42.032190+00:00",
+  "pending_first_pass": 1851,
+  "pending_prior_reviews": 5103,
+  "additional_treatments_since_current_audit": 156,
+  "new_snapshot_required_by_threshold": false,
+  "no_authenticated_probe_or_model_invocation": true,
+  "no_model_or_quota_reset": true,
+  "no_pipeline_code_policy_slot_or_process_change": true,
+  "root_cause_beyond_observed_native_routing_transport_failure_established": false,
+  "completion_claimed": false
+}

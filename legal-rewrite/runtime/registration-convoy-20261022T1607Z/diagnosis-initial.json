@@ -1,0 +1,14 @@
+{
+  "coordinator_pid": 75807,
+  "captured_at_unix": 1792685665.7782888,
+  "diagnosis": "Whole-corpus review registration holds writer lock; new acceptance waits for it while holding global progress lock. Native agents finish, all admission slots remain occupied until registrations complete. CPU and two stack samples show registration work, not a proven deadlock.",
+  "all_source_reference_benefit_impact_gates_preserved": true,
+  "automatic_restart_requested": false,
+  "free_bytes": 4727660544,
+  "files": {
+    "run_exhaustive.py": "1c66699d0b54334c099460546c8bd1cfced0a831336a544caf17b7b928538f7e",
+    "review_prior.py": "0f92e59f5df1e761ddc9bfbd0246ffbf2c34b1456db58356dd8423d80322be8e",
+    "register_batches.py": "b9d78f2eb677f7b89e1e572471b76694743cecba21bec451cb0b79351beb7999",
+    "review_lanes.py": "5a0fbfc04e9e2e4d6e6b315308425e6a807e5b2134a4dddd09ac65cfae22a1c5"
+  }
+}

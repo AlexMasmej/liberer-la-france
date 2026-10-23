@@ -1,0 +1,695 @@
+--- a/continuation_tail.py
++++ b/continuation_tail.py
+@@ -0,0 +1,315 @@
++"""Explicit continuation after a prior coordinator has drained.
++
++No independent model invocation or registration path. The coordinator must own
++its existing process lock; every job uses its common admission/lease ledger and
++unchanged execution, source, policy, benefit, impact, reference and commit guards.
++"""
++import json
++import os
++import fcntl
++import hashlib
++from contextlib import nullcontext
++import sqlite3
++import time
++from pathlib import Path
++from register_batches import writer_lock
++from contrat_unique_priority import article_priority, priority
++from sru_context import priority as sru_priority
++from worker_capacity import known_empty_manual_slots
++
++
++def verify_complete_inventory(coordinator,sources):
++    """Reconcile full identities against configuration and official structures.
++
++    Reads the existing coverage/config/plan and canonical structures, with no
++    export, backup or second database. The author's already pinned inventory
++    totals must agree with every collection and the complete canonical ID set.
++    """
++    from ingest import inventory
++    root=coordinator.HERE
++    config_raw=(root/'corpus.json').read_text()
++    coverage_raw=(coordinator.CORPUS/'coverage.json').read_text()
++    config=json.loads(config_raw);coverage=json.loads(coverage_raw)
++    configured=config['codes']+config.get('annexes',[])
++    slugs=list(coordinator.SLUGS)
++    entries={a['slug']:a for a in configured}
++    if len(entries)!=len(configured) or set(entries)!=set(slugs) or not isinstance(sources,dict) or set(sources)!=set(slugs):
++        raise ValueError('Complete configured source inventory is unknown or inconsistent')
++    covered={a['slug']:a for a in coverage['codes']}
++    if len(covered)!=len(coverage['codes']) or set(covered)!=set(slugs) or coverage.get('sources_complete') is not True or coverage.get('missing_archives')!=[] or not coverage.get('as_of'):
++        raise ValueError('Complete canonical coverage is unknown or incomplete')
++    plan=coordinator.worker_settings(coordinator.RUNTIME)
++    pinned=[plan[k] for k in ['baseline_three_worker_status','current_stage_initial_status'] if isinstance(plan.get(k),dict)]
++    if not pinned:raise ValueError('Canonical inventory totals are not pinned to the task plan')
++    counts={slug:covered[slug]['expected_articles'] for slug in slugs}
++    if any(type(n) is not int or n<=0 for n in counts.values()):raise ValueError('Canonical article counts are unknown')
++    for receipt in pinned:
++        values=receipt.get('codes')
++        if not isinstance(values,list):raise ValueError('Pinned collection inventory is unknown')
++        expected={r['slug']:r['source_records'] for r in values}
++        if len(expected)!=len(values) or expected!=counts or type(receipt.get('source_records')) is not int or receipt['source_records']!=sum(counts.values()):
++            raise ValueError('Pinned full canonical inventory changed; review required')
++    identities=[]
++    db=sqlite3.connect((root/'corpus.sqlite').resolve().as_uri()+'?mode=ro',uri=True,timeout=600)
++    try:
++        db.execute('BEGIN')
++        canonical={(c,i):(sha,number) for c,i,sha,number in db.execute('SELECT code_id,id,source_sha256,number FROM articles')}
++        for slug in slugs:
++            rows=sources[slug];code=entries[slug]['id'];report=covered[slug]
++            if not isinstance(rows,list) or len(rows)!=counts[slug] or report.get('inventory_reconciled') is not True or report.get('imported_versions')!=counts[slug]:
++                raise ValueError('Current collection inventory is truncated or incomplete: '+slug)
++            tree=inventory(db,code,coverage['as_of'])
++            ids=[a['source_id'] for a in rows]
++            if tree.get('missing_sections') or tree.get('missing_articles') or len(ids)!=len(set(ids)) or set(ids)!=set(tree['article_ids']) or len(tree['article_ids'])!=counts[slug]:
++                raise ValueError('Complete canonical source identities differ: '+slug)
++            for a in rows:
++                key=(a['code_id'],a['source_id'])
++                if a['code_id']!=code or canonical.get(key)!=(a['source_sha256'],a['number']):
++                    raise ValueError('Canonical source identity changed: '+str(key))
++                identities.append((a['code_id'],a['source_id'],a['source_sha256'],a['number']))
++    finally:db.close()
++    return {'complete':True,'source_records':sum(counts.values()),'collections':counts,
++            'as_of':coverage['as_of'],'identity_sha256':hashlib.sha256(json.dumps(sorted(identities),ensure_ascii=False).encode()).hexdigest(),
++            'config_sha256':hashlib.sha256(config_raw.encode()).hexdigest(),
++            'coverage_sha256':hashlib.sha256(coverage_raw.encode()).hexdigest()}
++
++
++def fresh_new_jobs(coordinator,sources,slugs,*,use_writer_lock=True):
++    """Reconstruct canonical open identities, never replay saved failed answers.
++
++    Small read transaction only: no DB copy, schema write or snapshot export.
++    Already registered retained sources count as completed. A stale, incomplete,
++    or nonmatching existing draft is a reconciliation blocker, never an overwrite.
++    """
++    root=coordinator.HERE
++    if not isinstance(sources,dict) or not slugs or len(set(slugs))!=len(slugs):
++        raise ValueError('Current source inventory is unknown or invalid')
++    seen=set()
++    for slug in slugs:
++        if slug not in sources or not isinstance(sources[slug],list) or not sources[slug]:
++            raise ValueError('Current source inventory is missing or empty for '+slug)
++        for source in sources[slug]:
++            if not isinstance(source,dict) or any(not source.get(k) for k in ['code_id','source_id','source_sha256','number','source_xml']):
++                raise ValueError('Incomplete current source identity in '+slug)
++            key=(source['code_id'],source['source_id'])
++            if key in seen:raise ValueError('Duplicate current source identity: '+str(key))
++            seen.add(key)
++    with writer_lock(root) if use_writer_lock else nullcontext():
++        db=sqlite3.connect((root/'corpus.sqlite').resolve().as_uri()+'?mode=ro',uri=True,timeout=600)
++        try:
++            db.execute('BEGIN')
++            states={(c,i):(sha,status,body) for c,i,sha,status,body in db.execute(
++                'SELECT code_id,source_id,source_sha256,status,proposed_xml FROM drafts')}
++            canonical={(c,i):(sha,number) for c,i,sha,number in db.execute(
++                'SELECT code_id,id,source_sha256,number FROM articles')}
++            jobs=[];held=[]
++            for slug in slugs:
++                if slug not in sources:raise ValueError('Unknown code '+slug)
++                pending=[]
++                for source in sources[slug]:
++                    key=(source['code_id'],source['source_id'])
++                    if canonical.get(key)!=(source['source_sha256'],source['number']):
++                        raise ValueError('Canonical source changed before queue reconstruction: '+str(key))
++                    existing=states.get(key)
++                    if existing:
++                        if existing[0]!=source['source_sha256'] or not (existing[2] or existing[1]=='retained_unchanged'):
++                            raise ValueError('Existing draft requires reconciliation before continuation: '+str(key))
++                        continue
++                    if coordinator.needs_graphic_source(source):
++                        held.append({'slug':slug,'code_id':key[0],'source_id':key[1],
++                                     'number':source['number'],'accepted':False,
++                                     'reason':'Normative graphic companion remains unresolved'})
++                    else:pending.append(source)
++                pending.sort(key=lambda a:(article_priority(a),not bool(a.get('sru_context'))))
++                batch_dir=root/'batches'/('automatic-'+slug)
++                index=1+max((int(p.stem) for p in batch_dir.glob('*.json') if p.stem.isdigit()),default=0)
++                chunk=[];size=0
++                for source in pending:
++                    amount=len(source['source_xml'])+len(source.get('source_notes_xml',''))+len(json.dumps(source.get('sru_context',[]),ensure_ascii=False))
++                    if chunk and (article_priority(chunk[0])!=article_priority(source) or size+amount>45000 or len(chunk)>=24):
++                        jobs.append((slug,index,chunk));index+=1;chunk=[];size=0
++                    chunk.append(source);size+=amount
++                if chunk:jobs.append((slug,index,chunk))
++        finally:db.close()
++    jobs.sort(key=lambda j:(priority(j),sru_priority(j),j[1],list(sources).index(j[0])))
++    return jobs,held
++
++
++def identities(jobs):
++    return tuple(sorted((a['code_id'],a['source_id'],a['source_sha256']) for _,_,rows in jobs for a in rows))
++
++
++def fresh_recovery_state(coordinator):
++    """Supervisor-only fresh read; no model, DB writer, export or process change."""
++    from source_assets import load_companions
++    companions=load_companions();sources={}
++    for slug in coordinator.SLUGS:
++        rows=json.loads((coordinator.CORPUS/(slug+'.json')).read_text())
++        for row in rows:
++            companion=companions.get((row['code_id'],row['source_id']))
++            if companion:row['source_companions']=companion
++            else:row.pop('source_companions',None)
++        sources[slug]=rows
++    inventory=verify_complete_inventory(coordinator,sources)
++    jobs,held=fresh_new_jobs(coordinator,sources,coordinator.SLUGS,use_writer_lock=False)
++    return {'open_accessible_new':sum(len(j[2]) for j in jobs),'held':held,'inventory':inventory}
++
++
++def drain_decision(evidence):
++    """Pure checklist for the parent's future live audit; never an activator.
++
++    Unknown/missing counters are blocking. Recheck this evidence under the
++    supervision/manual-slot locks immediately before closing review admissions.
++    A second independent process/lock/registration audit is required after exit.
++    """
++    required=['coordinator_identity_verified','fresh_queue_identity_verified',
++              'fresh_inventory_verified','active_batch_owners_verified',
++              'registration_guards_clear','source_guards_clear','benefit_guards_clear',
++              'impact_guards_clear','reference_guards_clear','no_orphan_or_manual_workers']
++    missing=[k for k in required if evidence.get(k) is not True]
++    for name in ['pending_new_jobs','reserved_or_running_new_jobs']:
++        if type(evidence.get(name)) is not int or evidence[name]!=0:missing.append(name)
++    if type(evidence.get('coordinator_pid')) is not int or evidence['coordinator_pid']<=0:
++        missing.append('coordinator_pid')
++    return {'may_close_review_admissions':not missing,'blocking_or_unknown':missing,
++            'must_recheck_under_supervision_lock':True,'activation_performed':False}
++
++
++def enter_review_tail(coordinator,maximum,new_jobs,sources=None):
++    """Only call after the full scheduler/executor context has drained."""
++    if new_jobs:raise ValueError('Open accessible drafting sources prevent review-tail reallocation')
++    if coordinator.REVIEW_TAIL:raise ValueError('Review tail is already active')
++    try:manual=(coordinator.RUNTIME/'manual-agent-slots.lock').open('r+')
++    except OSError as error:raise ValueError('Manual reservation lock is unknown') from error
++    try:
++        fcntl.flock(manual,fcntl.LOCK_EX|fcntl.LOCK_NB)
++        with coordinator.SLOTS:
++            if coordinator.STOP.is_set():raise ValueError('Stopped coordinator cannot enter review tail')
++            if coordinator.ACTIVE or any(coordinator.ACTIVE_BY_KIND.values()) or coordinator.ACTIVE_LEASES:
++                raise ValueError('Shared admissions and footprints must be fully drained')
++            known_empty_manual_slots(coordinator.RUNTIME)
++            inventory_receipt=verify_complete_inventory(coordinator,sources)
++            effective=coordinator.admission_limits(coordinator.RUNTIME,maximum,review_tail=True)
++            if effective['role_limits'] is None:raise ValueError('Review tail requires an explicit role plan')
++            coordinator.REVIEW_TAIL=True
++            coordinator.atomic(coordinator.RUNTIME/'continuation-phase.json',{
++                'coordinator_pid':os.getpid(),'phase':'review_tail',
++                'entered_at_unix':int(time.time()),'effective_limits':effective,
++                'open_accessible_new_sources':0,'shared_ledger_drained':True,
++                'complete_inventory':inventory_receipt,'manual_reservations_verified_empty':True,
++                'manual_reservation_guard':'phase marker rejects new manual reservations; inventory rechecked on every admission',
++                'execution_verified':False,'legal_completion_claimed':False})
++            coordinator.SLOTS.notify_all()
++    except BaseException:
++        coordinator.REVIEW_TAIL=False
++        raise
++    finally:manual.close()
++    return effective
++
++
++def exit_review_tail(coordinator):
++    """Retire the phase marker after all tail workers drain; no long-held lock."""
++    if not coordinator.REVIEW_TAIL:return
++    with (coordinator.RUNTIME/'manual-agent-slots.lock').open('r+') as manual:
++        fcntl.flock(manual,fcntl.LOCK_EX)
++        with coordinator.SLOTS:
++            if coordinator.ACTIVE or any(coordinator.ACTIVE_BY_KIND.values()) or coordinator.ACTIVE_LEASES:
++                raise ValueError('Cannot retire phase marker before full review-tail drain')
++            phase=json.loads((coordinator.RUNTIME/'continuation-phase.json').read_text())
++            coordinator.atomic(coordinator.RUNTIME/'continuation-phase.json',phase|{
++                'phase':'review_tail_drained','drained_at_unix':int(time.time())})
++            coordinator.REVIEW_TAIL=False
++
++
++def run(coordinator,codex,args):
++    """Fresh new waves, fresh before-images for review waves, reference convergence.
++
++    No-progress is blocking: residual sources/reviews remain explicit and are
++    never converted into an acceptance or counted as legally complete.
++    """
++    import review_prior
++    maximum=args.workers
++    slugs=args.slugs.split(',')
++    plan=coordinator.worker_settings(coordinator.RUNTIME)
++    if plan.get('continuation_mode')!='recover_new_before_reviews':
++        raise ValueError('Recovery continuation must be explicitly selected in the task plan')
++    checkpoint=coordinator.progress(coordinator.load_sources(coordinator.SLUGS))
++    exported=checkpoint['drafted_articles']+checkpoint['retained_unchanged']+checkpoint.get('prior_drafts_reviewed',0)
++
++    def consume(scheduled,sources):
++        nonlocal exported
++        for future in coordinator.scheduled_futures(scheduled,codex,sources,maximum):
++            try:
++                future.result()
++                if args.export_every and not coordinator.STOP.is_set():
++                    state=coordinator.progress(sources)
++                    count=state['drafted_articles']+state['retained_unchanged']+state.get('prior_drafts_reviewed',0)
++                    if count-exported>=args.export_every:
++                        coordinator.publish_checkpoint(args.deploy_on_export);exported=count
++            except Exception:
++                coordinator.STOP.set()
++                raise
++
++    sources=None
++    try:
++        seen_new=set()
++        while not coordinator.STOP.is_set():
++            sources=coordinator.load_sources(coordinator.SLUGS)
++            verify_complete_inventory(coordinator,sources)
++            jobs,held=fresh_new_jobs(coordinator,sources,slugs)
++            coordinator.atomic(coordinator.RUNTIME/'continuation-open-new.json',{
++                'jobs':[{'slug':s,'index':i,'source_ids':[a['source_id'] for a in rows]} for s,i,rows in jobs],
++                'held_graphic_sources':held,'accepted':False,'derived_from_current_canonical_state':True})
++            coordinator.atomic(coordinator.RUNTIME/'queue-admission-plan.json',{
++                'coordinator_pid':os.getpid(),'phase':'recover_current_new',
++                'capacity':maximum,'initial_admission_limits':coordinator.current_limits(maximum),
++                'scheduled_by_kind':{'new':len(jobs),'review':0},
++                'borrowing_enabled':False,'authorized_reallocation':False,
++                'queue_file':'continuation-open-new.json','execution_verified':False})
++            if not jobs:break
++            fingerprint=identities(jobs)
++            if fingerprint in seen_new:
++                raise ValueError('Drafting recovery made no progress; unresolved identities preserved in continuation-open-new.json')
++            seen_new.add(fingerprint)
++            consume([(job,False) for job in jobs],sources)
++        if coordinator.STOP.is_set():return
++        # A scope restriction may not hide unresolved first passes elsewhere.
++        all_new,all_held=fresh_new_jobs(coordinator,sources,coordinator.SLUGS)
++        enter_review_tail(coordinator,maximum,all_new,sources)
++        seen_reviews=set()
++        while not coordinator.STOP.is_set():
++            if coordinator.role_reviews_paused(maximum):
++                coordinator.progress(sources,'checkpoint');return
++            # build_jobs captures full DB and active-batch before-images anew.
++            jobs=review_prior.build_jobs(sources)
++            coordinator.atomic(coordinator.RUNTIME/'queue-admission-plan.json',{
++                'coordinator_pid':os.getpid(),'phase':'review_tail','capacity':maximum,
++                'effective_limits':coordinator.current_limits(maximum),
++                'scheduled_by_kind':{'new':0,'review':len(jobs)},
++                'borrowing_enabled':False,'authorized_reallocation':True,
++                'queue_source':'fresh current full DB and active-batch before-images',
++                'execution_verified':False})
++            report=json.loads(review_prior.revisions_manifest().read_text())
++            unresolved=[a for a in report['prior_articles'] if a['review_status']=='pending']
++            if not jobs:
++                if unresolved:raise ValueError('Pending prior reviews have changed before-images; manual reconciliation is required')
++                break
++            fingerprint=tuple(sorted((a['code_id'],a['source_id'],a['previous_draft']['proposed_sha256'],
++                                      a['previous_draft'].get('batch_row_sha256'))
++                                     for _,_,rows in jobs for a in rows))
++            if fingerprint in seen_reviews:
++                raise ValueError('Prior review made no progress; unresolved before-images remain pending')
++            seen_reviews.add(fingerprint)
++            consume([(job,True) for job in jobs],sources)
++        if not coordinator.STOP.is_set():coordinator.run_reference_review_phase(sources,codex,maximum)
++        if not coordinator.STOP.is_set():
++            coordinator.progress(sources,'checkpoint')
++    except Exception as error:
++        coordinator.STOP.set()
++        if sources is not None:coordinator.progress(sources,'blocked',str(error))
++        raise
++    finally:
++        try:
++            if sources is not None and (args.export_every or args.publish_at_end):
++                coordinator.publish_checkpoint(args.publish_at_end)
++        finally:exit_review_tail(coordinator)
+--- a/review_lane_observation.py
++++ b/review_lane_observation.py
+@@ -23,16 +23,40 @@
+     plan=json.loads(plan_path.read_text()) if plan_path.exists() else {}
+     configured=(run.get('capacity')==8 and run.get('role_limits')=={'new':6,'review':2} and
+                 plan.get('capacity')==8 and plan.get('role_limits')=={'new':6,'review':2})
++    phase_path=runtime/'continuation-phase.json'
++    phase=json.loads(phase_path.read_text()) if phase_path.exists() else {}
++    in_tail=(phase.get('phase')=='review_tail' and phase.get('coordinator_pid')==pid and
++             run.get('continuation_mode')=='recover_new_before_reviews')
++    tail_limits=None;tail_configured=False
++    if in_tail:
++        try:
++            from worker_capacity import admission_limits
++            tail_limits=admission_limits(runtime,run.get('capacity'),review_tail=True)
++            tail_configured=(plan.get('continuation_mode')=='recover_new_before_reviews' and
++                             phase.get('open_accessible_new_sources')==0 and
++                             phase.get('shared_ledger_drained') is True and
++                             phase.get('complete_inventory',{}).get('complete') is True and
++                             phase.get('manual_reservations_verified_empty') is True)
++        except (ValueError,KeyError,TypeError):pass
+     actual=[w for w in workers if w.get('ppid')==pid and
+             w.get('execution',{}).get('verified') is True and
+             all(w['execution'].get(k)==v for k,v in expected.items())]
+     counts={kind:sum(w.get('kind')==kind for w in actual) for kind in ['new','review']}
+-    all_distinct=len({w['pid'] for w in actual})==len(actual) and len({w['execution'].get('session_id') for w in actual})==len(actual)
++    all_distinct=(all(isinstance(w['execution'].get('session_id'),str) and w['execution']['session_id'].strip() for w in actual) and
++                  len({w['pid'] for w in actual})==len(actual) and len({w['execution'].get('session_id') for w in actual})==len(actual))
+     complete_scope=len(workers)==8 and len(actual)==8
++    tail_count=tail_limits['role_limits']['review'] if tail_limits is not None else None
++    tail_verified=bool(in_tail and matched and tail_configured and all_distinct and
++                       tail_count is not None and tail_count>0 and len(workers)==len(actual)==tail_count and
++                       counts=={'new':0,'review':tail_count})
+     report={'coordinator_pid':pid,'observed_at_unix':now,'coordinator_identity_matches':matched,
+             'verified_responding_by_kind':counts,'configured_capacity':run.get('capacity'),
+-            'configuration_matches_authorized_roles':configured,
+-            'all_active_workers_attested':complete_scope,
++            'configuration_matches_authorized_roles':tail_configured if in_tail else configured,
++            'phase':'review_tail' if in_tail else 'mixed',
++            'authorized_reallocation':bool(in_tail and tail_configured),
++            'effective_review_tail_limits':tail_limits,
++            'review_tail_distinct_native_sessions_verified':tail_verified,
++            'all_active_workers_attested':bool(workers) and len(workers)==len(actual) and all_distinct,
+             'active_worker_count':len(workers),
+             'unattested_or_unexpected_worker_count':len(workers)-len(actual),
+             'simultaneous_six_new_plus_two_review_verified':bool(matched and configured and complete_scope and all_distinct and counts=={'new':6,'review':2}),
+@@ -41,6 +65,11 @@
+         proof=runtime/'review-lanes-execution.json'
+         if not proof.exists() or json.loads(proof.read_text()).get('coordinator_pid')!=pid:
+             atomic(proof,report|{'active_agents':actual,**expected})
++    if tail_verified:
++        proof=runtime/'review-tail-execution.json'
++        previous=json.loads(proof.read_text()) if proof.exists() else {}
++        if previous.get('coordinator_pid')!=pid or previous.get('verified_review_workers')!=tail_count:
++            atomic(proof,report|{'active_agents':actual,'verified_review_workers':tail_count,**expected})
+     metrics=runtime/'job-metrics.jsonl'
+     rows=[]
+     if metrics.exists():
+@@ -52,6 +81,10 @@
+     report['cohort_articles']={kind:sum(x.get('articles',0) for x in rows if x.get('kind')==kind and x.get('outcome') in ['accepted','reviewed']) for kind in ['new','review']}
+     report['cohort_deferred_jobs']=sum(x.get('outcome')=='deferred' for x in rows)
+     successful=[x for x in rows if x.get('outcome') in ['accepted','reviewed']]
++    if in_tail:
++        successful=[x for x in successful if x.get('kind')=='review' and
++                    x.get('started_at_unix',0)>=phase.get('entered_at_unix',now)]
++    report['measurement_phase']='review_tail' if in_tail else 'mixed'
+     # Exclude initial startup and draining of the former coordinator. A window
+     # starts at the first completed job of the new PID and counts later jobs.
+     epoch=min((x['finished_at_unix'] for x in successful),default=None)
+@@ -60,7 +93,8 @@
+     report['measurement_epoch_unix']=epoch
+     report['measurement_hours']=max(0,hours)
+     report['measured_successful_by_kind']={kind:sum(x.get('kind')==kind and x.get('outcome') in ['accepted','reviewed'] for x in measured) for kind in ['new','review']}
+-    report['measurement_complete']=bool(hours>=2 and report['measured_successful_by_kind']['new']>=12 and report['measured_successful_by_kind']['review']>=4)
++    report['measurement_complete']=bool(hours>=2 and report['measured_successful_by_kind']['review']>=4 and
++                                        (in_tail or report['measured_successful_by_kind']['new']>=12))
+     report['measured_articles_per_hour']={kind:(sum(x.get('articles',0) for x in measured if x.get('kind')==kind and x.get('outcome') in ['accepted','reviewed'])/hours if hours>0 else None) for kind in ['new','review']}
+     report['performance_comparison_limit']='Different codes and article lengths affect throughput; no matched-workload speed or non-regression conclusion is automatic.'
+     atomic(runtime/'review-lanes-observation.json',report)
+--- a/review_lanes.py
++++ b/review_lanes.py
+@@ -13,7 +13,8 @@
+ 
+ def completed_futures(scheduled, *, limits, submit, stopped, wait_for_change,
+                       describe, state_changed, deferred_changed,
+-                      unconsumed=None, worker_failed=None, executor_factory=None, poll_seconds=.2):
++                      unconsumed=None, worker_failed=None, executor_factory=None, poll_seconds=.2,
++                      review_tail=False):
+     """Yield completed futures; paused/stopped jobs remain unattempted for resume.
+ 
+     ``submit(pool,job,review)`` must reserve all shared capacity/lease guards
+@@ -21,6 +22,9 @@
+     reservation if executor submission fails. Limits are read afresh each pass.
+     """
+     factory=executor_factory or concurrent.futures.ThreadPoolExecutor
++    pool_limits={'new':6,'review':8} if review_tail else dict(POOL_LIMITS)
++    if review_tail and any(not review for _,review in scheduled):
++        raise ValueError('Review-tail queue cannot contain a drafting job')
+     queues={role:[] for role in POOL_LIMITS}
+     for ordinal,(job,review) in enumerate(scheduled):
+         queues['review' if review else 'new'].append((ordinal,job,review))
+@@ -52,6 +56,9 @@
+                'admitted_by_kind':dict(admitted),
+                'deferred_by_kind':{r:sum(d['kind']==r for d in deferred) for r in POOL_LIMITS},
+                'borrowing_enabled':False,
++               'authorized_reallocation':bool(review_tail),
++               'phase':'review_tail' if review_tail else 'mixed',
++               'role_pool_limits':dict(pool_limits),
+                'execution_evidence_scope':'Admission only; native session headers and validated answers are required for execution/acceptance claims.'}
+         if value!=last_state:state_changed(value);last_state=value
+ 
+@@ -61,7 +68,7 @@
+             # Admission/refill is independent of a slow publication checkpoint
+             # in the consumer. Only the dispatcher owns its executor contexts.
+             with factory(max_workers=6,thread_name_prefix='new-article') as new_pool,\
+-                 factory(max_workers=2,thread_name_prefix='review-article') as review_pool:
++                 factory(max_workers=pool_limits['review'],thread_name_prefix='review-article') as review_pool:
+                 pools={'new':new_pool,'review':review_pool}
+                 while active or any(queues.values()):
+                     try:
+@@ -77,7 +84,7 @@
+                                 index=0
+                                 while index<len(lane_queue) and not should_stop():
+                                     role_active=sum(r==role for r in active.values())
+-                                    if role_active>=min(POOL_LIMITS[role],roles[role]) or len(active)>=current['workers']:break
++                                    if role_active>=min(pool_limits[role],roles[role]) or len(active)>=current['workers']:break
+                                     _,job,review=lane_queue[index]
+                                     future=submit(pools[role],job,review)
+                                     if future is None:
+--- a/run_exhaustive.py
++++ b/run_exhaustive.py
+@@ -28,6 +28,7 @@
+ LEASE_CONTEXT=threading.local()
+ METRICS_LOCK=threading.Lock()
+ MAX_WORKERS=8
++REVIEW_TAIL=False
+ SLUGS=['travail','impots','securite-sociale','urbanisme','construction-habitation',*[f'impots-annexe-{i}' for i in range(1,5)]]
+ 
+ def atomic(path,value):
+@@ -518,7 +519,10 @@
+     return snapshot()
+ 
+ def worker_limit(maximum):
+-    return admission_limits(RUNTIME,maximum)['workers']
++    return current_limits(maximum)['workers']
++
++def current_limits(maximum):
++    return admission_limits(RUNTIME,maximum,review_tail=REVIEW_TAIL)
+ 
+ def try_reserve_slot(job,maximum,review=False,*,wait=False,lease=None):
+     """Reserve shared total, role and footprint together, before pool submission."""
+@@ -528,7 +532,7 @@
+     token=object();kind='review' if review else 'new'
+     with SLOTS:
+         while True:
+-            current=admission_limits(RUNTIME,maximum);roles=current['role_limits']
++            current=current_limits(maximum);roles=current['role_limits']
+             if STOP.is_set():return
+             if roles is not None and roles[kind]==0:return
+             role_available=roles is None or ACTIVE_BY_KIND[kind]<roles[kind]
+@@ -560,7 +564,7 @@
+ 
+ def scheduled_futures(scheduled,codex,sources,maximum):
+     """Keep legacy mixed execution, or isolate new/review pools under a role plan."""
+-    current=admission_limits(RUNTIME,maximum)
++    current=current_limits(maximum)
+     if current['role_limits'] is None:
+         with concurrent.futures.ThreadPoolExecutor(max_workers=maximum) as pool:
+             futures=[pool.submit(run_in_slot,job,codex,sources,maximum,review) for job,review in scheduled]
+@@ -584,7 +588,9 @@
+             release_slot(reservation);raise
+     def changed(value):
+         atomic(RUNTIME/'admission-status.json',value|{'coordinator_pid':os.getpid(),
+-               'updated_at_unix':int(time.time()),'role_pools':{'new':6,'review':2}})
++               'updated_at_unix':int(time.time()),
++               'phase':'review_tail' if REVIEW_TAIL else 'mixed',
++               'role_pools':{'new':6,'review':8 if REVIEW_TAIL else 2}})
+     def deferred(value):
+         atomic(RUNTIME/'admission-deferred.json',{'coordinator_pid':os.getpid(),
+                'updated_at_unix':int(time.time()),'jobs':value,'accepted':False,
+@@ -613,19 +619,19 @@
+     # Clear only this run's admission telemetry, never canonical queue/state.
+     deferred([])
+     yield from review_lanes.completed_futures(scheduled,
+-        limits=lambda:admission_limits(RUNTIME,maximum),submit=submit,
++        limits=lambda:current_limits(maximum),submit=submit,
+         stopped=STOP.is_set,wait_for_change=wait_for_change,describe=describe,
+         state_changed=changed,deferred_changed=deferred,unconsumed=unconsumed,
+-        worker_failed=worker_failed)
++        worker_failed=worker_failed,review_tail=REVIEW_TAIL)
+ 
+ def role_reviews_paused(maximum):
+-    roles=admission_limits(RUNTIME,maximum)['role_limits']
++    roles=current_limits(maximum)['role_limits']
+     return roles is not None and roles['review']==0
+ 
+ def run_prior_review_phase(sources,codex,maximum):
+     """Same prior-review commits/checkpoints, with bounded role admissions."""
+     import review_prior
+-    if admission_limits(RUNTIME,maximum)['role_limits'] is None:
++    if current_limits(maximum)['role_limits'] is None:
+         return review_prior.run(sys.modules[__name__],sources,codex,maximum)
+     jobs=review_prior.build_jobs(sources)
+     print('RADICAL REVIEW START',len(jobs),'jobs; dedicated review lane',flush=True)
+@@ -643,7 +649,7 @@
+ def run_reference_review_phase(sources,codex,maximum):
+     """Preserve convergence checks; a disabled lane returns pending, not failure."""
+     import reference_queue
+-    if admission_limits(RUNTIME,maximum)['role_limits'] is None:
++    if current_limits(maximum)['role_limits'] is None:
+         return reference_queue.run(sys.modules[__name__],sources,codex,maximum)
+     seen=set()
+     while not STOP.is_set():
+@@ -663,9 +669,13 @@
+ def main():
+     parser=argparse.ArgumentParser();parser.add_argument('--workers',type=int,choices=range(1,MAX_WORKERS+1),default=1);parser.add_argument('--slugs',default=','.join(SLUGS));parser.add_argument('--max-jobs',type=int);parser.add_argument('--export-every',type=int,default=0);parser.add_argument('--publish-at-end',action='store_true');parser.add_argument('--review-prior-after',action='store_true');parser.add_argument('--wait-for-coordinator',action='store_true')
+     parser.add_argument('--deploy-on-export',action='store_true',help='Publish each checked checkpoint to the existing sites')
++    parser.add_argument('--recover-new-before-reviews',action='store_true',
++                        help='Resume current open drafting jobs, then reallocate explicitly authorized slots to reviews')
+     order=parser.add_mutually_exclusive_group();order.add_argument('--review-prior-first',action='store_true');order.add_argument('--interleave-review',action='store_true')
+     args=parser.parse_args()
+     if args.deploy_on_export and args.export_every<=0:parser.error('--deploy-on-export requires --export-every')
++    if args.recover_new_before_reviews and (args.max_jobs is not None or args.review_prior_first or args.review_prior_after or args.interleave_review):
++        parser.error('--recover-new-before-reviews owns phase ordering and cannot be combined with other review/max-job flags')
+     RUNTIME.mkdir(parents=True,exist_ok=True)
+     def stop_after_current_jobs(signum,frame):
+         STOP.set()
+@@ -681,6 +691,8 @@
+     atomic(RUNTIME/'coordinator-run.json',{'pid':os.getpid(),'capacity':args.workers,
+            'started_at_unix':int(time.time()),'dependency_leases':True,
+            'requested_execution':requested_execution(RUNTIME),
++           'continuation_mode':'recover_new_before_reviews' if args.recover_new_before_reviews else None,
++           'review_tail_capacity':worker_settings(RUNTIME).get('review_tail_capacity'),
+            'role_limits':role_ceiling,
+            'initial_admission_limits':initial_limits,
+            'borrowing_enabled':False})
+@@ -718,6 +730,10 @@
+     if role_ceiling is not None:print('START ROLE LIMITS',json.dumps(role_ceiling,sort_keys=True),'effective',json.dumps(initial_limits,sort_keys=True),flush=True)
+     if args.review_prior_first:
+         run_prior_review_phase(sources,codex,args.workers)
++    if args.recover_new_before_reviews:
++        import continuation_tail
++        continuation_tail.run(sys.modules[__name__],codex,args)
++        return
+     scheduled=[(job,False) for job in jobs]
+     if args.interleave_review:
+         import review_prior
+--- a/supervise_exhaustive.py
++++ b/supervise_exhaustive.py
+@@ -109,7 +109,7 @@
+     return len(remaining),held,report['pending_reference_reviews']
+ 
+ 
+-def action(status,live,workers,locked,previous,held,now,reference_pending=None):
++def action(status,live,workers,locked,previous,held,now,reference_pending=None,tail_paused=False):
+     """Decide without mutating corpus, files or processes; easy to regression-test."""
+     if live:
+         if len(live)>1:return 'needs_attention','Multiple coordinators detected; no new process launched'
+@@ -123,6 +123,8 @@
+             # reset time or make an unbounded series of authenticated requests.
+             return 'needs_attention','Authentication or usage limit requires resolution'
+         return 'needs_attention','Validation blocked the coordinator; checks remain binding'
++    if tail_paused and type(status.get('pending')) is int and status['pending']<=len(held):
++        return 'review_tail_paused','Explicit review-tail limit is zero and current canonical inventory has no accessible new work'
+     if status.get('pending')==0 and status.get('prior_drafts_awaiting_review')==0 and reference_pending==0:
+         return 'awaiting_final_audit','Coverage is not a complete legal or reference audit'
+     if status.get('pending') is not None and held and status['pending']<=len(held) and status.get('prior_drafts_awaiting_review')==0 and reference_pending==0:
+@@ -158,7 +160,9 @@
+ 
+ 
+ def launch(folder):
+-    command=[sys.executable,'-u',str(RUNNER),'--workers',str(worker_settings(RUNTIME)['capacity']),'--interleave-review',
++    plan=worker_settings(RUNTIME)
++    mode='--recover-new-before-reviews' if plan.get('continuation_mode')=='recover_new_before_reviews' else '--interleave-review'
++    command=[sys.executable,'-u',str(RUNNER),'--workers',str(plan['capacity']),mode,
+              '--export-every','1000','--deploy-on-export','--publish-at-end']
+     with (folder/'continuation.log').open('ab',buffering=0) as output:
+         child=subprocess.Popen(command,cwd=HERE,stdin=subprocess.DEVNULL,
+@@ -190,7 +194,23 @@
+         if not live and not workers and not locked and status.get('pending') is not None and status['pending']<=len(held) and status.get('prior_drafts_awaiting_review')==0:
+             remaining,held,reference_pending=fresh_tail()
+             status=status|{'pending':remaining}
+-        decision,reason=action(status,live,workers,locked,previous,held,now,reference_pending)
++        control=read_json(RUNTIME/'worker-limit.json',{})
++        plan=worker_settings(RUNTIME)
++        tail_paused=False;recovery_state=None
++        if (not live and not workers and not locked and plan.get('continuation_mode')=='recover_new_before_reviews' and
++                type(control.get('review_tail_limit')) is int and control['review_tail_limit']==0):
++            import run_exhaustive
++            from continuation_tail import fresh_recovery_state
++            recovery_state=fresh_recovery_state(run_exhaustive)
++            held=recovery_state['held']
++            status=status|{'pending':recovery_state['open_accessible_new']+len(held)}
++            phase=read_json(RUNTIME/'continuation-phase.json',{})
++            run=read_json(RUNTIME/'coordinator-run.json',{})
++            tail_paused=(recovery_state['open_accessible_new']==0 and phase.get('phase') in {'review_tail','review_tail_drained'} and
++                         type(run.get('pid')) is int and phase.get('coordinator_pid')==run['pid'] and
++                         phase.get('complete_inventory',{}).get('complete') is True and
++                         phase['complete_inventory'].get('identity_sha256')==recovery_state['inventory'].get('identity_sha256'))
++        decision,reason=action(status,live,workers,locked,previous,held,now,reference_pending,tail_paused)
+         promotion=None
+         if decision=='monitoring':
+             def refresh_promotion_inputs():
+@@ -204,6 +224,7 @@
+                'consecutive_unexpected_exits':failures,
+                'next_start_after_unix':previous.get('next_start_after_unix',0),
+                'fresh_pending_reference_reviews':reference_pending,
++               'fresh_recovery_state':recovery_state,
+                'worker_configuration':worker_settings(RUNTIME),
+                'exhaustive_rewriting_complete':False,'semantic_review_by_jurist':False}
+         if promotion is not None:state['parallelism_evaluation']=promotion
+--- a/worker_capacity.py
++++ b/worker_capacity.py
+@@ -3,6 +3,14 @@
+ 
+ MAX_WORKERS=8
+ LEGACY_MAX_WORKERS=6
++
++def known_empty_manual_slots(runtime):
++    """Unknown reservations are never equivalent to an empty inventory."""
++    try:agents=json.loads((runtime/'manual-agent-slots.json').read_text())
++    except (OSError,ValueError) as error:raise ValueError('Manual reservation inventory is unknown') from error
++    if not isinstance(agents,list) or agents:
++        raise ValueError('Manual reservation inventory must be explicitly empty')
++    return agents
+ 
+ def _roles(value, *, ceiling=None):
+     if not isinstance(value,dict) or set(value)!={'new','review'}:
+@@ -30,6 +38,12 @@
+             raise ValueError('Role capacities must sum to the authorized worker count')
+     elif plan['capacity']>LEGACY_MAX_WORKERS:
+         raise ValueError('Extra capacity requires separate drafting and review limits')
++    tail=plan.get('review_tail_capacity')
++    if tail is not None and (type(tail) is not int or not 1<=tail<=MAX_WORKERS or roles is None):
++        raise ValueError('Invalid explicit review-tail authorization')
++    mode=plan.get('continuation_mode')
++    if mode is not None and (mode!='recover_new_before_reviews' or tail is None):
++        raise ValueError('Invalid explicit continuation mode')
+     return plan
+ 
+ def drafting_slots(runtime,manual_agents=()):
+@@ -37,6 +51,12 @@
+ 
+ def slot_document(runtime,manual_agents=()):
+     plan=settings(runtime)
++    phase_path=runtime/'continuation-phase.json'
++    phase=json.loads(phase_path.read_text()) if phase_path.exists() else {}
++    if phase.get('phase')=='review_tail':
++        if manual_agents:raise ValueError('Manual reservations require a new coordination and fully drained review tail')
++        admission_limits(runtime,plan['capacity'],review_tail=True)
++        return json.loads((runtime/'worker-limit.json').read_text())
+     if plan.get('role_limits') is None:
+         return {'workers':max(1,plan['current_workers']-len(manual_agents))}
+     roles=dict(plan['role_limits'])
+@@ -45,7 +65,7 @@
+     roles['new']-=len(manual_agents)
+     return {'workers':sum(roles.values()),'role_limits':roles}
+ 
+-def admission_limits(runtime,maximum):
++def admission_limits(runtime,maximum,*,review_tail=False):
+     """One atomic control file may pause reviews without borrowing drafting slots."""
+     if type(maximum) is not int or not 1<=maximum<=MAX_WORKERS:
+         raise ValueError('Invalid coordinator worker capacity')
+@@ -65,4 +85,13 @@
+     roles=_roles(document.get('role_limits',ceiling),ceiling=ceiling)
+     if sum(roles.values())>min(maximum,total):
+         raise ValueError('Role limits exceed the effective worker limit')
++    if review_tail:
++        tail=plan.get('review_tail_capacity')
++        if tail is None:raise ValueError('Review-tail reallocation requires explicit task authorization')
++        known_empty_manual_slots(runtime)
++        limit=document.get('review_tail_limit')
++        if type(limit) is not int or not 0<=limit<=min(total,tail):
++            raise ValueError('Explicit review_tail_limit must be within the effective task capacity')
++        total=min(maximum,total,tail)
++        return {'workers':total,'role_limits':{'new':0,'review':min(limit,total)}}
+     return {'workers':min(maximum,total),'role_limits':roles}

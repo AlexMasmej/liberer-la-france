@@ -1,0 +1,21 @@
+{
+  "all_passed": true,
+  "activation_sha256": "4c7b9a2b05c6fbdb4dda047a344aa2fedf06985c2e305913286ba832dea25cb4",
+  "implementation_sha256": {
+    "register_batches.py": "75287e3267fb8d182a7262cdb747ae90070e20d6bf92b698768684e03c39051f"
+  },
+  "activate_files": [
+    "register_batches.py"
+  ],
+  "combined_real_gate_tests": 149,
+  "regression_tests": 116,
+  "differential_cases": 12,
+  "fixtures_per_version": 25,
+  "active_article_recovery_claimed": false,
+  "CCH_activation": "held_live_current_proposal_incompatible",
+  "combined_CCH_tests": "offline only; not activated by this handoff",
+  "drain_timeout_seconds": 5400,
+  "timeout_reason": "Existing active invocation timeout is3600seconds; allow natural completion plus final publication, never force-kill a valid lot.",
+  "handover_tests": 7,
+  "inventory_timeout_policy": "Keep exclusion and retry fresh process inventory until bounded drain deadline; never treat unknown as empty."
+}

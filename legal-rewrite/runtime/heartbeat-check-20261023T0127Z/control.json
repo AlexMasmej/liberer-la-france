@@ -1,0 +1,50 @@
+{
+  "checked_at_utc": "2026-10-23T01:28:24.162929+00:00",
+  "state": "known_routing_incident_no_validated_resumption",
+  "coordinator_pid": 3122,
+  "single_coordinator_and_launchagent_checked": true,
+  "active_workers_observed": 6,
+  "native_responses_verified": 1,
+  "native_start_alone_is_not_validated_recovery": true,
+  "new_acceptance_after_incident_capture": false,
+  "last_accepted_metric": {
+    "coordinator_pid": 3122,
+    "slug": "travail",
+    "index": 410,
+    "kind": "new",
+    "started_at_unix": 1792708459.583241,
+    "outcome": "accepted",
+    "attempts": 2,
+    "retries": [
+      "invocation"
+    ],
+    "job": "travail-00410",
+    "articles": 24,
+    "model": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "execution_session_id": "01a165c9-c414-7532-8840-b5e3b7686f51",
+    "execution_verified": true,
+    "finished_at_unix": 1792711542.0321898,
+    "duration_seconds": 3082.497008999999
+  },
+  "current_deferred_jobs": 23,
+  "pending_first_pass": 1851,
+  "prior_reviews_pending": 5103,
+  "effective_limits": {
+    "workers": 7,
+    "role_limits": {
+      "new": 6,
+      "review": 1
+    }
+  },
+  "additional_treatments_since_current_audit": 156,
+  "new_snapshot_needed_by_threshold": false,
+  "free_gib": 24.005508422851562,
+  "network_incident_artifact_manifest_verified": true,
+  "sealed_incident_artifacts_checked": 117,
+  "automation_active": true,
+  "no_pipeline_policy_admission_or_model_mutation": true,
+  "no_new_authenticated_probe": true,
+  "no_completion_claimed": true,
+  "notification": "DONT_NOTIFY_known_incident_no_new_action"
+}

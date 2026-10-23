@@ -1,0 +1,131 @@
+{
+  "supervision/status.json": {
+    "state": "monitoring",
+    "reason": "Existing coordinator adopted without interruption",
+    "checked_at_unix": 1792709367,
+    "coordinator_pids": [
+      3122
+    ]
+  },
+  "exhaustive/status.json": {
+    "status": "running",
+    "updated_at_unix": 1792708613,
+    "source_records": 30317,
+    "drafted_articles": 13584,
+    "retained_unchanged": 14810,
+    "pending": 1923,
+    "exhaustive_rewriting_complete": false,
+    "jurist_reviewed_articles": 0,
+    "codes": [
+      {
+        "slug": "travail",
+        "source_records": 11593,
+        "drafted": 3424,
+        "retained_unchanged": 6249,
+        "pending": 1920
+      },
+      {
+        "slug": "impots",
+        "source_records": 2375,
+        "drafted": 1472,
+        "retained_unchanged": 903,
+        "pending": 0
+      },
+      {
+        "slug": "securite-sociale",
+        "source_records": 7427,
+        "drafted": 3076,
+        "retained_unchanged": 4349,
+        "pending": 2
+      },
+      {
+        "slug": "urbanisme",
+        "source_records": 2459,
+        "drafted": 1472,
+        "retained_unchanged": 987,
+        "pending": 0
+      },
+      {
+        "slug": "construction-habitation",
+        "source_records": 4126,
+        "drafted": 2108,
+        "retained_unchanged": 2018,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-1",
+        "source_records": 71,
+        "drafted": 42,
+        "retained_unchanged": 29,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-2",
+        "source_records": 674,
+        "drafted": 573,
+        "retained_unchanged": 101,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-3",
+        "source_records": 1115,
+        "drafted": 1012,
+        "retained_unchanged": 103,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-4",
+        "source_records": 477,
+        "drafted": 405,
+        "retained_unchanged": 71,
+        "pending": 1
+      }
+    ],
+    "failure": null,
+    "prior_drafts_reviewed": 2448,
+    "prior_drafts_awaiting_review": 5115,
+    "publication_pending": false
+  },
+  "exhaustive/coordinator-run.json": {
+    "pid": 3122,
+    "capacity": 8,
+    "started_at_unix": 1792702461,
+    "dependency_leases": true,
+    "requested_execution": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium"
+    },
+    "role_limits": {
+      "new": 6,
+      "review": 2
+    },
+    "initial_admission_limits": {
+      "workers": 7,
+      "role_limits": {
+        "new": 6,
+        "review": 1
+      }
+    },
+    "borrowing_enabled": false
+  },
+  "exhaustive/worker-limit.json": {
+    "workers": 7,
+    "role_limits": {
+      "new": 6,
+      "review": 1
+    }
+  },
+  "process_inventory_known": true,
+  "launchagent_registered": true,
+  "free_gib": 27.524459838867188,
+  "active_register_batches_sha256": "75287e3267fb8d182a7262cdb747ae90070e20d6bf92b698768684e03c39051f",
+  "checked_at_utc": "2026-10-22T22:50:41.769985+00:00",
+  "sole_coordinator_confirmed": true,
+  "coordinators": [
+    {
+      "pid": 3122,
+      "ppid": 1
+    }
+  ],
+  "system_process_check_at_utc": "2026-10-22T22:51:04.943614+00:00"
+}

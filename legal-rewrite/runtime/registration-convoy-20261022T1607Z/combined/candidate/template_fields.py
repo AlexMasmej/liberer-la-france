@@ -1,0 +1,50 @@
+"""Exact inherited model fields, source-bound; not a completion certificate."""
+import hashlib, json, re
+from pathlib import Path
+from html.parser import HTMLParser
+BAD=re.compile(r'\[\s*(?:\.\.\.|…|à compléter|texte inchangé)\s*\]|<placeholder>|TODO',re.I)
+class Text(HTMLParser):
+    def __init__(self):super().__init__(convert_charrefs=True);self.words=[]
+    def handle_data(self,data):self.words.append(data)
+    def result(self):return ' '.join(' '.join(self.words).split())
+def normalized(body):
+    p=Text();p.feed(body);return p.result()
+def sha(body):return hashlib.sha256(body.encode()).hexdigest()
+def validate_placeholders(source, proposed):
+    if not proposed:
+        return None  # Missing drafts/retained slots remain the callers’ responsibility.
+    registry=CERTIFIED_FIELDS
+    text=normalized(proposed)
+    key=source['code_id']+'|'+source['source_id']
+    certified=registry.get(key)
+    if certified:
+        if (source['source_sha256']!=certified['source_sha256'] or
+            sha(source['source_xml'])!=certified['source_xml_sha256'] or
+            sha(source.get('source_notes_xml',''))!=certified['notes_sha256']):
+            raise ValueError('Certified source changed')
+        original=normalized(source['source_xml'])
+        headings=lambda xml: re.findall(r"^(?:<p>)?(\d+(?:\.\d+)?[AB]?\. [^<\n]+)",xml,re.M)
+        if headings(source['source_xml']) != headings(proposed):
+            raise ValueError('Template clause sequence changed')
+        for anchor in certified['other_blank_anchors']:
+            if original.count(anchor)!=1 or text.count(anchor)!=1:
+                raise ValueError('Authentic template blank removed or filled')
+        start,end=certified['start'],certified['end']
+        if original.count(start)!=1 or original.count(end)!=1 or text.count(start)!=1 or text.count(end)!=1:
+            raise ValueError('Missing or duplicated clause boundaries')
+        lo,hi=text.index(start),text.index(end)
+        block=text[lo:hi]
+        if sha(block)!=certified['block_sha256'] or block!=original[original.index(start):original.index(end)]:
+            raise ValueError('Capital clause changed, truncated, or filled')
+        matches=list(BAD.finditer(block))
+        if [(m.start(),m.group()) for m in matches]!=[tuple(x) for x in certified['slots']]:
+            raise ValueError('Field inventory mismatch')
+        # Only certified character intervals are ignored by this lexical test.
+        # No alteration to the actual article, no mass substitution of ellipses.
+        chars=list(text)
+        for m in matches:chars[lo+m.start():lo+m.end()]=' '*len(m.group())
+        text=''.join(chars)
+    if BAD.search(text):raise ValueError('Incomplete placeholder outside certified source fields')
+    return None
+
+CERTIFIED_FIELDS = {'LEGITEXT000006074096|LEGIARTI000045646952': {'source_sha256': '93ea5cc8b7ffa2e3bb4d43074b68d9143cca81b9f2c9d95e8b4b620dc9f062c9', 'source_xml_sha256': 'f6a8639ea7a78ab3498e608c0d4277c28eb947ea58689dc8ff71b800fe737e39', 'notes_sha256': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'start': '5. Capital social', 'end': '6. Modification du capital social', 'block_sha256': '230dde45c432ad35c8a433cc24108849f9e3dcda2ec84a3de0f7976e900aac49', 'slots': [[52, '[…]'], [80, '[…]'], [129, '[…]']], 'other_blank_anchors': ['La dénomination de la société est :, société de coordination.', 'Le siège social est fixé à :.']}, 'LEGITEXT000006074096|LEGIARTI000045646995': {'source_sha256': 'df94d382652ef832dbfe2dbe13917de18fec2551b14ba9ef4367de6fcc5d9242', 'source_xml_sha256': '0c488525d03efd7c346696d670aeb9a8fad146281bb6d48a1f37ffb9b4f0a58b', 'notes_sha256': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'start': '5. Capital social', 'end': '6. Variabilité du capital', 'block_sha256': '97eeaa09e3b8642c304a5f82f5a43ba1aaad3caf4d7da5aca3124d8dd1291a8c', 'slots': [[161, '[…]'], [825, '[…]']], 'other_blank_anchors': ['La dénomination de la société est :, société coopérative de coordination à capital variable.', 'Le siège social est fixé à :.', "à l'issue de la période de préavis de mois"]}}

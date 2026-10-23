@@ -1,0 +1,219 @@
+Préparation hors ligne — réallocation après épuisement des nouveaux lots
+Dossier : runtime/review-reallocation-preflight-20261022T223009Z
+État : CANDIDAT À RELIRE, NON INSTALLÉ. Aucune bascule effectuée.
+
+Portée et état réel
+
+Cette préparation ne copie pas la base active et ne réalise aucune capture
+d'audit. La vérification finale autorisée par le parent lit uniquement les
+identités canoniques en mode SQLite ro ; son reçu est current-inventory-readonly.json.
+Elle ne modifie aucun code actif, source, catalogue, politique,
+contrôle de capacité, pointeur, automation ou processus de production. Les seules
+écritures durables sont dans ce dossier. Les tests utilisent de petites bases
+temporaires et des tâches synthétiques, sans modèle ni achat/crédits/reset.
+Les instructions AGENTS.md applicables ont été lues ; sources/ reste en lecture
+seule. La cohorte 3122 reste entièrement inchangée et continue son travail.
+
+Les nombres communiqués par le parent pendant cette préparation ne sont pas une
+nouvelle mesure : environ 1 992 premières passes travail accessibles restent
+dans la file courante ; huit différés couvrent 168 nouveaux articles et 12
+relectures ; une correction distincte de 24 articles pour citations est préparée
+par un autre agent. Le parent a renouvelé son audit à 22:25:51. Ces états doivent
+être recalculés au futur point sûr. Aucun différé n'est ici déclaré accepté.
+
+Ce qui peut changer à chaud dans la cohorte actuelle
+
+worker-limit.json et parallelism-plan.json sont relus à l'admission, mais le code
+déjà importé impose new<=6, review<=2 et deux pools fixes de 6/2. Une baisse de
+limite laisse finir les tâches admises ; review=0 défère les relectures non
+admises sans arrêter les rédactions. Les fichiers queue.json, mixed-queue.json,
+failed-jobs.json et admission-deferred.json ne constituent pas des entrées
+dynamiques : les files de la cohorte sont déjà en mémoire. Un différé après
+trois essais reste ouvert, mais ne revient pas dans cette file automatiquement.
+
+Modifier uniquement le contrôle pour écrire review=8 est donc invalide, et
+installer un module sur disque ne change pas la cohorte 3122. Aucun remplacement
+de fonction en mémoire, signal de rechargement ni second coordinateur n'est
+proposé. Les anciens activate.py, notamment ceux de convoy exact achevés, ne
+doivent pas être rejoués.
+
+Candidat minimal de continuation pour une NOUVELLE cohorte
+
+candidate.patch et candidate/ contiennent six fichiers à relire ensemble :
+
+- run_exhaustive.py : drapeau --recover-new-before-reviews, mode de phase commun
+  et adaptation des limites ; la voie de validation/enregistrement reste celle
+  du coordinateur existant.
+- continuation_tail.py : reconstruction des nouveaux articles réellement ouverts,
+  puis entrée explicite en phase de relecture seulement après vidage complet du
+  registre commun et absence de première passe accessible dans les neuf corpus.
+  Il utilise scheduled_futures, run_in_slot, les empreintes et tous les commits
+  existants ; aucune invocation ou acceptation indépendante.
+- worker_capacity.py : autorisation facultative review_tail_capacity, jamais plus
+  que 8 ni plus que current_workers et le contrôle effectif. Un effectif courant
+  de 7 reste 7. Le champ strict review_tail_limit du contrôle effectif peut être
+  compris entre 0 et le total autorisé (au plus 8) ; 1/2/4 sont possibles et 0
+  ferme les nouvelles admissions en laissant finir toutes les réponses valides.
+  Le superviseur ne relance pas tant que ce contrôle reste à zéro.
+- review_lanes.py : pool de relecture plafonné à 8 seulement dans ce mode explicite,
+  refus de tout nouveau lot dans la phase finale et même admission atomique avant
+  soumission. Le plafond total et les conflits lecture/écriture restent communs.
+- supervise_exhaustive.py : le superviseur sélectionne réellement le nouveau
+  drapeau si continuation_mode vaut recover_new_before_reviews. Le lancement
+  habituel reste inchangé sans cette option. Il adopte toujours un coordinateur
+  existant et ne remplace pas des workers orphelins.
+- review_lane_observation.py : la phase review_tail et son plafond effectif sont
+  présentés séparément du schéma initial 6+2. Une preuve de fonctionnement final
+  exige le PID courant, le nombre total attendu de workers, le modèle/effort
+  attendus, toutes les réponses natives et des sessions et PID distincts. Une
+  capacité configurée ne produit aucune preuve de 8 sessions. La preuve finale
+  utilise review-tail-execution.json, distinct du constat historique 6+2.
+
+La télémétrie énonce authorized_reallocation et phase. borrowing_enabled reste
+faux : il ne s'agit pas d'un emprunt opportuniste pendant la rédaction, mais
+d'une autorisation explicite après absence de nouveau travail accessible.
+Les limites de pool sont des plafonds, jamais des preuves d'exécution.
+
+La bascule acquiert manual-agent-slots.lock et le registre commun, exige un
+document manual-agent-slots.json réellement connu et vide, puis écrit la phase
+avant de relâcher le verrou manuel. slot_document refuse toute nouvelle
+réservation manuelle pendant cette phase ; elle nécessite une nouvelle
+coordination et un drain complet. Le verrou reste disponible pour réduire ou
+ajuster atomiquement le contrôle de capacité. Le document manuel est relu à
+chaque admission tail ; absent, invalide ou non vide, il ferme les admissions.
+Écrire directement les fichiers hors de ce protocole ne constitue jamais une
+autorisation de lancer un agent.
+
+Récupération et dernières images avant modification
+
+La reprise ne consomme aucun ancien answer.json ou certificat. Elle recharge les
+sources canoniques actuelles, contrôle leurs identifiants, numéros et SHA contre
+la base, lit en transaction les propositions existantes et recalcule les index
+de lots à partir des lots actifs. Les articles déjà acceptés ou conservés sont
+exclus. Une proposition existante incomplète ou de source différente bloque la
+reprise et appelle une réconciliation, jamais un écrasement. Un inventaire
+absent, vide, mal formé ou contenant des doublons est une erreur, pas zéro tâche.
+Les sources graphiques non récupérées restent explicitement en attente.
+
+Avant tout nouveau lot et de nouveau au passage tail, verify_complete_inventory
+exige les neuf recueils complets configurés, coverage réconcilié, leurs nombres
+épinglés dans le plan et la même liste exacte d'identifiants que l'inventaire
+officiel ingest.inventory à la date de couverture. Le total attendu est 30 317.
+Un recueil tronqué, une substitution d'identité à nombre constant ou une section
+officielle manquante bloque. Cette lecture ne génère aucune nouvelle snapshot.
+
+Les 168 nouveaux différés seront donc retrouvés seulement s'ils sont encore
+ouverts au moment de la reprise ; les 24 réparations préparées ailleurs doivent
+d'abord être rapprochées des états réels par le parent. S'il les applique, les
+articles effectivement enregistrés disparaîtront naturellement de la reprise.
+
+Pour les 12 relectures différées et les autres secondes passes,
+review_prior.build_jobs est rappelé après le drain, puis entre les vagues. Il
+capture la source, la proposition entière et tous les champs DB, ainsi que
+l'empreinte de la ligne JSON active entière (pas uniquement le texte), sous le
+verrou rédacteur. Le commit refuse les propositions, métadonnées, propriétaires
+ou sources intervenus entre-temps. Les archives de before-images restent écrites
+avant tout remplacement. Un travail déjà repris ailleurs est exclu par l'état
+courant ; une divergence DB/lot ou manifeste exige une comparaison explicite.
+
+Un ensemble d'identités ou de before-images identique après une vague sans
+progrès provoque un blocage explicite. Il n'y a ni boucle de replay illimitée ni
+conversion de différé en acceptation. Les relectures de renvois utilisent ensuite
+le pilote de convergence existant, ses cibles complètes et ses gardes de commit.
+Le statut final reste un checkpoint : aucune exhaustivité juridique, aucun avis
+de juriste ni récupération de source normative n'est présumé.
+
+Après une sortie, un budget review_tail_limit=0 suspend seulement les reviews :
+le superviseur relit l'inventaire canonique complet courant et les ouverts, puis
+ne reste en pause que si aucun nouveau accessible ne subsiste et qu'une phase
+tail du même PID porte la même empreinte complète d'identités. Un statut ancien
+ne peut donc cacher un nouveau lot résiduel ; il est repris malgré la pause des
+reviews. Aucun worker sous budget zéro ne produit une preuve d'exécution vide.
+
+Point sûr futur — PROCÉDURE PARENT, NON AUTOMATISÉE ICI
+
+L'activation automatique n'est pas fournie. drain_decision est un contrôle pur
+testé, pas un outil qui collecte les preuves, attend les processus ou installe
+le candidat. Le parent doit relire le diff puis conduire la bascule ci-dessous.
+Cette limite est volontaire : aucun hook d'activation non revu n'est installé.
+
+1. Attendre la file courante new vide ET zéro new réservé/en cours, avec les
+   compteurs rattachés au PID exact du coordinateur et des fichiers frais. Ne
+   jamais déduire zéro d'un fichier absent, d'une erreur de lecture ou d'un statut
+   provenant d'une autre cohorte. Les différés hors file et les sources retenues
+   restent comptabilisés séparément ; « file vide » n'est pas « corpus terminé ».
+
+2. Sous les verrous de supervision et de réservations manuelles, refaire les
+   contrôles d'identité, files, inventaire, propriétaires des lots, enregistrement,
+   sources, bénéfices, impacts et renvois. Exclure toute tâche manuelle/orpheline
+   ou autre coordinateur. La fonction pure drain_decision ne valide que des
+   preuves déjà collectées ; chaque booléen manquant et compteur inconnu bloque.
+   Archiver les petits contrôles courants et leurs empreintes, pas une nouvelle
+   grosse copie de la base. Ne pas tenir draft-writer.lock en attendant les
+   derniers workers : ils en ont besoin pour enregistrer leurs réponses.
+
+3. Fermer uniquement les admissions review via le contrôle existant, en gardant
+   les six rédacteurs autorisés et review=0. Laisser finir les reviews valides
+   déjà en vol, le coordinateur et son éventuel checkpoint de publication.
+   Aucun signal ou arrêt brutal n'est requis. Garder le verrou de supervision
+   pendant cette fenêtre pour empêcher un redémarrage entre sortie et examen.
+
+4. Après sortie naturelle, vérifier de nouveau aucun processus worker/coordinateur,
+   la libération effective du verrou coordinateur et l'identité de son reçu de
+   sortie. Refaire sous les verrous appropriés l'inventaire des lots/propriétaires,
+   DB et miroirs, registration-intent/registration-complete, dernières images,
+   sources et toutes les gardes. Le helper de réparation de métadonnées du parent
+   ne s'utilise qu'à ce point complètement drainé, avec états exacts actuels.
+   Une absence de processus seule ne prouve pas une réconciliation réussie.
+
+5. Comparer les hashes du code actif à manifest.json. Toute évolution requiert
+   un rebasage et de nouveaux tests ciblés ; ne pas appliquer ce patch aveuglément.
+   Après revue seulement, installer les six fichiers ensemble, préserver les
+   autres champs du plan et y sélectionner continuation_mode
+   recover_new_before_reviews avec review_tail_capacity<=8. Le contrôle doit
+   contenir review_tail_limit explicite, entier entre 0 et sa capacité courante.
+   Restaurer le contrôle
+   effectif cohérent d'avant la fermeture (p. ex. 7=new6+review1) ; ne pas augmenter
+   automatiquement à 8 si la mesure du second relecteur n'a pas été validée.
+
+6. Libérer le verrou coordinateur réservé pour l'audit avant le lancement parent,
+   tout en gardant l'exclusion de supervision jusqu'à l'adoption du nouveau PID.
+   Le superviseur préparé relancera alors explicitement le mode de continuation.
+   Vérifier l'unicité, les réservations, la reprise des différés et les premières
+   réponses natives. Après récupération des nouveaux ouverts, le même processus
+   passe automatiquement aux relectures jusqu'au total effectif courant, puis
+   aux renvois. Les défauts persistants demeurent bloquants et documentés, sans
+   nouvelle demande de confirmation à l'utilisateur pour une reprise déjà autorisée.
+
+Validation et limites
+
+Les tests ciblés emploient uniquement de minuscules fixtures temporaires et des
+threads synthétiques : huit relectures simultanées au maximum, neuvième refusée,
+conflits conservés, baisse qui laisse finir, soumission défaillante qui libère sa
+réservation, sept places qui restent sept, pauses/réservations respectées,
+inventaire inconnu bloquant, sélection réelle du mode par le superviseur,
+phases ordonnées, progrès nul bloquant, preuve native distincte obligatoire.
+
+Une comparaison AST confirme que validate_answer, policy_is_current, invoke_agent,
+_run_job, run_job, job_directory, job_lease, leases_conflict, capture_for_attempt,
+run_in_slot et release_slot sont inchangés. review_prior.py et son commit restent
+intégralement inchangés. Les 27 tests ciblés et 74 régressions existantes de
+capacités, parallélisme, files, before-images, renvois, observation et supervision
+passent sur le candidat final. Les régressions interdisent explicitement l'accès
+à la DB active et limitent le verrou rédacteur aux fixtures temporaires.
+test_preflight.py et run_regressions.py permettent de les reproduire ; les logs
+et reçus donnent les comptes exacts. Aucun test ne prouve un débit réel supérieur.
+
+Le contrôle réel d'inventaire final a réussi en 10,50 secondes : 9 recueils et
+30 317 identités, avec égalité exacte des listes officielles et empreintes de
+sources/nombres. La base est ouverte avec mode=ro et BEGIN ; aucun verrou
+rédacteur de production, export, modèle ou nouvelle snapshot n'est requis.
+Deux premières exécutions de test/lecture attendaient le verrou rédacteur par
+un ancien chemin ; seuls ces deux processus de préparation ont été interrompus,
+puis relancés avec les gardes de lecture/fixtures corrigées. Aucun processus de
+production n'a été signalé ; aucune exécution longue n'est laissée en cours.
+
+Les empreintes finales attestent que les six codes actifs de référence n'ont pas
+changé pendant cette préparation. Ce dossier ne contient ni nouvelle capture
+de base ni reçu de déploiement ni preuve de sessions réelles. Il n'existe aucun
+pointeur « latest » créé par cet agent ; son enregistrement appartient au parent.

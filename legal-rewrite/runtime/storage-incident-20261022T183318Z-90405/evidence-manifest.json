@@ -1,0 +1,238 @@
+{
+  "at_utc": "2026-10-22T18:33:18.566488+00:00",
+  "free_bytes": 4914647040,
+  "coordinator": {
+    "pid": 18713,
+    "capacity": 8,
+    "started_at_unix": 1792693895,
+    "dependency_leases": true,
+    "requested_execution": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium"
+    },
+    "role_limits": {
+      "new": 6,
+      "review": 2
+    },
+    "initial_admission_limits": {
+      "workers": 7,
+      "role_limits": {
+        "new": 6,
+        "review": 1
+      }
+    },
+    "borrowing_enabled": false
+  },
+  "original_trace_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/registration-convoy-20261022T1607Z/continuation.log",
+  "original_trace_log_sha256": "6aa82f2d7af4d5f7db21fa881708001b3fd0fd420400740e925461bbdca02439",
+  "excerpt_lines": [
+    648952,
+    649017
+  ],
+  "evidence_files": [
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py",
+      "copy": "evidence/run_exhaustive.py",
+      "bytes": 63276,
+      "sha256": "1c66699d0b54334c099460546c8bd1cfced0a831336a544caf17b7b928538f7e",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/review_lanes.py",
+      "copy": "evidence/review_lanes.py",
+      "bytes": 6999,
+      "sha256": "5a0fbfc04e9e2e4d6e6b315308425e6a807e5b2134a4dddd09ac65cfae22a1c5",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/status.json",
+      "copy": "evidence/runtime/exhaustive/status.json",
+      "bytes": 1723,
+      "sha256": "a6a596e009d638dd60e123dd81bc2ff0b568397e9df64fd45c84079cd0f50a97",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/coordinator-exit.json",
+      "copy": "evidence/runtime/exhaustive/coordinator-exit.json",
+      "bytes": 128,
+      "sha256": "e331b71987b0bb232aceaaa7e4f717305bb86bde48cf5e3f9c186cb4cc7ccc80",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/coordinator-run.json",
+      "copy": "evidence/runtime/exhaustive/coordinator-run.json",
+      "bytes": 390,
+      "sha256": "566ab0ab972b8a27f767c15d71bf73ef2887fc4d22d8cef03fdcc23fb76c89ca",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/admission-worker-failure.json",
+      "copy": "evidence/runtime/exhaustive/admission-worker-failure.json",
+      "bytes": 457,
+      "sha256": "5cf9a8ada03ae75eb85028047a02c4977209b1bc23aa30744ad4197201b4711e",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/admission-unconsumed-completions.json",
+      "copy": "evidence/runtime/exhaustive/admission-unconsumed-completions.json",
+      "bytes": 833,
+      "sha256": "73d5c7f8e9eb362dc0d375f0e7a7c3649bc38c5139b1306653077eb96cc2f5b6",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/resume-latest.json",
+      "copy": "evidence/runtime/resume-latest.json",
+      "bytes": 450,
+      "sha256": "4363deca9134259f7d1dabde270c24952c458a5e8b023042e54c0f4cc85be0b8",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00345/coordination.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00345/coordination.json",
+      "bytes": 87006,
+      "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00345/policy-fingerprint.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00345/policy-fingerprint.json",
+      "bytes": 170,
+      "sha256": "03082f677ed42b48ee969181f04197fff4c0de29b674a7203febc2c2538452c5",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00345/policy.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00345/policy.json",
+      "bytes": 21153,
+      "sha256": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00345/source.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00345/source.json",
+      "bytes": 49970,
+      "sha256": "06c73642c3769cc6d630478119bd7e869afe938aaec661c0e2121dd06d46c17e",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00345/result-schema.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00345/result-schema.json",
+      "bytes": 242,
+      "sha256": "b63a4f377e5f982c819c8da66b7b868cb0bae9d461f6e0277f743c49842f6b30",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00345/process-14261.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00345/process-14261.json",
+      "bytes": 421,
+      "sha256": "ae620d3f11b40c9df08fd1c049f4f886183ef2bf1486f8b02c46d84b1385671d",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00345/errors-1.log",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00345/errors-1.log",
+      "bytes": 315342,
+      "sha256": "3649538c074f92ed100dab24c0e01f7db9c39f618240a0c1d9a84432833d190d",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00345/reference-targets.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00345/reference-targets.json",
+      "bytes": 17933,
+      "sha256": "1cf6f38185a428ff5fd82bbe89f4e89d235bfb1c3b31c8e2a0ee656935f8515e",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00345/execution-requested-1.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00345/execution-requested-1.json",
+      "bytes": 60,
+      "sha256": "9a63afb985056bf79ff71287b30864082b425ac111196fcc303f398a70f2132d",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00345/answer.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00345/answer.json",
+      "bytes": 67352,
+      "sha256": "48486481c8b624872d40b7cc64c037952386b35fad1af748fc6ab6dc0b1bc511",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00345/events-1.log",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00345/events-1.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00349/coordination.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00349/coordination.json",
+      "bytes": 87006,
+      "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00349/policy-fingerprint.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00349/policy-fingerprint.json",
+      "bytes": 170,
+      "sha256": "03082f677ed42b48ee969181f04197fff4c0de29b674a7203febc2c2538452c5",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00349/policy.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00349/policy.json",
+      "bytes": 21153,
+      "sha256": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00349/source.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00349/source.json",
+      "bytes": 47728,
+      "sha256": "12eaceaf8f021aa98905980cc1689bc722708a8f84c92063dc79f37f41d11cbb",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00349/result-schema.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00349/result-schema.json",
+      "bytes": 242,
+      "sha256": "b63a4f377e5f982c819c8da66b7b868cb0bae9d461f6e0277f743c49842f6b30",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00349/process-17456.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00349/process-17456.json",
+      "bytes": 421,
+      "sha256": "f61171a0fe9dd0b01772f0e187394a4e16a367729d0d21fe8815df69a9bf22e1",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00349/errors-1.log",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00349/errors-1.log",
+      "bytes": 23771,
+      "sha256": "0f571b5849e4e32120ef8b0f5b9f7d89c39c90e3c6f9e911f81be2128b74d0bb",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00349/reference-targets.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00349/reference-targets.json",
+      "bytes": 1661,
+      "sha256": "bc17547ae010c582d54b354670e01fe0d8de6c4867a5acd81868ed0ec6b7112b",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00349/execution-requested-1.json",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00349/execution-requested-1.json",
+      "bytes": 60,
+      "sha256": "9a63afb985056bf79ff71287b30864082b425ac111196fcc303f398a70f2132d",
+      "same_as_original": true
+    },
+    {
+      "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00349/events-1.log",
+      "copy": "evidence/runtime/exhaustive/jobs/travail-00349/events-1.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "same_as_original": true
+    }
+  ],
+  "current_status_may_lag_new_coordinator": true
+}

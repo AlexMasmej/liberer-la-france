@@ -1,0 +1,645 @@
+{
+  "review_id": "769f678268943499eb4c8bdda4041b6beb5fbf6035155917cc07e682e9b13125",
+  "global_audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+  "reviewed_at_utc": "2026-10-22T18:34:02.976924+00:00",
+  "scope": "Fresh semantic review of 8 L1242-2 references / 15 articles on frozen snapshot",
+  "target_key": "LEGITEXT000006072050|LEGIARTI000037312980",
+  "findings_reviewed": 8,
+  "classification_counts": {
+    "renvoi_historique_transitoire": 1,
+    "protection_speciale_independante_avec_composante_transitoire": 7
+  },
+  "all_article_guards_match_current_state": true,
+  "all_policy_guards_match_current_state": true,
+  "current_state_means": "named frozen snapshot only",
+  "full_articles_read": 15,
+  "findings": [
+    {
+      "review_id": "769f678268943499eb4c8bdda4041b6beb5fbf6035155917cc07e682e9b13125",
+      "original_finding_id": "2fc8e861e3d37191b39376fc2cf19f1cd22a2326adb539cafbc8ec16bcda3a39",
+      "global_audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+      "source_key": "LEGITEXT000006072050|LEGIARTI000035638998",
+      "number": "L1251-37-1",
+      "classification": "renvoi_historique_transitoire",
+      "effective_inconsistency_established": false,
+      "review_status": "fresh_full_context_review_not_marked_resolved",
+      "resolved": false,
+      "automatic_change": false,
+      "semantic_review_by_jurist": false,
+      "source_guard": {
+        "source_sha256": "2c92f937fc1a2d5ff1a69d05d23153c4b218fdc519d1855a987cdd073dd42b32",
+        "source_body_sha256": "130a076083a30576123e9472c19d2f50698597c0185e54111a75e33d4a5f972f",
+        "source_notes_sha256": "e7cde27c727af5c5655b79c183b82ea85fac39630b33590c17f50f7e5c665c9b",
+        "article_document_sha256": "2c92f937fc1a2d5ff1a69d05d23153c4b218fdc519d1855a987cdd073dd42b32",
+        "article_document_stored_sha256": "2c92f937fc1a2d5ff1a69d05d23153c4b218fdc519d1855a987cdd073dd42b32",
+        "proposal_sha256": "587d59f09bd1014074e6cc1cc385d337609b7886f705d3174355cce5df7fd068",
+        "draft_source_sha256": "2c92f937fc1a2d5ff1a69d05d23153c4b218fdc519d1855a987cdd073dd42b32",
+        "draft_status": "rewrite_draft"
+      },
+      "target_key": "LEGITEXT000006072050|LEGIARTI000037312980",
+      "target_guard": {
+        "source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "source_body_sha256": "1cf6128c8d475f274d79ade1ca1ba07395d3c9bdab5a4b1039fbb66f4e460464",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "article_document_stored_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "proposal_sha256": "475048d4b19f10e72239744905e5804d7f462a6f229fce92e84b1244c83c934f",
+        "draft_source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "draft_status": "rewrite_draft"
+      },
+      "analysis": "Dispense de carence pour futures lettres de mission, sécurité/égalité/licéité maintenues; six exceptions anciennes et champ de la note 2017 conservés.",
+      "reference_components": {
+        "legacy_contract_reference": "Définition historique du 3° appliquée aux anciens contrats sous transition L1241-1/L1242-2.",
+        "future_reference": null
+      },
+      "evidence": [
+        {
+          "paragraph_index_zero_based": 0,
+          "exact_paragraph_xml": "<p>Pour les contrats uniques conclus à compter de l'entrée en vigueur de la réforme, aucun délai de carence légal n'est imposé entre deux lettres de mission d'un salarié en contrat unique. Cette dispense ne permet pas d'affecter un salarié à des tâches interdites, de contourner la sécurité, l'égalité de traitement ou les conditions licites de recours à la mise à disposition.</p>",
+          "paragraph_xml_sha256": "1482ac084037fbc4c78c15a860cc36888b879675915dd647858a0a0974dfe847"
+        },
+        {
+          "paragraph_index_zero_based": 1,
+          "exact_paragraph_xml": "<p>Pour les contrats conclus avant cette entrée en vigueur, les règles suivantes demeurent applicables :</p>",
+          "paragraph_xml_sha256": "869b0ca70ff4b657fa54467eaed6543664a5bcbe73099d103cce8b4b94efd7aa"
+        },
+        {
+          "paragraph_index_zero_based": 2,
+          "exact_paragraph_xml": "<p>Si la convention ou l'accord de branche conclu en application de l'article L. 1251-37 ne prévoit pas les cas dans lesquels le délai de carence ne s'applique pas, ce délai ne s'applique pas dans les cas suivants :<br /><br />1° Le contrat de mission est conclu pour remplacer un salarié temporairement absent ou dont le contrat de travail est suspendu, et le salarié remplacé est de nouveau absent ;<br /><br />2° Le contrat de mission est conclu pour réaliser des travaux urgents rendus nécessaires par des mesures de sécurité ;<br /><br />3° Le contrat de travail à durée déterminée est conclu pour pourvoir un emploi à caractère saisonnier défini au 3° de l'article L. 1242-2 ou un emploi pour lequel il est d'usage constant de ne pas recourir au contrat de travail à durée indéterminée. Dans ce dernier cas, l'emploi relève de secteurs d'activité définis par décret ou par voie de convention ou d'accord collectif étendu, et cet usage tient à la nature de l'activité exercée et au caractère par nature temporaire de l'emploi ;<br /><br />4° Le contrat est conclu pour remplacer l'une des personnes mentionnées aux 4° et 5° de l'article L. 1251-6 ;<br /><br />5° Le salarié prend l'initiative de rompre le contrat avant son terme ;<br /><br />6° Le salarié refuse le renouvellement de son contrat de mission, pour la durée du contrat non renouvelé.</p>",
+          "paragraph_xml_sha256": "1298d3ab2410ab41f22c957e984b14308a5dc42904d493286d2dc8c7f6316677"
+        },
+        {
+          "paragraph_index_zero_based": 3,
+          "exact_paragraph_xml": "<p>Les contrats conclus avant l'entrée en vigueur de la réforme du contrat unique restent régis par les dispositions qui leur étaient applicables ; leurs droits et créances acquis sont conservés. Aucune conversion en contrat unique ne remet l'ancienneté à zéro.</p>",
+          "paragraph_xml_sha256": "88ec5a716974b092fccc1a6d11add84c5de22e3d38107d62b718174e77596cbe"
+        }
+      ],
+      "new_L1221_2_effect": "Réserve explicite des protections spéciales; conservation des avantages futurs et des droits acquis. Ne contredit pas ce renvoi.",
+      "queue_overlay_recommendation": "Conserver signal original avec cette revue limitée; aucune résolution automatique."
+    },
+    {
+      "review_id": "769f678268943499eb4c8bdda4041b6beb5fbf6035155917cc07e682e9b13125",
+      "original_finding_id": "6d5c414948fc50c4f03e8d9931ecb6cac0096660718f8895b9949c9de591a828",
+      "global_audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+      "source_key": "LEGITEXT000006072050|LEGIARTI000036762230",
+      "number": "L2412-13",
+      "classification": "protection_speciale_independante_avec_composante_transitoire",
+      "effective_inconsistency_established": false,
+      "review_status": "fresh_full_context_review_not_marked_resolved",
+      "resolved": false,
+      "automatic_change": false,
+      "semantic_review_by_jurist": false,
+      "source_guard": {
+        "source_sha256": "2f0551ed017f6e1d00a2834135d8f1112e7eb9c08d595f78d136cf001cccbc4d",
+        "source_body_sha256": "162f2b685f7ccb0ed35b6a054ca5859b330b5d996faa1ddb5dd55bb9f9ec81aa",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "2f0551ed017f6e1d00a2834135d8f1112e7eb9c08d595f78d136cf001cccbc4d",
+        "article_document_stored_sha256": "2f0551ed017f6e1d00a2834135d8f1112e7eb9c08d595f78d136cf001cccbc4d",
+        "proposal_sha256": "3f01d5719ab8e21d4ebef85986120fd7b849cf08934ee220871e44154aec3014",
+        "draft_source_sha256": "2f0551ed017f6e1d00a2834135d8f1112e7eb9c08d595f78d136cf001cccbc4d",
+        "draft_status": "rewrite_draft"
+      },
+      "target_key": "LEGITEXT000006072050|LEGIARTI000037312980",
+      "target_guard": {
+        "source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "source_body_sha256": "1cf6128c8d475f274d79ade1ca1ba07395d3c9bdab5a4b1039fbb66f4e460464",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "article_document_stored_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "proposal_sha256": "475048d4b19f10e72239744905e5804d7f462a6f229fce92e84b1244c83c934f",
+        "draft_source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "draft_status": "rewrite_draft"
+      },
+      "analysis": "Corps source conservé pour anciens CDD; autorisation et catégories/durées sources préservées; réemploi en contrat sans terme. Dernier alinéa étend explicitement la prolongation saisonnière ou d’usage aux futurs salariés protégés dans le même champ matériel. Cette prolongation autonome ne vaut ni terme ni dispense d’autorisation.",
+      "reference_components": {
+        "legacy_contract_reference": "Définition historique du 3° appliquée aux anciens contrats sous transition L1241-1/L1242-2.",
+        "future_reference": "Champ matériel de la prolongation autonome explicite du dernier alinéa, sans nouveau CDD."
+      },
+      "evidence": [
+        {
+          "paragraph_index_zero_based": 0,
+          "exact_paragraph_xml": "<p>Les dispositions du présent article demeurent applicables aux contrats à durée déterminée conclus avant l’entrée en vigueur de la loi instituant le contrat unique, dans les conditions transitoires de l’article L. 1241-1.</p>\n",
+          "paragraph_xml_sha256": "25801235f33fe7419bb388ffbb87a9a57522d987dbd7d0ae0c396017bd7d3dc2"
+        },
+        {
+          "paragraph_index_zero_based": 1,
+          "exact_paragraph_xml": "<p>La rupture du contrat de travail à durée déterminée du conseiller prud'homme avant l'échéance du terme en raison d'une faute grave ou de l'inaptitude constatée par le médecin du travail, ou à l'arrivée du terme lorsque l'employeur n'envisage pas de renouveler un contrat comportant une clause de renouvellement, ne peut intervenir qu'après autorisation de l'inspecteur du travail. </p>\n",
+          "paragraph_xml_sha256": "f382a1f860a45bdb57f6c9e4055b06d6f9d5e700a2e856561116ec5bdaeaf32c"
+        },
+        {
+          "paragraph_index_zero_based": 2,
+          "exact_paragraph_xml": "<p>Cette procédure est applicable pendant les délais prévus aux articles L. 2411-5 et L. 2411-8. </p>\n",
+          "paragraph_xml_sha256": "b8d688763afe7b39b2491b6c2bf8723a5c839a334f489562ae6ed5849de229a6"
+        },
+        {
+          "paragraph_index_zero_based": 3,
+          "exact_paragraph_xml": "<p>Lorsque le contrat est conclu sur le fondement du 3° de l'article L. 1242-2, le salarié bénéficie de la protection lorsque l'employeur envisage soit de rompre le contrat de travail avant l'échéance du terme, soit de ne pas le renouveler en non-respect d'une clause de reconduction prévue dans le contrat de travail, ou par accord d'entreprise ou accord de branche mentionné à l'article L. 1244-2-2. Les délais de protection sont prolongés d'une durée égale à la période habituelle d'interruption de l'activité du salarié.</p>\n",
+          "paragraph_xml_sha256": "14c74506f67c46e29561c5ca5700d9072e1448a57d0e82ef0055cbbf62a0378d"
+        },
+        {
+          "paragraph_index_zero_based": 4,
+          "exact_paragraph_xml": "<p>Les renvois aux anciens articles L. 1242-2 et L. 1244-2-2 servent exclusivement à préserver les catégories, droits de reconduction et prolongations de protection attachés à ces contrats antérieurs. Ils n’autorisent aucun nouveau CDD ni renouvellement à terme après la réforme. L’exécution d’un droit de réemploi conservé prend la forme d’un contrat unique sans terme, sans perte de l’ancienneté ou de la protection acquises.</p>",
+          "paragraph_xml_sha256": "bd028904227f75a69dae49fb26bb46fab0b7f7e32bc4504a38c1c05df1dd8ac7"
+        },
+        {
+          "paragraph_index_zero_based": 5,
+          "exact_paragraph_xml": "<p>Les nouveaux contrats uniques restent soumis à la protection des salariés investis d’un mandat prévue au chapitre Ier du présent titre. La fin d’une aide, d’une période d’activité saisonnière ou d’une mission ne crée pas un terme dispensant de cette protection.</p>\n",
+          "paragraph_xml_sha256": "3110fd1c464bbf54d987061e09058d9b3629580c7f23829cc25da539bf48b37f"
+        },
+        {
+          "paragraph_index_zero_based": 6,
+          "exact_paragraph_xml": "<p>Pour les futurs salariés en contrat unique appartenant aux catégories protégées mentionnées au présent article et affectés à une activité saisonnière ou d'usage par nature temporaire relevant du même champ matériel que le 3° de l'ancien article L. 1242-2, la prolongation des délais de protection reste applicable : les délais attachés à leur protection sont prolongés d'une durée égale à la période habituelle d'interruption de leur activité. Cette interruption ne met pas fin au contrat unique et ne dispense d'aucune autorisation de rupture requise pour un salarié protégé. Le changement de support du contrat ne retire pas cette garantie aux futurs bénéficiaires.</p>",
+          "paragraph_xml_sha256": "e030c865bd88140fb286333f586304e554628b2ea43c3b338ad8dc474687739a"
+        }
+      ],
+      "new_L1221_2_effect": "Réserve explicite des protections spéciales; conservation des avantages futurs et des droits acquis. Ne contredit pas ce renvoi.",
+      "queue_overlay_recommendation": "Conserver signal original avec cette revue limitée; aucune résolution automatique."
+    },
+    {
+      "review_id": "769f678268943499eb4c8bdda4041b6beb5fbf6035155917cc07e682e9b13125",
+      "original_finding_id": "4ba32642a2a4f4a32734ec03913abb2589e688e867a808acfae61fc6b675d829",
+      "global_audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+      "source_key": "LEGITEXT000006072050|LEGIARTI000036762242",
+      "number": "L2412-9",
+      "classification": "protection_speciale_independante_avec_composante_transitoire",
+      "effective_inconsistency_established": false,
+      "review_status": "fresh_full_context_review_not_marked_resolved",
+      "resolved": false,
+      "automatic_change": false,
+      "semantic_review_by_jurist": false,
+      "source_guard": {
+        "source_sha256": "f30b70b33d92b3160f66403bd6f291038578eb830d68ec6a4aff23d2302425ee",
+        "source_body_sha256": "8bc577cc6e1ac1abb769fe6f4e9ab8b867e9d819864d41fbf5317c1496aae9ce",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "f30b70b33d92b3160f66403bd6f291038578eb830d68ec6a4aff23d2302425ee",
+        "article_document_stored_sha256": "f30b70b33d92b3160f66403bd6f291038578eb830d68ec6a4aff23d2302425ee",
+        "proposal_sha256": "ca9bdee42bc22a5ba379a5940bd3914f7e472ecabc58693c8610bfbca278868e",
+        "draft_source_sha256": "f30b70b33d92b3160f66403bd6f291038578eb830d68ec6a4aff23d2302425ee",
+        "draft_status": "rewrite_draft"
+      },
+      "target_key": "LEGITEXT000006072050|LEGIARTI000037312980",
+      "target_guard": {
+        "source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "source_body_sha256": "1cf6128c8d475f274d79ade1ca1ba07395d3c9bdab5a4b1039fbb66f4e460464",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "article_document_stored_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "proposal_sha256": "475048d4b19f10e72239744905e5804d7f462a6f229fce92e84b1244c83c934f",
+        "draft_source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "draft_status": "rewrite_draft"
+      },
+      "analysis": "Corps source conservé pour anciens CDD; autorisation et catégories/durées sources préservées; réemploi en contrat sans terme. Dernier alinéa étend explicitement la prolongation saisonnière ou d’usage aux futurs salariés protégés dans le même champ matériel. Cette prolongation autonome ne vaut ni terme ni dispense d’autorisation.",
+      "reference_components": {
+        "legacy_contract_reference": "Définition historique du 3° appliquée aux anciens contrats sous transition L1241-1/L1242-2.",
+        "future_reference": "Champ matériel de la prolongation autonome explicite du dernier alinéa, sans nouveau CDD."
+      },
+      "evidence": [
+        {
+          "paragraph_index_zero_based": 0,
+          "exact_paragraph_xml": "<p>Les dispositions du présent article demeurent applicables aux contrats à durée déterminée conclus avant l’entrée en vigueur de la loi instituant le contrat unique, dans les conditions transitoires de l’article L. 1241-1.</p>\n",
+          "paragraph_xml_sha256": "25801235f33fe7419bb388ffbb87a9a57522d987dbd7d0ae0c396017bd7d3dc2"
+        },
+        {
+          "paragraph_index_zero_based": 1,
+          "exact_paragraph_xml": "<p>La rupture du contrat de travail à durée déterminée d'un salarié membre d'une commission paritaire d'hygiène, de sécurité et des conditions de travail en agriculture, avant l'échéance du terme en raison d'une faute grave ou de l'inaptitude constatée par le médecin du travail, ou à l'arrivée du terme lorsque l'employeur n'envisage pas de renouveler un contrat comportant une clause de renouvellement, ne peut intervenir qu'après autorisation de l'inspecteur du travail. </p>\n",
+          "paragraph_xml_sha256": "081947d6c38ed15c4a1b40329c0ea5a1da2d15eb3f8bac3ff74c47810961016f"
+        },
+        {
+          "paragraph_index_zero_based": 2,
+          "exact_paragraph_xml": "<p>Cette procédure s'applique également à l'ancien représentant ou au candidat durant les délais prévus aux articles L. 2411-8 et L. 2411-10. </p>\n",
+          "paragraph_xml_sha256": "9033ab4ac05ec20ff10843bdca959bb6a201974003521426ddc4e8c39e2f3755"
+        },
+        {
+          "paragraph_index_zero_based": 3,
+          "exact_paragraph_xml": "<p>Lorsque le contrat est conclu sur le fondement du 3° de l'article L. 1242-2, le salarié bénéficie de la protection lorsque l'employeur envisage soit de rompre le contrat de travail avant l'échéance du terme, soit de ne pas le renouveler en non-respect d'une clause de reconduction prévue dans le contrat de travail, ou par accord d'entreprise ou accord de branche mentionné à l'article L. 1244-2-2. Les délais de protection sont prolongés d'une durée égale à la période habituelle d'interruption de l'activité du salarié.</p>\n",
+          "paragraph_xml_sha256": "14c74506f67c46e29561c5ca5700d9072e1448a57d0e82ef0055cbbf62a0378d"
+        },
+        {
+          "paragraph_index_zero_based": 4,
+          "exact_paragraph_xml": "<p>Les renvois aux anciens articles L. 1242-2 et L. 1244-2-2 servent exclusivement à préserver les catégories, droits de reconduction et prolongations de protection attachés à ces contrats antérieurs. Ils n’autorisent aucun nouveau CDD ni renouvellement à terme après la réforme. L’exécution d’un droit de réemploi conservé prend la forme d’un contrat unique sans terme, sans perte de l’ancienneté ou de la protection acquises.</p>",
+          "paragraph_xml_sha256": "bd028904227f75a69dae49fb26bb46fab0b7f7e32bc4504a38c1c05df1dd8ac7"
+        },
+        {
+          "paragraph_index_zero_based": 5,
+          "exact_paragraph_xml": "<p>Les nouveaux contrats uniques restent soumis à la protection des salariés investis d’un mandat prévue au chapitre Ier du présent titre. La fin d’une aide, d’une période d’activité saisonnière ou d’une mission ne crée pas un terme dispensant de cette protection.</p>\n",
+          "paragraph_xml_sha256": "3110fd1c464bbf54d987061e09058d9b3629580c7f23829cc25da539bf48b37f"
+        },
+        {
+          "paragraph_index_zero_based": 6,
+          "exact_paragraph_xml": "<p>Pour les futurs salariés en contrat unique appartenant aux catégories protégées mentionnées au présent article et affectés à une activité saisonnière ou d'usage par nature temporaire relevant du même champ matériel que le 3° de l'ancien article L. 1242-2, la prolongation des délais de protection reste applicable : les délais attachés à leur protection sont prolongés d'une durée égale à la période habituelle d'interruption de leur activité. Cette interruption ne met pas fin au contrat unique et ne dispense d'aucune autorisation de rupture requise pour un salarié protégé. Le changement de support du contrat ne retire pas cette garantie aux futurs bénéficiaires.</p>",
+          "paragraph_xml_sha256": "e030c865bd88140fb286333f586304e554628b2ea43c3b338ad8dc474687739a"
+        }
+      ],
+      "new_L1221_2_effect": "Réserve explicite des protections spéciales; conservation des avantages futurs et des droits acquis. Ne contredit pas ce renvoi.",
+      "queue_overlay_recommendation": "Conserver signal original avec cette revue limitée; aucune résolution automatique."
+    },
+    {
+      "review_id": "769f678268943499eb4c8bdda4041b6beb5fbf6035155917cc07e682e9b13125",
+      "original_finding_id": "0f94e02d2c7743dd35233e040b7181fa268bb09d44c4f1614635a2a07e811b60",
+      "global_audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+      "source_key": "LEGITEXT000006072050|LEGIARTI000036762254",
+      "number": "L2412-8",
+      "classification": "protection_speciale_independante_avec_composante_transitoire",
+      "effective_inconsistency_established": false,
+      "review_status": "fresh_full_context_review_not_marked_resolved",
+      "resolved": false,
+      "automatic_change": false,
+      "semantic_review_by_jurist": false,
+      "source_guard": {
+        "source_sha256": "fc517fdf77fe3ffcaf3361820f3a6c470c364384b0bb1b3c7936167c7bba9783",
+        "source_body_sha256": "e2cf1cc9682e65271775dff99c476c7d81a7cd3416cd27feb1fdc99c1b8c8a85",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "fc517fdf77fe3ffcaf3361820f3a6c470c364384b0bb1b3c7936167c7bba9783",
+        "article_document_stored_sha256": "fc517fdf77fe3ffcaf3361820f3a6c470c364384b0bb1b3c7936167c7bba9783",
+        "proposal_sha256": "5bd6ce6ea105eee302bd309f1524deafd9b0bb508fa45e9875b3024f2b97a7a8",
+        "draft_source_sha256": "fc517fdf77fe3ffcaf3361820f3a6c470c364384b0bb1b3c7936167c7bba9783",
+        "draft_status": "rewrite_draft"
+      },
+      "target_key": "LEGITEXT000006072050|LEGIARTI000037312980",
+      "target_guard": {
+        "source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "source_body_sha256": "1cf6128c8d475f274d79ade1ca1ba07395d3c9bdab5a4b1039fbb66f4e460464",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "article_document_stored_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "proposal_sha256": "475048d4b19f10e72239744905e5804d7f462a6f229fce92e84b1244c83c934f",
+        "draft_source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "draft_status": "rewrite_draft"
+      },
+      "analysis": "Corps source conservé pour anciens CDD; autorisation et catégories/durées sources préservées; réemploi en contrat sans terme. Dernier alinéa étend explicitement la prolongation saisonnière ou d’usage aux futurs salariés protégés dans le même champ matériel. Cette prolongation autonome ne vaut ni terme ni dispense d’autorisation.",
+      "reference_components": {
+        "legacy_contract_reference": "Définition historique du 3° appliquée aux anciens contrats sous transition L1241-1/L1242-2.",
+        "future_reference": "Champ matériel de la prolongation autonome explicite du dernier alinéa, sans nouveau CDD."
+      },
+      "evidence": [
+        {
+          "paragraph_index_zero_based": 0,
+          "exact_paragraph_xml": "<p>Les dispositions du présent article demeurent applicables aux contrats à durée déterminée conclus avant l’entrée en vigueur de la loi instituant le contrat unique, dans les conditions transitoires de l’article L. 1241-1.</p>\n",
+          "paragraph_xml_sha256": "25801235f33fe7419bb388ffbb87a9a57522d987dbd7d0ae0c396017bd7d3dc2"
+        },
+        {
+          "paragraph_index_zero_based": 1,
+          "exact_paragraph_xml": "<p>La rupture du contrat de travail à durée déterminée d'un représentant du personnel d'une entreprise extérieure, désigné à la commission santé, sécurité et conditions de travail d'un établissement comprenant au moins une installation classée figurant sur la liste prévue à l'article L. 515-36 du code de l'environnement ou mentionnée à l'article L. 211-2 du code minier, avant l'échéance du terme en raison d'une faute grave ou de l'inaptitude constatée par le médecin du travail, ou à l'arrivée du terme lorsque l'employeur n'envisage pas de renouveler un contrat comportant une clause de renouvellement, ne peut intervenir qu'après autorisation de l'inspecteur du travail. </p>\n",
+          "paragraph_xml_sha256": "66f1b167e109c4a4e8e415b774417faecbfbb72db2214f7f0bafaf80ecb4a523"
+        },
+        {
+          "paragraph_index_zero_based": 2,
+          "exact_paragraph_xml": "<p>Cette procédure s'applique également à l'ancien représentant ou au candidat durant les délais prévus aux articles L. 2411-8 et L. 2411-10. </p>\n",
+          "paragraph_xml_sha256": "9033ab4ac05ec20ff10843bdca959bb6a201974003521426ddc4e8c39e2f3755"
+        },
+        {
+          "paragraph_index_zero_based": 3,
+          "exact_paragraph_xml": "<p>Lorsque le contrat est conclu sur le fondement du 3° de l'article L. 1242-2, le salarié bénéficie de la protection lorsque l'employeur envisage soit de rompre le contrat de travail avant l'échéance du terme, soit de ne pas le renouveler en non-respect d'une clause de reconduction prévue dans le contrat de travail, ou par accord d'entreprise ou accord de branche mentionné à l'article L. 1244-2-2. Les délais de protection sont prolongés d'une durée égale à la période habituelle d'interruption de l'activité du salarié.</p>\n",
+          "paragraph_xml_sha256": "14c74506f67c46e29561c5ca5700d9072e1448a57d0e82ef0055cbbf62a0378d"
+        },
+        {
+          "paragraph_index_zero_based": 4,
+          "exact_paragraph_xml": "<p>Les renvois aux anciens articles L. 1242-2 et L. 1244-2-2 servent exclusivement à préserver les catégories, droits de reconduction et prolongations de protection attachés à ces contrats antérieurs. Ils n’autorisent aucun nouveau CDD ni renouvellement à terme après la réforme. L’exécution d’un droit de réemploi conservé prend la forme d’un contrat unique sans terme, sans perte de l’ancienneté ou de la protection acquises.</p>",
+          "paragraph_xml_sha256": "bd028904227f75a69dae49fb26bb46fab0b7f7e32bc4504a38c1c05df1dd8ac7"
+        },
+        {
+          "paragraph_index_zero_based": 5,
+          "exact_paragraph_xml": "<p>Les nouveaux contrats uniques restent soumis à la protection des salariés investis d’un mandat prévue au chapitre Ier du présent titre. La fin d’une aide, d’une période d’activité saisonnière ou d’une mission ne crée pas un terme dispensant de cette protection.</p>\n",
+          "paragraph_xml_sha256": "3110fd1c464bbf54d987061e09058d9b3629580c7f23829cc25da539bf48b37f"
+        },
+        {
+          "paragraph_index_zero_based": 6,
+          "exact_paragraph_xml": "<p>Pour les futurs salariés en contrat unique appartenant aux catégories protégées mentionnées au présent article et affectés à une activité saisonnière ou d'usage par nature temporaire relevant du même champ matériel que le 3° de l'ancien article L. 1242-2, la prolongation des délais de protection reste applicable : les délais attachés à leur protection sont prolongés d'une durée égale à la période habituelle d'interruption de leur activité. Cette interruption ne met pas fin au contrat unique et ne dispense d'aucune autorisation de rupture requise pour un salarié protégé. Le changement de support du contrat ne retire pas cette garantie aux futurs bénéficiaires.</p>",
+          "paragraph_xml_sha256": "e030c865bd88140fb286333f586304e554628b2ea43c3b338ad8dc474687739a"
+        }
+      ],
+      "new_L1221_2_effect": "Réserve explicite des protections spéciales; conservation des avantages futurs et des droits acquis. Ne contredit pas ce renvoi.",
+      "queue_overlay_recommendation": "Conserver signal original avec cette revue limitée; aucune résolution automatique."
+    },
+    {
+      "review_id": "769f678268943499eb4c8bdda4041b6beb5fbf6035155917cc07e682e9b13125",
+      "original_finding_id": "d1d42537529aeda8e7f86ddb8a7afd3437d962c690baaf5fce4f0da3e6c7eb23",
+      "global_audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+      "source_key": "LEGITEXT000006072050|LEGIARTI000036762263",
+      "number": "L2412-5",
+      "classification": "protection_speciale_independante_avec_composante_transitoire",
+      "effective_inconsistency_established": false,
+      "review_status": "fresh_full_context_review_not_marked_resolved",
+      "resolved": false,
+      "automatic_change": false,
+      "semantic_review_by_jurist": false,
+      "source_guard": {
+        "source_sha256": "1845dea757d85b7dabe6485812ed9b1a657e1a49a07ef7eefa875c59d1e2a09d",
+        "source_body_sha256": "c6696acb2e9d9528ba8d3f7954281aa2d4b277beaa363e97d5261f5b02f01fd3",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "1845dea757d85b7dabe6485812ed9b1a657e1a49a07ef7eefa875c59d1e2a09d",
+        "article_document_stored_sha256": "1845dea757d85b7dabe6485812ed9b1a657e1a49a07ef7eefa875c59d1e2a09d",
+        "proposal_sha256": "23f506a28db5068cec215092b2697d688907444bca2e0343ccca492820a55da0",
+        "draft_source_sha256": "1845dea757d85b7dabe6485812ed9b1a657e1a49a07ef7eefa875c59d1e2a09d",
+        "draft_status": "rewrite_draft"
+      },
+      "target_key": "LEGITEXT000006072050|LEGIARTI000037312980",
+      "target_guard": {
+        "source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "source_body_sha256": "1cf6128c8d475f274d79ade1ca1ba07395d3c9bdab5a4b1039fbb66f4e460464",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "article_document_stored_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "proposal_sha256": "475048d4b19f10e72239744905e5804d7f462a6f229fce92e84b1244c83c934f",
+        "draft_source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "draft_status": "rewrite_draft"
+      },
+      "analysis": "Corps source conservé pour anciens CDD; autorisation et catégories/durées sources préservées; réemploi en contrat sans terme. Dernier alinéa étend explicitement la prolongation saisonnière ou d’usage aux futurs salariés protégés dans le même champ matériel. Cette prolongation autonome ne vaut ni terme ni dispense d’autorisation.",
+      "reference_components": {
+        "legacy_contract_reference": "Définition historique du 3° appliquée aux anciens contrats sous transition L1241-1/L1242-2.",
+        "future_reference": "Champ matériel de la prolongation autonome explicite du dernier alinéa, sans nouveau CDD."
+      },
+      "evidence": [
+        {
+          "paragraph_index_zero_based": 0,
+          "exact_paragraph_xml": "<p>Les dispositions du présent article demeurent applicables aux contrats à durée déterminée conclus avant l’entrée en vigueur de la loi instituant le contrat unique, dans les conditions transitoires de l’article L. 1241-1.</p>\n",
+          "paragraph_xml_sha256": "25801235f33fe7419bb388ffbb87a9a57522d987dbd7d0ae0c396017bd7d3dc2"
+        },
+        {
+          "paragraph_index_zero_based": 1,
+          "exact_paragraph_xml": "<p>La rupture du contrat de travail à durée déterminée d'un membre de la délégation du personnel du comité social et économique interentreprises avant l'échéance du terme en raison d'une faute grave ou de l'inaptitude constatée par le médecin du travail, ou à l'arrivée du terme lorsque l'employeur n'envisage pas de renouveler un contrat comportant une clause de renouvellement, ne peut intervenir qu'après autorisation de l'inspecteur du travail. </p>\n",
+          "paragraph_xml_sha256": "25396901fb974089c28a14053adc226592dea690cfbbf4b6e83d8d6e4b276f52"
+        },
+        {
+          "paragraph_index_zero_based": 2,
+          "exact_paragraph_xml": "<p>Cette procédure s'applique également à l'ancien membre de la délégation du personnel du comité social et économique interentreprises ou au candidat aux fonctions de membre de la délégation du personnel du comité social et économique interentreprises durant les délais prévus aux articles L. 2411-10 et L. 2411-10-1. </p>\n",
+          "paragraph_xml_sha256": "b35ce9fc6b5592328fa1977c1fd7ed9dd175f336065cf719588806ba8744b102"
+        },
+        {
+          "paragraph_index_zero_based": 3,
+          "exact_paragraph_xml": "<p>Lorsque le contrat est conclu sur le fondement du 3° de l'article L. 1242-2, le salarié bénéficie de la protection lorsque l'employeur envisage soit de rompre le contrat de travail avant l'échéance du terme, soit de ne pas le renouveler en non-respect d'une clause de reconduction prévue dans le contrat de travail, ou par accord d'entreprise ou accord de branche mentionné à l'article L. 1244-2-2. Les délais de protection sont prolongés d'une durée égale à la période habituelle d'interruption de l'activité du salarié.</p>\n",
+          "paragraph_xml_sha256": "14c74506f67c46e29561c5ca5700d9072e1448a57d0e82ef0055cbbf62a0378d"
+        },
+        {
+          "paragraph_index_zero_based": 4,
+          "exact_paragraph_xml": "<p>Les renvois aux anciens articles L. 1242-2 et L. 1244-2-2 servent exclusivement à préserver les catégories, droits de reconduction et prolongations de protection attachés à ces contrats antérieurs. Ils n’autorisent aucun nouveau CDD ni renouvellement à terme après la réforme. L’exécution d’un droit de réemploi conservé prend la forme d’un contrat unique sans terme, sans perte de l’ancienneté ou de la protection acquises.</p>",
+          "paragraph_xml_sha256": "bd028904227f75a69dae49fb26bb46fab0b7f7e32bc4504a38c1c05df1dd8ac7"
+        },
+        {
+          "paragraph_index_zero_based": 5,
+          "exact_paragraph_xml": "<p>Les nouveaux contrats uniques restent soumis à la protection des salariés investis d’un mandat prévue au chapitre Ier du présent titre. La fin d’une aide, d’une période d’activité saisonnière ou d’une mission ne crée pas un terme dispensant de cette protection.</p>\n",
+          "paragraph_xml_sha256": "3110fd1c464bbf54d987061e09058d9b3629580c7f23829cc25da539bf48b37f"
+        },
+        {
+          "paragraph_index_zero_based": 6,
+          "exact_paragraph_xml": "<p>Pour les futurs salariés en contrat unique appartenant aux catégories protégées mentionnées au présent article et affectés à une activité saisonnière ou d'usage par nature temporaire relevant du même champ matériel que le 3° de l'ancien article L. 1242-2, la prolongation des délais de protection reste applicable : les délais attachés à leur protection sont prolongés d'une durée égale à la période habituelle d'interruption de leur activité. Cette interruption ne met pas fin au contrat unique et ne dispense d'aucune autorisation de rupture requise pour un salarié protégé. Le changement de support du contrat ne retire pas cette garantie aux futurs bénéficiaires.</p>",
+          "paragraph_xml_sha256": "e030c865bd88140fb286333f586304e554628b2ea43c3b338ad8dc474687739a"
+        }
+      ],
+      "new_L1221_2_effect": "Réserve explicite des protections spéciales; conservation des avantages futurs et des droits acquis. Ne contredit pas ce renvoi.",
+      "queue_overlay_recommendation": "Conserver signal original avec cette revue limitée; aucune résolution automatique."
+    },
+    {
+      "review_id": "769f678268943499eb4c8bdda4041b6beb5fbf6035155917cc07e682e9b13125",
+      "original_finding_id": "7685f724c34db58f3e0602808987df7dc850ebcf3052532e5a59ec8963a51ba4",
+      "global_audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+      "source_key": "LEGITEXT000006072050|LEGIARTI000036762269",
+      "number": "L2412-4",
+      "classification": "protection_speciale_independante_avec_composante_transitoire",
+      "effective_inconsistency_established": false,
+      "review_status": "fresh_full_context_review_not_marked_resolved",
+      "resolved": false,
+      "automatic_change": false,
+      "semantic_review_by_jurist": false,
+      "source_guard": {
+        "source_sha256": "b119cda311073dac67e3239698174cfa12f0129321627340dfa72eaed273fd60",
+        "source_body_sha256": "13ea3daeff9ef5617c7fbdf3be4ffdcf39061933c90d3f74a44fe4e425c43ef6",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "b119cda311073dac67e3239698174cfa12f0129321627340dfa72eaed273fd60",
+        "article_document_stored_sha256": "b119cda311073dac67e3239698174cfa12f0129321627340dfa72eaed273fd60",
+        "proposal_sha256": "d7559cf41e7b91f4c1db9a663e31cbbbe1d953e48be2324236aa668a13e25211",
+        "draft_source_sha256": "b119cda311073dac67e3239698174cfa12f0129321627340dfa72eaed273fd60",
+        "draft_status": "rewrite_draft"
+      },
+      "target_key": "LEGITEXT000006072050|LEGIARTI000037312980",
+      "target_guard": {
+        "source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "source_body_sha256": "1cf6128c8d475f274d79ade1ca1ba07395d3c9bdab5a4b1039fbb66f4e460464",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "article_document_stored_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "proposal_sha256": "475048d4b19f10e72239744905e5804d7f462a6f229fce92e84b1244c83c934f",
+        "draft_source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "draft_status": "rewrite_draft"
+      },
+      "analysis": "Corps source conservé pour anciens CDD; autorisation et catégories/durées sources préservées; réemploi en contrat sans terme. Dernier alinéa étend explicitement la prolongation saisonnière ou d’usage aux futurs salariés protégés dans le même champ matériel. Cette prolongation autonome ne vaut ni terme ni dispense d’autorisation.",
+      "reference_components": {
+        "legacy_contract_reference": "Définition historique du 3° appliquée aux anciens contrats sous transition L1241-1/L1242-2.",
+        "future_reference": "Champ matériel de la prolongation autonome explicite du dernier alinéa, sans nouveau CDD."
+      },
+      "evidence": [
+        {
+          "paragraph_index_zero_based": 0,
+          "exact_paragraph_xml": "<p>Les dispositions du présent article demeurent applicables aux contrats à durée déterminée conclus avant l’entrée en vigueur de la loi instituant le contrat unique, dans les conditions transitoires de l’article L. 1241-1.</p>\n",
+          "paragraph_xml_sha256": "25801235f33fe7419bb388ffbb87a9a57522d987dbd7d0ae0c396017bd7d3dc2"
+        },
+        {
+          "paragraph_index_zero_based": 1,
+          "exact_paragraph_xml": "<p>La rupture du contrat de travail à durée déterminée d'un représentant de proximité avant l'échéance du terme en raison d'une faute grave ou de l'inaptitude constatée par le médecin du travail, ou à l'arrivée du terme lorsque l'employeur n'envisage pas de renouveler un contrat comportant une clause de renouvellement, ne peut intervenir qu'après autorisation de l'inspecteur du travail. </p>\n",
+          "paragraph_xml_sha256": "409ec3763c8005f7af9c5101131f440d27077f8b19a7e303e1b19fb9e5e9076b"
+        },
+        {
+          "paragraph_index_zero_based": 2,
+          "exact_paragraph_xml": "<p>Cette procédure s'applique également à l'ancien représentant de proximité ou au candidat aux fonctions de représentant de proximité durant les délais prévus aux articles L. 2411-8 et L. 2411-9. </p>\n",
+          "paragraph_xml_sha256": "2cabffe07ed8456a8a51006bb2602ecb16cc227db2276fd784d86835b534e23f"
+        },
+        {
+          "paragraph_index_zero_based": 3,
+          "exact_paragraph_xml": "<p>Lorsque le contrat est conclu sur le fondement du 3° de l'article L. 1242-2, le salarié bénéficie de la protection lorsque l'employeur envisage soit de rompre le contrat de travail avant l'échéance du terme, soit de ne pas le renouveler en non-respect d'une clause de reconduction prévue dans le contrat de travail, ou par accord d'entreprise ou accord de branche mentionné à l'article L. 1244-2-2. Les délais de protection sont prolongés d'une durée égale à la période habituelle d'interruption de l'activité du salarié.</p>\n",
+          "paragraph_xml_sha256": "14c74506f67c46e29561c5ca5700d9072e1448a57d0e82ef0055cbbf62a0378d"
+        },
+        {
+          "paragraph_index_zero_based": 4,
+          "exact_paragraph_xml": "<p>Les renvois aux anciens articles L. 1242-2 et L. 1244-2-2 servent exclusivement à préserver les catégories, droits de reconduction et prolongations de protection attachés à ces contrats antérieurs. Ils n’autorisent aucun nouveau CDD ni renouvellement à terme après la réforme. L’exécution d’un droit de réemploi conservé prend la forme d’un contrat unique sans terme, sans perte de l’ancienneté ou de la protection acquises.</p>",
+          "paragraph_xml_sha256": "bd028904227f75a69dae49fb26bb46fab0b7f7e32bc4504a38c1c05df1dd8ac7"
+        },
+        {
+          "paragraph_index_zero_based": 5,
+          "exact_paragraph_xml": "<p>Les nouveaux contrats uniques restent soumis à la protection des salariés investis d’un mandat prévue au chapitre Ier du présent titre. La fin d’une aide, d’une période d’activité saisonnière ou d’une mission ne crée pas un terme dispensant de cette protection.</p>\n",
+          "paragraph_xml_sha256": "3110fd1c464bbf54d987061e09058d9b3629580c7f23829cc25da539bf48b37f"
+        },
+        {
+          "paragraph_index_zero_based": 6,
+          "exact_paragraph_xml": "<p>Pour les futurs salariés en contrat unique appartenant aux catégories protégées mentionnées au présent article et affectés à une activité saisonnière ou d'usage par nature temporaire relevant du même champ matériel que le 3° de l'ancien article L. 1242-2, la prolongation des délais de protection reste applicable : les délais attachés à leur protection sont prolongés d'une durée égale à la période habituelle d'interruption de leur activité. Cette interruption ne met pas fin au contrat unique et ne dispense d'aucune autorisation de rupture requise pour un salarié protégé. Le changement de support du contrat ne retire pas cette garantie aux futurs bénéficiaires.</p>",
+          "paragraph_xml_sha256": "e030c865bd88140fb286333f586304e554628b2ea43c3b338ad8dc474687739a"
+        }
+      ],
+      "new_L1221_2_effect": "Réserve explicite des protections spéciales; conservation des avantages futurs et des droits acquis. Ne contredit pas ce renvoi.",
+      "queue_overlay_recommendation": "Conserver signal original avec cette revue limitée; aucune résolution automatique."
+    },
+    {
+      "review_id": "769f678268943499eb4c8bdda4041b6beb5fbf6035155917cc07e682e9b13125",
+      "original_finding_id": "fc8b7f10b0ab0e93b7eff968f4c5849110b649abd2920f30a8dcb3820abb0b17",
+      "global_audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+      "source_key": "LEGITEXT000006072050|LEGIARTI000036762276",
+      "number": "L2412-3",
+      "classification": "protection_speciale_independante_avec_composante_transitoire",
+      "effective_inconsistency_established": false,
+      "review_status": "fresh_full_context_review_not_marked_resolved",
+      "resolved": false,
+      "automatic_change": false,
+      "semantic_review_by_jurist": false,
+      "source_guard": {
+        "source_sha256": "c28114de4847394dbb1a7300a5089ee7200071ba84eb06a035e82413a31be47f",
+        "source_body_sha256": "8c1d18880d7e8807249221b379cfba8e2460dceed3aae5d8153d90b53c9df887",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "c28114de4847394dbb1a7300a5089ee7200071ba84eb06a035e82413a31be47f",
+        "article_document_stored_sha256": "c28114de4847394dbb1a7300a5089ee7200071ba84eb06a035e82413a31be47f",
+        "proposal_sha256": "5b2aa9b3b8221bb1d0c10d21812bf15f38d585f2a1e2d8d8e5ae36aeba478498",
+        "draft_source_sha256": "c28114de4847394dbb1a7300a5089ee7200071ba84eb06a035e82413a31be47f",
+        "draft_status": "rewrite_draft"
+      },
+      "target_key": "LEGITEXT000006072050|LEGIARTI000037312980",
+      "target_guard": {
+        "source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "source_body_sha256": "1cf6128c8d475f274d79ade1ca1ba07395d3c9bdab5a4b1039fbb66f4e460464",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "article_document_stored_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "proposal_sha256": "475048d4b19f10e72239744905e5804d7f462a6f229fce92e84b1244c83c934f",
+        "draft_source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "draft_status": "rewrite_draft"
+      },
+      "analysis": "Corps source conservé pour anciens CDD; autorisation et catégories/durées sources préservées; réemploi en contrat sans terme. Dernier alinéa étend explicitement la prolongation saisonnière ou d’usage aux futurs salariés protégés dans le même champ matériel. Cette prolongation autonome ne vaut ni terme ni dispense d’autorisation.",
+      "reference_components": {
+        "legacy_contract_reference": "Définition historique du 3° appliquée aux anciens contrats sous transition L1241-1/L1242-2.",
+        "future_reference": "Champ matériel de la prolongation autonome explicite du dernier alinéa, sans nouveau CDD."
+      },
+      "evidence": [
+        {
+          "paragraph_index_zero_based": 0,
+          "exact_paragraph_xml": "<p>Les dispositions du présent article demeurent applicables aux contrats à durée déterminée conclus avant l’entrée en vigueur de la loi instituant le contrat unique, dans les conditions transitoires de l’article L. 1241-1.</p>\n",
+          "paragraph_xml_sha256": "25801235f33fe7419bb388ffbb87a9a57522d987dbd7d0ae0c396017bd7d3dc2"
+        },
+        {
+          "paragraph_index_zero_based": 1,
+          "exact_paragraph_xml": "<p>La rupture du contrat de travail à durée déterminée d'un membre élu de la délégation du personnel du comité social et économique ou d'un représentant syndical au comité social et économique avant l'échéance du terme en raison d'une faute grave ou de l'inaptitude constatée par le médecin du travail, ou à l'arrivée du terme lorsque l'employeur n'envisage pas de renouveler un contrat comportant une clause de renouvellement, ne peut intervenir qu'après autorisation de l'inspecteur du travail. </p>\n",
+          "paragraph_xml_sha256": "036612faeb81ba62bdc591a15513d77cad7c304b6ca86c8af5d6f61de54c331c"
+        },
+        {
+          "paragraph_index_zero_based": 2,
+          "exact_paragraph_xml": "<p>Cette procédure s'applique également à l'ancien membre élu de la délégation du personnel du comité social et économique ou au candidat aux fonctions de membre élu de la délégation du personnel du comité social et économique et à l'ancien représentant syndical au comité social et économique durant les délais prévus aux articles L. 2411-5 et L. 2411-7. </p>\n",
+          "paragraph_xml_sha256": "4376f90407624c0077d77e18e41f08f033a37b768bc1ae0a7ada7fe3cf8ed313"
+        },
+        {
+          "paragraph_index_zero_based": 3,
+          "exact_paragraph_xml": "<p>Lorsque le contrat est conclu sur le fondement du 3° de l'article L. 1242-2, le salarié bénéficie de la protection lorsque l'employeur envisage soit de rompre le contrat de travail avant l'échéance du terme, soit de ne pas le renouveler en non-respect d'une clause de reconduction prévue dans le contrat de travail, ou par accord d'entreprise ou accord de branche mentionné à l'article L. 1244-2-2. Les délais de protection sont prolongés d'une durée égale à la période habituelle d'interruption de l'activité du salarié.</p>\n",
+          "paragraph_xml_sha256": "14c74506f67c46e29561c5ca5700d9072e1448a57d0e82ef0055cbbf62a0378d"
+        },
+        {
+          "paragraph_index_zero_based": 4,
+          "exact_paragraph_xml": "<p>Les renvois aux anciens articles L. 1242-2 et L. 1244-2-2 servent exclusivement à préserver les catégories, droits de reconduction et prolongations de protection attachés à ces contrats antérieurs. Ils n’autorisent aucun nouveau CDD ni renouvellement à terme après la réforme. L’exécution d’un droit de réemploi conservé prend la forme d’un contrat unique sans terme, sans perte de l’ancienneté ou de la protection acquises.</p>",
+          "paragraph_xml_sha256": "bd028904227f75a69dae49fb26bb46fab0b7f7e32bc4504a38c1c05df1dd8ac7"
+        },
+        {
+          "paragraph_index_zero_based": 5,
+          "exact_paragraph_xml": "<p>Les nouveaux contrats uniques restent soumis à la protection des salariés investis d’un mandat prévue au chapitre Ier du présent titre. La fin d’une aide, d’une période d’activité saisonnière ou d’une mission ne crée pas un terme dispensant de cette protection.</p>\n",
+          "paragraph_xml_sha256": "3110fd1c464bbf54d987061e09058d9b3629580c7f23829cc25da539bf48b37f"
+        },
+        {
+          "paragraph_index_zero_based": 6,
+          "exact_paragraph_xml": "<p>Pour les futurs salariés en contrat unique appartenant aux catégories protégées mentionnées au présent article et affectés à une activité saisonnière ou d'usage par nature temporaire relevant du même champ matériel que le 3° de l'ancien article L. 1242-2, la prolongation des délais de protection reste applicable : les délais attachés à leur protection sont prolongés d'une durée égale à la période habituelle d'interruption de leur activité. Cette interruption ne met pas fin au contrat unique et ne dispense d'aucune autorisation de rupture requise pour un salarié protégé. Le changement de support du contrat ne retire pas cette garantie aux futurs bénéficiaires.</p>",
+          "paragraph_xml_sha256": "e030c865bd88140fb286333f586304e554628b2ea43c3b338ad8dc474687739a"
+        }
+      ],
+      "new_L1221_2_effect": "Réserve explicite des protections spéciales; conservation des avantages futurs et des droits acquis. Ne contredit pas ce renvoi.",
+      "queue_overlay_recommendation": "Conserver signal original avec cette revue limitée; aucune résolution automatique."
+    },
+    {
+      "review_id": "769f678268943499eb4c8bdda4041b6beb5fbf6035155917cc07e682e9b13125",
+      "original_finding_id": "b13cda55369d045306cabf63cf0a24c4980d5f9e87edd946a3dd75bed495892e",
+      "global_audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+      "source_key": "LEGITEXT000006072050|LEGIARTI000036762283",
+      "number": "L2412-2",
+      "classification": "protection_speciale_independante_avec_composante_transitoire",
+      "effective_inconsistency_established": false,
+      "review_status": "fresh_full_context_review_not_marked_resolved",
+      "resolved": false,
+      "automatic_change": false,
+      "semantic_review_by_jurist": false,
+      "source_guard": {
+        "source_sha256": "c6a1db22824a85fb5f5efb784c9381c38595f8e971b92963a3a7890e45d91068",
+        "source_body_sha256": "4eb015f97c1a90429bc944b9a15fc2ba2af05d47772bcbdf18a95e6bc8866f6a",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "c6a1db22824a85fb5f5efb784c9381c38595f8e971b92963a3a7890e45d91068",
+        "article_document_stored_sha256": "c6a1db22824a85fb5f5efb784c9381c38595f8e971b92963a3a7890e45d91068",
+        "proposal_sha256": "2aeab64b0ba8484def8105fc94cae55452452498d7f23399062cb32c1718722c",
+        "draft_source_sha256": "c6a1db22824a85fb5f5efb784c9381c38595f8e971b92963a3a7890e45d91068",
+        "draft_status": "rewrite_draft"
+      },
+      "target_key": "LEGITEXT000006072050|LEGIARTI000037312980",
+      "target_guard": {
+        "source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "source_body_sha256": "1cf6128c8d475f274d79ade1ca1ba07395d3c9bdab5a4b1039fbb66f4e460464",
+        "source_notes_sha256": "4294660b7f212a9dce7c8d80337bdb164b33a4cf008ef43f72121d7645a749c4",
+        "article_document_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "article_document_stored_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "proposal_sha256": "475048d4b19f10e72239744905e5804d7f462a6f229fce92e84b1244c83c934f",
+        "draft_source_sha256": "f22c6fcb5b1283243c19e999f4c19f802ea5faf8a24288535d85e9d0af509767",
+        "draft_status": "rewrite_draft"
+      },
+      "analysis": "Corps source conservé pour anciens CDD; autorisation et catégories/durées sources préservées; réemploi en contrat sans terme. Dernier alinéa étend explicitement la prolongation saisonnière ou d’usage aux futurs salariés protégés dans le même champ matériel. Cette prolongation autonome ne vaut ni terme ni dispense d’autorisation.",
+      "reference_components": {
+        "legacy_contract_reference": "Définition historique du 3° appliquée aux anciens contrats sous transition L1241-1/L1242-2.",
+        "future_reference": "Champ matériel de la prolongation autonome explicite du dernier alinéa, sans nouveau CDD."
+      },
+      "evidence": [
+        {
+          "paragraph_index_zero_based": 0,
+          "exact_paragraph_xml": "<p>Les dispositions du présent article demeurent applicables aux contrats à durée déterminée conclus avant l’entrée en vigueur de la loi instituant le contrat unique, dans les conditions transitoires de l’article L. 1241-1.</p>\n",
+          "paragraph_xml_sha256": "25801235f33fe7419bb388ffbb87a9a57522d987dbd7d0ae0c396017bd7d3dc2"
+        },
+        {
+          "paragraph_index_zero_based": 1,
+          "exact_paragraph_xml": "<p>La rupture du contrat de travail à durée déterminée du délégué syndical avant l'échéance du terme en raison d'une faute grave ou de l'inaptitude constatée par le médecin du travail, ou à l'arrivée du terme lorsque l'employeur n'envisage pas de renouveler un contrat comportant une clause de renouvellement, ne peut intervenir qu'après autorisation de l'inspecteur du travail. </p>\n",
+          "paragraph_xml_sha256": "eb75903912ac80bb49d091675e993858e5ff4d349d056e689b5270cd14e6e66f"
+        },
+        {
+          "paragraph_index_zero_based": 2,
+          "exact_paragraph_xml": "<p>Cette procédure est applicable pendant les délais prévus à l'article L. 2411-5. </p>\n",
+          "paragraph_xml_sha256": "9c1466493f02347a240eb2dc854ad32daded2bd011dbd6949f68f22d6b2894ee"
+        },
+        {
+          "paragraph_index_zero_based": 3,
+          "exact_paragraph_xml": "<p>Lorsque le contrat est conclu sur le fondement du 3° de l'article L. 1242-2, le salarié bénéficie de la protection lorsque l'employeur envisage soit de rompre le contrat de travail avant l'échéance du terme, soit de ne pas le renouveler en non-respect d'une clause de reconduction prévue dans le contrat de travail, ou par accord d'entreprise ou accord de branche mentionné à l'article L. 1244-2-2. Les délais de protection sont prolongés d'une durée égale à la période habituelle d'interruption de l'activité du salarié.</p>\n",
+          "paragraph_xml_sha256": "14c74506f67c46e29561c5ca5700d9072e1448a57d0e82ef0055cbbf62a0378d"
+        },
+        {
+          "paragraph_index_zero_based": 4,
+          "exact_paragraph_xml": "<p>Les renvois aux anciens articles L. 1242-2 et L. 1244-2-2 servent exclusivement à préserver les catégories, droits de reconduction et prolongations de protection attachés à ces contrats antérieurs. Ils n’autorisent aucun nouveau CDD ni renouvellement à terme après la réforme. L’exécution d’un droit de réemploi conservé prend la forme d’un contrat unique sans terme, sans perte de l’ancienneté ou de la protection acquises.</p>",
+          "paragraph_xml_sha256": "bd028904227f75a69dae49fb26bb46fab0b7f7e32bc4504a38c1c05df1dd8ac7"
+        },
+        {
+          "paragraph_index_zero_based": 5,
+          "exact_paragraph_xml": "<p>Les nouveaux contrats uniques restent soumis à la protection des salariés investis d’un mandat prévue au chapitre Ier du présent titre. La fin d’une aide, d’une période d’activité saisonnière ou d’une mission ne crée pas un terme dispensant de cette protection.</p>\n",
+          "paragraph_xml_sha256": "3110fd1c464bbf54d987061e09058d9b3629580c7f23829cc25da539bf48b37f"
+        },
+        {
+          "paragraph_index_zero_based": 6,
+          "exact_paragraph_xml": "<p>Pour les futurs salariés en contrat unique appartenant aux catégories protégées mentionnées au présent article et affectés à une activité saisonnière ou d'usage par nature temporaire relevant du même champ matériel que le 3° de l'ancien article L. 1242-2, la prolongation des délais de protection reste applicable : les délais attachés à leur protection sont prolongés d'une durée égale à la période habituelle d'interruption de leur activité. Cette interruption ne met pas fin au contrat unique et ne dispense d'aucune autorisation de rupture requise pour un salarié protégé. Le changement de support du contrat ne retire pas cette garantie aux futurs bénéficiaires.</p>",
+          "paragraph_xml_sha256": "e030c865bd88140fb286333f586304e554628b2ea43c3b338ad8dc474687739a"
+        }
+      ],
+      "new_L1221_2_effect": "Réserve explicite des protections spéciales; conservation des avantages futurs et des droits acquis. Ne contredit pas ce renvoi.",
+      "queue_overlay_recommendation": "Conserver signal original avec cette revue limitée; aucune résolution automatique."
+    }
+  ],
+  "limits_and_unknowns": [
+    "Revue de huit signalements vers L1242-2 et quinze articles seulement; pas de validation globale des renvois du code.",
+    "Corpus DILA disponible jusqu’au 18 octobre 2026; aucune mise à jour officielle postérieure vérifiée.",
+    "Aucune validation juridique humaine, aucune résolution d’alerte ni modification de texte, politique, certificat, base active ou pointeur.",
+    "Durées détaillées du chapitre L2411, procédures et cibles extérieures (environnement/minier, accords et décrets sectoriels) non vérifiées intégralement au-delà des quinze articles.",
+    "La phrase « exclusivement » des L2412 est comprise avec le dernier alinéa exprès pour les futurs bénéficiaires; une clarification de portée/version statique reste possible, sans suppression de garantie.",
+    "La NOTA 2017 des L1251-37/37-1 ne date pas la future réforme et ne doit pas être appliquée à tous les contrats anciens indistinctement.",
+    "Gardes portent sur ce snapshot figé uniquement; tout nouveau snapshot exige contrôle des quinze gardes et quatre politiques."
+  ],
+  "still_in_analysis": [
+    "Durées détaillées du chapitre L2411, procédures et cibles extérieures (environnement/minier, accords et décrets sectoriels) non vérifiées intégralement au-delà des quinze articles.",
+    "La phrase « exclusivement » des L2412 est comprise avec le dernier alinéa exprès pour les futurs bénéficiaires; une clarification de portée/version statique reste possible, sans suppression de garantie.",
+    "La NOTA 2017 des L1251-37/37-1 ne date pas la future réforme et ne doit pas être appliquée à tous les contrats anciens indistinctement."
+  ],
+  "effective_inconsistencies_established": 0,
+  "semantic_review_by_jurist": false,
+  "resolved_findings": 0,
+  "automatic_change": false
+}

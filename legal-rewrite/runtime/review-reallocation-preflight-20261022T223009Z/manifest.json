@@ -1,0 +1,143 @@
+{
+  "state": "offline_candidate_tested_parent_review_required_no_activation",
+  "created_at_utc": "20261022T223009Z",
+  "active_mutations": false,
+  "baseline": {
+    "run_exhaustive.py": {
+      "sha256": "1c66699d0b54334c099460546c8bd1cfced0a831336a544caf17b7b928538f7e",
+      "bytes": 63276
+    },
+    "review_lanes.py": {
+      "sha256": "5a0fbfc04e9e2e4d6e6b315308425e6a807e5b2134a4dddd09ac65cfae22a1c5",
+      "bytes": 6999
+    },
+    "worker_capacity.py": {
+      "sha256": "ce7fa5595d1b015be9c30d61ba632db458e7c0fe5ec99ae15218e478cf91e347",
+      "bytes": 3311
+    },
+    "review_prior.py": {
+      "sha256": "0f92e59f5df1e761ddc9bfbd0246ffbf2c34b1456db58356dd8423d80322be8e",
+      "bytes": 11344
+    },
+    "supervise_exhaustive.py": {
+      "sha256": "127adf400228b62b0d33577bbd0736f9404a14ef3f8107d342597585ed9514eb",
+      "bytes": 13489
+    },
+    "review_lane_observation.py": {
+      "sha256": "92106dd87688df70f3096a2065777b3bf114a1435118c9b9b9d611201dcc7c52",
+      "bytes": 4617
+    }
+  },
+  "candidate": {
+    "continuation_tail.py": {
+      "sha256": "435e01c70ac8971a140e68190189cf162b49b75eeca6187ed8dd9d58ca195160",
+      "bytes": 19061
+    },
+    "review_lane_observation.py": {
+      "sha256": "ef1baa6f496463aef0c575342a71c72df405718522bc6604b7f979af5a779d1d",
+      "bytes": 7066
+    },
+    "review_lanes.py": {
+      "sha256": "f89934b39eeb28e4bbe3e6205b61b9bd79d078d3cb681e717b1e25823e83f330",
+      "bytes": 7456
+    },
+    "run_exhaustive.py": {
+      "sha256": "1664a0c04ffd030174ecbce7a00202a7dcdd8c1a820d1df8e5d633b85cedd846",
+      "bytes": 64275
+    },
+    "supervise_exhaustive.py": {
+      "sha256": "54e4eda6a5dbd490615a4ae7771939707c9afa944594105e3840679c410b8ffb",
+      "bytes": 15153
+    },
+    "worker_capacity.py": {
+      "sha256": "1d02e176ed0c7593c0a75bfa5fdb2c5881e561773a07f77eed58372c339634cf",
+      "bytes": 5153
+    }
+  },
+  "baseline_code_still_current": {
+    "run_exhaustive.py": true,
+    "review_lanes.py": true,
+    "worker_capacity.py": true,
+    "review_prior.py": true,
+    "supervise_exhaustive.py": true,
+    "review_lane_observation.py": true
+  },
+  "installation_performed": false,
+  "activation_automation_prepared": false,
+  "activation_owner": "parent_only_after_fresh_fully_drained_audit_and_code_review",
+  "active_source_database_copied": false,
+  "active_configuration_edited": false,
+  "frozen_at_utc": "2026-10-22T22:52:43.963324+00:00",
+  "tests": {
+    "targeted": {
+      "targeted_tests": 27,
+      "failures": 0,
+      "errors": 0,
+      "successful": true,
+      "real_models_invoked": false,
+      "production_database_opened_by_targeted_tests": false,
+      "real_inventory_checked_separately": true
+    },
+    "regressions": {
+      "regression_tests": 74,
+      "failures": 0,
+      "errors": 0,
+      "successful": true,
+      "real_models_invoked": false,
+      "production_database_open_forbidden": true,
+      "writer_lock": "temporary fixture roots only"
+    }
+  },
+  "real_inventory_receipt": "current-inventory-readonly.json",
+  "real_inventory_records": 30317,
+  "active_source_database_read": "Only final canonical identity inventory; mode=ro; no active draft-state audit or snapshot",
+  "long_running_preflight_processes_remaining": false,
+  "pre_activation_requirements": [
+    "Parent review of final code and tests",
+    "Fresh exact-PID queued-new/reserved-new zero audit",
+    "Supervision/manual-slot exclusion and natural review drain",
+    "Post-exit process/lock/registration/source/benefit/impact/reference and latest before-image recheck",
+    "Reconcile prepared quote/metadata repair against exact current rows",
+    "Install all six candidate modules together only if baseline hashes still match",
+    "Explicit plan continuation_mode/review_tail_capacity and hotfile review_tail_limit within authorized current total",
+    "Parent-controlled single launch, then distinct native execution proof"
+  ],
+  "files": {
+    "report.txt": {
+      "sha256": "d380b8ab9d58393094b35213be2df1e5d6d9f4e5c3fa40e833956e5c4f11e460",
+      "bytes": 14670
+    },
+    "candidate.patch": {
+      "sha256": "a45c272c18a4458327f981b40e96c4f4bbca66d32dddbee50a381fb425fb0bf0",
+      "bytes": 43140
+    },
+    "test_preflight.py": {
+      "sha256": "ebef0b36d0d256deba0ba0e7bac861329d5e0dcee9f587ffcd33e1f54d8cccb7",
+      "bytes": 32621
+    },
+    "run_regressions.py": {
+      "sha256": "1c87395a811b6c055f0c54c419ee7d5d2e32b7a0cd5ddb4d0ebdecda857e3e90",
+      "bytes": 2136
+    },
+    "tests.log": {
+      "sha256": "957275ceada7eb3b70ad87fb0390c722a1b69679612e26c21b3c94f1333045e1",
+      "bytes": 4823
+    },
+    "tests.json": {
+      "sha256": "6cfe7c31a1a3a3731ab3eb76eb8039dcc4f7f6f83732f81a42a8ff360f6380d1",
+      "bytes": 215
+    },
+    "regression-tests.log": {
+      "sha256": "bd59bbeda891e171f134c8051536049f1b3192c3b74eda6120f98c75385d960a",
+      "bytes": 11554
+    },
+    "regression-tests.json": {
+      "sha256": "3518dcc3f31406a623f04c24da9e2af536bfac1b559f9cecce0b242be0ac6659",
+      "bytes": 210
+    },
+    "current-inventory-readonly.json": {
+      "sha256": "54ddf99e842313df7db371b0a94b35f275682ee119d4e36496f7618c211ee72d",
+      "bytes": 1059
+    }
+  }
+}

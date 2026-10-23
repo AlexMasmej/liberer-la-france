@@ -1,0 +1,66 @@
+648952:   "registered": true
+648953: }
+648954: RADICAL REVIEW review-impots-annexe-2-LEGIARTI000006294227-00001 12 articles checked against the new direction
+648955: Traceback (most recent call last):
+648956:   File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py", line 739, in main
+648957:     future.result()
+648958:     ~~~~~~~~~~~~~^^
+648959:   File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+648960:     return self.__get_result()
+648961:            ~~~~~~~~~~~~~~~~~^^
+648962:   File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+648963:     raise self._exception
+648964:   File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+648965:     result = ctx.run(self.task)
+648966:   File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+648967:     return fn(*args, **kwargs)
+648968:   File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py", line 556, in run_in_slot
+648969:     if not STOP.is_set():return run_job(job,codex,sources,review=review)
+648970:                                 ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+648971:   File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py", line 466, in run_job
+648972:     try:return _run_job(job,codex,sources,review,measurement)
+648973:                ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+648974:   File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py", line 353, in _run_job
+648975:     process=invoke_agent(cmd,input=prompt+reference_prompt+('\nLe précédent contrôle a échoué : '+failure if failure else ''),text=True,stdout=events,stderr=errors,cwd=folder,timeout=3600)
+648976:             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+648977:   File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py", line 81, in invoke_agent
+648978:     atomic(record,process_record|{'ended_at_unix':int(time.time()),'returncode':child.returncode})
+648979:     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+648980:   File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py", line 37, in atomic
+648981:     with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8',dir=path.parent,
+648982:          ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+648983:                                      prefix='.'+path.name+'.',suffix='.tmp',delete=False) as stream:
+648984:                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+648985:   File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/tempfile.py", line 603, in NamedTemporaryFile
+648986:     file = _io.open(dir, mode, buffering=buffering,
+648987:                     newline=newline, encoding=encoding, errors=errors,
+648988:                     opener=opener)
+648989:   File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/tempfile.py", line 600, in opener
+648990:     fd, name = _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+648991:                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+648992:   File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/tempfile.py", line 257, in _mkstemp_inner
+648993:     fd = _os.open(file, flags, 0o600)
+648994: OSError: [Errno 28] No space left on device: '/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00345/.process-14261.json.qzvu2r6p.tmp'
+648995: 
+648996: During handling of the above exception, another exception occurred:
+648997: 
+648998: Traceback (most recent call last):
+648999:   File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py", line 771, in <module>
+649000:     try:main()
+649001:         ~~~~^^
+649002:   File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py", line 748, in main
+649003:     with LOCK:progress(sources,'blocked',str(error))
+649004:               ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+649005:   File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py", line 165, in progress
+649006:     db=open_db(HERE/'corpus.sqlite')
+649007:   File "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/ingest.py", line 24, in open_db
+649008:     db.executescript('''
+649009:     ~~~~~~~~~~~~~~~~^^^^
+649010:     PRAGMA journal_mode=WAL;
+649011:     ^^^^^^^^^^^^^^^^^^^^^^^^
+649012:     ...<5 lines>...
+649013:     CREATE TABLE IF NOT EXISTS scope_completion(scope TEXT PRIMARY KEY,archives INTEGER NOT NULL);
+649014:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+649015:     ''')
+649016:     ^^^^
+649017: sqlite3.OperationalError: unable to open database file
