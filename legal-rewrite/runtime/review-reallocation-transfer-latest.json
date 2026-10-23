@@ -1,20 +1,102 @@
 {
   "recorded_at_utc": "2026-10-23T03:13:39.398148+00:00",
-  "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-reallocation-transfer-preparation-20261023T0253Z",
-  "state": "NOT_READY_FOR_ACTIVATION",
-  "manifest_sha256": "d2b6511f125f2104e285036377647de68451c7726cd2751fa229b5adfb6abf61",
-  "parent_review": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/continuation-control-20261023T0252Z/transfer-parent-review.json",
-  "tests_passed": 15,
-  "production_controller_called": false,
-  "active_files_modified": false,
-  "production_backend_hard_block": true,
-  "sealed_candidate_manifest_sha256": "f8cbed8270405812119485da55d2faa15d52bbd6b98b9d7539d2b506e202de68",
-  "remaining_pre_activation_blockers": [
-    "Current guarded parent reconciliation collector/certificate verifier not implemented; production backend unconditionally refuses",
-    "Fresh reconciliation revalidation after interruption in RECONCILED/installed/configured phases not implemented",
-    "Late launch-adoption full code/policy pins and native execution attestation not implemented",
-    "Fresh terminal-new metrics/immutable-queue reconciliation alternative to conservative120second admission timestamp not implemented",
-    "Strong exit receipt time binding to exact process start beyond PID success fields not implemented"
-  ],
-  "normal_same_code_recovery_path_documented": true
+  "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-transfer-release-20261023T1414Z",
+  "state": "TRANSFER_COMPLETE_SUPERVISED_REVIEW_TAIL_ADOPTED",
+  "manifest_sha256": "6c990145d221b9353ca4342ba77254d40a57b3a7e74e4c9c486cb06c1f4b381a",
+  "parent_review": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-transfer-release-20261023T1414Z/REVIEW.md",
+  "tests_passed": 107,
+  "production_controller_called": true,
+  "active_files_modified": true,
+  "production_backend_hard_block": false,
+  "sealed_candidate_manifest_sha256": "e5c236715c130c46f57108d96d39f8e9cdf6e72a672d54448d31a5e91f079229",
+  "remaining_pre_activation_blockers": [],
+  "normal_same_code_recovery_path_documented": true,
+  "additional_offline_components": {
+    "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-reallocation-guards-20261023T0835Z",
+    "manifest_sha256": "8dccfc7e57cd169ae02da400638e98c0699ebcead81fd1148ef5dfe4f859a3b7",
+    "tests_passed": 27,
+    "integrated": false,
+    "production_collectors_called": false,
+    "state": "NOT_READY_FOR_ACTIVATION",
+    "review": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-reallocation-guards-20261023T0835Z/REVIEW.md"
+  },
+  "old_sealed_baseline_incompatible_with_current_runner": true,
+  "active_runner_sha256": "91e898776c7619b89461928010c02f8cd49141745473dcdefbdfd5f6f65c3e40",
+  "rebased_offline_candidate": {
+    "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-reallocation-rebase-20261023T1058Z",
+    "manifest_sha256": "e5c236715c130c46f57108d96d39f8e9cdf6e72a672d54448d31a5e91f079229",
+    "targeted_tests_passed": 35,
+    "regressions_passed": 74,
+    "installed": true,
+    "controller_integrated": true
+  },
+  "last_checked_at_utc": "2026-10-23T14:47:51.098077+00:00",
+  "previous_pointer_preserved": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261023T1348Z/before-final-review-reallocation-transfer-latest.json",
+  "integrated_offline_preparation": {
+    "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-reallocation-integration-20261023T1146Z",
+    "manifest_sha256": "87365347ea4341ebe3f6b86e01fefc145aa842b94c694c1117fc072de32a6d91",
+    "review": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-reallocation-integration-20261023T1146Z/REVIEW.md",
+    "tests_passed": 70,
+    "components_connected_in_new_offline_controller": true,
+    "production_backend_hard_block": true,
+    "production_activation": false,
+    "full_live_diagnostics": 2,
+    "successful_live_full_reconciliations": 0,
+    "required_second_pass_worklist_extension_connected": false
+  },
+  "latest_admission_pause": {
+    "applied_at_utc": "2026-10-23T12:28:05.088039+00:00",
+    "proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/registration-observation-20261023T1226Z/APPLIED.json",
+    "manifest_sha256": "ef92238cd53adf356132884e9a554d0c079c0cedbf89f012d97aa20c63156a2e",
+    "workers": 7,
+    "role_limits": {
+      "new": 6,
+      "review": 0
+    },
+    "active_review_allowed_to_finish": true,
+    "six_new_places_preserved": true
+  },
+  "current_hot_control_differs_from_prepared_controller_expected_one_review": false,
+  "next_preparation_rule": "Transfer completed and adopted. NEVER rerun installation, journal handoff or adoption. Follow the actual unique coordinator and current review_tail phase of the installed code. New review admissions are controlled by explicit review_tail_limit0..8 under manual-agent-slots.lock, leaving active work to finish. Current first passes accessible are complete;3 documentary holds remain. Reconcile all required passes and current references before closure.",
+  "whole_corpus_worklist_offline_preparation": {
+    "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-worklist-transfer-20261023T1246Z",
+    "manifest_sha256": "5a690d3dfd138ac1f65430a75d3aec4a6e6c9d01cb6840f2b003ff5075782e78",
+    "review": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-worklist-transfer-20261023T1246Z/REVIEW.md",
+    "tests_passed": 93,
+    "publication_and_resume_connected": true,
+    "actual_production_manifest_published": false,
+    "production_backend_hard_block": true,
+    "current_expected_worker_control": {
+      "workers": 7,
+      "role_limits": {
+        "new": 6,
+        "review": 0
+      }
+    },
+    "actual_production_full_reconciliation_at_this_control": false,
+    "installed": false
+  },
+  "active_guarded_transfer": {
+    "state": "COMPLETE",
+    "run_dir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-transfer-release-20261023T1414Z/runs/transfer-73618-resumed-20261023T1420Z",
+    "state_file": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-transfer-release-20261023T1414Z/runs/transfer-73618-resumed-20261023T1420Z/state.json",
+    "owner": "af204a5b-7dfe-4e7f-b549-937900406b1e",
+    "new_pid": 78943,
+    "launches": 1,
+    "owned_pause_removed_under_exact_guard": true,
+    "adoption_proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-transfer-adoption-20261023T1426Z/adoption-verified.json",
+    "adoption_manifest_sha256": "1246653fc7f94585affe9d6a40d52c8b33d92bd810db6c5839447bda07b0e13d",
+    "current_worklist_scope": 30314,
+    "current_worklist_observation": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-transfer-status-20261023T1440Z.json",
+    "whole_goal_complete": false
+  },
+  "prototype_0253_preserved": {
+    "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-reallocation-transfer-preparation-20261023T0253Z",
+    "manifest_sha256": "d2b6511f125f2104e285036377647de68451c7726cd2751fa229b5adfb6abf61",
+    "state": "NOT_READY_FOR_ACTIVATION",
+    "never_executed": true
+  },
+  "old_sealed_backends_hard_block_unchanged": true,
+  "proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261023T1348Z/CONTROL.json",
+  "artifact_manifest_sha256": "6ba36410d916c942cbeda1739a0571fbd0197b1e39e00e2757adf26726ea7d46"
 }

@@ -1,0 +1,8 @@
+{
+  "collector": "review-worklist-transfer-20261023T1246Z/registration_reconciliation.py:first_pass_inventory",
+  "result": "refused",
+  "error": "AssertionError in exact DB/raw XML/public reader tuple chain",
+  "native_guard_removed": false,
+  "canonical_sources_or_notes_changed": false,
+  "followup": "Whole raw ARTICLE XML vs canonical SQLite:30317 checked, zero differences. Public reader uses the pinned source_assets.safe_html producer, confirmed in build_reader.py; the new release copy compares both representations separately and exactly. Published sealed packages remain unchanged."
+}

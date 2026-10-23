@@ -1,0 +1,56 @@
+{
+  "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/second-pass-parallelism-20261022T061507Z",
+  "state": "registration_optimizer_installed_six_drafting_one_review_verified",
+  "old_pid": 21959,
+  "pid": 3122,
+  "capacity": 8,
+  "role_limits": {
+    "new": 6,
+    "review": 2
+  },
+  "activated": true,
+  "execution_verified": true,
+  "verified_at_utc": "2026-10-22T17:59:48.939889+00:00",
+  "execution_proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/review-lanes-execution.json",
+  "tests_passed": 211,
+  "performance_gain_measured": false,
+  "held_sources": 3,
+  "initial_execution_verified": {
+    "pid": 58514,
+    "verified_at_utc": "2026-10-22T06:56:15+00:00",
+    "execution_proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/review-lanes-execution.json"
+  },
+  "restart_execution_proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/storage-incident-20261022T1003Z/resumption-proof.json",
+  "coordinator_restarts": [
+    {
+      "previous_pid": 58514,
+      "pid": 75807,
+      "reason": "Disk ENOSPC; safely restarted by existing supervisor after space recovery",
+      "all_interrupted_entries_requeued_or_guarded_complete": true,
+      "interrupted_entries": 132,
+      "proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/storage-incident-20261022T1003Z/resumption-proof.json"
+    }
+  ],
+  "active_role_limits": {
+    "new": 6,
+    "review": 1
+  },
+  "registration_maintenance": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/registration-convoy-20261022T1607Z",
+  "current_execution_proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/network-resumption-20261023T0231Z/execution-check.json",
+  "current_coordinator_resumption_history": [
+    {
+      "previous_pid": 90405,
+      "pid": 18713,
+      "reason": "Transient ENOSPC; existing supervisor restarted after the old process drained/exited; native responses and new accepted rows verified",
+      "proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/audit-refresh-storage-resumption-20261022T1832Z/RESOLUTION.json"
+    },
+    {
+      "previous_pid": 18713,
+      "pid": 3122,
+      "reason": "SIGTERM received by18713 (sender/reason not established); existing supervisor launched3122; routing failures later resumed with native responses and accepted work",
+      "proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/deferred-recovery-latest.json"
+    }
+  ],
+  "last_verified_at_utc": "2026-10-23T02:38:02.398255+00:00",
+  "current_resumption_proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/network-resumption-20261023T0231Z/RESOLUTION.json"
+}

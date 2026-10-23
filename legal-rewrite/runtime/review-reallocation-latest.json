@@ -2,7 +2,7 @@
   "recorded_at_utc": "2026-10-22T22:53:57.272147+00:00",
   "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-reallocation-preflight-20261022T223009Z",
   "manifest_sha256": "f8cbed8270405812119485da55d2faa15d52bbd6b98b9d7539d2b506e202de68",
-  "state": "offline_candidate_reviewed_live_transfer_not_ready",
+  "state": "NOT_READY_FOR_ACTIVATION",
   "parent_review": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261022T2224Z/reallocation-parent-review.json",
   "active_code_installed": false,
   "activation_automation_prepared": false,
@@ -12,5 +12,17 @@
     "review": 1
   },
   "authorized_capacity": 8,
-  "stage_notes": "Preparation only; wait for fresh exact-PID queue-new/reserved-new zero then reviewed coordinated natural drain; no duplicate, no active batch interruption. Existing first-pass and review results remain authoritative."
+  "stage_notes": "Preparation only; wait for fresh exact-PID queue-new/reserved-new zero then reviewed coordinated natural drain; no duplicate, no active batch interruption. Existing first-pass and review results remain authoritative.",
+  "old_sealed_baseline_incompatible_with_current_runner": true,
+  "active_runner_sha256": "e950a288939012b1915f180a7cc80987b5e79452e08eab7b9a4cd4a4f7a3a0db",
+  "rebased_offline_candidate": {
+    "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-reallocation-rebase-20261023T1058Z",
+    "manifest_sha256": "e5c236715c130c46f57108d96d39f8e9cdf6e72a672d54448d31a5e91f079229",
+    "targeted_tests_passed": 35,
+    "regressions_passed": 74,
+    "installed": false,
+    "controller_integrated": false
+  },
+  "last_checked_at_utc": "2026-10-23T11:24:44.415874+00:00",
+  "previous_pointer_preserved": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/false-usage-recovery-20261023T1041Z/previous-review-reallocation-latest.json"
 }

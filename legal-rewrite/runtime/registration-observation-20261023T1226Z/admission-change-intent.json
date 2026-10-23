@@ -1,0 +1,42 @@
+{
+  "created_at_utc": "2026-10-23T12:28:05.086337+00:00",
+  "coordinator_pid": 39614,
+  "operation": "pause_only_new_review_admissions_preserve_six_new_slots_and_valid_active_work",
+  "authorized_condition": "User instruction to suspend future review admissions first if reviews cause an evidenced slowdown or repeated collisions",
+  "evidence": {
+    "sample_sha256": "b1e578c600258f74c7388782ab0d59dc75596c1d3d8a7894bf184b9751de417d",
+    "sample_file": "sample.txt",
+    "last_accepted_job": "travail-00486",
+    "last_accepted_at_unix": 1792755838.677623,
+    "seconds_without_new_acceptance": 2646.409003019333,
+    "sampled_review_activity": "SQLite row reads and whole XML parsing; no deadlock inferred",
+    "sampled_new_wait": "new-article_5 blocked in flock; another new thread waiting on an in-process lock",
+    "owner_db_differences": "Observed staged review replacement while writer occupied; not a fresh integrity certificate or established legal error"
+  },
+  "before": {
+    "workers": 7,
+    "role_limits": {
+      "new": 6,
+      "review": 1
+    }
+  },
+  "after": {
+    "workers": 7,
+    "role_limits": {
+      "new": 6,
+      "review": 0
+    }
+  },
+  "before_sha256": "2394cf3a0a90776dd36b330315fc3926a8877e6a33fea80ceb920eefceefef8b",
+  "after_sha256": "3b42181e618137d37e78d1a37216c8f1cb64ebb6d2f32f7aa935d99d52cdfc4e",
+  "plan_sha256": "003ed0e191134568dbc3b911cd3f7c4df71a4d944031d8b5c7beaf1ff2c56d76",
+  "manual_reservations_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "coordinator_run_sha256": "c2c4a1c8fd9c8d5013b065ca2ecf936cad83f4beee2375b13cd2a07127761090",
+  "no_new_capacity_borrowing": true,
+  "no_active_worker_interrupted": true,
+  "no_writer_lock_acquired": true,
+  "no_supervisor_pause": true,
+  "no_signal_or_launch": true,
+  "source_or_code_or_policy_modified": false,
+  "future_rule": "Keep the six new slots. Let the current review and all valid jobs finish; verify accepted results and actual writer progress. Do not restore reviews or infer zero reservations from the old observations. Review reallocation remains authorized after accessible first passes complete and a genuinely validated full-worklist transfer."
+}

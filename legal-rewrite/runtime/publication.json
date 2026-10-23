@@ -1,36 +1,78 @@
 {
-  "updated_at_unix": 1792729669,
+  "updated_at_unix": 1792789229,
   "exhaustive_rewriting_complete": false,
-  "local_checks_passed": false,
+  "local_checks_passed": true,
   "deployment_requested": true,
   "publication_pending": false,
-  "all_sites_published": false,
-  "status": "validating_local",
+  "all_sites_published": true,
+  "status": "published",
   "deployments": {
     "liberer-la-retraite": {
-      "published": false,
-      "status": "not_attempted",
-      "attempts": []
+      "published": true,
+      "status": "published",
+      "attempts": [
+        {
+          "attempt": 1,
+          "returncode": 0,
+          "transient_network_error": false,
+          "failure_type": null,
+          "log": "runtime/deploy-liberer-la-retraite-attempt1.log"
+        }
+      ]
     },
     "nouveaudroitdutravail": {
-      "published": false,
-      "status": "not_attempted",
-      "attempts": []
+      "published": true,
+      "status": "published",
+      "attempts": [
+        {
+          "attempt": 1,
+          "returncode": 0,
+          "transient_network_error": false,
+          "failure_type": null,
+          "log": "runtime/deploy-nouveaudroitdutravail-attempt1.log"
+        }
+      ]
     },
     "liberer-le-revenu": {
-      "published": false,
-      "status": "not_attempted",
-      "attempts": []
+      "published": true,
+      "status": "published",
+      "attempts": [
+        {
+          "attempt": 1,
+          "returncode": 0,
+          "transient_network_error": false,
+          "failure_type": null,
+          "log": "runtime/deploy-liberer-le-revenu-attempt1.log"
+        }
+      ]
     },
     "liberer-lentreprise": {
-      "published": false,
-      "status": "not_attempted",
-      "attempts": []
+      "published": true,
+      "status": "published",
+      "attempts": [
+        {
+          "attempt": 1,
+          "returncode": 0,
+          "transient_network_error": false,
+          "failure_type": null,
+          "log": "runtime/deploy-liberer-lentreprise-attempt1.log"
+        }
+      ]
     },
     "liberer-le-logement": {
-      "published": false,
-      "status": "not_attempted",
-      "attempts": []
+      "published": true,
+      "status": "published",
+      "attempts": [
+        {
+          "attempt": 1,
+          "returncode": 0,
+          "transient_network_error": false,
+          "failure_type": null,
+          "log": "runtime/deploy-liberer-le-logement-attempt1.log"
+        }
+      ]
     }
-  }
+  },
+  "drafted_articles": 13142,
+  "source_records": 30317
 }

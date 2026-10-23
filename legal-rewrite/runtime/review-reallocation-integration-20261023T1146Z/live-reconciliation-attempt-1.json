@@ -1,0 +1,9 @@
+{
+  "diagnostic": "refused",
+  "error_type": "AssertionError",
+  "error": "('Database/batch differs', ('LEGITEXT000006069577', 'LEGIARTI000053544241'))",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-reallocation-integration-20261023T1146Z/diagnose_reconciliation.py\", line 10, in <module>\n    report=collect(ROOT,pins)\n  File \"/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-reallocation-integration-20261023T1146Z/registration_reconciliation.py\", line 82, in collect\n    assert all_drafts.get(key) == values(row), ('Database/batch differs',key)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('Database/batch differs', ('LEGITEXT000006069577', 'LEGIARTI000053544241'))\n",
+  "elapsed_seconds": 26.904540300369263,
+  "controller_called": false,
+  "canonical_writes": false
+}

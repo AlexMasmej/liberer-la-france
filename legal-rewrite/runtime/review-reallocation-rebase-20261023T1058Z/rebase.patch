@@ -1,0 +1,55 @@
+--- original-candidate/run_exhaustive.py
++++ rebased-candidate/run_exhaustive.py
+@@ -81,6 +81,41 @@
+         if child.poll() is not None:
+             atomic(record,process_record|{'ended_at_unix':int(time.time()),'returncode':child.returncode})
+     return subprocess.CompletedProcess(command,child.returncode)
++
++def native_access_failure(stderr):
++    import re
++    lines = stderr.splitlines()
++    while lines and not lines[-1].strip():
++        lines.pop()
++    # Native text mode can finish with this informational two-line footer.
++    if (len(lines) >= 2 and lines[-2].strip() == 'tokens used'
++            and re.fullmatch(r'[\d,]+', lines[-1].strip())):
++        del lines[-2:]
++    while lines and not lines[-1].strip():
++        lines.pop()
++    diagnostics = []
++    for line in reversed(lines):
++        match = re.fullmatch(r'ERROR:\s*(.+)', line)
++        if not match:
++            match = re.fullmatch(
++                r'\d{4}-\d\d-\d\dT\S+\s+ERROR\s+[\w:]+:\s*(.+)', line)
++        if not match:
++            break
++        diagnostics.append(match[1])
++    # Merely mentioning "quota", sign-in or authentication is insufficient.
++    # Keep explicit access denials blocking even when transport also fails.
++    denied = re.compile(
++        r'\b(?:rate[ _-]limit(?:ed|s)?|usage[ _-]limit(?:s)?|'
++        r'insufficient[ _-]quota|quota[ _-](?:exceeded|exhausted)|'
++        r'authentication[ _-](?:failed|required)|unauthori[sz]ed|'
++        r'invalid[ _-](?:api[ _-])?key|not (?:logged|signed) in|'
++        r'please (?:log|sign) in|sign in (?:again|to continue)|'
++        r'too many requests|insufficient (?:credits|funds)|'
++        r'credit balance is too low)\b|'
++        r'\b(?:HTTP(?:[/\d.]+)?(?: status| error)?|status(?: code)?|'
++        r'unexpected status code)[ :=]+(?:401|403|429)\b', re.I)
++    return any(denied.search(message) for message in diagnostics)
++
+ 
+ def publish_checkpoint(deploy=False):
+     """Only a reported deployment failure is nonfatal; local defects still stop."""
+@@ -357,8 +392,8 @@
+                 failure='Agent timed out; no article accepted';continue
+         if process.returncode:
+             # Stop on auth/quota failures instead of silently retrying indefinitely.
+-            tail=(folder/f'events-{attempt}.log').read_text()[-8000:]+(folder/f'errors-{attempt}.log').read_text()[-4000:]
+-            if re.search(r'rate.limit|usage.limit|quota|unauthori[sz]ed|authentication|sign.in|insufficient',tail,re.I):
++            diagnostics=(folder/f'errors-{attempt}.log').read_text()
++            if native_access_failure(diagnostics):
+                 measurement['outcome']='blocked_auth_or_usage'
+                 STOP.set()
+                 with LOCK:progress(sources,'blocked','Codex authentication or usage limit; see job '+folder.name)

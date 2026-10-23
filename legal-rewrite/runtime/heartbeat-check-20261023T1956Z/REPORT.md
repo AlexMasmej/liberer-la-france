@@ -1,0 +1,11 @@
+# Contrôle et priorité de cohérence
+
+Une vraie relecture sémantique a été menée sur13textesCVAE complets et5contreparties : sept situations historiques qualifiées de nouveau,18gardes/fourpolitiques vérifiées. Aucune contradiction CVAE effective n'est établie dans ce seul périmètre. Le nouvel override sous manifeste reprend les limites et ne clôt ni les autresP1 ni les coordinations extérieures. QuatreP1 actuels sont homologuesCVAE ; huit autresP1 du groupe restent hors qualification globale. Les fichiers publiés de l'audit1908Z sont intacts.
+
+Le relevé final à20:05:10UTC constate78943 seul, LaunchAgent enregistré, sept processus natifs et sept réponses distinctesAstra/Moyen ; ce sont des comptes datés.404lots/3039articles reviewed sont observés,4081completed/26233pending sur30314. Un lotCSS de10articles est confronté aux cinqchamps, sourcesentières/NOTA/bornes, propriétaire/registre/archiveentière/completed. Ce n'est pas une réconciliation de toutes les acceptations ni autant de simplifications.
+
+Quatre différés courants/45identités et trois anciens lots/36 restent pending :81identités uniques, avant-images/sources/refus préservés. Le préfixe de l'audit1908Z est vérifié ;749traitements réels supplémentaires, seuil1000non atteint. Aucune nouvelle capture ou opération de nettoyage. Les trois réserves documentaires restent non vérifiées ; aucune nouvelle récupération n'est revendiquée.
+
+La priorité humaine est désormais traduite dans un candidat concret : un seul littéral du prompt de seconde passe est remplacé, AST inchangé ailleurs, compilation réussie. Le candidatd826… est NON INSTALLÉ. Le scheduler existant permet de fermer les admissionsreview avec review_tail_limit0 et de différer la queue non tentée en laissant finir les actifs. Il faut terminer un nouveau contrôleur gardé et ses tests avant de conduire ce drainage naturel, la réconciliation actuelle et une seule reprise supervisée. Aucune pause, modification d'admissions, installation, relance ou signal n'a été effectué ici. Les sessions en cours ne sont pas réputées avoir reçu rétroactivement cette priorité.
+
+La revue fraîche est une avancée limitée et ne prouve aucune cohérence juridique globale ou validation humaine. Le suivi reste actif jusqu'à toutes les passes, sources, coordinations et qualifications prioritaires puis audit final frais.

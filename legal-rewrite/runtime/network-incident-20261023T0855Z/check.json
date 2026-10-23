@@ -1,0 +1,160 @@
+{
+  "observed_at_utc": "2026-10-23T08:56:33.748369+00:00",
+  "state": "partial_native_transport_reconnections",
+  "single_coordinator": [
+    {
+      "pid": 3122,
+      "ppid": 1,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u /Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py --workers 8 --interleave-review --export-every 1000 --deploy-on-export --publish-at-end"
+    }
+  ],
+  "launchagent_registered": true,
+  "active_native_workers": 7,
+  "workers_with_retries_and_no_response_start": 4,
+  "session_response_start_attested": 2,
+  "fresh_response_progress_since_retries_established": false,
+  "last_accepted_metric": {
+    "coordinator_pid": 3122,
+    "slug": "travail",
+    "index": 469,
+    "kind": "new",
+    "started_at_unix": 1792737092.746218,
+    "outcome": "accepted",
+    "attempts": 1,
+    "retries": [],
+    "job": "travail-00469",
+    "articles": 24,
+    "model": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "execution_session_id": "01a16775-de9b-7161-af70-0f16bbf20a59",
+    "execution_verified": true,
+    "finished_at_unix": 1792740858.856407,
+    "duration_seconds": 3766.136058625001
+  },
+  "status": {
+    "status": "running",
+    "updated_at_unix": 1792744975,
+    "source_records": 30317,
+    "drafted_articles": 13924,
+    "retained_unchanged": 15574,
+    "pending": 819,
+    "exhaustive_rewriting_complete": false,
+    "jurist_reviewed_articles": 0,
+    "codes": [
+      {
+        "slug": "travail",
+        "source_records": 11593,
+        "drafted": 3785,
+        "retained_unchanged": 6992,
+        "pending": 816
+      },
+      {
+        "slug": "impots",
+        "source_records": 2375,
+        "drafted": 1472,
+        "retained_unchanged": 903,
+        "pending": 0
+      },
+      {
+        "slug": "securite-sociale",
+        "source_records": 7427,
+        "drafted": 3068,
+        "retained_unchanged": 4357,
+        "pending": 2
+      },
+      {
+        "slug": "urbanisme",
+        "source_records": 2459,
+        "drafted": 1472,
+        "retained_unchanged": 987,
+        "pending": 0
+      },
+      {
+        "slug": "construction-habitation",
+        "source_records": 4126,
+        "drafted": 2108,
+        "retained_unchanged": 2018,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-1",
+        "source_records": 71,
+        "drafted": 42,
+        "retained_unchanged": 29,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-2",
+        "source_records": 674,
+        "drafted": 568,
+        "retained_unchanged": 106,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-3",
+        "source_records": 1115,
+        "drafted": 1007,
+        "retained_unchanged": 108,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-4",
+        "source_records": 477,
+        "drafted": 402,
+        "retained_unchanged": 74,
+        "pending": 1
+      }
+    ],
+    "failure": null,
+    "prior_drafts_reviewed": 2509,
+    "prior_drafts_awaiting_review": 5054,
+    "publication_pending": true
+  },
+  "admission": {
+    "action": "running",
+    "pending_by_kind": {
+      "new": 4,
+      "review": 493
+    },
+    "reserved_or_running_by_kind": {
+      "new": 6,
+      "review": 1
+    },
+    "admitted_by_kind": {
+      "new": 85,
+      "review": 12
+    },
+    "deferred_by_kind": {
+      "new": 0,
+      "review": 0
+    },
+    "borrowing_enabled": false,
+    "execution_evidence_scope": "Admission only; native session headers and validated answers are required for execution/acceptance claims.",
+    "coordinator_pid": 3122,
+    "updated_at_unix": 1792744981,
+    "role_pools": {
+      "new": 6,
+      "review": 2
+    }
+  },
+  "effective_limits": {
+    "workers": 7,
+    "role_limits": {
+      "new": 6,
+      "review": 1
+    }
+  },
+  "free_gib": 6.047359466552734,
+  "wal_bytes": 0,
+  "new_enospc_established": false,
+  "cause_beyond_reconnections_established": false,
+  "auth_or_quota_cause_established": false,
+  "additional_authenticated_probe_or_reset_or_purchase": false,
+  "signals_or_duplicate_launch": false,
+  "bounded_native_retries_left_unchanged": true,
+  "active_code_policy_model_or_limits_changed": false,
+  "deferred_evidence": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261023T0835Z/deferred-disposition.json",
+  "offline_reallocation_guard_components": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-reallocation-guards-20261023T0835Z/manifest.json",
+  "notification": "NOTIFY_new_partial_native_response_incident",
+  "recovery_criterion": "Fresh native responses for replacements plus actual accepted batches, with all guards; never infer recovery from header, capacity, socket or process existence."
+}
