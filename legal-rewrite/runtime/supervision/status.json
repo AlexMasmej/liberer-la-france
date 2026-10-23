@@ -1,26 +1,26 @@
 {
   "state": "monitoring",
   "reason": "Existing coordinator adopted without interruption",
-  "checked_at_unix": 1792728815,
+  "checked_at_unix": 1792732103,
   "coordinator_pids": [
     3122
   ],
   "active_agents": [
     {
-      "pid": 82234,
+      "pid": 92836,
       "ppid": 3122,
-      "job": "travail-00452",
+      "job": "travail-00458",
       "kind": "new",
-      "last_event_unix": 1792728815,
+      "last_event_unix": 1792732099,
       "execution": {
-        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00452/errors-1.log",
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00458/errors-2.log",
         "cli_version": "0.160.1",
         "model": "gpt-6-astra",
         "reasoning_effort": "medium",
-        "session_id": "01a166e7-cd89-78a3-a010-19cb180c005a",
+        "session_id": "01a16717-964a-7b62-8bf5-b28f58def61a",
         "provider": "openai",
-        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00452",
-        "header_sha256": "262f35a3ecbb319f75b517d2773774d97f63f8bf2b685477eaf52b7f8685afab",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00458",
+        "header_sha256": "cff82223abd213e9b3a1aa27222c8a7f328afe5ec73bd4bbc9453c3011657b22",
         "response_started": true,
         "verified": true,
         "evidence_kind": "native_cli_startup_header_and_model_response",
@@ -28,20 +28,83 @@
       }
     },
     {
-      "pid": 82648,
+      "pid": 93972,
       "ppid": 3122,
-      "job": "review-impots-LEGIARTI000053564785-00002",
+      "job": "travail-00459",
+      "kind": "new",
+      "last_event_unix": 1792732104,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00459/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a1671f-67bc-7250-aaba-06beac4d4aa9",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00459",
+        "header_sha256": "714ef9b1b111873cfc65a32ad0df93ee271a56c8d1a207469a65b1e729876197",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      }
+    },
+    {
+      "pid": 93994,
+      "ppid": 3122,
+      "job": "travail-00460",
+      "kind": "new",
+      "last_event_unix": 1792732049,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00460/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a1671f-7994-7410-8465-f4d147c6eb14",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00460",
+        "header_sha256": "d4dd98734362a5774028c25bed4269b76e5db84ef521da4ab3f4976de2ad4360",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      }
+    },
+    {
+      "pid": 94020,
+      "ppid": 3122,
+      "job": "travail-00461",
+      "kind": "new",
+      "last_event_unix": 1792732104,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00461/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a1671f-92c7-7281-9f53-2d4007fa8144",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00461",
+        "header_sha256": "36155441f8881db80426cbb4841706c9908c206ca9f7e81e7b127ee822fd256d",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      }
+    },
+    {
+      "pid": 94090,
+      "ppid": 3122,
+      "job": "review-securite-sociale-LEGIARTI000037290433-00002",
       "kind": "review",
-      "last_event_unix": 1792728811,
+      "last_event_unix": 1792732049,
       "execution": {
-        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000053564785-00002/errors-1.log",
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000037290433-00002/errors-1.log",
         "cli_version": "0.160.1",
         "model": "gpt-6-astra",
         "reasoning_effort": "medium",
-        "session_id": "01a166e8-a841-7ee2-b75e-a2ff333aad8f",
+        "session_id": "01a16721-e83d-77e1-893b-4e434f0c0ef2",
         "provider": "openai",
-        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000053564785-00002",
-        "header_sha256": "fc7f5889c8408add94f12fddab2695bb3dcca1e16041d9ba187b67ee230c48ee",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000037290433-00002",
+        "header_sha256": "3eb6e34ec495e713cda984c7d4f82583f5c8954527aeba04e96f4079a900500f",
         "response_started": true,
         "verified": true,
         "evidence_kind": "native_cli_startup_header_and_model_response",
@@ -49,20 +112,20 @@
       }
     },
     {
-      "pid": 85161,
+      "pid": 94615,
       "ppid": 3122,
-      "job": "travail-00449",
+      "job": "travail-00462",
       "kind": "new",
-      "last_event_unix": 1792728814,
+      "last_event_unix": 1792732098,
       "execution": {
-        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00449/errors-2.log",
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00462/errors-1.log",
         "cli_version": "0.160.1",
         "model": "gpt-6-astra",
         "reasoning_effort": "medium",
-        "session_id": "01a166f3-3832-7e51-8b22-8e170a9da155",
+        "session_id": "01a16723-0c4c-7433-acbb-a745e7d118d3",
         "provider": "openai",
-        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00449",
-        "header_sha256": "d1563a24b91c26437573865258268880f28fcdae6950ca36ab1247feb9dfdca9",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00462",
+        "header_sha256": "615d77dda46eecfe313705c55605b8c847a9af1a33b7102becfffe43c1890a9f",
         "response_started": true,
         "verified": true,
         "evidence_kind": "native_cli_startup_header_and_model_response",
@@ -70,62 +133,13 @@
       }
     },
     {
-      "pid": 85492,
+      "pid": 95386,
       "ppid": 3122,
-      "job": "travail-00454",
+      "job": "travail-00463",
       "kind": "new",
-      "last_event_unix": 1792728812,
+      "last_event_unix": 1792731950,
       "execution": {
-        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00454/errors-1.log",
-        "cli_version": "0.160.1",
-        "model": "gpt-6-astra",
-        "reasoning_effort": "medium",
-        "session_id": "01a166f4-969d-7522-a9e1-daa1ae717813",
-        "provider": "openai",
-        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00454",
-        "header_sha256": "e807d95adcd36db736e207da3459c68915da413ee5b1ef7f1e1d850cf870ac3a",
-        "response_started": true,
-        "verified": true,
-        "evidence_kind": "native_cli_startup_header_and_model_response",
-        "status": "verified"
-      }
-    },
-    {
-      "pid": 85647,
-      "ppid": 3122,
-      "job": "travail-00455",
-      "kind": "new",
-      "last_event_unix": 1792728673,
-      "execution": {
-        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00455/errors-1.log",
-        "response_started": false,
-        "verified": false,
-        "evidence_kind": "native_cli_startup_header_and_model_response",
-        "status": "no_runtime_header"
-      }
-    },
-    {
-      "pid": 85997,
-      "ppid": 3122,
-      "job": "travail-00448",
-      "kind": "new",
-      "last_event_unix": 1792728792,
-      "execution": {
-        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00448/errors-2.log",
-        "response_started": false,
-        "verified": false,
-        "evidence_kind": "native_cli_startup_header_and_model_response",
-        "status": "no_runtime_header"
-      }
-    },
-    {
-      "pid": 86101,
-      "ppid": 3122,
-      "job": "travail-00456",
-      "kind": "new",
-      "last_event_unix": 1792728796,
-      "execution": {
-        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00456/errors-1.log",
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00463/errors-1.log",
         "response_started": false,
         "verified": false,
         "evidence_kind": "native_cli_startup_header_and_model_response",
@@ -146,16 +160,16 @@
   ],
   "counters": {
     "source_records": 30317,
-    "drafted_articles": 13822,
-    "retained_unchanged": 15292,
-    "pending": 1203,
-    "prior_drafts_reviewed": 2508,
-    "prior_drafts_awaiting_review": 5055
+    "drafted_articles": 13871,
+    "retained_unchanged": 15411,
+    "pending": 1035,
+    "prior_drafts_reviewed": 2509,
+    "prior_drafts_awaiting_review": 5054
   },
   "progress_signature": [
-    13822,
-    15292,
-    2508
+    13871,
+    15411,
+    2509
   ],
   "consecutive_unexpected_exits": 0,
   "next_start_after_unix": 1792702510,
@@ -491,35 +505,35 @@
   "semantic_review_by_jurist": false,
   "review_lane_observation": {
     "coordinator_pid": 3122,
-    "observed_at_unix": 1792728815,
+    "observed_at_unix": 1792732103,
     "coordinator_identity_matches": true,
     "verified_responding_by_kind": {
-      "new": 3,
+      "new": 5,
       "review": 1
     },
     "configured_capacity": 8,
     "configuration_matches_authorized_roles": true,
     "all_active_workers_attested": false,
     "active_worker_count": 7,
-    "unattested_or_unexpected_worker_count": 3,
+    "unattested_or_unexpected_worker_count": 1,
     "simultaneous_six_new_plus_two_review_verified": false,
     "measurement_complete": true,
     "scope": "Operational evidence; no legal validation or speed gain is inferred from capacity.",
-    "cohort_completed_jobs": 70,
+    "cohort_completed_jobs": 78,
     "cohort_articles": {
-      "new": 936,
-      "review": 61
+      "new": 1104,
+      "review": 62
     },
     "cohort_deferred_jobs": 25,
     "measurement_epoch_unix": 1792706194.761632,
-    "measurement_hours": 6.283399546676212,
+    "measurement_hours": 7.196732880009545,
     "measured_successful_by_kind": {
-      "new": 34,
-      "review": 5
+      "new": 41,
+      "review": 6
     },
     "measured_articles_per_hour": {
-      "new": 129.8660054860982,
-      "review": 9.548970991624868
+      "new": 136.728709597277,
+      "review": 8.476068379505993
     },
     "performance_comparison_limit": "Different codes and article lengths affect throughput; no matched-workload speed or non-regression conclusion is automatic."
   }

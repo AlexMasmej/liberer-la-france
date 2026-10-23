@@ -1,0 +1,274 @@
+{
+  "checked_at_utc": "2026-10-23T04:34:59.978485+00:00",
+  "single_coordinator": [
+    {
+      "pid": 3122,
+      "ppid": 1,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u /Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py --workers 8 --interleave-review --export-every 1000 --deploy-on-export --publish-at-end"
+    }
+  ],
+  "launchagent_registered": true,
+  "native_live_worker_execution": [
+    {
+      "pid": 89853,
+      "job": "travail-00457",
+      "kind": "new",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00457/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16703-f4ad-75f2-8496-0c3bdcc56d62",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00457",
+        "header_sha256": "633bfa49519a46007a9864478d528b2f9ff4334855a0c5f07cb03c43c800598e",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      }
+    },
+    {
+      "pid": 89858,
+      "job": "travail-00458",
+      "kind": "new",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00458/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16703-fdd1-70e0-b09a-84640af4a64b",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00458",
+        "header_sha256": "5a5d541e8610208302c173a8f826ab9ca53f82bc306c997364fdb41114a7d41c",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      }
+    }
+  ],
+  "status": {
+    "status": "running",
+    "updated_at_unix": 1792729669,
+    "source_records": 30317,
+    "drafted_articles": 13835,
+    "retained_unchanged": 15327,
+    "pending": 1155,
+    "exhaustive_rewriting_complete": false,
+    "jurist_reviewed_articles": 0,
+    "codes": [
+      {
+        "slug": "travail",
+        "source_records": 11593,
+        "drafted": 3696,
+        "retained_unchanged": 6745,
+        "pending": 1152
+      },
+      {
+        "slug": "impots",
+        "source_records": 2375,
+        "drafted": 1472,
+        "retained_unchanged": 903,
+        "pending": 0
+      },
+      {
+        "slug": "securite-sociale",
+        "source_records": 7427,
+        "drafted": 3068,
+        "retained_unchanged": 4357,
+        "pending": 2
+      },
+      {
+        "slug": "urbanisme",
+        "source_records": 2459,
+        "drafted": 1472,
+        "retained_unchanged": 987,
+        "pending": 0
+      },
+      {
+        "slug": "construction-habitation",
+        "source_records": 4126,
+        "drafted": 2108,
+        "retained_unchanged": 2018,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-1",
+        "source_records": 71,
+        "drafted": 42,
+        "retained_unchanged": 29,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-2",
+        "source_records": 674,
+        "drafted": 568,
+        "retained_unchanged": 106,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-3",
+        "source_records": 1115,
+        "drafted": 1007,
+        "retained_unchanged": 108,
+        "pending": 0
+      },
+      {
+        "slug": "impots-annexe-4",
+        "source_records": 477,
+        "drafted": 402,
+        "retained_unchanged": 74,
+        "pending": 1
+      }
+    ],
+    "failure": null,
+    "prior_drafts_reviewed": 2509,
+    "prior_drafts_awaiting_review": 5054,
+    "publication_pending": false
+  },
+  "admission": {
+    "action": "running",
+    "pending_by_kind": {
+      "new": 20,
+      "review": 495
+    },
+    "reserved_or_running_by_kind": {
+      "new": 6,
+      "review": 1
+    },
+    "admitted_by_kind": {
+      "new": 69,
+      "review": 10
+    },
+    "deferred_by_kind": {
+      "new": 0,
+      "review": 0
+    },
+    "borrowing_enabled": false,
+    "execution_evidence_scope": "Admission only; native session headers and validated answers are required for execution/acceptance claims.",
+    "coordinator_pid": 3122,
+    "updated_at_unix": 1792729670,
+    "role_pools": {
+      "new": 6,
+      "review": 2
+    }
+  },
+  "effective_limits": {
+    "workers": 7,
+    "role_limits": {
+      "new": 6,
+      "review": 1
+    }
+  },
+  "current_canonical_pending_first_pass": 1155,
+  "current_prior_review_counts": {
+    "completed": 2509,
+    "pending": 5054
+  },
+  "current_unique_deferred_first_pass_absent": 528,
+  "current_unique_deferred_prior_review_pending": 36,
+  "latest_accepted_metrics": [
+    {
+      "coordinator_pid": 3122,
+      "slug": "travail",
+      "index": 453,
+      "kind": "new",
+      "started_at_unix": 1792727809.245157,
+      "outcome": "accepted",
+      "attempts": 1,
+      "retries": [],
+      "job": "travail-00453",
+      "articles": 24,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a166e8-527a-79a2-a46e-a4f49615b7bc",
+      "execution_verified": true,
+      "finished_at_unix": 1792728645.248811,
+      "duration_seconds": 836.0080985000022
+    },
+    {
+      "coordinator_pid": 3122,
+      "slug": "travail",
+      "index": 450,
+      "kind": "new",
+      "started_at_unix": 1792727465.222503,
+      "outcome": "accepted",
+      "attempts": 1,
+      "retries": [],
+      "job": "travail-00450",
+      "articles": 24,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a166e4-5975-7193-b33f-f69946123157",
+      "execution_verified": true,
+      "finished_at_unix": 1792728670.736021,
+      "duration_seconds": 1205.5199272089994
+    },
+    {
+      "coordinator_pid": 3122,
+      "slug": "travail",
+      "index": 451,
+      "kind": "new",
+      "started_at_unix": 1792727585.539881,
+      "outcome": "accepted",
+      "attempts": 1,
+      "retries": [],
+      "job": "travail-00451",
+      "articles": 24,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a166e7-5f2d-7131-9540-80cd49e3855c",
+      "execution_verified": true,
+      "finished_at_unix": 1792728760.424523,
+      "duration_seconds": 1174.8908865000012
+    },
+    {
+      "coordinator_pid": 3122,
+      "slug": "travail",
+      "index": 449,
+      "kind": "new",
+      "started_at_unix": 1792727461.74751,
+      "outcome": "accepted",
+      "attempts": 2,
+      "retries": [
+        "validation"
+      ],
+      "job": "travail-00449",
+      "articles": 24,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a166f3-3832-7e51-8b22-8e170a9da155",
+      "execution_verified": true,
+      "finished_at_unix": 1792729661.457578,
+      "duration_seconds": 2199.7113394169974
+    },
+    {
+      "coordinator_pid": 3122,
+      "slug": "travail",
+      "index": 448,
+      "kind": "new",
+      "started_at_unix": 1792727459.423043,
+      "outcome": "accepted",
+      "attempts": 2,
+      "retries": [
+        "validation"
+      ],
+      "job": "travail-00448",
+      "articles": 24,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a166f6-b26f-7d93-85f1-076534dacc8a",
+      "execution_verified": true,
+      "finished_at_unix": 1792729670.127451,
+      "duration_seconds": 2210.7057206249992
+    }
+  ],
+  "free_gib": 10.052169799804688,
+  "additional_treatments_since_current_audit": 901,
+  "new_audit_snapshot_started": false,
+  "promotion_or_throughput_gain_claim": false,
+  "signals_or_launches": false,
+  "code_policy_or_catalog_changed": false,
+  "notification": "DONT_NOTIFY_normal_progress"
+}
