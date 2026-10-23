@@ -1,0 +1,34 @@
+{
+  "owner": "coherence-rollout-d5f96bf9-89b6-4956-87f2-ff1d593fd5b7",
+  "pid": 78943,
+  "birth_unix": 1792765488.0,
+  "run": {
+    "pid": 78943,
+    "capacity": 8,
+    "started_at_unix": 1792765488,
+    "dependency_leases": true,
+    "requested_execution": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium"
+    },
+    "continuation_mode": "recover_new_before_reviews",
+    "review_tail_capacity": 8,
+    "role_limits": {
+      "new": 6,
+      "review": 2
+    },
+    "initial_admission_limits": {
+      "workers": 8,
+      "role_limits": {
+        "new": 6,
+        "review": 0
+      }
+    },
+    "borrowing_enabled": false
+  },
+  "control_before_b64": "ewogICJyZXZpZXdfdGFpbF9saW1pdCI6IDgsCiAgInJvbGVfbGltaXRzIjogewogICAgIm5ldyI6IDYsCiAgICAicmV2aWV3IjogMAogIH0sCiAgIndvcmtlcnMiOiA4Cn0K",
+  "control_paused_b64": "ewogICJ3b3JrZXJzIjogOCwKICAicm9sZV9saW1pdHMiOiB7CiAgICAibmV3IjogNiwKICAgICJyZXZpZXciOiAwCiAgfSwKICAicmV2aWV3X3RhaWxfbGltaXQiOiAwCn0K",
+  "pause_b64": "ewogICJvd25lciI6ICJjb2hlcmVuY2Utcm9sbG91dC1kNWY5NmJmOS04OWI2LTQ5NTYtODdmMi1mZjFkNTkzZmQ1YjciLAogICJwaWQiOiA3ODk0MywKICAiY3JlYXRlZF9hdF91bml4IjogMTc5Mjc4ODgzMS4zNzE5OSwKICAicmVhc29uIjogIk5hdHVyYWwgZHJhaW4gYmVmb3JlIHJldmlld2VkIHByb21wdC1vbmx5IGNvaGVyZW5jZSB1cGRhdGU7IG5vIGFjdGl2ZSBqb2IgaW50ZXJydXB0ZWQuIgp9Cg==",
+  "pause_sha256": "7ac735c9c719ae8037ed066c5014b6191710124c32279af8c8cc524e0335e656",
+  "launchagent_registered": true
+}

@@ -13,7 +13,8 @@ POOL_LIMITS={'new':6,'review':2}
 
 def completed_futures(scheduled, *, limits, submit, stopped, wait_for_change,
                       describe, state_changed, deferred_changed,
-                      unconsumed=None, worker_failed=None, executor_factory=None, poll_seconds=.2):
+                      unconsumed=None, worker_failed=None, executor_factory=None, poll_seconds=.2,
+                      review_tail=False):
     """Yield completed futures; paused/stopped jobs remain unattempted for resume.
 
     ``submit(pool,job,review)`` must reserve all shared capacity/lease guards
@@ -21,6 +22,9 @@ def completed_futures(scheduled, *, limits, submit, stopped, wait_for_change,
     reservation if executor submission fails. Limits are read afresh each pass.
     """
     factory=executor_factory or concurrent.futures.ThreadPoolExecutor
+    pool_limits={'new':6,'review':8} if review_tail else dict(POOL_LIMITS)
+    if review_tail and any(not review for _,review in scheduled):
+        raise ValueError('Review-tail queue cannot contain a drafting job')
     queues={role:[] for role in POOL_LIMITS}
     for ordinal,(job,review) in enumerate(scheduled):
         queues['review' if review else 'new'].append((ordinal,job,review))
@@ -52,6 +56,9 @@ def completed_futures(scheduled, *, limits, submit, stopped, wait_for_change,
                'admitted_by_kind':dict(admitted),
                'deferred_by_kind':{r:sum(d['kind']==r for d in deferred) for r in POOL_LIMITS},
                'borrowing_enabled':False,
+               'authorized_reallocation':bool(review_tail),
+               'phase':'review_tail' if review_tail else 'mixed',
+               'role_pool_limits':dict(pool_limits),
                'execution_evidence_scope':'Admission only; native session headers and validated answers are required for execution/acceptance claims.'}
         if value!=last_state:state_changed(value);last_state=value
 
@@ -61,7 +68,7 @@ def completed_futures(scheduled, *, limits, submit, stopped, wait_for_change,
             # Admission/refill is independent of a slow publication checkpoint
             # in the consumer. Only the dispatcher owns its executor contexts.
             with factory(max_workers=6,thread_name_prefix='new-article') as new_pool,\
-                 factory(max_workers=2,thread_name_prefix='review-article') as review_pool:
+                 factory(max_workers=pool_limits['review'],thread_name_prefix='review-article') as review_pool:
                 pools={'new':new_pool,'review':review_pool}
                 while active or any(queues.values()):
                     try:
@@ -77,7 +84,7 @@ def completed_futures(scheduled, *, limits, submit, stopped, wait_for_change,
                                 index=0
                                 while index<len(lane_queue) and not should_stop():
                                     role_active=sum(r==role for r in active.values())
-                                    if role_active>=min(POOL_LIMITS[role],roles[role]) or len(active)>=current['workers']:break
+                                    if role_active>=min(pool_limits[role],roles[role]) or len(active)>=current['workers']:break
                                     _,job,review=lane_queue[index]
                                     future=submit(pools[role],job,review)
                                     if future is None:

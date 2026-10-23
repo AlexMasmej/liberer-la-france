@@ -1,0 +1,49 @@
+{
+  "observed_at_unix": 1792788910.409544,
+  "known_inventory": true,
+  "coordinator_pids": [
+    78943
+  ],
+  "native_workers": 7,
+  "exporters": 0,
+  "admission": {
+    "action": "review_admissions_paused",
+    "pending_by_kind": {
+      "new": 0,
+      "review": 0
+    },
+    "reserved_or_running_by_kind": {
+      "new": 0,
+      "review": 7
+    },
+    "admitted_by_kind": {
+      "new": 0,
+      "review": 485
+    },
+    "deferred_by_kind": {
+      "new": 0,
+      "review": 2252
+    },
+    "borrowing_enabled": false,
+    "authorized_reallocation": true,
+    "phase": "review_tail",
+    "role_pool_limits": {
+      "new": 6,
+      "review": 8
+    },
+    "execution_evidence_scope": "Admission only; native session headers and validated answers are required for execution/acceptance claims.",
+    "coordinator_pid": 78943,
+    "updated_at_unix": 1792788878,
+    "role_pools": {
+      "new": 6,
+      "review": 8
+    }
+  },
+  "exit_receipt": {
+    "pid": 73618,
+    "ended_at_unix": 1792764566,
+    "exit_code": 0,
+    "exit_type": null,
+    "stop_requested": false
+  }
+}

@@ -28,6 +28,7 @@ ACTIVE_LEASES={}
 LEASE_CONTEXT=threading.local()
 METRICS_LOCK=threading.Lock()
 MAX_WORKERS=8
+REVIEW_TAIL=False
 SLUGS=['travail','impots','securite-sociale','urbanisme','construction-habitation',*[f'impots-annexe-{i}' for i in range(1,5)]]
 
 def atomic(path,value):
@@ -80,6 +81,41 @@ def invoke_agent(command,*,input,text,stdout,stderr,cwd,timeout):
         if child.poll() is not None:
             atomic(record,process_record|{'ended_at_unix':int(time.time()),'returncode':child.returncode})
     return subprocess.CompletedProcess(command,child.returncode)
+
+def native_access_failure(stderr):
+    import re
+    lines = stderr.splitlines()
+    while lines and not lines[-1].strip():
+        lines.pop()
+    # Native text mode can finish with this informational two-line footer.
+    if (len(lines) >= 2 and lines[-2].strip() == 'tokens used'
+            and re.fullmatch(r'[\d,]+', lines[-1].strip())):
+        del lines[-2:]
+    while lines and not lines[-1].strip():
+        lines.pop()
+    diagnostics = []
+    for line in reversed(lines):
+        match = re.fullmatch(r'ERROR:\s*(.+)', line)
+        if not match:
+            match = re.fullmatch(
+                r'\d{4}-\d\d-\d\dT\S+\s+ERROR\s+[\w:]+:\s*(.+)', line)
+        if not match:
+            break
+        diagnostics.append(match[1])
+    # Merely mentioning "quota", sign-in or authentication is insufficient.
+    # Keep explicit access denials blocking even when transport also fails.
+    denied = re.compile(
+        r'\b(?:rate[ _-]limit(?:ed|s)?|usage[ _-]limit(?:s)?|'
+        r'insufficient[ _-]quota|quota[ _-](?:exceeded|exhausted)|'
+        r'authentication[ _-](?:failed|required)|unauthori[sz]ed|'
+        r'invalid[ _-](?:api[ _-])?key|not (?:logged|signed) in|'
+        r'please (?:log|sign) in|sign in (?:again|to continue)|'
+        r'too many requests|insufficient (?:credits|funds)|'
+        r'credit balance is too low)\b|'
+        r'\b(?:HTTP(?:[/\d.]+)?(?: status| error)?|status(?: code)?|'
+        r'unexpected status code)[ :=]+(?:401|403|429)\b', re.I)
+    return any(denied.search(message) for message in diagnostics)
+
 
 def publish_checkpoint(deploy=False):
     """Only a reported deployment failure is nonfatal; local defects still stop."""
@@ -319,7 +355,7 @@ def _run_job(job,codex,sources,review=False,measurement=None):
     atomic(folder/'result-schema.json',schema)
     source_hash=digest((folder/'source.json').read_text())
     prompt=INSTRUCTIONS+impact_audit.PROMPT+f'\nLis aussi coordination.json : coordinations déjà retenues dans les articles rédigés.\nCorpus public pour vérification en lecture seule : {CORPUS}\nCompléments documentaires en lecture seule : {HERE/"attachments"}. Quand source_companions est présent, lis ses notes de provenance et les pages pertinentes entières des documents/images ; les chemins de ces pièces sont relatifs à ce dossier. Ne substitue jamais une inférence à une formule. Les images vérifiées peuvent être conservées dans proposed_xml avec leur chemin media/ et un attribut alt non vide ; aucun autre attribut ni image non enregistrée.\nCode traité : {slug}. Nombre exact d’articles : {len(expected)}.\n'
-    if review:prompt+='\nSECONDE PASSE : chaque source contient previous_draft, une proposition antérieure à la consigne de coupes plus radicales. Lis cette proposition entière et la source entière. Réexamine réellement chaque obligation, impôt, doublon ou condition pour en supprimer davantage lorsque cela est justifié. Conserve les réformes déjà acquises. Si aucune coupe supplémentaire ne se justifie, tu peux conserver la proposition antérieure mais tu dois expliquer précisément pourquoi sa fonction reste nécessaire ; cela ne constitue aucune validation par un juriste. Les images de formules déjà enregistrées dans la proposition peuvent être conservées avec leurs chemins et attributs alt existants. Le texte final reste un article complet ou une abrogation opératoire, jamais un compte rendu de relecture.\n'
+    if review:prompt+='\nSECONDE PASSE — PRIORITÉ HUMAINE DU23OCTOBRE2026 : rechercher et corriger avant tout les contradictions et incohérences juridiques. Chaque source contient previous_draft. Lis intégralement la source, ses NOTA, la proposition précédente, les motifs et notes, puis les textes entiers des cibles et contreparties nécessaires dans leurs versions et champs pertinents. Recherche les conflits internes, entre articles et entre les neuf recueils, y compris sans renvoi explicite ; vérifie champs, définitions, conditions, seuils, exceptions, renvois entrants/sortants, abrogations, subdivisions, dates et transitions. Un renvoi ne doit rétablir une taxe ou obligation supprimée ni fermer une exonération ou protection autonome. Qualifie les cas par passages exacts dans reason/review_notes : contradiction effective, coordination nécessaire, transition compatible, différence de champ ou point non vérifiable. Corrige les conflits réellement établis dans les dispositions assignées avec les contrôles ordinaires ; identifie précisément les coordinations hors lot et sources manquantes qui restent ouvertes. Préserve les réformes déjà acquises, exonérations et dérogations favorables, y compris pour les situations futures éligibles. La recherche de nouvelles coupes est secondaire et doit rester justifiée ; elle ne remplace pas cette revue de cohérence. Si aucune correction ne se justifie, conserve la proposition existante et explique les interactions et transitions effectivement vérifiées, sans reformulation stylistique. Un marqueur completed, un validateur technique ou un certificat de renvoi ne prouve pas une cohérence globale ni une validation par juriste. Le texte final reste entier ou une abrogation opératoire avec transition, jamais un compte rendu ; conserve les images et chemins/alt de formules déjà validés. Ne retire aucune garde de sources, avantages, impacts, cibles, propriétaires ou avant-images.\n'
     if review and all(a.get('reference_recheck_only') for a in expected):
         prompt+='\nRELECTURE DE CONCORDANCE : conserve la proposition existante intégralement si ses renvois sont déjà cohérents. Corrige uniquement les incohérences de fond, transitions et renvois réellement identifiées ; aucune réécriture stylistique destinée à changer une empreinte. Ajoute les analyses de renvois requises. Les anciennes coupes et avantages demeurent acquis.\n'
     failure=None
@@ -356,8 +392,8 @@ def _run_job(job,codex,sources,review=False,measurement=None):
                 failure='Agent timed out; no article accepted';continue
         if process.returncode:
             # Stop on auth/quota failures instead of silently retrying indefinitely.
-            tail=(folder/f'events-{attempt}.log').read_text()[-8000:]+(folder/f'errors-{attempt}.log').read_text()[-4000:]
-            if re.search(r'rate.limit|usage.limit|quota|unauthori[sz]ed|authentication|sign.in|insufficient',tail,re.I):
+            diagnostics=(folder/f'errors-{attempt}.log').read_text()
+            if native_access_failure(diagnostics):
                 measurement['outcome']='blocked_auth_or_usage'
                 STOP.set()
                 with LOCK:progress(sources,'blocked','Codex authentication or usage limit; see job '+folder.name)
@@ -518,7 +554,10 @@ def capture_for_attempt(expected,provisional):
     return snapshot()
 
 def worker_limit(maximum):
-    return admission_limits(RUNTIME,maximum)['workers']
+    return current_limits(maximum)['workers']
+
+def current_limits(maximum):
+    return admission_limits(RUNTIME,maximum,review_tail=REVIEW_TAIL)
 
 def try_reserve_slot(job,maximum,review=False,*,wait=False,lease=None):
     """Reserve shared total, role and footprint together, before pool submission."""
@@ -528,7 +567,7 @@ def try_reserve_slot(job,maximum,review=False,*,wait=False,lease=None):
     token=object();kind='review' if review else 'new'
     with SLOTS:
         while True:
-            current=admission_limits(RUNTIME,maximum);roles=current['role_limits']
+            current=current_limits(maximum);roles=current['role_limits']
             if STOP.is_set():return
             if roles is not None and roles[kind]==0:return
             role_available=roles is None or ACTIVE_BY_KIND[kind]<roles[kind]
@@ -560,7 +599,7 @@ def run_in_slot(job,codex,sources,maximum,review=False,*,reservation=None):
 
 def scheduled_futures(scheduled,codex,sources,maximum):
     """Keep legacy mixed execution, or isolate new/review pools under a role plan."""
-    current=admission_limits(RUNTIME,maximum)
+    current=current_limits(maximum)
     if current['role_limits'] is None:
         with concurrent.futures.ThreadPoolExecutor(max_workers=maximum) as pool:
             futures=[pool.submit(run_in_slot,job,codex,sources,maximum,review) for job,review in scheduled]
@@ -584,7 +623,9 @@ def scheduled_futures(scheduled,codex,sources,maximum):
             release_slot(reservation);raise
     def changed(value):
         atomic(RUNTIME/'admission-status.json',value|{'coordinator_pid':os.getpid(),
-               'updated_at_unix':int(time.time()),'role_pools':{'new':6,'review':2}})
+               'updated_at_unix':int(time.time()),
+               'phase':'review_tail' if REVIEW_TAIL else 'mixed',
+               'role_pools':{'new':6,'review':8 if REVIEW_TAIL else 2}})
     def deferred(value):
         atomic(RUNTIME/'admission-deferred.json',{'coordinator_pid':os.getpid(),
                'updated_at_unix':int(time.time()),'jobs':value,'accepted':False,
@@ -613,19 +654,19 @@ def scheduled_futures(scheduled,codex,sources,maximum):
     # Clear only this run's admission telemetry, never canonical queue/state.
     deferred([])
     yield from review_lanes.completed_futures(scheduled,
-        limits=lambda:admission_limits(RUNTIME,maximum),submit=submit,
+        limits=lambda:current_limits(maximum),submit=submit,
         stopped=STOP.is_set,wait_for_change=wait_for_change,describe=describe,
         state_changed=changed,deferred_changed=deferred,unconsumed=unconsumed,
-        worker_failed=worker_failed)
+        worker_failed=worker_failed,review_tail=REVIEW_TAIL)
 
 def role_reviews_paused(maximum):
-    roles=admission_limits(RUNTIME,maximum)['role_limits']
+    roles=current_limits(maximum)['role_limits']
     return roles is not None and roles['review']==0
 
 def run_prior_review_phase(sources,codex,maximum):
     """Same prior-review commits/checkpoints, with bounded role admissions."""
     import review_prior
-    if admission_limits(RUNTIME,maximum)['role_limits'] is None:
+    if current_limits(maximum)['role_limits'] is None:
         return review_prior.run(sys.modules[__name__],sources,codex,maximum)
     jobs=review_prior.build_jobs(sources)
     print('RADICAL REVIEW START',len(jobs),'jobs; dedicated review lane',flush=True)
@@ -643,7 +684,7 @@ def run_prior_review_phase(sources,codex,maximum):
 def run_reference_review_phase(sources,codex,maximum):
     """Preserve convergence checks; a disabled lane returns pending, not failure."""
     import reference_queue
-    if admission_limits(RUNTIME,maximum)['role_limits'] is None:
+    if current_limits(maximum)['role_limits'] is None:
         return reference_queue.run(sys.modules[__name__],sources,codex,maximum)
     seen=set()
     while not STOP.is_set():
@@ -663,9 +704,13 @@ def run_reference_review_phase(sources,codex,maximum):
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--workers',type=int,choices=range(1,MAX_WORKERS+1),default=1);parser.add_argument('--slugs',default=','.join(SLUGS));parser.add_argument('--max-jobs',type=int);parser.add_argument('--export-every',type=int,default=0);parser.add_argument('--publish-at-end',action='store_true');parser.add_argument('--review-prior-after',action='store_true');parser.add_argument('--wait-for-coordinator',action='store_true')
     parser.add_argument('--deploy-on-export',action='store_true',help='Publish each checked checkpoint to the existing sites')
+    parser.add_argument('--recover-new-before-reviews',action='store_true',
+                        help='Resume current open drafting jobs, then reallocate explicitly authorized slots to reviews')
     order=parser.add_mutually_exclusive_group();order.add_argument('--review-prior-first',action='store_true');order.add_argument('--interleave-review',action='store_true')
     args=parser.parse_args()
     if args.deploy_on_export and args.export_every<=0:parser.error('--deploy-on-export requires --export-every')
+    if args.recover_new_before_reviews and (args.max_jobs is not None or args.review_prior_first or args.review_prior_after or args.interleave_review):
+        parser.error('--recover-new-before-reviews owns phase ordering and cannot be combined with other review/max-job flags')
     RUNTIME.mkdir(parents=True,exist_ok=True)
     def stop_after_current_jobs(signum,frame):
         STOP.set()
@@ -681,6 +726,8 @@ def main():
     atomic(RUNTIME/'coordinator-run.json',{'pid':os.getpid(),'capacity':args.workers,
            'started_at_unix':int(time.time()),'dependency_leases':True,
            'requested_execution':requested_execution(RUNTIME),
+           'continuation_mode':'recover_new_before_reviews' if args.recover_new_before_reviews else None,
+           'review_tail_capacity':worker_settings(RUNTIME).get('review_tail_capacity'),
            'role_limits':role_ceiling,
            'initial_admission_limits':initial_limits,
            'borrowing_enabled':False})
@@ -718,6 +765,10 @@ def main():
     if role_ceiling is not None:print('START ROLE LIMITS',json.dumps(role_ceiling,sort_keys=True),'effective',json.dumps(initial_limits,sort_keys=True),flush=True)
     if args.review_prior_first:
         run_prior_review_phase(sources,codex,args.workers)
+    if args.recover_new_before_reviews:
+        import continuation_tail
+        continuation_tail.run(sys.modules[__name__],codex,args)
+        return
     scheduled=[(job,False) for job in jobs]
     if args.interleave_review:
         import review_prior

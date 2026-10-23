@@ -1,0 +1,64 @@
+{
+  "checked_at_utc": "2026-10-23T21:44:16.525070+00:00",
+  "new_coordinator_pid": 41583,
+  "previous_coordinator_pid": 78943,
+  "birth_utc": "2026-10-23T21:04:43+00:00",
+  "run": {
+    "pid": 41583,
+    "capacity": 8,
+    "started_at_unix": 1792789489,
+    "dependency_leases": true,
+    "requested_execution": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium"
+    },
+    "continuation_mode": "recover_new_before_reviews",
+    "review_tail_capacity": 8,
+    "role_limits": {
+      "new": 6,
+      "review": 2
+    },
+    "initial_admission_limits": {
+      "workers": 8,
+      "role_limits": {
+        "new": 6,
+        "review": 0
+      }
+    },
+    "borrowing_enabled": false
+  },
+  "registered_supervisor_launch": {
+    "pid": 41583,
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-u",
+      "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py",
+      "--workers",
+      "8",
+      "--recover-new-before-reviews",
+      "--export-every",
+      "1000",
+      "--deploy-on-export",
+      "--publish-at-end"
+    ],
+    "launched_at_unix": 1792789483
+  },
+  "physical_interpreter": {
+    "requested_launcher": "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+    "loaded_image": "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+    "launcher_sha256": "f13707ff725eb3675d57e0f04527a4dada0511cebfb7cbd80f5cab72733a2a9d",
+    "image_sha256": "6cf88920bb89d3db7cb8bad4b09ad793143e37b00c60a8b37baa435071fcae03",
+    "lsof_sha256": "cac7c351ac6610d8b2ad47cb2399c5bd09f2d9fa77f84afd2fe0fc64887b81c7",
+    "arguments_identical": true
+  },
+  "native_workers": 8,
+  "native_responding_distinct": 0,
+  "responders": [],
+  "installed_runner_sha256": "d826aac7dbd43e5e07538d07a9bbf770bbb732842352424456ffd19067898802",
+  "all77pins_match": true,
+  "source_policy_or_global_model_changed": false,
+  "new_priority_applies_to_responding_sessions": true,
+  "throughput_gain_claimed": false,
+  "distinct_new_native_responses_observed_across_dated_captures": 0,
+  "eight_distinct_new_responses_attested": false
+}

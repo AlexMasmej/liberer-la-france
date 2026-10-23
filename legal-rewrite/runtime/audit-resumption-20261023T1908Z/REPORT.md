@@ -1,0 +1,11 @@
+# Reprise après libération d’espace
+
+Le signalement humain de l'espace libéré a permis une nouvelle capture cohérente et un audit technique intégral, validé puis publié atomiquement à 19:12:20 UTC. Aucun agent n'a été arrêté, relancé ou ajouté par ce contrôle et aucun texte source ou politique n'a changé.
+
+Les quatre gros fichiers de l'ancien audit 1557Z ont été archivés seulement après publication du nouveau pointeur. Leurs empreintes compressées et leur décompression intégrale ont été revérifiées séparément. Le nouvel audit 1908Z reste non compressé et inspectable. Les archives, manifestes, refus et sources sont conservés.
+
+La revue limitée L1242-2 reste applicable sous ses gardes exactes. La revue CVAE ne l'est plus : deux propositions ont changé. Un dossier de comparaison entière de ces deux textes est conservé et la relecture fraîche des treize articles demeure requise. Aucune conclusion juridique globale ni validation humaine n'est annoncée.
+
+Le relevé postpublication observe huit réponses natives Astra/Moyen distinctes et 343 lots/2400 articles réellement relus sous le coordinateur unique 78943 ; cet effectif est daté. La liste complète porte 3442 completed et 26872 pending. Le nouveau quatrième différé concerne neuf articles fiscaux, après trois refus de validation, dernier motif « Payment timing relief is not a permanent tax cut ». Ses sources/NOTA/bornes et cinq champs d'avant-image sont inchangés et tous ses fichiers/refus restent préservés. Les quatre différés courants/45 identités s'ajoutent sans chevauchement aux trois anciens lots/36 : 81 identités uniques restent à reconstruire au point sûr, sans rejeu.
+
+Les 30314 premières passes accessibles sont couvertes ; trois réserves documentaires restent non vérifiées. Toutes les secondes passes, la convergence des renvois et la qualification prioritaire, puis un audit final frais restent requis. La nouvelle baseline est le préfixe métrique de 622344 octets sous hash ddb234d11cdf14a010601394ea383be31288c88a23ea72c1e2c448f1127d397d : 2290 articles reviewed de 78943 avant capture. Le relevé postpublication compte 110 traitements supplémentaires. Les anciens totaux ne rendent pas ce nouvel audit immédiatement dû.

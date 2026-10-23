@@ -1,0 +1,229 @@
+{
+  "at_utc": "2026-10-23T21:45:00.861661+00:00",
+  "coordinator_pids": [
+    41583
+  ],
+  "current_pid": 41583,
+  "native_workers": 8,
+  "responding_distinct": 0,
+  "workers": [
+    {
+      "pid": 46377,
+      "job": "review-impots-LEGIARTI000006302661-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-78e2-ba45-e71ab931806b",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001",
+        "header_sha256": "4b34e9848decc9a4a5f1bf4329b215618933dad9ab92ea5f8c37cf8ca91e6b79",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "awaiting_model_response"
+      },
+      "log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001/errors-1.log",
+      "prefix_bytes": 20750,
+      "prefix_sha256": "38a2c1f660c427ddff7ca8f6aca3460ca6b32dfd230ecc3b7b58372c3f35cbc3",
+      "last1500bytes": "is sans renvoi explicite ; vérifie champs, définitions, conditions, seuils, exceptions, renvois entrants/sortants, abrogations, subdivisions, dates et transitions. Un renvoi ne doit rétablir une taxe ou obligation supprimée ni fermer une exonération ou protection autonome. Qualifie les cas par passages exacts dans reason/review_notes : contradiction effective, coordination nécessaire, transition compatible, différence de champ ou point non vérifiable. Corrige les conflits réellement établis dans les dispositions assignées avec les contrôles ordinaires ; identifie précisément les coordinations hors lot et sources manquantes qui restent ouvertes. Préserve les réformes déjà acquises, exonérations et dérogations favorables, y compris pour les situations futures éligibles. La recherche de nouvelles coupes est secondaire et doit rester justifiée ; elle ne remplace pas cette revue de cohérence. Si aucune correction ne se justifie, conserve la proposition existante et explique les interactions et transitions effectivement vérifiées, sans reformulation stylistique. Un marqueur completed, un validateur technique ou un certificat de renvoi ne prouve pas une cohérence globale ni une validation par juriste. Le texte final reste entier ou une abrogation opératoire avec transition, jamais un compte rendu ; conserve les images et chemins/alt de formules déjà validés. Ne retire aucune garde de sources, avantages, impacts, cibles, propriétaires ou avant-images.\n\n"
+    },
+    {
+      "pid": 46423,
+      "job": "review-travail-LEGIARTI000006900996-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7592-99c6-94d77af40fb5",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001",
+        "header_sha256": "b40655a7e0738b285cd10f3f9179e4c96c9095c608264b369ed846b0523961ca",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "awaiting_model_response"
+      },
+      "log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001/errors-1.log",
+      "prefix_bytes": 22405,
+      "prefix_sha256": "31e5dcc1aaeb866a12da1504241de70449c09071fddc128327e242d263e6a500",
+      "last1500bytes": "es, propriétaires ou avant-images.\n\nRENVOIS AU CONTRAT UNIQUE : lis reference-targets.json en entier, pour les cibles applicables à tes articles. Ce fichier contient les textes officiels entiers, leurs notes et les propositions actuelles ; une proposition n'est pas le droit en vigueur. Les identifiants dans requirements désignent les cibles à vérifier pour chaque article source. Vérifie le champ de chaque renvoi, les alinéas/subdivisions réellement visés, les anciens contrats, les avantages futurs et les exceptions spéciales. Un renvoi à un code extérieur ou à un régime public ne doit pas être attribué artificiellement au contrat privé : explique l'inapplicabilité lorsqu'elle existe.\nPour chaque objet answer.json concerné, ajoute reference_checks : une liste d'objets target_key, view_sha256, assessment. Elle couvre EXACTEMENT les cibles requises pour cet article, sans cible supplémentaire même si elle figure dans le contexte d'un autre article. Place les analyses facultatives dans review_notes. Reprends leurs empreintes EXACTES et donne pour chaque cible au moins80caractères d'analyse spécifique : règle réellement visée, cohérence/rectification du renvoi, condition d'ancienneté et de notification ou distinction d'une ancienne règle/situation spéciale. Pas de simple « vérifié ». Tout nouveau renvoi à une cible non fournie doit être signalé ; n'invente pas son contenu. La vérification automatique ne constitue aucune approbation juridique.\n\n"
+    },
+    {
+      "pid": 46438,
+      "job": "review-construction-habitation-LEGIARTI000006824437-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7123-aacf-5e1c0f87c633",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001",
+        "header_sha256": "0a641f645d358245cf1fb0b393f147802a8e33dad2c0b43693238934e7cc5120",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "awaiting_model_response"
+      },
+      "log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001/errors-1.log",
+      "prefix_bytes": 20974,
+      "prefix_sha256": "f321dc98e48d9a1ec00a821138ce8736dd43521c9247970419cc08b2113fe007",
+      "last1500bytes": "is sans renvoi explicite ; vérifie champs, définitions, conditions, seuils, exceptions, renvois entrants/sortants, abrogations, subdivisions, dates et transitions. Un renvoi ne doit rétablir une taxe ou obligation supprimée ni fermer une exonération ou protection autonome. Qualifie les cas par passages exacts dans reason/review_notes : contradiction effective, coordination nécessaire, transition compatible, différence de champ ou point non vérifiable. Corrige les conflits réellement établis dans les dispositions assignées avec les contrôles ordinaires ; identifie précisément les coordinations hors lot et sources manquantes qui restent ouvertes. Préserve les réformes déjà acquises, exonérations et dérogations favorables, y compris pour les situations futures éligibles. La recherche de nouvelles coupes est secondaire et doit rester justifiée ; elle ne remplace pas cette revue de cohérence. Si aucune correction ne se justifie, conserve la proposition existante et explique les interactions et transitions effectivement vérifiées, sans reformulation stylistique. Un marqueur completed, un validateur technique ou un certificat de renvoi ne prouve pas une cohérence globale ni une validation par juriste. Le texte final reste entier ou une abrogation opératoire avec transition, jamais un compte rendu ; conserve les images et chemins/alt de formules déjà validés. Ne retire aucune garde de sources, avantages, impacts, cibles, propriétaires ou avant-images.\n\n"
+    },
+    {
+      "pid": 46439,
+      "job": "review-impots-annexe-3-LEGIARTI000006299327-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7a00-82e0-ecafea422d5a",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001",
+        "header_sha256": "9894d26de6eccaa48cad2a1da3a3cb88b999869dd2be12b1c22b1b2eb05e3632",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "awaiting_model_response"
+      },
+      "log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001/errors-1.log",
+      "prefix_bytes": 22420,
+      "prefix_sha256": "162298ad16e96c46126ad966e2b8d8a68101bb46e33f6bebb42a49451cb1d667",
+      "last1500bytes": "es, propriétaires ou avant-images.\n\nRENVOIS AU CONTRAT UNIQUE : lis reference-targets.json en entier, pour les cibles applicables à tes articles. Ce fichier contient les textes officiels entiers, leurs notes et les propositions actuelles ; une proposition n'est pas le droit en vigueur. Les identifiants dans requirements désignent les cibles à vérifier pour chaque article source. Vérifie le champ de chaque renvoi, les alinéas/subdivisions réellement visés, les anciens contrats, les avantages futurs et les exceptions spéciales. Un renvoi à un code extérieur ou à un régime public ne doit pas être attribué artificiellement au contrat privé : explique l'inapplicabilité lorsqu'elle existe.\nPour chaque objet answer.json concerné, ajoute reference_checks : une liste d'objets target_key, view_sha256, assessment. Elle couvre EXACTEMENT les cibles requises pour cet article, sans cible supplémentaire même si elle figure dans le contexte d'un autre article. Place les analyses facultatives dans review_notes. Reprends leurs empreintes EXACTES et donne pour chaque cible au moins80caractères d'analyse spécifique : règle réellement visée, cohérence/rectification du renvoi, condition d'ancienneté et de notification ou distinction d'une ancienne règle/situation spéciale. Pas de simple « vérifié ». Tout nouveau renvoi à une cible non fournie doit être signalé ; n'invente pas son contenu. La vérification automatique ne constitue aucune approbation juridique.\n\n"
+    },
+    {
+      "pid": 46440,
+      "job": "review-urbanisme-LEGIARTI000045525738-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7e22-bd63-5a1d7172e216",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001",
+        "header_sha256": "1a3c83b353c383527833cbf2ad366245114a04ddf987d6a7c9bb00c32e6843ff",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "awaiting_model_response"
+      },
+      "log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001/errors-1.log",
+      "prefix_bytes": 22220,
+      "prefix_sha256": "72bc3d952133e5b172cdd428dd80bf759ec515bf2e145777acd08701a64296fa",
+      "last1500bytes": "es, propriétaires ou avant-images.\n\nRENVOIS AU CONTRAT UNIQUE : lis reference-targets.json en entier, pour les cibles applicables à tes articles. Ce fichier contient les textes officiels entiers, leurs notes et les propositions actuelles ; une proposition n'est pas le droit en vigueur. Les identifiants dans requirements désignent les cibles à vérifier pour chaque article source. Vérifie le champ de chaque renvoi, les alinéas/subdivisions réellement visés, les anciens contrats, les avantages futurs et les exceptions spéciales. Un renvoi à un code extérieur ou à un régime public ne doit pas être attribué artificiellement au contrat privé : explique l'inapplicabilité lorsqu'elle existe.\nPour chaque objet answer.json concerné, ajoute reference_checks : une liste d'objets target_key, view_sha256, assessment. Elle couvre EXACTEMENT les cibles requises pour cet article, sans cible supplémentaire même si elle figure dans le contexte d'un autre article. Place les analyses facultatives dans review_notes. Reprends leurs empreintes EXACTES et donne pour chaque cible au moins80caractères d'analyse spécifique : règle réellement visée, cohérence/rectification du renvoi, condition d'ancienneté et de notification ou distinction d'une ancienne règle/situation spéciale. Pas de simple « vérifié ». Tout nouveau renvoi à une cible non fournie doit être signalé ; n'invente pas son contenu. La vérification automatique ne constitue aucune approbation juridique.\n\n"
+    },
+    {
+      "pid": 46441,
+      "job": "review-impots-LEGIARTI000051765136-00002",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7520-b08e-53329f03a14c",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002",
+        "header_sha256": "7c1305b240054be5b2c8d9585240695fc30e571cc0e112a64ba5853e24f8b9c1",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "awaiting_model_response"
+      },
+      "log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002/errors-1.log",
+      "prefix_bytes": 20939,
+      "prefix_sha256": "bd5eb45f77e45f2040568052b0aaa964576dfd6353fbf564e99699c263ffa84f",
+      "last1500bytes": "is sans renvoi explicite ; vérifie champs, définitions, conditions, seuils, exceptions, renvois entrants/sortants, abrogations, subdivisions, dates et transitions. Un renvoi ne doit rétablir une taxe ou obligation supprimée ni fermer une exonération ou protection autonome. Qualifie les cas par passages exacts dans reason/review_notes : contradiction effective, coordination nécessaire, transition compatible, différence de champ ou point non vérifiable. Corrige les conflits réellement établis dans les dispositions assignées avec les contrôles ordinaires ; identifie précisément les coordinations hors lot et sources manquantes qui restent ouvertes. Préserve les réformes déjà acquises, exonérations et dérogations favorables, y compris pour les situations futures éligibles. La recherche de nouvelles coupes est secondaire et doit rester justifiée ; elle ne remplace pas cette revue de cohérence. Si aucune correction ne se justifie, conserve la proposition existante et explique les interactions et transitions effectivement vérifiées, sans reformulation stylistique. Un marqueur completed, un validateur technique ou un certificat de renvoi ne prouve pas une cohérence globale ni une validation par juriste. Le texte final reste entier ou une abrogation opératoire avec transition, jamais un compte rendu ; conserve les images et chemins/alt de formules déjà validés. Ne retire aucune garde de sources, avantages, impacts, cibles, propriétaires ou avant-images.\n\n"
+    },
+    {
+      "pid": 46445,
+      "job": "review-impots-annexe-2-LEGIARTI000054552531-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7992-80dc-82a12c1af152",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001",
+        "header_sha256": "748572e5a3303a8414e922ef1d14117e99671b2c82320f0ee448cf955bcea460",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "awaiting_model_response"
+      },
+      "log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001/errors-1.log",
+      "prefix_bytes": 20958,
+      "prefix_sha256": "9e842fd6a811683cbe1439021d3a69c461368ad075d06c033ca7c4db2020f526",
+      "last1500bytes": "is sans renvoi explicite ; vérifie champs, définitions, conditions, seuils, exceptions, renvois entrants/sortants, abrogations, subdivisions, dates et transitions. Un renvoi ne doit rétablir une taxe ou obligation supprimée ni fermer une exonération ou protection autonome. Qualifie les cas par passages exacts dans reason/review_notes : contradiction effective, coordination nécessaire, transition compatible, différence de champ ou point non vérifiable. Corrige les conflits réellement établis dans les dispositions assignées avec les contrôles ordinaires ; identifie précisément les coordinations hors lot et sources manquantes qui restent ouvertes. Préserve les réformes déjà acquises, exonérations et dérogations favorables, y compris pour les situations futures éligibles. La recherche de nouvelles coupes est secondaire et doit rester justifiée ; elle ne remplace pas cette revue de cohérence. Si aucune correction ne se justifie, conserve la proposition existante et explique les interactions et transitions effectivement vérifiées, sans reformulation stylistique. Un marqueur completed, un validateur technique ou un certificat de renvoi ne prouve pas une cohérence globale ni une validation par juriste. Le texte final reste entier ou une abrogation opératoire avec transition, jamais un compte rendu ; conserve les images et chemins/alt de formules déjà validés. Ne retire aucune garde de sources, avantages, impacts, cibles, propriétaires ou avant-images.\n\n"
+    },
+    {
+      "pid": 46446,
+      "job": "review-securite-sociale-LEGIARTI000054250137-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7853-88e6-d0dfcb5f1ba4",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001",
+        "header_sha256": "4de5ed83e629cc750701dbc4d1d0d920cb21077f16714287666ea139c12cfd6f",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "awaiting_model_response"
+      },
+      "log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001/errors-1.log",
+      "prefix_bytes": 22422,
+      "prefix_sha256": "b37e10bffa3c4a5c7ec73609bc2871b9f09ddf827c2f49246f2842f746fe3953",
+      "last1500bytes": "es, propriétaires ou avant-images.\n\nRENVOIS AU CONTRAT UNIQUE : lis reference-targets.json en entier, pour les cibles applicables à tes articles. Ce fichier contient les textes officiels entiers, leurs notes et les propositions actuelles ; une proposition n'est pas le droit en vigueur. Les identifiants dans requirements désignent les cibles à vérifier pour chaque article source. Vérifie le champ de chaque renvoi, les alinéas/subdivisions réellement visés, les anciens contrats, les avantages futurs et les exceptions spéciales. Un renvoi à un code extérieur ou à un régime public ne doit pas être attribué artificiellement au contrat privé : explique l'inapplicabilité lorsqu'elle existe.\nPour chaque objet answer.json concerné, ajoute reference_checks : une liste d'objets target_key, view_sha256, assessment. Elle couvre EXACTEMENT les cibles requises pour cet article, sans cible supplémentaire même si elle figure dans le contexte d'un autre article. Place les analyses facultatives dans review_notes. Reprends leurs empreintes EXACTES et donne pour chaque cible au moins80caractères d'analyse spécifique : règle réellement visée, cohérence/rectification du renvoi, condition d'ancienneté et de notification ou distinction d'une ancienne règle/situation spéciale. Pas de simple « vérifié ». Tout nouveau renvoi à une cible non fournie doit être signalé ; n'invente pas son contenu. La vérification automatique ne constitue aucune approbation juridique.\n\n"
+    }
+  ],
+  "phase": {
+    "coordinator_pid": 41583,
+    "phase": "review_tail",
+    "entered_at_unix": 1792791556,
+    "effective_limits": {
+      "workers": 8,
+      "role_limits": {
+        "new": 0,
+        "review": 8
+      }
+    },
+    "open_accessible_new_sources": 0,
+    "shared_ledger_drained": true,
+    "complete_inventory": {
+      "complete": true,
+      "source_records": 30317,
+      "collections": {
+        "travail": 11593,
+        "impots": 2375,
+        "securite-sociale": 7427,
+        "urbanisme": 2459,
+        "construction-habitation": 4126,
+        "impots-annexe-1": 71,
+        "impots-annexe-2": 674,
+        "impots-annexe-3": 1115,
+        "impots-annexe-4": 477
+      },
+      "as_of": "2026-10-18",
+      "identity_sha256": "044f82efaeef128cbcb9d4e729370f7e064ce3db40f41e28755267799825b5f1",
+      "config_sha256": "67bf21ceb80af24cc3ecba0d332acdd2333f9c870f7cfe3ab2c76be92b0d141d",
+      "coverage_sha256": "1a64e922b6c01b6728d63b09de9a23b9059977dd2a21a946557565a793187657"
+    },
+    "manual_reservations_verified_empty": true,
+    "manual_reservation_guard": "phase marker rejects new manual reservations; inventory rechecked on every admission",
+    "execution_verified": false,
+    "legal_completion_claimed": false
+  },
+  "available_bytes": 12773904384,
+  "WAL_bytes": 0,
+  "WAL_absent": true,
+  "observation_scope": "Only dated newcohort runtimeheaders/responsestarts;no inference of quota/disk/generalnetworkcause.",
+  "interruption_or_extra_launch": false
+}

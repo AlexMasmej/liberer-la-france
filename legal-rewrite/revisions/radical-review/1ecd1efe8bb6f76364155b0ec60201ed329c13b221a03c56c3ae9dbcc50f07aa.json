@@ -1,0 +1,529 @@
+[
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000044404258",
+    "source_sha256": "a8009a7bdb7cba73e9f8a5d04998c88910d31626edc9b2b013e37fa85e531ea6",
+    "status": "rewrite_draft",
+    "proposed_xml": "<p>Les caisses d'assurance maladie peuvent régler forfaitairement les dépenses prises en charge au titre du 1° de l'article L. 160-8, de l'article L. 160-9, des frais de soins mentionnés au 1° de l'article L. 160-9-1 et du 1° de l'article L. 431-1 lorsque les actions expérimentales de caractère médical et social sont menées par des personnes physiques ou morales, de droit public ou privé, agréées à cette fin par l'autorité administrative.</p>\n<p>Les organismes d'assurance maladie et les personnes concernées concluent des conventions qui fixent les modalités de règlement. Ces conventions sont soumises à l'approbation de l'autorité administrative.</p>\n<p>Un décret en Conseil d'Etat fixe les conditions d'application du présent article et les modalités d'évaluation de ces actions, en relation notamment avec les élus locaux, les organismes d'assurance maladie et les professions de santé.</p>",
+    "reason": "Réécriture à droit constant : la faculté de règlement forfaitaire est placée en sujet et les conditions tenant aux actions et aux personnes agréées sont regroupées en fin de phrase. La conclusion des conventions et leur approbation sont distinguées. Les trois alinéas restent en place ; aucune réforme de fond de policy.json ne concerne ces expérimentations.",
+    "review_notes": "Conserver les quatre fondements de prise en charge, dont seulement les frais de soins du 1° de L. 160-9-1. L'agrément porte toujours sur les personnes, physiques ou morales, publiques ou privées, à cette fin ; l'approbation des conventions demeure distincte. La note source précise l'entrée en vigueur au 14 mai 2022, fixée par l'article 1 du décret n° 2022-801 du 12 mai 2022 dans le cadre du I de l'article 5 de l'ordonnance n° 2021-1554 du 1er décembre 2021 (date butoir du 30 juin 2022). Ces dates historiques ne sont pas utilisées pour une réforme future.",
+    "replacement": {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000044404258",
+      "source_sha256": "a8009a7bdb7cba73e9f8a5d04998c88910d31626edc9b2b013e37fa85e531ea6",
+      "number": "L162-31",
+      "proposed_xml": "\n<br />\n<p>Lorsque les actions expérimentales de caractère médical et social sont menées par des personnes physiques ou morales, de droit public ou privé, les dépenses prises en charge au titre du 1° de l'article L. 160-8, de l'article L. 160-9 , des frais de soins mentionnés au 1° de l'article L. 160-9-1 et du 1° de l'article L. 431-1 peuvent faire l'objet d'un règlement forfaitaire par les caisses d'assurance maladie.</p>\n<p>Les modalités de règlement font l'objet de conventions passées entre les organismes d'assurance maladie et les personnes en cause.</p>\n<p>Un décret en Conseil d'Etat fixe les conditions d'application du présent article ainsi que les modalités d'évaluation de ces actions, en relation, notamment, avec les élus locaux, les organismes d'assurance maladie et les professions de santé.</p>\n<br />\n<p>À compter de l'entrée en vigueur de la présente loi, le règlement forfaitaire prévu au présent article n'est subordonné ni à un agrément particulier des personnes à ce titre ni à l'approbation administrative des conventions. Aucune déclaration ne remplace ces formalités. Cette suppression s'applique également aux procédures en cours, sans nouveau dépôt. Les conventions valablement conclues, les droits à prise en charge, les créances et les recours antérieurs sont préservés. Les qualifications et autorisations d'exercice ou de soins requises sur un autre fondement, ainsi que les contrôles et l'évaluation des actions, demeurent applicables.</p>",
+      "reason": "Réforme de fond : suppression de l’agrément spécial des opérateurs et de l’approbation des conventions de règlement. La convention engageant la caisse, l’évaluation et les autorisations sanitaires autonomes assurent les fonctions utiles ; deux visas supplémentaires ne sont pas conservés. Le précédent brouillon était seulement stylistique ; les quatre fondements de couverture sont maintenus à droit constant.",
+      "review_notes": "Coordonner le décret en Conseil d’État d’application de L. 162-31 et ses procédures d’agrément et d’approbation, sans rétablir de déclaration équivalente. L. 162-31-1 conserve son autorisation distincte de dérogations légales. Le 1° de L. 431-1 ne couvre pas les indemnités de rupture. La note source du 14 mai 2022 concerne le droit historique, non la date de cette réforme.",
+      "status": "rewrite_draft",
+      "substantive_impact": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "Deux visas propres à un même circuit de financement sont effectivement supprimés par rapport à la source entière ; aucun taux ni droit à prestations n’est réduit.",
+        "scope_limitations": "Les autorisations sanitaires fondées sur d’autres textes restent applicables. La réduction du coût administratif et le solde public ne sont pas chiffrés.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun dépôt, registre, donnée, délai minimal ou condition supplémentaire ne remplace les exigences retirées ou les renvois coordonnés. Le solde de coût de l’ensemble des codes n’est pas chiffré.",
+        "effects": [
+          {
+            "kind": "authorization_removed",
+            "measure_id": "experimentations-forfait-sans-double-visa",
+            "description": "Suppression conjointe de l’agrément des opérateurs et de l’approbation des conventions de règlement forfaitaire.",
+            "before": "Agrément administratif des personnes et approbation administrative des conventions exigés pour le circuit de règlement forfaitaire.",
+            "after": "Convention entre caisse et opérateur conservée sans agrément propre au forfait ni approbation administrative de cette convention.",
+            "unit": "legal_duty",
+            "affected_population": "Personnes publiques ou privées et caisses participant aux actions expérimentales.",
+            "conditions_and_transition": "Procédures nouvelles et en cours dès entrée en vigueur ; conventions, créances et recours antérieurs préservés.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles autonomes demeurent applicables.",
+            "source_quote": "Lorsque les actions expérimentales de caractère médical et social sont menées par des personnes physiques ou morales, de droit public ou privé, faisant l'objet, à cette fin, d'un agrément, par l'autorité administrative, les dépenses prises en charge au titre du 1° de l'article L. 160-8, de l'article L. 160-9 , des frais de soins mentionnés au 1° de l'article L. 160-9-1 et du 1° de l'article L. 431-1 peuvent faire l'objet d'un règlement forfaitaire par les caisses d'assurance maladie.\nLes modalités de règlement font l'objet de conventions soumises à l'approbation de l'autorité administrative et passées entre les organismes d'assurance maladie et les personnes en cause.",
+            "proposed_quote": "À compter de l'entrée en vigueur de la présente loi, le règlement forfaitaire prévu au présent article n'est subordonné ni à un agrément particulier des personnes à ce titre ni à l'approbation administrative des conventions."
+          }
+        ]
+      },
+      "change_type": "normative_reduction",
+      "reform_policy_id": "editorial_direction_2026_10_19",
+      "removed_provisions": [
+        "Agrément administratif particulier des personnes menant les actions expérimentales financées forfaitairement.",
+        "Approbation administrative des conventions fixant les modalités du règlement forfaitaire."
+      ],
+      "reference_checks": [
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "assessment": "Le règlement forfaitaire des actions médicales et sociales ne constitue pas une rupture du contrat de travail et l’article source ne renvoie pas à L. 1234-1. Le préavis proposé de quinze jours calendaires pour les nouveaux contrats privés, sa notification et les anciens préavis selon l’ancienneté restent hors de ce champ ; aucune autorisation sanitaire ne disparaît par cet effet."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+          "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+          "assessment": "Le règlement forfaitaire des actions médicales et sociales ne fixe aucun terme d’emploi. Le contrat unique proposé régit les nouvelles embauches privées, sans extinction automatique à la fin d’une action ou expérimentation ; les anciens contrats, aides futures éligibles et agents publics conservent leur champ. Aucun renvoi à L. 1221-2 n’est ajouté."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "assessment": "Le règlement forfaitaire des actions médicales et sociales ne concerne pas l’indemnité de licenciement. Le seuil proposé d’un an au terme effectif, préavis inclus, le calcul sur toute l’ancienneté à 0,20 mois par année et le plafond de six mois ne modifient ni dépenses de santé ni financement expérimental ; droits anciens et indemnités spéciales restent distincts."
+        },
+        {
+          "target_key": "LEGITEXT000006073189|LEGIARTI000035640835",
+          "view_sha256": "236358af272b656a5880f1503c55d2575c24f314828f4412d7a9d0bd7c1a54a0",
+          "assessment": "Le renvoi vise exclusivement le 1° : frais de soins, transports, réadaptation, rééducation, reclassement et reconversion, même sans interruption de travail. Il ne vise ni indemnités journalières du 2°, ni prestations décès du 3°, ni capital et rentes du 4°. La suppression de l’agrément expérimental ne ferme aucune prise en charge future et ne concerne pas l’ancienneté salariale."
+        }
+      ],
+      "substantive_impact_certificate": {
+        "version": 1,
+        "source_sha256": "a8009a7bdb7cba73e9f8a5d04998c88910d31626edc9b2b013e37fa85e531ea6",
+        "source_notes_sha256": "892a8c26b27705ec441a834234db47ad33d431b76b5e132c35b1f850cf6899d8",
+        "proposed_sha256": "66bb15f0a5ab341e5323ff4db009f27fbd04600379988785fda3a9d3a4471c8c",
+        "assessment_sha256": "60da9f91888c2e2b3bf091ae9fc7d8831601ca6b915dc7747ed83dbbc3f4f713",
+        "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "verification": "exact_passages_and_hashes_only",
+        "independent_impact_audit": false,
+        "semantic_review_by_jurist": false
+      },
+      "reference_coherence": {
+        "version": 3,
+        "referrer_sha256": "66bb15f0a5ab341e5323ff4db009f27fbd04600379988785fda3a9d3a4471c8c",
+        "policy_sha256": {
+          "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+          "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+        },
+        "referrer_source": {
+          "code_id": "LEGITEXT000006073189",
+          "source_id": "LEGIARTI000044404258",
+          "source_sha256": "a8009a7bdb7cba73e9f8a5d04998c88910d31626edc9b2b013e37fa85e531ea6",
+          "source_xml_sha256": "d84552cf8a47a430df0e76107da8031647e90475b6f1f451465751a1af65342e",
+          "source_notes_sha256": "892a8c26b27705ec441a834234db47ad33d431b76b5e132c35b1f850cf6899d8"
+        },
+        "targets": {
+          "LEGITEXT000006072050|LEGIARTI000006901112": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000006901112",
+            "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+            "view_kind": "proposal",
+            "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+            "source_xml_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
+            "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "LEGITEXT000006072050|LEGIARTI000019071087": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000019071087",
+            "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+            "view_kind": "proposal",
+            "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+            "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
+            "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "LEGITEXT000006072050|LEGIARTI000035644154": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000035644154",
+            "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+            "view_kind": "proposal",
+            "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+            "source_xml_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
+            "source_notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b"
+          },
+          "LEGITEXT000006073189|LEGIARTI000035640835": {
+            "code_id": "LEGITEXT000006073189",
+            "source_id": "LEGIARTI000035640835",
+            "source_sha256": "3ee32d90224bee003e3f6f8511a6fff042ccbf0e3d1a2da6d1fe6bd2c67e07fb",
+            "view_kind": "official_source_only",
+            "view_sha256": "236358af272b656a5880f1503c55d2575c24f314828f4412d7a9d0bd7c1a54a0",
+            "source_xml_sha256": "236358af272b656a5880f1503c55d2575c24f314828f4412d7a9d0bd7c1a54a0",
+            "source_notes_sha256": "bbdf1b5284efd3551a01cced5af1fa545c3ab95e44e68c55fc08d59f4561ff99"
+          }
+        },
+        "assessments": [
+          {
+            "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+            "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+            "assessment": "Le règlement forfaitaire des actions médicales et sociales ne constitue pas une rupture du contrat de travail et l’article source ne renvoie pas à L. 1234-1. Le préavis proposé de quinze jours calendaires pour les nouveaux contrats privés, sa notification et les anciens préavis selon l’ancienneté restent hors de ce champ ; aucune autorisation sanitaire ne disparaît par cet effet."
+          },
+          {
+            "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+            "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+            "assessment": "Le règlement forfaitaire des actions médicales et sociales ne fixe aucun terme d’emploi. Le contrat unique proposé régit les nouvelles embauches privées, sans extinction automatique à la fin d’une action ou expérimentation ; les anciens contrats, aides futures éligibles et agents publics conservent leur champ. Aucun renvoi à L. 1221-2 n’est ajouté."
+          },
+          {
+            "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+            "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+            "assessment": "Le règlement forfaitaire des actions médicales et sociales ne concerne pas l’indemnité de licenciement. Le seuil proposé d’un an au terme effectif, préavis inclus, le calcul sur toute l’ancienneté à 0,20 mois par année et le plafond de six mois ne modifient ni dépenses de santé ni financement expérimental ; droits anciens et indemnités spéciales restent distincts."
+          },
+          {
+            "target_key": "LEGITEXT000006073189|LEGIARTI000035640835",
+            "view_sha256": "236358af272b656a5880f1503c55d2575c24f314828f4412d7a9d0bd7c1a54a0",
+            "assessment": "Le renvoi vise exclusivement le 1° : frais de soins, transports, réadaptation, rééducation, reclassement et reconversion, même sans interruption de travail. Il ne vise ni indemnités journalières du 2°, ni prestations décès du 3°, ni capital et rentes du 4°. La suppression de l’agrément expérimental ne ferme aucune prise en charge future et ne concerne pas l’ancienneté salariale."
+          }
+        ],
+        "assessments_sha256": "e021f542c25a6eb871c2f0ae430bdec64c61de83bca2ebc8562163da83569529",
+        "semantic_review_by_jurist": false
+      },
+      "policy_review_id": "substantive_outcomes_2026_10_19",
+      "prior_proposal_sha256": "70ce419a316f7b3fcc96adece00bb17238aeef372b6270033fdd6b5a992c2a73"
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000054715108",
+    "source_sha256": "cd1d73bb4f2857bcd713c8850eeac0c5dcd9f18546b0eef619acee61ad0e1912",
+    "status": "rewrite_draft",
+    "proposed_xml": "<p>I. - Des expérimentations peuvent être mises en œuvre en dérogeant à au moins une des dispositions mentionnées au II. Leur durée ne peut dépasser cinq ans.</p>\n<p>Ces expérimentations poursuivent l'un ou l'autre des buts suivants :</p>\n<p>1° Faire émerger, dans les secteurs sanitaire et médico-social, des organisations innovantes qui contribuent à améliorer la prévention en santé, la prise en charge et le parcours des patients, l'efficience du système de santé et l'accès aux soins. Elles visent à :</p>\n<p>a) Optimiser le parcours de santé ainsi que la pertinence et la qualité de la prise en charge sanitaire, sociale ou médico-sociale grâce à une meilleure coordination ;</p>\n<p>b) Organiser la prise en charge des patients pour une séquence de soins ;</p>\n<p>c) Développer les modes d'exercice coordonné en contribuant à la structuration des soins ambulatoires ;</p>\n<p>d) Favoriser la présence de professionnels de santé dans les zones où l'offre de soins est insuffisante ou dans lesquelles l'accès aux soins ou aux médicaments présente des difficultés ;</p>\n<p>2° Améliorer la pertinence de la prise en charge, par l'assurance maladie, des médicaments ou des produits et prestations associées mentionnés à l'article L. 165-1, ainsi que la qualité des prescriptions. À cette fin, elles modifient :</p>\n<p>a) Les conditions de prise en charge des médicaments et des produits et prestations associées onéreux dans les établissements de santé, ainsi que les modalités de recueil des informations sur le contexte, la motivation et l'impact de leur prescription et de leur utilisation ;</p>\n<p>b) Les modalités de rémunération, les dispositions qui prévoient des mesures incitatives ou de modulation concernant les professionnels de santé ou les établissements de santé, ainsi que les mesures d'organisation destinées à promouvoir un recours pertinent aux médicaments et aux produits et prestations associées ;</p>\n<p>c) Les conditions d'accès au dispositif de l'article L. 165-1-1.</p>\n<p>II. - La mise en œuvre de ces expérimentations peut, dans la mesure nécessaire, déroger :</p>\n<p>1° Aux dispositions suivantes :</p>\n<p>a) Aux règles de facturation, de tarification et de remboursement mentionnées aux articles L. 162-1-7, L. 162-5, L. 162-9, L. 162-12-2, L. 162-12-9, L. 162-14, L. 162-14-1, L. 162-16-1, L. 162-22-3, L. 162-22-3-1, L. 162-22-4, L. 162-22-5, L. 162-22-5-1, L. 162-22-5-2, L. 162-22-5-3, L. 162-22-15, L. 162-22-18, L. 162-22-19, L. 162-23-1, L. 162-23-2, L. 162-23-3, L. 162-23-4, L. 162-23-6, L. 162-23-7, L. 162-23-8, L. 162-23-15, L. 162-23-16, L. 162-26, L. 162-26-1, L. 162-32-1, L. 165-1, L. 174-1, L. 322-5 et L. 322-5-2 du présent code et aux III, V et VI de l'article 78 de la loi n° 2015-1702 du 21 décembre 2015 de financement de la sécurité sociale pour 2016, pour ce qui concerne les tarifs, honoraires, rémunérations et frais accessoires dus aux établissements de santé, aux centres de santé, aux professionnels de santé, aux prestataires de transports sanitaires ou aux entreprises de taxi ;</p>\n<p>b) À l'article L. 162-2 du présent code, pour ce qui concerne le paiement direct des honoraires par le malade ;</p>\n<p>c) Aux 1°, 2° et 6° de l'article L. 160-8, pour ce qui concerne les frais couverts par l'assurance maladie, et au 1° de l'article L. 160-9-1, pour ce qui concerne les frais couverts par la branche autonomie ;</p>\n<p>d) Aux articles L. 160-13, L. 160-14 et L. 160-15, qui régissent la participation de l'assuré aux tarifs servant de base au calcul des prestations, et à l'article L. 174-4, qui régit le forfait journalier hospitalier ;</p>\n<p>e) Aux articles L. 162-16 à L. 162-19, L. 162-22-7, L. 162-22-7-1, L. 162-23-6, L. 162-38 et L. 165-1 à L. 165-7, pour ce qui concerne la prise en charge des médicaments et des dispositifs médicaux par l'assurance maladie ;</p>\n<p>f) À l'article L. 162-13-2, pour permettre le remboursement d'examens de biologie médicale réalisés sans prescription médicale, à la demande du patient ;</p>\n<p>2° Aux dispositions suivantes du code de la santé publique, si la dérogation est indispensable à la mise en œuvre de l'expérimentation et sous réserve, le cas échéant, de l'avis de la Haute Autorité de santé :</p>\n<p>a) À l'article L. 4113-5, pour ce qui concerne les règles de partage d'honoraires entre professionnels de santé ;</p>\n<p>b) Au premier alinéa de l'article L. 6111-1, dans la mesure où il limite les missions des établissements de santé, pour leur permettre de proposer à leurs patients une prestation d'hébergement temporaire non médicalisé avant ou après leur hospitalisation, en déléguant cette prestation, le cas échéant ;</p>\n<p>c) À l'article L. 6122-3, pour permettre l'octroi d'une autorisation d'activité de soins et d'équipements matériels lourds à des groupements constitués d'établissements de santé, de professionnels de santé ou de ces deux ensembles ;</p>\n<p>d) À l'article L. 4211-1, pour permettre aux prestataires de service et aux distributeurs de matériels mentionnés à l'article L. 5232-3 de dispenser des dialysats à domicile, sous la responsabilité d'un pharmacien inscrit à l'ordre des pharmaciens en sections A et D ;</p>\n<p>e) Au 3° de l'article L. 6122-2, dans la mesure où il impose le respect des conditions techniques de fonctionnement prévues à l'article L. 6124-1 pour l'organisation et la dispensation des soins, pendant la durée de l'expérimentation ;</p>\n<p>f) Aux articles L. 6154-2 et L. 6154-3, pour permettre à un praticien d'exercer une activité libérale, sans dépassement d'honoraires, hors de l'établissement où il est nommé ou exerce son activité principale, dans les zones où l'offre de soins est insuffisante ou dans lesquelles l'accès aux soins présente des difficultés ;</p>\n<p>g) Aux articles L. 4041-2 et L. 4042-1, pour permettre aux sociétés interprofessionnelles de soins ambulatoires d'adapter leur statut pendant la durée de l'expérimentation. Cette adaptation doit rendre possibles l'encaissement sur le compte de la société de tout ou partie des rémunérations des activités de prise en charge sanitaire, sociale ou médico-sociale de ses membres et le reversement de ces rémunérations à chacun d'eux ;</p>\n<p>h) Au dernier alinéa de l'article L. 6133-1, pour permettre, pendant la durée de l'expérimentation, la redistribution d'un intéressement collectif aux membres d'un groupement de coopération sanitaire ;</p>\n<p>i) À l'article L. 6323-1-5, pour permettre à un praticien d'exercer une activité libérale dans un centre de santé situé dans une zone où l'offre de soins est insuffisante ou dans laquelle l'accès aux soins présente des difficultés. Le centre de santé reverse les honoraires au praticien après avoir déduit les frais de fonctionnement du centre liés à la prestation ;</p>\n<p>j) Aux règles de compétences prévues aux articles L. 1132-1, L. 4111-1, L. 4161-1, L. 4161-3, L. 4161-5, L. 4221-1, L. 4241-1, L. 4241-13, L. 4251-1, L. 4301-1, L. 4311-1, L. 4321-1, L. 4322-1, L. 4331-1, L. 4332-1, L. 4341-1, L. 4342-1, L. 4351-1, L. 4352-2, L. 4361-1, L. 4362-1, L. 4364-1, L. 4371-1, L. 4391-1, L. 4392-1, L. 4393-8, L. 4394-1 et L. 6316-1 ;</p>\n<p>k) Au troisième alinéa de l'article L. 6311-2, pour permettre à des chirurgiens-dentistes d'exercice libéral de concourir au fonctionnement d'unités participant au service d'aide médicale urgente ;</p>\n<p>l) Aux articles L. 6211-13, L. 6211-14 et L. 6211-18, pour permettre d'étendre les lieux et les conditions de prélèvement et de réalisation de la phase analytique des examens de biologie médicale ;</p>\n<p>m) Au deuxième alinéa du I de l'article L. 6312-4, pour ce qui concerne l'agrément, le nombre théorique de véhicules et les catégories de moyens de transport ;</p>\n<p>n) Aux 2°, 3° et 4° de l'article L. 5125-1-1 A, au premier alinéa de l'article L. 5125-16, au deuxième alinéa de l'article L. 5125-17 et au troisième alinéa de l'article L. 5125-18, pour permettre au directeur général de l'agence régionale de santé de garantir l'approvisionnement en médicaments et produits pharmaceutiques de la population d'une commune ou d'une ancienne commune constitutive d'une commune nouvelle située dans une zone de montagne, dont la dernière officine a définitivement cessé son activité. Lorsque cet approvisionnement est compromis au sens de l'article L. 5125-3, le directeur général peut autoriser la création d'une seule antenne par le ou les pharmaciens titulaires d'une officine d'une commune limitrophe ou de l'officine la plus proche. L'antenne fait partie de cette officine et relève de la même entité juridique. Le conseil de l'ordre des pharmaciens territorialement compétent et les syndicats représentatifs de la profession sont consultés pour avis ;</p>\n<p>o) Aux articles L. 2112-1 à L. 2112-10, L. 2311-1 à L. 2311-6, L. 3111-11, L. 3112-2, L. 3121-2, L. 3311-2, L. 3411-9 et L. 6325-1, pour ce qui concerne le financement, l'organisation et les compétences des structures qui œuvrent en faveur de la prévention en santé.</p>\n<p>3° Aux règles de tarification et d'organisation applicables aux établissements et services mentionnés à l'article L. 312-1 du code de l'action sociale et des familles.</p>\n<p>III. - Les ministres chargés de la sécurité sociale et de la santé autorisent par arrêté les expérimentations à dimension nationale, après avis de la Haute Autorité de santé lorsque cet avis est requis. Les directeurs généraux des agences régionales de santé autorisent par arrêté les expérimentations à dimension régionale, après avis conforme de la Haute Autorité de santé lorsque cet avis est requis.</p>\n<p>Un conseil stratégique national formule des propositions sur les innovations dans le système de santé. Il est associé au suivi des expérimentations et rend un avis sur leur éventuelle généralisation.</p>\n<p>Un comité technique réunit des représentants de l'assurance maladie, des ministres chargés de la sécurité sociale et de la santé et des agences régionales de santé. Il rend un avis sur les expérimentations, leur mode de financement et leurs modalités d'évaluation, et détermine leur champ d'application territorial.</p>\n<p>Le comité technique soumet pour avis à la Haute Autorité de santé les projets d'expérimentation qui dérogent à des dispositions du code de la santé publique relatives à l'organisation ou à la dispensation des soins. Un décret en Conseil d'État fixe la liste des dispositions auxquelles une dérogation ne peut être accordée qu'après avis de la Haute Autorité de santé, ainsi que le délai dans lequel elle rend cet avis.</p>\n<p>Un décret en Conseil d'État précise les catégories d'expérimentations, leurs modalités de sélection, d'autorisation, de financement et d'évaluation selon leur niveau territorial ou national, les modalités d'information des patients, ainsi que la composition et les missions du conseil stratégique et du comité technique.</p>\n<p>IV. - Les expérimentations mentionnées au I qui dérogent à une ou plusieurs règles mentionnées au II et qui comportent des actes de télésurveillance tels que ceux mentionnés au V de l'article 54 de la loi n° 2017-1836 du 30 décembre 2017 de financement de la sécurité sociale pour 2018 relèvent de la procédure et du financement prévus au III du présent article. Cette procédure et ce financement remplacent ceux prévus au V de l'article 54 de la loi n° 2017-1836 du 30 décembre 2017 précitée.</p>\n<p>V. - Les professionnels qui interviennent dans une expérimentation prévue au présent article sont réputés appartenir à des équipes de soins au sens de l'article L. 1110-12 du code de la santé publique.</p>\n<p>Les personnes chargées d'évaluer les expérimentations ont accès aux données individuelles non nominatives du système d'information prévu à l'article L. 161-28-1 du présent code, si ces données sont nécessaires à la préparation, à la mise en œuvre et à l'évaluation prévues au présent article. Cet accès respecte les conditions du chapitre Ier du titre VI du livre IV de la première partie du code de la santé publique, sous réserve des adaptations éventuellement établies par décret en Conseil d'État.</p>\n<p>VI. - Un fonds pour l'innovation du système de santé, géré par la Caisse nationale d'assurance maladie, peut financer tout ou partie des expérimentations. Ce financement s'applique sans préjudice des règles de financement prévues au titre VI du livre Ier du présent code ou des missions du fonds d'intervention régional mentionné à l'article L. 1435-8 du code de la santé publique.</p>\n<p>Les ressources du fonds proviennent d'une dotation de la branche maladie, maternité, invalidité et décès du régime général. Les ministres chargés de la sécurité sociale et de la santé en fixent chaque année le montant par arrêté. Le fonds pour l'innovation du système de santé finance l'évaluation des expérimentations régies par le présent article.</p>\n<p>Lorsqu'une expérimentation fait l'objet d'un avis favorable à sa généralisation du conseil stratégique et du comité technique de l'innovation en santé, le même fonds peut la financer au-delà de son échéance, selon les modalités précisées au III. Ce financement au-delà de l'échéance ne peut dépasser dix-huit mois.</p>\n<p>VII. - Le Gouvernement présente chaque année au Parlement un état des lieux des expérimentations en cours. Il lui remet le rapport d'évaluation de chaque expérimentation au plus tard un an après la fin de celle-ci.</p>",
+    "reason": "Réécriture à droit constant : les finalités, chaque dérogation et ses limites restent dans leur subdivision d'origine. Les phrases distinguent les autorités d'autorisation, les avis simples et conformes, les fonctions des instances, l'accès aux données et les financements. Les durées et les listes de renvois sont conservées intégralement. Aucune réforme de fond de policy.json ne concerne ces expérimentations.",
+    "review_notes": "Conserver la limite de cinq ans, le financement après échéance limité à dix-huit mois et le rapport au plus tard un an après la fin de chaque expérimentation. Les renvois aux III, V et VI de l'article 78 de la loi n° 2015-1702 et au V de l'article 54 de la loi n° 2017-1836 restent des références historiques opératoires, non des dates de la réforme proposée. La distinction entre avis national et avis conforme régional de la Haute Autorité de santé est maintenue. Les listes du II, y compris la présence de L. 162-23-6 au a et au e du 1°, sont conservées. Aucun déplacement des alinéas normatifs ; seule la faute d'accord « ceux couvert » est corrigée. Les règles de financement de ces expérimentations ne sont pas utilisées pour financer les baisses de prélèvements ou la transition des retraites.",
+    "replacement": {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000054715108",
+      "source_sha256": "cd1d73bb4f2857bcd713c8850eeac0c5dcd9f18546b0eef619acee61ad0e1912",
+      "number": "L162-31-1",
+      "proposed_xml": "\n<p>I. - Des expérimentations dérogatoires à au moins une des dispositions mentionnées au II peuvent être mises en œuvre, pour une durée qui ne peut excéder cinq ans.</p>\n<p>Ces expérimentations ont l'un ou l'autre des buts suivants :</p>\n<p>1° Permettre l'émergence d'organisations innovantes dans les secteurs sanitaire et médico-social concourant à l'amélioration de la prévention en santé, de la prise en charge et du parcours des patients, de l'efficience du système de santé et de l'accès aux soins, en visant à :</p>\n<p>a) Optimiser par une meilleure coordination le parcours de santé ainsi que la pertinence et la qualité de la prise en charge sanitaire, sociale ou médico-sociale ;</p>\n<p>b) Organiser pour une séquence de soins la prise en charge des patients ;</p>\n<p>c) Développer les modes d'exercice coordonné en participant à la structuration des soins ambulatoires ;</p>\n<p>d) Favoriser la présence de professionnels de santé dans les zones caractérisées par une offre de soins insuffisante ou des difficultés dans l'accès aux soins ou aux médicaments ;</p>\n<p>2° Améliorer la pertinence de la prise en charge par l'assurance maladie des médicaments ou des produits et prestations associées mentionnés à l'article L. 165-1 et la qualité des prescriptions, en modifiant :</p>\n<p>a) Les conditions de prise en charge des médicaments et des produits et prestations associées onéreux au sein des établissements de santé et les modalités du recueil d'informations relatives au contexte, à la motivation et à l'impact de la prescription et de l'utilisation de ces médicaments, produits et prestations associées ;</p>\n<p>b) Les modalités de rémunération, les dispositions prévoyant des mesures incitatives ou de modulation concernant les professionnels de santé ou les établissements de santé, ainsi que des mesures d'organisation dans l'objectif de promouvoir un recours pertinent aux médicaments et aux produits et prestations associées ;</p>\n<p>c) Les conditions d'accès au dispositif prévu à l'article L. 165-1-1.</p>\n<p>II. - Pour la mise en œuvre de ces expérimentations, il peut être dérogé en tant que de besoin :</p>\n<p>1° Aux dispositions suivantes :</p>\n<p>a) Les règles de facturation, de tarification et de remboursement mentionnées aux articles L. 162-1-7, L. 162-5, L. 162-9, L. 162-12-2, L. 162-12-9, L. 162-14, L. 162-14-1, L. 162-16-1, L. 162-22-3, L. 162-22-3-1, L. 162-22-4, L. 162-22-5, L. 162-22-5-1, L. 162-22-5-2, L. 162-22-5-3, L. 162-22-15, L. 162-22-18, L. 162-22-19, L. 162-23-1, L. 162-23-2, L. 162-23-3, L. 162-23-4, L. 162-23-6, L. 162-23-7, L. 162-23-8, L. 162-23-15, L. 162-23-16, L. 162-26, L. 162-26-1, L. 162-32-1, L. 165-1, L. 174-1, L. 322-5 et L. 322-5-2 du présent code et aux III, V et VI de l'article 78 de la loi n° 2015-1702 du 21 décembre 2015 de financement de la sécurité sociale pour 2016, en tant qu'ils concernent les tarifs, honoraires, rémunérations et frais accessoires dus aux établissements de santé, centres de santé, professionnels de santé, prestataires de transports sanitaires ou entreprises de taxi ;</p>\n<p>b) L'article L. 162-2 du présent code, en tant qu'il concerne le paiement direct des honoraires par le malade ;</p>\n<p>c) Les 1°, 2° et 6° de l'article L. 160-8, en tant qu'ils concernent les frais couverts par l'assurance maladie, et le 1° de l'article L. 160-9-1, en tant qu'il concerne ceux couvert par la branche autonomie ;</p>\n<p>d) Les articles L. 160-13, L. 160-14 et L. 160-15, relatifs à la participation de l'assuré aux tarifs servant de base au calcul des prestations, et l'article L. 174-4 relatif au forfait journalier hospitalier ;</p>\n<p>e) Les articles L. 162-16 à L. 162-19, L. 162-22-7, L. 162-22-7-1, L. 162-23-6, L. 162-38 et L. 165-1 à L. 165-7, en tant qu'ils concernent la prise en charge des médicaments et dispositifs médicaux par l'assurance maladie ;</p>\n<p>f) L'article L. 162-13-2 pour permettre le remboursement d'examens de biologie médicale réalisés à la demande du patient sans prescription médicale ;</p>\n<p>2° Aux dispositions suivantes du code de la santé publique, lorsque cette dérogation est indispensable à la mise en œuvre de l'expérimentation et sous réserve, le cas échéant, de l'avis de la Haute Autorité de santé :</p>\n<p>a) L'article L. 4113-5, en ce qu'il concerne les règles relatives au partage d'honoraires entre professionnels de santé ;</p>\n<p>b) Le premier alinéa de l'article L. 6111-1, en tant qu'il limite les missions des établissements de santé, afin de leur permettre de proposer à leurs patients une prestation d'hébergement temporaire non médicalisé, en amont ou en aval de leur hospitalisation, le cas échéant en déléguant cette prestation ;</p>\n<p>c) L'article L. 6122-3, afin de permettre que soit accordée une autorisation d'activité de soins et d'équipements matériels lourds à des groupements constitués soit d'établissements de santé, soit de professionnels de santé, soit de ces deux ensembles ;</p>\n<p>d) L'article L. 4211-1, afin de permettre l'intervention des prestataires de service et distributeurs de matériels mentionnés à l'article L. 5232-3 pour dispenser à domicile des dialysats, sous la responsabilité d'un pharmacien inscrit à l'ordre des pharmaciens en sections A et D ;</p>\n<p>e) Le 3° de l'article L. 6122-2, en tant qu'il impose la satisfaction des conditions techniques de fonctionnement prévues à l'article L. 6124-1 relatives à l'organisation et à la dispensation des soins, pour la durée de l'expérimentation ;</p>\n<p>f) Les articles L. 6154-2 et L. 6154-3, afin de permettre, dans les zones caractérisées par une offre de soins insuffisante ou par des difficultés d'accès aux soins, à un praticien de réaliser, sans dépassement d'honoraires, une activité libérale hors de l'établissement où il est nommé ou exerce à titre principal son activité ;</p>\n<p>g) Les articles L. 4041-2 et L. 4042-1, afin de permettre à des sociétés interprofessionnelles de soins ambulatoires d'adapter leur statut pour la durée de l'expérimentation pour rendre possible l'encaissement sur le compte de la société de tout ou partie des rémunérations des activités de prise en charge sanitaire, sociale ou médico-sociale de ses membres et le reversement de ces rémunérations à chacun d'eux ;</p>\n<p>h) Le dernier alinéa de l'article L. 6133-1, afin de permettre la redistribution d'un intéressement collectif aux membres d'un groupement de coopération sanitaire, pour la durée de l'expérimentation ;</p>\n<p>i) L'article L. 6323-1-5, afin de permettre, dans les zones caractérisées par une offre de soins insuffisante ou par des difficultés d'accès aux soins, à un praticien de réaliser une activité libérale au sein d'un centre de santé. Les honoraires sont reversés au praticien par le centre de santé après déduction des frais de fonctionnement du centre liés à la prestation ;</p>\n<p>j) Les règles de compétences prévues aux articles L. 1132-1, L. 4111-1, L. 4161-1, L. 4161-3, L. 4161-5, L. 4221-1, L. 4241-1, L. 4241-13, L. 4251-1, L. 4301-1, L. 4311-1, L. 4321-1, L. 4322-1, L. 4331-1, L. 4332-1, L. 4341-1, L. 4342-1, L. 4351-1, L. 4352-2, L. 4361-1, L. 4362-1, L. 4364-1, L. 4371-1, L. 4391-1, L. 4392-1, L. 4393-8, L. 4394-1 et L. 6316-1 ;</p>\n<p>k) Le troisième alinéa de l'article L. 6311-2, afin de permettre le concours de chirurgiens-dentistes d'exercice libéral au fonctionnement d'unités participant au service d'aide médicale urgente ;</p>\n<p>l) Les articles L. 6211-13, L. 6211-14 et L. 6211-18, afin de permettre l'extension des lieux et des conditions de prélèvement et de réalisation de la phase analytique des examens de biologie médicale ;</p>\n<p>m) Le deuxième alinéa du I de l'article L. 6312-4, en tant qu'il concerne l'agrément, le nombre théorique de véhicules et les catégories de moyens de transport ;</p>\n<p>n) Les 2°, 3° et 4° de l'article L. 5125-1-1 A, le premier alinéa de l'article L. 5125-16, le deuxième alinéa de l'article L. 5125-17 et le troisième alinéa de l'article L. 5125-18, afin de permettre au directeur général de l'agence régionale de santé de garantir l'approvisionnement en médicaments et produits pharmaceutiques de la population d'une commune ou d'une ancienne commune constitutive d'une commune nouvelle située dans une zone de montagne dont la dernière officine a cessé définitivement son activité, lorsque celui-ci est compromis au sens de l'article L. 5125-3 en autorisant la création d'une seule antenne par le ou les pharmaciens titulaires d'une officine d'une commune limitrophe ou de l'officine la plus proche. L'antenne fait partie de cette officine et relève de la même entité juridique. L'avis du conseil de l'ordre des pharmaciens territorialement compétent et des syndicats représentatifs de la profession est sollicité ;</p>\n<p>o) Les articles L. 2112-1 à L. 2112-10, L. 2311-1 à L. 2311-6, L. 3111-11, L. 3112-2, L. 3121-2, L. 3311-2, L. 3411-9 et L. 6325-1, en tant qu'ils concernent le financement, l'organisation et les compétences de structures œuvrant en faveur de la prévention en santé.</p>\n<p>3° Aux règles de tarification et d'organisation applicables aux établissements et services mentionnés à l'article L. 312-1 du code de l'action sociale et des familles.</p>\n<p>III. - Les expérimentations à dimension nationale sont autorisées, le cas échéant après avis de la Haute Autorité de santé, par arrêté des ministres chargés de la sécurité sociale et de la santé. Les expérimentations à dimension régionale sont autorisées, le cas échéant après avis conforme de la Haute Autorité de santé, par arrêté des directeurs généraux des agences régionales de santé.</p>\n<p>Un conseil stratégique, institué au niveau national, est chargé de formuler des propositions sur les innovations dans le système de santé. Il est associé au suivi des expérimentations et formule un avis en vue de leur éventuelle généralisation.</p>\n<p>Un comité technique composé de représentants de l'assurance maladie, des ministres chargés de la sécurité sociale et de la santé et des agences régionales de santé émet un avis sur ces expérimentations, leur mode de financement ainsi que leurs modalités d'évaluation et détermine leur champ d'application territorial.</p>\n<p>Le comité technique saisit pour avis la Haute Autorité de santé des projets d'expérimentation comportant des dérogations à des dispositions du code de la santé publique relatives à l'organisation ou la dispensation des soins. Un décret en Conseil d'Etat précise la liste des dispositions auxquelles il ne peut être dérogé qu'après avis de la Haute Autorité de santé et le délai dans lequel son avis est rendu.</p>\n<p>Les catégories d'expérimentations, les modalités de sélection, d'autorisation, de financement et d'évaluation des expérimentations selon le niveau territorial ou national de celles-ci, les modalités d'information des patients ainsi que la composition et les missions du conseil stratégique et du comité technique sont précisées par décret en Conseil d'Etat.</p>\n<p>IV. - Les expérimentations mentionnées au I du présent article dérogeant à une ou plusieurs règles mentionnées au II et comportant la réalisation d'actes de télésurveillance tels que ceux mentionnés au V de l'article 54 de la loi n° 2017-1836 du 30 décembre 2017 de financement de la sécurité sociale pour 2018 sont soumises à la procédure et au financement prévus au III du présent article, qui se substituent à la procédure et au financement prévus au V de l'article 54 de la loi n° 2017-1836 du 30 décembre 2017 précitée.</p>\n<p>V. - Les professionnels intervenant dans le cadre d'une expérimentation prévue au présent article sont réputés appartenir à des équipes de soins, au sens de l'article L. 1110-12 du code de la santé publique.</p>\n<p>Les personnes chargées de l'évaluation des expérimentations ont accès aux données individuelles non nominatives contenues dans le système d'information prévu à l'article L. 161-28-1 du présent code lorsque ces données sont nécessaires à la préparation, à la mise en œuvre et à l'évaluation prévues au présent article, dans le respect des conditions prévues au chapitre Ier du titre VI du livre IV de la première partie du code de la santé publique, sous réserve, le cas échéant, d'adaptations établies par décret en Conseil d'Etat.</p>\n<p>VI. - Sans préjudice des règles de financement prévues au titre VI du livre Ier du présent code ou des missions du fonds d'intervention régional mentionné à l'article L. 1435-8 du code de la santé publique, le financement de tout ou partie des expérimentations peut être assuré par un fonds pour l'innovation du système de santé, géré par la Caisse nationale d'assurance maladie.</p>\n<p>Les ressources du fonds sont constituées par une dotation de la branche maladie, maternité, invalidité et décès du régime général, dont le montant est fixé chaque année par arrêté des ministres chargés de la sécurité sociale et de la santé. L'évaluation des expérimentations régies par le présent article est financée par le fonds pour l'innovation du système de santé.</p>\n<p>Les expérimentations dont la généralisation fait l'objet d'un avis favorable du conseil stratégique et du comité technique de l'innovation en santé peuvent être financées par ce même fonds, selon les modalités précisées au III du présent article, au delà de leur échéance et pour une durée qui ne peut excéder dix-huit mois.</p>\n<p>VII. - Le Gouvernement remet au Parlement, au plus tard un an après la fin de chaque expérimentation, le rapport d'évaluation la concernant.</p>\n<p>À compter de l'entrée en vigueur de la présente loi, l'état des lieux annuel des expérimentations en cours n'est plus exigé, y compris au titre des périodes antérieures pour lesquelles il n'a pas encore été remis. Aucun état périodique de remplacement n'est imposé. Les évaluations, leur financement, les rapports d'évaluation et leur délai de remise, ainsi que les droits, autorisations et financements des expérimentations en cours, demeurent régis par les autres dispositions du présent article.</p>",
+      "reason": "Réforme de fond limitée au VII : suppression de l’état des lieux annuel distinct, en plus du rapport d’évaluation de chaque expérimentation. Le suivi par les instances et l’évaluation financée sont conservés : ils documentent déjà les résultats et les risques des dérogations. Les I à VI sont intégralement maintenus, sans transformer leurs autorisations de déroger à la loi en simples déclarations. Le précédent brouillon ne comportait aucune coupe de fond.",
+      "review_notes": "Toutes les subdivisions et listes du II sont maintenues, y compris L. 162-23-6 cité à deux endroits. Maintien des cinq ans, dix-huit mois et un an, de l’avis simple national et conforme régional de la HAS. Le VII est conservé à son emplacement. La faute source « ceux couvert » reste sans modification de portée. Les lois de 2015 et 2017 sont des renvois historiques, pas des dates futures. Adapter les prescriptions réglementaires de remontée exclusivement destinées à l’état annuel ; ne pas supprimer les données nécessaires à l’évaluation, au contrôle des financements ou aux droits des patients.",
+      "status": "rewrite_draft",
+      "substantive_impact": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "La suppression porte seulement sur la synthèse annuelle au Parlement ; les évaluations individuelles et leur transmission subsistent intégralement.",
+        "scope_limitations": "Aucune suppression générale des autorisations de soins, de financement ou des avis de sécurité. Aucun rendement financier ni allègement des prélèvements n’est démontré.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun dépôt, registre, donnée, délai minimal ou condition supplémentaire ne remplace les exigences retirées ou les renvois coordonnés. Le solde de coût de l’ensemble des codes n’est pas chiffré.",
+        "effects": [
+          {
+            "kind": "obligation_removed",
+            "measure_id": "experimentations-fin-etat-annuel",
+            "description": "Suppression de la synthèse annuelle distincte des évaluations.",
+            "before": "État des lieux au Parlement tous les ans en plus des rapports d’évaluation.",
+            "after": "Seuls les rapports d’évaluation restent exigés par le VII, sous un an après chaque fin.",
+            "unit": "legal_duty",
+            "affected_population": "Gouvernement et services préparant l’état des lieux.",
+            "conditions_and_transition": "Suppression dès entrée en vigueur, incluant les états anciens non remis ; rapports et suivis utiles conservés.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles autonomes demeurent applicables.",
+            "source_quote": "Le Gouvernement présente chaque année au Parlement un état des lieux des expérimentations en cours",
+            "proposed_quote": "l'état des lieux annuel des expérimentations en cours n'est plus exigé"
+          }
+        ]
+      },
+      "change_type": "normative_reduction",
+      "reform_policy_id": "editorial_direction_2026_10_19",
+      "removed_provisions": [
+        "Présentation annuelle obligatoire au Parlement d’un état des lieux distinct des expérimentations en cours."
+      ],
+      "benefit_review": "Tous les avantages expérimentaux du II restent ouverts aux futurs projets : dérogations tarifaires et de facturation, paiement direct, couverture des frais, participation et forfait hospitalier, médicaments et dispositifs, biologie sans prescription ; partage d’honoraires, hébergement, groupements autorisés, dialysats, conditions techniques, exercice libéral sans dépassement, encaissement SISA, intéressement collectif, activité libérale en centre, compétences, aide médicale urgente, biologie, transports, antenne pharmaceutique de montagne et structures de prévention ; tarification et organisation médico-sociales. Les conditions de nécessité, avis et autorisations sont préservées. Le statut d’équipe, l’accès encadré aux données, le fonds, le financement de l’évaluation et la prolongation de dix-huit mois demeurent. Seul le rapport annuel de synthèse est supprimé, sans fermeture des dérogations ni des financements futurs.",
+      "reference_checks": [
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "assessment": "La durée maximale de cinq ans des expérimentations et leur financement ne constitue pas une rupture du contrat de travail et l’article source ne renvoie pas à L. 1234-1. Le préavis proposé de quinze jours calendaires pour les nouveaux contrats privés, sa notification et les anciens préavis selon l’ancienneté restent hors de ce champ ; aucune autorisation sanitaire ne disparaît par cet effet."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+          "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+          "assessment": "La durée maximale de cinq ans des expérimentations et leur financement ne fixe aucun terme d’emploi. Le contrat unique proposé régit les nouvelles embauches privées, sans extinction automatique à la fin d’une action ou expérimentation ; les anciens contrats, aides futures éligibles et agents publics conservent leur champ. Aucun renvoi à L. 1221-2 n’est ajouté."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "assessment": "La durée maximale de cinq ans des expérimentations et leur financement ne concerne pas l’indemnité de licenciement. Le seuil proposé d’un an au terme effectif, préavis inclus, le calcul sur toute l’ancienneté à 0,20 mois par année et le plafond de six mois ne modifient ni dépenses de santé ni financement expérimental ; droits anciens et indemnités spéciales restent distincts."
+        },
+        {
+          "target_key": "LEGITEXT000006073189|LEGIARTI000048702812",
+          "view_sha256": "af0483a955f88d3f0d075e7d0c4a3d4ecb76da87bd3d363da08f830a76555f33",
+          "assessment": "Le II, 1°, a vise la garantie pluriannuelle, le complément de recettes et la dotation territoriale des hôpitaux de proximité, dans la limite des tarifs, honoraires, rémunérations et frais accessoires. Ces avantages restent accessibles aux futurs hôpitaux éligibles ; la coupe du VII ne supprime ni leur fondement ni l’évaluation. L’indemnité des libéraux n’est pas une indemnité de rupture de salarié."
+        },
+        {
+          "target_key": "LEGITEXT000006073189|LEGIARTI000051820183",
+          "view_sha256": "7bc5dada794012f186a65dd7800ca21dfd50115048b7d26abfb86853a7e7a919",
+          "assessment": "Le II, 1°, a vise les règles conventionnelles de facturation et rémunération infirmières, non le préavis du code du travail. La proposition de L. 162-12-2 supprime l’expérience minimale préalable au conventionnement, mais conserve qualifications, formation, aides et autres conditions. Le renvoi expérimental ne rétablit pas cette durée minimale ; les cinq ans de convention ne sont pas la durée d’un emploi."
+        }
+      ],
+      "substantive_impact_certificate": {
+        "version": 1,
+        "source_sha256": "cd1d73bb4f2857bcd713c8850eeac0c5dcd9f18546b0eef619acee61ad0e1912",
+        "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "proposed_sha256": "7fccf5934ea05d786443d0c7f4183a5151bd403d791e83d0cd6ef18884a273cc",
+        "assessment_sha256": "1789b1d7a08ffa612cc35db61bd5ea0770a54a5a5d7cf464d7e751d201eb8b7f",
+        "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "verification": "exact_passages_and_hashes_only",
+        "independent_impact_audit": false,
+        "semantic_review_by_jurist": false
+      },
+      "reference_coherence": {
+        "version": 3,
+        "referrer_sha256": "7fccf5934ea05d786443d0c7f4183a5151bd403d791e83d0cd6ef18884a273cc",
+        "policy_sha256": {
+          "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+          "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+        },
+        "referrer_source": {
+          "code_id": "LEGITEXT000006073189",
+          "source_id": "LEGIARTI000054715108",
+          "source_sha256": "cd1d73bb4f2857bcd713c8850eeac0c5dcd9f18546b0eef619acee61ad0e1912",
+          "source_xml_sha256": "bbd005144b07f9923f06a927c81f5e2b2b7780ae88dda3c4061c983a2cac2d37",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "targets": {
+          "LEGITEXT000006072050|LEGIARTI000006901112": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000006901112",
+            "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+            "view_kind": "proposal",
+            "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+            "source_xml_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
+            "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "LEGITEXT000006072050|LEGIARTI000019071087": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000019071087",
+            "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+            "view_kind": "proposal",
+            "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+            "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
+            "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "LEGITEXT000006072050|LEGIARTI000035644154": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000035644154",
+            "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+            "view_kind": "proposal",
+            "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+            "source_xml_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
+            "source_notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b"
+          },
+          "LEGITEXT000006073189|LEGIARTI000048702812": {
+            "code_id": "LEGITEXT000006073189",
+            "source_id": "LEGIARTI000048702812",
+            "source_sha256": "4b249a334f56035fa0742a0cc81ced7b62a6b3897b73ee08de2883eca6c09e6a",
+            "view_kind": "official_source_only",
+            "view_sha256": "af0483a955f88d3f0d075e7d0c4a3d4ecb76da87bd3d363da08f830a76555f33",
+            "source_xml_sha256": "af0483a955f88d3f0d075e7d0c4a3d4ecb76da87bd3d363da08f830a76555f33",
+            "source_notes_sha256": "66186bc930cff6b0bd722a655ba592fc3d7656e71673bd1c0c556185d10022f3"
+          },
+          "LEGITEXT000006073189|LEGIARTI000051820183": {
+            "code_id": "LEGITEXT000006073189",
+            "source_id": "LEGIARTI000051820183",
+            "source_sha256": "f549b8bb6676741f94b1d6715f7693971dd96ecac4454c0b50b8a4588d19b1d1",
+            "view_kind": "proposal",
+            "view_sha256": "7bc5dada794012f186a65dd7800ca21dfd50115048b7d26abfb86853a7e7a919",
+            "source_xml_sha256": "c1406c2cd429b16cc335117a884bca3d208c4aede26777353500b928851505fb",
+            "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "assessments": [
+          {
+            "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+            "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+            "assessment": "La durée maximale de cinq ans des expérimentations et leur financement ne constitue pas une rupture du contrat de travail et l’article source ne renvoie pas à L. 1234-1. Le préavis proposé de quinze jours calendaires pour les nouveaux contrats privés, sa notification et les anciens préavis selon l’ancienneté restent hors de ce champ ; aucune autorisation sanitaire ne disparaît par cet effet."
+          },
+          {
+            "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+            "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+            "assessment": "La durée maximale de cinq ans des expérimentations et leur financement ne fixe aucun terme d’emploi. Le contrat unique proposé régit les nouvelles embauches privées, sans extinction automatique à la fin d’une action ou expérimentation ; les anciens contrats, aides futures éligibles et agents publics conservent leur champ. Aucun renvoi à L. 1221-2 n’est ajouté."
+          },
+          {
+            "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+            "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+            "assessment": "La durée maximale de cinq ans des expérimentations et leur financement ne concerne pas l’indemnité de licenciement. Le seuil proposé d’un an au terme effectif, préavis inclus, le calcul sur toute l’ancienneté à 0,20 mois par année et le plafond de six mois ne modifient ni dépenses de santé ni financement expérimental ; droits anciens et indemnités spéciales restent distincts."
+          },
+          {
+            "target_key": "LEGITEXT000006073189|LEGIARTI000048702812",
+            "view_sha256": "af0483a955f88d3f0d075e7d0c4a3d4ecb76da87bd3d363da08f830a76555f33",
+            "assessment": "Le II, 1°, a vise la garantie pluriannuelle, le complément de recettes et la dotation territoriale des hôpitaux de proximité, dans la limite des tarifs, honoraires, rémunérations et frais accessoires. Ces avantages restent accessibles aux futurs hôpitaux éligibles ; la coupe du VII ne supprime ni leur fondement ni l’évaluation. L’indemnité des libéraux n’est pas une indemnité de rupture de salarié."
+          },
+          {
+            "target_key": "LEGITEXT000006073189|LEGIARTI000051820183",
+            "view_sha256": "7bc5dada794012f186a65dd7800ca21dfd50115048b7d26abfb86853a7e7a919",
+            "assessment": "Le II, 1°, a vise les règles conventionnelles de facturation et rémunération infirmières, non le préavis du code du travail. La proposition de L. 162-12-2 supprime l’expérience minimale préalable au conventionnement, mais conserve qualifications, formation, aides et autres conditions. Le renvoi expérimental ne rétablit pas cette durée minimale ; les cinq ans de convention ne sont pas la durée d’un emploi."
+          }
+        ],
+        "assessments_sha256": "3b88c8eb033d54f295a640cb2abb2d78d658772fd0852db3633d284b88a8000d",
+        "semantic_review_by_jurist": false
+      },
+      "policy_review_id": "substantive_outcomes_2026_10_19",
+      "prior_proposal_sha256": "1e5ce1c874b22515f0a688b3b93b97df66562ed3470b8b683916ffc589e6e390"
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000044835155",
+    "source_sha256": "63abda38f6967c9967eeee11b9249b1b9493e307ae09094a7fdf3f08269f7e6d",
+    "status": "rewrite_draft",
+    "proposed_xml": "<p>Les caisses primaires d'assurance maladie versent une subvention aux centres de santé conventionnés dans les conditions de l'article L. 162-32-2. Cette subvention couvre une partie des cotisations dues par ces centres au titre de l'article L. 241-1 pour les personnes qu'ils emploient et qui appartiennent aux catégories de praticiens ou d'auxiliaires médicaux relevant des sections 1 et 2 du présent chapitre.</p>\n<p>Lorsque le personnel d'un centre de soins infirmiers est affilié aux assurances sociales agricoles, la caisse de mutualité sociale agricole compétente prend en charge la partie des cotisations d'assurance maladie versées en application de l'article 1031 du code rural. Cette prise en charge est imputée sur les dépenses d'assurance maladie.</p>\n<p>Les centres de santé dispensent les assurés sociaux d'avancer les frais correspondant à la part garantie par l'assurance maladie.</p>\n<p>Un décret fixe les conditions d'application du présent article.</p>",
+    "reason": "Réécriture à droit constant : la subvention, les cotisations auxquelles elle se rapporte, la prise en charge agricole et la dispense d'avance de frais sont énoncées séparément avec leurs débiteurs explicites. Aucun changement de fond prévu par policy.json n'est appliqué au régime des centres de santé.",
+    "review_notes": "Le renvoi historique à l'article 1031 du code rural est conservé tel qu'assigné ; sa correspondance dans la codification applicable aux assurances sociales agricoles appelle un contrôle, sans substitution inventée. La subvention ne concerne que les cotisations de L. 241-1 pour les catégories des sections 1 et 2 ; la dispense d'avance reste limitée à la part garantie par l'assurance maladie. Aucun taux de subvention n'est créé.",
+    "replacement": {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000044835155",
+      "source_sha256": "63abda38f6967c9967eeee11b9249b1b9493e307ae09094a7fdf3f08269f7e6d",
+      "number": "L162-32",
+      "proposed_xml": "\n<p>Les caisses primaires d'assurance maladie versent aux centres de santé conventionnés dans les conditions prévues à l'article L. 162-32-2 une subvention égale à une partie des cotisations dues par ces centres en application de l'article L. 241-1 pour les personnes qu'ils emploient et qui relèvent des catégories de praticiens ou d'auxiliaires médicaux relevant des sections 1 et 2 du présent chapitre.</p>\n<p>Lorsque le personnel des centres de soins infirmiers est affilié aux assurances sociales agricoles, la partie des cotisations d'assurance maladie versées au titre du régime des assurances sociales agricoles est prise en charge par la caisse de mutualité sociale agricole compétente et imputée sur les dépenses d'assurance maladie.</p>\n<p>Les centres de santé font bénéficier les assurés sociaux de la dispense d'avance de frais pour la part garantie par l'assurance maladie.</p>\n<p>Les conditions d'application du présent article sont fixées par décret.</p>\n<p>La désignation des cotisations d'assurance maladie du régime des assurances sociales agricoles au deuxième alinéa se substitue au renvoi à l'ancien article 1031 du code rural sans modifier la part prise en charge, ses conditions de calcul ni les catégories de personnel bénéficiaires. Elle s'applique dès l'entrée en vigueur de la présente loi, y compris aux prises en charge restant à liquider, sans nouvelle demande. Les droits, créances, restitutions et recours antérieurs demeurent préservés.</p>",
+      "reason": "Coordination nécessaire du renvoi historique au code rural : la catégorie de cotisations maladie agricoles est désignée directement sans numéro de remplacement conjectural. La subvention et la dispense d’avance de frais sont des avantages utiles, non des charges à abroger. Aucune coupe supplémentaire n’est justifiée dans ce texte qui fixe bénéficiaires, financeurs et tiers payant. Le brouillon stylistique est remplacé par cette seule coordination.",
+      "review_notes": "Le renvoi à l’ancien article 1031 n’est pas reconduit comme référence opératoire actuelle ; aucune concordance numérique n’est affirmée sans source agricole disponible. L’application réglementaire doit préserver exactement la fraction prise en charge et son calcul, sans extension à d’autres cotisations. Les renvois à L. 162-32-2, L. 241-1 et aux sections 1 et 2 demeurent. Aucun taux, assiette ou montant n’est créé. La correction ne constitue pas une baisse de prélèvements.",
+      "status": "rewrite_draft",
+      "substantive_impact": {
+        "version": 1,
+        "classification": "coordination_only",
+        "assessment": "Le financement favorable est conservé ; seule la référence agricole historique est remplacée par une désignation matérielle à champ constant.",
+        "scope_limitations": "La concordance du code rural et les modalités réglementaires de calcul restent à documenter hors corpus. Aucun gain de cotisation ni de trésorerie n’est revendiqué.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun dépôt, registre, donnée, délai minimal ou condition supplémentaire ne remplace les exigences retirées ou les renvois coordonnés. Le solde de coût de l’ensemble des codes n’est pas chiffré.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "centres-sante-cotisations-agricoles-reference",
+            "description": "Désignation autonome des cotisations agricoles prises en charge.",
+            "before": "Renvoi à l’ancien article 1031 du code rural pour les cotisations maladie agricoles.",
+            "after": "Même part des cotisations maladie agricoles, sans référence numérique obsolète.",
+            "unit": "legal_duty",
+            "affected_population": "Centres de soins infirmiers employant du personnel affilié aux assurances sociales agricoles.",
+            "conditions_and_transition": "Application immédiate aux liquidations restantes ; part, calcul, bénéficiaires et droits antérieurs inchangés.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles autonomes demeurent applicables.",
+            "source_quote": "versées en application de l'article 1031 du code rural",
+            "proposed_quote": "versées au titre du régime des assurances sociales agricoles"
+          }
+        ]
+      },
+      "benefit_review": "La subvention CPAM correspondant à une partie des cotisations de L. 241-1 reste ouverte aux centres conventionnés pour les catégories de praticiens et auxiliaires visées. La prise en charge MSA des cotisations maladie des personnels agricoles demeure, sans changement de fraction ni de calcul, pour les situations futures également. Le tiers payant de la part garantie bénéficie toujours aux assurés. Le texte n’institue aucune taxe accessoire et ne supprime ni aide ni dispense ; le renvoi historique est neutralisé sans retrait de l’avantage.",
+      "reference_checks": [],
+      "substantive_impact_certificate": {
+        "version": 1,
+        "source_sha256": "63abda38f6967c9967eeee11b9249b1b9493e307ae09094a7fdf3f08269f7e6d",
+        "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "proposed_sha256": "700b18bb8dce2dc3969965e251fb4c6327f7d410c02b7d0600275cd47bff01d5",
+        "assessment_sha256": "a3db4556f9359e2c776147944eb9922b0b19ebfb66a418caeb9416f185170f25",
+        "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "verification": "exact_passages_and_hashes_only",
+        "independent_impact_audit": false,
+        "semantic_review_by_jurist": false
+      },
+      "policy_review_id": "substantive_outcomes_2026_10_19",
+      "prior_proposal_sha256": "b81b253429aa41e9f5fc2b26b862ed71ad0ebab85da00f5906836b2a92072802"
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000044835179",
+    "source_sha256": "5883443fb5b457933dd59f63665aaf90624b87ae1078208acb8a94759c64600b",
+    "status": "rewrite_draft",
+    "proposed_xml": "<p>Un accord national définit les rapports entre les organismes d'assurance maladie et les centres de santé. Il est conclu pour cinq ans au plus entre l'Union nationale des caisses d'assurance maladie et, d'une part, une ou plusieurs organisations représentatives des centres de soins infirmiers et, d'autre part, une ou plusieurs organisations représentatives des centres de soins médicaux, dentaires et polyvalents.</p>\n<p>L'accord fixe notamment :</p>\n<p>1° Les obligations respectives des caisses primaires d'assurance maladie et des centres de santé ;</p>\n<p>2° Les conditions générales dans lesquelles les conventions mentionnées aux sections 1, 2 et 3 du présent chapitre s'appliquent aux différents professionnels qui exercent dans les centres de santé. Ces conditions ne peuvent modifier les tarifs des honoraires, rémunérations et frais accessoires fixés par ces conventions. Elles prévoient que les modes de rémunération définis par ces conventions, autres que le paiement à l'acte, sont examinés dans les conditions prévues par l'accord ou, dans certains cas, transposés automatiquement, en vue de leur intégration à l'accord conformément au premier alinéa de l'article L. 162-32-2. Cet examen ou cette transposition intervient au plus tard six mois après la conclusion des conventions ou de leurs avenants ;</p>\n<p>3° Les modalités selon lesquelles les centres de santé organisent leurs actions de prévention sanitaire ;</p>\n<p>4° Les mesures jugées appropriées pour faciliter l'accès des assurés sociaux aux soins et garantir la qualité et la coordination de ceux-ci ;</p>\n<p>4° bis Les conditions que les centres de santé doivent remplir pour relever de l'accord national. Il s'agit notamment des conditions relatives aux zones d'exercice définies par l'agence régionale de santé en application de l'article L. 1434-4 du code de la santé publique, pour l'ouverture d'un centre de santé ou l'accroissement de son activité par le recrutement d'un nouveau professionnel de santé salarié. Ces conditions peuvent varier selon la profession des professionnels de santé salariés du centre ;</p>\n<p>5° Les modes de rémunération autres que le paiement à l'acte pour les activités de soins, ainsi que les modes de rémunération des activités non curatives des centres de santé, notamment les actions de prévention et d'éducation pour la santé ;</p>\n<p>6° Les conditions de participation des organismes d'assurance maladie aux actions d'accompagnement de l'informatisation des centres de santé, notamment pour transmettre par voie électronique les documents nécessaires au remboursement ou à la prise en charge. Dans ce cadre, les centres s'engagent à atteindre un taux significatif de télétransmission des documents nécessaires au remboursement des actes ou des prestations qu'ils dispensent ;</p>\n<p>6° bis Les orientations pluriannuelles prioritaires de développement professionnel continu relevant de l'article L. 4021-2 du code de la santé publique ;</p>\n<p>7° (Abrogé) ;</p>\n<p>8° Le cas échéant, les dispositifs d'aide qui facilitent l'installation des centres de santé dans les zones définies par l'agence régionale de santé en application de l'article L. 1434-4 du code de la santé publique, ainsi que les conditions d'attribution, en contrepartie, d'une rémunération forfaitaire annuelle. Cette rémunération peut varier selon le niveau d'activité des centres et leurs modalités d'exercice ou d'organisation, notamment pour les inciter à intégrer dans leurs équipes des professionnels de santé dont les activités sont numériquement déficitaires dans ces zones. Après consultation des organisations représentatives des centres de santé mentionnées au premier alinéa du présent article, les agences régionales de santé peuvent adapter les obligations des centres bénéficiaires de ces aides pour tenir compte de la situation régionale ;</p>\n<p>9° Le cas échéant, la rémunération attribuée en contrepartie du respect d'engagements individualisés du centre de santé. Ces engagements peuvent porter sur la prescription, la participation à des actions de dépistage et de prévention, la prise en charge de patients atteints de pathologies chroniques, les actions favorisant la continuité et la coordination des soins, ainsi que toute action d'amélioration des pratiques, de formation et d'information des professionnels. La contrepartie financière est versée au centre de santé en fonction des objectifs qu'il atteint.</p>",
+    "reason": "Réécriture à droit constant : les parties à l'accord et sa durée sont explicitées ; les longues dispositions relatives aux rémunérations, au conventionnement, à l'informatisation et aux aides sont scindées en phrases lisibles dans leurs alinéas d'origine. Tous les numéros, dont 4° bis, 6° bis et le 7° abrogé, sont conservés. Aucune réforme de fond de policy.json ne vise cet accord.",
+    "review_notes": "La durée maximale reste de cinq ans et le délai d'examen ou de transposition des rémunérations autres que le paiement à l'acte reste de six mois. Le renvoi du 2° au premier alinéa de L. 162-32-2 est maintenu ; ce dernier porte sur l'approbation de l'accord et non expressément sur l'intégration des rémunérations : articulation préexistante à contrôler. L'interdiction de modifier les tarifs conventionnels, les conditions de zones du 4° bis, la consultation avant adaptation régionale des aides et le lien entre objectifs atteints et versement du 9° sont conservés.",
+    "replacement": {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000044835179",
+      "source_sha256": "5883443fb5b457933dd59f63665aaf90624b87ae1078208acb8a94759c64600b",
+      "number": "L162-32-1",
+      "proposed_xml": "\n<p>Les rapports entre les organismes d'assurance maladie et les centres de santé sont définis par un accord national conclu pour une durée au plus égale à cinq ans par l'Union nationale des caisses d'assurance maladie et une ou plusieurs organisations représentatives des centres de soins infirmiers, ainsi qu'une ou plusieurs organisations représentatives des centres de soins médicaux, dentaires et polyvalents.</p>\n<p>Cet accord détermine notamment :</p>\n<p>1° Les obligations respectives des caisses primaires d'assurance maladie et des centres de santé ;</p>\n<p>2° Les conditions générales d'application des conventions mentionnées aux sections 1, 2 et 3 du présent chapitre aux différents professionnels exerçant dans des centres de santé ; ces conditions ne peuvent pas modifier les tarifs des honoraires, rémunérations et frais accessoires déterminés par ces conventions. Ces conditions prévoient que les modes de rémunération définis par ces conventions, autres que le paiement à l'acte, font l'objet, au plus tard six mois après la conclusion de ces conventions ou d'avenants à ces conventions, d'un examen dans les conditions prévues par l'accord ou d'une transposition automatique dans certains cas en vue de leur intégration au sein de celui-ci, conformément au premier alinéa de l'article L. 162-32-2 ;</p>\n<p>3° Les modalités d'organisation des actions de prévention sanitaire menées par les centres de santé ;</p>\n<p>4° Les mesures jugées appropriées pour favoriser l'accès aux soins des assurés sociaux et garantir la qualité et la coordination des soins ;</p>\n<p>4° bis Les conditions à remplir par les centres de santé pour être régis par l'accord national. Ces conditions peuvent être modulées en fonction de la profession des professionnels de santé salariés exerçant au sein du centre de santé. Toutefois, l'ouverture d'un centre ou l'accroissement de son activité par le recrutement d'un professionnel de santé salarié ne peut être subordonné, au titre de cet accord, à une condition relative à la zone d'exercice. Cette règle ne modifie pas les conditions géographiques des aides prévues au 8° ;</p>\n<p>5° Les modes de rémunération, autres que le paiement à l'acte, des activités de soins ainsi que les modes de rémunération des activités non curatives des centres de santé et notamment d'actions de prévention et d'éducation pour la santé ;</p>\n<p>6° Les conditions dans lesquelles les organismes d'assurance maladie participent à des actions d'accompagnement de l'informatisation des centres de santé, notamment pour ce qui concerne la transmission par voie électronique des documents nécessaires au remboursement ou à la prise en charge. Les centres s'engagent dans ce cadre à réaliser un taux significatif de télétransmission de documents nécessaires au remboursement des actes ou des prestations qu'ils dispensent ;</p>\n<p>6° bis Les orientations pluriannuelles prioritaires en matière de développement professionnel continu, relevant de l'article L. 4021-2 du code de la santé publique ;</p>\n<p>7° (Abrogé) ;</p>\n<p>8° Le cas échéant, des dispositifs d'aide visant à faciliter l'installation des centres de santé dans les zones définies par l'agence régionale de santé en application de l'article L. 1434-4 du code de la santé publique ainsi que les conditions dans lesquelles ces centres bénéficient, en contrepartie, d'une rémunération forfaitaire annuelle qui peut être modulée en fonction de leur niveau d'activité et leurs modalités d'exercice ou d'organisation, notamment pour les conduire à intégrer dans leurs équipes des professionnels de santé exerçant des activités numériquement déficitaires dans ces zones. Les obligations auxquelles sont soumis les centres de santé qui bénéficient de ces aides peuvent être adaptées par les agences régionales de santé après consultation des organisations représentatives des centres de santé mentionnées au premier alinéa du présent article pour tenir compte de la situation régionale ;</p>\n<p>9° Le cas échéant, la rémunération versée en contrepartie du respect d'engagements individualisés. Ces engagements individualisés du centre de santé peuvent porter sur la prescription, la participation à des actions de dépistage et de prévention, la prise en charge des patients atteints de pathologies chroniques, des actions destinées à favoriser la continuité et la coordination des soins, ainsi que toute action d'amélioration des pratiques, de formation et d'information des professionnels. Le versement de la contrepartie financière au centre de santé est fonction de l'atteinte des objectifs par celui-ci.</p>\n<br />\n<p>La suppression des conditions de zone d'exercice prévues au 4° bis s'applique à compter de l'entrée en vigueur de la présente loi, y compris aux demandes en cours, sans nouveau dépôt. Les clauses contraires de l'accord national cessent de s'appliquer pour l'avenir. Les conventionnements, aides, rémunérations et créances acquis sont préservés. Les aides prévues au 8° demeurent ouvertes aux futurs centres éligibles dans les mêmes conditions. Les règles autonomes de qualification, de sécurité, de qualité des soins et d'autorisation sanitaire restent applicables.</p>",
+      "reason": "Réforme de fond au 4° bis : retrait des restrictions de zone conditionnant l’accès à l’accord lors d’une ouverture ou d’un recrutement. Ce verrou conventionnel d’offre est distinct des autorisations sanitaires et de l’aide ciblée aux zones déficitaires ; ces dernières sont conservées. Le reste de l’accord demeure intégral : financement, tarifs, prévention, qualité, accompagnement informatique et contreparties des aides. La limitation à cinq ans organise le renouvellement de l’accord, pas l’emploi ; le délai de six mois protège l’intégration des rémunérations et n’est pas un délai minimal à supprimer.",
+      "review_notes": "Coordonner le dernier alinéa de L. 162-32-2 dans le présent lot et les clauses de l’accord national fondées sur le 4° bis. Le renvoi du 2° au premier alinéa de L. 162-32-2 désigne bien la procédure d’approbation des modifications de l’accord, non une règle autonome de calcul des rémunérations. Les 7° abrogé, 6° bis et toutes les autres subdivisions sont conservés. Les conditions géographiques du 8° demeurent pour l’octroi des aides, sans imposer un quota au conventionnement. La télétransmission du 6° accompagne une aide à l’informatisation et conserve sa fonction de remboursement ; aucun nouveau justificatif n’est ajouté.",
+      "status": "rewrite_draft",
+      "substantive_impact": {
+        "version": 1,
+        "classification": "material_reduction",
+        "assessment": "L’obstacle conventionnel de zone pour ouvrir un centre ou recruter est retiré ; les conditions d’aide territoriale demeurent favorables et distinctes.",
+        "scope_limitations": "La réforme ne supprime pas les autorisations sanitaires autonomes ni les zonages des autres professions. Effet sur la répartition des soins et coût public non chiffrés.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun dépôt, registre, donnée, délai minimal ou condition supplémentaire ne remplace les exigences retirées ou les renvois coordonnés. Le solde de coût de l’ensemble des codes n’est pas chiffré.",
+        "effects": [
+          {
+            "kind": "obligation_removed",
+            "measure_id": "centres-sante-fin-verrou-geographique",
+            "description": "Retrait des conditions de zone à l’accès à l’accord national.",
+            "before": "Accord habilité à conditionner ouverture ou recrutement selon les zones et professions salariées.",
+            "after": "Aucune condition de zone pour ouvrir ou accroître l’activité au titre de l’accord ; aides territoriales maintenues.",
+            "unit": "legal_duty",
+            "affected_population": "Centres de santé ouvrant ou recrutant, notamment nouveaux centres éligibles.",
+            "conditions_and_transition": "Dès entrée en vigueur, demandes en cours comprises ; clauses contraires sans effet futur et aides acquises préservées.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles autonomes demeurent applicables.",
+            "source_quote": "4° bis Les conditions à remplir par les centres de santé pour être régis par l'accord national, notamment celles relatives aux zones d'exercice, définies par l'agence régionale de santé en application de l'article L. 1434-4 du code la santé publique, concernant l'ouverture des centres de santé ou l'accroissement d'activité par le recrutement d'un nouveau professionnel de santé salarié. Ces conditions peuvent être modulées en fonction de la profession des professionnels de santé salariés exerçant au sein du centre de santé ;",
+            "proposed_quote": "4° bis Les conditions à remplir par les centres de santé pour être régis par l'accord national. Ces conditions peuvent être modulées en fonction de la profession des professionnels de santé salariés exerçant au sein du centre de santé. Toutefois, l'ouverture d'un centre ou l'accroissement de son activité par le recrutement d'un professionnel de santé salarié ne peut être subordonné, au titre de cet accord, à une condition relative à la zone d'exercice. Cette règle ne modifie pas les conditions géographiques des aides prévues au 8° ;"
+          }
+        ]
+      },
+      "change_type": "normative_reduction",
+      "reform_policy_id": "editorial_direction_2026_10_19",
+      "removed_provisions": [
+        "Conditions géographiques conventionnelles d’ouverture des centres et d’accroissement d’activité par recrutement, avec modulation selon la profession salariée."
+      ],
+      "benefit_review": "Les tarifs conventionnels non modifiables, les rémunérations autres qu’à l’acte et leur examen sous six mois restent intégralement protégés. Les actions de prévention, mesures d’accès aux soins et accompagnements d’informatisation restent financables dans leur champ. Les aides d’installation, forfait annuel modulable et adaptations régionales du 8°, ainsi que les rémunérations d’engagements du 9°, demeurent ouverts aux futurs bénéficiaires remplissant leurs conditions. La suppression du verrou de zone au 4° bis ne supprime pas le ciblage favorable des aides du 8° ; elle n’en fait pas une subvention universelle sans conditions.",
+      "reference_checks": [],
+      "substantive_impact_certificate": {
+        "version": 1,
+        "source_sha256": "5883443fb5b457933dd59f63665aaf90624b87ae1078208acb8a94759c64600b",
+        "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "proposed_sha256": "ca4ab588cb931e079828330d7b576f5295cce1b6f7eb785486a785e3e0e938f1",
+        "assessment_sha256": "5da4b3ec90913224da970c9ddffba1406846e81381d8262dcae7c636e85c2073",
+        "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "verification": "exact_passages_and_hashes_only",
+        "independent_impact_audit": false,
+        "semantic_review_by_jurist": false
+      },
+      "policy_review_id": "substantive_outcomes_2026_10_19",
+      "prior_proposal_sha256": "8eea606527f55252603e84e5aee1bbbf8a9321b54d60ad8b5752a202cb961b96"
+    }
+  },
+  {
+    "code_id": "LEGITEXT000006073189",
+    "source_id": "LEGIARTI000044835217",
+    "source_sha256": "289783c7af5641136058a586db171f35308228d1f8c8067d1494793d2e2d406b",
+    "status": "rewrite_draft",
+    "proposed_xml": "<p>L'approbation de l'accord national, de ses annexes et de ses avenants intervient dans les conditions prévues à l'article L. 162-15.</p>\n<p>La mise en œuvre d'un accord national est empêchée lorsqu'au moins la moitié des organisations représentatives des centres de soins infirmiers ou au moins la moitié des organisations représentatives des centres de santé médicaux, dentaires et polyvalents s'y opposent dans les conditions fixées par décret.</p>\n<p>L'accord national est renouvelé tacitement, sauf si au moins l'un de ses signataires ou une ou plusieurs organisations représentatives des centres de santé s'opposent à sa reconduction dans les conditions réglementaires prévues à l'article L. 162-15-2.</p>\n<p>Après son échéance ou sa résiliation, l'accord national continue de produire ses effets jusqu'à la publication au Journal officiel du nouvel accord national ou du règlement arbitral qui le remplace.</p>\n<p>La conclusion et l'approbation d'un accord dans les conditions de l'article L. 162-15 rendent l'accord précédent caduc.</p>\n<p>Un arbitre arrête un projet d'accord si les négociations préalables à l'élaboration de l'accord national sont rompues, si le nouvel accord national fait l'objet d'une opposition ou si six mois se sont écoulés depuis le début des négociations. Il respecte le cadre financier pluriannuel des dépenses de santé et les conditions prévues aux quatre derniers alinéas du I de l'article L. 162-14-2.</p>\n<p>L'Union nationale des caisses d'assurance maladie et au moins une organisation représentative des centres de santé désignent l'arbitre. À défaut de désignation, ou si la majorité des organisations représentatives des centres de santé s'oppose à celle-ci, le président du Haut Conseil pour l'avenir de l'assurance maladie le désigne.</p>\n<p>En l'absence d'accord national, les tarifs fixés pour chaque profession dans les conditions prévues aux sections 1, 2 et 3 du présent chapitre s'appliquent aux centres de santé. Ces dispositions s'appliquent aussi aux centres de santé qui n'ont pas adhéré à l'accord national, de même que les conditions relatives aux zones d'exercice définies en application du 4° bis de l'article L. 162-32-1.</p>",
+    "reason": "Réécriture à droit constant : les effets de l'opposition, la reconduction, le maintien temporaire de l'accord et les trois cas de recours à l'arbitre sont formulés directement. Les autorités de désignation et le régime tarifaire subsidiaire restent distincts. Aucune modification de fond issue de policy.json.",
+    "review_notes": "Le seuil d'opposition reste au moins la moitié dans l'une ou l'autre des deux catégories d'organisations, distinct de la majorité exigée pour s'opposer à la désignation de l'arbitre. Le délai d'arbitrage reste de six mois après le début des négociations. Les renvois aux quatre derniers alinéas du I de L. 162-14-2 et au 4° bis de L. 162-32-1 sont conservés. Articulation à contrôler entre les tarifs prévus ici pour les centres non adhérents et la base de remboursement aux tarifs d'autorité de L. 162-32-4 : ces formulations préexistantes ne sont pas harmonisées silencieusement. Les points d'extinction fondés respectivement sur la publication du remplacement et sur la conclusion et l'approbation du nouvel accord sont conservés.",
+    "replacement": {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000044835217",
+      "source_sha256": "289783c7af5641136058a586db171f35308228d1f8c8067d1494793d2e2d406b",
+      "number": "L162-32-2",
+      "proposed_xml": "\n<p>L'accord national, ses annexes et avenants sont approuvés dans les conditions prévues à l'article L. 162-15.</p>\n<p>L'opposition formée, dans des conditions prévues par décret, à l'encontre d'un accord national par au moins la moitié des organisations représentatives des centres de soins infirmiers ou au moins la moitié des organisations représentatives des centres de santé médicaux, dentaires et polyvalents fait obstacle à sa mise en œuvre.</p>\n<p>En l'absence d'opposition à sa reconduction formée, dans les conditions réglementaires prévues à l'article L. 162-15-2, par l'un au moins des signataires ou par une ou plusieurs organisations représentatives des centres de santé, l'accord national est renouvelé par tacite reconduction.</p>\n<p>L'accord national arrivé à échéance ou résilié continue de produire ses effets jusqu'à la publication au Journal officiel du nouvel accord national ou du règlement arbitral qui le remplace.</p>\n<p>Lorsqu'un accord est conclu et approuvé dans les conditions prévues à l'article L. 162-15, l'accord précédent est réputé caduc à la publication au Journal officiel du nouvel accord.</p>\n<p>En cas de rupture des négociations préalables à l'élaboration de l'accord national ou d'opposition au nouvel accord national ou à l'issue d'un délai de six mois à compter du début des négociations, un arbitre arrête un projet d'accord dans le respect du cadre financier pluriannuel des dépenses de santé et dans les conditions prévues aux quatre derniers alinéas du I de l'article L. 162-14-2.</p>\n<p>L'arbitre est désigné par l'Union nationale des caisses d'assurance maladie et au moins une organisation représentative des centres de santé. A défaut ou en cas d'opposition à cette désignation par la majorité des organisations représentatives des centres de santé, il est désigné par le président du Haut Conseil pour l'avenir de l'assurance maladie.</p>\n<p>A défaut d'accord national, les tarifs applicables aux centres de santé sont ceux fixés pour chacune des professions dans les conditions prévues aux sections 1,2 et 3 du présent chapitre. Ces dispositions sont également applicables aux centres de santé qui n'ont pas adhéré à l'accord national. Aucune condition relative à la zone d'exercice ne leur est opposable sur le fondement du 4° bis de l'article L. 162-32-1.</p>\n<p>La suppression des conditions de zone d'exercice s'applique à compter de l'entrée en vigueur de la présente loi, y compris aux demandes en cours, sans nouveau dépôt. Les conditions géographiques des aides prévues au 8° de l'article L. 162-32-1 ne sont pas modifiées. La règle de caducité à la publication s'applique aux accords de remplacement approuvés à compter de cette même date. Les actes accomplis, droits, financements et recours antérieurs sont préservés.</p>",
+      "reason": "Coordination de la suppression du verrou géographique décidée au 4° bis de L. 162-32-1 : aucune réintroduction par application aux centres non adhérents. Correction explicite de la discordance préexistante entre le quatrième alinéa, qui maintient l’accord jusqu’à publication, et le cinquième, qui le rendait caduc dès conclusion et approbation. Les deux bornes sont alignées sur la publication pour assurer la continuité des droits. Les majorités, la reconduction et l’arbitrage restent nécessaires à la légitimité et à la continuité du financement ; le précédent brouillon était à droit constant.",
+      "review_notes": "Lecture locale de L. 162-15, L. 162-15-2, L. 162-14-2 et L. 162-32-4 effectuée. Les quatre derniers alinéas du I de L. 162-14-2 concernent bien approbation/publication, continuité, durée de cinq ans et négociations sous deux ans, puis renouvellement ; le II de désignation n’est pas importé. L. 162-15 proposé dispense la reconduction inchangée d’une nouvelle transmission/approbation : le renvoi ne rétablit pas celles-ci. Maintenir l’opposition d’au moins la moitié dans chacune des deux catégories, distincte de la majorité de désignation. Les six mois d’arbitrage n’excluent pas l’arbitrage antérieur après rupture ou opposition. Les tarifs applicables du dernier alinéa se distinguent de la base de remboursement aux tarifs d’autorité de L. 162-32-4 ; aucune harmonisation des montants n’est inventée. Renvois locaux supplémentaires vérifiés mais non ajoutés à reference_checks, réservé aux cibles imposées.",
+      "status": "rewrite_draft",
+      "substantive_impact": {
+        "version": 1,
+        "classification": "coordination_only",
+        "assessment": "Le renvoi ne peut plus rétablir le verrou de zone supprimé dans L. 162-32-1 ; il s’agit de la même mesure, non d’une seconde baisse. La caducité est alignée sur la publication pour éviter un vide de couverture.",
+        "scope_limitations": "Le régime tarifaire des non-adhérents, les autorisations sanitaires et les aides zonées restent distincts. Aucun solde financier ou gain national de complexité n’est établi.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun dépôt, registre, donnée, délai minimal ou condition supplémentaire ne remplace les exigences retirées ou les renvois coordonnés. Le solde de coût de l’ensemble des codes n’est pas chiffré.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "centres-sante-fin-verrou-geographique",
+            "description": "Retrait du relais du verrou géographique pour les centres non adhérents.",
+            "before": "Conditions de zone du 4° bis étendues aux non-adhérents.",
+            "after": "Absence de condition de zone sur ce fondement, sans retrait des aides zonées.",
+            "unit": "legal_duty",
+            "affected_population": "Centres de santé non adhérents à l’accord national.",
+            "conditions_and_transition": "Dès entrée en vigueur, demandes en cours ; droits et aides antérieurs conservés.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles autonomes demeurent applicables.",
+            "source_quote": "Ces dispositions ainsi que les conditions relatives aux zones d'exercice définies en application du 4° bis de l'article L. 162-32-1 sont également applicables aux centres de santé qui n'ont pas adhéré à l'accord national.",
+            "proposed_quote": "Aucune condition relative à la zone d'exercice ne leur est opposable sur le fondement du 4° bis de l'article L. 162-32-1."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "centres-sante-continuite-accord",
+            "description": "Alignement de la caducité sur la publication de l’accord de remplacement.",
+            "before": "Caducité dès conclusion et approbation, malgré une continuité jusqu’à publication prévue à l’alinéa précédent.",
+            "after": "Caducité à la publication du nouvel accord, comme la fin du maintien prévue à l’alinéa précédent.",
+            "unit": "legal_duty",
+            "affected_population": "Centres, caisses et assurés relevant du cadre conventionnel.",
+            "conditions_and_transition": "Accords de remplacement approuvés dès entrée en vigueur ; actes et droits antérieurs préservés.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles autonomes demeurent applicables.",
+            "source_quote": "Lorsqu'un accord est conclu et approuvé dans les conditions prévues à l'article L. 162-15, l'accord précédent est réputé caduc.",
+            "proposed_quote": "l'accord précédent est réputé caduc à la publication au Journal officiel du nouvel accord."
+          }
+        ]
+      },
+      "change_type": "normative_reduction",
+      "reform_policy_id": "editorial_direction_2026_10_19",
+      "removed_provisions": [
+        "Application aux centres non adhérents des restrictions de zone fondées sur le 4° bis de L. 162-32-1."
+      ],
+      "reference_checks": [],
+      "substantive_impact_certificate": {
+        "version": 1,
+        "source_sha256": "289783c7af5641136058a586db171f35308228d1f8c8067d1494793d2e2d406b",
+        "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "proposed_sha256": "f17de28f418a5c30e2bb226dbf443b37f977dcac84da1e2d8c55168347efbced",
+        "assessment_sha256": "c6806e0b91b52f563ec0106de2a10a782c97fa5d63e2d07846f23d55c9e14030",
+        "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "verification": "exact_passages_and_hashes_only",
+        "independent_impact_audit": false,
+        "semantic_review_by_jurist": false
+      },
+      "policy_review_id": "substantive_outcomes_2026_10_19",
+      "prior_proposal_sha256": "ae2cc599c922763349b27904c727f3454d4ff45de914e82713882941124fbb48"
+    }
+  }
+]

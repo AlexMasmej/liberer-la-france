@@ -1,0 +1,9 @@
+# Relecture fraîche CVAE orientée contradictions
+
+Les treize sources, propositions, notes, motifs et bornes ont été relus intégralement sur le snapshot1908Z, y compris les deux propositions46C/39 modifiées. Cinq contreparties supplémentaires ont été lues entièrement :234nonies,172bis,1655ter,217quindecies et1641. Les18gardes et les quatre politiques ont été recalculées ; les18sources/NOTA/bornes et cinq champs de proposition correspondent encore en transaction de lecture seule à la base vivante au contrôle final.
+
+Sept situations historiques ont été qualifiées de nouveau. Dans ce seul périmètre, aucune contradiction CVAE effective n'est établie : même frontière annuelle future, obligations et droits des anciennes années préservés, définitions de valeur ajoutée/période et plafonds CFE maintenus, abattements99%LaPoste2025 et fondement futur protégés, accès au dispositif électrique indépendant du paiement de laCVAE. Les13textes relus ne sont pas13nouvelles acceptations de seconde passe et ne gonflent aucun compteur.
+
+Les clauses nouvelles46C/39 ne sont pas réputées validées globalement. La bascule CRL par encaissement est distincte de la bascule annuelle CVAE.234nonies interdit déjà son rétablissement par renvoi ; l'expression de la rubriqueCRL38Ia et les formulaires restent à nettoyer. Les circuits sociaux, IS209/219, normes DSN/franco-suisses, QPC, modalités européennes et calendriers différés2027–2030 demeurent hors certification exhaustive. Les réserves précises figurent dans findings-reviewed.json.
+
+Aucune correction canonique n'est proposée faute de contradiction CVAE démontrée dans le seul groupe. Aucun signalement structurel n'est administrativement résolu, aucun texte, politique, source ou audit publié n'a été changé et aucune validation par juriste n'est affirmée. Cette qualification fraîche peut être utilisée seulement sous ses18gardes exactes et limites ; elle ne remplace pas l'examen des autres contradictions prioritaires.

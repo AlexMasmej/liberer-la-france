@@ -1,0 +1,11 @@
+# Suivi des deux changements CVAE
+
+Le nouvel audit 1908Z a correctement refusé de reconduire la revue CVAE : les propositions des articles 46 C et 39 de l'annexe III ont changé. Leurs sources entières, notes, bornes de version et empreintes de document sont inchangées. Les onze autres gardes d'article et les quatre politiques correspondent à l'origine publiée sous empreinte.
+
+Les deux sources et propositions, anciennes et nouvelles, ainsi que leurs motifs et notes actuels ont été lus intégralement pour ce suivi. Le dossier rassemble aussi les treize textes actuels, mais leur extraction et la concordance des onze autres gardes ne sont pas une nouvelle lecture sémantique de ces onze textes.
+
+Pour 46 C, la suppression future du tableau CVAE reste explicite, à compter des années d'imposition débutant le 1er janvier de l'année suivant l'entrée en vigueur de la loi de suppression. Les obligations antérieures et les définitions et obligations autonomes de plafonnement de CFE sont expressément conservées. Le texte ajoute cependant des coordinations substantielles sur les sociétés civiles, la contribution sur les revenus locatifs, l'impôt sur les sociétés et l'usage de données déjà accessibles. Leurs interactions et renvois doivent être réexaminés avant toute nouvelle conclusion sur les treize articles.
+
+Pour 39, la suppression des données CVAE futures et la conservation des obligations des années antérieures restent explicites, avec le même seuil annuel. Les nouvelles réductions portant sur le code APE, les bases de formation dans ce circuit fiscal, une ligne de rémunération nette et les totaux demandent leur propre contrôle des déclarations autonomes, transitions et protections. Les huit champs suisses restent présents ; leur conformité internationale n'est pas certifiée par ce suivi. La note de source sur l'entrée en vigueur au 1er janvier 2026 reste distincte des dates futures du projet.
+
+Cette comparaison n'établit pas à elle seule une contradiction nouvelle dans les deux clauses CVAE examinées. Elle ne renouvelle pas la conclusion de cohérence sur les treize textes et ne clôt aucun signalement global. Une relecture fraîche des treize textes, des cibles modifiées et de leurs transitions reste requise. Aucun texte canonique ni preuve publiée n'a été modifié et aucune réponse ancienne n'a été rejouée.
