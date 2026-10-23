@@ -1,0 +1,59 @@
+{
+  "state": "FROZEN_NOT_READY_FOR_ACTIVATION",
+  "frozen_at_utc": "2026-10-23T03:11:50.864579+00:00",
+  "sealed_candidate_manifest_sha256": "f8cbed8270405812119485da55d2faa15d52bbd6b98b9d7539d2b506e202de68",
+  "sealed_candidate_modules_unchanged": true,
+  "active_files_modified": false,
+  "sealed_folder_modified": false,
+  "production_controller_called": false,
+  "production_backend_hard_block_before_collection_and_mutation": true,
+  "activation_performed": false,
+  "readiness_override_flag_or_json_accepted": false,
+  "atomicity": "journalled logical six-file transaction under exclusions and durable owned supervisor disabled marker; not a POSIX atomic multi-file rename",
+  "tests": {
+    "tests": 15,
+    "failures": 0,
+    "errors": 0,
+    "successful": true,
+    "observed_duration_seconds": 0.445,
+    "mode": "temporary fixtures only",
+    "production_controller_or_preflight_called": false,
+    "real_processes_launched": 0,
+    "model_calls": 0,
+    "network_cli_calls": 0,
+    "pending_processes": 0
+  },
+  "remaining_pre_activation_blockers": [
+    "Current guarded parent reconciliation collector/certificate verifier not implemented; production backend unconditionally refuses",
+    "Fresh reconciliation revalidation after interruption in RECONCILED/installed/configured phases not implemented",
+    "Late launch-adoption full code/policy pins and native execution attestation not implemented",
+    "Fresh terminal-new metrics/immutable-queue reconciliation alternative to conservative120second admission timestamp not implemented",
+    "Strong exit receipt time binding to exact process start beyond PID success fields not implemented"
+  ],
+  "not_a_completion_audit": true,
+  "new_or_review_queues_extended": false,
+  "normal_same_code_restart_can_recover_absent_deferred_sources": true,
+  "transfer_owner": "parent only after further implementation/review; no activation of this package",
+  "files": {
+    "transfer_controller.py": {
+      "sha256": "cc24c01601cc129f4c50d91c8343d0e4f71b9c8fced16fc9624d6e622a427179",
+      "bytes": 24806
+    },
+    "test_transfer.py": {
+      "sha256": "371f0ecba8c1013f0b5ad827f574ed2e6e070b58e381d8c4d944a0b177159174",
+      "bytes": 16121
+    },
+    "tests.log": {
+      "sha256": "e73ea1f5cfeee854498f48d81fdff8650688ba48d44504ee93f160c28023d993",
+      "bytes": 2661
+    },
+    "tests.json": {
+      "sha256": "f6612ec91ac329004f5f4bb78d443d9ef3bfb5b79c87db5e2b005c1adf30071a",
+      "bytes": 305
+    },
+    "report.txt": {
+      "sha256": "d5ff4e2bb32c76b3bf6191fccd016a72a46136d8e7a2daee48372032157012f0",
+      "bytes": 10309
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z",
+  "audit_id": "5a397d8c1d94e2081c5d88b1b7dd8cf2941e383b9951c04d75baa8691e47b9ba",
+  "snapshot_sha256": "41ec9cb42513b2e945e37c9dba385f52e74aa242468ec712d4c17273af804195",
+  "recorded_at_utc": "2026-10-22T22:28:19.712267+00:00",
+  "structural_scan_complete": true,
+  "semantic_review_complete": false,
+  "semantic_review_by_jurist": false,
+  "read_only_source": true,
+  "source_entry_count": 30317,
+  "reviewed_contract_referrers": 8,
+  "actual_errors_established_in_those_eight": 0,
+  "findings_are_not_confirmed_legal_errors": true,
+  "next_refresh_after_additional_treatments": 1000,
+  "refresh_progress_observed_after_initial_scan": {
+    "drafted_articles": 13565,
+    "retained_unchanged": 14757,
+    "prior_drafts_reviewed": 2448
+  },
+  "refresh_rule": "New snapshot after at least 1000 additional first-pass/review treatments relative to observed counters or before final closure; publish only after complete validation. Guard limited semantic classifications against exact source/proposal/policy changes.",
+  "additional_semantic_reviews": [
+    {
+      "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/cvae-semantic-recheck-20261022T103000Z",
+      "report": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/cvae-semantic-recheck-20261022T103000Z/REPORT.md",
+      "findings_reviewed": 7,
+      "full_articles_read": 13,
+      "effective_inconsistencies_established": 0,
+      "classification_applies_to_new_snapshot": true,
+      "automatic_change": false,
+      "jurist_review": false,
+      "review_id": "34261b1a4432a463fcf9202fdc19efd68c9fad6f6a91d78870f86652ae96c7ca"
+    }
+  ],
+  "refresh_progress_basis": {
+    "method": "Conservative observation before snapshot capture; legacy counter field retained for continuity.",
+    "observed_at_utc": "2026-10-22T22:25:51.485189+00:00",
+    "status_updated_at_unix": 1792707398,
+    "evidence": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z/pre-capture-progress.json"
+  },
+  "frozen_snapshot_counts": {
+    "proposals_in_canonical_inventory": 13565,
+    "retained_unchanged_in_canonical_inventory": 14757,
+    "proposals_identical_to_source_body": 0
+  },
+  "as_of": "2026-10-18",
+  "validation": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z/validation.json",
+  "refresh_report": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z/REFRESH.md",
+  "semantic_review_inheritance": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z/semantic-review-inheritance.json",
+  "prior_audit": {
+    "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T182623Z",
+    "audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+    "snapshot_sha256": "62aef999d3a37f33852b9b0b08c8f7c8c5fba603cb1485fdbf07964ef5923989"
+  },
+  "prior_semantic_reviews_are_limited_and_guarded": true,
+  "semantic_reviews_requiring_new_review": [],
+  "refresh_validator_template": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/semantic-review-override-support-20261022/validate_refresh.py.template",
+  "refresh_validator_template_sha256": "e92534a4bfce8eb0d9f62cca07c84a1a6f7d12c815b638ef27f405fb08cd7b01",
+  "semantic_review_overrides": {
+    "CVAE": {
+      "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/cvae-semantic-recheck-20261022T103000Z",
+      "manifest_sha256": "9772b0e19d495979d553edf9d0c776ba5d321172b0d653816025a6133a4cfad5",
+      "review_id": "34261b1a4432a463fcf9202fdc19efd68c9fad6f6a91d78870f86652ae96c7ca",
+      "guarded_audit_id": "ef899f0423753d7723a2720b71b45cbb83016f42874f05eedec7422303f1a837",
+      "scope": "Limited fresh review; next snapshot must recheck every article and policy guard.",
+      "last_checked_audit_id": "5a397d8c1d94e2081c5d88b1b7dd8cf2941e383b9951c04d75baa8691e47b9ba",
+      "classification_applies_to_last_checked_snapshot": true
+    },
+    "L1242-2": {
+      "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/l1242-semantic-recheck-20261022T183007Z",
+      "manifest_sha256": "cd6735d5e3785bbb7f842a185ce6d2eac00c8640fa00059ce6d5abad30ab1090",
+      "review_id": "769f678268943499eb4c8bdda4041b6beb5fbf6035155917cc07e682e9b13125",
+      "guarded_audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+      "scope": "Fresh limited review of8references and15whole articles; each future snapshot must recheck all article and policy guards.",
+      "last_checked_audit_id": "5a397d8c1d94e2081c5d88b1b7dd8cf2941e383b9951c04d75baa8691e47b9ba",
+      "classification_applies_to_last_checked_snapshot": true
+    }
+  },
+  "additional_semantic_review_history": [
+    {
+      "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022/fiscal-CVAE-semantic-review-20261022",
+      "report": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022/fiscal-CVAE-semantic-review-20261022/REPORT.md",
+      "findings_reviewed": 7,
+      "full_articles_read": 13,
+      "effective_inconsistencies_established": 0,
+      "classification_applies_to_new_snapshot": false,
+      "automatic_change": false,
+      "jurist_review": false
+    }
+  ],
+  "semantic_review_origin_anchors": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z/semantic-origin-anchor-check.json"
+}

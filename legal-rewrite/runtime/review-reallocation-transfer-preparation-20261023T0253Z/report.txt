@@ -1,0 +1,156 @@
+Contrôleur de transfert préparé hors ligne — NON PRÊT POUR ACTIVATION
+Dossier : runtime/review-reallocation-transfer-preparation-20261023T0253Z
+Candidat inchangé : runtime/review-reallocation-preflight-20261022T223009Z
+SHA256 du manifeste scellé : f8cbed8270405812119485da55d2faa15d52bbd6b98b9d7539d2b506e202de68
+
+État et portée
+
+Aucun appel du contrôleur ou de son préflight contre la production. Aucun modèle,
+CLI réseau, coordinateur, signal ou worker réel lancé. Aucun contrôle, code,
+politique, catalogue, source, DB, fichier de lot, pointeur ou processus actif
+modifié. Le dossier scellé n'a pas été modifié. Les seules écritures sont les
+artefacts de ce dossier et des fixtures temporaires supprimées après les tests.
+
+La situation fournie par le parent (un PID3122, effectif7=new6/review1,
+43 nouveaux lots en file et6 réservés,1707 premières passes restantes) est
+INÉLIGIBLE. Ces nombres ne sont pas une nouvelle collecte par cet agent.
+
+NativeBackend.reconciliation_precondition lève systématiquement une exception
+NOT READY avant collecte de processus, création d'état de transfert ou mutation
+de production. Le collecteur/vérificateur courant de réconciliation parent n'est
+pas implémenté. Aucun champ JSON, certificat fourni par l'utilisateur ou drapeau
+ne peut lever ce blocage ; il faudra du code revu et de nouveaux tests. Le CLI
+exige en plus --activate, mais ce drapeau ne contourne pas le verrou du backend.
+Les tests ne fournissent qu'un backend de fixtures, absent du chemin CLI normal.
+
+Mécanisme préparé dans transfer_controller.py
+
+- Vérification du hash exact du manifeste et des SIX modules du candidat.
+  Aucun remplacement du candidat, aucune modification CCH/CSS ou métadonnée.
+- Collecteur d'éligibilité lisant réellement fichiers et inventaire local des
+  processus lorsqu'il sera autorisé : PID et début de processus exacts, commandes,
+  PGID, file du même PID, compteurs entiers connus, revue des réservations.
+  New non vide, new réservé, worker nouveau, orphelin ou état ambigu bloquent.
+- Run-dir borné à ce dossier de préparation/runs ; cibles de mutation limitées
+  aux six modules, plan, contrôle effectif et pause existante. Locks non réguliers
+  et symlinks refusés. Les octets originaux et chaque intention sont journalisés.
+- supervisor.lock unique et runtime/supervision/disabled, le marqueur réellement
+  respecté par l'ancien superviseur. Toute pause préexistante est refusée ; une
+  pause remplacée/intervenante n'est jamais écrasée ni supprimée.
+- Fermeture des seules admissions review sous manual-agent-slots.lock,
+  puis attente naturelle sans signal, sans verrou rédacteur/coordinateur/manuel
+  tenu pendant l'attente. Le superviseur reste exclu et la pause durable survit
+  à une interruption du contrôleur.
+- L'ancienne sortie doit provenir du PID drainé, avec résultat naturel réussi.
+  Un reçu historique d'un autre PID reste une absence de preuve ; il est attendu,
+  pas interprété comme une sortie du PID courant. Les groupes de workers suivis
+  ne peuvent subsister après disparition du coordinateur.
+- Groupe des six fichiers journalisé, avec états before/after propriétaires,
+  reprise d'une installation interrompue et rollback d'une erreur ordinaire
+  uniquement si les octets correspondent encore. Aucun import applicatif pendant
+  le remplacement du groupe. La pause durable reste présente si incomplet.
+- Plan8/rôles6+2 conservé ; seuls continuation_mode et review_tail_capacity sont
+  ajoutés. Effectif restauré7/new6/review1 et review_tail_limit=7 explicite ; aucun
+  changement du modèle/effort. La vraie politique modèle est model-policy.json,
+  pas execution-plan.json, qui n'existe pas.
+- Une seule tentative de launch, via le mécanisme supervise_exhaustive.launch
+  installé. LAUNCH_INTENT est durable avant l'appel. Un reçu présent permet
+  l'adoption du PID unique sans reprendre le verrou que ce nouveau coordinateur
+  détient ; un résultat ambigu ne provoque jamais un second lancement.
+- Timeout avant installation : restauration des contrôles possédés exactement,
+  contrôle HOT d'abord, puis pause. Si un contrôle est intervenu, rien ne l'écrase
+  et la pause n'est pas retirée prématurément. Les actifs ne sont jamais signalés.
+
+Atomicité et reprise : limites exactes
+
+Le remplacement de six fichiers directs n'est pas une opération POSIX atomique.
+Le mécanisme est une transaction logique, sous exclusions et pause persistante,
+avec journal fsync avant chaque écriture et vérification du groupe avant launch.
+Une interruption peut laisser un mélange visible sur disque ; la pause durable
+empêche le superviseur de lancer dessus. Une reprise doit garder cette pause,
+examiner les octets before/after et achever ou annuler le groupe sous gardes.
+Il ne faut jamais retirer manuellement disabled au seul motif que le contrôleur
+a disparu. Toute intervention parent doit préserver l'état et les avant-images.
+
+Les quatre problèmes de reprise signalés par le parent sont corrigés et testés :
+1. LAUNCH_INTENT/LAUNCHED avec reçu : adoption sans réacquérir coordinator.lock
+   ni exiger l'ancienne sortie lorsque le nouveau PID existe déjà.
+2. Interruption au milieu du groupe : le journal reconnaît chaque before/after
+   appartenant au transfert ; les fichiers candidats déjà écrits ne sont pas
+   confondus avec un changement externe. Erreur ordinaire : rollback exact.
+3. Intention de configuration HOT distincte (configured_after) : les octets
+   encore pausés et les octets déjà configurés sont tous deux reconnus.
+4. Pause préexistante/intervenante refusée ; run-dir et locks bornés/non symlink.
+
+Cela ne certifie pas à lui seul toute la reprise en production. Restent BLOQUANTS :
+
+A. Collecteur réel et vérificateur de réconciliation courante absents. Le futur
+   outil doit rapprocher sous verrous DB, propriétaires et lignes complètes de
+   lots, registry, intentions/complétions, sources entières, NOTA, documents et
+   versions, bénéfices, impacts, cibles et dernières before-images. Il ne doit
+   jamais fabriquer registration_guards_clear à partir d'un simple comptage.
+   Il ne doit enregistrer ou réparer aucun article dans ce transfert.
+
+B. Revalidation de cette réconciliation après une interruption entre RECONCILED,
+   le groupe installé et CONFIGURED à concevoir/tester. Le prototype réutilise
+   encore l'empreinte du premier reçu dans ces phases ; une intervention parent
+   sur la DB ou les lots entre deux exécutions doit imposer une nouvelle collecte
+   gardée et un rapprochement explicite avant toute installation/continuation.
+
+C. La reprise tardive LAUNCH_INTENT/LAUNCHED vérifie reçu, PID unique, commande et
+   marqueur propriétaire, mais n'a pas encore de revalidation complète des pins
+   code/politiques et d'attestation native du nouveau modèle/effort/sessions.
+   Ces contrôles doivent être ajoutés et testés avant de retirer le verrou dur.
+
+D. La fraîcheur de admission-status.json est refusée au-delà de120secondes.
+   C'est conservateur mais peut empêcher le point sûr durant une longue review
+   valide, car state_changed ne réécrit ce fichier que si l'état change.
+   Le rapprochement alternatif frais (file immuable du PID + résultats métriques
+   new terminaux + zéro worker/réservation new + identités enregistrées ou
+   différées) n'est PAS implémenté. Ne jamais rafraîchir artificiellement l'heure.
+
+E. Le rattachement temporel fort du reçu de sortie au début exact du processus,
+   au-delà du PID et des champs de succès, reste à compléter dans le collecteur
+   final pour couvrir une réutilisation historique de PID. Le reçu historique
+   courant90405 ne vaut en aucun cas preuve de sortie de3122.
+
+Travail juridique restant et continuité
+
+Des certificats de renvois périmés précisément inventoriés par reference_queue
+peuvent rester du travail EN ATTENTE de la convergence normale. Ils ne doivent
+être déclarés ni frais ni résolus ; une contradiction d'intégrité DB/lot/source/
+propriétaire ou une ambiguïté non classée bloque. Les enregistrements futurs
+conservent toutes les gardes actuelles de sources, empreintes, cibles complètes,
+bénéfices et impacts. Le transfert n'élargit aucune file.
+
+Le manifeste historique des secondes passes ne démontre pas leur couverture
+actuelle exhaustive. Une nouvelle phase de couverture avant clôture reste
+nécessaire, distincte de ce transfert et de ses compteurs.
+
+Le blocage de cette installation des six modules ne doit pas laisser les différés
+oubliés pendant toutes les relectures : le runner actif reconstruit déjà ses files
+depuis les identités absentes de drafts après register(). Au vrai point sûr,
+un drain naturel coordonné puis une reprise du MÊME code sous supervision unique
+peut récupérer les différés encore ouverts, avec restauration effective7/6+1
+après adoption du nouveau PID. Aucune branche de ce type n'est ajoutée ici et
+aucun appel actif n'est effectué. La réallocation0new/7reviews exige le candidat
+scellé et une activation ultérieure réellement sécurisée.
+
+Tests et remise
+
+15 tests isolés,0échec,0erreur ; durée observée0,445seconde. Ils utilisent de
+minuscules DB, fichiers et locks temporaires et des identités de processus
+synthétiques. Aucun processus enfant, CLI ou modèle n'est lancé, y compris
+dans la fixture de launch. Le rapprochement fixture DB/lot/registry est réel,
+mais ne constitue pas le collecteur juridique de production manquant.
+
+Les cas couvrent refus queue43/newréservés6/inconnus/PID/fraîcheur, verrou dur
+avant toute collecte native, pause préexistante, symlinks, drain sans writerlock,
+timeout et non-écrasement, intégrité fixture contradictoire, installation exacte
+des six modules, interruptions aux trois fenêtres critiques, reprise/adoption,
+résultat de launch ambigu sans doublon et changement externe de code/pause.
+
+Le paquet est figé pour revue parent et publication éventuelle d'un pointeur
+NON PRÊT. Il n'existe aucune exécution pendante ni activation effectuée. Aucun
+pointeur n'a été écrit par cet agent. Le parent reste seul propriétaire de toute
+future activation ou de la voie de continuité avec le code actuel.
