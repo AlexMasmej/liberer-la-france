@@ -4,239 +4,1138 @@
     "source_id": "LEGIARTI000006300735",
     "source_sha256": "9e37c374783c6073dceba1431beecea59a71335b79b84379269900895a055cc1",
     "number": "54-0 BW",
-    "proposed_xml": "<p>Seuls les syndicats viticoles et les groupements professionnels peuvent être habilités à répartir les capsules collectives représentatives des droits destinées aux récoltants. Cette habilitation est subordonnée à l'agrément du directeur régional des douanes et droits indirects territorialement compétent.</p>\n<p>Les personnes habilitées à détenir des capsules représentatives de droits sont comptables des droits représentés par les marques fiscales qu'elles détiennent. Elles doivent fournir un cautionnement garantissant le paiement des droits correspondant aux capsules détenues ainsi que des droits sur les capsules expédiées aux récoltants sous le couvert du document mentionné au I de l'article 302 M du code général des impôts.</p>\n<p>Le directeur régional des douanes et droits indirects peut autoriser une personne habilitée à percevoir le droit de circulation lorsqu'elle répartit les capsules à ses seuls adhérents. La personne habilitée reverse ces droits chaque mois à la recette des douanes et droits indirects dont elle dépend.</p>\n<p>Les personnes habilitées doivent tenir une comptabilité matières comportant les indications suivantes :</p>\n<p>a) En entrée, le nombre de capsules reçues par catégorie, avec les références au document mentionné au I de l'article 302 M du code général des impôts. Les catégories sont distinguées notamment selon le volume net exprimé en centilitres, la couleur, le caractère tranquille ou mousseux pour les vins et, le cas échéant, le titre alcoométrique volumique ;</p>\n<p>b) En sortie, le nombre de capsules expédiées ou livrées, par destinataire et par catégorie, avec les références au document mentionné, selon le cas, au I ou au II de l'article 302 M du code général des impôts.</p>\n<p>Les personnes habilitées tiennent cette comptabilité matières et les capsules qu'elles détiennent à la disposition des agents des douanes et droits indirects pour leur contrôle.</p>\n<p>Chaque mois, la personne habilitée établit la balance des entrées et des sorties de la comptabilité matières. Elle la transmet au service des douanes et droits indirects dont elle dépend au plus tard le cinquième jour du mois suivant.</p>",
-    "reason": "Réécriture à droit constant : les organismes admissibles, l'autorité d'agrément, le cautionnement, la perception et le reversement des droits ainsi que les obligations de comptabilité et de contrôle sont exprimés avec un sujet explicite. Les huit alinéas utiles et les lettres a) et b) sont conservés. Aucune réforme de fond de policy.json ne vise ce régime.",
-    "review_notes": "Le cinquième jour du mois suivant, le reversement mensuel et la limitation de la perception aux seuls adhérents sont conservés. Le renvoi à l'article 302 M, I et II, est maintenu ; cet article n'a pas été retrouvé dans le fichier public impots.json fourni : son actualisation nécessite un contrôle de coordination, sans substitution inventée. Les points de suspension de la liste des catégories sont rendus par « notamment », afin de conserver son caractère ouvert.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>La répartition des capsules collectives représentatives des droits destinées aux récoltants ne peut être réalisée que par les personnes habilitées après agrément du directeur régional des douanes et droits indirects territorialement compétent. Ne peuvent être habilités que les syndicats viticoles ou les groupements professionnels.</p><p>Les personnes habilitées à détenir des capsules représentatives de droits sont comptables des droits représentés par les marques fiscales détenues. Elles fournissent un cautionnement garantissant le paiement des droits correspondant aux capsules détenues ainsi qu'aux droits sur les capsules expédiées aux récoltants sous le couvert du document d'accompagnement requis par la réglementation applicable à leur mouvement.</p><p>Une personne habilitée peut percevoir le droit de circulation lors de la répartition des capsules à ses seuls adhérents, sans autorisation supplémentaire du directeur régional des douanes et droits indirects. Ces droits sont reversés mensuellement à la recette des douanes et droits indirects dont dépend la personne habilitée.</p><p>Ces personnes doivent tenir une comptabilité matières dans laquelle sont repris :</p><p>a) En entrée, avec les références au document d'accompagnement requis par la réglementation applicable au mouvement, le nombre de capsules reçues, par catégorie (volume net exprimé en centilitres, couleur, pour les vins, vin tranquille ou vin mousseux, et, le cas échéant, titre alcoométrique volumique...) ;</p><p>b) En sortie, par destinataire et par catégorie, le nombre de capsules expédiées ou livrées, avec les références au document d'accompagnement requis par la réglementation applicable au mouvement.</p><p>Cette comptabilité matières ainsi que les capsules détenues sont tenues à la disposition des agents des douanes et droits indirects à fin de contrôle.</p><p>La personne habilitée effectue mensuellement la balance des entrées et sorties de la comptabilité matières. Cette balance est tenue à la disposition des agents des douanes et droits indirects ; aucune transmission mensuelle systématique n'est exigée.</p><p>La dispense d'autorisation supplémentaire et la suppression de la transmission mensuelle s'appliquent dès l'entrée en vigueur de la réforme, y compris aux personnes déjà habilitées et aux balances de périodes antérieures non encore transmises. Les droits dus, le reversement mensuel, les cautionnements, les documents déjà établis et les pouvoirs de contrôle demeurent régis par les règles qui leur sont applicables.</p>",
+    "reason": "Réduction de fond : suppression de l'autorisation supplémentaire de perception auprès des adhérents et de l'envoi mensuel obligatoire de la balance au cinquième jour. L'agrément initial, la responsabilité fiscale, le cautionnement et la comptabilité restent nécessaires à la garde de marques fiscales. Les mentions, catégories et contrôles sont conservés. Les anciens renvois documentaires sont coordonnés sans imposer de document supplémentaire.",
+    "review_notes": "302 M absent du corpus impots.json : les références au I/II sont remplacées par les documents effectivement requis pour le mouvement, sans affirmer leur concordance avec un article précis du CIBS. Vérifier les textes nationaux et européens d'accompagnement avant adoption ; aucune obligation européenne n'est supprimée. Les huit alinéas et lettres a/b gardent leur place, puis une transition est ajoutée. 54-0 BV et BX restent opérants puisque l'agrément initial subsiste.",
+    "status": "rewrite_draft",
+    "benefit_review": "La commande collective et la faculté de perception pour les seuls adhérents sont maintenues pour l'avenir ; cette dernière est libérée du second accord. Aucun droit fiscal, exonération ou paiement déjà libératoire n'est remis en cause.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Autorisation administrative supplémentaire de percevoir le droit auprès des seuls adhérents.",
+      "Transmission systématique de la balance mensuelle au plus tard le cinquième jour du mois suivant."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réduction de fond : suppression de l'autorisation supplémentaire de perception auprès des adhérents et de l'envoi mensuel obligatoire de la balance au cinquième jour. L'agrément initial, la responsabilité fiscale, le cautionnement et la comptabilité restent nécessaires à la garde de marques fiscales. Les mentions, catégories et contrôles sont conservés. Les anciens renvois documentaires sont coordonnés sans imposer de document supplémentaire.",
+      "scope_limitations": "302 M absent du corpus impots.json : les références au I/II sont remplacées par les documents effectivement requis pour le mouvement, sans affirmer leur concordance avec un article précis du CIBS. Vérifier les textes nationaux et européens d'accompagnement avant adoption ; aucune obligation européenne n'est supprimée. Les huit alinéas et lettres a/b gardent leur place, puis une transition est ajoutée. 54-0 BV et BX restent opérants puisque l'agrément initial subsiste.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées par aucun dépôt, registre, taxe ou délai supplémentaire. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "authorization_removed",
+          "measure_id": "capsules-perception-sans-second-agrement",
+          "description": "Suppression du second accord pour percevoir les droits auprès des seuls adhérents.",
+          "before": "Autorisation discrétionnaire supplémentaire du directeur régional.",
+          "after": "Perception permise de plein droit à la personne déjà habilitée ; reversement mensuel maintenu.",
+          "unit": "legal_duty",
+          "affected_population": "Syndicats viticoles et groupements professionnels habilités.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; situations antérieures préservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément réservées gardent leur champ.",
+          "source_quote": "Une personne habilitée peut être autorisée par le directeur régional des douanes et droits indirects à percevoir le droit de circulation lors de la répartition des capsules à ses seuls adhérents.",
+          "proposed_quote": "Une personne habilitée peut percevoir le droit de circulation lors de la répartition des capsules à ses seuls adhérents, sans autorisation supplémentaire du directeur régional des douanes et droits indirects."
+        },
+        {
+          "kind": "obligation_removed",
+          "measure_id": "capsules-fin-envoi-balance-mensuelle",
+          "description": "Suppression de l’envoi automatique de la balance.",
+          "before": "Envoi chaque mois au plus tard le cinquième jour du mois suivant.",
+          "after": "Balance mensuelle conservée et accessible au contrôle, sans envoi périodique.",
+          "unit": "legal_duty",
+          "affected_population": "Personnes habilitées à répartir les capsules collectives.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; situations antérieures préservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément réservées gardent leur champ.",
+          "source_quote": "La personne habilitée effectue mensuellement la balance des entrées et sorties de la comptabilité matières et transmet ce document au service des douanes et droits indirects dont elle dépend au plus tard le cinquième jour du mois suivant.",
+          "proposed_quote": "Cette balance est tenue à la disposition des agents des douanes et droits indirects ; aucune transmission mensuelle systématique n'est exigée."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "9e37c374783c6073dceba1431beecea59a71335b79b84379269900895a055cc1",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "2028df0e90d906badb78bb358cf66dace78c3860166b9efb7454998476193888",
+      "assessment_sha256": "bafa40ab8f4feea27389280629ff983765d49732930b5366ed1b91bc99c258db",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "b5c01aa7be150aa6d34e68b9e0b25855979fdd17f9576f4e4ecd1e7ad59ed524"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300563",
     "source_sha256": "5844f33ac965cb6639b7ba8df07c52d0913d03ba09a03c0cacbd3504eac852fd",
     "number": "54-0 BX",
-    "proposed_xml": "<p>Les capsules mentionnées à l'article 54-0 BW doivent présenter les caractéristiques fixées par les articles 54-0 B à 54-0 E. Toutefois, le numéro d'agrément de la personne responsable de l'embouteillage est remplacé par le numéro attribué à la personne habilitée.</p>\n<p>Le récoltant doit apposer sur les bouteilles et récipients portant ces capsules des étiquettes indiquant obligatoirement ses nom et adresse.</p>",
-    "reason": "Réécriture à droit constant : l'exception relative au numéro d'agrément est isolée dans une phrase et l'obligation d'étiquetage est directement attribuée au récoltant. Les deux alinéas et tous les renvois sont conservés ; aucune réforme de fond n'est appliquée.",
-    "review_notes": "Les articles 54-0 B à 54-0 E du corpus public ont été lus pour vérifier les caractéristiques visées. Seul le numéro d'agrément est remplacé ; l'identification obligatoire du récoltant sur les étiquettes demeure distincte.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien intégral nécessaire de l'identification du responsable des capsules collectives et du récoltant. Le numéro de la personne habilitée remplace celui de l'embouteilleur : supprimer ce mécanisme ferait perdre la facilité collective. L'étiquette assure l'identification du récoltant lorsque le numéro désigne le groupement. Aucun doublon dispensable n'est démontré par la source.",
+    "review_notes": "Les quatre articles 54-0 B, C, D et E ont été lus intégralement : définition, mentions, couleurs et incompatibilités demeurent. 54-0 BW conserve l'agrément initial et son titulaire ; aucun renvoi orphelin n'est créé. Les alternatives de couleur et les qualifications de récoltant ne sont pas modifiées.",
+    "status": "retained_unchanged",
+    "benefit_review": "L'exception permettant d'employer le numéro du groupement habilité est préservée, y compris pour de nouveaux récoltants. L'identification nominative du récoltant protège la traçabilité sans imposer un agrément individuel supplémentaire dans cet article.",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral nécessaire de l'identification du responsable des capsules collectives et du récoltant. Le numéro de la personne habilitée remplace celui de l'embouteilleur : supprimer ce mécanisme ferait perdre la facilité collective. L'étiquette assure l'identification du récoltant lorsque le numéro désigne le groupement. Aucun doublon dispensable n'est démontré par la source.",
+      "scope_limitations": "Les quatre articles 54-0 B, C, D et E ont été lus intégralement : définition, mentions, couleurs et incompatibilités demeurent. 54-0 BW conserve l'agrément initial et son titulaire ; aucun renvoi orphelin n'est créé. Les alternatives de couleur et les qualifications de récoltant ne sont pas modifiées.",
+      "new_burdens_review": "Aucune charge nouvelle : identification et caractéristiques source intégralement conservées, sans création de numéro, registre ou étiquette supplémentaire.",
+      "effects": []
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "5844f33ac965cb6639b7ba8df07c52d0913d03ba09a03c0cacbd3504eac852fd",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "6aedbc97208aa603ee3521c834c5986b45f134cbabf0623442e4500c6160700b",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "0896238386a898144339b9294e951bcb1138ab632ecdb48e4404edc108d5b3b7"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006301437",
     "source_sha256": "19afdbd86a74d71c4dfe193491de0c3892beea62ee5c5f1c2871a93b2c3c50fc",
     "number": "54 C",
-    "proposed_xml": "<p>Lorsqu'un professionnel transporte, ou fait transporter pour son compte, des alcools et boissons alcooliques dans des bouteilles et récipients revêtus de capsules représentatives de droits, les produits doivent circuler sous le couvert d'un document commercial. Ce document comporte l'identité de l'expéditeur, le nom et l'adresse du destinataire, le numéro de référence et la date d'établissement du document, la nature et la désignation des produits transportés avec leur dénomination et, le cas échéant, leur appellation d'origine, les quantités et, selon le cas, le titre alcoométrique volumique acquis des boissons. Le document commercial doit être présenté aux agents des douanes à première réquisition.</p>\n<p>Le document commercial prévu au premier alinéa ne s'applique pas aux livraisons destinées à des personnes situées hors du territoire fiscal de la France. Ces livraisons doivent être effectuées sous le couvert des documents d'accompagnement mentionnés à l'article 302 M du code général des impôts.</p>",
-    "reason": "Réécriture à droit constant : le champ du transport professionnel est placé en tête et la longue phrase est divisée sans déplacer les mentions obligatoires hors du premier alinéa. L'exclusion territoriale et le régime documentaire correspondant restent au second alinéa. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Toutes les mentions documentaires, le titre alcoométrique volumique acquis « selon le cas », l'appellation d'origine « le cas échéant » et la présentation à première réquisition sont conservés. Le renvoi à l'article 302 M est maintenu, mais cet article n'a pas été retrouvé dans impots.json : coordination à contrôler sans créer de renvoi de remplacement.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Lorsque les alcools et boissons alcooliques sont transportés dans des bouteilles et récipients revêtus de capsules représentatives de droits, par des professionnels ou pour leur compte, les produits circulent sous couvert d'un document commercial comportant l'identité de l'expéditeur, le nom et l'adresse du destinataire, le numéro de référence et la date d'établissement du document, la nature et la désignation des produits transportés avec leur dénomination et, le cas échéant, leur appellation d'origine, les quantités et, selon le cas, le titre alcoométrique volumique acquis des boissons. Ce document commercial est présenté aux agents des douanes à première réquisition.</p><p>Le document commercial mentionné au premier alinéa n'est pas applicable pour les livraisons à destination des personnes situées hors du territoire fiscal de la France. Ces livraisons sont effectuées sous le couvert des documents d'accompagnement exigés par les dispositions nationales et de l'Union européenne qui leur sont applicables. Ces documents restent requis dans leur champ propre.</p><p>Cette coordination s'applique aux transports effectués à compter de l'entrée en vigueur de la réforme. Elle ne modifie ni les dispenses légalement applicables ni le régime des transports antérieurs.</p>",
+    "reason": "Coordination nécessaire du renvoi à 302 M, introuvable dans le corpus, par une réserve expresse des documents nationaux et européens applicables aux livraisons hors du territoire fiscal français. Le document commercial intérieur, ses mentions et sa présentation au contrôle restent entiers : ils permettent de rapprocher les marchandises du mouvement réel. Aucune réduction matérielle n'est revendiquée.",
+    "review_notes": "Le remplacement n'établit pas de concordance précise CGI/CIBS : celle-ci reste à vérifier avec les textes hors corpus. Il ne dispense ni des documents électroniques ni des formalités douanières effectivement exigés. Les champs transfrontaliers et intérieurs restent séparés, et aucune nouvelle liste documentaire n'est créée.",
+    "status": "rewrite_draft",
+    "benefit_review": "La faculté de circuler sous document commercial dans le champ du premier alinéa reste intégrale. Les dispenses légalement applicables sont expressément protégées pour les transports futurs ; aucune condition d'accès supplémentaire n'est ajoutée.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination nécessaire du renvoi à 302 M, introuvable dans le corpus, par une réserve expresse des documents nationaux et européens applicables aux livraisons hors du territoire fiscal français. Le document commercial intérieur, ses mentions et sa présentation au contrôle restent entiers : ils permettent de rapprocher les marchandises du mouvement réel. Aucune réduction matérielle n'est revendiquée.",
+      "scope_limitations": "Le remplacement n'établit pas de concordance précise CGI/CIBS : celle-ci reste à vérifier avec les textes hors corpus. Il ne dispense ni des documents électroniques ni des formalités douanières effectivement exigés. Les champs transfrontaliers et intérieurs restent séparés, et aucune nouvelle liste documentaire n'est créée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées par aucun dépôt, registre, taxe ou délai supplémentaire. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "accises-renvois-documents-mouvements",
+          "description": "Retrait du renvoi ancien non vérifiable, réserve des documents applicables.",
+          "before": "Renvoi à 302 M du CGI non retrouvé dans le corpus fourni.",
+          "after": "Documents légalement applicables dans leur champ national et européen ; contenu intérieur inchangé.",
+          "unit": "legal_duty",
+          "affected_population": "Professionnels transportant des boissons munies de capsules.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; situations antérieures préservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément réservées gardent leur champ.",
+          "source_quote": "Ces livraisons doivent être effectuées sous couvert des documents d'accompagnement mentionnés à l'article 302 M du code général des impôts.",
+          "proposed_quote": "Ces documents restent requis dans leur champ propre."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "19afdbd86a74d71c4dfe193491de0c3892beea62ee5c5f1c2871a93b2c3c50fc",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "c5c8a57c5edfede55c9667532c0b908665e97cc6a21823061f51336dab0ac2cc",
+      "assessment_sha256": "0065a9889c03fb5ad385c21e88cff6fbdf78cb5da5e56def9412841301b71b54",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "b759ca3f29b0dcb8dc53f84ff89d68edc8c6c3b25455a09359819ff7d493e614"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300741",
     "source_sha256": "c5f1127fcf4ed239c8512d7faac50036fd1194d85b0b4c747d206f54240549e0",
     "number": "54 bis",
-    "proposed_xml": "<p>Les cidres et poirés bénéficient des dispositions du 5° de l'article 458 du code général des impôts lorsqu'ils sont libérés des droits indirects et livrés en récipients portant de manière apparente le nom et l'adresse du fabricant ou de l'embouteilleur.</p>",
-    "reason": "Réécriture à droit constant : le bénéfice du régime est directement rattaché aux cidres et poirés et à ses deux conditions cumulatives. Le renvoi et l'unique alinéa utile sont conservés ; aucune réforme de fond n'est appliquée.",
-    "review_notes": "L'acquittement des droits indirects et la mention apparente du nom et de l'adresse du fabricant ou de l'embouteilleur restent requis. L'article 458 n'a pas été retrouvé dans le fichier public impots.json : le renvoi à son 5° est conservé et appelle un contrôle de coordination.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Les cidres et poirés libérés des droits indirects et livrés en récipients portant, de manière apparente, l'indication du nom et de l'adresse du fabricant ou de l'embouteilleur conservent le bénéfice des dispositions du 5° de l'article 458 du code général des impôts dans sa rédaction à laquelle renvoyait le présent article avant l'entrée en vigueur de la réforme. Ce bénéfice demeure ouvert aux livraisons futures remplissant ces conditions, dans le même champ matériel et territorial, sans nouvelle formalité.</p><p>Cette disposition ne rétablit aucune obligation supprimée et n'écarte pas les règles de l'Union européenne applicables aux mouvements transfrontaliers. Les droits et recours relatifs aux livraisons antérieures sont préservés.</p>",
+    "reason": "Coordination conservatoire du renvoi historique à 458, absent du corpus : rattachement à la rédaction antérieure visée, avec maintien exprès du bénéfice pour les livraisons futures. Les conditions source sont toutes reprises. Le contenu exact du 5° manquant interdit d'inventer une dispense générale de documents ou une suppression de droits.",
+    "review_notes": "Le texte de 458, 5°, n'a pas été retrouvé dans le corpus autorisé. Le renvoi est figé, non présenté comme une disposition actuelle vérifiée. Sa portée matérielle et territoriale doit être confrontée au texte historique et au CIBS avant adoption : coordination documentaire non achevée. Aucune réécriture de 458 ni conformité européenne affirmée. Pas d'effet chiffré ni de coupe matérielle comptée.",
+    "status": "rewrite_draft",
+    "benefit_review": "L'avantage auquel renvoie 458, 5°, est conservé avec ses limites historiques, les droits acquittés et l'identification apparente du fabricant ou de l'embouteilleur. Il reste ouvert aux futures livraisons éligibles ; son contenu précis n'est pas présumé connu en l'absence de la cible documentaire.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination conservatoire du renvoi historique à 458, absent du corpus : rattachement à la rédaction antérieure visée, avec maintien exprès du bénéfice pour les livraisons futures. Les conditions source sont toutes reprises. Le contenu exact du 5° manquant interdit d'inventer une dispense générale de documents ou une suppression de droits.",
+      "scope_limitations": "Le texte de 458, 5°, n'a pas été retrouvé dans le corpus autorisé. Le renvoi est figé, non présenté comme une disposition actuelle vérifiée. Sa portée matérielle et territoriale doit être confrontée au texte historique et au CIBS avant adoption : coordination documentaire non achevée. Aucune réécriture de 458 ni conformité européenne affirmée. Pas d'effet chiffré ni de coupe matérielle comptée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées par aucun dépôt, registre, taxe ou délai supplémentaire. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "cidres-poires-preservation-renvoi-historique",
+          "description": "Sécurisation temporelle du renvoi favorable sans extension présumée.",
+          "before": "Bénéfice renvoyant au 5° de 458, cible absente du corpus.",
+          "after": "Maintien pour les livraisons futures du même bénéfice historique, sous les mêmes conditions.",
+          "unit": "legal_duty",
+          "affected_population": "Fabricants et embouteilleurs de cidres et poirés libérés des droits.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; situations antérieures préservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément réservées gardent leur champ.",
+          "source_quote": "Bénéficient des dispositions du 5° de l'article 458 du code général des impôts",
+          "proposed_quote": "Ce bénéfice demeure ouvert aux livraisons futures remplissant ces conditions, dans le même champ matériel et territorial, sans nouvelle formalité."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "c5f1127fcf4ed239c8512d7faac50036fd1194d85b0b4c747d206f54240549e0",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "dc71f73f2bab99ba3573bec88e09389084b051893af7fffb0950ec270c6e801e",
+      "assessment_sha256": "59d4a49235b4d58e5aa7aec57c1084d0b3fb90871a71ea2f68e22451a9ca34ed",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "f5ec1b5e5b8f56d2a8bf28bf1707a50669802b0d1f812311d93d9da3246a326d"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300578",
     "source_sha256": "1799962a8310df3ba53b7273dab103baec63d74cf674ae394da85fc564b6a8bb",
     "number": "55 F",
-    "proposed_xml": "<p>Pour les vins doux naturels à appellation d'origine contrôlée, l'instance compétente ou les expéditeurs authentifient les mentions relatives à l'appellation d'origine figurant sur les documents d'accompagnement au vu d'une attestation établie par le comité interprofessionnel des vins doux naturels. Cette attestation constate que le produit a fait l'objet d'un agrément par l'Institut national de l'origine et de la qualité et précise, s'il y a lieu, les comptes d'âge.</p>",
-    "reason": "Réécriture à droit constant : l'auteur de l'authentification devient le sujet de la phrase et le contenu de l'attestation fait l'objet d'une seconde phrase, dans le même alinéa. Les deux auteurs possibles et les comptes d'âge conditionnels sont conservés. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Les erreurs rédactionnelles « instance compétence » et « au vue » sont corrigées en « instance compétente » et « au vu », sans changement de compétence. L'instance n'est pas identifiée plus précisément dans la source : aucune autorité nouvelle ne lui est substituée. L'agrément du produit par l'Institut national de l'origine et de la qualité est conservé.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>L'authentification par l'instance compétente ou par les expéditeurs des mentions relatives à l'appellation d'origine des vins doux naturels à appellation d'origine contrôlée figurant sur les documents d'accompagnement est effectuée au vu des documents constatant que le produit a fait l'objet d'un agrément par l'Institut national de l'origine et de la qualité et précisant, s'il y a lieu, les comptes d'âge. Une attestation distincte du comité interprofessionnel des vins doux naturels n'est pas exigée.</p><p>Cette suppression s'applique aux authentifications effectuées à compter de l'entrée en vigueur de la réforme, y compris pour les produits agréés antérieurement. Les attestations déjà établies demeurent utilisables. Les conditions de l'appellation, l'agrément du produit et les exigences européennes d'authentification restent applicables.</p>",
+    "reason": "Réduction de fond : retrait de l'attestation interprofessionnelle obligatoirement distincte qui ne faisait que constater l'agrément du produit et les comptes d'âge. Les documents prouvant directement ces éléments suffisent. L'authentification, ses deux auteurs possibles et l'agrément INAO demeurent ; ce n'est pas une suppression du contrôle des appellations.",
+    "review_notes": "Les erreurs source « instance compétence » et « au vue » sont corrigées explicitement. Aucun changement d'autorité ni nouvelle compétence d'agrément. Vérifier hors corpus les règles européennes des documents vitivinicoles et le régime actuel de certification INAO ; aucune dispense de ces obligations n'est affirmée. Les comptes d'âge restent requis seulement s'il y a lieu.",
+    "status": "rewrite_draft",
+    "benefit_review": "La reconnaissance et l'utilisation de l'appellation restent ouvertes aux futurs produits éligibles ; les attestations déjà obtenues sont encore utilisables. L'allègement concerne exclusivement l'intermédiation documentaire, pas les qualifications permettant un régime favorable.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Attestation distincte obligatoire du comité interprofessionnel constatant un agrément INAO déjà obtenu et les comptes d’âge."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réduction de fond : retrait de l'attestation interprofessionnelle obligatoirement distincte qui ne faisait que constater l'agrément du produit et les comptes d'âge. Les documents prouvant directement ces éléments suffisent. L'authentification, ses deux auteurs possibles et l'agrément INAO demeurent ; ce n'est pas une suppression du contrôle des appellations.",
+      "scope_limitations": "Les erreurs source « instance compétence » et « au vue » sont corrigées explicitement. Aucun changement d'autorité ni nouvelle compétence d'agrément. Vérifier hors corpus les règles européennes des documents vitivinicoles et le régime actuel de certification INAO ; aucune dispense de ces obligations n'est affirmée. Les comptes d'âge restent requis seulement s'il y a lieu.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées par aucun dépôt, registre, taxe ou délai supplémentaire. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "vdn-suppression-attestation-interprofessionnelle",
+          "description": "Suppression du justificatif interprofessionnel distinct obligatoire.",
+          "before": "Authentification obligatoirement au vu d’une attestation du comité.",
+          "after": "Preuve de l’agrément et des comptes d’âge, sans attestation distincte du comité.",
+          "unit": "legal_duty",
+          "affected_population": "Expéditeurs de vins doux naturels AOC et instance compétente.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; situations antérieures préservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément réservées gardent leur champ.",
+          "source_quote": "une attestation établie par le comité interprofessionnel des vins doux naturels",
+          "proposed_quote": "Une attestation distincte du comité interprofessionnel des vins doux naturels n'est pas exigée."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "1799962a8310df3ba53b7273dab103baec63d74cf674ae394da85fc564b6a8bb",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "630cc7e3ae5d485ccc102c1bed7e67cefb0782c21cbd027399fd2b24be813387",
+      "assessment_sha256": "5128809d5f364af375913cebbbd4869e5b273fb1e1692ec40827764280d22fe2",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e4c260b0c979a95c5ab10a57f8b5e785e7f597fcac85abcb6fef2665267f15da"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006301464",
     "source_sha256": "cbae241b8c9971bfc73e576c7511a44cf39e3c03a534a37da181db57a2bf394a",
     "number": "56 J bis",
-    "proposed_xml": "<p>Les professionnels qui font déterminer par les bureaux de garantie le titre des lingots, apprêts ou composants entrant dans leurs fabrications doivent acquitter la rémunération prévue à l'article 191 de l'annexe III au code général des impôts. Cette rémunération est fixée, par opération, à 38 euros pour l'or et le platine et à 15 euros pour l'argent.</p>\n<p>Les bureaux de douane perçoivent cette rémunération. Les recettes correspondantes sont comptabilisées aux produits divers du budget.</p>",
-    "reason": "Réécriture à droit constant : les professionnels débiteurs, la prestation rémunérée et les bureaux chargés du recouvrement sont explicités. Les tarifs par opération et l'imputation budgétaire sont conservés dans les deux alinéas. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Contrôle des montants : 38 euros pour l'or et le platine, 15 euros pour l'argent, par opération. Le renvoi à l'article 191 de l'annexe III a été vérifié dans le corpus public ; ce texte renvoie lui-même à l'article 56 J bis. Ces rémunérations ne sont pas modifiées par les orientations fiscales de policy.json.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Le présent article est abrogé pour les opérations de détermination du titre des lingots, apprêts ou composants entrant dans les fabrications des professionnels réalisées par les bureaux de garantie à compter de l'entrée en vigueur de la réforme. Aucune rémunération n'est due au titre de l'article 191 de l'annexe III au code général des impôts pour ces opérations ; la faculté de recourir aux bureaux de garantie pour déterminer le titre demeure ouverte.</p><p>Les rémunérations afférentes aux opérations réalisées antérieurement restent régies par les dispositions en vigueur à la date de leur réalisation, y compris leurs règles de perception et d'imputation budgétaire, les restitutions, prescriptions et recours. Aucun prélèvement de remplacement n'est institué et aucune restitution générale des rémunérations légalement dues pour les opérations antérieures n'est ouverte.</p>",
+    "reason": "Abrogation de fond de la rémunération par opération de détermination du titre : 38 euros pour l'or et le platine, 15 euros pour l'argent. Le service facultatif d'essai reste accessible ; le prélèvement accessoire n'est pas nécessaire à la valeur de la détermination. La perte de recettes et le coût de fonctionnement public subsistant ne sont pas chiffrés.",
+    "review_notes": "Annexe III 191 lue en entier : elle ouvre le recours facultatif au bureau et habilite le tarif. Sa seconde phrase et sa note de renvoi doivent être coordonnées pour retirer la rémunération des opérations nouvelles, sans supprimer le service. Pas de modification du corpus tiers. Les autres essais, poinçons et garanties légales sont distincts ; aucun financement de remplacement présumé.",
+    "status": "rewrite_draft",
+    "benefit_review": "L'accès facultatif à la détermination du titre reste ouvert aux professionnels futurs et devient gratuit dans ce seul champ. La source ne prévoit pas d'exonération particulière à supprimer ; les restitutions et recours des opérations anciennes restent protégés.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Abrogation de fond de la rémunération par opération de détermination du titre : 38 euros pour l'or et le platine, 15 euros pour l'argent. Le service facultatif d'essai reste accessible ; le prélèvement accessoire n'est pas nécessaire à la valeur de la détermination. La perte de recettes et le coût de fonctionnement public subsistant ne sont pas chiffrés.",
+      "scope_limitations": "Annexe III 191 lue en entier : elle ouvre le recours facultatif au bureau et habilite le tarif. Sa seconde phrase et sa note de renvoi doivent être coordonnées pour retirer la rémunération des opérations nouvelles, sans supprimer le service. Pas de modification du corpus tiers. Les autres essais, poinçons et garanties légales sont distincts ; aucun financement de remplacement présumé.",
+      "new_burdens_review": "Aucune charge juridique nouvelle pour les professionnels. Les bureaux continuent le service sans cette recette : financement public et solde net non établis, sans taxe ou déclaration de remplacement.",
+      "effects": [
+        {
+          "kind": "tax_removed",
+          "measure_id": "garantie-metaux-suppression-remuneration-essai",
+          "description": "Suppression du prélèvement tarifaire accessoire, sans supprimer le service facultatif.",
+          "before": "38 euros par opération pour or/platine, 15 euros par opération pour argent, sur détermination du titre des lingots, apprêts ou composants.",
+          "after": "Zéro rémunération pour ces mêmes opérations nouvelles ; anciens montants dus préservés.",
+          "unit": "euro",
+          "affected_population": "Professionnels recourant aux bureaux de garantie pour ces essais.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; situations antérieures préservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément réservées gardent leur champ.",
+          "source_quote": "est fixée, par opération, à 38 euros pour l'or et le platine et à 15 euros pour l'argent.",
+          "proposed_quote": "Aucune rémunération n'est due au titre de l'article 191 de l'annexe III au code général des impôts pour ces opérations"
+        }
+      ]
+    },
+    "change_type": "full_repeal",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Suppression pour les opérations futures des rémunérations de 38 euros et 15 euros dues pour la détermination du titre des lingots, apprêts et composants, et de leur perception au titre de ces opérations.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "cbae241b8c9971bfc73e576c7511a44cf39e3c03a534a37da181db57a2bf394a",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "450760329169c2483037f6eff48296a2ced7510e7931123160a5bf3d01ae4b6f",
+      "assessment_sha256": "0fb2bd1a42a2b4ab8cd0ab6efb44e7788e3656f255e40cb21ff92f7eb9863f92",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "340cf30386bdab90b1da1c4ff97e8cc21393da1b4799c4c391f1003f3944b76b"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000051829363",
     "source_sha256": "7e97663c68d0b8236ff6df985f559703b1ff207b92f6090ea7e4f681d32f9880",
     "number": "56 J quinquies",
-    "proposed_xml": "<p>Toute personne physique ou morale qui souhaite exercer la profession de commissionnaire en garantie prévue à l'article L. 834-3 du code de commerce doit présenter une demande écrite d'agrément. Elle dépose cette demande auprès de la direction interrégionale des douanes et droits indirects territorialement compétente ou, en Guadeloupe, en Guyane, à La Réunion et à Mayotte, de la direction régionale des douanes et droits indirects. La demande indique les nom et adresse du demandeur ainsi que le ou les bureaux de garantie auprès desquels il souhaite exercer son activité.</p>\n<p>La personne physique joint à sa demande un extrait du casier judiciaire ou, à défaut, toute pièce en tenant lieu, ainsi qu'un justificatif d'identité. La personne morale joint un extrait du registre du commerce et des sociétés.</p>",
-    "reason": "Réécriture à droit constant : la demande, son destinataire et son contenu sont présentés en phrases distinctes au premier alinéa ; les pièces sont séparées selon la qualité du demandeur au deuxième alinéa. Aucune réforme de fond n'est appliquée et aucune dispense documentaire n'est créée.",
-    "review_notes": "Le deuxième alinéa reste celui des justificatifs, car l'article 56 J septies le vise. Les quatre territoires, le choix d'un ou plusieurs bureaux et le caractère subsidiaire de la pièce tenant lieu d'extrait du casier judiciaire sont conservés. Le renvoi au code de commerce, hors du corpus fourni, est maintenu sans validation externe ni modification.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Les personnes physiques ou morales qui veulent exercer la profession de commissionnaire en garantie prévue à l'article L. 834-3 du code de commerce doivent déposer auprès de la direction interrégionale des douanes et droits indirects territorialement compétente ou, en Guadeloupe, en Guyane, à La Réunion et à Mayotte, de la direction régionale des douanes et droits indirects une demande écrite en vue de leur agrément indiquant leurs nom et adresse.</p><p>La demande est accompagnée, pour les personnes physiques, d'un justificatif d'identité. Aucun extrait de casier judiciaire, pièce en tenant lieu ou extrait du registre du commerce et des sociétés n'est exigé à l'appui de cette demande.</p><p>Ces dispositions s'appliquent aux demandes présentées à compter de l'entrée en vigueur de la réforme et, pour les pièces non encore remises, aux demandes en cours. Aucune déclaration ni attestation de remplacement n'est requise ; les conditions légales d'exercice et les contrôles légalement autorisés restent applicables.</p>",
+    "reason": "Réduction de fond du dossier d'agrément : suppression des extraits de casier judiciaire et du registre du commerce, et de la désignation des bureaux d'exercice. L'identité et la demande écrite restent nécessaires à la décision personnelle et à son contrôle. Le casier systématique n'est pas justifié par une condition précise dans la source ; les incapacités et contrôles légalement fondés ne sont pas abolis.",
+    "review_notes": "L834-3 commerce est hors corpus : agrément légal non supprimé ni champ réécrit. Les quatre territoires et les directions compétentes restent inchangés. Le deuxième alinéa demeure celui des pièces ; 56 J septies est coordonné. 56 J nonies lu : son renvoi suit la réduction des justificatifs, sans dispenser de signaler le changement des représentants. L'accès aux données judiciaires n'est ni créé ni élargi. Une part du gain RCS peut déjà relever du CRPA : aucun gain distinct chiffré pour cette seule pièce.",
+    "status": "rewrite_draft",
+    "benefit_review": "L'accès à l'agrément demeure ouvert aux personnes physiques et morales futures, sans durée ni nombre de bureaux limités par ce dossier. La faculté subsidiaire de fournir une pièce tenant lieu de casier devient sans objet avec la disparition de toute cette exigence, sans justificatif de remplacement.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Production systématique de l’extrait du casier judiciaire ou de toute pièce en tenant lieu dans le dossier.",
+      "Production obligatoire de l’extrait du registre du commerce et des sociétés pour les personnes morales.",
+      "Désignation des bureaux de garantie comme périmètre territorial de la demande d’agrément."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réduction de fond du dossier d'agrément : suppression des extraits de casier judiciaire et du registre du commerce, et de la désignation des bureaux d'exercice. L'identité et la demande écrite restent nécessaires à la décision personnelle et à son contrôle. Le casier systématique n'est pas justifié par une condition précise dans la source ; les incapacités et contrôles légalement fondés ne sont pas abolis.",
+      "scope_limitations": "L834-3 commerce est hors corpus : agrément légal non supprimé ni champ réécrit. Les quatre territoires et les directions compétentes restent inchangés. Le deuxième alinéa demeure celui des pièces ; 56 J septies est coordonné. 56 J nonies lu : son renvoi suit la réduction des justificatifs, sans dispenser de signaler le changement des représentants. L'accès aux données judiciaires n'est ni créé ni élargi. Une part du gain RCS peut déjà relever du CRPA : aucun gain distinct chiffré pour cette seule pièce.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées par aucun dépôt, registre, taxe ou délai supplémentaire. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "commissionnaires-garantie-dossier-allege",
+          "description": "Retrait des justificatifs systématiques de casier et d’immatriculation.",
+          "before": "Casier ou pièce équivalente et identité pour personne physique ; RCS pour personne morale.",
+          "after": "Justificatif d’identité des personnes physiques conservé ; aucun casier ni extrait RCS à joindre.",
+          "unit": "legal_duty",
+          "affected_population": "Demandeurs personnes physiques et morales.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; situations antérieures préservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément réservées gardent leur champ.",
+          "source_quote": "La demande est accompagnée, pour les personnes physiques, de l'extrait du casier judiciaire ou, à défaut, toute pièce en tenant lieu, et d'un justificatif d'identité, pour les personnes morales, de l'extrait du registre du commerce et des sociétés.",
+          "proposed_quote": "Aucun extrait de casier judiciaire, pièce en tenant lieu ou extrait du registre du commerce et des sociétés n'est exigé à l'appui de cette demande."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "7e97663c68d0b8236ff6df985f559703b1ff207b92f6090ea7e4f681d32f9880",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "38529d5946bc98d1cef6b075b9b8168169d8345029191895f99bd077a9bf1d35",
+      "assessment_sha256": "07dfb02a3bec1905dc40604463398bc2c06a4365c35c905993cce7ecefd181ba",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "9dbec2dbc98859ae00043287c38861ac0e280fc70d2155a6bc5b7d08d329648a"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000041546006",
     "source_sha256": "9ac0ac39869154fe0c84f21a7e7b8d993b73c02f0fbb1f10cc75d76f756a8433",
     "number": "56 J sexies",
-    "proposed_xml": "<p>La direction interrégionale ou régionale mentionnée à l'article 56 J quinquies accuse réception de la demande et ouvre sans délai une enquête.</p>\n<p>Cette direction peut demander la présentation de toute pièce complémentaire nécessaire à l'instruction. Elle statue dans les deux mois suivant la date de réception de la demande.</p>",
-    "reason": "Réécriture à droit constant : le pouvoir de demander des pièces et l'obligation de statuer sont formulés en deux phrases, en conservant les deux alinéas. L'enquête demeure immédiate et le délai part de la réception de la demande. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Le délai de deux mois n'est pas reporté à la réception d'un dossier complet. La note source maintient, conformément au II de l'article 11 de l'arrêté du 13 janvier 2020 (NOR : CPAP1931008A), l'instruction des demandes de décisions administratives individuelles présentées avant son entrée en vigueur selon les procédures applicables à la date de leur présentation. Cette transition reste applicable ; elle n'est pas une date d'entrée en vigueur d'une réforme future.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>La direction interrégionale ou régionale mentionnée à l'article 56 J quinquies accuse réception de la demande. Aucune enquête systématique n'est requise.</p><p>Cette direction peut se faire présenter les seules pièces complémentaires nécessaires à la vérification des conditions légales de l'agrément, sans rétablir les pièces supprimées par l'article 56 J quinquies ni une habilitation individuelle des représentants supprimée par l'article 56 J septies. Elle statue dans le délai de deux mois suivant la date de réception de la demande.</p><p>La suppression de l'enquête systématique s'applique dès l'entrée en vigueur de la réforme aux demandes nouvelles et aux demandes en cours, sans reprise du délai d'instruction. Les contrôles légalement autorisés et les recours demeurent. Pour le surplus, les demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 restent soumises aux procédures applicables à la date de leur présentation conformément au II de son article 11.</p>",
+    "reason": "Réduction de fond : suppression de l'enquête automatique pour chaque demande. Un examen nécessaire des conditions légales et le pouvoir limité de demander des pièces utiles subsistent, sous réserve des suppressions coordonnées. Le délai maximal de deux mois part toujours de la réception de la demande ; aucun dossier complet ou redémarrage du délai n'est ajouté.",
+    "review_notes": "La transition historique de l'arrêté du 13 janvier 2020 est conservée pour le surplus, la suppression nouvelle bénéficiant aussi aux dossiers en cours. Le maintien du contrôle ciblé ne crée pas un nouvel accès à des données. Les pièces retirées et les habilitations personnelles des représentants ne peuvent revenir par l'instruction.",
+    "status": "rewrite_draft",
+    "benefit_review": "L'accusé de réception et le délai protecteur de deux mois sont intégralement conservés pour les nouveaux demandeurs. Le retrait de l'enquête systématique ne réduit ni les droits de recours ni les garanties des demandes antérieures.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Enquête administrative obligatoire ouverte sans délai pour toute demande d’agrément de commissionnaire en garantie."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réduction de fond : suppression de l'enquête automatique pour chaque demande. Un examen nécessaire des conditions légales et le pouvoir limité de demander des pièces utiles subsistent, sous réserve des suppressions coordonnées. Le délai maximal de deux mois part toujours de la réception de la demande ; aucun dossier complet ou redémarrage du délai n'est ajouté.",
+      "scope_limitations": "La transition historique de l'arrêté du 13 janvier 2020 est conservée pour le surplus, la suppression nouvelle bénéficiant aussi aux dossiers en cours. Le maintien du contrôle ciblé ne crée pas un nouvel accès à des données. Les pièces retirées et les habilitations personnelles des représentants ne peuvent revenir par l'instruction.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées par aucun dépôt, registre, taxe ou délai supplémentaire. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "commissionnaires-garantie-fin-enquete-systematique",
+          "description": "Retrait de l’enquête obligatoire pour chaque dossier.",
+          "before": "Enquête systématique sans délai.",
+          "after": "Instruction des conditions légales, sans enquête automatique ; deux mois conservés.",
+          "unit": "legal_duty",
+          "affected_population": "Directions douanières instructrices et demandeurs d’agrément.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; situations antérieures préservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément réservées gardent leur champ.",
+          "source_quote": "accuse réception de la demande et procède sans délai à une enquête.",
+          "proposed_quote": "Aucune enquête systématique n'est requise."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "9ac0ac39869154fe0c84f21a7e7b8d993b73c02f0fbb1f10cc75d76f756a8433",
+      "source_notes_sha256": "0054b8fb3feaf9ae52a4689ad6bce6e73fd8272c9b3759d8227b743e36e83fde",
+      "proposed_sha256": "7ae458c0be111e1040ab11a691ba4154646300ecfddb10b2793bd10c8bb8e9ce",
+      "assessment_sha256": "8801b625621ee4836c12e2509df56ff6efc6b7ef99486c049925d61164b60890",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "0491d2151ec9c5d26dea6d34b571e9eaa3df01fbb5e9576a52c0d964439495fa"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300762",
     "source_sha256": "6c36a6d486e98cec227b1d1ed8ed029a24de8832e34de88ccb783fb324c00ccd",
     "number": "56 J septies",
-    "proposed_xml": "<p>L'agrément de commissionnaire en garantie est délivré à titre personnel.</p>\n<p>Une personne morale obtient l'agrément pour elle-même et pour les personnes physiques nommément désignées qui sont habilitées à la représenter. Ces personnes physiques doivent justifier qu'elles appartiennent à son personnel et présenter les documents mentionnés au deuxième alinéa de l'article 56 J quinquies qui concernent les personnes physiques.</p>",
-    "reason": "Réécriture à droit constant : la portée personnelle de l'agrément est maintenue et la représentation de la personne morale est décrite avec des sujets identifiés. Le rattachement des représentants au personnel et les justificatifs requis demeurent cumulatifs. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Le renvoi au deuxième alinéa de l'article 56 J quinquies reste opérant dans la proposition correspondante. La désignation nominative des représentants et leur appartenance au personnel ne sont pas remplacées par une habilitation générale.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>L'agrément en tant que commissionnaire en garantie est délivré à titre personnel.</p><p>Les personnes morales obtiennent cet agrément pour elles-mêmes. Les personnes physiques nommément désignées par elles peuvent les représenter en vertu de leur mandat, sans agrément individuel ni condition d'appartenance à leur personnel. Ces représentants présentent le justificatif d'identité prévu au deuxième alinéa de l'article 56 J quinquies.</p><p>Ces dispositions s'appliquent dès l'entrée en vigueur de la réforme, y compris aux personnes morales déjà agréées et aux désignations en cours. Les habilitations antérieures demeurent utilisables ; aucun renouvellement de l'agrément de la personne morale ni nouveau dépôt des pièces d'identité déjà fournies n'est exigé.</p>",
+    "reason": "Réduction de fond : l'agrément de la personne morale suffit, sans agrément personnel supplémentaire de chaque représentant ni appartenance obligatoire à son personnel. La désignation nominative, le mandat et l'identité permettent d'attribuer les actes et de contrôler la représentation. Le renvoi documentaire suit le deuxième alinéa allégé de 56 J quinquies.",
+    "review_notes": "56 J nonies maintient le signalement des changements de représentants ; 56 J decies, lu en entier, impose déjà des mandats écrits et la conservation des justificatifs trois ans. Le mandat n'est pas un nouveau registre. L834-3 commerce demeure à confronter pour assurer l'absence d'obstacle législatif à cette simplification ; son agrément de la profession n'est pas aboli par ce texte.",
+    "status": "rewrite_draft",
+    "benefit_review": "Les personnes morales gardent leur agrément propre et leurs habilitations antérieures ; l'ouverture aux mandataires non salariés vaut aussi pour les désignations futures. Aucun avantage de durée ou de validité acquis n'est retiré et aucune nouvelle demande d'agrément n'est imposée.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Agrément personnel supplémentaire des personnes physiques représentant une personne morale déjà agréée.",
+      "Condition et justification d’appartenance obligatoire des représentants au personnel de la personne morale."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réduction de fond : l'agrément de la personne morale suffit, sans agrément personnel supplémentaire de chaque représentant ni appartenance obligatoire à son personnel. La désignation nominative, le mandat et l'identité permettent d'attribuer les actes et de contrôler la représentation. Le renvoi documentaire suit le deuxième alinéa allégé de 56 J quinquies.",
+      "scope_limitations": "56 J nonies maintient le signalement des changements de représentants ; 56 J decies, lu en entier, impose déjà des mandats écrits et la conservation des justificatifs trois ans. Le mandat n'est pas un nouveau registre. L834-3 commerce demeure à confronter pour assurer l'absence d'obstacle législatif à cette simplification ; son agrément de la profession n'est pas aboli par ce texte.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées par aucun dépôt, registre, taxe ou délai supplémentaire. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "authorization_removed",
+          "measure_id": "commissionnaires-garantie-representation-libre",
+          "description": "Fin de l’agrément individuel et du lien salarial obligatoire des représentants.",
+          "before": "Agrément couvrant nominativement les représentants, obligatoirement membres du personnel.",
+          "after": "Mandataires nommément désignés, identifiés, sans agrément individuel ni emploi salarié obligatoire.",
+          "unit": "legal_duty",
+          "affected_population": "Personnes morales agréées et leurs représentants.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; situations antérieures préservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément réservées gardent leur champ.",
+          "source_quote": "Ces personnes physiques doivent justifier de leur appartenance au personnel de la personne morale",
+          "proposed_quote": "Les personnes physiques nommément désignées par elles peuvent les représenter en vertu de leur mandat, sans agrément individuel ni condition d'appartenance à leur personnel."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "6c36a6d486e98cec227b1d1ed8ed029a24de8832e34de88ccb783fb324c00ccd",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "55f575c207c70a85703e65432c436e4f75b17a7060026471d1247eeac4e4e6cc",
+      "assessment_sha256": "de9d75f784d78d605a689a849041763aaee02dd7a0b94c64d5425de16731a431",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "3d0e3152b133d64a3278d91e2abd189b3be56f74bb01b4da1abe539cf55bfa8a"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000041546002",
     "source_sha256": "5bf80220049eb9bdf8570c41faf8ea08e1fa411c29ea44947f37be6afbc6ba9c",
     "number": "56 J octies",
-    "proposed_xml": "<p>Le directeur interrégional ou régional territorialement compétent au sens de l'article 56 J quinquies accorde l'agrément par décision, pour une durée indéterminée et pour un ou plusieurs bureaux de garantie.</p>\n<p>Chaque décision d'agrément est notifiée à son bénéficiaire.</p>\n<p>Toute décision rejetant une demande d'agrément doit être motivée et notifiée au requérant.</p>",
-    "reason": "Réécriture à droit constant : l'autorité devient le sujet de la décision et les obligations de notification sont formulées directement. Les trois alinéas, la durée indéterminée et la possibilité de plusieurs bureaux sont conservés. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "L'obligation de motivation reste attachée au rejet, sans être étendue dans cet article à toute décision favorable. La note source réserve, au titre du II de l'article 11 de l'arrêté du 13 janvier 2020 (NOR : CPAP1931008A), les procédures applicables à la date de présentation des demandes de décisions administratives individuelles antérieures à l'entrée en vigueur de cet arrêté. Cette règle transitoire est conservée sans nouvelle date inventée.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>L'agrément est accordé par décision du directeur interrégional ou régional territorialement compétent au sens de l'article 56 J quinquies, pour une durée indéterminée. Il permet d'exercer auprès de tous les bureaux de garantie, sans autorisation supplémentaire.</p><p>Les décisions d'agrément sont notifiées aux bénéficiaires.</p><p>Les décisions rejetant les demandes d'agrément sont motivées et notifiées aux requérants.</p><p>L'absence de limitation à certains bureaux s'applique dès l'entrée en vigueur de la réforme aux agréments existants ainsi qu'aux demandes nouvelles et en cours, sans nouvelle demande ni renouvellement. Pour le surplus, les demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 restent instruites selon les procédures applicables à la date de leur présentation conformément au II de son article 11.</p>",
+    "reason": "Réduction de fond : suppression de la limitation de l'agrément à un ou plusieurs bureaux, alors que l'aptitude du titulaire n'est pas propre à un bureau. La portée générale vaut aussi pour les agréments existants, sans nouvelle demande. Durée indéterminée, décision de l'autorité compétente, notification et motivation des refus sont intégralement conservées.",
+    "review_notes": "La compétence de décision demeure celle de 56 J quinquies, y compris outre-mer ; elle ne restreint plus les bureaux d'exercice. Le dossier de quinquies est coordonné sans comptabiliser deux suppressions de la même limitation. Transition historique de 2020 conservée pour le surplus, sans faire de 2020 la date de la réforme future. Vérification législative hors corpus de L834-3 à prévoir.",
+    "status": "rewrite_draft",
+    "benefit_review": "La durée indéterminée et les garanties de notification et motivation restent ouvertes aux futurs demandeurs. Les anciens agréments deviennent utilisables auprès de tous les bureaux sans perdre leur validité ni devoir être renouvelés ; aucune échéance ou redevance nouvelle.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Limitation de la portée de l’agrément à un ou plusieurs bureaux de garantie désignés, nécessitant une extension pour les autres."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réduction de fond : suppression de la limitation de l'agrément à un ou plusieurs bureaux, alors que l'aptitude du titulaire n'est pas propre à un bureau. La portée générale vaut aussi pour les agréments existants, sans nouvelle demande. Durée indéterminée, décision de l'autorité compétente, notification et motivation des refus sont intégralement conservées.",
+      "scope_limitations": "La compétence de décision demeure celle de 56 J quinquies, y compris outre-mer ; elle ne restreint plus les bureaux d'exercice. Le dossier de quinquies est coordonné sans comptabiliser deux suppressions de la même limitation. Transition historique de 2020 conservée pour le surplus, sans faire de 2020 la date de la réforme future. Vérification législative hors corpus de L834-3 à prévoir.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées par aucun dépôt, registre, taxe ou délai supplémentaire. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "authorization_removed",
+          "measure_id": "commissionnaires-garantie-tous-bureaux",
+          "description": "Suppression des restrictions de bureaux attachées à l’agrément.",
+          "before": "Agrément à durée indéterminée pour un ou plusieurs bureaux.",
+          "after": "Même agrément à durée indéterminée utilisable auprès de tous les bureaux sans extension.",
+          "unit": "legal_duty",
+          "affected_population": "Tous commissionnaires agréés, actuels et futurs.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la réforme ; situations antérieures préservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément réservées gardent leur champ.",
+          "source_quote": "pour une durée indéterminée, pour un ou plusieurs bureaux de garantie.",
+          "proposed_quote": "Il permet d'exercer auprès de tous les bureaux de garantie, sans autorisation supplémentaire."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "5bf80220049eb9bdf8570c41faf8ea08e1fa411c29ea44947f37be6afbc6ba9c",
+      "source_notes_sha256": "0054b8fb3feaf9ae52a4689ad6bce6e73fd8272c9b3759d8227b743e36e83fde",
+      "proposed_sha256": "c45920fa1a67ad8f36429e8dc8cf06a0b394f7adef82d278834019a4c9d5a935",
+      "assessment_sha256": "f04e88f33f9511fbfdd2209592c3395ae45d351f74136229dbf88944da163999",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "f4f8c9a83f450841e908e12917b0870f46e05e7f05f1a6aba6acd8680b78ab9b"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000041545998",
     "source_sha256": "191caadcb7c48f9ff13605992f6e7385ee947d4f924a5d34d9fd437597ff6b79",
     "number": "56 J nonies",
-    "proposed_xml": "<p>Le commissionnaire en garantie doit informer l'autorité administrative désignée à l'article 56 J quinquies de tout changement affectant les justificatifs mentionnés à ce même article. Il doit également l'informer de tout changement relatif aux personnes physiques habilitées à représenter les personnes morales agréées.</p>",
-    "reason": "Réécriture à droit constant : les deux catégories de changements à déclarer sont distinguées par deux phrases au sein du même alinéa. Le destinataire reste l'autorité désignée à l'article 56 J quinquies. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Aucun délai chiffré ni nouvelle pièce n'est ajouté à l'obligation d'information. Selon la note source, le II de l'article 11 de l'arrêté du 13 janvier 2020 (NOR : CPAP1931008A) maintient les procédures applicables à la date de présentation pour les demandes de décisions administratives individuelles présentées avant son entrée en vigueur. Cette transition est conservée.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Le commissionnaire en garantie est tenu de porter à la connaissance de l'autorité administrative désignée à l'article 56 J quinquies tout changement affectant les justificatifs visés à l'article 56 J quinquies ainsi que tout changement relatif aux personnes physiques habilitées à représenter les personnes morales agréées. Les changements des mentions de l'extrait du registre du commerce et des sociétés sont dispensés de l'information prévue au présent article ; les changements relatifs aux personnes physiques habilitées à représenter les personnes morales agréées restent toutefois soumis à cette information.</p>\n<p>À compter de l’entrée en vigueur de la loi de réforme, cette dispense s'applique également aux changements antérieurs qui n'ont pas encore été signalés, sans notification de rattrapage. Elle ne modifie pas les obligations d'inscription au registre du commerce et des sociétés.</p>",
+    "status": "rewrite_draft",
+    "reason": "Réforme de fond : retrait de la notification spéciale des modifications de l'extrait RCS, tout en maintenant l'information relative aux représentants et aux autres justificatifs d'identité ou d'honorabilité. La première passe ne faisait que reformuler ces obligations. La suppression porte sur l'envoi spontané spécial, et non sur une simple reprise du droit au réemploi des pièces.",
+    "review_notes": "56 J quinquies a été lu : l'extrait RCS est le justificatif demandé aux personnes morales ; les autres justificatifs concernent les personnes physiques. L'inscription légale au RCS n'est pas supprimée ; les représentants restent identifiables par l'information maintenue. Aucun accès nouveau à des données n'est créé. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Notification spéciale des changements affectant les mentions de l'extrait RCS, sauf changements de représentants."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond : retrait de la notification spéciale des modifications de l'extrait RCS, tout en maintenant l'information relative aux représentants et aux autres justificatifs d'identité ou d'honorabilité. La première passe ne faisait que reformuler ces obligations. La suppression porte sur l'envoi spontané spécial, et non sur une simple reprise du droit au réemploi des pièces.",
+      "scope_limitations": "56 J quinquies a été lu : l'extrait RCS est le justificatif demandé aux personnes morales ; les autres justificatifs concernent les personnes physiques. L'inscription légale au RCS n'est pas supprimée ; les représentants restent identifiables par l'information maintenue. Aucun accès nouveau à des données n'est créé. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les contrôles et informations conservés étaient déjà exigés. Les formalités retirées ne sont remplacées par aucun dépôt, registre ou délai supplémentaire. Le solde global des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "garantie-fin-notification-changements-rcs",
+          "description": "Retrait de l'information spontanée spéciale sur les mentions RCS.",
+          "before": "Tout changement affectant l'extrait RCS doit être signalé par le commissionnaire.",
+          "after": "Aucune notification spéciale de ces mentions, sauf changement des représentants.",
+          "unit": "legal_duty",
+          "affected_population": "Commissionnaires en garantie personnes morales",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi de réforme, cette dispense s'applique également aux changements antérieurs qui n'ont pas encore été signalés, sans notification de rattrapage. Elle ne modifie pas les obligations d'inscription au registre du commerce et des sociétés.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les garanties distinctes expressément conservées restent applicables.",
+          "source_quote": "tout changement affectant les justificatifs visés à l'article 56 J quinquies",
+          "proposed_quote": "Les changements des mentions de l'extrait du registre du commerce et des sociétés sont dispensés de l'information prévue au présent article ; les changements relatifs aux personnes physiques habilitées à représenter les personnes morales agréées restent toutefois soumis à cette information."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "191caadcb7c48f9ff13605992f6e7385ee947d4f924a5d34d9fd437597ff6b79",
+      "source_notes_sha256": "0054b8fb3feaf9ae52a4689ad6bce6e73fd8272c9b3759d8227b743e36e83fde",
+      "proposed_sha256": "1c6dac0b954ddb61534ec084f0254d3b8a30c2f61936a0c3874cfcdf3ab4aa85",
+      "assessment_sha256": "a9369045d3378253a5a8929cc6852a448e95f5a3b2180875e1405f08f35eb563",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "5354b1d10ddaabd0e5f50b9df2f6bedb7da5bd29cd2778897a1e1b5f7a2b3d46"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000051829385",
     "source_sha256": "685cefee3adad4fd2247ca617d84b8d404df59172142f1b1d1d266c062c81351",
     "number": "56 J decies",
-    "proposed_xml": "<p>Le commissionnaire en garantie exerce son activité dans le cadre des mandats écrits qui lui sont confiés. Il doit les présenter à toute réquisition du service des douanes et droits indirects.</p>\n<p>Le commissionnaire en garantie doit conserver tous les documents justificatifs de ses activités pendant trois ans à compter de la date à laquelle il accomplit les formalités pour le compte des fabricants ou des marchands mentionnés à l'article L. 832-4 du code de commerce. Il tient ces documents à la disposition du service des douanes et droits indirects.</p>",
-    "reason": "Réécriture à droit constant : l'exercice sous mandat écrit et sa présentation sont séparés ; la conservation et la mise à disposition des pièces ont un débiteur explicite. Les deux alinéas et le point de départ du délai sont conservés. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Le délai reste de trois ans à compter de l'accomplissement des formalités, sans être remplacé par une durée courant à la clôture de l'exercice ou à la fin du mandat. Le renvoi à l'article L. 832-4 du code de commerce est conservé ; ce code n'est pas inclus dans le corpus public fourni.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "status": "retained_unchanged",
+    "classification": "retained_necessary",
+    "reason": "Maintien intégral après seconde passe : le mandat écrit prouve l'étendue du pouvoir d'agir pour autrui et les pièces conservées trois ans permettent de reconstituer les opérations de garantie et d'en contrôler la responsabilité. La présentation intervient sur réquisition, sans dépôt périodique ni registre supplémentaire. Aucun doublon intégral permettant de supprimer cette preuve n'est établi ; le brouillon stylistique est abandonné.",
+    "review_notes": "Conserver les deux alinéas, le délai de trois ans à compter de l'accomplissement des formalités et le renvoi L. 832-4 du code de commerce. Ce dernier code n'est pas fourni ; sa concordance actuelle n'est pas certifiée. Aucune réduction de prélèvement ou de délai n'est revendiquée.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral après seconde passe : le mandat écrit prouve l'étendue du pouvoir d'agir pour autrui et les pièces conservées trois ans permettent de reconstituer les opérations de garantie et d'en contrôler la responsabilité. La présentation intervient sur réquisition, sans dépôt périodique ni registre supplémentaire. Aucun doublon intégral permettant de supprimer cette preuve n'est établi ; le brouillon stylistique est abandonné.",
+      "scope_limitations": "Conserver les deux alinéas, le délai de trois ans à compter de l'accomplissement des formalités et le renvoi L. 832-4 du code de commerce. Ce dernier code n'est pas fourni ; sa concordance actuelle n'est pas certifiée. Aucune réduction de prélèvement ou de délai n'est revendiquée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : le texte source est maintenu intégralement, sans nouvelle pièce, périodicité ni condition.",
+      "effects": []
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "685cefee3adad4fd2247ca617d84b8d404df59172142f1b1d1d266c062c81351",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "9325153f2c60061dfe23923118e4a14c1f04273bfdd5a69fe00c4802e717a224",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "89e8c142622b1aaf39f4f5927f3932cdaacf0b2a3d6be44e73e69aa2bbeaaa49"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000041545994",
     "source_sha256": "73432a46bbe5fcebb30d173055fbfab94e1bcba8aa751a3e07f720212604f79d",
     "number": "56 J undecies",
-    "proposed_xml": "<p>En cas de manquement aux dispositions légales ou réglementaires applicables à la garantie des métaux précieux, le directeur interrégional ou régional compétent au sens de l'article 56 J quinquies retire l'agrément par une décision motivée.</p>\n<p>Ce directeur peut suspendre sans délai, à titre conservatoire, l'agrément d'une personne morale ou physique qui ne respecte pas ses obligations.</p>",
-    "reason": "Réécriture à droit constant : le directeur est directement désigné comme auteur du retrait et de la suspension. Le retrait en cas de manquement, sa motivation et le caractère facultatif, conservatoire et immédiat de la suspension sont maintenus. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Le pouvoir de suspension (« peut ») reste distinct du retrait prévu au premier alinéa. La note source conserve, en application du II de l'article 11 de l'arrêté du 13 janvier 2020 (NOR : CPAP1931008A), les procédures de la date de présentation pour les demandes de décisions administratives individuelles antérieures à son entrée en vigueur. Cette règle n'est ni supprimée ni convertie en date d'une réforme future.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "status": "retained_unchanged",
+    "classification": "retained_necessary",
+    "reason": "Maintien intégral : le retrait motivé et la suspension conservatoire répondent aux manquements à la garantie des métaux précieux, protégeant contre la fraude sur le titre. L'agrément des commissionnaires n'est pas supprimé dans ce lot ; la dispense ciblée de notification RCS de 56 J nonies ne peut plus fonder un manquement. Aucun rapport périodique ni pièce nouvelle n'est exigé ici. La reformulation antérieure n'apportait aucune réduction.",
+    "review_notes": "56 J quinquies a été lu pour la compétence. Le retrait et le pouvoir facultatif de suspension restent distincts ; les recours et garanties procédurales autonomes ne sont pas modifiés. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral : le retrait motivé et la suspension conservatoire répondent aux manquements à la garantie des métaux précieux, protégeant contre la fraude sur le titre. L'agrément des commissionnaires n'est pas supprimé dans ce lot ; la dispense ciblée de notification RCS de 56 J nonies ne peut plus fonder un manquement. Aucun rapport périodique ni pièce nouvelle n'est exigé ici. La reformulation antérieure n'apportait aucune réduction.",
+      "scope_limitations": "56 J quinquies a été lu pour la compétence. Le retrait et le pouvoir facultatif de suspension restent distincts ; les recours et garanties procédurales autonomes ne sont pas modifiés. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : le texte source est maintenu intégralement, sans nouvelle pièce, périodicité ni condition.",
+      "effects": []
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "73432a46bbe5fcebb30d173055fbfab94e1bcba8aa751a3e07f720212604f79d",
+      "source_notes_sha256": "0054b8fb3feaf9ae52a4689ad6bce6e73fd8272c9b3759d8227b743e36e83fde",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "cd7ddfaeb044f6c47476267d4e7eab2c5f8d3825def466a5553bc9b6160d7bc1",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "b0b92e7511c44ba2373dd21323ddb058ff82fdde5404aaf0c4d7e572fbe819a8"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000051829357",
     "source_sha256": "182431ba47470a5b04666b54659af8ad57b9b43afbcb2e377426c444a65fba74",
     "number": "56 J duodecies",
-    "proposed_xml": "<p>Les professionnels habilités par une convention doivent décrire, dans le cahier des charges prévu à l'article 275 bis C de l'annexe II au code général des impôts, les moyens et les méthodes de contrôle et d'essai qu'ils mettent en œuvre, ainsi que leurs méthodes d'attestation de la garantie du titre.</p>\n<p>Le professionnel doit demander l'autorisation de procéder au marquage au laser pour attester la garantie du titre au directeur interrégional des douanes et droits indirects territorialement compétent ou, en Guadeloupe, en Guyane, à La Réunion et à Mayotte, au directeur régional des douanes et droits indirects. L'autorisation est accordée après que des organismes agréés mentionnés à l'article 275 bis F de l'annexe II au code général des impôts ont vérifié la conformité du protocole de sécurité.</p>\n<p>La direction régionale des douanes et droits indirects de rattachement doit approuver le cahier des charges avant l'habilitation du professionnel.</p>\n<p>Le cahier des charges mentionné au premier alinéa comprend notamment :</p>\n<p>1° Une documentation relative à l'entreprise, qui fournit :</p>\n<p>a) Une description des structures juridiques et des locaux de l'entreprise ;</p>\n<p>b) Une description de l'organisation et des responsabilités de la direction de l'entreprise ;</p>\n<p>2° Une documentation relative aux obligations de contrôle du titre des ouvrages, qui indique :</p>\n<p>a) Les sources d'approvisionnement des alliages et des apprêts pour les fabricants, ainsi que les méthodes de contrôle des métaux précieux appliquées depuis leur acquisition jusqu'aux produits finis ;</p>\n<p>b) Les méthodes d'analyse interne des produits lorsque le contractant habilité dispose d'un laboratoire dans son entreprise, ou les méthodes d'analyse externe dans les autres cas ;</p>\n<p>c) La méthode de gestion des échantillons lors des essais des ouvrages ;</p>\n<p>d) La méthode de gestion des produits non conformes au titre légal prévu ;</p>\n<p>e) Les modalités de mise en œuvre des actions correctives concernant les ouvrages aux titres non légaux ;</p>\n<p>3° Une documentation relative aux méthodes utilisées pour attester la garantie du titre et, en cas de marquage au laser, à la mise en place du protocole de sécurité informatique, qui indique :</p>\n<p>a) Les modalités d'installation et de configuration du poste informatique ;</p>\n<p>b) Les mesures de sécurisation des accès au poste de pilotage de la machine à graver au laser ;</p>\n<p>c) Les modalités de sauvegarde et d'archivage des données informatiques du journal de suivi des ouvertures de session et des modifications des comptes d'utilisateurs ;</p>\n<p>4° Les obligations en matière de marquage des ouvrages, avec les précisions suivantes :</p>\n<p>a) Les modalités de conservation de la documentation relative à la délégation de poinçons ;</p>\n<p>b) En cas de marquage au laser, la description du dessin de l'empreinte du poinçon à apposer sur l'ouvrage en or, argent et platine et le respect des profondeurs de gravure ;</p>\n<p>c) Le respect des règles de marque ;</p>\n<p>d) La tenue d'une comptabilité matières indiquant le nombre et le poids des ouvrages essayés, détaillant les ouvrages marqués par type de métal, précisant la modalité d'attestation de la garantie du titre parmi celles prévues à l'article L. 833-3 du code de commerce et recensant les ouvrages reconnus aux titres non légaux.</p>",
-    "reason": "Réécriture à droit constant : le contenu du cahier des charges est exprimé par des verbes directs et la procédure d'autorisation distingue le demandeur et les organismes vérificateurs. Les vingt-deux alinéas utiles, les quatre rubriques et toutes leurs lettres sont maintenus, avec l'intégralité des exigences techniques et comptables. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Les renvois aux articles 275 bis C et 275 bis F de l'annexe II ont été vérifiés dans le corpus public ; le renvoi à L. 833-3 du code de commerce est maintenu sans contrôle externe. Écart préexistant conservé : le troisième alinéa confie l'approbation à la direction régionale de rattachement, tandis que le deuxième alinéa et l'article 275 bis C distinguent directeur interrégional et directeurs régionaux des quatre territoires cités. Une éventuelle harmonisation de compétence exige une coordination expresse ; elle n'est pas opérée silencieusement. Le 2° a) conserve les alliages, les apprêts pour les fabricants et le contrôle jusqu'aux produits finis.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Le cahier des charges prévu à l'article 275 bis C de l'annexe II au code général des impôts comprend la description des moyens et des méthodes de contrôles et essais ainsi que des méthodes d'attestation de la garantie du titre mis en œuvre par les professionnels habilités par une convention. </p>\n<p>L'autorisation de procéder au marquage au laser pour attester la garantie du titre doit être demandée au directeur interrégional des douanes et droits indirects territorialement compétent ou, en Guadeloupe, en Guyane, à La Réunion et à Mayotte, au directeur régional des douanes et droits indirects. Elle est accordée après vérification de la conformité du protocole de sécurité par des organismes agréés mentionnés à l'article 275 bis F de l'annexe II au code général des impôts. </p>\n<p>La direction régionale des douanes et droits indirects de rattachement examine le cahier des charges dans le cadre de l'habilitation du professionnel. La décision accordant l'habilitation du professionnel emporte approbation du cahier des charges, sans décision préalable distincte.</p>\n<p>Le cahier des charges mentionné au premier alinéa est composé notamment : </p>\n<p>1° D'une documentation, relative à l'entreprise, fournissant : </p>\n<p>a) La description de l'entreprise quant à ses structures juridiques et ses locaux ; </p>\n<p>b) La description de l'organisation et des responsabilités de la direction de l'entreprise ; </p>\n<p>2° D'une documentation relative aux obligations de contrôle du titre des ouvrages indiquant : </p>\n<p>a) Les sources d'approvisionnement des alliages, apprêts pour les fabricants, ainsi que les méthodes de contrôle des métaux précieux mises en œuvre depuis leur acquisition jusqu'aux produits finis ; </p>\n<p>b) Les méthodes d'analyses internes quand le contractant habilité a son laboratoire situé dans son entreprise ou externes des produits dans les autres cas ; </p>\n<p>c) La méthode de gestion des échantillons lors des essais des ouvrages ; </p>\n<p>d) La méthode de gestion des produits non conformes au titre légal prévu ; </p>\n<p>e) La mise en œuvre des actions correctives pour les ouvrages aux titres non légaux ; </p>\n<p>3° D'une documentation relative aux méthodes utilisées pour attester la garantie du titre et à la mise en place du protocole de sécurité informatique en cas de marquage au laser, indiquant : </p>\n<p>a) L'installation et la configuration du poste informatique ; </p>\n<p>b) La sécurisation des accès au poste de pilotage de la machine à graver au laser ; </p>\n<p>c) Les modalités de sauvegarde et d'archivage des données informatiques relatives au journal de suivi des ouvertures de session et des modifications des comptes d'utilisateurs ; </p>\n<p>4° De l'indication des obligations en matière de marquage des ouvrages, précisant : </p>\n<p>a) La conservation de la documentation relative à la délégation de poinçons ; </p>\n<p>b) En cas de marquage au laser, la description du dessin de l'empreinte du poinçon à apposer sur l'ouvrage en or, argent et platine et le respect des profondeurs de gravure ; </p>\n<p>c) Le respect des règles de marque ; </p>\n<p>d) La tenue d'une comptabilité matières mentionnant le nombre et le poids des ouvrages essayés, détaillant les ouvrages marqués par type de métal, précisant la modalité d'attestation de la garantie du titre parmi celles prévues à l'article L. 833-3 du code de commerce et recensant les ouvrages reconnus aux titres non légaux.</p>\n<p>À compter de l’entrée en vigueur de la loi de réforme, ces dispositions s'appliquent aux demandes en cours et nouvelles, sans nouveau dépôt ni reprise des délais d'instruction. Les habilitations, agréments et approbations déjà accordés demeurent valables.</p>",
+    "status": "rewrite_draft",
+    "reason": "Réforme de fond limitée à la fusion de l'approbation préalable du cahier des charges avec la décision d'habilitation ou d'agrément. La première passe conservait deux étapes administratives. L'examen technique reste nécessaire pour garantir le titre des ouvrages ; une décision préalable distincte n'apporte pas de contrôle technique supplémentaire démontré. Aucun autre contenu documentaire n'est retranché.",
+    "review_notes": "Les articles 275 bis C, 275 bis F et 275 ter G de l'annexe II ont été lus ; l'autorisation laser prévue par les textes supérieurs demeure, ainsi que sa vérification technique. Les quatre rubriques, toutes leurs lettres et les exigences de sécurité, essais, correction et comptabilité matières sont maintenues intégralement. Le renvoi L. 833-3 du code de commerce reste à vérifier hors corpus. L'écart préexistant entre direction régionale au troisième alinéa et autorités interrégionales/régionales au deuxième et dans 275 bis C est signalé ; la réforme ne redistribue pas les compétences.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Décision distincte d'approbation du cahier des charges préalablement à l'habilitation ou à l'agrément."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond limitée à la fusion de l'approbation préalable du cahier des charges avec la décision d'habilitation ou d'agrément. La première passe conservait deux étapes administratives. L'examen technique reste nécessaire pour garantir le titre des ouvrages ; une décision préalable distincte n'apporte pas de contrôle technique supplémentaire démontré. Aucun autre contenu documentaire n'est retranché.",
+      "scope_limitations": "Les articles 275 bis C, 275 bis F et 275 ter G de l'annexe II ont été lus ; l'autorisation laser prévue par les textes supérieurs demeure, ainsi que sa vérification technique. Les quatre rubriques, toutes leurs lettres et les exigences de sécurité, essais, correction et comptabilité matières sont maintenues intégralement. Le renvoi L. 833-3 du code de commerce reste à vérifier hors corpus. L'écart préexistant entre direction régionale au troisième alinéa et autorités interrégionales/régionales au deuxième et dans 275 bis C est signalé ; la réforme ne redistribue pas les compétences.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les contrôles et informations conservés étaient déjà exigés. Les formalités retirées ne sont remplacées par aucun dépôt, registre ou délai supplémentaire. Le solde global des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_merged",
+          "measure_id": "garantie-approbation-cahier-decision-unique",
+          "description": "Fusion de l'approbation du cahier des charges avec la décision principale.",
+          "before": "Approbation du cahier des charges préalable à la décision principale.",
+          "after": "Une décision principale emporte approbation après le même examen technique.",
+          "unit": "legal_duty",
+          "affected_population": "Professionnels habilités",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi de réforme, ces dispositions s'appliquent aux demandes en cours et nouvelles, sans nouveau dépôt ni reprise des délais d'instruction. Les habilitations, agréments et approbations déjà accordés demeurent valables.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les garanties distinctes expressément conservées restent applicables.",
+          "source_quote": "La direction régionale des douanes et droits indirects de rattachement approuve le cahier des charges préalablement à l'habilitation du professionnel. ",
+          "proposed_quote": "La direction régionale des douanes et droits indirects de rattachement examine le cahier des charges dans le cadre de l'habilitation du professionnel. La décision accordant l'habilitation du professionnel emporte approbation du cahier des charges, sans décision préalable distincte."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "182431ba47470a5b04666b54659af8ad57b9b43afbcb2e377426c444a65fba74",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "9799488bc0c15ad36c7d40d8ff76cb317ef88684e2c234f9c359365e0749337f",
+      "assessment_sha256": "d55a9fb8ffa920ae2dfc7d3e15c5cb0c1fe6aa11c5d2755c6e9abb52a01b1186",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "6725f78af8935494a0ca1ea130d8c0bef3d54274405ade503c7977c3321a5ea4"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000051829350",
     "source_sha256": "1055a322cb893153886e39a2398703b385e2b2af07f02183cca16d5df68357bb",
     "number": "56 J terdecies",
-    "proposed_xml": "<p>Les organismes de contrôle agréés doivent décrire, dans le cahier des charges prévu à l'article 275 ter B de l'annexe II au code général des impôts, les moyens et les méthodes de contrôle et d'essai qu'ils mettent en œuvre, ainsi que leurs méthodes d'attestation de la garantie du titre.</p>\n<p>L'organisme doit demander l'autorisation de procéder au marquage au laser pour attester la garantie du titre au directeur interrégional des douanes et droits indirects territorialement compétent ou, en Guadeloupe, en Guyane, à La Réunion et à Mayotte, au directeur régional des douanes et droits indirects. L'autorisation est accordée après que des organismes agréés mentionnés à l'article 275 ter G de l'annexe II au code général des impôts ont vérifié la conformité du protocole de sécurité.</p>\n<p>La direction interrégionale ou régionale compétente mentionnée au deuxième alinéa doit approuver le cahier des charges avant l'agrément de l'organisme de contrôle.</p>\n<p>Le cahier des charges mentionné au premier alinéa comprend notamment :</p>\n<p>1° Une documentation relative à l'organisme de contrôle agréé, qui fournit :</p>\n<p>a) Une description des structures juridiques et des locaux de l'organisme ;</p>\n<p>b) Une description de l'organisation et des responsabilités de la direction de l'entreprise, ainsi que de la compétence du personnel chargé de déterminer le titre des ouvrages ;</p>\n<p>2° Une documentation relative à la procédure d'analyse des ouvrages en métaux précieux, qui présente :</p>\n<p>a) Les normes utilisées pour les méthodes de dosage des métaux précieux ;</p>\n<p>b) Les moyens et les méthodes de contrôle et d'essai des ouvrages des professionnels habilités par une convention et des ouvrages des professionnels non habilités ;</p>\n<p>c) La méthode de gestion des échantillons lors des essais des ouvrages et la procédure appliquée en cas de découverte de produits non conformes au titre légal ;</p>\n<p>3° Une documentation relative aux méthodes utilisées pour attester la garantie du titre et, en cas de marquage au laser, à la mise en place du protocole de sécurité informatique, qui indique :</p>\n<p>a) Les modalités d'installation et de configuration du poste informatique ;</p>\n<p>b) Les mesures de sécurisation des accès au poste de pilotage de la machine à marquer au laser ;</p>\n<p>c) Les modalités de sauvegarde et d'archivage des données informatiques du journal de suivi des ouvertures de session et des modifications des comptes d'utilisateurs ;</p>\n<p>4° Une documentation relative aux obligations des organismes de contrôle agréés qui marquent éventuellement les ouvrages pour le compte des professionnels, précisant :</p>\n<p>a) En cas de marquage au laser, la description du dessin de l'empreinte du poinçon à apposer sur l'ouvrage en or, argent et platine et le respect des profondeurs de gravure ;</p>\n<p>b) Le respect des règles de marque ;</p>\n<p>c) La tenue d'une comptabilité matières indiquant le nombre et le poids des ouvrages essayés, détaillant les ouvrages marqués par type de métal, précisant la modalité d'attestation de la garantie du titre parmi celles prévues à l'article L. 833-3 du code de commerce et recensant les ouvrages reconnus aux titres non légaux.</p>",
-    "reason": "Réécriture à droit constant : la procédure d'autorisation et d'approbation est formulée directement ; le contenu documentaire est rédigé en propositions plus lisibles. Les dix-neuf alinéas utiles, les quatre rubriques et toutes leurs lettres sont conservés, sans retrancher les exigences d'analyse, de sécurité ou de traçabilité. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Les renvois aux articles 275 ter B et 275 ter G de l'annexe II ont été vérifiés dans le corpus public. Le deuxième alinéa et le renvoi qui le vise au troisième restent en place. Le 1° b) de la source mentionne la « direction de l'entreprise » alors que la rubrique porte sur l'organisme de contrôle : cette variation de désignation est conservée et signalée, sans harmonisation silencieuse. Le renvoi à L. 833-3 du code de commerce reste inchangé et n'a pas été vérifié hors corpus.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Le cahier des charges prévu à l'article 275 ter B de l'annexe II au code général des impôts comprend la description des moyens et des méthodes de contrôles et essais ainsi que des méthodes d'attestation de la garantie du titre mis en œuvre par les organismes de contrôle agréés. </p>\n<p>L'autorisation de procéder au marquage au laser pour attester la garantie du titre doit être demandée au directeur interrégional des douanes et droits indirects territorialement compétent ou, en Guadeloupe, en Guyane, à La Réunion et à Mayotte, au directeur régional des douanes et droits indirects. Elle est accordée après vérification de la conformité du protocole de sécurité par des organismes agréés mentionnés à l'article 275 ter G de l'annexe II au code général des impôts. </p>\n<p>La direction interrégionale ou régionale compétente mentionnée au deuxième alinéa examine le cahier des charges dans le cadre de l'agrément de l'organisme de contrôle. La décision accordant l'agrément de l'organisme de contrôle emporte approbation du cahier des charges, sans décision préalable distincte.</p>\n<p>Le cahier des charges mentionné au premier alinéa est composé notamment : </p>\n<p>1° D'une documentation, relative à l'organisme de contrôle agréé, fournissant : </p>\n<p>a) La description de l'organisme quant à ses structures juridiques et ses locaux ; </p>\n<p>b) La description de l'organisation et des responsabilités de la direction de l'entreprise ainsi que la compétence du personnel chargé de la détermination du titre des ouvrages ; </p>\n<p>2° D'une documentation relative à la procédure d'analyse des ouvrages en métaux précieux qui reprend : </p>\n<p>a) Les normes utilisées sur les méthodes de dosage des métaux précieux ; </p>\n<p>b) Les moyens et les méthodes de contrôle et d'essai des ouvrages des professionnels habilités par une convention et des ouvrages des professionnels non habilités ; </p>\n<p>c) La méthode de gestion des échantillons lors des essais des ouvrages et la procédure mise en place en cas de découverte de produits non conformes au titre légal ; </p>\n<p>3° D'une documentation relative aux méthodes utilisées pour attester la garantie du titre et à la mise en place du protocole de sécurité informatique en cas de marquage au laser, indiquant : </p>\n<p>a) L'installation et la configuration du poste informatique ; </p>\n<p>b) La sécurisation des accès au poste de pilotage de la machine à marquer au laser ; </p>\n<p>c) Les modalités de sauvegarde et d'archivage des données informatiques relatives au journal de suivi des ouvertures de session et des modifications des comptes d'utilisateurs ; </p>\n<p>4° D'une documentation relative aux obligations des organismes de contrôles agréés qui marquent éventuellement les ouvrages pour le compte des professionnels, précisant : </p>\n<p>a) En cas du marquage au laser, la description du dessin de l'empreinte du poinçon à apposer sur l'ouvrage en or, argent et platine et le respect des profondeurs de gravure ; </p>\n<p>b) Le respect des règles de marque ; </p>\n<p>c) La tenue d'une comptabilité matières mentionnant le nombre et le poids des ouvrages essayés, détaillant les ouvrages marqués par type de métal, précisant la modalité d'attestation de la garantie du titre parmi celles prévues à l'article L. 833-3 du code de commerce et recensant les ouvrages reconnus aux titres non légaux.</p>\n<p>À compter de l’entrée en vigueur de la loi de réforme, ces dispositions s'appliquent aux demandes en cours et nouvelles, sans nouveau dépôt ni reprise des délais d'instruction. Les habilitations, agréments et approbations déjà accordés demeurent valables.</p>",
+    "status": "rewrite_draft",
+    "reason": "Réforme de fond limitée à la fusion de l'approbation préalable du cahier des charges avec la décision d'habilitation ou d'agrément. La première passe conservait deux étapes administratives. L'examen technique reste nécessaire pour garantir le titre des ouvrages ; une décision préalable distincte n'apporte pas de contrôle technique supplémentaire démontré. Aucun autre contenu documentaire n'est retranché.",
+    "review_notes": "Les articles 275 ter B, 275 bis F et 275 ter G de l'annexe II ont été lus ; l'autorisation laser prévue par les textes supérieurs demeure, ainsi que sa vérification technique. Les quatre rubriques, toutes leurs lettres et les exigences de sécurité, essais, correction et comptabilité matières sont maintenues intégralement. Le renvoi L. 833-3 du code de commerce reste à vérifier hors corpus. Le deuxième alinéa reste en place pour le renvoi du troisième ; la mention préexistante de la direction de l'entreprise au 1° b) est conservée.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Décision distincte d'approbation du cahier des charges préalablement à l'habilitation ou à l'agrément."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond limitée à la fusion de l'approbation préalable du cahier des charges avec la décision d'habilitation ou d'agrément. La première passe conservait deux étapes administratives. L'examen technique reste nécessaire pour garantir le titre des ouvrages ; une décision préalable distincte n'apporte pas de contrôle technique supplémentaire démontré. Aucun autre contenu documentaire n'est retranché.",
+      "scope_limitations": "Les articles 275 ter B, 275 bis F et 275 ter G de l'annexe II ont été lus ; l'autorisation laser prévue par les textes supérieurs demeure, ainsi que sa vérification technique. Les quatre rubriques, toutes leurs lettres et les exigences de sécurité, essais, correction et comptabilité matières sont maintenues intégralement. Le renvoi L. 833-3 du code de commerce reste à vérifier hors corpus. Le deuxième alinéa reste en place pour le renvoi du troisième ; la mention préexistante de la direction de l'entreprise au 1° b) est conservée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les contrôles et informations conservés étaient déjà exigés. Les formalités retirées ne sont remplacées par aucun dépôt, registre ou délai supplémentaire. Le solde global des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_merged",
+          "measure_id": "garantie-approbation-cahier-decision-unique",
+          "description": "Fusion de l'approbation du cahier des charges avec la décision principale.",
+          "before": "Approbation du cahier des charges préalable à la décision principale.",
+          "after": "Une décision principale emporte approbation après le même examen technique.",
+          "unit": "legal_duty",
+          "affected_population": "Organismes de contrôle agréés",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi de réforme, ces dispositions s'appliquent aux demandes en cours et nouvelles, sans nouveau dépôt ni reprise des délais d'instruction. Les habilitations, agréments et approbations déjà accordés demeurent valables.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les garanties distinctes expressément conservées restent applicables.",
+          "source_quote": "La direction interrégionale ou régionale compétente mentionnée au deuxième alinéa approuve le cahier des charges préalablement à l'agrément de l'organisme de contrôle. ",
+          "proposed_quote": "La direction interrégionale ou régionale compétente mentionnée au deuxième alinéa examine le cahier des charges dans le cadre de l'agrément de l'organisme de contrôle. La décision accordant l'agrément de l'organisme de contrôle emporte approbation du cahier des charges, sans décision préalable distincte."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "1055a322cb893153886e39a2398703b385e2b2af07f02183cca16d5df68357bb",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "b817581256ef6ec177f23c22d817a0d27a0c44518e31b2a660857e6b47539453",
+      "assessment_sha256": "7969f103945fe842de8ffae8f200c030934152c62b6589fe848b2751112659f8",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "d23d5744a775da4d7a5b83cf4ed26702e9fbe8d532995174f2a30f06e6366000"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000041545978",
     "source_sha256": "3d8eb2c3bd67da0b35f12d0bd9b7bb738ff00b05394053101db8d59bbdde2e0c",
     "number": "56 j terdecies A",
-    "proposed_xml": "<p>Pour obtenir l'agrément mentionné aux articles 275 bis F et 275 ter G de l'annexe II au code général des impôts, l'organisme doit déposer un dossier auprès de la direction interrégionale ou régionale compétente au sens de l'article 56 J terdecies. Ce dossier atteste de sa compétence, de son expérience et de son honorabilité. Il comprend l'engagement de respecter le cahier des charges mentionné à l'article 56 J terdecies B.</p>\n<p>L'organisme doit également justifier qu'il est à jour de ses obligations sociales et fiscales.</p>\n<p>La direction mentionnée au premier alinéa peut demander la présentation de toute pièce complémentaire nécessaire à l'instruction du dossier.</p>\n<p>Cette direction accorde l'agrément pour une durée de cinq ans.</p>",
-    "reason": "Réécriture à droit constant : la présentation du dossier, les qualités à établir et l'engagement au cahier des charges sont séparés en phrases courtes au premier alinéa. Les quatre alinéas, les obligations sociales et fiscales et la durée de cinq ans sont conservés. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Les articles 275 bis F et 275 ter G de l'annexe II ont été vérifiés dans le corpus public ; la durée de cinq ans reste propre à ces organismes et n'est pas étendue aux commissionnaires. La note source maintient, selon le II de l'article 11 de l'arrêté du 13 janvier 2020 (NOR : CPAP1931008A), les procédures applicables à la date de présentation pour les demandes de décisions administratives individuelles antérieures à l'entrée en vigueur de cet arrêté. La casse du numéro « 56 j terdecies A » est recopiée à l'identique dans le champ number.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Tout organisme qui souhaite obtenir l'agrément mentionné aux articles 275 bis F et 275 ter G de l'annexe II au code général des impôts doit déposer auprès de la direction interrégionale ou régionale compétente au sens de l'article 56 J terdecies un dossier attestant de sa compétence, de son expérience et de son honorabilité. Le dossier comprend un engagement à respecter le cahier des charges mentionné à l'article 56 J terdecies B.</p>\n<p>L'agrément n'est pas subordonné à la justification de la régularité des obligations sociales et fiscales de l'organisme ; ces obligations restent régies par les textes qui leur sont propres.</p>\n<p>La direction mentionnée au premier alinéa peut se faire présenter toute pièce complémentaire nécessaire à l'instruction du dossier.</p>\n<p>L'agrément est accordé par la direction mentionnée au premier alinéa sans limitation de durée, sous réserve des dispositions des articles 56 J terdecies D et 56 J terdecies E. Aucun renouvellement périodique n'est exigé.</p>\n<p>À compter de l’entrée en vigueur de la loi de réforme, les agréments en cours de validité deviennent sans limitation de durée, sans demande ni nouvelle instruction. Les demandes initiales en cours bénéficient de ces dispositions ; les demandes de renouvellement d'un agrément encore valable deviennent sans objet. Les retraits et suspensions prononcés ne sont pas levés par cette prolongation.</p>",
+    "status": "rewrite_draft",
+    "reason": "Réforme de fond : suppression de la condition de régularité sociale et fiscale, étrangère à la capacité technique de sécuriser les poinçons, et de l'expiration quinquennale entraînant des renouvellements. Compétence, expérience, honorabilité, engagement technique et contrôle des manquements demeurent. Le recouvrement fiscal et social reste autonome. La première passe conservait les deux charges.",
+    "review_notes": "275 bis F et 275 ter G lus : le dossier de compétence, expérience et honorabilité reste exigé. 56 J terdecies conserve l'autorité désignée ; 56 J terdecies D et E maintiennent suspension et retrait. L'agrément sans terme concerne les seuls organismes techniques des fichiers laser, non tous les organismes de contrôle ou commissionnaires. Les agréments déjà expirés ne renaissent pas. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Condition d'accès imposant de justifier être à jour des obligations sociales et fiscales.",
+      "Limitation de l'agrément à cinq ans et renouvellements périodiques qui en résultent."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond : suppression de la condition de régularité sociale et fiscale, étrangère à la capacité technique de sécuriser les poinçons, et de l'expiration quinquennale entraînant des renouvellements. Compétence, expérience, honorabilité, engagement technique et contrôle des manquements demeurent. Le recouvrement fiscal et social reste autonome. La première passe conservait les deux charges.",
+      "scope_limitations": "275 bis F et 275 ter G lus : le dossier de compétence, expérience et honorabilité reste exigé. 56 J terdecies conserve l'autorité désignée ; 56 J terdecies D et E maintiennent suspension et retrait. L'agrément sans terme concerne les seuls organismes techniques des fichiers laser, non tous les organismes de contrôle ou commissionnaires. Les agréments déjà expirés ne renaissent pas. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les contrôles et informations conservés étaient déjà exigés. Les formalités retirées ne sont remplacées par aucun dépôt, registre ou délai supplémentaire. Le solde global des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "garantie-agrement-fin-justificatif-fiscal-social",
+          "description": "Suppression de la condition de régularité fiscale et sociale pour l'agrément.",
+          "before": "Justification de régularité sociale et fiscale exigée pour l'agrément.",
+          "after": "Aucune condition de régularité fiscale et sociale pour cet agrément ; dettes autonomes inchangées.",
+          "unit": "legal_duty",
+          "affected_population": "Organismes des fichiers de poinçons laser",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi de réforme, les agréments en cours de validité deviennent sans limitation de durée, sans demande ni nouvelle instruction. Les demandes initiales en cours bénéficient de ces dispositions ; les demandes de renouvellement d'un agrément encore valable deviennent sans objet. Les retraits et suspensions prononcés ne sont pas levés par cette prolongation.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les garanties distinctes expressément conservées restent applicables.",
+          "source_quote": "En outre, l'organisme intéressé doit justifier être à jour de ses obligations sociales et fiscales.",
+          "proposed_quote": "L'agrément n'est pas subordonné à la justification de la régularité des obligations sociales et fiscales de l'organisme ; ces obligations restent régies par les textes qui leur sont propres."
+        },
+        {
+          "kind": "authorization_removed",
+          "measure_id": "garantie-agrement-sans-renouvellement",
+          "description": "Suppression du renouvellement périodique, agrément initial maintenu.",
+          "before": "Agrément limité à cinq ans pour ces organismes.",
+          "after": "Agrément sans limitation de durée ; retrait et suspension demeurent.",
+          "unit": "legal_duty",
+          "affected_population": "Organismes des fichiers de poinçons laser",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi de réforme, les agréments en cours de validité deviennent sans limitation de durée, sans demande ni nouvelle instruction. Les demandes initiales en cours bénéficient de ces dispositions ; les demandes de renouvellement d'un agrément encore valable deviennent sans objet. Les retraits et suspensions prononcés ne sont pas levés par cette prolongation.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les garanties distinctes expressément conservées restent applicables.",
+          "source_quote": "L'agrément est accordé par la direction mentionnée au premier alinéa pour une durée de cinq ans.",
+          "proposed_quote": "L'agrément est accordé par la direction mentionnée au premier alinéa sans limitation de durée, sous réserve des dispositions des articles 56 J terdecies D et 56 J terdecies E. Aucun renouvellement périodique n'est exigé."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "3d8eb2c3bd67da0b35f12d0bd9b7bb738ff00b05394053101db8d59bbdde2e0c",
+      "source_notes_sha256": "0054b8fb3feaf9ae52a4689ad6bce6e73fd8272c9b3759d8227b743e36e83fde",
+      "proposed_sha256": "d7feaf374f0bd3989296e37bb70288ae9a2387fa4c5d92156d0464395ed5eb15",
+      "assessment_sha256": "ab4c81ec60d0f64c261fd56ad18076d1dff7a444b17dd5ce62d501f9d89161c1",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "8fcf21e33f6053b6f226613d9b23fd1eeb26f248f63ee8eb1c76f41fd4040f9f"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000041545973",
     "source_sha256": "aea011759f4df09fedc52d2770823be862fbd70d229d3d4b6949e390b1181af6",
     "number": "56 j terdecies B",
-    "proposed_xml": "<p>Le cahier des charges mentionné aux articles 275 bis C, 275 bis F et 275 ter G de l'annexe II au code général des impôts comporte les éléments suivants :</p>\n<p>1° La définition des missions de l'organisme agréé par le directeur interrégional des douanes et droits indirects territorialement compétent ou, en Guadeloupe, en Guyane, à La Réunion et à Mayotte, par le directeur régional des douanes et droits indirects. Ces missions sont :</p>\n<p>a) Réaliser la version dématérialisée des poinçons attestant la garantie du titre ;</p>\n<p>b) Élaborer, vendre et transférer les fichiers contenant cette version dématérialisée aux professionnels habilités et aux organismes de contrôle agréés qui demandent l'autorisation d'attester la garantie du titre par le marquage au laser d'un poinçon ;</p>\n<p>c) Vérifier la mise en place et la conformité du protocole de sécurité informatique imposé aux professionnels habilités et aux organismes de contrôle agréés qui demandent l'autorisation d'attester la garantie du titre par le marquage au laser d'un poinçon ;</p>\n<p>2° Une documentation sur les conditions d'exercice des missions mentionnées au 1°, qui comporte :</p>\n<p>a) Les modalités d'élaboration de la version dématérialisée des poinçons attestant la garantie du titre, à partir des agrandissements photographiques des poinçons en acier détenus par la Monnaie de Paris et transmis par l'intermédiaire de l'administration des douanes et droits indirects ;</p>\n<p>b) Les modalités de conception et de gestion des fichiers contenant la version dématérialisée des poinçons attestant la garantie du titre par marquage au laser ;</p>\n<p>c) Les modalités de transfert des fichiers contenant la version dématérialisée des poinçons aux professionnels habilités et aux organismes de contrôle agréés qui demandent l'autorisation d'attester la garantie du titre par marquage au laser. Le transfert doit être effectué sur un support amovible au moyen d'un procédé de cryptage. L'organisme agréé fournit une clef de décryptage ;</p>\n<p>d) Une description des mesures de sécurisation du poste informatique qui garantissent l'inviolabilité des fichiers contenant la version dématérialisée des poinçons attestant la garantie du titre par le marquage au laser d'un poinçon. Cette description précise :</p>\n<p>Les modalités d'installation et de configuration du poste informatique ;</p>\n<p>Les mesures de sécurisation des accès au poste de travail. Pour les équipements dédiés à la gravure au laser, le local sécurisé de l'entreprise mentionné à l'article 275 bis C de l'annexe II au code général des impôts désigne le lieu sécurisé destiné à garantir l'inviolabilité des fichiers cryptés et de la clef de décryptage mentionnés au c du 2° ;</p>\n<p>Les modalités de sauvegarde et d'archivage des données ;</p>\n<p>e) Les modalités de vérification de la mise en place et de la conformité du protocole de sécurité informatique imposé aux professionnels habilités et aux organismes de contrôle agréés qui demandent l'autorisation d'attester la garantie du titre par le marquage au laser d'un poinçon, à savoir :</p>\n<p>La réalisation d'un audit des professionnels habilités et des organismes de contrôle agréés avant la délivrance de l'autorisation de marquage au laser, en présence d'un représentant de la direction régionale des douanes et droits indirects ;</p>\n<p>La transmission, par la direction régionale des douanes et droits indirects, du rapport d'audit signé conjointement par le représentant de cette direction et par l'organisme agréé.</p>",
-    "reason": "Réécriture à droit constant : les missions sont énoncées à l'infinitif et les obligations de cryptage, de sécurisation et d'audit sont formulées directement. Les seize alinéas, les deux rubriques, les lettres et les sous-alinéas non numérotés sont conservés ; aucune modalité technique n'est remplacée par un résumé. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Renvois aux articles 275 bis C, 275 bis F et 275 ter G de l'annexe II vérifiés dans le corpus public. Le 1°, visé par les articles 56 J terdecies D et E, reste à sa place, ainsi que le c du 2°. Écart de désignation conservé : les deux derniers alinéas visent la direction régionale, tandis que le 1° distingue autorités interrégionale et régionales ; une harmonisation éventuelle exige un examen exprès. La note source maintient les procédures de la date de présentation pour les demandes de décisions administratives individuelles antérieures à l'entrée en vigueur de l'arrêté du 13 janvier 2020, conformément au II de son article 11 (NOR : CPAP1931008A). La casse du champ number est conservée.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Le cahier des charges mentionné aux articles 275 bis C, 275 bis F et 275 ter G de l'annexe II au code général des impôts comprend :</p>\n<p>1° La définition des missions de l'organisme agréé par le directeur interrégional des douanes et droits indirects territorialement compétent ou, en Guadeloupe, en Guyane, à La Réunion et à Mayotte, par le directeur régional des douanes et droits indirects :</p>\n<p>a) La réalisation de la version dématérialisée des poinçons attestant la garantie du titre ;</p>\n<p>b) L'élaboration, la vente et le transfert des fichiers comportant la version dématérialisée des poinçons aux professionnels habilités et aux organismes de contrôle agréés qui demandent l'autorisation d'attester la garantie du titre par marquage au laser d'un poinçon ;</p>\n<p>c) La vérification de la mise en place et de la conformité du protocole de sécurité informatique imposé aux professionnels habilités et aux organismes de contrôle agréés qui demandent l'autorisation d'attester la garantie du titre par marquage au laser d'un poinçon ;</p>\n<p>2° Une documentation relative aux conditions d'exercice des missions mentionnées au 1° comportant :</p>\n<p>a) Les modalités d'élaboration de la version dématérialisée des poinçons attestant la garantie du titre à partir des agrandissements photographiques des poinçons en acier détenus par la Monnaie de Paris et transmis par l'intermédiaire de l'administration des douanes et droits indirects ;</p>\n<p>b) Les modalités de conception et de gestion des fichiers comportant la version dématérialisée des poinçons attestant la garantie du titre par marquage au laser ;</p>\n<p>c) Les modalités de transfert des fichiers comportant la version dématérialisée des poinçons aux professionnels habilités et aux organismes de contrôle agréés qui demandent l'autorisation d'attester la garantie du titre par marquage au laser. Ce transfert a lieu en ayant recours à un procédé de cryptage, sur un support amovible ou par transmission électronique sécurisée. Une clef de décryptage est fournie par l'organisme agréé ;</p>\n<p>d) La description de la sécurisation du poste informatique afin de garantir l'inviolabilité des fichiers comportant la version dématérialisée des poinçons attestant la garantie du titre par marquage au laser d'un poinçon et indiquant :</p>\n<p>L'installation et la configuration du poste informatique ;</p>\n<p>La sécurisation des accès au poste de travail, étant précisé que le local sécurisé de l'entreprise mentionné à l'article 275 bis C de l'annexe II au code général des impôts doit s'entendre, dans le cas des équipements dédiés à la gravure au laser, comme le lieu sécurisé destiné à garantir l'inviolabilité des fichiers cryptés et de la clef de décryptage mentionnés au c du 2° ;</p>\n<p>Les modalités de sauvegarde et d'archivage des données ;</p>\n<p>e) Les modalités de vérification de la mise en place et de la conformité du protocole de sécurité informatique imposé aux professionnels habilités et aux organismes de contrôle agréés qui demandent l'autorisation d'attester la garantie du titre par marquage au laser d'un poinçon, à savoir :</p>\n<p>La réalisation, par l'organisme agréé, d'un audit des professionnels habilités et des organismes de contrôle agréés préalablement à la délivrance de l'autorisation de marquage au laser, sans présence obligatoire d'un représentant de la direction régionale des douanes et droits indirects ;</p>\n<p>La transmission, par la direction régionale des douanes et droits indirects, du rapport d'audit signé par l'organisme agréé. La signature conjointe du représentant de cette direction n'est pas exigée.</p>\n<p>À compter de l’entrée en vigueur de la loi de réforme, ces dispositions s'appliquent aux transferts de fichiers et aux audits restant à effectuer, y compris pour les demandes en cours. Les transferts et audits déjà effectués demeurent valables et ne sont pas renouvelés du seul fait de cette réforme.</p>",
+    "status": "rewrite_draft",
+    "reason": "Réforme de fond : suppression du support amovible obligatoire et du déplacement obligatoire d'un agent douanier pour chaque audit initial, avec retrait de sa cosignature. Le cryptage, la clef, le protocole, l'audit technique préalable et son rapport transmis demeurent. La première passe conservait ces contraintes matérielles et ce double intervenant ; leur retrait ne dispense pas du contrôle de conformité.",
+    "review_notes": "275 bis C, 275 bis F et 275 ter G lus : l'autorisation laser demeure, ainsi que le dossier de l'organisme et ses missions. Les missions 1° a à c et toute la documentation 2° a à e restent, sauf les deux contraintes matérielles retirées. Le transfert dans les locaux du destinataire prévu par l'annexe II reste à respecter : la transmission électronique proposée ne permet pas un accès ou un usage hors de ces locaux. L'autorité régionale du circuit d'audit est conservée malgré l'écart de désignation avec le 1°. Le contrôle administratif demeure possible, sans présence systématique. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Exclusivité du support amovible pour transférer les fichiers cryptés de poinçons laser.",
+      "Présence obligatoire d'un représentant douanier à chaque audit initial et cosignature obligatoire de son rapport."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond : suppression du support amovible obligatoire et du déplacement obligatoire d'un agent douanier pour chaque audit initial, avec retrait de sa cosignature. Le cryptage, la clef, le protocole, l'audit technique préalable et son rapport transmis demeurent. La première passe conservait ces contraintes matérielles et ce double intervenant ; leur retrait ne dispense pas du contrôle de conformité.",
+      "scope_limitations": "275 bis C, 275 bis F et 275 ter G lus : l'autorisation laser demeure, ainsi que le dossier de l'organisme et ses missions. Les missions 1° a à c et toute la documentation 2° a à e restent, sauf les deux contraintes matérielles retirées. Le transfert dans les locaux du destinataire prévu par l'annexe II reste à respecter : la transmission électronique proposée ne permet pas un accès ou un usage hors de ces locaux. L'autorité régionale du circuit d'audit est conservée malgré l'écart de désignation avec le 1°. Le contrôle administratif demeure possible, sans présence systématique. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les contrôles et informations conservés étaient déjà exigés. Les formalités retirées ne sont remplacées par aucun dépôt, registre ou délai supplémentaire. Le solde global des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "compliance_cost_reduced",
+          "measure_id": "garantie-laser-transfert-sans-support-impose",
+          "description": "Ouverture d'un transfert électronique sécurisé à la place du support imposé.",
+          "before": "Support amovible obligatoire et cryptage pour tout transfert.",
+          "after": "Choix entre support amovible et transmission électronique sécurisée, avec cryptage et clef.",
+          "unit": "legal_duty",
+          "affected_population": "Organismes agréés et destinataires habilités des fichiers laser",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi de réforme, ces dispositions s'appliquent aux transferts de fichiers et aux audits restant à effectuer, y compris pour les demandes en cours. Les transferts et audits déjà effectués demeurent valables et ne sont pas renouvelés du seul fait de cette réforme.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les garanties distinctes expressément conservées restent applicables.",
+          "source_quote": "c) Les modalités de transfert des fichiers comportant la version dématérialisée des poinçons aux professionnels habilités et aux organismes de contrôle agréés qui demandent l'autorisation d'attester la garantie du titre par marquage au laser. Ce transfert a lieu au moyen d'un support amovible en ayant recours à un procédé de cryptage. Une clef de décryptage est fournie par l'organisme agréé ;",
+          "proposed_quote": "c) Les modalités de transfert des fichiers comportant la version dématérialisée des poinçons aux professionnels habilités et aux organismes de contrôle agréés qui demandent l'autorisation d'attester la garantie du titre par marquage au laser. Ce transfert a lieu en ayant recours à un procédé de cryptage, sur un support amovible ou par transmission électronique sécurisée. Une clef de décryptage est fournie par l'organisme agréé ;"
+        },
+        {
+          "kind": "obligation_removed",
+          "measure_id": "garantie-laser-audit-sans-double-intervenant",
+          "description": "Retrait de la présence et de la cosignature douanières obligatoires.",
+          "before": "Audit en présence d'un représentant douanier, rapport cosigné transmis par la direction.",
+          "after": "Audit par l'organisme agréé, rapport signé par lui ; transmission par la direction régionale maintenue.",
+          "unit": "legal_duty",
+          "affected_population": "Organismes agréés, professionnels audités et douanes",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi de réforme, ces dispositions s'appliquent aux transferts de fichiers et aux audits restant à effectuer, y compris pour les demandes en cours. Les transferts et audits déjà effectués demeurent valables et ne sont pas renouvelés du seul fait de cette réforme.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les garanties distinctes expressément conservées restent applicables.",
+          "source_quote": "La réalisation, en présence d'un représentant de la direction régionale des douanes et droits indirects, d'un audit des professionnels habilités et des organismes de contrôle agréés préalablement à la délivrance de l'autorisation de marquage au laser ;",
+          "proposed_quote": "La réalisation, par l'organisme agréé, d'un audit des professionnels habilités et des organismes de contrôle agréés préalablement à la délivrance de l'autorisation de marquage au laser, sans présence obligatoire d'un représentant de la direction régionale des douanes et droits indirects ;"
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "aea011759f4df09fedc52d2770823be862fbd70d229d3d4b6949e390b1181af6",
+      "source_notes_sha256": "0054b8fb3feaf9ae52a4689ad6bce6e73fd8272c9b3759d8227b743e36e83fde",
+      "proposed_sha256": "74fb310f8e3f429639369e6ed9b26c883802bc0f5becf578c065139fa013911f",
+      "assessment_sha256": "73062ad799e304c391f853fda948ce3df5ab64dc357e763c1cfa3c87ab69d854",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "c6e6c3c5ba9cd870e9dc6c6bd48604622a5e7750996628132105991a0c948971"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000041545971",
     "source_sha256": "911b5472a910c8a89f12e1b1758be641823340eb0bbb6981859274bae7064483",
     "number": "56 j terdecies C",
-    "proposed_xml": "<p>Chaque année, les services de la direction régionale des douanes et droits indirects de rattachement réalisent un audit de l'organisme agréé pour vérifier qu'il respecte les prescriptions du cahier des charges.</p>\n<p>L'organisme agréé doit conserver pendant trois ans toutes les pièces justifiant l'exercice de ses activités. Il les tient à la disposition de l'administration des douanes et droits indirects.</p>",
-    "reason": "Réécriture à droit constant : la périodicité de l'audit est placée en tête et les obligations de conservation et de mise à disposition sont attribuées à l'organisme. Les deux alinéas, la direction compétente désignée dans la source et la durée de trois ans sont conservés. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "La source ne précise pas le point de départ du délai de trois ans : aucun point de départ n'est ajouté. La désignation de la seule direction régionale de rattachement est maintenue, à coordonner expressément si les autorités du 1° de 56 J terdecies B sont harmonisées. Les notes mentionnent les modifications consécutives à l'article 4 du décret n° 2014-1048 du 15 septembre 2014 et la transition du II de l'article 11 de l'arrêté du 13 janvier 2020 (NOR : CPAP1931008A) : les demandes de décisions administratives individuelles antérieures à l'entrée en vigueur de cet arrêté restent instruites selon les procédures applicables à leur présentation. Ces indications historiques ne datent aucune réforme future. La casse de number est conservée.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Les services de la direction régionale des douanes et droits indirects de rattachement peuvent procéder à un audit de l'organisme agréé afin de vérifier le respect des prescriptions fixées par le cahier des charges. Aucun audit annuel systématique n'est imposé.</p>\n<p>L'organisme agréé conserve toutes les pièces justifiant de l'exercice de ses activités pendant un délai de trois ans. Ces pièces justificatives sont tenues à la disposition de l'administration des douanes et droits indirects.</p>\n<p>À compter de l’entrée en vigueur de la loi de réforme, cette suppression de la périodicité annuelle s'applique aux audits non commencés, sans audit de rattrapage au seul titre d'une année antérieure. Les audits en cours peuvent être achevés et les pièces demeurent conservées pendant le délai prévu au deuxième alinéa.</p>",
+    "status": "rewrite_draft",
+    "reason": "Réforme de fond : suppression de l'audit annuel systématique, sans supprimer le pouvoir de contrôler les organismes qui élaborent et sécurisent les fichiers de poinçons. L'agrément initial et la conservation de trois ans rendent possible un contrôle des manquements sans calendrier annuel automatique. La première passe conservait la périodicité. Aucun rapport périodique de remplacement n'est créé.",
+    "review_notes": "Le délai de trois ans demeure sans ajout d'un point de départ que la source ne fixe pas. Le pouvoir d'audit s'articule avec l'agrément sans terme de 56 J terdecies A et les sanctions D et E ; aucun organisme n'est immunisé contre le contrôle. Le coût public et privé effectivement évité dépendra des audits décidés, sans économie chiffrée. La note relative au décret de 2014 reste historique. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Audit annuel obligatoire de chaque organisme agréé, remplacé par la faculté de contrôle sans périodicité imposée."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond : suppression de l'audit annuel systématique, sans supprimer le pouvoir de contrôler les organismes qui élaborent et sécurisent les fichiers de poinçons. L'agrément initial et la conservation de trois ans rendent possible un contrôle des manquements sans calendrier annuel automatique. La première passe conservait la périodicité. Aucun rapport périodique de remplacement n'est créé.",
+      "scope_limitations": "Le délai de trois ans demeure sans ajout d'un point de départ que la source ne fixe pas. Le pouvoir d'audit s'articule avec l'agrément sans terme de 56 J terdecies A et les sanctions D et E ; aucun organisme n'est immunisé contre le contrôle. Le coût public et privé effectivement évité dépendra des audits décidés, sans économie chiffrée. La note relative au décret de 2014 reste historique. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les contrôles et informations conservés étaient déjà exigés. Les formalités retirées ne sont remplacées par aucun dépôt, registre ou délai supplémentaire. Le solde global des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "garantie-fin-audit-annuel-systematique",
+          "description": "Suppression de la périodicité annuelle obligatoire de l'audit.",
+          "before": "Un audit par an de chaque organisme agréé.",
+          "after": "Audit possible sans obligation annuelle ; mêmes prescriptions contrôlées.",
+          "unit": "legal_duty",
+          "affected_population": "Organismes agréés de fichiers laser et services douaniers",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi de réforme, cette suppression de la périodicité annuelle s'applique aux audits non commencés, sans audit de rattrapage au seul titre d'une année antérieure. Les audits en cours peuvent être achevés et les pièces demeurent conservées pendant le délai prévu au deuxième alinéa.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les garanties distinctes expressément conservées restent applicables.",
+          "source_quote": "Les services de la direction régionale des douanes et droits indirects de rattachement procèdent à un audit annuel de l'organisme agréé afin de vérifier le respect des prescriptions fixées par le cahier des charges.",
+          "proposed_quote": "Les services de la direction régionale des douanes et droits indirects de rattachement peuvent procéder à un audit de l'organisme agréé afin de vérifier le respect des prescriptions fixées par le cahier des charges. Aucun audit annuel systématique n'est imposé."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "911b5472a910c8a89f12e1b1758be641823340eb0bbb6981859274bae7064483",
+      "source_notes_sha256": "94ee3431e7a26c5c28af72bc2823b3a4609a48dfe7225f150b39440ba1b3a34b",
+      "proposed_sha256": "586e0201a145c608f093ea6a3e0ca9996b5ebc14b579bc975edafb14ddef6796",
+      "assessment_sha256": "56674edd358f5fdee7a49eb6612b23a750b1dc87d0bc8df5194f36bb11bf3fc3",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "273250e90351efc06d81a843f4dbba1221ee4ad41eb4357bb3991d34add6d449"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000041545967",
     "source_sha256": "ee14c33cc45865018d9446c6723f9bfe66568887fb96836e9b5c24a7bed1479d",
     "number": "56 j terdecies D",
-    "proposed_xml": "<p>L'agrément est suspendu à titre conservatoire lorsqu'il est constaté que l'organisme agréé a manqué :</p>\n<p>1° Aux obligations résultant des articles 275 bis F et 275 ter G de l'annexe II au code général des impôts ;</p>\n<p>2° Aux dispositions législatives et réglementaires applicables à la garantie des métaux précieux.</p>\n<p>Cette suspension est prononcée à la diligence du directeur interrégional ou régional des douanes et droits indirects compétent mentionné au 1° de l'article 56 J terdecies B.</p>",
-    "reason": "Réécriture à droit constant : le lien entre le manquement constaté et la suspension conservatoire est formulé plus directement. Les quatre alinéas et les deux catégories de manquements sont maintenus ; la formule de compétence « à la diligence » est conservée pour ne pas en modifier la portée. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Les renvois aux articles 275 bis F et 275 ter G ont été vérifiés dans l'annexe II du corpus ; le 1° de 56 J terdecies B reste en place. Les notes mentionnent l'article 4 du décret n° 2014-1048 du 15 septembre 2014 et maintiennent, selon le II de l'article 11 de l'arrêté du 13 janvier 2020 (NOR : CPAP1931008A), les procédures de la date de présentation pour les demandes de décisions administratives individuelles présentées avant son entrée en vigueur. La suspension de ce régime reste distincte du pouvoir facultatif de l'article 56 J undecies. La casse de number est conservée.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "status": "retained_unchanged",
+    "classification": "retained_necessary",
+    "reason": "Maintien intégral : la suspension conservatoire empêche un organisme défaillant de continuer à diffuser ou vérifier des poinçons numériques compromettant la garantie du titre. Le pouvoir reste utile avec un agrément désormais sans limitation de durée et des audits non systématiques. Les deux catégories de manquements demeurent ; ni déclaration périodique ni prélèvement n'est institué par cet article. La rédaction stylistique antérieure n'est pas conservée comme une réforme.",
+    "review_notes": "275 bis F et 275 ter G lus ; les obligations techniques subsistent. Le 1° de 56 J terdecies B et la compétence qu'il définit restent inchangés. Ne pas confondre la suspension obligatoire de ce régime avec la faculté de suspension des commissionnaires prévue par 56 J undecies. Les garanties procédurales et recours autonomes restent distincts. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral : la suspension conservatoire empêche un organisme défaillant de continuer à diffuser ou vérifier des poinçons numériques compromettant la garantie du titre. Le pouvoir reste utile avec un agrément désormais sans limitation de durée et des audits non systématiques. Les deux catégories de manquements demeurent ; ni déclaration périodique ni prélèvement n'est institué par cet article. La rédaction stylistique antérieure n'est pas conservée comme une réforme.",
+      "scope_limitations": "275 bis F et 275 ter G lus ; les obligations techniques subsistent. Le 1° de 56 J terdecies B et la compétence qu'il définit restent inchangés. Ne pas confondre la suspension obligatoire de ce régime avec la faculté de suspension des commissionnaires prévue par 56 J undecies. Les garanties procédurales et recours autonomes restent distincts. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : le texte source est maintenu intégralement, sans nouvelle pièce, périodicité ni condition.",
+      "effects": []
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "ee14c33cc45865018d9446c6723f9bfe66568887fb96836e9b5c24a7bed1479d",
+      "source_notes_sha256": "94ee3431e7a26c5c28af72bc2823b3a4609a48dfe7225f150b39440ba1b3a34b",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "4d4708fb378f734adad0664c7bcefc3940df413f43cff4ce9c71f45d588d443e",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "77f8d90d37f63a3ea051d4398c0b87ac3694f52e285b8a6287567d9ed32b44b2"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000041545963",
     "source_sha256": "60c1bb6cad6d0a8b7fe3220135a61a8006db9230496e48aa0e51ceb3bcbc24cd",
     "number": "56 j terdecies E",
-    "proposed_xml": "<p>Le retrait de l'agrément intervient dans les cas suivants :</p>\n<p>1° À la demande de l'organisme agréé. L'organisme doit cesser sans délai ses activités lorsqu'il ne remplit plus les conditions prévues par les articles 275 bis F et 275 ter G de l'annexe II au code général des impôts ;</p>\n<p>2° D'office, par l'administration, lorsque l'organisme agréé a manqué :</p>\n<p>a) Aux obligations résultant des articles 275 bis F et 275 ter G de l'annexe II au code général des impôts ;</p>\n<p>b) Aux dispositions législatives et réglementaires applicables à la garantie des métaux précieux.</p>\n<p>Le directeur interrégional ou régional des douanes et droits indirects compétent mentionné au 1° de l'article 56 J terdecies B prononce le retrait de l'agrément. Ce retrait entraîne la cessation immédiate des activités exercées par l'organisme.</p>",
-    "reason": "Réécriture à droit constant : les deux voies de retrait sont présentées directement et le directeur est le sujet de la décision finale. Les six alinéas, les numéros et les lettres sont conservés, avec la cessation sans délai en cas de perte des conditions et l'effet immédiat du retrait. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Les renvois aux articles 275 bis F et 275 ter G ont été vérifiés dans l'annexe II ; le 1° de 56 J terdecies B reste opérant. L'obligation de cesser sans délai demeure au 1°, sans déplacement d'alinéa. La note source maintient, selon le II de l'article 11 de l'arrêté du 13 janvier 2020 (NOR : CPAP1931008A), les procédures applicables à la date de présentation pour les demandes de décisions administratives individuelles antérieures à son entrée en vigueur. La casse du champ number est conservée.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "status": "retained_unchanged",
+    "classification": "retained_necessary",
+    "reason": "Maintien intégral : retrait volontaire, cessation lorsque les conditions techniques ne sont plus remplies et retrait pour manquements protègent la fiabilité des poinçons. Ces dispositions restent nécessaires après la suppression du terme quinquennal ; elles ne sont ni un renouvellement ni une déclaration équivalente. Les obligations fiscales et sociales retirées de 56 J terdecies A ne sont pas réintroduites par les renvois techniques à l'annexe II. Aucun allègement supplémentaire justifié n'est identifié.",
+    "review_notes": "275 bis F et 275 ter G ont été lus : compétence, expérience, honorabilité et sécurité des fichiers demeurent. Le 1° de 56 J terdecies B est conservé. Les deux voies de retrait et la cessation immédiate restent à leur emplacement. La suppression de la durée de cinq ans ne lève pas les retraits déjà prononcés. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral : retrait volontaire, cessation lorsque les conditions techniques ne sont plus remplies et retrait pour manquements protègent la fiabilité des poinçons. Ces dispositions restent nécessaires après la suppression du terme quinquennal ; elles ne sont ni un renouvellement ni une déclaration équivalente. Les obligations fiscales et sociales retirées de 56 J terdecies A ne sont pas réintroduites par les renvois techniques à l'annexe II. Aucun allègement supplémentaire justifié n'est identifié.",
+      "scope_limitations": "275 bis F et 275 ter G ont été lus : compétence, expérience, honorabilité et sécurité des fichiers demeurent. Le 1° de 56 J terdecies B est conservé. Les deux voies de retrait et la cessation immédiate restent à leur emplacement. La suppression de la durée de cinq ans ne lève pas les retraits déjà prononcés. La note historique relative aux demandes présentées avant l'entrée en vigueur de l'arrêté du 13 janvier 2020 ne fixe pas la date de cette réforme ; les décisions et procédures anciennes restent régies par leurs règles sous réserve de la transition expresse proposée.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : le texte source est maintenu intégralement, sans nouvelle pièce, périodicité ni condition.",
+      "effects": []
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "60c1bb6cad6d0a8b7fe3220135a61a8006db9230496e48aa0e51ceb3bcbc24cd",
+      "source_notes_sha256": "0054b8fb3feaf9ae52a4689ad6bce6e73fd8272c9b3759d8227b743e36e83fde",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "71e28f1c67632cb1f8b96fed7ffc03e7f8a51e32240845a82a87022121301279",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "9c5f61bd5f42de9d7fdb0a8fa8b793b98a20d1bad85de92077ea9b4c48e226d9"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000051829377",
     "source_sha256": "cdc174a0dd70b1950fbd0c9c0dd96cd56151de7d4721e391e5351d72e6d93947",
     "number": "56 J quaterdecies",
-    "proposed_xml": "<p>Les personnes physiques ou morales mentionnées à l'article L. 834-6 du code de commerce doivent tenir un registre de leurs achats, ventes, réceptions et livraisons de matières d'or, d'argent ou de platine ou d'ouvrages contenant ces matières. Elles doivent y inscrire les réceptions et les livraisons même lorsqu'elles ne font pas suite à un achat ou à une vente.</p>\n<p>Le registre doit être conservé sur le lieu de détention des ouvrages. Toutefois, l'établissement principal peut tenir un registre pour l'ensemble de ses magasins. Ce registre distingue alors les ouvrages détenus directement par l'établissement principal de ceux détenus par chacun des établissements secondaires dépourvus de personnalité juridique propre. Les ouvrages neufs livrés par l'établissement principal aux différents magasins doivent porter des étiquettes d'identification et être accompagnés d'une fiche de livraison ou de tout document en tenant lieu, portant la dénomination commerciale de l'établissement principal et permettant d'identifier les ouvrages. Ces documents doivent notamment préciser la référence, la désignation de l'ouvrage, la marque, le poids, la quantité et le prix hors taxes. Les magasins inscrivent leurs ventes sur des états de vente établis quotidiennement, qui indiquent au moins la référence des ouvrages et sont retournés à l'établissement principal en fin de journée. À la demande du service, les magasins doivent pouvoir communiquer à tout moment leur situation de stock par l'intermédiaire de l'établissement principal.</p>\n<p>Le I de l'article L. 102 B du livre des procédures fiscales s'applique.</p>",
-    "reason": "Réécriture à droit constant : le champ du registre est exprimé en deux phrases et la centralisation par l'établissement principal est détaillée sans déplacer les obligations hors du deuxième alinéa. Tous les mouvements, les mentions documentaires et les obligations quotidiennes sont conservés. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Les trois alinéas sont maintenus. La centralisation conserve la distinction des établissements secondaires sans personnalité juridique propre ; l'étiquetage et les documents concernent les ouvrages neufs livrés aux magasins. L'état de vente reste quotidien et retourné en fin de journée. Les renvois à L. 834-6 du code de commerce et au seul I de L. 102 B du livre des procédures fiscales sont conservés ; ces textes sont hors du corpus fourni et aucune durée de conservation supplémentaire n'est inventée.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Les personnes physiques ou morales désignées à l'article L. 834-6 du code de commerce doivent tenir un registre de leurs achats, ventes, réceptions et livraisons (même si ces réceptions et ces livraisons ne sont pas consécutives à des achats ou à des ventes) de matières d'or, d'argent ou de platine ou d'ouvrages contenant ces matières. </p>\n<p>Le registre doit se trouver sur le lieu où sont détenus les ouvrages. Toutefois, un établissement principal peut tenir ce registre pour l'ensemble de ses magasins. Dans ce cas, ce registre doit distinguer les ouvrages qu'il détient directement et ceux détenus par chacun des établissements secondaires n'ayant aucune personnalité juridique propre. Les ouvrages neufs livrés par l'établissement principal aux différents magasins doivent être munis d'étiquettes d'identification et accompagnés d'une fiche de livraison ou de tout document en tenant lieu avec la dénomination commerciale de l'établissement principal permettant de les identifier. Ces documents doivent en particulier préciser la référence, la désignation de l'ouvrage, la marque, le poids, la quantité, le prix hors taxes. Les ventes réalisées par les magasins restent inscrites dans le registre ; aucun état de vente quotidien distinct ni retour d'un tel état à l'établissement principal en fin de journée n'est exigé. Les magasins doivent être en mesure de communiquer leur situation de stock à tout moment, par le biais de l'établissement principal, à la demande du service. </p>\n<p>Les dispositions du I de l'article L. 102 B du livre des procédures fiscales sont applicables.</p>\n<p>À compter de l’entrée en vigueur de la loi de réforme, cette dispense d'états distincts s'applique aux ventes nouvelles et aux états non encore établis ou transmis ; aucun rattrapage n'est exigé. Elle ne dispense pas d'inscrire les mouvements dans le registre ni de conserver les documents déjà établis selon les règles applicables.</p>",
+    "status": "rewrite_draft",
+    "reason": "Réforme de fond : suppression des états de vente quotidiens séparés et de leur retour en fin de journée, doublonnant l'inscription des ventes et la situation de stock déjà exigées. Le registre, la centralisation facultative, la distinction des magasins sans personnalité juridique, les étiquettes, les pièces de livraison et leurs six mentions demeurent. La première passe conservait le double circuit.",
+    "review_notes": "56 J sexdecies, septdecies et octodecies lus : choix des supports, comptabilité tenant lieu de registre, inscriptions globales, contrats de dépôt et dispenses restent applicables aux futures situations. L'éditabilité quotidienne prévue par sexdecies n'est pas supprimée ni assimilée à un retour quotidien d'états séparés. L. 834-6 du code de commerce et I de L. 102 B du LPF sont hors corpus ; leurs règles autonomes de tenue et conservation ne sont pas supprimées. La situation des stocks reste communicable à tout moment.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Établissement d'états de vente quotidiens distincts et retour obligatoire en fin de journée à l'établissement principal."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond : suppression des états de vente quotidiens séparés et de leur retour en fin de journée, doublonnant l'inscription des ventes et la situation de stock déjà exigées. Le registre, la centralisation facultative, la distinction des magasins sans personnalité juridique, les étiquettes, les pièces de livraison et leurs six mentions demeurent. La première passe conservait le double circuit.",
+      "scope_limitations": "56 J sexdecies, septdecies et octodecies lus : choix des supports, comptabilité tenant lieu de registre, inscriptions globales, contrats de dépôt et dispenses restent applicables aux futures situations. L'éditabilité quotidienne prévue par sexdecies n'est pas supprimée ni assimilée à un retour quotidien d'états séparés. L. 834-6 du code de commerce et I de L. 102 B du LPF sont hors corpus ; leurs règles autonomes de tenue et conservation ne sont pas supprimées. La situation des stocks reste communicable à tout moment.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les contrôles et informations conservés étaient déjà exigés. Les formalités retirées ne sont remplacées par aucun dépôt, registre ou délai supplémentaire. Le solde global des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "garantie-registre-fin-etats-vente-separes",
+          "description": "Retrait du double circuit quotidien des états de vente des magasins.",
+          "before": "Registre, état quotidien des ventes avec références et retour en fin de journée.",
+          "after": "Registre et situation des stocks conservés ; aucun état quotidien séparé ni retour imposé.",
+          "unit": "legal_duty",
+          "affected_population": "Établissements principaux centralisant le registre de leurs magasins",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi de réforme, cette dispense d'états distincts s'applique aux ventes nouvelles et aux états non encore établis ou transmis ; aucun rattrapage n'est exigé. Elle ne dispense pas d'inscrire les mouvements dans le registre ni de conserver les documents déjà établis selon les règles applicables.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les garanties distinctes expressément conservées restent applicables.",
+          "source_quote": "Les ventes réalisées par les magasins doivent être inscrites sur des états de vente établis quotidiennement, reprenant au moins la référence des ouvrages et retournés en fin de journée à l'établissement principal.",
+          "proposed_quote": "Les ventes réalisées par les magasins restent inscrites dans le registre ; aucun état de vente quotidien distinct ni retour d'un tel état à l'établissement principal en fin de journée n'est exigé."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "cdc174a0dd70b1950fbd0c9c0dd96cd56151de7d4721e391e5351d72e6d93947",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "8bacb90e7c7a271ee2d71a513aee7758d87a4f2f394b594539ba30bf01366e08",
+      "assessment_sha256": "56ba249ca24350455314edd6c95b04dd5bfaa57fcd029328853664f4ec625e85",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "39ac4e14dd6d91e04af1421a10ff286508f1d68e72174808f2591962734bd297"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000021668188",
     "source_sha256": "a44bb8701277fa0dd6627514ecc11f6acea47604b656f395bc953387b14bbe87",
     "number": "56 J quindecies",
-    "proposed_xml": "<p>Sauf dans les cas prévus par la loi et sans préjudice des articles 56 J sexdecies à 56 J octodecies, le registre prévu à l'article 56 J quaterdecies doit indiquer les noms, prénoms et adresses des personnes qui ont vendu ou confié les matières ou ouvrages mentionnés à ce même article. Ces indications sont portées sur justification de l'identité de ces personnes.</p>\n<p>Pour permettre l'identification individuelle des matières ou ouvrages, le registre doit également indiquer leur nature, leur nombre, leur poids, leur titre, leurs dates d'entrée et de sortie et leur origine.</p>",
-    "reason": "Réécriture à droit constant : l'identification des personnes et celle des biens sont formulées en obligations distinctes, en conservant les deux alinéas. Les exceptions légales et la réserve des articles suivants restent en tête. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Toutes les mentions sont maintenues, dont les prénoms, l'origine et les dates d'entrée et de sortie. L'article 56 J octodecies a été lu dans le corpus public : ses dispenses demeurent réservées par le premier alinéa. Les formes et adaptations prévues aux articles 56 J sexdecies et septdecies ne sont pas écartées par cette rédaction.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "status": "retained_unchanged",
+    "classification": "retained_necessary",
+    "reason": "Maintien intégral : identité du vendeur ou déposant et identification individuelle des matières ou ouvrages assurent leur traçabilité, notamment contre le recel et la fraude sur le titre. Les exceptions légales et les aménagements des trois articles suivants évitent d'imposer indistinctement toutes les mentions. La suppression des états quotidiens séparés de 56 J quaterdecies ne rend pas ces informations inutiles. Aucun nouvel écrit distinct n'est ajouté et la reformulation antérieure n'est pas comptée comme simplification.",
+    "review_notes": "Lecture intégrale de 56 J sexdecies, septdecies et octodecies : dispenses de poids/titre sous identification alternative, inscriptions globales, documents tenant lieu de registre, professionnels dispensés et vente au détail d'argent jusqu'à cinq grammes restent ouverts aux futures situations éligibles. Le renvoi à 56 J quaterdecies reste opérant, avec le même registre et ses mouvements. Aucun changement d'assiette ou taux fiscal n'est proposé.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral : identité du vendeur ou déposant et identification individuelle des matières ou ouvrages assurent leur traçabilité, notamment contre le recel et la fraude sur le titre. Les exceptions légales et les aménagements des trois articles suivants évitent d'imposer indistinctement toutes les mentions. La suppression des états quotidiens séparés de 56 J quaterdecies ne rend pas ces informations inutiles. Aucun nouvel écrit distinct n'est ajouté et la reformulation antérieure n'est pas comptée comme simplification.",
+      "scope_limitations": "Lecture intégrale de 56 J sexdecies, septdecies et octodecies : dispenses de poids/titre sous identification alternative, inscriptions globales, documents tenant lieu de registre, professionnels dispensés et vente au détail d'argent jusqu'à cinq grammes restent ouverts aux futures situations éligibles. Le renvoi à 56 J quaterdecies reste opérant, avec le même registre et ses mouvements. Aucun changement d'assiette ou taux fiscal n'est proposé.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : le texte source est maintenu intégralement, sans nouvelle pièce, périodicité ni condition.",
+      "effects": []
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "a44bb8701277fa0dd6627514ecc11f6acea47604b656f395bc953387b14bbe87",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "abf94a74d9cb96a13e22a0b43ef84674bd2f9f321983367712bb23e0571047ff",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "febcda7961a40ae2ae2aa976dfccd8d499792a27625854baeea7121f37f7f531"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000027435843",
     "source_sha256": "1b6467e91515a8a790030673896b2d262f985853e03c5c5fb352de5ffc9ac722",
     "number": "56 J sexdecies",
-    "proposed_xml": "<p>L'opérateur peut choisir, pour le registre prévu à l'article 56 J quaterdecies, l'une des formes suivantes :</p>\n<p>1. Pour les ouvrages neufs :</p>\n<p>a. Un registre coté et paraphé par l'administration municipale territorialement compétente, qui peut :</p>\n<p>1° Comporter uniquement des renvois aux documents comptables, notamment aux factures et bordereaux d'expédition, relatifs aux matières ou ouvrages mentionnés à l'article 56 J quaterdecies. Dans ce cas, les indications prévues à l'article 56 J quindecies doivent y figurer. Toutefois, le poids et le titre des ouvrages peuvent ne pas être indiqués si les ouvrages sont identifiables par leur numéro de série individuel ou par leur référence commerciale mentionnée dans un catalogue ou dans tout document de nature comptable ;</p>\n<p>2° Renvoyer à des fiches de stock et d'inventaire numérotées en continu, appuyées de tout document probant comportant la désignation complète et détaillée des ouvrages et des matières confiées prévue à l'article 56 J quindecies ;</p>\n<p>3° Comporter une inscription globale pour les ouvrages strictement identiques, notamment quant à leur référence et à leur poids, à condition que la référence renvoie à une facture. La facture peut omettre le titre et le poids des objets si ceux-ci restent identifiables par leur numéro de série individuel ou par leur référence commerciale mentionnée dans un catalogue ou dans tout document de nature comptable ;</p>\n<p>b. Ou une comptabilité conforme, selon le cas, aux articles L. 123-12 à L. 123-23 du code de commerce ou aux spécifications du 3° du I de l'article 286 du code général des impôts, à condition que les documents prévus à cet article soient accompagnés de fiches de stock ou d'un inventaire permanent ;</p>\n<p>c. Ou un registre établi au moyen d'un logiciel qui assure une gestion permanente des stocks par référence de produits, permet d'identifier les ouvrages et offre toutes garanties en matière de preuve. Le logiciel doit comporter les indications prévues à l'article 56 J quindecies. Toutefois, le poids et le titre des ouvrages peuvent ne pas être indiqués si les ouvrages sont identifiables par leur numéro de série individuel ou par leur référence commerciale mentionnée dans un catalogue ou dans tout document de nature comptable.</p>\n<p>L'opérateur doit pouvoir prouver la fiabilité du système informatique utilisé et la chronologie des écritures présentées sous forme de listes. Les feuillets informatiques doivent être identifiés, numérotés et datés sans possibilité de modification, afin de garantir la chronologie des opérations enregistrées. Toute modification doit être justifiée par la création d'un nouvel enregistrement informatique qui en indique le motif.</p>\n<p>L'opérateur doit pouvoir éditer quotidiennement les informations relatives aux seuls ouvrages en métaux précieux. Il doit pouvoir présenter les enregistrements informatiques ou les listages à toute réquisition du service, dans les conditions prévues à l'article 56 J quaterdecies.</p>\n<p>2. Pour les ouvrages d'occasion :</p>\n<p>a. Un registre coté et paraphé par l'administration municipale territorialement compétente ;</p>\n<p>b. Ou le registre prévu à l'article 321-7 du code pénal. Les ouvrages contenant des métaux précieux doivent y être inscrits individuellement, quelle que soit leur valeur, avec une encre d'une couleur différente de celle utilisée pour les autres objets ;</p>\n<p>c. Ou le registre établi au moyen du logiciel de gestion permanente des stocks prévu au c du 1, à condition que les enregistrements informatiques créés pour les ouvrages d'occasion ne puissent être modifiés que par la création d'un nouvel enregistrement indiquant le motif de la modification. Le répertoire contenant ces informations doit être spécifique et comprendre un système d'identification des pages par chiffre de contrôle, contenant un algorithme ou un système fondé notamment sur la date de l'opération, reporté en fin et en tête des pages imprimées quotidiennement.</p>\n<p>L'opérateur doit pouvoir éditer quotidiennement les informations relatives aux seuls ouvrages en métaux précieux.</p>",
-    "reason": "Réécriture à droit constant : les formes de registre et les conditions de chaque option sont formulées plus directement ; les phrases sur les logiciels et la correction des écritures sont raccourcies. Les quinze alinéas, les subdivisions 1. et 2., a., b., c. et 1° à 3° sont maintenus avec toutes les alternatives, exceptions et garanties techniques. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Le 3° du I de l'article 286 a été lu dans impots.json. Sa note annonce une abrogation à compter du 1er janvier 2027 avec maintien de certaines dispositions jusqu'à leur reprise par les mesures réglementaires visées à L. 215-26 du code des impositions sur les biens et services ; le renvoi actuel est conservé et sa coordination future nécessite un contrôle exprès. Les renvois au code de commerce et au code pénal, hors corpus, restent inchangés. L'ambiguïté préexistante de « y figurer » au 1. a. 1° est maintenue sans décider silencieusement si la mention vise le registre ou les documents auxquels il renvoie. La formule technique du chiffre de contrôle au 2. c. est conservée sans substitution d'un dispositif nouveau. L'exception de poids et de titre reste limitée aux cas prévus pour les ouvrages neufs ; aucune dispense générale n'est étendue aux ouvrages d'occasion.",
-    "status": "rewrite_draft"
+    "proposed_xml": "\n<p>Le registre prévu à l'article 56 J quaterdecies peut prendre, au choix de l'opérateur, les formes suivantes : </p>\n<p>1. Pour les ouvrages neufs : </p>\n<p>a. Un registre sans cote ni paraphe administratifs qui peut : </p>\n<p>1° Soit ne comporter que des renvois aux documents comptables, notamment les factures et bordereaux d'expédition, relatifs aux matières ou ouvrages repris à l'article 56 J quaterdecies. Dans ce cas, les indications reprises à l'article 56 J quindecies devront y figurer. Toutefois, l'indication du poids et du titre des ouvrages n'est pas exigée si leur identification est possible soit par le numéro de série individuel ou la référence commerciale de l'ouvrage mentionnée dans un catalogue ou tout document de nature comptable ; </p>\n<p>2° Soit renvoyer à des fiches de stock et d'inventaire numérotées en continu, appuyées de tout document probant reprenant la désignation complète et détaillée des ouvrages et des matières confiées telle qu'énoncée à l'article 56 J quindecies ; </p>\n<p>3° Soit comporter une inscription globale pour les ouvrages strictement identiques, notamment quant à leur référence et à leur poids, à condition que la référence renvoie à une facture. La facture peut ne pas indiquer le titre et le poids des objets si l'identification reste possible par le numéro de série individuel ou la référence commerciale de l'ouvrage mentionnée dans un catalogue ou tout document de nature comptable ; </p>\n<p>b. Ou une comptabilité conforme, suivant le cas, aux prescriptions des articles L. 123-12 à L. 123-23 du code de commerce ou aux spécifications du 3° du I de l'article 286 du code général des impôts si les documents prévus à cet article sont accompagnés de fiches de stock ou d'un inventaire permanent ; </p>\n<p>c. Ou un registre établi au moyen d'un logiciel assurant une gestion permanente des stocks, par référence de produits, permettant l'identification des ouvrages et offrant toutes garanties en matière de preuve. Tout logiciel doit comporter les indications reprises à l'article 56 J quindecies. Toutefois, l'indication du poids et du titre des ouvrages n'est pas exigée si leur identification est possible soit par le numéro de série individuel, soit par la référence commerciale de l'ouvrage mentionnée dans un catalogue ou tout document de nature comptable. </p>\n<p>L'opérateur doit être en mesure d'apporter la preuve de la fiabilité du système informatique utilisé et de la chronologie des écritures présentées sous forme de listes. Les feuillets informatiques doivent être identifiés, numérotés et datés sans possibilité de modifications afin d'assurer la chronologie des opérations enregistrées. Les modifications éventuelles doivent être justifiées par création d'un nouvel enregistrement informatique avec indication de son motif. </p>\n<p>Les enregistrements informatiques ou listages doivent pouvoir être présentés à toute réquisition du service dans les conditions précisées à l'article 56 J quaterdecies. </p>\n<p>2. Pour les ouvrages d'occasion : </p>\n<p>a. Un registre sans cote ni paraphe administratifs ; </p>\n<p>b. Ou le registre prévu à l'article 321-7 du code pénal sur lequel les ouvrages contenant des métaux précieux doivent être portés individuellement, quelle que soit leur valeur ; </p>\n<p>c. Ou le registre établi au moyen du logiciel assurant la gestion permanente des stocks prévu au c du 1, sous réserve que les enregistrements informatiques créés pour les ouvrages d'occasion ne puissent être modifiés que par création d'un nouvel enregistrement avec indication de son motif. </p>\n<p>Les enregistrements relatifs aux ouvrages d'occasion restent présentables à toute réquisition du service dans les conditions de l'article 56 J quaterdecies, sans édition quotidienne obligatoire.</p>\n<p>À compter de l'entrée en vigueur de la loi, les formalités de cote, de paraphe, de couleur d'encre, de répertoire spécifique, de chiffre de contrôle des pages et d'édition quotidienne supprimées par le présent article ne sont plus exigées, y compris pour les registres en cours. Les écritures et justificatifs antérieurs restent conservés selon les règles qui leur sont applicables ; aucune ressaisie n'est exigée. Les obligations autonomes du registre prévu à l'article 321-7 du code pénal ne sont pas modifiées.</p>",
+    "reason": "Réforme de fond : suppression des visas municipaux, de l’encre spéciale et des prescriptions d’édition quotidienne, de répertoire séparé et de chiffre de contrôle. L’identification, la chronologie, la preuve de fiabilité et la correction traçable restent nécessaires contre la fraude et le recel. Le brouillon précédent ne retirait aucune de ces charges.",
+    "review_notes": "56 J quaterdecies et quindecies lus : obligation de registre, conservation et identification subsistent, avec leurs dispenses. Les trois options pour le neuf et l’occasion sont maintenues. Le renvoi au 3° du I de 286 reste valable dans le corpus, sous la transition de l’ordonnance 2025-1247 (reprise réglementaire à coordonner). L123-12 à L123-23 commerce et 321-7 pénal sont hors corpus : la dispense ne supprime pas leurs obligations autonomes.",
+    "status": "rewrite_draft",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond : suppression des visas municipaux, de l’encre spéciale et des prescriptions d’édition quotidienne, de répertoire séparé et de chiffre de contrôle. L’identification, la chronologie, la preuve de fiabilité et la correction traçable restent nécessaires contre la fraude et le recel. Le brouillon précédent ne retirait aucune de ces charges.",
+      "scope_limitations": "56 J quaterdecies et quindecies lus : obligation de registre, conservation et identification subsistent, avec leurs dispenses. Les trois options pour le neuf et l’occasion sont maintenues. Le renvoi au 3° du I de 286 reste valable dans le corpus, sous la transition de l’ordonnance 2025-1247 (reprise réglementaire à coordonner). L123-12 à L123-23 commerce et 321-7 pénal sont hors corpus : la dispense ne supprime pas leurs obligations autonomes.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les éléments de preuve et les obligations de fond conservés existaient déjà ; aucune déclaration, taxe ou autorisation de remplacement n’est créée. Le solde global de complexité et les coûts ne sont pas chiffrés.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "metaux-precieux-formalisme-registres",
+          "description": "Retrait des formalités de support sans supprimer la traçabilité.",
+          "before": "Cote/paraphe, encre distincte et éditions quotidiennes prescrits selon le support.",
+          "after": "Même choix de supports, sans ces formalités matérielles.",
+          "unit": "legal_duty",
+          "affected_population": "Opérateurs d’ouvrages en métaux précieux",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur de la loi ; droits et preuves antérieurs conservés selon le texte proposé.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; obligations de fond subsistantes conservées.",
+          "source_quote": "Un registre coté et paraphé par l'administration municipale territorialement compétente",
+          "proposed_quote": "Un registre sans cote ni paraphe administratifs"
+        }
+      ]
+    },
+    "benefit_review": "Les choix entre registre, comptabilité et logiciel, les renvois aux pièces, l’inscription globale des objets identiques et les dispenses de poids et de titre pour identification par série ou référence sont tous conservés, y compris pour les futures opérations. Aucun allègement existant n’est remplacé par une obligation informatique.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Cote et paraphe municipaux des registres neufs et d’occasion supprimés.",
+      "Couleur d’encre particulière pour les métaux précieux retirée.",
+      "Éditions quotidiennes, répertoire spécifique et chiffre de contrôle des pages supprimés, avec conservation de la preuve et des corrections traçables."
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "1b6467e91515a8a790030673896b2d262f985853e03c5c5fb352de5ffc9ac722",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "f610e76557133d54af01d967808ceac95173b2cad7504bb9e08de81fdffb7442",
+      "assessment_sha256": "92027bd8ab259c78ac643e8847b54b89d473f7d8128f385d410b605ee71ed84e",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "83390d2afa422b453a2a0a77ea49cd7843128b1609eecdf51a5c4f2f0dede600"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000024181478",
     "source_sha256": "25fbd7aea8cb7f71ef23654c9b8cd674f1e605474463fabe8e1c77f171f3a7c7",
     "number": "56 J septdecies",
-    "proposed_xml": "<p>Les ouvrages neufs et d'occasion confiés à quelque titre que ce soit, notamment pour réparation, peuvent faire l'objet d'une inscription globale des entrées et des sorties en fin de journée sur le registre prévu à l'article 56 J quaterdecies. Cette faculté est subordonnée à la possibilité de justifier leur situation à tout moment par tout document probant, tel qu'une étiquette, un sachet individualisé ou un carnet à souche, indiquant le nom du client, la nature de l'objet et la date du dépôt.</p>\n<p>Pour ces mêmes ouvrages, il est également permis de présenter des documents comptables tenant lieu de registre, tels que les livres comptables, le livre d'inventaire permanent, les fiches de stocks et d'inventaire intégrées dans la comptabilité ou la comptabilité matières assortie de factures, de bons de livraison ou de bons, bordereaux ou fiches de confiés. Ces documents doivent alors comporter les indications prévues à l'article 56 J quindecies.</p>\n<p>Pour les ouvrages confiés pour réparation, le registre prévu à l'article 56 J quaterdecies peut être remplacé par un contrat de dépôt ou par des fiches « réparation-facture-horlogerie ». Le contrat et les fiches doivent indiquer le nom et l'adresse du déposant et du dépositaire, la date et le numéro du contrat ou de la fiche dans une série continue, ainsi que la désignation complète et détaillée des objets confiés, en particulier la nature, le poids, le métal et le titre des ouvrages. Le registre peut être établi au moyen d'un logiciel comportant la désignation complète et détaillée des ouvrages et des matières confiées prévue à l'article 56 J quindecies.</p>",
-    "reason": "Réécriture à droit constant : l'inscription globale et sa condition de justification sont séparées en deux phrases ; les documents tenant lieu de registre et les supports propres à la réparation sont explicités. Les trois alinéas, la liste complète des justificatifs et toutes les mentions d'identification sont conservés. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "L'inscription globale reste effectuée en fin de journée et subordonnée à une justification possible à tout moment. Le contrat de dépôt et les fiches restent réservés aux ouvrages confiés pour réparation, tandis que les deux premiers alinéas couvrent les ouvrages confiés à quelque titre que ce soit. La série continue, les deux parties au dépôt, le poids, le métal, le titre et les renvois à 56 J quaterdecies et quindecies sont conservés. Aucun délai de conservation ni remplacement obligatoire par un logiciel n'est ajouté.",
-    "status": "rewrite_draft"
+    "proposed_xml": "\n<p>Les ouvrages neufs et d'occasion confiés à quelque titre que ce soit et notamment pour réparation peuvent faire l'objet, en fin de journée, d'une inscription globale des entrées et des sorties sur le registre prévu à l'article 56 J quaterdecies à condition que leur situation puisse être justifiée à tout moment par tout document probant tel qu'étiquettes, sachets individualisés, carnets à souche, indiquant le nom du client, la nature de l'objet et la date du dépôt. </p>\n<p>De même, la présentation des documents comptables tels que les livres comptables, livre d'inventaire permanent, fiches de stocks et d'inventaire intégrées dans la comptabilité, comptabilité matières assortie de factures, bons de livraisons ou bons ou bordereaux ou fiches de confiés, tenant lieu de registre, est autorisée pour de tels ouvrages. Dans ce cas, les indications reprises à l'article 56 J quindecies devront y figurer. </p>\n<p>Le registre prévu à l'article 56 J quaterdecies, pour les ouvrages confiés pour réparation peut être remplacé par un contrat de dépôt ou par des fiches \" réparation-facture-horlogerie \". Ce contrat et ces fiches doivent indiquer le nom et l'adresse du déposant et du dépositaire, la date du contrat ou de la fiche, la désignation complète et détaillée des objets confiés et, en particulier, la nature, le poids, le métal et le titre des ouvrages. Ce registre peut être établi au moyen d'un logiciel reprenant la désignation complète et détaillée des ouvrages et des matières confiées telle qu'énoncée à l'article 56 J quindecies.</p>\n<p>La suppression du numéro dans une série continue s'applique aux contrats et fiches établis à compter de l'entrée en vigueur de la loi. Les documents antérieurs conservent leur valeur probante et ne doivent pas être renumérotés.</p>",
+    "reason": "Réforme de fond : retrait de la numérotation continue spéciale des contrats et fiches de réparation. Les noms, adresses, date, description et situation des objets suffisent à leur rapprochement ; les autres mentions sont conservées pour identifier les biens confiés. Le précédent brouillon gardait cette numérotation.",
+    "review_notes": "Les trois alinéas et leurs options demeurent ; 56 J quaterdecies et quindecies ont été lus. L’inscription globale en fin de journée reste possible avec justification à tout moment. Aucune durée de conservation nouvelle et aucune obligation de logiciel. Les numérotations imposées sur un fondement autonome, notamment de facturation, ne sont pas supprimées.",
+    "status": "rewrite_draft",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond : retrait de la numérotation continue spéciale des contrats et fiches de réparation. Les noms, adresses, date, description et situation des objets suffisent à leur rapprochement ; les autres mentions sont conservées pour identifier les biens confiés. Le précédent brouillon gardait cette numérotation.",
+      "scope_limitations": "Les trois alinéas et leurs options demeurent ; 56 J quaterdecies et quindecies ont été lus. L’inscription globale en fin de journée reste possible avec justification à tout moment. Aucune durée de conservation nouvelle et aucune obligation de logiciel. Les numérotations imposées sur un fondement autonome, notamment de facturation, ne sont pas supprimées.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les éléments de preuve et les obligations de fond conservés existaient déjà ; aucune déclaration, taxe ou autorisation de remplacement n’est créée. Le solde global de complexité et les coûts ne sont pas chiffrés.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "metaux-precieux-reparation-numerotation",
+          "description": "Suppression d’une numérotation spéciale.",
+          "before": "Date et numéro de contrat ou fiche dans une série continue.",
+          "after": "Date conservée ; numéro continu spécial non exigé.",
+          "unit": "legal_duty",
+          "affected_population": "Opérateurs d’ouvrages en métaux précieux",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur de la loi ; droits et preuves antérieurs conservés selon le texte proposé.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; obligations de fond subsistantes conservées.",
+          "source_quote": "la date et le numéro de contrat ou de la fiche dans une série continue",
+          "proposed_quote": "la date du contrat ou de la fiche"
+        }
+      ]
+    },
+    "benefit_review": "L’inscription globale, l’usage des documents comptables tenant lieu de registre, le contrat de dépôt et les fiches réparation-facture-horlogerie restent disponibles pour toute situation future éligible. Le retrait du numéro continu n’en restreint aucune condition favorable.",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Numérotation en série continue spéciale des contrats de dépôt et fiches de réparation supprimée."
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "25fbd7aea8cb7f71ef23654c9b8cd674f1e605474463fabe8e1c77f171f3a7c7",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "4b72467d0d254f574da2aa4f6f5f7607c369b4ba7518636b9cd1ca53666c2f11",
+      "assessment_sha256": "271392cc54fda3305f970db43586bf7cf270e8fd3016e461e1abfef4260516bd",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "75bfccfa15f3990a609912fc6aa90dd452b889e738ef04dc553e2273ea5280fa"
   }
 ]

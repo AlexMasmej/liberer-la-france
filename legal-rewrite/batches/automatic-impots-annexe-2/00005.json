@@ -5,28 +5,29 @@
     "source_sha256": "0cf05c5b80d9ee81df562230915ac36960380603a912d0bb43d7f5c27d01a8ad",
     "number": "81",
     "proposed_xml": "<p>1. Les certificats délivrés aux sociétés d'investissement et aux sociétés assimilées servent à justifier le crédit d'impôt attaché aux dividendes qu'elles distribuent à leurs actionnaires.</p><p>2. Les certificats délivrés aux sociétés visées à l'article 8 du code général des impôts servent à justifier le montant des certificats qu'elles délivrent elles-mêmes à leurs membres en leur qualité d'établissement payeur au sens du 4° de l'article 75, dans les conditions des articles 77 et 78, ainsi que l'assiette de la retenue à la source prélevée par elles, le cas échéant, en application du 4 de l'article 79.</p><p>3. Jusqu'à l'expiration du délai de reprise fixé par le premier alinéa de l'article L. 169 du livre des procédures fiscales, les sociétés visées au présent article justifient les montants mentionnés aux 1 et 2 par les certificats reçus ou par leurs pièces comptables et documents de paiement identifiant les revenus, leur bénéficiaire et le crédit d'impôt. Aucune conservation distincte des certificats n'est exigée lorsque ces éléments figurent dans ces pièces et documents.</p><p>Cette faculté s'applique à compter de l'entrée en vigueur de la réforme, y compris aux justificatifs de revenus antérieurs. Elle ne modifie ni le montant des crédits d'impôt, ni les retenues dues, ni les délais de reprise, prescriptions et recours.</p>",
-    "status": "rewrite_draft",
-    "reason": "Réforme de fond : supprimer l'archivage fiscal spécifique d'un certificat lorsque les pièces ordinaires suffisent. Coordination du 2 : le 4 de l'article 79 fixe la répartition et la retenue, tandis que la qualité de payeur et la délivrance relèvent des articles 75, 77 et 78. La preuve jusqu'au délai de reprise reste nécessaire contre les doubles imputations.",
+    "reason": "Réforme de fond : supprimer l'archivage fiscal spécifique d'un certificat lorsque les pièces ordinaires suffisent. Coordination du 2 : le 4 de l'article 79 fixe la répartition et la retenue, tandis que la qualité de payeur et la délivrance relèvent des articles 75, 77 et 78. La preuve jusqu'au délai de reprise reste nécessaire contre les doubles imputations. Seconde passe : conserver cette suppression déjà acquise. Supprimer aussi toute preuve du montant compromettrait la ventilation des crédits entre associés et la prévention des doubles imputations ; aucun registre supplémentaire n'est nécessaire.",
     "review_notes": "Articles 75, 77, 78 et 79 lus dans le corpus : le brouillon conservait un renvoi incomplet. Le 77 prévoit la délivrance pour les résidents, le I b du 78 pour les non-résidents avec réserve conventionnelle sur la retenue ; le 4 de 79 règle répartition et retenue. Les références expresses à 75, 77 et 78 sont ajoutées pour corriger cette articulation ; ces cibles ne sont pas fournies dans reference-targets mais ont été vérifiées dans le corpus public autorisé. L169 LPF hors corpus : durée non modifiée. Aucun IS annuel rétabli.",
-    "benefit_review": "Le crédit attaché aux dividendes distribués et les crédits transmis aux membres des sociétés de personnes restent justifiables pour les revenus futurs comme anciens. La faculté de preuve comptable réduit l'archivage sans réduire les montants, exonérations ou droits à imputation.",
+    "status": "rewrite_draft",
+    "benefit_review": "Le crédit d'impôt des actionnaires et celui réparti aux membres des sociétés de l'article 8 restent justifiables par certificat ou pièces ordinaires, pour les revenus futurs également. Les montants, retenues et délais de recours ne changent pas ; seul l'archivage distinct disparaît.",
+    "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Suppression de l'archivage distinct du certificat sous condition de preuve ordinaire équivalente ; pas de suppression du crédit ou de la retenue.",
-      "scope_limitations": "La dispense porte sur l'archive distincte et non sur la preuve du crédit ni sur le délai de reprise. Les conventions et L169 LPF demeurent hors de la vérification locale ; aucun gain global chiffré.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un dépôt ni par un registre ou une autorisation. Les conditions de fond et contrôles expressément maintenus préexistent.",
+      "assessment": "Réforme de fond : supprimer l'archivage fiscal spécifique d'un certificat lorsque les pièces ordinaires suffisent. Coordination du 2 : le 4 de l'article 79 fixe la répartition et la retenue, tandis que la qualité de payeur et la délivrance relèvent des articles 75, 77 et 78. La preuve jusqu'au délai de reprise reste nécessaire contre les doubles imputations. Seconde passe : conserver cette suppression déjà acquise. Supprimer aussi toute preuve du montant compromettrait la ventilation des crédits entre associés et la prévention des doubles imputations ; aucun registre supplémentaire n'est nécessaire.",
+      "scope_limitations": "Articles 75, 77, 78 et 79 lus dans le corpus : le brouillon conservait un renvoi incomplet. Le 77 prévoit la délivrance pour les résidents, le I b du 78 pour les non-résidents avec réserve conventionnelle sur la retenue ; le 4 de 79 règle répartition et retenue. Les références expresses à 75, 77 et 78 sont ajoutées pour corriger cette articulation ; ces cibles ne sont pas fournies dans reference-targets mais ont été vérifiées dans le corpus public autorisé. L169 LPF hors corpus : durée non modifiée. Aucun IS annuel rétabli. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
       "effects": [
         {
           "kind": "obligation_removed",
-          "measure_id": "certificats-credit-preuve-ordinaire",
-          "description": "Dispense de conservation distincte sous preuve ordinaire.",
-          "before": "Certificats obligatoirement conservés jusqu'au délai de reprise.",
-          "after": "Pièces comptables et de paiement admises ; même terme de preuve.",
+          "measure_id": "credits-mobiliers-archivage-certificats",
+          "description": "Suppression de la conservation distincte des certificats lorsque les pièces ordinaires prouvent les montants.",
+          "before": "Certificats à conserver jusqu’au délai de reprise L169.",
+          "after": "Preuve par certificats ou pièces ordinaires ; pas de conservation distincte si elles suffisent.",
           "unit": "legal_duty",
-          "affected_population": "Personnes et organismes relevant du présent article.",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme ; situations antérieures préservées selon le texte proposé.",
-          "replacement_or_new_burdens": "Aucun dépôt, registre, autorisation ou prélèvement de remplacement créé.",
-          "source_quote": "Les sociétés visées au présent article sont tenues de conserver les certificats",
+          "affected_population": "Sociétés d’investissement, assimilées et sociétés de l’article 8.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
+          "source_quote": "sont tenues de conserver les certificats qui leur ont été délivrés",
           "proposed_quote": "Aucune conservation distincte des certificats n'est exigée lorsque ces éléments figurent dans ces pièces et documents."
         }
       ]
@@ -34,22 +35,21 @@
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Conservation obligatoire du certificat comme support exclusif, lorsque les pièces comptables et de paiement contiennent les éléments probants."
+      "Suppression de la conservation distincte des certificats lorsque les pièces ordinaires prouvent les montants."
     ],
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "0cf05c5b80d9ee81df562230915ac36960380603a912d0bb43d7f5c27d01a8ad",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "d759103ab2df330fef018a0f96047e9061343a08973fbebfb605d5599c1da677",
-      "assessment_sha256": "a590e3a3a8efab64d022a35c652d90b1e00a43dca3edb48d6ddc1d4a4bfd7d07",
+      "assessment_sha256": "005f01748534f7b91aa792dffb8af8b1b84b1f250a2c44d164e1b54855e94e6d",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "220237bac89b8d3f3a2f1326718cd7b1e5f6d2ff21d73ccf1f1ecc27bb1c3d30"
+    "prior_proposal_sha256": "d759103ab2df330fef018a0f96047e9061343a08973fbebfb605d5599c1da677"
   },
   {
     "code_id": "LEGITEXT000006069569",
@@ -57,28 +57,50 @@
     "source_sha256": "7a04d60d8507a814a3f273e6370f9d78b21bc72d6364a2ef0555a3480294288d",
     "number": "81 bis",
     "proposed_xml": "<p>I. - Le crédit d'impôt attaché aux revenus des valeurs mobilières attribuées aux salariés ou acquises pour leur compte en application des articles L. 3322-1 à L. 3326-2 du code du travail fait l'objet du certificat prévu à l'article 77. Ce certificat peut être intégré à la demande de restitution prévue au III ; aucun certificat distinct ni pièce séparée n'est alors exigé.</p>\n<p>II. - Lorsque ces revenus sont exonérés en application de l'article 163 bis AA du code général des impôts, le certificat est établi au nom de l'organisme chargé de la conservation des titres et porte sur la totalité du crédit d'impôt. Cet organisme demande la restitution du crédit d'impôt mentionné sur le certificat.</p>\n<p>Lorsque l'exonération ne porte que sur la moitié de ces revenus, le certificat établi au nom de l'organisme chargé de la conservation des titres ne mentionne que la moitié du crédit d'impôt attaché à ces revenus. L'organisme demande alors la restitution de cette seule moitié.</p>\n<p>III. - L'organisme qui établit la demande de restitution l'adresse au service des impôts de son siège. Le certificat accompagne la demande, sauf lorsqu'il y est intégré.</p>\n<p>La restitution est effectuée au profit de cet organisme. Celui-ci doit employer les sommes restituées de la même façon que les revenus auxquels elles se rattachent.</p><p>Pour les demandes présentées à compter de l'entrée en vigueur de la réforme, y compris au titre de revenus antérieurs, le certificat intégré à la demande vaut certificat au sens de l'article 77. Les demandes déjà déposées demeurent valables et n'ont pas à être renouvelées. Les conditions de fond de l'exonération, les montants restituables et les règles d'affectation des sommes ne sont pas modifiés.</p>",
+    "reason": "Réforme de fond par fusion du certificat avec la demande de restitution, déjà présente dans le brouillon fourni. L'identification du crédit, de l'organisme bénéficiaire et son affectation restent nécessaires à la restitution sans double emploi ; les conditions fiscales de fond sont maintenues. Seconde passe : la fusion déjà acquise retire le support distinct. La demande, le montant total ou de moitié et l'affectation des fonds restent nécessaires pour restituer le crédit au bon organisme ; aucune nouvelle coupe de ces éléments ne se justifie.",
+    "review_notes": "Articles 77 et 79 officiels lus : dérogation expresse au caractère distinct imposé ici, sans abolition des informations utiles. Le service du siège reste destinataire. 163 bis AA conserve l'exonération totale ou de moitié et la restitution correspondante ; la note de 2007 est historique.",
     "status": "rewrite_draft",
-    "reason": "Réforme de fond par fusion du certificat avec la demande de restitution, au-delà de la seule reformulation antérieure. L'identification du crédit, de l'organisme bénéficiaire et son affectation restent nécessaires à la restitution sans double emploi ; les conditions fiscales de fond sont maintenues.",
-    "review_notes": "Article 77 et proposition de liberté de support de l'article 79 lus : dérogation expresse au caractère distinct imposé ici, sans abolition des informations utiles. Le service du siège reste destinataire. 163 bis AA conserve l'exonération totale ou de moitié et la restitution correspondante ; la note de 2007 est historique.",
-    "benefit_review": "Les revenus exonérés et les crédits restituables restent ouverts aux futures situations éligibles de salariés, y compris sous contrat unique. La totalité ou la moitié du crédit selon l'exonération et l'emploi identique aux revenus sont intégralement conservés.",
+    "benefit_review": "L'exonération totale, l'exonération de moitié et la restitution correspondante de l'article 163 bis AA sont conservées, avec réemploi identique des sommes. La fusion documentaire demeure accessible aux demandes futures éligibles et aux revenus anciens sans refaire les demandes déposées.",
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006069577|LEGIARTI000038836583",
+        "view_sha256": "190c989c451b0b9d139815463b83d05071cc6be284d5f0957bc772fa82186d48",
+        "assessment": "Le troisième alinéa fonde la restitution des crédits et le deuxième l'exonération de moitié lorsque l'indisponibilité est de trois ans. Les I à III de 81 bis conservent ces deux montants et leur affectation ; aucune condition de rupture, d'ancienneté d'emploi ou de notification n'est ajoutée."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+        "assessment": "La cible distingue le préavis de quinze jours des nouveaux contrats et les anciens préavis selon ancienneté. L'article fiscal concerne la restitution de crédits d'épargne salariale, non la durée de rupture. Ni le préavis nouveau ni l'ancienneté des anciens contrats ne conditionnent cette restitution."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+        "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+        "assessment": "La proposition réserve le contrat unique aux emplois privés nouveaux et préserve anciens contrats et avantages futurs. La participation et l'épargne visées restent accessibles aux salariés éligibles en contrat unique ; la durée de blocage de l'épargne n'est pas une durée d'emploi. Aucun régime d'agent public n'est modifié."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+        "assessment": "L1234-9 proposé prévoit zéro indemnité ordinaire avant un an au terme effectif préavis inclus, puis 0,20 mois par année totale, prorata des mois complets et plafond de six mois, employeur seul ; anciens droits et indemnités spéciales sont distincts. Ces conditions ne sont pas des conditions de restitution des crédits d'épargne salariale ici et ne sont donc pas importées dans le renvoi fiscal."
+      }
+    ],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Fusion facultative du certificat et de la demande : un support unique suffit ; droit à restitution et réemploi maintenus, sans économie fiscale chiffrée.",
-      "scope_limitations": "Fusion des supports seulement ; l'indisponibilité, la moitié ou totalité restituable et l'affectation de la participation subsistent. Ni gain d'impôt nouveau ni réduction globale des formalités d'épargne salariale chiffrés.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un dépôt ni par un registre ou une autorisation. Les conditions de fond et contrôles expressément maintenus préexistent.",
+      "assessment": "Réforme de fond par fusion du certificat avec la demande de restitution, déjà présente dans le brouillon fourni. L'identification du crédit, de l'organisme bénéficiaire et son affectation restent nécessaires à la restitution sans double emploi ; les conditions fiscales de fond sont maintenues. Seconde passe : la fusion déjà acquise retire le support distinct. La demande, le montant total ou de moitié et l'affectation des fonds restent nécessaires pour restituer le crédit au bon organisme ; aucune nouvelle coupe de ces éléments ne se justifie.",
+      "scope_limitations": "Article 77 et proposition de liberté de support de l'article 79 lus : dérogation expresse au caractère distinct imposé ici, sans abolition des informations utiles. Le service du siège reste destinataire. 163 bis AA conserve l'exonération totale ou de moitié et la restitution correspondante ; la note de 2007 est historique. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
       "effects": [
         {
           "kind": "obligation_merged",
-          "measure_id": "epargne-salariale-certificat-demande-unique",
-          "description": "Fusion du certificat avec la demande de restitution.",
+          "measure_id": "epargne-salariale-certificat-demande-fusion",
+          "description": "Suppression du certificat obligatoirement distinct lorsque son contenu est intégré à la demande de restitution.",
           "before": "Certificat distinct et demande accompagnée de ce certificat.",
-          "after": "Demande unique contenant le certificat ; mêmes montants et bénéficiaires.",
+          "after": "Un même support peut contenir demande et certificat, avec montants et affectation inchangés.",
           "unit": "legal_duty",
-          "affected_population": "Personnes et organismes relevant du présent article.",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme ; situations antérieures préservées selon le texte proposé.",
-          "replacement_or_new_burdens": "Aucun dépôt, registre, autorisation ou prélèvement de remplacement créé.",
-          "source_quote": "La demande de restitution, accompagnée du certificat,",
+          "affected_population": "Organismes dépositaires et salariés bénéficiaires de participation.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
+          "source_quote": "donne lieu à la délivrance d'un certificat distinct",
           "proposed_quote": "Ce certificat peut être intégré à la demande de restitution prévue au III ; aucun certificat distinct ni pièce séparée n'est alors exigé."
         }
       ]
@@ -86,36 +108,14 @@
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Obligation de délivrer un certificat distinct et de le joindre séparément à la demande de restitution des crédits d'impôt."
-    ],
-    "reference_checks": [
-      {
-        "target_key": "LEGITEXT000006069577|LEGIARTI000038836583",
-        "view_sha256": "190c989c451b0b9d139815463b83d05071cc6be284d5f0957bc772fa82186d48",
-        "assessment": "Le troisième alinéa fonde restitution et exonération des crédits de participation ; le deuxième conserve la moitié en cas d'indisponibilité de trois ans et l'affectation ouvrant l'exonération totale. Le certificat intégré ne change aucune de ces conditions ni les droits futurs."
-      },
-      {
-        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
-        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
-        "assessment": "Ni le certificat ni sa restitution ne dépendent du préavis : quinze jours calendaires pour les contrats nouveaux, anciens droits de préavis préservés par la cible. Le renvoi d'épargne salariale n'introduit aucune condition de notification de licenciement ou d'ancienneté pour rembourser un crédit acquis."
-      },
-      {
-        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
-        "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
-        "assessment": "Le renvoi collectif au code du travail concerne l'épargne salariale, non la durée du contrat. Les salariés du contrat unique restent bénéficiaires dans les mêmes conditions fiscales ; aucune ancienneté nouvelle ni échéance d'emploi n'est ajoutée et les anciens contrats restent distincts."
-      },
-      {
-        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
-        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
-        "assessment": "Le seuil d'un an à la fin effective, préavis inclus, et le barème de 0,20 mois par année totale plafonné à six mois concernent la seule indemnité ordinaire. Ils ne conditionnent ni participation, ni réemploi des revenus, ni restitution des crédits ; aucune restriction des droits futurs ou anciens n'est importée."
-      }
+      "Suppression du certificat obligatoirement distinct lorsque son contenu est intégré à la demande de restitution."
     ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "7a04d60d8507a814a3f273e6370f9d78b21bc72d6364a2ef0555a3480294288d",
       "source_notes_sha256": "9fd45de94179502448df033c44eb3977b7d9bb7e17ef144778f4e199b950081b",
       "proposed_sha256": "ed1daae1e1871755d7aad26d78f6682cb66b5c04fa99e722bee3a419eef47f8e",
-      "assessment_sha256": "a2efd8276792812201fef8216e36667c9d5565ba85da26f64bae0c862e040fcc",
+      "assessment_sha256": "2343229f28e5ecad9714aada79595e031c604cde30ed4ff531de2c68f67639ee",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
@@ -159,7 +159,7 @@
           "source_id": "LEGIARTI000019071087",
           "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
           "view_kind": "proposal",
-          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
           "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
           "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
@@ -177,29 +177,29 @@
         {
           "target_key": "LEGITEXT000006069577|LEGIARTI000038836583",
           "view_sha256": "190c989c451b0b9d139815463b83d05071cc6be284d5f0957bc772fa82186d48",
-          "assessment": "Le troisième alinéa fonde restitution et exonération des crédits de participation ; le deuxième conserve la moitié en cas d'indisponibilité de trois ans et l'affectation ouvrant l'exonération totale. Le certificat intégré ne change aucune de ces conditions ni les droits futurs."
+          "assessment": "Le troisième alinéa fonde la restitution des crédits et le deuxième l'exonération de moitié lorsque l'indisponibilité est de trois ans. Les I à III de 81 bis conservent ces deux montants et leur affectation ; aucune condition de rupture, d'ancienneté d'emploi ou de notification n'est ajoutée."
         },
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
           "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
-          "assessment": "Ni le certificat ni sa restitution ne dépendent du préavis : quinze jours calendaires pour les contrats nouveaux, anciens droits de préavis préservés par la cible. Le renvoi d'épargne salariale n'introduit aucune condition de notification de licenciement ou d'ancienneté pour rembourser un crédit acquis."
+          "assessment": "La cible distingue le préavis de quinze jours des nouveaux contrats et les anciens préavis selon ancienneté. L'article fiscal concerne la restitution de crédits d'épargne salariale, non la durée de rupture. Ni le préavis nouveau ni l'ancienneté des anciens contrats ne conditionnent cette restitution."
         },
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
-          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
-          "assessment": "Le renvoi collectif au code du travail concerne l'épargne salariale, non la durée du contrat. Les salariés du contrat unique restent bénéficiaires dans les mêmes conditions fiscales ; aucune ancienneté nouvelle ni échéance d'emploi n'est ajoutée et les anciens contrats restent distincts."
+          "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+          "assessment": "La proposition réserve le contrat unique aux emplois privés nouveaux et préserve anciens contrats et avantages futurs. La participation et l'épargne visées restent accessibles aux salariés éligibles en contrat unique ; la durée de blocage de l'épargne n'est pas une durée d'emploi. Aucun régime d'agent public n'est modifié."
         },
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
           "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
-          "assessment": "Le seuil d'un an à la fin effective, préavis inclus, et le barème de 0,20 mois par année totale plafonné à six mois concernent la seule indemnité ordinaire. Ils ne conditionnent ni participation, ni réemploi des revenus, ni restitution des crédits ; aucune restriction des droits futurs ou anciens n'est importée."
+          "assessment": "L1234-9 proposé prévoit zéro indemnité ordinaire avant un an au terme effectif préavis inclus, puis 0,20 mois par année totale, prorata des mois complets et plafond de six mois, employeur seul ; anciens droits et indemnités spéciales sont distincts. Ces conditions ne sont pas des conditions de restitution des crédits d'épargne salariale ici et ne sont donc pas importées dans le renvoi fiscal."
         }
       ],
-      "assessments_sha256": "ad2b067ca33a7d1c6b16143223527209e29b3391bb8e84c7b0fd63371eef67d3",
+      "assessments_sha256": "d1962bd9d3450da24a90b508e32ace9f9154baa341dbaceda5fd8bbee9eaf02f",
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "638634215fcf5f0e054655c5eaf3427961e4ded940dc8b4d6439fc74ba43f2c0"
+    "prior_proposal_sha256": "ed1daae1e1871755d7aad26d78f6682cb66b5c04fa99e722bee3a419eef47f8e"
   },
   {
     "code_id": "LEGITEXT000006069569",
@@ -207,28 +207,50 @@
     "source_sha256": "12d81735602243d6faf5092d732f734fa4986cab1b06d9e97700d21d6794dd61",
     "number": "82",
     "proposed_xml": "<p>I. - Le crédit d'impôt attaché aux revenus du portefeuille collectif ou des titres détenus individuellement, acquis en application des articles L. 3331-1 à L. 3335-2 du code du travail et dans les conditions qu'ils fixent, fait l'objet du certificat prévu à l'article 77. Ce certificat peut être intégré à la demande de restitution prévue au III ; aucun certificat distinct ni pièce séparée n'est alors exigé.</p>\n<p>II. - Lorsque ces revenus sont totalement exonérés en application des deux premières phrases du II de l'article 163 bis B du code général des impôts, le certificat est établi au nom de l'organisme chargé de la conservation des titres et porte sur la totalité du crédit d'impôt. Cet organisme demande la restitution du crédit d'impôt mentionné sur le certificat.</p>\n<p>III. - L'organisme qui établit la demande de restitution l'adresse au service des impôts de son siège. Le certificat accompagne la demande, sauf lorsqu'il y est intégré.</p>\n<p>La restitution est effectuée au profit de cet organisme. Celui-ci doit employer les sommes restituées de la même façon que les revenus auxquels elles se rattachent.</p><p>Pour les demandes présentées à compter de l'entrée en vigueur de la réforme, y compris au titre de revenus antérieurs, le certificat intégré à la demande vaut certificat au sens de l'article 77. Les demandes déjà déposées demeurent valables et n'ont pas à être renouvelées. Les conditions de fond de l'exonération, les montants restituables et les règles d'affectation des sommes ne sont pas modifiés.</p>",
+    "reason": "Réforme de fond par fusion du certificat avec la demande de restitution, déjà présente dans le brouillon fourni. L'identification du crédit, de l'organisme bénéficiaire et son affectation restent nécessaires à la restitution sans double emploi ; les conditions fiscales de fond sont maintenues. Seconde passe : la fusion déjà acquise est conservée. Le réemploi, l'indisponibilité et l'identification de l'organisme sont nécessaires à la restitution de l'avantage légal ; supprimer ces éléments modifierait un régime distinct plutôt que retirer un doublon.",
+    "review_notes": "Articles 77 et 79 officiels lus : dérogation expresse au caractère distinct imposé ici, sans abolition des informations utiles. Le service du siège reste destinataire. Les deux premières phrases du II de 163 bis B visent bien réemploi et indisponibilité ; le II ter fonde la restitution. Aucune extension implicite au II bis. La note de 2008 reste historique.",
     "status": "rewrite_draft",
-    "reason": "Réforme de fond par fusion du certificat avec la demande de restitution, au-delà de la seule reformulation antérieure. L'identification du crédit, de l'organisme bénéficiaire et son affectation restent nécessaires à la restitution sans double emploi ; les conditions fiscales de fond sont maintenues.",
-    "review_notes": "Article 77 et proposition de liberté de support de l'article 79 lus : dérogation expresse au caractère distinct imposé ici, sans abolition des informations utiles. Le service du siège reste destinataire. Les deux premières phrases du II de 163 bis B visent bien réemploi et indisponibilité ; le II ter fonde la restitution. Aucune extension implicite au II bis. La note de 2008 reste historique.",
-    "benefit_review": "Les revenus exonérés et les crédits restituables restent ouverts aux futures situations éligibles de salariés, y compris sous contrat unique. La restitution intégrale au conservateur, le réemploi et l'indisponibilité restent inchangés ; les droits autonomes du II bis de 163 bis B ne sont pas supprimés.",
+    "benefit_review": "La totalité du crédit attaché aux revenus exonérés du II de 163 bis B demeure restituable à l'organisme pour réemploi, y compris à l'avenir. La fusion du certificat ne limite ni l'exonération ni la restitution et ne ferme pas le régime distinct du II bis.",
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006069577|LEGIARTI000047288738",
+        "view_sha256": "b2a19d860a683936c0edeb38febc9080a8afe19035773c973a83a9bc3d630914",
+        "assessment": "Le II, ses deux premières phrases, vise le réemploi et l'indisponibilité des revenus ; le II ter autorise la restitution. 82 conserve ce champ et ne l'étend pas implicitement au II bis. Le maintien après départ du salarié n'est pas subordonné à l'indemnité ni au préavis."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+        "assessment": "La cible distingue le préavis de quinze jours des nouveaux contrats et les anciens préavis selon ancienneté. L'article fiscal concerne la restitution de crédits d'épargne salariale, non la durée de rupture. Ni le préavis nouveau ni l'ancienneté des anciens contrats ne conditionnent cette restitution."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+        "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+        "assessment": "La proposition réserve le contrat unique aux emplois privés nouveaux et préserve anciens contrats et avantages futurs. La participation et l'épargne visées restent accessibles aux salariés éligibles en contrat unique ; la durée de blocage de l'épargne n'est pas une durée d'emploi. Aucun régime d'agent public n'est modifié."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+        "assessment": "L1234-9 proposé prévoit zéro indemnité ordinaire avant un an au terme effectif préavis inclus, puis 0,20 mois par année totale, prorata des mois complets et plafond de six mois, employeur seul ; anciens droits et indemnités spéciales sont distincts. Ces conditions ne sont pas des conditions de restitution des crédits d'épargne salariale ici et ne sont donc pas importées dans le renvoi fiscal."
+      }
+    ],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Fusion facultative du certificat et de la demande : un support unique suffit ; droit à restitution et réemploi maintenus, sans économie fiscale chiffrée.",
-      "scope_limitations": "Fusion de documents dans le seul champ du II de 163 bis B ; aucune prétention à réécrire les procédures propres au PER et au produit paneuropéen du II bis. Gain administratif non chiffré.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un dépôt ni par un registre ou une autorisation. Les conditions de fond et contrôles expressément maintenus préexistent.",
+      "assessment": "Réforme de fond par fusion du certificat avec la demande de restitution, déjà présente dans le brouillon fourni. L'identification du crédit, de l'organisme bénéficiaire et son affectation restent nécessaires à la restitution sans double emploi ; les conditions fiscales de fond sont maintenues. Seconde passe : la fusion déjà acquise est conservée. Le réemploi, l'indisponibilité et l'identification de l'organisme sont nécessaires à la restitution de l'avantage légal ; supprimer ces éléments modifierait un régime distinct plutôt que retirer un doublon.",
+      "scope_limitations": "Article 77 et proposition de liberté de support de l'article 79 lus : dérogation expresse au caractère distinct imposé ici, sans abolition des informations utiles. Le service du siège reste destinataire. Les deux premières phrases du II de 163 bis B visent bien réemploi et indisponibilité ; le II ter fonde la restitution. Aucune extension implicite au II bis. La note de 2008 reste historique. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
       "effects": [
         {
           "kind": "obligation_merged",
-          "measure_id": "epargne-salariale-certificat-demande-unique",
-          "description": "Fusion du certificat avec la demande de restitution.",
+          "measure_id": "epargne-salariale-certificat-demande-fusion",
+          "description": "Suppression du certificat obligatoirement distinct lorsque son contenu est intégré à la demande de restitution.",
           "before": "Certificat distinct et demande accompagnée de ce certificat.",
-          "after": "Demande unique contenant le certificat ; mêmes montants et bénéficiaires.",
+          "after": "Un même support peut contenir demande et certificat, avec montants et affectation inchangés.",
           "unit": "legal_duty",
-          "affected_population": "Personnes et organismes relevant du présent article.",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme ; situations antérieures préservées selon le texte proposé.",
-          "replacement_or_new_burdens": "Aucun dépôt, registre, autorisation ou prélèvement de remplacement créé.",
-          "source_quote": "La demande de restitution, accompagnée du certificat,",
+          "affected_population": "Organismes dépositaires et bénéficiaires de plans d’épargne salariale.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
+          "source_quote": "donne lieu à la délivrance d'un certificat distinct",
           "proposed_quote": "Ce certificat peut être intégré à la demande de restitution prévue au III ; aucun certificat distinct ni pièce séparée n'est alors exigé."
         }
       ]
@@ -236,36 +258,14 @@
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Obligation de délivrer un certificat distinct et de le joindre séparément à la demande de restitution des crédits d'impôt."
-    ],
-    "reference_checks": [
-      {
-        "target_key": "LEGITEXT000006069577|LEGIARTI000047288738",
-        "view_sha256": "b2a19d860a683936c0edeb38febc9080a8afe19035773c973a83a9bc3d630914",
-        "assessment": "Les deux premières phrases du II portent bien sur réemploi et indisponibilité des titres ; le II ter rend les crédits restituables. La fusion des supports ne supprime aucun droit du II ou du II bis, ce dernier restant hors du renvoi étroit de l'article 82."
-      },
-      {
-        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
-        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
-        "assessment": "Ni le certificat ni sa restitution ne dépendent du préavis : quinze jours calendaires pour les contrats nouveaux, anciens droits de préavis préservés par la cible. Le renvoi d'épargne salariale n'introduit aucune condition de notification de licenciement ou d'ancienneté pour rembourser un crédit acquis."
-      },
-      {
-        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
-        "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
-        "assessment": "Le renvoi collectif au code du travail concerne l'épargne salariale, non la durée du contrat. Les salariés du contrat unique restent bénéficiaires dans les mêmes conditions fiscales ; aucune ancienneté nouvelle ni échéance d'emploi n'est ajoutée et les anciens contrats restent distincts."
-      },
-      {
-        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
-        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
-        "assessment": "Le seuil d'un an à la fin effective, préavis inclus, et le barème de 0,20 mois par année totale plafonné à six mois concernent la seule indemnité ordinaire. Ils ne conditionnent ni participation, ni réemploi des revenus, ni restitution des crédits ; aucune restriction des droits futurs ou anciens n'est importée."
-      }
+      "Suppression du certificat obligatoirement distinct lorsque son contenu est intégré à la demande de restitution."
     ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "12d81735602243d6faf5092d732f734fa4986cab1b06d9e97700d21d6794dd61",
       "source_notes_sha256": "6d6a992ced28c48540d6543db1931de5796f77660d48637ae9be3014447e0f61",
       "proposed_sha256": "7d764a4c8f93988c7f47aef2008b9284834893887ba5707b4a960be75cf1553f",
-      "assessment_sha256": "5b5741cdc607094ba69b2fe07b4c95ca7c0243cd99de475b51d65c182c20047a",
+      "assessment_sha256": "b09c0c7ad166cd9edf53d146251a0c3ab5d258b2db88b2d8cd8ec182330eab74",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
@@ -309,7 +309,7 @@
           "source_id": "LEGIARTI000019071087",
           "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
           "view_kind": "proposal",
-          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
           "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
           "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
@@ -327,29 +327,29 @@
         {
           "target_key": "LEGITEXT000006069577|LEGIARTI000047288738",
           "view_sha256": "b2a19d860a683936c0edeb38febc9080a8afe19035773c973a83a9bc3d630914",
-          "assessment": "Les deux premières phrases du II portent bien sur réemploi et indisponibilité des titres ; le II ter rend les crédits restituables. La fusion des supports ne supprime aucun droit du II ou du II bis, ce dernier restant hors du renvoi étroit de l'article 82."
+          "assessment": "Le II, ses deux premières phrases, vise le réemploi et l'indisponibilité des revenus ; le II ter autorise la restitution. 82 conserve ce champ et ne l'étend pas implicitement au II bis. Le maintien après départ du salarié n'est pas subordonné à l'indemnité ni au préavis."
         },
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
           "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
-          "assessment": "Ni le certificat ni sa restitution ne dépendent du préavis : quinze jours calendaires pour les contrats nouveaux, anciens droits de préavis préservés par la cible. Le renvoi d'épargne salariale n'introduit aucune condition de notification de licenciement ou d'ancienneté pour rembourser un crédit acquis."
+          "assessment": "La cible distingue le préavis de quinze jours des nouveaux contrats et les anciens préavis selon ancienneté. L'article fiscal concerne la restitution de crédits d'épargne salariale, non la durée de rupture. Ni le préavis nouveau ni l'ancienneté des anciens contrats ne conditionnent cette restitution."
         },
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
-          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
-          "assessment": "Le renvoi collectif au code du travail concerne l'épargne salariale, non la durée du contrat. Les salariés du contrat unique restent bénéficiaires dans les mêmes conditions fiscales ; aucune ancienneté nouvelle ni échéance d'emploi n'est ajoutée et les anciens contrats restent distincts."
+          "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+          "assessment": "La proposition réserve le contrat unique aux emplois privés nouveaux et préserve anciens contrats et avantages futurs. La participation et l'épargne visées restent accessibles aux salariés éligibles en contrat unique ; la durée de blocage de l'épargne n'est pas une durée d'emploi. Aucun régime d'agent public n'est modifié."
         },
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
           "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
-          "assessment": "Le seuil d'un an à la fin effective, préavis inclus, et le barème de 0,20 mois par année totale plafonné à six mois concernent la seule indemnité ordinaire. Ils ne conditionnent ni participation, ni réemploi des revenus, ni restitution des crédits ; aucune restriction des droits futurs ou anciens n'est importée."
+          "assessment": "L1234-9 proposé prévoit zéro indemnité ordinaire avant un an au terme effectif préavis inclus, puis 0,20 mois par année totale, prorata des mois complets et plafond de six mois, employeur seul ; anciens droits et indemnités spéciales sont distincts. Ces conditions ne sont pas des conditions de restitution des crédits d'épargne salariale ici et ne sont donc pas importées dans le renvoi fiscal."
         }
       ],
-      "assessments_sha256": "56f3d07ada1b22498bad9c2517088c754fb5f2d5cc7ee570eb592ae00b6bca44",
+      "assessments_sha256": "36e6befdb04b83ee503a77bfc908d153c32baa974ef24d8ec2afec519d78740f",
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "0e03177f4f9ec7bc7033fee65ef940a3dc001db193545b2091b46493a544974c"
+    "prior_proposal_sha256": "7d764a4c8f93988c7f47aef2008b9284834893887ba5707b4a960be75cf1553f"
   },
   {
     "code_id": "LEGITEXT000006069569",
@@ -357,28 +357,29 @@
     "source_sha256": "39c15379ca12ee6b68eaf4c5a9e154eddb588e964037924a85c09913d46370c1",
     "number": "83",
     "proposed_xml": "<p>Pour être admises au bénéfice de l'exonération prévue au I de l'article 159 quinquies du code général des impôts, les primes à la construction encaissées par les sociétés immobilières d'investissement et les sociétés immobilières de gestion doivent être distribuées en espèces aux actionnaires ou porteurs de parts. Cette exonération n'est subordonnée ni à une distribution lors de la mise en paiement du dividende de l'exercice de perception des primes, ni à un délai suivant l'assemblée générale statuant sur les résultats de cet exercice.</p><p>Cette suppression des échéances s'applique aux distributions effectuées à compter de l'entrée en vigueur de la réforme, quelle que soit la date d'encaissement des primes. Les distributions antérieures, les impositions correspondantes, restitutions, prescriptions et recours restent régis par les règles antérieurement applicables.</p>",
-    "status": "rewrite_draft",
-    "reason": "Réforme de fond : retirer les deux échéances qui font perdre l'exonération sans changer la provenance des fonds ni le bénéficiaire. Le versement en espèces aux associés reste la condition utile correspondant à l'objet de l'article 159 quinquies ; aucune exonération n'est fermée.",
+    "reason": "Réforme de fond : retirer les deux échéances qui font perdre l'exonération sans changer la provenance des fonds ni le bénéficiaire. Le versement en espèces aux associés reste la condition utile correspondant à l'objet de l'article 159 quinquies ; aucune exonération n'est fermée. Seconde passe : les deux échéances sont déjà retirées. La distribution effective en espèces des primes encaissées reste l'objet de l'exonération des bénéficiaires ; sa suppression ferait porter le texte sur des sommes non distribuées, hors de l'article 159 quinquies.",
     "review_notes": "159 quinquies I et sa note renvoient expressément à 83 et 84 : texte lu. Coordonner 84 dans ce lot. Aucun effet sur les délais civils de paiement ou engagements contractuels ; pas de modification de l'IS ni du champ des primes R311-1 CCH.",
-    "benefit_review": "L'exonération d'IR des primes à la construction reste entière et devient accessible sans les anciennes échéances, pour les distributions futures de primes déjà encaissées ou à encaisser. Les droits et restitutions des distributions anciennes restent protégés.",
+    "status": "rewrite_draft",
+    "benefit_review": "L'exonération des distributions de primes à la construction est préservée et élargie aux distributions futures sans les anciennes échéances. La condition de provenance et le versement aux actionnaires ou porteurs demeurent ; aucun impôt de substitution n'est créé.",
+    "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Élargissement de l'exonération aux distributions tardives de véritables primes encaissées ; les primes doivent toujours parvenir en espèces aux associés.",
-      "scope_limitations": "Suppression des seules échéances fiscales de distribution ; ni nouveau droit à une prime ni suppression des obligations civiles ou de l'IS. Les distributions antérieures gardent leur régime, coût fiscal non mesuré.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un dépôt ni par un registre ou une autorisation. Les conditions de fond et contrôles expressément maintenus préexistent.",
+      "assessment": "Réforme de fond : retirer les deux échéances qui font perdre l'exonération sans changer la provenance des fonds ni le bénéficiaire. Le versement en espèces aux associés reste la condition utile correspondant à l'objet de l'article 159 quinquies ; aucune exonération n'est fermée. Seconde passe : les deux échéances sont déjà retirées. La distribution effective en espèces des primes encaissées reste l'objet de l'exonération des bénéficiaires ; sa suppression ferait porter le texte sur des sommes non distribuées, hors de l'article 159 quinquies.",
+      "scope_limitations": "159 quinquies I et sa note renvoient expressément à 83 et 84 : texte lu. Coordonner 84 dans ce lot. Aucun effet sur les délais civils de paiement ou engagements contractuels ; pas de modification de l'IS ni du champ des primes R311-1 CCH. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
       "effects": [
         {
           "kind": "relief_extended",
           "measure_id": "primes-construction-fin-echeances",
-          "description": "Exonération indépendante du calendrier de distribution.",
-          "before": "Distribution avec le dividende ou sous vingt jours après assemblée sans dividende.",
-          "after": "Aucune échéance fiscale de distribution ; même prime encaissée et mêmes associés.",
+          "description": "Suppression des deux échéances de distribution conditionnant l’exonération des primes à la construction.",
+          "before": "Distribution au paiement du dividende, sinon dans les vingt jours après assemblée.",
+          "after": "Exonération des distributions en espèces sans ces échéances ; provenance et bénéficiaires inchangés.",
           "unit": "legal_duty",
-          "affected_population": "Personnes et organismes relevant du présent article.",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme ; situations antérieures préservées selon le texte proposé.",
-          "replacement_or_new_burdens": "Aucun dépôt, registre, autorisation ou prélèvement de remplacement créé.",
-          "source_quote": "dans les vingt jours qui suivent l'assemblée générale statuant sur les résultats de cet exercice.",
+          "affected_population": "Sociétés immobilières d’investissement et de gestion et leurs associés.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
+          "source_quote": "la distribution des primes doit avoir lieu, au plus tard, dans les vingt jours qui suivent l'assemblée générale statuant sur les résultats de cet exercice.",
           "proposed_quote": "Cette exonération n'est subordonnée ni à une distribution lors de la mise en paiement du dividende de l'exercice de perception des primes, ni à un délai suivant l'assemblée générale statuant sur les résultats de cet exercice."
         }
       ]
@@ -386,23 +387,21 @@
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Date limite de distribution à la mise en paiement du dividende de l'exercice de perception des primes.",
-      "Délai subsidiaire de vingt jours après l'assemblée générale en l'absence de dividende distribué."
+      "Suppression des deux échéances de distribution conditionnant l’exonération des primes à la construction."
     ],
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "39c15379ca12ee6b68eaf4c5a9e154eddb588e964037924a85c09913d46370c1",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "9bb385d17dc46d2dca52b414b2d4d08b43ae924d34b24cfba7bac2f045c0d4f1",
-      "assessment_sha256": "cc63574f19d5ade5ad8fcb6b8853ebdd97af4cc0a5c4a50acc1522aa15a223b9",
+      "assessment_sha256": "1691af02b53fc138b5ceba61b8211f516ada4ad5924b606247065d2cbc337b47",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "f0345994685495b1daec039011511ac30b5ea6941e8e651600ebbaa9ddccc3de"
+    "prior_proposal_sha256": "9bb385d17dc46d2dca52b414b2d4d08b43ae924d34b24cfba7bac2f045c0d4f1"
   },
   {
     "code_id": "LEGITEXT000006069569",
@@ -410,41 +409,42 @@
     "source_sha256": "df42e5a8d3d9d084209e414f1998c06069da6a9baea0f5bab688f6042421eb1f",
     "number": "84",
     "proposed_xml": "<p>I. - Les distributions de primes à la construction conformes aux prescriptions de l'article 83 ne sont pas subordonnées à la remise de coupons ou d'instruments représentatifs de coupons distincts de ceux servant au paiement des dividendes et autres produits des actions ou parts, par dérogation à l'article 4 du décret n° 48-1683 du 30 octobre 1948 fixant certaines caractéristiques des valeurs mobilières. Elles ne donnent pas lieu à l'établissement du relevé prévu à l'article 57.</p><p>II. - La distribution de primes à la construction ne satisfaisant pas aux conditions de l'article 83 ou de sommes ne provenant pas de primes à la construction encaissées par la société ne suffit pas à réputer les bénéficiaires non identifiés. Le régime des rémunérations et avantages occultes mentionnés au c de l'article 111 du code général des impôts ne s'applique que lorsque ses conditions propres sont remplies. Les autres règles d'imposition des distributions demeurent applicables.</p><p>Le présent article s'applique aux distributions effectuées à compter de l'entrée en vigueur de la réforme. Les distributions antérieures, créances, restitutions, prescriptions et recours restent régis par leurs règles antérieures, sous réserve de l'application des dispositions répressives plus douces dans leur champ.</p>",
+    "reason": "Réforme de fond : la réalité de la prime et du bénéficiaire peut être établie sans coupons distincts ; l'irrégularité de distribution ne démontre pas à elle seule une dissimulation. Maintenir le régime de fraude réellement applicable et les autres impôts, avec la dispense favorable de relevé. Seconde passe : conserver les deux coupes déjà acquises, coupons séparés et présomption automatique. Le régime autonome des avantages réellement occultes protège contre la dissimulation ; sa suppression générale excéderait cette irrégularité documentaire.",
+    "review_notes": "83 est coordonné dans ce lot : ses échéances supprimées ne peuvent fonder une taxation occulte. 159 quinquies et 57 lus ; la dispense de relevé est conservée indépendamment des autres réformes envisagées de 57. Décret 1948 hors corpus à coordonner expressément ; aucune abrogation générale des coupons. Le c de 111 a été lu : il vise les rémunérations et avantages occultes, sans définir toute irrégularité de calendrier comme une dissimulation. La suppression de la présomption n'abolit pas ce régime légal autonome.",
     "status": "rewrite_draft",
-    "reason": "Réforme de fond : la réalité de la prime et du bénéficiaire peut être établie sans coupons distincts ; l'irrégularité de distribution ne démontre pas à elle seule une dissimulation. Maintenir le régime de fraude réellement applicable et les autres impôts, avec la dispense favorable de relevé.",
-    "review_notes": "83 est coordonné dans ce lot : ses échéances supprimées ne peuvent fonder une taxation occulte. 159 quinquies et 57 lus ; la dispense de relevé est conservée même au-delà de la dispense générale proposée à 57. Décret 1948 hors corpus à coordonner expressément ; aucune abrogation générale des coupons. Le c de 111 a été lu : il vise les rémunérations et avantages occultes, sans définir toute irrégularité de calendrier comme une dissimulation. La suppression de la présomption n'abolit pas ce régime légal autonome.",
-    "benefit_review": "La dispense du relevé de l'article 57 est maintenue pour toutes les futures distributions conformes à 83, comme l'exonération de 159 quinquies. La suppression des coupons distincts facilite cet avantage ; les distributions non éligibles restent soumises aux impôts de leur champ sans présomption automatique d'occultation.",
+    "benefit_review": "La dispense du relevé de l'article 57 est maintenue pour les distributions conformes, futures comprises. L'exonération de 159 quinquies demeure accessible sans coupons distincts ; la présomption d'avantages occultes est supprimée sans abolir les règles applicables à une dissimulation réelle.",
+    "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Retrait du support obligatoire de paiement et de l'assimilation automatique à un avantage occulte ; contrôle de la provenance et impositions de droit commun conservés.",
-      "scope_limitations": "L'allègement vise les coupons distincts et la présomption spéciale ; ni les obligations générales d'identification ni les revenus distribués réellement occultes ne sont exonérés. Effet fiscal net non quantifié ; décret de 1948 extérieur à coordonner.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un dépôt ni par un registre ou une autorisation. Les conditions de fond et contrôles expressément maintenus préexistent.",
+      "assessment": "Réforme de fond : la réalité de la prime et du bénéficiaire peut être établie sans coupons distincts ; l'irrégularité de distribution ne démontre pas à elle seule une dissimulation. Maintenir le régime de fraude réellement applicable et les autres impôts, avec la dispense favorable de relevé. Seconde passe : conserver les deux coupes déjà acquises, coupons séparés et présomption automatique. Le régime autonome des avantages réellement occultes protège contre la dissimulation ; sa suppression générale excéderait cette irrégularité documentaire.",
+      "scope_limitations": "83 est coordonné dans ce lot : ses échéances supprimées ne peuvent fonder une taxation occulte. 159 quinquies et 57 lus ; la dispense de relevé est conservée même au-delà de la dispense générale proposée à 57. Décret 1948 hors corpus à coordonner expressément ; aucune abrogation générale des coupons. Le c de 111 a été lu : il vise les rémunérations et avantages occultes, sans définir toute irrégularité de calendrier comme une dissimulation. La suppression de la présomption n'abolit pas ce régime légal autonome. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
       "effects": [
         {
           "kind": "obligation_removed",
-          "measure_id": "primes-construction-fin-coupons-distincts",
-          "description": "Suppression des coupons distincts obligatoires.",
-          "before": "Coupons distincts remis pour le paiement.",
-          "after": "Paiement sans coupons distincts obligatoire ; dispense de relevé conservée.",
+          "measure_id": "primes-construction-coupons-distincts",
+          "description": "Suppression de l’obligation de remise de coupons distincts pour les primes à la construction.",
+          "before": "Coupons obligatoirement distincts de ceux des dividendes.",
+          "after": "Pas de coupons distincts exigés ; dispense du relevé conservée.",
           "unit": "legal_duty",
-          "affected_population": "Personnes et organismes relevant du présent article.",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme ; situations antérieures préservées selon le texte proposé.",
-          "replacement_or_new_burdens": "Aucun dépôt, registre, autorisation ou prélèvement de remplacement créé.",
-          "source_quote": "sont obligatoirement distincts de ceux servant au paiement des dividendes",
-          "proposed_quote": "ne sont pas subordonnées à la remise de coupons ou d'instruments représentatifs de coupons distincts"
+          "affected_population": "Sociétés immobilières et bénéficiaires des distributions de primes.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
+          "source_quote": "sont obligatoirement distincts de ceux servant au paiement des dividendes et autres produits des actions ou parts.",
+          "proposed_quote": "ne sont pas subordonnées à la remise de coupons ou d'instruments représentatifs de coupons distincts de ceux servant au paiement des dividendes et autres produits des actions ou parts"
         },
         {
-          "kind": "tax_reduced",
+          "kind": "relief_extended",
           "measure_id": "primes-construction-fin-presomption-occulte",
-          "description": "Suppression de la qualification fiscale automatique, sans chiffrage de baisse.",
-          "before": "Sommes ou valeurs irrégulièrement réparties réputées occultes sans examen de l'identité réelle ; taux non fixé ici.",
-          "after": "Même assiette soumise aux règles propres de distribution ; régime occulte seulement si ses conditions sont remplies, taux non modifiés.",
+          "description": "Suppression de la présomption automatique de bénéficiaires non identifiés pour une distribution irrégulière.",
+          "before": "Toute distribution visée au II réputée à bénéficiaires non identifiés et taxée comme occulte.",
+          "after": "Application de 111 c seulement si ses conditions propres sont remplies ; imposition ordinaire distincte.",
           "unit": "legal_duty",
-          "affected_population": "Personnes et organismes relevant du présent article.",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme ; situations antérieures préservées selon le texte proposé.",
-          "replacement_or_new_burdens": "Aucun dépôt, registre, autorisation ou prélèvement de remplacement créé.",
-          "source_quote": "sont réputées versées à des bénéficiaires non identifiés",
+          "affected_population": "Sociétés immobilières et bénéficiaires des distributions de primes.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
+          "source_quote": "les sommes ou valeurs ainsi réparties sont réputées versées à des bénéficiaires non identifiés",
           "proposed_quote": "ne suffit pas à réputer les bénéficiaires non identifiés."
         }
       ]
@@ -452,23 +452,22 @@
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Remise obligatoire de coupons ou instruments distincts pour distribuer les primes à la construction exonérées.",
-      "Présomption automatique de bénéficiaires non identifiés et d'avantages occultes pour toute distribution irrégulière au regard de l'article 83."
+      "Suppression de l’obligation de remise de coupons distincts pour les primes à la construction.",
+      "Suppression de la présomption automatique de bénéficiaires non identifiés pour une distribution irrégulière."
     ],
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "df42e5a8d3d9d084209e414f1998c06069da6a9baea0f5bab688f6042421eb1f",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "19abd9c573fc58a60ad2640d8f66d80ebde907b87c46ce9a535cb3449db3f739",
-      "assessment_sha256": "8de60d25daa53bfd3797055bffe655e2020be18aa750f996cccaac7a92f32560",
+      "assessment_sha256": "1dafa6e01463c42c9943f1125f98d94b7e71c23499b677119808dc6ef7594e05",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "f8ce9eb811a4f8244fdb519870143d01c8db9a18427de42ee950eb107b0c97c0"
+    "prior_proposal_sha256": "19abd9c573fc58a60ad2640d8f66d80ebde907b87c46ce9a535cb3449db3f739"
   },
   {
     "code_id": "LEGITEXT000006069569",
@@ -476,27 +475,34 @@
     "source_sha256": "6019ba76a55f7321ecf1ca3b4146e86b1b902700f406329db7ea47f4d13f1e42",
     "number": "91 bis",
     "proposed_xml": "\n<p>I. – 1° L'entreprise ou la société mentionnée au 2° délivre un état individuel aux bénéficiaires d'options sur titres attribuées jusqu'au 27 septembre 2012 dans les conditions prévues au I de l'article 163 bis C du code général des impôts dans sa rédaction antérieure à celle résultant de l'article 11 de la loi n° 2012-1509 du 29 décembre 2012 de finances pour 2013, au plus tard le 1er mars de l'année de dépôt de leur déclaration de revenus souscrite au titre de l'année de la levée des options. Les bénéficiaires ne sont pas tenus de conserver cet état ni de le présenter à l'administration fiscale. Les obligations de transmission de l'entreprise ou de la société prévues au présent article demeurent applicables. </p>\n<p>Cet état mentionne : </p>\n<p>a) L'objet pour lequel il est établi : application de l'article 163 bis C du code général des impôts dans sa rédaction antérieure à celle résultant de la loi n° 2012-1509 du 29 décembre 2012 de finances pour 2013, pour les options sur titres attribuées jusqu'au 27 septembre 2012 ; </p>\n<p>b) La raison sociale et le siège social de la société émettrice des titres et, le cas échéant, celle de l'entreprise qui établit l'état ; </p>\n<p>c) L'identité et l'adresse du bénéficiaire ; </p>\n<p>d) Le nombre, le prix de souscription ou d'achat et la valeur des actions acquises à la date de la levée des options ; </p>\n<p>e) La fraction du gain de levée d'option de source française ; </p>\n<p>f) Les dates d'attribution et de levée des options ; </p>\n<p>g) Lorsque les dispositions du II de l'article 80 bis du code général des impôts trouvent à s'appliquer, le montant de la différence définie à cet article. </p>\n<p>2° La société émettrice qui a son siège social en France et dans laquelle le titulaire des options sur titres exerce son activité ou l'entreprise mentionnée au III de l'article 80 bis du code général des impôts transmet à l'administration fiscale, dans la déclaration prévue à l'article 87 du même code, les informations mentionnées au i du 2° de l'article 39 de l'annexe III audit code. </p>\n<p>Lorsque le titulaire exerce son activité dans une entreprise différente de la société ou de l'entreprise mentionnée à l'alinéa précédent au moment de la levée des options, cette information est transmise, selon les mêmes modalités, par l'entreprise dans laquelle il exerce son activité lorsqu'elle dispose des informations nécessaires. </p>\n<p>Dans les autres cas, la société émettrice ou l'entreprise mentionnée au premier alinéa adresse au service des impôts des entreprises dont elle relève, au plus tard le 1er mars de l'année qui suit celle au cours de laquelle a eu lieu la levée des options, un duplicata de l'état individuel mentionné au 1°. </p>\n<p>3° Lorsque les actions issues des options sur titres sont inscrites sur un compte titres qui n'est pas tenu par l'entreprise ou la société mentionnée au 2°, celle-ci communique, soit au plus tard le 1er mars de l'année qui suit celle de la levée des options, soit lors de la cession des titres lorsqu'elle intervient avant cette date, une copie de l'état prévu au 1° à l'établissement chargé de la tenue du compte titres qui est redevable de la retenue à la source prévue à l'article 182 A ter du code général des impôts. </p>\n<p>En cas de transfert des titres sur un autre compte, l'établissement mentionné à l'alinéa précédent transmet une copie du duplicata au nouveau redevable de la retenue à la source. </p>\n<p>II. – 1° En cas de conversion au porteur, de mise en location ou de cession d'actions issues d'options sur titres attribuées jusqu'au 27 septembre 2012, avant le terme de la période d'indisponibilité prévue au I de l'article 163 bis C du code général des impôts dans sa rédaction antérieure à celle résultant de l'article 11 de la loi n° 2012-1509 du 29 décembre 2012 de finances pour 2013, l'entreprise ou la société mentionnée au 2° du I du présent article adresse au service des impôts des entreprises dont elle relève, au plus tard le 1er mars de l'année qui suit celle au cours de laquelle a eu lieu l'opération, un état individuel qui mentionne la date et la nature de l'opération, le nombre d'actions concernées, les informations mentionnées aux b à g du 1° du I et, le cas échéant, la survenance d'un événement prévu à l'article 91 ter. </p>\n<p>Elle communique une copie de cet état au titulaire des options et, le cas échéant, à l'établissement mentionné au 3° du I. </p>\n<p>2° En cas d'échange sans soulte d'actions issues d'options sur titres attribuées jusqu'au 27 septembre 2012 et résultant d'une opération mentionnée au I bis de l'article 163 bis C du code général des impôts dans sa rédaction antérieure à celle résultant de l'article 11 de la loi n° 2012-1509 du 29 décembre 2012 de finances pour 2013, l'entreprise ou la société mentionnée au 2° du I du présent article adresse au service des impôts des entreprises dont elle relève, au plus tard le 1er mars de l'année qui suit celle au cours de laquelle a eu lieu l'opération, un état individuel qui mentionne la date et la nature de l'opération, le nombre d'actions reçues en échange, la raison sociale et l'adresse de la société dont les actions sont remises en échange ainsi que les informations mentionnées aux b à g du 1° du I. </p>\n<p>Elle communique une copie de cet état au titulaire des options et, le cas échéant, à l'établissement mentionné au 3° du I.</p>\n<p>La suppression de l'obligation de conservation et de présentation pesant sur les bénéficiaires prend effet à l'entrée en vigueur de la réforme, y compris pour les états antérieurement délivrés. Elle ne supprime ni les conditions du régime fiscal des options attribuées jusqu'au 27 septembre 2012, ni les droits, créances, restitutions, contrôles, prescriptions et recours correspondants. Aucun état supplémentaire n'est exigé de l'entreprise en remplacement de cette obligation.</p>",
-    "status": "rewrite_draft",
-    "reason": "Réforme de fond : retirer l'obligation personnelle de garder et représenter un état dont les données sont déjà transmises par l'entreprise au I, 2°. Les états de l'entreprise, l'information du salarié et la circulation nécessaire à la retenue demeurent pour justifier les avantages historiques et éviter les erreurs d'assiette. Aucun simple toilettage du reste de l'article.",
+    "reason": "Réforme de fond : retirer l'obligation personnelle de garder et représenter un état dont les données sont déjà transmises par l'entreprise au I, 2°. Les états de l'entreprise, l'information du salarié et la circulation nécessaire à la retenue demeurent pour justifier les avantages historiques et éviter les erreurs d'assiette. Aucun simple toilettage du reste de l'article. Seconde passe : la conservation personnelle est supprimée. Les destinataires des transmissions restantes sont différents : contribuable, administration et redevable de la retenue. Les données de levée, cession et échange sont nécessaires aux droits historiques et à la retenue ; aucun doublon universel supplémentaire n'est démontré.",
     "review_notes": "I, 1° a à g, 2°, 3° et II, 1° et 2° conservés intégralement hors phrase ciblée. Maintien de tous les 1er mars, du transfert entre teneurs de compte, de l'échange sans soulte et des références aux versions historiques de 163 bis C. L'article 87 fourni maintient la déclaration ; son réemploi de données n'est pas compté comme nouvelle baisse. 91 ter est allégé séparément sans supprimer le signalement des événements favorables.",
-    "benefit_review": "Les options attribuées jusqu'au 27 septembre 2012 conservent leur régime fiscal historique et les événements favorables de 91 ter. La suppression d'archive ne retire aucun droit ; elle ne crée pas de nouvelles attributions éligibles au régime clos en 2012.",
+    "status": "rewrite_draft",
+    "benefit_review": "Les régimes historiques des options attribuées jusqu'au 27 septembre 2012 sont préservés ; les événements favorables de 91 ter, l'échange sans soulte et les informations permettant le calcul de la retenue demeurent. La suppression de l'archivage personnel ne ferme aucun avantage.",
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006069577|LEGIARTI000030751932",
+        "view_sha256": "037863c664865e0b3dde293f417e8f5e50555cc30104febd3dd73f600a1a079c",
+        "assessment": "La déclaration de rémunérations subsiste dans la source et dans la proposition de 87. Le I 2° de 91 bis l'utilise pour les données d'options, sans restaurer une taxe sur les salaires ; retirer la conservation du bénéficiaire ne dispense pas l'entreprise des données nécessaires. Le réemploi prévu par 87 n'est pas compté comme une seconde coupe."
+      }
+    ],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Suppression d'une archive obligatoire du salarié alors que la transmission fiscale incombe déjà à l'entreprise ; tous contenus, échéances et circuits de retenue sont maintenus.",
-      "scope_limitations": "Le stock antérieur au 28 septembre 2012 seul est concerné. Les transmissions de l'entreprise et des teneurs de compte restent nécessaires ; les versions historiques de 163 bis C ne sont pas fournies dans les cibles et aucun achèvement de leur contrôle n'est affirmé.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un dépôt ni par un registre ou une autorisation. Les conditions de fond et contrôles expressément maintenus préexistent.",
+      "assessment": "Réforme de fond : retirer l'obligation personnelle de garder et représenter un état dont les données sont déjà transmises par l'entreprise au I, 2°. Les états de l'entreprise, l'information du salarié et la circulation nécessaire à la retenue demeurent pour justifier les avantages historiques et éviter les erreurs d'assiette. Aucun simple toilettage du reste de l'article. Seconde passe : la conservation personnelle est supprimée. Les destinataires des transmissions restantes sont différents : contribuable, administration et redevable de la retenue. Les données de levée, cession et échange sont nécessaires aux droits historiques et à la retenue ; aucun doublon universel supplémentaire n'est démontré.",
+      "scope_limitations": "I, 1° a à g, 2°, 3° et II, 1° et 2° conservés intégralement hors phrase ciblée. Maintien de tous les 1er mars, du transfert entre teneurs de compte, de l'échange sans soulte et des références aux versions historiques de 163 bis C. L'article 87 fourni maintient la déclaration ; son réemploi de données n'est pas compté comme nouvelle baisse. 91 ter est allégé séparément sans supprimer le signalement des événements favorables. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
       "effects": [
         {
           "kind": "obligation_removed",
-          "measure_id": "options-anciennes-fin-archive-beneficiaire",
-          "description": "Fin de la conservation personnelle obligatoire de l'état.",
-          "before": "Le salarié conserve et présente l'état jusqu'au délai de reprise.",
-          "after": "Aucune conservation ni présentation spécifique par le bénéficiaire ; déclarations de l'entreprise inchangées.",
+          "measure_id": "options-titres-fin-archivage-beneficiaire",
+          "description": "Suppression de la conservation et présentation personnelle de l’état individuel des options anciennes.",
+          "before": "État à conserver jusqu’au délai de reprise et présenter sur demande.",
+          "after": "Bénéficiaire dispensé ; transmission de l’entreprise et aux teneurs de compte maintenue.",
           "unit": "legal_duty",
-          "affected_population": "Personnes et organismes relevant du présent article.",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme ; situations antérieures préservées selon le texte proposé.",
-          "replacement_or_new_burdens": "Aucun dépôt, registre, autorisation ou prélèvement de remplacement créé.",
+          "affected_population": "Bénéficiaires d’options attribuées jusqu’au 27 septembre 2012.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
           "source_quote": "Les bénéficiaires doivent le conserver jusqu'à l'expiration du délai de reprise et le présenter sur demande de l'administration fiscale.",
           "proposed_quote": "Les bénéficiaires ne sont pas tenus de conserver cet état ni de le présenter à l'administration fiscale."
         }
@@ -505,21 +511,14 @@
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Conservation personnelle obligatoire de l'état individuel par le bénéficiaire jusqu'au délai de reprise et présentation sur demande fiscale."
-    ],
-    "reference_checks": [
-      {
-        "target_key": "LEGITEXT000006069577|LEGIARTI000030751932",
-        "view_sha256": "037863c664865e0b3dde293f417e8f5e50555cc30104febd3dd73f600a1a079c",
-        "assessment": "Le I, 2° de 91 bis vise la déclaration des rémunérations prévue à 87, non une indemnité de rupture. Le texte source et sa proposition maintiennent cette déclaration, permettant de retirer la seule archive obligatoire du bénéficiaire sans retirer la transmission fiscale de l'entreprise."
-      }
+      "Suppression de la conservation et présentation personnelle de l’état individuel des options anciennes."
     ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "6019ba76a55f7321ecf1ca3b4146e86b1b902700f406329db7ea47f4d13f1e42",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "2fe99de4a0b741bc7c0153cef144566ecdb2be9ec0e0fce418de3ad83c8c96fa",
-      "assessment_sha256": "a659338622b5276dd699d97ce0d80bc8da46bba2d42bb65331924e6d1eacfd37",
+      "assessment_sha256": "83fb5c2efeac01f58ab49af202075869355ff85add77f57dbae152f9ed2ec7cb",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
@@ -554,14 +553,14 @@
         {
           "target_key": "LEGITEXT000006069577|LEGIARTI000030751932",
           "view_sha256": "037863c664865e0b3dde293f417e8f5e50555cc30104febd3dd73f600a1a079c",
-          "assessment": "Le I, 2° de 91 bis vise la déclaration des rémunérations prévue à 87, non une indemnité de rupture. Le texte source et sa proposition maintiennent cette déclaration, permettant de retirer la seule archive obligatoire du bénéficiaire sans retirer la transmission fiscale de l'entreprise."
+          "assessment": "La déclaration de rémunérations subsiste dans la source et dans la proposition de 87. Le I 2° de 91 bis l'utilise pour les données d'options, sans restaurer une taxe sur les salaires ; retirer la conservation du bénéficiaire ne dispense pas l'entreprise des données nécessaires. Le réemploi prévu par 87 n'est pas compté comme une seconde coupe."
         }
       ],
-      "assessments_sha256": "79f04bc5c5e7232086e78a81e43b7b9936f99c4643743e9ff38408bde8dbf02a",
+      "assessments_sha256": "c53f33402b2778bcb9704464776fbb9c0eeb013ec8f5911621c10bd4ca1a5405",
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "789836edf499cc7fe1a44482a8724e2bd7a62a40c36d90535e46b734c21aadbf"
+    "prior_proposal_sha256": "2fe99de4a0b741bc7c0153cef144566ecdb2be9ec0e0fce418de3ad83c8c96fa"
   },
   {
     "code_id": "LEGITEXT000006069569",
@@ -569,40 +568,57 @@
     "source_sha256": "585634637e78feb9d8dba4d227abadaf0073ec0bada0e7c47123a6893c9ca0d0",
     "number": "91 ter",
     "proposed_xml": "<p>Le bénéficiaire d'options sur titres attribuées jusqu'au 27 septembre 2012 peut, à titre exceptionnel, disposer des actions avant le terme de la période d'indisponibilité fixée au I de l'article 163 bis C du code général des impôts, dans sa rédaction antérieure à celle résultant de l'article 11 de la loi n° 2012-1509 du 29 décembre 2012 de finances pour 2013, tout en conservant le bénéfice des dispositions de cet article, dans les situations suivantes :</p>\n<p>1° Le licenciement du titulaire ;</p>\n<p>2° La mise à la retraite du titulaire ;</p>\n<p>3° L'invalidité du titulaire correspondant à son classement dans la deuxième ou la troisième des catégories prévues à l'article L. 341-4 du code de la sécurité sociale ;</p>\n<p>4° Le décès du titulaire.</p>\n<p>Dans les situations prévues aux 1° et 2°, aucun délai minimal entre la levée des options et l'événement invoqué n'est exigé.</p><p>Pour l'application du 1°, la rupture à l'initiative de l'employeur d'un contrat de travail unique ouvre le même droit que le licenciement, sans condition tenant à l'ouverture du droit à l'indemnité ordinaire de rupture. Les autres modes de cessation de l'emploi ne sont pas assimilés à un licenciement par le présent article.</p><p>Ces dispositions s'appliquent aux actes de disposition des actions accomplis à compter de l'entrée en vigueur de la réforme, y compris au titre d'options antérieurement levées. Le champ des options attribuées jusqu'au 27 septembre 2012 demeure inchangé. Les actes antérieurs, leurs impositions, restitutions, prescriptions et recours restent régis par les règles antérieures.</p>",
-    "status": "rewrite_draft",
-    "reason": "Réforme de fond : le délai de trois mois peut priver le titulaire licencié d'un avantage alors que la perte d'emploi est réelle. Sa suppression protège le bénéfice sans imposer une durée nouvelle. Coordination expresse avec la rupture patronale du contrat unique, indépendante du seuil d'un an de l'indemnité ordinaire.",
+    "reason": "Réforme de fond : le délai de trois mois peut priver le titulaire licencié d'un avantage alors que la perte d'emploi est réelle. Sa suppression protège le bénéfice sans imposer une durée nouvelle. Coordination expresse avec la rupture patronale du contrat unique, indépendante du seuil d'un an de l'indemnité ordinaire. Seconde passe : maintenir la suppression du délai de trois mois et l'assimilation de la rupture patronale. Les quatre événements restent nécessaires pour déterminer les exceptions au régime historique sans ouvrir un nouveau régime général d'options.",
     "review_notes": "Les quatre événements, les catégories 2 et 3 d'invalidité et le champ historique 2012 sont maintenus. Le décès est ici un motif de disponibilité fiscale favorable, non un droit de succession. Le préavis individuel reste distinct des procédures collectives et autorisations ; aucune règle de notification ou d'ancienneté d'emploi n'est modifiée ici.",
-    "benefit_review": "Licenciement, mise à la retraite, invalidité des deuxième et troisième catégories et décès continuent d'ouvrir les sorties sans perte du régime fiscal. Les événements futurs restent couverts pour les options admissibles ; le délai de trois mois est supprimé et le contrat unique n'exclut pas le titulaire.",
+    "status": "rewrite_draft",
+    "benefit_review": "Les exceptions pour licenciement, retraite, invalidité de deuxième ou troisième catégorie et décès restent ouvertes aux dispositions futures des options du champ historique. Le délai de trois mois disparaît et la rupture patronale du contrat unique donne accès au même avantage, sans seuil d'indemnité.",
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+        "assessment": "La cible distingue le préavis de quinze jours des nouveaux contrats et les anciens préavis selon ancienneté. 91 ter ouvre l'exception fiscale à la rupture patronale sans exiger un préavis d'une durée particulière ; aucune autorisation spéciale n'est supprimée."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+        "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+        "assessment": "La proposition réserve le contrat unique aux emplois privés nouveaux et préserve anciens contrats et avantages futurs. L'assimilation explicite dans 91 ter maintient la dérogation fiscale lors d'une rupture patronale future, sans créer de CDD ni viser les agents publics."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+        "assessment": "L1234-9 proposé prévoit zéro indemnité ordinaire avant un an au terme effectif préavis inclus, puis 0,20 mois par année totale, prorata des mois complets et plafond de six mois, employeur seul ; anciens droits et indemnités spéciales sont distincts. 91 ter ne conditionne pas l'avantage fiscal à ce seuil ni au versement de cette indemnité."
+      }
+    ],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Suppression effective du délai de trois mois ; extension de la sortie favorable à toute rupture patronale du contrat unique dans le seul stock d'options admissibles.",
-      "scope_limitations": "Seuls les actes futurs sur options attribuées jusqu'au 27 septembre 2012 bénéficient de la suppression du délai. Aucune réouverture du stock ni assimilation générale de toute fin d'emploi. Le coût fiscal de l'élargissement n'est pas établi.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un dépôt ni par un registre ou une autorisation. Les conditions de fond et contrôles expressément maintenus préexistent.",
+      "assessment": "Réforme de fond : le délai de trois mois peut priver le titulaire licencié d'un avantage alors que la perte d'emploi est réelle. Sa suppression protège le bénéfice sans imposer une durée nouvelle. Coordination expresse avec la rupture patronale du contrat unique, indépendante du seuil d'un an de l'indemnité ordinaire. Seconde passe : maintenir la suppression du délai de trois mois et l'assimilation de la rupture patronale. Les quatre événements restent nécessaires pour déterminer les exceptions au régime historique sans ouvrir un nouveau régime général d'options.",
+      "scope_limitations": "Les quatre événements, les catégories 2 et 3 d'invalidité et le champ historique 2012 sont maintenus. Le décès est ici un motif de disponibilité fiscale favorable, non un droit de succession. Le préavis individuel reste distinct des procédures collectives et autorisations ; aucune règle de notification ou d'ancienneté d'emploi n'est modifiée ici. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
       "effects": [
         {
-          "kind": "deadline_reduced",
-          "measure_id": "options-anciennes-fin-delai-trois-mois",
-          "description": "Fin du délai d'antériorité fiscale de levée.",
-          "before": "Au moins trois mois avant licenciement ou mise à la retraite.",
-          "after": "Aucun délai minimal avant ces deux événements ; invalidité et décès inchangés.",
-          "unit": "other",
-          "affected_population": "Personnes et organismes relevant du présent article.",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme ; situations antérieures préservées selon le texte proposé.",
-          "replacement_or_new_burdens": "Aucun dépôt, registre, autorisation ou prélèvement de remplacement créé.",
+          "kind": "relief_extended",
+          "measure_id": "options-titres-fin-delai-trois-mois",
+          "description": "Suppression du délai minimal de trois mois entre levée des options et licenciement ou mise à la retraite.",
+          "before": "Levée au moins trois mois avant événement pour conserver le bénéfice.",
+          "after": "Aucun délai minimal pour ces deux événements ; autres exceptions conservées.",
+          "unit": "legal_duty",
+          "affected_population": "Titulaires d’options du champ historique licenciés ou mis à la retraite.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
           "source_quote": "les options doivent avoir été levées au moins trois mois avant la date de réalisation de l'événement invoqué.",
-          "proposed_quote": "aucun délai minimal entre la levée des options et l'événement invoqué n'est exigé."
+          "proposed_quote": "Dans les situations prévues aux 1° et 2°, aucun délai minimal entre la levée des options et l'événement invoqué n'est exigé."
         },
         {
           "kind": "coordination",
-          "measure_id": "contrat-unique-maintien-avantages-fiscaux",
-          "description": "Maintien du déblocage favorable en cas de rupture patronale du contrat unique.",
-          "before": "Le 1° vise le licenciement du titulaire, sans condition d'indemnité ordinaire.",
-          "after": "La rupture patronale du contrat unique ouvre le même droit, même sans indemnité ordinaire.",
-          "unit": "regime",
-          "affected_population": "Titulaires d'options attribuées jusqu'au 27 septembre 2012 ultérieurement employés sous contrat unique.",
-          "conditions_and_transition": "Actes de disposition accomplis après l'entrée en vigueur ; aucun nouveau stock d'options éligibles créé.",
-          "replacement_or_new_burdens": "Aucune formalité ou ancienneté supplémentaire ; les autres modes de cessation ne sont pas assimilés au licenciement.",
+          "measure_id": "contrat-unique-avantages-fiscaux",
+          "description": "Coordination de l’exception fiscale de licenciement avec la rupture patronale du contrat unique.",
+          "before": "Licenciement parmi les événements ouvrant la disponibilité anticipée.",
+          "after": "Même avantage pour rupture patronale du contrat unique sans condition d’indemnité.",
+          "unit": "legal_duty",
+          "affected_population": "Titulaires d’options du champ historique licenciés ou mis à la retraite.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
           "source_quote": "1° licenciement du titulaire ;",
           "proposed_quote": "Pour l'application du 1°, la rupture à l'initiative de l'employeur d'un contrat de travail unique ouvre le même droit que le licenciement, sans condition tenant à l'ouverture du droit à l'indemnité ordinaire de rupture."
         }
@@ -611,31 +627,14 @@
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Délai minimal de trois mois entre la levée des options et le licenciement ou la mise à la retraite pour préserver l'avantage fiscal."
-    ],
-    "reference_checks": [
-      {
-        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
-        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
-        "assessment": "La rupture patronale du contrat unique donne accès au 1° sans attendre une ancienne durée de préavis. Les quinze jours calendaires sont un préavis individuel, sans suppression des procédures collectives ; le délai fiscal de trois mois est retiré et ne doit pas être confondu avec la notification de la rupture."
-      },
-      {
-        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
-        "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
-        "assessment": "Le stock d'options demeure limité aux attributions jusqu'au 27 septembre 2012, mais une rupture future de contrat unique ne doit pas fermer la sortie favorable. Le nouveau contrat reste indéterminé ; aucune fin de mission ou formation n'est assimilée ici à une rupture automatique."
-      },
-      {
-        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
-        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
-        "assessment": "L'indemnité ordinaire dépend d'un an au terme effectif préavis inclus, puis de 0,20 mois par année totale, prorata des mois complets et plafond six mois. Ces conditions ne gouvernent pas l'avantage fiscal de 91 ter : la rupture patronale ouvre la sortie même sans indemnité ; anciens droits et indemnités spéciales restent distincts."
-      }
+      "Suppression du délai minimal de trois mois entre levée des options et licenciement ou mise à la retraite."
     ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "585634637e78feb9d8dba4d227abadaf0073ec0bada0e7c47123a6893c9ca0d0",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "fce9f4f2861533300d399844ec1ce0c795c759493c329ecd1829fb27bb5e3e2e",
-      "assessment_sha256": "c176b7cbf229028f8e352a43fbe205323d4560ba243a49e40764cfa0f0e2e4c1",
+      "assessment_sha256": "bddfa00d17d0a987f93e29a39cce2d4bbce2e262d36202a2502fc3824d90637a",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
@@ -670,7 +669,7 @@
           "source_id": "LEGIARTI000019071087",
           "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
           "view_kind": "proposal",
-          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
+          "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
           "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
           "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
@@ -688,24 +687,24 @@
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
           "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
-          "assessment": "La rupture patronale du contrat unique donne accès au 1° sans attendre une ancienne durée de préavis. Les quinze jours calendaires sont un préavis individuel, sans suppression des procédures collectives ; le délai fiscal de trois mois est retiré et ne doit pas être confondu avec la notification de la rupture."
+          "assessment": "La cible distingue le préavis de quinze jours des nouveaux contrats et les anciens préavis selon ancienneté. 91 ter ouvre l'exception fiscale à la rupture patronale sans exiger un préavis d'une durée particulière ; aucune autorisation spéciale n'est supprimée."
         },
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
-          "view_sha256": "0f4a0061aadf2d6fc30386f95fb3d102a6306fc6d536e3c0409e13b7393c405d",
-          "assessment": "Le stock d'options demeure limité aux attributions jusqu'au 27 septembre 2012, mais une rupture future de contrat unique ne doit pas fermer la sortie favorable. Le nouveau contrat reste indéterminé ; aucune fin de mission ou formation n'est assimilée ici à une rupture automatique."
+          "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+          "assessment": "La proposition réserve le contrat unique aux emplois privés nouveaux et préserve anciens contrats et avantages futurs. L'assimilation explicite dans 91 ter maintient la dérogation fiscale lors d'une rupture patronale future, sans créer de CDD ni viser les agents publics."
         },
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
           "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
-          "assessment": "L'indemnité ordinaire dépend d'un an au terme effectif préavis inclus, puis de 0,20 mois par année totale, prorata des mois complets et plafond six mois. Ces conditions ne gouvernent pas l'avantage fiscal de 91 ter : la rupture patronale ouvre la sortie même sans indemnité ; anciens droits et indemnités spéciales restent distincts."
+          "assessment": "L1234-9 proposé prévoit zéro indemnité ordinaire avant un an au terme effectif préavis inclus, puis 0,20 mois par année totale, prorata des mois complets et plafond de six mois, employeur seul ; anciens droits et indemnités spéciales sont distincts. 91 ter ne conditionne pas l'avantage fiscal à ce seuil ni au versement de cette indemnité."
         }
       ],
-      "assessments_sha256": "57662ec017d7d3adff649855cd4122cd6c992d763feccf72ca22942feffde95d",
+      "assessments_sha256": "664e5ff6f2d8cf87138da7108789863ae21d0309591d8528e3b6acff320ade70",
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "544e8c2cb2bd70db28f5db438e47c9fe6784840d529306ebd88d131ef8143cbc"
+    "prior_proposal_sha256": "fce9f4f2861533300d399844ec1ce0c795c759493c329ecd1829fb27bb5e3e2e"
   },
   {
     "code_id": "LEGITEXT000006069569",
@@ -713,33 +712,33 @@
     "source_sha256": "013796acbf65d2515bae010549fa6baeb7691df3afbddcba890d2999445166d5",
     "number": "91 ter A",
     "proposed_xml": null,
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
-    "reason": "Maintien intégral nécessaire après seconde passe. La formule sur soixante jours de négociation réalise le critère légal de capitalisation du 4 du II de 163 bis G. Les adaptations de première cotation et de restructuration rendent l'avantage accessible sans attendre soixante jours ; supprimer un terme altérerait l'éligibilité plutôt que retirer une formalité.",
+    "reason": "Maintien intégral nécessaire après seconde passe. La formule sur soixante jours de négociation réalise le critère légal de capitalisation du 4 du II de 163 bis G. Les adaptations de première cotation et de restructuration rendent l'avantage accessible sans attendre soixante jours ; supprimer un terme altérerait l'éligibilité plutôt que retirer une formalité. La seconde passe ne révèle aucune obligation déclarative autonome : la formule et ses deux adaptations sont nécessaires pour rendre applicable le critère législatif sans retirer les dérogations favorables.",
     "review_notes": "163 bis G entier lu : seuil de 150 millions, régime de trois ans après dépassement, filiales et sous-filiales et règles de cumul restent au niveau législatif. Aucun formulaire ni agrément dans cet article. Les jours de négociation et cours d'ouverture, de placement et de clôture ne sont pas interchangeables.",
-    "benefit_review": "Les dérogations de première admission, augmentation de capital, fusion, scission et apport partiel d'actif restent intégrales et ouvertes aux futures émissions recevables. Maintenir ces méthodes évite de fermer le régime favorable BSPCE pour absence d'historique boursier.",
+    "status": "retained_unchanged",
+    "benefit_review": "La moyenne aménagée pour une première admission ou restructuration et les deux formules dérogatoires du II sont intégralement conservées pour les émissions futures. Elles permettent d'appliquer le régime BSPCE sans attendre soixante jours de cotation ; aucune condition ou formule favorable n'est supprimée.",
+    "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "La formule sur soixante jours de négociation réalise le critère légal de capitalisation du 4 du II de 163 bis G. Les adaptations de première cotation et de restructuration rendent l'avantage accessible sans attendre soixante jours ; supprimer un terme altérerait l'éligibilité plutôt que retirer une formalité.",
-      "scope_limitations": "La formule demeure tributaire du champ et des seuils légaux de 163 bis G ; pas de réduction des prélèvements personnels ou des autorisations sociales revendiquée. Aucun rendement BSPCE ou gain budgétaire chiffré.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien de la règle source sans ajout de données, de registre, de délai ou de formalité.",
+      "assessment": "Maintien intégral nécessaire après seconde passe. La formule sur soixante jours de négociation réalise le critère légal de capitalisation du 4 du II de 163 bis G. Les adaptations de première cotation et de restructuration rendent l'avantage accessible sans attendre soixante jours ; supprimer un terme altérerait l'éligibilité plutôt que retirer une formalité. La seconde passe ne révèle aucune obligation déclarative autonome : la formule et ses deux adaptations sont nécessaires pour rendre applicable le critère législatif sans retirer les dérogations favorables.",
+      "scope_limitations": "163 bis G entier lu : seuil de 150 millions, régime de trois ans après dépassement, filiales et sous-filiales et règles de cumul restent au niveau législatif. Aucun formulaire ni agrément dans cet article. Les jours de négociation et cours d'ouverture, de placement et de clôture ne sont pas interchangeables. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "013796acbf65d2515bae010549fa6baeb7691df3afbddcba890d2999445166d5",
       "source_notes_sha256": "9d91bd3ba66b689298a06f4c2217d0d3296b0949fba24102ce0d65f7ef90f984",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "68393e2bf33c7cac87265803edfcbbaf43f21ab67dbef40a3eb242ae3ee7631c",
+      "assessment_sha256": "86a0d019534088bc241851f73bdc878867567fdc2b38cd7e3a2b58d8232ea96f",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "a6e1c7cfdf7b8d8abf3ab9e22adbbc0304e4ec2191203a55b82d149a2711c2e2"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006069569",
@@ -747,33 +746,33 @@
     "source_sha256": "acdbe9c0a6f24f7da15a7120e3ec185071059d625c83a2509933178c765581fb",
     "number": "91 quater",
     "proposed_xml": null,
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
-    "reason": "Maintien intégral nécessaire après seconde passe. Le renvoi détermine une date d'ouverture unique du PEP utile à ses exonérations. Il ne crée ni déclaration ni autorisation distincte ; le retirer ferait perdre le point de départ fiscal sans réduire une charge démontrée.",
+    "reason": "Maintien intégral nécessaire après seconde passe. Le renvoi détermine une date d'ouverture unique du PEP utile à ses exonérations. Il ne crée ni déclaration ni autorisation distincte ; le retirer ferait perdre le point de départ fiscal sans réduire une charge démontrée. Aucune coupe supplémentaire justifiée : ce point de départ unique protège le calcul de l'ancienneté du PEP et n'ajoute aucun délai de blocage propre.",
     "review_notes": "R221-69 du code monétaire et financier est extérieur au corpus autorisé et non fourni : sa teneur n'est pas prétendue vérifiée. Aucun nouveau renvoi introduit ; la réforme du PEA à trois ans ne s'applique pas au PEP.",
-    "benefit_review": "La date d'ouverture sert à mesurer l'ancienneté ouvrant les avantages du PEP. Le maintien ne ferme aucun avantage pour les opérations futures sur plans recevables, sans promettre l'ouverture de nouveaux PEP.",
+    "status": "retained_unchanged",
+    "benefit_review": "Le point de départ du PEP est maintenu afin de protéger le calcul des exonérations liées à son ancienneté. Cet article ne fixe pas le délai du PEA et la réforme à trois ans ne lui est pas appliquée.",
+    "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Le renvoi détermine une date d'ouverture unique du PEP utile à ses exonérations. Il ne crée ni déclaration ni autorisation distincte ; le retirer ferait perdre le point de départ fiscal sans réduire une charge démontrée.",
-      "scope_limitations": "Le contenu extérieur de R221-69 n'est pas fourni ; le maintien conserve le renvoi existant sans prétendre valider toutes les règles du PEP. Il ne produit aucune simplification ni baisse d'impôt nouvelle.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien de la règle source sans ajout de données, de registre, de délai ou de formalité.",
+      "assessment": "Maintien intégral nécessaire après seconde passe. Le renvoi détermine une date d'ouverture unique du PEP utile à ses exonérations. Il ne crée ni déclaration ni autorisation distincte ; le retirer ferait perdre le point de départ fiscal sans réduire une charge démontrée. Aucune coupe supplémentaire justifiée : ce point de départ unique protège le calcul de l'ancienneté du PEP et n'ajoute aucun délai de blocage propre.",
+      "scope_limitations": "R221-69 du code monétaire et financier est extérieur au corpus autorisé et non fourni : sa teneur n'est pas prétendue vérifiée. Aucun nouveau renvoi introduit ; la réforme du PEA à trois ans ne s'applique pas au PEP. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "acdbe9c0a6f24f7da15a7120e3ec185071059d625c83a2509933178c765581fb",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "da0b6c7eb732e8f8226569d870e90ce177806582d3f4556d8e198e53c5e20bb1",
+      "assessment_sha256": "07d7b50c4bfc4ae5862d0a7ac50604a1c570b6e09176481c09da95c1d56ae2d4",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "54c4f4a70457ffcfb12672744cb607d5f9d727fd2c383efb0b9bd21bbd6d54c1"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006069569",
@@ -781,84 +780,98 @@
     "source_sha256": "674538d654d3c6ef3a11b006c04c8c34a9e327224b91e607526db72a8013f9cc",
     "number": "91 quater A",
     "proposed_xml": null,
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
-    "reason": "Maintien intégral nécessaire après seconde passe. La définition retranche les versements des remboursements et évite d'assimiler le capital rendu à un produit. Elle n'impose aucun justificatif ou dépôt autonome. Sa suppression pourrait élargir l'assiette ; maintien intégral préférable à la reformulation stylistique antérieure.",
+    "reason": "Maintien intégral nécessaire après seconde passe. La définition retranche les versements des remboursements et évite d'assimiler le capital rendu à un produit. Elle n'impose aucun justificatif ou dépôt autonome. Sa suppression pourrait élargir l'assiette ; maintien intégral préférable à la reformulation stylistique antérieure. Aucune coupe supplémentaire justifiée : la soustraction du capital versé protège l'assiette et n'impose aucune démarche autonome.",
     "review_notes": "Article 109 III deuxième alinéa de la loi 89-935 hors corpus : vérification historique externe non effectuée et non autorisée ici. Aucune modification du sens de la soustraction, aucun nouveau taux. Ce PEP demeure distinct du PEA et de la capitalisation retraite.",
-    "benefit_review": "La déduction des versements protège le capital contre son assimilation aux produits du PEP. Cette règle reste intégrale pour les remboursements recevables futurs comme anciens ; aucune exonération ni prime n'est supprimée.",
+    "status": "retained_unchanged",
+    "benefit_review": "La déduction des versements du titulaire du montant remboursé reste entière : le capital restitué n'est pas transformé en produit imposable. Cette définition est préservée pour les opérations futures également.",
+    "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "La définition retranche les versements des remboursements et évite d'assimiler le capital rendu à un produit. Elle n'impose aucun justificatif ou dépôt autonome. Sa suppression pourrait élargir l'assiette ; maintien intégral préférable à la reformulation stylistique antérieure.",
-      "scope_limitations": "La loi de 1989 visée n'est pas fournie en entier ; la définition arithmétique est conservée sans validation de l'ensemble du régime historique. Aucune baisse d'impôt nouvelle revendiquée.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien de la règle source sans ajout de données, de registre, de délai ou de formalité.",
+      "assessment": "Maintien intégral nécessaire après seconde passe. La définition retranche les versements des remboursements et évite d'assimiler le capital rendu à un produit. Elle n'impose aucun justificatif ou dépôt autonome. Sa suppression pourrait élargir l'assiette ; maintien intégral préférable à la reformulation stylistique antérieure. Aucune coupe supplémentaire justifiée : la soustraction du capital versé protège l'assiette et n'impose aucune démarche autonome.",
+      "scope_limitations": "Article 109 III deuxième alinéa de la loi 89-935 hors corpus : vérification historique externe non effectuée et non autorisée ici. Aucune modification du sens de la soustraction, aucun nouveau taux. Ce PEP demeure distinct du PEA et de la capitalisation retraite. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "674538d654d3c6ef3a11b006c04c8c34a9e327224b91e607526db72a8013f9cc",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "d9e98a80a64f97e964864d231f49528bb62abd0fe9d45ba771552cb7b58d8725",
+      "assessment_sha256": "6be545485075581e1b99b1cf8aa3df24a27954cfe9cb7a50dfc8e8f30b43e48b",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "91fc16beaaee1fdbef74da0dce03851ba83bc1514bb3c1a6334fb3ab74bc1576"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006069569",
     "source_id": "LEGIARTI000006293903",
     "source_sha256": "b00ccea947dcbc6fca198ec268f98261ad464cf650a049fc0ab351eab2e0f2d5",
     "number": "91 quater B",
-    "proposed_xml": "\n<p>I. - En cas de clôture du plan d'épargne populaire avant huit ans, le titulaire du plan présente, le cas échéant, à l'organisme gestionnaire un document qui atteste la survenance du décès de son conjoint ou de l'un des événements visés au 22° de l'article 157 du code général des impôts dans les deux ans qui précèdent la clôture.</p>\n<p>L'exonération d'impôt en cas de clôture du plan avant huit ans ne s'applique qu'aux plans ouverts avant le décès du conjoint ou la survenance de l'un des événements mentionnés au 22° de l'article 157 du code général des impôts.</p>\n<p>II. - L'organisme auprès duquel un plan d'épargne populaire a été ouvert adresse aux services fiscaux, avant le 16 février de chaque année, uniquement lorsqu'un versement de produits est intervenu au cours de l'année précédente, les renseignements suivants relatifs à cette année en les mentionnant sur la déclaration prévue au 1 de l'article 242 ter du code général des impôts :</p>\n<p>Les nom, prénoms et adresse du titulaire ;</p>\n<p>Les références du plan d'épargne populaire ;</p>\n<p>La date d'ouverture du plan.</p>\n<p>Le cas échéant, l'organisme fait également figurer distinctement le montant des produits payés non soumis à l'impôt sur le revenu en application du 22° de l'article 157 du code général des impôts.</p>\n<p>Aucune transmission annuelle n'est exigée sur le seul fondement du II pour un plan n'ayant donné lieu à aucun versement de produits pendant l'année considérée. Cette dispense s'applique aux transmissions à effectuer à compter de l'entrée en vigueur de la réforme, y compris pour une année antérieure ; aucun rattrapage n'est exigé sur ce seul fondement. Les déclarations légalement requises à un autre titre, les exonérations et les droits à restitution restent applicables, sans nouveau dépôt de remplacement.</p>",
+    "proposed_xml": "\n<p>I. - En cas de clôture du plan d'épargne populaire avant huit ans, le titulaire du plan présente, le cas échéant, à l'organisme gestionnaire un document qui atteste la survenance du décès de son conjoint ou de l'un des événements visés au 22° de l'article 157 du code général des impôts dans les deux ans qui précèdent la clôture. Le titulaire n'est pas tenu de remettre ce document lorsque l'organisme gestionnaire dispose déjà d'une pièce établissant le même événement et sa date. Aucune attestation nouvelle ni déclaration de remplacement n'est alors exigée. Cette dispense s'applique aux clôtures intervenant à compter de l'entrée en vigueur de la réforme.</p>\n<p>L'exonération d'impôt en cas de clôture du plan avant huit ans ne s'applique qu'aux plans ouverts avant le décès du conjoint ou la survenance de l'un des événements mentionnés au 22° de l'article 157 du code général des impôts.</p>\n<p>II. - L'organisme auprès duquel un plan d'épargne populaire a été ouvert adresse aux services fiscaux, avant le 16 février de chaque année, uniquement lorsqu'un versement de produits est intervenu au cours de l'année précédente, les renseignements suivants relatifs à cette année en les mentionnant sur la déclaration prévue au 1 de l'article 242 ter du code général des impôts :</p>\n<p>Les nom, prénoms et adresse du titulaire ;</p>\n<p>Les références du plan d'épargne populaire ;</p>\n<p>La date d'ouverture du plan.</p>\n<p>Le cas échéant, l'organisme fait également figurer distinctement le montant des produits payés non soumis à l'impôt sur le revenu en application du 22° de l'article 157 du code général des impôts.</p>\n<p>Aucune transmission annuelle n'est exigée sur le seul fondement du II pour un plan n'ayant donné lieu à aucun versement de produits pendant l'année considérée. Cette dispense s'applique aux transmissions à effectuer à compter de l'entrée en vigueur de la réforme, y compris pour une année antérieure ; aucun rattrapage n'est exigé sur ce seul fondement. Les déclarations légalement requises à un autre titre, les exonérations et les droits à restitution restent applicables, sans nouveau dépôt de remplacement.</p>",
+    "reason": "Réforme de fond : une déclaration annuelle de simple détention n'est pas nécessaire au calcul de l'impôt sur des produits non versés. Maintien du II en cas de versement et du I qui permet de prouver la sortie exonérée, avec ses durées et son antériorité. Le brouillon fourni avait déjà supprimé cette transmission sans produits et corrigé un ancien diagnostic de renvoi vide ; ces corrections sont conservées. Seconde passe : outre la dispense annuelle déjà acquise, supprimer la nouvelle remise d'un justificatif dont le gestionnaire dispose déjà. Maintenir la preuve de l'événement, son délai et l'antériorité du plan, nécessaires à l'exonération anticipée.",
+    "review_notes": "Correction expresse du diagnostic précédent : le texte officiel ENTIER de 157 fourni contient bien au 22° décès, expiration des droits chômage après licenciement, liquidation judiciaire et invalidité. Le renvoi de 91 quater B est donc cohérent sans inventer de liste. Huit ans, deux ans et avant le 16 février conservés. La dispense propre ne supprime pas les obligations autonomes de 242 ter ; leur articulation opérationnelle reste à coordonner dans les formulaires. La dispense documentaire nouvelle concerne les pièces déjà détenues par le gestionnaire, sans nouvel accès aux données ni transfert à un tiers ; ce n'est pas une déclaration sur l'honneur substituée.",
     "status": "rewrite_draft",
-    "reason": "Réforme de fond : une déclaration annuelle de simple détention n'est pas nécessaire au calcul de l'impôt sur des produits non versés. Maintien du II en cas de versement et du I qui permet de prouver la sortie exonérée, avec ses durées et son antériorité. Le brouillon se limitait à une reformulation et diagnostiquait à tort un renvoi vide.",
-    "review_notes": "Correction expresse du diagnostic précédent : le texte officiel ENTIER de 157 fourni contient bien au 22° décès, expiration des droits chômage après licenciement, liquidation judiciaire et invalidité. Le renvoi de 91 quater B est donc cohérent sans inventer de liste. Huit ans, deux ans et avant le 16 février conservés. La dispense propre ne supprime pas les obligations autonomes de 242 ter ; leur articulation opérationnelle reste à coordonner dans les formulaires.",
-    "benefit_review": "L'exonération avant huit ans reste ouverte pour les événements du 22° de 157 dans les deux ans précédant la clôture, sous l'antériorité d'ouverture conservée. L'indication des produits exonérés lors de leur versement est maintenue ; la dispense d'état sans versement ne retire ni exonération ni restitution.",
+    "benefit_review": "L'exonération avant huit ans pour décès du conjoint ou événement du 22° de 157 demeure ouverte aux clôtures futures éligibles : deux ans et ouverture préalable restent. Les exonérations ordinaires, prime et restitutions ne sont pas retirées ; la dispense de reporting sans produit et de remise redondante facilite leur exercice.",
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006069577|LEGIARTI000053543192",
+        "view_sha256": "1216d37f702fd74044b1d41d37032ff365977ff1a4a86a97e6a066cd9dd04bd3",
+        "assessment": "Le 22° contient effectivement les événements PEP : décès, expiration des droits chômage après licenciement, liquidation judiciaire et invalidité. Le renvoi reste cohérent ; huit ans et deux ans sont conservés. Les trois ans du PEA au 5° ter de la proposition ne concernent pas le PEP. L'expiration des allocations reste distincte de la notification du licenciement."
+      }
+    ],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Suppression de la déclaration de simple détention d'un PEP sans versement ; déclaration des produits et preuves d'événement favorable maintenues.",
-      "scope_limitations": "Dispense du seul état spécifique sans versement ; les déclarations autonomes subsistent. Les formulaires de 242 ter restent à coordonner, sans réintroduire la déclaration de simple détention. Coût et population effective non chiffrés.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées ni par un dépôt ni par un registre ou une autorisation. Les conditions de fond et contrôles expressément maintenus préexistent.",
+      "assessment": "Réforme de fond : une déclaration annuelle de simple détention n'est pas nécessaire au calcul de l'impôt sur des produits non versés. Maintien du II en cas de versement et du I qui permet de prouver la sortie exonérée, avec ses durées et son antériorité. Le brouillon fourni avait déjà supprimé cette transmission sans produits et corrigé un ancien diagnostic de renvoi vide ; ces corrections sont conservées. Seconde passe : outre la dispense annuelle déjà acquise, supprimer la nouvelle remise d'un justificatif dont le gestionnaire dispose déjà. Maintenir la preuve de l'événement, son délai et l'antériorité du plan, nécessaires à l'exonération anticipée.",
+      "scope_limitations": "Correction expresse du diagnostic précédent : le texte officiel ENTIER de 157 fourni contient bien au 22° décès, expiration des droits chômage après licenciement, liquidation judiciaire et invalidité. Le renvoi de 91 quater B est donc cohérent sans inventer de liste. Huit ans, deux ans et avant le 16 février conservés. La dispense propre ne supprime pas les obligations autonomes de 242 ter ; leur articulation opérationnelle reste à coordonner dans les formulaires. La dispense documentaire nouvelle concerne les pièces déjà détenues par le gestionnaire, sans nouvel accès aux données ni transfert à un tiers ; ce n'est pas une déclaration sur l'honneur substituée. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
       "effects": [
         {
           "kind": "obligation_removed",
-          "measure_id": "pep-fin-declaration-sans-versement",
-          "description": "Fin de l'état annuel de simple détention.",
-          "before": "Renseignements annuels pour chaque PEP, même sans produits versés.",
-          "after": "Transmission spécifique seulement en cas de versement de produits ; échéance inchangée.",
+          "measure_id": "pep-fin-declaration-sans-produits",
+          "description": "Suppression de la transmission annuelle propre au PEP sans versement de produits dans l’année.",
+          "before": "Identité, références et ouverture déclarées annuellement même sans produit versé.",
+          "after": "Transmission propre au II seulement avec versement de produits ; autres obligations autonomes réservées.",
           "unit": "legal_duty",
-          "affected_population": "Personnes et organismes relevant du présent article.",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme ; situations antérieures préservées selon le texte proposé.",
-          "replacement_or_new_burdens": "Aucun dépôt, registre, autorisation ou prélèvement de remplacement créé.",
+          "affected_population": "Titulaires de PEP et organismes gestionnaires.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
           "source_quote": "avant le 16 février de chaque année, les renseignements suivants relatifs à l'année précédente",
           "proposed_quote": "Aucune transmission annuelle n'est exigée sur le seul fondement du II pour un plan n'ayant donné lieu à aucun versement de produits pendant l'année considérée."
+        },
+        {
+          "kind": "obligation_removed",
+          "measure_id": "pep-fin-justificatif-redondant",
+          "description": "Suppression de la remise du justificatif d’événement lorsque le gestionnaire détient déjà une pièce suffisante.",
+          "before": "Document présenté par le titulaire lors de la clôture anticipée.",
+          "after": "Pas de nouvelle remise si événement et date déjà établis chez le gestionnaire.",
+          "unit": "legal_duty",
+          "affected_population": "Titulaires de PEP et organismes gestionnaires.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
+          "source_quote": "le titulaire du plan présente, le cas échéant, à l'organisme gestionnaire un document",
+          "proposed_quote": "Le titulaire n'est pas tenu de remettre ce document lorsque l'organisme gestionnaire dispose déjà d'une pièce établissant le même événement et sa date."
         }
       ]
     },
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Déclaration annuelle des nom, prénoms, adresse, références et date d'ouverture du PEP lorsqu'aucun produit n'a été versé dans l'année."
-    ],
-    "reference_checks": [
-      {
-        "target_key": "LEGITEXT000006069577|LEGIARTI000053543192",
-        "view_sha256": "1216d37f702fd74044b1d41d37032ff365977ff1a4a86a97e6a066cd9dd04bd3",
-        "assessment": "Le 22° officiel complet comporte les événements de sortie avant huit ans : décès, fin des droits chômage après licenciement, liquidation judiciaire et invalidité. Le renvoi est valide, contrairement à la note du brouillon. La proposition conserve ces avantages ; la dispense annuelle sans versement ne les ferme pas et ne confond pas PEP et PEA à trois ans."
-      }
+      "Suppression de la transmission annuelle propre au PEP sans versement de produits dans l’année.",
+      "Suppression de la remise du justificatif d’événement lorsque le gestionnaire détient déjà une pièce suffisante."
     ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "b00ccea947dcbc6fca198ec268f98261ad464cf650a049fc0ab351eab2e0f2d5",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "f1786d65c8909b71d3528ebef2cf9ddb88d2172b40351765fc53bab4c972051a",
-      "assessment_sha256": "abc73f83f265e567cda7c4a7a56f11dc7134b3ba22daf1f4a6aadbdf5295ed10",
+      "proposed_sha256": "7fe15bd48e5cede351546b7545a40cdfa00b4fa9aee01ad10b79d799528b9aed",
+      "assessment_sha256": "3fe56e85ceebc5a9a9629332ee3a18776ace4a1e91f07022bf5996354eeee1ee",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
@@ -866,7 +879,7 @@
     },
     "reference_coherence": {
       "version": 3,
-      "referrer_sha256": "f1786d65c8909b71d3528ebef2cf9ddb88d2172b40351765fc53bab4c972051a",
+      "referrer_sha256": "7fe15bd48e5cede351546b7545a40cdfa00b4fa9aee01ad10b79d799528b9aed",
       "policy_sha256": {
         "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
         "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
@@ -893,14 +906,14 @@
         {
           "target_key": "LEGITEXT000006069577|LEGIARTI000053543192",
           "view_sha256": "1216d37f702fd74044b1d41d37032ff365977ff1a4a86a97e6a066cd9dd04bd3",
-          "assessment": "Le 22° officiel complet comporte les événements de sortie avant huit ans : décès, fin des droits chômage après licenciement, liquidation judiciaire et invalidité. Le renvoi est valide, contrairement à la note du brouillon. La proposition conserve ces avantages ; la dispense annuelle sans versement ne les ferme pas et ne confond pas PEP et PEA à trois ans."
+          "assessment": "Le 22° contient effectivement les événements PEP : décès, expiration des droits chômage après licenciement, liquidation judiciaire et invalidité. Le renvoi reste cohérent ; huit ans et deux ans sont conservés. Les trois ans du PEA au 5° ter de la proposition ne concernent pas le PEP. L'expiration des allocations reste distincte de la notification du licenciement."
         }
       ],
-      "assessments_sha256": "237fc099ce4ad377fae5fb01d09666c7e37c99c61a62b90aed4fc13a4541b08a",
+      "assessments_sha256": "fea47060b2749a234e2f418bb52dcc51162d582a20f087785e19adc18975569b",
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "c8438a9235b622fd7783562d36541fc5e9ae772da0a842e90833c6dc38dd3e0a"
+    "prior_proposal_sha256": "f1786d65c8909b71d3528ebef2cf9ddb88d2172b40351765fc53bab4c972051a"
   },
   {
     "code_id": "LEGITEXT000006069569",
@@ -908,67 +921,69 @@
     "source_sha256": "405ca58a8c27c52a0771569fd2b798e805baa6c6cce05cad9988905e36772e70",
     "number": "91 quater E",
     "proposed_xml": null,
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
-    "reason": "Maintien intégral nécessaire après seconde passe. Ce renvoi répartit correctement les modalités d'ouverture entre PEA et PEA-PME/ETI. Il n'impose pas de délai de détention de cinq ans et ne rétablit donc pas le délai supprimé par la réforme. Aucun doublon de dépôt identifié dans cet article.",
+    "reason": "Maintien intégral nécessaire après seconde passe. Ce renvoi répartit correctement les modalités d'ouverture entre PEA et PEA-PME/ETI. Il n'impose pas de délai de détention de cinq ans et ne rétablit donc pas le délai supprimé par la réforme. Aucun doublon de dépôt identifié dans cet article. Aucune coupe supplémentaire justifiée dans cet article de renvoi : il ne prévoit ni dépôt supplémentaire ni durée fiscale de cinq ans. Les modalités externes ne sont pas déclarées simplifiées.",
     "review_notes": "R221-111 et D221-113-3 du code monétaire et financier hors corpus : contenu non fourni, pas de vérification externe prétendue. La réduction à trois ans porte sur la disponibilité et la fiscalité, non sur la correspondance des règles d'ouverture ici maintenue.",
-    "benefit_review": "Les deux catégories de PEA restent accessibles selon leurs règles propres ; aucune restriction nouvelle de l'avantage fiscal ou du retrait à trois ans n'est introduite. Le texte ne modifie ni plafonds, ni exceptions, ni prélèvements sociaux.",
+    "status": "retained_unchanged",
+    "benefit_review": "Les règles d'ouverture distinctes du PEA et du PEA-PME restent référencées sans introduire de nouvelle condition. Le renvoi ne remet pas en cause la réduction à trois ans des délais fiscaux et de retrait décidée dans leurs textes propres.",
+    "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Ce renvoi répartit correctement les modalités d'ouverture entre PEA et PEA-PME/ETI. Il n'impose pas de délai de détention de cinq ans et ne rétablit donc pas le délai supprimé par la réforme. Aucun doublon de dépôt identifié dans cet article.",
-      "scope_limitations": "Le contenu des deux règlements du code monétaire et financier n'est pas fourni. Aucun changement d'ouverture ou abaissement de délai n'est compté ici ; les coordinations PEA à trois ans restent dans leurs articles propres.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien de la règle source sans ajout de données, de registre, de délai ou de formalité.",
+      "assessment": "Maintien intégral nécessaire après seconde passe. Ce renvoi répartit correctement les modalités d'ouverture entre PEA et PEA-PME/ETI. Il n'impose pas de délai de détention de cinq ans et ne rétablit donc pas le délai supprimé par la réforme. Aucun doublon de dépôt identifié dans cet article. Aucune coupe supplémentaire justifiée dans cet article de renvoi : il ne prévoit ni dépôt supplémentaire ni durée fiscale de cinq ans. Les modalités externes ne sont pas déclarées simplifiées.",
+      "scope_limitations": "R221-111 et D221-113-3 du code monétaire et financier hors corpus : contenu non fourni, pas de vérification externe prétendue. La réduction à trois ans porte sur la disponibilité et la fiscalité, non sur la correspondance des règles d'ouverture ici maintenue. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "405ca58a8c27c52a0771569fd2b798e805baa6c6cce05cad9988905e36772e70",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "7bf862fdf4344d41e79785e9d2ba5a243997aa9b5842758c4772a2122de4195f",
+      "assessment_sha256": "e86083800ccf09eb3840d9435d74fa7a54bf8e9e04994a3534ee056ea9314aa7",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "1b138c13b01c7e6e7ebc07ed3d8c38e94fcf16c9f52a3b94ff71224300f38324"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006069569",
     "source_id": "LEGIARTI000041589978",
     "source_sha256": "a3623103694d88b8edb6a03d4ab0ee95828310bb3f0df52893de560be76c57f0",
     "number": "91 quater G",
-    "status": "rewrite_draft",
     "proposed_xml": "<p>L'organisme auprès duquel est ouvert un plan d'épargne en actions mentionné à l'article 163 quinquies D du code général des impôts adresse au service d'assiette dont relève sa résidence, avant le 16 février de chaque année, les renseignements suivants concernant l'année précédente. Il les porte sur la déclaration prévue au 1 de l'article 242 ter du même code :</p>\n<p>a) Les nom, prénom et adresse du titulaire ;</p>\n<p>b) Les références du plan ;</p>\n<p>c) La date d'ouverture du plan.</p>\n<p>L'organisme indique également, de manière distincte, la date du premier retrait de sommes ou de valeurs figurant sur le plan ou la date du premier rachat du contrat de capitalisation.</p>\n<p>L'organisme indique les éléments ci-dessous lorsque le plan est clôturé avant l'expiration de la troisième année ou, dans les conditions prévues au 2 bis du II de l'article 150-0 A du code général des impôts, après l'expiration de cette année. Il les indique également lorsque, sans clôture du plan, un retrait ou un rachat est effectué dans les conditions prévues au troisième alinéa du II de l'article L. 221-32 du code monétaire et financier ou au IV du même article :</p>\n<p>a. La valeur liquidative du plan ou la valeur de rachat du contrat de capitalisation à la date de clôture, de retrait ou de rachat. Cette valeur est diminuée des sommes ou valeurs correspondant aux retraits ou rachats réalisés, en vue de la création ou de la reprise d'une entreprise, en même temps que la clôture, le retrait ou le rachat mentionné à l'alinéa précédent ;</p>\n<p>b. Le montant cumulé des versements effectués depuis l'ouverture du plan, diminué du montant des versements correspondant à de précédents retraits ou rachats qui n'ont pas entraîné la clôture du plan ;</p>\n<p>c. Le montant du retrait ou du rachat effectué dans les conditions prévues au troisième alinéa du II de l'article L. 221-32 du code monétaire et financier ou au IV du même article.</p>\n<p>L'organisme indique distinctement le montant des produits procurés par des placements dont l'exonération est susceptible d'être limitée en application du 5° bis de l'article 157 du code général des impôts. Il indique également, de manière distincte, le montant de la cession ou du retrait des obligations remboursables en actions ou des actions reçues en remboursement. Cette dernière obligation s'applique à compter du dépôt de la déclaration prévue au 1 de l'article 242 ter du code général des impôts au titre des revenus perçus en 2020.</p>\n<p>La réduction de cinq à trois ans des délais propres au plan d’épargne en actions s’applique aux retraits, rachats, clôtures et dénouements intervenant à compter de l’entrée en vigueur de la loi portant cette réduction, y compris pour les plans déjà ouverts, sans remise à zéro de leur ancienneté. Elle ne remet pas en cause les faits générateurs antérieurs, paiements, créances, imputations, restitutions et recours régis par leurs règles applicables. Les autres conditions, plafonds, exclusions et exceptions favorables demeurent dans leur champ ; les prélèvements sociaux ne sont pas supprimés par la réduction du délai fiscal.</p>\n",
-    "change_type": "normative_reduction",
-    "reform_policy_id": "editorial_direction_2026_10_19",
-    "removed_provisions": [
-      "Le délai de cinq ans propre au PEA est ramené à trois ans pour les opérations futures, sans recommencer l’ancienneté des plans existants."
+    "reason": "Coordination nécessaire du seuil déclaratif avec le délai fiscal PEA de trois ans déjà retenu. Après examen supplémentaire, les données d'identification, d'ancienneté, de versements et de retraits restent nécessaires au contrôle de l'exonération, du gain et des limitations du 5° bis de 157 ; la déclaration est déjà intégrée à celle de 242 ter. Aucun doublon distinct supplémentaire n'est démontré ici : pas de nouvelle coupe revendiquée ni de baisse d'impôt autonome.",
+    "review_notes": "Conservation des a), b), c), des a., b., c., du dépôt avant le 16 février et de la diminution pour création ou reprise d'entreprise. La note de 2020 concerne seulement la seconde phrase du dernier alinéa, reprise dans le texte. Le renvoi au 5° bis de 157 reste exact ; son 22° PEP ne concerne pas cet article. Coordonner ensemble 150-0 A, les textes PEA du CMF L221-32 et L221-32-3 et les formulaires ; leurs dispositions ne sont pas réputées adoptées. Le renvoi au troisième alinéa du II et au IV de L221-32 est conservé sans renumérotation présumée ; vérifier la stabilité de ces alinéas lors de l'adoption du compagnon hors corpus.",
+    "status": "rewrite_draft",
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006069577|LEGIARTI000053543192",
+        "view_sha256": "1216d37f702fd74044b1d41d37032ff365977ff1a4a86a97e6a066cd9dd04bd3",
+        "assessment": "Le dernier alinéa vise le 5° bis de 157 : plafonnement à 10 % de certains produits et au double du placement de certaines plus-values d'obligations remboursables en actions, avec exceptions coopératives et mutualistes conservées. Le 5° ter proposé ramène à trois ans la rente PEA mais ne supprime pas ces limites. Le 22° concerne le PEP et ses événements de chômage, non le contrat unique : aucune condition de préavis ni d'ancienneté salariale à transposer dans 91 quater G. La note de 2026 concerne 163 bis H, pas la date de la réforme PEA."
+      }
     ],
-    "reason": "Applique la décision explicite de l’auteur : délai propre au PEA ramené de cinq à trois ans. Les autres délais et tous les passages sans rapport avec cette mesure sont conservés exactement dans le projet antérieur.",
-    "review_notes": "Révision ciblée du texte intégral avec avant-image conservée. Les paragraphes modifiés sont isolés dans changed-paragraphs.json ; tous les autres passages sont identiques au projet antérieur. Une contrelecture intégrale indépendante des sources, notes et propositions est requise avant inscription. L.221-32 CMF est fourni entier dans le complément externe et doit être adopté ensemble ; L.221-32-3 étend son fonctionnement au PEA-PME. Les conditions sociales de L136-7 restent applicables ; aucun taux social n’est ramené à zéro. Les cinq ans des autres fonds, durées de détention et participations ne sont pas modifiés.",
-    "benefit_review": "Les dérogations anticipées pour création ou reprise d’entreprise, licenciement, invalidité et retraite anticipée restent ouvertes dans leur champ. Le traitement des titres163bisH, plafonds des titres non cotés et obligations remboursables en actions, calcul des gains et moins-values et droits antérieurs ne sont pas supprimés. Les PEA existants bénéficient de leur ancienneté réelle, sans réouverture ni rétroactivité fiscale générale.",
+    "benefit_review": "Les exonérations PEA et les exceptions du 5° bis de 157 demeurent applicables aux placements futurs éligibles ; les limites de 10 % et du double du placement ne sont pas élargies. L'exclusion des retraits simultanés destinés à créer ou reprendre une entreprise et la diminution des versements pour retraits antérieurs restent entières. Le délai de trois ans concerne aussi les plans déjà ouverts, sans remise à zéro ni suppression des prélèvements sociaux.",
     "substantive_impact": {
       "version": 1,
       "classification": "coordination_only",
-      "assessment": "La condition temporelle du PEA est réellement raccourcie de deux ans ; la coordination déclarative conserve la même clé de mesure et ne compte pas comme une seconde économie. Les autres règles de l’article entier sont conservées dans leur rédaction proposée antérieure.",
-      "scope_limitations": "La réduction porte sur le délai du PEA, sans suppression des prélèvements sociaux ni des plafonds ou exclusions des titres. Adoption coordonnée du complément CMF nécessaire. Aucun coût fiscal ni solde national n’est établi.",
-      "new_burdens_review": "Aucune obligation de réouverture, d’attestation, de registre ou de déclaration supplémentaire n’est créée. Les mêmes déclarations suivent seulement le seuil de trois ans ; les droits et conditions de calcul autonomes demeurent.",
+      "assessment": "Coordination nécessaire du seuil déclaratif avec le délai fiscal PEA de trois ans déjà retenu. Après examen supplémentaire, les données d'identification, d'ancienneté, de versements et de retraits restent nécessaires au contrôle de l'exonération, du gain et des limitations du 5° bis de 157 ; la déclaration est déjà intégrée à celle de 242 ter. Aucun doublon distinct supplémentaire n'est démontré ici : pas de nouvelle coupe revendiquée ni de baisse d'impôt autonome.",
+      "scope_limitations": "Simple coordination déclarative : le gain fiscal PEA relève de la loi et du CMF. Aucun coût national ni contrôle complet du compagnon CMF n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, collecte, attestation, délai minimal ou dépôt de remplacement n'est créé. Les règles de preuve, de calcul et de contrôle maintenues servent les droits existants ; leur coût global n'est pas chiffré.",
       "effects": [
         {
           "kind": "coordination",
-          "measure_id": "pea-delai-fiscal-trois-ans",
-          "description": "PEA : avantage et traitement des retraits à trois ans au lieu de cinq, avec coordination des déclarations.",
-          "before": "Délai propre au PEA de cinq ans à compter de son ouverture.",
-          "after": "Délai propre au PEA de trois ans, ancienneté réelle du plan conservée.",
-          "unit": "legal_duty",
-          "affected_population": "Titulaires de PEA et PEA-PME, organismes teneurs des plans pour les déclarations coordonnées.",
-          "conditions_and_transition": "La réduction de cinq à trois ans des délais propres au plan d’épargne en actions s’applique aux retraits, rachats, clôtures et dénouements intervenant à compter de l’entrée en vigueur de la loi portant cette réduction, y compris pour les plans déjà ouverts, sans remise à zéro de leur ancienneté. Elle ne remet pas en cause les faits générateurs antérieurs, paiements, créances, imputations, restitutions et recours régis par leurs règles applicables. Les autres conditions, plafonds, exclusions et exceptions favorables demeurent dans leur champ ; les prélèvements sociaux ne sont pas supprimés par la réduction du délai fiscal.",
-          "replacement_or_new_burdens": "Aucun nouveau plan, formulaire ou dépôt ; mêmes règles de calcul et prélèvements sociaux. Coût fiscal national non chiffré.",
-          "source_quote": "En cas de clôture du plan avant ou, dans les conditions prévues au 2 bis du II de l'article 150-0 A du code général des impôts, après l'expiration de la cinquième année ou, en l'absence de clôture du plan, en cas de retrait ou rachat effectué sur celui-ci dans les conditions prévues au troisième alinéa du II de l'article L. 221-32 du code monétaire et financier ou au IV du même article, il indique :",
+          "measure_id": "pea-delai-trois-ans",
+          "description": "Seuil déclaratif coordonné au délai PEA de trois ans.",
+          "before": "Clôture avant cinq ans soumise au champ déclaratif de cet alinéa.",
+          "after": "Seuil ramené à trois ans, autres événements déclarables conservés.",
+          "unit": "other",
+          "affected_population": "Organismes gestionnaires de PEA",
+          "conditions_and_transition": "Entrée en vigueur selon la clause transitoire de la proposition ; droits et périodes antérieurs préservés, opérations futures éligibles maintenues.",
+          "replacement_or_new_burdens": "Aucune déclaration, attestation ou autorisation de remplacement instituée ; conditions matérielles et contrôles autonomes maintenus.",
+          "source_quote": "En cas de clôture du plan avant ou, dans les conditions prévues au 2 bis du II de l'article 150-0 A du code général des impôts, après l'expiration de la cinquième année ou, en l'absence de clôture du plan, en cas de retrait ou rachat effectué sur celui-ci dans les conditions prévues au  troisième alinéa du II de l'article L. 221-32 du code monétaire et financier ou au IV du même article, il indique :",
           "proposed_quote": "L'organisme indique les éléments ci-dessous lorsque le plan est clôturé avant l'expiration de la troisième année ou, dans les conditions prévues au 2 bis du II de l'article 150-0 A du code général des impôts, après l'expiration de cette année. Il les indique également lorsque, sans clôture du plan, un retrait ou un rachat est effectué dans les conditions prévues au troisième alinéa du II de l'article L. 221-32 du code monétaire et financier ou au IV du même article :"
         }
       ]
@@ -978,14 +993,49 @@
       "source_sha256": "a3623103694d88b8edb6a03d4ab0ee95828310bb3f0df52893de560be76c57f0",
       "source_notes_sha256": "3f5cd5641e05da367e354d424cc673c2cf3df7cdb3c994f0c40f7f286a19c1f6",
       "proposed_sha256": "34390363994dbbd94bce3e9fa6d82aad67c4182dcb0b3aeecd8ad27c6985b681",
-      "assessment_sha256": "440429d643ae25fa9ce7da1a57fe44a4e354f205666a21ae9912619ca6df965c",
-      "policy_sha256": "d154ae55769ef077da06d705aa415102be6ec3a145b6b511400a6b01a7344be7",
+      "assessment_sha256": "3b212ab11a44275a2ab3011c90fc8dc78458b15e60541ad0d047512366d099cc",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
+    "reference_coherence": {
+      "version": 3,
+      "referrer_sha256": "34390363994dbbd94bce3e9fa6d82aad67c4182dcb0b3aeecd8ad27c6985b681",
+      "policy_sha256": {
+        "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+      },
+      "referrer_source": {
+        "code_id": "LEGITEXT000006069569",
+        "source_id": "LEGIARTI000041589978",
+        "source_sha256": "a3623103694d88b8edb6a03d4ab0ee95828310bb3f0df52893de560be76c57f0",
+        "source_xml_sha256": "8afdf40950b965f40a0a22b4138f1e9b48afa7a246d1ca4a1d1da3d7418fd6e6",
+        "source_notes_sha256": "3f5cd5641e05da367e354d424cc673c2cf3df7cdb3c994f0c40f7f286a19c1f6"
+      },
+      "targets": {
+        "LEGITEXT000006069577|LEGIARTI000053543192": {
+          "code_id": "LEGITEXT000006069577",
+          "source_id": "LEGIARTI000053543192",
+          "source_sha256": "88b3ebe86abe2fc635dd5c01ffd4e2f84add3cdfe80d3345c6ccd4cd62cccb6a",
+          "view_kind": "proposal",
+          "view_sha256": "1216d37f702fd74044b1d41d37032ff365977ff1a4a86a97e6a066cd9dd04bd3",
+          "source_xml_sha256": "b0df02f08ce63a6b4cb02fb0c52eb3798408f8eb4425769bfd5724ed7e3542d2",
+          "source_notes_sha256": "29b51a0449c5100be33e26072400254dc8362a4cc1335764b7a975d366609b14"
+        }
+      },
+      "assessments": [
+        {
+          "target_key": "LEGITEXT000006069577|LEGIARTI000053543192",
+          "view_sha256": "1216d37f702fd74044b1d41d37032ff365977ff1a4a86a97e6a066cd9dd04bd3",
+          "assessment": "Le dernier alinéa vise le 5° bis de 157 : plafonnement à 10 % de certains produits et au double du placement de certaines plus-values d'obligations remboursables en actions, avec exceptions coopératives et mutualistes conservées. Le 5° ter proposé ramène à trois ans la rente PEA mais ne supprime pas ces limites. Le 22° concerne le PEP et ses événements de chômage, non le contrat unique : aucune condition de préavis ni d'ancienneté salariale à transposer dans 91 quater G. La note de 2026 concerne 163 bis H, pas la date de la réforme PEA."
+        }
+      ],
+      "assessments_sha256": "2de6d1aec4af570068559039b8110d4d310183d8ba285aa0d2f5171baa8e1f8b",
+      "semantic_review_by_jurist": false
+    },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "a8fd43403fab811b6258b8daa2741488e481e928899e80cefa4cc8b5f3bf8fc2"
+    "prior_proposal_sha256": "34390363994dbbd94bce3e9fa6d82aad67c4182dcb0b3aeecd8ad27c6985b681"
   },
   {
     "code_id": "LEGITEXT000006069569",
@@ -1118,35 +1168,50 @@
     "source_id": "LEGIARTI000041589947",
     "source_sha256": "647e56a6c613b4619e506769121e17357b3a183520786d62b57c9cb92fa7eaed",
     "number": "91 quater J",
+    "proposed_xml": "<p>Le gain net défini au 6 de l'article 150-0 D du code général des impôts réalisé depuis l'ouverture d'un plan d'épargne en actions mentionné à l'article 163 quinquies D du même code est, le cas échéant, diminué du montant des produits et des plus-values qui n'ont pas bénéficié de l'exonération prévue au 5° bis de l'article 157 du même code. Le contribuable n'est pas tenu de joindre à la déclaration mentionnée à l'article 74-0 F les justificatifs de cette correction ; celle-ci peut être établie, en cas de contrôle, par tout document probant.</p><p>Lorsque la clôture du plan intervient avant l'expiration de la troisième année, le montant du gain net mentionné au premier alinéa figure dans la déclaration mentionnée à l'article 74-0 F, sans rubrique spéciale ni nouvelle production des éléments déjà indiqués dans cette déclaration. Les justificatifs de son calcul ne sont pas joints systématiquement ; ils peuvent être demandés dans les conditions légales du contrôle fiscal.</p><p>La réduction de cinq à trois ans des délais propres au plan d’épargne en actions s’applique aux retraits, rachats, clôtures et dénouements intervenant à compter de l’entrée en vigueur de la loi portant cette réduction, y compris pour les plans déjà ouverts, sans remise à zéro de leur ancienneté. Elle ne remet pas en cause les faits générateurs antérieurs, paiements, créances, imputations, restitutions et recours régis par leurs règles applicables. Les autres conditions, plafonds, exclusions et exceptions favorables demeurent dans leur champ ; les prélèvements sociaux ne sont pas supprimés par la réduction du délai fiscal.</p><p>Les dispenses de rubrique spéciale et de dépôt systématique des justificatifs s'appliquent aux déclarations souscrites à compter de l'entrée en vigueur de la disposition qui les institue, y compris pour les opérations antérieures. Elles n'imposent aucun registre ni attestation de remplacement, ne modifient pas les durées légales de conservation et n'obligent pas à refaire les déclarations déjà déposées. Les échéances antérieures conservent leur régime, sous réserve des dispositions répressives plus douces.</p>",
+    "reason": "Réduction supplémentaire de fond par rapport au brouillon : suppression des justificatifs à joindre systématiquement et de la rubrique spéciale répétant le gain déjà déclaré en vertu de 74-0 F. La preuve reste possible au contrôle. Conservation de la correction évitant la double imposition et de la coordination du délai PEA de cinq à trois ans. Le montant imposable demeure déclaré : sa suppression compromettrait la liquidation de l'impôt restant dû.",
+    "review_notes": "74-0 F, source et proposition lues intégralement, exige déjà le gain et ses éléments de calcul et permet un document de l'intermédiaire. La dispense spéciale de 91 quater J prime pour ses justificatifs et sa rubrique : coordonner le formulaire de plus-values, sans nouvelle annexe. Le délai fiscal suppose l'adoption simultanée des dispositions législatives PEA et du CMF L221-32, hors de ce lot ; la proposition de 157 est disponible dans reference-targets mais n'est pas une cible requise pour cet article. Aucun régime de contrat de travail n'est modifié.",
     "status": "rewrite_draft",
-    "proposed_xml": "<p>Le gain net défini au 6 de l'article 150-0 D du code général des impôts, réalisé depuis l'ouverture d'un plan d'épargne en actions mentionné à l'article 163 quinquies D du même code, est, le cas échéant, diminué du montant des produits et des plus-values qui n'ont pas bénéficié de l'exonération prévue au 5° bis de l'article 157 du même code. Pour justifier cette correction, le contribuable joint les éléments nécessaires à sa détermination à la déclaration mentionnée à l'article 74-0 F.</p>\n<p>Si le plan est clôturé avant l'expiration de la troisième année, le contribuable indique dans une rubrique spéciale de cette déclaration le montant du gain net mentionné au premier alinéa et les éléments nécessaires à sa détermination.</p>\n<p>La réduction de cinq à trois ans des délais propres au plan d’épargne en actions s’applique aux retraits, rachats, clôtures et dénouements intervenant à compter de l’entrée en vigueur de la loi portant cette réduction, y compris pour les plans déjà ouverts, sans remise à zéro de leur ancienneté. Elle ne remet pas en cause les faits générateurs antérieurs, paiements, créances, imputations, restitutions et recours régis par leurs règles applicables. Les autres conditions, plafonds, exclusions et exceptions favorables demeurent dans leur champ ; les prélèvements sociaux ne sont pas supprimés par la réduction du délai fiscal.</p>\n",
+    "reference_checks": [],
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Le délai de cinq ans propre au PEA est ramené à trois ans pour les opérations futures, sans recommencer l’ancienneté des plans existants."
+      "Dépôt systématique des justificatifs de correction et de calcul du gain net du PEA avec la déclaration.",
+      "Rubrique spéciale obligatoire pour le gain de clôture anticipée déjà compris dans la déclaration de plus-values."
     ],
-    "reason": "Applique la décision explicite de l’auteur : délai propre au PEA ramené de cinq à trois ans. Les autres délais et tous les passages sans rapport avec cette mesure sont conservés exactement dans le projet antérieur.",
-    "review_notes": "Révision ciblée du texte intégral avec avant-image conservée. Les paragraphes modifiés sont isolés dans changed-paragraphs.json ; tous les autres passages sont identiques au projet antérieur. Une contrelecture intégrale indépendante des sources, notes et propositions est requise avant inscription. L.221-32 CMF est fourni entier dans le complément externe et doit être adopté ensemble ; L.221-32-3 étend son fonctionnement au PEA-PME. Les conditions sociales de L136-7 restent applicables ; aucun taux social n’est ramené à zéro. Les cinq ans des autres fonds, durées de détention et participations ne sont pas modifiés.",
-    "benefit_review": "Les dérogations anticipées pour création ou reprise d’entreprise, licenciement, invalidité et retraite anticipée restent ouvertes dans leur champ. Le traitement des titres163bisH, plafonds des titres non cotés et obligations remboursables en actions, calcul des gains et moins-values et droits antérieurs ne sont pas supprimés. Les PEA existants bénéficient de leur ancienneté réelle, sans réouverture ni rétroactivité fiscale générale.",
+    "benefit_review": "La diminution du gain par les produits et plus-values déjà privés d'exonération demeure, afin d'éviter leur double taxation. La dispense de justificatifs ne conditionne pas cette correction à un nouveau document ; elle vaut aussi pour les opérations anciennes déclarées après la réforme. L'avantage du délai PEA de trois ans demeure ouvert aux opérations futures des plans existants et nouveaux, sans effacer les impôts antérieurs.",
     "substantive_impact": {
       "version": 1,
-      "classification": "coordination_only",
-      "assessment": "La condition temporelle du PEA est réellement raccourcie de deux ans ; la coordination déclarative conserve la même clé de mesure et ne compte pas comme une seconde économie. Les autres règles de l’article entier sont conservées dans leur rédaction proposée antérieure.",
-      "scope_limitations": "La réduction porte sur le délai du PEA, sans suppression des prélèvements sociaux ni des plafonds ou exclusions des titres. Adoption coordonnée du complément CMF nécessaire. Aucun coût fiscal ni solde national n’est établi.",
-      "new_burdens_review": "Aucune obligation de réouverture, d’attestation, de registre ou de déclaration supplémentaire n’est créée. Les mêmes déclarations suivent seulement le seuil de trois ans ; les droits et conditions de calcul autonomes demeurent.",
+      "classification": "material_reduction",
+      "assessment": "Réduction supplémentaire de fond par rapport au brouillon : suppression des justificatifs à joindre systématiquement et de la rubrique spéciale répétant le gain déjà déclaré en vertu de 74-0 F. La preuve reste possible au contrôle. Conservation de la correction évitant la double imposition et de la coordination du délai PEA de cinq à trois ans. Le montant imposable demeure déclaré : sa suppression compromettrait la liquidation de l'impôt restant dû.",
+      "scope_limitations": "La déclaration du montant reste requise ; les gains exonérés et les prélèvements sociaux gardent leur champ. Le coût net global n'est pas chiffré.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, collecte, attestation, délai minimal ou dépôt de remplacement n'est créé. Les règles de preuve, de calcul et de contrôle maintenues servent les droits existants ; leur coût global n'est pas chiffré.",
       "effects": [
         {
-          "kind": "coordination",
-          "measure_id": "pea-delai-fiscal-trois-ans",
-          "description": "PEA : avantage et traitement des retraits à trois ans au lieu de cinq, avec coordination des déclarations.",
-          "before": "Délai propre au PEA de cinq ans à compter de son ouverture.",
-          "after": "Délai propre au PEA de trois ans, ancienneté réelle du plan conservée.",
+          "kind": "obligation_removed",
+          "measure_id": "pea-justificatifs-depot-suppression",
+          "description": "Fin du dépôt systématique des preuves de correction et du calcul.",
+          "before": "Pièces de correction jointes et gain assorti de ses éléments dans une rubrique spéciale.",
+          "after": "Gain déclaré, justificatifs seulement au contrôle, sans rubrique répétitive.",
           "unit": "legal_duty",
-          "affected_population": "Titulaires de PEA et PEA-PME, organismes teneurs des plans pour les déclarations coordonnées.",
-          "conditions_and_transition": "La réduction de cinq à trois ans des délais propres au plan d’épargne en actions s’applique aux retraits, rachats, clôtures et dénouements intervenant à compter de l’entrée en vigueur de la loi portant cette réduction, y compris pour les plans déjà ouverts, sans remise à zéro de leur ancienneté. Elle ne remet pas en cause les faits générateurs antérieurs, paiements, créances, imputations, restitutions et recours régis par leurs règles applicables. Les autres conditions, plafonds, exclusions et exceptions favorables demeurent dans leur champ ; les prélèvements sociaux ne sont pas supprimés par la réduction du délai fiscal.",
-          "replacement_or_new_burdens": "Aucun nouveau plan, formulaire ou dépôt ; mêmes règles de calcul et prélèvements sociaux. Coût fiscal national non chiffré.",
+          "affected_population": "Contribuables titulaires de PEA",
+          "conditions_and_transition": "Entrée en vigueur selon la clause transitoire de la proposition ; droits et périodes antérieurs préservés, opérations futures éligibles maintenues.",
+          "replacement_or_new_burdens": "Aucune déclaration, attestation ou autorisation de remplacement instituée ; conditions matérielles et contrôles autonomes maintenus.",
+          "source_quote": "Le gain net défini au 6 de l'article 150-0 D du code général des impôts réalisé depuis l'ouverture d'un plan d'épargne en actions mentionné à l'article 163 quinquies D du code général des impôts est, le cas échéant, diminué du montant des produits et des plus-values qui n'ont pas bénéficié de l'exonération prévue au 5° bis de l'article 157 du même code. Le contribuable joint à la déclaration mentionnée à l'article 74-0 F les éléments nécessaires à la détermination de cette correction",
+          "proposed_quote": "Le gain net défini au 6 de l'article 150-0 D du code général des impôts réalisé depuis l'ouverture d'un plan d'épargne en actions mentionné à l'article 163 quinquies D du même code est, le cas échéant, diminué du montant des produits et des plus-values qui n'ont pas bénéficié de l'exonération prévue au 5° bis de l'article 157 du même code. Le contribuable n'est pas tenu de joindre à la déclaration mentionnée à l'article 74-0 F les justificatifs de cette correction ; celle-ci peut être établie, en cas de contrôle, par tout document probant."
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "pea-delai-trois-ans",
+          "description": "Coordination du seuil de clôture fiscale.",
+          "before": "Déclaration spéciale avant la cinquième année.",
+          "after": "Mention avant la troisième année, droits antérieurs sauvegardés.",
+          "unit": "other",
+          "affected_population": "Contribuables titulaires de PEA",
+          "conditions_and_transition": "Entrée en vigueur selon la clause transitoire de la proposition ; droits et périodes antérieurs préservés, opérations futures éligibles maintenues.",
+          "replacement_or_new_burdens": "Aucune déclaration, attestation ou autorisation de remplacement instituée ; conditions matérielles et contrôles autonomes maintenus.",
           "source_quote": "Lorsque la clôture du plan intervient avant l'expiration de la cinquième année, cette déclaration doit faire apparaître sous une rubrique spéciale le montant du gain net visé au premier alinéa assorti des éléments nécessaires à sa détermination.",
-          "proposed_quote": "Si le plan est clôturé avant l'expiration de la troisième année, le contribuable indique dans une rubrique spéciale de cette déclaration le montant du gain net mentionné au premier alinéa et les éléments nécessaires à sa détermination."
+          "proposed_quote": "Lorsque la clôture du plan intervient avant l'expiration de la troisième année, le montant du gain net mentionné au premier alinéa figure dans la déclaration mentionnée à l'article 74-0 F, sans rubrique spéciale ni nouvelle production des éléments déjà indiqués dans cette déclaration. Les justificatifs de son calcul ne sont pas joints systématiquement ; ils peuvent être demandés dans les conditions légales du contrôle fiscal."
         }
       ]
     },
@@ -1154,15 +1219,15 @@
       "version": 1,
       "source_sha256": "647e56a6c613b4619e506769121e17357b3a183520786d62b57c9cb92fa7eaed",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "034b0a043f3ae7bdb8a9304a07d560d5b0dc403397b5968067b872b384e8023b",
-      "assessment_sha256": "a34375648771b3d18f0d9071d482cd93429418753fc870fa16a14b846f90b961",
-      "policy_sha256": "d154ae55769ef077da06d705aa415102be6ec3a145b6b511400a6b01a7344be7",
+      "proposed_sha256": "4d4cac01ab6591646815cf04d0478b90d52e6d71220e5786fb652a39b80272dd",
+      "assessment_sha256": "9cb49b73ba444f70de950b90234658e9696d02f99a605c57a56ae93dc75cc2b2",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "edda2f1a4a1d27ebc453128a48f3f134b4546f6453ac72af670214c2ac2605c8"
+    "prior_proposal_sha256": "034b0a043f3ae7bdb8a9304a07d560d5b0dc403397b5968067b872b384e8023b"
   },
   {
     "code_id": "LEGITEXT000006069569",

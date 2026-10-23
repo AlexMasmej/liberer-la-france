@@ -5,7 +5,45 @@
     "source_sha256": "4177f0f41caa66611b8d195ba5cbe77f1d7a4ccbd0e1bc7ca8b5869101ea10ed",
     "number": "49 septies ZZB bis",
     "proposed_xml": "<p>Le crédit d’impôt de l’article 244 quater U du code général des impôts compensant l’absence d’intérêts sur une avance remboursable sans intérêt est accordé à l’établissement de crédit, à la société de financement ou à la société de tiers-financement. Il est égal au montant de l’avance multiplié par le taux S. Calculé chaque trimestre, S est le produit des deux termes suivants, arrondi à la quatrième décimale :</p>\n<p>1° La somme actualisée, au moyen des facteurs définis au présent article, des écarts de mensualités entre deux prêts de 1 euro, de même durée initiale de remboursement que l’avance et à mensualités constantes : un prêt au taux de référence i augmenté de la prime p, et un prêt sans intérêt ;</p>\n<p>2° L’inverse de la moyenne des facteurs d’actualisation à 6, 18, 30, 42 et 54 mois, cette moyenne étant retenue dans la limite de 1.</p>\n<p>Pour une maturité t exprimée en mois, le facteur d’actualisation β_t est calculé à partir de la moyenne z_t des taux zéro-coupon interbancaires de cette maturité observés entre le dixième jour du deuxième mois et le dixième jour du dernier mois du trimestre précédant l’offre. Pour une avance à un syndicat de copropriétaires, cette période précède la signature du contrat de prêt. La formule est :</p>\n<p>β_t = (1 + z_t)^(−t/12).</p>\n<p><img src=\"media/fiscalite/zzb-bis-formule-1.png\" alt=\"Formule source : bêta indice t égale un plus z indice t, puissance moins t sur douze.\" /></p>\n<p>Le taux annuel de référence i annule la valeur actualisée nette d’un prêt à mensualités constantes, consenti à ce taux et de même durée totale T, exprimée en mois, que le prêt sans intérêt. Avec les facteurs d’actualisation définis ci-dessus, il vérifie :</p>\n<p>∑_{t=1}^{T} (1 + i)^(−t/12) = ∑_{t=1}^{T} β_t.</p>\n<p><img src=\"media/fiscalite/zzb-bis-formule-2.png\" alt=\"Formule source : somme pour t de un à T de un plus i puissance moins t sur douze égale somme pour t de un à T de bêta indice t.\" /></p>\n<p>La prime p dépend de la nature de l’avance définie aux a et b de l’article D. 319-1 du code de la construction et de l’habitation :</p>\n<table><tbody><tr><th>Nature de l’avance</th><th>Avance individuelle : a de l’article D. 319-1 du code de la construction et de l’habitation</th><th>Avance à un syndicat de copropriétaires : b du même article</th></tr><tr><td>Prime p</td><td>100 points de base</td><td>220 points de base</td></tr></tbody></table>\n<p>La durée de remboursement est arrondie au multiple de six mois inférieur.</p>\n<p>Le taux S calculé par l’organisme mentionné au cinquième alinéa de l’article L. 312-1 du code de la construction et de l’habitation s’applique aux avances dont les offres sont émises pendant le même trimestre.</p>\n<p>Par dérogation, pour une avance à un syndicat de copropriétaires, le taux S est celui en vigueur à la signature du contrat par l’emprunteur.</p>",
-    "reason": "Réécriture complète du calcul du crédit d’impôt éco-PTZ, avec réintégration réelle des deux formules mathématiques et du tableau intégral, sans changement de taux ni d’échéance. Les règles communes et la date particulière des copropriétés sont distinguées.",
-    "review_notes": "Article rédigé en entier à droit constant. Les deux formules omises du XML sont retrouvées et vérifiées visuellement dans la page 3 du PDF officiel DGFiP BOI-BIC-RICI-10-110-20-20200806 (export 287189), avec images originales, transcriptions et empreintes dans le compagnon. Cette doctrine historique a cessé d’être publiée le 27 novembre 2024 : elle sert uniquement à récupérer les images de la règle créée en 2019, pas à remplacer la version canonique de 2024. Les bénéficiaires, la signature copropriété et les primes restent ceux de la source canonique 2024. Le renvoi source aux « quatrième et cinquième alinéas du présent I », alors que le texte ne comporte pas de I, est remplacé par une référence aux facteurs définis dans l’article, sans changement de calcul. La note d’application aux I à III de l’article 6 du décret n° 2024-299 du 29 mars 2024 reste attachée au texte. RÉSERVE : les formules n’ont pas encore été confrontées aux pixels de l’extrait JO authentifié JORFTEXT000038934588 ; son PDF est lisible dans le moteur web, mais les captures ne livrent pas de pixels dans cette interface et le téléchargement local renvoie HTTP 403. Aucun contrôle juridique final revendiqué."
+    "status": "rewrite_draft",
+    "reason": "Conservation du corps complet antérieur : restitution des deux formules et du tableau, et correction nécessaire des renvois au « présent I » inexistant. Aucune coupe supplémentaire justifiée : ces paramètres déterminent le crédit favorable et ne constituent pas un prélèvement. Aucun gain de simplification matérielle n'est attribué à cette correction.",
+    "review_notes": "Page 3 entière du PDF DGFiP BOI-BIC-RICI-10-110-20-20200806 examinée visuellement : les deux formules correspondent aux transcriptions et aux images enregistrées du compagnon. Document historique clos le 27 novembre 2024 ; il n'actualise pas la version légale 2024. La confrontation au JO authentifié JORFTEXT000038934588 reste non effectuée ; aucune formule n'est inférée. Le renvoi source au présent I est incohérent : remplacement par le présent article, sans changement de calcul. D319-1 a), b), c) lu : la source ne donne que deux colonnes de prime ; aucune troisième prime inventée pour c). Conserver les modalités I à III de l'article 6 du décret 2024-299. Note historique source conservée : Se reporter aux modalités d’application prévues aux I à III de l’article 6 du décret n° 2024-299 du 29 mars 2024.",
+    "benefit_review": "Le crédit éco-PTZ et sa compensation financière sont intégralement préservés : plafond de la moyenne à 1, prime de 100 points de base pour l'individuel et 220 pour la copropriété, arrondi à six mois et taux de la date de signature pour les syndicats. Ces règles demeurent accessibles aux futures avances éligibles.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Conservation du corps complet antérieur : restitution des deux formules et du tableau, et correction nécessaire des renvois au « présent I » inexistant. Aucune coupe supplémentaire justifiée : ces paramètres déterminent le crédit favorable et ne constituent pas un prélèvement. Aucun gain de simplification matérielle n'est attribué à cette correction.",
+      "scope_limitations": "Aucune baisse de prélèvement ou économie nationale n'est démontrée par ce maintien. Les conditions législatives du crédit et les régimes fiscaux distincts conservent leur champ.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien du texte officiel sans registre, déclaration, délai ou condition supplémentaire.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "eco-ptz-calcul-credit-renvoi-facteurs",
+          "description": "Correction du renvoi à un I absent, sans modification des paramètres.",
+          "before": "Renvoi aux quatrième et cinquième alinéas du présent I alors qu'aucun I n'existe.",
+          "after": "Renvoi aux facteurs définis au présent article ; formules et tableau complets.",
+          "unit": "legal_duty",
+          "affected_population": "Établissements de crédit, sociétés de financement et sociétés de tiers-financement éligibles au crédit concerné.",
+          "conditions_and_transition": "Aucun changement de période d'éligibilité ni de taux : modalités du décret 2024-299 préservées.",
+          "replacement_or_new_burdens": "Aucune obligation nouvelle ; correction d'un renvoi matériel et restitution documentaire des formules.",
+          "source_quote": "aux quatrième et cinquième alinéas du présent I",
+          "proposed_quote": "au moyen des facteurs définis au présent article"
+        }
+      ]
+    },
+    "reference_checks": [],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "4177f0f41caa66611b8d195ba5cbe77f1d7a4ccbd0e1bc7ca8b5869101ea10ed",
+      "source_notes_sha256": "31cd157de1832bbfd2808beb62fbf0cb6577ec92a3159154026716b864e2450c",
+      "proposed_sha256": "6ac46e84c6cd11b600f45d181b7a43cab398cab680d6addf261d4f32733b4fbe",
+      "assessment_sha256": "c41184cb663f56669076b016fe9208d43fbfa0e26ef6105dec75af61618edebb",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "6ac46e84c6cd11b600f45d181b7a43cab398cab680d6addf261d4f32733b4fbe"
   }
 ]

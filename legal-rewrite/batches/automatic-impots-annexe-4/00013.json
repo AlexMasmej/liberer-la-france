@@ -4,239 +4,1154 @@
     "source_id": "LEGIARTI000030625671",
     "source_sha256": "aeab93fd1a4cd24594eee10ccb564f102f71b62a12904745b83f8b3f9f2f23c4",
     "number": "50-0 BA",
-    "proposed_xml": "<p>La déclaration prévue à l'article 286 O de l'annexe II au code général des impôts est effectuée auprès de la direction régionale des douanes et droits indirects territorialement compétente. Elle est établie sur le formulaire conforme au modèle fixé par l'administration et figurant en annexe. Ce formulaire comporte les mentions suivantes :</p><p>a La dénomination ou la raison sociale de l'entrepositaire agréé ;</p><p>b Les adresses du siège ou du principal établissement et de l'entrepôt fiscal suspensif des droits d'accises ainsi que, le cas échéant, l'adresse du lieu de conservation de la comptabilité-matières ;</p><p>c Les numéros de registre du commerce, d'accises et d'identification à la TVA ;</p><p>d La nature des marchandises réceptionnées, détenues et expédiées ;</p><p>e Le type d'activité exercée ;</p><p>f La désignation détaillée et la localisation des lieux de vente, ainsi que leurs modalités d'ouverture et de fonctionnement. Le plan des lieux de vente est annexé au formulaire. Toute modification des plans, de la localisation ou des modalités d'ouverture et de fonctionnement de ces lieux doit être signalée à la direction régionale des douanes et droits indirects territorialement compétente ;</p><p>g Les dates et signatures de l'exploitant du comptoir de vente ou de la boutique de vente à bord.</p>",
-    "reason": "Réécriture à droit constant : la phrase introductive distingue le service destinataire, le formulaire requis et son contenu. Les renseignements à fournir et le signalement des modifications des lieux de vente sont formulés plus directement, sans modifier les lettres a à g. Aucune réforme de fond de policy.json ne concerne ce régime d'accises.",
-    "review_notes": "Renvoi à l'article 286 O de l'annexe II vérifié dans le corpus public : il prévoit la déclaration et le modèle fixé par arrêté. Conservation du service régional désigné par la source et de tous les renseignements, y compris les dates et signatures au pluriel. La référence au modèle figurant en annexe est conservée ; le formulaire lui-même n'est pas fourni dans le lot. Aucun déplacement des huit alinéas.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>En application de l'article 286 O de l'annexe II au code général des impôts, la déclaration est effectuée auprès de la direction régionale des douanes et droits indirects territorialement compétente sur le formulaire selon un modèle fixé par l'administration et figurant en annexe, lequel comprend les mentions suivantes :</p><p>a la dénomination ou raison sociale de l'entrepositaire agréé ;</p><p>b les adresses du siège ou du principal établissement, de l'entrepôt fiscal suspensif des droits d'accises et, le cas échéant, l'adresse à laquelle est conservée la comptabilité-matières ;</p><p>c les numéros de registre du commerce, d'accises ainsi que d'identification à la TVA ;</p><p>d la nature des marchandises réceptionnées, détenues, expédiées ;</p><p>e le type d'activité réalisée ;</p><p>f la désignation détaillée et la localisation des lieux de vente ainsi que les modalités d’ouverture et de fonctionnement ; toute modification de ces renseignements est signalée à la direction régionale des douanes et droits indirects territorialement compétente. Aucun plan des lieux de vente ni signalement de ses seules modifications n’est exigé ;</p><p>g les dates et signatures de l'exploitant du comptoir de vente ou de la boutique de vente à bord.</p><p>Les présentes simplifications s’appliquent aux formalités accomplies à compter de l’entrée en vigueur de la réforme, y compris dans les procédures en cours, sans renouvellement des dépôts déjà effectués. Les droits, exonérations, créances et recours relatifs aux opérations antérieures sont conservés.</p>",
+    "reason": "Réduction de fond : suppression du plan et du signalement de ses seules modifications. La localisation et les modalités d’exploitation suffisent à identifier le site contrôlé ; les adresses fiscales, produits, activités et signatures restent nécessaires au régime suspensif. Le précédent brouillon maintenait le plan.",
+    "review_notes": "286 O lu en entier : il exige les modalités d’ouverture et de fonctionnement mais n’impose pas le plan. Le modèle annexé, non joint au lot, doit être adapté. Les signalements des changements de localisation et de fonctionnement restent ; aucun agrément ni exonération supprimé.",
+    "status": "rewrite_draft",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suppression du plan annexé obligatoire et du signalement de ses seules modifications."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réduction de fond : suppression du plan et du signalement de ses seules modifications. La localisation et les modalités d’exploitation suffisent à identifier le site contrôlé ; les adresses fiscales, produits, activités et signatures restent nécessaires au régime suspensif. Le précédent brouillon maintenait le plan.",
+      "scope_limitations": "286 O lu en entier : il exige les modalités d’ouverture et de fonctionnement mais n’impose pas le plan. Le modèle annexé, non joint au lot, doit être adapté. Les signalements des changements de localisation et de fonctionnement restent ; aucun agrément ni exonération supprimé.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "accises-comptoirs-plan-supprime",
+          "description": "Retrait du plan distinct dans la déclaration d’exploitation.",
+          "before": "Plan annexé et signalement de toute modification du plan.",
+          "after": "Localisation et fonctionnement déclarés, sans plan.",
+          "unit": "legal_duty",
+          "affected_population": "Entrepositaires exploitant comptoirs ou boutiques de vente à bord.",
+          "conditions_and_transition": "Formalités accomplies à compter de l’entrée en vigueur ; droits et recours antérieurs conservés. Les conditions fiscales de fond demeurent.",
+          "replacement_or_new_burdens": "Aucune déclaration, autorisation ou pièce de remplacement créée.",
+          "source_quote": "le plan des lieux de vente est annexé au formulaire",
+          "proposed_quote": "Aucun plan des lieux de vente ni signalement de ses seules modifications n’est exigé"
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "aeab93fd1a4cd24594eee10ccb564f102f71b62a12904745b83f8b3f9f2f23c4",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "90518f766bebccab931fe2148cdacd12124d3686c3ad836d39c8680c1e841bd6",
+      "assessment_sha256": "4506082739a118631f2e00621eb444d4bccb449209955205d41f216b4b0638e0",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "500fd9b1aba77969bd3f2803e1ef0d095287975218d364c3393c20f1f3ac7066"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000030625673",
     "source_sha256": "ef86c856f6e82222ad3f2a367ef34efdd1ad22f4026eadde074973e7803954b7",
     "number": "50-0 BB",
-    "proposed_xml": "<p>Le document d'avitaillement et livraisons à emporter prévu à l'article 286 P de l'annexe II au code général des impôts accompagne les produits soumis à accises livrés aux boutiques de vente à bord ou dans le cadre de l'avitaillement. Il couvre le trajet entre l'entrepôt suspensif et le navire ou l'aéronef, ou entre la zone de mise à bord et l'aéronef. Il doit comporter les mentions suivantes :</p><p>a Le numéro du justificatif établi par l'opérateur, composé comme suit : caractères 1 et 2 : quantième de l'année ; caractères 3 à 15 : numéro d'accises de l'entrepositaire agréé ; caractères 16 à 20 : numéro de séquence annuel propre à l'opérateur ;</p><p>b La dénomination ou la raison sociale et les coordonnées de l'entrepositaire agréé qui expédie les produits ;</p><p>c La dénomination ou la raison sociale et les coordonnées du destinataire des produits ;</p><p>d La dénomination commerciale précise des produits ;</p><p>e Les quantités livrées, exprimées en litres ou en kilogrammes selon le cas, ainsi que l'unité de conditionnement ;</p><p>f Le nombre de contenants et, lorsqu'un scellement est utilisé, les numéros des scellés ;</p><p>g Pour les alcools et les boissons alcooliques, le titre alcoométrique ;</p><p>h La destination et, pour un navire, son nom et celui de la compagnie maritime ou, pour un aéronef, le numéro de vol et le nom de la compagnie aérienne ;</p><p>Le document d'avitaillement et de livraisons à bord est conservé sur support papier ou sous forme dématérialisée. Tout document équivalent comportant l'ensemble des mentions ci-dessus peut le remplacer.</p>",
-    "reason": "Réécriture à droit constant : le champ du document et les trajets concernés sont énoncés en phrases distinctes. Chaque mention obligatoire conserve sa lettre ; les informations propres aux navires et aux aéronefs sont distinguées. Les supports de conservation et la faculté de remplacement par un document équivalent sont maintenus. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Renvoi à l'article 286 P de l'annexe II vérifié. Les plages 1 et 2, 3 à 15 et 16 à 20 sont conservées. La source affecte deux caractères au « quantième de l'année », expression ambiguë à contrôler ; elle n'est pas remplacée par « millésime ». La source nomme le document « avitaillement et livraisons à emporter » au début, puis « avitaillement et de livraisons à bord » à la fin : cette différence préexistante est conservée et doit être harmonisée avec le modèle réglementaire lors d'une coordination expresse. Les dix alinéas sont maintenus.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>En application de l'article 286 P de l'annexe II au code général des impôts, le document d'avitaillement et livraisons à emporter qui accompagne les produits soumis à accises livrés aux boutiques de vente à bord et dans le cadre de l'avitaillement, entre l'entrepôt suspensif et le navire ou l'aéronef ou entre la zone de mise à bord et l'aéronef, comporte les mentions obligatoires suivantes :</p><p>a le numéro unique du justificatif attribué par l’opérateur, sans format imposé ;</p><p>b la dénomination ou raison sociale, les coordonnées de l'entrepositaire agréé qui expédie les produits ;</p><p>c la dénomination ou raison sociale, les coordonnées du destinataire des produits ;</p><p>d la dénomination commerciale précise des produits ;</p><p>e les quantités livrées, en litres ou en kilogrammes selon le cas, avec l'unité de conditionnement ;</p><p>f le nombre de contenants et les numéros de scellés (si le scellement est utilisé) ;</p><p>g le titre alcoométrique pour les alcools et boissons alcooliques ;</p><p>h la destination, le nom du navire et de la compagnie maritime, le numéro de vol et la compagnie aérienne pour les aéronefs ;</p><p>Le document d'avitaillement et de livraisons à bord est conservé sous format papier ou dématérialisé et peut être remplacé par tout document équivalent comportant l'ensemble des mentions précitées.</p><p>Les présentes simplifications s’appliquent aux formalités accomplies à compter de l’entrée en vigueur de la réforme, y compris dans les procédures en cours, sans renouvellement des dépôts déjà effectués. Les droits, exonérations, créances et recours relatifs aux opérations antérieures sont conservés.</p>",
+    "reason": "Réduction de fond : retrait de la codification nationale obligatoire à vingt caractères. Le numéro unique et les coordonnées de l’entrepositaire assurent le rapprochement avec la livraison, sans double encodage du numéro d’accise. Les quantités, unités, scellés éventuels et destinations restent ; papier, dématérialisation et document équivalent sont conservés.",
+    "review_notes": "286 P lu : document, intégrité du contenant, réception signée et stockage sûr demeurent. La codification du a était ambiguë : deux caractères pour le « quantième de l’année ». Elle est expressément supprimée, non corrigée en millésime. Les deux dénominations historiques du document restent dans la source proposée ; modèles extérieurs à coordonner.",
+    "status": "rewrite_draft",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suppression du format obligatoire à vingt caractères du numéro de justificatif."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réduction de fond : retrait de la codification nationale obligatoire à vingt caractères. Le numéro unique et les coordonnées de l’entrepositaire assurent le rapprochement avec la livraison, sans double encodage du numéro d’accise. Les quantités, unités, scellés éventuels et destinations restent ; papier, dématérialisation et document équivalent sont conservés.",
+      "scope_limitations": "286 P lu : document, intégrité du contenant, réception signée et stockage sûr demeurent. La codification du a était ambiguë : deux caractères pour le « quantième de l’année ». Elle est expressément supprimée, non corrigée en millésime. Les deux dénominations historiques du document restent dans la source proposée ; modèles extérieurs à coordonner.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "avitaillement-numero-format-libre",
+          "description": "Suppression de la structure imposée du numéro documentaire.",
+          "before": "Caractères 1 à 20 répartis entre quantième, accise et séquence annuelle.",
+          "after": "Numéro unique choisi par l’opérateur sans format imposé.",
+          "unit": "legal_duty",
+          "affected_population": "Entrepositaires livrant les boutiques de vente à bord et l’avitaillement.",
+          "conditions_and_transition": "Formalités accomplies à compter de l’entrée en vigueur ; droits et recours antérieurs conservés. Les conditions fiscales de fond demeurent.",
+          "replacement_or_new_burdens": "Aucune déclaration, autorisation ou pièce de remplacement créée.",
+          "source_quote": "caractère 16 à 20 : numéro de séquence annuel propre à l'opérateur",
+          "proposed_quote": "a le numéro unique du justificatif attribué par l’opérateur, sans format imposé ;"
+        }
+      ]
+    },
+    "benefit_review": "La faculté de document équivalent et le choix du papier ou de la dématérialisation sont maintenus pour les livraisons futures. Les scellés restent conditionnels à leur utilisation. Aucun régime suspensif ou exonération d’avitaillement n’est fermé.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "ef86c856f6e82222ad3f2a367ef34efdd1ad22f4026eadde074973e7803954b7",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "f1c172441a2821e64164e9982da5a0fc021db66817f3533d72b4ff7f5f07e93e",
+      "assessment_sha256": "14eaae8a5d7fb4cc860691110914ff0fb02301716fee5160b70260bdfe0a3b3b",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "4f7019505399631584a329f7d26405345a33f6f4fdbd06368de5baae59fe705d"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000030625675",
     "source_sha256": "98efdd66266528101e61f888d73784e69106d7e9f12999ee9bedc65e308383db",
     "number": "50-0 BC",
-    "proposed_xml": "<p>Le document commercial prévu aux articles 111-0 HB et 111-0 HC de l'annexe III au code général des impôts doit comporter les informations suivantes :</p><p>a La nature, la valeur unitaire et le nombre des articles achetés et vendus ;</p><p>b L'identité de l'acquéreur ;</p><p>c Le numéro de vol ou la liaison maritime concernée ;</p><p>d Le lieu de destination indiqué sur le titre de transport ;</p><p>e La date de la transaction ;</p><p>f Selon le cas, la mention « ventes en exonération des droits et taxes » ou « ventes en droits acquittés ».</p><p>Les boutiques de vente à bord d'aéronefs ne sont pas tenues de fournir les informations des points b, d et f.</p><p>Pour les boutiques de vente à bord de navires qui effectuent uniquement des ventes en droits acquittés à des passagers à destination d'un autre État membre de l'Union européenne, les informations des points b, d et f sont facultatives.</p>",
-    "reason": "Réécriture à droit constant : l'obligation documentaire est explicite et les deux dérogations sont rédigées avec leur champ propre. Les six mentions et les lettres auxquelles renvoient les exceptions sont conservées. Aucune réforme de fond ne concerne ces ventes.",
-    "review_notes": "Renvois aux articles 111-0 HB et 111-0 HC de l'annexe III vérifiés. Le 111-0 HC impose l'indication du statut fiscal des produits alors que la source dispense les aéronefs de la mention f et la rend facultative pour certaines ventes à bord des navires : articulation préexistante à contrôler sans supprimer les dérogations. Conserver la condition tenant aux seules ventes en droits acquittés et à la destination dans un autre État membre. Neuf alinéas maintenus.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien nécessaire après examen : le document relie la vente à son traitement fiscal par les produits, la destination et la date. Les deux dispenses b, d et f réduisent déjà les données à bord. Supprimer davantage sans coordination des conditions de vente exonérée affaiblirait la justification de l’avantage. La reformulation antérieure est abandonnée sans gain revendiqué.",
+    "review_notes": "111-0 HB et HC lus entièrement. Tension préexistante entre le statut fiscal exigé par HC et la dispense de f ici : harmonisation explicite de HC nécessaire, sans retirer la dispense favorable. Aucun renvoi nouveau ; aucune extension de taxe. Les conditions de destination et de ventes exclusivement en droits acquittés sont conservées.",
+    "status": "retained_unchanged",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien nécessaire après examen : le document relie la vente à son traitement fiscal par les produits, la destination et la date. Les deux dispenses b, d et f réduisent déjà les données à bord. Supprimer davantage sans coordination des conditions de vente exonérée affaiblirait la justification de l’avantage. La reformulation antérieure est abandonnée sans gain revendiqué.",
+      "scope_limitations": "111-0 HB et HC lus entièrement. Tension préexistante entre le statut fiscal exigé par HC et la dispense de f ici : harmonisation explicite de HC nécessaire, sans retirer la dispense favorable. Aucun renvoi nouveau ; aucune extension de taxe. Les conditions de destination et de ventes exclusivement en droits acquittés sont conservées.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
+      "effects": []
+    },
+    "benefit_review": "Les mentions b, d et f restent dispensées pour les aéronefs et facultatives pour les navires ne vendant qu’en droits acquittés à destination d’un autre État membre. Ces avantages restent ouverts aux ventes futures ; les ventes exonérées et leurs fondements ne sont pas supprimés.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "98efdd66266528101e61f888d73784e69106d7e9f12999ee9bedc65e308383db",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "cb2c4049c954086eb20b98ecfaa2776050d90bca4c0890d73051690c80064728",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e587724fec02ab9ee884500fe1110b8b45a62a89a11ec343f6d1ab880d1d2a2b"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000041546014",
     "source_sha256": "b873aac35f41aa8f2be5547461c16fcee8d31206e382f1902ea10d5161eff126",
     "number": "50-0 C",
-    "proposed_xml": "<p>Les capsules représentatives de droits destinées à être apposées sur des bouteilles et récipients dans les autres États membres de la Communauté européenne doivent porter les mentions suivantes :</p><p>a) Le numéro d'agrément délivré par la direction interrégionale des douanes et droits indirects territorialement compétente ou, en Guadeloupe, en Guyane, à La Réunion et à Mayotte, par la direction régionale des douanes et droits indirects. Ce numéro est précédé du sigle du pays : DE pour Allemagne, IT pour Italie, FI pour Finlande, SE pour Suède, AT pour Autriche, BE pour Belgique, DK pour Danemark, EL pour Grèce, ES pour Espagne, GB pour Grande-Bretagne, IE pour Irlande, LU pour Luxembourg, NL pour Pays-Bas et PT pour Portugal ;</p><p>b) La marque du fabricant des capsules ou, le cas échéant, celle du fabricant des marques fiscales utilisées pour fabriquer les capsules.</p><p>Ces mentions doivent être apposées selon la description figurant au II de l'article 164 AM.</p><p>Les indications prévues au a doivent correspondre à celles qui figurent sur les étiquettes apposées sur les bouteilles ou récipients, ou sur les bouteilles ou récipients eux-mêmes. Elles doivent être apposées avant la livraison des capsules à l'utilisateur.</p><p>Conformément au II de l'article 11 de l'arrêté du 13 janvier 2020 (NOR : CPAP1931008A), les demandes de décisions administratives individuelles présentées avant l'entrée en vigueur de cet arrêté sont instruites selon les procédures applicables à la date de leur présentation.</p>",
-    "reason": "Réécriture à droit constant : les autorités de délivrance, le préfixe national et les obligations d'apposition sont distingués. Les territoires, les quatorze sigles et la concordance avec les indications des récipients sont intégralement conservés. La règle transitoire des notes source est explicitée en fin de texte. Aucune réforme de fond ni nouvelle date d'entrée en vigueur n'est créée.",
-    "review_notes": "Le II de l'article 164 AM figure dans le corpus et décrit les marques fiscales. La terminologie historique « Communauté européenne » et la liste des pays, comprenant GB pour Grande-Bretagne et ne couvrant pas tous les États membres actuels, sont conservées : leur actualisation exige une coordination expresse. La règle transitoire du II de l'article 11 de l'arrêté du 13 janvier 2020 provient exclusivement des notes source ; elle est ajoutée après les cinq alinéas initiaux, sans les déplacer. Le 13 janvier 2020 n'est pas une date de réforme future.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Les capsules représentatives de droits destinées à être apposées, dans les autres Etats membres de la Communauté européenne, sur les bouteilles et récipients doivent comporter les mentions suivantes :</p><p>a) Le numéro d’accise attribué à l’entrepositaire agréé par l’État membre dans lequel il est établi, précédé du sigle de cet État. Aucun numéro d’agrément français supplémentaire n’est exigé ;</p><p>b) La marque du fabricant des capsules ou, le cas échéant, celle du fabricant des marques fiscales servant à la fabrication des capsules.</p><p>Ces mentions sont apposées conformément à la description qui en est faite au II de l’article 164 AM. Pour les opérateurs visés au présent article, le numéro d’accise prévu au a tient lieu du numéro d’agrément mentionné dans cette description.</p><p>Les indications reprises au a doivent concorder avec celles figurant soit sur les étiquettes apposées sur les bouteilles ou récipients, soit sur les bouteilles ou récipients eux-mêmes. Ces indications doivent être apposées avant leur livraison à l'utilisateur.</p><p>Les numéros d’agrément déjà attribués et les capsules ou marques qui les portent demeurent utilisables sans nouvelle demande ni nouveau marquage. Le présent article s’applique dès l’entrée en vigueur de la réforme aux opérateurs établis dans un autre État membre ; un ancien sigle ne confère pas cette qualité à un opérateur établi hors de l’Union européenne.</p><p>Les présentes simplifications s’appliquent aux formalités accomplies à compter de l’entrée en vigueur de la réforme, y compris dans les procédures en cours, sans renouvellement des dépôts déjà effectués. Les droits, exonérations, créances et recours relatifs aux opérations antérieures sont conservés.</p>",
+    "reason": "Coordination de fond de la suppression de l’agrément français supplémentaire déjà retenue pour 111 I : le numéro d’accise existant identifie l’opérateur. Maintien des anciens marquages sans réimpression. La liste historique de quatorze sigles, dont GB, est remplacée expressément par le sigle de l’État membre d’établissement.",
+    "review_notes": "111 I à N, 164 AM et 54-0 D lus. Coordonner 164 AM, 54-0 D et les modèles sans rétablir l’agrément français. L’ancienne note du 13 janvier 2020 règle ses demandes historiques ; elle ne retarde pas la dispense future. Les conditions d’entrepositaire, de paiement et de traçabilité demeurent. Aucun nouveau régime britannique n’est créé.",
+    "status": "rewrite_draft",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suppression de la mention obligatoire d’un numéro d’agrément français supplémentaire."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination de fond de la suppression de l’agrément français supplémentaire déjà retenue pour 111 I : le numéro d’accise existant identifie l’opérateur. Maintien des anciens marquages sans réimpression. La liste historique de quatorze sigles, dont GB, est remplacée expressément par le sigle de l’État membre d’établissement.",
+      "scope_limitations": "111 I à N, 164 AM et 54-0 D lus. Coordonner 164 AM, 54-0 D et les modèles sans rétablir l’agrément français. L’ancienne note du 13 janvier 2020 règle ses demandes historiques ; elle ne retarde pas la dispense future. Les conditions d’entrepositaire, de paiement et de traçabilité demeurent. Aucun nouveau régime britannique n’est créé.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "capsules-agrement-francais-supprime",
+          "description": "Coordination du marquage à la suppression de l’agrément supplémentaire.",
+          "before": "Numéro d’agrément français obligatoire sur les capsules.",
+          "after": "Numéro d’accise existant ; anciens marquages utilisables.",
+          "unit": "legal_duty",
+          "affected_population": "Entrepositaires agréés dans un autre État membre utilisant des capsules françaises.",
+          "conditions_and_transition": "Formalités accomplies à compter de l’entrée en vigueur ; droits et recours antérieurs conservés. Les conditions fiscales de fond demeurent.",
+          "replacement_or_new_burdens": "Aucune déclaration, autorisation ou pièce de remplacement créée.",
+          "source_quote": "Le numéro d'agrément délivré par la direction interrégionale des douanes et droits indirects",
+          "proposed_quote": "Aucun numéro d’agrément français supplémentaire n’est exigé"
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "b873aac35f41aa8f2be5547461c16fcee8d31206e382f1902ea10d5161eff126",
+      "source_notes_sha256": "0054b8fb3feaf9ae52a4689ad6bce6e73fd8272c9b3759d8227b743e36e83fde",
+      "proposed_sha256": "fdcaa025ab27fdf918598113f9f30cc80b54a7d20b081b0545d860bc5d629dc8",
+      "assessment_sha256": "4aadb525843fb4a2ec89c4015586300f1dc32f3c646a3d44eb47ea68fcdffc05",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "fbe2afcb74f24d7572da21fe7ef0de0dad71976af891f7039ed245fde7e9772e"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300448",
     "source_sha256": "015c579a3aa8d54febee52e6ea7e48bd867970368eb9ba1df138a45b986efe08",
     "number": "50-0 D",
-    "proposed_xml": "<p>Les capsules mentionnées à l'article 50-0 C doivent respecter la description donnée à l'article 54-0 D.</p>",
-    "reason": "Réécriture à droit constant de l'alinéa unique : la conformité des capsules est exprimée comme une obligation explicite, en conservant les deux renvois. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "L'article 54-0 D est présent dans le corpus et fixe notamment les couleurs des capsules selon les produits. Articulation conservée avec le renvoi au II de l'article 164 AM figurant à l'article 50-0 C. Aucun ajout de caractéristique technique.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Les capsules visées à l’article 50-0 C sont conformes à la description qui en est faite à l’article 54-0 D. Pour ces capsules, le numéro d’accise prévu au a de l’article 50-0 C tient lieu du numéro d’agrément du responsable de l’embouteillage mentionné à l’article 54-0 D. Les anciens numéros et marquages demeurent utilisables dans les conditions de l’article 50-0 C.</p>",
+    "reason": "Coordination nécessaire : le renvoi technique à 54-0 D ne doit pas rétablir l’identifiant français supprimé par 111 I et 50-0 C. Couleurs, mentions de produits et contrastes restent intégralement applicables ; aucune réduction technique distincte n’est comptée.",
+    "review_notes": "54-0 D lu : sept rubriques, couleurs, mentions Champagne, VDN et BFAV et capsule générique lie-de-vin restent applicables avec leurs exclusions. La substitution d’identifiant est la seule exception au renvoi. 164 AM doit être coordonné au même dispositif.",
+    "status": "rewrite_draft",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination nécessaire : le renvoi technique à 54-0 D ne doit pas rétablir l’identifiant français supprimé par 111 I et 50-0 C. Couleurs, mentions de produits et contrastes restent intégralement applicables ; aucune réduction technique distincte n’est comptée.",
+      "scope_limitations": "54-0 D lu : sept rubriques, couleurs, mentions Champagne, VDN et BFAV et capsule générique lie-de-vin restent applicables avec leurs exclusions. La substitution d’identifiant est la seule exception au renvoi. 164 AM doit être coordonné au même dispositif.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "capsules-agrement-francais-supprime",
+          "description": "Neutralisation du retour de l’agrément par renvoi technique.",
+          "before": "54-0 D vise le numéro d’agrément du responsable.",
+          "after": "Numéro d’accise substitué dans le champ de 50-0 C.",
+          "unit": "legal_duty",
+          "affected_population": "Mêmes entrepositaires des autres États membres.",
+          "conditions_and_transition": "Formalités accomplies à compter de l’entrée en vigueur ; droits et recours antérieurs conservés. Les conditions fiscales de fond demeurent.",
+          "replacement_or_new_burdens": "Aucune déclaration, autorisation ou pièce de remplacement créée.",
+          "source_quote": "Les capsules visées à l'article 50-0 C sont conformes à la description qui en est faite à l'article 54-0 D.",
+          "proposed_quote": "Pour ces capsules, le numéro d’accise prévu au a de l’article 50-0 C tient lieu du numéro d’agrément du responsable de l’embouteillage mentionné à l’article 54-0 D."
+        }
+      ]
+    },
+    "benefit_review": "La possibilité de capsule générique lie-de-vin du e de 54-0 D reste disponible sous ses exclusions précises ; le renvoi conserve cet avantage pour les nouvelles opérations. Les anciens numéros demeurent utilisables sans nouveau marquage.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "015c579a3aa8d54febee52e6ea7e48bd867970368eb9ba1df138a45b986efe08",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "50aa2df4a8b1eec8bc1483e6b8f5f3359e74faa18458a2b96ca2e4320282b4e9",
+      "assessment_sha256": "c288d862456ce4aee6e37cea0fd057d34310bfe8aedaf449737fa64b1f5c6707",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "369c183816c678eba0406c3c9cb72074748af274e7e25eb05b2b1a99d14254ba"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300450",
     "source_sha256": "0545ec4053b11318264f6a5c747fd483db704e0d9729847eabe559ac60fcba23",
     "number": "50-0 E",
-    "proposed_xml": "<p>Le bon de commande prévu à l'article 111 J de l'annexe III doit être établi en double exemplaire, daté et visé par l'administration des douanes et droits indirects. Il comporte notamment les renseignements suivants :</p><p>a) Le nom et l'adresse du fournisseur des marques fiscales ou des capsules ;</p><p>b) Le nom et l'adresse de l'entrepositaire agréé destinataire, ainsi que ses numéros d'accise et d'agrément ;</p><p>c) Le nombre de marques fiscales ou de capsules commandées pour chaque catégorie. Les catégories sont définies par le volume net exprimé en centilitres, la couleur des capsules, la distinction entre vin tranquille et vin mousseux pour les vins et, le cas échéant, le titre alcoométrique volumique.</p><p>Un exemplaire du bon de commande est remis au fabricant. L'autre est conservé dans le dossier ouvert au nom du commanditaire.</p>",
-    "reason": "Réécriture à droit constant : les exigences de forme du bon de commande et la destination de chacun des exemplaires sont formulées directement. Les critères de ventilation par catégorie sont explicités au sein du c, sans déplacer les autres alinéas. Aucune réforme de fond ne concerne ce dispositif.",
-    "review_notes": "Renvoi à l'article 111 J de l'annexe III vérifié : il prévoit le visa des bons de commande avant la mise en fabrication. Les deux exemplaires, les deux numéros du destinataire, l'unité en centilitres, la distinction entre vins et le titre alcoométrique lorsqu'il est requis sont conservés. L'énumération reste non exhaustive par le maintien de « notamment ».",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Le bon de commande mentionné à l’article 111 J de l’annexe III est daté, sans visa préalable de l’administration des douanes et droits indirects ni double exemplaire obligatoire. Il comporte les renseignements suivants :</p><p>a) Le nom et l’adresse du fournisseur des marques fiscales ou des capsules ;</p><p>b) Le nom et l’adresse de l’entrepositaire agréé destinataire ainsi que son numéro d’accise ; un ancien numéro d’agrément peut également être utilisé dans les conditions de l’article 50-0 C ;</p><p>c) Le nombre de marques fiscales ou de capsules commandées, par catégorie (volume net exprimé en centilitres, couleur des capsules, pour les vins, vin tranquille ou vin mousseux et, le cas échéant, titre alcoométrique volumique).</p><p>Le bon est transmis au fabricant. Les parties peuvent conserver ce bon dans leurs pièces commerciales ordinaires, sur papier ou sous forme électronique, sans dossier administratif distinct. Les obligations légales autonomes de conservation et de présentation au contrôle demeurent.</p><p>Ces règles s’appliquent aux commandes exécutées à compter de l’entrée en vigueur de la réforme, y compris aux commandes antérieures non encore visées. Aucun visa ou exemplaire administratif de remplacement n’est exigé. Les pièces déjà établies, les droits légalement dus et les recours antérieurs sont préservés.</p>",
+    "reason": "Réduction matérielle du circuit de commande : suppression du visa, des doubles et du dossier administratif spécifique. Le visa était déjà supprimé dans la coordination 111 J ; sa reprise ici ne constitue pas une seconde autorisation supprimée. Le contenu utile de la commande reste, sans rubrique ouverte indéfiniment par « notamment ». Le numéro d’accise suffit.",
+    "review_notes": "111 J lu et suppression coordonnée ; 54-0 AB lu et doit comporter la même exception pour ce circuit, sans suppression générale des autres visas. 111 K conserve réception et apurement de quatre mois. Pas de baisse de taux d’accise ; coûts de conformité non chiffrés.",
+    "status": "rewrite_draft",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suppression du visa douanier préalable sur chaque bon de commande de capsules.",
+      "Suppression du double exemplaire obligatoire et du dossier administratif de commande."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réduction matérielle du circuit de commande : suppression du visa, des doubles et du dossier administratif spécifique. Le visa était déjà supprimé dans la coordination 111 J ; sa reprise ici ne constitue pas une seconde autorisation supprimée. Le contenu utile de la commande reste, sans rubrique ouverte indéfiniment par « notamment ». Le numéro d’accise suffit.",
+      "scope_limitations": "111 J lu et suppression coordonnée ; 54-0 AB lu et doit comporter la même exception pour ce circuit, sans suppression générale des autres visas. 111 K conserve réception et apurement de quatre mois. Pas de baisse de taux d’accise ; coûts de conformité non chiffrés.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "capsules-commandes-sans-visa",
+          "description": "Application de la suppression du visa déjà décidée pour 111 J.",
+          "before": "Bon daté et visé par les douanes.",
+          "after": "Bon daté sans visa préalable.",
+          "unit": "legal_duty",
+          "affected_population": "Fabricants et entrepositaires commandant les capsules du circuit 111 J.",
+          "conditions_and_transition": "Formalités accomplies à compter de l’entrée en vigueur ; droits et recours antérieurs conservés. Les conditions fiscales de fond demeurent.",
+          "replacement_or_new_burdens": "Aucune déclaration, autorisation ou pièce de remplacement créée.",
+          "source_quote": "est daté et visé par l'administration des douanes et droits indirects",
+          "proposed_quote": "sans visa préalable de l’administration des douanes et droits indirects"
+        },
+        {
+          "kind": "obligation_removed",
+          "measure_id": "capsules-commandes-doubles-supprimes",
+          "description": "Retrait du circuit de doubles et du dossier administratif distinct.",
+          "before": "Deux exemplaires dont un au dossier du commanditaire.",
+          "after": "Bon au fabricant et pièces ordinaires, sans dossier distinct.",
+          "unit": "legal_duty",
+          "affected_population": "Fabricants et entrepositaires commandant les capsules du circuit 111 J.",
+          "conditions_and_transition": "Formalités accomplies à compter de l’entrée en vigueur ; droits et recours antérieurs conservés. Les conditions fiscales de fond demeurent.",
+          "replacement_or_new_burdens": "Aucune déclaration, autorisation ou pièce de remplacement créée.",
+          "source_quote": "établi en double exemplaire",
+          "proposed_quote": "sans dossier administratif distinct"
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "0545ec4053b11318264f6a5c747fd483db704e0d9729847eabe559ac60fcba23",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "97df487ce4344233536bcfc4aecbc94319e4fe15c977a778b642c8c752e21c7d",
+      "assessment_sha256": "86c8d36f1e47f2f18520ec6789dc4617cae0e1dcf48ee501ca3167d83241cb58",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "005eeeec2e941445750982bc1407fa358ae33f01c79c77746225ea8d027c5312"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300453",
     "source_sha256": "2ddc497a6c0344687245ca07a5e7464f2ad182931fa2ef3c3e80cc50af3bb159",
     "number": "50-0 F",
-    "proposed_xml": "<p>Les entrepositaires agréés des autres États membres de la Communauté européenne doivent respecter les caractéristiques et les obligations prévues pour les entrepositaires agréés aux articles 54-0 A à 54-0 AC.</p>",
-    "reason": "Réécriture à droit constant de l'alinéa unique : les entrepositaires concernés deviennent le sujet de la règle d'assujettissement. L'ensemble de la plage de renvoi est maintenu, sans extension du régime. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Les articles 54-0 A et 54-0 AC, bornes du renvoi, figurent dans le corpus. Le champ reste celui des autres États membres. La dénomination historique « Communauté européenne » est conservée et son actualisation terminologique reste à coordonner avec les dispositions relatives aux capsules.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Les caractéristiques et obligations prévues aux articles 54-0 A à 54-0 AC relatives aux entrepositaires agréés sont applicables aux entrepositaires agréés d’autres États membres de l’Union européenne, sous les réserves suivantes.</p><p>Dans le champ des articles 50-0 C à 50-0 E, ces dispositions n’imposent ni agrément français supplémentaire, ni visa de commande, ni double exemplaire ou dossier administratif distinct. Le numéro d’accise et les anciens marquages sont utilisés dans les conditions de l’article 50-0 C ; les commandes relèvent de l’article 50-0 E. Pour ces seules commandes, le délai d’apurement de douze mois suivant le visa prévu à l’article 54-0 AB ne s’applique pas ; l’apurement des expéditions et le délai de quatre mois prévus à l’article 111 K de l’annexe III demeurent applicables.</p><p>Ces réserves prennent effet dans les conditions temporelles prévues aux articles 50-0 C et 50-0 E. Les autres caractéristiques, les droits légalement dus, les contrôles et les avantages applicables demeurent.</p>",
+    "reason": "Coordination de portée : le renvoi global aux articles 54-0 A à AC est maintenu avec exceptions expresses empêchant de rétablir les formalités supprimées. Aucun nouvel agrément ou nouvelle réduction de taxe n’est compté pour cet article.",
+    "review_notes": "Plage 54-0 A à 54-0 AC lue intégralement, y compris S et V renvoyant à AB. Le délai de douze mois après visa de AB est expressément écarté pour les seules commandes de 50-0 E ; aucune échéance sans point de départ ne subsiste. L’apurement de l’expédition sous quatre mois de 111 K demeure distinct. Les garanties contre le réemploi, la comptabilité, la sécurité et les restitutions sont maintenues. Les anciens renvois à 302 M nécessitent leur concordance CIBS hors lot.",
+    "status": "rewrite_draft",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination de portée : le renvoi global aux articles 54-0 A à AC est maintenu avec exceptions expresses empêchant de rétablir les formalités supprimées. Aucun nouvel agrément ou nouvelle réduction de taxe n’est compté pour cet article.",
+      "scope_limitations": "Plage 54-0 A à 54-0 AC lue intégralement, y compris S et V renvoyant à AB. Le délai de douze mois après visa de AB est expressément écarté pour les seules commandes de 50-0 E ; aucune échéance sans point de départ ne subsiste. L’apurement de l’expédition sous quatre mois de 111 K demeure distinct. Les garanties contre le réemploi, la comptabilité, la sécurité et les restitutions sont maintenues. Les anciens renvois à 302 M nécessitent leur concordance CIBS hors lot.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "capsules-commandes-sans-visa",
+          "description": "Empêcher la réintroduction du visa par le renvoi global.",
+          "before": "Application globale de 54-0 A à AC.",
+          "after": "Exception ciblée pour le circuit 50-0 C à E.",
+          "unit": "legal_duty",
+          "affected_population": "Entrepositaires agréés des autres États membres utilisant les capsules.",
+          "conditions_and_transition": "Formalités accomplies à compter de l’entrée en vigueur ; droits et recours antérieurs conservés. Les conditions fiscales de fond demeurent.",
+          "replacement_or_new_burdens": "Aucune déclaration, autorisation ou pièce de remplacement créée.",
+          "source_quote": "Les caractéristiques et obligations prévues aux articles 54-0 A à 54-0 AC relatives aux entrepositaires agréés",
+          "proposed_quote": "ces dispositions n’imposent ni agrément français supplémentaire, ni visa de commande, ni double exemplaire ou dossier administratif distinct."
+        }
+      ]
+    },
+    "benefit_review": "Le renvoi maintient les avantages autonomes : substitution des capsules au document de circulation de 54-0 A, faculté de capsule générique de 54-0 D, réserve de caution de 54-0 U et restitutions ou remises de 54-0 Z pour récipients défectueux, cassés et exportations. Ils restent ouverts aux situations futures admissibles ; aucune condition nouvelle ne leur est ajoutée.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "2ddc497a6c0344687245ca07a5e7464f2ad182931fa2ef3c3e80cc50af3bb159",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "046f4709343db02050af797635d250db246fa6ebc572b5523d34711ebf95b17d",
+      "assessment_sha256": "ddd2db0be6fef6a6fffe47f82563bcfe056af16ea102adafe68f651ac13d191e",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "3ac62c0a4a23730b08ae2736cd344296708699b6b0b90f0b7603efacbcdb7c66"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300442",
     "source_sha256": "9cf9d8ee84c3a0273211368c59aaf8c4857be5b373753c97c7702f75d3048cd3",
     "number": "50-0 G",
-    "proposed_xml": "<p>La liste récapitulative prévue au 3° du I de l'article 111-0 E de l'annexe III au code général des impôts doit comporter les renseignements suivants :</p><p>a. Le nom ou la raison sociale, l'adresse et l'activité professionnelle des personnes définies au 2° du II de l'article 111-0 E et à l'article 111-0 F de cette annexe ;</p><p>b. Le numéro d'identification figurant sur la déclaration préalable de profession, attribué par l'administration des douanes et droits indirects dans les conditions prévues à l'article 50-0 H.</p>",
-    "reason": "Réécriture à droit constant : la liste et son contenu obligatoire sont identifiés directement. La distinction entre les renseignements professionnels et le numéro attribué par les douanes est conservée aux lettres a et b. Aucune réforme de fond ne concerne cette liste.",
-    "review_notes": "Les articles 111-0 E et 111-0 F de l'annexe III sont présents dans le corpus et définissent respectivement les intermédiaires et les utilisateurs. Le 3° du I de l'article 111-0 E prévoit la « liste clients ». Coordination interne maintenue avec l'article 50-0 H du présent lot pour l'attribution du numéro ; aucune formalité supplémentaire n'est ajoutée.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "reason": "Maintien nécessaire : les deux rubriques rapprochent les clients livrés en exonération de leur identité professionnelle et de leur numéro. La liste constitue une preuve de destination admissible, distincte de la déclaration de profession ; supprimer ces données compromettrait la justification des livraisons exonérées. Pas de taxe ni de nouveau dossier institué par cet article.",
+    "review_notes": "111-0 E et F lus entièrement : la liste et la preuve de livraison à une personne autorisée sont imposées par E I 3°. Le numéro IN/UT est conservé dans 50-0 H proposé ; le renvoi demeure cohérent. La possibilité d’intégrer la liste à des outils ordinaires relève du texte de base, non d’une suppression fictive de ses obligations.",
+    "status": "retained_unchanged",
+    "classification": "retained_necessary",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien nécessaire : les deux rubriques rapprochent les clients livrés en exonération de leur identité professionnelle et de leur numéro. La liste constitue une preuve de destination admissible, distincte de la déclaration de profession ; supprimer ces données compromettrait la justification des livraisons exonérées. Pas de taxe ni de nouveau dossier institué par cet article.",
+      "scope_limitations": "111-0 E et F lus entièrement : la liste et la preuve de livraison à une personne autorisée sont imposées par E I 3°. Le numéro IN/UT est conservé dans 50-0 H proposé ; le renvoi demeure cohérent. La possibilité d’intégrer la liste à des outils ordinaires relève du texte de base, non d’une suppression fictive de ses obligations.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
+      "effects": []
+    },
+    "benefit_review": "La liste justifie les livraisons en exonération aux intermédiaires et utilisateurs éligibles ; elle reste utilisable pour les opérations futures. Le maintien de l’identification ne ferme aucune exonération de 302 D bis ni aucune dispense prévue pour les échantillons.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "9cf9d8ee84c3a0273211368c59aaf8c4857be5b373753c97c7702f75d3048cd3",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "cb39192f1c245b5d4ba70f50d573662700305be3c8a4f39ed77570c13dfa120b",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e51734645c3d20256b0147ec1e4053764420f86acdc74bc192c21b876c173aa8"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300443",
     "source_sha256": "d5ad5565a74dfa99ca70284597038ff62146d4cd33d5adfb0421d5a71c688a76",
     "number": "50-0 H",
-    "proposed_xml": "<p>Pour l'application du 2° du II de l'article 111-0 E, les opérateurs doivent établir une déclaration préalable de profession conforme au modèle de l'annexe I de l'arrêté du 4 juillet 2005 (JO du 6 juillet 2005). Pour l'application du 1° du I de l'article 111-0 F de l'annexe III au code général des impôts, ils doivent établir cette déclaration selon le modèle de l'annexe II ou de l'annexe III du même arrêté du 4 juillet 2005 (JO du 6 juillet 2005), selon le cas :</p><p>1° L'opérateur peut déposer ou transmettre la déclaration préalable de profession au service des douanes et droits indirects par tout moyen. Il doit y joindre :</p><p>a. Selon le cas, un extrait du registre du commerce et des sociétés, un document justifiant de l'inscription au répertoire des métiers ou une pièce justifiant de la qualité professionnelle ;</p><p>b. Si le déclarant est une personne physique, un justificatif d'identité ;</p><p>c. S'il s'agit d'une personne morale, un justificatif d'identité du déclarant et une procuration ;</p><p>2° La déclaration préalable de profession est établie en deux exemplaires. Le déclarant conserve le premier pour le présenter à toute réquisition des agents des douanes et droits indirects. Le second est destiné au service des douanes et droits indirects territorialement compétent ;</p><p>3° La déclaration porte un numéro d'identification composé de sept caractères numériques précédés des lettres « IN » pour les intermédiaires définis au 2° du II de l'article 111-0 E de l'annexe III au même code, ou des lettres « UT » pour les utilisateurs définis au 1° du I de l'article 111-0 F de cette annexe. Le numéro prend la forme suivante :<br/>IN ou UT/ XXX/ XXXX :</p><p>a. Les trois premiers caractères après « IN » ou « UT » identifient le service des douanes et droits indirects qui vise la déclaration préalable de profession ;</p><p>b. Les quatre derniers caractères constituent le numéro de la déclaration préalable, tiré d'une série chronologique gérée par ce service.</p><p>Le service des douanes et droits indirects qui reçoit la déclaration préalable de profession attribue le numéro d'identification. Ce numéro est personnel. Les personnes morales l'obtiennent pour elles-mêmes et pour les personnes physiques habilitées par procuration à les représenter ;</p><p>4° La déclaration préalable de profession doit comporter les renseignements suivants :</p><p>a. Les nom et prénoms usuels du déclarant ;</p><p>b. Les date et lieu d'établissement de la déclaration, ainsi que la signature du déclarant accompagnée du cachet de son entreprise ;</p><p>c. Le cas échéant, les nom et prénoms du représentant légal de la personne morale ou physique mentionnée au b qui a donné procuration au déclarant, ainsi que la date de cette procuration ;</p><p>d. Une case réservée à l'administration des douanes et droits indirects, indiquant la date de prise en charge de la déclaration, le numéro d'identification du déclarant, ainsi que l'adresse et le visa du service ;</p><p>5° Outre les renseignements prévus au 4°, la déclaration préalable de profession doit comporter les informations suivantes :</p><p>a. Pour les intermédiaires définis au 2° du II de l'article 111-0 E de l'annexe III au code général des impôts :</p><p>1. Le nom ou la raison sociale, l'adresse et le numéro d'accises que le service des douanes et droits indirects a attribué à l'intermédiaire pour son activité d'entrepositaire agréé ;</p><p>2. L'adresse du lieu de réception et de détention des alcools et boissons alcooliques, qui est aussi le lieu de tenue de la liste clients ;</p><p>b. Pour les utilisateurs définis au 1° du I de l'article 111-0 F de la même annexe :</p><p>1. Le nom ou la raison sociale, l'adresse, le numéro SIRET et l'activité de l'opérateur qui souhaite bénéficier des exonérations prévues à l'article 302 D bis du code général des impôts ;</p><p>2. L'adresse du lieu de réception et d'utilisation des alcools et boissons alcooliques, qui est aussi le lieu de tenue de la comptabilité matières pour les utilisateurs soumis à cette obligation ;</p><p>3. Le ou les cas d'utilisation prévus à l'article 302 D bis du code général des impôts.</p>",
-    "reason": "Réécriture à droit constant : les opérateurs et le service attributaire sont les sujets explicites des formalités. Les pièces à joindre, les exemplaires, la structure du numéro et les renseignements communs ou propres à chaque catégorie sont distingués dans les subdivisions d'origine. Aucune réforme de fond ni dispense de pièce nouvelle n'est introduite.",
-    "review_notes": "Conservation des 1° à 5°, des lettres et des sous-points 1 à 3 ; schéma IN ou UT/ XXX/ XXXX et sept caractères numériques maintenus. Les dates du 4 et du 6 juillet 2005 désignent les modèles historiques, non une réforme à venir. Le c du 4° renvoie à une personne « mentionnée au b », alors que ce b porte sur la date, le lieu, la signature et le cachet : ambiguïté préexistante conservée à contrôler sur les formulaires. Les articles 111-0 E et 111-0 F figurent dans le corpus ; l'article 302 D bis y est signalé ABROGE_DIFF : le raccordement au droit des accises exige une coordination expresse, non effectuée ici. Le répertoire des métiers est conservé comme dans la source ; la référence au registre et aux justificatifs actuels doit être contrôlée avant toute actualisation.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Pour l'application du 2° du II de l'article 111-0 E, les opérateurs doivent établir une déclaration préalable de profession conforme au modèle de l'annexe I de l'arrêté du 4 juillet 2005 (JO du 6 juillet 2005). Pour l'application du 1° du I de l'article 111-0 F de l'annexe III au code général des impôts, ils doivent établir cette déclaration selon le modèle de l'annexe II ou de l'annexe III du même arrêté du 4 juillet 2005 (JO du 6 juillet 2005), selon le cas :</p><p>1° L'opérateur peut déposer ou transmettre la déclaration préalable de profession au service des douanes et droits indirects par tout moyen. Il doit y joindre :</p><p>a. Selon le cas, un extrait du registre du commerce et des sociétés, un document justifiant de l'inscription au répertoire des métiers ou une pièce justifiant de la qualité professionnelle ;</p><p>b. Si le déclarant est une personne physique, un justificatif d'identité ;</p><p>c. S'il s'agit d'une personne morale, un justificatif d'identité du déclarant et une procuration ;</p><p>2° La déclaration préalable de profession est transmise en un seul exemplaire au service des douanes et droits indirects territorialement compétent. Aucun second exemplaire original n’est exigé. Le déclarant conserve une copie pour les communications et contrôles prévus aux articles 111-0 E et 111-0 F ;</p><p>3° La déclaration porte un numéro d'identification composé de sept caractères numériques précédés des lettres « IN » pour les intermédiaires définis au 2° du II de l'article 111-0 E de l'annexe III au même code, ou des lettres « UT » pour les utilisateurs définis au 1° du I de l'article 111-0 F de cette annexe. Le numéro prend la forme suivante :<br/>IN ou UT/ XXX/ XXXX :</p><p>a. Les trois premiers caractères après « IN » ou « UT » identifient le service des douanes et droits indirects qui vise la déclaration préalable de profession ;</p><p>b. Les quatre derniers caractères constituent le numéro de la déclaration préalable, tiré d'une série chronologique gérée par ce service.</p><p>Le service des douanes et droits indirects qui reçoit la déclaration préalable de profession attribue le numéro d'identification. Ce numéro est personnel. Les personnes morales l'obtiennent pour elles-mêmes et pour les personnes physiques habilitées par procuration à les représenter ;</p><p>4° La déclaration préalable de profession doit comporter les renseignements suivants :</p><p>a. Les nom et prénoms usuels du déclarant ;</p><p>b. Les date et lieu d’établissement de la déclaration et la signature du déclarant ; aucun cachet d’entreprise n’est exigé ;</p><p>c. Le cas échéant, les nom et prénoms du représentant légal de la personne représentée qui a donné procuration au déclarant, ainsi que la date de cette procuration ;</p><p>d. Une case réservée à l'administration des douanes et droits indirects, indiquant la date de prise en charge de la déclaration, le numéro d'identification du déclarant, ainsi que l'adresse et le visa du service ;</p><p>5° Outre les renseignements prévus au 4°, la déclaration préalable de profession doit comporter les informations suivantes :</p><p>a. Pour les intermédiaires définis au 2° du II de l'article 111-0 E de l'annexe III au code général des impôts :</p><p>1. Le nom ou la raison sociale, l'adresse et le numéro d'accises que le service des douanes et droits indirects a attribué à l'intermédiaire pour son activité d'entrepositaire agréé ;</p><p>2. L'adresse du lieu de réception et de détention des alcools et boissons alcooliques, qui est aussi le lieu de tenue de la liste clients ;</p><p>b. Pour les utilisateurs définis au 1° du I de l'article 111-0 F de la même annexe :</p><p>1. Le nom ou la raison sociale, l'adresse, le numéro SIRET et l'activité de l'opérateur qui souhaite bénéficier des exonérations prévues à l'article 302 D bis du code général des impôts ;</p><p>2. L'adresse du lieu de réception et d'utilisation des alcools et boissons alcooliques, qui est aussi le lieu de tenue de la comptabilité matières pour les utilisateurs soumis à cette obligation ;</p><p>3. Le ou les cas d'utilisation prévus à l'article 302 D bis du code général des impôts.</p><p>Les présentes simplifications s’appliquent aux formalités accomplies à compter de l’entrée en vigueur de la réforme, y compris dans les procédures en cours, sans renouvellement des dépôts déjà effectués. Les droits, exonérations, créances et recours relatifs aux opérations antérieures sont conservés.</p>",
+    "reason": "Réduction de fond : un seul exemplaire original de la déclaration et suppression du cachet d’entreprise ; la copie nécessaire aux fournisseurs demeure. La procuration, l’identité, l’activité et les usages exonérés sont maintenus pour prévenir le détournement du régime. Le renvoi erroné du 4° c au b est remplacé expressément par la personne représentée.",
+    "review_notes": "111-0 E/F et 302 D bis lus. Deux originaux ne sont pas nécessaires à la preuve, mais les copies aux fournisseurs et la conservation demeurent. IN/UT, sept chiffres, XXX/XXXX et toutes rubriques du 5° conservés. Modèles I à III de l’arrêté du 4 juillet 2005 à adapter ; référence historique au répertoire des métiers et concordance CIBS restent à vérifier hors lot. Aucun nouvel accès à des données n’est créé.",
+    "status": "rewrite_draft",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suppression du second exemplaire original obligatoire de la déclaration préalable.",
+      "Suppression du cachet d’entreprise en complément de la signature du déclarant."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réduction de fond : un seul exemplaire original de la déclaration et suppression du cachet d’entreprise ; la copie nécessaire aux fournisseurs demeure. La procuration, l’identité, l’activité et les usages exonérés sont maintenus pour prévenir le détournement du régime. Le renvoi erroné du 4° c au b est remplacé expressément par la personne représentée.",
+      "scope_limitations": "111-0 E/F et 302 D bis lus. Deux originaux ne sont pas nécessaires à la preuve, mais les copies aux fournisseurs et la conservation demeurent. IN/UT, sept chiffres, XXX/XXXX et toutes rubriques du 5° conservés. Modèles I à III de l’arrêté du 4 juillet 2005 à adapter ; référence historique au répertoire des métiers et concordance CIBS restent à vérifier hors lot. Aucun nouvel accès à des données n’est créé.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "accises-profession-exemplaire-cachet",
+          "description": "Retrait du second original et du cachet sans retirer la preuve des exonérations.",
+          "before": "Deux exemplaires et signature appuyée du cachet.",
+          "after": "Un original, copie conservée et signature sans cachet.",
+          "unit": "legal_duty",
+          "affected_population": "Intermédiaires et utilisateurs d’alcools bénéficiant du régime d’exonération.",
+          "conditions_and_transition": "Formalités accomplies à compter de l’entrée en vigueur ; droits et recours antérieurs conservés. Les conditions fiscales de fond demeurent.",
+          "replacement_or_new_burdens": "Aucune déclaration, autorisation ou pièce de remplacement créée.",
+          "source_quote": "La déclaration préalable de profession comprend deux exemplaires.",
+          "proposed_quote": "Aucun second exemplaire original n’est exigé."
+        }
+      ]
+    },
+    "benefit_review": "Les exonérations des alcools dénaturés, vinaigres, médicaments, arômes, préparations alimentaires, échantillons, recherche, usages médicaux et fabrications admissibles restent accessibles aux futurs opérateurs. Le 5° conserve les usages et adresses nécessaires ; aucun plafond ni agrément nouveau n’est ajouté. Les dispenses de comptabilité demeurent dans leur champ.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "d5ad5565a74dfa99ca70284597038ff62146d4cd33d5adfb0421d5a71c688a76",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "13ec37f6de66b37d0acfa22879f8180a4be2d1e611f7e88c9e72001e26f82af4",
+      "assessment_sha256": "1815e0edb5245c7a261cc9c84c4d14384d4c1fcdf0ba3d06e240cd42678c0674",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "f2721ddcdea146fb934a257d48112a84b9a7b61776b5c3a648f26bbb58432766"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300444",
     "source_sha256": "ab4377f6c77e09cb78571151b66156e9befbc21a9f277696757d6a8624062a82",
     "number": "50-0 I",
-    "proposed_xml": "<p>I. – La comptabilité matières prévue au 2° de l'article 111-0 G et au 1° de l'article 111-0 H de l'annexe III au code général des impôts doit notamment comporter les renseignements suivants :</p><p>a. La nature, le numéro et la date de réception du document d'accompagnement mentionné à l'article 302 M de ce code, du document économique ou des pièces justifiant les entrées ou les fabrications ;</p><p>b. La nature et la date de toute autre opération constituant une « entrée » ou une « sortie » au sens du 2° de l'article 111-0 G de la même annexe ;</p><p>c. L'espèce, la qualité et la nature des produits mentionnés à l'article 302 D bis du code général des impôts, ainsi que des produits issus de la fabrication.</p><p>II. – La déclaration mensuelle récapitulant les quantités de produits vitivinicoles, prévue au 2° de l'article 111-0 H de l'annexe III au code général des impôts, doit comporter les renseignements suivants :</p><p>a. La campagne vitivinicole au cours de laquelle les produits vitivinicoles sont mis en œuvre ;</p><p>b. Le nom ou la raison sociale du fabricant de vinaigre ;</p><p>c. Le numéro d'identification attribué par le service des douanes et droits indirects dans les conditions prévues à l'article 50-0 H ;</p><p>d. L'adresse du lieu d'utilisation des produits vitivinicoles ;</p><p>e. Le mois pour lequel la déclaration est établie ;</p><p>f. Les date et lieu d'établissement de la déclaration ;</p><p>g. La qualité et la signature du déclarant, accompagnée du cachet de l'entreprise.</p><p>Lorsqu'aucune opération de fabrication n'a été réalisée, l'utilisateur doit adresser au service des douanes et droits indirects la déclaration mensuelle portant la mention « néant ».</p>",
-    "reason": "Réécriture à droit constant : l'objet de chacun des I et II est identifié avant sa liste de renseignements. L'envoi de la déclaration en l'absence de fabrication devient une obligation directement formulée. Les listes et leur caractère non exhaustif au I sont conservés. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Les articles 111-0 G et 111-0 H de l'annexe III sont présents et portent les obligations comptables et déclaratives visées ; le renvoi interne au 50-0 H est maintenu. L'article 302 M n'a pas été retrouvé dans le corpus du CGI fourni ; le 302 D bis y porte l'état ABROGE_DIFF. Ces références anciennes sont conservées en attendant une coordination expresse avec le droit des accises. Les I et II, les lettres et les treize alinéas sont maintenus ; aucune dispense de déclaration « néant » n'est créée.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>I. – Pour l'application des dispositions du 2° de l'article 111-0 G et du 1° de l'article 111-0 H de l'annexe III au code général des impôts, la comptabilité matières doit reprendre notamment les renseignements suivants :</p><p>a. La nature, le numéro et la date de réception du document d'accompagnement mentionné à l'article 302 M dudit code, du document économique ou des pièces justificatives des entrées ou des fabrications ;</p><p>b. La nature et la date de toute autre opération constituant une \" entrée \" ou une \" sortie \" selon le 2° de l'article 111-0 G de la même annexe ;</p><p>c. L'espèce, la qualité et la nature des produits mentionnés à l'article 302 D bis du code général des impôts et des produits issus de la fabrication.</p><p>II. – Pour l'application des dispositions du 2° de l'article 111-0 H de l'annexe III au code général des impôts, la déclaration mensuelle récapitulant les quantités de produits vitivinicoles comporte les renseignements suivants :</p><p>a. La campagne vitivinicole au cours de laquelle sont mis en oeuvre les produits vitivinicoles ;</p><p>b. Le nom ou la raison sociale du fabricant de vinaigre ;</p><p>c. Le numéro d'identification attribué par le service des douanes et droits indirects dans les conditions fixées à l'article 50-0 H ;</p><p>d. L'adresse du lieu d'utilisation des produits vitivinicoles ;</p><p>e. Le mois au titre duquel la déclaration est établie ;</p><p>f. Les date et lieu d'établissement de la déclaration ;</p><p>g. La qualité et la signature du déclarant, sans cachet de l’entreprise.</p><p>A défaut d’opération de fabrication au cours du mois, aucune déclaration mensuelle portant la mention « néant » n’est exigée. Cette dispense ne modifie pas les obligations de comptabilité matières ni les déclarations des mois comportant une opération de fabrication.</p><p>Les présentes simplifications s’appliquent aux formalités accomplies à compter de l’entrée en vigueur de la réforme, y compris dans les procédures en cours, sans renouvellement des dépôts déjà effectués. Les droits, exonérations, créances et recours relatifs aux opérations antérieures sont conservés.</p>",
+    "reason": "Réduction de fond : suppression de la déclaration mensuelle « néant » et du cachet d’entreprise. La comptabilité matières et les déclarations des mois actifs conservent la preuve des quantités affectées à l’usage exonéré. Le précédent brouillon imposait encore ces deux formalités.",
+    "review_notes": "111-0 G/H lus entièrement : seuils de G (100 et 500 litres), unités et échéance du dixième jour pour H restent dans leur champ. Coordonner H 2° pour la dispense des mois sans fabrication. Les références anciennes 302 M (absent du corpus fourni) et 302 D bis demandent concordance CIBS ; aucune concordance inventée. Le fondement européen vitivinicole ancien doit être vérifié hors corpus ; aucune obligation européenne autonome n’est réputée abrogée.",
+    "status": "rewrite_draft",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suppression de la déclaration mensuelle néant en l’absence de fabrication.",
+      "Suppression du cachet de l’entreprise sur la déclaration mensuelle."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réduction de fond : suppression de la déclaration mensuelle « néant » et du cachet d’entreprise. La comptabilité matières et les déclarations des mois actifs conservent la preuve des quantités affectées à l’usage exonéré. Le précédent brouillon imposait encore ces deux formalités.",
+      "scope_limitations": "111-0 G/H lus entièrement : seuils de G (100 et 500 litres), unités et échéance du dixième jour pour H restent dans leur champ. Coordonner H 2° pour la dispense des mois sans fabrication. Les références anciennes 302 M (absent du corpus fourni) et 302 D bis demandent concordance CIBS ; aucune concordance inventée. Le fondement européen vitivinicole ancien doit être vérifié hors corpus ; aucune obligation européenne autonome n’est réputée abrogée.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "vinaigre-declaration-neant-cachet",
+          "description": "Retrait de deux formalités sans suppression de la comptabilité de contrôle.",
+          "before": "Déclaration même sans fabrication et cachet obligatoire.",
+          "after": "Déclaration seulement pour les mois actifs, signature suffisante.",
+          "unit": "legal_duty",
+          "affected_population": "Fabricants de vinaigre et utilisateurs soumis à comptabilité matières.",
+          "conditions_and_transition": "Formalités accomplies à compter de l’entrée en vigueur ; droits et recours antérieurs conservés. Les conditions fiscales de fond demeurent.",
+          "replacement_or_new_burdens": "Aucune déclaration, autorisation ou pièce de remplacement créée.",
+          "source_quote": "A défaut d'opération de fabrication, l'utilisateur adresse au service des douanes et droits indirects la déclaration mensuelle annotée de la mention \" néant \".",
+          "proposed_quote": "A défaut d’opération de fabrication au cours du mois, aucune déclaration mensuelle portant la mention « néant » n’est exigée."
+        }
+      ]
+    },
+    "benefit_review": "L’exonération des produits employés à fabriquer du vinaigre est maintenue pour les productions futures ; l’absence de déclaration néant ne peut la fermer. Les autres usages exonérés et seuils de dispense de comptabilité prévus à 111-0 G ne sont pas modifiés.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "ab4377f6c77e09cb78571151b66156e9befbc21a9f277696757d6a8624062a82",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "5970baf2000055b42331f32309cef72b9c38ce22daaee984434db6c3d1d7976a",
+      "assessment_sha256": "c5bf0bd4eb14b0eac9f9a6caf04e0ffea50dfc5c1c71598f650525101259b2e9",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "53eb52ff1334baa6529ceb3b106a0c694f453c22f52e085f9b9d8bea0ccd91b9"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000037095145",
     "source_sha256": "6df0cc5902aba3e2fd3b2c4608074b0925d062803563b72f2ea243a9fd0e5747",
     "number": "50-0 J",
-    "proposed_xml": "<p>L'entrepositaire agréé doit inscrire les pertes ou déchets constatés lors de l'élaboration, de la transformation et du stockage d'alcools et de boissons alcooliques dans la colonne « sorties » de sa comptabilité matières. Il les distingue par tarif d'imposition et par produit concerné, tel que défini aux articles 286 I et 286 J de l'annexe II au code général des impôts. L'exonération est appliquée par entrepôt fiscal suspensif de droits d'accises et par type d'opération, selon les distinctions prévues par ces articles.</p><p>Les pertes accidentelles doivent être immédiatement signalées à l'administration et inscrites dans la colonne « sorties » de la comptabilité matières. Elles ne sont pas taxées si l'administration les admet après examen de la demande d'admission en décharge présentée par l'entrepositaire agréé.</p>",
-    "reason": "Réécriture à droit constant : l'entrepositaire est placé au début de l'obligation d'inscription. La ventilation comptable, le champ de l'exonération et l'admission des pertes accidentelles sont formulés en phrases plus courtes. Les deux alinéas sont maintenus et aucune réforme de fond n'est introduite.",
-    "review_notes": "Les articles 286 I et 286 J figurent dans le corpus et concernent la comptabilité matières des entrepositaires agréés. La répétition de ces deux numéros à la fin du premier alinéa est remplacée par « ces articles », sans changement de cible. Maintien du signalement immédiat, de la demande d'admission en décharge et de la décision d'admission par l'administration : l'inscription comptable seule ne dispense pas de taxation.",
-    "status": "rewrite_draft"
+    "proposed_xml": "\n<p>Les pertes ou déchets constatés en cours d'élaboration, de transformation et de stockage d'alcools et de boissons alcooliques, doivent être inscrits par l'entrepositaire agréé dans la colonne “ sorties ” de sa comptabilité matières, par tarif d'imposition et par produit concerné tel que défini aux articles 286 I et 286 J de l'annexe II au code général des impôts. L'exonération attribuée s'applique par entrepôt fiscal suspensif de droits d'accises, par type d'opération et selon les distinctions prévues aux articles 286 I et 286 J de l'annexe II au code général des impôts.</p>\n<p>Les pertes accidentelles doivent être signalées immédiatement à l'administration. Elles sont inscrites en sorties dans la comptabilité matières. Ces pertes ne font pas l'objet d'une taxation dès lors qu'elles sont admises par l'administration après examen du signalement, qui vaut demande d'admission en décharge sans demande distincte.</p>\n<p>Ces dispositions s'appliquent à compter de l'entrée en vigueur de la loi. Les droits, exonérations, restitutions et recours relatifs aux opérations antérieures restent régis par les règles qui leur sont applicables.</p><p>La dispense de demande distincte s'applique également aux pertes déjà signalées dont l'admission en décharge n'a pas encore été décidée.</p>",
+    "status": "rewrite_draft",
+    "reason": "Réforme de fond : fusion de la demande d'admission en décharge avec le signalement immédiat déjà obligatoire. Le précédent brouillon conservait les deux démarches. La comptabilité et l'examen administratif restent nécessaires pour distinguer perte réelle et mise à la consommation ; aucune exonération automatique de manquants inexpliqués n'est créée.",
+    "review_notes": "286 I et 286 J de l'annexe II lus intégralement : ventilation et colonne sorties maintenues. Le signalement immédiat permet le constat de la perte ; la décision d'admission demeure. Le cadre européen des accises et sa preuve de perte restent à coordonner avec le CIBS, sans prétendre les abroger.",
+    "benefit_review": "L'exonération des pertes et déchets demeure par entrepôt, type d'opération, tarif et produit. La non-taxation des pertes accidentelles admises est conservée pour les pertes futures et anciennes recevables ; seule la seconde démarche est supprimée.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond : fusion de la demande d'admission en décharge avec le signalement immédiat déjà obligatoire. Le précédent brouillon conservait les deux démarches. La comptabilité et l'examen administratif restent nécessaires pour distinguer perte réelle et mise à la consommation ; aucune exonération automatique de manquants inexpliqués n'est créée.",
+      "scope_limitations": "Les effets sont limités au présent dispositif ; aucun solde national de recettes ou de complexité n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, attestation, donnée ou dépôt de remplacement n’est créé.",
+      "effects": [
+        {
+          "kind": "obligation_merged",
+          "measure_id": "pertes-accidentelles-demande-unique",
+          "description": "Un seul signalement tient lieu de demande de décharge.",
+          "before": "Signalement immédiat et demande distincte pour la même perte.",
+          "after": "Signalement immédiat valant demande ; décision et inscription inchangées.",
+          "unit": "legal_duty",
+          "affected_population": "Entrepositaires agréés concernés par les opérations de cet article.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi ; droits fiscaux, exonérations et recours antérieurs préservés selon la transition du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles autonomes restent distincts.",
+          "source_quote": "après examen de la demande d'admission en décharge présentée par l'entrepositaire agréé",
+          "proposed_quote": "après examen du signalement, qui vaut demande d'admission en décharge sans demande distincte"
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suppression de la demande distincte d'admission en décharge après signalement des pertes accidentelles."
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "6df0cc5902aba3e2fd3b2c4608074b0925d062803563b72f2ea243a9fd0e5747",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e43822805e1b43c9c20e1219ec8804df34e2154bbaec96148e9b1f94c3872cbb",
+      "assessment_sha256": "879b121ecc7d4ea88d4107880f0daccaa9f54c1ffaf1123077970b263485e239",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "9101348cb35888160128bbc276e3cd410be3b301eeafe6c1030950b70f3cb871"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000035423127",
     "source_sha256": "0d2a113c0abf3f8b68c882d31e8da34794efefd3e72083b7c1c58cd3132170bb",
     "number": "50-0 K",
-    "proposed_xml": "<p>L'entrepositaire agréé bénéficie d'une exonération de droits pour les pertes et déchets survenus lors de l'élaboration ou du conditionnement des alcools et boissons alcooliques, avant leur stockage, à condition de les retracer dûment dans sa comptabilité matières. Cette exonération est limitée aux taux annuels suivants :</p><table><tbody><tr><th>CATÉGORIES DE PRODUITS</th><th>TAUX ANNUEL DE DÉCHETS OU PERTES à l'élaboration</th><th>TAUX ANNUEL DE DÉCHETS OU PERTES au conditionnement</th></tr><tr><td>Vins finis (après fermentation), cidre (après dépectinisation) et autres boissons alcooliques mentionnées à l'article 438 du CGI</td><td>1,5 % sur les volumes de produits alcooliques mis en œuvre.</td><td>0,7 % sur les quantités conditionnées.</td></tr><tr><td>Spiritueux :</td><td></td><td></td></tr><tr><td>― élaboration par distillation, macération, infusion … ;</td><td>5 % sur les volumes de produits alcooliques mis en œuvre.</td><td>0,7 % sur les quantités conditionnées.</td></tr><tr><td>― opérations liées à la transformation.</td><td>1 % sur les volumes de produits alcooliques mis en œuvre.</td><td></td></tr><tr><td>Produits intermédiaires :</td><td></td><td></td></tr><tr><td>― élaboration par mutage ;</td><td>1,5 % sur les volumes de produits alcooliques mis en œuvre.</td><td>0,7 % sur les quantités conditionnées.</td></tr><tr><td>― opérations liées à la transformation.</td><td>1 % sur les volumes de produits alcooliques mis en œuvre.</td><td></td></tr><tr><td>Alcools :</td><td></td><td></td></tr><tr><td>― élaboration par distillation ;</td><td>3,25 % sur les volumes de produits alcooliques mis en œuvre.</td><td>0,7 % sur les quantités conditionnées.</td></tr><tr><td>― opérations liées à la transformation ;</td><td>1 % sur les volumes de produits alcooliques mis en œuvre.</td><td></td></tr><tr><td>― dénaturation ;</td><td>1,25 % sur les volumes de produits alcooliques mis en œuvre.</td><td></td></tr></tbody></table>",
-    "reason": "Réécriture à droit constant de la condition d'exonération : le bénéficiaire, les opérations antérieures au stockage et l'obligation de retracer les pertes sont explicités. Le tableau est reproduit intégralement, avec ses catégories techniques, toutes ses lignes et toutes ses cases vides ; les taux ne sont pas reformulés pour créer un changement artificiel. Aucune réforme de fond ni modification des plafonds n'est appliquée.",
-    "review_notes": "Contrôle à conserver sur les 12 lignes et 3 colonnes du tableau : 1,5 %, 5 %, 1 %, 1,5 %, 1 %, 3,25 %, 1 % et 1,25 % à l'élaboration, et quatre occurrences de 0,7 % au conditionnement. Les assiettes restent les volumes mis en œuvre ou les quantités conditionnées selon la colonne. Les cases vides ne valent pas taux nul et ne sont pas complétées. L'article 438 du CGI n'a pas été retrouvé dans le corpus fourni ; son renvoi historique est conservé sans lui substituer un article d'un autre code.",
-    "status": "rewrite_draft"
+    "proposed_xml": "\n<p>Pour les pertes et déchets dûment retracés en comptabilité matières lors de l'élaboration ou du conditionnement d'alcools et de boissons alcooliques antérieurs au stockage, l'entrepositaire agréé bénéficie d'une exonération de droits dans la limite des taux annuels suivants : </p>\n<br />\n<table>\n<tbody>\n<tr>\n<th>\n<br />CATÉGORIES DE PRODUITS </th>\n<th>\n<br />TAUX ANNUEL DE DECHETS OU PERTES <br />\n<br />à l'élaboration </th>\n<th>\n<br />TAUX ANNUEL DE DECHETS OU PERTES <br />\n<br />au conditionnement </th>\n</tr>\n<tr>\n<td>\n<br />Vins finis (après fermentation), cidre (après dépectinisation) et autres boissons alcooliques reprises à l'article 438 du code général des impôts dans sa dernière rédaction applicable avant son abrogation </td>\n<td>\n<br />1,5 % sur les volumes de produits alcooliques mis en œuvre. </td>\n<td>\n<br />0,7 % sur les quantités conditionnées. </td>\n</tr>\n<tr>\n<td>\n<br />Spiritueux : </td>\n<td />\n<td />\n</tr>\n<tr>\n<td>\n<br />― élaboration par distillation, macération, infusion … ; </td>\n<td>\n<br />5 % sur les volumes de produits alcooliques mis en œuvre. </td>\n<td>\n<br />0,7 % sur les quantités conditionnées. </td>\n</tr>\n<tr>\n<td>\n<br />― opérations liées à la transformation. </td>\n<td>\n<br />1 % sur les volumes de produits alcooliques mis en œuvre. </td>\n<td />\n</tr>\n<tr>\n<td>\n<br />Produits intermédiaires : </td>\n<td />\n<td />\n</tr>\n<tr>\n<td>\n<br />― élaboration par mutage ; </td>\n<td>\n<br />1,5 % sur les volumes de produits alcooliques mis en œuvre. </td>\n<td>\n<br />0,7 % sur les quantités conditionnées. </td>\n</tr>\n<tr>\n<td>\n<br />― opérations liées à la transformation. </td>\n<td>\n<br />1 % sur les volumes de produits alcooliques mis en œuvre. </td>\n<td />\n</tr>\n<tr>\n<td>\n<br />Alcools : </td>\n<td />\n<td />\n</tr>\n<tr>\n<td>\n<br />― élaboration par distillation ; </td>\n<td>\n<br />3,25 % sur les volumes de produits alcooliques mis en œuvre. </td>\n<td>\n<br />0,7 % sur les quantités conditionnées. </td>\n</tr>\n<tr>\n<td>\n<br />― opérations liées à la transformation ; </td>\n<td>\n<br />1 % sur les volumes de produits alcooliques mis en œuvre </td>\n<td />\n</tr>\n<tr>\n<td>\n<br />― dénaturation ; </td>\n<td>\n<br />1,25 % sur les volumes de produits alcooliques mis en œuvre.</td>\n<td />\n</tr>\n</tbody>\n</table>\n<p>La référence à l'ancien article 438 détermine uniquement les catégories de produits bénéficiant de l'exonération. Elle ne rétablit aucun prélèvement abrogé et n'exclut pas les opérations futures portant sur ces catégories.</p><p>Ces dispositions s'appliquent à compter de l'entrée en vigueur de la loi. Les droits, exonérations, restitutions et recours relatifs aux opérations antérieures restent régis par les règles qui leur sont applicables.</p>",
+    "status": "rewrite_draft",
+    "reason": "Coordination du renvoi ancien à l'article 438 : incorporation expresse de son périmètre de produits pour maintenir l'exonération, sans rétablir l'impôt ancien. Les tableaux et toutes les règles de calcul de la source restent intégralement conservés ; aucune baisse de taux ni coupe supplémentaire n'est revendiquée. Le précédent brouillon ne faisait qu'une reformulation stylistique.",
+    "review_notes": "Article 438 absent du corpus actif consulté : aucune concordance CIBS inventée. Le champ historique est expressément conservé, non remplacé par une catégorie supposée équivalente ; la reproduction de sa dernière version dans le futur paquet CIBS reste à documenter. Contrôle à conserver sur les 12 lignes et 3 colonnes du tableau : 1,5 %, 5 %, 1 %, 1,5 %, 1 %, 3,25 %, 1 % et 1,25 % à l'élaboration, et quatre occurrences de 0,7 % au conditionnement. Les assiettes restent les volumes mis en œuvre ou les quantités conditionnées selon la colonne. Les cases vides ne valent pas taux nul et ne sont pas complétées. L'article 438 du CGI n'a pas été retrouvé dans le corpus fourni ; son renvoi historique est conservé sans lui substituer un article d'un autre code.",
+    "benefit_review": "Tous les plafonds d'exonération à l'élaboration et au conditionnement sont conservés : 1,5 %, 5 %, 1 %, 3,25 %, 1,25 % et 0,7 %, sur leurs assiettes respectives. Les cases vides ne sont ni supprimées ni transformées en taux nuls ; les situations futures restent éligibles.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination du renvoi ancien à l'article 438 : incorporation expresse de son périmètre de produits pour maintenir l'exonération, sans rétablir l'impôt ancien. Les tableaux et toutes les règles de calcul de la source restent intégralement conservés ; aucune baisse de taux ni coupe supplémentaire n'est revendiquée. Le précédent brouillon ne faisait qu'une reformulation stylistique.",
+      "scope_limitations": "Les effets sont limités au présent dispositif ; aucun solde national de recettes ou de complexité n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les mêmes comptes, assiettes, conditions et taux d'exonération sont conservés, sans nouveau justificatif.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "accises-maintien-categories-historiques",
+          "description": "Préservation du champ des produits malgré le renvoi ancien.",
+          "before": "Renvoi non daté à 438, absent du corpus actif.",
+          "after": "Périmètre historique expressément conservé pour les opérations futures.",
+          "unit": "other",
+          "affected_population": "Entrepositaires agréés concernés par les opérations de cet article.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi ; droits fiscaux, exonérations et recours antérieurs préservés selon la transition du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles autonomes restent distincts.",
+          "source_quote": "à l'article 438 du CGI",
+          "proposed_quote": "La référence à l'ancien article 438 détermine uniquement les catégories de produits bénéficiant de l'exonération."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "0d2a113c0abf3f8b68c882d31e8da34794efefd3e72083b7c1c58cd3132170bb",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e56190e9b6a127d0252bdedab82347e583ae46c8579978516756ccff5d229dbd",
+      "assessment_sha256": "f5607d1fae0ab8e84382c0331fac5c18251c13bc5b46536ad1fd34631e16f6bd",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "b74be5b0ec0a773b6b03b8b315affb4e488e8904a7e0c55f299dd007af02753d"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000035423129",
     "source_sha256": "5a2e93899bb1b07225a58c97e9e2d7df554950d59b650ab9be8a914d48de6d0c",
     "number": "50-0 L",
-    "proposed_xml": "<p>L'entrepositaire agréé bénéficie d'une exonération de droits pour les pertes et déchets survenus pendant le stockage d'alcools et de boissons alcooliques. Cette exonération est limitée aux taux annuels suivants :</p><table><tbody><tr><th></th><th>STOCKAGE SOUS BOIS</th><th>STOCKAGE EN CUVES ÉTANCHES</th><th>STOCKAGE APRÈS CONDITIONNEMENT</th></tr><tr><td>Vins, cidres et autres boissons alcooliques mentionnées à l'article 438 du CGI</td><td>4,5 % sur le stock moyen</td><td>0,7 % sur le stock moyen</td><td>0,3 % sur les quantités sorties</td></tr><tr><td>Produits intermédiaires</td><td>5 % sur le stock moyen</td><td>0,7 % sur le stock moyen</td><td>0,3 % sur les quantités sorties</td></tr><tr><td>Spiritueux</td><td>6 % sur le stock moyen</td><td>1,5 % sur le stock moyen</td><td>0,3 % sur les quantités sorties</td></tr><tr><td>Rhums (DOM)</td><td>8 % sur le stock moyen</td><td>3 % sur le stock moyen</td><td>0,3 % sur les quantités sorties</td></tr><tr><td>Alcools</td><td>6 % sur le stock moyen</td><td>1,5 % sur le stock moyen</td><td>0,3 % sur les quantités sorties</td></tr></tbody></table><p>L'exonération est calculée et appliquée séparément pour chaque produit concerné, tel que défini aux articles 286 I et 286 J de l'annexe II au code général des impôts, et pour chaque type de stockage identifié comme tel.</p><p>Pour les vins mousseux élaborés selon la méthode traditionnelle, l'entrepositaire agréé applique aux volumes de vin élaboré en bouteilles un taux global de pertes maximal de 1,5 %.</p><p>Pour les eaux-de-vie de fruits stockées en cuves étanches ouvertes, le taux annuel maximal de pertes est de 2,5 % du stock moyen.</p><p>Pour la bière, le taux annuel maximal de pertes est de 1 % des quantités sorties.</p><p>Pour les arômes, le taux annuel maximal de pertes est de 1,25 % des quantités sorties.</p><p>Le stock moyen est calculé en additionnant les résultats des balances journalières des comptes des entrées et des sorties. Il peut également être calculé en additionnant les soldes mensuels reportés chaque mois dans la comptabilité matières depuis le dernier arrêté annuel. Ces résultats sont, s'il y a lieu, corrigés pour tenir compte des recensements réalisés par l'administration et reportés dans la comptabilité matières. Le solde moyen est ensuite obtenu en divisant ce total par le nombre de mois écoulés depuis le dernier arrêté annuel.</p>",
-    "reason": "Réécriture à droit constant : l'exonération et son calcul par produit et par stockage sont formulés directement. Les quatre règles particulières et les méthodes de calcul du stock sont conservées à leur place. Le tableau reste intégral, sans regroupement de produits ou de taux. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Tableau conservé : 6 lignes et 4 colonnes, avec les taux sous bois 4,5 %, 5 %, 6 %, 8 %, 6 % ; en cuves étanches 0,7 %, 0,7 %, 1,5 %, 3 %, 1,5 % ; après conditionnement 0,3 % pour chacun des cinq produits. Hors tableau : 1,5 % sur les volumes élaborés en bouteilles, 2,5 % sur le stock moyen, 1 % et 1,25 % sur les quantités sorties. L'articulation entre addition des balances journalières, addition des soldes mensuels et division finale par le nombre de mois est ambiguë dans la source ; aucune formule nouvelle n'est inventée. La qualification « cuves étanches ouvertes » est également conservée malgré sa formulation paradoxale. Renvois aux 286 I et 286 J présents dans le corpus ; 438 du CGI non retrouvé, à coordonner expressément.",
-    "status": "rewrite_draft"
+    "proposed_xml": "\n<p>Pour les pertes et déchets en cours de stockage d'alcools et de boissons alcooliques, l'entrepositaire agréé bénéficie d'une exonération des droits, dans la limite des taux annuels suivants : </p>\n\n<table>\n<tbody>\n<tr>\n<th />\n<th>\n<br />STOCKAGE SOUS BOIS </th>\n<th>\n<br />STOCKAGE EN CUVES ETANCHES </th>\n<th>\n<br />STOCKAGE APRES CONDITIONNEMENT </th>\n</tr>\n<tr>\n<td>\n<br />Vins, cidres et autres boissons alcooliques reprises à l'article 438 du code général des impôts dans sa dernière rédaction applicable avant son abrogation </td>\n<td>\n<br />4,5 % sur le stock moyen </td>\n<td>\n<br />0,7 % sur le stock moyen </td>\n<td>\n<br />0,3 % sur les quantités sorties </td>\n</tr>\n<tr>\n<td>\n<br />Produits intermédiaires </td>\n<td>\n<br />5 % sur le stock moyen </td>\n<td>\n<br />0,7 % sur le stock moyen </td>\n<td>\n<br />0,3 % sur les quantités sorties </td>\n</tr>\n<tr>\n<td>\n<br />Spiritueux </td>\n<td>\n<br />6 % sur le stock moyen </td>\n<td>\n<br />1,5 % sur le stock moyen </td>\n<td>\n<br />0,3 % sur les quantités sorties </td>\n</tr>\n<tr>\n<td>\n<br />Rhums (DOM) </td>\n<td>\n<br />8 % sur le stock moyen </td>\n<td>\n<br />3 % sur le stock moyen </td>\n<td>\n<br />0,3 % sur les quantités sorties </td>\n</tr>\n<tr>\n<td>\n<br />Alcools </td>\n<td>\n<br />6 % sur le stock moyen </td>\n<td>\n<br />1,5 % sur le stock moyen </td>\n<td>\n<br />0,3 % sur les quantités sorties </td>\n</tr>\n</tbody>\n</table>\n\n<p>L'exonération est calculée et appliquée par produit concerné tel que défini aux articles 286 I et 286 J de l'annexe II au code général des impôts et par type de stockage identifié en tant que tel. </p>\n<p>Pour les vins mousseux élaborés selon la méthode traditionnelle, l'entrepositaire agréé applique un taux de pertes global maximum de 1,5 % aux volumes de vin élaboré en bouteilles. </p>\n<p>Pour les eaux-de-vie de fruits stockées en cuves étanches ouvertes, le taux annuel de pertes maximum est fixé à 2,5 % sur le stock moyen. </p>\n<p>Pour la bière, le taux annuel de pertes maximum est fixé à 1 % sur les quantités sorties. </p>\n<p>Pour les arômes, le taux annuel de pertes maximum est fixé à 1,25 % sur les quantités sorties. </p>\n<p>Le stock moyen est obtenu en additionnant les résultats des balances journalières des comptes des entrées et des sorties. Ce stock peut être aussi obtenu en additionnant les soldes mensuels reportés chaque mois dans la comptabilité matières depuis le dernier arrêté annuel. Ces résultats sont éventuellement corrigés de ceux des recensements réalisés par l'administration et reportés dans la comptabilité matières. Le solde moyen est alors obtenu en divisant ce total par le nombre de mois écoulés depuis le dernier arrêté annuel.</p>\n<p>La référence à l'ancien article 438 détermine uniquement les catégories de produits bénéficiant de l'exonération. Elle ne rétablit aucun prélèvement abrogé et n'exclut pas les opérations futures portant sur ces catégories.</p><p>Ces dispositions s'appliquent à compter de l'entrée en vigueur de la loi. Les droits, exonérations, restitutions et recours relatifs aux opérations antérieures restent régis par les règles qui leur sont applicables.</p>",
+    "status": "rewrite_draft",
+    "reason": "Coordination du renvoi ancien à l'article 438 : incorporation expresse de son périmètre de produits pour maintenir l'exonération, sans rétablir l'impôt ancien. Les tableaux et toutes les règles de calcul de la source restent intégralement conservés ; aucune baisse de taux ni coupe supplémentaire n'est revendiquée. Le précédent brouillon ne faisait qu'une reformulation stylistique.",
+    "review_notes": "Article 438 absent du corpus actif consulté : aucune concordance CIBS inventée. Le champ historique est expressément conservé, non remplacé par une catégorie supposée équivalente ; la reproduction de sa dernière version dans le futur paquet CIBS reste à documenter. Tableau conservé : 6 lignes et 4 colonnes, avec les taux sous bois 4,5 %, 5 %, 6 %, 8 %, 6 % ; en cuves étanches 0,7 %, 0,7 %, 1,5 %, 3 %, 1,5 % ; après conditionnement 0,3 % pour chacun des cinq produits. Hors tableau : 1,5 % sur les volumes élaborés en bouteilles, 2,5 % sur le stock moyen, 1 % et 1,25 % sur les quantités sorties. L'articulation entre addition des balances journalières, addition des soldes mensuels et division finale par le nombre de mois est ambiguë dans la source ; aucune formule nouvelle n'est inventée. La qualification « cuves étanches ouvertes » est également conservée malgré sa formulation paradoxale. Renvois aux 286 I et 286 J présents dans le corpus ; 438 du CGI non retrouvé, à coordonner expressément.",
+    "benefit_review": "Les cinq catégories conservent les taux sous bois de 4,5 %, 5 %, 6 %, 8 %, 6 %, en cuves de 0,7 %, 0,7 %, 1,5 %, 3 %, 1,5 % et après conditionnement de 0,3 %. Les quatre régimes particuliers 1,5 %, 2,5 %, 1 % et 1,25 % et l'alternative de calcul mensuel restent ouverts aux situations futures.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination du renvoi ancien à l'article 438 : incorporation expresse de son périmètre de produits pour maintenir l'exonération, sans rétablir l'impôt ancien. Les tableaux et toutes les règles de calcul de la source restent intégralement conservés ; aucune baisse de taux ni coupe supplémentaire n'est revendiquée. Le précédent brouillon ne faisait qu'une reformulation stylistique.",
+      "scope_limitations": "Les effets sont limités au présent dispositif ; aucun solde national de recettes ou de complexité n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les mêmes comptes, assiettes, conditions et taux d'exonération sont conservés, sans nouveau justificatif.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "accises-maintien-categories-historiques",
+          "description": "Préservation du champ des produits malgré le renvoi ancien.",
+          "before": "Renvoi non daté à 438, absent du corpus actif.",
+          "after": "Périmètre historique expressément conservé pour les opérations futures.",
+          "unit": "other",
+          "affected_population": "Entrepositaires agréés concernés par les opérations de cet article.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi ; droits fiscaux, exonérations et recours antérieurs préservés selon la transition du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles autonomes restent distincts.",
+          "source_quote": "à l'article 438 du CGI",
+          "proposed_quote": "La référence à l'ancien article 438 détermine uniquement les catégories de produits bénéficiant de l'exonération."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "5a2e93899bb1b07225a58c97e9e2d7df554950d59b650ab9be8a914d48de6d0c",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "fbbcf9b43784471f750320b6ab608f06338c114b624a07ee3f2ec1dd54da5ff0",
+      "assessment_sha256": "f5607d1fae0ab8e84382c0331fac5c18251c13bc5b46536ad1fd34631e16f6bd",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "1d6662383e48eee2a45a019ff8f7c308e5e4ae240f6a328eae0dd9770bd3f798"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000037106129",
     "source_sha256": "cabd09419920b63a7a8628944c246b56a22036c6611fa221ffa9d3ccf01abb96",
     "number": "50-0 M",
-    "proposed_xml": "<p>Pour les vins tranquilles et les vins mousseux autres que ceux élaborés selon la méthode traditionnelle, l'entrepositaire agréé récoltant vinificateur ou négociant vinificateur, ainsi que la cave coopérative exerçant le même type d'activité, peuvent choisir un taux annuel global de pertes en remplacement des taux des articles 50-0 K et 50-0 L. Ce taux couvre l'élaboration, le stockage, le conditionnement et le stockage après conditionnement. Il est de 3,5 % du stock moyen pour un stockage en cuves étanches et de 6 % du stock moyen pour un stockage sous bois.</p><p>Pour les vins doux naturels à appellation d'origine contrôlée et les vins de liqueur mentionnés à l'article 417 bis du code général des impôts, l'entrepositaire agréé récoltant vinificateur peut choisir un taux annuel global de pertes en remplacement des taux des articles 50-0 K et 50-0 L. Ce taux couvre l'élaboration, le stockage, le conditionnement et le stockage après conditionnement. Il est de 3,5 % du stock moyen pour un stockage en cuves étanches et de 6 % du stock moyen pour un stockage sous bois.</p><p>L'opérateur qui souhaite exercer cette option doit la déclarer à l'administration des douanes et droits indirects avant le début de la campagne viticole. La déclaration est effectuée par voie informatique. À titre exceptionnel, une déclaration sur support papier peut être acceptée si l'opérateur est dans l'incapacité de la dématérialiser. L'option est renouvelée chaque année par tacite reconduction, sauf si l'opérateur indique y renoncer.</p>",
-    "reason": "Réécriture à droit constant : chaque alinéa distingue les bénéficiaires, les vins concernés, les opérations couvertes et les taux de l'option. La déclaration préalable à la campagne, l'exception au support informatique et la reconduction sont clarifiées. Les deux champs d'éligibilité restent distincts. Aucune réforme de fond n'est introduite.",
-    "review_notes": "Conservation des trois alinéas, des deux taux 3,5 % et 6 % dans chacun des deux régimes et de l'assiette en stock moyen. Le premier alinéa inclut négociants vinificateurs et caves coopératives ; le second demeure réservé à l'entrepositaire agréé récoltant vinificateur. Les vins mousseux de méthode traditionnelle restent exclus du premier alinéa. Renvois internes aux 50-0 K et 50-0 L maintenus ; l'article 417 bis du CGI n'a pas été retrouvé dans le corpus fourni, sans substitution silencieuse. Aucune échéance de renonciation nouvelle n'est ajoutée.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Pour les vins tranquilles et les vins mousseux (autres que ceux élaborés selon la méthode traditionnelle), et en lieu et place des taux cités aux articles 50-0 K et 50-0 L, l'entrepositaire agréé récoltant vinificateur ou négociant vinificateur, et la cave coopérative ayant le même type d'activité, peuvent opter pour un taux annuel de pertes global (comprenant l'élaboration, le stockage, le conditionnement et le stockage après conditionnement) de 3,5 % sur le stock moyen si le stockage s'effectue en cuves étanches ou de 6 % sur le stock moyen si le stockage s'effectue sous bois.</p><p>Pour les vins doux naturels à appellation d'origine contrôlée et les vins de liqueur mentionnés à l'article 417 bis du code général des impôts dans sa dernière rédaction applicable avant son abrogation, et en lieu et place des taux cités aux articles 50-0 K et 50-0 L, l'entrepositaire agréé récoltant vinificateur peut opter pour un taux annuel de pertes global (comprenant l'élaboration, le stockage, le conditionnement et le stockage après conditionnement) de 3,5 % sur le stock moyen si le stockage s'effectue en cuves étanches ou de 6 % sur le stock moyen si le stockage s'effectue sous bois.</p><p>L'option résulte de l'application du taux global dans la comptabilité matières, sans déclaration préalable ni demande distincte à l'administration. Elle porte sur l'ensemble de la campagne viticole et ne se cumule pas, pour les mêmes opérations, avec les taux des articles 50-0 K et 50-0 L. Elle est renouvelée chaque année par tacite reconduction, sauf si l'opérateur y renonce dans cette comptabilité.</p><p>Ces dispositions s'appliquent à compter de l'entrée en vigueur de la loi. Les droits, exonérations, restitutions et recours relatifs aux opérations antérieures restent régis par les règles qui leur sont applicables.</p><p>La dispense de déclaration s'applique aux campagnes en cours à cette date et aux campagnes suivantes, sans remise en cause des exonérations déjà acquises. Le renvoi historique à l'article 417 bis conserve les catégories de vins éligibles pour les opérations futures ; il ne rétablit aucun prélèvement abrogé.</p>",
+    "status": "rewrite_draft",
+    "reason": "Suppression réelle de la déclaration préalable d'option et de son échéance avant campagne. Le choix ressort du calcul déjà porté en comptabilité, sans formulaire nouveau. Les deux champs de bénéficiaires, les taux 3,5 % et 6 % sur stock moyen et la reconduction sont conservés ; l'option vaut pour toute la campagne afin d'éviter le cumul des méthodes.",
+    "review_notes": "50-0 K et L coordonnés dans ce lot. 417 bis absent du corpus actif : incorporation explicite du champ historique, concordance avec le CIBS à documenter hors lot. Aucune extension aux mousseux de méthode traditionnelle ni aux négociants dans le deuxième alinéa. La comptabilité permet déjà le calcul de l'exonération : pas de registre supplémentaire.",
+    "benefit_review": "Les taux globaux favorables de 3,5 % en cuves étanches et 6 % sous bois restent accessibles aux futurs bénéficiaires des deux alinéas. La suppression de déclaration ne ferme pas l'option ; les options antérieures se poursuivent et les exonérations acquises restent protégées.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Suppression réelle de la déclaration préalable d'option et de son échéance avant campagne. Le choix ressort du calcul déjà porté en comptabilité, sans formulaire nouveau. Les deux champs de bénéficiaires, les taux 3,5 % et 6 % sur stock moyen et la reconduction sont conservés ; l'option vaut pour toute la campagne afin d'éviter le cumul des méthodes.",
+      "scope_limitations": "Les effets sont limités au présent dispositif ; aucun solde national de recettes ou de complexité n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, attestation, donnée ou dépôt de remplacement n’est créé.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "pertes-viticoles-option-sans-declaration",
+          "description": "Retrait du dépôt préalable pour choisir le taux global.",
+          "before": "Déclaration avant campagne, dématérialisée sauf exception papier.",
+          "after": "Choix par application dans la comptabilité existante, sans déclaration.",
+          "unit": "legal_duty",
+          "affected_population": "Entrepositaires agréés concernés par les opérations de cet article.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi ; droits fiscaux, exonérations et recours antérieurs préservés selon la transition du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles autonomes restent distincts.",
+          "source_quote": "L'opérateur qui souhaite bénéficier de cette option, doit en faire la déclaration auprès de l'administration des douanes et droits indirects, avant le début de la campagne viticole.",
+          "proposed_quote": "L'option résulte de l'application du taux global dans la comptabilité matières, sans déclaration préalable ni demande distincte à l'administration."
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suppression de la déclaration douanière préalable à la campagne, de la voie informatique imposée et de l'acceptation exceptionnelle du papier."
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "cabd09419920b63a7a8628944c246b56a22036c6611fa221ffa9d3ccf01abb96",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "aee7c2aa2f9c726d9719c82e45cb6270ef56adab96007aa59462786c5a5ea8c5",
+      "assessment_sha256": "7aa1ab315fec29bfb53b0e14eada453e293575e837b569c9181118892edc7051",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "634f5328f5542fd01dab9d06cbdd1235c391bfe9de17ce37ebd669b0f77112de"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000037095138",
     "source_sha256": "0c2829fc6bf7d4ed28f2e610cd261c3d114d0517b9f4c4252611b4cfde9e585b",
     "number": "50-0 N",
-    "proposed_xml": "<p>Pour les alcools produits à partir d'unités agréées sous le régime général des distilleries industrielles prévu aux articles 311 bis et 57 à 77 de l'annexe I au code général des impôts, l'entrepositaire agréé peut choisir un taux annuel global de pertes de 1,5 % des quantités expédiées.</p><p>L'opérateur qui souhaite exercer cette option doit la demander à l'administration des douanes et droits indirects avant le début de son exercice commercial.</p>",
-    "reason": "Réécriture à droit constant : l'option, son assiette et la demande préalable à l'exercice commercial sont formulées plus directement dans les deux alinéas d'origine. Le taux et le champ des unités agréées sont conservés. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Taux de 1,5 % sur les quantités expédiées maintenu, sans substitution du stock moyen ni confusion avec l'option viticole du 50-0 M. La soudure « 311 biset » est décomposée en « 311 bis et », simple réparation typographique explicitement signalée. Le rattachement du renvoi 311 bis à l'annexe I est ambigu dans la source ; aucun 311 bis n'a été retrouvé dans le CGI ni dans l'annexe I fournis. L'article 57 de l'annexe I est présent et vise désormais le code des impositions sur les biens et services ; l'article 77 n'a pas été retrouvé. La plage de renvoi 57 à 77 est conservée et appelle un contrôle de coordination, sans invention d'une nouvelle cible.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Pour les alcools produits à partir d'unités agréées sous le régime général des distilleries industrielles défini à l'article 57 de l'annexe I au code général des impôts, l'entrepositaire agréé peut opter pour un taux annuel de pertes global de 1,5 % sur les quantités expédiées.</p><p>L'option résulte de l'application de ce taux dans la comptabilité matières, sans demande préalable auprès de l'administration des douanes et droits indirects. Elle porte sur l'ensemble de l'exercice commercial.</p><p>Ces dispositions s'appliquent à compter de l'entrée en vigueur de la loi. Les droits, exonérations, restitutions et recours relatifs aux opérations antérieures restent régis par les règles qui leur sont applicables.</p><p>La dispense de demande s'applique aux exercices en cours à cette date et aux exercices suivants. Les options déjà exercées et les exonérations acquises sont conservées.</p>",
+    "status": "rewrite_draft",
+    "reason": "Retrait de la demande préalable à l'exercice commercial pour le forfait de pertes de 1,5 %. Le régime général est rattaché directement à l'article 57 lu dans le corpus, sans conserver les renvois introuvables à 311 bis et à la borne 77. Le taux et son assiette en quantités expédiées restent inchangés.",
+    "review_notes": "Annexe I 57 lu avec ses six alinéas et sa note de 2025 : il définit le régime général et ses alternatives techniques fiables. La mention des unités agréées est conservée. 311 bis et 77 absents du corpus ; la nouvelle référence vise la définition actuelle de 57, sans prétendre abroger les contraintes de production CIBS L311-39, de métrologie ou les autres dispositions de l'annexe I.",
+    "benefit_review": "Le forfait annuel de 1,5 % sur les quantités expédiées demeure disponible pour les unités agréées du régime général, y compris les futurs exercices éligibles. Aucun remplacement par le stock moyen ni retrait de l'option n'est opéré ; les options et exonérations acquises restent protégées.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Retrait de la demande préalable à l'exercice commercial pour le forfait de pertes de 1,5 %. Le régime général est rattaché directement à l'article 57 lu dans le corpus, sans conserver les renvois introuvables à 311 bis et à la borne 77. Le taux et son assiette en quantités expédiées restent inchangés.",
+      "scope_limitations": "Les effets sont limités au présent dispositif ; aucun solde national de recettes ou de complexité n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, attestation, donnée ou dépôt de remplacement n’est créé.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "pertes-distilleries-option-sans-demande",
+          "description": "Retrait de la demande préalable du taux global.",
+          "before": "Demande aux douanes avant exercice commercial.",
+          "after": "Application du taux dans la comptabilité, pour tout l’exercice.",
+          "unit": "legal_duty",
+          "affected_population": "Entrepositaires agréés concernés par les opérations de cet article.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi ; droits fiscaux, exonérations et recours antérieurs préservés selon la transition du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles autonomes restent distincts.",
+          "source_quote": "L'opérateur qui souhaite bénéficier de cette option doit en faire la demande auprès de l'administration des douanes et droits indirects, avant le début de son exercice commercial.",
+          "proposed_quote": "L'option résulte de l'application de ce taux dans la comptabilité matières, sans demande préalable auprès de l'administration des douanes et droits indirects."
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suppression de la demande préalable d'option à l'administration avant le début de l'exercice commercial."
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "0c2829fc6bf7d4ed28f2e610cd261c3d114d0517b9f4c4252611b4cfde9e585b",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "0c041e099985445e591f0ea6fba6352b24af156bb8036ec47765fbf8d7cd3a8d",
+      "assessment_sha256": "a532d97fdcc6ed5ccc31bf178a449e3923f6d82f69a77a84ea7f57c361e814f5",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "51f01b2c0a34a4b6f11822eb1acdcf75d964a44983ee4245760f73365a88cd77"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000035423135",
     "source_sha256": "e7090de40b9ffbcfefa2bdb85d9e9b9dc4d1ecc11b2fb4bb8ca0eb813b85e060",
     "number": "50-0 O",
-    "proposed_xml": "<p>I. – Par dérogation aux taux annuels des articles 50-0 K et 50-0 L, un entrepositaire agréé ou un groupement d'entrepositaires agréés élaborant le même produit dans les mêmes conditions peut proposer à l'administration un taux global personnalisé de pertes ou de déchets. Ce taux comprend toutes ses opérations d'élaboration, de stockage et de conditionnement. Il peut être proposé lorsque les taux de ces articles ne couvrent pas les opérations concernées ou lorsque le processus d'élaboration, de conditionnement ou de stockage le justifie.</p><p>Le demandeur soumet à l'administration des douanes et droits indirects territorialement compétente pour l'entrepôt fiscal d'accises concerné le taux global annuel de pertes ou de déchets réellement encouru. Sa demande précise :</p><p>a) Le nom ou la raison sociale et l'adresse du ou des requérants ;</p><p>b) L'activité économique de la société du ou des requérants ;</p><p>c) Le numéro d'accises ou d'identification du ou des requérants ;</p><p>d) L'adresse des entrepôts fiscaux d'accises ;</p><p>e) L'estimation des quantités, des espèces et des qualités des matières premières mises en œuvre entre deux arrêtés annuels de la comptabilité matières pour fabriquer, transformer, stocker ou conditionner des alcools et boissons alcooliques, ainsi que les quantités de produits obtenus ou conditionnés. Les quantités de produits obtenus ou conditionnés sont exprimées en volume d'alcool pur pour les alcools, en volume effectif pour les produits intermédiaires ou les produits mentionnés à l'article 438 du code général des impôts, et en volume effectif par degré alcoométrique pour les bières ;</p><p>f) La description détaillée des procédés et techniques de fabrication, de transformation, de conditionnement ou de stockage des alcools et boissons alcooliques ;</p><p>g) La proposition d'un taux global annuel de pertes ou de déchets pour chaque alcool ou boisson alcoolique fabriqué, transformé, stocké ou conditionné. Ce taux doit permettre d'évaluer la quantité effectivement obtenue, stockée ou conditionnée à partir d'une quantité déterminée de matières premières ;</p><p>h) Les date et lieu d'établissement de la demande, ainsi que la signature du ou des requérants accompagnée du cachet de l'entreprise ou, en cas de groupement d'entrepositaires agréés, du cachet de leurs entreprises.</p><p>L'administration des douanes et droits indirects statue sur la demande après avoir reçu, le cas échéant, l'avis du laboratoire des douanes et droits indirects compétent. Si nécessaire, ce laboratoire fait prélever contradictoirement trois échantillons représentatifs des alcools ou boissons alcooliques fabriqués, transformés, stockés ou conditionnés pour les analyser. Dans ce cas, il se rend également dans les entrepôts fiscaux d'accises du requérant pour expertiser les conditions de fabrication, de transformation, de stockage ou de conditionnement.</p><p>La décision de l'administration des douanes et droits indirects fixant le taux global annuel de pertes ou de déchets est transmise au requérant. Si le taux retenu diffère du taux demandé, la décision doit être motivée. Le taux est reconduit pour l'exercice suivant lorsque les conditions de fabrication, de transformation, de stockage ou de conditionnement dans l'entrepôt fiscal d'accises de l'entrepositaire agréé restent inchangées.</p><p>Ce dispositif s'applique également aux entrepositaires agréés producteurs d'arômes alcooliques et aux régénérateurs d'alcools.</p><p>II. – Lorsque les conditions de fabrication, de transformation, de conditionnement ou de stockage mentionnées au I sont modifiées, l'administration des douanes et droits indirects qui a fixé le taux annuel global de pertes ou de déchets peut le réviser chaque année. La demande de révision est présentée dans les mêmes conditions que la demande de fixation du taux initial. La révision intervient à l'issue de l'arrêté annuel de la comptabilité matières du déclarant.</p><p>III. – L'entrepositaire agréé doit signaler sans délai à l'administration des douanes et droits indirects mentionnée au I tout changement ou toute modification des procédés de fabrication, de transformation, de conditionnement ou de stockage susceptible d'avoir des conséquences sur le taux annuel global de pertes ou de déchets.</p><p>IV. – Pour couvrir les déchets de fabrication, les entrepositaires agréés fabriquant des mistelles bénéficient, sur les alcools employés au mutage, d'une exonération à un taux maximal de 3 % pour les mistelles blanches et de 5 % pour les mistelles rouges.</p>",
-    "reason": "Réécriture à droit constant : les conditions du taux personnalisé, les éléments de la demande et les étapes de décision sont exprimés en phrases plus courtes, avec un sujet explicite. Les I à IV et les lettres a à h restent à leur place. Le contrôle du laboratoire, la motivation, la reconduction, la révision et le régime propre aux mistelles sont intégralement conservés. Aucune réforme de fond n'est introduite.",
-    "review_notes": "Maintien de l'alternative entre absence de couverture des opérations par les taux généraux et justification par le processus ; maintien du même produit élaboré dans les mêmes conditions pour le groupement. Les trois échantillons et le prélèvement contradictoire sont conservés, ainsi que les unités propres aux alcools, produits intermédiaires et autres boissons, et bières. La visite du laboratoire reste liée à la nécessité de l'expertise. Les seize alinéas et les bénéficiaires producteurs d'arômes et régénérateurs restent présents. Les plafonds de 3 % et 5 % portent sur les alcools employés au mutage, sans extension à d'autres fabrications. Renvois internes aux 50-0 K et 50-0 L conservés ; 438 du CGI non retrouvé dans le corpus, à coordonner expressément.",
-    "status": "rewrite_draft"
+    "proposed_xml": "\n<p>I. – Par dérogation aux taux annuels prévus aux articles 50-0 K et 50-0 L, un entrepositaire agréé, ou un groupement d'entrepositaires agréés, qui élabore le même produit dans les mêmes conditions, peut proposer à l'administration, un taux global de pertes ou de déchets personnalisé comprenant toutes ses opérations d'élaboration, de stockage et conditionnement, dès lors que les taux prévus aux articles précités ne couvrent pas lesdites opérations, ou si son processus d'élaboration, de conditionnement ou de stockage le justifie.</p>\n<p>Dans ce cas, il soumet à l'administration des douanes et droits indirects, dans le ressort territorial duquel se trouve l'entrepôt fiscal d'accises concerné, le taux global annuel de pertes ou de déchets réel encouru, en précisant :</p>\n<p>a) Nom ou raison sociale et adresse du ou des requérants ;</p>\n<p>b) Abrogé ;</p>\n<p>c) Numéro d'accises ou d'identification du ou des requérants ;</p>\n<p>d) Adresse des entrepôts fiscaux d'accises ;</p>\n<p>e) Estimation des quantités, espèces et qualités des matières premières mises en œuvre, entre deux arrêtés annuels de la comptabilité matières, pour la fabrication, la transformation, le stockage ou le conditionnement d'alcools et de boissons alcooliques et quantités de ces produits obtenues ou conditionnées exprimées en volume d'alcool pur, s'il s'agit d'alcool, ou en volume effectif, s'il s'agit de produits intermédiaires ou de produits mentionnés à l'article 438 du code général des impôts dans sa dernière rédaction applicable avant son abrogation, ou en volume effectif par degré alcoométrique, s'il s'agit de bières ;</p>\n<p>f) Description détaillée des procédés et techniques de fabrication, de transformation, de conditionnement ou de stockage d'alcools et de boissons alcooliques ;</p>\n<p>g) Proposition d'un taux global annuel de pertes ou de déchets pour chaque alcool ou boisson alcoolique fabriqué, transformé, stocké ou conditionné permettant d'évaluer la quantité d'alcool ou de boisson alcoolique effectivement obtenue ou effectivement stockée ou conditionnée à partir d'une quantité déterminée de matières premières ;</p>\n<p>h) Date d'établissement de la demande et signature du ou des requérants. Aucun lieu d'établissement ni cachet d'entreprise n'est exigé.</p>\n<p>L'administration des douanes et droits indirects statue sur la demande après avoir reçu, le cas échéant, l'avis du laboratoire des douanes et droits indirects compétent. Si cela s'avère nécessaire, ledit laboratoire fait prélever contradictoirement trois échantillons représentatifs des alcools ou boissons alcooliques fabriqués, transformés, stockés ou conditionnés aux fins d'analyse et se déplace dans les entrepôts fiscaux d'accises du requérant pour expertiser les conditions de fabrication, de transformation, de stockage ou de conditionnement.</p>\n<p>La décision de l'administration des douanes et droits indirects fixant un taux global annuel de pertes ou de déchets est transmise au requérant. Si l'administration des douanes et droits indirects fixe un taux annuel de pertes ou de déchets différent de celui figurant dans la demande, sa décision doit être motivée. Ce taux est reconduit pour l'exercice suivant si les conditions de fabrication, de transformation, de stockage ou de conditionnement dans l'entrepôt fiscal d'accises de l'entrepositaire agréé sont inchangées.</p>\n<p>Cette mesure s'applique, en outre, aux entrepositaires agréés producteurs d'arômes alcooliques et aux régénérateurs d'alcools.</p>\n<p>II. – Si les conditions de fabrication, de transformation, de conditionnement ou de stockage mentionnées au I sont modifiées, le taux annuel global de pertes ou de déchets peut être révisé chaque année par l'administration des douanes et droits indirects qui l'a fixé. La demande indique les seuls éléments modifiés par rapport à la demande initiale ; les renseignements et pièces inchangés ne sont pas fournis à nouveau. La révision est effectuée à l'issue de l'arrêté annuel de la comptabilité matières du déclarant.</p>\n<p>III. – Tout changement ou toute modification des procédés de fabrication, de transformation, de conditionnement ou de stockage, susceptible d'avoir des conséquences sur le taux annuel global de pertes ou de déchets, doit être porté sans délai à la connaissance de l'administration des douanes et droits indirects mentionnée au I par l'entrepositaire agréé.</p>\n<p>IV. – Sur les alcools employés au mutage, il est accordé aux entrepositaires agréés fabriquant des mistelles une exonération fixée à un taux maximum de 3 % pour la fabrication des mistelles blanches et de 5 % pour la fabrication de mistelles rouges, pour couvrir les déchets de fabrication.</p>\n<p>Ces dispositions s'appliquent à compter de l'entrée en vigueur de la loi. Les droits, exonérations, restitutions et recours relatifs aux opérations antérieures restent régis par les règles qui leur sont applicables.</p><p>Les suppressions de pièces et de mentions s'appliquent également aux demandes en cours, sans nouveau dépôt. Les taux personnalisés déjà accordés restent applicables dans les conditions du présent article. Le renvoi historique à l'article 438 conserve les catégories de produits et leurs unités de mesure pour les opérations futures, sans rétablir aucun prélèvement abrogé.</p>",
+    "status": "rewrite_draft",
+    "reason": "Réduction du dossier de taux personnalisé : retrait de l'activité économique générale déjà décrite par les procédés, du lieu de signature, des cachets et de la reproduction intégrale d'un dossier inchangé lors de la révision. L'expertise reste nécessaire à un taux individuel dérogeant aux plafonds ; le contradictoire, trois échantillons si nécessaires, motivation et reconduction restent intacts.",
+    "review_notes": "I à IV et a à h maintenus à leur place ; b expressément abrogé. Les éléments techniques e, f et g, les trois unités, le laboratoire et le signalement des changements restent inchangés. 438 : périmètre historique incorporé, correspondance CIBS à documenter. Le réemploi des pièces rejoint les droits généraux déjà existants : aucun second gain autonome CRPA compté.",
+    "benefit_review": "Le taux personnalisé reste ouvert aux entrepositaires et groupements élaborant le même produit dans les mêmes conditions, ainsi qu'aux producteurs d'arômes et régénérateurs. Sa reconduction et sa révision sont préservées. Les exonérations de mistelles de 3 % blanches et 5 % rouges sur alcools de mutage restent entières, pour les fabrications futures aussi.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réduction du dossier de taux personnalisé : retrait de l'activité économique générale déjà décrite par les procédés, du lieu de signature, des cachets et de la reproduction intégrale d'un dossier inchangé lors de la révision. L'expertise reste nécessaire à un taux individuel dérogeant aux plafonds ; le contradictoire, trois échantillons si nécessaires, motivation et reconduction restent intacts.",
+      "scope_limitations": "Les effets sont limités au présent dispositif ; aucun solde national de recettes ou de complexité n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, attestation, donnée ou dépôt de remplacement n’est créé.",
+      "effects": [
+        {
+          "kind": "compliance_cost_reduced",
+          "measure_id": "pertes-personnalisees-dossier-allege",
+          "description": "Suppression des mentions générales et cachets sans utilité technique.",
+          "before": "Activité générale, lieu de signature et cachets obligatoires en plus du dossier technique.",
+          "after": "Rubrique b abrogée ; date et signature conservées sans lieu ni cachet.",
+          "unit": "legal_duty",
+          "affected_population": "Entrepositaires agréés concernés par les opérations de cet article.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi ; droits fiscaux, exonérations et recours antérieurs préservés selon la transition du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles autonomes restent distincts.",
+          "source_quote": "h) Date et lieu d'établissement de la demande et signature du ou des requérants appuyée du cachet de son entreprise ou en cas de groupement d'entrepositaires agréés, du cachet de leurs entreprises.",
+          "proposed_quote": "h) Date d'établissement de la demande et signature du ou des requérants. Aucun lieu d'établissement ni cachet d'entreprise n'est exigé."
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suppression de la mention distincte de l'activité économique générale au b du I, les procédés restant décrits au f.",
+      "Suppression du lieu d'établissement et des cachets d'entreprise à joindre à la signature de la demande.",
+      "Suppression de la reproduction des renseignements et pièces inchangés lors de la demande de révision du taux."
+    ],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "e7090de40b9ffbcfefa2bdb85d9e9b9dc4d1ecc11b2fb4bb8ca0eb813b85e060",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "17a3542bdf7e7bb4ce099d1118c15ca9203dcca2120ee7223c7c1792e4bc5bf1",
+      "assessment_sha256": "9ea4d5055bdec7929b44c74fa4ecc32827afc7aaf6cc88c0dbcd0e81f3dca5b6",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "a1804492b1b8f90968485c2aeb1174f3422df086d4f6731258335d1cde40e14a"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300672",
     "source_sha256": "39b4ba08524634ca5301cbc0f98cf88b11c53db46d13e9347206e85fee3ff939",
     "number": "50 A",
-    "proposed_xml": "<p>Toute personne qui souhaite importer, acquérir à titre gratuit ou onéreux, prendre en location, faire réparer ou faire transformer un ou plusieurs appareils ou portions d'appareils propres à la distillation, à la fabrication ou au repassage d'eaux-de-vie ou d'esprits doit présenter une demande écrite à la direction régionale des douanes et droits indirects du lieu de destination ou d'implantation de ces appareils ou portions d'appareils.</p>",
-    "reason": "Réécriture à droit constant de l'alinéa unique : le demandeur, chacune des opérations soumises à demande écrite et l'autorité territorialement compétente sont identifiés dans une phrase grammaticalement régulière. Le champ des appareils et portions d'appareils reste inchangé. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Toutes les opérations de la source sont maintenues, y compris l'acquisition gratuite, la location et les réparations ou transformations. La formule technique « eaux-de-vie ou esprits » est conservée. Coordination interne maintenue avec les mentions de demande du 50 B et l'autorisation du 50 C ; aucun nouveau délai ni aucune dispense ne sont créés.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur de la loi. Aucune demande, autorisation, certification ou transmission de copie n'est exigée sur le fondement des articles 50 A à 50 E pour les opérations réalisées à compter de cette date.</p><p>Les demandes en cours deviennent sans objet et les autorisations antérieures ne peuvent conditionner les opérations futures. Aucun dépôt de rattrapage ni renouvellement n'est exigé sur ces fondements. Les droits et recours relatifs aux opérations antérieures sont conservés, sous réserve de l'application de la loi répressive plus douce aux sanctions non définitives. Les impôts légalement dus ne sont pas supprimés par cette abrogation.</p><p>Les règles autonomes de déclaration douanière d'importation, de sécurité des appareils, de métrologie, de production et de détention d'alcool ainsi que les contrôles correspondants restent applicables. Aucun document exclusivement fondé sur le présent article ne peut être exigé au titre de ces règles.</p>",
+    "status": "rewrite_draft",
+    "reason": "Abrogation prospective du circuit national d'autorisation des appareils : Demande écrite préalable pour importer, acquérir, louer, faire réparer ou transformer les appareils et portions d'appareils de distillation. Le précédent brouillon maintenait intégralement cette formalité. L'appréciation des garanties morales et les copies certifiées ne contrôlent pas les caractéristiques techniques ; les contrôles de production et de sécurité autonomes demeurent. Les cinq articles coordonnent une seule mesure.",
+    "review_notes": "50 A à 50 E abrogés ensemble dans ce lot. Annexe I 57 à 59 consultés : régime général, dossier d'exploitation et jaugeage relèvent de contrôles distincts maintenus. L'ancien CGI 302 M et les anciens fondements législatifs ne figurent pas dans le corpus actif ; concordance CIBS et dispositions résiduelles d'application à vérifier hors lot, sans prétendre les abroger par arrêté. Le véhicule législatif doit écarter tout fondement national supérieur qui maintiendrait cette autorisation spécifique ; les règles douanières européennes et de sécurité ne sont pas supprimées. Aucun prélèvement ou gain budgétaire chiffré revendiqué.",
+    "benefit_review": "Cet article n'institue pas d'exonération fiscale : il organise une étape de l'autorisation d'appareils. Sa suppression ne ferme aucune exonération d'accise ou dérogation technique ; les droits et recours antérieurs ainsi que les régimes favorables autonomes demeurent applicables aux situations futures.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Suppression du régime d'autorisation préalable et de ses pièces d'exécution, dédupliquée sous une seule mesure.",
+      "scope_limitations": "Suppression nationale proposée ; les fondements législatifs résiduels et le CIBS restent à coordonner hors lot. Les obligations douanières et techniques autonomes subsistent ; aucun solde net global chiffré.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, attestation, donnée ou dépôt de remplacement n’est créé.",
+      "effects": [
+        {
+          "kind": "authorization_removed",
+          "measure_id": "appareils-distillation-fin-autorisation",
+          "description": "Demande écrite préalable pour importer, acquérir, louer, faire réparer ou transformer les appareils et portions d'appareils de distillation.",
+          "before": "Autorisation préalable, dossier, garanties morales, validité six mois et copies certifiées.",
+          "after": "Circuit supprimé pour les opérations futures ; aucun dépôt de remplacement.",
+          "unit": "legal_duty",
+          "affected_population": "Personnes réalisant les opérations sur appareils ou portions d’appareils visées aux articles 50 A à 50 E.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi ; droits fiscaux, exonérations et recours antérieurs préservés selon la transition du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles autonomes restent distincts.",
+          "source_quote": "doit en faire la demande écrite à la direction régionale des douanes et droits indirects",
+          "proposed_quote": "Aucune demande, autorisation, certification ou transmission de copie n'est exigée sur le fondement des articles 50 A à 50 E pour les opérations réalisées à compter de cette date."
+        }
+      ]
+    },
+    "change_type": "full_repeal",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Demande écrite préalable pour importer, acquérir, louer, faire réparer ou transformer les appareils et portions d'appareils de distillation.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "39b4ba08524634ca5301cbc0f98cf88b11c53db46d13e9347206e85fee3ff939",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "832fd0c3f7b1baf1279ae0306c2aaca11dc59e8af7a6bf74d727f7c3b3bc5f9b",
+      "assessment_sha256": "e08fe0fef635b87d49086a9545f6b8535d802b4d5d290716e7ed510e54123e92",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "23654c1fe00e84bb96bca8ed5742aace6bc25cf9a3fd3f7f373892e66afa014a"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300455",
     "source_sha256": "73c6d0b1e80100c5699ab6475ef09c05fd735073e4164623cc3789a6c873f8aa",
     "number": "50 B",
-    "proposed_xml": "<p>La demande doit comporter les renseignements suivants :</p><p>Pour le requérant : ses nom et prénoms ou sa raison sociale, sa profession et son adresse ;</p><p>Pour les appareils ou portions d'appareils faisant l'objet de la demande :</p><p>a. Leur nombre, leur nature exacte et leurs caractéristiques ;</p><p>b. S'ils sont déjà poinçonnés, les numéros de poinçonnement propres à chacun d'eux ;</p><p>c. L'usage auquel ils sont destinés ou la nature des réparations ou transformations à effectuer ;</p><p>d. Le cas échéant, le lieu où ils doivent être utilisés, réparés ou transformés.</p>",
-    "reason": "Réécriture à droit constant : les renseignements sur le requérant sont séparés de ceux sur les appareils et les conditions attachées au poinçonnement et au lieu d'utilisation sont formulées clairement. Les sept alinéas et les lettres a à d sont maintenus. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "La demande demeure celle prévue au 50 A. Conservation du caractère conditionnel des renseignements du b et du d et de l'alternative entre usage prévu et nature des travaux au c. Les numéros de poinçonnement propres à chaque appareil ou portion d'appareil déjà poinçonné sont conservés au pluriel, sans en limiter le nombre. Aucun justificatif supplémentaire n'est exigé.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur de la loi. Aucune demande, autorisation, certification ou transmission de copie n'est exigée sur le fondement des articles 50 A à 50 E pour les opérations réalisées à compter de cette date.</p><p>Les demandes en cours deviennent sans objet et les autorisations antérieures ne peuvent conditionner les opérations futures. Aucun dépôt de rattrapage ni renouvellement n'est exigé sur ces fondements. Les droits et recours relatifs aux opérations antérieures sont conservés, sous réserve de l'application de la loi répressive plus douce aux sanctions non définitives. Les impôts légalement dus ne sont pas supprimés par cette abrogation.</p><p>Les règles autonomes de déclaration douanière d'importation, de sécurité des appareils, de métrologie, de production et de détention d'alcool ainsi que les contrôles correspondants restent applicables. Aucun document exclusivement fondé sur le présent article ne peut être exigé au titre de ces règles.</p>",
+    "status": "rewrite_draft",
+    "reason": "Abrogation prospective du circuit national d'autorisation des appareils : Dossier de renseignements sur le requérant et les appareils imposé pour la demande d'autorisation de l'article 50 A. Le précédent brouillon maintenait intégralement cette formalité. L'appréciation des garanties morales et les copies certifiées ne contrôlent pas les caractéristiques techniques ; les contrôles de production et de sécurité autonomes demeurent. Les cinq articles coordonnent une seule mesure.",
+    "review_notes": "50 A à 50 E abrogés ensemble dans ce lot. Annexe I 57 à 59 consultés : régime général, dossier d'exploitation et jaugeage relèvent de contrôles distincts maintenus. L'ancien CGI 302 M et les anciens fondements législatifs ne figurent pas dans le corpus actif ; concordance CIBS et dispositions résiduelles d'application à vérifier hors lot, sans prétendre les abroger par arrêté. Le véhicule législatif doit écarter tout fondement national supérieur qui maintiendrait cette autorisation spécifique ; les règles douanières européennes et de sécurité ne sont pas supprimées. Aucun prélèvement ou gain budgétaire chiffré revendiqué.",
+    "benefit_review": "Cet article n'institue pas d'exonération fiscale : il organise une étape de l'autorisation d'appareils. Sa suppression ne ferme aucune exonération d'accise ou dérogation technique ; les droits et recours antérieurs ainsi que les régimes favorables autonomes demeurent applicables aux situations futures.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination de l'abolition du même circuit 50 A à 50 E ; cette étape retirée n'est pas comptée comme une autorisation ou taxe supplémentaire supprimée.",
+      "scope_limitations": "Suppression nationale proposée ; les fondements législatifs résiduels et le CIBS restent à coordonner hors lot. Les obligations douanières et techniques autonomes subsistent ; aucun solde net global chiffré.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, attestation, donnée ou dépôt de remplacement n’est créé.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "appareils-distillation-fin-autorisation",
+          "description": "Dossier de renseignements sur le requérant et les appareils imposé pour la demande d'autorisation de l'article 50 A.",
+          "before": "Autorisation préalable, dossier, garanties morales, validité six mois et copies certifiées.",
+          "after": "Circuit supprimé pour les opérations futures ; aucun dépôt de remplacement.",
+          "unit": "legal_duty",
+          "affected_population": "Personnes réalisant les opérations sur appareils ou portions d’appareils visées aux articles 50 A à 50 E.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi ; droits fiscaux, exonérations et recours antérieurs préservés selon la transition du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles autonomes restent distincts.",
+          "source_quote": "Cette demande doit mentionner :",
+          "proposed_quote": "Aucune demande, autorisation, certification ou transmission de copie n'est exigée sur le fondement des articles 50 A à 50 E pour les opérations réalisées à compter de cette date."
+        }
+      ]
+    },
+    "change_type": "full_repeal",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Dossier de renseignements sur le requérant et les appareils imposé pour la demande d'autorisation de l'article 50 A.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "73c6d0b1e80100c5699ab6475ef09c05fd735073e4164623cc3789a6c873f8aa",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "832fd0c3f7b1baf1279ae0306c2aaca11dc59e8af7a6bf74d727f7c3b3bc5f9b",
+      "assessment_sha256": "4aeda9bf9199e73504d118bad2a27fa3bda46611454b71d7cdf7cea8e996c5e1",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "d5dc23be3a7c157fb430aa6021b7edeab54eb03406157e8fac2661b7b5237cd3"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300456",
     "source_sha256": "84c47ffe938d44867d8b1d200d89a8db8589767cc3ee6b8430ed6a97a0187926",
     "number": "50 C",
-    "proposed_xml": "<p>L'administration accorde l'autorisation demandée lorsqu'elle juge suffisantes les garanties morales offertes par le requérant. L'autorisation est valable pendant six mois à compter de sa date.</p>",
-    "reason": "Réécriture à droit constant : l'administration et son appréciation des garanties morales sont identifiées directement. La durée de validité est formulée dans une seconde phrase, dans le même alinéa. Aucune réforme de fond n'est introduite.",
-    "review_notes": "Validité de six mois et point de départ à la date de l'autorisation maintenus. La notion historique de « garanties morales » est conservée sans création de critères nouveaux. Coordination avec les demandes des 50 A et 50 B et les copies de l'autorisation des 50 D et 50 E.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur de la loi. Aucune demande, autorisation, certification ou transmission de copie n'est exigée sur le fondement des articles 50 A à 50 E pour les opérations réalisées à compter de cette date.</p><p>Les demandes en cours deviennent sans objet et les autorisations antérieures ne peuvent conditionner les opérations futures. Aucun dépôt de rattrapage ni renouvellement n'est exigé sur ces fondements. Les droits et recours relatifs aux opérations antérieures sont conservés, sous réserve de l'application de la loi répressive plus douce aux sanctions non définitives. Les impôts légalement dus ne sont pas supprimés par cette abrogation.</p><p>Les règles autonomes de déclaration douanière d'importation, de sécurité des appareils, de métrologie, de production et de détention d'alcool ainsi que les contrôles correspondants restent applicables. Aucun document exclusivement fondé sur le présent article ne peut être exigé au titre de ces règles.</p>",
+    "status": "rewrite_draft",
+    "reason": "Abrogation prospective du circuit national d'autorisation des appareils : Autorisation fondée sur des garanties morales et validité limitée à six mois pour les opérations sur les appareils. Le précédent brouillon maintenait intégralement cette formalité. L'appréciation des garanties morales et les copies certifiées ne contrôlent pas les caractéristiques techniques ; les contrôles de production et de sécurité autonomes demeurent. Les cinq articles coordonnent une seule mesure.",
+    "review_notes": "50 A à 50 E abrogés ensemble dans ce lot. Annexe I 57 à 59 consultés : régime général, dossier d'exploitation et jaugeage relèvent de contrôles distincts maintenus. L'ancien CGI 302 M et les anciens fondements législatifs ne figurent pas dans le corpus actif ; concordance CIBS et dispositions résiduelles d'application à vérifier hors lot, sans prétendre les abroger par arrêté. Le véhicule législatif doit écarter tout fondement national supérieur qui maintiendrait cette autorisation spécifique ; les règles douanières européennes et de sécurité ne sont pas supprimées. Aucun prélèvement ou gain budgétaire chiffré revendiqué.",
+    "benefit_review": "Cet article n'institue pas d'exonération fiscale : il organise une étape de l'autorisation d'appareils. Sa suppression ne ferme aucune exonération d'accise ou dérogation technique ; les droits et recours antérieurs ainsi que les régimes favorables autonomes demeurent applicables aux situations futures.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination de l'abolition du même circuit 50 A à 50 E ; cette étape retirée n'est pas comptée comme une autorisation ou taxe supplémentaire supprimée.",
+      "scope_limitations": "Suppression nationale proposée ; les fondements législatifs résiduels et le CIBS restent à coordonner hors lot. Les obligations douanières et techniques autonomes subsistent ; aucun solde net global chiffré.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, attestation, donnée ou dépôt de remplacement n’est créé.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "appareils-distillation-fin-autorisation",
+          "description": "Autorisation fondée sur des garanties morales et validité limitée à six mois pour les opérations sur les appareils.",
+          "before": "Autorisation préalable, dossier, garanties morales, validité six mois et copies certifiées.",
+          "after": "Circuit supprimé pour les opérations futures ; aucun dépôt de remplacement.",
+          "unit": "legal_duty",
+          "affected_population": "Personnes réalisant les opérations sur appareils ou portions d’appareils visées aux articles 50 A à 50 E.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi ; droits fiscaux, exonérations et recours antérieurs préservés selon la transition du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles autonomes restent distincts.",
+          "source_quote": "Celle-ci est valable pendant une période de six mois à compter de sa date.",
+          "proposed_quote": "Aucune demande, autorisation, certification ou transmission de copie n'est exigée sur le fondement des articles 50 A à 50 E pour les opérations réalisées à compter de cette date."
+        }
+      ]
+    },
+    "change_type": "full_repeal",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Autorisation fondée sur des garanties morales et validité limitée à six mois pour les opérations sur les appareils.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "84c47ffe938d44867d8b1d200d89a8db8589767cc3ee6b8430ed6a97a0187926",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "832fd0c3f7b1baf1279ae0306c2aaca11dc59e8af7a6bf74d727f7c3b3bc5f9b",
+      "assessment_sha256": "82ced1656d3b972decbbe94bacc96258c1e0c589bd116636f7c833d5b33973fa",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "c345d476b86f637e43fc4d636c1d5dbc5e56ce4a8b24ca3d4518a5c67a668f50"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300675",
     "source_sha256": "73ea581f7936a5dabc65879f2d1ba8edc2d96b7e909a76aa4d85d0f1c859a26f",
     "number": "50 D",
-    "proposed_xml": "<p>Pour les appareils ou portions d'appareils à importer, le destinataire doit remettre une copie de l'autorisation délivrée, certifiée conforme par le service des douanes et droits indirects de sa résidence, au bureau de déclarations de la direction générale des douanes et droits indirects du lieu de dédouanement. Cette remise lui permet d'obtenir le document indispensable mentionné au I de l'article 302 M du code général des impôts.</p><p>Le destinataire doit ensuite présenter ce document au bureau de douane à l'appui de sa déclaration d'importation.</p>",
-    "reason": "Réécriture à droit constant : les deux étapes sont distinguées, de la remise de la copie certifiée conforme à la présentation du document avec la déclaration d'importation. Le destinataire est le sujet explicite des obligations. Les deux alinéas restent en place et aucune réforme de fond n'est appliquée.",
-    "review_notes": "Maintien de l'autorité qui certifie la copie, du bureau de déclarations du lieu de dédouanement et de l'ordre des formalités. Le I de l'article 302 M du CGI n'a pas été retrouvé dans le corpus fourni : la référence et le circuit administratif anciens sont conservés, mais leur coordination avec les règles et documents actuels doit être contrôlée expressément. Aucun document de remplacement n'est inventé.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur de la loi. Aucune demande, autorisation, certification ou transmission de copie n'est exigée sur le fondement des articles 50 A à 50 E pour les opérations réalisées à compter de cette date.</p><p>Les demandes en cours deviennent sans objet et les autorisations antérieures ne peuvent conditionner les opérations futures. Aucun dépôt de rattrapage ni renouvellement n'est exigé sur ces fondements. Les droits et recours relatifs aux opérations antérieures sont conservés, sous réserve de l'application de la loi répressive plus douce aux sanctions non définitives. Les impôts légalement dus ne sont pas supprimés par cette abrogation.</p><p>Les règles autonomes de déclaration douanière d'importation, de sécurité des appareils, de métrologie, de production et de détention d'alcool ainsi que les contrôles correspondants restent applicables. Aucun document exclusivement fondé sur le présent article ne peut être exigé au titre de ces règles.</p>",
+    "status": "rewrite_draft",
+    "reason": "Abrogation prospective du circuit national d'autorisation des appareils : Circuit de copie certifiée d'autorisation, obtention du document spécial et présentation de celui-ci à l'importation des appareils. Le précédent brouillon maintenait intégralement cette formalité. L'appréciation des garanties morales et les copies certifiées ne contrôlent pas les caractéristiques techniques ; les contrôles de production et de sécurité autonomes demeurent. Les cinq articles coordonnent une seule mesure.",
+    "review_notes": "50 A à 50 E abrogés ensemble dans ce lot. Annexe I 57 à 59 consultés : régime général, dossier d'exploitation et jaugeage relèvent de contrôles distincts maintenus. L'ancien CGI 302 M et les anciens fondements législatifs ne figurent pas dans le corpus actif ; concordance CIBS et dispositions résiduelles d'application à vérifier hors lot, sans prétendre les abroger par arrêté. Le véhicule législatif doit écarter tout fondement national supérieur qui maintiendrait cette autorisation spécifique ; les règles douanières européennes et de sécurité ne sont pas supprimées. Aucun prélèvement ou gain budgétaire chiffré revendiqué.",
+    "benefit_review": "Cet article n'institue pas d'exonération fiscale : il organise une étape de l'autorisation d'appareils. Sa suppression ne ferme aucune exonération d'accise ou dérogation technique ; les droits et recours antérieurs ainsi que les régimes favorables autonomes demeurent applicables aux situations futures.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination de l'abolition du même circuit 50 A à 50 E ; cette étape retirée n'est pas comptée comme une autorisation ou taxe supplémentaire supprimée.",
+      "scope_limitations": "Suppression nationale proposée ; les fondements législatifs résiduels et le CIBS restent à coordonner hors lot. Les obligations douanières et techniques autonomes subsistent ; aucun solde net global chiffré.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, attestation, donnée ou dépôt de remplacement n’est créé.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "appareils-distillation-fin-autorisation",
+          "description": "Circuit de copie certifiée d'autorisation, obtention du document spécial et présentation de celui-ci à l'importation des appareils.",
+          "before": "Autorisation préalable, dossier, garanties morales, validité six mois et copies certifiées.",
+          "after": "Circuit supprimé pour les opérations futures ; aucun dépôt de remplacement.",
+          "unit": "legal_duty",
+          "affected_population": "Personnes réalisant les opérations sur appareils ou portions d’appareils visées aux articles 50 A à 50 E.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi ; droits fiscaux, exonérations et recours antérieurs préservés selon la transition du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles autonomes restent distincts.",
+          "source_quote": "Ce document doit être ensuite présenté au bureau de douane à l'appui de la déclaration d'importation.",
+          "proposed_quote": "Aucune demande, autorisation, certification ou transmission de copie n'est exigée sur le fondement des articles 50 A à 50 E pour les opérations réalisées à compter de cette date."
+        }
+      ]
+    },
+    "change_type": "full_repeal",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Circuit de copie certifiée d'autorisation, obtention du document spécial et présentation de celui-ci à l'importation des appareils.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "73ea581f7936a5dabc65879f2d1ba8edc2d96b7e909a76aa4d85d0f1c859a26f",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "832fd0c3f7b1baf1279ae0306c2aaca11dc59e8af7a6bf74d727f7c3b3bc5f9b",
+      "assessment_sha256": "e3c90329ee74fa71f491c39df0ea183c20bca2f6005a48bc5fd1f506f7df7e70",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "ae7adcbdc4dcc68c6a5c93e9b7247855f91d6c4e1d5d91375f545b83afbcb8d9"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300677",
     "source_sha256": "07f704d94b5a2429ac9bbdc105cafbdc1ddfb3a0bfb25f186ec301ebe80881dd",
     "number": "50 E",
-    "proposed_xml": "<p>Le titulaire de l'autorisation doit en remettre une copie, certifiée conforme par le service des douanes et droits indirects de sa résidence, au cédant, au loueur, au réparateur ou au transformateur des appareils ou portions d'appareils.</p>",
-    "reason": "Réécriture à droit constant de l'alinéa unique : la remise de la copie de l'autorisation est énoncée directement, en isolant l'exigence de certification conforme. Les quatre catégories de destinataires restent présentes. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Certification par le service de la résidence du titulaire maintenue ; aucune copie simple ne lui est substituée. Les appareils et les portions d'appareils restent couverts. Coordination interne avec l'autorisation du 50 C et, pour l'importation, la formalité distincte du 50 D.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur de la loi. Aucune demande, autorisation, certification ou transmission de copie n'est exigée sur le fondement des articles 50 A à 50 E pour les opérations réalisées à compter de cette date.</p><p>Les demandes en cours deviennent sans objet et les autorisations antérieures ne peuvent conditionner les opérations futures. Aucun dépôt de rattrapage ni renouvellement n'est exigé sur ces fondements. Les droits et recours relatifs aux opérations antérieures sont conservés, sous réserve de l'application de la loi répressive plus douce aux sanctions non définitives. Les impôts légalement dus ne sont pas supprimés par cette abrogation.</p><p>Les règles autonomes de déclaration douanière d'importation, de sécurité des appareils, de métrologie, de production et de détention d'alcool ainsi que les contrôles correspondants restent applicables. Aucun document exclusivement fondé sur le présent article ne peut être exigé au titre de ces règles.</p>",
+    "status": "rewrite_draft",
+    "reason": "Abrogation prospective du circuit national d'autorisation des appareils : Remise d'une copie certifiée de l'autorisation au cédant, loueur, réparateur ou transformateur des appareils. Le précédent brouillon maintenait intégralement cette formalité. L'appréciation des garanties morales et les copies certifiées ne contrôlent pas les caractéristiques techniques ; les contrôles de production et de sécurité autonomes demeurent. Les cinq articles coordonnent une seule mesure.",
+    "review_notes": "50 A à 50 E abrogés ensemble dans ce lot. Annexe I 57 à 59 consultés : régime général, dossier d'exploitation et jaugeage relèvent de contrôles distincts maintenus. L'ancien CGI 302 M et les anciens fondements législatifs ne figurent pas dans le corpus actif ; concordance CIBS et dispositions résiduelles d'application à vérifier hors lot, sans prétendre les abroger par arrêté. Le véhicule législatif doit écarter tout fondement national supérieur qui maintiendrait cette autorisation spécifique ; les règles douanières européennes et de sécurité ne sont pas supprimées. Aucun prélèvement ou gain budgétaire chiffré revendiqué.",
+    "benefit_review": "Cet article n'institue pas d'exonération fiscale : il organise une étape de l'autorisation d'appareils. Sa suppression ne ferme aucune exonération d'accise ou dérogation technique ; les droits et recours antérieurs ainsi que les régimes favorables autonomes demeurent applicables aux situations futures.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination de l'abolition du même circuit 50 A à 50 E ; cette étape retirée n'est pas comptée comme une autorisation ou taxe supplémentaire supprimée.",
+      "scope_limitations": "Suppression nationale proposée ; les fondements législatifs résiduels et le CIBS restent à coordonner hors lot. Les obligations douanières et techniques autonomes subsistent ; aucun solde net global chiffré.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, attestation, donnée ou dépôt de remplacement n’est créé.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "appareils-distillation-fin-autorisation",
+          "description": "Remise d'une copie certifiée de l'autorisation au cédant, loueur, réparateur ou transformateur des appareils.",
+          "before": "Autorisation préalable, dossier, garanties morales, validité six mois et copies certifiées.",
+          "after": "Circuit supprimé pour les opérations futures ; aucun dépôt de remplacement.",
+          "unit": "legal_duty",
+          "affected_population": "Personnes réalisant les opérations sur appareils ou portions d’appareils visées aux articles 50 A à 50 E.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur de la loi ; droits fiscaux, exonérations et recours antérieurs préservés selon la transition du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles autonomes restent distincts.",
+          "source_quote": "Le titulaire d'une autorisation est tenu de fournir une copie de celle-ci certifiée conforme",
+          "proposed_quote": "Aucune demande, autorisation, certification ou transmission de copie n'est exigée sur le fondement des articles 50 A à 50 E pour les opérations réalisées à compter de cette date."
+        }
+      ]
+    },
+    "change_type": "full_repeal",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Remise d'une copie certifiée de l'autorisation au cédant, loueur, réparateur ou transformateur des appareils.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "07f704d94b5a2429ac9bbdc105cafbdc1ddfb3a0bfb25f186ec301ebe80881dd",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "832fd0c3f7b1baf1279ae0306c2aaca11dc59e8af7a6bf74d727f7c3b3bc5f9b",
+      "assessment_sha256": "91a3ca04a30815e36db0a97a238c98ae3b50534962c23f165f95782bfdaca563",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "bef171e3d9ce4b2fd23b152902bcf7d20680bb1ef5ac743978f6bbb852bf5801"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300457",
     "source_sha256": "09eca9090cbac8f56f190f585138fba72fb3c38e8e42863a95b84277e3aaa603",
     "number": "51",
-    "proposed_xml": "<p>Un appareil est un alambic d'essai s'il est à chargement intermittent, ne comporte aucun organe de rectification ou de rétrogradation et a une capacité au plus égale à un litre.</p>",
-    "reason": "Réécriture à droit constant de la définition : les trois critères cumulatifs sont exprimés dans l'ordre de la source avec un sujet unique. La nature du chargement, l'absence d'organes et la limite de capacité sont maintenues. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Seuil inclusif d'un litre conservé : un appareil d'une capacité exactement égale à un litre reste dans la définition s'il remplit les deux autres critères. Les termes techniques rectification et rétrogradation ne sont pas remplacés. Aucun critère d'usage, d'exemption ou de puissance n'est ajouté.",
-    "status": "rewrite_draft"
+    "proposed_xml": null,
+    "status": "retained_unchanged",
+    "reason": "Maintien intégral de la définition technique de l'alambic d'essai. Aucun agrément, déclaration ou taxe n'est créé par cet article. Le seuil inclusif d'un litre et les critères de chargement intermittent et d'absence de rectification ou rétrogradation bornent une catégorie technique ; les supprimer ne démontrerait aucune réduction de charge et pourrait déstabiliser les régimes qui s'y réfèrent. Le brouillon stylistique est abandonné.",
+    "review_notes": "Les trois critères cumulatifs restent exactement ceux de la source. Aucun renvoi interne à une norme abrogée. Ne pas assimiler la suppression de l'autorisation 50 A à 50 E à l'abrogation de tous les régimes des appareils ni ajouter un critère d'usage.",
+    "benefit_review": "La définition peut servir à un régime favorable des appareils d'essai : elle demeure entière pour les futurs appareils comme pour les anciens, avec capacité au plus égale à un litre. Aucune dispense particulière non reproduite dans la source n'est affirmée ou retirée.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "retained_necessary",
+      "assessment": "Maintien intégral de la définition technique de l'alambic d'essai. Aucun agrément, déclaration ou taxe n'est créé par cet article. Le seuil inclusif d'un litre et les critères de chargement intermittent et d'absence de rectification ou rétrogradation bornent une catégorie technique ; les supprimer ne démontrerait aucune réduction de charge et pourrait déstabiliser les régimes qui s'y réfèrent. Le brouillon stylistique est abandonné.",
+      "scope_limitations": "Les effets sont limités au présent dispositif ; aucun solde national de recettes ou de complexité n’est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien exact d'une définition sans déclaration, registre ni autorisation ajoutés.",
+      "effects": []
+    },
+    "classification": "retained_necessary",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "09eca9090cbac8f56f190f585138fba72fb3c38e8e42863a95b84277e3aaa603",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "d72a05a1f0ab94fd2bac3316ea879b3fed47eb5837085655488b35bedc866470",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "48086b0719371ce2bcf30142b654e9e32971564661c926877d031683551708f4"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300458",
     "source_sha256": "2db3477a003b78126e93ad89c16c9262c2ad718c1ab83aac60ec4134a9b4240d",
     "number": "51 A",
-    "proposed_xml": "<p>Les détenteurs d'alambics suivants peuvent notamment demander à l'État le rachat de leurs appareils :</p><p>Les bouilleurs de cru qui ne peuvent plus ou ne souhaitent plus les utiliser ;</p><p>Les loueurs d'alambics ambulants auxquels l'autorisation prévue à l'article 311 bis du code général des impôts a été refusée ou retirée.</p><p>Lorsqu'un loueur d'alambics ambulants fait l'objet d'un retrait temporaire de cette autorisation, sa demande de rachat doit comporter une déclaration par laquelle il renonce définitivement à exercer la profession.</p>",
-    "reason": "Réécriture à droit constant : les détenteurs éligibles et les deux catégories citées sont présentés directement. La déclaration de renonciation est rattachée explicitement au retrait temporaire de l'autorisation. Le caractère non exhaustif de la liste et les quatre alinéas sont conservés. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "Maintien de « notamment » : les deux catégories ne deviennent pas une liste fermée. Le retrait temporaire ne suffit pas à lui seul ; la demande doit comporter la renonciation définitive à la profession. L'article 311 bis du CGI n'a pas été retrouvé dans le corpus fourni ; le renvoi est conservé sans invention d'une référence au code des impositions sur les biens et services ou à un autre texte. Coordination avec le contenu et l'envoi de la demande au 51 B.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>Peuvent notamment demander à l'État le rachat des alambics dont ils sont détenteurs :</p><p>Les bouilleurs de cru qui ne peuvent plus ou ne désirent plus utiliser ces appareils ;</p><p>Les loueurs d'alambics ambulants auxquels l'autorisation d'exercer cette profession a été refusée ou retirée, même temporairement.</p><p>Le rachat n'est pas subordonné à une renonciation définitive à exercer la profession.</p><p>Ces dispositions s'appliquent à compter de l'entrée en vigueur de la loi, y compris aux demandes en cours, sans nouveau dépôt. Les rachats déjà conclus et leurs conditions de paiement, de livraison ou de gardiennage demeurent régis par les engagements valablement souscrits.</p>",
+    "reason": "Réforme de fond : suppression de la déclaration et de la condition de renonciation professionnelle définitive imposées au loueur temporairement privé d'autorisation. La vente d'un appareil ne justifie pas l'interdiction à vie d'exercer avec un autre appareil autorisé. Le bénéfice facultatif du rachat et la liste non exhaustive des détenteurs restent ouverts.",
+    "review_notes": "Le renvoi à CGI 311 bis, absent du corpus consulté, est remplacé par la désignation directe de l'autorisation régie par 51 bis à 51 quater. Cela ne reconstitue pas une base législative absente : la concordance avec les textes législatifs d'accise, hors lot, reste à établir. Aucun droit automatique au rachat ni nouvelle dotation budgétaire. Les contrats déjà conclus ne sont pas annulés.",
+    "status": "rewrite_draft",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Déclaration de renonciation définitive à la profession conditionnant le rachat après un retrait temporaire."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond : suppression de la déclaration et de la condition de renonciation professionnelle définitive imposées au loueur temporairement privé d'autorisation. La vente d'un appareil ne justifie pas l'interdiction à vie d'exercer avec un autre appareil autorisé. Le bénéfice facultatif du rachat et la liste non exhaustive des détenteurs restent ouverts.",
+      "scope_limitations": "Le renvoi à CGI 311 bis, absent du corpus consulté, est remplacé par la désignation directe de l'autorisation régie par 51 bis à 51 quater. Cela ne reconstitue pas une base législative absente : la concordance avec les textes législatifs d'accise, hors lot, reste à établir. Aucun droit automatique au rachat ni nouvelle dotation budgétaire. Les contrats déjà conclus ne sont pas annulés.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées par aucun registre, dépôt périodique, justificatif ou prélèvement. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "alambics-rachat-fin-renonciation",
+          "description": "Suppression d'une condition professionnelle irréversible d'accès au rachat.",
+          "before": "Retrait temporaire : déclaration de renonciation définitive requise.",
+          "after": "Rachat accessible sans renonciation définitive, sous les autres conditions du rachat.",
+          "unit": "legal_duty",
+          "affected_population": "Détenteurs des alambics concernés",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi, dans les conditions transitoires de l'article.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles et obligations autonomes demeurent.",
+          "source_quote": "la demande de rachat comporte une déclaration par laquelle l'intéressé renonce définitivement à exercer la profession.",
+          "proposed_quote": "Le rachat n'est pas subordonné à une renonciation définitive à exercer la profession."
+        }
+      ]
+    },
+    "benefit_review": "Le rachat facultatif est un avantage pour les détenteurs qui ne peuvent ou ne veulent plus utiliser l'alambic. La liste reste non exhaustive et ouverte aux demandes futures ; le refus ou retrait d'autorisation reste une situation éligible, sans renonciation professionnelle définitive. Les rachats conclus et le prix minimal de 51 H sont préservés.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "2db3477a003b78126e93ad89c16c9262c2ad718c1ab83aac60ec4134a9b4240d",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "ca4555ad92f2d59c43c9a2716eb07b8c2e05d5a73ccb31ae16938773930bcd67",
+      "assessment_sha256": "c9f98fcf851e515034581b34ce4a9b6f7f02188013fd9874d220ab344b4e2fbe",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "6e2ba72adedfaec211d564bdf36e60162a6194c7099b3bdb3a3f1b7f08ce0eec"
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300680",
     "source_sha256": "17861748c2a18bb7dbf50245cdbff0788eb03ebbffeb93eaaedbd93febf0d47f",
     "number": "51 B",
-    "proposed_xml": "<p>La demande de rachat doit être motivée et comporter les renseignements suivants :</p><p>Pour le requérant : ses nom et prénoms ou sa raison sociale, sa profession, son adresse et la date à laquelle il est entré en possession du ou des alambics concernés ;</p><p>Pour le ou les appareils :</p><p>a. Leur nombre, leur nature, avec indication de la marque et du type, les caractéristiques de leurs différents éléments et leur état de marche ;</p><p>b. Leurs numéros de poinçonnement ;</p><p>c. Le prix de rachat proposé pour chaque appareil.</p><p>La demande doit être envoyée par lettre recommandée avec demande d'avis de réception à la direction régionale des douanes et droits indirects du lieu d'immatriculation du ou des appareils.</p>",
-    "reason": "Réécriture à droit constant : les mentions concernant le requérant et les appareils sont distinguées. Le caractère unitaire du prix proposé et les modalités d'envoi sont formulés directement. La motivation et les sept alinéas de la source sont maintenus. Aucune réforme de fond n'est appliquée.",
-    "review_notes": "La date d'entrée en possession, la marque, le type, les éléments de chaque appareil, son état de marche et les numéros de poinçonnement sont tous conservés. Le prix reste une proposition unitaire du requérant, sans barème ni obligation de rachat nouvelle. Le service compétent reste celui du lieu d'immatriculation, et non de la résidence ; l'envoi recommandé avec demande d'avis de réception est maintenu. L'accord grammatical « douane » devient « douanes » dans le nom du service, sans changement d'autorité.",
-    "status": "rewrite_draft"
+    "proposed_xml": "<p>La demande de rachat mentionne :</p><p>En ce qui concerne le requérant : ses nom et prénoms ou sa raison sociale et son adresse ;</p><p>En ce qui concerne le ou les appareils :</p><p>a. Leur nombre, leur nature (marque et type), les caractéristiques de leurs différents éléments ainsi que leur état de marche ;</p><p>b. Leurs numéros de poinçonnement ;</p><p>c. Le prix de rachat unitaire proposé.</p><p>La demande est adressée à la direction régionale des douanes et droits indirects du lieu d'immatriculation du ou des appareils. Aucun envoi par lettre recommandée avec demande d'avis de réception n'est imposé par le présent article.</p><p>Ces dispositions s'appliquent à compter de l'entrée en vigueur de la loi, y compris aux demandes en cours, sans nouveau dépôt. Les rachats déjà conclus et leurs conditions de paiement, de livraison ou de gardiennage demeurent régis par les engagements valablement souscrits.</p>",
+    "reason": "Réforme de fond : retrait de la motivation obligatoire, de la profession et de la date d'entrée en possession. L'identification du vendeur et de l'appareil, son état et le prix unitaire suffisent à instruire l'achat ; ces retraits ne suppriment pas la vérification du droit de vendre. Retrait de l'exclusivité du recommandé ; aucune baisse fiscale.",
+    "review_notes": "Les rubriques a, b, c, le service du lieu d'immatriculation et les données nécessaires à l'évaluation du bien demeurent. Le droit de vendre et les contrôles autonomes ne sont pas supprimés. L'allègement des mentions va au-delà du seul réemploi de données déjà disponibles. Pour le recommandé, des voies électroniques peuvent déjà être ouvertes : aucun gain supplémentaire de dématérialisation n'est revendiqué.",
+    "status": "rewrite_draft",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Motivation obligatoire et indication de la profession et de la date d'entrée en possession dans toute demande de rachat.",
+      "Obligation spéciale d'envoi par lettre recommandée avec demande d'avis de réception."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Réforme de fond : retrait de la motivation obligatoire, de la profession et de la date d'entrée en possession. L'identification du vendeur et de l'appareil, son état et le prix unitaire suffisent à instruire l'achat ; ces retraits ne suppriment pas la vérification du droit de vendre. Retrait de l'exclusivité du recommandé ; aucune baisse fiscale.",
+      "scope_limitations": "Les rubriques a, b, c, le service du lieu d'immatriculation et les données nécessaires à l'évaluation du bien demeurent. Le droit de vendre et les contrôles autonomes ne sont pas supprimés. L'allègement des mentions va au-delà du seul réemploi de données déjà disponibles. Pour le recommandé, des voies électroniques peuvent déjà être ouvertes : aucun gain supplémentaire de dématérialisation n'est revendiqué.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les suppressions ne sont remplacées par aucun registre, dépôt périodique, justificatif ou prélèvement. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "alambics-rachat-dossier-allege",
+          "description": "Retrait de mentions générales non nécessaires à l'évaluation de l'appareil.",
+          "before": "Motivation, profession et date d'entrée en possession exigées en plus de l'identité et des caractéristiques.",
+          "after": "Identité, adresse et caractéristiques utiles conservées ; trois mentions supprimées.",
+          "unit": "legal_duty",
+          "affected_population": "Détenteurs des alambics concernés",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi, dans les conditions transitoires de l'article.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles et obligations autonomes demeurent.",
+          "source_quote": "La demande de rachat doit être motivée et mentionner :",
+          "proposed_quote": "La demande de rachat mentionne :"
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "17861748c2a18bb7dbf50245cdbff0788eb03ebbffeb93eaaedbd93febf0d47f",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "9c6722e5a230881e35acd822e18e025cfca0645b84c129de01da9d9bd6cbf356",
+      "assessment_sha256": "e418c42a044f492fbaf879c1426aff1fe440ee03c59411431ebc553ab681137e",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "c99802e470c1047d0adbcc3fcbfc68b5705e5120dc58f0acefc8fd2a7d5a1fe8"
   }
 ]
