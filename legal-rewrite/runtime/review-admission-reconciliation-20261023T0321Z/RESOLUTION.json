@@ -1,0 +1,35 @@
+{
+  "recorded_at_utc": "2026-10-23T03:20:58.209339+00:00",
+  "state": "effective_limit_restored",
+  "origin": "Separate shared-project continuation at 2026-10-23T02:54:32Z, recorded in runtime/review-resumption-20261023/diagnosis.json; current-thread restoration not yet executed",
+  "human_context": "A later human request in the shared project asked to unblock second passes without slowing Labour Code work. It did not waive the explicit healthy observation and verification requirements.",
+  "evidence_scope": "Accepted second-pass progress exists; no comparative throughput conclusion or verified two-review promotion follows.",
+  "required_evaluation": "Two healthy hours, twelve new accepted batches and four accepted review batches, workload, retries, deferred jobs and all existing validations; routing incident excluded.",
+  "before_sha256": "01a2fb8f74bd7808ddfc61c4a84bc33fa33cd55afb6656e60ed5064da95378ed",
+  "plan_sha256": "003ed0e191134568dbc3b911cd3f7c4df71a4d944031d8b5c7beaf1ff2c56d76",
+  "manual_reservations_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "manual_reservations": [],
+  "observation_sha256": "1acaf500ecd3d116c587227ac29e88d462ac1e88b245d19568ae582afba80dcf",
+  "unchanged_authorized_ceiling": {
+    "workers": 8,
+    "role_limits": {
+      "new": 6,
+      "review": 2
+    }
+  },
+  "intended_effective_limits": {
+    "workers": 7,
+    "role_limits": {
+      "new": 6,
+      "review": 1
+    }
+  },
+  "active_jobs_to_finish": true,
+  "signals_or_coordinator_launch": false,
+  "code_policy_or_reference_catalog_change": false,
+  "completed_at_utc": "2026-10-23T03:21:18.660869+00:00",
+  "after_sha256": "2394cf3a0a90776dd36b330315fc3926a8877e6a33fea80ceb920eefceefef8b",
+  "manual_lock_held_for_atomic_cas": true,
+  "reason": "Minimum post-incident measurement and review sample not met; no accepted results discarded",
+  "pre_intent_directory_fsync_error": "Initial attempt stopped before hot-file mutation; corrected directory descriptor handling; exact before-image checked on resumption"
+}

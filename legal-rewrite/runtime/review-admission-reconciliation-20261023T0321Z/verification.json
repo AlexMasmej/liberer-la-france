@@ -1,0 +1,661 @@
+{
+  "checked_at_utc": "2026-10-23T03:22:36.296444+00:00",
+  "effective_limits": {
+    "workers": 7,
+    "role_limits": {
+      "new": 6,
+      "review": 1
+    }
+  },
+  "authorized_capacity": 8,
+  "status": "running",
+  "failure": null,
+  "pending_first_pass": 1659,
+  "prior_reviews_pending": 5079,
+  "prior_reviewed": 2484,
+  "coordinator_pids": [
+    3122
+  ],
+  "supervision_record": {
+    "state": "monitoring",
+    "reason": "Existing coordinator adopted without interruption",
+    "checked_at_unix": 1792725736,
+    "coordinator_pids": [
+      3122
+    ],
+    "active_agents": [
+      {
+        "pid": 67046,
+        "ppid": 3122,
+        "job": "travail-00434",
+        "kind": "new",
+        "last_event_unix": 1792725626,
+        "execution": {
+          "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00434/errors-2.log",
+          "cli_version": "0.160.1",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "medium",
+          "session_id": "01a166b9-d7fc-7b33-8187-eb0309bd186e",
+          "provider": "openai",
+          "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00434",
+          "header_sha256": "c1fde37a75d430e2d010e70b52c6e0b77e6ab0661c70b3f573b29aae734b441a",
+          "response_started": true,
+          "verified": true,
+          "evidence_kind": "native_cli_startup_header_and_model_response",
+          "status": "verified"
+        }
+      },
+      {
+        "pid": 67635,
+        "ppid": 3122,
+        "job": "travail-00435",
+        "kind": "new",
+        "last_event_unix": 1792725611,
+        "execution": {
+          "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00435/errors-2.log",
+          "cli_version": "0.160.1",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "medium",
+          "session_id": "01a166bc-0f0c-7a21-854c-45f46faf9c0a",
+          "provider": "openai",
+          "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00435",
+          "header_sha256": "8432f5bcf3e975bedbefd4a02e10a77a8ff9e2ff301455db791242ff82f3e057",
+          "response_started": true,
+          "verified": true,
+          "evidence_kind": "native_cli_startup_header_and_model_response",
+          "status": "verified"
+        }
+      },
+      {
+        "pid": 68676,
+        "ppid": 3122,
+        "job": "travail-00436",
+        "kind": "new",
+        "last_event_unix": 1792725643,
+        "execution": {
+          "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00436/errors-1.log",
+          "cli_version": "0.160.1",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "medium",
+          "session_id": "01a166c1-0c88-7600-86a4-463718ae5e9f",
+          "provider": "openai",
+          "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00436",
+          "header_sha256": "3bee0a60b0ce5a9d9bb55138aaae1062b5346af838d87f6cc3ccd708f62f87fc",
+          "response_started": true,
+          "verified": true,
+          "evidence_kind": "native_cli_startup_header_and_model_response",
+          "status": "verified"
+        }
+      },
+      {
+        "pid": 69160,
+        "ppid": 3122,
+        "job": "travail-00437",
+        "kind": "new",
+        "last_event_unix": 1792725723,
+        "execution": {
+          "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00437/errors-1.log",
+          "cli_version": "0.160.1",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "medium",
+          "session_id": "01a166c2-22b7-7ba0-993b-924abaa1ae1b",
+          "provider": "openai",
+          "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00437",
+          "header_sha256": "4b26e32c4a50b557d105a8e91baf3332f9519ee5bb0ff23b3544bd8a2fafa7e3",
+          "response_started": true,
+          "verified": true,
+          "evidence_kind": "native_cli_startup_header_and_model_response",
+          "status": "verified"
+        }
+      }
+    ],
+    "scope": [
+      "travail",
+      "impots",
+      "securite-sociale",
+      "urbanisme",
+      "construction-habitation",
+      "impots-annexe-1",
+      "impots-annexe-2",
+      "impots-annexe-3",
+      "impots-annexe-4"
+    ],
+    "counters": {
+      "source_records": 30317,
+      "drafted_articles": 13658,
+      "retained_unchanged": 15000,
+      "pending": 1659,
+      "prior_drafts_reviewed": 2484,
+      "prior_drafts_awaiting_review": 5079
+    },
+    "progress_signature": [
+      13658,
+      15000,
+      2484
+    ],
+    "consecutive_unexpected_exits": 0,
+    "next_start_after_unix": 1792702510,
+    "fresh_pending_reference_reviews": null,
+    "worker_configuration": {
+      "capacity": 8,
+      "current_workers": 8,
+      "target_workers": 8,
+      "stage": "six_drafting_plus_two_review_astra_medium",
+      "approved_scope": "five complete codes and CGI annexes; existing source, impact, benefit and reference checks remain mandatory",
+      "authorized_by": "User request to accelerate with more parallel agents without sacrificing quality or reference checks",
+      "prepared_at_utc": "2026-10-21T20:54:19.620343+00:00",
+      "proof_directory": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/parallelisme-20261021T205419Z",
+      "promotion": {
+        "minimum_hours_at_four_workers": 2,
+        "minimum_successful_jobs": 12,
+        "maximum_extra_retry_fraction_over_baseline": 0.1,
+        "require_no_new_deferred_or_blocked_jobs": true,
+        "minimum_job_throughput_gain_over_baseline": 0.1,
+        "decision_by": "Existing LaunchAgent supervisor every minute after the full window and validation audit; no hourly wakeup or new confirmation required.",
+        "maximum_retry_job_fraction": 0.31126760563380285,
+        "baseline_successful_jobs_per_hour": 11.833333333333334,
+        "new_confirmation_required": false,
+        "automatic_minute_check": true,
+        "check_interval_seconds": 60
+      },
+      "baseline_three_worker_status": {
+        "status": "running",
+        "updated_at_unix": 1792615817,
+        "source_records": 30317,
+        "drafted_articles": 9996,
+        "retained_unchanged": 3981,
+        "pending": 16340,
+        "exhaustive_rewriting_complete": false,
+        "jurist_reviewed_articles": 0,
+        "codes": [
+          {
+            "slug": "travail",
+            "source_records": 11593,
+            "drafted": 1817,
+            "retained_unchanged": 1030,
+            "pending": 8746
+          },
+          {
+            "slug": "impots",
+            "source_records": 2375,
+            "drafted": 1198,
+            "retained_unchanged": 510,
+            "pending": 667
+          },
+          {
+            "slug": "securite-sociale",
+            "source_records": 7427,
+            "drafted": 1566,
+            "retained_unchanged": 911,
+            "pending": 4950
+          },
+          {
+            "slug": "urbanisme",
+            "source_records": 2459,
+            "drafted": 1573,
+            "retained_unchanged": 754,
+            "pending": 132
+          },
+          {
+            "slug": "construction-habitation",
+            "source_records": 4126,
+            "drafted": 1533,
+            "retained_unchanged": 750,
+            "pending": 1843
+          },
+          {
+            "slug": "impots-annexe-1",
+            "source_records": 71,
+            "drafted": 71,
+            "retained_unchanged": 0,
+            "pending": 0
+          },
+          {
+            "slug": "impots-annexe-2",
+            "source_records": 674,
+            "drafted": 674,
+            "retained_unchanged": 0,
+            "pending": 0
+          },
+          {
+            "slug": "impots-annexe-3",
+            "source_records": 1115,
+            "drafted": 1088,
+            "retained_unchanged": 26,
+            "pending": 1
+          },
+          {
+            "slug": "impots-annexe-4",
+            "source_records": 477,
+            "drafted": 476,
+            "retained_unchanged": 0,
+            "pending": 1
+          }
+        ],
+        "failure": null,
+        "prior_drafts_reviewed": 751,
+        "prior_drafts_awaiting_review": 6812,
+        "publication_pending": false
+      },
+      "baseline_metrics": {
+        "window_hours": 6,
+        "measured_at_utc": "2026-10-21T20:52:35Z",
+        "workers": 3,
+        "new_entries_per_hour": 192,
+        "new_entries": 1152,
+        "new_proposals": 525,
+        "new_retained": 627,
+        "reviews_per_hour": 3.8333333333333335,
+        "successful_jobs_per_hour": 11.833333333333334,
+        "successful_jobs": 71,
+        "jobs_requiring_retry": 15,
+        "retry_job_fraction": 0.2112676056338028,
+        "extra_attempts": 17,
+        "deferred_registry_entries": 44,
+        "new_job_median_minutes": 17.9,
+        "new_job_p90_minutes": 29.4,
+        "review_job_median_minutes": 4.4,
+        "review_job_p90_minutes": 7.6,
+        "timing_method": "last event file mtime for accepted jobs; excludes still-open jobs; code mix and source length affect comparison",
+        "model_execution_attested": false,
+        "model_comparison_note": "Historical operational baseline inherited global settings; not a matched-model benchmark after explicit Astra/medium migration."
+      },
+      "manual_agent_reservations_preserved": true,
+      "stage_started_at_utc": "2026-10-21T22:24:43.892249+00:00",
+      "stage_coordinator_pid": 21959,
+      "warmup_excluded_from_performance_window": true,
+      "verified_active_workers": 4,
+      "regression_tests_passed": 166,
+      "explicit_promotion_authorization": {
+        "approved": true,
+        "recorded_at_utc": "2026-10-21T21:18:17.810904+00:00",
+        "new_confirmation_required": false,
+        "continue_after_promotion": true,
+        "scope": "five complete codes and four CGI annexes",
+        "instruction": "Passer à six dès que le palier est validé, sans redemander, puis continuer jusqu’au bout avec les mêmes vérifications."
+      },
+      "model_transition_history": [
+        {
+          "previous_stage": "four_worker_trial",
+          "previous_stage_started_at_utc": "2026-10-21T21:02:24.650551+00:00",
+          "previous_coordinator_pid": 95424,
+          "latest_evaluation": {
+            "checked_at_utc": "2026-10-21T21:45:01.242531+00:00",
+            "coordinator_pid": 95424,
+            "hours_since_first_measured_job": 0.7292328816652298,
+            "successful_jobs": 10,
+            "successful_jobs_per_hour": 13.713040444863973,
+            "retry_job_fraction": 0.5,
+            "outcomes": {
+              "reviewed": 3,
+              "accepted": 7
+            },
+            "deferred_registry_entries": 44,
+            "decision": "hold_at_four",
+            "reason": "Minimum two-hour observation window not yet reached; early retry fraction exceeds promotion threshold, all observed retries resolved by the existing validators.",
+            "promotion_validated": false,
+            "confirmation_required": false
+          },
+          "archived_in": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/migration-astra-20261021T220319Z"
+        }
+      ],
+      "requested_execution": {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium"
+      },
+      "model_migration_proof_directory": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/migration-astra-20261021T220319Z",
+      "measurement_epoch_reset_reason": "Explicit model/effort change: measure only the Astra/medium coordinator cohort; exclude old jobs, draining and startup.",
+      "execution_verification_state": "All four active sessions verified from native CLI startup fields and model response markers.",
+      "execution_verified_at_utc": "2026-10-21T22:24:43.892249+00:00",
+      "current_stage_initial_status": {
+        "status": "running",
+        "updated_at_unix": 1792621401,
+        "source_records": 30317,
+        "drafted_articles": 10170,
+        "retained_unchanged": 4155,
+        "pending": 15992,
+        "exhaustive_rewriting_complete": false,
+        "jurist_reviewed_articles": 0,
+        "codes": [
+          {
+            "slug": "travail",
+            "source_records": 11593,
+            "drafted": 1834,
+            "retained_unchanged": 1085,
+            "pending": 8674
+          },
+          {
+            "slug": "impots",
+            "source_records": 2375,
+            "drafted": 1241,
+            "retained_unchanged": 527,
+            "pending": 607
+          },
+          {
+            "slug": "securite-sociale",
+            "source_records": 7427,
+            "drafted": 1600,
+            "retained_unchanged": 949,
+            "pending": 4878
+          },
+          {
+            "slug": "urbanisme",
+            "source_records": 2459,
+            "drafted": 1617,
+            "retained_unchanged": 782,
+            "pending": 60
+          },
+          {
+            "slug": "construction-habitation",
+            "source_records": 4126,
+            "drafted": 1569,
+            "retained_unchanged": 786,
+            "pending": 1771
+          },
+          {
+            "slug": "impots-annexe-1",
+            "source_records": 71,
+            "drafted": 71,
+            "retained_unchanged": 0,
+            "pending": 0
+          },
+          {
+            "slug": "impots-annexe-2",
+            "source_records": 674,
+            "drafted": 674,
+            "retained_unchanged": 0,
+            "pending": 0
+          },
+          {
+            "slug": "impots-annexe-3",
+            "source_records": 1115,
+            "drafted": 1088,
+            "retained_unchanged": 26,
+            "pending": 1
+          },
+          {
+            "slug": "impots-annexe-4",
+            "source_records": 477,
+            "drafted": 476,
+            "retained_unchanged": 0,
+            "pending": 1
+          }
+        ],
+        "failure": null,
+        "prior_drafts_reviewed": 760,
+        "prior_drafts_awaiting_review": 6803,
+        "publication_pending": false
+      },
+      "current_stage_initial_deferred_entries": 44,
+      "latest_evaluation": {
+        "checked_at_utc": "2026-10-22T00:25:40+00:00",
+        "coordinator_pid": 21959,
+        "hours_since_verified_four_worker_start": 2.0155854863590665,
+        "successful_jobs": 79,
+        "successful_jobs_per_hour": 39.19456680684123,
+        "retry_job_fraction": 0.13924050632911392,
+        "new_deferred_entries": 0,
+        "successful_by_code": {
+          "construction-habitation": 12,
+          "impots": 13,
+          "securite-sociale": 13,
+          "travail": 13,
+          "urbanisme": 28
+        },
+        "active_workers_execution_verified": 4,
+        "decision": "promoted_to_six",
+        "reasons": [],
+        "promotion_validated": true,
+        "confirmation_required": false,
+        "measurement_note": "Post-start Astra/medium jobs only; historical baseline is not a matched-model benchmark.",
+        "validation_audit": {
+          "jobs": 79,
+          "articles": 1220,
+          "source_benefit_impact_reference_checks_passed": true,
+          "source_characters_by_kind": {
+            "new": {
+              "minimum": 6282,
+              "median": 23040,
+              "maximum": 44259
+            },
+            "review": {
+              "minimum": 87,
+              "median": 749.5,
+              "maximum": 2891
+            }
+          },
+          "reference_scope": "Existing dependency catalogue; this is not the final exhaustive reference audit."
+        },
+        "workers": 6
+      },
+      "automatic_promotion_authorization": {
+        "approved": true,
+        "recorded_at_utc": "2026-10-22T00:18:12.542267+00:00",
+        "instruction": "Passer à six dès que le palier est validé, sans attendre le prochain contrôle horaire ni redemander; poursuivre les cinq codes avec les mêmes vérifications."
+      },
+      "promotion_event_id": "2026-10-22T00:25:40+00:00-21959",
+      "promoted_at_utc": "2026-10-22T00:25:40+00:00",
+      "effective_six_verified_at_utc": "2026-10-22T00:28:11.924674+00:00",
+      "role_transition_history": [
+        {
+          "previous_capacity": 6,
+          "previous_workers": 6,
+          "coordinator_pid": 21959,
+          "proof_folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/second-pass-parallelism-20261022T061507Z"
+        }
+      ],
+      "role_limits": {
+        "new": 6,
+        "review": 2
+      },
+      "additional_review_authorization": {
+        "approved": true,
+        "new_confirmation_required": false,
+        "instruction": "Accélérer aussi les secondes passes en parallèle, sans réduire les six places de rédaction ni les vérifications."
+      },
+      "review_lane_proof_directory": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/second-pass-parallelism-20261022T061507Z",
+      "registration_maintenance_history": [
+        {
+          "coordinator_pid": 75807,
+          "proof_folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/registration-convoy-20261022T1607Z",
+          "full_validation_preserved": true,
+          "effective_reviews_temporarily": 1
+        }
+      ]
+    },
+    "exhaustive_rewriting_complete": false,
+    "semantic_review_by_jurist": false,
+    "review_lane_observation": {
+      "coordinator_pid": 3122,
+      "observed_at_unix": 1792725736,
+      "coordinator_identity_matches": true,
+      "verified_responding_by_kind": {
+        "new": 4,
+        "review": 0
+      },
+      "configured_capacity": 8,
+      "configuration_matches_authorized_roles": true,
+      "all_active_workers_attested": false,
+      "active_worker_count": 4,
+      "unattested_or_unexpected_worker_count": 0,
+      "simultaneous_six_new_plus_two_review_verified": false,
+      "measurement_complete": false,
+      "scope": "Operational evidence; no legal validation or speed gain is inferred from capacity.",
+      "cohort_completed_jobs": 48,
+      "cohort_articles": {
+        "new": 480,
+        "review": 25
+      },
+      "cohort_deferred_jobs": 25,
+      "measurement_epoch_unix": 1792706194.761632,
+      "measurement_hours": 5.428121768898434,
+      "measured_successful_by_kind": {
+        "new": 15,
+        "review": 2
+      },
+      "measured_articles_per_hour": {
+        "new": 66.3212830011839,
+        "review": 4.421418866745594
+      },
+      "performance_comparison_limit": "Different codes and article lengths affect throughput; no matched-workload speed or non-regression conclusion is automatic."
+    }
+  },
+  "admission_record": {
+    "action": "running",
+    "pending_by_kind": {
+      "new": 41,
+      "review": 497
+    },
+    "reserved_or_running_by_kind": {
+      "new": 6,
+      "review": 2
+    },
+    "admitted_by_kind": {
+      "new": 48,
+      "review": 8
+    },
+    "deferred_by_kind": {
+      "new": 0,
+      "review": 0
+    },
+    "borrowing_enabled": false,
+    "execution_evidence_scope": "Admission only; native session headers and validated answers are required for execution/acceptance claims.",
+    "coordinator_pid": 3122,
+    "updated_at_unix": 1792725353,
+    "role_pools": {
+      "new": 6,
+      "review": 2
+    }
+  },
+  "observation_record": {
+    "coordinator_pid": 3122,
+    "observed_at_unix": 1792725736,
+    "coordinator_identity_matches": true,
+    "verified_responding_by_kind": {
+      "new": 4,
+      "review": 0
+    },
+    "configured_capacity": 8,
+    "configuration_matches_authorized_roles": true,
+    "all_active_workers_attested": false,
+    "active_worker_count": 4,
+    "unattested_or_unexpected_worker_count": 0,
+    "simultaneous_six_new_plus_two_review_verified": false,
+    "measurement_complete": false,
+    "scope": "Operational evidence; no legal validation or speed gain is inferred from capacity.",
+    "cohort_completed_jobs": 48,
+    "cohort_articles": {
+      "new": 480,
+      "review": 25
+    },
+    "cohort_deferred_jobs": 25,
+    "measurement_epoch_unix": 1792706194.761632,
+    "measurement_hours": 5.428121768898434,
+    "measured_successful_by_kind": {
+      "new": 15,
+      "review": 2
+    },
+    "measured_articles_per_hour": {
+      "new": 66.3212830011839,
+      "review": 4.421418866745594
+    },
+    "performance_comparison_limit": "Different codes and article lengths affect throughput; no matched-workload speed or non-regression conclusion is automatic."
+  },
+  "free_gib": 10.589641571044922,
+  "automation_active_verified": true,
+  "automation_prompt_sha256": "ddb0b9ecd563963bfee47e17e4a99d6733ab64ab6d427b8f8693c6642b61e5ee",
+  "current_audit_pointer_unchanged": {
+    "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z",
+    "audit_id": "5a397d8c1d94e2081c5d88b1b7dd8cf2941e383b9951c04d75baa8691e47b9ba",
+    "snapshot_sha256": "41ec9cb42513b2e945e37c9dba385f52e74aa242468ec712d4c17273af804195",
+    "recorded_at_utc": "2026-10-22T22:28:19.712267+00:00",
+    "structural_scan_complete": true,
+    "semantic_review_complete": false,
+    "semantic_review_by_jurist": false,
+    "read_only_source": true,
+    "source_entry_count": 30317,
+    "reviewed_contract_referrers": 8,
+    "actual_errors_established_in_those_eight": 0,
+    "findings_are_not_confirmed_legal_errors": true,
+    "next_refresh_after_additional_treatments": 1000,
+    "refresh_progress_observed_after_initial_scan": {
+      "drafted_articles": 13565,
+      "retained_unchanged": 14757,
+      "prior_drafts_reviewed": 2448
+    },
+    "refresh_rule": "New snapshot after at least 1000 additional first-pass/review treatments relative to observed counters or before final closure; publish only after complete validation. Guard limited semantic classifications against exact source/proposal/policy changes.",
+    "additional_semantic_reviews": [
+      {
+        "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/cvae-semantic-recheck-20261022T103000Z",
+        "report": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/cvae-semantic-recheck-20261022T103000Z/REPORT.md",
+        "findings_reviewed": 7,
+        "full_articles_read": 13,
+        "effective_inconsistencies_established": 0,
+        "classification_applies_to_new_snapshot": true,
+        "automatic_change": false,
+        "jurist_review": false,
+        "review_id": "34261b1a4432a463fcf9202fdc19efd68c9fad6f6a91d78870f86652ae96c7ca"
+      }
+    ],
+    "refresh_progress_basis": {
+      "method": "Conservative observation before snapshot capture; legacy counter field retained for continuity.",
+      "observed_at_utc": "2026-10-22T22:25:51.485189+00:00",
+      "status_updated_at_unix": 1792707398,
+      "evidence": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z/pre-capture-progress.json"
+    },
+    "frozen_snapshot_counts": {
+      "proposals_in_canonical_inventory": 13565,
+      "retained_unchanged_in_canonical_inventory": 14757,
+      "proposals_identical_to_source_body": 0
+    },
+    "as_of": "2026-10-18",
+    "validation": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z/validation.json",
+    "refresh_report": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z/REFRESH.md",
+    "semantic_review_inheritance": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z/semantic-review-inheritance.json",
+    "prior_audit": {
+      "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T182623Z",
+      "audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+      "snapshot_sha256": "62aef999d3a37f33852b9b0b08c8f7c8c5fba603cb1485fdbf07964ef5923989"
+    },
+    "prior_semantic_reviews_are_limited_and_guarded": true,
+    "semantic_reviews_requiring_new_review": [],
+    "refresh_validator_template": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/semantic-review-override-support-20261022/validate_refresh.py.template",
+    "refresh_validator_template_sha256": "e92534a4bfce8eb0d9f62cca07c84a1a6f7d12c815b638ef27f405fb08cd7b01",
+    "semantic_review_overrides": {
+      "CVAE": {
+        "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/cvae-semantic-recheck-20261022T103000Z",
+        "manifest_sha256": "9772b0e19d495979d553edf9d0c776ba5d321172b0d653816025a6133a4cfad5",
+        "review_id": "34261b1a4432a463fcf9202fdc19efd68c9fad6f6a91d78870f86652ae96c7ca",
+        "guarded_audit_id": "ef899f0423753d7723a2720b71b45cbb83016f42874f05eedec7422303f1a837",
+        "scope": "Limited fresh review; next snapshot must recheck every article and policy guard.",
+        "last_checked_audit_id": "5a397d8c1d94e2081c5d88b1b7dd8cf2941e383b9951c04d75baa8691e47b9ba",
+        "classification_applies_to_last_checked_snapshot": true
+      },
+      "L1242-2": {
+        "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/l1242-semantic-recheck-20261022T183007Z",
+        "manifest_sha256": "cd6735d5e3785bbb7f842a185ce6d2eac00c8640fa00059ce6d5abad30ab1090",
+        "review_id": "769f678268943499eb4c8bdda4041b6beb5fbf6035155917cc07e682e9b13125",
+        "guarded_audit_id": "d72d3da2dd5ee49b65ffde3b88f0874dc5c9d2395fe9c33962d1dc55f8b52b12",
+        "scope": "Fresh limited review of8references and15whole articles; each future snapshot must recheck all article and policy guards.",
+        "last_checked_audit_id": "5a397d8c1d94e2081c5d88b1b7dd8cf2941e383b9951c04d75baa8691e47b9ba",
+        "classification_applies_to_last_checked_snapshot": true
+      }
+    },
+    "additional_semantic_review_history": [
+      {
+        "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022/fiscal-CVAE-semantic-review-20261022",
+        "report": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022/fiscal-CVAE-semantic-review-20261022/REPORT.md",
+        "findings_reviewed": 7,
+        "full_articles_read": 13,
+        "effective_inconsistencies_established": 0,
+        "classification_applies_to_new_snapshot": false,
+        "automatic_change": false,
+        "jurist_review": false
+      }
+    ],
+    "semantic_review_origin_anchors": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z/semantic-origin-anchor-check.json"
+  },
+  "new_snapshot_started": false,
+  "signals_or_launches": false,
+  "pipeline_code_policy_catalog_changed": false
+}
