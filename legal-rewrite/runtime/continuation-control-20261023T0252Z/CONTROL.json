@@ -1,11 +1,11 @@
 {
-  "checked_at_utc": "2026-10-23T03:15:37.229694+00:00",
+  "checked_at_utc": "2026-10-23T03:22:36.296444+00:00",
   "human_directive": "Continue jusqu’à100% sur tous les textes, différés et secondes passes inclus, mêmes vérifications de renvois.",
   "status": "running",
   "failure": null,
   "source_records": 30317,
-  "pending_first_pass": 1683,
-  "prior_reviews_pending": 5091,
+  "pending_first_pass": 1659,
+  "prior_reviews_pending": 5079,
   "status_updated_at_unix": 1792725288,
   "coordinators": [
     {
@@ -16,13 +16,13 @@
   "single_coordinator": true,
   "launchagent_registered": true,
   "effective_limits": {
-    "workers": 8,
+    "workers": 7,
     "role_limits": {
       "new": 6,
-      "review": 2
+      "review": 1
     }
   },
-  "free_gib": 8.870399475097656,
+  "free_gib": 10.589641571044922,
   "additional_treatments_since_current_audit": 336,
   "new_audit_snapshot_started": false,
   "transfer_prototype_activated": false,
@@ -32,5 +32,36 @@
   "active_pipeline_code_or_policy_changed": false,
   "automation_active": true,
   "exhaustive_completion_claimed": false,
-  "work_remains_active": true
+  "work_remains_active": true,
+  "admission_limit_reconciled_at_utc": "2026-10-23T03:21:18.660869+00:00",
+  "admission_reconciliation_evidence": "runtime/review-admission-reconciliation-20261023T0321Z/RESOLUTION.json",
+  "minimum_two_review_measurement_complete": false,
+  "admission_after_reconciliation": {
+    "action": "running",
+    "pending_by_kind": {
+      "new": 41,
+      "review": 497
+    },
+    "reserved_or_running_by_kind": {
+      "new": 6,
+      "review": 2
+    },
+    "admitted_by_kind": {
+      "new": 48,
+      "review": 8
+    },
+    "deferred_by_kind": {
+      "new": 0,
+      "review": 0
+    },
+    "borrowing_enabled": false,
+    "execution_evidence_scope": "Admission only; native session headers and validated answers are required for execution/acceptance claims.",
+    "coordinator_pid": 3122,
+    "updated_at_unix": 1792725353,
+    "role_pools": {
+      "new": 6,
+      "review": 2
+    }
+  },
+  "all_texts_complete": false
 }
