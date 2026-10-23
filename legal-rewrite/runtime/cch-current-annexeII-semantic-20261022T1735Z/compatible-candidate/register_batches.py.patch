@@ -1,0 +1,40 @@
+--- active-observed/register_batches.py
++++ offline-candidate/register_batches.py
+@@ -3,6 +3,7 @@
+ Integrity checks do not constitute legal review. Completion is never inferred
+ from source coverage or from the mere existence of a batch file.
+ """
++from template_fields import validate_placeholders
+ from pathlib import Path
+ import argparse,hashlib,html,json,re,sqlite3,sys,fcntl
+ from contextlib import contextmanager
+@@ -104,7 +105,7 @@
+                     raise ValueError('A retained normative source needs an explicit necessity assessment')
+             elif not proposed:raise ValueError('Empty draft '+str(key))
+             elif proposed==original:raise ValueError('Unchanged source cannot count as rewritten: '+str(key))
+-            if re.search(r'\[\s*(?:\.\.\.|…|à compléter|texte inchangé)\s*\]|<placeholder>|TODO',proposed,re.I):raise ValueError('Placeholder in article '+str(key))
++            validate_placeholders({'code_id':key[0], 'source_id':key[1], 'source_sha256':sha, 'source_xml':body, 'source_notes_xml':impact_source['source_notes_xml']}, row['proposed_xml'] or '')
+             if not retained and not reduced and source_tables and tables<source_tables:raise ValueError('Source table missing from draft: '+str(key))
+             source_parser=Markup(False);source_parser.feed(body)
+             draft_parser=Markup();draft_parser.feed(row['proposed_xml'] or '');draft_parser.result()
+@@ -148,9 +149,17 @@
+         try:
+             db.execute('BEGIN IMMEDIATE')
+             for key,(row,body,start,end) in records.items():
+-                db.execute('INSERT INTO drafts VALUES(?,?,?,?,?,?,?) ON CONFLICT(code_id,source_id) DO UPDATE SET status=excluded.status,proposed_xml=excluded.proposed_xml,reason=excluded.reason,review_notes=excluded.review_notes',(*key,row['source_sha256'],row.get('status','rewrite_draft'),row['proposed_xml'],row['reason'],row['review_notes']))
+-                notes=source_notes(db,*key)
+-                db.execute('INSERT INTO draft_sources VALUES(?,?,?,?,?) ON CONFLICT(code_id,source_id) DO NOTHING',(*key,source_evidence(body,notes),start,end))
++                values=(*key,row['source_sha256'],row.get('status','rewrite_draft'),row['proposed_xml'],row['reason'],row['review_notes'])
++                current=db.execute('SELECT code_id,source_id,source_sha256,status,proposed_xml,reason,review_notes FROM drafts WHERE code_id=? AND source_id=?',key).fetchone()
++                # Full validation and batch-hash recheck above remain mandatory.
++                # Compare every stored field, preserving None versus empty text.
++                if current!=values:
++                    db.execute('INSERT INTO drafts VALUES(?,?,?,?,?,?,?) ON CONFLICT(code_id,source_id) DO UPDATE SET status=excluded.status,proposed_xml=excluded.proposed_xml,reason=excluded.reason,review_notes=excluded.review_notes',values)
++                # Existing source evidence is deliberately immutable (the previous
++                # INSERT used DO NOTHING). Parse notes only when evidence is absent.
++                if db.execute('SELECT 1 FROM draft_sources WHERE code_id=? AND source_id=?',key).fetchone() is None:
++                    notes=source_notes(db,*key)
++                    db.execute('INSERT INTO draft_sources VALUES(?,?,?,?,?) ON CONFLICT(code_id,source_id) DO NOTHING',(*key,source_evidence(body,notes),start,end))
+             db.commit()
+         except Exception:
+             db.rollback();raise

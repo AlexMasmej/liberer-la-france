@@ -1,0 +1,16 @@
+{
+  "at_utc": "2026-10-22T18:37:40.826140+00:00",
+  "minimum_free_bytes_all_captures": 6442450944,
+  "minimum_free_bytes_while_coordinator_writers_active": 9663676416,
+  "scope": "Prospective storage admission for future audit captures only; no writer throttling, model or active pipeline code change.",
+  "reason": "The6.0525GiB preflight was respected but concurrent live writes plus the new audit exhausted available storage transiently. The6GiB floor alone is not sufficient assurance while writers are active. Require9GiB conservatively for the next such capture, and re-estimate upward if current footprint or WAL/write exposure grows.",
+  "current_audit_footprint_bytes": 3082324422,
+  "current_snapshot_bytes": 1892552704,
+  "available_free_bytes": 4907724800,
+  "incident_evidence": "legal-rewrite/runtime/storage-incident-20261022T183318Z-90405/REPORT.md",
+  "archive_only_completed_noncurrent_audits": true,
+  "current_audit_must_remain_uncompressed": true,
+  "no_evidence_source_or_version_deletion": true,
+  "do_not_touch_data_outside_project": true,
+  "if_insufficient": "Defer new large capture; keep canonical writing and per-batch validations running while writes remain possible. Do not repeatedly notify unchanged storage condition."
+}

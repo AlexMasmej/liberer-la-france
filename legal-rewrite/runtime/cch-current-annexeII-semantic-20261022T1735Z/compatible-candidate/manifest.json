@@ -1,0 +1,139 @@
+{
+  "status": "offline_candidate_not_activation_ready",
+  "optimizer_base_sha256": "75287e3267fb8d182a7262cdb747ae90070e20d6bf92b698768684e03c39051f",
+  "five_substitutions": [
+    [
+      "La dénomination de la société est :, société coopérative de coordination à capital variable.",
+      "La dénomination choisie par les associés et inscrite dans les statuts comprend les mots « société de coordination » et indique sa forme coopérative à capital variable."
+    ],
+    [
+      "Le siège social est fixé à :.",
+      "Le siège social est fixé à l'adresse inscrite dans les statuts."
+    ],
+    [
+      "Le capital statutaire est fixé à la somme de […] euros.",
+      "Le montant du capital statutaire, exprimé en euros, est fixé dans les statuts."
+    ],
+    [
+      "La valeur nominale des parts sociales est de […] euros.",
+      "La valeur nominale des parts sociales, exprimée en euros, est fixée dans les statuts."
+    ],
+    [
+      "à l'issue de la période de préavis de mois",
+      "à l'issue de la période de préavis, dont la durée en mois est fixée dans les statuts,"
+    ]
+  ],
+  "protected_sections": {
+    "1. Forme": {
+      "end": "2. Dénomination",
+      "sha256": "a51cdc872fc4724707bfdd4d6adf5236ed72c1f1612d340bf0edf142ceab40fc"
+    },
+    "2. Dénomination": {
+      "end": "3. Compétence territoriale-Siège social",
+      "sha256": "00ecb9969c34206c7b0afd67b56024ffee22b5b514b5da87f2b0ae7f61eb2787"
+    },
+    "3. Compétence territoriale-Siège social": {
+      "end": "4. Objet social",
+      "sha256": "9612acd7f90e7781f201de1f63968004f7ecdc7b72474a1ddfcdc103cb7431c9"
+    },
+    "5. Capital social": {
+      "end": "6. Variabilité du capital",
+      "sha256": "ac5b230927ec212655fd8dd5c8d771347296fc4c885d1ab01df54e5bb111c0e7"
+    },
+    "6. Variabilité du capital": {
+      "end": "6.1. Retrait d'associés",
+      "sha256": "810d90e42531237e00fe3942456daceb3a4cac58ffb4533e86c80c421c315299"
+    },
+    "6.1. Retrait d'associés": {
+      "end": "6.2. Exclusion d'associés",
+      "sha256": "61b3e16dc9d461cf4db317fa01c8902336471577a0183872a0638c09cb15fead"
+    },
+    "6.2. Exclusion d'associés": {
+      "end": "6.3. Conséquences du retrait ou de l'exclusion",
+      "sha256": "ad199ef8f7d4c40193ea50a16b6f2a04521c0d39226db2a70dbc1b0e3a476792"
+    },
+    "6.3. Conséquences du retrait ou de l'exclusion": {
+      "end": "7. Cessions de parts sociales",
+      "sha256": "7808a7e4781687300e26c53d4e668bc9e07a434bb28852140a929bcede71e983"
+    },
+    "7. Cessions de parts sociales": {
+      "end": "8A. Conseil d'administration (3)",
+      "sha256": "a1ce2d362178a001bc48ef08570791e6551bf21eb8abc2ee50ee39e62bebf600"
+    },
+    "8A. Conseil d'administration (3)": {
+      "end": "8B. Conseil de surveillance et directoire (3)",
+      "sha256": "dd396a8b2e0cd9a5e820eaeaf441be102179206e921989aac73e1d9a60598013"
+    },
+    "8B. Conseil de surveillance et directoire (3)": {
+      "end": "9. Assemblées générales",
+      "sha256": "ced150175d121c8f0b76007b599914f81922b61c7fcf33efd67bcb2131a213df"
+    },
+    "9. Assemblées générales": {
+      "end": "10. Année sociale",
+      "sha256": "b0faea2b3c2985ac59cd5b798161c2948579844fcd303a1f25c22b2fe5194020"
+    },
+    "10. Année sociale": {
+      "end": "11. Résultat de l'exercice (4)",
+      "sha256": "1ba9f4a1eb621978ecb52f01ffa557af97d0b8a9e170fcc034098cba32b2ef1a"
+    },
+    "11. Résultat de l'exercice (4)": {
+      "end": "12. Réserves",
+      "sha256": "6317a6a41fbc51b0b54a6b1a3c3f35def9e36956c8e48310d796b786e09fa4af"
+    },
+    "12. Réserves": {
+      "end": "13. Attribution de l'actif",
+      "sha256": "5a7621e81383e4254873464fca03287133e52e4f306ad4c12a00485fd8533fa8"
+    },
+    "13. Attribution de l'actif": {
+      "end": "14. Transmission des statuts",
+      "sha256": "c8249412291dd65fccec5bf580a635a4af49b00549230839910588f754a0f243"
+    },
+    "15. Révision coopérative": {
+      "end": "Dispositions transitoires.",
+      "sha256": "2d67d11e685f4be625aae4d18d7bb54f436d8a1e899c26e6f72b791d2b5434a4"
+    }
+  },
+  "source_notes_hashes": "Unchanged original CERTIFIED_FIELDS constants",
+  "no_active_changes": true,
+  "optimizer_functions_unchanged": {
+    "text": true,
+    "references": true,
+    "full_repeal": true,
+    "authorized_reduction": true,
+    "writer_lock": true,
+    "register": true,
+    "_register": true
+  },
+  "gate_only_function_changed": [
+    "validate_batches"
+  ],
+  "activation_proposed_files": [
+    {
+      "path": "template_fields.py",
+      "observed_active_sha256": null,
+      "candidate_sha256": "ceb3446f292b43753faafe24ca80f2c7214975fdcfed7214940a87f313b4b826"
+    },
+    {
+      "path": "run_exhaustive.py",
+      "observed_active_sha256": "1c66699d0b54334c099460546c8bd1cfced0a831336a544caf17b7b928538f7e",
+      "candidate_sha256": "e352b3c8e97b9747253cf570631d6ae56ad5aa83b726448e2e58236775cc4185"
+    },
+    {
+      "path": "register_batches.py",
+      "observed_active_sha256": "b9d78f2eb677f7b89e1e572471b76694743cecba21bec451cb0b79351beb7999",
+      "candidate_sha256": "c1aee1c3dc3e92be8f0ef47e631f965bf6f8809aedc83d8930868769b92435c7"
+    }
+  ],
+  "tests": {
+    "original_suite": 149,
+    "additional_cases": 102,
+    "unexpected": 0
+  },
+  "limitations": [
+    "Current reference L1221-2 guard stale",
+    "L423-15/16 coordination unresolved",
+    "50percent capital mismatch unresolved",
+    "Registration benefit requirement remains preexisting weaker than coordinator",
+    "Future runner/candidate code rebase against post-handoff required"
+  ]
+}
