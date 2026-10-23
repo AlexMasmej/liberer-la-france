@@ -1,0 +1,1777 @@
+{
+  "checked_at_utc": "2026-10-23T11:24:44.415874+00:00",
+  "coordinator_pid": 39614,
+  "verified_accepted_jobs": 6,
+  "verified_accepted_new_articles": 144,
+  "verified_reviewed_jobs": 1,
+  "verified_reviewed_articles": 12,
+  "verification_scope": "Whole source, NOTA, versions, five proposal fields, native execution and current DB/batch/registry/intention; not final legal review",
+  "no_replay_no_registration_no_canonical_mutation": true,
+  "verified_jobs": [
+    {
+      "job": "travail-00478",
+      "articles": 24,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00478/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a1686c-28b9-7510-a861-ff9173b2e8ed",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00478",
+        "header_sha256": "9f7b770505e0d44ccef4db69c21f0c341d18c0ccc2dbce8ec2d2c69d3afc014a",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "metric": {
+        "coordinator_pid": 39614,
+        "slug": "travail",
+        "index": 478,
+        "kind": "new",
+        "started_at_unix": 1792753211.771092,
+        "outcome": "accepted",
+        "attempts": 1,
+        "retries": [],
+        "job": "travail-00478",
+        "articles": 24,
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "execution_session_id": "01a1686c-28b9-7510-a861-ff9173b2e8ed",
+        "execution_verified": true,
+        "finished_at_unix": 1792753932.9946969,
+        "duration_seconds": 721.2275848329955
+      },
+      "statuses": {
+        "retained_unchanged": 20,
+        "rewrite_draft": 4
+      },
+      "reference_certificates": {
+        "not_required_by_catalogue": 24
+      },
+      "rows": [
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752212",
+          "source_sha256": "c3baef039c1bf47fe766a54d01e97f2dd2473c1d467371405c55bcc2b09b1a1d",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e4fdaf2801be33b10c6624b0037e16311612b82af8ecce38002c22d37030985f",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752221",
+          "source_sha256": "8217df0bc5aad713b07e0fee7f17233e875ba59c1f6c67aadae151502f48e6c6",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "446265d2de53007e2fdcb8c05c7df34ee009dfc671611761caa49c684f5db482",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752225",
+          "source_sha256": "c8ab91ae3451740e1921d45fb4fd70462d6441d620fc2bce62108f4c48ea1421",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "206af231b0b0fea4c1b2e1d1e6c0753ff798c5a5bab3b35cf04dba5c852b9c80",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752232",
+          "source_sha256": "417e787c20da7914b2704437b0631b15806426b07aae19c02da0c39cdd78c5f2",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "35846681deecfe0c7a75d640c699cfd98daf5c9e9deced42f76bba4839af7d60",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752242",
+          "source_sha256": "9e36ce3c1ba2fd09c7a99ca3c099f5046403d441cc8a8ddfd3d1602af6d7b61c",
+          "proposed_sha256": "c9a8ae044195f328ae67afec270e74166e855a76b921db8f1bb8a61c7cab299d",
+          "reason_sha256": "6e0e84e6f69c19084ea6f989645524bca370853167e8f8807ad749653516d188",
+          "notes_sha256": "8f2247c7802b5645e5ca749cbbb3bf494d6eb507e7f433e7653043af7afbc50a",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752246",
+          "source_sha256": "f015ad7b9603bb5c397c51e25df04eec1492736fdd53b2110fce17d3e8a0602a",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "ea876477529b301c7b0d051fc46e5929e737a446ca4ab670d8d6e9a6a97a88a0",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752257",
+          "source_sha256": "9cb6097e7fff6a15c20ae52b3953cf7540dc5a6ac8e380204ce913992e2f28d4",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e991ed21333f15993e4b3ab40c23a5b56e439daeec58c2b228ada7f0ff273c05",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752271",
+          "source_sha256": "77c1d9322f08db5df010e07676441ae56e3490e38b57bcbf16aae65c807c475a",
+          "proposed_sha256": "91d59af6e9f558571410fd5966c00bc182bc0006fdcb900903baf6dea4a645b5",
+          "reason_sha256": "797a303cdc8203fa57d31fa2bfbe375d456798f9d95026b7cc5692dc19188986",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050746058",
+          "source_sha256": "ee6bf5991df94a0c71633de9b6ff7da376cbce4627f7f3b90b403efa71133c0d",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "2a7f1e700bad813398fff99f3dbd5c7f59d954c12e02ad4c0014a1182fdcec6b",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752296",
+          "source_sha256": "305343143928d499de24e081ab2701933103f6d9bfb4b9622a8275cfc78ca498",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "5e7dd0068656062875857ea048393d468387b22ae11bc493277edeab9912b658",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752301",
+          "source_sha256": "b74dd417f92ad9431955652b421be68007b59d6e5b6312b394fade0218264d8a",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "70dace52cd6aa32983bb4e7a12133b9c98f31f525c669ce31857576f4f87e91b",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752305",
+          "source_sha256": "36a60486d930215c3f644b00b5cdfe66ab868700b46476ed007ce26beaeead48",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "27254960e74e52953d9045aa7059569afc681f313df387ebcaa9a91a7b6f8fd2",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752309",
+          "source_sha256": "6b6f94e9a660bf84f430ad6db0501ebfbf9da992641c41226a44672e5017b6c5",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "0b6f58da229c833fb6733f90b26aae4542505fb7b823357c861f6b9eb4219a9d",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752332",
+          "source_sha256": "2e45bd26a37f0d5fdcd6fa28fa082e414e701bfd8374467371e66cd4d499909b",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e25a231540ddc1d2e42b284408923adac7015ed6def264150d1973f3a0c46f1c",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752355",
+          "source_sha256": "7da9eece275967ee44ba093d20a28fb642b70afc41385c26f01f34b9951299de",
+          "proposed_sha256": "9991de220f5a48a7966e1f4e50ec7d4ba6bbfc5dd70dd2c03fd4312d896b8679",
+          "reason_sha256": "8ce3d7f706e2f867ce9aecdc1925f265ff09363bfdbd2455dfd9c4a2903b62ee",
+          "notes_sha256": "cad69cba0dabce9ab975ba45158fdf8132ef94083e742c541fd07de029d54547",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752360",
+          "source_sha256": "92417cf545680f574c4b99c3bdc6b74c9b0c881cb1a4e8ca19c83312e9c55ec3",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e46871df9e781e7bc7336bfa3f62f99dd77331a7b678512990943f42f1f64e74",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752364",
+          "source_sha256": "085eb431be976d4e87b99f40b4649bc86c9b72ab3f518f33a4117378c28b0869",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "a6d9fe4a717002f6714970591fcd757a8a70bfd2346280f2727c6e33a00ed095",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752369",
+          "source_sha256": "8cf6f56a14279c241276166ff0827e8d90f9bb5ede84aebac2d45146c6b87795",
+          "proposed_sha256": "38e75e5c08adb2dbef7c7438a1580a243cb9ea3e04d352b2d1a4c52ada66bfd7",
+          "reason_sha256": "d82d12015a41aaa390dca8845665e5e8e6dd9c8e87b67a1d3aa6aa757d790bb4",
+          "notes_sha256": "7be232bc1c6a18035a5f5347b8daf795b315ad909c247acae1964964e8aba424",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752373",
+          "source_sha256": "9536423a97b1b2d18207d8b89e36af30bc637cdecac2166648335c6ea89f9054",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "01375e05c2ff929cd191c65e7423bee149ece5927c4dd0fa529129f75e1a6572",
+          "notes_sha256": "9c3660723599c35d65fe12f071355b4058304e339aa8beb5122c8b765a8a3306",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816450",
+          "source_sha256": "225393807a4354dc05ac22b66f326df745981af01356c6a04bb0efa41efa0cc6",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "60b2304d10b372e1a46c4680d6cd6b7585327ae4a25bb34e63eb6862babd2a1e",
+          "notes_sha256": "c809e39097bf39851d0429e005b0ac1ee07a0d6250989498336118ff47bce94b",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816447",
+          "source_sha256": "b1c1f7e01cbd98909b25a3bc71c26777e47ce0bfbf3b519cd766af0305002d4f",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "d806817873c5eb9ca86a29b0216484d15e6037a9f21a8e4009d3ff7279db2872",
+          "notes_sha256": "c809e39097bf39851d0429e005b0ac1ee07a0d6250989498336118ff47bce94b",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816443",
+          "source_sha256": "48166b2d9656881f3aba595b3048d9337afda81cd0fe1bf44c3cb7e923b58afa",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "4abd24390830dea1ea8658ba045a03f24d206cd131c964ea54954d72315972ff",
+          "notes_sha256": "c809e39097bf39851d0429e005b0ac1ee07a0d6250989498336118ff47bce94b",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816440",
+          "source_sha256": "101c583f882feb79b572219af1c97717fcaf2b73c8cf44da29f0101ead7656fc",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "4308fca90dcd0d9490aea85145e3ba649ad48f6ea36c75723a9f22e86b9e0f8d",
+          "notes_sha256": "c809e39097bf39851d0429e005b0ac1ee07a0d6250989498336118ff47bce94b",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816481",
+          "source_sha256": "c4850d0004e7cb3a231f64e14d44149eb1491dd13cbafbab318200764c6e1cc5",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "a8e8abd84c159f93cabadd03b8b4115622150a117f3e443681a2e33c1936ca16",
+          "notes_sha256": "21aa9d695ed08f019ad082afb0efa1ac824be20f23a600c843ea2f18fabffb9e",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        }
+      ]
+    },
+    {
+      "job": "travail-00479",
+      "articles": 24,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00479/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a1686c-27a1-7ff1-862e-e01d4c790b59",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00479",
+        "header_sha256": "1857d471bef9baae4ef653de18ef2e82d07be85dfcadd8efeb82ecd95e558314",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "metric": {
+        "coordinator_pid": 39614,
+        "slug": "travail",
+        "index": 479,
+        "kind": "new",
+        "started_at_unix": 1792753212.0978591,
+        "outcome": "accepted",
+        "attempts": 1,
+        "retries": [],
+        "job": "travail-00479",
+        "articles": 24,
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "execution_session_id": "01a1686c-27a1-7ff1-862e-e01d4c790b59",
+        "execution_verified": true,
+        "finished_at_unix": 1792754443.231765,
+        "duration_seconds": 1231.1279338750028
+      },
+      "statuses": {
+        "rewrite_draft": 4,
+        "retained_unchanged": 20
+      },
+      "reference_certificates": {
+        "not_required_by_catalogue": 24
+      },
+      "rows": [
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816436",
+          "source_sha256": "41c6f6e0ddbfad8fb99a70c22d16a6b431bd56b6ce40ab2aaf686a3e9c834fa1",
+          "proposed_sha256": "c8d7175d17bf27d8210aa9761d7d270474dd359b44ae2f10260acdc34eee3993",
+          "reason_sha256": "4580c7e29523f4cb57bc07b36ebbf81b8956c78f05b4cd26fe4ce3e38fdf6d8c",
+          "notes_sha256": "e360fa290960cd1ba147b6801b0adc0112914eabfa68a62259b4ef33314a9137",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816433",
+          "source_sha256": "fc2aa4fd6ad5c8ce4f4472b8b75fb1ceb54dd655ff5c84b1269b2bb86f9178f1",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "d44c973e327972280653b9e9ffae2afa2a3a77ae343311d5796e93630c5a5ccf",
+          "notes_sha256": "798d9548a0976c21f9571a11f3632974ee30172a3fcc8466351df53976015ffb",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816469",
+          "source_sha256": "92c5b5dfd5d3beb3cece06ce24a981db0b89db7ff69be658a03f581c63820fc6",
+          "proposed_sha256": "a556014431761a2fb27655ee737d3d12bdfbb6b54f4c8af0350215f0c32118fd",
+          "reason_sha256": "0fac2a932c9b3dd1dbee525eafc9567f6aa2f219640b1c1353f7d2f1acf7cf87",
+          "notes_sha256": "7315af6d89aad4fbb3487f2878ec6d803e42bbc8c1bce596a661016613b97a75",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816431",
+          "source_sha256": "ffbcfe97f38a77038ff7e9e30f48b608286c27886b45e72e3a87b361bbec4320",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e53d7aec8864a4d6a5f5cf5f2bfb3613548e8e59a18da44976fa5dad759116fc",
+          "notes_sha256": "12ec4c43ad3f48934542a17b210a26b184d335b790eadff506244bf3094a522a",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000028975762",
+          "source_sha256": "9967182349583c14f3a5e76001f9062ed73fc9dc9045b8883820095dc85539d4",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "f9da4c1dcfed1c9b30732c7beb78bf3c7e7b41a563ada46b1365e248af78c27a",
+          "notes_sha256": "60f9c8a7699a9b68436609745a7ab92b10c268ed8e56332a2fb542a24cb08640",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000028975769",
+          "source_sha256": "0e9c1d7fa69e3b58de57219a1f939512af670fa46d429f4d0aa7db347a74b41a",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "980115b51fd1384547592eadfd0aea23457990813e5a86c0d113f5031f3350b3",
+          "notes_sha256": "31a42056dc45048bdfbeee0e96c730f86a61270ce75dcdf37fec660a64cb9ce1",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000028975760",
+          "source_sha256": "7fa6f51021d5984f531f0fbd023d468cb8256eac28b7b04091a0b213616c9e17",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "08cde697bd4926a7829980bb01b17b86d86426db5bbd77118391778db0183dbd",
+          "notes_sha256": "a965feba038a077b1dc9e95b2c3335ad1f1562fc9d29f88f2ee96e4a2cbf19b4",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049794774",
+          "source_sha256": "2af25df784b5e4bc13d82c4798b08f6636b7cdd35cd8cb73c66f918479ac751f",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "d01ae10c8cd46760038ecbfa3d55cafd1dea5e412fc918d7df26b663f3e49bbe",
+          "notes_sha256": "20eaf051318bb4421efbf9311a7828618ead6bb6bb171cd6df411d1f23b904cd",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000028975767",
+          "source_sha256": "c9b929dec840fa11ac9ceb931a2e6154e30302ce063d7cee245726674b25425c",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "2b413da43e7d9ffe601e0f4a71242bab360096d9bbd17304bb2528316703f032",
+          "notes_sha256": "a867a5abf4b1e8b21a11255dac95f1b43eb3b30b4ddc6930936dd1fd4d9f94b7",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000028975745",
+          "source_sha256": "5d16b54219a182476f9be20e97eaf28f13b475e37db104ac15c14cf89b7b2397",
+          "proposed_sha256": "0ecdd5d42fb86ae78eab60a9d5e26bba484701b2157e144c0aa80e7db65b4299",
+          "reason_sha256": "8d382c2ea1f7b2aa59491c3dbd1af97598b5c589c25c6dee8acb6e9c384e37c6",
+          "notes_sha256": "3c5d4fe51979ae60c2e6f79b08e499397fd9e5e09543ef845d9a153085db2ad2",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000028975743",
+          "source_sha256": "573961c393ef969d945465aef86ec1182ee21600678852f0275015181ef8edbb",
+          "proposed_sha256": "07f28eb4c04df0f9be7db0df2518287183974a79cb19134bbe95915e009e6545",
+          "reason_sha256": "05a47f98251f65102325ca2c830c1238b673c25114ae339e5561e7725ab79eb0",
+          "notes_sha256": "d97fdbff3f7ffcfa4ccc2cca5ac7cd4111e21f884d4aada57f38720ced90ae47",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049794772",
+          "source_sha256": "6ff920b5c788fb90fb4fee6e4b4f79a90c2d92e9504b57267bd64519a43e3864",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "9e158a020e4d845333c758d115d95df4a542506c1ca8a52689e04142129a5a7d",
+          "notes_sha256": "66d91042360e201a57e41527c0d0cdf7fd6419a8fc2f0aacb18645591bbaec4d",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049794769",
+          "source_sha256": "7dfa8bd7de883d10025d027a4dc6b3c5a59e2815fda20bdd4caf3c0ab0a30f24",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "9aba86654cf59b365045930811a03914a4759d75dbb43e7ad75907d3de0d62a2",
+          "notes_sha256": "8ced00db9b3d7e6b7118a8832e8f6016aa9c9681742c05754fcbd3d31dac72f5",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000028975753",
+          "source_sha256": "b7ac427e8f55e1f3ca9d75627368deaf01edb5467180cd016091f49885027ad3",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "4fbac22bdd4c7cdc148af50df614fc93d163c2798cd055ca405ba2cb643644e3",
+          "notes_sha256": "714935e5e5a4110f3a7be94b1577ea5d4fdbbad9a202a41c3b296da0022130ee",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000028975731",
+          "source_sha256": "22370f382c5f9e83a1d8f670d45c7e093bbe16aef36bbaee69bf63d118dfd190",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "b8d46a82d3c5a5b281cef4fc689745f4a1e900398b3f56ca9ab0f98aeaa09259",
+          "notes_sha256": "222aa065918c84c2894375c0673e47e6ef741cf43f65cf2ce90e15694dcfe3c6",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816426",
+          "source_sha256": "45e0651e3e897d5dd9dd1a02740e00bc69c2b8fd70bad1f19e23b3082f3faec2",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "2c406c714a486428de0888b0f8b6829314bf2b2f03587d874ef7cea7b76c7097",
+          "notes_sha256": "d4f01c68f2e81bf0ff044c95ccc0a70a831c2c28cc60fb186e6624c99804157f",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816424",
+          "source_sha256": "b70949dd02e341d6521b84919160120196f162ca1d6ec7779d3327a8b04300e7",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "9cf5e983fcf8c116ee2a616c81cb223fd1a2fb3afeb8e115db5230989e71c38b",
+          "notes_sha256": "2d6334d5fc869d79a1834b5e86ab0b0907f2485f1fcd73fcc1bc6c7327118e25",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816462",
+          "source_sha256": "053116154541cf18f26b07f435a1e847a03580b5416f5f7cfb1daf982a9c19af",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "bbb3fa7ea5db20b2eb76a9b75d0ad8ffcd542181a70b8e73be8e9b78266026a2",
+          "notes_sha256": "6fd2f58754ad04858b67f9f87420934d9bf0d5c1c713ef204fa1bf112e8903fe",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816422",
+          "source_sha256": "f7616cbb34c8dbe59824496b6af7cd51884096675680f35e9367b689034e5e6a",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "adb1db7d82170f14f868353d5f263e8922210489835065d85506594ffaefc638",
+          "notes_sha256": "33a6c0f65bfa26f80f0a0c2bb35bf3bdca9c87afd48f1a232973224aa092c447",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049794789",
+          "source_sha256": "db76dcd18aecf2bc247ac1376319b28dd4e74e825cb494364fa22f1b68aab66f",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "f9f2caef00875458ed739c3f8b1ce7ae661146a6774fcc8ef4281b155f805430",
+          "notes_sha256": "e0dad48b49b7daf0b234f15c3764ccb20fd972bac0e9357a9856ae2653d74c92",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816455",
+          "source_sha256": "04e5be0cc2034152bbb7f65cd5cc08deac5afd5c83f68c8b20e958605733bb8d",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "4d713994fd4988c2d1bee954824bc3b7da3c4850a31d141dbe5f0794cf3a11d5",
+          "notes_sha256": "fd71f56f645c60f6e4c1aee9ff3e5b663609cd827881b6863dcda8d461d6d78b",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816419",
+          "source_sha256": "199323735e796b749d5c7f5d5bd0ff3bff6afba46b12124d84ce699fc105aa5d",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e97dfaad22dcb262a1f0afdc077e10864b368182cf934a9816f38db940af215f",
+          "notes_sha256": "92b6c43886292a9cf0dbecb681fb0de80ea3bb16e8f6fb26ad3ab4d4b03196b8",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049794800",
+          "source_sha256": "6866ebcb5428ff969d9685881c1143cd9531f2c91a31079647d8108fcef8d3ab",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "2cdae8500f13c2ac7f22e68fa2db2621dca3eef3a02a3f435b58b1f298d1397d",
+          "notes_sha256": "d5d5a7b669b4322541e4dcbffe64f247d8b9ff00e56309c9f6461d475eae6543",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049794797",
+          "source_sha256": "9c7051516b70165ffc0612ddd6f0bb9ee4b4fd0356e778adb929ee499a515e56",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "5d9ec59a95675c6482bc70b5c2bbbd3a2a22309302d6e82cb0e9a3594fe5cd29",
+          "notes_sha256": "8b8b173aef189eee0d52ce107acf929dacfc4642fa924b46e18113c81fe9b3ef",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        }
+      ]
+    },
+    {
+      "job": "travail-00477",
+      "articles": 24,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00477/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a1686c-28f8-7a42-bfcf-2aea7ef49e67",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00477",
+        "header_sha256": "5b3d587a21699eba20dc79aaa4756d28ad19e63a600547cf5735ecf60fdfb041",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "metric": {
+        "coordinator_pid": 39614,
+        "slug": "travail",
+        "index": 477,
+        "kind": "new",
+        "started_at_unix": 1792753211.638305,
+        "outcome": "accepted",
+        "attempts": 1,
+        "retries": [],
+        "job": "travail-00477",
+        "articles": 24,
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "execution_session_id": "01a1686c-28f8-7a42-bfcf-2aea7ef49e67",
+        "execution_verified": true,
+        "finished_at_unix": 1792754446.416779,
+        "duration_seconds": 1234.7725022499944
+      },
+      "statuses": {
+        "retained_unchanged": 16,
+        "rewrite_draft": 8
+      },
+      "reference_certificates": {
+        "not_required_by_catalogue": 24
+      },
+      "rows": [
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000053789517",
+          "source_sha256": "e2dddd1b6be882cf4fab300af6344bb4cc6928ba7f1d230f4dc2b27b6916f527",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "2dc7480e8f75520db9a93937f81ec60e987c7ec2f21dab1a3a674f7d0796a57f",
+          "notes_sha256": "023508cb87e3e190397ce800f688a301d2f76bfe165d01c368929a86c604a0a9",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049316771",
+          "source_sha256": "463e421b4e2f22c120963d3834fa8a53916bfffc4ebaa2b7e858a5ea147f8050",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "6c14a8b7f84e5907a715c66fbf9b851526721c050e60c738d5c2082e031c2f05",
+          "notes_sha256": "5b18aba39fad5959068e060e27a854081e41fc07cdcba2e37076fa6c1baa9c8c",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049316775",
+          "source_sha256": "16aee604be445c0055d3ddd5dc59287f76c57cf55d70e7ad87fe82887afc5abd",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "2ff555777f5e49b6c513f64031a45c062884684839bfc90d6137a278525fea5f",
+          "notes_sha256": "cda917cf1dc83836ac4ef3be12341caa034de86c2004c57a290580ba92867ee3",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049316777",
+          "source_sha256": "fd30c65abcd02662ff82ab9db7c916b32d711412db6423a8d2fbaa3890e3d21c",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e1c2f605aefd525178047fcea842e53fe154686fb98e747dc572869b5af7275f",
+          "notes_sha256": "9a8a0387cf5819314a41fc812d4698afca3e7f10222d869f975fcb76bd27cc74",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049316779",
+          "source_sha256": "de22ec390cbe5acbe3193cffd2a1ba17fd7646e2d2971e4e4a13ca8b8e704cde",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "3648c5a7b54a0b53f8009b516cd3237483051ee1bcfe665e5ae4c90d8bf461d1",
+          "notes_sha256": "9a8a0387cf5819314a41fc812d4698afca3e7f10222d869f975fcb76bd27cc74",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049316781",
+          "source_sha256": "00470ae8c4b7eb30ae73b9b293ab91cfe7c4f7ff8e63c0dbf50cfd2f7ce0edf9",
+          "proposed_sha256": "75b19e254a1a9abe34a44071953e205e7b41ae94a2d3fa57c32a7239583a45a6",
+          "reason_sha256": "09446ac524941e9c3fa876d4d5ebf45cfd2d91cc02a64f093ee4e60f8d1c0dc6",
+          "notes_sha256": "750c4d2ea4efb0dbb228731c58fb1a3cecd482e52e74677eef8babfcff2b4605",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049316783",
+          "source_sha256": "7801f7e0bdad04d45af7d5a651f0be6000f300b93d8fcce5d4d5f944c36ccef0",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "06a53549ab34b4a64137fa62536bc5401515614539b26c071d56c080c47281ce",
+          "notes_sha256": "9a8a0387cf5819314a41fc812d4698afca3e7f10222d869f975fcb76bd27cc74",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049316785",
+          "source_sha256": "baa38f37691e08723aade60a6edc5755e36939f0cd4226a3d4bed47ad5208be8",
+          "proposed_sha256": "e09ea962e7197e411fbb09fa526ca76edcbb45af1a8c934843c3dc08e925d431",
+          "reason_sha256": "25ddeea200405777eaff1474692e350dd125e029c07d2a85a35d35c7ee4cb355",
+          "notes_sha256": "4af4fac8af5fb71deb562332cd3790521eaa2918a0673df0ff03257a7a2fa3e0",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049316789",
+          "source_sha256": "e67fa8acaf6485d2509bc9aaabc8167954e712934a1e75acdb5fc728f00204f3",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "612e491ebb81944b6f8e1a0e9cc0c5b198c72d0063cf515c9dafd8561cbdefce",
+          "notes_sha256": "9c126f4217c56a5448f5bc79be95b8890894b8d716a2f7598a9051ba5838a5db",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049316791",
+          "source_sha256": "3a6ab9ae01b26ca69c686c61dea01fb75a2a5d1f3615a52bee73b0c8558d5237",
+          "proposed_sha256": "1fb579b26a3dc96e410977731da0c657f1e9b39d146080f3bc6f47a32a50830a",
+          "reason_sha256": "33f195cead5cab81249c14b53a07a67a4f2b38552d5d5565a172d53d4942b16c",
+          "notes_sha256": "f6d989dcbdfff50705770e2da0d8592c1d27e8b419b3a3c8bda6ff55b036c182",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049316793",
+          "source_sha256": "81afaa638ef892005a3b6d6df6f1588a0a4981dd3e308db376de12d6f404916f",
+          "proposed_sha256": "9fd479e00114e59c7c099a0e776f45001329c5dce6bbd7b0d76b5c409b59a9cf",
+          "reason_sha256": "f00fd11a769308c002d1f6a6d77bedd9e74de319f37f3056a923e55602ab1514",
+          "notes_sha256": "245f3bb31d32676197de6e9f5ea40cc76a9ca1fe41246ac6bb4f6c53806ca9cb",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752119",
+          "source_sha256": "b8fe85dc36c21448e74bf61549d46a42454dc1bbe92eac4109a9f28c51b3bf73",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "07c0048efa1fb89132a0eb63ee46db74aae3d981b74cd34ca508fd995e92eb0b",
+          "notes_sha256": "ade553e21b1602cd2a9fc05c27eca82c87dc90f681bb2464e99bcc09aa49a418",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752123",
+          "source_sha256": "5a84913b22eb4a3ca3b6d5dcf184cb2f00553f11663114a79738690219ef1ec7",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e3b485c74c9e9b48775c896bdfda2481bbbe4c6aeb5f4251d46b943a8f3c25a9",
+          "notes_sha256": "d799b2ce9da52e718c1506df886703cef7966fe183237bf1edf0212a36808594",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752132",
+          "source_sha256": "d9b67f7c38bd23d6a6784f2586c63560976381e01820e694ae15c128c83e00f7",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e005ea1a391ca364ac9f50e6fa4f473277f1db3a50f07263011333fcf7a3e249",
+          "notes_sha256": "d799b2ce9da52e718c1506df886703cef7966fe183237bf1edf0212a36808594",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752141",
+          "source_sha256": "64acdc2b0c1aa0bca9707afa704067f7a5a5306e6cccca3e2208c8f6bfdddfd2",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "ce3b177c9590300f21df65a2e80d008b5284a6782d24a843a6eff8f29204ce4a",
+          "notes_sha256": "7805a465bf1305e18828b6dc497fd9a9c2ea4726227221ee0b90df72fe891bfe",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752156",
+          "source_sha256": "25cb8bcc6caad425e700d04d44f967d70a6eee0e2974b8e4c77612e75eff31a7",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "a213b37c3f96fefa8d6122b325554000b1b4330783fca3e5252b2933b8eb5f39",
+          "notes_sha256": "d799b2ce9da52e718c1506df886703cef7966fe183237bf1edf0212a36808594",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752162",
+          "source_sha256": "9015fed000c40df4551ef651f2af9ebdcb6461d25eaad32c4bace1989c6220ab",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "093346c63c875a81a16971942fd076b4e35a5d37ac917e30412e3940808d4d7e",
+          "notes_sha256": "9139c6b830dfbb3d0e330d6054df134b7f08db954ee1ee1e83bb9755ff9d59f9",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752171",
+          "source_sha256": "c469a0a7f3afcc4c915c201b27fe87be70b7e53a8585cc052835ead808667ee0",
+          "proposed_sha256": "379ef61136441f74b847199ac173ab7478fe5fcb835d9ed60338c99428809fa0",
+          "reason_sha256": "c8890f1e43ff4276f9da283921009fe9fbd7c6157fd227efb947fdf3ae70e1df",
+          "notes_sha256": "85357052323b5f0bbc7d3fc08f862d8042270144d9f88151362197e643d3b2cf",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752177",
+          "source_sha256": "c4aa85f7dfb26fa700f3d94d8b28087be80e5d63e14841a177d74bdceb3ecaa2",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "51caaa836f90ee0aa32c1b1b633155ae608d3f575090a702d0977c0c03fdc613",
+          "notes_sha256": "d799b2ce9da52e718c1506df886703cef7966fe183237bf1edf0212a36808594",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752181",
+          "source_sha256": "65c2626ae5529c81a2b3dc0fbdaa5e00973a17b1719e076c6cc96cf2e7fa869c",
+          "proposed_sha256": "0d62db8b77b28a5f7d1315bb1129328a03224dd2594acaf5e7a70e1746ecab9b",
+          "reason_sha256": "f0bbba5c37b107c2cc320393278628cfef51d77b3d5e962cef4db449434f3f6e",
+          "notes_sha256": "29824bf3701109b37ddba26835f9fb34aea6d99722d7ba8dff4b7e515c91a822",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752190",
+          "source_sha256": "afef42ed32619f7a80ad1e034d5b7ff2a3ff200e49e98bfacaea20526f48d5e7",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "7cf9bc27f8d78ed9bc9cb20fbd8801ac1ee91f9574e753b86041602ad4fe555c",
+          "notes_sha256": "475a25fcac40310e7dfae95352d9f7e49c8d3b16c3f25cff2a41bf631f702dc3",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752194",
+          "source_sha256": "0106c7db0ceceab363ae564418e28c61163b7d5ac44188c7efbb9aa699d70dd6",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "abff7dae86caf6007a1213e01eacea990a2a3e147e92c32d8bfce41bd056f071",
+          "notes_sha256": "d799b2ce9da52e718c1506df886703cef7966fe183237bf1edf0212a36808594",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752202",
+          "source_sha256": "22b406296786e3a4a245e2b9d37cc68f5de5a42c074630b257eb8b302ad91a6e",
+          "proposed_sha256": "563adab1d7bfae921c16d67d16329e5d19e87bd7598a1281fc362542e7da88cc",
+          "reason_sha256": "3f9ea545175a879895d61c4a8da46aadfa141b97b4a64f6f8f661cec4f59f942",
+          "notes_sha256": "a7312dcf55193a5223ae22c587d53109d3bcf6575c023a664e08cf38ed8f224e",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049752208",
+          "source_sha256": "9fdd09db34332ac52c338115647312107146f1920c0f82ae3f88b4fedb68816c",
+          "proposed_sha256": "db269beddc02cab19a2275b5216b12794e187205c4b24f08ee919049febebb57",
+          "reason_sha256": "c5c6fcd285cd794bb900baeaa021b6c2344566c3e968824e290ba3b7dddeee18",
+          "notes_sha256": "85357052323b5f0bbc7d3fc08f862d8042270144d9f88151362197e643d3b2cf",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        }
+      ]
+    },
+    {
+      "job": "travail-00480",
+      "articles": 24,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00480/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a1686c-290b-7e50-8924-471a9f925784",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00480",
+        "header_sha256": "eab7b0203702e605dff4d3f105e64c7540ee425a728d2356516c934b0b52737c",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "metric": {
+        "coordinator_pid": 39614,
+        "slug": "travail",
+        "index": 480,
+        "kind": "new",
+        "started_at_unix": 1792753212.468718,
+        "outcome": "accepted",
+        "attempts": 1,
+        "retries": [],
+        "job": "travail-00480",
+        "articles": 24,
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "execution_session_id": "01a1686c-290b-7e50-8924-471a9f925784",
+        "execution_verified": true,
+        "finished_at_unix": 1792754452.4080682,
+        "duration_seconds": 1239.933371166997
+      },
+      "statuses": {
+        "rewrite_draft": 7,
+        "retained_unchanged": 17
+      },
+      "reference_certificates": {
+        "not_required_by_catalogue": 10,
+        "current": 14
+      },
+      "rows": [
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049794806",
+          "source_sha256": "26279eab784d3c43bd091dca2b161673ee9c5158dc7c53e9e70ec138e62b01d0",
+          "proposed_sha256": "37496bf000953f5ae780c117500e6e53c5f54936d2f396b9976ac107980fe831",
+          "reason_sha256": "ce339976222ab7cab690261c91f6931e8ba6eb2d964c3089c53de62b8804cabd",
+          "notes_sha256": "620e39aea75f8f927be9d689a5375761f912ddb7ec655b602453fe50105b1053",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049794804",
+          "source_sha256": "54e0218a72b124cefa9787f1a8db2c8be11fe0af867210d4779282330129a68d",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "cfc1742f27729e33f3649d137df47750f432ef7b8cd2d86bf0aa84c104c19493",
+          "notes_sha256": "bcd0f6c90f589d65a2d5e59b77783a931678b6ab53195dd9c093c655138e8e13",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816416",
+          "source_sha256": "7f663be92631fa0e79a1e04a197a2c9906cc28e2fbed904b14c11cbd62b9b5ed",
+          "proposed_sha256": "7d15983c39910bcb7627a15f89d47075c33514f992028f99c4d2f43152d9f3be",
+          "reason_sha256": "1ac3691baffc182ccb473fde1d5d561fd7f0999e6b85ae19169cbcd9169ba93f",
+          "notes_sha256": "aab290dcc3848b0a54d983ae2f4d705015987dd37e2c4d23897e0267f98b149b",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050943121",
+          "source_sha256": "eb9a02ee49a37e5c829114ee6924738fc49931dbb11bb5b40be22959ce87f5ec",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "eac66dadf2d62f764b1b46273b16364bed41418b0ff5d025d2d4c72e969379c9",
+          "notes_sha256": "e74e40c26d27170de2579fbc6d2801054901474763fb8cf559635a15e49a698f",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050943127",
+          "source_sha256": "76076135a254f336621665b317a4500d58b397abbeeda95a97d76ecfaf283dde",
+          "proposed_sha256": "9c0694d95eedff390dbf65af3f4aa5a8310b0838bb590751980ce336c01b500b",
+          "reason_sha256": "42c475f60d2944bbdeea4aa928053a92a45be9ac1385b9e2c9bcd320b45ea5c7",
+          "notes_sha256": "46a56f81c218da8fa984ed62b5f96b495941df6b02836d86bb7957fa3113c1d3",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050943139",
+          "source_sha256": "cf7804ef71d087939be744cb66a2742c6c02d689864291bda37e622329219292",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "cf3bf220946708183b48b1ab85c988f16aadf5e20ad6c8ea572455965ddc5632",
+          "notes_sha256": "bcd0f6c90f589d65a2d5e59b77783a931678b6ab53195dd9c093c655138e8e13",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050943129",
+          "source_sha256": "cde2124c4b359b2095a22c54fd6fcbad29f98d81535799a16bd892eae227b753",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "60c1b50c39426bc2e391575f9f9a7e0e0af1116fd08d78845f63dd7531316eda",
+          "notes_sha256": "bcd0f6c90f589d65a2d5e59b77783a931678b6ab53195dd9c093c655138e8e13",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050940242",
+          "source_sha256": "e2f3afb46f8c1ab780c5e510e8a1ae7ba04fd6cd13cece96cc1a66ced8ff038d",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "55491627f4914ec5c4b32ea22c34b8cbbee33d340e5a268b210d386cd9a71cd8",
+          "notes_sha256": "bcd0f6c90f589d65a2d5e59b77783a931678b6ab53195dd9c093c655138e8e13",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050943207",
+          "source_sha256": "74e46a54eaa06bd61530c2fe1651c57c951b6ff11f0000f22aa6c839cc57e753",
+          "proposed_sha256": "7bde70ee8c7294840ea33f3937e0c2a381ac59b5076894a4790ef94aa203dcf1",
+          "reason_sha256": "6f24a5b396b0ead1114b4710ff05c44acb12ceb37ec4b335362dd952b8daba23",
+          "notes_sha256": "98e1f15bb4633538e0eb47388bb8960adf6028a8015e16ab10bec121f94f222d",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050943198",
+          "source_sha256": "f4f63539edfb97b1cb2361615fc27fe44bb7e8569bc4a3d86d2b054d0d13c8fc",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "fb524fa6ac760d4dcb4b85a2c7832b6f5585e65c0c7c256f2bd4a2db04a1d1a3",
+          "notes_sha256": "bcd0f6c90f589d65a2d5e59b77783a931678b6ab53195dd9c093c655138e8e13",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050943194",
+          "source_sha256": "686530be48a1a369fd7ad41596fc8a4fbbd360f44eff4a83922622555574e3ba",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "85466f828652009bb50345533d8f7e16ea4433eae3d621ed3a6c01679260df9b",
+          "notes_sha256": "bcd0f6c90f589d65a2d5e59b77783a931678b6ab53195dd9c093c655138e8e13",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050940445",
+          "source_sha256": "3cc7cf8f5a7a4c4d6fa68ccb6054f7ff66a36a276a9f18306c913bd98f2d7b07",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "476a0088efe4402db0e3c2ec79a0dd6ff035bd93d623d17e224181d2845bfdbb",
+          "notes_sha256": "77c29ea757ef89135be1f5f6edd768a76f2b9096dbff78ceac49fd4cc53425cb",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050940449",
+          "source_sha256": "aa33035eeddf44654cc1269b780422a97aad4b36539b0b892ff4c97e2423ad41",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "33781ac2db9adc8da08c52d6d7ff2c452cb8c10e078889171c0ed71eb3ff02f3",
+          "notes_sha256": "bcd0f6c90f589d65a2d5e59b77783a931678b6ab53195dd9c093c655138e8e13",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050940453",
+          "source_sha256": "8e6c2d8ee3c5bd4121c0c4c9cd45d9c50884146e9698235a0aac3fe73eb6e871",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "c6f30d20ac3123adb13ec6aa384c9e441f48ce7f26e2fbb3fbac2fc9856841db",
+          "notes_sha256": "bcd0f6c90f589d65a2d5e59b77783a931678b6ab53195dd9c093c655138e8e13",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050940457",
+          "source_sha256": "ab2c0e9aceb980c02aa17458fd85f5506ae7bad7c9e00aa1e6359b2661cbcc83",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e9eeae4188fc4900070aca2ff84088b20eac4a1bbaa6708cc41943b2779a6f19",
+          "notes_sha256": "bcd0f6c90f589d65a2d5e59b77783a931678b6ab53195dd9c093c655138e8e13",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050943175",
+          "source_sha256": "f73bfa3b6104a70d4e9bf030803b69c89c2cf7a89e45598f641925e814f099b3",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "ed52468e1da26b5e19b6719767a63f165f15613276cc14e361e55572d0f54f06",
+          "notes_sha256": "bcd0f6c90f589d65a2d5e59b77783a931678b6ab53195dd9c093c655138e8e13",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050947057",
+          "source_sha256": "2947e1dd4988474ff6d78e00fb709a5996605efa7c30c9f54b1f59f8b8db211f",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "76978675eff3f5e0592ee4f06478efd1386401c8176a7f7a41dbe9613d362602",
+          "notes_sha256": "902ff54d20217582ab1dc2b3551ddb2e2b1271cbe1080bd70cc6a0e3c5b5348f",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050943165",
+          "source_sha256": "3682f71b32b00518a96cd162ace4851700b96ae08a1fa519ec150edf4542a0df",
+          "proposed_sha256": "500863a0f33ef1eb25bc449dfaf0c21c9ac8a1e53827b655950601a946aa8caf",
+          "reason_sha256": "95d624ab249b14b9d7c131cb6ec670e865c54ff295ece4e7c5b9331e62e1e6c2",
+          "notes_sha256": "1d35d5e684d3108d130444dd936e509a7d704a884e7453400ef8a34ed39b0314",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000051679561",
+          "source_sha256": "37e85a31d6cf5b7897431f0e14cb620bd5a002c6c8fb452279135a8b4a1647d7",
+          "proposed_sha256": "2e8a64816a6ad6fe0792d905cb239c7655a06e168e8a92fd6342d2c7466d084e",
+          "reason_sha256": "8cccd0a6bf06dee0cc09a9922dbea217678464c5601318009f726dfd792c5b1e",
+          "notes_sha256": "6671c509d635ddc54d564d6793165c34dddf68567628dd372cbbebd85e66f9c2",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816358",
+          "source_sha256": "7de0d440d84c6359a29ab84ed416e946080fe4b9253a89c44c3cb7cf731c0d51",
+          "proposed_sha256": "e0042672fe6d728059550ff194b8a17208ae9a620be1c4eea1b14a3cf8606aa8",
+          "reason_sha256": "095af65e5114a913995ee8500be72490263f1a2185608b80272d537b61a6a06c",
+          "notes_sha256": "96da8342b57d130111d546a77801b7f436ab5bddb5676b81ddf690644c6e54fc",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049792539",
+          "source_sha256": "33ebe643e6b93234e643253b622f583ad822a715400e61f1c2c7f233327941b6",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "fb6938a4634d86c284cad51b1a405548d75ffed1242287ac93806f702e29e1a1",
+          "notes_sha256": "bcd0f6c90f589d65a2d5e59b77783a931678b6ab53195dd9c093c655138e8e13",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050941369",
+          "source_sha256": "0c96aacac5688c6571c7b34fa61c9b85e5412b903318413dac5ce1b10f8446df",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e57262ecc682c44c9bfb6cf67923f1ed197b47b71a6bd2bbc114f679287a1a62",
+          "notes_sha256": "bd961695a3b5856bed1cc6da6851cd0432ac6040110f7f33108f581b378042df",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816348",
+          "source_sha256": "9cf64ad0dc4e9460d8353442e68f88642fd4e138b701911af7fb6bcd273e5a81",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "aa443405ef143af66e89aaf3777757b28fa8765593fa1b6c790f230ce2e4f0e7",
+          "notes_sha256": "50cf0796a289d91c1ca8ab6d987176f09e657e65c73611c60f544fe74120afa2",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049816344",
+          "source_sha256": "d126370a0a1a2d4b2eea3a2e3d127fd5d8834d4f2b78bca50a17e023b8bda8b0",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "97b54ae4308a4528690f91473bb75cf769cc2be07e6d7e2f5199bbc7bd7a35ca",
+          "notes_sha256": "edea74654299db4a172cf39374284e9ae7e952fae945bf24c54584a20e5d9b98",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        }
+      ]
+    },
+    {
+      "job": "travail-00481",
+      "articles": 24,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00481/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16876-2a4a-7c61-b589-9b83dc6aecfb",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00481",
+        "header_sha256": "9b8cd94b234b2f0ec09cd2ee62216027b4ce74e75105c29c94faa55ad512cc92",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "metric": {
+        "coordinator_pid": 39614,
+        "slug": "travail",
+        "index": 481,
+        "kind": "new",
+        "started_at_unix": 1792753933.12006,
+        "outcome": "accepted",
+        "attempts": 1,
+        "retries": [],
+        "job": "travail-00481",
+        "articles": 24,
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "execution_session_id": "01a16876-2a4a-7c61-b589-9b83dc6aecfb",
+        "execution_verified": true,
+        "finished_at_unix": 1792754459.207979,
+        "duration_seconds": 526.0779735420001
+      },
+      "statuses": {
+        "retained_unchanged": 14,
+        "rewrite_draft": 10
+      },
+      "reference_certificates": {
+        "current": 1,
+        "not_required_by_catalogue": 23
+      },
+      "rows": [
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050941363",
+          "source_sha256": "120a31a31093f6fac72f58f73cf91e629b9bb7d79774a442ab224c4810ac244e",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "87f166244ad9734ddaf6de6d25ec4cac37e0b1e8e0c2859b186fd2f3ffff32b7",
+          "notes_sha256": "a5d4ca142a867776372ee794d4137ef87956a202c975b6b64e720579cbc35b6e",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000046201809",
+          "source_sha256": "8ca28f3ca37598323f421da139cf5e79781ae6782622534b526363843cb44c9a",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "87e7df068c4bd417edc821113bc3e045361b1f60e21e5c9e5925c53585408be5",
+          "notes_sha256": "8422074a1b852e6b73af088d745215144cf60f5ef0f0b691daa8ca0fb37a27ce",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050923763",
+          "source_sha256": "fbd1643aae87263ce1a183cceb3460791056640fbec0e30dbfee37cfec55d25b",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "4b301df6da475a70f8ccb65f7b34dcd112f10ad924c8e542bd1e63ead04a63e8",
+          "notes_sha256": "caf437b91f69c78b77f0a84d114de9404adcf842dbbfe54be78cc058a0ad7bb1",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050923760",
+          "source_sha256": "bdac661cc041e11290e69bafaf0cfdfbae916a7f21c251b66cedf1adfc0b7121",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "48e2b66d232495aa2a82b730a8e863c8c13c6dc73e7f3153d6353570354388af",
+          "notes_sha256": "d510c8cd36d856f8604fac2f9804bf05ed8fae1da798cfc40d14efa1ce22928d",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050923755",
+          "source_sha256": "98651df494236131938478d8ff8405a4df547299c95ef7a2ea5a9c94d412c5f4",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "918120f1d1b95fa3c46cddf46455f46ecf400e568c693742868b79a9d3dd9c10",
+          "notes_sha256": "0c26b45665a0b751bb9bec95724754544421b94ff30f61dd53ae52dcab64df75",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000050923752",
+          "source_sha256": "79593a544b2d6ba109b12826ab1dcd36e7f1f1093c27ff64e0031ab23a90f193",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "cfd26e7c805df02dc3c52457c4fd774422a5b6cbfa40e3d61e124a8484dd7136",
+          "notes_sha256": "2ecbd0e7ea23e89ab831e91716ab2daa60ed53a16f67b32a7c88450c902b823d",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000018525382",
+          "source_sha256": "13287a9018e031288d60ffce9a0296c6b97fedf0b36ecd4a1974c6fec6b864c1",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "fb329d325f8eeae14a1e5257d240966cedf99b7e4e1905912682edcb586737dd",
+          "notes_sha256": "a9fb4ce5a0ae38963540310d52804de07b868e37a8989353d92aa806f00862bc",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000028625223",
+          "source_sha256": "fc8cec06b2264f7cfe62d6bb2f6c55cce90410b722a2e2aa351e6820a32b382f",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e3d9058f0c524063a71d80497dc45219d2f015eafd33441919b7a7f60ad04796",
+          "notes_sha256": "83571a54835a77fef37d71c1ac225b15279ff1366a38c436bf38606c9e9d4b78",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000021501207",
+          "source_sha256": "a4863aac8c3b8969f6ac98bfb24d78f86d32093afc99d7fd5173ef3b1051a05c",
+          "proposed_sha256": "0cf076368f08428042a761eefd7854b64bacf5b805e544ffa884d87bb4ad8a15",
+          "reason_sha256": "5d9af84f2c513eac47322bfd357e60747c48ab385506472f5a234c2c3a368013",
+          "notes_sha256": "48e133c8c9272f60a203933233153d08907c77592349d56d452b58c53e37209f",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000021501205",
+          "source_sha256": "6f35cc09f397d66845191cecf7201c5ee552e1488bf44b0f392ba7e5153c71f2",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "e0b4448b982f3e81d51b1abef6f125c8b19d1ee08bd5a20bd6d2a1c07947dc67",
+          "notes_sha256": "17a365d3bbd358575e62136eeb7e3dea2fa066ccf14267d4e8710be0c7fb43b3",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000021501203",
+          "source_sha256": "014adbb711df4ce5ccb8163c1f765d8da76999850ad5119966629ada737763d7",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "5c081177c195bede96fa482ae54d895a4a252efcff07dcf1185a065eefafbb91",
+          "notes_sha256": "b4aad7eb4c563ada74b4d55e1c7f6697d74774a5f7da4366bd4d2659aa7a817c",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000021501201",
+          "source_sha256": "24ad99d8b63b4b275fe736cbc68f74354fc1f0698fa6e6646093493d173219df",
+          "proposed_sha256": "091bacb0e5b12cbdea7193e48700c97ae8560737f7dbc31983534f45432f239c",
+          "reason_sha256": "373a6deb84c5c485106febdee21f065a9b6674706ad8c53d47bedd2a0d16a695",
+          "notes_sha256": "3b59d281a58d23b534e326d319d1fcdce373fb081cbbdf658e2f3fcad7710580",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000021501199",
+          "source_sha256": "a4d02aa8dd34d96e733f679aacbb7880651970229cc42a8d7a8a66e6f68edee8",
+          "proposed_sha256": "c00f5a4206e5fb797c15b442e6dc24c06e6e89c4912270f6227ef890f16e7615",
+          "reason_sha256": "ff3cb288aa66f0ab96b3ae17f78978441fcf38463f4c08db3290c17ab1717dbd",
+          "notes_sha256": "f3841468e3e728add25a95f4a32f9560c07cdc4f399a84208bc0219b9a5611e0",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000018525364",
+          "source_sha256": "e769b0225c5380c45be6015c0979f296aa003cbf1b46b6b1cfeb0a4e4275c5bb",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "a531e1d1097d1b6b9c4604ae870d31019533d483adf200270198075e474ea559",
+          "notes_sha256": "a48ea861996a603c467f1e8c944af221ee7aa0c0f517acffa672f241484654ce",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000022208947",
+          "source_sha256": "88487fb83a032aa866ba6ba3f7358deffb02c86e8fe5e731ce3da9b9f99a6c5a",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "c7fe78745ca2a48e3232833f9b836dcce5818e3ed8c7aec882716b835113844c",
+          "notes_sha256": "afa06e9098ff99c8b5f01bf6ca8c39f7473abe29a8cbe3499fd697566e6d9f0d",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000033407463",
+          "source_sha256": "c8ba025079f9bc2772486d8cf5e3350c1cfcf3e72e1b5480cd5ae0f8177c6542",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "7c23cbbb73e567d82957e3b66e83b6e49258628c83d40d2e051ddf6e8a5577eb",
+          "notes_sha256": "9a4bc3c1fbe15321c1e1e98547475848e28965db4524c71fceb00053121f339e",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000037256217",
+          "source_sha256": "f4478abff14acafbf13857c0202758dd41fbc878363dd5377316b4644cefacad",
+          "proposed_sha256": "2a0e3060f28bde31d0706ff990d42b64d6971e8ff7b5593c3ef195dd40f7c97a",
+          "reason_sha256": "9da3af38f9dfe2643742c3cd24c550a8fa9a4e949040ae0a9956eed9cd946787",
+          "notes_sha256": "5a072a5331e7be7fb0c7c7ceeb3c8f12eadce4b8d160d4b13a37dc72cac2dbcd",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000033407470",
+          "source_sha256": "4d5916c190e959b5c242636d211bce1af56a2a03cbfc95b36985af2d10fd131d",
+          "proposed_sha256": "298b7f96536f352ab105d60b458f2c805130bd33bae67699e7661a6f29146470",
+          "reason_sha256": "d459dce54e6d44c88a1b20873f44372daaeb602edd5b5202bf31280020f8271f",
+          "notes_sha256": "38c5f06a9f5d49506785fe2498294d6b430d88b127062732dd26d46867d4c027",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000033407477",
+          "source_sha256": "367d5d68ac972ae726c3b323179eaac21ef9b44377618b86c64a29bd696e8062",
+          "proposed_sha256": "46961d18db6e6a4dc94aa72eb69db6e7ff5f2dd4dc7dfd6cc2cbe5768ceed221",
+          "reason_sha256": "3c7ff2973be3ea1d3005968c8ec3099cddd5a28eb1031eae963e599662e36fcb",
+          "notes_sha256": "49a556b8a4e4542c9b0dc689a472394f232b49966ba869d8c027599ef598b920",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000033407486",
+          "source_sha256": "02c3856e20bd6682a69e919ef940d9613d28f81fb6b36817bf87be91226d4192",
+          "proposed_sha256": "f96dba5c0bfcde877a5bd197779d99cdc10eb416bcecf49d0600e1336f9e910a",
+          "reason_sha256": "78f4d3532da963f3f7bf7d548460289ac1c75467dbbec39f794ab43e35126484",
+          "notes_sha256": "999ff2125d389e26e7e8524bdd9ffac9e78b006dc97379f694436511deca848d",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000033407488",
+          "source_sha256": "95b3b3e63ebd31d17ab1e732012337bbc93005d76900d9c74f738b153082d476",
+          "proposed_sha256": "df0301dd3750065b76d0f1c470b79cb15c622dedf489a8a4e860a2356139cb99",
+          "reason_sha256": "0d06175383a2649cd59b73e20d0a8cfcbff976388ef7fdfdd24f8f6214958bce",
+          "notes_sha256": "d520db7083f054482ef8cedb90ab674d6204398c76efad85898643f3093e6eba",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000033407494",
+          "source_sha256": "eb6f6b123255960be98a0656958d7fd88b2ba598b4f48cc042c06f3efde90f41",
+          "proposed_sha256": "2ccc4b3b3dcf2fd6b1a64a935f19e2d2b9ad7d52d0dde36eea950c91c76c4865",
+          "reason_sha256": "c0178fb2ba7c957c63793a73a76004f16834bab8cdc69a3047320636d9864945",
+          "notes_sha256": "2aae6b1c53b4a16899a77144b76c5aaa8d50d4e1811dfc7e874fc6059ed299d0",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000036483442",
+          "source_sha256": "4f4366034ef6a1871266511ff70e9ec4a611dd59daccf5a259ce6541eacbf5b9",
+          "proposed_sha256": "821b65ab83bd24ed51562f9051f1e2482a13f72e7dfab8787220adac5f7f9b5a",
+          "reason_sha256": "d70accd4796217f039ca54ec880b2d67dd582bf3ae2c6114a57f650a58c09c87",
+          "notes_sha256": "8b1cc4b4373e793ca2cd68dbe2935d296fe33b844cbaac0f0a93d66f53682d49",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000033407515",
+          "source_sha256": "d5074984490151919eb1b01b4ddce2ae307abe64fce3add80b7c6e42114da785",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "d21e57eeb1d60dfebbe2e8789e6694342e98e8e122d38927ba93c4ddc4833aca",
+          "notes_sha256": "28ee68b64fca5f49a2df9adf701cbf86796fff23ec76b07f4e2cc721d0a7b1f9",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        }
+      ]
+    },
+    {
+      "job": "travail-00475",
+      "articles": 24,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00475/errors-2.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16877-c138-7821-81a3-2ec5c319bf86",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00475",
+        "header_sha256": "ca45d95dd37d8e6d3e9c47e8962c04a1b9e2a4f734456a3a38005822d1796cf6",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "metric": {
+        "coordinator_pid": 39614,
+        "slug": "travail",
+        "index": 475,
+        "kind": "new",
+        "started_at_unix": 1792753211.461101,
+        "outcome": "accepted",
+        "attempts": 2,
+        "retries": [
+          "validation"
+        ],
+        "job": "travail-00475",
+        "articles": 24,
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "execution_session_id": "01a16877-c138-7821-81a3-2ec5c319bf86",
+        "execution_verified": true,
+        "finished_at_unix": 1792754469.362795,
+        "duration_seconds": 1257.895729708005
+      },
+      "statuses": {
+        "rewrite_draft": 12,
+        "retained_unchanged": 12
+      },
+      "reference_certificates": {
+        "current": 11,
+        "not_required_by_catalogue": 13
+      },
+      "rows": [
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049123699",
+          "source_sha256": "dc53c3e77ced7721cd4ea0898d479c1a1957b50778436305f3e0b48276abc05a",
+          "proposed_sha256": "f023c94c8f92af510ea46705fddb16d004d3e663048a4f1e717302ed1f250683",
+          "reason_sha256": "f11b5ffb91d92c24ab931d5174db15301a975fa0172f2ad2a5a76d9577acc4bb",
+          "notes_sha256": "1d84af269fef5ec6ec16ecaf1091cfa316b691d6e65d088b0559866c2c1785c4",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000045950343",
+          "source_sha256": "c5d0c2e6d01a16a4552b16482d4893b9b9f4ee7354239f160a8a02378035ab2b",
+          "proposed_sha256": "6a4b2f8b4d9bdb5e7c25c07cf86791e3549829c47efa78ecf0b43297b20567e6",
+          "reason_sha256": "ef9366971e864c49b32b44672065a90a0a5aa6834adfdf00b49f52c4de477fce",
+          "notes_sha256": "30cf6ff16986c3b470fbc63218160b10b27b3a6e6ec5c25ff5006d2add469c22",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049127314",
+          "source_sha256": "d32ebb5de53c0ad0bc49eb2c665a531e9a18f76b12842fe38f844758d97146e5",
+          "proposed_sha256": "dc19331bffbf1e2be00a16c7da134edb215cbca9f06c2a13b42caf92efa469ea",
+          "reason_sha256": "23553a2af8a05f8fd5065e8695d36ddddb68e362f5c1188e885f702ef4aa920a",
+          "notes_sha256": "b93e9e9db32f29e8fbdc8a14fc03f874320328d891ba697ab42ef23c502b083a",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000038032393",
+          "source_sha256": "8b37de27c9544af52e982c3d6ab81fcf8f89181981319cda19eb6f5c780f31df",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "42a502623520aef4db69e5bba3121a28cc0d7ecd1a2dd995015674db3c29237c",
+          "notes_sha256": "f5a3e489927b54159e91eb6f0f6bcd0cb8666a397ceb016ddd81bd3398023529",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000048711975",
+          "source_sha256": "0cad10b922638c11e7c404735e47accb2f77035dbb08da6b13f079b24834dcc9",
+          "proposed_sha256": "eaa9a5b487dec7336e0eff2fb46aa214fe2c867849ce01ba43c160da58d342a0",
+          "reason_sha256": "31d29ca794d98c4fbb6aad46f68aeef5154a07d717a67661068a8c44b106c052",
+          "notes_sha256": "2e6b9adba35d28f79d0b38b35d8ac9a564b18a0c5ddf0741e0c7626415b67ab7",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049127311",
+          "source_sha256": "c5d7a9d9e8780dc11ccf89d0070ef78e3d32d667a9c5551982f588890a897d9d",
+          "proposed_sha256": "e6fdf09756c7b5db965adb8c983b8e54db7b93d7296c19164f1f9f9381528296",
+          "reason_sha256": "f11b5ffb91d92c24ab931d5174db15301a975fa0172f2ad2a5a76d9577acc4bb",
+          "notes_sha256": "1d84af269fef5ec6ec16ecaf1091cfa316b691d6e65d088b0559866c2c1785c4",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049127308",
+          "source_sha256": "e07d2d7c93c82ed44cddd54e0674905df7165a88c63b8833cd14d95aa5079777",
+          "proposed_sha256": "c0d29a571372b4abce9282c69b32af8d6bce560658f147f9ba1973b0ffa53dee",
+          "reason_sha256": "c625edd3a505f9102fa1ed93e8927013f9441302b73f224c481172f24ee5caa8",
+          "notes_sha256": "82d7a7113046809cc525602bbe25c7273e851125aef7b065ad9ffa307288fa3e",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000038032384",
+          "source_sha256": "11b5a7fae5b550439ac0d3ce1e65ae2a0bd6cb81121b34054968a20e3dcb6ebc",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "c5a531d2fe595303eae977500a9dab00e34b7cacea8e91c678e219db394e0b16",
+          "notes_sha256": "f5a3e489927b54159e91eb6f0f6bcd0cb8666a397ceb016ddd81bd3398023529",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000038032420",
+          "source_sha256": "ca39d5022bbd16323407fc030bcc0fc1ab9c9da3127b9fccb8828cad32bf2877",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "9034aa767ee98cf6059ca306110c94481b625a460b36ca808a6fdaf634c748b1",
+          "notes_sha256": "f5a3e489927b54159e91eb6f0f6bcd0cb8666a397ceb016ddd81bd3398023529",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000038032417",
+          "source_sha256": "8acfe996e942453892cd503454d020f537a109861a30894c08152fbc8ce120f5",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "a0c98c1dafe6c16aaadade6ff78f85ae314f451e2f08937c63dbb31d4400ce58",
+          "notes_sha256": "f5a3e489927b54159e91eb6f0f6bcd0cb8666a397ceb016ddd81bd3398023529",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000038032411",
+          "source_sha256": "3cc0565a9dd09f67ee8aaf3f2373d9ef0e8fb054cf0f0d24394b1010803ecb78",
+          "proposed_sha256": "befbc349fea393f90372b3851200545fdd63ac2665f2d6a2ee90cb4fa9a7fb53",
+          "reason_sha256": "11e5daadbbfe3ce6b4e8c15a23fa241af7826879cfaa209095e61a83da91c7c8",
+          "notes_sha256": "8ef45a96fdb40ed027eb0250fc3701ccd7055e4f0906bf574c8a4652a8d4bac0",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000038032414",
+          "source_sha256": "2c2dc02ac0e0c8f2e6a8aa7a71cea6158759b286a97d8629fbab0becf5e72dde",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "d6c65b31ba0e81f1877b1368013da6a97f70d29bfaff23a90d00bfd778ec5e41",
+          "notes_sha256": "f5a3e489927b54159e91eb6f0f6bcd0cb8666a397ceb016ddd81bd3398023529",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000038008113",
+          "source_sha256": "2952cf5aa03f6423bcd3872f4f261cda6eb78ffa9fc524f30d4fca760779f6b0",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "fe4a16b5867df9708a49075b751e5c79fc2537cbd37b3a425adbe356756bd6f7",
+          "notes_sha256": "f5a3e489927b54159e91eb6f0f6bcd0cb8666a397ceb016ddd81bd3398023529",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000045950409",
+          "source_sha256": "5ac85dd157094abd32ac427e5a3c4b7a21234e11fde777dcf274e9fd91a62e54",
+          "proposed_sha256": "e58bb3ac3d2b0f87e27c453e45d7aae9dc32f359a038b210f2434e8c7276926b",
+          "reason_sha256": "6b8816990b2fd084c4b3d7db32668aa6b98f8be61e19388754d80799eb33e11e",
+          "notes_sha256": "fa090c3295187a1422cf8c0a8de906e753ec00d8ddb8a6191105335274a926c6",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049123774",
+          "source_sha256": "89c02dd1e3ec6082b8945e4a10c68cfbf2ea9a1c16ef6b2825ba24ae354e5c31",
+          "proposed_sha256": "72b827d435e30f1a2ca3c7e4d0905a7c387e4f3d1a949c0b1ffafa4cd22c9a3f",
+          "reason_sha256": "30a3809fdf6244056562b2057edc83fd373edf736ae8578a511edb99ecbfdaba",
+          "notes_sha256": "88a8f447f39b150471464b0622303a828c1ee076b3fb09eceab8b2df777ebd17",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049123776",
+          "source_sha256": "f4263774172783c453729a3df6c163925960d8613f5cb793f2c17b6c57cf329b",
+          "proposed_sha256": "e6cea0ae057e21ee74b7cd9370ce5052d14613f92d73b8a8a579853ad26295b0",
+          "reason_sha256": "4ae28510e1aefb9fd68dc9222e0bb0b2aed9b6d1f9fbaad78ec0e7b962391341",
+          "notes_sha256": "3af3ee8162104f70d997621234c23f310d69e3dd9b8fc75535c5bdf335dd8a24",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049125068",
+          "source_sha256": "bbf641d17dfce8ee5653d7214a46c34b8bfdab30cfc7e4320cda5373c127d180",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "c1079b6931a99bd5bbe41922c9c2a60e30349e49b502f35655308c4ecc2b7389",
+          "notes_sha256": "f5a3e489927b54159e91eb6f0f6bcd0cb8666a397ceb016ddd81bd3398023529",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000038056790",
+          "source_sha256": "9b863f9325a4a9f71de25c44a5e5d95b6626e999c90399fa6329ed3ecb8b161f",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "59d226fda8c6db1c2b925d337e7f6164b97ef38b2c17c46bd9bd32eb16deed78",
+          "notes_sha256": "0540a65e5c5a8b3f77ce923c4c5186beb49e54cfac5dafe5680e20045b93e22e",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000043128498",
+          "source_sha256": "397f898303a29e0f53101b9c0363433a4c9fa47c25e377d1a1e59ca1c249170d",
+          "proposed_sha256": "76ab23203519b36d2fe92a6f4fde17615f6727c5078a2e97234136d39af38c99",
+          "reason_sha256": "97644066a5e2bec5ac92e901ca0fdec5eabe31513970d97a0c7c02572eabae33",
+          "notes_sha256": "4cffa52f389a85cc14485306ea3a80895f995e75c252b68d84d64fef694ac9b3",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000038056784",
+          "source_sha256": "a6d645a094e1ea309ef86aef5ee87864ed4eb89e50f6627af1088aac7745435c",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "0c58e3123b4da015bb3f282756a4a2399eba98186591e3445563f8a1befe6cba",
+          "notes_sha256": "f5a3e489927b54159e91eb6f0f6bcd0cb8666a397ceb016ddd81bd3398023529",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000038056781",
+          "source_sha256": "e7a378c23c86e6bb6a6a7c6c219a77bd2c40591d52ab27f0e1295b59b680114e",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "0d1c72fd1f49681eff444cc1294166886b74925e3a3b7fd57ac47a3165d6290e",
+          "notes_sha256": "f5a3e489927b54159e91eb6f0f6bcd0cb8666a397ceb016ddd81bd3398023529",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000038056777",
+          "source_sha256": "a18889b0627c614f430ae6bf8f5de477d82753432a7b421c1b8367cd4a2a345e",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "262bf1617cb7e777b085c655d5eaee242dfc51bf383b8c2db37f54fa72d0c4e2",
+          "notes_sha256": "f1170ef669ce29f375540fb5cd7e8665f24cdd7e0363c0d1d760099687a93a6e",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049127251",
+          "source_sha256": "18e6daf59b7b1b8d73f26870b6fed2f29330da1275e06cf76234347f19592623",
+          "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "reason_sha256": "344d70424fa3791a15d5beee6bcafd6044e08a9eed4aac78fed34b7525d5ad39",
+          "notes_sha256": "f00dabe1af3bf94aea8db8f35383047ed69ec7dc9128a5b69d589e978fc61422",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000049127253",
+          "source_sha256": "e9d413da8ce35b76c5612735309fefaa41699bd8a9f53b758a7be079bdfc22f9",
+          "proposed_sha256": "a20f03fb384601f0b20228888d9305a07dfadec897ead5ff0a8d8f54a72ced3c",
+          "reason_sha256": "333dca75588d64973da1e76b73345bbd8bd509d53da84449afb039c7c52d7952",
+          "notes_sha256": "2d4c1c7e820c0e9562052e4e07ae668f4a1561f0a96e1c374b53afc9f8e8a9e6",
+          "all_five_fields_source_notes_versions_batch_registry_intent_match": true
+        }
+      ]
+    }
+  ],
+  "verified_reviews": [
+    {
+      "job": "review-travail-LEGIARTI000035653236-00001-resume-1we5p9tn",
+      "articles": 12,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000035653236-00001-resume-1we5p9tn/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a1686c-28b6-7761-804e-fffc36345f2f",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000035653236-00001-resume-1we5p9tn",
+        "header_sha256": "b1885e1a7ca8b968dee9fe1404249d8867149dca21503ea7c9777c66ee70ad29",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "metric": {
+        "coordinator_pid": 39614,
+        "slug": "travail",
+        "index": 1,
+        "kind": "review",
+        "started_at_unix": 1792753213.0715048,
+        "outcome": "reviewed",
+        "attempts": 1,
+        "retries": [],
+        "job": "review-travail-LEGIARTI000035653236-00001-resume-1we5p9tn",
+        "articles": 12,
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "execution_session_id": "01a1686c-28b6-7761-804e-fffc36345f2f",
+        "execution_verified": true,
+        "finished_at_unix": 1792754480.873052,
+        "duration_seconds": 1267.8095468339961
+      },
+      "rows": [
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000035653236",
+          "archive": "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json",
+          "source_proposal_notes_versions_and_archived_beforeimage_match": true,
+          "current_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "prior_proposal_sha256": "c5902f82b2eddcc69a7fa172f79997750806c0d1dd5b59707f46fec983a92b0a"
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000033013454",
+          "archive": "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json",
+          "source_proposal_notes_versions_and_archived_beforeimage_match": true,
+          "current_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "prior_proposal_sha256": "ada405fed9bbdcb1e40b94f4a60c16d50ef09112a3180202f868b27da7839c99"
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000006900967",
+          "archive": "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json",
+          "source_proposal_notes_versions_and_archived_beforeimage_match": true,
+          "current_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "prior_proposal_sha256": "5833f5b32786cfcc8562e22ee9ca2d6dd4747f681a36b3d73541fba669549710"
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000024024758",
+          "archive": "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json",
+          "source_proposal_notes_versions_and_archived_beforeimage_match": true,
+          "current_proposal_sha256": "04112cb6569145bea265ebd6bb3b3b4ad91d9c2591cc2cd690329145132a43b5",
+          "prior_proposal_sha256": "3e20c1d653c5fed02caa663e2f7d29e7f3bccecb31664863f299a87f28ca7846"
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000032181969",
+          "archive": "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json",
+          "source_proposal_notes_versions_and_archived_beforeimage_match": true,
+          "current_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "prior_proposal_sha256": "028a2294b96e97f24f6f6d4850bd45a890731d212e73763806bbc4ce9808426e"
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000006900972",
+          "archive": "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json",
+          "source_proposal_notes_versions_and_archived_beforeimage_match": true,
+          "current_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "prior_proposal_sha256": "6135b4832d3bb4b1dca521a344391b9e0ee42ebe8856310831397f6fe2f6108a"
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000053283550",
+          "archive": "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json",
+          "source_proposal_notes_versions_and_archived_beforeimage_match": true,
+          "current_proposal_sha256": "514c3de7c7ffe05297ad4ed1e96d800c4ba719b19848ed2338e3e4696b5e5b09",
+          "prior_proposal_sha256": "11b822d2baba8cdf30a438dc9712e59a5d6441d151dad71f3b3de78c4cd13d87"
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000033024860",
+          "archive": "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json",
+          "source_proposal_notes_versions_and_archived_beforeimage_match": true,
+          "current_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "prior_proposal_sha256": "bb1b3ecf08561a548aa54f5c4ed9b9b4c5e0c57699a838b506518c8b0b811fa0"
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000006900975",
+          "archive": "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json",
+          "source_proposal_notes_versions_and_archived_beforeimage_match": true,
+          "current_proposal_sha256": "f3721f765d8d220ce73dab5520c98ebee9f43ffecea54d3b250b6db171f83522",
+          "prior_proposal_sha256": "12f9163d04f1ced9b2ac64db2df563450760bd891c4d4c91a54a74b17127aa9d"
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000046119112",
+          "archive": "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json",
+          "source_proposal_notes_versions_and_archived_beforeimage_match": true,
+          "current_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "prior_proposal_sha256": "3bd0a0bb9831c4077c549dc28ddfd5813acaa2c237e2b1750d8f4c8b91c9ceae"
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000035653215",
+          "archive": "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json",
+          "source_proposal_notes_versions_and_archived_beforeimage_match": true,
+          "current_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "prior_proposal_sha256": "271192d0235632510dffe0943f913a6123c70236b35679fa9be3f60bc809651d"
+        },
+        {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000006900978",
+          "archive": "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json",
+          "source_proposal_notes_versions_and_archived_beforeimage_match": true,
+          "current_proposal_sha256": "e8a3e66c3d7ce5b63512bd0428157a594b6556aa10f867b1fa24662ce440e2cc",
+          "prior_proposal_sha256": "31e720193341b9c6db81718212a75d545da23f0bb501e11bd9aa905c81f92ffb"
+        }
+      ]
+    }
+  ],
+  "current_disposition": {
+    "first_pass_covered": 29666,
+    "first_pass_pending": 651,
+    "old_nonaccepted_new_still_absent": 552,
+    "old_unattempted_new_still_absent": 96,
+    "documentary_holds_pending": 3,
+    "nonaccepted_old_reviews_still_pending": 46,
+    "old_review_pending": 5042,
+    "old_review_completed": 2521
+  },
+  "input_hashes": {
+    "runtime/false-usage-recovery-20261023T1041Z/locked-disposition.json": "0a029b4bc58c7fa3972c3d7b6d630f459837900546ba5cb6bed0036e05c20194",
+    "runtime/supervision/restarts/20261023T105555458418Z/mixed-queue.json": "bcfb60a64658af091acfcce7c06f4f3647e9d9f6f4bab339128b85f7cdc0a71c",
+    "registered-batches.json": "bf81f1751c41a41caf3e2fd929b6afb6e3a7987a9d0fda0b746d68c1b73b6540",
+    "runtime/exhaustive/jobs/travail-00478/source.json": "1917f0cd3230c9909be7c085c1ad5bd58deb856506081afce44ba618983cd92a",
+    "runtime/exhaustive/jobs/travail-00478/answer.json": "2a997674a1580bcd2677cb49e75fa89a6ce4ed6f9144fbba316f7095851fe67b",
+    "runtime/exhaustive/jobs/travail-00478/registration-intent.json": "2c2e117879fd8a41a8cdf673d77a74a37a2231307cf57d61989d5df188f565cc",
+    "runtime/exhaustive/jobs/travail-00478/registration-complete.json": "3a429240adf6d543a688077b853db400bdf32647439d4961b81e1541d7c1b153",
+    "batches/automatic-travail/00478.json": "2d975787f95da093246f7ed01d45f2ca97adf041d29fd176558a500b3cb2f9df",
+    "runtime/exhaustive/jobs/travail-00478/execution-observed-1.json": "308ec14acbc03e49698259da7868bd64f126d08ecfcde2290024ae8e584b2230",
+    "runtime/exhaustive/jobs/travail-00479/source.json": "844f757d53c31c7d92b1f155cc5ae287e52aa2875836a01eeb40376cf9d39ef0",
+    "runtime/exhaustive/jobs/travail-00479/answer.json": "67f3435bbb26513929d4e711350a4ad0ff2cbc3be07e4cfef44d816787120c95",
+    "runtime/exhaustive/jobs/travail-00479/registration-intent.json": "1bb7ca4b2a1f73e1e4edcb0217f5e5310ab7bfce7e55c32206ff2b9e045b9037",
+    "runtime/exhaustive/jobs/travail-00479/registration-complete.json": "2f8f51b49ae59d34e6c36ba82a2721b83427b39ca101ee9d4a435dec6deaa255",
+    "batches/automatic-travail/00479.json": "199d9debb56586a0964fcd7bce258173ccd3be6f7d6fd0c0de758f0e2c9e1e2d",
+    "runtime/exhaustive/jobs/travail-00479/execution-observed-1.json": "ba99c6f3300f393947fd1eebef26283df621401c5030ba260aef7667e46bfa5a",
+    "runtime/exhaustive/jobs/travail-00477/source.json": "8fe36ddd60567583a4c75c5a0d58444bba184602ba91b0f279ed850b76273e0b",
+    "runtime/exhaustive/jobs/travail-00477/answer.json": "967f6c9be8c137ad322987182777e262a73ce174c85d255af602e1d97b504268",
+    "runtime/exhaustive/jobs/travail-00477/registration-intent.json": "65c970b2b1dca938fa2445687e491a2031d12ea9652646cee6bddc8d76cd3cd9",
+    "runtime/exhaustive/jobs/travail-00477/registration-complete.json": "612e09f01377d5bbfb5fb8aaf3527e09af80aec545c644049a8d3e222e1ed239",
+    "batches/automatic-travail/00477.json": "0489ace843bfa2765f3856bf69ab4cdbbdf08f9b3caa95bf591a93ca9eaa4031",
+    "runtime/exhaustive/jobs/travail-00477/execution-observed-1.json": "15d2faf5fe695f7abc9a8ab762b227b38f90dfe3e8530635e8fe55152265faad",
+    "runtime/exhaustive/jobs/travail-00480/source.json": "bc283fb323df882954fb229973b260d4473265bdac27ad09ab54402946338532",
+    "runtime/exhaustive/jobs/travail-00480/answer.json": "9ef5c79132d58e0a6f1ffa377ba3b422d665a8c7e7e5c25b9fef0b7c278e7db2",
+    "runtime/exhaustive/jobs/travail-00480/registration-intent.json": "69c59557ae31280fbcc1cafb1e473fa0ef6234536f27cac74a4cc7d1106ecf87",
+    "runtime/exhaustive/jobs/travail-00480/registration-complete.json": "7693bc07fce508db5795cb195f23d22cfc05a77967fd64ad7487c3714a7af54f",
+    "batches/automatic-travail/00480.json": "28cdb2ccee0d8fe2a2d1f9063536bacffd4cb1a8099ee23acd326b673c7fe9c8",
+    "runtime/exhaustive/jobs/travail-00480/execution-observed-1.json": "dcbfd1bf859eef496d483b7ff34217e976414adb984a2c5ba96c62c0178103d3",
+    "runtime/exhaustive/jobs/travail-00481/source.json": "c0b35fa9bc6b480d5f4f810edaf2f9f88ee6669509bc280df4972cefe58f53a5",
+    "runtime/exhaustive/jobs/travail-00481/answer.json": "c666e315b2e60c480ada8992b91f1c3500b9ebf8c53ea17e818b7297daed32dc",
+    "runtime/exhaustive/jobs/travail-00481/registration-intent.json": "114b26148f1081c16f382d369f44b55ee2e65c96574dd679a17b106758ae6e58",
+    "runtime/exhaustive/jobs/travail-00481/registration-complete.json": "5a437cbdd343bb82e38e79a89575eeac74497a540fdd11ec6fff83ac27d60db4",
+    "batches/automatic-travail/00481.json": "b6d4b87fd0a57db1959644f4b5228d20250d9e3d427c9116d5a06db7bcbb5263",
+    "runtime/exhaustive/jobs/travail-00481/execution-observed-1.json": "27f55382541c3114b88561cbae78a755446f2031fc513a13f8a0ef2cd9f5722a",
+    "runtime/exhaustive/jobs/travail-00475/source.json": "49ebfe0171568cd904a5539b984c168c67873287b852f2e6bc752e900d18bcf5",
+    "runtime/exhaustive/jobs/travail-00475/answer.json": "161d5de4dfea2baffcf80839e7c790dde8daea0fbde11d5b6e5cb87eed6a9663",
+    "runtime/exhaustive/jobs/travail-00475/registration-intent.json": "f5d50a04e7720510ae02bfb0e75306a95a266525e11cf183af88a96e18e99ba9",
+    "runtime/exhaustive/jobs/travail-00475/registration-complete.json": "b84d19affcfb99f0f770d81c10f34949f9572a178a1d9c8579e2f234717a8fce",
+    "batches/automatic-travail/00475.json": "09c40a559e26f092dbf5eaf1539cd49d95d2e8e625cb46aa29be5be69d2db437",
+    "runtime/exhaustive/jobs/travail-00475/execution-observed-2.json": "1176ca8a9c27983131645e47bab5ebf13ac74047113ddf809bc9cdfba0a3c9dd",
+    "runtime/exhaustive/jobs/review-travail-LEGIARTI000035653236-00001-resume-1we5p9tn/source.json": "4a90c6e510eba7b2799ee61a49b6b221ecc8ae5e8d756fa03f1dca44c9350ad5",
+    "batches/travail/010.json": "c8404cd26f1507f35b70edfc6f4685ab9ab4e3ba4cec19ab8648a0b376e8cf3b",
+    "batches/travail/011.json": "edcfea8c2cfa4591d37c09b47299266ed79aa14eb02c7313d396b88fcee57a9a",
+    "runtime/exhaustive/jobs/review-travail-LEGIARTI000035653236-00001-resume-1we5p9tn/answer.json": "6ab72d29262710e8211e1341147be0604bc9e26deeb6dc0968a80f73a0250439",
+    "runtime/exhaustive/jobs/review-travail-LEGIARTI000035653236-00001-resume-1we5p9tn/execution-observed-1.json": "fc153b14e307290b231ba02b11f49049103018b9ab2d0afbd8a3a102cf5e00d9",
+    "revisions/radical-review/bd6f86218ab5ee508b7f832b3c19ba805a26259305d25aa49fcec250f7ca420f.json": "99243fa9987e868b8096afa53639c451788ec3ba3ea4af9f30e638c508302958",
+    "runtime/radical-review-20261019.json": "21534ded88493f3c273e94dbc9350c3a95332a966b1041555daf8396504237b6"
+  }
+}

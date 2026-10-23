@@ -1,0 +1,76 @@
+{
+  "checked_at_utc": "2026-10-23T10:02:42.253662+00:00",
+  "state": "self_stopped_false_access_classification_export_finishing",
+  "coordinator_pid": 3122,
+  "known_os_coordinator_count": 1,
+  "last_os_check": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/false-usage-classification-20261023T0943Z/system-check.json",
+  "current_first_pass_covered": 29522,
+  "current_first_pass_pending": 795,
+  "old_review_completed": 2509,
+  "old_review_pending": 5054,
+  "all_second_pass_coverage_not_certified": true,
+  "nonaccepted_jobs": 34,
+  "new_absent_in_nonaccepted_jobs": 696,
+  "prior_reviews_still_pending_in_nonaccepted_jobs": 58,
+  "unattempted_new_jobs": 4,
+  "unattempted_new_absent": 96,
+  "held_documentary_sources": 3,
+  "unclassified_first_pass_missing": 0,
+  "last_new_job_verified_accepted": {
+    "job": "travail-00474",
+    "articles": 24
+  },
+  "native_worker_count_at_os_check": 0,
+  "remaining_coordinator_activity": "existing publish_snapshot.py --deploy, build_reader.py descendant; no new publication launched by this control",
+  "owned_supervision_pause": {
+    "owner": "false-usage-classification-20261023T0943Z-f7e28488-2bc7-4a9f-8113-ee14df0a6198",
+    "reason": "Guarded technical repair after native routing failure misclassified from legal quota text; existing process and accepted batches finish naturally",
+    "pid": 3122,
+    "created_at_unix": 1792748985.335069,
+    "no_signal_sent": true,
+    "no_concurrent_launch": true,
+    "resume_only_after_guarded_reconciliation": true
+  },
+  "pause_sha256": "56afa06903a7e52346f17f5d937844c9d16160f68dce473c8837aa94fc4a009c",
+  "effective_workers": {
+    "workers": 7,
+    "role_limits": {
+      "new": 6,
+      "review": 1
+    }
+  },
+  "technical_candidate": {
+    "reviewed_at_unix": 1792749627.8634298,
+    "active_unchanged": true,
+    "only_changed_existing_function": [
+      "_run_job"
+    ],
+    "only_added_function": "native_access_failure",
+    "validator_functions_ast_identical": true,
+    "candidate_sha256": "e950a288939012b1915f180a7cc80987b5e79452e08eab7b9a4cd4a4f7a3a0db",
+    "baseline_sha256": "1c66699d0b54334c099460546c8bd1cfced0a831336a544caf17b7b928538f7e",
+    "test_results": {
+      "tests_run": 105,
+      "failures": 0,
+      "errors": 0,
+      "success": true,
+      "production_db_forbidden": true,
+      "model_invocations": 0,
+      "tested_runner_sha256": "e950a288939012b1915f180a7cc80987b5e79452e08eab7b9a4cd4a4f7a3a0db"
+    },
+    "state": "READY_FOR_GUARDED_SINGLE_FILE_INSTALL_AFTER_CONFIRMED_EXIT",
+    "not_installed": true,
+    "review_transfer_not_ready": true
+  },
+  "active_code_modified": false,
+  "canonical_articles_modified_by_this_control": false,
+  "no_current_stop_signal_sent": true,
+  "large_capture_not_launched": true,
+  "global_audit": "global-reference-audit-20261022T222551Z",
+  "treatments_since_audit_baseline": 1261,
+  "free_gib": 5.465602874755859,
+  "audit_capture_required_free_gib": 9,
+  "wal_bytes": 0,
+  "review_reallocation": "NOT_READY_FOR_ACTIVATION",
+  "next_action": "Wait for exact process and exporter descendants to exit; current full guarded reconciliation and owned-pause checks before one-file repair and one restart by existing supervisor. Never infer first-pass exhaustion from the stopped queue."
+}

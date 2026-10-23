@@ -1,0 +1,54 @@
+{
+  "observed_at_unix": 1792749525.372732,
+  "coordinators": [
+    {
+      "pid": 3122,
+      "ppid": 1,
+      "args": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "-u",
+        "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py",
+        "--workers",
+        "8",
+        "--interleave-review",
+        "--export-every",
+        "1000",
+        "--deploy-on-export",
+        "--publish-at-end"
+      ]
+    }
+  ],
+  "native_workers": [],
+  "known_process_inventory": true,
+  "os_process_birth": {
+    "raw_lstart": "Thu Oct 22 13:54:15 2026",
+    "parsed_using_local_timezone": [
+      "PST",
+      "PDT"
+    ],
+    "epoch": 1792702455.0,
+    "utc": "2026-10-22T20:54:15+00:00",
+    "run_start_delay_seconds": 6.0,
+    "timezone_conversion_roundtrip": true
+  },
+  "descendants": [
+    {
+      "pid": 31635,
+      "ppid": 3122,
+      "args": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/publish_snapshot.py",
+        "--deploy"
+      ]
+    },
+    {
+      "pid": 32330,
+      "ppid": 31635,
+      "args": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/build_reader.py"
+      ]
+    }
+  ],
+  "no_process_signals_or_launches_by_this_check": true
+}

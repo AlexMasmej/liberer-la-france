@@ -1,0 +1,198 @@
+{
+  "checked_at_utc": "2026-10-23T11:01:35.360248+00:00",
+  "coordinators": [
+    {
+      "pid": 39614,
+      "ppid": 1,
+      "args": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "-u",
+        "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py",
+        "--workers",
+        "8",
+        "--interleave-review",
+        "--export-every",
+        "1000",
+        "--deploy-on-export",
+        "--publish-at-end"
+      ]
+    }
+  ],
+  "workers": [
+    {
+      "pid": 40126,
+      "ppid": 39614,
+      "job": "travail-00478",
+      "kind": "new",
+      "last_event_unix": 1792753278,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00478/errors-1.log",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "no_runtime_header"
+      }
+    },
+    {
+      "pid": 40129,
+      "ppid": 39614,
+      "job": "travail-00477",
+      "kind": "new",
+      "last_event_unix": 1792753278,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00477/errors-1.log",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "no_runtime_header"
+      }
+    },
+    {
+      "pid": 40132,
+      "ppid": 39614,
+      "job": "travail-00479",
+      "kind": "new",
+      "last_event_unix": 1792753279,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00479/errors-1.log",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "no_runtime_header"
+      }
+    },
+    {
+      "pid": 40133,
+      "ppid": 39614,
+      "job": "travail-00480",
+      "kind": "new",
+      "last_event_unix": 1792753281,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00480/errors-1.log",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "no_runtime_header"
+      }
+    },
+    {
+      "pid": 40135,
+      "ppid": 39614,
+      "job": "review-travail-LEGIARTI000035653236-00001-resume-1we5p9tn",
+      "kind": "review",
+      "last_event_unix": 1792753278,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000035653236-00001-resume-1we5p9tn/errors-1.log",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "no_runtime_header"
+      }
+    },
+    {
+      "pid": 40136,
+      "ppid": 39614,
+      "job": "travail-00475",
+      "kind": "new",
+      "last_event_unix": 1792753262,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00475/errors-1.log",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "no_runtime_header"
+      }
+    },
+    {
+      "pid": 40137,
+      "ppid": 39614,
+      "job": "travail-00476",
+      "kind": "new",
+      "last_event_unix": 1792753256,
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00476/errors-1.log",
+        "response_started": false,
+        "verified": false,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "no_runtime_header"
+      }
+    }
+  ],
+  "known_process_inventory": true,
+  "run": {
+    "pid": 39614,
+    "capacity": 8,
+    "started_at_unix": 1792752957,
+    "dependency_leases": true,
+    "requested_execution": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium"
+    },
+    "role_limits": {
+      "new": 6,
+      "review": 2
+    },
+    "initial_admission_limits": {
+      "workers": 7,
+      "role_limits": {
+        "new": 6,
+        "review": 1
+      }
+    },
+    "borrowing_enabled": false
+  },
+  "os_birth": {
+    "lstart_local": "Fri Oct 23 03:55:55 2026",
+    "time_zone": [
+      "PST",
+      "PDT"
+    ],
+    "epoch": 1792752955.0,
+    "utc": "2026-10-23T10:55:55+00:00",
+    "run_start_delay_seconds": 2.0
+  },
+  "new_queue_jobs": 33,
+  "new_queue_identities": 792,
+  "all_696_nonaccepted_and_96_unattempted_new_ids_requeued": true,
+  "old_pending_reviews_in_mixed_queue": 5054,
+  "all_58_nonaccepted_reviews_requeued": true,
+  "native_prefix_hashes": [
+    {
+      "path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00478/errors-1.log",
+      "captured_bytes": 308,
+      "prefix_sha256": "6b7b138fc8d4f62efd2bfd3435814e6663b136f5796f378856e531071918af7c"
+    },
+    {
+      "path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00477/errors-1.log",
+      "captured_bytes": 119,
+      "prefix_sha256": "30f58d8c8f297b27afb376a4fbab64c407b20b77d51d2862cb5201371c803a1e"
+    },
+    {
+      "path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00479/errors-1.log",
+      "captured_bytes": 308,
+      "prefix_sha256": "390d1e8a86c2a8f98fd4a34851ab898041753ee527bbfc51a514fa899c5f9b9c"
+    },
+    {
+      "path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00480/errors-1.log",
+      "captured_bytes": 119,
+      "prefix_sha256": "c957b5822b728c93266018d2f6e8c1a597d5cdd5dbe1a10ee1dba64946e4834f"
+    },
+    {
+      "path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000035653236-00001-resume-1we5p9tn/errors-1.log",
+      "captured_bytes": 308,
+      "prefix_sha256": "5d8de81aec26555c32a97c912f324ac59588ac59c9766d634f4905e18829c94c"
+    },
+    {
+      "path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00475/errors-1.log",
+      "captured_bytes": 119,
+      "prefix_sha256": "61cddf448cb512607a805ec13638420d0646bdc2fb1f157ea8e60414ab3a27eb"
+    },
+    {
+      "path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/travail-00476/errors-1.log",
+      "captured_bytes": 119,
+      "prefix_sha256": "babb5e63f9d5f1881af273cb96dd0cb1724db6fcfead8311101a6ce18ad7c2c7"
+    }
+  ],
+  "accepted_new_pid_jobs": [],
+  "no_completed_legal_convergence_claimed": true
+}

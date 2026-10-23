@@ -1,0 +1,33 @@
+{
+  "pause": {
+    "owner": "false-usage-classification-20261023T0943Z-f7e28488-2bc7-4a9f-8113-ee14df0a6198",
+    "reason": "Guarded technical repair after native routing failure misclassified from legal quota text; existing process and accepted batches finish naturally",
+    "pid": 3122,
+    "created_at_unix": 1792748985.335069,
+    "no_signal_sent": true,
+    "no_concurrent_launch": true,
+    "resume_only_after_guarded_reconciliation": true
+  },
+  "pause_sha256": "56afa06903a7e52346f17f5d937844c9d16160f68dce473c8837aa94fc4a009c",
+  "run_sha256": "a99bda4f39a183bd4839fb16b14911383dbf09ab2cdb9bcc4cd28c4f1027d1fa",
+  "live_coordinators": [
+    {
+      "pid": 3122,
+      "ppid": 1,
+      "args": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "-u",
+        "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py",
+        "--workers",
+        "8",
+        "--interleave-review",
+        "--export-every",
+        "1000",
+        "--deploy-on-export",
+        "--publish-at-end"
+      ]
+    }
+  ],
+  "workers": [],
+  "action": "create owned supervisor pause only; no active job interruption"
+}
