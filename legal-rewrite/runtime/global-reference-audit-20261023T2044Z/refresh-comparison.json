@@ -1,0 +1,71 @@
+{
+  "audit_id": "b8e5f14afb9810ccbdb390e0966565f219ac3640e58e849628483afba9bc67a7",
+  "previous_audit_id": "384c85d78606cdafab4c33a86b86533004b1ba9ee0a1006779014a07ce0351f6",
+  "as_of": "2026-10-18",
+  "metrics": {
+    "entries_scanned": {
+      "previous": 30317,
+      "current": 30317,
+      "change": 0
+    },
+    "findings_count": {
+      "previous": 89300,
+      "current": 88671,
+      "change": -629
+    },
+    "distinct_articles_with_priority_1_findings": {
+      "previous": 720,
+      "current": 752,
+      "change": 32
+    },
+    "proposed_repeal_targets_with_detected_referrers": {
+      "previous": 521,
+      "current": 542,
+      "change": 21
+    }
+  },
+  "occurrences": {
+    "previous": 470924,
+    "current": 469482
+  },
+  "priority_1": {
+    "previous": 1196,
+    "current": 1248
+  },
+  "progress_before_capture": {
+    "observed_at_utc": "2026-10-23T20:43:45.616028+00:00",
+    "method": "Conservative atomic status and complete metrics-prefix observations before read-only capture; not transactionally synchronous with snapshot. Actual accepted/reviewed treatment counts after the previous pinned prefix, without subtracting worklist completed counters.",
+    "source": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/status.json",
+    "status_sha256": "4caf4238dc6ee525d395274446ae79c4241d46aeeea69fdce56842a5b24ed389",
+    "status_updated_at_unix": 1792788218,
+    "counters": {
+      "drafted_articles": 13236,
+      "retained_unchanged": 17078,
+      "prior_drafts_reviewed": 4646
+    },
+    "source_records": 30317,
+    "pending": 3,
+    "additional_treatments_since_previous_baseline": 1314,
+    "treatment_count_basis": {
+      "postpublication_coordinator_pid": 78943,
+      "postpublication_reviewed_jobs": 460,
+      "postpublication_reviewed_articles": 3604,
+      "metrics_prefix_bytes": 683550,
+      "metrics_prefix_sha256": "c618cd3d402b4c88ca88cec513bd2b89cc6bac4918e2f3b2564d332e57ccb35a",
+      "last_reviewed_finished_at_unix": 1792788217.652004,
+      "previous_validated_audit_id": "384c85d78606cdafab4c33a86b86533004b1ba9ee0a1006779014a07ce0351f6",
+      "previous_baseline_metrics_prefix_bytes": 622344,
+      "previous_baseline_metrics_prefix_sha256": "ddb234d11cdf14a010601394ea383be31288c88a23ea72c1e2c448f1127d397d",
+      "successful_treatments_after_previous_pinned_metrics_prefix": 1314
+    },
+    "next_threshold_basis": "Count actual successful accepted/reviewed articles after this pinned prefix, including later verified PIDs; never subtract completed totals of different worklists."
+  },
+  "frozen_snapshot_counts": {
+    "proposals_in_canonical_inventory": 13236,
+    "retained_unchanged_in_canonical_inventory": 17078,
+    "proposals_identical_to_source_body": 0
+  },
+  "additional_treatments_since_previous_baseline": 1314,
+  "structural_findings_are_confirmed_legal_errors": false,
+  "automatic_change": false
+}

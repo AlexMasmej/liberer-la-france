@@ -1,0 +1,28 @@
+{
+  "observed_at_utc": "2026-10-23T20:43:45.616028+00:00",
+  "method": "Conservative atomic status and complete metrics-prefix observations before read-only capture; not transactionally synchronous with snapshot. Actual accepted/reviewed treatment counts after the previous pinned prefix, without subtracting worklist completed counters.",
+  "source": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/status.json",
+  "status_sha256": "4caf4238dc6ee525d395274446ae79c4241d46aeeea69fdce56842a5b24ed389",
+  "status_updated_at_unix": 1792788218,
+  "counters": {
+    "drafted_articles": 13236,
+    "retained_unchanged": 17078,
+    "prior_drafts_reviewed": 4646
+  },
+  "source_records": 30317,
+  "pending": 3,
+  "additional_treatments_since_previous_baseline": 1314,
+  "treatment_count_basis": {
+    "postpublication_coordinator_pid": 78943,
+    "postpublication_reviewed_jobs": 460,
+    "postpublication_reviewed_articles": 3604,
+    "metrics_prefix_bytes": 683550,
+    "metrics_prefix_sha256": "c618cd3d402b4c88ca88cec513bd2b89cc6bac4918e2f3b2564d332e57ccb35a",
+    "last_reviewed_finished_at_unix": 1792788217.652004,
+    "previous_validated_audit_id": "384c85d78606cdafab4c33a86b86533004b1ba9ee0a1006779014a07ce0351f6",
+    "previous_baseline_metrics_prefix_bytes": 622344,
+    "previous_baseline_metrics_prefix_sha256": "ddb234d11cdf14a010601394ea383be31288c88a23ea72c1e2c448f1127d397d",
+    "successful_treatments_after_previous_pinned_metrics_prefix": 1314
+  },
+  "next_threshold_basis": "Count actual successful accepted/reviewed articles after this pinned prefix, including later verified PIDs; never subtract completed totals of different worklists."
+}

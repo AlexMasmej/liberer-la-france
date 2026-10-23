@@ -1,0 +1,11 @@
+# Contrôle du 23 octobre 12h46–13h UTC
+
+L’enregistrement de la longue relecture est désormais réellement accepté : huit articles de review-impots-LEGIARTI000053544241-00001, leurs cinq champs, sources entières, NOTA, bornes, propriétaire, registre et avant-images concordent. Cela résout l’attente observée pour ce lot ; aucune cause générale ou absence d’interblocage future n’est inférée. Les deux refus de rapprochement global pendant sa phase protégée restent historiques, non effacés et non transformés en contrôles réussis du corpus entier.
+
+À 2026-10-23T13:04:40.785531+00:00, 19 lots new/456 articles et deux lots/20 relectures du PID39614 sont vérifiés par transaction ro. Couverture première passe : 29978/30317 ; 339 ouvertes =240 anciens non acceptés absents +96 anciennes non admises +3 réserves. Sur les34 anciens travaux non acceptés,20 sont récupérés par travail frais vérifié et14 gardent du pending ; leurs754 sources/NOTA/bornes sont reconfrontées. Les anciennes relectures restent2529/5034 sur la seule liste7563.
+
+Le nouveau différé travail-00482 est une tentative fraîche de39614 : trois rejets de validation, dernier motif sauvegardé « Duplicate measure and effect in one article ». Ses24 identités restent absentes, sources entières/NOTA/versions exactes et fichiers originaux hachés. Toutes chevauchent le vieux périmètre : ne pas ajouter24 aux339 ouvertes. Aucun rejeu ou enregistrement par le contrôle, aucune cause réseau/quota/disque établie.
+
+À13h05, unique39614, LaunchAgent enregistré, six réponses natives Astra/Moyen réelles ; sept lots new en attente et six réservés. Le contrôle reste7/new6/review0. Aucun signal, relancement, pause de supervision, installation ou changement de limite. La préparation hors ligne de la liste complète et de sa publication coordonnée est terminée dans le nouveau paquet,93 tests réussis ; son backend conserve son refus précoce et la production reste NOT_READY_FOR_ACTIVATION. Aucun gain de débit ni validation juridique globale annoncé.
+
+Environ5.10Gio disponibles, WAL0octet à cette capture ; audit dû avec1737traitements depuis222551Z, toujours différé sous9Gio. Aucun snapshot, nettoyage ou compression du courant. Recherches officielles bornées sans fac-similé original obtenu, trois réserves conservées. Suivi actif.

@@ -1,0 +1,23 @@
+{
+  "at_utc": "2026-10-23T05:39:00.982435+00:00",
+  "state": "refresh_deferred_storage_budget",
+  "current_validated_audit": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261022T222551Z",
+  "current_audit_id": "5a397d8c1d94e2081c5d88b1b7dd8cf2941e383b9951c04d75baa8691e47b9ba",
+  "additional_treatments_since_current_audit": 1093,
+  "available_free_bytes": 9150017536,
+  "available_free_gib": 8.521617889404297,
+  "required_free_bytes_during_writers": 9663676416,
+  "required_free_bytes_otherwise": 6442450944,
+  "archive_utility_saved_bytes": 0,
+  "completed_noncurrent_audits_already_compacted": true,
+  "new_snapshot_created": false,
+  "current_audit_kept_uncompressed": true,
+  "coordinator_pid": 3122,
+  "rewrite_status": "running",
+  "canonical_writes_continue": true,
+  "code_policy_or_worker_limits_changed": false,
+  "previous_record": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261023T0537Z/previous-audit-refresh-deferred.json",
+  "proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261023T0537Z/CONTROL.json",
+  "resume_rule": "Recheck free margin each control; take a NEW timestamped read-only snapshot only above current concurrent budget and perform all validation before atomic pointer replacement. No writer reduction, evidence deletion, or cleanup outside project.",
+  "notification": "Known capture-margin constraint; no repeated storage alert while canonical writes progress."
+}
