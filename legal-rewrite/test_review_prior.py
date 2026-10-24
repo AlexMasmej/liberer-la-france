@@ -51,6 +51,20 @@ class PriorReviewTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'changed draft'):review.commit([self.new],self.expected)
         self.assertEqual(self.path.read_text(),before)
         self.assertFalse((self.root/'revisions/radical-review').exists())
+    def test_acceptance_is_finalized_before_unlocking(self):
+        @contextlib.contextmanager
+        def lock():
+            yield
+            report=json.loads(review.revisions_manifest().read_text())
+            self.assertEqual(report['completed_second_pass'],1)
+        with patch.object(review,'writer_lock',lock),contextlib.redirect_stdout(io.StringIO()):
+            review.commit([self.new],self.expected)
+    def test_failed_full_validation_never_marks_review_complete(self):
+        before=review.revisions_manifest().read_bytes()
+        with patch.object(review,'register_locked',side_effect=ValueError('full validation rejected')):
+            with self.assertRaisesRegex(ValueError,'full validation rejected'):
+                review.commit([self.new],self.expected)
+        self.assertEqual(review.revisions_manifest().read_bytes(),before)
     def test_refuses_a_changed_official_source_before_editing_batches(self):
         before=self.path.read_text()
         self.db.execute('UPDATE articles SET source_sha256=?',('0'*64,));self.db.commit()
