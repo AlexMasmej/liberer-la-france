@@ -1,0 +1,11 @@
+{
+  "runner_sha256": "d826aac7dbd43e5e07538d07a9bbf770bbb732842352424456ffd19067898802",
+  "attempt_bound": 3,
+  "per_attempt_timeout_seconds": 3600,
+  "note": "The pinned runner contains invoke_agent group cleanup on timeout and ordinary bounded retries. Six first-attempt receipts ended with returncode -15 and two with returncode 1. Available retry inputs distinguish timeout from invocation failure; this control sent no signal.",
+  "exact_two_coordinator_launches": [
+    41583,
+    58195
+  ],
+  "no_bounded_retry_count_or_native_access_detector_change": true
+}

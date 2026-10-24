@@ -1,0 +1,237 @@
+{
+  "checked_at_utc": "2026-10-23T22:06:50.426638+00:00",
+  "new_coordinator_pid": 41583,
+  "previous_coordinator_pid": 78943,
+  "birth_utc": "2026-10-23T21:04:43+00:00",
+  "run": {
+    "pid": 41583,
+    "capacity": 8,
+    "started_at_unix": 1792789489,
+    "dependency_leases": true,
+    "requested_execution": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium"
+    },
+    "continuation_mode": "recover_new_before_reviews",
+    "review_tail_capacity": 8,
+    "role_limits": {
+      "new": 6,
+      "review": 2
+    },
+    "initial_admission_limits": {
+      "workers": 8,
+      "role_limits": {
+        "new": 6,
+        "review": 0
+      }
+    },
+    "borrowing_enabled": false
+  },
+  "registered_supervisor_launch": {
+    "pid": 41583,
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-u",
+      "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py",
+      "--workers",
+      "8",
+      "--recover-new-before-reviews",
+      "--export-every",
+      "1000",
+      "--deploy-on-export",
+      "--publish-at-end"
+    ],
+    "launched_at_unix": 1792789483
+  },
+  "physical_interpreter": {
+    "requested_launcher": "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+    "loaded_image": "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+    "launcher_sha256": "f13707ff725eb3675d57e0f04527a4dada0511cebfb7cbd80f5cab72733a2a9d",
+    "image_sha256": "6cf88920bb89d3db7cb8bad4b09ad793143e37b00c60a8b37baa435071fcae03",
+    "lsof_sha256": "271501281040e705ddb814d5b10ae2e81bbc6b3c4a56b265b63a6414d7050418",
+    "arguments_identical": true
+  },
+  "native_workers": 8,
+  "native_responding_distinct": 8,
+  "responders": [
+    {
+      "pid": 46377,
+      "job": "review-impots-LEGIARTI000006302661-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-78e2-ba45-e71ab931806b",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001",
+        "header_sha256": "4b34e9848decc9a4a5f1bf4329b215618933dad9ab92ea5f8c37cf8ca91e6b79",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "new_priority_present_in_native_input": true,
+      "log_prefix_bytes": 499941,
+      "log_prefix_sha256": "0b93aceb7276773b309f9189c37ec22feb4761c4524a85a99c3c8e2a16d96869"
+    },
+    {
+      "pid": 46423,
+      "job": "review-travail-LEGIARTI000006900996-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7592-99c6-94d77af40fb5",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001",
+        "header_sha256": "b40655a7e0738b285cd10f3f9179e4c96c9095c608264b369ed846b0523961ca",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "new_priority_present_in_native_input": true,
+      "log_prefix_bytes": 433798,
+      "log_prefix_sha256": "2ea73a35e8debd5ef339d3d35291f88f79151b50d5899f810e80264ab4d7cd37"
+    },
+    {
+      "pid": 46438,
+      "job": "review-construction-habitation-LEGIARTI000006824437-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7123-aacf-5e1c0f87c633",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001",
+        "header_sha256": "0a641f645d358245cf1fb0b393f147802a8e33dad2c0b43693238934e7cc5120",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "new_priority_present_in_native_input": true,
+      "log_prefix_bytes": 525524,
+      "log_prefix_sha256": "36698dda775732de2608a1fbbe6ebdfbd7b8ab9ab27f6ce5929c6f612e466d77"
+    },
+    {
+      "pid": 46439,
+      "job": "review-impots-annexe-3-LEGIARTI000006299327-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7a00-82e0-ecafea422d5a",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001",
+        "header_sha256": "9894d26de6eccaa48cad2a1da3a3cb88b999869dd2be12b1c22b1b2eb05e3632",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "new_priority_present_in_native_input": true,
+      "log_prefix_bytes": 440697,
+      "log_prefix_sha256": "c68a04bd0bb444c226f4b73139b74f0403f552a4bae3b0a4561621e6f0c80c6e"
+    },
+    {
+      "pid": 46440,
+      "job": "review-urbanisme-LEGIARTI000045525738-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7e22-bd63-5a1d7172e216",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001",
+        "header_sha256": "1a3c83b353c383527833cbf2ad366245114a04ddf987d6a7c9bb00c32e6843ff",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "new_priority_present_in_native_input": true,
+      "log_prefix_bytes": 445837,
+      "log_prefix_sha256": "bf9583f8b30a5262bac52b8b63e8da724aee8e1220932e2301dcc203b6915a8c"
+    },
+    {
+      "pid": 46441,
+      "job": "review-impots-LEGIARTI000051765136-00002",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7520-b08e-53329f03a14c",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002",
+        "header_sha256": "7c1305b240054be5b2c8d9585240695fc30e571cc0e112a64ba5853e24f8b9c1",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "new_priority_present_in_native_input": true,
+      "log_prefix_bytes": 605310,
+      "log_prefix_sha256": "aab9014b3e52742bc5e281b0b44725fa89917220acb9dfe20eda24e8165f530b"
+    },
+    {
+      "pid": 46445,
+      "job": "review-impots-annexe-2-LEGIARTI000054552531-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7992-80dc-82a12c1af152",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001",
+        "header_sha256": "748572e5a3303a8414e922ef1d14117e99671b2c82320f0ee448cf955bcea460",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "new_priority_present_in_native_input": true,
+      "log_prefix_bytes": 555178,
+      "log_prefix_sha256": "dfeba400272730189dcdd9dd916f7cd625ce8ae1ada16e0f2ae9fdf538669891"
+    },
+    {
+      "pid": 46446,
+      "job": "review-securite-sociale-LEGIARTI000054250137-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7853-88e6-d0dfcb5f1ba4",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001",
+        "header_sha256": "4de5ed83e629cc750701dbc4d1d0d920cb21077f16714287666ea139c12cfd6f",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "new_priority_present_in_native_input": true,
+      "log_prefix_bytes": 426093,
+      "log_prefix_sha256": "7735c431d8e6db9b51132e4c9ca39ebf5699bd3273546e6301c248a6028b3e10"
+    }
+  ],
+  "installed_runner_sha256": "d826aac7dbd43e5e07538d07a9bbf770bbb732842352424456ffd19067898802",
+  "all77pins_match": true,
+  "legal_policy_coordinations_or_global_model_changed": false,
+  "concurrent_presentation_and_grammar_reviews": [
+    "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/coherence-rollout-20261023T2042Z/concurrent-presentation-change-review-v3.json",
+    "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/coherence-rollout-20261023T2042Z/concurrent-site-summaries-grammar-review.json"
+  ],
+  "new_priority_applies_to_responding_sessions": true,
+  "throughput_gain_claimed": false,
+  "distinct_new_native_responses_observed_across_dated_captures": 8,
+  "eight_distinct_new_responses_attested": true
+}

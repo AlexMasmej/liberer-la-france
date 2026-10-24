@@ -1,0 +1,130 @@
+{
+  "checked_at_utc": "2026-10-23T22:17:38.368558+00:00",
+  "new_coordinator_pid": 41583,
+  "previous_coordinator_pid": 78943,
+  "birth_utc": "2026-10-23T21:04:43+00:00",
+  "run": {
+    "pid": 41583,
+    "capacity": 8,
+    "started_at_unix": 1792789489,
+    "dependency_leases": true,
+    "requested_execution": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium"
+    },
+    "continuation_mode": "recover_new_before_reviews",
+    "review_tail_capacity": 8,
+    "role_limits": {
+      "new": 6,
+      "review": 2
+    },
+    "initial_admission_limits": {
+      "workers": 8,
+      "role_limits": {
+        "new": 6,
+        "review": 0
+      }
+    },
+    "borrowing_enabled": false
+  },
+  "registered_supervisor_launch": {
+    "pid": 41583,
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-u",
+      "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py",
+      "--workers",
+      "8",
+      "--recover-new-before-reviews",
+      "--export-every",
+      "1000",
+      "--deploy-on-export",
+      "--publish-at-end"
+    ],
+    "launched_at_unix": 1792789483
+  },
+  "physical_interpreter": {
+    "requested_launcher": "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+    "loaded_image": "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+    "launcher_sha256": "f13707ff725eb3675d57e0f04527a4dada0511cebfb7cbd80f5cab72733a2a9d",
+    "image_sha256": "6cf88920bb89d3db7cb8bad4b09ad793143e37b00c60a8b37baa435071fcae03",
+    "lsof_sha256": "00323398816c2d2157e5922f4df5bd674621ff85d2e501d979fdc02d3c35a678",
+    "arguments_identical": true
+  },
+  "native_workers": 3,
+  "native_responding_distinct": 3,
+  "responders": [
+    {
+      "pid": 46377,
+      "job": "review-impots-LEGIARTI000006302661-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-78e2-ba45-e71ab931806b",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001",
+        "header_sha256": "4b34e9848decc9a4a5f1bf4329b215618933dad9ab92ea5f8c37cf8ca91e6b79",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "new_priority_present_in_native_input": true,
+      "log_prefix_bytes": 606422,
+      "log_prefix_sha256": "a624ef672332a6317cab5779a671f67f13785a4b55dfb8b9d254d30d57cbefed"
+    },
+    {
+      "pid": 46439,
+      "job": "review-impots-annexe-3-LEGIARTI000006299327-00001",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7a00-82e0-ecafea422d5a",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001",
+        "header_sha256": "9894d26de6eccaa48cad2a1da3a3cb88b999869dd2be12b1c22b1b2eb05e3632",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "new_priority_present_in_native_input": true,
+      "log_prefix_bytes": 511534,
+      "log_prefix_sha256": "d95bf1d1439b18c92b5f3e643caa258f6a98d20f466fab3f2e6f272ec531d84d"
+    },
+    {
+      "pid": 46441,
+      "job": "review-impots-LEGIARTI000051765136-00002",
+      "execution": {
+        "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002/errors-1.log",
+        "cli_version": "0.160.1",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "session_id": "01a16ab7-22b5-7520-b08e-53329f03a14c",
+        "provider": "openai",
+        "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002",
+        "header_sha256": "7c1305b240054be5b2c8d9585240695fc30e571cc0e112a64ba5853e24f8b9c1",
+        "response_started": true,
+        "verified": true,
+        "evidence_kind": "native_cli_startup_header_and_model_response",
+        "status": "verified"
+      },
+      "new_priority_present_in_native_input": true,
+      "log_prefix_bytes": 711336,
+      "log_prefix_sha256": "a5605f3c673d38610a574dff3f265f66c96049cb0751cd4c595bc4094e20cca2"
+    }
+  ],
+  "installed_runner_sha256": "d826aac7dbd43e5e07538d07a9bbf770bbb732842352424456ffd19067898802",
+  "all77pins_match": true,
+  "legal_policy_coordinations_or_global_model_changed": false,
+  "concurrent_presentation_and_grammar_reviews": [
+    "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/coherence-rollout-20261023T2042Z/concurrent-presentation-change-review-v3.json",
+    "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/coherence-rollout-20261023T2042Z/concurrent-site-summaries-grammar-review.json"
+  ],
+  "new_priority_applies_to_responding_sessions": true,
+  "throughput_gain_claimed": false
+}

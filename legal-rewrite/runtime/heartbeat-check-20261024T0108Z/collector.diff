@@ -1,0 +1,13 @@
+--- legal-rewrite/runtime/heartbeat-check-20261024T0016Z/collect.py
++++ collect.py
+@@ -88,9 +88,7 @@
+     new_observer_open_folder=str(R/'coherence-policy-resumption-20261023T2301Z'),
+     original_rollout_folder_still_open=str(R/'coherence-rollout-20261023T2042Z'),
+     original_rollout_finalizer_not_executed=True))
+-put('tests.json',dict(isolated_two_launch_identity_and_temporality_tests=12,passed=True,
+-    test_file='captured-test_chain.py',pure_AST_extracted_guard_only=True,production_DB_or_model_used_by_tests=False))
+-put('CONTROL.json',dict(at_utc=datetime.now(timezone.utc).isoformat(),state=obs['state'],coordinator_pid=58195,
++put('CONTROL.json',dict(at_utc=datetime.now(timezone.utc).isoformat(),state='CURRENT_NATIVE_REPLACEMENTS_WITHOUT_RESPONSES_OR_ACCEPTANCE',coordinator_pid=58195,
+     old41583_exit=obs['old_exit_receipt'],old_refused_jobs=8,old_refused_articles=70,old_successful_articles=0,
+     old_receipt_attached_to_last_actual_live_observation=True,old_native_groups_and_exporters_absent=True,
+     unique_new_supervised_launch_verified=True,exact_launch_history_since_original_release=[41583,58195],

@@ -1,0 +1,850 @@
+{
+  "at_utc": "2026-10-24T02:19:45.542740+00:00",
+  "state": "NEW_GUARDED_PHASE_NATIVE_AND_ACCEPTANCE_TO_VERIFY",
+  "previous_pid": 41583,
+  "new_pid": 58195,
+  "old_exit_receipt": {
+    "pid": 41583,
+    "ended_at_unix": 1792796369,
+    "exit_code": 0,
+    "exit_type": null,
+    "stop_requested": true
+  },
+  "last_old_real_live_observation": "2026-10-23T22:21:44.534244+00:00",
+  "exact_two_launch_history": [
+    {
+      "pid": 41583,
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-u",
+        "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py",
+        "--workers",
+        "8",
+        "--recover-new-before-reviews",
+        "--export-every",
+        "1000",
+        "--deploy-on-export",
+        "--publish-at-end"
+      ],
+      "launched_at_unix": 1792789483
+    },
+    {
+      "pid": 58195,
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-u",
+        "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py",
+        "--workers",
+        "8",
+        "--recover-new-before-reviews",
+        "--export-every",
+        "1000",
+        "--deploy-on-export",
+        "--publish-at-end"
+      ],
+      "launched_at_unix": 1792796434
+    }
+  ],
+  "old_native_groups_absent": [
+    46377,
+    46423,
+    46438,
+    46439,
+    46440,
+    46441,
+    46445,
+    46446
+  ],
+  "old_exporters_absent": true,
+  "current_process": {
+    "pid": 58195,
+    "ppid": 1,
+    "args": [
+      "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "-u",
+      "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/run_exhaustive.py",
+      "--workers",
+      "8",
+      "--recover-new-before-reviews",
+      "--export-every",
+      "1000",
+      "--deploy-on-export",
+      "--publish-at-end"
+    ]
+  },
+  "birth_utc": "2026-10-23T23:00:34+00:00",
+  "run": {
+    "pid": 58195,
+    "capacity": 8,
+    "started_at_unix": 1792796447,
+    "dependency_leases": true,
+    "requested_execution": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium"
+    },
+    "continuation_mode": "recover_new_before_reviews",
+    "review_tail_capacity": 8,
+    "role_limits": {
+      "new": 6,
+      "review": 2
+    },
+    "initial_admission_limits": {
+      "workers": 8,
+      "role_limits": {
+        "new": 6,
+        "review": 0
+      }
+    },
+    "borrowing_enabled": false
+  },
+  "physical_interpreter_hashes_verified": true,
+  "lsof_sha256": "052ce755cf225dcc22f8ba31ca9269b8e12e802103089cb1a526694eb2047e7d",
+  "registered_launchagent": true,
+  "all77_current_pins_match": true,
+  "guarded_phase_matches_current_pid": true,
+  "observed_phase_marker": {
+    "coordinator_pid": 58195,
+    "phase": "review_tail",
+    "entered_at_unix": 1792799044,
+    "effective_limits": {
+      "workers": 8,
+      "role_limits": {
+        "new": 0,
+        "review": 8
+      }
+    },
+    "open_accessible_new_sources": 0,
+    "shared_ledger_drained": true,
+    "complete_inventory": {
+      "complete": true,
+      "source_records": 30317,
+      "collections": {
+        "travail": 11593,
+        "impots": 2375,
+        "securite-sociale": 7427,
+        "urbanisme": 2459,
+        "construction-habitation": 4126,
+        "impots-annexe-1": 71,
+        "impots-annexe-2": 674,
+        "impots-annexe-3": 1115,
+        "impots-annexe-4": 477
+      },
+      "as_of": "2026-10-18",
+      "identity_sha256": "044f82efaeef128cbcb9d4e729370f7e064ce3db40f41e28755267799825b5f1",
+      "config_sha256": "67bf21ceb80af24cc3ecba0d332acdd2333f9c870f7cfe3ab2c76be92b0d141d",
+      "coverage_sha256": "1a64e922b6c01b6728d63b09de9a23b9059977dd2a21a946557565a793187657"
+    },
+    "manual_reservations_verified_empty": true,
+    "manual_reservation_guard": "phase marker rejects new manual reservations; inventory rechecked on every admission",
+    "execution_verified": false,
+    "legal_completion_claimed": false
+  },
+  "native_process_count": 0,
+  "responders": [],
+  "actual_current_distinct_native_responses": 0,
+  "old_refused_jobs": [
+    {
+      "coordinator_pid": 41583,
+      "slug": "securite-sociale",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792791593.414837,
+      "outcome": "stale_policy",
+      "attempts": 1,
+      "retries": [],
+      "job": "review-securite-sociale-LEGIARTI000054250137-00001",
+      "articles": 7,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a16ab7-22b5-7853-88e6-d0dfcb5f1ba4",
+      "execution_verified": true,
+      "finished_at_unix": 1792793614.904841,
+      "duration_seconds": 2021.496875124998
+    },
+    {
+      "coordinator_pid": 41583,
+      "slug": "urbanisme",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792791593.6287801,
+      "outcome": "stale_policy",
+      "attempts": 1,
+      "retries": [],
+      "job": "review-urbanisme-LEGIARTI000045525738-00001",
+      "articles": 12,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a16ab7-22b5-7e22-bd63-5a1d7172e216",
+      "execution_verified": true,
+      "finished_at_unix": 1792793828.77636,
+      "duration_seconds": 2235.155045583
+    },
+    {
+      "coordinator_pid": 41583,
+      "slug": "construction-habitation",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792791593.803319,
+      "outcome": "stale_policy",
+      "attempts": 1,
+      "retries": [],
+      "job": "review-construction-habitation-LEGIARTI000006824437-00001",
+      "articles": 12,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a16ab7-22b5-7123-aacf-5e1c0f87c633",
+      "execution_verified": true,
+      "finished_at_unix": 1792793832.79925,
+      "duration_seconds": 2239.0033992499957
+    },
+    {
+      "coordinator_pid": 41583,
+      "slug": "travail",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792791589.587373,
+      "outcome": "stale_policy",
+      "attempts": 1,
+      "retries": [],
+      "job": "review-travail-LEGIARTI000006900996-00001",
+      "articles": 12,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a16ab7-22b5-7592-99c6-94d77af40fb5",
+      "execution_verified": true,
+      "finished_at_unix": 1792793838.044553,
+      "duration_seconds": 2248.4646342920023
+    },
+    {
+      "coordinator_pid": 41583,
+      "slug": "impots-annexe-2",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792791593.9317682,
+      "outcome": "stale_policy",
+      "attempts": 1,
+      "retries": [],
+      "job": "review-impots-annexe-2-LEGIARTI000054552531-00001",
+      "articles": 12,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a16ab7-22b5-7992-80dc-82a12c1af152",
+      "execution_verified": true,
+      "finished_at_unix": 1792793923.3977118,
+      "duration_seconds": 2329.4735752920096
+    },
+    {
+      "coordinator_pid": 41583,
+      "slug": "impots-annexe-3",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792791594.005494,
+      "outcome": "stale_policy",
+      "attempts": 1,
+      "retries": [],
+      "job": "review-impots-annexe-3-LEGIARTI000006299327-00001",
+      "articles": 5,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a16ab7-22b5-7a00-82e0-ecafea422d5a",
+      "execution_verified": true,
+      "finished_at_unix": 1792794136.181924,
+      "duration_seconds": 2542.1844310000015
+    },
+    {
+      "coordinator_pid": 41583,
+      "slug": "impots",
+      "index": 2,
+      "kind": "review",
+      "started_at_unix": 1792791594.6663098,
+      "outcome": "stale_policy",
+      "attempts": 1,
+      "retries": [],
+      "job": "review-impots-LEGIARTI000051765136-00002",
+      "articles": 1,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a16ab7-22b5-7520-b08e-53329f03a14c",
+      "execution_verified": true,
+      "finished_at_unix": 1792794253.553066,
+      "duration_seconds": 2658.8949626250105
+    },
+    {
+      "coordinator_pid": 41583,
+      "slug": "impots",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792791591.289718,
+      "outcome": "stale_policy",
+      "attempts": 1,
+      "retries": [],
+      "job": "review-impots-LEGIARTI000006302661-00001",
+      "articles": 9,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a16ab7-22b5-78e2-ba45-e71ab931806b",
+      "execution_verified": true,
+      "finished_at_unix": 1792794308.880996,
+      "duration_seconds": 2717.5995745830005
+    }
+  ],
+  "old_refused_articles": 70,
+  "old_rejected_beforeimages_preserved": [
+    {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000054250137",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000054250139",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000048687877",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000046822845",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000044628361",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000046812685",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000051285324",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "source_id": "LEGIARTI000045525738",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "source_id": "LEGIARTI000043961482",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "source_id": "LEGIARTI000043961484",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "source_id": "LEGIARTI000043961486",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "source_id": "LEGIARTI000043961488",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "source_id": "LEGIARTI000043961490",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "source_id": "LEGIARTI000043961492",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "source_id": "LEGIARTI000043961494",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "source_id": "LEGIARTI000031210502",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "source_id": "LEGIARTI000042655490",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "source_id": "LEGIARTI000031210506",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "source_id": "LEGIARTI000042655487",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000006824437",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000006824438",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000006824439",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000006824440",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000006824441",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000039279923",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000039279919",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000006824444",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000006824445",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000006824446",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000006824447",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000006824448",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006900996",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006900997",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000019071126",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006901000",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006901001",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006901002",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006901003",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000036762096",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000031014016",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000038952034",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000036762052",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000036762026",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "source_id": "LEGIARTI000054552531",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "source_id": "LEGIARTI000054552548",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "source_id": "LEGIARTI000046385773",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "source_id": "LEGIARTI000054552551",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "source_id": "LEGIARTI000054552554",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "source_id": "LEGIARTI000054552557",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "source_id": "LEGIARTI000054552564",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "source_id": "LEGIARTI000054552567",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "source_id": "LEGIARTI000054552572",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "source_id": "LEGIARTI000006294511",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "source_id": "LEGIARTI000006294514",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "source_id": "LEGIARTI000022179464",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069574",
+      "source_id": "LEGIARTI000006299327",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069574",
+      "source_id": "LEGIARTI000006299330",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069574",
+      "source_id": "LEGIARTI000050737774",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069574",
+      "source_id": "LEGIARTI000006299337",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069574",
+      "source_id": "LEGIARTI000022179572",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069577",
+      "source_id": "LEGIARTI000051765136",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069577",
+      "source_id": "LEGIARTI000006302661",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069577",
+      "source_id": "LEGIARTI000006307263",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069577",
+      "source_id": "LEGIARTI000038613493",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069577",
+      "source_id": "LEGIARTI000036428175",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069577",
+      "source_id": "LEGIARTI000006307268",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069577",
+      "source_id": "LEGIARTI000006307270",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069577",
+      "source_id": "LEGIARTI000051218411",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069577",
+      "source_id": "LEGIARTI000054373745",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    },
+    {
+      "code_id": "LEGITEXT000006069577",
+      "source_id": "LEGIARTI000031815505",
+      "source_NOTA_versions_match": true,
+      "current_disposition": "pending_whole_beforeimage_preserved",
+      "accepted_job": null
+    }
+  ],
+  "current_metrics": [
+    {
+      "coordinator_pid": 58195,
+      "slug": "impots",
+      "index": 2,
+      "kind": "review",
+      "started_at_unix": 1792799137.496536,
+      "outcome": "deferred",
+      "attempts": 3,
+      "retries": [
+        "invocation",
+        "timeout",
+        "invocation"
+      ],
+      "job": "review-impots-LEGIARTI000051765136-00002-resume-12me37e5",
+      "articles": 1,
+      "finished_at_unix": 1792806940.335126,
+      "duration_seconds": 7802.897101291004
+    },
+    {
+      "coordinator_pid": 58195,
+      "slug": "construction-habitation",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792799134.621454,
+      "outcome": "deferred",
+      "attempts": 3,
+      "retries": [
+        "invocation",
+        "timeout",
+        "invocation"
+      ],
+      "job": "review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o",
+      "articles": 12,
+      "finished_at_unix": 1792807076.560802,
+      "duration_seconds": 7941.999081249989
+    },
+    {
+      "coordinator_pid": 58195,
+      "slug": "securite-sociale",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792799132.443846,
+      "outcome": "deferred",
+      "attempts": 3,
+      "retries": [
+        "timeout",
+        "timeout",
+        "new_reference"
+      ],
+      "job": "review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j",
+      "articles": 7,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a16b9d-3703-7562-9ef2-9ac8bd42a9c2",
+      "execution_verified": true,
+      "finished_at_unix": 1792808327.352061,
+      "duration_seconds": 9194.977403458004
+    }
+  ],
+  "current_successful_articles": 0,
+  "free_gib": 3.2246742248535156,
+  "no_manual_signal_pause_launch_code_policy_or_admission_change": true,
+  "no_old_response_replay": true,
+  "accepted_review_verification_complete": false,
+  "global_legal_completion": false
+}

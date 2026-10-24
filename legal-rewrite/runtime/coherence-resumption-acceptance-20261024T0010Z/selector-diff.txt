@@ -1,0 +1,28 @@
+--- legal-rewrite/runtime/coherence-rollout-20261023T2042Z/accepted_work.py
++++ accepted_work_selected.py
+@@ -6,7 +6,15 @@
+ def values(row):
+     return (row['source_sha256'],row.get('status','rewrite_draft'),row['proposed_xml'],row['reason'],row['review_notes'])
+ 
+-def accepted_review(root,pid,pins,now):
++def select_review(metrics,pid,job=None):
++    candidates=[m for m in metrics if m.get('coordinator_pid')==pid and m.get('kind')=='review' and m.get('outcome')=='reviewed']
++    if job is not None:
++        candidates=[m for m in candidates if m.get('job')==job]
++        if len(candidates)!=1:raise GuardError('Exactly one successful metric for the explicit job required')
++    if not candidates:raise GuardError('No accepted review for this actual coordinator')
++    return max(candidates,key=lambda x:x['finished_at_unix'])
++
++def accepted_review(root,pid,pins,now,job=None):
+     root=Path(root).resolve();verify_pins(root,pins);base=root/'runtime/exhaustive';stable={}
+     def read(path):
+         path=Path(path)
+@@ -17,7 +25,7 @@
+     metrics=[json.loads(line) for line in data.splitlines()]
+     candidates=[m for m in metrics if m.get('coordinator_pid')==pid and m.get('kind')=='review' and m.get('outcome')=='reviewed']
+     if not candidates:raise GuardError('A fresh accepted review from the new coordinator is not yet verified')
+-    metric=max(candidates,key=lambda x:x['finished_at_unix']);name=metric.get('job')
++    metric=select_review(candidates,pid,job);name=metric.get('job')
+     if not isinstance(name,str) or Path(name).name!=name:raise GuardError('Unknown accepted job folder')
+     run=read(base/'coordinator-run.json')
+     if run.get('pid')!=pid or not run['started_at_unix']<=metric['started_at_unix']<=metric['finished_at_unix']<=now:

@@ -1,0 +1,1932 @@
+{
+  "at_utc": "2026-10-24T02:11:44.078078+00:00",
+  "jobs": [
+    {
+      "job": "review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o",
+      "first_wave": true,
+      "active": null,
+      "terminal_metric": {
+        "coordinator_pid": 58195,
+        "slug": "construction-habitation",
+        "index": 1,
+        "kind": "review",
+        "started_at_unix": 1792799134.621454,
+        "outcome": "deferred",
+        "attempts": 3,
+        "retries": [
+          "invocation",
+          "timeout",
+          "invocation"
+        ],
+        "job": "review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o",
+        "articles": 12,
+        "finished_at_unix": 1792807076.560802,
+        "duration_seconds": 7941.999081249989
+      },
+      "assigned_sources": 12,
+      "files": {
+        "source.json": {
+          "bytes": 69122,
+          "sha256": "1ced76f9355901f92cdfd39e325118010f1e97b6cda1e191b61b0159f03d2fd5"
+        },
+        "policy.json": {
+          "bytes": 21163,
+          "sha256": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+        },
+        "coordination.json": {
+          "bytes": 87006,
+          "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e"
+        },
+        "reference-targets.json": {
+          "bytes": 1025,
+          "sha256": "4da32da53b71fc2ba2c6056136dc5fc80d82d5e40f1b18067771005a36b93cd3"
+        }
+      },
+      "processes": [
+        {
+          "pid": 64383,
+          "process_group": 64383,
+          "started_at_unix": 1792799230,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-1.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/events-1.log",
+          "ended_at_unix": 1792802795,
+          "returncode": 1
+        },
+        {
+          "pid": 73390,
+          "process_group": 73390,
+          "started_at_unix": 1792802938,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-2.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/events-2.log",
+          "ended_at_unix": 1792806539,
+          "returncode": -15
+        },
+        {
+          "pid": 81088,
+          "process_group": 81088,
+          "started_at_unix": 1792806542,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-3.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/events-3.log",
+          "ended_at_unix": 1792806858,
+          "returncode": 1
+        }
+      ],
+      "logs": [
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-1.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0108Z/captured/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-1.log",
+          "bytes": 601014,
+          "sha256": "e784e14d2a09a60c03e59a6a8856c5e027d2620c544a46ea1169c03cc3361681",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-1.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b29-7ed0-73c1-93b5-0966ab016655",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o",
+            "header_sha256": "c76aa553f1c1440b2838b072ce3c44bbba837d56045cbb7fc307c6eb865c043a",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "2026-10-24T00:37:40.337982Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "ERROR: Reconnecting... 5/5",
+            "ERROR: workspace routing discovery timed out",
+            "ERROR: workspace routing discovery timed out",
+            "2026-10-24T00:46:15.674618Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out"
+          ],
+          "process": {
+            "pid": 64383,
+            "process_group": 64383,
+            "started_at_unix": 1792799230,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-1.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/events-1.log",
+            "ended_at_unix": 1792802795,
+            "returncode": 1
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-2.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-2.log",
+          "bytes": 25585,
+          "sha256": "5ad7fd6c14b50ee1d1450aab3f4f1d26c6d202386dc7f456251bd2256f12b976",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-2.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b65-0acd-7102-8ed4-e406c8ce3bf3",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o",
+            "header_sha256": "5dd5873865b71f9abbd45345c291d13e026d88ad0482481b11d880a87090e0c8",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "ERROR: Reconnecting... 5/5",
+            "2026-10-24T01:35:57.598243Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:40:30.644255Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:45:03.772277Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network"
+          ],
+          "process": {
+            "pid": 73390,
+            "process_group": 73390,
+            "started_at_unix": 1792802938,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-2.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/events-2.log",
+            "ended_at_unix": 1792806539,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-3.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-3.log",
+          "bytes": 23055,
+          "sha256": "d0b79fcf9aa338a6673756320af90f822da7b2e7fab978903c8564313fd164a5",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-3.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b99-2330-7ca1-be93-a6dafb9ca9c6",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o",
+            "header_sha256": "c47ad7c7c95c4ef5007923c9ce7e26bf5331869392ab5bc38f022bee864464d2",
+            "response_started": false,
+            "verified": false,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "awaiting_model_response"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:49:20.646667Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "2026-10-24T01:49:23.621085Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "ERROR: Reconnecting... 5/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "ERROR: Reconnecting... 5/5",
+            "2026-10-24T01:53:55.281289Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: workspace routing discovery failed",
+            "ERROR: workspace routing discovery failed"
+          ],
+          "process": {
+            "pid": 81088,
+            "process_group": 81088,
+            "started_at_unix": 1792806542,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/errors-3.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o/events-3.log",
+            "ended_at_unix": 1792806858,
+            "returncode": 1
+          },
+          "coherence_priority_in_input": true
+        }
+      ],
+      "local_artifacts_are_not_accepted_proof": [],
+      "current_frozen_policies_match": true
+    },
+    {
+      "job": "review-impots-LEGIARTI000006302661-00001-resume-z3022c0k",
+      "first_wave": true,
+      "active": {
+        "pid": 81563,
+        "ppid": 58195,
+        "job": "review-impots-LEGIARTI000006302661-00001-resume-z3022c0k",
+        "kind": "review",
+        "last_event_unix": 1792807880,
+        "execution": {
+          "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-3.log",
+          "cli_version": "0.160.1",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "medium",
+          "session_id": "01a16b9d-38cd-7f81-977e-0a946b709ad5",
+          "provider": "openai",
+          "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k",
+          "header_sha256": "f3f7a288e6c5d8bf58317d11affe117ca6d9731d68f2ad8ab3034f34c42f1bd7",
+          "response_started": true,
+          "verified": true,
+          "evidence_kind": "native_cli_startup_header_and_model_response",
+          "status": "verified"
+        }
+      },
+      "terminal_metric": null,
+      "assigned_sources": 9,
+      "files": {
+        "source.json": {
+          "bytes": 90185,
+          "sha256": "e82d616cf71376cfd908cf255d14d2b1ee7bcb8f0f4a3c1ee84296df05b76496"
+        },
+        "policy.json": {
+          "bytes": 21163,
+          "sha256": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+        },
+        "coordination.json": {
+          "bytes": 87006,
+          "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e"
+        },
+        "reference-targets.json": {
+          "bytes": 866,
+          "sha256": "69fa59978c80b25fcfbacef6b4657a0b24c4565cb349342127af9f0577e71218"
+        }
+      },
+      "processes": [
+        {
+          "pid": 64382,
+          "process_group": 64382,
+          "started_at_unix": 1792799229,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-1.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/events-1.log",
+          "ended_at_unix": 1792802939,
+          "returncode": -15
+        },
+        {
+          "pid": 73592,
+          "process_group": 73592,
+          "started_at_unix": 1792802974,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-2.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/events-2.log",
+          "ended_at_unix": 1792806613,
+          "returncode": -15
+        },
+        {
+          "pid": 81563,
+          "process_group": 81563,
+          "started_at_unix": 1792806662,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-3.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/events-3.log"
+        }
+      ],
+      "logs": [
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-1.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0108Z/captured/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-1.log",
+          "bytes": 654557,
+          "sha256": "d3cf696b9070e3a44af7767e4f06a753e07a6df22d83464fbca6bdcce097f3e9",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-1.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b29-7eca-71d2-b67e-f91bf7965dd2",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k",
+            "header_sha256": "1752513f45b861c6da768db62250f0617cab22478b1714fad16e5df8ed73fd2d",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T00:04:09.604434Z ERROR codex_core::tools::router: error=timed out negotiating with the code-mode host",
+            "2026-10-24T00:07:19.519476Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "2026-10-24T00:37:16.478721Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "2026-10-24T00:46:12.176848Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 4/5"
+          ],
+          "process": {
+            "pid": 64382,
+            "process_group": 64382,
+            "started_at_unix": 1792799229,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-1.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/events-1.log",
+            "ended_at_unix": 1792802939,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-2.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-2.log",
+          "bytes": 24709,
+          "sha256": "51dacf0b1ba408dc08286b40e410200bee6df8cbfe22a316bec025701182babd",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-2.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b65-0f5d-7f61-a43e-5348febf02ee",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k",
+            "header_sha256": "868b71bf4fcc2163e8579992f67f117d51ad85a3d64456fc4e18de43ff214a55",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:36:37.541931Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:41:10.828471Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:45:44.038370Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network"
+          ],
+          "process": {
+            "pid": 73592,
+            "process_group": 73592,
+            "started_at_unix": 1792802974,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-2.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/events-2.log",
+            "ended_at_unix": 1792806613,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-3.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-3.log",
+          "bytes": 648749,
+          "sha256": "714f93166d9f5a1efc66b71827fbbab809de116d12f1a722787a65e4628839d8",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-3.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b9d-38cd-7f81-977e-0a946b709ad5",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k",
+            "header_sha256": "f3f7a288e6c5d8bf58317d11affe117ca6d9731d68f2ad8ab3034f34c42f1bd7",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:53:45.725189Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T01:53:54.922877Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "2026-10-24T01:55:21.971198Z ERROR codex_skills_extension::host_service: failed to install system skills: io error while remove existing system skills dir: Directory not empty (os error 66)"
+          ],
+          "process": {
+            "pid": 81563,
+            "process_group": 81563,
+            "started_at_unix": 1792806662,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/errors-3.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000006302661-00001-resume-z3022c0k/events-3.log"
+          },
+          "coherence_priority_in_input": true
+        }
+      ],
+      "local_artifacts_are_not_accepted_proof": [],
+      "current_frozen_policies_match": true
+    },
+    {
+      "job": "review-impots-LEGIARTI000051765136-00002-resume-12me37e5",
+      "first_wave": true,
+      "active": null,
+      "terminal_metric": {
+        "coordinator_pid": 58195,
+        "slug": "impots",
+        "index": 2,
+        "kind": "review",
+        "started_at_unix": 1792799137.496536,
+        "outcome": "deferred",
+        "attempts": 3,
+        "retries": [
+          "invocation",
+          "timeout",
+          "invocation"
+        ],
+        "job": "review-impots-LEGIARTI000051765136-00002-resume-12me37e5",
+        "articles": 1,
+        "finished_at_unix": 1792806940.335126,
+        "duration_seconds": 7802.897101291004
+      },
+      "assigned_sources": 1,
+      "files": {
+        "source.json": {
+          "bytes": 61843,
+          "sha256": "c1b3fefeecc322acc95b5fe631a8f410bceb457beb36a0c6488ec792e840ef76"
+        },
+        "policy.json": {
+          "bytes": 21163,
+          "sha256": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+        },
+        "coordination.json": {
+          "bytes": 87006,
+          "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e"
+        },
+        "reference-targets.json": {
+          "bytes": 442,
+          "sha256": "8973de163dde9a039e57dc035159115f71716b5754dbf8c114ad5939e255a12c"
+        }
+      },
+      "processes": [
+        {
+          "pid": 64384,
+          "process_group": 64384,
+          "started_at_unix": 1792799230,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-1.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/events-1.log",
+          "ended_at_unix": 1792802795,
+          "returncode": 1
+        },
+        {
+          "pid": 73311,
+          "process_group": 73311,
+          "started_at_unix": 1792802852,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-2.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/events-2.log",
+          "ended_at_unix": 1792806462,
+          "returncode": -15
+        },
+        {
+          "pid": 80737,
+          "process_group": 80737,
+          "started_at_unix": 1792806462,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-3.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/events-3.log",
+          "ended_at_unix": 1792806679,
+          "returncode": 1
+        }
+      ],
+      "logs": [
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-1.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0108Z/captured/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-1.log",
+          "bytes": 725546,
+          "sha256": "5a055c6c26ca036f43684707787adb780aef33edb48458b2b41c714d7fd92a09",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-1.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b29-8240-7082-88d5-d229a84480e6",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5",
+            "header_sha256": "86d1828d034e5be0be70b3eb81b7aacba1691391baed0897b5d6e135cf60230f",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "ERROR: Reconnecting... 5/5",
+            "ERROR: Reconnecting... 1/5",
+            "2026-10-24T00:37:39.351702Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "ERROR: Reconnecting... 5/5",
+            "ERROR: workspace routing discovery timed out",
+            "2026-10-24T00:46:09.566397Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: workspace routing discovery timed out"
+          ],
+          "process": {
+            "pid": 64384,
+            "process_group": 64384,
+            "started_at_unix": 1792799230,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-1.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/events-1.log",
+            "ended_at_unix": 1792802795,
+            "returncode": 1
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-2.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-2.log",
+          "bytes": 25142,
+          "sha256": "a937499bb0b2cd7b55d3c53668a292b69047c34cc2b5a90ccdc0b7aba42699c0",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-2.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b65-1a28-78b0-ab10-2851d46fb8f1",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5",
+            "header_sha256": "a2d0f4bb3fb4df6465ee71a3592a288e1e96a113413dfcc0bfa28172d8ce89c7",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "ERROR: Reconnecting... 5/5",
+            "2026-10-24T01:36:31.086867Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:41:07.576637Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:45:40.685716Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network"
+          ],
+          "process": {
+            "pid": 73311,
+            "process_group": 73311,
+            "started_at_unix": 1792802852,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-2.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/events-2.log",
+            "ended_at_unix": 1792806462,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-3.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-3.log",
+          "bytes": 23558,
+          "sha256": "18ba06a8b63e1b71cd7f0cc23b9a845a6dd400f55eb4653502963ef7e5c986df",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-3.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b98-3ca0-7c81-a165-51998d8d2654",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5",
+            "header_sha256": "91b21a85da6027ef4cfecf78d19c284b49e083ac388f5d4486baf235606657d9",
+            "response_started": false,
+            "verified": false,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "awaiting_model_response"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:47:55.925860Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T01:48:29.939999Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "ERROR: Reconnecting... 5/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "ERROR: Reconnecting... 5/5",
+            "ERROR: workspace routing discovery failed",
+            "ERROR: workspace routing discovery failed"
+          ],
+          "process": {
+            "pid": 80737,
+            "process_group": 80737,
+            "started_at_unix": 1792806462,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/errors-3.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-LEGIARTI000051765136-00002-resume-12me37e5/events-3.log",
+            "ended_at_unix": 1792806679,
+            "returncode": 1
+          },
+          "coherence_priority_in_input": true
+        }
+      ],
+      "local_artifacts_are_not_accepted_proof": [],
+      "current_frozen_policies_match": true
+    },
+    {
+      "job": "review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7",
+      "first_wave": true,
+      "active": {
+        "pid": 81562,
+        "ppid": 58195,
+        "job": "review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7",
+        "kind": "review",
+        "last_event_unix": 1792807895,
+        "execution": {
+          "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-3.log",
+          "cli_version": "0.160.1",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "medium",
+          "session_id": "01a16b9d-380e-7b72-823d-33be1f096792",
+          "provider": "openai",
+          "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7",
+          "header_sha256": "b0fd540835ad6012bdfc517eb64b01cc6fa8a7491e3fd8ab2ffe26f447213dba",
+          "response_started": true,
+          "verified": true,
+          "evidence_kind": "native_cli_startup_header_and_model_response",
+          "status": "verified"
+        }
+      },
+      "terminal_metric": null,
+      "assigned_sources": 12,
+      "files": {
+        "source.json": {
+          "bytes": 94778,
+          "sha256": "80cf8fc071c84d9ffc3e8a2b0e97ab73f9c2457f36307f819664ab5cf7ace5e0"
+        },
+        "policy.json": {
+          "bytes": 21163,
+          "sha256": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+        },
+        "coordination.json": {
+          "bytes": 87006,
+          "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e"
+        },
+        "reference-targets.json": {
+          "bytes": 1025,
+          "sha256": "b11bbc2815645173f9599f5e2a9990f7624bf2c47a9b3594a16968c9f55895ec"
+        }
+      },
+      "processes": [
+        {
+          "pid": 64387,
+          "process_group": 64387,
+          "started_at_unix": 1792799230,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-1.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/events-1.log",
+          "ended_at_unix": 1792802861,
+          "returncode": -15
+        },
+        {
+          "pid": 73607,
+          "process_group": 73607,
+          "started_at_unix": 1792802979,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-2.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/events-2.log",
+          "ended_at_unix": 1792806593,
+          "returncode": -15
+        },
+        {
+          "pid": 81562,
+          "process_group": 81562,
+          "started_at_unix": 1792806661,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-3.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/events-3.log"
+        }
+      ],
+      "logs": [
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-1.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0108Z/captured/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-1.log",
+          "bytes": 723463,
+          "sha256": "25783bb1dc7379f0f0e14806d1eee4cc34c77dd0e3e528d9bf7d114c21bee0e3",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-1.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b29-7f0b-7242-bf0a-adb290e33657",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7",
+            "header_sha256": "85f914bdca429b6cbd94ee32f0c200385c37d1d971ed3361e19f82ee6c771e0a",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T00:07:17.963836Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "ERROR: Reconnecting... 5/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "2026-10-24T00:36:42.208513Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T00:46:09.567543Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out"
+          ],
+          "process": {
+            "pid": 64387,
+            "process_group": 64387,
+            "started_at_unix": 1792799230,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-1.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/events-1.log",
+            "ended_at_unix": 1792802861,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-2.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-2.log",
+          "bytes": 25672,
+          "sha256": "4300aa9f9f70b0d41363ae14af38b0f0a7c07937168d400ce9bc5e412f42a7f0",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-2.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b64-fd0b-70a0-97bc-eb8ed47c9681",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7",
+            "header_sha256": "016d8a3de7305dcaa4880ac77e78c0fe6144ef9576e1255b7a7f8cecd5289837",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:36:37.613184Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:41:10.593551Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:45:43.650637Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network"
+          ],
+          "process": {
+            "pid": 73607,
+            "process_group": 73607,
+            "started_at_unix": 1792802979,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-2.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/events-2.log",
+            "ended_at_unix": 1792806593,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-3.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-3.log",
+          "bytes": 526143,
+          "sha256": "850d9913bdbaee0f4c3d925092aaf2e3459ddd6deba45089a11ba7b236641a38",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-3.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b9d-380e-7b72-823d-33be1f096792",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7",
+            "header_sha256": "b0fd540835ad6012bdfc517eb64b01cc6fa8a7491e3fd8ab2ffe26f447213dba",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:52:19.161500Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T01:53:54.940311Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "2026-10-24T01:55:21.971466Z ERROR codex_skills_extension::host_service: failed to install system skills: io error while remove existing system skills dir: Directory not empty (os error 66)",
+            "2026-10-24T01:55:21.969925Z ERROR codex_skills_extension::host_service: failed to install system skills: io error while remove existing system skills dir: Directory not empty (os error 66)",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 2/5",
+            "2026-10-24T02:11:02.974840Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out"
+          ],
+          "process": {
+            "pid": 81562,
+            "process_group": 81562,
+            "started_at_unix": 1792806661,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/errors-3.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-2-LEGIARTI000054552531-00001-resume-lrz3eqd7/events-3.log"
+          },
+          "coherence_priority_in_input": true
+        }
+      ],
+      "local_artifacts_are_not_accepted_proof": [
+        {
+          "name": "answer.json",
+          "bytes": 121994
+        }
+      ],
+      "current_frozen_policies_match": true
+    },
+    {
+      "job": "review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b",
+      "first_wave": true,
+      "active": {
+        "pid": 81561,
+        "ppid": 58195,
+        "job": "review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b",
+        "kind": "review",
+        "last_event_unix": 1792807868,
+        "execution": {
+          "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-3.log",
+          "cli_version": "0.160.1",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "medium",
+          "session_id": "01a16b9d-37fc-7d51-894d-051c89845b5c",
+          "provider": "openai",
+          "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b",
+          "header_sha256": "7626d212cbba99b78c0567b676310982d55cbe13ee8068944bc951f9d7dd975d",
+          "response_started": true,
+          "verified": true,
+          "evidence_kind": "native_cli_startup_header_and_model_response",
+          "status": "verified"
+        }
+      },
+      "terminal_metric": null,
+      "assigned_sources": 5,
+      "files": {
+        "source.json": {
+          "bytes": 86952,
+          "sha256": "f435b75f492161419dceb538affb5842fde4d458a73b1572caec14c0f0357e38"
+        },
+        "policy.json": {
+          "bytes": 21163,
+          "sha256": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+        },
+        "coordination.json": {
+          "bytes": 87006,
+          "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e"
+        },
+        "reference-targets.json": {
+          "bytes": 4619,
+          "sha256": "91accee7a3993db6a2138c3dfbca1c616809f352943beaa8304529d07bb575b8"
+        }
+      },
+      "processes": [
+        {
+          "pid": 64389,
+          "process_group": 64389,
+          "started_at_unix": 1792799230,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-1.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/events-1.log",
+          "ended_at_unix": 1792802853,
+          "returncode": -15
+        },
+        {
+          "pid": 73624,
+          "process_group": 73624,
+          "started_at_unix": 1792802986,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-2.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/events-2.log",
+          "ended_at_unix": 1792806594,
+          "returncode": -15
+        },
+        {
+          "pid": 81561,
+          "process_group": 81561,
+          "started_at_unix": 1792806660,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-3.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/events-3.log"
+        }
+      ],
+      "logs": [
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-1.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0108Z/captured/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-1.log",
+          "bytes": 462933,
+          "sha256": "e14155f9f9cd02b1830a0478ab7b50947161df5b21860f7661168f0e3dc549fc",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-1.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b29-7ee9-7462-bf55-b9b460ae0033",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b",
+            "header_sha256": "af3058dedd63c3dc16e7478863f84ab026eb8a776890a7dc8429d5715e71486d",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "2026-10-24T00:36:54.190196Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "2026-10-24T00:46:09.586760Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 5/5"
+          ],
+          "process": {
+            "pid": 64389,
+            "process_group": 64389,
+            "started_at_unix": 1792799230,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-1.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/events-1.log",
+            "ended_at_unix": 1792802853,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-2.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-2.log",
+          "bytes": 25824,
+          "sha256": "cf063b407bdc21776ca27ceab5cea0ab0e3e48ca60497c9b1e5dbd8521400362",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-2.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b65-085f-7993-85bc-1799bda9969a",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b",
+            "header_sha256": "373f47b36f26b8ace9e073303b7b18213e900e0760278a9063aba421f31b8254",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:36:31.715961Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:41:07.951904Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:45:41.025990Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network"
+          ],
+          "process": {
+            "pid": 73624,
+            "process_group": 73624,
+            "started_at_unix": 1792802986,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-2.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/events-2.log",
+            "ended_at_unix": 1792806594,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-3.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-3.log",
+          "bytes": 489664,
+          "sha256": "d4ff764281531503c9de4edca898b902319424b56923eb02166635ad0d6e64a5",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-3.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b9d-37fc-7d51-894d-051c89845b5c",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b",
+            "header_sha256": "7626d212cbba99b78c0567b676310982d55cbe13ee8068944bc951f9d7dd975d",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:52:34.316351Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T01:53:54.651056Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "2026-10-24T01:55:21.972358Z ERROR codex_skills_extension::host_service: failed to install system skills: io error while remove existing system skills dir: Directory not empty (os error 66)",
+            "2026-10-24T01:55:21.971459Z ERROR codex_skills_extension::host_service: failed to install system skills: io error while remove existing system skills dir: Directory not empty (os error 66)",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "2026-10-24T02:10:57.128727Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out"
+          ],
+          "process": {
+            "pid": 81561,
+            "process_group": 81561,
+            "started_at_unix": 1792806660,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/errors-3.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-impots-annexe-3-LEGIARTI000006299327-00001-resume-i4z_0w7b/events-3.log"
+          },
+          "coherence_priority_in_input": true
+        }
+      ],
+      "local_artifacts_are_not_accepted_proof": [
+        {
+          "name": "answer.json",
+          "bytes": 86732
+        }
+      ],
+      "current_frozen_policies_match": true
+    },
+    {
+      "job": "review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j",
+      "first_wave": true,
+      "active": {
+        "pid": 81572,
+        "ppid": 58195,
+        "job": "review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j",
+        "kind": "review",
+        "last_event_unix": 1792807903,
+        "execution": {
+          "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-3.log",
+          "cli_version": "0.160.1",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "medium",
+          "session_id": "01a16b9d-3703-7562-9ef2-9ac8bd42a9c2",
+          "provider": "openai",
+          "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j",
+          "header_sha256": "56d904df9c320d0ce2144f50705ac9c7e0c16200f1d5f9b42c04ff220dec4da8",
+          "response_started": true,
+          "verified": true,
+          "evidence_kind": "native_cli_startup_header_and_model_response",
+          "status": "verified"
+        }
+      },
+      "terminal_metric": null,
+      "assigned_sources": 7,
+      "files": {
+        "source.json": {
+          "bytes": 93253,
+          "sha256": "3cdda5ecb67793926d122b99ad771fdf50f11eca2fb65bd95b3ebc51cd15fdd3"
+        },
+        "policy.json": {
+          "bytes": 21163,
+          "sha256": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+        },
+        "coordination.json": {
+          "bytes": 87006,
+          "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e"
+        },
+        "reference-targets.json": {
+          "bytes": 38436,
+          "sha256": "092d05d3eeb732360cfba4f2fdd9ae676efeeda0417b680b6b8fcc18852c0c02"
+        }
+      },
+      "processes": [
+        {
+          "pid": 64391,
+          "process_group": 64391,
+          "started_at_unix": 1792799231,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-1.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/events-1.log",
+          "ended_at_unix": 1792802852,
+          "returncode": -15
+        },
+        {
+          "pid": 73677,
+          "process_group": 73677,
+          "started_at_unix": 1792803014,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-2.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/events-2.log",
+          "ended_at_unix": 1792806639,
+          "returncode": -15
+        },
+        {
+          "pid": 81572,
+          "process_group": 81572,
+          "started_at_unix": 1792806666,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-3.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/events-3.log"
+        }
+      ],
+      "logs": [
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-1.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0108Z/captured/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-1.log",
+          "bytes": 672610,
+          "sha256": "6f90e04179d10617224df3da33de2f34a923e55077316ff1340b989d69d6b3cc",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-1.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b29-7ecd-73e0-9247-9df07c7033f6",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j",
+            "header_sha256": "ad1e2a9f6d0145ab6ff27280ee0856c229d92cc4fef049f582da35039fabad0c",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "ERROR: Reconnecting... 4/5",
+            "ERROR: Reconnecting... 5/5",
+            "2026-10-23T23:59:42.767195Z ERROR codex_core::tools::router: error=timed out negotiating with the code-mode host",
+            "2026-10-24T00:02:20.690096Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T00:03:40.122768Z ERROR codex_core::tools::router: error=timed out negotiating with the code-mode host",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "2026-10-24T00:07:17.852161Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "2026-10-24T00:36:41.839883Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T00:46:10.552568Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5"
+          ],
+          "process": {
+            "pid": 64391,
+            "process_group": 64391,
+            "started_at_unix": 1792799231,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-1.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/events-1.log",
+            "ended_at_unix": 1792802852,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-2.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-2.log",
+          "bytes": 26462,
+          "sha256": "d71dc88229d51e74372279a9d2126fdde26daade996bb3d0c2f01c96d1935a59",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-2.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b65-1725-7492-80c0-ef38c67a4615",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j",
+            "header_sha256": "b61a7a524ad6c906c8cd7ef63217eaefa4373bfb8474b09ab124484a34b22680",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:36:37.517988Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:41:10.543553Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:45:43.722220Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network"
+          ],
+          "process": {
+            "pid": 73677,
+            "process_group": 73677,
+            "started_at_unix": 1792803014,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-2.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/events-2.log",
+            "ended_at_unix": 1792806639,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-3.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-3.log",
+          "bytes": 585292,
+          "sha256": "363800f383f0ad9fcffe0f71078cf34378fb8f6c7e78f6840f190b3c06c70a98",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-3.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b9d-3703-7562-9ef2-9ac8bd42a9c2",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j",
+            "header_sha256": "56d904df9c320d0ce2144f50705ac9c7e0c16200f1d5f9b42c04ff220dec4da8",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:53:50.296063Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "2026-10-24T01:53:54.214689Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "2026-10-24T01:55:21.971444Z ERROR codex_skills_extension::host_service: failed to install system skills: io error while remove existing system skills dir: Directory not empty (os error 66)"
+          ],
+          "process": {
+            "pid": 81572,
+            "process_group": 81572,
+            "started_at_unix": 1792806666,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/errors-3.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j/events-3.log"
+          },
+          "coherence_priority_in_input": true
+        }
+      ],
+      "local_artifacts_are_not_accepted_proof": [],
+      "current_frozen_policies_match": true
+    },
+    {
+      "job": "review-securite-sociale-LEGIARTI000054335726-00002",
+      "first_wave": false,
+      "active": {
+        "pid": 82545,
+        "ppid": 58195,
+        "job": "review-securite-sociale-LEGIARTI000054335726-00002",
+        "kind": "review",
+        "last_event_unix": 1792807882,
+        "execution": {
+          "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054335726-00002/errors-1.log",
+          "cli_version": "0.160.1",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "medium",
+          "session_id": "01a16ba1-12db-72a3-bd9c-2041ec806ee5",
+          "provider": "openai",
+          "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054335726-00002",
+          "header_sha256": "325cb0c550b8a63ac5cf1741a6f7d24d25bd0f779cf0cc164a2148d72572501e",
+          "response_started": true,
+          "verified": true,
+          "evidence_kind": "native_cli_startup_header_and_model_response",
+          "status": "verified"
+        }
+      },
+      "terminal_metric": null,
+      "assigned_sources": 5,
+      "files": {
+        "source.json": {
+          "bytes": 88292,
+          "sha256": "6ad464d68a4a1d0085a18e7414b906e9a98e123ba4ec9a81f7cebe891df1ef79"
+        },
+        "policy.json": {
+          "bytes": 21163,
+          "sha256": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+        },
+        "coordination.json": {
+          "bytes": 87006,
+          "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e"
+        },
+        "reference-targets.json": {
+          "bytes": 55475,
+          "sha256": "5e5595d6470a7f93555eafe65a0bea19c929d4fcb26a07ca4a147c93f6388bc1"
+        }
+      },
+      "processes": [
+        {
+          "pid": 82545,
+          "process_group": 82545,
+          "started_at_unix": 1792807077,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054335726-00002/errors-1.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054335726-00002/events-1.log"
+        }
+      ],
+      "logs": [
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054335726-00002/errors-1.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-securite-sociale-LEGIARTI000054335726-00002/errors-1.log",
+          "bytes": 441789,
+          "sha256": "00be5a4489d23a69e8d5b3a9534cfc674ab5adc8bb23d5c43ffd0f3af3e12c40",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054335726-00002/errors-1.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16ba1-12db-72a3-bd9c-2041ec806ee5",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054335726-00002",
+            "header_sha256": "325cb0c550b8a63ac5cf1741a6f7d24d25bd0f779cf0cc164a2148d72572501e",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T02:00:57.794071Z ERROR codex_core::tools::router: error=timed out negotiating with the code-mode host",
+            "2026-10-24T02:03:12.281924Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T02:07:53.985276Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out"
+          ],
+          "process": {
+            "pid": 82545,
+            "process_group": 82545,
+            "started_at_unix": 1792807077,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054335726-00002/errors-1.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-securite-sociale-LEGIARTI000054335726-00002/events-1.log"
+          },
+          "coherence_priority_in_input": true
+        }
+      ],
+      "local_artifacts_are_not_accepted_proof": [],
+      "current_frozen_policies_match": true
+    },
+    {
+      "job": "review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv",
+      "first_wave": true,
+      "active": {
+        "pid": 81574,
+        "ppid": 58195,
+        "job": "review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv",
+        "kind": "review",
+        "last_event_unix": 1792807900,
+        "execution": {
+          "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-3.log",
+          "cli_version": "0.160.1",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "medium",
+          "session_id": "01a16b9d-3a8a-73c3-bfac-f2007d3baf1b",
+          "provider": "openai",
+          "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv",
+          "header_sha256": "8e59ff52a1a25ba28dc870cd57e8b04734940ba76bf45016b511b71c66ada198",
+          "response_started": true,
+          "verified": true,
+          "evidence_kind": "native_cli_startup_header_and_model_response",
+          "status": "verified"
+        }
+      },
+      "terminal_metric": null,
+      "assigned_sources": 12,
+      "files": {
+        "source.json": {
+          "bytes": 92146,
+          "sha256": "8004f2af477966d655303d291c5e956896df831e46ea1dda1d21b4e18374e42d"
+        },
+        "policy.json": {
+          "bytes": 21163,
+          "sha256": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+        },
+        "coordination.json": {
+          "bytes": 87006,
+          "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e"
+        },
+        "reference-targets.json": {
+          "bytes": 60722,
+          "sha256": "c08db49072af01b85513ab80f81e54df18fc6705ae0a4fb07dc6707f6681cec9"
+        }
+      },
+      "processes": [
+        {
+          "pid": 64392,
+          "process_group": 64392,
+          "started_at_unix": 1792799231,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-1.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/events-1.log",
+          "ended_at_unix": 1792802852,
+          "returncode": -15
+        },
+        {
+          "pid": 73683,
+          "process_group": 73683,
+          "started_at_unix": 1792803018,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-2.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/events-2.log",
+          "ended_at_unix": 1792806627,
+          "returncode": -15
+        },
+        {
+          "pid": 81574,
+          "process_group": 81574,
+          "started_at_unix": 1792806666,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-3.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/events-3.log"
+        }
+      ],
+      "logs": [
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-1.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0108Z/captured/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-1.log",
+          "bytes": 469914,
+          "sha256": "7dab10e9d7697ba616b9b2e4b0d0e17aef27f7841014f1c0100a3e15102a8a02",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-1.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b29-7eca-79e3-87ca-969f77fc07b2",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv",
+            "header_sha256": "c5b0bbffd1041e4159b934854f1bdad045a16892fb7baae759a5292826640cf6",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T00:07:19.325078Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "2026-10-24T00:36:41.838937Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "2026-10-24T00:46:11.992720Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 5/5"
+          ],
+          "process": {
+            "pid": 64392,
+            "process_group": 64392,
+            "started_at_unix": 1792799231,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-1.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/events-1.log",
+            "ended_at_unix": 1792802852,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-2.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-2.log",
+          "bytes": 26581,
+          "sha256": "87b49ef0b652e4457937b28b0e4768c6504f72854b4f02fb37e7b66305107706",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-2.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b65-04d5-7541-8e1f-a5a0507a5508",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv",
+            "header_sha256": "8595618003e03275633c9d9ec71cb4fba795f7073882f8c4d12ef85c60c916b0",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:36:37.025821Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T01:36:54.095669Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: invalid peer certificate: UnknownIssuer, url: wss://chatgpt.com/backend-api/codex/responses",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:41:10.692401Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:45:43.734732Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network"
+          ],
+          "process": {
+            "pid": 73683,
+            "process_group": 73683,
+            "started_at_unix": 1792803018,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-2.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/events-2.log",
+            "ended_at_unix": 1792806627,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-3.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-3.log",
+          "bytes": 438070,
+          "sha256": "633cadaa1a101972c22851d7f732da1806a2ae85cdf52be92b0cf335ec0f6d5f",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-3.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b9d-3a8a-73c3-bfac-f2007d3baf1b",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv",
+            "header_sha256": "8e59ff52a1a25ba28dc870cd57e8b04734940ba76bf45016b511b71c66ada198",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:53:51.224081Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T01:53:54.223111Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "2026-10-24T01:55:21.974497Z ERROR codex_skills_extension::host_service: failed to install system skills: io error while remove existing system skills dir: Directory not empty (os error 66)",
+            "ERROR: Reconnecting... 2/5"
+          ],
+          "process": {
+            "pid": 81574,
+            "process_group": 81574,
+            "started_at_unix": 1792806666,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/errors-3.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-travail-LEGIARTI000006900996-00001-resume-2nz5lzxv/events-3.log"
+          },
+          "coherence_priority_in_input": true
+        }
+      ],
+      "local_artifacts_are_not_accepted_proof": [],
+      "current_frozen_policies_match": true
+    },
+    {
+      "job": "review-urbanisme-LEGIARTI000031210514-00002",
+      "first_wave": false,
+      "active": {
+        "pid": 83342,
+        "ppid": 58195,
+        "job": "review-urbanisme-LEGIARTI000031210514-00002",
+        "kind": "review",
+        "last_event_unix": 1792807880,
+        "execution": {
+          "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000031210514-00002/errors-1.log",
+          "cli_version": "0.160.1",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "medium",
+          "session_id": "01a16ba4-9c36-7d40-87ee-cf252889c449",
+          "provider": "openai",
+          "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000031210514-00002",
+          "header_sha256": "f78af4f2e62c90f7ebd95c8bd46a4a3b52219a7c116b29505280304b8d26af46",
+          "response_started": true,
+          "verified": true,
+          "evidence_kind": "native_cli_startup_header_and_model_response",
+          "status": "verified"
+        }
+      },
+      "terminal_metric": null,
+      "assigned_sources": 12,
+      "files": {
+        "source.json": {
+          "bytes": 60531,
+          "sha256": "12dbe580c253ed28db7a0a73875322abc668eb48dd003d031f733a3471e52daf"
+        },
+        "policy.json": {
+          "bytes": 21163,
+          "sha256": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+        },
+        "coordination.json": {
+          "bytes": 87006,
+          "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e"
+        },
+        "reference-targets.json": {
+          "bytes": 15701,
+          "sha256": "642fa953ac1b4bdf0500c36665f27a515bc178c21d754416be20f8b18a777fad"
+        }
+      },
+      "processes": [
+        {
+          "pid": 83342,
+          "process_group": 83342,
+          "started_at_unix": 1792807310,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000031210514-00002/errors-1.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000031210514-00002/events-1.log"
+        }
+      ],
+      "logs": [
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000031210514-00002/errors-1.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-urbanisme-LEGIARTI000031210514-00002/errors-1.log",
+          "bytes": 296635,
+          "sha256": "207263d299daafc53fc86125fff9a5d277c696ba7d28d40ec88b2e6ec3496140",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000031210514-00002/errors-1.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16ba4-9c36-7d40-87ee-cf252889c449",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000031210514-00002",
+            "header_sha256": "f78af4f2e62c90f7ebd95c8bd46a4a3b52219a7c116b29505280304b8d26af46",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T02:03:10.300924Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: tls handshake eof, url: wss://chatgpt.com/backend-api/codex/responses",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "2026-10-24T02:11:11.673421Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out"
+          ],
+          "process": {
+            "pid": 83342,
+            "process_group": 83342,
+            "started_at_unix": 1792807310,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000031210514-00002/errors-1.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000031210514-00002/events-1.log"
+          },
+          "coherence_priority_in_input": true
+        }
+      ],
+      "local_artifacts_are_not_accepted_proof": [],
+      "current_frozen_policies_match": true
+    },
+    {
+      "job": "review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o",
+      "first_wave": true,
+      "active": {
+        "pid": 81568,
+        "ppid": 58195,
+        "job": "review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o",
+        "kind": "review",
+        "last_event_unix": 1792807862,
+        "execution": {
+          "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-3.log",
+          "cli_version": "0.160.1",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "medium",
+          "session_id": "01a16b9d-3802-71f2-a464-1fda2371bc36",
+          "provider": "openai",
+          "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o",
+          "header_sha256": "f6de406a44f353c60fa4b73531c64a9cbae4864c53b033f11f8d1021a8baf341",
+          "response_started": true,
+          "verified": true,
+          "evidence_kind": "native_cli_startup_header_and_model_response",
+          "status": "verified"
+        }
+      },
+      "terminal_metric": null,
+      "assigned_sources": 12,
+      "files": {
+        "source.json": {
+          "bytes": 78045,
+          "sha256": "1c5c17d2205306f3bc63c664fa1c0f5b00a0075727c1d36c2d7ee23e5b969435"
+        },
+        "policy.json": {
+          "bytes": 21163,
+          "sha256": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+        },
+        "coordination.json": {
+          "bytes": 87006,
+          "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e"
+        },
+        "reference-targets.json": {
+          "bytes": 23747,
+          "sha256": "a2326165d390f2ffe18e4519e12d4f931807954592d83065250d198ac38c7fd4"
+        }
+      },
+      "processes": [
+        {
+          "pid": 64390,
+          "process_group": 64390,
+          "started_at_unix": 1792799230,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-1.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/events-1.log",
+          "ended_at_unix": 1792802852,
+          "returncode": -15
+        },
+        {
+          "pid": 73651,
+          "process_group": 73651,
+          "started_at_unix": 1792803009,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-2.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/events-2.log",
+          "ended_at_unix": 1792806659,
+          "returncode": -15
+        },
+        {
+          "pid": 81568,
+          "process_group": 81568,
+          "started_at_unix": 1792806663,
+          "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-3.log",
+          "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/events-3.log"
+        }
+      ],
+      "logs": [
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-1.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0108Z/captured/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-1.log",
+          "bytes": 26482,
+          "sha256": "e11c024146d6cdd7de9b6cbe2fd90c255ab9e29efb4b5a298bd35988e528795b",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-1.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b29-7ef0-7241-8b05-d80a26d58cdd",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o",
+            "header_sha256": "bcc1097c995d5c9f50a6dff2e142f0dbe1d748df7601b468744fe968bbf79c99",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "ERROR: Reconnecting... 5/5",
+            "2026-10-24T00:00:10.124462Z ERROR codex_core::tools::router: error=timed out negotiating with the code-mode host",
+            "2026-10-24T00:02:23.133209Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T00:03:40.113790Z ERROR codex_core::tools::router: error=timed out negotiating with the code-mode host",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "2026-10-24T00:07:17.931148Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T00:07:55.846913Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: invalid peer certificate: UnknownIssuer, url: wss://chatgpt.com/backend-api/codex/responses",
+            "ERROR: Reconnecting... 1/5",
+            "2026-10-24T00:37:18.938493Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 1/5",
+            "ERROR: Reconnecting... 2/5",
+            "ERROR: Reconnecting... 3/5",
+            "ERROR: Reconnecting... 4/5",
+            "2026-10-24T00:46:10.552897Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "ERROR: Reconnecting... 5/5"
+          ],
+          "process": {
+            "pid": 64390,
+            "process_group": 64390,
+            "started_at_unix": 1792799230,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-1.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/events-1.log",
+            "ended_at_unix": 1792802852,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-2.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-2.log",
+          "bytes": 28284,
+          "sha256": "105125dd7a585613416b6be79be8e5139ad68e0c70b2888c0e975758b9c677e5",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-2.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b65-048e-7c52-8eaf-5b893fd4f427",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o",
+            "header_sha256": "4065dec08a0df4171a5a8e81976a082a7333e25a9fb022fe86e0dc6c48d84ec4",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:43:23.791970Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: failed to lookup address information: nodename nor servname provided, or not known, url: wss://chatgpt.com/backend-api/codex/responses",
+            "ERROR: Reconnecting... 4/5",
+            "2026-10-24T01:43:25.922489Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: failed to lookup address information: nodename nor servname provided, or not known, url: wss://chatgpt.com/backend-api/codex/responses",
+            "ERROR: Reconnecting... 5/5",
+            "2026-10-24T01:43:29.799020Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: failed to lookup address information: nodename nor servname provided, or not known, url: wss://chatgpt.com/backend-api/codex/responses",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:44:52.842720Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "ERROR: Reconnecting... waiting for network",
+            "2026-10-24T01:49:25.930313Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "ERROR: Reconnecting... 1/5"
+          ],
+          "process": {
+            "pid": 73651,
+            "process_group": 73651,
+            "started_at_unix": 1792803009,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-2.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/events-2.log",
+            "ended_at_unix": 1792806659,
+            "returncode": -15
+          },
+          "coherence_priority_in_input": true
+        },
+        {
+          "original": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-3.log",
+          "retained_prefix": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261024T0210Z/captured/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-3.log",
+          "bytes": 443409,
+          "sha256": "a40adb4f09ca979a5224996612b527527ab46efcc1cb50c0343587af2e161c8a",
+          "execution": {
+            "source_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-3.log",
+            "cli_version": "0.160.1",
+            "model": "gpt-6-astra",
+            "reasoning_effort": "medium",
+            "session_id": "01a16b9d-3802-71f2-a464-1fda2371bc36",
+            "provider": "openai",
+            "workdir": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o",
+            "header_sha256": "f6de406a44f353c60fa4b73531c64a9cbae4864c53b033f11f8d1021a8baf341",
+            "response_started": true,
+            "verified": true,
+            "evidence_kind": "native_cli_startup_header_and_model_response",
+            "status": "verified"
+          },
+          "native_diagnostics_tail": [
+            "2026-10-24T01:52:19.171093Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+            "2026-10-24T01:53:54.227703Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request",
+            "2026-10-24T01:55:21.976509Z ERROR codex_skills_extension::host_service: failed to install system skills: io error while remove existing system skills dir: Directory not empty (os error 66)",
+            "2026-10-24T01:55:21.970276Z ERROR codex_skills_extension::host_service: failed to install system skills: io error while remove existing system skills dir: Directory not empty (os error 66)",
+            "ERROR: Reconnecting... 2/5",
+            "2026-10-24T02:11:02.700578Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out"
+          ],
+          "process": {
+            "pid": 81568,
+            "process_group": 81568,
+            "started_at_unix": 1792806663,
+            "stderr_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/errors-3.log",
+            "stdout_log": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/jobs/review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o/events-3.log"
+          },
+          "coherence_priority_in_input": true
+        }
+      ],
+      "local_artifacts_are_not_accepted_proof": [],
+      "current_frozen_policies_match": true
+    }
+  ],
+  "current_metrics": [
+    {
+      "coordinator_pid": 58195,
+      "slug": "impots",
+      "index": 2,
+      "kind": "review",
+      "started_at_unix": 1792799137.496536,
+      "outcome": "deferred",
+      "attempts": 3,
+      "retries": [
+        "invocation",
+        "timeout",
+        "invocation"
+      ],
+      "job": "review-impots-LEGIARTI000051765136-00002-resume-12me37e5",
+      "articles": 1,
+      "finished_at_unix": 1792806940.335126,
+      "duration_seconds": 7802.897101291004
+    },
+    {
+      "coordinator_pid": 58195,
+      "slug": "construction-habitation",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792799134.621454,
+      "outcome": "deferred",
+      "attempts": 3,
+      "retries": [
+        "invocation",
+        "timeout",
+        "invocation"
+      ],
+      "job": "review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o",
+      "articles": 12,
+      "finished_at_unix": 1792807076.560802,
+      "duration_seconds": 7941.999081249989
+    }
+  ],
+  "current_native_processes": 8,
+  "actual_current_native_responses": 8,
+  "current_native_sessions": [
+    "01a16b9d-37fc-7d51-894d-051c89845b5c",
+    "01a16b9d-380e-7b72-823d-33be1f096792",
+    "01a16b9d-38cd-7f81-977e-0a946b709ad5",
+    "01a16b9d-3802-71f2-a464-1fda2371bc36",
+    "01a16b9d-3703-7562-9ef2-9ac8bd42a9c2",
+    "01a16b9d-3a8a-73c3-bfac-f2007d3baf1b",
+    "01a16ba1-12db-72a3-bd9c-2041ec806ee5",
+    "01a16ba4-9c36-7d40-87ee-cf252889c449"
+  ],
+  "new_active_jobs_after_terminal_deferrals": [
+    "review-securite-sociale-LEGIARTI000054335726-00002",
+    "review-urbanisme-LEGIARTI000031210514-00002"
+  ],
+  "no_acceptance_claim_from_response_or_answer_file": true,
+  "no_manual_signal_pause_launch_code_policy_or_admission_change": true,
+  "no_general_network_quota_disk_or_deadlock_cause_established": true
+}

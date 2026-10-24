@@ -127,7 +127,9 @@ def commit(rows,expected,reference_snapshot=None):
             # again; use its already-locked implementation here.
             register_locked(db,HERE/'batches',True)
         finally:db.close()
-    with writer_lock():
+        # Finalize successful acceptance before releasing the writer lock.
+        # Reacquiring it here lets other full-corpus registrations indefinitely
+        # delay completion bookkeeping and keep all review slots occupied.
         report=json.loads(revisions_manifest().read_text());done={(a['code_id'],a['source_id']) for a in rows}
         for article in report['prior_articles']:
             if (article['code_id'],article['source_id']) in done:article['review_status']='completed'

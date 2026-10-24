@@ -1,0 +1,164 @@
+{
+  "folder": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/second-pass-parallelism-20261022T061507Z",
+  "state": "supervised_review_tail_installed_native_and_accepted_verified",
+  "old_pid": 21959,
+  "pid": 41583,
+  "capacity": 8,
+  "role_limits": {
+    "new": 6,
+    "review": 2
+  },
+  "activated": true,
+  "execution_verified": true,
+  "verified_at_utc": "2026-10-22T17:59:48.939889+00:00",
+  "execution_proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/review-lanes-execution.json",
+  "tests_passed": 211,
+  "performance_gain_measured": false,
+  "held_sources": 3,
+  "initial_execution_verified": {
+    "pid": 58514,
+    "verified_at_utc": "2026-10-22T06:56:15+00:00",
+    "execution_proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/exhaustive/review-lanes-execution.json"
+  },
+  "restart_execution_proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/storage-incident-20261022T1003Z/resumption-proof.json",
+  "coordinator_restarts": [
+    {
+      "previous_pid": 58514,
+      "pid": 75807,
+      "reason": "Disk ENOSPC; safely restarted by existing supervisor after space recovery",
+      "all_interrupted_entries_requeued_or_guarded_complete": true,
+      "interrupted_entries": 132,
+      "proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/storage-incident-20261022T1003Z/resumption-proof.json"
+    }
+  ],
+  "active_role_limits": {
+    "new": 0,
+    "review": 8
+  },
+  "registration_maintenance": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/registration-convoy-20261022T1607Z",
+  "current_execution_proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-transfer-adoption-20261023T1426Z/adoption-verified.json",
+  "current_coordinator_resumption_history": [
+    {
+      "previous_pid": 90405,
+      "pid": 18713,
+      "reason": "Transient ENOSPC; existing supervisor restarted after the old process drained/exited; native responses and new accepted rows verified",
+      "proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/audit-refresh-storage-resumption-20261022T1832Z/RESOLUTION.json"
+    },
+    {
+      "previous_pid": 18713,
+      "pid": 3122,
+      "reason": "SIGTERM received by18713 (sender/reason not established); existing supervisor launched3122; routing failures later resumed with native responses and accepted work",
+      "proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/deferred-recovery-latest.json"
+    }
+  ],
+  "last_verified_at_utc": "2026-10-23T02:38:02.398255+00:00",
+  "current_resumption_proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/network-resumption-20261023T0231Z/RESOLUTION.json",
+  "stage": "review_tail",
+  "mixed_role_ceiling": {
+    "new": 6,
+    "review": 2
+  },
+  "active_worker_control": {
+    "review_tail_limit": 8,
+    "role_limits": {
+      "new": 6,
+      "review": 0
+    },
+    "workers": 8
+  },
+  "active_runner_sha256": "d826aac7dbd43e5e07538d07a9bbf770bbb732842352424456ffd19067898802",
+  "transfer_resolution": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/heartbeat-check-20261023T1348Z/CONTROL.json",
+  "transfer_manifest_sha256": "6ba36410d916c942cbeda1739a0571fbd0197b1e39e00e2757adf26726ea7d46",
+  "current_status_observation": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/review-transfer-status-20261023T1440Z.json",
+  "last_checked_at_utc": "2026-10-23T14:47:51.098077+00:00",
+  "previous_pointer_preserved": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/coherence-rollout-observation-20261023T215625Z/before-second-pass-parallelism-latest.json",
+  "latest_operational_observation": {
+    "at_utc": "2026-10-23T21:56:25.405895+00:00",
+    "coordinator_pid": 41583,
+    "registered_launchagent": true,
+    "only_one_coordinator": true,
+    "phase": "review_tail",
+    "effective_limits": {
+      "workers": 8,
+      "role_limits": {
+        "new": 0,
+        "review": 8
+      }
+    },
+    "native_processes_in_dated_capture": 8,
+    "distinct_actual_headers_with_new_priority": 8,
+    "actual_native_response_starts": 8,
+    "new_coordinator_successful_jobs": 0,
+    "new_coordinator_successful_articles": 0,
+    "new_coordinator_metrics": [],
+    "first_pass_registered_accessible": 30314,
+    "canonical_identities": 30317,
+    "documentary_holds_unverified": 3,
+    "second_pass_completed": 4884,
+    "second_pass_pending": 25430,
+    "pending_original_review_identities": 24,
+    "pending_failed_review_identities": 45,
+    "pending_union": 69,
+    "pending_dispositions": [
+      {
+        "cohort": "original3122",
+        "job": "review-construction-habitation-LEGIARTI000046123749-00001",
+        "currently_pending": 0
+      },
+      {
+        "cohort": "original3122",
+        "job": "review-urbanisme-LEGIARTI000031211073-00002",
+        "currently_pending": 12
+      },
+      {
+        "cohort": "original3122",
+        "job": "review-urbanisme-LEGIARTI000042017888-00001",
+        "currently_pending": 12
+      },
+      {
+        "cohort": 78943,
+        "job": "review-travail-LEGIARTI000031087504-00008-resume-7oxi3cso",
+        "currently_pending": 12
+      },
+      {
+        "cohort": 78943,
+        "job": "review-travail-LEGIARTI000006900996-00003-resume-5oc687_0",
+        "currently_pending": 12
+      },
+      {
+        "cohort": 78943,
+        "job": "review-impots-annexe-2-LEGIARTI000054552531-00017",
+        "currently_pending": 12
+      },
+      {
+        "cohort": 78943,
+        "job": "review-impots-LEGIARTI000006302661-00033",
+        "currently_pending": 9
+      }
+    ],
+    "actual_treatments_after_current_audit_prefix": 238,
+    "current_validated_audit": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/global-reference-audit-20261023T2044Z",
+    "current_validated_audit_id": "b8e5f14afb9810ccbdb390e0966565f219ac3640e58e849628483afba9bc67a7",
+    "audit_due": false,
+    "metrics_prefix_verified": true,
+    "free_bytes": 11983884288,
+    "WAL_bytes": 0,
+    "WAL_absent": false,
+    "unreviewed_pin_differences": [
+      {
+        "file": "build_compact_sites.py",
+        "expected": "747d3d265f1413ff21b06df891120149886070952d8da562be49ed10402de0f0",
+        "observed": "901b8f8303551efb38997b486e4232347728346257dbe581d5b146ca2b6758a2"
+      }
+    ],
+    "formal_site_summary_policy_hash_changed": true,
+    "grammar_change_review": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/coherence-rollout-20261023T2042Z/concurrent-site-summaries-grammar-review.json",
+    "native_headers_not_counted_as_responses": true,
+    "no_new_accepted_review_proven_by_parent": true,
+    "no_throughput_gain_or_global_legal_completion_claimed": true
+  },
+  "latest_native_execution_proof": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/runtime/coherence-rollout-observation-20261023T215625Z/native-sessions.json",
+  "latest_native_execution_observed_at_utc": "2026-10-23T21:56:25.405895+00:00",
+  "current_responding_distinct_sessions_at_observation": 8,
+  "coherence_priority_installed": true
+}

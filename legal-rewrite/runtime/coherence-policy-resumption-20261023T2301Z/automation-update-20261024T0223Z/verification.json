@@ -1,0 +1,94 @@
+{
+  "at_utc": "2026-10-24T02:26:00.906343+00:00",
+  "automation_status": "ACTIVE",
+  "all_old_prompt_preserved_as_exact_suffix": true,
+  "cadence_target_name_preferences_unchanged": true,
+  "automation_toml_sha256": "42fd60df14f31efb9b99d641e2bb7d451198ff38cef98912d6eb1b4ec70caace",
+  "control129_and_preflight28_and_acceptance_preparation_members_verified": true,
+  "current_terminal_metrics": [
+    {
+      "coordinator_pid": 58195,
+      "slug": "impots",
+      "index": 2,
+      "kind": "review",
+      "started_at_unix": 1792799137.496536,
+      "outcome": "deferred",
+      "attempts": 3,
+      "retries": [
+        "invocation",
+        "timeout",
+        "invocation"
+      ],
+      "job": "review-impots-LEGIARTI000051765136-00002-resume-12me37e5",
+      "articles": 1,
+      "finished_at_unix": 1792806940.335126,
+      "duration_seconds": 7802.897101291004
+    },
+    {
+      "coordinator_pid": 58195,
+      "slug": "construction-habitation",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792799134.621454,
+      "outcome": "deferred",
+      "attempts": 3,
+      "retries": [
+        "invocation",
+        "timeout",
+        "invocation"
+      ],
+      "job": "review-construction-habitation-LEGIARTI000006824437-00001-resume-lvth1e0o",
+      "articles": 12,
+      "finished_at_unix": 1792807076.560802,
+      "duration_seconds": 7941.999081249989
+    },
+    {
+      "coordinator_pid": 58195,
+      "slug": "securite-sociale",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792799132.443846,
+      "outcome": "deferred",
+      "attempts": 3,
+      "retries": [
+        "timeout",
+        "timeout",
+        "new_reference"
+      ],
+      "job": "review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j",
+      "articles": 7,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a16b9d-3703-7562-9ef2-9ac8bd42a9c2",
+      "execution_verified": true,
+      "finished_at_unix": 1792808327.352061,
+      "duration_seconds": 9194.977403458004
+    },
+    {
+      "coordinator_pid": 58195,
+      "slug": "urbanisme",
+      "index": 1,
+      "kind": "review",
+      "started_at_unix": 1792799132.743744,
+      "outcome": "deferred",
+      "attempts": 3,
+      "retries": [
+        "timeout",
+        "timeout",
+        "validation"
+      ],
+      "job": "review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o",
+      "articles": 12,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "execution_session_id": "01a16b9d-3802-71f2-a464-1fda2371bc36",
+      "execution_verified": true,
+      "finished_at_unix": 1792808397.718287,
+      "duration_seconds": 9265.042811541003
+    }
+  ],
+  "first_successes": [],
+  "free_gib": 3.3710784912109375,
+  "global_validated_audit_unchanged": true,
+  "rollout_resolution_exists": false
+}

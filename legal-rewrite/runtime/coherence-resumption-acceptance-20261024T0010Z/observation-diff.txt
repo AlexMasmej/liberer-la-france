@@ -1,0 +1,81 @@
+--- legal-rewrite/runtime/coherence-policy-resumption-20261023T2301Z/observe.py
++++ observe_v2.py
+@@ -6,10 +6,12 @@
+ sys.dont_write_bytecode=True
+ OUT=Path(__file__).resolve().parent;ROOT=OUT.parents[1];R=ROOT/'runtime'
+ WORK=R/'coherence-rollout-20261023T2042Z'
+-sys.path.insert(0,str(ROOT));sys.path.insert(0,str(WORK))
++sys.path.insert(0,str(ROOT));sys.path.insert(0,str(WORK));sys.path.insert(0,str(OUT))
+ import supervise_exhaustive as supervisor
+ from worker_execution import verify_execution
+ from ingest import source_notes
++from continuation_checks import rejected_disposition
++from accepted_work_selected import accepted_review
+ 
+ def sha(b):return hashlib.sha256(b).hexdigest()
+ def read(p):return json.loads(p.read_bytes())
+@@ -92,6 +94,26 @@
+         responders.append(dict(job=item['job'],pid=item['pid'],execution=e,current_frozen_policies_match=True,priority_present=True,log_prefix_bytes=len(b),log_prefix_sha256=sha(b)))
+     if len({x['execution']['session_id'] for x in responders})!=len(responders):raise ValueError('Native sessions not distinct')
+     metrics_b=(R/'exhaustive/job-metrics.jsonl').read_bytes();metrics=[json.loads(x) for x in metrics_b.splitlines()]
++    current_metrics=[m for m in metrics if m.get('coordinator_pid')==pid]
++    successes=[m for m in current_metrics if m.get('kind')=='review' and m.get('outcome')=='reviewed']
++    accepted_proofs=[];fully_verified={}
++    if accept:
++        if not ready:raise ValueError('Actual current guarded review phase required')
++        if not successes:raise ValueError('No true accepted review yet; finalizer must keep refusing')
++        for metric in successes:
++            proof=accepted_review(ROOT,pid,pins,time.time(),job=metric['job'])
++            folder=R/'exhaustive/jobs'/proof['job']
++            if read(folder/'policy.json')!=read(ROOT/'site-summaries.json') or read(folder/'coordination.json')!=read(ROOT/'policy-coordinations.json'):
++                raise ValueError('Accepted frozen policies differ from current')
++            if proof['native_execution']['model']!='gpt-6-astra' or proof['native_execution']['reasoning_effort']!='medium':raise ValueError('Accepted model/effort differs')
++            log=Path(proof['native_execution']['source_log']).read_bytes()
++            if 'SECONDE PASSE — PRIORITÉ HUMAINE DU23OCTOBRE2026' not in log.decode(errors='replace'):raise ValueError('Accepted native coherence priority absent')
++            source_map={(a['code_id'],a['source_id']):a for a in read(folder/'source.json')}
++            for answer in read(folder/'answer.json'):
++                k=answer['code_id'],answer['source_id']
++                if k in fully_verified:raise ValueError('Overlapping successful jobs need a separate history qualification')
++                fully_verified[k]=dict(previous_draft=source_map[k]['previous_draft'],answer=answer,job=proof['job'])
++            accepted_proofs.append(proof)
+     old=[m for m in metrics if m.get('coordinator_pid')==41583]
+     if len(old)!=8 or {m['job'] for m in old}!=old_names or any(m['outcome']!='stale_policy' for m in old):raise ValueError('Old queue terminal partition is not exact')
+     work_b=(R/'radical-review-20261019.json').read_bytes()
+@@ -106,10 +128,10 @@
+                 key=source['code_id'],source['source_id'];prior=source['previous_draft']
+                 if db.execute('SELECT source_sha256,content_xml,valid_from,valid_until FROM articles WHERE code_id=? AND id=?',key).fetchone()!=(source['source_sha256'],source['source_xml'],source['valid_from'],source['valid_until']):raise ValueError('Old rejected source guard changed')
+                 if source_notes(db,*key)!=source['source_notes_xml']:raise ValueError('Old rejected NOTA changed')
+-                values=tuple(prior[k] for k in ['source_sha256','status','proposed_xml','reason','review_notes'])
+-                if db.execute('SELECT source_sha256,status,proposed_xml,reason,review_notes FROM drafts WHERE code_id=? AND source_id=?',key).fetchone()!=values:raise ValueError('Rejected beforeimage changed; requalify actual current disposition')
+-                if work[key]['review_status']!='pending':raise ValueError('Rejected article no longer pending: verify fresh recovery')
+-                preserved.append(dict(code_id=key[0],source_id=key[1],source_NOTA_versions_five_field_beforeimage_and_pending_match=True))
++                current_values=db.execute('SELECT source_sha256,status,proposed_xml,reason,review_notes FROM drafts WHERE code_id=? AND source_id=?',key).fetchone()
++                disposition=rejected_disposition(key,prior,current_values,work[key]['review_status'],fully_verified)
++                preserved.append(dict(code_id=key[0],source_id=key[1],source_NOTA_versions_match=True,current_disposition=disposition,
++                    accepted_job=fully_verified.get(key,{}).get('job')))
+     finally:db.close()
+     if (R/'radical-review-20261019.json').read_bytes()!=work_b:raise ValueError('Worklist changed during old-source proof')
+     current=[m for m in metrics if m.get('coordinator_pid')==pid]
+@@ -125,18 +147,10 @@
+         free_gib=shutil.disk_usage(ROOT).free/2**30,no_manual_signal_pause_launch_code_policy_or_admission_change=True,
+         no_old_response_replay=True,accepted_review_verification_complete=False,global_legal_completion=False)
+     if accept:
+-        if not ready:raise ValueError('Fresh guarded phase required before acceptance proof')
+-        from accepted_work import accepted_review
+-        accepted=accepted_review(ROOT,pid,pins,time.time())
+-        d=R/'exhaustive/jobs'/accepted['job']
+-        if read(d/'policy.json')!=read(ROOT/'site-summaries.json') or read(d/'coordination.json')!=read(ROOT/'policy-coordinations.json'):
+-            raise ValueError('Accepted frozen policy changed')
+-        log=Path(accepted['native_execution']['source_log']).read_bytes()
+-        if 'SECONDE PASSE — PRIORITÉ HUMAINE DU23OCTOBRE2026' not in log.decode(errors='replace'):raise ValueError('Accepted native priority absent')
+-        work_b=(R/'radical-review-20261019.json').read_bytes();work={(x['code_id'],x['source_id']):x for x in json.loads(work_b)['prior_articles']}
+-        if not all(work[a['code_id'],a['source_id']]['review_status']=='completed' for a in accepted['rows']):raise ValueError('Accepted entries not completed')
+-        if (R/'radical-review-20261019.json').read_bytes()!=work_b:raise ValueError('Worklist changed during proof')
+-        result.update(accepted_review=accepted,accepted_review_verification_complete=True)
++        if not all(work[k]['review_status']=='completed' for k in fully_verified):raise ValueError('An accepted article lacks completed')
++        if (R/'radical-review-20261019.json').read_bytes()!=work_b:raise ValueError('Worklist changed during full accepted proof')
++        result.update(accepted_reviews=accepted_proofs,accepted_review_verification_complete=True,
++            actual_fresh_recoveries_of_41583=sum(p['current_disposition'].startswith('freshly_recovered') for p in preserved))
+     folder=OUT/'observations';folder.mkdir(exist_ok=True)
+     put(folder/('observation-'+str(time.time_ns())+'.json'),result)
+     return result

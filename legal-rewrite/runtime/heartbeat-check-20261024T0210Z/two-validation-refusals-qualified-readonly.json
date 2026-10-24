@@ -1,0 +1,189 @@
+{
+  "at_utc": "2026-10-24T02:22:53.828355+00:00",
+  "jobs": [
+    {
+      "job": "review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j",
+      "terminal_metric": {
+        "coordinator_pid": 58195,
+        "slug": "securite-sociale",
+        "index": 1,
+        "kind": "review",
+        "started_at_unix": 1792799132.443846,
+        "outcome": "deferred",
+        "attempts": 3,
+        "retries": [
+          "timeout",
+          "timeout",
+          "new_reference"
+        ],
+        "job": "review-securite-sociale-LEGIARTI000054250137-00001-resume-hlqp8l9j",
+        "articles": 7,
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "execution_session_id": "01a16b9d-3703-7562-9ef2-9ac8bd42a9c2",
+        "execution_verified": true,
+        "finished_at_unix": 1792808327.352061,
+        "duration_seconds": 9194.977403458004
+      },
+      "recorded_failure": {
+        "attempt": 3,
+        "error": "New reference needs its complete target text; refresh reference-targets.json"
+      },
+      "article_diagnostics": [
+        {
+          "source_id": "LEGIARTI000054250137",
+          "number": "L162-64",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000054250139",
+          "number": "L162-65",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000048687877",
+          "number": "L164-1",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000046822845",
+          "number": "L165-1",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000044628361",
+          "number": "L165-1-1",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000046812685",
+          "number": "L165-1-1-1",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000051285324",
+          "number": "L165-1-3",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": [
+            "LEGITEXT000006073189|LEGIARTI000048687768"
+          ]
+        }
+      ],
+      "old_answer_not_accepted_or_replayed": true,
+      "fresh_reconstruction_and_full_target_readings_required": true
+    },
+    {
+      "job": "review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o",
+      "terminal_metric": {
+        "coordinator_pid": 58195,
+        "slug": "urbanisme",
+        "index": 1,
+        "kind": "review",
+        "started_at_unix": 1792799132.743744,
+        "outcome": "deferred",
+        "attempts": 3,
+        "retries": [
+          "timeout",
+          "timeout",
+          "validation"
+        ],
+        "job": "review-urbanisme-LEGIARTI000045525738-00001-resume-9w9t_y0o",
+        "articles": 12,
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "execution_session_id": "01a16b9d-3802-71f2-a464-1fda2371bc36",
+        "execution_verified": true,
+        "finished_at_unix": 1792808397.718287,
+        "duration_seconds": 9265.042811541003
+      },
+      "recorded_failure": {
+        "attempt": 3,
+        "error": "A reduction needs a concrete cut and must disclose additions as mixed"
+      },
+      "article_diagnostics": [
+        {
+          "source_id": "LEGIARTI000045525738",
+          "number": "L121-22-5",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000043961482",
+          "number": "L121-22-6",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000043961484",
+          "number": "L121-22-7",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000043961486",
+          "number": "L121-22-8",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000043961488",
+          "number": "L121-22-9",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000043961490",
+          "number": "L121-22-10",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000043961492",
+          "number": "L121-22-11",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000043961494",
+          "number": "L121-22-12",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000031210502",
+          "number": "L121-31",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000042655490",
+          "number": "L121-32",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000031210506",
+          "number": "L121-33",
+          "ordinary_frozen_answer_error": null,
+          "new_required_targets_absent_from_frozen_snapshot": []
+        },
+        {
+          "source_id": "LEGIARTI000042655487",
+          "number": "L121-34",
+          "ordinary_frozen_answer_error": "A reduction needs a concrete cut and must disclose additions as mixed",
+          "new_required_targets_absent_from_frozen_snapshot": []
+        }
+      ],
+      "old_answer_not_accepted_or_replayed": true,
+      "fresh_reconstruction_and_full_target_readings_required": true
+    }
+  ],
+  "mechanical_diagnosis_not_fresh_semantic_review": true,
+  "no_candidate_repaired_or_registered": true
+}
