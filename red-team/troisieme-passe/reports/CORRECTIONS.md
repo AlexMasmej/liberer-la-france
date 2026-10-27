@@ -103,6 +103,141 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** Le contrôle de légalité et l'annulation sous huit jours. La suspension pour complément d'instruction et le délai ministériel de quarante jours. Les délais francs. L'application aux décisions déléguées…
 
+## RT-DOMIS-01 (P1, confirmé) — DOM-IS
+
+**Articles :** cgi 219, cgi 209, cgi 223 VJ, cgi 223 VK, cgi 223 O, cgi 223 WB, cgi 1668
+
+**Correction minimale :** Ajouter au V de l'article 219 un 6 ainsi rédigé : « 6. Les entités constitutives situées en France d'un groupe entrant dans le champ de l'article 223 VL peuvent opter pour la liquidation annuelle de l'impôt sur les sociétés, au titre de chaque exercice, sur le bénéfice de cet exercice déterminé selon le XI de l'article 209 et aux taux des 2 et 3 du présent V et du VI appliqués à la base avant impôt, sans la majoration prévue pour les montants nets distribués. Pour un groupe mentionné à l'article 223 A, l'option est exercée par la société mère pour l'ensemble des membres. Elle est notifiée au plus tard à la date de dépôt de la déclaration de l'exercice prévue à l'article 223 et vaut jusqu'à sa dénonciation, qui prend effet pour l'exercice suivant. L'impôt ainsi liquidé est déclaré et payé selon les 1 à 5 de l'article 1668. Le montant net des bénéfices ainsi imposés est inscrit au compte prévu au 1 du XI de l'article 209 ; sa distribution ultérieure ne donne lieu à aucun second impôt sur les sociétés. Les déficits, crédits et réductions d'impôt s'imputent sur cet impôt dans leurs conditions propres, sans double emploi. L'option ne modifie ni le champ, ni le calcul de l'imposition minimale prévue aux articles 223 VJ et suivants. » Coordonner le premier alinéa de l'article 1668 : « … ainsi qu'aux régimes annuels distincts expressément maintenus par le 12 de l'article 206 et à l'option prévue au 6 du V de l'article 219. »
+
+**Autres options :**
+- (a) Imputer l'impôt national complémentaire français acquitté sur un exercice sur l'IS de distribution ultérieur du même bénéfice, ou porter ce bénéfice au compte protégé à hauteur du complémentaire. Ce système suit l'orientation de plus près, mais il pourrait passer pour un « avantage lié » au complémentaire et faire perdre à l'impôt national son caractère qualifié : à vérifier sur la directive et les commentaires de l'OCDE avant tout choix. (b) Exclure de plein droit du régime de distribution les entités dans le champ de 223 VL. C'est plus simple, mais cela retire l'option aux groupes qui pr…
+
+**À préserver :** Le régime de distribution pour toutes les autres entreprises ; le taux de 20 % ; le compte protégé ; les taux réduits et exonérations du VI ; le champ, les exclusions, les mesures favorables et le cal…
+
+## RT-DOMIS-02 (P1, confirmé) — DOM-IS
+
+**Articles :** cgi 212 bis, cgi 219, cgi 209, cgi 205 B, cgi 223 VK, cgi 39
+
+**Correction minimale :** Ajouter au 1 du V de l'article 219, après le e, un f ainsi rédigé : « f) Le montant des charges financières nettes non admises en déduction au titre d'un exercice en application de l'article 212 bis et de l'article 223 B bis, ainsi que celui des dépenses et charges effectivement payées dont la déduction est exclue par le 4 et le 2 de l'article 39 ou par l'article 238 A, lorsqu'elles ne constituent pas déjà une distribution en application du b. Ce montant est imposé au titre de l'exercice de sa constatation, au taux du 2 appliqué au montant lui-même, sans la majoration prévue pour les montants nets distribués, et l'impôt est acquitté avec le solde prévu au 8 de l'article 1668. La base ainsi imposée est retranchée de la fraction taxable suivie au XI de l'article 209 et ne peut être imposée une seconde fois lors d'une distribution ; le montant net correspondant n'est pas inscrit au compte protégé. Les charges financières reportées et la capacité de déduction inemployée de l'article 212 bis s'imputent, lorsqu'elles deviennent déductibles, d'abord sur les montants imposés en application du présent f au titre des exercices ultérieurs, puis sur les bases suivies. » Corriger en conséquence le X de l'article 212 bis : « Par dérogation, l'impôt afférent aux charges non admises en déduction est établi dans les conditions du f du 1 du V de l'article 219. »
+
+**Autres options :**
+- (a) Limiter le f à l'article 212 bis et à l'article 223 B bis, qui relèvent du droit de l'Union, en laissant les autres non-déductibilités dans le mécanisme q. C'est le minimum juridique, mais la fuite des charges somptuaires reste ouverte. (b) Imposer à la liquidation et à la sortie du régime le solde des fractions taxables sans montant économique. C'est plus tardif et moins sûr au regard de la directive.
+
+**À préserver :** La déductibilité des salaires, achats, investissements, intérêts et remboursements professionnels réels ; le seuil de 3 M€, le ratio de 30 % et les clauses de sauvegarde ou de report de 212 bis ; l'ab…
+
+## RT-DOMIS-03 (P1, confirmé) — DOM-IS
+
+**Articles :** cgi 1668, cgi 206, cgi 219, cgi 205 B, cgi 205 C, cgi 205 D, cgi 209 B, cgi 209
+
+**Correction minimale :** 1° Au premier alinéa de l'article 1668, après « par le 12 de l'article 206 », insérer : « ainsi qu'aux impositions établies au titre d'un exercice en application du IV de l'article 205 B, des articles 205 C et 205 D, du V de l'article 209 B et, le cas échéant, du f du 1 du V de l'article 219 ; pour ces impositions, aucun acompte n'est dû et l'impôt est acquitté avec le relevé de solde prévu au 2 ». 2° Au 2 du VI de l'article 219, après « conservent leurs règles propres. », insérer : « Les impositions correctives annuelles prévues au IV de l'article 205 B, aux articles 205 C et 205 D et au V de l'article 209 B sont établies au titre de leur exercice, au taux du 2 ou du 3 du V appliqué à la base avant impôt, sans majoration pour montant net ; les déficits du 3 du XI de l'article 209 peuvent s'y imputer dans les limites du I de l'article 209, sans double emploi. » 3° Compléter le deuxième alinéa du 12 de l'article 206 par la même énumération.
+
+**Autres options :**
+- Conserver expressément 25 % pour ces impositions correctives, si l'auteur veut une surcharge anti-évasion. Cette solution serait plus sévère que le droit commun du régime nouveau et devrait être justifiée ; elle n'est pas recommandée. Supprimer les acomptes plutôt que les rétablir est conforme à l'orientation (pas d'acompte sur bénéfice conservé).
+
+**À préserver :** Les protections contre la seconde imposition des montants déjà soumis à ces impositions correctives (205 B IV, 205 C, 205 D, 209 B V) ; les exceptions européennes de 209 B ; l'absence d'IS annuel sur …
+
+## RT-DOMIS-04 (P1, confirmé) — DOM-IS
+
+**Articles :** cgi 223 A, cgi 223 B, cgi 223 L, cgi 223 S, cgi 209, cgi 223 I, a3 46 quater-0 ZJ bis
+
+**Correction minimale :** Aligner sur la faveur maintenue par 223 A IV (ne pas supprimer une faveur pour rendre les textes cohérents). 1° Au premier alinéa du 3 du XI de l'article 209, remplacer « ; cette faculté ne s’étend pas aux pertes nouvelles ni à des membres ou activités exclus par cet article. » par : « . Les pertes nouvelles des membres d’un groupe sont compensées dans les conditions du IV de l’article 223 A ; aucune perte ne peut être utilisée deux fois, ni hors des membres et activités admis par les articles 223 A à 223 U. » 2° Au II de l'article 223 I, remplacer la dernière phrase par : « Les pertes nouvelles des membres suivent le IV de l’article 223 A, sans s’ajouter au plafond ni à l’assiette du présent droit transitoire. » 3° Annexe III, 46 quater-0 ZJ bis : remplacer « Aucune mutualisation de pertes nouvelles ni créance remboursable n'est créée. » par « Aucune créance remboursable n'est créée ; la compensation des pertes nouvelles suit le IV de l'article 223 A du code général des impôts. »
+
+**Autres options :**
+- Retenir au contraire la restriction de 209 XI 3, en supprimant la dérogation de 223 A IV, 223 B, 223 L 7 et 223 S. Cela supprime une faveur de l'intégration : l'auteur doit le décider expressément, ce n'est pas une simple coordination.
+
+**À préserver :** Le plafond unique du déficit d'ensemble antérieur ; son titulaire ; l'interdiction du double emploi ; les agréments et transferts de 223 I, 223 L et 223 R pour les opérations futures.
+
+## RT-DOMIS-05 (P1, à confirmer) — DOM-IS
+
+**Articles :** cgi 145, cgi 216, cgi 209
+
+**Correction minimale :** Au IV de l'article 216, après le deuxième alinéa, insérer : « Le montant net reçu d’une société établie dans un autre État membre de l’Union européenne, dans un autre État partie à l’accord sur l’Espace économique européen ou dans un État ayant conclu avec la France une convention d’assistance administrative en vue de lutter contre la fraude et l’évasion fiscales, qui ne relève pas de l’article 145, est inscrit au compte prévu au 1 du XI de l’article 209 à proportion de l’impôt sur les bénéfices effectivement acquitté par la société distributrice sur les bénéfices distribués, rapporté au taux du 2 du V de l’article 219, sans pouvoir excéder ce montant net. La justification résulte des pièces dont dispose le bénéficiaire ; à défaut de justification, le montant suit le troisième alinéa. Les exclusions du 6 de l’article 145 et des États ou territoires non coopératifs demeurent applicables. »
+
+**Autres options :**
+- Étendre purement et simplement la protection à tout dividende étranger soumis à un impôt équivalent, sans prorata : plus simple, mais plus coûteux, et cela récompense un impôt étranger faible. Ou faire de la protection du dividende français de portefeuille un prorata de l'IS effectivement liquidé : cela réduit une faveur du projet et exige une décision de l'auteur.
+
+**À préserver :** La protection intégrale, sans seuil ni durée, des dividendes français ; le régime mère-fille et la suppression des quotes-parts de 5 % et 1 % ; les exclusions anti-abus du 6 de 145.
+
+## RT-DOMIS-06 (P1, à confirmer) — DOM-IS
+
+**Articles :** cgi 119 bis, cgi 187, cgi 119 ter, cgi 145, cgi 216
+
+**Correction minimale :** Ajouter à l'article 119 ter un 6 ainsi rédigé : « 6. Pour les dividendes distribués par une société relevant du régime prévu aux V et VI de l'article 219 au cours des exercices ouverts à compter de l'entrée en vigueur de ce régime, les conditions de détention et de durée prévues au c du 2 ne sont pas exigées lorsque ces dividendes auraient été inscrits au compte prévu au 1 du XI de l'article 209 s'ils avaient été perçus par une société établie en France. Les autres conditions du 2, le 2 bis et le 3 demeurent applicables. »
+
+**Autres options :**
+- Étendre la même règle aux sociétés établies dans un État tiers lié à la France par une convention d'assistance administrative, au titre de l'article 63 TFUE. Ou prévoir une restitution sur demande, par analogie avec les mécanismes existants pour les bénéficiaires déficitaires. Plus lourd, mais plus étroit.
+
+**À préserver :** La retenue sur les bénéficiaires personnes physiques (12,8 %) et le taux de 75 % pour les États et territoires non coopératifs ; la clause anti-montages de 119 ter, 3 ; les conventions plus favorables…
+
+## RT-DOMIS-07 (P1, confirmé) — DOM-IS
+
+**Articles :** cgi 221, cgi 221 bis, cgi 111 bis, cgi 219, cgi 239, cgi 1655 sexies, cgi 206
+
+**Correction minimale :** 1° Ajouter au 1 du V de l'article 219, après le e, un alinéa ainsi rédigé : « Sont également imposables comme des distributions, à la date de l'événement, les bénéfices différés non protégés d'une personne morale qui cesse totalement ou partiellement d'être assujettie à l'impôt sur les sociétés dans le régime du présent V, notamment par transformation, renonciation à une option, exonération ou affectation à un régime d'imposition distinct, sous réserve du 7 de l'article 221 et de l'article 221 bis pour les seuls sursis et plus-values latentes. L'impôt est liquidé aux taux du 2, du 3 et du VI appliqués à la base avant impôt, sans la majoration prévue pour les montants nets distribués. Le montant net correspondant est inscrit au compte prévu au 1 du XI de l'article 209 ; sa répartition ultérieure ou sa distribution réputée en application de l'article 111 bis ne donne pas lieu à un second impôt sur les sociétés. » 2° Au deuxième alinéa du 2 de l'article 221, après « au deuxième alinéa du I de l'article 219 », insérer « ou, pour les exercices relevant du régime de distribution, à l'impôt sur les sociétés dans les conditions du V du même article ». 3° Au a du 7 de l'article 221, après « un changement de forme ou d'activité », insérer « n'entraînant pas la cessation d'assujettissement mentionnée au dernier alinéa du 1 du V de l'article 219 ».
+
+**Autres options :**
+- Rendre l'option de 239 et 1655 sexies irrévocable pendant cinq exercices pour les entités qui conservent des bénéfices différés. Cela recrée une contrainte que la réforme a voulu supprimer ; ce n'est pas recommandé.
+
+**À préserver :** La neutralité de l'entrée dans le régime de distribution ; la libre renonciation à l'option de 239 ; la continuité de 221 bis pour les sursis et plus-values ; les exceptions de 208 C et 208, 3° nonies…
+
+## RT-DOMSRU-01 (P1, confirmé) — DOM-SRU
+
+**Articles :** cch L302-5, cch L302-7, cch L302-9-1, cch R302-17, cch R302-19, cch R302-18, cch L435-1
+
+**Correction minimale :** Ajouter au V de L302-5 une règle de rattachement : le prélèvement de L302-7 et la majoration de L302-9-1, dans leur rédaction antérieure, naissent le 1er janvier de l'année au titre de laquelle ils sont effectués. Aucun n'est dû au titre d'une année commençant après l'entrée en vigueur, même si l'assiette, l'arrêté de carence ou les dépenses se rapportent à une période antérieure. Le texte complet figure dans le rapport, section 9.1. Il faut aligner R302-19, R302-18 et L302-9-1 (quatrième alinéa de la proposition) sur cette règle.
+
+**Autres options :**
+- Option plus favorable aux communes (moins de prélèvements) : les neuvièmes non encore imputés à la date d'entrée en vigueur ne sont plus prélevés, et les sommes déjà prélevées restent acquises aux bénéficiaires.
+- Fixer la date d'effet de la loi au 1er janvier d'une année, pour que la question ne se pose qu'au titre de l'année de bascule.
+
+**À préserver :** Sommes déjà prélevées et leur affectation (L302-7 proposé, L435-1 2° proposé, L324-8 2° proposé).; Déductions, reports et plafonds opposables aux créances antérieures (R302-16 à R302-18-1 proposés).; Droits de recours, restitutions d'indus, loi répressive plus douce.
+
+## RT-DOMSRU-02 (P1, confirmé) — DOM-SRU
+
+**Articles :** urba L101-2, urba L141-7, urba L151-15, urba R151-37, urba R151-38, urba L152-6, urba L152-6-4, urba L152-6-5, urba L321-14, cch L302-1
+
+**Correction minimale :** Supprimer la condition et le motif de refus tirés de la « mixité sociale » dans L152-6 (1° et 5°), L152-6-4 (deuxième alinéa) et L152-6-5 (I, deuxième alinéa). C'est favorable et sans perte de droits. Pour L151-15, R151-37 et R151-38 3°, choisir explicitement entre : (a) un fondement autonome écrit (« au regard des besoins en logement identifiés par le diagnostic du plan local d'urbanisme ou par le programme local de l'habitat »), avec un critère vérifiable de non-contournement ; (b) l'abrogation du pourcentage imposé, avec la transition déjà écrite pour L151-41 4°. Les textes figurent dans le rapport, section 9.2.
+
+**Autres options :**
+- Rétablir dans L101-2 un objectif non contraignant de diversité de l'offre de logements, sans quota, comme fondement unique des outils maintenus.
+- Pour L321-14 et L302-1, remplacer « mixité sociale » par « diversité de l'offre de logements », sans effet contraignant.
+
+**À préserver :** Majorations de constructibilité de L151-28 et R151-37 (2°, 5° à 7°), résidences universitaires comprises.; Dérogations de L152-6 et L152-6-4 pour les opérations futures.; Droits de délaissement et prescriptions des permis déjà délivrés.
+
+## RT-DOMSUCC-01 (P1, confirmé) — DOM-SUCC
+
+**Articles :** cgi 750 ter, cgi 757 B, cgi 990 I, cgi 792-0 bis, cgi 792 bis, cgi 784 C
+
+**Correction minimale :** Borner l'exonération aux transmissions dont l'auteur est le défunt. Ajouter au II de 750 ter un alinéa (texte complet en section « Corrections ») qualifiant de donation entre vifs, lorsque l'intention libérale est établie, la transmission dont l'auteur est vivant au décès d'un tiers. Coordonner en conséquence 792-0 bis II 2 et 792 bis (« décès du constituant »), 784 C (auteur décédé) et l'alinéa de 757 B relatif aux sommes d'assurance (primes versées par l'assuré décédé ou dépendant de sa succession).
+
+**Autres options :**
+- Option a minima : une simple réserve d'interprétation dans l'exposé des motifs, juridiquement plus fragile. Option de neutralisation : exonérer aussi les donations dans ces montages, mais cela dépasse la décision de l'auteur, qui maintient les droits de donation.
+
+**À préserver :** L'exonération totale des transmissions dont l'auteur est le défunt (assurance-vie souscrite par l'assuré, PER, trust après le décès du constituant, legs gradués), sans plafond ni condition de parenté.…
+
+## RT-DOMSUCC-02 (P1, à confirmer) — DOM-SUCC
+
+**Articles :** cgi 754 A, cgi 662, cgi 677, cgi 968 bis, cgi 750 ter
+
+**Correction minimale :** Remplacer l'abrogation pure de 754 A par une rédaction qui maintient la qualification de transmission gratuite par le prémourant, constate l'exonération par le II de 750 ter et exclut expressément tout droit de mutation à titre onéreux et toute taxe proportionnelle à raison de l'accroissement (texte en section « Corrections »).
+
+**Autres options :**
+- Ajouter au II de 750 ter une phrase générale : « Aucun droit de mutation à titre onéreux n'est dû à raison d'un accroissement, d'une réversion ou d'une attribution qui prend effet au décès et qui, avant l'entrée en vigueur de la présente loi, était réputé transmis à titre gratuit par le défunt. »
+
+**À préserver :** L'exonération des nouveaux décès. Le régime antérieur, avec l'option, pour les décès anciens. La définition autonome IFI de 968 bis. Les règles civiles de la tontine.
+
+## RT-DOMTS-01 (P1, à confirmer) — DOM-TS
+
+**Articles :** cgi 231, css L131-8, css L131-7, css LO111-3-15, css LO111-3-16, css LO111-3-18
+
+**Correction minimale :** Ne pas conditionner la suppression. Trancher expressément la compensation, dans une loi de financement. Option A, conforme à l'orientation « aucune compensation créée » : compléter L131-7 II par « 3° À la suppression de la taxe sur les salaires prévue à l'article 231 du code général des impôts pour les rémunérations versées à compter de l'entrée en vigueur de la loi qui la prévoit. » Ajouter dans la LFSS un article non codifié : « La suppression de la taxe sur les salaires prévue à l'article 231 du code général des impôts n'est pas compensée aux branches mentionnées au 1° de l'article L. 131-8 du code de la sécurité sociale ; ses effets sont retracés dans les prévisions de recettes et les tableaux d'équilibre de la présente loi. » Option B : maintenir L131-7 I et inscrire la compensation en loi de finances. Dans les deux cas, voter la réécriture de L131-8 1° en LFSS.
+
+**Autres options :**
+- Porter l'ensemble de la suppression (CGI 231 et coordinations) dans une LFSS, qui peut contenir des dispositions ayant un effet sur les recettes des régimes (LO111-3-7 1°).
+- Si la suppression figure en loi de finances, adopter le même jour les dispositions L131-7/L131-8 en LFSS.
+
+**À préserver :** Suppression prospective sans condition de financement préalable (orientation budget); Affectation des recettes anciennes et de leurs régularisations selon les fractions 58,35/10,74/24,77/6,14 %; Absence de recette fictive ou de pourcentage redistribué
+
 ## RT-FUTCSS-04 (P1, confirmé) — FUT-CSS
 
 **Articles :** css L137-26, css L137-30, css L137-32, css L137-33

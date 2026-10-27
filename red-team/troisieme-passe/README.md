@@ -5,7 +5,7 @@ Revue critique indépendante du projet de réécriture de cinq codes : Code du t
 La revue recherche les contradictions, les fragilités juridiques, les effets involontaires, les risques de contournement et les difficultés d'application. Les objections sont démontrées, sourcées, classées par priorité, et chacune est accompagnée de corrections possibles.
 
 > **À lire avant tout usage**
-> - Cette revue a été conduite par une IA (Claude, d'Anthropic : un coordinateur et 24 agents, dont certains ont délégué à des sous-agents). **Aucun juriste ne l'a validée.**
+> - Cette revue a été conduite par une IA (Claude, d'Anthropic : un coordinateur et 29 agents, dont certains ont délégué à des sous-agents). **Aucun juriste ne l'a validée.**
 > - Ses conclusions sont **provisoires**. Elles portent sur l'instantané figé `20261026T230545Z`, pris alors que la seconde passe du projet était encore en cours (11 052 articles relus sur 30 314).
 > - Une revue finale des différences avec l'état issu de la seconde passe reste à faire (§ D du rapport).
 > - Les corrections proposées sont présentées **séparément des textes courants**. Aucune n'a été intégrée au projet.
@@ -16,11 +16,11 @@ La revue recherche les contradictions, les fragilités juridiques, les effets in
 | Document | Contenu |
 |---|---|
 | [`reports/RAPPORT.md`](reports/RAPPORT.md) | Synthèse, portée et limites, conclusions incertaines, méthode et procédure de revue finale |
-| [`reports/REGISTRE.md`](reports/REGISTRE.md) | Registre des 269 objections retenues : 4 P0, 99 P1, 166 P2 |
+| [`reports/REGISTRE.md`](reports/REGISTRE.md) | Registre des 303 objections retenues : 4 P0, 111 P1, 188 P2 |
 | [`reports/CORRECTIONS.md`](reports/CORRECTIONS.md) | Corrections minimales des P0 et P1, avec les options et les éléments à préserver |
 | [`reports/register.json`](reports/register.json) | Registre complet, au format machine : priorité justifiée, nature, statut, articles et versions LEGI, empreintes, citations, raisonnement, conséquences, corrections, incertitudes, preuves |
-| [`reports/dossiers/`](reports/dossiers/) | Les 26 rapports de dossier, avec les rédactions intégrales proposées |
-| [`reports/dedupe.json`](reports/dedupe.json) | Les 32 doublons entre dossiers et leur fusion motivée |
+| [`reports/dossiers/`](reports/dossiers/) | Les 31 rapports de dossier, avec les rédactions intégrales proposées, dont les 5 revues de fond des domaines prioritaires (`DOM-IS`, `DOM-SUCC`, `DOM-SRU`, `DOM-CVAE`, `DOM-TS`) |
+| [`reports/dedupe.json`](reports/dedupe.json) | Les 36 doublons entre dossiers et leur fusion motivée |
 
 ## Contenu du dossier
 
@@ -40,11 +40,11 @@ La revue recherche les contradictions, les fragilités juridiques, les effets in
   - requalification des P1 ;
   - assemblage du registre ;
   - revue des différences (`diff_review.py`).
-- **Consignes données aux agents** : `BRIEF-AGENTS.md` et `BRIEF-P1.md`.
+- **Consignes données aux agents** : `BRIEF-AGENTS.md`, `BRIEF-P1.md` et `BRIEF-DOMAINES.md`.
 - **`manifests/`** : empreintes par article des deux instantanés pris : source, XML, NOTA, bornes, statut, proposition, motif, notes, lot propriétaire, politiques.
   - `20261026T220621Z` : premier instantané, **rejeté** parce qu'une écriture de la production a été saisie en cours.
   - `20261026T230545Z` : instantané retenu.
-- **`evidence/cited/20261026T230545Z/`** : 6 669 exports d'articles cités. Chaque export contient toutes les versions du numéro : source entière, XML LEGI, NOTA, bornes, proposition, motif, notes de revue, ligne de lot, statut d'inventaire, avec leurs empreintes.
+- **`evidence/cited/20261026T230545Z/`** : 9 677 exports d'articles cités. Chaque export contient toutes les versions du numéro : source entière, XML LEGI, NOTA, bornes, proposition, motif, notes de revue, ligne de lot, statut d'inventaire, avec leurs empreintes.
 - **`evidence/sealed/`**
   - `sealed-manifest.json` : empreintes des 6 982 fichiers des dossiers de preuve datés de la production cités par l'index des contradictions ;
   - les pièces de ces dossiers effectivement citées par une objection, comme le JO de 2010 et la formule E pour D351-9 ;
@@ -62,8 +62,8 @@ Tous les chemins `evidence/…` cités dans les rapports et le registre sont pr�
 ## Limites principales
 
 - **Accès aux sources.** Légifrance a répondu HTTP 403 aux agents le 26 octobre 2026. Ce refus n'a pas été contourné. Les lectures du JORF reposent donc sur les preuves déjà scellées. Le droit de l'Union a été lu sur des copies secondaires ou cité de mémoire ; ces points sont marqués « à confirmer ».
-- **Périmètre non couvert.** Les ~30 300 articles n'ont pas été relus un à un. Les 87 876 alertes P2 et P3 de l'audit n'ont pas été examinées. Les domaines prioritaires (IS à la distribution, successions, SRU intégral, CVAE, taxe sur les salaires) n'ont pas encore fait l'objet d'une revue de fond propre.
-- **Dépendance à la seconde passe.** 174 des 269 objections citent au moins un article que la seconde passe n'avait pas encore relu au moment de l'instantané.
+- **Périmètre non couvert.** Les ~30 300 articles n'ont pas été relus un à un. Les 87 876 alertes P2 et P3 de l'audit n'ont pas été examinées. Les domaines prioritaires (IS à la distribution, successions, SRU intégral, CVAE, taxe sur les salaires) ont été revus au fond le 27 octobre, mais pas exhaustivement : la couverture réelle de chacun est indiquée dans son rapport et au § A.4 du rapport.
+- **Dépendance à la seconde passe.** 189 des 303 objections citent au moins un article que la seconde passe n'avait pas encore relu au moment de l'instantané.
 
 ## Vérifier
 

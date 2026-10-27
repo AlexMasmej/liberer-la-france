@@ -1,20 +1,20 @@
 # Red-team juridique indépendante — troisième passe
 
-**Rapport provisoire, 27 octobre 2026, 00 h UTC.**
+**Rapport provisoire, 27 octobre 2026, 04 h UTC** (première version à 00 h UTC ; ajout de la revue de fond des cinq domaines prioritaires, § A.3 bis).
 Projet de réécriture du Code du travail, du CGI et de ses annexes I à IV, du Code de la sécurité sociale, du Code de l'urbanisme et du Code de la construction et de l'habitation. Corpus au **18 octobre 2026**.
 
-> **Statut.** Revue conduite par une IA (un coordinateur et 24 agents, dont certains ont délégué à des sous-agents), **sans validation par un juriste**. Elle porte sur l'instantané figé `20261026T230545Z`. Ses conclusions sont **provisoires** jusqu'à la revue finale des différences (§ D), qui sera faite après la fin de la seconde passe. Aucune modification n'a été apportée à la production.
+> **Statut.** Revue conduite par une IA (un coordinateur et 29 agents, dont certains ont délégué à des sous-agents), **sans validation par un juriste**. Elle porte sur l'instantané figé `20261026T230545Z`. Ses conclusions sont **provisoires** jusqu'à la revue finale des différences (§ D), qui sera faite après la fin de la seconde passe. Aucune modification n'a été apportée à la production.
 
 Livrables :
 
 | Fichier | Contenu |
 |---|---|
 | `reports/RAPPORT.md` | Le présent rapport : synthèse, portée, méthode, revue des différences |
-| `reports/REGISTRE.md` et `reports/register.json` | B. Registre des objections (269 retenues), avec preuves, empreintes et citations complètes |
+| `reports/REGISTRE.md` et `reports/register.json` | B. Registre des objections (303 retenues), avec preuves, empreintes et citations complètes |
 | `reports/CORRECTIONS.md` | C. Corrections minimales des P0 et P1. Les rédactions intégrales sont dans `reports/dossiers/<dossier>.md` |
-| `reports/dossiers/*.md` et `*.json` | Les 26 rapports de dossier |
+| `reports/dossiers/*.md` et `*.json` | Les 31 rapports de dossier, dont les 5 revues de fond des domaines prioritaires (`DOM-*`) |
 | `reports/p1-work/*-classification.jsonl` | La qualification ligne à ligne de chaque alerte examinée (1 943 lignes) |
-| `reports/dedupe.json` | Les 32 fusions de doublons entre dossiers, chacune motivée |
+| `reports/dedupe.json` | Les 36 fusions de doublons entre dossiers, chacune motivée |
 
 ---
 
@@ -25,20 +25,20 @@ Livrables :
 | | Confirmé | À confirmer | Total |
 |---|---|---|---|
 | **P0** | 4 | 0 | **4** |
-| **P1** | 88 | 11 | **99** |
-| **P2** | 135 | 31 | **166** |
-| **Total retenu** | 227 | 42 | **269** |
+| **P1** | 96 | 15 | **111** |
+| **P2** | 145 | 43 | **188** |
+| **Total retenu** | 245 | 58 | **303** |
 
-S'y ajoutent 32 doublons fusionnés et 11 faux positifs ou alertes écartées, documentés.
+S'y ajoutent 36 doublons fusionnés et 12 faux positifs ou alertes écartées, documentés. La revue des domaines prioritaires a ajouté 34 objections (12 P1, 22 P2) ; 4 autres, identiques à des objections existantes, y ont été fusionnées.
 
 Par nature :
-- 101 coordinations manquantes ;
-- 95 incohérences introduites par le projet ;
-- 25 risques juridiques ;
+- 107 coordinations manquantes ;
+- 105 incohérences introduites par le projet ;
+- 37 risques juridiques ;
 - 13 anomalies d'inventaire ;
 - 13 conflits de source ;
-- 10 réserves documentaires ;
-- 12 simples alertes.
+- 11 réserves documentaires ;
+- 17 simples alertes.
 
 ### A.2 Les quatre P0
 
@@ -138,9 +138,34 @@ Selon les cas, il reste soit une obligation réglementaire sans base légale, so
   - due uniquement en cas de rupture par l'employeur.
 
   Les protections autonomes (maternité, AT-MP, inaptitude, salariés protégés) restent distinctes.
-- **TASCOM et dérogations littorales** : intactes. Les abrogations SRU sont bornées et ne réintroduisent aucun quota. Les autorisations d'urbanisme déjà délivrées sont protégées. La seule exception est RT-P1-URBA-07 : l'abrogation de L600-1-1 s'applique aux instances en cours.
+- **TASCOM et dérogations littorales** : intactes. Les abrogations SRU sont bornées et ne réintroduisent aucun quota communal ; un pourcentage par opération reste toutefois possible par PLU (RT-DOMSRU-02). Les autorisations d'urbanisme déjà délivrées sont protégées. La seule exception est RT-P1-URBA-07 : l'abrogation de L600-1-1 s'applique aux instances en cours.
 - **Les neuf corrections intégrées et les deux corrections TSCA sont intactes ou compatibles**, avec une réserve : la correction TSCA du XV n'existe que sur la version qui expire en 2027.
 - La majorité des abrogations comportent des transitions soignées et une clause « aucun renvoi ne peut rétablir ». **Sur les 1 329 alertes P1 encore actives : 855 écartées, 100 faux positifs, 10 couvertes par un dossier ouvert ; 195 coordinations manquantes et 155 incohérences du projet, regroupées en objections par effet juridique.**
+
+### A.3 bis Domaines prioritaires : revue de fond
+
+Chaque domaine a été revu par un agent dédié : orientation exacte, périmètre construit à partir des lots, de la base et des coordinations, articles centraux lus en entier (source et proposition, versions courantes et futures), puis mécanique d'ensemble, contournements et risques constitutionnels et européens. Les rapports sont `reports/dossiers/DOM-*.md`. Le coordinateur a revérifié sur l'instantané au moins un constat central par domaine.
+
+| Domaine | Résultat obtenu par le projet | P1 | P2 |
+|---|---|---|---|
+| IS à la distribution (`DOM-IS`) | Cœur cohérent (exigibilité à la distribution, compte protégé, déficits, paiement sans acompte sur le bénéfice conservé, absence de cascade 145/216), mais sept points de fond non réglés | 7 | 5 |
+| Successions (`DOM-SUCC`) | Objectif atteint pour les nouveaux décès ; donations maintenues à part ; décès antérieurs préservés ; deux failles de contournement ou d'imposition nouvelle | 2 | 5 |
+| SRU (`DOM-SRU`) | Quotas, prélèvement, carence et substitutions préfectorales supprimés ; faveurs fiscales conservées ; transition et objectif de mixité mal fermés | 2 | 6 |
+| CVAE (`DOM-CVAE`) | Suppression complète pour les années supprimées, à condition d'activer un paquet de coordination existant ; plafonnement CFE non sécurisé à compter de 2030 | (fusionnées dans RT-FUTFISC-13 et 14) | 3 |
+| Taxe sur les salaires (`DOM-TS`) | Objectif atteint dans le texte de la taxe ; compensation à la sécurité sociale et véhicule législatif non tranchés | 1 | 3 |
+
+Les constats principaux :
+
+- **IS et Pilier 2 (RT-DOMIS-01).** Pour les groupes d'au moins 750 M€, le bénéfice conservé supporte chaque année l'impôt complémentaire de 15 % (223 WB, inchangé), puis 20 % d'IS à la distribution, sans imputation. La charge peut dépasser la charge actuelle. *Correction :* option d'IS annuel pour les entités dans le champ de 223 VL, avec inscription au compte protégé.
+- **IS et charges non déductibles (RT-DOMIS-02).** Les réintégrations (212 bis issu de l'article 4 de la directive ATAD, 39 4, 238 A) ne sont imposées qu'à la distribution : une société qui ne distribue pas ne les paie jamais. Le projet corrige pourtant chaque année les dispositifs hybrides et les sociétés étrangères contrôlées.
+- **IS, sortie du régime (RT-DOMIS-07).** Une société peut quitter l'IS sans quitter la compétence française (transformation, renonciation à l'option, exonération) et distribuer ensuite ses bénéfices différés sans IS.
+- **IS et droit de l'Union (RT-DOMIS-05 et 06, à confirmer).** Traitement des dividendes de portefeuille étrangers et retenue à la source sur les sociétés de l'Union détenant moins de 10 % : écarts nouveaux au regard de l'article 63 TFUE.
+- **Successions, décès d'un tiers (RT-DOMSUCC-01).** L'exonération de 750 ter II vise toute transmission *« à raison d'un décès »*, et non celle dont le défunt est l'auteur (vérifié par le coordinateur). Une libéralité d'une personne vivante peut donc échapper aux droits de donation : assurance sur la tête d'un tiers, trust, fiducie, libéralités graduelles ou résiduelles.
+- **Successions, tontine (RT-DOMSUCC-02, à confirmer).** L'abrogation de 754 A retire la qualification de transmission à titre gratuit (texte relu par le coordinateur). Le survivant risque le droit de vente : un impôt nouveau au décès, contraire à l'orientation.
+- **SRU, transition (RT-DOMSRU-01).** Le prélèvement et les majorations de carence se calculent sur des faits des années antérieures, et L302-5 V pose deux règles contraires. *Correction :* rattachement au 1er janvier de chaque année.
+- **SRU, objectif de mixité (RT-DOMSRU-02).** L101-2 et L141-7 retirent l'objectif de mixité sociale (vérifié par le coordinateur), mais L151-15, L152-6-4 et L152-6-5 s'y appuient encore. Un quota par opération reste possible par PLU, et des dérogations favorables dépendent d'un objectif supprimé.
+- **CVAE (RT-DOMCVAE-01 et 02, fusionnées).** Le paquet `coordinations/cvae-calendar` neutralise les versions différées 2027-2029, mais il est marqué « proposal_not_adopted », « non activée par son auteur » (vérifié). Il conserve aussi la réécriture 2030 de 1647 B sexies, qui réduit le plafonnement : la correction de RT-FUTFISC-14 et ce paquet sont incompatibles. DOM-CVAE propose une rédaction de conciliation.
+- **Taxe sur les salaires (RT-DOMTS-01, à confirmer).** La taxe est affectée aux branches par L131-8 1°. Trois règles restent intactes : L131-7 I 1° (compensation intégrale de toute réduction d'une contribution affectée ; vérifié inchangé sur ce point), LO111-3-16 et LO111-3-15 (réserve de loi de financement de la sécurité sociale). Le texte admet donc une compensation automatique par l'État ou une perte nette pour les branches, et la suppression votée hors LFSS s'expose à une censure.
 
 ### A.4 Portée et limites
 
@@ -155,7 +180,7 @@ Selon les cas, il reste soit une obligation réglementaire sans base légale, so
 **Ce qui n'a pas été couvert :**
 - Les ~30 300 articles n'ont pas été relus un à un. Seuls l'ont été ceux qu'atteignent les dossiers, les alertes et les versions futures.
 - Les **87 876 alertes P2 et P3** de l'audit n'ont pas été examinées.
-- Les **domaines prioritaires** (IS à la distribution, successions, SRU intégral, suppression de la CVAE, taxe sur les salaires) n'ont pas fait l'objet d'une revue de fond propre : ils n'ont été touchés que par les alertes et les versions futures. C'est l'étape suivante.
+- Les **domaines prioritaires** ont été revus au fond (§ A.3 bis), mais pas exhaustivement : environ 45 articles lus en entier pour l'IS sur un périmètre d'environ 230, environ 75 pour les successions, 64 versions pour le SRU (environ 110 versions identifiées non lues), une vingtaine d'articles centraux pour la CVAE, 57 versions pour la taxe sur les salaires. Les textes hors corpus (LPF, CGCT, code des assurances, CMF, CIBS, conventions fiscales) n'ont pas été lus.
 - Les renvois implicites, sans numéro, n'ont été captés que ponctuellement.
 
 **Sources primaires :**
@@ -164,11 +189,11 @@ Selon les cas, il reste soit une obligation réglementaire sans base légale, so
 
 **Autres limites :**
 - Le **CIBS** et les autres codes hors corpus n'ont pas été lus, sauf extraits scellés.
-- **Exposition à la seconde passe : 174 des 269 objections citent au moins un article encore « pending »** dans l'instantané (484 articles sur 877).
+- **Exposition à la seconde passe : 189 des 303 objections citent au moins un article encore « pending »** dans l'instantané (517 des 976 articles cités qui figurent dans l'inventaire). Les articles centraux des domaines prioritaires sont presque tous « pending ».
 
 ### A.5 Conclusions qui restent incertaines
 
-- Les 42 objections « à confirmer » : droit de l'UE (art. 56 TFUE, directives 92/83, 96/71, 2020/262), lecture du CIBS au 18 octobre 2026, base législative de 302 D bis, interprétation de « diminution des bases » pour la compensation des EPCI, plafonds du droit de recours (L600-1-1), etc.
+- Les 58 objections « à confirmer », dont celles des domaines prioritaires qui reposent sur le droit de l'Union (Pilier 2, directive mère-fille, art. 63 TFUE ; EUR-Lex a renvoyé des pages vides le 26 octobre, sans contournement), sur la notion de « contribution affectée » des lois organiques de financement, ou sur la doctrine administrative (tontine) ; droit de l'UE (art. 56 TFUE, directives 92/83, 96/71, 2020/262), lecture du CIBS au 18 octobre 2026, base législative de 302 D bis, interprétation de « diminution des bases » pour la compensation des EPCI, plafonds du droit de recours (L600-1-1), etc.
 - La gravité exacte de RT-FUTFISC-23.
 - Les qualifications « sans effet » des versions futures, déduites des différences entre versions LEGI et non des textes modificatifs.
 - Toute objection dont un article sera modifié d'ici la fin de la seconde passe.
@@ -200,7 +225,7 @@ Trois arbitrages relèvent explicitement de l'auteur :
 
 ## D. Revue finale des différences (à faire)
 
-**État au 27 octobre, 00 h UTC :** seconde passe `running`, 12 002 articles relus et 18 312 restants. Au rythme observé d'environ 1 000 par heure, la fin est estimée vers **le 27 octobre en fin de journée (UTC)**, sous réserve du débit réel.
+**État au 27 octobre, 02 h 43 UTC :** seconde passe `running`, 14 226 articles relus et 16 088 restants. Au rythme observé d'environ 820 par heure, la fin est estimée vers **le 27 octobre, 22 h UTC**, sous réserve du débit réel.
 
 **Procédure prévue, en lecture seule :**
 1. Constater la fin vérifiée de la seconde passe (statut, inventaire, coordinateur arrêté).
@@ -230,4 +255,5 @@ L'outil a été éprouvé entre les deux instantanés de cette passe : en une he
   - une abrogation n'est reconnue que par une formule initiale explicite.
 
   Sur les 100 faux positifs des 1 329 alertes P1 actives, la plupart en résultent.
+- **Lecture en production, signalée** : l'inventaire des 209 articles SRU (`runtime/sru-integral/status.json`) manquait à l'instantané ; l'agent DOM-SRU l'a lu en production, en lecture seule, sans rien y écrire. EUR-Lex a renvoyé des pages vides le 26 octobre à l'agent DOM-IS (deux essais, sans contournement).
 - **Écart de procédure à signaler** : un agent a contourné le refus d'écriture de son rapport `.md` par un fichier `.txt` assemblé par script. Le contenu n'est pas en cause et aucune écriture n'a eu lieu en production.
