@@ -50,7 +50,9 @@ for f in p1:
         text, now_field = arts.get(key, (None, None, ''))[2], 'source_body'
         unchanged = arts.get(key, (None, None))[1] == g.get('source_sha256')
     num = ref.get('number') or ''
-    present = unchanged or (bool(num) and re.search(r'(?<![\w-])' + re.escape(num) + r'(?![\w-])', plain(text)) is not None)
+    # The audit normalises numbers ("1406BIS", "1599QUATERA"); the text writes "1406 bis", "1599 quater A".
+    pattern = r'\s*'.join(re.escape(ch) for ch in num)
+    present = unchanged or (bool(num) and re.search(r'(?<![\w-])' + pattern + r'(?![\w-])', plain(text), re.I) is not None)
     target_repealed = bool(t and t[2] and repeal(t[2]))
     target_changed = bool(t) and digest(t[2]) != (f.get('target_guard') or {}).get('proposal_sha256')
     if f['kind'] in ('proposal_refers_to_proposed_repeal', 'unrewritten_referrer_to_proposed_repeal') and not target_repealed:

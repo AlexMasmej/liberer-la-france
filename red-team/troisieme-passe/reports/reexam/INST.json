@@ -1,0 +1,840 @@
+{
+ "group": "INST",
+ "snapshot_old": "20261026T230545Z",
+ "snapshot_new": "20261027T044303Z",
+ "objections": [
+  {
+   "id": "RT-INV-01",
+   "verdict": "reformulée",
+   "new_priority": "P2",
+   "new_status": "confirmé",
+   "trace": "Changement : la proposition de 1609 quinvicies (LEGIARTI000042914206, version MODIFIE_MORT_NE) a été entièrement réécrite (empreinte b2d2e0b9… → 1e9a7d72…), motif et notes refaits, seconde passe « completed ». L'ancienne rédaction réinstituait la CSA (« I. – Il est institué une contribution supplémentaire à l'apprentissage. », taux 0,05 % à 0,6 %). La nouvelle commence par « Le présent article est abrogé. Il ne constitue aucun fondement d'assujettissement… » et précise : « La présente disposition ne remet en vigueur aucune rédaction qui n'est pas entrée en vigueur et n'institue aucune contribution en sus de celle régie, pour les périodes relevant de son champ, par l'article L. 6242-1 du code du travail. » Le motif reconnaît la nature mort-née (« cela ne permet pas de rétablir cette rédaction comme droit actuel ») et le renvoi brisé au « III de l'article L. 6131-1 » a disparu. L'effet P0 (double base légale d'un impôt que le projet supprime) est donc levé ; confronté à L6242-1 (inchangé, lu en entier), le calendrier (1er janvier suivant la loi), la créance de L6241-2, l'aide de L6243-1-2 et les décomptes favorables du contrat unique concordent ; aucune formalité ni perte de faveur n'apparaît. Subsiste une partie de l'objection initiale (sa correction demandait aussi de sortir la version de la couverture courante) : (1) LEGIARTI000042914206 reste compté comme article courant de l'inventaire, désormais « completed », alors que l'article est abrogé depuis le 1er janvier 2022 (version ABROGE LEGIARTI000043701898) et que cette version n'est jamais entrée en vigueur ; « abroger » un article déjà abrogé est sans objet ; (2) la proposition loge des règles de fond (« Pour l'application des avantages et exclusions aux années encore imposables, les salariés employés sous contrat unique sont pris en compte pendant leur période d'apprentissage… », « les garanties de rémunération entre missions demeurent ») dans un texte qui se déclare abrogé ; elles doublonnent L6242-1 VIII, avec des formulations différentes (risque de divergence d'interprétation). Effet limité, documentaire et rédactionnel : P2, nature désormais « anomalie d'inventaire ».",
+   "articles_read": [
+    {
+     "code": "cgi",
+     "number": "1609 quinvicies",
+     "source_id": "LEGIARTI000042914206",
+     "proposed_sha256_new": "1e9a7d72782e87139c60a4637cde4bdc30a504e48987d0db7ac9ac05ffd6e729",
+     "lecture": "intégral"
+    },
+    {
+     "code": "cgi",
+     "number": "1609 quinvicies",
+     "source_id": "LEGIARTI000043701898",
+     "proposed_sha256_new": null,
+     "lecture": "état et bornes (version ABROGE, sans proposition)"
+    },
+    {
+     "code": "travail",
+     "number": "L6242-1",
+     "source_id": "LEGIARTI000048839886",
+     "proposed_sha256_new": "1df4e817a6a12b9c9ca8d6aeb9eba32db43268abe383ec8ae723d7b2b84bdd58",
+     "lecture": "intégral"
+    }
+   ],
+   "revised_minimal_correction": "Remplacer le corps proposé de 1609 quinvicies par une mention documentaire non normative : « Article abrogé à compter du 1er janvier 2022 par l'article 6 de l'ordonnance n° 2021-797 du 23 juin 2021 ; la rédaction issue des lois n° 2019-1479 du 28 décembre 2019 et n° 2020-1721 du 29 décembre 2020 n'est jamais entrée en vigueur. La contribution supplémentaire à l'apprentissage, sa suppression et le régime des années antérieures sont régis par l'article L. 6242-1 du code du travail. » Classer LEGIARTI000042914206 hors couverture courante (version mort-née). Ne rien perdre : les décomptes du contrat unique, les exclusions intérimaires, la créance de L6241-2 et l'aide de L6243-1-2 figurent déjà dans L6242-1 proposé (I, II 1°, V, VIII). Si l'exclusion des rémunérations garanties entre missions doit être expressément maintenue pour les années encore imposables, l'ajouter à L6242-1 VIII, non à 1609 quinvicies."
+  },
+  {
+   "id": "RT-CSS12-01",
+   "verdict": "reformulée",
+   "new_priority": "P2",
+   "new_status": "confirmé",
+   "trace": "Trois des quatre textes visés sont corrigés. R123-1-1 (dc099cea…, completed) : « Le présent article est abrogé à compter de l'entrée en vigueur de la loi supprimant l'agrément des conventions collectives des organismes de sécurité sociale. » ; l'agrément tacite à un mois a disparu. R152-8 (f90f6f7f…, completed) : la réserve « demeurent applicables » est remplacée par « Le présent article ne rétablit aucun agrément des conventions collectives relevant des articles L. 123-1 et L. 123-2. » R123-1 (passé de retained_unchanged à rewrite_draft, 84199b7a…) : « Cette désignation ne soumet à aucun agrément les conventions collectives relevant des articles L. 123-1, L. 123-2 et L. 123-2-1. » ; son motif ne dit plus que la désignation « rend applicables les agréments ». Aucun effet nouveau constaté (transitions alignées sur la loi, droits acquis et recours préservés, aucune formalité de remplacement). Reste D224-7 (LEGIARTI000046356432), inchangé et encore « pending » : « Les agréments prévus par les articles L. 123-1 et L. 123-2 demeurent applicables dans leur champ. », avec des notes qui affirment un « agrément encore légalement exigé pour les accords locaux ». Ce n'est plus une procédure opérante (R123-1-1 est abrogé à la date de la loi), mais une affirmation réglementaire contraire à L123-1 et L123-2 proposés (« applicables sans agrément »). La contradiction subsiste dans un seul texte, sans circuit d'instruction : P1 → P2.",
+   "articles_read": [
+    {
+     "code": "css",
+     "number": "R123-1-1",
+     "source_id": "LEGIARTI000038790652",
+     "proposed_sha256_new": "dc099cea17cc2203182d62dc86fe26f02974a9885b372e420549cfe7e46b858b",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R152-8",
+     "source_id": "LEGIARTI000029388285",
+     "proposed_sha256_new": "f90f6f7fad866c2248463c68d6163beaa01d6243cd05874780a37e8dc65685c0",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R123-1",
+     "source_id": "LEGIARTI000029389194",
+     "proposed_sha256_new": "84199b7a320e1a14599d1436d1037ef19e53d39f1df80787f89ecbf66ef276fd",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "D224-7",
+     "source_id": "LEGIARTI000046356432",
+     "proposed_sha256_new": "4e5295caf80eddd9c4f720f8f406b0ab6eb04936f64f7199a992acbe47dfe7d7",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "L123-1",
+     "source_id": "LEGIARTI000037948839",
+     "proposed_sha256_new": "478cc37788438a895bef7fa1d4d6befcf3e54f533f6a775cb140646e0a8e4258",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "L123-2",
+     "source_id": "LEGIARTI000037948868",
+     "proposed_sha256_new": "c387c617f125af8cf3882dbbb4f2a508e867e9b55f521c1399d40eac90c19069",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "L123-2-1",
+     "source_id": "LEGIARTI000036391616",
+     "proposed_sha256_new": "a379229f5e546097813cb44b2a591a09751a875f179476bf7d721965b69b34f1",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "L224-5-1",
+     "source_id": "LEGIARTI000037948891",
+     "proposed_sha256_new": "83a665437bc5702c148e82db881e46716d320139c2843493f5afe2cb0c5509db",
+     "lecture": "empreintes seulement (inchangé depuis l'ancien instantané)"
+    },
+    {
+     "code": "css",
+     "number": "L123-2-3",
+     "source_id": "LEGIARTI000020886948",
+     "proposed_sha256_new": "452f52a4386d0e0e37cd258d4dd882009c2a3ac695704f38de998595dfc54bd7",
+     "lecture": "empreintes seulement (inchangé)"
+    }
+   ],
+   "revised_minimal_correction": "D224-7, dernier alinéa : supprimer « Les agréments prévus par les articles L. 123-1 et L. 123-2 demeurent applicables dans leur champ. » et écrire : « À compter de l'entrée en vigueur de la loi supprimant l'agrément des conventions collectives des organismes de sécurité sociale, aucun agrément, avis ou déclaration de remplacement ne peut être exigé pour ces accords. Les accords déjà applicables et les droits qui en résultent sont préservés. » Mettre à jour son motif et ses notes. À traiter avec RT-CSS12-03 (même article)."
+  },
+  {
+   "id": "RT-CSS12-02",
+   "verdict": "résolue",
+   "new_priority": null,
+   "new_status": "résolu",
+   "trace": "R123-1 n'est plus abrogé (option du candidat critiquée) mais réécrit (rewrite_draft, 84199b7a…, completed). Le passage qui règle le défaut : « Les compétences ainsi désignées demeurent applicables aux actes distincts pour lesquels un texte renvoie au présent article, notamment à la fixation de la date des élections prévue à l'article R. 123-54. » La désignation (ministre chargé de la sécurité sociale ; ministre chargé de l'agriculture pour la MSA) est conservée par une formule générale (« Lorsqu'une disposition renvoie au présent article… »), ce qui couvre R123-54, maintenu, qui renvoie toujours à « l'autorité compétente de l'Etat déterminée conformément à l'article R. 123-1 ». Vérification des effets nouveaux : aucune formalité créée (« Aucun avis préalable, autorisation ou déclaration de remplacement ne peut être exigé ») ; scrutin de liste, seuil « plus de 8 % », périodicité de quatre ans conservés (R123-54 inchangé) ; suppression des copies de R123-56 maintenue ; renvoi non cassé. Les notes de R123-54 (« ses renvois aux agréments supprimés demandent une harmonisation hors lot ») sont devenues périmées : voir RT-RXINST-01.",
+   "articles_read": [
+    {
+     "code": "css",
+     "number": "R123-1",
+     "source_id": "LEGIARTI000029389194",
+     "proposed_sha256_new": "84199b7a320e1a14599d1436d1037ef19e53d39f1df80787f89ecbf66ef276fd",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R123-54",
+     "source_id": "LEGIARTI000039447908",
+     "proposed_sha256_new": null,
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R123-56",
+     "source_id": "LEGIARTI000039447922",
+     "proposed_sha256_new": "75fd97eec618432ac1b6349e363ed1a3d7691fd278e4172201c7c8293a1ee6ba",
+     "lecture": "intégral"
+    }
+   ],
+   "revised_minimal_correction": null
+  },
+  {
+   "id": "RT-CSS12-06",
+   "verdict": "résolue",
+   "new_priority": null,
+   "new_status": "résolu",
+   "trace": "R151-1 et R151-3, autrefois retained_unchanged, sont réécrits (019a61d8… et 690e5473…, completed). R151-1, troisième alinéa : « À compter de l'entrée en vigueur de la suppression prévue au troisième alinéa de l'article L. 151-1, les décisions ne peuvent plus être suspendues sur le seul fondement de leur incidence présumée sur l'équilibre financier des risques. » ; R151-3 : « la saisine du directeur de la caisse nationale et sa confirmation ne sont plus requises ». Le circuit supprimé par L151-1 proposé (inchangé) n'est plus organisé par le règlement. Effets nouveaux vérifiés : premier, deuxième et quatrième alinéas de R151-1 identiques à la source (communication immédiate, annulation pour illégalité sous huit jours, suspension pour complément d'instruction, quarante jours, délais francs) ; décisions déléguées toujours couvertes par R151-3 ; décisions définitivement annulées non rétablies ; plus aucune balise <br /> dans R151-3. Le déclencheur renvoie au troisième alinéa de L151-1 proposé, qui porte bien la suppression. Seul reste le défaut des textes d'aval R226-1, R226-2, R752-24, suivi sous RT-TUT-04 (non recompté ici).",
+   "articles_read": [
+    {
+     "code": "css",
+     "number": "R151-1",
+     "source_id": "LEGIARTI000021508199",
+     "proposed_sha256_new": "019a61d822cf52cd2b1dffb30b880c2538ecfe3681ac0ca49a9f98bf87dce835",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R151-3",
+     "source_id": "LEGIARTI000029389202",
+     "proposed_sha256_new": "690e54732f00d14d2bd8f78a1835213e9a9145db2b717aeab79a93e3b7fa5a8f",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "L151-1",
+     "source_id": "LEGIARTI000037064171",
+     "proposed_sha256_new": "2d56027f99d0ea0b114e90ebf0ca370871c043915197a02c2b72e4b60e566051",
+     "lecture": "intégral"
+    }
+   ],
+   "revised_minimal_correction": null
+  },
+  {
+   "id": "RT-XCUT-01",
+   "verdict": "maintenue",
+   "new_priority": "P1",
+   "new_status": "confirmé",
+   "trace": "Recomptage sur l'instantané 20261027T044303Z (SQL en lecture seule : articles state='VIGUEUR_DIFF' et valid_from > '2026-10-18', jointure gauche sur drafts), base de comparaison reports/future-versions-20261026T230545Z.json. Résultat : 516 versions futures, toutes encore sans aucune ligne de proposition (516 avant, 516 après ; 0 a reçu une proposition ; ensemble identique, aucune entrée ni sortie). Répartition inchangée : 408 successeurs d'un article inventorié et 108 nouveaux numéros ; successeurs par code : CGI 163, CSS 118, travail 72, CCH 41, urbanisme 9, annexe II 4, annexe III 1 ; dates des successeurs : 2026-11 : 43 ; 2027-01 : 179 ; 2028-01 : 45 ; 2029-01 : 61 ; 2029-03 : 23 ; 2222-02-22 (borne technique) : 16 ; autres dates : 41. Côté versions courantes (384 versions distinctes pour 408 successeurs) : 85 ont changé entre les deux instantanés (statut, proposition, motif ou notes), dont 31 avec une proposition modifiée ; la seconde passe terminée passe de 144 à 229 ; 224 sont en rewrite_draft (219 avant) ; les successeurs dont une version courante est en rewrite_draft passent de 241 à 246 (162 en retained_unchanged au lieu de 167). Aucune de ces modifications ne porte de rédaction pour la version future ni ne l'accepte expressément. Les 13 articles du paquet ont été relus en différentiel (ancien export / nouveau) : leurs notes reconnaissent au contraire le trou, par exemple L3332-17-1 : « la version postérieure au 1er janvier 2027 reste manquante » ; L931-7-2 : « le texte successeur et son acte modificatif ne sont pas fournis » ; 1042 : « le texte entier de l'ordonnance et le dispositif abrogeant 1042 au 1er janvier 2027 manquent ». Or ces successeurs sont dans le corpus (par exemple 1042 LEGIARTI000053187629, L3332-17-1 LEGIARTI000054140237, L931-7-2 LEGIARTI000052845932, tous VIGUEUR_DIFF) : voir RT-RXINST-02. 991 (via RT-INTEG-03) n'a pas de version future et n'est pas concerné. Le cas démontré L752-1 (2028) est inchangé. Le défaut subsiste en entier et l'échéance se rapproche : 43 successeurs prennent effet le 1er novembre 2026, cinq jours après l'instantané, alors que la seconde passe est arrêtée jusqu'au 2 novembre. Priorité P1 maintenue (effet systémique à date certaine, mais conditionné à l'adoption de la réforme).",
+   "articles_read": [
+    {
+     "code": "css",
+     "number": "L752-1",
+     "source_id": "LEGIARTI000042684012",
+     "proposed_sha256_new": "ae66f56bf562aafeaf30e15969c0f5166ac17de022d0ce9c7ee4aa20e33fcd9e",
+     "lecture": "empreintes et statut (inchangé)"
+    },
+    {
+     "code": "css",
+     "number": "L752-1",
+     "source_id": "LEGIARTI000054466934",
+     "proposed_sha256_new": null,
+     "lecture": "état et bornes"
+    },
+    {
+     "code": "travail",
+     "number": "L3332-17-1",
+     "source_id": "LEGIARTI000049720096",
+     "proposed_sha256_new": "7bf71f16bfebddfece396a71930c3f4600e11f0a62fdc47183cdccfcb898b403",
+     "lecture": "différentiel ancien/nouveau intégral (motif et notes)"
+    },
+    {
+     "code": "css",
+     "number": "L931-7-2",
+     "source_id": "LEGIARTI000039183328",
+     "proposed_sha256_new": null,
+     "lecture": "différentiel intégral (notes)"
+    },
+    {
+     "code": "css",
+     "number": "R145-10",
+     "source_id": "LEGIARTI000052208286",
+     "proposed_sha256_new": "12562e61b061f00af62bcae27ba3f182b3eb3e46fc686b085c2d53b775fe7a57",
+     "lecture": "différentiel intégral (proposition, motif, notes)"
+    },
+    {
+     "code": "cgi",
+     "number": "1042",
+     "source_id": "LEGIARTI000037666927",
+     "proposed_sha256_new": "90a0f9d4f69198283313b464fbcde539864992b818f7f59ecb8e34177b80dba7",
+     "lecture": "différentiel intégral"
+    },
+    {
+     "code": "cgi",
+     "number": "1382-0",
+     "source_id": "LEGIARTI000048846391",
+     "proposed_sha256_new": "e4db06faaef4f0180271da4424251024b35d52240862923fb17891b34efd6058",
+     "lecture": "différentiel, filtré sur les mentions temporelles"
+    },
+    {
+     "code": "cgi",
+     "number": "1509",
+     "source_id": "LEGIARTI000027517709",
+     "proposed_sha256_new": "48c19fafe800bbd1deb799bd755a12feef0848f8a41c533009e62ed130393122",
+     "lecture": "différentiel, filtré"
+    },
+    {
+     "code": "cgi",
+     "number": "1582",
+     "source_id": "LEGIARTI000044873045",
+     "proposed_sha256_new": "9c5faa33267d533b7611f5450d46969812916001c90dbbdc9e0c09fbed839922",
+     "lecture": "différentiel, filtré"
+    },
+    {
+     "code": "cgi",
+     "number": "1609 sexdecies C",
+     "source_id": "LEGIARTI000051200895",
+     "proposed_sha256_new": "caad10cd9550b4360e9e53b3ebc9b64a85ff44af1e06130e47404f090b4f5673",
+     "lecture": "différentiel, filtré"
+    },
+    {
+     "code": "cgi",
+     "number": "1609 sexvicies",
+     "source_id": "LEGIARTI000048826662",
+     "proposed_sha256_new": "c0c0062933b6f4d2233739f06ee3d780dd7fbef8cf52352799f09eea7e760df9",
+     "lecture": "différentiel, filtré"
+    },
+    {
+     "code": "cgi",
+     "number": "1613 quater",
+     "source_id": "LEGIARTI000051288275",
+     "proposed_sha256_new": "76b1ada1eb4fc1ea69b2fd1a3fb62f0b1a9696286cd96ddd3708440a73555028",
+     "lecture": "différentiel, filtré"
+    },
+    {
+     "code": "cgi",
+     "number": "1622",
+     "source_id": "LEGIARTI000033713742",
+     "proposed_sha256_new": "9d240289f76a805e3c0985ae23817f72b8713d85b8865eee426a07eacb882090",
+     "lecture": "différentiel, filtré"
+    },
+    {
+     "code": "cgi",
+     "number": "299 septies",
+     "source_id": "LEGIARTI000054374033",
+     "proposed_sha256_new": "ca96e51f1d0712c54942c56b82ff925d0dad910d984796d9aacb1735d99d2862",
+     "lecture": "différentiel, filtré"
+    },
+    {
+     "code": "cgi",
+     "number": "991",
+     "source_id": "LEGIARTI000041471848",
+     "proposed_sha256_new": "284c188b4f3c3087c85dbaae38e9f7290bd3471137203c3f16d53c4343095fa7",
+     "lecture": "différentiel, filtré"
+    },
+    {
+     "code": "cgi",
+     "number": "1509",
+     "source_id": "LEGIARTI000053188717",
+     "proposed_sha256_new": null,
+     "lecture": "source de la version future (début)"
+    }
+   ],
+   "revised_minimal_correction": null
+  },
+  {
+   "id": "RT-UNION-03",
+   "verdict": "maintenue",
+   "new_priority": "P1",
+   "new_status": "confirmé",
+   "trace": "R216-2 (LEGIARTI000036914470) est inchangé : toujours retained_unchanged, seconde passe « pending », motif « L. 216-3 exige cette approbation avant fonctionnement ». L216-3 proposé (inchangé) dit l'inverse : « Les unions ou fédérations peuvent fonctionner dès l'adoption de leurs statuts par les organismes qui les constituent, sans approbation préalable de l'autorité compétente de l'État ni déclaration de remplacement. » Le seul changement du paquet touche R155-1 (motif et notes complétés, seconde passe terminée, toujours sans proposition) : l'ajout porte sur R155-3 (« la suppression des transmissions périodiques de R155-3 ne supprime pas le « service à compétence nationale » ») et ne traite pas la compétence d'approbation de R216-2, 2°. Le renvoi de R216-2 au « deuxième alinéa de l'article L. 216-3 » viserait toujours l'alinéa qui supprime l'approbation.",
+   "articles_read": [
+    {
+     "code": "css",
+     "number": "R216-2",
+     "source_id": "LEGIARTI000036914470",
+     "proposed_sha256_new": null,
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "L216-3",
+     "source_id": "LEGIARTI000006741713",
+     "proposed_sha256_new": "c01728888c94ab4d0f098f84bb11f5d0d015e371e8620177bed25563cd14a2c3",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R155-1",
+     "source_id": "LEGIARTI000038790497",
+     "proposed_sha256_new": null,
+     "lecture": "intégral"
+    }
+   ],
+   "revised_minimal_correction": null
+  },
+  {
+   "id": "RT-A1-02",
+   "verdict": "maintenue",
+   "new_priority": "P2",
+   "new_status": "confirmé",
+   "trace": "a1 165 (LEGIARTI000032881253) est inchangé : « La déclaration prévue au III de l’article 302 D bis du code général des impôts demeure distincte ; aucun second dépôt n’est requis au titre du présent article. », et son motif affirme toujours que 302 D bis « impose déjà la déclaration des bénéficiaires ». Le corps de 302 D bis (f96e9f7b…) est identique ; son III dit toujours « ne sont subordonnés à aucune déclaration préalable de profession auprès de l'administration ». Seules ses notes ont été complétées (contradictions avec 50-0 H, 50-0 I, 289 15°) ; elles ne mentionnent pas 165. La phrase de 165 renvoie donc encore à une déclaration supprimée.",
+   "articles_read": [
+    {
+     "code": "a1",
+     "number": "165",
+     "source_id": "LEGIARTI000032881253",
+     "proposed_sha256_new": "6d4be25d50c853313b4df91fc92b0c612a51076ddd874266c78b8b869e9f9d8f",
+     "lecture": "intégral"
+    },
+    {
+     "code": "cgi",
+     "number": "302 D bis",
+     "source_id": "LEGIARTI000041472187",
+     "proposed_sha256_new": "f96e9f7b83e7a219bc58ff0f6baed3dbca5282147a24751da6188813fdedfb3d",
+     "lecture": "intégral"
+    }
+   ],
+   "revised_minimal_correction": null
+  },
+  {
+   "id": "RT-A1-03",
+   "verdict": "maintenue",
+   "new_priority": "P2",
+   "new_status": "à confirmer",
+   "trace": "CGI 508 (LEGIARTI000006309958, ABROGE_DIFF, borne 2222-02-22) reste absent des propositions et de l'inventaire (« not_in_inventory », aucun lot). Sa NOTA conditionne toujours l'abrogation à « l'intervention du décret mentionné à l'article L. 311-39 du code des impositions sur les biens et services ». 302 D bis I a renvoie toujours aux « articles 302 M et 508 à 513 » ; ses nouvelles notes rappellent que ces références sont « anciennes » sans inscrire 508. a1 165 est inchangé. L'applicabilité résiduelle de 508 n'est toujours pas établie : P2, à confirmer.",
+   "articles_read": [
+    {
+     "code": "cgi",
+     "number": "508",
+     "source_id": "LEGIARTI000006309958",
+     "proposed_sha256_new": null,
+     "lecture": "état, bornes et NOTA"
+    },
+    {
+     "code": "a1",
+     "number": "165",
+     "source_id": "LEGIARTI000032881253",
+     "proposed_sha256_new": "6d4be25d50c853313b4df91fc92b0c612a51076ddd874266c78b8b869e9f9d8f",
+     "lecture": "intégral"
+    },
+    {
+     "code": "cgi",
+     "number": "302 D bis",
+     "source_id": "LEGIARTI000041472187",
+     "proposed_sha256_new": "f96e9f7b83e7a219bc58ff0f6baed3dbca5282147a24751da6188813fdedfb3d",
+     "lecture": "intégral"
+    }
+   ],
+   "revised_minimal_correction": null
+  },
+  {
+   "id": "RT-CSS12-03",
+   "verdict": "reformulée",
+   "new_priority": "P2",
+   "new_status": "confirmé",
+   "trace": "L'objection visait le candidat non enregistré de R123-1-1 ; c'est désormais la proposition enregistrée qui en a la structure. R123-1-1 proposé (dc099cea…) a pour seul effet : « Le présent article est abrogé à compter de l'entrée en vigueur de la loi supprimant l'agrément des conventions collectives des organismes de sécurité sociale. » L'allègement intermédiaire de l'ancien brouillon (avis facultatif, mois courant à réception, pas de prorogation) a disparu. Jusqu'à la loi, la source reste donc applicable : avis obligatoire du comité de L224-5-2 et agrément tacite « au terme d'un délai d'un mois suivant l'avis mentionné à l'alinéa précédent », prorogeable deux fois. D224-7 (inchangé, pending) supprime au contraire ce même avis dès le décret : « À compter de l'entrée en vigueur du présent texte, aucun avis du comité exécutif des directeurs n'est requis sur le fondement du 3° ». Si le décret précède la loi, l'agrément tacite, qui court à partir de l'avis, ne peut plus naître : blocage des accords locaux jusqu'à la loi. Le défaut a changé de support (texte enregistré au lieu d'un candidat), pas de nature. Effet conditionné au calendrier : P2.",
+   "articles_read": [
+    {
+     "code": "css",
+     "number": "R123-1-1",
+     "source_id": "LEGIARTI000038790652",
+     "proposed_sha256_new": "dc099cea17cc2203182d62dc86fe26f02974a9885b372e420549cfe7e46b858b",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "D224-7",
+     "source_id": "LEGIARTI000046356432",
+     "proposed_sha256_new": "4e5295caf80eddd9c4f720f8f406b0ab6eb04936f64f7199a992acbe47dfe7d7",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "L224-5-2",
+     "source_id": "LEGIARTI000044404093",
+     "proposed_sha256_new": "a5344419ac08639bd2a434eb1860e7dd7c2752e7122993d24b698f384522cd6b",
+     "lecture": "empreintes seulement (inchangé)"
+    }
+   ],
+   "revised_minimal_correction": "R123-1-1, insérer avant la phrase d'abrogation : « Jusqu'à l'entrée en vigueur de la loi supprimant l'agrément des conventions collectives des organismes de sécurité sociale, les accords d'entreprise et les décisions mentionnées à l'article R. 152-8 ne sont soumis à aucun avis préalable obligatoire ; ils sont réputés agréés si le ministre compétent n'a pas notifié une décision expresse dans le délai d'un mois à compter de leur réception par ses services. Ce délai ne peut être ni prorogé ni renouvelé. Aucun agrément tacite déjà acquis ni aucune date plus favorable n'est reportée, et aucun nouveau dépôt n'est requis. » Conserver ensuite l'abrogation à la date de la loi. Option moins favorable, non recommandée : aligner D224-7 sur la date de la loi ; elle retarderait la suppression de l'avis que le projet accorde dès le décret."
+  },
+  {
+   "id": "RT-CSS12-04",
+   "verdict": "résolue",
+   "new_priority": null,
+   "new_status": "résolu",
+   "trace": "R152-8 nomme désormais la loi visée : « Le présent article est abrogé à compter de l'entrée en vigueur de la loi supprimant l'agrément des conventions collectives des organismes de sécurité sociale. » R123-1-1 proposé ne contient plus l'énoncé inexact « qui supprime également l'agrément des décisions mentionnées à l'article R. 152-8 ». Ses notes et celles de R152-8 distinguent la mesure réglementaire propre aux décisions de directeurs de la suppression législative. La date d'abrogation n'est plus ambiguë : c'est celle de la loi, désignée par une périphrase commune aux deux textes. Effets nouveaux vérifiés : demandes en cours couvertes « pour les effets des décisions à compter de cette date » ; décisions antérieures, droits acquis et recours préservés ; aucune formalité de remplacement. L'abrogation d'un texte réglementaire à la date d'une loi future reste un choix de calendrier admissible (l'autre option, abroger dès le décret, était seulement suggérée).",
+   "articles_read": [
+    {
+     "code": "css",
+     "number": "R152-8",
+     "source_id": "LEGIARTI000029388285",
+     "proposed_sha256_new": "f90f6f7fad866c2248463c68d6163beaa01d6243cd05874780a37e8dc65685c0",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R123-1-1",
+     "source_id": "LEGIARTI000038790652",
+     "proposed_sha256_new": "dc099cea17cc2203182d62dc86fe26f02974a9885b372e420549cfe7e46b858b",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "L123-1",
+     "source_id": "LEGIARTI000037948839",
+     "proposed_sha256_new": "478cc37788438a895bef7fa1d4d6befcf3e54f533f6a775cb140646e0a8e4258",
+     "lecture": "intégral"
+    }
+   ],
+   "revised_minimal_correction": null
+  },
+  {
+   "id": "RT-CSS12-05",
+   "verdict": "résolue",
+   "new_priority": null,
+   "new_status": "résolu",
+   "trace": "R153-2 passe de retained_unchanged à rewrite_draft (647f3ff5…, completed). Le premier alinéa (budgets approuvés par le directeur général de l'ARS, catégories 8°, 13°, 14° et 15° du I de L312-1 CASF) est identique à la source. Le second est remplacé par : « À compter de l'entrée en vigueur de l'abrogation de l'article L. 153-6, l'autorité chargée du contrôle administratif n'exerce plus l'opposition spéciale prévue par cet article, y compris dans les procédures en cours. » Le motif ne justifie plus le maintien par une protection légale supprimée. Effets nouveaux vérifiés : concordance avec L153-6 proposé (inchangé) : oppositions définitives conservées, procédures en cours éteintes, nouvel octroi possible ; avantages accordés, conventions, créances et recours préservés ; « elle ne permet aucune nouvelle opposition spéciale ni procédure de remplacement ». Aucune faveur perdue.",
+   "articles_read": [
+    {
+     "code": "css",
+     "number": "R153-2",
+     "source_id": "LEGIARTI000022055116",
+     "proposed_sha256_new": "647f3ff5a380db0d8f42fad444b40afe318be088796f99dc5efeacd81c66c615",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "L153-6",
+     "source_id": "LEGIARTI000006740522",
+     "proposed_sha256_new": "65268033cebe96416a7387f24a525c0eb75b08224d3c4c5ca65d1b01b0165bc2",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "L153-2",
+     "source_id": "LEGIARTI000006740511",
+     "proposed_sha256_new": null,
+     "lecture": "empreintes seulement (inchangé)"
+    }
+   ],
+   "revised_minimal_correction": null
+  },
+  {
+   "id": "RT-TUT-04",
+   "verdict": "maintenue",
+   "new_priority": "P2",
+   "new_status": "confirmé",
+   "trace": "R226-2 (83bf04bb…) et R226-1 (5cf1923d…) sont inchangés et toujours pending. R226-2 : « Pour l'application du troisième alinéa de l'article R. 151-1, l'organisme dont la décision a été suspendue par le responsable du service mentionné à l'article R. 155-1 saisit la caisse nationale compétente s'il maintient sa décision… » ; R226-1 : « 2°) pour l'application du troisième alinéa du même article, compte tenu de la nature du risque en cause. » Or le candidat R151-1 est désormais enregistré : le troisième alinéa de R151-1 est devenu la clause qui met fin à ce circuit (« la saisine de la caisse nationale et sa confirmation ne sont plus requises »). Le renvoi est donc inversé, comme l'objection l'anticipait. Les notes de R151-1 et R151-3 le constatent (« R226-1 dernier 2° et R226-2 proposés visent encore le troisième alinéa de R151-1 pour une saisine nationale ») sans le corriger. R752-24 (inchangé, instance fusionnée RT-CSS12-07) maintient « le contrôle de légalité et le contrôle financier prévus par les articles L. 151-1 et R. 151-1 ». Seul sous-point réglé : le motif de R151-4 ne parle plus de « solvabilité » et dit « sans pouvoir ressusciter la suspension financière supprimée » (ce point n'était pas compté). Défaut maintenu à l'identique ; correction initiale toujours valable.",
+   "articles_read": [
+    {
+     "code": "css",
+     "number": "R226-2",
+     "source_id": "LEGIARTI000021508265",
+     "proposed_sha256_new": "83bf04bbaa81b8b615ac7aed784996c96106ecf358268a8f35f1b6d77676d774",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R226-1",
+     "source_id": "LEGIARTI000038789394",
+     "proposed_sha256_new": "5cf1923d93ed12494732566419d0940170c3d3fbbb7e96652284a634b1191d71",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "L151-1",
+     "source_id": "LEGIARTI000037064171",
+     "proposed_sha256_new": "2d56027f99d0ea0b114e90ebf0ca370871c043915197a02c2b72e4b60e566051",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R151-1",
+     "source_id": "LEGIARTI000021508199",
+     "proposed_sha256_new": "019a61d822cf52cd2b1dffb30b880c2538ecfe3681ac0ca49a9f98bf87dce835",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R151-4",
+     "source_id": "LEGIARTI000021508208",
+     "proposed_sha256_new": null,
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R752-24",
+     "source_id": "LEGIARTI000006752585",
+     "proposed_sha256_new": "278e5581de624d911b304d84089aa0715c147ef470c4ba6bf27257e80be72920",
+     "lecture": "intégral"
+    }
+   ],
+   "revised_minimal_correction": null
+  },
+  {
+   "id": "RT-INV-10",
+   "verdict": "maintenue",
+   "new_priority": "P2",
+   "new_status": "confirmé",
+   "trace": "302 J (LEGIARTI000021664265, état ABROGE, borne 2222-02-22) reste compté dans l'inventaire courant, maintenant au statut « completed », toujours sans corps proposé. Seules les notes ont été complétées : interactions avec 302 G V, 302 H ter et 302 H quater, et « maintien documentaire de la source ABROGE, sans réactivation ni affirmation d'une dispense nouvellement créée ». L'anomalie (article abrogé compté et affiché comme maintenu, couverture surévaluée d'une unité) est inchangée ; l'annexe II 289, 4°, renvoie toujours à 302 J selon les notes.",
+   "articles_read": [
+    {
+     "code": "cgi",
+     "number": "302 J",
+     "source_id": "LEGIARTI000021664265",
+     "proposed_sha256_new": null,
+     "lecture": "intégral"
+    }
+   ],
+   "revised_minimal_correction": null
+  },
+  {
+   "id": "RT-INV-13",
+   "verdict": "résolue",
+   "new_priority": null,
+   "new_status": "résolu",
+   "trace": "Les trois propositions CCH ont désormais un lot propriétaire : D304-1 dans batches/radical-review-legacy/00011.json, D319-6 et D319-7 dans batches/radical-review-legacy/00012.json. Elles figurent dans registered-batches.json avec leurs empreintes de source et de proposition (inchangées : 6461be85…, 477b667b…, 7ff9a1fb…). Le rapport de cohérence 20261027T044303Z ne les compte plus dans drafts_without_owner (qui ne contient plus que quatre versions historiques d'autres articles). Leurs lignes de lot portent un substantive_impact classé « editorial_only ». La seconde passe est terminée et répond à la question de portée de D319-7 : « Aucune contradiction établie entre « apprécie » et « évalue » dans ce contexte ». La traçabilité, objet de la réserve, est rétablie. Effets nouveaux : aucun, les corps sont identiques. Restes sans incidence normative : l'inventaire radical-review garde owner=null et batch_row_sha256=null pour ces trois entrées, et les trois lignes de lot n'ont pas de reference_checks. Le maintien de reformulations purement stylistiques reste discutable au regard de l'instruction du 19 octobre, mais c'est une question d'orientation, qui n'était pas l'objet de cette réserve.",
+   "articles_read": [
+    {
+     "code": "cch",
+     "number": "D304-1",
+     "source_id": "LEGIARTI000038970859",
+     "proposed_sha256_new": "6461be85871eb740b89fb80b12929bc920875488f0d96912d8b734f20c136d7e",
+     "lecture": "intégral"
+    },
+    {
+     "code": "cch",
+     "number": "D319-6",
+     "source_id": "LEGIARTI000049356983",
+     "proposed_sha256_new": "477b667b95964fcc7e272ebc31720c25dbb7fc6d05231629b1803041917e9422",
+     "lecture": "intégral"
+    },
+    {
+     "code": "cch",
+     "number": "D319-7",
+     "source_id": "LEGIARTI000049356981",
+     "proposed_sha256_new": "7ff9a1fbec9770430d9268a377c8989b45486ea64029ac2d920c31f4dd60163a",
+     "lecture": "intégral"
+    }
+   ],
+   "revised_minimal_correction": null
+  },
+  {
+   "id": "RT-TUT-08",
+   "verdict": "maintenue",
+   "new_priority": "P2",
+   "new_status": "confirmé",
+   "trace": "R151-2, R152-1 et R152-2 ont été retouchés sur le point de départ des délais (huit jours dès la communication, quarante jours dès la suspension, vingt jours de R152-4 dès la communication au ministre de l'agriculture) et la levée d'une ambiguïté de pronom. Ces retouches sont cohérentes entre elles, mais elles ne touchent pas l'objet de l'objection. Les déclencheurs restent hétérogènes : R151-2 : « Ces dispositions s'appliquent aux décisions communiquées à compter de l'entrée en vigueur du présent texte. » ; R152-1 et R152-2 : « Ces dispositions s'appliquent aux décisions communiquées à compter de l'entrée en vigueur de la loi. » Les trois textes sont réglementaires et portent la même dispense de procès-verbal intégral. D635-5 (inchangé, pending) garde « pour les demandes d'approbation présentées à compter de l'entrée en vigueur de la réforme » ; R226-4 et D632-7 sont inchangés. Défaut maintenu ; correction initiale toujours valable.",
+   "articles_read": [
+    {
+     "code": "css",
+     "number": "D635-5",
+     "source_id": "LEGIARTI000041967053",
+     "proposed_sha256_new": "c12feebc8623239e905c06b588e778977f34f65c5b421dfbc0cb1f82fcf2752a",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R226-4",
+     "source_id": "LEGIARTI000006748712",
+     "proposed_sha256_new": "7180929554dfe2a5158e6e26bb03c5fa92b4e78a21076915f4303da5b24504db",
+     "lecture": "empreintes et statut (inchangé, relu au premier examen)"
+    },
+    {
+     "code": "css",
+     "number": "R151-2",
+     "source_id": "LEGIARTI000021508238",
+     "proposed_sha256_new": "39a5ee94ec40e6bc939a85e263f64916f58866b42f80d47774630eedbf187f57",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R152-1",
+     "source_id": "LEGIARTI000023633986",
+     "proposed_sha256_new": "4443589f449a7a7f2717b2adcb9cf05b455a68aa2cc3d5d4d073d44f83fad9bb",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "R152-2",
+     "source_id": "LEGIARTI000026735655",
+     "proposed_sha256_new": "4530be9c819a91352d790f12a3c7f3f9b430dfab627b2371366ffd07ab70226e",
+     "lecture": "intégral"
+    },
+    {
+     "code": "css",
+     "number": "D632-7",
+     "source_id": "LEGIARTI000041921873",
+     "proposed_sha256_new": "c580c4d55d81d03e9e90d1bede5108cbfeadbb40729d197d54dc49dd340c4777",
+     "lecture": "empreintes et statut (inchangé)"
+    }
+   ],
+   "revised_minimal_correction": null
+  }
+ ],
+ "alerts": [],
+ "new_findings": [
+  {
+   "id": "RT-RXINST-01",
+   "priority": "P2",
+   "priority_justification": "Notes de revue périmées, sans effet normatif. Dans un projet où les notes servent de trace de contrôle, elles affirment toutefois des contradictions qui n'existent plus et peuvent faire rouvrir des articles déjà corrigés.",
+   "nature": "réserve documentaire",
+   "status": "confirmé",
+   "articles": [
+    {
+     "code": "css",
+     "number": "L123-1",
+     "source_id": "LEGIARTI000037948839",
+     "valid_from": "2018-12-24",
+     "valid_until": "2999-01-01",
+     "source_sha256": "77af7a1dccb16ad9d58c2263355f10d6ef593cea14c1feecdae032fc1012a3ce",
+     "proposed_sha256": "478cc37788438a895bef7fa1d4d6befcf3e54f533f6a775cb140646e0a8e4258",
+     "reason_sha256": "87e526155c680a09fca7afc765a5ff73a02088440adc03c4010d43469ab5b422",
+     "review_notes_sha256": "2c844741d72ae32f7002158fade889aea40c1ae6e6d66285598a6fb42348645e",
+     "second_pass": "completed"
+    },
+    {
+     "code": "css",
+     "number": "L123-2",
+     "source_id": "LEGIARTI000037948868",
+     "valid_from": "2018-12-23",
+     "valid_until": "2999-01-01",
+     "source_sha256": "5699d6989b187fd86b9ff523cf41c38a412e6c99a4c5e8caa6da77d63a6cf3b7",
+     "proposed_sha256": "c387c617f125af8cf3882dbbb4f2a508e867e9b55f521c1399d40eac90c19069",
+     "reason_sha256": "3095a252d1724ba834b23e24a0bc9d17f5f53841bd47ebb071b9e9fd79540d00",
+     "review_notes_sha256": "2c844741d72ae32f7002158fade889aea40c1ae6e6d66285598a6fb42348645e",
+     "second_pass": "completed"
+    },
+    {
+     "code": "css",
+     "number": "L123-2-1",
+     "source_id": "LEGIARTI000036391616",
+     "valid_from": "2018-01-01",
+     "valid_until": "2999-01-01",
+     "source_sha256": "3fe06b422094de1f7ff86cb2c53f826dd52b7d380cfc71cc26f6bdfa745a89ce",
+     "proposed_sha256": "a379229f5e546097813cb44b2a591a09751a875f179476bf7d721965b69b34f1",
+     "reason_sha256": "e688ecbb54935da7f6b8da73693a967ec2b386ae795344bf8c7dc7ed81e0aae1",
+     "review_notes_sha256": "2c844741d72ae32f7002158fade889aea40c1ae6e6d66285598a6fb42348645e",
+     "second_pass": "completed"
+    },
+    {
+     "code": "css",
+     "number": "R123-1-1",
+     "source_id": "LEGIARTI000038790652",
+     "valid_from": "2020-01-01",
+     "valid_until": "2999-01-01",
+     "source_sha256": "76307c32788036ae4afee52728f3d17dbdc18e3eae0c9d192e6caffb5c6b7bc1",
+     "proposed_sha256": "dc099cea17cc2203182d62dc86fe26f02974a9885b372e420549cfe7e46b858b",
+     "reason_sha256": "73a3a485308f00217f77ace3143176e1a1fce3f0f378edc752a317d6a04ddeb6",
+     "review_notes_sha256": "6ac8eed241fc8615b2046d287cc38baca69a95204689ed98183a6863b6fc0bf6",
+     "second_pass": "completed"
+    },
+    {
+     "code": "css",
+     "number": "R123-1",
+     "source_id": "LEGIARTI000029389194",
+     "valid_from": "2014-08-23",
+     "valid_until": "2999-01-01",
+     "source_sha256": "d121ce7cf8929c7e460d7b28855d74cb4e98b4ab10a24cce2899b2cd1c5e535b",
+     "proposed_sha256": "84199b7a320e1a14599d1436d1037ef19e53d39f1df80787f89ecbf66ef276fd",
+     "reason_sha256": "75e5d75a29826c25cf01759adde5b5feacfb69709b077109e14416fcc8b39ce1",
+     "review_notes_sha256": "b53a8cf6af7f5f33ef7983df1840a738463c022d6e7ebb8c14337ce3fa566bba",
+     "second_pass": "completed"
+    },
+    {
+     "code": "css",
+     "number": "R123-54",
+     "source_id": "LEGIARTI000039447908",
+     "valid_from": "2020-01-01",
+     "valid_until": "2999-01-01",
+     "source_sha256": "091de1344e5e36592869a10dc1c3918e453aa20555cc16834e3d27f2caa006c7",
+     "proposed_sha256": null,
+     "reason_sha256": "adf2108515c7d670004852700812e6c837b2f815fe2d34fb50fb7252f03e3534",
+     "review_notes_sha256": "e596fa41411ad127a383dd38d131e80b079218bb03c730b0fe48d9eb3d5c0eb7",
+     "second_pass": "completed"
+    }
+   ],
+   "passages": [
+    "css L123-1 LEGIARTI000037948839 (notes, identiques dans L123-2 et L123-2-1) : « R. 123-1-1 conserve encore un agrément tacite dans sa proposition »",
+    "css R123-1-1 LEGIARTI000038790652 (notes) : « Hors lot, R123-1 désigne encore l'autorité d'agrément : retirer cette désignation devenue sans objet. » ; « La proposition R152-8 conserve la phrase »",
+    "css R123-1 LEGIARTI000029389194 (notes) : « R123-1-1 proposé dit encore « sont réputés agréés » »",
+    "css R123-54 LEGIARTI000039447908 (notes) : « ses renvois aux agréments supprimés demandent une harmonisation hors lot »",
+    "css R123-1-1 LEGIARTI000038790652 (proposition courante) : « Le présent article est abrogé à compter de l'entrée en vigueur de la loi supprimant l'agrément des conventions collectives des organismes de sécurité sociale. »"
+   ],
+   "primary_references": [
+    "LEGI LEGIARTI000037948839, LEGIARTI000037948868, LEGIARTI000036391616, LEGIARTI000038790652, LEGIARTI000029389194, LEGIARTI000039447908 — instantané snapshots/20261027T044303Z (corpus au 18 octobre 2026), lu le 2026-10-26"
+   ],
+   "reasoning": "Les corrections de R123-1-1, R152-8 et R123-1 ont été enregistrées dans le même intervalle. Les notes des articles législatifs (seconde passe terminée) et celles des textes réglementaires voisins décrivent pourtant l'état antérieur comme actuel : agrément tacite encore conservé dans R123-1-1, réserve de R152-8 encore présente, R123-1 encore à corriger. Les notes de R123-1-1 demandent même de « retirer » la désignation de R123-1, alors que R123-1 vient d'être réécrit pour la conserver au profit de R123-54 (choix correct, voir RT-CSS12-02). Les notes de R123-1 décrivent R123-1-1 comme disant encore « sont réputés agréés ». C'est un seul défaut documentaire, présent dans six textes.",
+   "consequences": "Un relecteur ou une reprise automatique peut rouvrir R123-1-1, R152-8 ou R123-1 pour corriger une contradiction déjà corrigée, ou supprimer à tort la désignation que R123-54 utilise.",
+   "minimal_correction": "Actualiser les notes. L123-1, L123-2, L123-2-1 : remplacer la phrase sur R123-1-1 par « R. 123-1-1 et R. 152-8 proposés sont abrogés à la date de la loi ; R. 123-1 proposé conserve la seule désignation utile à R. 123-54. » R123-1-1 : supprimer « Hors lot, R123-1 désigne encore l'autorité d'agrément : retirer cette désignation devenue sans objet. » et la phrase sur R152-8. R123-1 : supprimer les deux phrases sur R123-1-1 et R152-8. R123-54 : supprimer « ses renvois aux agréments supprimés demandent une harmonisation hors lot ». Aucune proposition n'est à modifier.",
+   "other_options": "Ajouter un horodatage aux notes (« état au … ») au lieu de les réécrire.",
+   "preserve": "Les propositions elles-mêmes, la désignation ministérielle de R123-1 pour R123-54 et la suppression de l'agrément.",
+   "uncertainties": "Les notes d'autres articles du même ensemble (L224-5-1, L123-2-3) n'ont été contrôlées que par empreinte ; elles n'ont pas changé depuis l'ancien instantané.",
+   "evidence_files": [
+    "evidence/cited/20261027T044303Z/css_L123-1_LEGIARTI000037948839.json",
+    "evidence/cited/20261027T044303Z/css_L123-2_LEGIARTI000037948868.json",
+    "evidence/cited/20261027T044303Z/css_L123-2-1_LEGIARTI000036391616.json",
+    "evidence/cited/20261027T044303Z/css_R123-1-1_LEGIARTI000038790652.json",
+    "evidence/cited/20261027T044303Z/css_R123-1_LEGIARTI000029389194.json",
+    "evidence/cited/20261027T044303Z/css_R123-54_LEGIARTI000039447908.json"
+   ]
+  },
+  {
+   "id": "RT-RXINST-02",
+   "priority": "P2",
+   "priority_justification": "Défaut de traçabilité et de méthode, sans effet normatif propre. Il marque toutefois « completed » des articles dont la relecture a expressément exclu le texte successeur : c'est la cause directe de RT-XCUT-01, dont il ne double pas le compte.",
+   "nature": "anomalie d'inventaire",
+   "status": "confirmé",
+   "articles": [
+    {
+     "code": "cgi",
+     "number": "1509",
+     "source_id": "LEGIARTI000027517709",
+     "valid_from": "2013-06-07",
+     "valid_until": "2027-01-01",
+     "source_sha256": "40ecf6c1ae1f591c721276cf7c79adbbd65d66afcbf528c08131f520d809a7f9",
+     "proposed_sha256": "48c19fafe800bbd1deb799bd755a12feef0848f8a41c533009e62ed130393122",
+     "reason_sha256": "caff16ed39cc5efdef15d003f830a2833b6b57d3079d4714fca18d6c0037199a",
+     "review_notes_sha256": "bfa4b1b2b3e7017611d0a0614e111a93736e91095a20c79622a88c92946b7e96",
+     "second_pass": "completed"
+    },
+    {
+     "code": "cgi",
+     "number": "1042",
+     "source_id": "LEGIARTI000037666927",
+     "valid_from": "2018-11-25",
+     "valid_until": "2027-01-01",
+     "source_sha256": "563b279eab0e9605b3c48cc0381d6f2790aae916c9eb088ac1e53084ec9ca229",
+     "proposed_sha256": "90a0f9d4f69198283313b464fbcde539864992b818f7f59ecb8e34177b80dba7",
+     "reason_sha256": "398a94692b7ed20caffe4c0b542fa36a3447ad3ed9ce7aaad60ae768f0edd8b0",
+     "review_notes_sha256": "c27c614602b4c2f4c396a772229043d507144f895953c6b908eb06318fd6f76c",
+     "second_pass": "completed"
+    },
+    {
+     "code": "travail",
+     "number": "L3332-17-1",
+     "source_id": "LEGIARTI000049720096",
+     "valid_from": "2025-01-01",
+     "valid_until": "2027-01-01",
+     "source_sha256": "2bc63c7d1c8b75baf890960f0d044b56aeb400215c377441897f958aad056da4",
+     "proposed_sha256": "7bf71f16bfebddfece396a71930c3f4600e11f0a62fdc47183cdccfcb898b403",
+     "reason_sha256": "4488111eaafb063558fa0a10fe94e00179642a1260faec8ac9e312a3b2583bdb",
+     "review_notes_sha256": "5788d95fe57f9ffcc53d3e46a88fd6dac67d7adcccecc9b336e207dbace34627",
+     "second_pass": "completed"
+    },
+    {
+     "code": "css",
+     "number": "L931-7-2",
+     "source_id": "LEGIARTI000039183328",
+     "valid_from": "2020-01-01",
+     "valid_until": "2029-01-01",
+     "source_sha256": "e335694d5b75ba600a2908434e498058f2b9abd0e955f21aaf78c2a24bb1df3f",
+     "proposed_sha256": null,
+     "reason_sha256": "e926621cac20f843155bd2350d2a552e584d671d94b6fe5789043e1b96b76dbf",
+     "review_notes_sha256": "785ddf5319238c84ada90d631ff90ca95b7aef70f55662af43beddaa31d44d4e",
+     "second_pass": "completed"
+    },
+    {
+     "code": "css",
+     "number": "L452-2",
+     "source_id": "LEGIARTI000026799867",
+     "valid_from": "2013-04-01",
+     "valid_until": "2026-11-01",
+     "source_sha256": "2afd10e9b7c33aa19b125f3f991944799aba62cdc35e5833953809dd08810a4e",
+     "proposed_sha256": null,
+     "reason_sha256": "116fffa83ad9ae4b769a2d6cfdaab6ccfcd1d0e4077ebc567d7b70ff1d2beb46",
+     "review_notes_sha256": "982607b43757fe1d7cff058a2fa9fcd261fdbca482c4dcf72e8fa6fe6cb1639c",
+     "second_pass": "completed"
+    },
+    {
+     "code": "css",
+     "number": "L752-1",
+     "source_id": "LEGIARTI000042684012",
+     "valid_from": "2020-12-16",
+     "valid_until": "2028-01-01",
+     "source_sha256": "8fee33311479bf03543eaf3554269572fa38d97b898dccfadc1fb55e8fdc18e9",
+     "proposed_sha256": "ae66f56bf562aafeaf30e15969c0f5166ac17de022d0ce9c7ee4aa20e33fcd9e",
+     "reason_sha256": "b29d1d1b815fff5ed702e7b0f54cd94f6e0f82b573cebed834188232a00a4753",
+     "review_notes_sha256": "3f41aedccd5ac7b557731f8fe5e1309cf74a4aec2a30ae6dcf97e10d5dfbf677",
+     "second_pass": "completed"
+    }
+   ],
+   "passages": [
+    "cgi 1509 LEGIARTI000027517709 (notes, seconde passe) : « aucun successeur de 1509 disponible dans le corpus » ; le corpus contient pourtant cgi 1509 LEGIARTI000053188717, VIGUEUR_DIFF à compter du 2027-01-01",
+    "cgi 1042 LEGIARTI000037666927 (notes) : « le texte entier de l'ordonnance et le dispositif abrogeant 1042 au 1er janvier 2027 manquent » ; le successeur LEGIARTI000053187629 (VIGUEUR_DIFF, 2027-01-01) est au corpus",
+    "travail L3332-17-1 LEGIARTI000049720096 (notes) : « la version postérieure au 1er janvier 2027 reste manquante » ; le successeur LEGIARTI000054140237 est au corpus",
+    "css L931-7-2 LEGIARTI000039183328 (notes) : « le texte successeur et son acte modificatif ne sont pas fournis » ; le successeur LEGIARTI000052845932 (2029-01-01) est au corpus",
+    "css L452-2 LEGIARTI000026799867 (notes) : « la rédaction officielle qui lui succédera n'est pas fournie parmi les sources assignées » ; le successeur LEGIARTI000051288472 (2026-11-01) est au corpus"
+   ],
+   "primary_references": [
+    "Instantané snapshots/20261027T044303Z, table articles (state VIGUEUR_DIFF) et drafts, requête en lecture seule le 2026-10-26 ; base reports/future-versions-20261026T230545Z.json"
+   ],
+   "reasoning": "Une recherche par expression régulière dans les motifs et notes des 384 versions courantes qui précèdent une version future trouve au moins 30 versions dont les notes déclarent le successeur « non fourni », « manquant » ou « absent ». Chaque successeur existe pourtant dans corpus.sqlite comme version VIGUEUR_DIFF, avec son XML complet. La plupart des notes décrivent exactement la chaîne de seconde passe (« non fourni parmi les sources assignées ») : les rédacteurs ne reçoivent pas la version future. L'une d'elles (1509) affirme à tort l'absence du successeur « dans le corpus ». Ces articles sont pourtant comptés « completed ». Les 30 occurrences sont un minimum : l'expression régulière ne détecte pas toutes les formulations.",
+   "consequences": "La seconde passe ne peut pas résorber RT-XCUT-01 si elle continue sans les successeurs. Son compteur de complétude surestime la couverture temporelle : un article « completed » peut devenir sans effet à la date de sa version future.",
+   "minimal_correction": "Pour chaque version courante qui a un successeur VIGUEUR_DIFF (408 couples), joindre le XML entier du successeur aux sources de la seconde passe. Marquer « completed – successeur non examiné » les articles déjà terminés sans lui. Corriger la note de 1509 : « Le successeur LEGIARTI000053188717 (en vigueur au 1er janvier 2027) figure au corpus ; il n'a pas été examiné dans cette passe. »",
+   "other_options": "À défaut, produire une liste des couples (courant, futur) annexée à chaque lot, pour que la coordination « hors lot » annoncée dans les notes ait un objet identifié.",
+   "preserve": "Les dates normatives des successeurs (à distinguer des bornes techniques 2222-02-22), les faveurs qu'ils créent et les transitions déjà rédigées sur les versions courantes.",
+   "uncertainties": "Le décompte de 30 est un minimum issu d'une expression régulière, et les notes n'ont pas toutes été lues en entier : seuls les 13 articles du paquet ont été relus en différentiel. Les sources réellement transmises par la production aux rédacteurs n'ont pas été examinées (périmètre en lecture seule).",
+   "evidence_files": [
+    "evidence/cited/20261027T044303Z/cgi_1509_LEGIARTI000027517709.json",
+    "evidence/cited/20261027T044303Z/cgi_1509_LEGIARTI000053188717.json",
+    "evidence/cited/20261027T044303Z/cgi_1042_LEGIARTI000037666927.json",
+    "evidence/cited/20261027T044303Z/travail_L3332-17-1_LEGIARTI000049720096.json",
+    "evidence/cited/20261027T044303Z/css_L931-7-2_LEGIARTI000039183328.json",
+    "evidence/cited/20261027T044303Z/css_L752-1_LEGIARTI000054466934.json",
+    "reports/future-versions-20261026T230545Z.json"
+   ]
+  }
+ ]
+}

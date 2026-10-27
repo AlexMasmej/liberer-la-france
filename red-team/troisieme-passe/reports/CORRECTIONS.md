@@ -25,17 +25,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** Option de l'article 150 VL; Déclaration des cessions et délais (635, un mois); Faits générateurs antérieurs, y compris ceux régis par la rédaction 2027, avec restitutions, prescriptions et recours
 
-## RT-INV-01 (P0, confirmé) — INV
-
-**Articles :** cgi 1609 quinvicies, travail L6242-1
-
-**Correction minimale :** Retirer la proposition de 1609 quinvicies (statut : article abrogé depuis le 1er janvier 2022, sans rédaction proposée) et sortir LEGIARTI000042914206 de l'inventaire courant. La coordination contrat unique (décompte des périodes d'apprentissage et de professionnalisation, exclusion des missions d'intérim) est déjà portée par la proposition de L6242-1, II 1° et V : rien n'est perdu.
-
-**Autres options :**
-- À défaut de retrait, remplacer le corps proposé par : « Article abrogé par l'article 6 de l'ordonnance n° 2021-797 du 23 juin 2021. La contribution supplémentaire à l'apprentissage est régie par l'article L. 6242-1 du code du travail. » (mention documentaire, non normative).
-
-**À préserver :** Régime des années antérieures, créance de L6241-2, exclusion des contrats de mission et des périodes de formation du contrat unique, réduction de 52 % en Alsace-Moselle pour les années encore imposabl…
-
 ## RT-INV-02 (P0, confirmé) — INV
 
 **Articles :** css L434-1, css L461-1
@@ -69,39 +58,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 - Statu quo de la source (texte inchangé citant 435) : déconseillé, car il perpétue l'apparence d'un fondement actuel.
 
 **À préserver :** Deux critères alternatifs, seuil inclusif 3 bar, CO2 en solution; Portée pour les droits exigibles avant le 1er janvier 2022, réclamations et contentieux ouverts, décisions définitives; Aucune renaissance du droit de circulation, aucune charge ni formalité nouvelle; Catégories et tarifs CIBS inchangés
-
-## RT-CSS12-01 (P1, confirmé) — CSS12
-
-**Articles :** css R123-1-1, css D224-7, css R152-8, css R123-1, css L123-1, css L123-2, css L123-2-1, css L224-5-1, css L123-2-3
-
-**Correction minimale :** Adopter les candidats R123-1-1 (amendé selon RT-CSS12-03 et RT-CSS12-04), D224-7 et R152-8 (amendé selon RT-CSS12-04). Pour R123-1, retenir la rédaction proposée en RT-CSS12-02 et non l'abrogation. Mettre à jour le motif de R123-1.
-
-**Autres options :**
-- Une disposition finale unique de la loi pourrait déclarer caduques toutes les dispositions réglementaires d'agrément des conventions des articles L123-1, L123-2 et L123-2-1, avec la même transition. La coordination de chaque texte resterait préférable pour la lisibilité.
-
-**À préserver :** Les agréments exprès ou tacites déjà acquis, les conventions applicables et les droits qui en résultent. Les refus définitifs. Les recours relatifs aux périodes antérieures. Les conditions de validité…
-
-## RT-CSS12-02 (P1, confirmé) — CSS12
-
-**Articles :** css R123-1, css R123-54, css R123-56
-
-**Correction minimale :** Réécrire R123-1 au lieu de l'abroger. Texte proposé : « L'autorité compétente de l'Etat mentionnée à l'article R. 123-54 est le ministre chargé de la sécurité sociale et, pour les organismes de mutualité sociale agricole, le ministre chargé de l'agriculture. À compter de l'entrée en vigueur de la loi supprimant l'agrément prévu aux articles L. 123-1, L. 123-2 et L. 123-2-1, la présente désignation ne permet d'exiger aucun agrément, avis ou déclaration au titre de ces articles, y compris pour les conventions et avenants dont l'examen est en cours ou qui n'ont pas encore été déposés. Les agréments acquis, les refus devenus définitifs et les recours relatifs aux périodes antérieures sont préservés. »
-
-**Autres options :**
-- Modifier R123-54 pour désigner directement « le ministre chargé de la sécurité sociale et, pour la mutualité sociale agricole, le ministre chargé de l'agriculture », puis abroger R123-1 comme le prévoit le candidat. Cela touche un second article encore « pending ».
-
-**À préserver :** Le scrutin de liste à un tour, le seuil strictement supérieur à 8 %, la périodicité de quatre ans et la fixation officielle de la date. La suppression des copies ministérielles de R123-56, R123-59 et …
-
-## RT-CSS12-06 (P1, confirmé) — CSS12
-
-**Articles :** css R151-1, css R151-3, css L151-1
-
-**Correction minimale :** Adopter les candidats R151-1 et R151-3. Retirer de R151-3 les trois balises <br /> héritées de la source. Traiter en même temps RT-CSS12-07.
-
-**Autres options :**
-- Aucune autre option ne préserve à la fois la réforme et le contrôle de légalité.
-
-**À préserver :** Le contrôle de légalité et l'annulation sous huit jours. La suspension pour complément d'instruction et le délai ministériel de quarante jours. Les délais francs. L'application aux décisions déléguées…
 
 ## RT-DOMIS-01 (P1, confirmé) — DOM-IS
 
@@ -210,21 +166,12 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **Correction minimale :** Borner l'exonération aux transmissions dont l'auteur est le défunt. Ajouter au II de 750 ter un alinéa (texte complet en section « Corrections ») qualifiant de donation entre vifs, lorsque l'intention libérale est établie, la transmission dont l'auteur est vivant au décès d'un tiers. Coordonner en conséquence 792-0 bis II 2 et 792 bis (« décès du constituant »), 784 C (auteur décédé) et l'alinéa de 757 B relatif aux sommes d'assurance (primes versées par l'assuré décédé ou dépendant de sa succession).
 
+**Correction révisée au réexamen (20261027T044303Z) :** Borner l'exonération aux transmissions dont l'auteur est décédé. (a) 784 C, deuxième alinéa, à remplacer par : « Lorsque le premier légataire ou donataire décède à compter de l'entrée en vigueur de la présente loi, la transmission au second gratifié ne supporte aucun droit de mutation à titre gratuit ni prélèvement de remplacement si le testateur ou le donateur est décédé à la date de ce décès. Si le donateur est vivant à cette date, l'actif transmis au second gratifié est soumis aux droits de donation d'après le degré de parenté existant entre le donateur et le second gratifié, sa valeur étant déterminée à la date du décès du premier gratifié ; les droits acquittés par le premier donataire sur les mêmes biens sont imputés sur ces droits. » (conserver la phrase sur l'absence de remboursement général et le troisième alinéa). (b) 792-0 bis II 2 et 792 bis al. 3 : remplacer « du constituant ou d'un bénéficiaire » par « du constituant ou, lorsque le constituant est décédé, d'un bénéficiaire » et ajouter : « L'attribution ou le maintien de biens à raison du décès d'un bénéficiaire du vivant du constituant suit le régime des donations entre vifs prévu au 1 [ou : au premier alinéa]. » (c) Volet assurance-vie (750 ter II al. 2) : à trancher par l'auteur au regard de successions[0] ; à défaut de décision contraire, ajouter « lorsque les primes ont été versées par l'assuré décédé ou par sa succession ». Préserver l'exonération totale, sans plafond ni condition, des transmissions dont l'auteur est le défunt, et l'absence de toute déclaration de remplacement.
+
 **Autres options :**
 - Option a minima : une simple réserve d'interprétation dans l'exposé des motifs, juridiquement plus fragile. Option de neutralisation : exonérer aussi les donations dans ces montages, mais cela dépasse la décision de l'auteur, qui maintient les droits de donation.
 
 **À préserver :** L'exonération totale des transmissions dont l'auteur est le défunt (assurance-vie souscrite par l'assuré, PER, trust après le décès du constituant, legs gradués), sans plafond ni condition de parenté.…
-
-## RT-DOMSUCC-02 (P1, à confirmer) — DOM-SUCC
-
-**Articles :** cgi 754 A, cgi 662, cgi 677, cgi 968 bis, cgi 750 ter
-
-**Correction minimale :** Remplacer l'abrogation pure de 754 A par une rédaction qui maintient la qualification de transmission gratuite par le prémourant, constate l'exonération par le II de 750 ter et exclut expressément tout droit de mutation à titre onéreux et toute taxe proportionnelle à raison de l'accroissement (texte en section « Corrections »).
-
-**Autres options :**
-- Ajouter au II de 750 ter une phrase générale : « Aucun droit de mutation à titre onéreux n'est dû à raison d'un accroissement, d'une réversion ou d'une attribution qui prend effet au décès et qui, avant l'entrée en vigueur de la présente loi, était réputé transmis à titre gratuit par le défunt. »
-
-**À préserver :** L'exonération des nouveaux décès. Le régime antérieur, avec l'option, pour les décès anciens. La définition autonome IFI de 968 bis. Les règles civiles de la tontine.
 
 ## RT-DOMTS-01 (P1, à confirmer) — DOM-TS
 
@@ -387,6 +334,8 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 **Articles :** cgi 231 A, cgi 231 bis L, cgi 299 septies, cgi 302 bis WA, cgi 302 bis WB, cgi 302 bis WC, cgi 31, cgi 39, cgi 273, cgi 93, cgi 809, cgi 80 (+53)
 
 **Correction minimale :** Rebaser chaque proposition concernée sur la rédaction future publiée : reporter mot pour mot les passages modifiés par la version future que la proposition reproduit, sans autre changement (citations dans le fichier de classification). Pour les passages reformulés (80, 1509, 1609 sexvicies, 119 ter, 200 quater, 200 quater A, 207), adopter la rédaction fusionnée des fiches de lot. Dans la loi de réforme, viser l'article « dans sa rédaction en vigueur à la date de publication de la présente loi ».
+
+**Correction révisée au réexamen (20261027T044303Z) :** Étendre aux couples restants la méthode déjà retenue par la seconde passe : formule matérielle autonome (1042, 809) ou renvoi figé à une rédaction datée antérieure au 18 octobre 2026 (1460, 1464 A, 1594 F quinquies), sans inventer de numéro CIBS ; ou, à défaut, report mécanique des passages modifiés par la version future. Priorités : 1509 V, 1382-0 II 2° (figer « dans sa rédaction antérieure à la loi n° 2026-103 », comme la version 2027), 1594-0 G et 1115 (256 A), 1594 F quinquies (268), 302 bis WA VI, WB V et WC III (L. 180-1 CIBS), 1613 ter V A, B et F, 299 septies I 2° (« (Abrogé) » comme en 2027), et 1635 quinquies (« contributions douanières » à compter de 2029). Pour 1384-0 A et 1391 E, soit revenir au maintien (retained_unchanged), puisque la version 2027 assure déjà la continuité, soit rebaser sur les versions 2027. Garder dans la loi de réforme la clause « dans sa rédaction en vigueur à la date de publication de la présente loi » et corriger les notes qui lisent ABROGE_DIFF comme une abrogation.
 
 **Autres options :**
 - Clause générale de la loi de réforme : « Les renvois faits par la présente loi à des dispositions du code général des impôts transférées dans le code des impositions sur les biens et services s'entendent des dispositions correspondantes de ce code. » Solution de secours, plus fragile, car elle laisse au juge la concordance.
@@ -583,6 +532,19 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 - Clause générale : « La présente loi ne prive d'effet aucune exonération, réduction ou atténuation créée par une loi publiée avant elle et non encore entrée en vigueur. »
 
 **À préserver :** Faveurs listées; Conditions d'entrée en vigueur propres (décret, décision de la Commission)
+
+## RT-FUTFISC-30 (P1, confirmé) — FUT-FISC
+
+**Articles :** cgi 1518 A sexies, cgi 1518 A quinquies A
+
+**Correction minimale :** Remplacer le III proposé par le III de la version 2027, maintenir la règle du changement d'exploitant pour les réductions encore en cours (changements de méthode postérieurs ou réductions non éteintes), et préciser l'articulation avec 1518 A quinquies A. Rédaction complète dans C1-redactions.md.
+
+**Correction révisée au réexamen (20261027T044303Z) :** Remplacer le III proposé par le III de la version 2027. Supprimer « Les réductions en cours sont conservées pour leur durée restant à courir ». Limiter la transmissibilité au changement d'exploitant aux réductions ouvertes par des changements pris en compte à compter de 2027, ou exclure expressément ces locaux du lissage de 1518 A quinquies A. Ce choix revient à l'auteur. Garder la règle nouvelle selon laquelle l'événement initial n'éteint pas la réduction. Corriger la note sur l'absence de successeur.
+
+**Autres options :**
+- Maintenir les réductions en cours au 31 décembre 2026 jusqu'à leur terme, à condition d'exclure le lissage de 1518 A quinquies A pour les mêmes locaux, afin d'éviter un double avantage non décidé.
+
+**À préserver :** Barème 85/70/55/40/25/10 %; Lissage 2027-2031 de 1518 A quinquies A; Années antérieures
 
 ## RT-FUTTL-02 (P1, confirmé) — FUT-TRAV-LOG
 
@@ -831,17 +793,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** Suppression intégrale et prospective de la contribution FNAL par période d'activité ; créances, exonérations et recours des périodes antérieures ; réduction générale et réduction minière intégralement…
 
-## RT-P1-CCH-02 (P1, confirmé) — P1-CCH
-
-**Articles :** cch L126-19, urba R425-15-2, urba R423-70-1, cch L126-20
-
-**Correction minimale :** Retirer de R425-15-2 et R423-70-1 toute mention de L126-19 pour les décisions prises à compter de l'entrée en vigueur de la loi abrogeant L126-19, y compris sur les demandes en cours, en conservant le régime L126-18 (accord intercommunal conditionnel, accord tacite à quinze jours) et la protection des accords déjà recueillis. Texte complet au rapport.
-
-**Autres options :**
-- Conserver la mention de L126-19 avec une clause « dans sa rédaction antérieure, pour les seules décisions prises avant l'entrée en vigueur » : plus lourd et sans utilité, les décisions anciennes étant déjà protégées.
-
-**À préserver :** Règles de fond du PLU prises en application de L151-14 ; régime L126-18 (habitat dégradé, sécurité, salubrité) avec l'accord intercommunal et le délai tacite de quinze jours ; protection du bail de l'…
-
 ## RT-P1-CCH-03 (P1, confirmé) — P1-CCH
 
 **Articles :** cch R445-5-1, cch R445-2-8, cch L445-1, cch R445-5-2
@@ -863,28 +814,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 - Ajouter à la proposition de 1406 bis une clause générale de survie : le 1° du B et la liste en vigueur la veille de l'abrogation restent applicables aux renvois non fiscaux. Cette option a l'avantage de l'unité, mais elle figerait aussi le périmètre des contraintes de L151-22. Ce texte règle déjà la question lui-même ; il faudrait vérifier l'absence de double règle.
 
 **À préserver :** Faculté de vente de 30 % de L433-2, sans autorisation préfectorale ; dispense de stationnement de L151-36-1 ; absence de toute TLV ou formalité de remplacement ; impositions et délibérations des année…
-
-## RT-P1-CGI-C-01 (P1, confirmé) — P1-CGI-C
-
-**Articles :** cgi 1635-0 quinquies, cgi 1519 D, cgi 1519 E, cgi 1519 F, cgi 1519 G, cgi 1519 H, cgi 1519 HA, cgi 1519 HB, cgi 1599 quater A, cgi 1599 quater A bis, cgi 1599 quater B
-
-**Correction minimale :** Borner le I aux impositions des années antérieures à la suppression et préciser que la revalorisation (ou sa suppression) ne s'applique qu'aux composantes encore dues. Texte complet proposé au rapport (section Corrections, C-01).
-
-**Autres options :**
-- Abroger 1635-0 quinquies dans les mêmes termes que les composantes, en conservant en transition la règle d'indexation des années antérieures. Ou, si l'auteur entend conserver certaines composantes, retirer leur abrogation (contraire à l'état actuel du projet).
-
-**À préserver :** Régime complet des années antérieures (tarifs indexés, exonérations, réductions, affectations, restitutions, recours) ; désindexation favorable si elle entre en vigueur avant la suppression ; aucune t…
-
-## RT-P1-CGI-C-02 (P1, confirmé) — P1-CGI-C
-
-**Articles :** cgi 1649 A quater, cgi 1519 G, a3 328 P, cgi 1736
-
-**Correction minimale :** Borner 1649 A quater et 1736 VI aux années antérieures à la suppression de 1519 G (texte complet de 1649 A quater et phrase de 1736 VI au rapport, C-02).
-
-**Autres options :**
-- Abroger 1649 A quater pour les années supprimées par une clause dans 1519 G citant expressément 1649 A quater et 1736 VI.
-
-**À préserver :** Dispense de renouvellement et réemploi des données pour les années anciennes ; loi répressive plus douce pour les sanctions non définitives ; qualité de redevable du concessionnaire pour les années an…
 
 ## RT-P1-CGI-C-03 (P1, à confirmer) — P1-CGI-C
 
@@ -908,17 +837,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** Révision favorable sur distributions effectives (fenêtre de douze mois, trois mois), restitution pour bénéficiaires français (31 décembre de l'année suivante), allègement des pièces, absence de double…
 
-## RT-P1-CGI-C-05 (P1, confirmé) — P1-CGI-C
-
-**Articles :** cgi 750 ter, cgi 990 D
-
-**Correction minimale :** Remplacer « au sens de l'article 990 D » par « au sens de l'article 990 D dans sa rédaction en vigueur la veille de l'entrée en vigueur de la loi supprimant la taxe prévue à cet article » (C-05).
-
-**Autres options :**
-- Écrire dans 750 ter une définition autonome reprenant le deuxième alinéa de 990 D et ses exclusions, avec renvoi statique aux catégories de 990 E.
-
-**À préserver :** Droits de donation, leurs abattements et exonérations ; exclusion des immeubles d'exploitation ; conventions internationales ; suppression des droits au décès.
-
 ## RT-P1-CGI-C-06 (P1, confirmé) — P1-CGI-C
 
 **Articles :** a4 50 sexies B, cgi 290 quater
@@ -940,28 +858,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 - Aucune option plus légère cohérente : la dispense partielle actuelle ne suffit pas.
 
 **À préserver :** Droit à déduction des amortissements de 39 C et ses conditions de fond ; déclarations déjà déposées sans réfection ; loi répressive plus douce pour les manquements antérieurs.
-
-## RT-P1-CSS-A-01 (P1, confirmé) — P1-CSS-A
-
-**Articles :** css L138-22, css R137-2
-
-**Correction minimale :** Remplacer le corps proposé de R137-2 par : « Le présent article est abrogé à compter de l'entrée en vigueur de la loi portant abrogation de l'article L. 138-22. À compter de cette date, aucun organisme d'assurance ou assimilé n'est tenu, sur le fondement du présent article, de désigner ou de maintenir un représentant, agréé ou non, ni de présenter un registre fiscal spécial aux agents chargés du contrôle ; aucune liste annuelle de représentants n'est communiquée à ce titre. Ces organismes accomplissent leurs obligations déclaratives et de paiement directement ou par un mandataire de leur choix, sans condition de résidence en France. Les responsabilités personnellement encourues par un représentant à raison des opérations déclaratives et des sommes dues avant cette date restent régies par les dispositions antérieures, avec leurs prescriptions et voies de recours. Les pouvoirs de contrôle et de présentation de documents prévus à l'article R. 243-59 demeurent applicables ; les documents antérieurement conservés restent utilisables sous les garanties qui leur sont applicables. Les obligations fiscales ayant un fondement autonome ne sont pas modifiées. Aucun agrément, registre ou déclaration de remplacement n'est exigé. » Mettre à jour le motif et les notes (prémisse « non supprimée » erronée).
-
-**Autres options :**
-- Conserver l'actuelle rédaction R137-2 limitée aux désignations et responsabilités antérieures à l'abrogation de L138-22 (« Pour les seules opérations antérieures… »), si l'on veut garder la suppression de l'agrément fiscal pour le stock.
-
-**À préserver :** Responsabilités déjà encourues, prescriptions et recours ; dettes et déclarations dues ; contrôles R243-59 (trente jours d'avis, contradictoire 30/60 jours) ; obligations fiscales autonomes ; suppress…
-
-## RT-P1-CSS-A-04 (P1, confirmé) — P1-CSS-A
-
-**Articles :** css L137-40, travail L3133-7
-
-**Correction minimale :** Remplacer le 2° de la proposition L3133-7 par : « 2° La suppression de la journée de solidarité est sans incidence sur le régime de la contribution de solidarité pour l'autonomie, qui relève exclusivement du code de la sécurité sociale, y compris des dispositions transitoires de l'article L. 137-40 de ce code pour les sommes versées avant son abrogation. Le travail supplémentaire supprimé ne peut être rétabli au motif du maintien ou de la suppression de cette contribution. » Corriger motif et notes des deux articles (référence croisée).
-
-**Autres options :**
-- Si l'auteur entend conserver la CSA, retirer l'abrogation de L137-40 et ses coordinations (L241-6-2, L223-9, L241-10, L241-13, D311-2) ; cette option revient sur une coupe déjà rédigée et relève d'une décision expresse.
-
-**À préserver :** Suppression de la journée de solidarité sans réduction de salaire ni récupération ; rémunérations et repos des heures antérieures ; droits APA/PCH ; restitution des indus CSA anciens ; aucune contribu…
 
 ## RT-P1-CSS-A-05 (P1, confirmé) — P1-CSS-A
 
@@ -985,17 +881,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** Départ anticipé carrière longue des avocats, conditions de durée tous régimes, périodes équivalentes, paramètres D351-1-1 à D351-1-3, pensions liquidées, renvoi de D173-21-2.
 
-## RT-P1-CSS-A-14 (P1, confirmé) — P1-CSS-A
-
-**Articles :** css R123-4, css R123-48
-
-**Correction minimale :** Remplacer la dernière phrase de R123-48 par : « Elle ne supprime pas l'agrément des agents comptables régi par la présente sous-section. À compter de l'entrée en vigueur de l'abrogation de l'article R. 123-4, les directeurs des établissements ou œuvres sociales fonctionnant en permanence et comportant hébergement ne sont soumis à aucun agrément au titre de leur nomination, ni sur le fondement de la présente sous-section ni sur celui de cet article. »
-
-**Autres options :**
-- Si l'agrément R123-4 doit être conservé, retirer l'abrogation de R123-4 (contraire à l'orientation).
-
-**À préserver :** Agrément des agents comptables ; exclusions existantes ; assimilation de la nomination à un agrément pour R123-45 ; nominations et agréments antérieurs ; qualifications et protections des personnes hé…
-
 ## RT-P1-CSS-A-15 (P1, confirmé) — P1-CSS-A
 
 **Articles :** css R931-3-13, css R931-1-28
@@ -1006,17 +891,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 - Remplacer en outre « R. 931-3-13 à R. 931-3-14-1 » par « R. 931-3-14 et R. 931-3-14-1 » dans le premier alinéa.
 
 **À préserver :** Suppression des limites d'âge, plancher des limites librement stipulées, autonomie du contrat de travail, obligations légales d'égalité et de non-discrimination.
-
-## RT-P1-CSS-B-02 (P1, confirmé) — P1-CSS-B
-
-**Articles :** css L162-1-7-1, css R161-45, css R163-2, css R165-93, css R163-51, css R162-116, css R162-73, css R162-38, css R162-37-2, css R162-34-13, css R163-32
-
-**Correction minimale :** 1) R161-45 : remplacer le 6° du I par « 6° Abrogé. » et le III par : « III. – Abrogé. Aucun document indiquant si la prescription respecte les indications ouvrant droit au remboursement ne peut être exigé pour les produits délivrés, actes, prestations et transports réalisés à compter de l'entrée en vigueur de la loi abrogeant l'article L. 162-1-7-1, y compris sur prescription antérieure. » ; garder les autres allègements proposés (mentions répétées, canal R161-48). 2) Dans R162-34-13 V, R162-37-2 III, R162-38 al. 2, R162-73 II al. 3, R162-116 II, R163-2 IV, R163-32 II, R163-51 et R165-93 al. 3, remplacer le passage par : « Abrogé. Les mentions prises sur le fondement de la rédaction antérieure du présent [alinéa] cessent de subordonner la prise en charge des produits délivrés et des actes et prestations réalisés à compter de l'entrée en vigueur de la loi abrogeant l'article L. 162-1-7-1, y compris sur prescription antérieure. Les indications thérapeutiques et les conditions de prise en charge fixées par l'acte d'inscription demeurent applicables. »
-
-**Autres options :**
-- Ajouter à L162-1-7-1 proposé une phrase visant aussi « toute mention portée ou à porter sur l'ordonnance en application des dispositions réglementaires prises pour l'application du présent article ». C'est une solution d'attente : les décrets resteraient à nettoyer.
-
-**À préserver :** Indications thérapeutiques remboursables ; conditions médicales et tarifaires ; contrôles du service médical ; information sur les frais et consentement du patient ; soins antérieurs et recours ; allè…
 
 ## RT-P1-CSS-B-04 (P1, confirmé) — P1-CSS-B
 
@@ -1095,17 +969,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** Limitation de finalité de R8291-4 ; document d'information des travailleurs détachés (L1262-4, R8294-8), remis par l'employeur selon L8291-1 proposé ; pouvoirs de contrôle autonomes (L8271-1-2, déclar…
 
-## RT-P1-TRAVAIL-A-03 (P1, confirmé) — P1-TRAVAIL-A
-
-**Articles :** travail L3142-114, travail L3142-115, travail D3142-75, travail L3142-29, travail D3142-21, travail L3142-32, travail L3142-28, travail L3142-113, travail D3142-20
-
-**Correction minimale :** Option A, qui suit l'intention exprimée par L3142-28, L3142-29, L3142-32 et D3142-21 : rédiger dans L3142-29 et D3142-21 un fondement autonome limité au congé sabbatique, et retirer de L3142-32 4° les renvois aux articles abrogés. Le congé pour création reste sans report. Les textes complets figurent au rapport, § 5.3.
-
-**Autres options :**
-- Option B : étendre la suppression au sabbatique. Le deuxième alinéa de L3142-29 se réduit alors au refus du 1° de L3142-113 ; L3142-32 4° vise les seuls plafonds du premier alinéa de L3142-29 ; D3142-21 est abrogé avec transition ; les motifs contraires sont corrigés. C'est un choix de fond à trancher par l'auteur, à ne pas faire passer pour une simple coordination.
-
-**À préserver :** Report du premier alinéa de L3142-29 (six ou neuf mois) et seuils de 1,5 % de D3142-20 ; refus du 1° de L3142-113 après avis du CSE, avec motivation et recours accéléré ; suppression des conditions d'…
-
 ## RT-P1-TRAVAIL-B-01 (P1, confirmé) — P1-TRAVAIL-B
 
 **Articles :** travail L1221-12-1, travail L1221-12, travail R1221-5, travail R1221-13, travail D1221-18, travail D1221-19
@@ -1161,17 +1024,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** Bornes de 80 % et 120 %, motifs II 1° à 4°, condition III 1°, extension favorable du III, missions IV, agréments ordinaires.
 
-## RT-P1-URBA-01 (P1, confirmé) — P1-URBA
-
-**Articles :** urba L510-1, urba R*510-5, urba R*510-1, urba R*510-2, urba R*510-8
-
-**Correction minimale :** Abroger par décret l'ensemble du chapitre R*510 (R*510-1, R*510-2, R*510-4 à R*510-11, R*510-15, R*510-14 déjà abrogé) à la date d'entrée en vigueur de l'abrogation de L510-1, avec une transition commune. Texte proposé pour R*510-5 (modèle pour les autres) : « Le présent article est abrogé à compter de l'entrée en vigueur de la loi abrogeant l'article L. 510-1. À compter de cette date, aucune convention ne peut être conclue, renouvelée ou exécutée pour définir les modalités locales de l'agrément supprimé, et le préfet ne peut ni suspendre ni dénoncer une convention sur ce fondement pour en tirer une obligation d'agrément. Les conventions en cours cessent de produire effet en tant qu'elles organisent la délivrance de l'agrément ou imposent des engagements exclusivement liés à celui-ci ; leurs autres stipulations, les engagements financiers valablement conclus et les droits des tiers demeurent régis par leurs propres termes. Les décisions prises avant cette date et les recours qui s'y rapportent restent régis par les dispositions antérieures, sous réserve des effets de l'abrogation de l'article L. 510-1. » Pour R*510-8, retirer le deuxième alinéa (fonds publics/affectation) et le renvoi au g de R431-16.
-
-**Autres options :**
-- Si les auteurs entendent revenir à l'orientation sru_abrogation (retrait du seul critère social de L510-1, agrément préexistant conservé), rétablir dans L510-1 un I/III/IV sans le second alinéa du I : choix contraire à la dernière consigne « Cut harder », à trancher par les auteurs, non par coordination.
-
-**À préserver :** Agréments déjà délivrés et droits acquis (non annulés); Exonérations, remboursements et durées de référence de R520-14 pour les opérations antérieures; Indemnités de L510-4/R*510-14 pour mesures antérieures; Loi répressive plus douce pour les faits antérieurs; Aucune formalité de remplacement
-
 ## RT-P1-URBA-03 (P1, confirmé) — P1-URBA
 
 **Articles :** urba L102-2, urba L102-5, urba R102-1, urba L172-7
@@ -1210,6 +1062,8 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 **Articles :** urba L600-1-1, urba R*423-6
 
 **Correction minimale :** Remplacer le deuxième alinéa proposé de L600-1-1 par : « La condition d'une ancienneté minimale d'un an du dépôt des statuts d'une association cesse de s'appliquer aux recours dirigés contre les décisions relatives à des demandes dont l'affichage ou la publication prévus à l'article R. 423-6 interviennent à compter de cette entrée en vigueur. Les recours dirigés contre les décisions relatives à des demandes affichées ou publiées avant cette date, y compris les instances en cours, restent soumis à cette condition. Aucun justificatif de cette ancienneté ne peut être exigé sur ce seul fondement pour les recours relevant de la présente rédaction. »
+
+**Correction révisée au réexamen (20261027T044303Z) :** (1) L600-1-1 : correction inchangée. Remplacer le deuxième alinéa par : « La condition d'une ancienneté minimale d'un an du dépôt des statuts d'une association cesse de s'appliquer aux recours dirigés contre les décisions relatives à des demandes dont l'affichage ou la publication prévus à l'article R. 423-6 interviennent à compter de cette entrée en vigueur. Les recours dirigés contre les décisions relatives à des demandes affichées ou publiées avant cette date, y compris les instances en cours, restent soumis à cette condition. Aucun justificatif de cette ancienneté ne peut être exigé sur ce seul fondement pour les recours relevant de la présente rédaction. » (2) R*423-6, troisième alinéa, à mettre en cohérence : « La suppression, au deuxième alinéa, du renvoi à l'article L. 600-1-1 s'applique aux demandes dont l'affichage ou la publication interviennent à compter de la date d'entrée en vigueur de l'abrogation de cet article. Pour les demandes affichées ou publiées avant cette date, la date de publication par voie électronique continue de tenir lieu de date d'affichage pour l'application de l'article L. 600-1-1 dans sa rédaction antérieure. Ces dispositions n'imposent ni renouvellement des publicités déjà effectuées ni modification de leur date et ne rouvrent aucun délai de recours expiré. » Si les auteurs maintiennent l'application aux instances en cours, la rédaction actuelle de R*423-6 est cohérente et seule la réserve de fond sur L600-1-1 demeure.
 
 **Autres options :**
 - Maintenir L600-1-1 : garantie favorable aux constructeurs, cohérente avec la politique du logement du projet.

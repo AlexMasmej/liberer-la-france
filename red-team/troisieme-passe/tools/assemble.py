@@ -49,7 +49,8 @@ dups = [i for i, n in collections.Counter(o.get('id') for o in objections).items
 if dups:
     problems.append(f'identifiants en double : {dups}')
 
-triage = json.loads(next((HOME / 'reports').glob('p1-triage-*.json')).read_text())
+latest = (HOME / 'snapshots/LATEST').read_text().strip()
+triage = json.loads((HOME / 'reports' / f'p1-triage-{latest}.json').read_text())
 live = {x['finding_id']: x for x in triage['all'] if x['bucket'] == 'live'}
 classified, cls_count = {}, collections.Counter()
 for f in sorted((HOME / 'reports/p1-work').glob('*-classification.jsonl')):
@@ -60,6 +61,19 @@ for f in sorted((HOME / 'reports/p1-work').glob('*-classification.jsonl')):
                 problems.append(f"P1 classé deux fois : {r['finding_id']}")
             classified[r['finding_id']] = r
             cls_count[r['classification'].split(' ')[0] if r['classification'].startswith('couvert') else r['classification']] += 1
+# Re-qualifications from the diff review (reports/reexam/) supersede the earlier line.
+requalified = 0
+for f in sorted((HOME / 'reports/reexam').glob('*.json')):
+    if f.name.startswith('packet') or f.name == 'merges.json':
+        continue
+    for r in json.loads(f.read_text()).get('alerts') or []:
+        prev = classified.get(r['finding_id'])
+        if prev:
+            key = prev['classification'].split(' ')[0] if prev['classification'].startswith('couvert') else prev['classification']
+            cls_count[key] -= 1
+        classified[r['finding_id']] = dict(r, reexam=f.stem)
+        cls_count[r['classification'].split(' ')[0] if r['classification'].startswith('couvert') else r['classification']] += 1
+        requalified += 1
 unclassified = [k for k in live if k not in classified]
 
 summary = dict(
@@ -73,6 +87,7 @@ summary = dict(
     p1_live=len(live), p1_classified=len([k for k in live if k in classified]),
     p1_unclassified=len(unclassified), p1_classification=cls_count,
     p1_read_in_full=sum(1 for r in classified.values() if r.get('read_in_full')),
+    p1_requalified_at_reexam=requalified,
     problems=problems)
 (HOME / 'reports/register.json').write_text(json.dumps(
     dict(summary=summary, objections=sorted(objections, key=lambda o: (o.get('priority', 'P9'), o.get('id', '')))),
