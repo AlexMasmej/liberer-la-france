@@ -1,0 +1,13 @@
+# Suite documentaire du 26 octobre, vers 02 h 45 UTC
+
+La page textuelle initiale de la loi 2001-1246 est maintenant conservée entièrement telle qu'affichée par Légifrance : 1771 lignes de page, 76 articles dans l'ordre, rapport annexé et signatures. Neuf reçus sont réunis avec 988 comparaisons de chevauchements exactes. Deux tableaux restent externalisés vers le JO aux articles 20 et 76 : cette collecte ne vaut donc pas récupération du texte original avec toutes ses données, ni d'un PDF ou fac-similé authentifié.
+
+L'article 75 III ajoute expressément les organismes nationaux aux organismes locaux et régionaux de L216-3. La substitution littérale reconstruit exactement tout le corps local normalisé de la version 2001 depuis la version 1996. Le IV qualifie historiquement l'UCANSS d'union nationale ; le reste de l'article conserve des objets distincts de financement, gouvernance, nomination, budget, statuts, accords collectifs et tutelle. Aucune équivalence générale des trois catégories de L281-6, suppression d'avis autonome ou date future n'en est déduite. Aucune clause particulière d'entrée en vigueur n'a été trouvée dans l'article 75 entier ; aucune règle générale ou date n'est inférée de cette seule absence.
+
+Le rectificatif affiché entier du 19 juin 2003 corrige uniquement un renvoi de l'article 8 I B au code du travail ancien. Il ne modifie pas l'article 75. Il est conservé séparément, sans correction nouvelle de contrat de travail. L'échec d'accès à son alias ELI reste conservé. Les refus publics des autres actes ne prouvent aucune cause générale de réseau ou d'authentification.
+
+Sept contreparties courantes entières et les deux versions historiques de L216-3 sont capturées dans deux transactions RO distinctes égales, avec les vrais XML BLOB, NOTA, bornes et cinq champs ; les 77 empreintes du code et des politiques restent exactes. Ceci n'est ni une réconciliation des propriétaires/registre/worklist, ni une revue de rebase des douze candidats. Aucun candidat n'est ajouté ou intégré, aucune lecture native n'est comptée ; readiness=false et absence de validation par juriste demeurent.
+
+Les originaux complets 1996/2004/2006, les tableaux 2001, les transitions, modèles extérieurs, double avis et calendriers restent à instruire. Pour 2006, conserver les deux articles 140 et 141 dans le périmètre. Le travail natif valide continue ; aucun garde, contrôle actif ou site n'est modifié.
+
+Sources primaires : [loi initiale 2001-1246](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000396224), [rectificatif du 19 juin 2003](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000596469).

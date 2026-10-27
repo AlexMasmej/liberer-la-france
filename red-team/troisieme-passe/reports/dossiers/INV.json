@@ -1,0 +1,1602 @@
+[
+ {
+  "id": "RT-INV-01",
+  "priority": "P0",
+  "priority_justification": "Si la rédaction proposée de 1609 quinvicies est adoptée comme texte de l'article, elle institue de nouveau la contribution supplémentaire à l'apprentissage dans le CGI, avec ses taux, alors que le projet la supprime à L6242-1 du code du travail : deux textes incompatibles sur le même prélèvement (réinstitution d'un impôt supprimé, risque de double base légale).",
+  "nature": "incohérence du projet",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "cgi",
+    "number": "1609 quinvicies",
+    "source_id": "LEGIARTI000042914206",
+    "valid_from": "2022-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "4ddf24afaaab82df6953d91ed2de88abbb74a423f6bd80892b1db13b13a6db29",
+    "proposed_sha256": "b2d2e0b9b145019696c109257c12a438dbaed5a948ef9a86dfd93e26e410f294",
+    "reason_sha256": "8c80209cf8dee9378a088f26c01fd22cff97c6d1ad583ca69563261e2a110bba",
+    "review_notes_sha256": "f3ef83fc82a428684adc249d23650a85d77d2bb871d3337b88550ae0312d5fe1",
+    "second_pass": "pending"
+   },
+   {
+    "code": "cgi",
+    "number": "1609 quinvicies",
+    "source_id": "LEGIARTI000043701898",
+    "valid_from": "2020-01-01",
+    "valid_until": "2022-01-01",
+    "source_sha256": "82fe9c3f00ff992cc31bd25144e0d5a2c752fec069138ca4b901e2e45f995552",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "travail",
+    "number": "L6242-1",
+    "source_id": "LEGIARTI000048839886",
+    "valid_from": "2023-12-31",
+    "valid_until": "2999-01-01",
+    "source_sha256": "caf04ef96c6ca745ff9b1ca1131f354b196c3ca3470a4917fa813b8e828b6672",
+    "proposed_sha256": "1df4e817a6a12b9c9ca8d6aeb9eba32db43268abe383ec8ae723d7b2b84bdd58",
+    "reason_sha256": "3da4640b789f0fa3ea5760df8906797d19772a2521bd4e09eb0a34525e06d7b1",
+    "review_notes_sha256": "a6db7d5c3d1c502f245ceb036476f9470aad9c375e81ad72fe22fc36e3d5ed63",
+    "second_pass": "completed"
+   }
+  ],
+  "passages": [
+   "cgi 1609 quinvicies LEGIARTI000042914206 (état MODIFIE_MORT_NE, 2022-01-01→2999-01-01), proposition : « I. – Il est institué une contribution supplémentaire à l'apprentissage. »",
+   "cgi 1609 quinvicies LEGIARTI000043701898 (ABROGE 2020-01-01→2022-01-01), lien LEGI : « Ordonnance n°2021-797 du 23 juin 2021 - art. 6 » typelien=ABROGE",
+   "travail L6242-1 LEGIARTI000048839886, proposition : « La contribution supplémentaire à l'apprentissage est supprimée pour les années civiles commençant le 1er janvier de l'année suivant celle de l'entrée en vigueur de la loi portant cette suppression. »",
+   "travail L6242-1 LEGIARTI000048839886, NOTA : « ces dispositions entrent en vigueur au 1er janvier 2022 pour les contributions dues à compter de cette date »"
+  ],
+  "primary_references": [
+   "LEGI LEGIARTI000042914206, LEGIARTI000043701898, LEGIARTI000041535047 (instantané LEGI au 18/10/2026)",
+   "JORFTEXT000043694630 (ordonnance n° 2021-797 du 23 juin 2021, art. 6, abrogation de 1609 quinvicies) — identifiant lu dans LEGI, texte JORF non consulté (Légifrance (legifrance.gouv.fr/codes/article_lc/…) : HTTP 403 le 2026-10-26, non contourné)",
+   "LEGI LEGIARTI000048839886 (L6242-1 code du travail, en vigueur depuis le 31/12/2023)"
+  ],
+  "reasoning": "La chaîne LEGI de 1609 quinvicies montre une version ABROGE se terminant le 1er janvier 2022 par l'effet de l'ordonnance 2021-797 (art. 6), puis deux versions MODIFIE_MORT_NE datées du 1er janvier 2022 (LFI 2020 et LFI 2021) qui n'ont jamais été en vigueur. La version retenue dans l'inventaire (LEGIARTI000042914206) est l'une de ces versions mort-nées ; sa borne de fin 2999 explique sa sélection par date. Depuis 2022, la CSA est régie par L6242-1 du code du travail (version en vigueur LEGIARTI000048839886), que le projet supprime pour les années nouvelles tout en conservant la créance de L6241-2 et le régime des années antérieures. La proposition de 1609 quinvicies réécrit au contraire l'article mort-né en entier, conserve « Il est institué une contribution supplémentaire à l'apprentissage », ses seuils de 250 et 2 000 salariés et ses taux, et y ajoute une coordination contrat unique. Le motif (« Maintenir l'année de décompte favorable après formation… ») et les notes ne mentionnent ni l'abrogation de 2022 ni L6242-1.",
+  "consequences": "Le lecteur et tout texte consolidé du projet présentent deux régimes de CSA : un régime CGI réinstitué (taux 0,05 % à 0,6 %, recouvrement « III de l'article L. 6131-1 », renvoi qui n'existe plus sous cette forme) et une suppression dans le code du travail. Adopté tel quel, le projet recréerait une base légale fiscale que la réforme veut supprimer. La couverture « 30 314 entrées courantes » compte un article abrogé depuis 2022.",
+  "minimal_correction": "Retirer la proposition de 1609 quinvicies (statut : article abrogé depuis le 1er janvier 2022, sans rédaction proposée) et sortir LEGIARTI000042914206 de l'inventaire courant. La coordination contrat unique (décompte des périodes d'apprentissage et de professionnalisation, exclusion des missions d'intérim) est déjà portée par la proposition de L6242-1, II 1° et V : rien n'est perdu.",
+  "other_options": "À défaut de retrait, remplacer le corps proposé par : « Article abrogé par l'article 6 de l'ordonnance n° 2021-797 du 23 juin 2021. La contribution supplémentaire à l'apprentissage est régie par l'article L. 6242-1 du code du travail. » (mention documentaire, non normative).",
+  "preserve": "Régime des années antérieures, créance de L6241-2, exclusion des contrats de mission et des périodes de formation du contrat unique, réduction de 52 % en Alsace-Moselle pour les années encore imposables : tous restent dans la proposition L6242-1.",
+  "uncertainties": "Le JORF de l'ordonnance 2021-797 n'a pas été relu (Légifrance 403) ; la conclusion repose sur les liens LEGI ABROGE et sur la NOTA de L6242-1. La proposition peut encore changer (statut pending). Écarts d'empreintes (proposition révisée après l'inventaire du 19/10) : travail L6242-1 LEGIARTI000048839886: empreintes reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/cgi_1609_quinvicies_LEGIARTI000042914206.json",
+   "evidence/cited/20261026T230545Z/cgi_1609_quinvicies_LEGIARTI000043701898.json",
+   "evidence/cited/20261026T230545Z/travail_L6242-1_LEGIARTI000048839886.json"
+  ]
+ },
+ {
+  "id": "RT-INV-02",
+  "priority": "P0",
+  "priority_justification": "Les propositions de L434-1 et L461-1 réécrivent les versions qui cessent le 1er novembre 2026 et ignorent les versions de remplacement publiées. Adoptées comme rédaction de ces articles, elles supprimeraient la part fonctionnelle de l'indemnité en capital (victimes consolidées depuis le 1er novembre 2026), la reconnaissance sur avis de deux médecins-conseils (à compter de 2027) et la renumérotation des alinéas : c'est une perte de droits certaine.",
+  "nature": "coordination manquante",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "css",
+    "number": "L434-1",
+    "source_id": "LEGIARTI000031688413",
+    "valid_from": "2015-12-23",
+    "valid_until": "2026-11-01",
+    "source_sha256": "f6c4da0ef0deac312101080c40cfc04912b540e21f95279116b5c7469ff8b2fc",
+    "proposed_sha256": "11fe1dc1f362a11f27ebd19d7fd902be3c6c44f82339427b8a7ed97c7c8e0de9",
+    "reason_sha256": "9a1dfee7a669702b84265cf7abc945375941572aa9eec647af8a07feaa75eb12",
+    "review_notes_sha256": "0f9b32c4023848f1fae2448da4272a93995482f4676c8920600022dff0dbff23",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "L434-1",
+    "source_id": "LEGIARTI000051288500",
+    "valid_from": "2026-11-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "f9f1c1563e35c9748313e857e7e8f26282c8be6afad2b6b30a8184be82d55345",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "L461-1",
+    "source_id": "LEGIARTI000053281596",
+    "valid_from": "2026-09-30",
+    "valid_until": "2026-11-01",
+    "source_sha256": "8bb23918b6c784e4d3c70a1d7a99a7cd7ac33176323bab2909f283fda2c90e33",
+    "proposed_sha256": "a00f40cb4c82863df2ad7be851cf67aa6be523f5017b1cc2b5916160609c33c6",
+    "reason_sha256": "547f0454ee10cb560efeaa6684b265ea51f30c6bcf2538fc681237e63fff8341",
+    "review_notes_sha256": "db40f2ed3395913e5872e6d4d48d0c7bbf658d749d38c572b6507aa1ceb884c6",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "L461-1",
+    "source_id": "LEGIARTI000053285183",
+    "valid_from": "2026-11-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "ed5a566e10e2344449da4e8407da30bc0ce171572624b83906d2f1cdd381413d",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "L461-1",
+    "source_id": "LEGIARTI000053285169",
+    "valid_from": "2027-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "a5926061431e420bc7f9852fea73cc29fd8e5980272830c2eb186a4c9da9cc50",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   }
+  ],
+  "passages": [
+   "css L434-1 LEGIARTI000051288500 (VIGUEUR_DIFF 2026-11-01) : « 2° D'une part fonctionnelle correspondant au déficit fonctionnel permanent de la victime. »",
+   "css L434-1 LEGIARTI000051288500, NOTA : « le I de l'article précité entre en vigueur à une date fixée par décret, et au plus tard le 1er novembre 2026. Il s'applique aux victimes dont l'état est consolidé à compter de cette date. »",
+   "css L434-1 LEGIARTI000031688413, proposition : « Son montant est fonction du taux d'incapacité de la victime et déterminé par un barème forfaitaire fixé par décret » (aucune part fonctionnelle)",
+   "css L461-1 LEGIARTI000053285169 (VIGUEUR_DIFF 2027-01-01) : « Si seule la condition tenant au délai de prise en charge n'est pas remplie, la maladie […] peut être reconnue d'origine professionnelle, après avis d'au moins deux médecins conseils »",
+   "css L461-1 LEGIARTI000053281596, proposition : « dans les conditions prévues aux septième et avant-dernier alinéas du présent article » (successeur 2027 : « huitième et avant-dernier »)",
+   "css L434-1 LEGIARTI000031688413, notes : « la nouvelle rédaction postérieure et son article L. 434-1 A ne sont pas fournis comme cibles complètes »"
+  ],
+  "primary_references": [
+   "LEGI LEGIARTI000051288500, LEGIARTI000053285183, LEGIARTI000053285169 (versions VIGUEUR_DIFF présentes dans l'instantané du 18/10/2026)",
+   "JORFTEXT000051269481 (loi n° 2025-199 du 28 février 2025, art. 90) et JORFTEXT000053226384 (loi n° 2025-1403 du 30 décembre 2025, art. 95 et 96), identifiants lus dans LEGI ; JORF non consulté (Légifrance (legifrance.gouv.fr/codes/article_lc/…) : HTTP 403 le 2026-10-26, non contourné)"
+  ],
+  "reasoning": "La réforme AT-MP (loi 2025-199, art. 90, date d'effet fixée au plus tard au 1er novembre 2026 par la loi 2025-1403) est déjà consolidée dans l'instantané sous forme de versions VIGUEUR_DIFF. Pour L434-1, la version en vigueur jusqu'au 31 octobre 2026 (marquée ABROGE_DIFF par LEGI) est remplacée par une indemnité en deux parts, professionnelle et fonctionnelle, fondée sur des taux distincts et sur un référentiel par arrêté. La proposition part de l'ancienne version : elle ajoute utilement le paiement dès la notification, mais conserve un barème unique et n'a pas de part fonctionnelle. Pour L461-1, la version au 1er novembre 2026 remplace L434-2 par le deuxième alinéa de L434-1 A et introduit l'incapacité permanente professionnelle. Celle du 1er janvier 2027 ajoute une voie de reconnaissance sans CRRMP, sur avis de deux médecins-conseils, et renumérote les renvois internes. La proposition ne connaît que la version du 30 septembre 2026. Les notes de revue affirment que la version successeur n'est pas fournie, alors qu'elle figure dans le corpus.",
+  "consequences": "Adoptées comme rédaction des articles, ces deux propositions effaceraient pour l'avenir la part fonctionnelle et la voie des deux médecins-conseils, des faveurs nouvelles pour les victimes, et rétabliraient des renvois devenus faux (L434-2 au lieu de L434-1 A, « septième » au lieu de « huitième »). La clause finale de L434-1 proposé (« Les champs respectifs des versions successives […] sont conservés ») n'est pas opérante : un article n'a qu'une seule rédaction.",
+  "minimal_correction": "Rebaser les deux propositions sur les versions successeurs et y reporter seulement les réformes propres au projet : pour L434-1, versement dès la notification, recours non suspensif et respect de l'option rente/capital, appliqués aux deux parts ; pour L461-1, renvoi au I de L315-2. Les textes complets sont donnés dans INV.md, section Corrections.",
+  "other_options": "Classer provisoirement les deux propositions en « à rebaser » et les retirer du lecteur jusqu'à leur réécriture, plutôt que de publier un texte périmé six jours après la date de remplacement.",
+  "preserve": "Part fonctionnelle et sa révision, part professionnelle due même en cas de retraite, voie des deux médecins-conseils, présomption des tableaux, CRRMP. Pour les victimes consolidées avant le 1er novembre 2026, le régime antérieur reste applicable selon le V de l'article 90 de la loi 2025-199. Gains du projet à conserver : paiement du capital dès la notification ; coordination L315-2.",
+  "uncertainties": "Le décret fixant la date d'effet (au plus tard le 1er novembre 2026) n'a pas été vérifié au JORF. Les articles L434-1 A et L434-2 (successeur) n'ont pas été relus en entier ; la proposition L434-2 est retained_unchanged sur l'ancienne version (voir RT-INV-05). Les empreintes de la proposition L434-1 dans l'inventaire diffèrent de l'instantané (proposition révisée depuis l'inventaire). Écarts d'empreintes (proposition révisée après l'inventaire du 19/10) : css L434-1 LEGIARTI000031688413: empreintes proposed_sha256, review_notes_sha256 de l'inventaire ≠ instantané ; css L461-1 LEGIARTI000053281596: empreintes reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/css_L434-1_LEGIARTI000031688413.json",
+   "evidence/cited/20261026T230545Z/css_L434-1_LEGIARTI000051288500.json",
+   "evidence/cited/20261026T230545Z/css_L461-1_LEGIARTI000053281596.json",
+   "evidence/cited/20261026T230545Z/css_L461-1_LEGIARTI000053285169.json",
+   "evidence/cited/20261026T230545Z/css_L461-1_LEGIARTI000053285183.json"
+  ]
+ },
+ {
+  "id": "RT-INV-03",
+  "priority": "P1",
+  "priority_justification": "Sept autres réécritures du bloc AT-MP partent de versions qui cessent le 1er novembre 2026. Leurs renvois et leur terminologie (taux unique, « troisième alinéa de L434-2 », barèmes annexés) contredisent les remplacements publiés. Effet probable : renvois faux ou ambigus, et rétablissement d'un alinéa supprimé par le décret 2026-354.",
+  "nature": "coordination manquante",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "css",
+    "number": "L142-1",
+    "source_id": "LEGIARTI000042683979",
+    "valid_from": "2020-12-16",
+    "valid_until": "2026-11-01",
+    "source_sha256": "3218b84c9724e8047746760759864ce3ed2d3667409d5683fe5fa61c05704bdb",
+    "proposed_sha256": "57a734dc741efc732f032122261cd3c67c4261c84158daaefb235b751b9026e2",
+    "reason_sha256": "00a129782bd5caa55f3c051b28ab135b95e39d41242f905657e133a760a7817b",
+    "review_notes_sha256": "7659b80000c03947848c74a5930cb8b9925103cca3b92f89509f0bcb8191581b",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "L142-1",
+    "source_id": "LEGIARTI000051288452",
+    "valid_from": "2026-11-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "5a5cb223a9698b7ba3523f00e0deab2c505507fa8ac7891ad97e9f7d049a52ce",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "L351-3",
+    "source_id": "LEGIARTI000053279221",
+    "valid_from": "2025-12-31",
+    "valid_until": "2026-11-01",
+    "source_sha256": "a48861133dce3720c550e4c1818d4040db257bf6177bd6f88e0980cf655d8355",
+    "proposed_sha256": "829970fa053c4de9e9d0f63e80f2c859279612b623fb24d18ed68ea96f6d0e2a",
+    "reason_sha256": "f21f1b7f58fa161e8f3ef00f60be2f1d1862938ce830d6664a0cdcb18542320b",
+    "review_notes_sha256": "4b0610b4ce113d5be6b401ef8e3fedc66762657231221fa8df93c70dae756b1c",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "L351-3",
+    "source_id": "LEGIARTI000051288449",
+    "valid_from": "2026-11-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "d2d05d50f5c65bc87c03d936dae1764311e9fd509f6c22449936a8b67060050f",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "L434-16",
+    "source_id": "LEGIARTI000031688385",
+    "valid_from": "2015-12-23",
+    "valid_until": "2026-11-01",
+    "source_sha256": "170a1ab287168078de0669872bfb19f033fc4e9a51b6888441396d15921b2976",
+    "proposed_sha256": "37475b94b46076334c278130fe3fee289263e20a27fafca443cbdc642a144791",
+    "reason_sha256": "8dcbb6ef2bb835164992b87ea340acf3fe2303b8516a0950d05af1222054963a",
+    "review_notes_sha256": "d7e94303e84643ff7351592150cd3b9c899d4d2813d7c9608f2a8edf5bf1057f",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "L434-16",
+    "source_id": "LEGIARTI000051288487",
+    "valid_from": "2026-11-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "72de8bbddba09b86f524cf3687459d8e1c090f45894cdad3b5281a212e1eb51d",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "L443-1",
+    "source_id": "LEGIARTI000026799850",
+    "valid_from": "2013-03-01",
+    "valid_until": "2026-11-01",
+    "source_sha256": "448e7ec127c0059e91d96c24cf4847b0f4dd0b4e2a318e709b3f762fc56bdaef",
+    "proposed_sha256": "a73eb17221a5c0ec20c09c42c691a694e268e0a9b42324d5ab11f630077bb8c0",
+    "reason_sha256": "ad1fffe658f9b4aa60dc0729d1ffa560f7755e326d57f17c1c6b2fdaa5bdf5ae",
+    "review_notes_sha256": "e2d2aeb992b3febede0675de732ec2e63c1fd1def0daf2ab0907b870bd57e5fa",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "L443-1",
+    "source_id": "LEGIARTI000051288476",
+    "valid_from": "2026-11-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "c5dea52012ba4c59468bdaee0b89c90262f9cd78d753d7f7e97e50da9e795448",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "R351-12",
+    "source_id": "LEGIARTI000054167657",
+    "valid_from": "2026-07-01",
+    "valid_until": "2026-11-01",
+    "source_sha256": "c5338fc05359879ff3ffd9afcd1be179bec62fdbca2107c6e8767c1614284397",
+    "proposed_sha256": "a612219ba94440214d4b48cd98b0ca47dc6d5f716dc6e42fa6eb89633dcbab17",
+    "reason_sha256": "a50bc670338e6746f5a12f2c7b6a485e9a3e61c1e95c8ce236235773d88b8358",
+    "review_notes_sha256": "544c6e419dbf8dec91f90400d730429395e0117a8e319b042fd4e9a2fc84e842",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "R351-12",
+    "source_id": "LEGIARTI000054060166",
+    "valid_from": "2026-11-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "8a308efe766e8e71624724b38e0174f2e65bf6b5954ca16b3d2446ea19305bd5",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "R351-12",
+    "source_id": "LEGIARTI000054425288",
+    "valid_from": "2026-11-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "7305dbdef8b1ab504a96fdd52c6646f8e48dae78bf6f7907c005e7c19db898bf",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "R351-37",
+    "source_id": "LEGIARTI000047633235",
+    "valid_from": "2023-09-01",
+    "valid_until": "2026-11-01",
+    "source_sha256": "7026627f0f682ce0b478372c61da17dafebf3b696af2877d5028abbe5149d46d",
+    "proposed_sha256": "67d8fc01ef5a5874c930d7b9bc1077e6de7815cbd894100627c7e4c8c631bad1",
+    "reason_sha256": "0573ec5fbaeeecce053dafe8490cf2a2f2f534d0d614dbdcb9674aa5f9b6bbd4",
+    "review_notes_sha256": "2e5071893a967142193181ce53c1019aca6846f1dd790c49304af167145f4f9e",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "R351-37",
+    "source_id": "LEGIARTI000054060160",
+    "valid_from": "2026-11-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "cab5f368f91555e8c628f08e135c20bd94ab80a588b589d5d429bebf0a4e5fee",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "R434-32",
+    "source_id": "LEGIARTI000022073148",
+    "valid_from": "2010-04-01",
+    "valid_until": "2026-11-01",
+    "source_sha256": "9560e862f1af321b767076e8db51859665b3a67ce35bf48044bfe5741b894f2e",
+    "proposed_sha256": "e7811f749280a05a72cd18f40801c0af2069d2a53c111093017470e23c75cf34",
+    "reason_sha256": "2dcbe28808b25c86a0f47151fbc825adf5cce0318533d5f57063e276f5eb05fa",
+    "review_notes_sha256": "ecbc2f561954b90f36f0fd96a18be0c0f99d519db43f4655ecd30514c314a2e9",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "R434-32",
+    "source_id": "LEGIARTI000054060111",
+    "valid_from": "2026-11-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "4570f99240db25c583421760dd8d50d7de9b3a62cdc2b0e5f1dd0f4519978263",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   }
+  ],
+  "passages": [
+   "css R434-32 LEGIARTI000054060111 (VIGUEUR_DIFF 2026-11-01) : « sur les taux d'incapacité permanente professionnelle et fonctionnelle de celle-ci » ; l'alinéa « Les barèmes indicatifs d'invalidité […] sont annexés au présent livre » est supprimé",
+   "css R434-32 LEGIARTI000022073148, proposition : « Les barèmes indicatifs d'invalidité dont il est tenu compte pour la détermination du taux d'incapacité permanente […] sont annexés au présent livre. »",
+   "css L434-16 LEGIARTI000031688385, proposition : « La présente rédaction ne modifie ni la date d'abrogation du présent article déjà fixée au 1er novembre 2026 » ; successeur LEGIARTI000051288487 : « compte tenu du III de l'article L. 434-2 »",
+   "css L443-1 LEGIARTI000051288476 : « admise au bénéfice des dispositions du II de l'article L. 434-2 » ; proposition LEGIARTI000026799850 : « du troisième alinéa de l'article L. 434-2 »",
+   "css L142-1 LEGIARTI000042683979, notes : « aucune version de remplacement n'a été trouvée sous ce numéro dans le fichier du corpus consulté »",
+   "css R351-12 : deux versions VIGUEUR_DIFF identiques LEGIARTI000054060166 et LEGIARTI000054425288 (même décret 2026-354, même date)"
+  ],
+  "primary_references": [
+   "LEGI LEGIARTI000051288452, 051288449, 051288487, 051288476, 054060166, 054425288, 054060160, 054060111 (instantané du 18/10/2026)",
+   "JORFTEXT000051269481 (loi 2025-199, art. 90) ; JORFTEXT000054050122 (décret n° 2026-354 du 7 mai 2026) — identifiants LEGI, JORF non consulté (Légifrance (legifrance.gouv.fr/codes/article_lc/…) : HTTP 403 le 2026-10-26, non contourné)"
+  ],
+  "reasoning": "Pour chaque paire (version sortante, version successeur), on a comparé mot à mot la source sortante, le successeur et la proposition. Les successeurs changent : L142-1 5° (« incapacité permanente » et « aux taux ») ; L351-3 1° (« incapacité permanente professionnelle ») ; L434-16 (« III de l'article L. 434-2 ») ; L443-1 (« II de l'article L. 434-2 ») ; R351-12 5° (« professionnelle ») ; R351-37 III (« L. 434-1 A ») ; R434-32 (deux taux et suppression de l'alinéa des barèmes). Les propositions gardent l'ancienne rédaction de ces passages. R351-37 proposé évite en partie le conflit en renvoyant au I de L351-1-4. L434-16 proposé affirme une « date d'abrogation » alors qu'il s'agit d'une modification : adopté après le 1er novembre 2026, ce membre de phrase pourrait se lire comme une abrogation de l'article.",
+  "consequences": "Après le 1er novembre 2026, les textes proposés rétabliraient un taux unique et des renvois périmés dans le contentieux, la retraite, la révision, la présomption de décès et la notification des taux. Pour R434-32, l'alinéa des barèmes annexés que le décret 2026-354 a supprimé reviendrait. Les allègements propres au projet restent légitimes, mais ils sont greffés sur un texte périmé.",
+  "minimal_correction": "Rebaser chaque proposition sur son successeur en reportant uniquement le changement propre au projet : L142-1 (3° CSP et clause finale) ; L351-3 (retrait de la seconde occurrence du congé de naissance) ; L434-16 (renvoi corrigé « au premier alinéa du présent article », sans la phrase sur l'abrogation) ; L443-1 (dispense d'intervalle pour les demandes d'augmentation) ; R351-12 (preuve des périodes) ; R351-37 (circuit sans commission) ; R434-32 (accès au rapport sans délai ni formulaire). Les passages corrigés sont dans INV.md.",
+  "other_options": "Traiter le bloc AT-MP (42 articles au 1er novembre 2026) comme un lot unique de rebasage, avec L434-1 A, L434-2 et D434-1 successeurs, avant toute publication.",
+  "preserve": "Les deux taux et la part fonctionnelle, les présomptions favorables (décès, tableaux), les délais de recours, et les allègements de procédure du projet (accès au rapport médical sans délai, révision à la demande de la victime sans intervalle).",
+  "uncertainties": "Les notes de R351-12 et R351-37 n'ont pas été lues mot à mot en entier pour chaque alinéa ; la comparaison porte sur le texte intégral source, successeur et proposition. Les deux versions VIGUEUR_DIFF identiques de R351-12 relèvent d'un doublon DILA : laquelle subsistera n'est pas établi. Écarts d'empreintes (proposition révisée après l'inventaire du 19/10) : css L142-1 LEGIARTI000042683979: empreintes proposed_sha256, reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané ; css L351-3 LEGIARTI000053279221: empreintes proposed_sha256, reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané ; css L434-16 LEGIARTI000031688385: empreintes reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané ; css L443-1 LEGIARTI000026799850: empreintes review_notes_sha256 de l'inventaire ≠ instantané.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/css_L142-1_LEGIARTI000042683979.json",
+   "evidence/cited/20261026T230545Z/css_L142-1_LEGIARTI000051288452.json",
+   "evidence/cited/20261026T230545Z/css_L351-3_LEGIARTI000051288449.json",
+   "evidence/cited/20261026T230545Z/css_L351-3_LEGIARTI000053279221.json",
+   "evidence/cited/20261026T230545Z/css_L434-16_LEGIARTI000031688385.json",
+   "evidence/cited/20261026T230545Z/css_L434-16_LEGIARTI000051288487.json",
+   "evidence/cited/20261026T230545Z/css_L443-1_LEGIARTI000026799850.json",
+   "evidence/cited/20261026T230545Z/css_L443-1_LEGIARTI000051288476.json",
+   "evidence/cited/20261026T230545Z/css_R351-12_LEGIARTI000054060166.json",
+   "evidence/cited/20261026T230545Z/css_R351-12_LEGIARTI000054167657.json",
+   "evidence/cited/20261026T230545Z/css_R351-12_LEGIARTI000054425288.json",
+   "evidence/cited/20261026T230545Z/css_R351-37_LEGIARTI000047633235.json",
+   "evidence/cited/20261026T230545Z/css_R351-37_LEGIARTI000054060160.json",
+   "evidence/cited/20261026T230545Z/css_R434-32_LEGIARTI000022073148.json",
+   "evidence/cited/20261026T230545Z/css_R434-32_LEGIARTI000054060111.json"
+  ]
+ },
+ {
+  "id": "RT-INV-04",
+  "priority": "P1",
+  "priority_justification": "La proposition réécrit le référentiel Qualiopi en vigueur jusqu'au 31 octobre 2026. Elle ignore le référentiel de remplacement publié par le décret 2026-728 (indicateur 33, prévention des violences et du harcèlement, protection renforcée des apprentis mineurs). Effet probable : adoptée après le 1er novembre 2026, elle effacerait ces exigences.",
+  "nature": "coordination manquante",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "travail",
+    "number": "Annexe",
+    "source_id": "LEGIARTI000038591641",
+    "valid_from": "2021-01-01",
+    "valid_until": "2026-11-01",
+    "source_sha256": "91f46621be6b8a96c137bc62ec3ce657d65f2b03e72e67ed850a416ae72a66a6",
+    "proposed_sha256": "9fc5251c6d7dfb064b71efa160c1be281805f66d9df80ab3f1fb4ad6c0bd1090",
+    "reason_sha256": "0a45358a9eb593e63e00b5fef83431724466597e9397c7a1a0cbc41ba5d2b42a",
+    "review_notes_sha256": "9f7420f76de92d38caf20b54e2ec5a39f00efa29d9ee358343195f3904109451",
+    "second_pass": "pending"
+   },
+   {
+    "code": "travail",
+    "number": "Annexe",
+    "source_id": "LEGIARTI000054612711",
+    "valid_from": "2026-11-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "46aa15168d870931039e32dc020d40fbac9182ec93a19aedf27cc52901a3570d",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   }
+  ],
+  "passages": [
+   "travail Annexe LEGIARTI000054612711 (VIGUEUR_DIFF 2026-11-01), NOTA : « Conformément à l'article 2 du décret n° 2026-728 du 1er août 2026, ces dispositions […] entrent en vigueur le 1er novembre 2026. »",
+   "travail Annexe LEGIARTI000054612711, indicateur 12 : « Il s'assure de la prévention et du traitement de toute situation de violence, dont les violences sexistes et sexuelles, de harcèlement ou de discrimination dans le cadre de leur formation. »",
+   "travail Annexe LEGIARTI000054612711 : « 33) Le prestataire met en place un dispositif d'évaluation des contenus et des enseignements par les apprenants »",
+   "travail Annexe LEGIARTI000038591641, proposition : « La certification n'est soumise ni à expiration périodique ni à renouvellement. »"
+  ],
+  "primary_references": [
+   "LEGI LEGIARTI000054612711 et LEGIARTI000038591641 (instantané du 18/10/2026)",
+   "JORFTEXT000054608509 (décret n° 2026-728 du 1er août 2026), identifiant LEGI ; JORF non consulté (Légifrance (legifrance.gouv.fr/codes/article_lc/…) : HTTP 403 le 2026-10-26, non contourné)"
+  ],
+  "reasoning": "Comparaison intégrale des 205 lignes de la source sortante, de la proposition et du successeur. La proposition ne modifie que le II, 2 (fin de l'expiration à trois ans et de l'audit de renouvellement) et ajoute une transition ; les indicateurs 1 à 32 sont repris de l'ancienne version. Le successeur, publié avant la date de référence, réécrit les indicateurs 1, 2, 3, 7, 12, 14, 15, 19, 20, 27, 30, 31 et 32 et ajoute un indicateur 33 ; il conserve le II, 2 à l'identique (cycle de trois ans, renouvellement). Les deux textes ne se contredisent donc pas sur la mesure propre du projet. Ils se contredisent sur tout le reste du tableau.",
+  "consequences": "Une consolidation fondée sur la proposition, faite après le 1er novembre 2026, rétablirait l'ancien référentiel. Elle supprimerait sans motif des obligations de protection des apprenants (violences, harcèlement, mineurs, médiateur de l'apprentissage), alors que le motif affirme « Les 32 indicateurs, toutes les cases du tableau […] sont conservés en entier ».",
+  "minimal_correction": "Rebaser la proposition sur LEGIARTI000054612711 : reprendre l'intégralité de ce texte (indicateurs 1 à 33), puis appliquer au seul II, 2 la modification du projet et la transition déjà rédigée (voir INV.md).",
+  "other_options": "Si le rebasage attend, retirer la proposition du lecteur à compter du 1er novembre 2026 et la marquer « à rebaser ».",
+  "preserve": "Indicateur 33, obligations relatives aux violences, au harcèlement et aux discriminations, information renforcée des apprentis mineurs, audits de surveillance, non-conformités, modalités du 4. Suppression du renouvellement triennal (orientation du projet, coordonnée avec R6316-2).",
+  "uncertainties": "Les dispositions transitoires de l'article 2 du décret 2026-728 (certifications en cours) n'ont pas été lues ; l'arrêté d'application n'est pas dans le corpus.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/travail_Annexe_LEGIARTI000038591641.json",
+   "evidence/cited/20261026T230545Z/travail_Annexe_LEGIARTI000054612711.json"
+  ]
+ },
+ {
+  "id": "RT-INV-05",
+  "priority": "P1",
+  "priority_justification": "Défaut de méthode qui touche des centaines d'articles. Il explique RT-INV-02 à RT-INV-04 sans les compter deux fois. Les versions de remplacement déjà publiées ne sont ni dans l'inventaire ni montrées aux rédacteurs, et le projet présente comme « maintenu » ou réécrit un texte qui changera à date certaine.",
+  "nature": "anomalie d'inventaire",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "travail",
+    "number": "L3332-17-1",
+    "source_id": "LEGIARTI000049720096",
+    "valid_from": "2025-01-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "2bc63c7d1c8b75baf890960f0d044b56aeb400215c377441897f958aad056da4",
+    "proposed_sha256": "7bf71f16bfebddfece396a71930c3f4600e11f0a62fdc47183cdccfcb898b403",
+    "reason_sha256": "b8e44e2b34b78fcfc034da140fc6879d68cfda2d7b53781451699f7b15714dd1",
+    "review_notes_sha256": "fd4f115565f935455796e5ece784d430bb43b3ea8d2081e40535018c2f1e4e47",
+    "second_pass": "pending"
+   },
+   {
+    "code": "travail",
+    "number": "L3332-17-1",
+    "source_id": "LEGIARTI000054140237",
+    "valid_from": "2027-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "22b5aa87ed6469b3eb561b1821648dfcb6ad200dab849d8cf53286dd36a76246",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "L223-9",
+    "source_id": "LEGIARTI000046808945",
+    "valid_from": "2026-01-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "a6b32130a35d97471ebc3677a3c8b08461536ddda6c668aab2e50b15751246fa",
+    "proposed_sha256": "2f0f74457f7a0359d65cad23f85582982eed7f12fd5b0f629fef1c3b90071f80",
+    "reason_sha256": "e896a273a38f53600a7eb3d3a9b00d5f2b4bca5cf70366c5d37444e851e87358",
+    "review_notes_sha256": "6e66539a024bd4df6a0d88537a9283a8f640814a002fd6145540483d4256a4e5",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "L223-9",
+    "source_id": "LEGIARTI000046808960",
+    "valid_from": "2027-01-01",
+    "valid_until": "2028-01-01",
+    "source_sha256": "e74d4896bd176961ee0d9620002b1012df5c2ec3d7ae5b7d6663e8d31b3cd60c",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "cch",
+    "number": "R824-11",
+    "source_id": "LEGIARTI000038878851",
+    "valid_from": "2019-09-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "77fbf8fd800cb321f664148d50f0fda8df56f9945f34e169d787cff2d8dbaa09",
+    "proposed_sha256": "1a1b6c0f3efeb471a2e4f3b2850114ff3c0402782c1c1429933bbb1736ccd3c8",
+    "reason_sha256": "18eb993df7f67d09f0f52e5c78734378d9262fbba6d97e9c7c27841990d62fa1",
+    "review_notes_sha256": "96fb1e35e3d1b879fd1d15d8c9d2d302edd90f643dc3222f986d72e3528d76bb",
+    "second_pass": "pending"
+   },
+   {
+    "code": "cch",
+    "number": "R824-11",
+    "source_id": "LEGIARTI000053470490",
+    "valid_from": "2027-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "99454bd36e6370013d3f3035287535b5d94c5e8d4aeef6b0ac7cb64099ba8b84",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "cch",
+    "number": "L313-4",
+    "source_id": "LEGIARTI000037387268",
+    "valid_from": "2019-01-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "ab20b7c5f22596997cb4829e329f912f5429c349fe2d2870c4180e82e7e4346e",
+    "proposed_sha256": "1deb6a53ff87c2a5c03b075f8684690f2e5ada48e4b80c9a82027916a04c390f",
+    "reason_sha256": "830520a3d5d9a24925c67e32fbe783175c11dcea24630e84f8fcc22b37fb8744",
+    "review_notes_sha256": "daa6062caa8c88ecc291318a311650f45f9561a2f35aa6ce307d684fb5ef32b1",
+    "second_pass": "completed"
+   },
+   {
+    "code": "cch",
+    "number": "L313-4",
+    "source_id": "LEGIARTI000053151481",
+    "valid_from": "2027-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "a69a9ebf1b49ea97dabd0127e876b6d8b84bb3275b4d2d84608b673e617cdd5e",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "L434-2",
+    "source_id": "LEGIARTI000047452183",
+    "valid_from": "2023-04-16",
+    "valid_until": "2026-11-01",
+    "source_sha256": "c3b4dccbf787bc2886b6f6ac5d1a0e2a385205a3387d33d79603196b3b7b4d22",
+    "proposed_sha256": null,
+    "reason_sha256": "61f976ca9b2f15da793572cde90bb427c50e654899afada557ff053e2bde6686",
+    "review_notes_sha256": "4013e0a19b3a68e7d2d6e5a0fc2925ecb5e1ba2179ea030313b37d0ad103dbb3",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "L434-2",
+    "source_id": "LEGIARTI000051288493",
+    "valid_from": "2026-11-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "3bc1c7194d6a3a92ffa1261451ea1b0cb694cee6c6963f21144944d46952b121",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "travail",
+    "number": "L6323-13",
+    "source_id": "LEGIARTI000052437094",
+    "valid_from": "2025-10-26",
+    "valid_until": "2027-01-01",
+    "source_sha256": "ea4501ce417e502e43fcfd4d81e7fd6f3338f222f9e8e40d16e568df38b5abec",
+    "proposed_sha256": "a1c1a58b2f26f89f2e08c6c4b682fc34ce633df1751daf172d49c2d27b84f3e9",
+    "reason_sha256": "825059d7ffd134454408bd14f5b0656db490b7bafe652563c669b1c7a6a92f69",
+    "review_notes_sha256": "f03bf17d210009241834339f74e4be4631f082d5ee3ebe114b7bc031296ed178",
+    "second_pass": "pending"
+   },
+   {
+    "code": "travail",
+    "number": "L6323-13",
+    "source_id": "LEGIARTI000053151869",
+    "valid_from": "2027-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "6c0c8d9dcbf5558ea5b5da267b7b876d477be885919f446e7e31cd6f70008074",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   }
+  ],
+  "passages": [
+   "travail L3332-17-1 LEGIARTI000049720096, notes : « aucune version successeur n'est fournie dans le corpus consulté » ; successeur présent LEGIARTI000054140237 (loi n° 2026-403, VIGUEUR_DIFF 2027-01-01)",
+   "css L223-9 LEGIARTI000046808960 (VIGUEUR_DIFF 2027-01-01) : taux « 7,93 » au lieu de « 7,75 » conservé par la proposition de LEGIARTI000046808945",
+   "cch L313-4 LEGIARTI000037387268, proposition : « La présente rédaction s'applique jusqu'au 31 décembre 2026 et ne proroge pas l'application du présent article au-delà de cette date. »",
+   "css L434-2 LEGIARTI000047452183 (retained_unchanged) ; successeur LEGIARTI000051288493 : « 1° D'une part professionnelle correspondant à la perte de gains professionnels »"
+  ],
+  "primary_references": [
+   "LEGI : 519 versions VIGUEUR_DIFF dans l'instantané du 18/10/2026, aucune dans l'inventaire (runtime/radical-review-20261019.json)",
+   "JORFTEXT000054131304 (loi n° 2026-403 du 26 mai 2026) ; JORFTEXT000053465727 (décret n° 2026-84 du 12 février 2026) ; identifiants LEGI"
+  ],
+  "reasoning": "Sur les 650 entrées ABROGE_DIFF de l'inventaire, 379 ont, sous le même numéro, une version VIGUEUR_DIFF qui commence exactement à leur date de fin. Ce sont des remplacements différés, non des abrogations. Toutes les entrées de 2026 sont dans ce cas (45 sur 45) ; janvier 2027 en compte 174 sur 337. Aucune des 519 versions VIGUEUR_DIFF n'est dans l'inventaire et aucune n'a de proposition. 215 réécritures portent sur une source qui a déjà un successeur publié. Au moins 60 notes de revue affirment, à tort, que le successeur n'est pas fourni. 26 propositions insèrent dans le texte normatif une clause d'abrogation ou de non-prorogation (« ne proroge pas », « date d'abrogation […] déjà fixée ») alors que l'article est remplacé, non abrogé. Exemples : L3332-17-1 (ESUS), dont la proposition supprime l'agrément sur la base de l'ancienne liste de 16 catégories alors que la loi 2026-403 a remplacé cette liste par une présomption et des catégories fixées par décret ; L223-9, où le paramètre 7,75 % est figé alors que le successeur fixe 7,93 % ; R824-11 CCH, où l'ancienne procédure est réécrite alors que le décret 2026-84 la remplace par une suspension décidée en commission ; L434-2, maintenu à droit constant sur l'ancienne version alors que le successeur crée les deux parts. Les 35 entrées retained_unchanged de 2026 présentent de même comme « maintenu » un texte qui change le 1er novembre ou en décembre 2026.",
+  "consequences": "Le projet consolidé publié diverge du droit dès le 1er novembre 2026, puis le 1er janvier 2027 pour 337 entrées, sans que le lecteur le signale. Les propositions qui « bornent » leur effet au 31 décembre 2026 n'ont d'objet que si la loi du projet entre en vigueur avant cette date. Les réformes de fond du projet sur ces articles (ESUS, PEEC, APL, etc.) disparaîtraient à la date du remplacement.",
+  "minimal_correction": "(1) Ajouter à l'inventaire, pour chaque entrée ABROGE_DIFF ou VIGUEUR à borne de fin finie, la version successeur de même numéro (statut « version future publiée ») et l'exposer aux rédacteurs. (2) Rebaser les 215 réécritures concernées : la réforme se greffe sur le successeur lorsque la loi du projet entrera en vigueur après la date du remplacement, ou sur les deux versions avec une règle de transition explicite. (3) Supprimer des corps proposés les clauses « date d'abrogation […] déjà fixée » lorsque LEGI prévoit un remplacement. (4) Pour les retained_unchanged, afficher dans le lecteur la version future et sa date.",
+  "other_options": "Fixer une date d'entrée en vigueur présumée du projet (par exemple le 1er janvier 2028) et choisir comme base de chaque article la version en vigueur à cette date. C'est plus simple, mais cela exige de relire les 519 successeurs.",
+  "preserve": "Transitions et créances anciennes déjà rédigées ; réformes de fond du projet, à transposer sans perte sur les successeurs (ESUS sans agrément, majoration CPF supprimée, etc.).",
+  "uncertainties": "Les nombres 60 et 26 sont issus d'une recherche par expression régulière sur les notes et les propositions. Ce sont des minima, non vérifiés un par un. La correspondance par numéro peut se tromper si un numéro est recyclé (cas des annexes du code du travail : voir RT-INV-09). Écarts d'empreintes (proposition révisée après l'inventaire du 19/10) : css L223-9 LEGIARTI000046808945: empreintes proposed_sha256, reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané ; cch L313-4 LEGIARTI000037387268: empreintes proposed_sha256, reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané ; css L434-2 LEGIARTI000047452183: empreintes review_notes_sha256 de l'inventaire ≠ instantané.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/cch_L313-4_LEGIARTI000037387268.json",
+   "evidence/cited/20261026T230545Z/cch_L313-4_LEGIARTI000053151481.json",
+   "evidence/cited/20261026T230545Z/cch_R824-11_LEGIARTI000038878851.json",
+   "evidence/cited/20261026T230545Z/cch_R824-11_LEGIARTI000053470490.json",
+   "evidence/cited/20261026T230545Z/css_L223-9_LEGIARTI000046808945.json",
+   "evidence/cited/20261026T230545Z/css_L223-9_LEGIARTI000046808960.json",
+   "evidence/cited/20261026T230545Z/css_L434-2_LEGIARTI000047452183.json",
+   "evidence/cited/20261026T230545Z/css_L434-2_LEGIARTI000051288493.json",
+   "evidence/cited/20261026T230545Z/travail_L3332-17-1_LEGIARTI000049720096.json",
+   "evidence/cited/20261026T230545Z/travail_L3332-17-1_LEGIARTI000054140237.json",
+   "evidence/cited/20261026T230545Z/travail_L6323-13_LEGIARTI000052437094.json",
+   "evidence/cited/20261026T230545Z/travail_L6323-13_LEGIARTI000053151869.json"
+  ]
+ },
+ {
+  "id": "RT-INV-06",
+  "priority": "P1",
+  "priority_justification": "La recodification de la TVA dans le CIBS au 1er janvier 2027 abroge 169 articles CGI de l'inventaire, dont 70 réécrits. Le CIBS n'est ni dans le corpus ni dans la liste des coordinations hors corpus, contrairement à l'orientation « Suivre les filiations et recodifications actuelles, y compris hors cinq codes ». Effet probable : les réformes TVA du projet deviennent sans support, et des renvois proposés visent des articles abrogés.",
+  "nature": "coordination manquante",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "cgi",
+    "number": "293 D",
+    "source_id": "LEGIARTI000052488147",
+    "valid_from": "2025-03-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "954b7ec2cc064836795e902f87e4ef13da44489bf3abf4f4d7b0200ef3fee67d",
+    "proposed_sha256": "89bbd0fa55db4bdf79c3e2ba74001ecbe3149982ad997bebe2099de825f067e4",
+    "reason_sha256": "e83b29605e5fa1bf8391f599987282e07afbce7e20cbcdc715e0b935d879fa6e",
+    "review_notes_sha256": "88d75cc4a75d86fd09748f76caa03de08b62f68cf91651781c3757ec09b3ae05",
+    "second_pass": "completed"
+   },
+   {
+    "code": "cgi",
+    "number": "256-0",
+    "source_id": "LEGIARTI000018035891",
+    "valid_from": "2008-01-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "ccc9d10c4ffb924f36ff8dbaa2f1998472ba5af6275985c096fc71ea135221cd",
+    "proposed_sha256": "52873163cbc59704941db21999ddb880c426a867f9e915b1a0815ede747b1f9e",
+    "reason_sha256": "9fed420f1437bc12e8c16000369374f67d69a809c44f1d22560c343000cdeb73",
+    "review_notes_sha256": "eebc16f7cff44f92d3cce00322ab7e56e30d3985430d2cd9bb97945169cfdf1c",
+    "second_pass": "completed"
+   },
+   {
+    "code": "cgi",
+    "number": "279",
+    "source_id": "LEGIARTI000053562872",
+    "valid_from": "2026-03-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "47f969dc040c7ae6d708a8c116bd02d3bfeca9fc6d25df1d2843d036c9d3a153",
+    "proposed_sha256": "7152472d2af2c805441c738c72c010e655745210051e260860fb242386cab0ae",
+    "reason_sha256": "2864f6739a5abd25c6464b9c765dd0f5866eb6ef34536dafd86316c4e259fcdb",
+    "review_notes_sha256": "fd219f6398206c198adb42aa58a3962ac839c6c1490fb587bf81a00e3fce9246",
+    "second_pass": "completed"
+   },
+   {
+    "code": "cgi",
+    "number": "1824",
+    "source_id": "LEGIARTI000006313950",
+    "valid_from": "1979-07-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "077abde042a15eaeed0e169c37bb4c334fe720b6073d6897efcd14379bf5b6b4",
+    "proposed_sha256": "227409d9e129ff0afad10be69fc99b59cfb63121f257cbce8bad02ed8bc4dacf",
+    "reason_sha256": "7499fcfa698370703c366a3a5c0d6bd3dd6af7ffafd56b8accf9fc3962e9fd7c",
+    "review_notes_sha256": "f4c406405c992e9f4b631dd90581fda16b90f49f01f62842a4c676bce76a9518",
+    "second_pass": "pending"
+   },
+   {
+    "code": "cgi",
+    "number": "200",
+    "source_id": "LEGIARTI000053543932",
+    "valid_from": "2026-02-21",
+    "valid_until": "2027-01-01",
+    "source_sha256": "eaf9e04d8039e5f746fc0e490462c6209eac100592ff02d42e9a6ae77b97df53",
+    "proposed_sha256": "468f39e7990cfd8d582a6d4ea9c7f182c909bca453f73d1f74a5061a30e46339",
+    "reason_sha256": "7c81e8c6e6020d17010d1bbefd10b6e6a14386559d26614d4d7619d8748bdee9",
+    "review_notes_sha256": "0c19646122c50a10223a93c879665c26fe136c9d699862a66125d28a5df78651",
+    "second_pass": "completed"
+   },
+   {
+    "code": "cgi",
+    "number": "200",
+    "source_id": "LEGIARTI000053154489",
+    "valid_from": "2027-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "669da263bbb17a63e72c4a88cd11a520c25cd9cfc25cbcc2151819cc491588ed",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "cgi",
+    "number": "39",
+    "source_id": "LEGIARTI000053542680",
+    "valid_from": "2026-02-21",
+    "valid_until": "2027-01-01",
+    "source_sha256": "a3504700986f2218daa93697e0fb4891f05a138ce19e3ae58203917343f93072",
+    "proposed_sha256": "3992b3374b426b90f59096a9e3e178a71464e219e0de72e09931585473d250c6",
+    "reason_sha256": "1bce1c21762580d30829303ad9e06b029a5369f22fd14c6f550c2bef41e6a879",
+    "review_notes_sha256": "dee66f001a43212f1e8fb3cd56197f6fdd462de87113a2e576eda44f607d580b",
+    "second_pass": "completed"
+   },
+   {
+    "code": "cgi",
+    "number": "39",
+    "source_id": "LEGIARTI000053154402",
+    "valid_from": "2027-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "9cbe384f06eee3b3c41409d847d58c142ea6dcce76eabcecfc6e275aac3d7ae4",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "L137-26",
+    "source_id": "LEGIARTI000041466952",
+    "valid_from": "2022-01-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "f66958525451e5e5aeb3613866c4771d8c904fa16695844fef1792fcdeff8b3b",
+    "proposed_sha256": "e5315fda15327d3b5d71dd1917679036b9b70b7eb522aaced197ed6f7d510c61",
+    "reason_sha256": "6841b58891c97263f6e5f06dfcc92919cfd54106a90540275a7c7efafe7548a1",
+    "review_notes_sha256": "fd5d1dad575e7ea52a6828864d11ead24a73026eb77437c163e1123b3195adc3",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "L137-26",
+    "source_id": "LEGIARTI000053151613",
+    "valid_from": "2027-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "5e4c7ba0b075884c74de726c8ba47299df214a1d8a44338ceb4cfe0c859ca8cb",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "urba",
+    "number": "L112-16",
+    "source_id": "LEGIARTI000031210287",
+    "valid_from": "2016-01-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "b323b72d1cb59564ce4b17a73cb55dad5dbfffb5c8a4d8f2a52256ba7c48f1d1",
+    "proposed_sha256": "0cc7c8eccb6236aac1e8771377318af0e37db004ea99ad0cef78e413ca59b9ee",
+    "reason_sha256": "8f2ab832318e48737fd42c8d556ed411981a7228ce4445ececbaf348cb89e09a",
+    "review_notes_sha256": "f4831a86fda9d900835c7d07d8cdec870b1256091493c4f29705d81f5f10e631",
+    "second_pass": "completed"
+   },
+   {
+    "code": "urba",
+    "number": "L112-16",
+    "source_id": "LEGIARTI000053151885",
+    "valid_from": "2027-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "049a710be18d89db20a6d194d2863bcfb7c5c426ee244ef24445311ac8fda63b",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   }
+  ],
+  "passages": [
+   "cgi 293 D LEGIARTI000052488147, notes : « la reprise de 293 D par le CIBS prévue par l'ordonnance 2025-1247 (article 9, 27°, et article 49) ; numéro de reprise non fourni »",
+   "cgi 200 LEGIARTI000053154489 (VIGUEUR_DIFF 2027-01-01) : « L. 213-96, à l'article L. 213-98 ou à l'article L. 213-100 du code des impositions sur les biens et services » à la place de « 261 », conservé par la proposition de LEGIARTI000053543932",
+   "policy-coordinations.json : « Suivre les filiations et recodifications actuelles, y compris hors cinq codes »",
+   "runtime/radical-review-20261019.json, outside_corpus_coordination_pending : « Livre des procédures fiscales », « Code des assurances », « Code de la mutualité », « Code monétaire et financier », « Conventions fiscales applicables » (pas le CIBS)"
+  ],
+  "primary_references": [
+   "JORFTEXT000053091516 (ordonnance n° 2025-1247 du 17 décembre 2025 portant recodification de la TVA), identifiant LEGI",
+   "JORFTEXT000054497160 (ordonnance n° 2026-671 du 27 juillet 2026, art. 17 modifiant l'art. 49 de l'ordonnance 2025-1247), identifiant LEGI",
+   "BOFiP BOI 14901-PGP, https://bofip.impots.gouv.fr/bofip/14901-PGP.html, publié le 07/10/2026, consulté le 2026-10-26 : « À compter du 1er janvier 2027, le code des impositions sur les biens et services comprendra » les dispositions législatives TVA (doctrine administrative, source secondaire)",
+   "Légifrance (legifrance.gouv.fr/codes/article_lc/…) : HTTP 403 le 2026-10-26, non contourné"
+  ],
+  "reasoning": "169 entrées CGI de l'inventaire portent un lien LEGI ABROGE vers l'ordonnance 2025-1247 (art. 9, 11 ou 17) : 99 avec une fin au 1er janvier 2027, 70 avec la borne technique 2222-02-22. 70 sont des rewrite_draft. Beaucoup de notes mentionnent le CIBS comme coordination à faire, mais aucun article du CIBS n'est dans le corpus, et le CIBS manque à la liste outside_corpus_coordination_pending. Les successeurs déjà consolidés d'articles voisins remplacent leurs renvois au CGI par des renvois au CIBS : CGI 200 et 39, CSS L137-26, travail L6323-13, CCH L313-4, urbanisme L112-16. Plusieurs propositions conservent les anciens renvois : CGI 200 vise encore « 261 » ; L6323-13 conserve le recouvrement « selon les modalités […] applicables aux taxes sur le chiffre d'affaires ». D'autres anticipent correctement le changement, comme L112-16 urbanisme pour L6360-1 transports.",
+  "consequences": "À compter du 1er janvier 2027, les réformes TVA réécrites dans le CGI, comme la suppression du prorata des plafonds de franchise à 293 D, n'ont plus de support : l'article est abrogé et la règle vit dans le CIBS, qui n'est pas réécrit. Si le projet « rétablit » ces articles du CGI, la TVA aurait deux codifications concurrentes. Des renvois proposés visent des articles CGI abrogés. Pour le taux de 75 % de l'article 200 (soins gratuits aux personnes en difficulté), l'effet est atténué parce que la proposition définit elle-même les soins visés, mais le renvoi au « 1° du 4 de l'article 261 » reste périmé.",
+  "minimal_correction": "Ajouter le livre II du CIBS (partie législative TVA) au corpus, ou au minimum à outside_corpus_coordination_pending, avec la table de concordance de l'ordonnance 2025-1247. Rebaser les 70 réécritures sur les articles CIBS correspondants, ou les convertir en « mesures à porter dans le CIBS » (texte cible et article de destination). Corriger les renvois des successeurs (CGI 200, 39, etc.) dans les propositions.",
+  "other_options": "Adopter la loi du projet avant le 1er janvier 2027, hypothèse irréaliste au 26 octobre 2026. Ou insérer une clause générale de transposition (« les modifications apportées aux articles du CGI abrogés par l'ordonnance 2025-1247 s'appliquent aux articles du CIBS qui les reprennent »), juridiquement fragile car elle n'a pas d'objet défini.",
+  "preserve": "Toutes les mesures TVA favorables du projet (franchise sans prorata, etc.), les taux réduits existants et les exonérations ; les règles TVA des opérations antérieures au 1er janvier 2027.",
+  "uncertainties": "Le contenu des articles CIBS de destination n'a pas été lu (hors corpus). La date du 1er janvier 2027 repose sur LEGI et le BOFiP, non sur le JORF. Les 70 entrées à borne 2222-02-22 peuvent relever d'une date d'effet distincte, non examinée. Écarts d'empreintes (proposition révisée après l'inventaire du 19/10) : cgi 293 D LEGIARTI000052488147: empreintes proposed_sha256, reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané ; cgi 256-0 LEGIARTI000018035891: empreintes review_notes_sha256 de l'inventaire ≠ instantané ; cgi 279 LEGIARTI000053562872: empreintes proposed_sha256, review_notes_sha256 de l'inventaire ≠ instantané ; cgi 200 LEGIARTI000053543932: empreintes proposed_sha256, reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané ; cgi 39 LEGIARTI000053542680: empreintes proposed_sha256, reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané ; css L137-26 LEGIARTI000041466952: empreintes proposed_sha256, reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané ; urba L112-16 LEGIARTI000031210287: empreintes reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/cgi_1824_LEGIARTI000006313950.json",
+   "evidence/cited/20261026T230545Z/cgi_200_LEGIARTI000053154489.json",
+   "evidence/cited/20261026T230545Z/cgi_200_LEGIARTI000053543932.json",
+   "evidence/cited/20261026T230545Z/cgi_256-0_LEGIARTI000018035891.json",
+   "evidence/cited/20261026T230545Z/cgi_279_LEGIARTI000053562872.json",
+   "evidence/cited/20261026T230545Z/cgi_293_D_LEGIARTI000052488147.json",
+   "evidence/cited/20261026T230545Z/cgi_39_LEGIARTI000053154402.json",
+   "evidence/cited/20261026T230545Z/cgi_39_LEGIARTI000053542680.json",
+   "evidence/cited/20261026T230545Z/css_L137-26_LEGIARTI000041466952.json",
+   "evidence/cited/20261026T230545Z/css_L137-26_LEGIARTI000053151613.json",
+   "evidence/cited/20261026T230545Z/urba_L112-16_LEGIARTI000031210287.json",
+   "evidence/cited/20261026T230545Z/urba_L112-16_LEGIARTI000053151885.json"
+  ]
+ },
+ {
+  "id": "RT-INV-07",
+  "priority": "P2",
+  "priority_justification": "Les versions concurrentes de R5221-22 et de 382-0 C bis portent des propositions identiques, sans divergence de fond. R611-2 porte deux maintiens dont l'un décrit un régime abrogé : l'effet est documentaire (double comptage, lecteur ambigu), aucun texte normatif nouveau n'est en jeu.",
+  "nature": "anomalie d'inventaire",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "travail",
+    "number": "R5221-22",
+    "source_id": "LEGIARTI000043320687",
+    "valid_from": "2021-04-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "f4b4264220e9a584861192f3b95b026df73e32acc3275ee0ba029f361226bba9",
+    "proposed_sha256": "931f415ee2b66c1083954c7310e06e3468e1e2f19d80546ce012b8a9e066bb3c",
+    "reason_sha256": "16031b6efe54175c1bac8c65fddb7fcbf063e854cbaf0114ed2570261d935110",
+    "review_notes_sha256": "d8084d34517017b9211523f7789e58f40916ee680f15a6a6104a26e88dbfe2bf",
+    "second_pass": "pending"
+   },
+   {
+    "code": "travail",
+    "number": "R5221-22",
+    "source_id": "LEGIARTI000052536486",
+    "valid_from": "2021-05-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "69cbbd7d6a85fd3b89670adfd912f175df84dc8e359186113a008b293d568463",
+    "proposed_sha256": "931f415ee2b66c1083954c7310e06e3468e1e2f19d80546ce012b8a9e066bb3c",
+    "reason_sha256": "16031b6efe54175c1bac8c65fddb7fcbf063e854cbaf0114ed2570261d935110",
+    "review_notes_sha256": "d8084d34517017b9211523f7789e58f40916ee680f15a6a6104a26e88dbfe2bf",
+    "second_pass": "pending"
+   },
+   {
+    "code": "travail",
+    "number": "R5221-22",
+    "source_id": "LEGIARTI000042947235",
+    "valid_from": "2021-05-01",
+    "valid_until": "2021-04-01",
+    "source_sha256": "16d488e2fde6e7baadef13e00f12cc3b42f274af8e8fbf3db169d7c390db6bb5",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "R611-2",
+    "source_id": "LEGIARTI000036704272",
+    "valid_from": "2018-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "7566186ab64b221a926582955a72d9fe275c7bf6040c35da943321293a0fe3ba",
+    "proposed_sha256": null,
+    "reason_sha256": "e081aa9f766f1046708740186075bc322040f304f6225e22e6b92e4052aede32",
+    "review_notes_sha256": "7b2e615dbb30bd738444223aa98a0ac4056899dd01dd1cae28ffb2c24c55fe75",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "R611-2",
+    "source_id": "LEGIARTI000043292679",
+    "valid_from": "2023-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "42288ac41bc88c49affba7ba493079d966431e5c8c68a2625352edbb924a5b89",
+    "proposed_sha256": null,
+    "reason_sha256": "369b09ef403f99564f35c8eb77bd96206a116bcef768ebe1f9436daeb938dda8",
+    "review_notes_sha256": "e326ba617cfc4ea774fdbbd92299395897b62fd3b92302a0a2bc7c624c744e1c",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "R611-2",
+    "source_id": "LEGIARTI000039278160",
+    "valid_from": "2019-10-26",
+    "valid_until": "2023-01-01",
+    "source_sha256": "99224f21f0e173377d515386c606d1b253e9ea1b326deb1ab6fdeb203d31ac09",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "a3",
+    "number": "382-0 C bis",
+    "source_id": "LEGIARTI000034729420",
+    "valid_from": "2019-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "a89e6558241fd130a9a08e0caba6cab24a6807e8fb8378ccf9d026a6739db46e",
+    "proposed_sha256": "b8df2d501bdb6af426a16b6d3b946bc413ee25039b55f21b153f0db59eb65ca4",
+    "reason_sha256": "1e2e91f2fd5c22fddf117307724a1921d5aef822c0e89374aeea72b1b7a1bf47",
+    "review_notes_sha256": "135830a6be87e184043854c5e2ec8098ee1858b9192adbd2785ed2957462f259",
+    "second_pass": "completed"
+   },
+   {
+    "code": "a3",
+    "number": "382-0 C bis",
+    "source_id": "LEGIARTI000036256024",
+    "valid_from": "2019-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "0ac63d4fb9317fd56f981e66717aa07224dc1e3a624112f01b6e9e49e576c23f",
+    "proposed_sha256": "b8df2d501bdb6af426a16b6d3b946bc413ee25039b55f21b153f0db59eb65ca4",
+    "reason_sha256": "1e2e91f2fd5c22fddf117307724a1921d5aef822c0e89374aeea72b1b7a1bf47",
+    "review_notes_sha256": "56e18c687580487ea870c94c024e77f340f6fe60f196d8e56ef2a7813cea5600",
+    "second_pass": "completed"
+   }
+  ],
+  "passages": [
+   "a3 382-0 C bis LEGIARTI000036256024, lien LEGI : « Décret n°2017-1750 du 22 décembre 2017 - art. 1 » typelien=MODIFIE ; LEGIARTI000034729420 : « Décret n°2017-975 du 10 mai 2017 - art. 1 » typelien=CREE",
+   "a3 382-0 C bis LEGIARTI000034729420, notes : « conflit préexistant signalé, non résolu par une affirmation sur leur authenticité respective »",
+   "css R611-2 LEGIARTI000036704272 (MODIFIE 2018-01-01→2999-01-01), motif : « Maintien des quinze jours d'échanges entre organismes puis du mois laissé à l'indépendant »",
+   "css R611-2 LEGIARTI000043292679 (VIGUEUR depuis 2023-01-01) : « Les organismes lui transmettent dans un délai de six mois tout élément »",
+   "travail R5221-22 : versions LEGIARTI000043320687 (MODIFIE 2021-04-01→2999), LEGIARTI000042947235 (MODIFIE_MORT_NE 2021-05-01), LEGIARTI000052536486 (VIGUEUR 2021-05-01)"
+  ],
+  "primary_references": [
+   "LEGI listes VERSIONS et LIENS des documents ARTICLE (instantané du 18/10/2026)",
+   "JORFTEXT000036252228 (décret 2017-1750), JORFTEXT000034676331 (décret 2017-975), JORFTEXT000043311005 (décret 2021-360), JORFTEXT000042756398 (décret 2020-1734), JORFTEXT000039272452 (décret 2019-1080), JORFTEXT000043269370 (décret 2021-300) — identifiants LEGI",
+   "Légifrance (legifrance.gouv.fr/codes/article_lc/…) : HTTP 403 le 2026-10-26, non contourné"
+  ],
+  "reasoning": "R5221-22 : la version réellement en vigueur est LEGIARTI000052536486. La version LEGIARTI000043320687 (décret 2021-360, 1er avril 2021) a été modifiée le 1er mai 2021 par le décret 2020-1734 ; DILA a d'abord créé une version mort-née (042947235), puis une version consolidée corrigée (052536486). La borne 2999 de la version 043320687 est un défaut de clôture. R611-2 : la version en vigueur est LEGIARTI000043292679 (décret 2021-300, 1er janvier 2023). 036704272 (décret 2018-174) a été remplacée dès le 26 octobre 2019 par 039278160, et son état MODIFIE le confirme. 382-0 C bis : la version créée par le décret 2017-975 a été modifiée avant même son entrée en vigueur par le décret 2017-1750 (même date d'effet, 1er janvier 2019). La version en vigueur est donc LEGIARTI000036256024, qui n'exclut pas la CFE du I. Le « conflit » signalé dans les notes se résout par les liens LEGI. Côté propositions : R5221-22 et 382-0 C bis ont chacune une proposition identique pour les deux versions (même empreinte), sans divergence de fond. Pour 382-0 C bis, la proposition est d'ailleurs conforme au texte réellement en vigueur. R611-2 a deux retained_unchanged sans corps, mais leurs motifs décrivent deux régimes incompatibles : 15 jours et 1 mois d'un côté, 6 mois et opposition d'un mois de l'autre.",
+  "consequences": "Double comptage dans la couverture : 3 entrées fantômes, dont 2 comptées comme relues pour 382-0 C bis. Le lecteur adresse les articles par numéro et risque d'afficher deux textes pour R611-2, dont l'un est « maintenu » alors qu'il est abrogé depuis 2019.",
+  "minimal_correction": "Retirer de l'inventaire courant LEGIARTI000043320687, LEGIARTI000036704272 et LEGIARTI000034729420 (versions historiques) et conserver une seule proposition par numéro. Corriger les notes de 382-0 C bis : la version en vigueur est 036256024, issue du décret 2017-1750.",
+  "other_options": "Garder les fantômes avec un statut « version historique à borne non close (défaut DILA) », sans proposition.",
+  "preserve": "Proposition 382-0 C bis (ouverture des prélèvements après le 30 juin, dispense d'acompte CFE, report de janvier) ; dispense de situation de l'emploi pour les jeunes confiés à l'ASE (R5221-22) ; délais protecteurs de R611-2 en vigueur.",
+  "uncertainties": "Le JORF des décrets 2017-1750, 2020-1734 et 2021-360 n'a pas été relu (Légifrance 403). Voir RT-INV-08 pour la rédaction de R5221-22. Écarts d'empreintes (proposition révisée après l'inventaire du 19/10) : a3 382-0 C bis LEGIARTI000034729420: empreintes review_notes_sha256 de l'inventaire ≠ instantané ; a3 382-0 C bis LEGIARTI000036256024: empreintes review_notes_sha256 de l'inventaire ≠ instantané.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/a3_382-0_C_bis_LEGIARTI000034729420.json",
+   "evidence/cited/20261026T230545Z/a3_382-0_C_bis_LEGIARTI000036256024.json",
+   "evidence/cited/20261026T230545Z/css_R611-2_LEGIARTI000036704272.json",
+   "evidence/cited/20261026T230545Z/css_R611-2_LEGIARTI000039278160.json",
+   "evidence/cited/20261026T230545Z/css_R611-2_LEGIARTI000043292679.json",
+   "evidence/cited/20261026T230545Z/travail_R5221-22_LEGIARTI000042947235.json",
+   "evidence/cited/20261026T230545Z/travail_R5221-22_LEGIARTI000043320687.json",
+   "evidence/cited/20261026T230545Z/travail_R5221-22_LEGIARTI000052536486.json"
+  ]
+ },
+ {
+  "id": "RT-INV-08",
+  "priority": "P2",
+  "priority_justification": "Possible erreur de consolidation DILA reprise par le projet. La portée de l'exonération est un peu ambiguë, sans perte de droit démontrée.",
+  "nature": "conflit de source",
+  "status": "à confirmer",
+  "articles": [
+   {
+    "code": "travail",
+    "number": "R5221-22",
+    "source_id": "LEGIARTI000052536486",
+    "valid_from": "2021-05-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "69cbbd7d6a85fd3b89670adfd912f175df84dc8e359186113a008b293d568463",
+    "proposed_sha256": "931f415ee2b66c1083954c7310e06e3468e1e2f19d80546ce012b8a9e066bb3c",
+    "reason_sha256": "16031b6efe54175c1bac8c65fddb7fcbf063e854cbaf0114ed2570261d935110",
+    "review_notes_sha256": "d8084d34517017b9211523f7789e58f40916ee680f15a6a6104a26e88dbfe2bf",
+    "second_pass": "pending"
+   },
+   {
+    "code": "travail",
+    "number": "R5221-22",
+    "source_id": "LEGIARTI000043320687",
+    "valid_from": "2021-04-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "f4b4264220e9a584861192f3b95b026df73e32acc3275ee0ba029f361226bba9",
+    "proposed_sha256": "931f415ee2b66c1083954c7310e06e3468e1e2f19d80546ce012b8a9e066bb3c",
+    "reason_sha256": "16031b6efe54175c1bac8c65fddb7fcbf063e854cbaf0114ed2570261d935110",
+    "review_notes_sha256": "d8084d34517017b9211523f7789e58f40916ee680f15a6a6104a26e88dbfe2bf",
+    "second_pass": "pending"
+   },
+   {
+    "code": "travail",
+    "number": "R5221-20",
+    "source_id": "LEGIARTI000049999760",
+    "valid_from": "2024-09-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "b218d2501fe63160ee6b8889e34ee7e345456081fbf954758dbba18207a40304",
+    "proposed_sha256": "46762bfb69f8732ef3a22d78bf2d7bc23e41cf340203fa019a1e64668fae5d7b",
+    "reason_sha256": "7885356f1e930334608707037e3b26de2ed7f293c8bb1790c26e4e1752a8320a",
+    "review_notes_sha256": "a0ffa3b9271af9e956cf2981eec24aa242a7e4ebc096f9ccd4c3fc3e772a9fb5",
+    "second_pass": "pending"
+   }
+  ],
+  "passages": [
+   "travail R5221-22 LEGIARTI000043320687 (décret 2021-360) : « La condition prévue au 1° de l'article R. 5221-20 du présent code ne peut être opposée »",
+   "travail R5221-22 LEGIARTI000052536486 et proposition : « La situation de l'emploi ne peut être opposée »",
+   "travail R5221-20 LEGIARTI000049999760 : « 1° S'agissant de l'emploi proposé : a) Soit cet emploi relève de la liste des métiers en tension […] b) Soit l'offre pour cet emploi a été préalablement publiée »"
+  ],
+  "primary_references": [
+   "LEGI LEGIARTI000052536486, LEGIARTI000043320687, LEGIARTI000049999760",
+   "JORFTEXT000043311005 (décret 2021-360, art. 3), JORFTEXT000042756398 (décret 2020-1734, art. 14) — non relus (Légifrance (legifrance.gouv.fr/codes/article_lc/…) : HTTP 403 le 2026-10-26, non contourné)"
+  ],
+  "reasoning": "Le décret 2021-360 (signé en mars 2021, en vigueur le 1er avril 2021) a remplacé la notion de « situation de l'emploi » par un renvoi au 1° de R5221-20. Le décret 2020-1734 (signé en décembre 2020, en vigueur le 1er mai 2021) ne visait qu'à substituer L435-3 CESEDA aux anciens L313-15 et L313-10. La version consolidée de DILA, reprise par la proposition, réintroduit la « situation de l'emploi ». Dans le code en vigueur, R5221-22 est le seul article réglementaire de la série R52 à employer encore cette notion, que R5221-20 ne définit plus (métiers en tension ou offre publiée).",
+  "consequences": "Le jeune confié à l'ASE pourrait se voir opposer l'une des branches du 1° de R5221-20 si l'on juge que la « situation de l'emploi » ne couvre que l'ancienne notion. L'effet est limité et incertain.",
+  "minimal_correction": "Dans la proposition de R5221-22, deuxième alinéa : « La condition prévue au 1° de l'article R. 5221-20 ne peut être opposée lorsque l'autorisation de travail est demandée par un étranger confié à l'aide sociale à l'enfance entre l'âge de seize ans et l'âge de dix-huit ans, dès lors qu'il satisfait les conditions fixées à l'article L. 435-3 du code de l'entrée et du séjour des étrangers et du droit d'asile pour obtenir une carte de séjour temporaire portant la mention “salarié” ou “travailleur temporaire”. »",
+  "other_options": "Vérifier au JORF le texte exact de l'article 14 du décret 2020-1734 et de l'article 3 du décret 2021-360 avant de trancher.",
+  "preserve": "Dispense au profit des jeunes de 16 à 18 ans confiés à l'ASE ; autorisation de droit pour l'apprentissage et la professionnalisation, étendue au contrat unique.",
+  "uncertainties": "Sans le JORF, on ne peut pas exclure que le décret 2020-1734 ait remplacé tout l'alinéa ; dans ce cas, le texte DILA serait exact et la correction proposée deviendrait une précision favorable de fond.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/travail_R5221-20_LEGIARTI000049999760.json",
+   "evidence/cited/20261026T230545Z/travail_R5221-22_LEGIARTI000043320687.json",
+   "evidence/cited/20261026T230545Z/travail_R5221-22_LEGIARTI000052536486.json"
+  ]
+ },
+ {
+  "id": "RT-INV-09",
+  "priority": "P2",
+  "priority_justification": "Faux positif de doublon : les annexes sont distinctes. Reste une ambiguïté d'adressage par numéro, à effet documentaire.",
+  "nature": "faux positif",
+  "status": "faux positif",
+  "articles": [
+   {
+    "code": "travail",
+    "number": "Annexe",
+    "source_id": "LEGIARTI000036483371",
+    "valid_from": "2018-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "e206d7f325655ea9fb3a2b8ee0750bd83bcd81a7304873c7778d61f458b38286",
+    "proposed_sha256": "7005f8b978279512b44e889503ed73a4bb6c6210fcd535f3a0b1d8b81b206529",
+    "reason_sha256": "dc1fad52de994837af53aeacef1f733f58b32e12841a130ade169e853095ccb7",
+    "review_notes_sha256": "b6e57f15504dcb7b2fa37e86a4808b27c921e5a80bbd6cb5f854a6837569148e",
+    "second_pass": "pending"
+   },
+   {
+    "code": "travail",
+    "number": "Annexe",
+    "source_id": "LEGIARTI000038591641",
+    "valid_from": "2021-01-01",
+    "valid_until": "2026-11-01",
+    "source_sha256": "91f46621be6b8a96c137bc62ec3ce657d65f2b03e72e67ed850a416ae72a66a6",
+    "proposed_sha256": "9fc5251c6d7dfb064b71efa160c1be281805f66d9df80ab3f1fb4ad6c0bd1090",
+    "reason_sha256": "0a45358a9eb593e63e00b5fef83431724466597e9397c7a1a0cbc41ba5d2b42a",
+    "review_notes_sha256": "9f7420f76de92d38caf20b54e2ec5a39f00efa29d9ee358343195f3904109451",
+    "second_pass": "pending"
+   },
+   {
+    "code": "travail",
+    "number": "Annexe I",
+    "source_id": "LEGIARTI000040477365",
+    "valid_from": "2020-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "9e0a6efe1a64ab193d8c08945976aa1110b6ba7c49e0e3eefc90c838a0e19252",
+    "proposed_sha256": "871742dafb06ed6263ffdb8c6c70f856f2cd5c69136831b9163cf19e7e2bdca4",
+    "reason_sha256": "0272df48871e46db1324d2ab0cc34058801632f6250d2db798c5671ee44453f3",
+    "review_notes_sha256": "14af924feec8bf8fcc645c9fe85bbd7171a594b736abbdae2c3dbc86ec1fe2ac",
+    "second_pass": "pending"
+   },
+   {
+    "code": "travail",
+    "number": "Annexe I",
+    "source_id": "LEGIARTI000038137262",
+    "valid_from": "2019-01-01",
+    "valid_until": "2029-03-01",
+    "source_sha256": "414d4934a13e8564daed2d4d496626580635ff4a31cbb5fd18f9ddd878c37dbc",
+    "proposed_sha256": "774021e7fa6a7b73a36ff0a38c0273be957a1e9b7e4c75f4d9cb5903d0af0a88",
+    "reason_sha256": "a32c0a22bbda617290471c9338ce3a71a2d5cc040a33acbfe4e3470ec7b31fee",
+    "review_notes_sha256": "d5daa11a1b156f21e6ebb775b6cd03237f4aaf36cd1a19c964abe87c81dce888",
+    "second_pass": "completed"
+   },
+   {
+    "code": "travail",
+    "number": "Annexe I",
+    "source_id": "LEGIARTI000047548258",
+    "valid_from": "2029-03-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "96d193842fdbba0dcf18210f90c8df9f7f5dd2f02d2e892fe96eef722a250efd",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "travail",
+    "number": "Annexe II",
+    "source_id": "LEGIARTI000023018851",
+    "valid_from": "2010-07-05",
+    "valid_until": "2999-01-01",
+    "source_sha256": "0dc96aed3f44f2d1c398ca0061fb0f88e3f44c99db5e8974aa61dd4fd43dff27",
+    "proposed_sha256": "8770def1bce8bb6134dc9a51cda53b44f33b96e25f4a85e84632fd906236a35d",
+    "reason_sha256": "14862ea4c12814d35835d14a9d746202d519b190353db2e3cce99af45bfde977",
+    "review_notes_sha256": "aea5b4472bda6413a3336883892aaf7dd4c2f656c7b9dadf4837339059c6ac08",
+    "second_pass": "pending"
+   },
+   {
+    "code": "travail",
+    "number": "Annexe II",
+    "source_id": "LEGIARTI000038137266",
+    "valid_from": "2019-01-01",
+    "valid_until": "2029-03-01",
+    "source_sha256": "4c5ba9200f8bebc4fe1a90a8c31e98b1cd894db8aa88a89bef4fedd88421d59f",
+    "proposed_sha256": "563cde829342d737b096a547d2004af42a97f2d338638f74038bf26b9d7ad7e7",
+    "reason_sha256": "e68533642cce3e990f6ac7923666e222e25f32073c9b5fdf2a5bc5dd22abc69a",
+    "review_notes_sha256": "21f5638d92d4892eb8c06ff8b2431c162fca3d2ddaaffbda1176a318d9ca2d97",
+    "second_pass": "completed"
+   },
+   {
+    "code": "travail",
+    "number": "Annexe II",
+    "source_id": "LEGIARTI000047548249",
+    "valid_from": "2029-03-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "36642dd88229f8d9dbacdcbae3c7d7948983cd076bc6bfbed8a5c2ab7f85c062",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   }
+  ],
+  "passages": [
+   "travail Annexe LEGIARTI000036483371 : « DÉFINISSANT LES MODÈLES DE CONVENTION DE FORMATION PROFESSIONNELLE CONTINUE PRÉVUS PAR LES ARTICLES D. 6122-4 ET D. 6122-5 »",
+   "travail Annexe LEGIARTI000038591641 : « ANNEXE AU CHAPITRE VI DU TITRE PREMIER DU LIVRE III DE LA SIXIÈME PARTIE » (référentiel qualité)",
+   "travail Annexe I/II LEGIARTI000040477365 / LEGIARTI000023018851 : rayonnements optiques artificiels (décrets 2010-750, 2019-1547) ; LEGIARTI000038137262 / LEGIARTI000038137266 : index de l'égalité professionnelle (décret 2019-15)",
+   "travail Annexe I LEGIARTI000047548258 : lien « Décret n°2023-370 du 15 mai 2023 - art. 1 » typelien=DEPLACE"
+  ],
+  "primary_references": [
+   "LEGI contextes (TITRE_TM) et liens des documents ARTICLE cités",
+   "JORFTEXT000047546170 (décret 2023-370), JORFTEXT000037964765 (décret 2019-15)"
+  ],
+  "reasoning": "Le rapport concurrent-in-force rapproche les annexes par numéro. Leurs contextes de section et leurs textes montrent quatre annexes différentes sous deux libellés : modèles de convention D6122 et référentiel Qualiopi ; rayonnements optiques et index égalité. Les versions 2029 de l'index (décret 2023-370, DEPLACE) ont un texte identique mot pour mot aux versions actuelles (0 ligne de différence) : c'est un simple déplacement dans la nouvelle section 1, sans conflit. Les propositions se rattachent chacune à la bonne annexe.",
+  "consequences": "Aucune contradiction. Le lecteur (URL ?article=<numéro>) et toute clé par numéro confondent pourtant ces annexes, et les propositions de l'index devront être rattachées aux nouveaux identifiants en 2029.",
+  "minimal_correction": "Identifier les annexes par libellé complet ou par identifiant de section dans le lecteur et l'inventaire, par exemple « Annexe (D6122-4 et D6122-5) » et « Annexe au chapitre VI (référentiel qualité) ». Prévoir le report des propositions de l'index sur LEGIARTI000047548258 et 047548249 au 1er mars 2029.",
+  "other_options": "Aucune.",
+  "preserve": "Propositions existantes sur chaque annexe ; conservation intégrale des tableaux de l'index et des valeurs limites d'exposition.",
+  "uncertainties": "Le lecteur public n'a pas été consulté. Écarts d'empreintes (proposition révisée après l'inventaire du 19/10) : travail Annexe I LEGIARTI000038137262: empreintes proposed_sha256, reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané ; travail Annexe II LEGIARTI000038137266: empreintes proposed_sha256, reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/travail_Annexe_II_LEGIARTI000023018851.json",
+   "evidence/cited/20261026T230545Z/travail_Annexe_II_LEGIARTI000038137266.json",
+   "evidence/cited/20261026T230545Z/travail_Annexe_II_LEGIARTI000047548249.json",
+   "evidence/cited/20261026T230545Z/travail_Annexe_I_LEGIARTI000038137262.json",
+   "evidence/cited/20261026T230545Z/travail_Annexe_I_LEGIARTI000040477365.json",
+   "evidence/cited/20261026T230545Z/travail_Annexe_I_LEGIARTI000047548258.json",
+   "evidence/cited/20261026T230545Z/travail_Annexe_LEGIARTI000036483371.json",
+   "evidence/cited/20261026T230545Z/travail_Annexe_LEGIARTI000038591641.json"
+  ]
+ },
+ {
+  "id": "RT-INV-10",
+  "priority": "P2",
+  "priority_justification": "Article abrogé maintenu sans corps dans l'inventaire courant. Aucun texte normatif proposé, le motif précise que le maintien « ne vaut ni rétablissement » : effet documentaire seulement.",
+  "nature": "anomalie d'inventaire",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "cgi",
+    "number": "302 J",
+    "source_id": "LEGIARTI000021664265",
+    "valid_from": "2010-04-01",
+    "valid_until": "2222-02-22",
+    "source_sha256": "91084010af0f9909358acb7d0690ea267eb9fe2712c950256ed8c2c713687e2e",
+    "proposed_sha256": null,
+    "reason_sha256": "962ca1a385e111f79dfc29255a0b365e4fd9836ce8b541982507ea18ecfe5b52",
+    "review_notes_sha256": "5cc2d66c8e18ab6ee4e65ad1f526732aad37e333e96eb7eb344a5541bdf5f146",
+    "second_pass": "pending"
+   }
+  ],
+  "passages": [
+   "cgi 302 J LEGIARTI000021664265 : <ETAT>ABROGE</ETAT>, DATE_FIN 2222-02-22, lien « Ordonnance n°2021-1843 du 22 décembre 2021 - art. 10 » typelien=ABROGE",
+   "motif : « La source est toutefois déjà marquée ABROGE ; la conserver dans le corpus ne vaut ni rétablissement de cet article ni création d'une exonération nouvelle. »"
+  ],
+  "primary_references": [
+   "LEGI LEGIARTI000021664265 (archive LEGI_20260729)",
+   "JORFTEXT000044590225 (ordonnance 2021-1843, art. 10) — non relu (Légifrance (legifrance.gouv.fr/codes/article_lc/…) : HTTP 403 le 2026-10-26, non contourné)"
+  ],
+  "reasoning": "L'état ABROGE, issu de la mise à jour LEGI du 29 juillet 2026, contredit la borne 2222-02-22, qui marque d'ordinaire une date d'effet non encore fixée. Au 18 octobre 2026, l'article est présenté comme abrogé par l'ordonnance CIBS 2021-1843. L'inventaire le compte parmi les articles courants parce que sa borne de fin est postérieure à la date de référence. La proposition est un maintien sans corps, et son motif écarte expressément tout rétablissement.",
+  "consequences": "Couverture surévaluée d'une unité. Le lecteur affiche comme « maintenu » un article abrogé. L'annexe II, article 289, 4°, renvoie encore à 302 J (signalé dans les notes).",
+  "minimal_correction": "Classer 302 J en « abrogé (date d'effet LEGI incohérente, borne 2222-02-22) », hors couverture courante, et suivre la coordination de l'annexe II 289 avec le CIBS.",
+  "other_options": "Aucune.",
+  "preserve": "Dispense de caution des personnes publiques si elle a été reprise dans le CIBS (à vérifier).",
+  "uncertainties": "La date d'effet exacte de l'abrogation n'est pas établie ; le CIBS n'est pas dans le corpus.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/cgi_302_J_LEGIARTI000021664265.json"
+  ]
+ },
+ {
+  "id": "RT-INV-11",
+  "priority": "P2",
+  "priority_justification": "Texte en vigueur au 18 octobre 2026, maintenu sans changement. La modification différée connue au 1er juillet 2027 n'est pas contredite, puisqu'aucun corps n'est proposé : simple alerte de suivi.",
+  "nature": "simple alerte",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "travail",
+    "number": "R4451-39",
+    "source_id": "LEGIARTI000037024754",
+    "valid_from": "2018-07-01",
+    "valid_until": "2027-07-01",
+    "source_sha256": "08e7422c2428f15311f1e54bbedd4a4666f128ede6e2cf6fa0a1fbc1125a2b70",
+    "proposed_sha256": null,
+    "reason_sha256": "25304e20906b24b5cb2ef2b69634a1a008a531bac3183aec9603a5a85c6db8e3",
+    "review_notes_sha256": "8f9bf5c51c5a44633c2efb4e48db19b1b1d3ad6767e53f817a3b8a20e3a63487",
+    "second_pass": "pending"
+   },
+   {
+    "code": "travail",
+    "number": "R4451-39",
+    "source_id": "LEGIARTI000047715485",
+    "valid_from": "2027-07-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "e3ed9be2694dd6ca3db433581a815a69bc5f6680d93535d986728b77e8a75194",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   }
+  ],
+  "passages": [
+   "travail R4451-39 LEGIARTI000047715485 (VIGUEUR_DIFF 2027-07-01) : « 3° Les modalités et conditions de présence du conseiller en radioprotection […] 4° Les modalités de suivi des salariés intérimaires »",
+   "notes de LEGIARTI000037024754 : « coordonner le texte successeur avec celui de R4451-38 sans prolonger implicitement les versions anciennes »"
+  ],
+  "primary_references": [
+   "LEGI LEGIARTI000037024754, LEGIARTI000047715485",
+   "JORFTEXT000047709593 (décret 2023-489) ; décret 2025-1347 cité par la NOTA"
+  ],
+  "reasoning": "L'état MODIFIE avec une borne au 1er juillet 2027 est la représentation LEGI ordinaire d'une version en vigueur dont le remplacement est déjà programmé. Le texte est donc bien en vigueur au 18 octobre 2026. La proposition, sans corps, ne réécrit rien, et les notes signalent le successeur.",
+  "consequences": "Aucune contradiction. Le successeur n'a pas de proposition : le lecteur affichera au-delà du 1er juillet 2027 un texte que la réglementation aura remplacé.",
+  "minimal_correction": "Faire entrer LEGIARTI000047715485 dans l'inventaire (voir RT-INV-05) et lui donner une décision, par exemple un maintien. Coordonner avec R4451-38.",
+  "other_options": "Aucune.",
+  "preserve": "Les nouvelles rubriques 3° (conseiller en radioprotection) et 4° (intérimaires).",
+  "uncertainties": "R4451-38 et ses versions futures n'ont pas été relues.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/travail_R4451-39_LEGIARTI000037024754.json",
+   "evidence/cited/20261026T230545Z/travail_R4451-39_LEGIARTI000047715485.json"
+  ]
+ },
+ {
+  "id": "RT-INV-12",
+  "priority": "P2",
+  "priority_justification": "L'état vide est une lacune des métadonnées LEGI. Les textes sont en vigueur et les propositions ne réécrivent aucun texte mort : le soupçon est écarté.",
+  "nature": "faux positif",
+  "status": "faux positif",
+  "articles": [
+   {
+    "code": "css",
+    "number": "L381-32",
+    "source_id": "LEGIARTI000047452607",
+    "valid_from": "2023-09-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "c4015be3430cea0826eec5cd09dea47851926710bc66802c1a6d2a72d687b590",
+    "proposed_sha256": null,
+    "reason_sha256": "17ab616ead0d5bae196c8713b7b593553bf785565151f86bef3cea09ad395575",
+    "review_notes_sha256": "0279884203be7b90af79411b964691d3a36374085d1ac7eb25483b209add8e25",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "R381-5",
+    "source_id": "LEGIARTI000047961931",
+    "valid_from": "2023-09-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "6064e4044bc68d0eb849303a81654cd20620a5327530cc278db79f44614a40b2",
+    "proposed_sha256": "13e9bc48057d465c9f15f05a137535b64d4678012661b969e61a626edc733903",
+    "reason_sha256": "270c334ba329699c4eee20531d5ace42f2ca0b7825238079e94079ae6fa180e0",
+    "review_notes_sha256": "94e2523e35d59ef7de9aaa3669db2ad3685df4da77b6f8423b537b4b31f51485",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "R381-6",
+    "source_id": "LEGIARTI000047961920",
+    "valid_from": "2023-09-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "9124c07153f808a49b95517fd76a8a9f04e064c0c74ce427905596578d0dbf71",
+    "proposed_sha256": null,
+    "reason_sha256": "d1b210368702099f6f37c2c3f0eeaa667c4f8062a7f09bf353a3b89338d7034b",
+    "review_notes_sha256": "81ed2599189f564f3c4a1ce863e9716e722dc34487d116c9be50af5971fe79d2",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "R381-7",
+    "source_id": "LEGIARTI000047961910",
+    "valid_from": "2023-09-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "e60abb09be63a1683366c9fc079dfd313a5d8e8194d83ec83c4f60ef53af28c2",
+    "proposed_sha256": null,
+    "reason_sha256": "71fda166d93cd4a0075f03bfb0d076f865b447adc6ac3ec2d65d4b58ff2c0eb9",
+    "review_notes_sha256": "9d69a3aab0802673b2a5ef1a4ac9e74863dab7f263110ade050322438d7e1377",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "R381-8",
+    "source_id": "LEGIARTI000047961900",
+    "valid_from": "2023-09-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "0bd80562394b6e9b47b63df96676bc2172f65f6e7486552178dc9d60d507cea2",
+    "proposed_sha256": null,
+    "reason_sha256": "73416b83e993e5b37215005aff277b26d0432c0cb8eaa2f9bea1326cf0210678",
+    "review_notes_sha256": "7074bee43fcd01df66c4ffe6d7f2f054da46ee0a285f09fa3616af186b4f209f",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "R381-9",
+    "source_id": "LEGIARTI000047961889",
+    "valid_from": "2023-09-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "25a6f1458452e1860596f9280f987dcb4515c00ba4576488dc04566f10c433c5",
+    "proposed_sha256": "db8b7e4013845c6b42ab74cd46644ae21fca5628cdf425f2551277d05ea985c3",
+    "reason_sha256": "4d8abd0f389b966cc1b7af0c0d467c161608423e55617fdcbfdd5eb1d275fe4d",
+    "review_notes_sha256": "fef39db0aa6d8b885a36923804b9f8249cbfc76dfc241b631c18281236db1aec",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "D381-4",
+    "source_id": "LEGIARTI000047961286",
+    "valid_from": "2023-09-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "ddff31bc53230c006b156ae5509082e23b13653bce4e85be88c9d08f9dd72188",
+    "proposed_sha256": "00522ef2be3594bec57d5937f67422b3754e4c69f8cb269382431de20d6236fa",
+    "reason_sha256": "01aa1b189bd1ed7015dea6f6e16332482d1bac34ccbde24f8987729d08b2e6c5",
+    "review_notes_sha256": "60b9af032ff520d1ee142359b4bfcdc322a6e66f8472b9b5f2a4ad4e0f373908",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "D381-5",
+    "source_id": "LEGIARTI000047961281",
+    "valid_from": "2023-09-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "5e5986ba7d5501d6285d99dae65f2d6a8d7bc971fd9bae4e048a677edeb6d60e",
+    "proposed_sha256": null,
+    "reason_sha256": "d942f11d3f95c77c129bf45a8809c3837d18fca570e9520a0db17224bf68fbb1",
+    "review_notes_sha256": "50cde48bcee4d21630b7cb854b7af8f8845c1ce727c0f632bb8987a2bbb170f6",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "D643-14",
+    "source_id": "LEGIARTI000047634694",
+    "valid_from": "2023-09-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "728bcf0196c75713f910e342f8624322f8c1cd56763520ed4d9754320f44d03c",
+    "proposed_sha256": null,
+    "reason_sha256": "dd3b0fdefc7a9a6e737a50fbc192cc376c03256cca092b7c7129f1ee0ac66fe6",
+    "review_notes_sha256": "65b32da212f938c0981bf578dec39f88972d87b7d7787a9a024e5a0e1aa2b83b",
+    "second_pass": "pending"
+   }
+  ],
+  "passages": [
+   "css L381-32 LEGIARTI000047452607 : <ETAT/> ; lien « LOI n°2023-270 du 14 avril 2023 - art. 1 (V) » ; NOTA : « s'appliquent aux membres du Conseil économique, social et environnemental entrant en fonction à compter du 1er septembre 2023 »",
+   "css R381-5 à R381-9 : lien « Décret n°2023-752 du 10 août 2023 - art. 3 » ; D381-4, D381-5 : « Décret n°2023-754 du 10 août 2023 - art. 2 » ; D643-14 : « Décret n°2023-436 du 3 juin 2023 - art. 6 »"
+  ],
+  "primary_references": [
+   "LEGI (stock Freemium du 13/07/2025, sans mise à jour ultérieure de ces articles)",
+   "JORFTEXT000047445077 (loi 2023-270), JORFTEXT000047956328 (décret 2023-752), JORFTEXT000047956498 (décret 2023-754), JORFTEXT000047625782 (décret 2023-436)",
+   "Légifrance (legifrance.gouv.fr/codes/article_lc/…) : HTTP 403 le 2026-10-26, non contourné"
+  ],
+  "reasoning": "Ces neuf numéros ont été recyclés : leurs anciennes versions avaient été abrogées entre 2006 et 2020, et de nouveaux articles ont été créés par la réforme des retraites de 2023, avec effet au 1er septembre 2023. Le stock LEGI laisse leur balise ETAT vide. Aucun lien ABROGE ni aucune version postérieure n'existe, et la borne de fin est 2999 : ils sont en vigueur au 18 octobre 2026, sous réserve d'une vérification sur Légifrance. Les six maintiens et les trois réécritures (R381-5 affiliation d'office, R381-9 pièces justificatives, D381-4 preuve par tout moyen) portent bien sur ces textes de 2023.",
+  "consequences": "Aucune. Sans normalisation de l'état, un filtre par état les écarterait à tort.",
+  "minimal_correction": "Normaliser l'état à « VIGUEUR (état LEGI vide) » dans l'inventaire.",
+  "other_options": "Aucune.",
+  "preserve": "Affiliations vieillesse des aidants et des membres du CESE ; assiettes forfaitaires ; seuil de 80 %.",
+  "uncertainties": "Légifrance non consultable (403) : l'état en vigueur n'a pas été confirmé par la base officielle en ligne. Écarts d'empreintes (proposition révisée après l'inventaire du 19/10) : css L381-32 LEGIARTI000047452607: empreintes review_notes_sha256 de l'inventaire ≠ instantané.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/css_D381-4_LEGIARTI000047961286.json",
+   "evidence/cited/20261026T230545Z/css_D381-5_LEGIARTI000047961281.json",
+   "evidence/cited/20261026T230545Z/css_D643-14_LEGIARTI000047634694.json",
+   "evidence/cited/20261026T230545Z/css_L381-32_LEGIARTI000047452607.json",
+   "evidence/cited/20261026T230545Z/css_R381-5_LEGIARTI000047961931.json",
+   "evidence/cited/20261026T230545Z/css_R381-6_LEGIARTI000047961920.json",
+   "evidence/cited/20261026T230545Z/css_R381-7_LEGIARTI000047961910.json",
+   "evidence/cited/20261026T230545Z/css_R381-8_LEGIARTI000047961900.json",
+   "evidence/cited/20261026T230545Z/css_R381-9_LEGIARTI000047961889.json"
+  ]
+ },
+ {
+  "id": "RT-INV-13",
+  "priority": "P2",
+  "priority_justification": "Trois propositions publiées n'ont pas de lot propriétaire ni de métadonnées d'impact. Leur portée normative est faible (reformulations), mais leur traçabilité est rompue.",
+  "nature": "réserve documentaire",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "cch",
+    "number": "D304-1",
+    "source_id": "LEGIARTI000038970859",
+    "valid_from": "2019-09-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "e78ac6aaca326e1f8949a354c9348a7dbb4cb181a3a3e3ea9bb3b9d9b1315ccd",
+    "proposed_sha256": "6461be85871eb740b89fb80b12929bc920875488f0d96912d8b734f20c136d7e",
+    "reason_sha256": "fece00e2e7abf319f4dc6f6a8877ac8d8d9e13dffd7fe498af068703e5ecf439",
+    "review_notes_sha256": "8feff3296901254c95bc24452b9a6887e3c9a096d31e68bcfcab208a11dcdd22",
+    "second_pass": "pending"
+   },
+   {
+    "code": "cch",
+    "number": "D319-6",
+    "source_id": "LEGIARTI000049356983",
+    "valid_from": "2024-04-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "a02e33ffdb55f659b1bd6b288e5b5eb18f9102eb60929907f13e3a750cdf89ec",
+    "proposed_sha256": "477b667b95964fcc7e272ebc31720c25dbb7fc6d05231629b1803041917e9422",
+    "reason_sha256": "2088703be1fbf17ab30c245de1397314455b9c604c82df0a02b6afee015e4012",
+    "review_notes_sha256": "ef4a1c8cac468400d01674bbc37429eb11e37b483f75d92a575eedac2dac0821",
+    "second_pass": "pending"
+   },
+   {
+    "code": "cch",
+    "number": "D319-7",
+    "source_id": "LEGIARTI000049356981",
+    "valid_from": "2024-04-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "a458b8cc42a009205c7556bc5d0ed7766b8e611ece4e8776f79fe2528383c01c",
+    "proposed_sha256": "7ff9a1fbec9770430d9268a377c8989b45486ea64029ac2d920c31f4dd60163a",
+    "reason_sha256": "004b7a1720d6cfc276b679d82ee886ef46f81e8bc99813ff55e790950037e823",
+    "review_notes_sha256": "6039a6f3ac67e11b0e2e1670e26a83f9cc31ed23809d623fc6993ea1da2f98b2",
+    "second_pass": "pending"
+   }
+  ],
+  "passages": [
+   "cch D319-7 LEGIARTI000049356981, motif : « Réécriture intégrale en formulation active » ; notes : « Vérifier l'identité de portée entre l'appréciation prévue par la source et le terme « évalue » »",
+   "cch D304-1 LEGIARTI000038970859, motif : « Réécriture intégrale avec maintien de l'autorité compétente, de la fréquence minimale de révision et des relations entre les zones. »",
+   "inventaire : owner=null, batch_row_sha256=null, state « independent_second_pass_required », review_status « pending » (pour les trois)",
+   "instruction (inventaire) : « Supprimer, fusionner et alléger en priorité ; reformuler uniquement lorsque cela sert ces objectifs. »"
+  ],
+  "primary_references": [
+   "LEGI LEGIARTI000038970859, LEGIARTI000049356983, LEGIARTI000049356981 ; NOTA décret n° 2024-299 du 29 mars 2024"
+  ],
+  "reasoning": "Les trois propositions existent dans la table drafts, avec un motif et des notes, et leur empreinte de source correspond à l'article en vigueur. Aucun lot de batches/ ne les possède, aucune ligne de registre ne les lie, et elles n'ont ni substantive_impact ni reference_checks. Ce sont des reformulations stylistiques de première passe, contraires à l'instruction du 19 octobre. Pour D319-7, le passage de « apprécie » à « évalue » soulève, selon ses propres notes, une question de portée. Les sources de draft_sources de D319-6 et D319-7 ajoutent la NOTA en commentaire ; l'écart relevé par le coordinateur est bénin.",
+  "consequences": "Ces propositions sont visibles et comptées (30 318 lignes) mais échappent aux gardes du registre (pas de batch_row_sha256 ni de propriétaire). Une reprise automatique ne saurait ni les actualiser ni les protéger. On ne peut pas retracer qui les a produites ni contre quelle politique.",
+  "minimal_correction": "Rattacher les trois entrées à un lot CCH, par exemple celui de D319-5 et D319-8, et les soumettre à la seconde passe. En attendant, afficher « proposition non revue, sans lot » ou les requalifier en retained_unchanged.",
+  "other_options": "Supprimer ces trois propositions et reprendre le texte source.",
+  "preserve": "Contenu des articles (zonage A bis à C ; versements et responsabilité du prêteur pour l'éco-PTZ, y compris pour les sociétés de tiers-financement).",
+  "uncertainties": "L'origine de ces lignes (lot supprimé, écriture manuelle) n'a pas été recherchée en production, conformément au périmètre.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/cch_D304-1_LEGIARTI000038970859.json",
+   "evidence/cited/20261026T230545Z/cch_D319-6_LEGIARTI000049356983.json",
+   "evidence/cited/20261026T230545Z/cch_D319-7_LEGIARTI000049356981.json"
+  ]
+ },
+ {
+  "id": "RT-INV-14",
+  "priority": "P2",
+  "priority_justification": "Écarts de périmètre entre corpus et inventaire. Ils relèvent surtout de défauts DILA (versions fantômes, articles orphelins) ; aucune perte de proposition de fond n'est démontrée.",
+  "nature": "anomalie d'inventaire",
+  "status": "à confirmer",
+  "articles": [
+   {
+    "code": "cgi",
+    "number": "302 B",
+    "source_id": "LEGIARTI000041535200",
+    "valid_from": "2026-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "3cd4fe154ff1e9f3dbbf0cad5b456080d1947798976cc64fe7c5d75229938bcb",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "cgi",
+    "number": "591",
+    "source_id": "LEGIARTI000048391647",
+    "valid_from": "1950-04-30",
+    "valid_until": "2999-01-01",
+    "source_sha256": "fda122c8c5d3ca27864389889a1f533b15c9500fcf2f47332afb69553656e6ab",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "cgi",
+    "number": "1954",
+    "source_id": "LEGIARTI000049265782",
+    "valid_from": "1982-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "a193c85f69a881426747a6522657cedd37877749419114527368668468006987",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "travail",
+    "number": "R4623-29",
+    "source_id": "LEGIARTI000045676630",
+    "valid_from": "2022-04-28",
+    "valid_until": "2999-01-01",
+    "source_sha256": "b4225817f556c904db2bdfb4c56416f730aa8fd4100ad32881b7f4fb1816919a",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "travail",
+    "number": "R4214-28",
+    "source_id": "LEGIARTI000054303161",
+    "valid_from": "2011-11-10",
+    "valid_until": "2027-01-01",
+    "source_sha256": "c4b8d39ec492cda7013fae45ed37ff3b7952913b4bb879daad1b6f2cbdd49ec9",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "cgi",
+    "number": "322",
+    "source_id": "LEGIARTI000006305009",
+    "valid_from": "1950-04-30",
+    "valid_until": "2222-02-22",
+    "source_sha256": "bc54ad9211e3cfeb9564ead4c902ff4a61a814f960db670a035cdb86bbaf8d73",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "cgi",
+    "number": "1695 ter",
+    "source_id": "LEGIARTI000006313615",
+    "valid_from": "2007-01-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "2439396d65df2df3764f24ce21f750f574d7b1461f59fb93d53d9260ff194f6c",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "cgi",
+    "number": "1695 quater",
+    "source_id": "LEGIARTI000025170086",
+    "valid_from": "2014-10-01",
+    "valid_until": "2027-01-01",
+    "source_sha256": "848ff4a3ea56ac253fce61a94ca6def203c606aada821f4484454a1cc7230be8",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "L161-24-1",
+    "source_id": "LEGIARTI000054331775",
+    "valid_from": "2026-06-27",
+    "valid_until": "2999-01-01",
+    "source_sha256": "7394c3535f413041dcbd4231c24ffaaa533c6ff49a5bca8f7e6f24f776fa9fc7",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   },
+   {
+    "code": "css",
+    "number": "L161-24-1",
+    "source_id": "LEGIARTI000042675131",
+    "valid_from": "2020-12-16",
+    "valid_until": "2028-01-01",
+    "source_sha256": "9f6017395862c7604e99e3d00cc1ff280b6aa2d29dbc9dff948f8a13196018a8",
+    "proposed_sha256": null,
+    "reason_sha256": "6fb7274cbece2d616bc89cd4a8995be292858f95651b834e1f165c444f73d4a8",
+    "review_notes_sha256": "ddff95b60af102b081725b9c82bf092a5d97569dbad21674c23e2940a2101988",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "L161-24-1",
+    "source_id": "LEGIARTI000054358416",
+    "valid_from": "2028-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "a1353e46d0ad3c483d21e177780795539db208a19542a864011833cde5378f61",
+    "proposed_sha256": null,
+    "reason_sha256": null,
+    "review_notes_sha256": null,
+    "second_pass": "not_in_inventory"
+   }
+  ],
+  "passages": [
+   "css L161-24-1 LEGIARTI000054331775 (VIGUEUR 2026-06-27, hors inventaire) : « 2° bis En fournissant un certificat d'existence […] ; 2° bis En fournissant un certificat d'existence » (doublon), NOTA « entre en vigueur le 1er janvier 2028 »",
+   "cgi 302 B LEGIARTI000041535200 : VIGUEUR depuis 2026-01-01, section « 1° : Champ d'application » close au 2022-01-01",
+   "travail R4214-28 LEGIARTI000054303161 : ABROGE_DIFF jusqu'au 2027-01-01, section close au 2026-10-01 ; successeur LEGIARTI000052645192 VIGUEUR_DIFF"
+  ],
+  "primary_references": [
+   "LEGI documents ARTICLE et SECTION_TA de l'instantané du 18/10/2026"
+  ],
+  "reasoning": "44 versions sont en vigueur selon leurs dates au 18 octobre 2026 sans figurer dans l'inventaire. (a) 9 sont des fantômes DILA doublant une version incluse : L146-1 urbanisme, L131-7, D612-3, 244 quater B bis, 1649 bis C, 344-0 B, L153-40, L5424-14 et L161-24-1. Pour ce dernier, la version 054331775, défectueuse (2° bis doublé), est remplacée par 054358416 au 1er janvier 2028 ; l'inventaire garde à juste titre 042675131. (b) 7 sont rattachées à des sections closes ou ne sont rattachées à aucune section : CGI 302 B, 591, 1954 (TRANSFERE), 1695 ter et 1695 quater (en vigueur jusqu'au 1er janvier 2027, mais dans une section close au 1er septembre 2026, date initiale de la recodification TVA), travail R4623-29 (aucune section) et R4214-28. (c) 28 articles CGI ABROGE_DIFF à borne 2222-02-22, situés dans des sections closes au 1er juillet 2025, sont exclus, alors que 107 autres entrées à la même borne sont incluses. L'inventaire suit donc l'arborescence et non les dates, ce qui est défendable. Les fantômes sont pourtant traités de façon inégale : exclus ici, inclus pour R5221-22 et R611-2 (RT-INV-07).",
+  "consequences": "Le périmètre « codes complets » n'est pas vérifiable sans règle écrite. Un article réellement en vigueur mais orphelin dans LEGI, comme R4623-29, n'a aucune décision du projet.",
+  "minimal_correction": "Documenter la règle de sélection (arborescence au 18 octobre 2026) et publier la liste des 44 exclusions avec leur motif (fantôme, section close, transféré). Contrôler R4623-29, CGI 302 B, 1695 ter, 1695 quater et R4214-28 sur Légifrance, puis décider de leur inclusion.",
+  "other_options": "Aucune.",
+  "preserve": "—",
+  "uncertainties": "Vérification Légifrance impossible (403). La qualification de chaque exclusion repose sur les métadonnées LEGI. Écarts d'empreintes (proposition révisée après l'inventaire du 19/10) : css L161-24-1 LEGIARTI000042675131: empreintes reason_sha256, review_notes_sha256 de l'inventaire ≠ instantané.",
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/cgi_1695_quater_LEGIARTI000025170086.json",
+   "evidence/cited/20261026T230545Z/cgi_1695_ter_LEGIARTI000006313615.json",
+   "evidence/cited/20261026T230545Z/cgi_1954_LEGIARTI000049265782.json",
+   "evidence/cited/20261026T230545Z/cgi_302_B_LEGIARTI000041535200.json",
+   "evidence/cited/20261026T230545Z/cgi_322_LEGIARTI000006305009.json",
+   "evidence/cited/20261026T230545Z/cgi_591_LEGIARTI000048391647.json",
+   "evidence/cited/20261026T230545Z/css_L161-24-1_LEGIARTI000042675131.json",
+   "evidence/cited/20261026T230545Z/css_L161-24-1_LEGIARTI000054331775.json",
+   "evidence/cited/20261026T230545Z/css_L161-24-1_LEGIARTI000054358416.json",
+   "evidence/cited/20261026T230545Z/travail_R4214-28_LEGIARTI000054303161.json",
+   "evidence/cited/20261026T230545Z/travail_R4623-29_LEGIARTI000045676630.json"
+  ]
+ }
+]

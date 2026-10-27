@@ -1,0 +1,637 @@
+{
+  "audit_id": "13465ee80d75e22b04bb265da4c19abfae1486d48fd239560b94b90f1c0af802",
+  "version": 1,
+  "started_at_utc": "2026-10-25T23:44:16.698428+00:00",
+  "completed_at_utc": "2026-10-25T23:45:03.926576+00:00",
+  "as_of": "2026-10-18",
+  "scope": "five_complete_codes_and_four_CGI_annexes",
+  "source_entries_in_canonical_inventory": 30317,
+  "entries_scanned": 30317,
+  "all_historical_article_versions_indexed": 135904,
+  "missing_inventory_articles": [],
+  "inventory_date_mismatches": [],
+  "fields_scanned": {
+    "source_body": 30317,
+    "source_notes": 30317,
+    "proposal": 13152,
+    "canonical_article_document": 30317
+  },
+  "edge_counts": {
+    "proposal": 55599,
+    "canonical_other_link": 65415,
+    "canonical_incoming_citation": 111741,
+    "canonical_version_lineage": 81570,
+    "source_body": 90593,
+    "canonical_outgoing_citation": 50762,
+    "source_notes": 14012
+  },
+  "canonical_document_checks": {
+    "article_documents_parsed": 30317,
+    "canonical_body_matches_stored_article_body": 30317,
+    "nonempty_official_application_notes": 7602
+  },
+  "resolution_counts": {
+    "resolved_unique_unqualified": 28809,
+    "resolved_current": 118663,
+    "historical_identifier": 44094,
+    "ambiguous_code_or_version": 8970,
+    "outside_scope": 98404,
+    "historical_context_current_number_candidate": 5269,
+    "historical_number_only": 3360,
+    "unqualified_historical_or_unresolved": 3716,
+    "unresolved_identifier": 9607,
+    "unresolved_number": 196,
+    "ambiguous_code": 1616,
+    "ambiguous_current_version": 3
+  },
+  "findings_count": 89297,
+  "distinct_articles_with_findings": 19572,
+  "distinct_articles_with_priority_1_findings": 816,
+  "proposed_repeal_targets_with_detected_referrers": 562,
+  "findings_by_priority": {
+    "2": 30196,
+    "3": 57680,
+    "1": 1421
+  },
+  "findings_by_kind": {
+    "reference_introduced_in_proposal": 5664,
+    "reference_resolution_review": 24056,
+    "historical_target_version_review": 33687,
+    "proposal_refers_to_proposed_repeal": 1111,
+    "subdivision_scope_requires_review": 14382,
+    "reference_disappeared_from_proposal": 5712,
+    "target_deferred_transition_requires_review": 3446,
+    "range_not_expanded": 932,
+    "unrewritten_referrer_to_proposed_repeal": 305,
+    "reference_to_official_inactive_state": 2
+  },
+  "reference_differences": {
+    "reference_introduced_in_proposal": 5664,
+    "reference_disappeared_from_proposal": 5712
+  },
+  "proposals_with_explicit_repeal_formula": 1855,
+  "proposals_differing_from_source_body": 13152,
+  "cycles": {
+    "official_source_citations": {
+      "status": "informational_only_not_an_incoherence",
+      "components": 515,
+      "vertices_in_cycles": 3418,
+      "largest_component": 2064
+    },
+    "proposed_view_textual_citations": {
+      "status": "informational_only_not_an_incoherence",
+      "components": 619,
+      "vertices_in_cycles": 3614,
+      "largest_component": 2017
+    }
+  },
+  "snapshot_and_policy_fingerprints": {
+    "snapshot_sha256": "3edfed184c6ca13a0e31f67bd9594d69b693a53f85d51e6e394dd337f62489a0",
+    "as_of": "2026-10-18",
+    "all_article_metadata_sha256": "d480183c03b1a72f3c603e232cf5e2e72cdf8e88fe85074e171d96595aa35147",
+    "all_document_metadata_sha256": "b295d02df0923ef1e8731c641bf03373bc65c1236c70038b86ef2cb5c18b4388",
+    "archives_sha256": "5b1b25269c6f0b86b79161044e8c0918033194abfb7ad325d5fa828593778fb8",
+    "all_drafts_sha256": "db1fea64b61748702d5ce44a870e4ffaea1621585968a2d58ce42124ac307c47",
+    "policy_files": {
+      "corpus.json": {
+        "sha256": "67bf21ceb80af24cc3ecba0d332acdd2333f9c870f7cfe3ab2c76be92b0d141d",
+        "source_path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/corpus.json",
+        "stable_during_capture": true
+      },
+      "policy-coordinations.json": {
+        "sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "source_path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/policy-coordinations.json",
+        "stable_during_capture": true
+      },
+      "site-summaries.json": {
+        "sha256": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512",
+        "source_path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/site-summaries.json",
+        "stable_during_capture": true
+      },
+      "reference-focus-extra.json": {
+        "sha256": "dc5faff96de729fda9b4735ede34e691e21dbe81e9aa70689e8d8e405deec059",
+        "source_path": "/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite/reference-focus-extra.json",
+        "stable_during_capture": true
+      }
+    },
+    "auditor_sha256": "bcd071910be1f3d4498c8304ebaac6611627879af61db9bbd54a2032ec2c2221",
+    "audit_id": "13465ee80d75e22b04bb265da4c19abfae1486d48fd239560b94b90f1c0af802"
+  },
+  "semantic_review_by_jurist": false,
+  "automatic_change": false,
+  "limits": [
+    "Audit structurel local, sans revue juridique, sans approbation de fond et sans modification automatique.",
+    "Le graphe couvre les citations ARTICLE structurées, les numéros préfixés et les listes numériques introduites par article/art.; les renvois implicites, livres/chapitres seuls et sémantiques ne sont pas exhaustifs.",
+    "Les codes et instruments hors des neuf recueils sont inventoriés, pas vérifiés. Les titres de codes sont rapprochés des identifiants réellement présents dans les liens canoniques; les autres titres restent non identifiés. Leur absence locale n'est pas une anomalie juridique.",
+    "Une unicité locale d'un numéro non qualifié ne prouve pas le code juridiquement visé; les ambiguïtés ne sont jamais tranchées arbitrairement.",
+    "Les plages numériques compatibles jusqu'à 101 éléments sont développées; les autres plages et les suffixes non reconnus restent à examiner.",
+    "Les liens canoniques sens=cible sont des citations entrantes de la source officielle, et ne prouvent pas leur maintien dans une proposition.",
+    "Les suppressions et introductions de renvois sont comparées par code identifié et numéro, sans identité complète des instruments non codifiés ni validation des alinéas; une suppression normative autorisée peut les justifier.",
+    "L'état ABROGE_DIFF signale une transition différée; il n'est jamais assimilé à une abrogation déjà applicable à la date du corpus.",
+    "Les abrogations proposées ne sont reconnues automatiquement que par une formule initiale explicite; les suppressions partielles, dérogations, alinéas, versions et transitions demandent une lecture.",
+    "Les cycles du graphe sont informatifs: un cycle n'établit aucune incohérence.",
+    "Le snapshot fige une transaction SQLite cohérente pendant la rédaction active; les propositions ultérieures et les sources externes en cours de récupération en sont absentes. Les fichiers de politique sont figés individuellement juste après la sauvegarde, sans transaction atomique entre SQLite et JSON."
+  ],
+  "code_reports": [
+    {
+      "code_id": "LEGITEXT000006072050",
+      "title": "Code du travail",
+      "slug": "travail",
+      "inventory_entries": 11593,
+      "missing_sections": [],
+      "missing_articles": [],
+      "scanned_entries": 11593,
+      "fields_scanned": {
+        "source_body": 11593,
+        "source_notes": 11593,
+        "proposal": 3989,
+        "canonical_article_document": 11593
+      },
+      "edges_by_field": {
+        "source_notes": 5521,
+        "canonical_outgoing_citation": 15552,
+        "canonical_incoming_citation": 37892,
+        "canonical_other_link": 24003,
+        "canonical_version_lineage": 22031,
+        "source_body": 21891,
+        "proposal": 10744
+      },
+      "resolutions": {
+        "unqualified_historical_or_unresolved": 874,
+        "unresolved_number": 57,
+        "historical_context_current_number_candidate": 1677,
+        "historical_identifier": 10210,
+        "resolved_current": 35548,
+        "historical_number_only": 1630,
+        "ambiguous_code_or_version": 370,
+        "outside_scope": 28339,
+        "resolved_unique_unqualified": 7549,
+        "unresolved_identifier": 5205,
+        "ambiguous_code": 138,
+        "ambiguous_current_version": 3
+      },
+      "findings_by_kind": {
+        "reference_resolution_review": 6647,
+        "historical_target_version_review": 9070,
+        "reference_disappeared_from_proposal": 1320,
+        "unrewritten_referrer_to_proposed_repeal": 79,
+        "reference_introduced_in_proposal": 1520,
+        "target_deferred_transition_requires_review": 354,
+        "subdivision_scope_requires_review": 2865,
+        "proposal_refers_to_proposed_repeal": 160,
+        "range_not_expanded": 114
+      },
+      "findings_by_priority": {
+        "3": 15701,
+        "2": 6189,
+        "1": 239
+      },
+      "audit_id": "13465ee80d75e22b04bb265da4c19abfae1486d48fd239560b94b90f1c0af802",
+      "semantic_review_by_jurist": false,
+      "queue_items": 22129
+    },
+    {
+      "code_id": "LEGITEXT000006069577",
+      "title": "Code général des impôts",
+      "slug": "impots",
+      "inventory_entries": 2375,
+      "missing_sections": [],
+      "missing_articles": [],
+      "scanned_entries": 2375,
+      "fields_scanned": {
+        "source_body": 2375,
+        "source_notes": 2375,
+        "canonical_article_document": 2375,
+        "proposal": 1335
+      },
+      "edges_by_field": {
+        "source_body": 14482,
+        "canonical_other_link": 4256,
+        "canonical_outgoing_citation": 6080,
+        "canonical_incoming_citation": 15036,
+        "canonical_version_lineage": 15733,
+        "proposal": 10615,
+        "source_notes": 2184
+      },
+      "resolutions": {
+        "resolved_current": 15872,
+        "resolved_unique_unqualified": 5628,
+        "unqualified_historical_or_unresolved": 548,
+        "ambiguous_code_or_version": 1730,
+        "outside_scope": 16451,
+        "historical_identifier": 5974,
+        "historical_context_current_number_candidate": 966,
+        "unresolved_identifier": 591,
+        "unresolved_number": 48,
+        "historical_number_only": 165,
+        "ambiguous_code": 424
+      },
+      "findings_by_kind": {
+        "reference_resolution_review": 3326,
+        "range_not_expanded": 434,
+        "historical_target_version_review": 4479,
+        "reference_introduced_in_proposal": 611,
+        "subdivision_scope_requires_review": 2616,
+        "target_deferred_transition_requires_review": 1017,
+        "proposal_refers_to_proposed_repeal": 207,
+        "unrewritten_referrer_to_proposed_repeal": 40,
+        "reference_disappeared_from_proposal": 1120
+      },
+      "findings_by_priority": {
+        "3": 7784,
+        "2": 5816,
+        "1": 250
+      },
+      "audit_id": "13465ee80d75e22b04bb265da4c19abfae1486d48fd239560b94b90f1c0af802",
+      "semantic_review_by_jurist": false,
+      "queue_items": 13850
+    },
+    {
+      "code_id": "LEGITEXT000006073189",
+      "title": "Code de la sécurité sociale",
+      "slug": "securite-sociale",
+      "inventory_entries": 7427,
+      "missing_sections": [],
+      "missing_articles": [],
+      "scanned_entries": 7427,
+      "fields_scanned": {
+        "source_body": 7427,
+        "source_notes": 7427,
+        "proposal": 2803,
+        "canonical_article_document": 7427
+      },
+      "edges_by_field": {
+        "source_body": 25493,
+        "proposal": 13212,
+        "canonical_outgoing_citation": 14543,
+        "canonical_other_link": 19950,
+        "canonical_version_lineage": 22517,
+        "canonical_incoming_citation": 38840,
+        "source_notes": 3451
+      },
+      "resolutions": {
+        "unqualified_historical_or_unresolved": 1289,
+        "resolved_unique_unqualified": 7219,
+        "outside_scope": 30671,
+        "historical_context_current_number_candidate": 1062,
+        "resolved_current": 33039,
+        "historical_identifier": 17258,
+        "ambiguous_code_or_version": 2046,
+        "historical_number_only": 736,
+        "unresolved_number": 22,
+        "unresolved_identifier": 1784,
+        "ambiguous_code": 413
+      },
+      "findings_by_kind": {
+        "reference_resolution_review": 5522,
+        "historical_target_version_review": 10618,
+        "proposal_refers_to_proposed_repeal": 192,
+        "reference_disappeared_from_proposal": 1187,
+        "subdivision_scope_requires_review": 4035,
+        "reference_introduced_in_proposal": 991,
+        "target_deferred_transition_requires_review": 926,
+        "unrewritten_referrer_to_proposed_repeal": 85,
+        "range_not_expanded": 84
+      },
+      "findings_by_priority": {
+        "3": 16134,
+        "1": 279,
+        "2": 7227
+      },
+      "audit_id": "13465ee80d75e22b04bb265da4c19abfae1486d48fd239560b94b90f1c0af802",
+      "semantic_review_by_jurist": false,
+      "queue_items": 23640
+    },
+    {
+      "code_id": "LEGITEXT000006074075",
+      "title": "Code de l'urbanisme",
+      "slug": "urbanisme",
+      "inventory_entries": 2459,
+      "missing_sections": [],
+      "missing_articles": [],
+      "scanned_entries": 2459,
+      "fields_scanned": {
+        "source_body": 2459,
+        "source_notes": 2459,
+        "proposal": 1467,
+        "canonical_article_document": 2459
+      },
+      "edges_by_field": {
+        "source_body": 6461,
+        "canonical_other_link": 5462,
+        "canonical_incoming_citation": 6866,
+        "canonical_outgoing_citation": 4201,
+        "canonical_version_lineage": 5689,
+        "proposal": 5147,
+        "source_notes": 985
+      },
+      "resolutions": {
+        "historical_number_only": 90,
+        "outside_scope": 7514,
+        "historical_identifier": 3134,
+        "resolved_current": 8845,
+        "resolved_unique_unqualified": 1846,
+        "historical_context_current_number_candidate": 494,
+        "ambiguous_code_or_version": 1008,
+        "ambiguous_code": 118,
+        "unresolved_identifier": 475,
+        "unqualified_historical_or_unresolved": 136
+      },
+      "findings_by_kind": {
+        "historical_target_version_review": 2282,
+        "reference_disappeared_from_proposal": 414,
+        "reference_introduced_in_proposal": 1011,
+        "subdivision_scope_requires_review": 927,
+        "reference_resolution_review": 1737,
+        "proposal_refers_to_proposed_repeal": 178,
+        "target_deferred_transition_requires_review": 38,
+        "unrewritten_referrer_to_proposed_repeal": 13,
+        "range_not_expanded": 31
+      },
+      "findings_by_priority": {
+        "3": 4019,
+        "2": 2421,
+        "1": 191
+      },
+      "audit_id": "13465ee80d75e22b04bb265da4c19abfae1486d48fd239560b94b90f1c0af802",
+      "semantic_review_by_jurist": false,
+      "queue_items": 6631
+    },
+    {
+      "code_id": "LEGITEXT000006074096",
+      "title": "Code de la construction et de l'habitation",
+      "slug": "construction-habitation",
+      "inventory_entries": 4126,
+      "missing_sections": [],
+      "missing_articles": [],
+      "scanned_entries": 4126,
+      "fields_scanned": {
+        "source_body": 4126,
+        "source_notes": 4126,
+        "proposal": 2039,
+        "canonical_article_document": 4126
+      },
+      "edges_by_field": {
+        "source_body": 15112,
+        "proposal": 10361,
+        "canonical_outgoing_citation": 6164,
+        "canonical_other_link": 8799,
+        "canonical_version_lineage": 9080,
+        "canonical_incoming_citation": 11442,
+        "source_notes": 1305
+      },
+      "resolutions": {
+        "outside_scope": 12049,
+        "ambiguous_code_or_version": 3431,
+        "resolved_unique_unqualified": 5482,
+        "resolved_current": 15836,
+        "historical_identifier": 4763,
+        "unqualified_historical_or_unresolved": 700,
+        "unresolved_number": 43,
+        "ambiguous_code": 355,
+        "historical_context_current_number_candidate": 524,
+        "historical_number_only": 309,
+        "unresolved_identifier": 892
+      },
+      "findings_by_kind": {
+        "reference_resolution_review": 5419,
+        "reference_disappeared_from_proposal": 940,
+        "reference_introduced_in_proposal": 928,
+        "historical_target_version_review": 3695,
+        "subdivision_scope_requires_review": 1949,
+        "range_not_expanded": 53,
+        "target_deferred_transition_requires_review": 248,
+        "proposal_refers_to_proposed_repeal": 89,
+        "unrewritten_referrer_to_proposed_repeal": 37
+      },
+      "findings_by_priority": {
+        "3": 9101,
+        "2": 4131,
+        "1": 126
+      },
+      "audit_id": "13465ee80d75e22b04bb265da4c19abfae1486d48fd239560b94b90f1c0af802",
+      "semantic_review_by_jurist": false,
+      "queue_items": 13358
+    },
+    {
+      "code_id": "LEGITEXT000006069568",
+      "title": "Code général des impôts — annexe I",
+      "slug": "impots-annexe-1",
+      "inventory_entries": 71,
+      "missing_sections": [],
+      "missing_articles": [],
+      "scanned_entries": 71,
+      "fields_scanned": {
+        "source_body": 71,
+        "source_notes": 71,
+        "proposal": 42,
+        "canonical_article_document": 71
+      },
+      "edges_by_field": {
+        "proposal": 67,
+        "canonical_other_link": 78,
+        "canonical_incoming_citation": 49,
+        "canonical_version_lineage": 234,
+        "source_body": 120,
+        "canonical_outgoing_citation": 52,
+        "source_notes": 10
+      },
+      "resolutions": {
+        "resolved_unique_unqualified": 10,
+        "resolved_current": 96,
+        "historical_identifier": 44,
+        "ambiguous_code_or_version": 77,
+        "outside_scope": 56,
+        "historical_context_current_number_candidate": 9,
+        "historical_number_only": 3,
+        "unqualified_historical_or_unresolved": 2,
+        "unresolved_identifier": 1
+      },
+      "findings_by_kind": {
+        "reference_introduced_in_proposal": 11,
+        "reference_resolution_review": 80,
+        "historical_target_version_review": 46,
+        "proposal_refers_to_proposed_repeal": 3,
+        "subdivision_scope_requires_review": 3,
+        "reference_disappeared_from_proposal": 2
+      },
+      "findings_by_priority": {
+        "2": 16,
+        "3": 126,
+        "1": 3
+      },
+      "audit_id": "13465ee80d75e22b04bb265da4c19abfae1486d48fd239560b94b90f1c0af802",
+      "semantic_review_by_jurist": false,
+      "queue_items": 145
+    },
+    {
+      "code_id": "LEGITEXT000006069569",
+      "title": "Code général des impôts — annexe II",
+      "slug": "impots-annexe-2",
+      "inventory_entries": 674,
+      "missing_sections": [],
+      "missing_articles": [],
+      "scanned_entries": 674,
+      "fields_scanned": {
+        "source_body": 674,
+        "source_notes": 674,
+        "canonical_article_document": 674,
+        "proposal": 388
+      },
+      "edges_by_field": {
+        "source_body": 1919,
+        "canonical_other_link": 965,
+        "canonical_outgoing_citation": 1135,
+        "canonical_version_lineage": 1785,
+        "proposal": 1365,
+        "canonical_incoming_citation": 528,
+        "source_notes": 183
+      },
+      "resolutions": {
+        "resolved_current": 2451,
+        "historical_identifier": 757,
+        "ambiguous_code_or_version": 111,
+        "historical_context_current_number_candidate": 155,
+        "resolved_unique_unqualified": 374,
+        "outside_scope": 850,
+        "unresolved_number": 10,
+        "ambiguous_code": 31,
+        "unqualified_historical_or_unresolved": 59,
+        "historical_number_only": 197,
+        "unresolved_identifier": 135
+      },
+      "findings_by_kind": {
+        "target_deferred_transition_requires_review": 242,
+        "subdivision_scope_requires_review": 488,
+        "historical_target_version_review": 1058,
+        "reference_resolution_review": 346,
+        "proposal_refers_to_proposed_repeal": 71,
+        "reference_introduced_in_proposal": 147,
+        "reference_disappeared_from_proposal": 180,
+        "range_not_expanded": 65,
+        "unrewritten_referrer_to_proposed_repeal": 19,
+        "reference_to_official_inactive_state": 2
+      },
+      "findings_by_priority": {
+        "2": 1127,
+        "3": 1401,
+        "1": 90
+      },
+      "audit_id": "13465ee80d75e22b04bb265da4c19abfae1486d48fd239560b94b90f1c0af802",
+      "semantic_review_by_jurist": false,
+      "queue_items": 2618
+    },
+    {
+      "code_id": "LEGITEXT000006069574",
+      "title": "Code général des impôts — annexe III",
+      "slug": "impots-annexe-3",
+      "inventory_entries": 1115,
+      "missing_sections": [],
+      "missing_articles": [],
+      "scanned_entries": 1115,
+      "fields_scanned": {
+        "source_body": 1115,
+        "source_notes": 1115,
+        "canonical_article_document": 1115,
+        "proposal": 799
+      },
+      "edges_by_field": {
+        "canonical_other_link": 1335,
+        "canonical_version_lineage": 3111,
+        "source_body": 4025,
+        "proposal": 3290,
+        "canonical_outgoing_citation": 2328,
+        "canonical_incoming_citation": 761,
+        "source_notes": 245
+      },
+      "resolutions": {
+        "resolved_current": 5507,
+        "historical_identifier": 1496,
+        "resolved_unique_unqualified": 537,
+        "outside_scope": 1920,
+        "ambiguous_code_or_version": 134,
+        "unqualified_historical_or_unresolved": 76,
+        "unresolved_number": 6,
+        "historical_context_current_number_candidate": 299,
+        "historical_number_only": 144,
+        "ambiguous_code": 126,
+        "unresolved_identifier": 404
+      },
+      "findings_by_kind": {
+        "historical_target_version_review": 1851,
+        "range_not_expanded": 112,
+        "target_deferred_transition_requires_review": 425,
+        "subdivision_scope_requires_review": 1187,
+        "proposal_refers_to_proposed_repeal": 175,
+        "reference_introduced_in_proposal": 344,
+        "reference_disappeared_from_proposal": 471,
+        "reference_resolution_review": 745,
+        "unrewritten_referrer_to_proposed_repeal": 10
+      },
+      "findings_by_priority": {
+        "3": 2593,
+        "2": 2542,
+        "1": 185
+      },
+      "audit_id": "13465ee80d75e22b04bb265da4c19abfae1486d48fd239560b94b90f1c0af802",
+      "semantic_review_by_jurist": false,
+      "queue_items": 5320
+    },
+    {
+      "code_id": "LEGITEXT000006069576",
+      "title": "Code général des impôts — annexe IV",
+      "slug": "impots-annexe-4",
+      "inventory_entries": 477,
+      "missing_sections": [],
+      "missing_articles": [],
+      "scanned_entries": 477,
+      "fields_scanned": {
+        "source_body": 477,
+        "source_notes": 477,
+        "proposal": 290,
+        "canonical_article_document": 477
+      },
+      "edges_by_field": {
+        "source_body": 1090,
+        "proposal": 798,
+        "canonical_other_link": 567,
+        "canonical_outgoing_citation": 707,
+        "canonical_version_lineage": 1390,
+        "canonical_incoming_citation": 327,
+        "source_notes": 128
+      },
+      "resolutions": {
+        "resolved_current": 1469,
+        "historical_context_current_number_candidate": 83,
+        "historical_identifier": 458,
+        "resolved_unique_unqualified": 164,
+        "outside_scope": 554,
+        "ambiguous_code_or_version": 63,
+        "ambiguous_code": 11,
+        "unresolved_number": 10,
+        "unqualified_historical_or_unresolved": 32,
+        "historical_number_only": 86,
+        "unresolved_identifier": 120
+      },
+      "findings_by_kind": {
+        "historical_target_version_review": 588,
+        "subdivision_scope_requires_review": 312,
+        "target_deferred_transition_requires_review": 196,
+        "reference_resolution_review": 234,
+        "reference_introduced_in_proposal": 101,
+        "proposal_refers_to_proposed_repeal": 36,
+        "reference_disappeared_from_proposal": 78,
+        "range_not_expanded": 39,
+        "unrewritten_referrer_to_proposed_repeal": 22
+      },
+      "findings_by_priority": {
+        "3": 821,
+        "2": 727,
+        "1": 58
+      },
+      "audit_id": "13465ee80d75e22b04bb265da4c19abfae1486d48fd239560b94b90f1c0af802",
+      "semantic_review_by_jurist": false,
+      "queue_items": 1606
+    }
+  ]
+}
