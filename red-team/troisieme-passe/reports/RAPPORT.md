@@ -1,6 +1,8 @@
 # Red-team juridique indépendante — troisième passe
 
 **Rapport provisoire, 27 octobre 2026, 08 h UTC.** Historique : première version à 00 h UTC ; revue de fond des cinq domaines prioritaires à 04 h UTC (§ A.3 bis) ; **revue des différences sur l'instantané intermédiaire `20261027T044303Z`** à 08 h UTC (§ D).
+
+> **Mise à jour du 28 octobre 2026, 23 h UTC : tri des issues GitHub externes.** Les issues #2 à #11 ont été triées contre le registre (`reports/issues/TRI.md`). Il en sort **8 objections nouvelles** (4 P1, 4 P2 ; dossier `ISS`). Le registre compte désormais **296 objections retenues : 3 P0, 102 P1, 191 P2**. Les chiffres du § A ci-dessous restent ceux du 27 octobre (288) jusqu'à la revue finale. La seconde passe s'est de nouveau arrêtée le 28 octobre à 21 h 59 UTC (limite d'usage), à 28 912 articles relus sur 30 314.
 Projet de réécriture du Code du travail, du CGI et de ses annexes I à IV, du Code de la sécurité sociale, du Code de l'urbanisme et du Code de la construction et de l'habitation. Corpus au **18 octobre 2026**.
 
 > **Statut.** Revue conduite par une IA (un coordinateur et 37 agents, dont certains ont délégué à des sous-agents), **sans validation par un juriste**. Elle a été conduite sur l'instantané figé `20261026T230545Z`, puis réexaminée sur l'instantané `20261027T044303Z`, pris après l'**arrêt de la seconde passe** (limite d'usage du compte, 15 597 articles relus sur 30 314, reprise possible le 2 novembre). Les chiffres ci-dessous sont ceux d'après réexamen. Ses conclusions restent **provisoires** : une dernière revue des différences sera nécessaire quand la seconde passe sera réellement terminée. Aucune modification n'a été apportée à la production.
@@ -16,6 +18,7 @@ Livrables :
 | `reports/p1-work/*-classification.jsonl` | La qualification ligne à ligne de chaque alerte examinée (1 943 lignes) |
 | `reports/dedupe.json` et `reports/reexam/merges.json` | Les 41 fusions de doublons, chacune motivée |
 | `reports/reexam/` | D. Revue des différences : verdict et trace de chaque objection réexaminée, requalification des alertes |
+| `reports/issues/` | Tri des issues GitHub externes (`TRI.md`), avec le détail par groupe et les copies des issues triées |
 
 ---
 

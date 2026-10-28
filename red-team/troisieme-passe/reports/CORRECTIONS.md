@@ -725,6 +725,51 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** Toutes les mesures TVA favorables du projet (franchise sans prorata, etc.), les taux réduits existants et les exonérations ; les règles TVA des opérations antérieures au 1er janvier 2027.
 
+## RT-ISS10-01 (P1, confirmé) — ISS
+
+**Articles :** travail L4132-2, travail L4133-1, travail L4133-2, travail D4132-1, travail D4132-2, travail D4133-1, travail D4133-2, travail D4133-3, travail L4131-4
+
+**Correction minimale :** Aligner les décrets sur la loi, à la même date d'entrée en vigueur que celle-ci : (1) D4132-1, D4133-1 et D4133-2 : abrogation totale, par exemple « Le présent article est abrogé à compter de l'entrée en vigueur de la loi qui fixe aux articles L. 4132-2, L. 4133-1 et L. 4133-2 le contenu de l'écrit de consignation. Les avis et alertes consignés avant cette date demeurent régis par sa rédaction antérieure. » ; (2) D4132-2 et D4133-3 : limiter expressément leur objet aux registres antérieurs, par exemple « Les registres spéciaux ouverts avant l'entrée en vigueur de la loi mentionnée à l'article L. 4132-2 [L. 4133-1 pour D4133-3] restent tenus, sous la responsabilité de l'employeur, à la disposition des représentants du personnel au comité social et économique. Aucun registre n'est exigé pour les avis [alertes] consignés après cette date. » ; (3) réécrire les motifs et notes des huit entrées (ceux des lois annoncent une coordination « hors lot » ; ceux des décrets affirment le maintien du registre).
+
+**Autres options :**
+- (a) Solution de l'issue : abroger D4132-1, D4133-1 et D4133-2 et garder D4132-2 et D4133-3 inchangés ; acceptable, mais « Le registre spécial est tenu » reste lisible comme une obligation de tenue continue, faute de référent. (b) Abroger les cinq décrets et s'en remettre à la clause législative de survie (« selon les règles qui leur étaient applicables ») ; plus court, mais la survie de règles abrogées est moins lisible. (c) Arbitrage de l'auteur, non nécessaire à la cohérence : ajouter à L4131-4 ou à L4132-2 que « la preuve du signalement peut être rapportée par tout moyen » ; c'est une règle…
+
+**À préserver :** Alerte immédiate, enquête conjointe, droit de retrait (L4131-1 à L4132-5) ; présomption de faute inexcusable de L4131-4 ; date, signature et trois mentions de l'écrit ; accès du CSE et confidentialité…
+
+## RT-ISS11-01 (P1, confirmé) — ISS
+
+**Articles :** travail L3122-21, travail R3122-9, travail R3122-10, travail R3124-15, travail L3122-1
+
+**Correction minimale :** (1) R3122-9 et R3122-10 : abrogation totale à la date d'entrée en vigueur de L3122-21 proposé, par exemple « Le présent article est abrogé à compter de l'entrée en vigueur de la loi supprimant l'autorisation prévue à l'article L. 3122-21. Les recours formés contre les décisions notifiées avant cette date demeurent régis par sa rédaction antérieure. » (seconde phrase pour R3122-10 seulement). (2) L3122-21 proposé, premier alinéa : supprimer « , selon des modalités fixées par décret en Conseil d'Etat » et remplacer « Ces modalités ne peuvent imposer une autorisation ou une déclaration de remplacement. » par « Aucune autorisation ni déclaration ne peut être exigée pour cette affectation. » (3) Déclarer dans removed_provisions la perte du délai de douze mois de R3122-9 2°. (4) Mettre à jour motifs et notes de L3122-21, R3122-9 et R3122-10.
+
+**Autres options :**
+- (a) Solution de l'issue : mêmes abrogations et suppression pure de la phrase de garde ; acceptable, mais elle retire une garde législative contre une formalité de remplacement que le pouvoir réglementaire autonome pourrait encore créer. (b) Arbitrage de l'auteur : conserver la fraîcheur de la négociation comme condition de fond, sans formalité (« des négociations engagées au cours des douze mois précédant la première affectation »), ou accepter expressément sa perte.
+
+**À préserver :** Négociation loyale et sérieuse et ses trois éléments ; contreparties de L3122-8 ; pauses ; avis des représentants ou information des salariés ; caractère exceptionnel du travail de nuit (L3122-1) ; su…
+
+## RT-ISS7-01 (P1, confirmé) — ISS
+
+**Articles :** travail L3121-24, travail R3121-11, travail R3121-10, travail R3124-11
+
+**Correction minimale :** Rédiger R3121-11 ainsi : « Pour l'application de l'article L. 3121-24, le dépassement de la durée hebdomadaire moyenne de quarante-quatre heures n'est subordonné à aucune demande, justification, rapport ni décision administrative. Les autorisations accordées avant l'entrée en vigueur du présent article et les mesures compensatoires qu'elles fixent en application de l'article R. 3121-9 demeurent applicables jusqu'à leur terme. » Les conditions de fond sont déjà dans la loi proposée (circonstance exceptionnelle, 46 heures en moyenne sur douze semaines, avis du CSE).
+
+**Autres options :**
+- Abroger R3121-11 avec la même transition : plus court, mais L3121-24 proposé renvoie encore à des « conditions déterminées par décret en Conseil d'Etat » ; sans texte d'application, l'applicabilité directe de la loi pourrait être discutée.
+- Rétablir l'autorisation (correction de #7 en sens inverse) : écarté, contraire à la suppression décidée et à l'interdiction de toute formalité de remplacement.
+
+**À préserver :** Mesures compensatoires et repos complémentaires déjà accordés (R3121-9); Avis du CSE prévu par L3121-26 proposé; Autorisations distinctes de L3121-21/R3121-10 et L3121-25/R3121-12 à R3121-16; Limite absolue de 48 heures de L3121-20
+
+## RT-ISS9-01 (P1, confirmé) — ISS
+
+**Articles :** travail L1233-24-1, travail L1233-46, travail R1233-3-5, travail L1237-19, travail R1237-6-1, travail D1237-7, travail L1233-57-6, travail D1233-12, travail L1237-19-3, travail L1233-57-2
+
+**Correction minimale :** Aligner les textes sur la suppression, sans formalité de remplacement. 1. L1233-24-1 (texte complet proposé) : « Dans les entreprises de cinquante salariés et plus, un accord collectif peut déterminer le contenu du plan de sauvegarde de l'emploi mentionné aux articles L. 1233-61 à L. 1233-63 ainsi que les modalités de consultation du comité social et économique et de mise en œuvre des licenciements. Cet accord est signé par une ou plusieurs organisations syndicales représentatives ayant recueilli au moins 50 % des suffrages exprimés en faveur d'organisations reconnues représentatives au premier tour des dernières élections des titulaires au comité social et économique, quel que soit le nombre de votants, ou par le conseil d'entreprise dans les conditions prévues à l'article L. 2321-9. Aucune information de l'administration sur l'ouverture de cette négociation n'est exigée à compter de l'entrée en vigueur de la loi portant la présente réforme, y compris pour les négociations déjà ouvertes. » Ce second alinéa reprend la formule de L1237-19 proposé. On peut aussi le supprimer purement et simplement, comme le propose l'issue : voir l'option (a). 2. L1233-46 : supprimer « ; l'information sans délai sur l'ouverture effective de cette négociation prévue par cet article demeure applicable » et terminer la phrase après « notification ». Rien d'autre ne change. 3. R1233-3-5 : nouvelle première phrase : « Lorsque le projet de licenciement collectif porte sur des établissements relevant de la compétence de plusieurs directeurs régionaux des entreprises, de la concurrence, de la consommation, du travail et de l'emploi, l'employeur notifie son projet de licenciement en application de l'article L. 1233-46 au directeur régional du siège de l'entreprise. » Supprimer les deuxième et troisième phrases actuelles (« Aucune information distincte préalable… » ; « L'employeur notifie à ce directeur… », devenue redondante). Dans le dernier alinéa, supprimer la phrase « Elle ne supprime pas la mention de l'intention de négocier… ». Les critères de compétence, l'information de l'employeur et celle du CSE et des syndicats restent : la notification les déclenche toujours. 4. R1237-6-1 : réécrire le premier alinéa ainsi : « Lorsque le projet d'accord collectif portant rupture conventionnelle collective inclut des établissements relevant de la compétence de plusieurs directeurs régionaux des entreprises, de la concurrence, de la consommation, du travail et de l'emploi, le directeur régional compétent est celui dans le ressort duquel se situe : » et garder les 1° à 4°. Supprimer le dernier alinéa (notification de la compétence et information du CSE et des syndicats) : son déclencheur disparaît. 5. D1237-7 : abrogé. Coordonner l'arrêté du 29 décembre 2017 (volet D1237-7), sans abroger ses dispositions relatives à D1237-8 à D1237-12.
+
+**Autres options :**
+- (a) L1233-24-1 sans aucune phrase transitoire (solution de l'issue). Elle a le même effet pour les négociations futures, mais laisse la question des négociations en cours à l'issue #3. (b) Garder un seul canal, la mention de l'intention dans la notification de L1233-46, rendue exigible, et supprimer l'information distincte. C'est une fusion de doublon conforme à la consigne générale, mais elle rompt la symétrie avec L1237-19 : arbitrage de l'auteur. (c) Pour R1237-6-1, garder l'information de compétence en la déclenchant par la transmission de l'accord pour validation. Ce serait une formalité …
+
+**À préserver :** La notification du projet (L1233-46 et D1233-4) et la communication simultanée des informations et procès-verbaux (L1233-48), transmissions qui correspondent aux art. 2 et 3 de la directive ; les règl…
+
 ## RT-MENS-01 (P1, confirmé) — MENS
 
 **Articles :** a3 111-0 H, a4 50-0 I

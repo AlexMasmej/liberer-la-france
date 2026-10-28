@@ -1,16 +1,16 @@
 # Registre des objections — troisième passe (provisoire)
 
-Établi sur l'instantané `20261026T230545Z`, réexaminé sur l'instantané intermédiaire `20261027T044303Z` (seconde passe arrêtée à 15 597 / 30 314). 288 objections retenues · 27 résolues ou obsolètes depuis · 41 doublons fusionnés · 12 alertes écartées ou faux positifs documentés.
+Établi sur l'instantané `20261026T230545Z`, réexaminé sur l'instantané intermédiaire `20261027T044303Z` (`reports/reexam/`). 296 objections retenues · 27 résolues ou obsolètes depuis · 41 doublons fusionnés · 12 alertes écartées ou faux positifs documentés.
 
-La colonne « Réexamen » donne le verdict de la revue des différences (`reports/reexam/`) : « — » signifie que l’objection ne cite aucun article modifié entre les deux instantanés ; « nouveau » marque un constat apparu au réexamen. Une priorité suivie de « ← P1 » a changé.
+La colonne « Réexamen » donne le verdict de la dernière revue des différences qui a touché l’objection, suivi de « (final) » pour la revue finale : « — » signifie qu’aucun article cité n’a changé ; « nouveau » marque un constat apparu au réexamen. Une priorité suivie de « ← P1 » a changé.
 
 Statuts et priorités tels que qualifiés par les dossiers, après fusion des doublons (`reports/dedupe.json`). Les preuves, citations et empreintes complètes de chaque objection sont dans `reports/dossiers/<dossier>.json` et `reports/register.json`. Revue IA, sans validation par un juriste.
 
 | Priorité | confirmé | à confirmer | total |
 |---|---|---|---|
 | P0 | 3 | 0 | 3 |
-| P1 | 84 | 14 | 98 |
-| P2 | 141 | 46 | 187 |
+| P1 | 88 | 14 | 102 |
+| P2 | 145 | 46 | 191 |
 
 ## P0 — 3 objections
 
@@ -20,7 +20,7 @@ Statuts et priorités tels que qualifiés par les dossiers, après fusion des do
 | RT-FUTFISC-23 | FUT-FISC | incohérence du projet | confirmé | — | cgi 150 VM | L'état ABROGE_DIFF de la version courante traduit son remplacement le 1er janvier 2027 par une rédaction issue de l'ordonnance 2025-1247, non l'abrogation de l'article 150 VM. La proposition prend cet état pour une abrogation et inscrit dans le texte normatif … |
 | RT-INV-02 | INV | coordination manquante | confirmé | — | css L434-1, css L461-1 | La réforme AT-MP (loi 2025-199, art. 90, date d'effet fixée au plus tard au 1er novembre 2026 par la loi 2025-1403) est déjà consolidée dans l'instantané sous forme de versions VIGUEUR_DIFF. Pour L434-1, la version en vigueur jusqu'au 31 octobre 2026 (marquée … |
 
-## P1 — 98 objections
+## P1 — 102 objections
 
 | ID | Dossier | Nature | Statut | Réexamen | Articles | Constat |
 |---|---|---|---|---|---|---|
@@ -86,6 +86,10 @@ Statuts et priorités tels que qualifiés par les dossiers, après fusion des do
 | RT-INV-03 | INV | coordination manquante | confirmé | — | css L142-1, css L351-3, css L434-16, css L443-1, css R351-12, css R351-37 (+1) | Pour chaque paire (version sortante, version successeur), on a comparé mot à mot la source sortante, le successeur et la proposition. Les successeurs changent : L142-1 5° (« incapacité permanente » et « aux taux ») ; L351-3 1° (« incapacité permanente professi… |
 | RT-INV-04 | INV | coordination manquante | confirmé | — | travail Annexe | Comparaison intégrale des 205 lignes de la source sortante, de la proposition et du successeur. La proposition ne modifie que le II, 2 (fin de l'expiration à trois ans et de l'audit de renouvellement) et ajoute une transition ; les indicateurs 1 à 32 sont repr… |
 | RT-INV-06 | INV | coordination manquante | confirmé | — | cgi 293 D, cgi 256-0, cgi 279, cgi 1824, cgi 200, cgi 39 (+2) | 169 entrées CGI de l'inventaire portent un lien LEGI ABROGE vers l'ordonnance 2025-1247 (art. 9, 11 ou 17) : 99 avec une fin au 1er janvier 2027, 70 avec la borne technique 2222-02-22. 70 sont des rewrite_draft. Beaucoup de notes mentionnent le CIBS comme coor… |
+| RT-ISS10-01 | ISS | incohérence du projet | confirmé | — | travail L4132-2, travail L4133-1, travail L4133-2, travail D4132-1, travail D4132-2, travail D4133-1 (+3) | En vigueur, L4132-2, L4133-1 et L4133-2 renvoient la consignation écrite à « des conditions déterminées par voie réglementaire » ; D4132-1 et D4133-1 imposent un registre spécial à pages numérotées (et tamponnées pour D4132-1), D4133-2 renvoie au registre de D… |
+| RT-ISS11-01 | ISS | incohérence du projet | confirmé | — | travail L3122-21, travail R3122-9, travail R3122-10, travail R3124-15, travail L3122-1 | L3122-21 proposé (texte identique au commit de l'issue, empreinte 8c0bcdda…) supprime l'autorisation de l'inspecteur du travail, applique la suppression aux demandes en cours et interdit toute autorisation ou déclaration de remplacement, tout en gardant « selo… |
+| RT-ISS7-01 | ISS | coordination manquante | confirmé | — | travail L3121-24, travail R3121-11, travail R3121-10, travail R3124-11 | La loi proposée (L3121-24) supprime l'autorisation et interdit au règlement de la rétablir. R3121-11 est retenu inchangé : il soumet le même dépassement à R3121-10 (demande à l'inspecteur, justifications, avis du CSE joint, rapport, décision du directeur régio… |
+| RT-ISS9-01 | ISS | incohérence du projet | confirmé | — | travail L1233-24-1, travail L1233-46, travail R1233-3-5, travail L1237-19, travail R1237-6-1, travail D1237-7 (+4) | La réforme a retiré la moitié d'une obligation en double, chaque fois en comptant sur l'autre moitié. Pour le PSE, en droit en vigueur, l'administration apprend l'ouverture d'une négociation d'accord majoritaire de deux façons : par l'information sans délai de… |
 | RT-MENS-01 | MENS | incohérence du projet | confirmé | — | a3 111-0 H, a4 50-0 I | 50-0 I II n'a pas de champ propre : il fixe le contenu de la déclaration du 2° de 111-0 H. Opérateurs (fabricants de vinaigre recevant et utilisant des produits vitivinicoles), mois, objet et finalité sont identiques ; il ne s'agit pas de deux obligations dist… |
 | RT-P1-ANNEXES-01 | P1-ANNEXES | coordination manquante | confirmé | — | a2 242 nonies E, a2 242 nonies G, a4 41 septies J, a4 41 septies K, a4 41 septies L, a4 41 septies N (+7) | Les six articles d'exécution 242 nonies J, L, M, N, O et P de l'annexe II sont abrogés par leurs propositions, en conséquence de l'abrogation proposée de CGI 289 E, 290 et 290 A (selon les motifs de ces propositions, que je n'ai pas relus en entier : voir les … |
 | RT-P1-ANNEXES-03 | P1-ANNEXES | incohérence du projet | confirmé | — | a2 371 bis F, a2 371 bis H, a2 371 bis K, a2 371 bis M, a2 371 bis B, a2 371 bis C (+3) | 371 bis B, C et C bis sont abrogés « à compter de l'entrée en vigueur de la présente réforme ». Il n'y aura donc plus ni demande, ni refus, ni seuil de clientèle. Pourtant, 371 bis K proposé organise une nouvelle demande de convention « soumise à la procédure … |
@@ -123,7 +127,7 @@ Statuts et priorités tels que qualifiés par les dossiers, après fusion des do
 | RT-UNION-04 | UNION | coordination manquante | confirmé | — | css R281-4, css R213-5, css R752-1, css L281-4, css R281-6, css L283-1 | Les motifs de R281-4, R213-5 et R752-1 reposent sur le maintien de L281-4 (« Une suppression effective de cette approbation nécessite la modification législative de L281-4 hors du présent lot »). Or L281-4 proposé est abrogé, et ses notes et celles de L281-6 d… |
 | RT-XCUT-01 | XCUT | risque juridique | confirmé | maintenue | css L752-1 | Le projet réécrit la version en vigueur au 18 octobre 2026. Or le droit a déjà prévu, par des textes publiés, une autre rédaction qui prendra effet plus tard. Une loi de réforme qui modifierait « l'article X » en visant la rédaction actuelle serait elle-même d… |
 
-## P2 — 187 objections
+## P2 — 191 objections
 
 | ID | Dossier | Nature | Statut | Réexamen | Articles | Constat |
 |---|---|---|---|---|---|---|
@@ -209,6 +213,10 @@ Statuts et priorités tels que qualifiés par les dossiers, après fusion des do
 | RT-INV-10 | INV | anomalie d'inventaire | confirmé | maintenue | cgi 302 J | L'état ABROGE, issu de la mise à jour LEGI du 29 juillet 2026, contredit la borne 2222-02-22, qui marque d'ordinaire une date d'effet non encore fixée. Au 18 octobre 2026, l'article est présenté comme abrogé par l'ordonnance CIBS 2021-1843. L'inventaire le com… |
 | RT-INV-11 | INV | simple alerte | confirmé | — | travail R4451-39 | L'état MODIFIE avec une borne au 1er juillet 2027 est la représentation LEGI ordinaire d'une version en vigueur dont le remplacement est déjà programmé. Le texte est donc bien en vigueur au 18 octobre 2026. La proposition, sans corps, ne réécrit rien, et les n… |
 | RT-INV-14 | INV | anomalie d'inventaire | à confirmer | — | cgi 302 B, cgi 591, cgi 1954, travail R4623-29, travail R4214-28, cgi 322 (+3) | 44 versions sont en vigueur selon leurs dates au 18 octobre 2026 sans figurer dans l'inventaire. (a) 9 sont des fantômes DILA doublant une version incluse : L146-1 urbanisme, L131-7, D612-3, 244 quater B bis, 1649 bis C, 344-0 B, L153-40, L5424-14 et L161-24-1… |
+| RT-ISS11-02 | ISS | incohérence du projet | confirmé | — | travail L4532-1, travail R4532-3, travail L4744-2, travail R4532-2 | L4532-1 proposé crée un dépôt unique auprès de l'autorité administrative, qui transmet la déclaration aux organismes des 2° et 3°, et libère le maître d'ouvrage de tout envoi séparé. R4532-3 proposé (second_pass « pending ») garde l'envoi à l'agent de contrôle… |
+| RT-ISS2-01 | ISS | simple alerte | confirmé | — | travail L1234-1, travail L1221-2 | Le texte ne dit pas si un contrat antérieur converti d'un commun accord est un contrat « conclu à compter » de l'entrée en vigueur, ni si la durée de préavis ancienne (un ou deux mois, ou durée conventionnelle) fait partie des « droits ... acquis » conservés. … |
+| RT-ISS6-01 | ISS | coordination manquante | confirmé | — | travail L3123-22, css L241-17, travail L3123-8 | La proposition de L3123-22 ajoute deux alinéas après la règle de majoration de 25 % (plafond de huit avenants supprimé ; articulation avec le contrat unique). Le « dernier alinéa » désigne donc désormais la phrase sur le contrat unique, qui ne fixe aucun taux.… |
+| RT-ISS8-01 | ISS | incohérence du projet | confirmé | — | travail L2353-27, travail L2363-6, travail L2373-3, travail L2325-44, travail L2315-63 | Trois propositions renvoient au congé de formation de l'ancien L2325-44 « dans sa dernière rédaction en vigueur avant son abrogation » : L2353-27 (comité de la société européenne), L2363-6 (SCE) et L2373-3 (opérations transfrontalières). Cette référence figée … |
 | RT-MENS-02 | MENS | risque juridique | confirmé | — | a3 111-0 H, a4 50-0 I, a3 111-0 F | H retient comme fait générateur le mois (« mois commençant à compter de ») ; 50-0 I retient la date d'accomplissement de la formalité. Exemples : un mois antérieur sans fabrication dont l'échéance tombe après l'entrée en vigueur, où le « néant » est dû selon H… |
 | RT-MENS-05 | MENS | anomalie d'inventaire | confirmé | — | a4 50-0 I, a3 111-0 H | L'état « après » de 50-0 I contredit la mesure de 111-0 H. Pour les nouveaux mois, la suppression du « néant » et du cachet est absorbée par la suppression de la déclaration entière ; la compter à part serait un double comptage. Le II ne concerne que les fabri… |
 | RT-P1-ANNEXES-05 | P1-ANNEXES | réserve documentaire | à confirmer | — | cgi 1649 quater C, cgi 1649 quater L, cgi 1649 quater M | Dans l'instantané, les articles législatifs qui fondent les centres de gestion agréés, les associations agréées, les organismes mixtes et les viseurs fiscaux conventionnés (CGI 1649 quater C à M) sont tous abrogés au 16 février 2025 par l'article 11 de la loi … |

@@ -1,0 +1,883 @@
+{
+ "group": "ISS-A",
+ "snapshot": "20261027T044303Z",
+ "issues": [
+  {
+   "issue": 2,
+   "url": "https://github.com/AlexMasmej/liberer-la-france/issues/2",
+   "title": "[Code du travail / Droit supérieur] Préavis unique de 15 jours quelle que soit l'ancienneté (L1234-1, L1234-8) : contraire à l'article 4§4 de la Charte sociale européenne",
+   "github_state": "OPEN",
+   "claims": [
+    {
+     "claim": "Pour les contrats nouveaux, L1234-1 fixe un préavis de licenciement de quinze jours calendaires indépendamment de l'ancienneté, au lieu d'un mois (6 mois à 2 ans) et deux mois (2 ans et plus).",
+     "verdict": "confirmé",
+     "text_changed_since_issue": true,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L1234-1",
+       "source_id": "LEGIARTI000006901112",
+       "proposed_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800"
+      }
+     ],
+     "evidence": "LEGIARTI000006901112, source : « 3° S'il justifie chez le même employeur d'une ancienneté de services continus d'au moins deux ans, à un préavis de deux mois. » ; proposition : « bénéficie d’un préavis de quinze jours calendaires, indépendamment de son ancienneté ». Changement depuis cac48419 : l'ancien régime figure désormais en tête pour les contrats antérieurs et « les relations de travail qui ne relèvent pas de ce contrat » ; le nouveau régime est limité aux « contrats de travail de droit privé relevant du contrat unique ». Substance inchangée."
+    },
+    {
+     "claim": "L1234-8 supprime toute condition d'ancienneté pour ce préavis.",
+     "verdict": "confirmé",
+     "text_changed_since_issue": true,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L1234-8",
+       "source_id": "LEGIARTI000053153317",
+       "proposed_sha256": "734f0f53965326809f422a707cd3e3798c40ec645da4eb69eafad41cc6665bf7"
+      }
+     ],
+     "evidence": "LEGIARTI000053153317, proposition : « aucune durée d’ancienneté n’est exigée pour le préavis de quinze jours calendaires ». Changement : champ limité au contrat unique de droit privé, ajout de « sans préjudice des dispositions légales spéciales relatives à la rupture ou au report du terme »."
+    },
+    {
+     "claim": "L2253-3 et L2254-1 rendent ce préavis « impératif » : un accord collectif ne peut pas l'allonger.",
+     "verdict": "confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L2253-3",
+       "source_id": "LEGIARTI000036262236",
+       "proposed_sha256": "07eee40416e8d22d9bb569e2514c5c5e70bfa5787a3f85cde4e0b792700e98a8"
+      },
+      {
+       "code": "travail",
+       "number": "L2254-1",
+       "source_id": "LEGIARTI000006901778",
+       "proposed_sha256": "88ff6ff876ac05ae0160f5c2bd3e9814e9152abb7ecac610d55027c21308feff"
+      },
+      {
+       "code": "travail",
+       "number": "L2251-1",
+       "source_id": "LEGIARTI000006901772",
+       "proposed_sha256": null
+      }
+     ],
+     "evidence": "LEGIARTI000036262236 : « ni à la durée impérative du préavis individuel des contrats nouveaux prévue à l'article L. 1234-1 » ; LEGIARTI000006901778 : « elle ne transforme pas le préavis impératif des contrats nouveaux en un minimum conventionnel ». Les passages cités par l'issue figurent mot pour mot. L2251-1 (LEGIARTI000006901772, retained_unchanged) : « Ils ne peuvent déroger aux dispositions qui revêtent un caractère d'ordre public. »"
+    },
+    {
+     "claim": "Périmètre : seules L1234-1, L2253-3, L2254-1 et L2261-22 imposent la durée contre les conventions ; les quatre suppressions exactes suffisent.",
+     "verdict": "non confirmé",
+     "text_changed_since_issue": true,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L1234-2",
+       "source_id": "LEGIARTI000006901113",
+       "proposed_sha256": "46a7cb454e19e71b720a94f88f84cee979ab42f1b81e8d3f4fb78dd6ef46b89d"
+      },
+      {
+       "code": "travail",
+       "number": "L2261-33",
+       "source_id": "LEGIARTI000033006075",
+       "proposed_sha256": "5cfb293e137b7ce0dff1391d2245ee39f58a42d9bd7cf737c43f7742280faac0"
+      },
+      {
+       "code": "travail",
+       "number": "L2261-22",
+       "source_id": "LEGIARTI000035902423",
+       "proposed_sha256": "22592d72d71a43f513a5f42f9d78bee874cd34de6e1d498fa0b509979ae8cd09"
+      },
+      {
+       "code": "travail",
+       "number": "L1237-1",
+       "source_id": "LEGIARTI000006901174",
+       "proposed_sha256": "1e9906a1d5aab0a7b145cd0013a6b83cc280316c14f89b24e65594f61f943d81"
+      }
+     ],
+     "evidence": "Deux autres verrous existent : L1234-2 (LEGIARTI000006901113) « toute clause imposant un préavis unilatéral d’une durée différente des quinze jours calendaires prévus à l’article L. 1234-1 est réputée non écrite » ; L2261-33 (LEGIARTI000033006075) « ni une durée conventionnelle de préavis individuel différente des quinze jours calendaires légalement applicables ». Côté démission, L1237-1 (LEGIARTI000006901174) : « Cette durée se substitue aux durées de préavis fixées par les conventions, accords ou usages ». En outre, la phrase de L2261-22 que l'issue veut supprimer a changé : « Le délai court à partir du lendemain de la présentation ou de la réception de la notification écrite. » n'existe plus ; elle est remplacée par des règles de computation détaillées (LEGIARTI000035902423)."
+    },
+    {
+     "claim": "Depuis une déclaration d'interprétation de 2018, reprise dans les Conclusions 2022, le CEDS ne contrôle plus la durée du préavis sauf si elle est « manifestly unreasonable », mais vérifie que les sources de la règle permettent de tenir compte de l'ancienneté ; la France a été ajournée en 2022.",
+     "verdict": "invérifiable",
+     "text_changed_since_issue": false,
+     "articles": [],
+     "evidence": "Aucune source primaire du CEDS lue (HUDOC non consulté ; lien de l'issue non ouvert). À confirmer. Le projet note lui-même dans L1234-1 : « La compatibilité internationale du délai pour les longues anciennetés demeure un contrôle ouvert »."
+    },
+    {
+     "claim": "La Charte sociale n'a pas d'effet direct entre particuliers (Cass. soc., 11 mai 2022, n° 21-15.247, sur l'art. 24) ; son extension à l'art. 4§4 est une inférence ; seul l'art. 11 de la convention OIT n° 158 (« préavis raisonnable ») serait invocable, avec une issue incertaine.",
+     "verdict": "invérifiable",
+     "text_changed_since_issue": false,
+     "articles": [],
+     "evidence": "Arrêt et convention non lus sur source primaire (Légifrance JURI et NORMLEX non consultés). L'issue qualifie elle-même l'extension à l'art. 4§4 d'inférence. Qualification prudente : risque contentieux à confirmer, non effet juridique certain."
+    },
+    {
+     "claim": "Le principe de faveur ne rend pas le choix illégal : L2251-1 réserve l'ordre public et le législateur peut en créer (CC n° 2004-494 DC).",
+     "verdict": "partiellement confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L2251-1",
+       "source_id": "LEGIARTI000006901772",
+       "proposed_sha256": null
+      }
+     ],
+     "evidence": "L2251-1 (LEGIARTI000006901772) retained_unchanged, réserve d'ordre public confirmée ; ses notes de revue indiquent que la substitution de L1234-1 « n'est pas annulée par cette clause générale ». Décision 2004-494 DC non relue : à confirmer."
+    }
+   ],
+   "relation": "mixte",
+   "register_ids": [],
+   "proposed_fix_assessment": "L'option 1 de l'issue fait de quinze jours un plancher pour la rupture patronale et laisse conventions, accords, contrats et usages l'allonger. 1) Elle est incomplète sur l'instantané : elle omet L1234-2, qui continuerait à réputer non écrite toute clause contractuelle d'une durée « différente », et L2261-33 ; le passage de L2261-22 qu'elle supprime n'existe plus tel quel, et le test de l'issue échouerait (« snapshot inattendu »). 2) Elle n'est pas neutre pour l'objectif : les durées conventionnelles en vigueur s'appliqueraient de plein droit aux contrats nouveaux couverts. Le préavis réel des contrats uniques ne serait alors plus de quinze jours dans les branches qui prévoient plus, ce qui revient largement à défaire l'orientation « quinze jours de chaque côté ». 3) Elle ne crée pas de formalité ni de renvoi cassé, et garde le préavis payé en cas de faute grave. Une variante préserverait mieux l'objectif tout en ouvrant la prise en compte de l'ancienneté par une source : la substitution resterait impérative à l'égard des stipulations antérieures à la loi, mais les accords et contrats conclus après elle pourraient prévoir un préavis patronal plus long. Elle toucherait L1234-1, L1234-2, L2253-3, L2254-1, L2261-22 et L2261-33. Cette variante ajoute une règle ; elle est à soumettre à l'auteur, pas à appliquer d'office. Aucune des options ne garantit la conformité au regard du CEDS (à confirmer).",
+   "orientation_conflict": "Oui pour le caractère impératif : l'orientation fixe « un préavis de quinze jours calendaires » pour l'employeur comme pour le salarié et « des règles connues dès le départ » (site-summaries, embauche). Le plafond n'y est pas écrit, mais toute la rédaction du projet le met en œuvre. Le transformer en plancher relève de l'auteur. La durée de quinze jours elle-même est préservée par toutes les options.",
+   "recommended_priority": "P2",
+   "recommended_action": "Arbitrage de l'auteur (statu quo documenté, plancher ou variante « stipulations postérieures »). Aucune correction de rédaction n'est requise pour l'objectif tel qu'il est fixé. Si l'option plancher est retenue, l'étendre à L1234-2 et L2261-33 et partir du texte actuel de L2261-22. Clarifier en tout cas le cas des conversions (RT-ISS2-01).",
+   "new_objections": [
+    {
+     "id": "RT-ISS2-01",
+     "origin": "GitHub #2",
+     "relates_to": [],
+     "priority": "P2",
+     "priority_justification": "Ambiguïté rédactionnelle sans impossibilité d'appliquer ; elle ne joue que pour les conversions convenues, mais c'est là que la durée de quinze jours rencontre dès l'entrée en vigueur de longues anciennetés, donc le risque Charte/OIT soulevé par #2.",
+     "nature": "simple alerte",
+     "status": "confirmé",
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L1234-1",
+       "source_id": "LEGIARTI000006901112",
+       "proposed_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
+       "valid_from": "2008-05-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+       "reason_sha256": "913af1860c60a252e588a97c014f4d4b5af940ab7683b95accdde9cdc9302e07",
+       "review_notes_sha256": "8f83111187e25b2fe3e9adfdfdfdb3f29c785beef0bdca3d9b075fd00903993a",
+       "draft_status": "rewrite_draft",
+       "second_pass": "completed",
+       "owner": "batches/automatic-travail/00004.json"
+      },
+      {
+       "code": "travail",
+       "number": "L1221-2",
+       "source_id": "LEGIARTI000019071087",
+       "proposed_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+       "valid_from": "2008-06-27",
+       "valid_until": "2999-01-01",
+       "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+       "reason_sha256": "e5eed8a4b7950445113c62a8880f88ccd2d05432dfd5cd4f6e212b61bee710b1",
+       "review_notes_sha256": "80963e7ac29e94c43a4044d8bd3d0c5987f92bb9616ddccd33e5ddf8dc263d89",
+       "draft_status": "rewrite_draft",
+       "second_pass": "completed",
+       "owner": "batches/travail/003.json"
+      }
+     ],
+     "passages": [
+      {
+       "id": "LEGIARTI000006901112 (proposition)",
+       "text": "Pour les contrats de travail de droit privé relevant du contrat unique et conclus à compter de l’entrée en vigueur de la loi instituant le contrat de travail unique, le salarié dont l’employeur prend l’initiative de rompre le contrat bénéficie d’un préavis de quinze jours calendaires, indépendamment de son ancienneté."
+      },
+      {
+       "id": "LEGIARTI000006901112 (proposition)",
+       "text": "Une conversion convenue d’un contrat antérieur conserve l’ancienneté, les droits et les créances acquis."
+      },
+      {
+       "id": "LEGIARTI000019071087 (proposition)",
+       "text": "Une conversion convenue en contrat unique conserve toute l’ancienneté et les créances acquises."
+      }
+     ],
+     "primary_references": [
+      "LEGIARTI000006901112 (instantané 20261027T044303Z)",
+      "LEGIARTI000019071087 (instantané 20261027T044303Z)"
+     ],
+     "reasoning": "Le texte ne dit pas si un contrat antérieur converti d'un commun accord est un contrat « conclu à compter » de l'entrée en vigueur, ni si la durée de préavis ancienne (un ou deux mois, ou durée conventionnelle) fait partie des « droits ... acquis » conservés. Deux lectures sont possibles : (a) le salarié converti passe aux quinze jours en gardant son ancienneté pour l'indemnité ; (b) il conserve la durée de préavis attachée à son ancienneté. La lecture (a) est la plus cohérente avec l'économie du projet, mais la formule « droits acquis » invite la lecture (b). Une durée de préavis n'est en principe pas un droit acquis avant la notification de la rupture (à confirmer en jurisprudence).",
+     "consequences": "Contentieux prévisible sur chaque conversion ; si la lecture (a) prévaut, des salariés de longue ancienneté relèvent des quinze jours dès l'entrée en vigueur, ce qui concentre le risque de droit supérieur discuté dans #2 (art. 4§4 de la Charte sociale, art. 11 de la convention OIT n° 158 ; à confirmer).",
+     "minimal_correction": "Choix de l'auteur, puis une phrase dans le dernier alinéa de L1234-1 proposé. Lecture (a) : « Une conversion convenue d'un contrat antérieur conserve l'ancienneté, les droits et les créances acquis ; le préavis applicable aux ruptures notifiées après la conversion est celui du présent alinéa. » Lecture (b) : « ... ; la durée de préavis résultant du régime antérieur demeure applicable lorsqu'elle est plus longue. »",
+     "other_options": [
+      "Accord de conversion obligatoirement explicite sur la durée de préavis : écarté, ce serait une mention de forme nouvelle."
+     ],
+     "preserve": [
+      "Préavis de quinze jours calendaires des contrats uniques nouveaux",
+      "Conservation intégrale de l'ancienneté et des créances lors d'une conversion",
+      "Caractère volontaire de la conversion"
+     ],
+     "uncertainties": [
+      "Qualification de la durée de préavis comme droit acquis : non vérifiée en jurisprudence.",
+      "La seconde passe peut encore modifier L1234-1."
+     ],
+     "evidence_files": [
+      "evidence/cited/20261027T044303Z/travail_L1234-1_LEGIARTI000006901112.json",
+      "evidence/cited/20261027T044303Z/travail_L1221-2_LEGIARTI000019071087.json"
+     ]
+    }
+   ]
+  },
+  {
+   "issue": 6,
+   "url": "https://github.com/AlexMasmej/liberer-la-france/issues/6",
+   "title": "[Code du travail / Simplification] Abroger L3123-22 (avenants « compléments d'heures ») : toute heure au-delà du contrat devient une heure complémentaire (L3123-8, L3123-21, L3123-29)",
+   "github_state": "OPEN",
+   "claims": [
+    {
+     "claim": "Texte en vigueur de L3123-22 : avenant temporaire autorisé par accord de branche étendu, huit avenants au plus par an et par salarié hors remplacement nommément désigné, majoration facultative (2°), priorité (3°), 25 % au moins au-delà de l'avenant.",
+     "verdict": "confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3123-22",
+       "source_id": "LEGIARTI000033019984",
+       "proposed_sha256": "3ecd4a32ce810eff83df5063f2b0010e6c8e12c5b8126602ec7bf055c3c2e424"
+      }
+     ],
+     "evidence": "LEGIARTI000033019984, source : « 1° Détermine le nombre maximal d'avenants pouvant être conclus, dans la limite de huit par an et par salarié, en dehors des cas de remplacement d'un salarié absent nommément désigné »."
+    },
+    {
+     "claim": "Les heures d'avenant ne sont pas des heures complémentaires, sont payées au taux normal sauf majoration conventionnelle et ne s'imputent pas sur les plafonds du dixième ou du tiers.",
+     "verdict": "partiellement confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3123-22",
+       "source_id": "LEGIARTI000033019984",
+       "proposed_sha256": "3ecd4a32ce810eff83df5063f2b0010e6c8e12c5b8126602ec7bf055c3c2e424"
+      },
+      {
+       "code": "travail",
+       "number": "L3123-28",
+       "source_id": "LEGIARTI000033019950",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "L3123-20",
+       "source_id": "LEGIARTI000033019991",
+       "proposed_sha256": null
+      }
+     ],
+     "evidence": "Inférence textuelle seulement : « Les heures complémentaires accomplies au delà de la durée déterminée par l'avenant » (LEGIARTI000033019984) et « 2° Peut prévoir la majoration salariale des heures effectuées dans le cadre de cet avenant ». La non-imputation sur L3123-28/L3123-20 n'est pas écrite ; jurisprudence et doctrine administrative non lues."
+    },
+    {
+     "claim": "La réécriture supprime le plafond de huit mais garde le mécanisme et ajoute un paragraphe transitoire (123 → 317 mots).",
+     "verdict": "confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3123-22",
+       "source_id": "LEGIARTI000033019984",
+       "proposed_sha256": "3ecd4a32ce810eff83df5063f2b0010e6c8e12c5b8126602ec7bf055c3c2e424"
+      }
+     ],
+     "evidence": "Proposition : « Le plafond légal de huit avenants par an et par salarié cesse de s'appliquer aux avenants conclus à compter de l'entrée en vigueur de la loi supprimant ce plafond. » ; 317 mots, comme dans l'issue."
+    },
+    {
+     "claim": "Des avenants successifs illimités deviennent possibles.",
+     "verdict": "partiellement confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3123-22",
+       "source_id": "LEGIARTI000033019984",
+       "proposed_sha256": "3ecd4a32ce810eff83df5063f2b0010e6c8e12c5b8126602ec7bf055c3c2e424"
+      },
+      {
+       "code": "travail",
+       "number": "L2253-1",
+       "source_id": "LEGIARTI000036761771",
+       "proposed_sha256": "2ae8f9eb378eeab2685e3fa0db26277c9d49e3bb1666a649b47a3a67b2341fda"
+      }
+     ],
+     "evidence": "Le plafond légal disparaît, mais la branche doit toujours fixer un maximum : « 1° Détermine le nombre maximal d'avenants pouvant être conclus » ; et « Les nombres maximaux et les autres garanties fixés par les conventions et accords collectifs applicables demeurent opposables ». L2253-1 6° maintient la primauté de branche sur L3123-22."
+    },
+    {
+     "claim": "Trois articles renvoient à L3123-22 : L3123-6 (dernier alinéa), L2253-1 6° (sans entrée dans le lot) et CSS L241-17 (trois renvois au « dernier alinéa »).",
+     "verdict": "partiellement confirmé",
+     "text_changed_since_issue": true,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3123-6",
+       "source_id": "LEGIARTI000033020080",
+       "proposed_sha256": "36a7f44009dc99e2123592d42128166b125fe298361692472ffcb62599074ac0"
+      },
+      {
+       "code": "travail",
+       "number": "L2253-1",
+       "source_id": "LEGIARTI000036761771",
+       "proposed_sha256": "2ae8f9eb378eeab2685e3fa0db26277c9d49e3bb1666a649b47a3a67b2341fda"
+      },
+      {
+       "code": "css",
+       "number": "L241-17",
+       "source_id": "LEGIARTI000037947458",
+       "proposed_sha256": "bb78f084d5987aebd884f432e5dfa75e23cab5150783130faaf06f4db4fa8a89"
+      }
+     ],
+     "evidence": "Liste des renvois confirmée par recherche dans tout l'instantané. Changements : L3123-6 proposé (LEGIARTI000033020080) garde la phrase source mot pour mot (« L'avenant au contrat de travail prévu à l'article L. 3123-22 mentionne les modalités... »), pas la paraphrase citée par l'issue ; L2253-1 (LEGIARTI000036761771) a désormais une proposition (lot contrat-unique-coordinations-20261019), avec un 6° inchangé. CSS L241-17 (LEGIARTI000037947458) : trois renvois confirmés."
+    },
+    {
+     "claim": "Sans plafond, des avenants peuvent remplacer chaque semaine des heures complémentaires majorées (exemple : +10 % ou +17,5 % perdus).",
+     "verdict": "partiellement confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3123-29",
+       "source_id": "LEGIARTI000033019947",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "L3123-21",
+       "source_id": "LEGIARTI000033019988",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "L3123-22",
+       "source_id": "LEGIARTI000033019984",
+       "proposed_sha256": "3ecd4a32ce810eff83df5063f2b0010e6c8e12c5b8126602ec7bf055c3c2e424"
+      }
+     ],
+     "evidence": "L'arithmétique est exacte si l'accord ne prévoit aucune majoration au titre du 2° (LEGIARTI000033019947 : « 10 % ... dans la limite du dixième ... 25 % ... entre le dixième et le tiers »). Le risque existe déjà dans la limite de huit avenants ; la réforme l'étend, sous le plafond de branche. L3123-13 (consolidation) est conservé, mais son application aux heures d'avenant « n'est pas présentée comme résolue » (notes du projet)."
+    },
+    {
+     "claim": "Risque au regard de la directive 97/81/CE, clause 4 (non-discrimination des travailleurs à temps partiel).",
+     "verdict": "invérifiable",
+     "text_changed_since_issue": false,
+     "articles": [],
+     "evidence": "EUR-Lex consulté le 2026-10-28 (CELEX 32003L0088 et 31997L0081, pages HTML et ELI) : contenu vide renvoyé à l'outil de lecture, texte non lu ; aucun contournement tenté. Piste à confirmer : la jurisprudence de la CJUE sur les majorations d'heures des travailleurs à temps partiel (notamment C-184/22 et C-185/22, 2024, non lue) pourrait renforcer le risque. Ce risque viserait le mécanisme existant, et pas seulement la suppression du plafond."
+    },
+    {
+     "claim": "Des dispositifs de branche (propreté IDCC 3043, art. 6.2.5.2 ; IDCC 1505, art. 34-8) dépendent de L3123-22 et perdraient leur base.",
+     "verdict": "invérifiable",
+     "text_changed_since_issue": false,
+     "articles": [],
+     "evidence": "Conventions collectives absentes de l'instantané ; l'issue s'appuie en partie sur des sources secondaires. Non examiné."
+    },
+    {
+     "claim": "(Constat de la red-team) Le projet actuel fausse déjà les renvois de CSS L241-17 au « dernier alinéa de l'article L. 3123-22 », puisque L3123-22 proposé ajoute deux alinéas après la règle des 25 %.",
+     "verdict": "confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3123-22",
+       "source_id": "LEGIARTI000033019984",
+       "proposed_sha256": "3ecd4a32ce810eff83df5063f2b0010e6c8e12c5b8126602ec7bf055c3c2e424"
+      },
+      {
+       "code": "css",
+       "number": "L241-17",
+       "source_id": "LEGIARTI000037947458",
+       "proposed_sha256": "bb78f084d5987aebd884f432e5dfa75e23cab5150783130faaf06f4db4fa8a89"
+      },
+      {
+       "code": "travail",
+       "number": "L3123-8",
+       "source_id": "LEGIARTI000033020061",
+       "proposed_sha256": null
+      }
+     ],
+     "evidence": "Dernier alinéa proposé de LEGIARTI000033019984 : « Aucun nouveau contrat à durée déterminée ni renouvellement d'un tel contrat ne peut être conclu à compter de cette entrée en vigueur. » ; voir RT-ISS6-01."
+    }
+   ],
+   "relation": "mixte",
+   "register_ids": [],
+   "proposed_fix_assessment": "Les coordinations proposées sont mécaniquement complètes : L3123-6, L2253-1 6° et les trois renvois de L241-17, seuls renvois trouvés dans l'instantané. Pour L3123-6, il faut partir du texte actuel. Sur le fond, l'abrogation ne rétablit aucune formalité, mais elle supprime des faveurs : la priorité d'accès aux compléments d'heures (3°), les majorations conventionnelles d'avenant, la possibilité d'augmenter temporairement la durée au-delà du dixième ou du tiers, donc des revenus supplémentaires, et la base des dispositifs de branche. Elle est contraire aux orientations « Garder les dérogations et possibilités ... de percevoir davantage de revenu » et « Ne pas supprimer un avantage sous prétexte de ... simplification ». Le texte proposé, « L'article L. 3123-22 est abrogé. », n'a pas de disposition transitoire : il méconnaît la règle « Une abrogation intégrale doit porter un texte opératoire complet et une disposition transitoire adaptée » et laisse sans régime les avenants en cours à la date d'entrée en vigueur. Les critères d'acceptation champ par champ de l'issue relèvent de l'outillage, pas du droit.",
+   "orientation_conflict": "Oui : l'abrogation retire des dérogations favorables et une priorité pour les salariés au nom de la simplification. La suppression du plafond de huit est un choix du projet (motif : « retrait du plafond légal uniforme de huit avenants annuels, sans inventer de plafond de remplacement »), conforme à « Coupe davantage les ... contraintes ».",
+   "recommended_priority": "P2",
+   "recommended_action": "Pas d'abrogation sans décision expresse de l'auteur. Correction de rédaction en tout état de cause : RT-ISS6-01 (renvois de CSS L241-17). Facultatif, à arbitrer : documenter le risque au regard de la directive 97/81/CE, ou prévoir que les heures d'avenant au-delà d'un certain nombre d'avenants suivent la majoration de L3123-21. Cette seconde option ajoute une règle.",
+   "new_objections": [
+    {
+     "id": "RT-ISS6-01",
+     "origin": "GitHub #6",
+     "relates_to": [],
+     "priority": "P2",
+     "priority_justification": "Renvoi faussé dans un texte d'allègement de cotisations, effet probable dès l'entrée en vigueur mais limité : la base des heures reste couverte par le renvoi à L3123-8 ; seule la part de majoration à 25 % des heures accomplies au-delà de l'avenant perd sa référence de plafond.",
+     "nature": "coordination manquante",
+     "status": "confirmé",
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3123-22",
+       "source_id": "LEGIARTI000033019984",
+       "proposed_sha256": "3ecd4a32ce810eff83df5063f2b0010e6c8e12c5b8126602ec7bf055c3c2e424",
+       "valid_from": "2016-08-10",
+       "valid_until": "2999-01-01",
+       "source_sha256": "963235ecd79c9b0663fee6ad1dfa33472caeca1a17edb3aa7c24b9eb4b75645a",
+       "reason_sha256": "1206bc89db4bc2d39c1040b496899d7b15d7f2577bc5a8a72251108ed4af065c",
+       "review_notes_sha256": "f7ca7b6bbee76382d730e9a7c1bcf389f0fd6cee4e0f1d8a763784a2ee04dba5",
+       "draft_status": "rewrite_draft",
+       "second_pass": "completed",
+       "owner": "batches/automatic-travail/00079.json"
+      },
+      {
+       "code": "css",
+       "number": "L241-17",
+       "source_id": "LEGIARTI000037947458",
+       "proposed_sha256": "bb78f084d5987aebd884f432e5dfa75e23cab5150783130faaf06f4db4fa8a89",
+       "valid_from": "2019-01-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "c3d09f8b27d7daa7dd56e449018bb7df2bd161b3aba6a7b71b687f442f483b05",
+       "reason_sha256": "0e6c93cb05025b7062d3c79929824d82b0b7ea5caa55ec9991e6df3a9762a6fd",
+       "review_notes_sha256": "4fef4436f1c7d603cb7c8f5d22915bf4502b0ac2479fdf4de147d05dcd4685d5",
+       "draft_status": "rewrite_draft",
+       "second_pass": "completed",
+       "owner": "batches/automatic-securite-sociale/00044.json"
+      },
+      {
+       "code": "travail",
+       "number": "L3123-8",
+       "source_id": "LEGIARTI000033020061",
+       "proposed_sha256": null,
+       "valid_from": "2016-08-10",
+       "valid_until": "2999-01-01",
+       "source_sha256": "a13755abb1631a1967df506b298d10645e7b091c99ddbb4ffde9388681117e2d",
+       "reason_sha256": "cb2457c05a5590f3bad6be9f42a92c36259f8f1c2f1c67b46419378a0499b8e5",
+       "review_notes_sha256": "54a759d64f4cc89975a8c6d8573feeb9ae3143d3e2b134c70de5b873279b278e",
+       "draft_status": "retained_unchanged",
+       "second_pass": "completed",
+       "owner": "batches/automatic-travail/00078.json"
+      }
+     ],
+     "passages": [
+      {
+       "id": "LEGIARTI000033019984 (source, dernier alinéa)",
+       "text": "Les heures complémentaires accomplies au delà de la durée déterminée par l'avenant donnent lieu à une majoration salariale qui ne peut être inférieure à 25 %."
+      },
+      {
+       "id": "LEGIARTI000033019984 (proposition, dernier alinéa)",
+       "text": "Aucun nouveau contrat à durée déterminée ni renouvellement d'un tel contrat ne peut être conclu à compter de cette entrée en vigueur."
+      },
+      {
+       "id": "LEGIARTI000037947458 (proposition, I 5°)",
+       "text": "du dernier alinéa de l'article L. 3123-22 et des articles L. 3123-28 et L. 3123-29 du même code"
+      },
+      {
+       "id": "LEGIARTI000037947458 (proposition, IV 1° b)",
+       "text": "les taux de 10 % ou de 25 % prévus, selon le cas, au dernier alinéa de l'article L. 3123-22 ou à l'article L. 3123-29 du même code"
+      },
+      {
+       "id": "LEGIARTI000033020061 (notes de revue)",
+       "text": "Coordination hors lot nécessaire : CSS L241-17 I 5° et IV renvoient encore au « dernier alinéa de l'article L. 3123-22 »"
+      }
+     ],
+     "primary_references": [
+      "LEGIARTI000033019984",
+      "LEGIARTI000037947458",
+      "LEGIARTI000033020061 (instantané 20261027T044303Z)"
+     ],
+     "reasoning": "La proposition de L3123-22 ajoute deux alinéas après la règle de majoration de 25 % (plafond de huit avenants supprimé ; articulation avec le contrat unique). Le « dernier alinéa » désigne donc désormais la phrase sur le contrat unique, qui ne fixe aucun taux. La proposition de CSS L241-17, réécrite pour d'autres motifs, conserve trois fois la désignation « dernier alinéa de l'article L. 3123-22 » (I 5°, IV 1° a et b). Le projet a lui-même relevé la difficulté dans les notes de L3123-8, sans la corriger. Ce défaut existe dans le projet actuel, que l'on abroge L3123-22 ou non ; l'issue #6 ne le voit que comme une conséquence de l'abrogation.",
+     "consequences": "Application stricte des textes d'exonération : sans accord collectif, la réduction de cotisations salariales sur la majoration des heures accomplies au-delà de l'avenant pourrait être plafonnée au taux de 10 % de L3123-29 au lieu de 25 % ; une faveur existante est réduite sans que le projet l'ait décidé.",
+     "minimal_correction": "Dans CSS L241-17 proposé, remplacer les trois occurrences de « du dernier alinéa de l'article L. 3123-22 » / « au dernier alinéa de l'article L. 3123-22 » par « de l'article L. 3123-22, pour les heures accomplies au-delà de la durée fixée par l'avenant, » / « à l'article L. 3123-22 pour les heures accomplies au-delà de la durée fixée par l'avenant ». Le reste du texte est inchangé.",
+     "other_options": [
+      "Remettre la règle des 25 % en dernier alinéa de L3123-22 proposé, en plaçant les deux alinéas transitoires avant elle : aucune modification du CSS, mais la désignation par rang d'alinéa reste fragile.",
+      "Si l'auteur retient l'abrogation demandée par #6 : retirer les trois renvois comme le propose l'issue."
+     ],
+     "preserve": [
+      "Réduction de cotisations salariales sur les heures complémentaires, y compris sur la majoration de 25 % au-delà de l'avenant",
+      "Régime des périodes antérieures (depuis le 1er janvier 2019)"
+     ],
+     "uncertainties": [
+      "Le juge pourrait corriger l'erreur matérielle par interprétation ; non certain en matière d'exonération.",
+      "CSS L241-17 et L3123-22 sont « completed » ; la correction n'a pas été vue dans l'instantané."
+     ],
+     "evidence_files": [
+      "evidence/cited/20261027T044303Z/travail_L3123-22_LEGIARTI000033019984.json",
+      "evidence/cited/20261027T044303Z/css_L241-17_LEGIARTI000037947458.json",
+      "evidence/cited/20261027T044303Z/travail_L3123-8_LEGIARTI000033020061.json"
+     ]
+    }
+   ]
+  },
+  {
+   "issue": 7,
+   "url": "https://github.com/AlexMasmej/liberer-la-france/issues/7",
+   "title": "[Code du travail / Durée du travail] Dépassement de la moyenne de 44 h jusqu'à 46 h sur simple décision de l'employeur (L3121-24) : fin du contrôle de l'inspection",
+   "github_state": "OPEN",
+   "claims": [
+    {
+     "claim": "Le texte en vigueur soumet le dépassement de 44 h (moyenne sur 12 semaines) à l'autorisation de l'autorité administrative, dans la limite de 46 heures.",
+     "verdict": "confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3121-24",
+       "source_id": "LEGIARTI000033020389",
+       "proposed_sha256": "b79da4d81089af792f6cec4059ebcc746d578a6d84d969b892679246b1be6f06"
+      },
+      {
+       "code": "travail",
+       "number": "R3121-11",
+       "source_id": "LEGIARTI000033443497",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "R3121-10",
+       "source_id": "LEGIARTI000036483283",
+       "proposed_sha256": null
+      }
+     ],
+     "evidence": "LEGIARTI000033020389, source : « est autorisé par l'autorité administrative dans des conditions déterminées par décret en Conseil d'Etat, dans la limite d'une durée totale maximale de quarante-six heures »."
+    },
+    {
+     "claim": "La réécriture permet à l'employeur de dépasser seul en cas de circonstance exceptionnelle ; les décrets « ne peuvent rétablir ces formalités ».",
+     "verdict": "confirmé",
+     "text_changed_since_issue": true,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3121-24",
+       "source_id": "LEGIARTI000033020389",
+       "proposed_sha256": "b79da4d81089af792f6cec4059ebcc746d578a6d84d969b892679246b1be6f06"
+      }
+     ],
+     "evidence": "Proposition : « l'employeur peut, en cas de circonstance exceptionnelle entraînant temporairement un surcroît extraordinaire de travail, dépasser » ; « Les dispositions réglementaires prises pour son application ne peuvent rétablir ces formalités. » Changement depuis cac48419 : le dernier alinéa protège désormais les compensations déjà accordées et exécutables après la réforme (264 mots contre 220)."
+    },
+    {
+     "claim": "Le plafond change de nature : la « durée totale maximale de 46 heures » devient une « durée moyenne maximale ... sur douze semaines », ce qui permet des semaines au-delà de 46 h.",
+     "verdict": "partiellement confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3121-24",
+       "source_id": "LEGIARTI000033020389",
+       "proposed_sha256": "b79da4d81089af792f6cec4059ebcc746d578a6d84d969b892679246b1be6f06"
+      },
+      {
+       "code": "travail",
+       "number": "R3121-11",
+       "source_id": "LEGIARTI000033443497",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "R3121-12",
+       "source_id": "LEGIARTI000033443858",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "L3121-25",
+       "source_id": "LEGIARTI000033020386",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "L3121-20",
+       "source_id": "LEGIARTI000033020414",
+       "proposed_sha256": null
+      }
+     ],
+     "evidence": "Le changement de mots est confirmé. Mais le système en vigueur lit déjà les 46 h comme une moyenne : R3121-11 (LEGIARTI000033443497) vise « le dépassement de la durée hebdomadaire moyenne de quarante-quatre heures » ; R3121-12 (LEGIARTI000033443858) traite les 46 h « prévue aux articles L. 3121-23 et L. 3121-24 » (L3121-25) comme « la durée moyenne hebdomadaire de quarante-six heures sur une période de douze semaines consécutives ». Toute semaine reste bornée à 48 h : L3121-20 (LEGIARTI000033020414, retained_unchanged) « la durée maximale hebdomadaire de travail est de quarante-huit heures ». Desserrement au plus marginal."
+    },
+    {
+     "claim": "L'avis du CSE est conservé ; seul le contrôle administratif préalable disparaît ; le contrôle devient a posteriori.",
+     "verdict": "confirmé",
+     "text_changed_since_issue": true,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3121-24",
+       "source_id": "LEGIARTI000033020389",
+       "proposed_sha256": "b79da4d81089af792f6cec4059ebcc746d578a6d84d969b892679246b1be6f06"
+      },
+      {
+       "code": "travail",
+       "number": "L3121-26",
+       "source_id": "LEGIARTI000035653098",
+       "proposed_sha256": "0a40a5a4f3998feefdefc86b71a6912643719dbce2d6ffd5d769748c341da471"
+      },
+      {
+       "code": "travail",
+       "number": "R3124-11",
+       "source_id": "LEGIARTI000033471420",
+       "proposed_sha256": "79a79020f2585ff3d43ef41923b3c36161ddd3a4133efbb46aec40e90f34d051"
+      }
+     ],
+     "evidence": "L3121-26 proposé (LEGIARTI000035653098) : « Pour le dépassement prévu à l'article L. 3121-24, l'avis est recueilli avant sa mise en œuvre, sans demande d'autorisation ni transmission administrative de cet avis. » ; R3124-11 proposé : « Les limites de durée, les conditions de fond du dépassement et la consultation du comité demeurent sanctionnées dans leur champ. » Légères retouches de L3121-26 depuis l'issue (190 mots contre 187)."
+    },
+    {
+     "claim": "La limite de 48 h en moyenne sur 4 mois (directive 2003/88/CE, art. 6 et 16 b) reste respectée.",
+     "verdict": "partiellement confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3121-24",
+       "source_id": "LEGIARTI000033020389",
+       "proposed_sha256": "b79da4d81089af792f6cec4059ebcc746d578a6d84d969b892679246b1be6f06"
+      },
+      {
+       "code": "travail",
+       "number": "L3121-20",
+       "source_id": "LEGIARTI000033020414",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "L3121-22",
+       "source_id": "LEGIARTI000033020402",
+       "proposed_sha256": null
+      }
+     ],
+     "evidence": "Côté français, confirmé : 46 h en moyenne sur douze semaines, soit moins de 48 h sur une période plus courte que quatre mois, avec une semaine bornée à 48 h. Les art. 17 et 22 (dérogations, opt-out) ne sont pas en cause : le dépassement reste sous la limite de l'art. 6. EUR-Lex consulté le 2026-10-28 (CELEX 32003L0088 et 31997L0081, pages HTML et ELI) : contenu vide renvoyé à l'outil de lecture, texte non lu ; aucun contournement tenté. Les régimes distincts L3121-21 (60 h) et L3121-25/R3121-12 2° (moyenne étalée sur plus de douze semaines) ne relèvent pas de l'issue et n'ont pas été évalués au regard de la directive."
+    },
+    {
+     "claim": "Combiné à l'absence de système de décompte du temps (issue « travail-07 »), le plafond de 46 h devient invérifiable.",
+     "verdict": "invérifiable",
+     "text_changed_since_issue": false,
+     "articles": [],
+     "evidence": "Renvoie à une autre issue, hors du groupe ISS-A ; décompte du temps non examiné ici."
+    },
+    {
+     "claim": "Renvois à retirer en cas d'abrogation : L3121-25, L3121-26, L3121-69, R3121-11, R3124-11 ; aucun autre code n'y renvoie.",
+     "verdict": "confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3121-25",
+       "source_id": "LEGIARTI000033020386",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "L3121-26",
+       "source_id": "LEGIARTI000035653098",
+       "proposed_sha256": "0a40a5a4f3998feefdefc86b71a6912643719dbce2d6ffd5d769748c341da471"
+      },
+      {
+       "code": "travail",
+       "number": "L3121-69",
+       "source_id": "LEGIARTI000033003428",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "R3121-11",
+       "source_id": "LEGIARTI000033443497",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "R3124-11",
+       "source_id": "LEGIARTI000033471420",
+       "proposed_sha256": "79a79020f2585ff3d43ef41923b3c36161ddd3a4133efbb46aec40e90f34d051"
+      }
+     ],
+     "evidence": "Recherche « 3121-24 » sur tout l'instantané : seules sources L3121-25, L3121-26, L3121-69 ; R3121-11 met en œuvre L3121-24 sans le citer ; R3124-11 vise la plage « L. 3121-20 à L. 3121-26 »."
+    },
+    {
+     "claim": "(Constat de la red-team) R3121-11, maintenu sans changement, soumet encore le dépassement à l'autorisation de R3121-10, en contradiction avec L3121-24 proposé.",
+     "verdict": "confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "R3121-11",
+       "source_id": "LEGIARTI000033443497",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "R3121-10",
+       "source_id": "LEGIARTI000036483283",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "L3121-24",
+       "source_id": "LEGIARTI000033020389",
+       "proposed_sha256": "b79da4d81089af792f6cec4059ebcc746d578a6d84d969b892679246b1be6f06"
+      }
+     ],
+     "evidence": "R3121-11 (LEGIARTI000033443497), retained_unchanged : « est accordé dans les conditions définies à l'article R. 3121-10 » ; voir RT-ISS7-01."
+    }
+   ],
+   "relation": "mixte",
+   "register_ids": [],
+   "proposed_fix_assessment": "L'abrogation de L3121-24 ne rétablit aucune formalité, et la liste des renvois à retirer est exacte. Mais elle supprime purement la voie sans accord pour aller jusqu'à 46 h. Cette voie est une dérogation qui allège les contraintes et permet de travailler et de gagner davantage, contrairement à « garder les exonérations et les dérogations favorables ». Paradoxe : sans accord, l'employeur n'aurait plus que L3121-25, une autorisation sectorielle préalable, plus lourde que le régime actuel. Le correctif augmenterait donc le recours à l'autorisation. Le vrai défaut du projet n'est pas l'absence de contrôle préalable, choix assumé et sans obstacle européen démontré. C'est le décret R3121-11 non aligné (RT-ISS7-01) : il faut l'aligner sur la loi, sans rétablir l'autorisation.",
+   "orientation_conflict": "Oui : le correctif ferme une dérogation favorable au lieu de garder la règle simplifiée. La suppression de l'autorisation par le projet suit l'instruction « remplacer les autorisations et déclarations sans utilité démontrée par une règle plus simple ».",
+   "recommended_priority": "P2",
+   "recommended_action": "Rejeter l'abrogation sauf choix contraire de l'auteur. Corriger R3121-11 (RT-ISS7-01, P1) pour l'aligner sur L3121-24 proposé, avec maintien des compensations déjà accordées. Pas de formalité de remplacement.",
+   "new_objections": [
+    {
+     "id": "RT-ISS7-01",
+     "origin": "GitHub #7",
+     "relates_to": [],
+     "priority": "P1",
+     "priority_justification": "Coordination loi/décret manquante avec effet probable dès l'entrée en vigueur : le décret maintenu continue d'organiser une autorisation que la loi proposée supprime ; insécurité sur la nécessité d'une demande et illégalité de la disposition réglementaire.",
+     "nature": "coordination manquante",
+     "status": "confirmé",
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L3121-24",
+       "source_id": "LEGIARTI000033020389",
+       "proposed_sha256": "b79da4d81089af792f6cec4059ebcc746d578a6d84d969b892679246b1be6f06",
+       "valid_from": "2016-08-10",
+       "valid_until": "2999-01-01",
+       "source_sha256": "0b3313d0ec37aad972d109c10c1bd174c1226adb11f4ab6f6bda4b6ab61dd446",
+       "reason_sha256": "c366168fc52ca23baf1acf8461a1cb206351739b97a74da29c8caed6f3e6e8b6",
+       "review_notes_sha256": "acd1f54146d2fced4237efc34322bebc3d7f54f426f47fc66c839060ccb1d4a8",
+       "draft_status": "rewrite_draft",
+       "second_pass": "completed",
+       "owner": "batches/automatic-travail/00076.json"
+      },
+      {
+       "code": "travail",
+       "number": "R3121-11",
+       "source_id": "LEGIARTI000033443497",
+       "proposed_sha256": null,
+       "valid_from": "2017-01-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "f3ea31d1e800b33c0ffd7792f219cdd342aefddcc274ceb8c638cf3537abc155",
+       "reason_sha256": "4a57bba78b411e68574a3b5aae710187dc69a9722ce07865f355ca7eccb928a7",
+       "review_notes_sha256": "eb06dd24c4b6f4dd85e71d19cb6d36155813a84138d794844d808b5e09c19541",
+       "draft_status": "retained_unchanged",
+       "second_pass": "pending",
+       "owner": "batches/automatic-travail/00236.json"
+      },
+      {
+       "code": "travail",
+       "number": "R3121-10",
+       "source_id": "LEGIARTI000036483283",
+       "proposed_sha256": null,
+       "valid_from": "2018-01-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "98d5a476f48fbc76139039c51ef1dd14eb67562dc18bd24c1f6ef700f667384d",
+       "reason_sha256": "211d43af34358d6e7af2125af36afb9292f05c41ac8e7e84c16a727e43842ceb",
+       "review_notes_sha256": "2d8f2ed92f87238274185bdaf210a2adf977795259f5c57c7843f9e123040cb2",
+       "draft_status": "retained_unchanged",
+       "second_pass": "pending",
+       "owner": "batches/automatic-travail/00236.json"
+      },
+      {
+       "code": "travail",
+       "number": "R3124-11",
+       "source_id": "LEGIARTI000033471420",
+       "proposed_sha256": "79a79020f2585ff3d43ef41923b3c36161ddd3a4133efbb46aec40e90f34d051",
+       "valid_from": "2017-01-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "025e065942e065c7e0dc08f39e3bc94055feac3ad76b09ea8f4d8816090d0b44",
+       "reason_sha256": "8974e9152fcc46ecf66db93f56e16e28930c208f8bdcc0d9dac2442336783373",
+       "review_notes_sha256": "d4dcdf873f498fe2079631dc85132a044b66d2f95f66e30fb378626b0203a4f8",
+       "draft_status": "rewrite_draft",
+       "second_pass": "pending",
+       "owner": "batches/automatic-travail/00239.json"
+      }
+     ],
+     "passages": [
+      {
+       "id": "LEGIARTI000033020389 (proposition)",
+       "text": "Ce dépassement n'est soumis ni à une autorisation administrative ni à une déclaration préalable."
+      },
+      {
+       "id": "LEGIARTI000033020389 (proposition)",
+       "text": "Les dispositions réglementaires prises pour son application ne peuvent rétablir ces formalités."
+      },
+      {
+       "id": "LEGIARTI000033443497 (source, retained_unchanged)",
+       "text": "A défaut d'accord prévu à l'article L. 3121-23, le dépassement de la durée hebdomadaire moyenne de quarante-quatre heures est accordé dans les conditions définies à l'article R. 3121-10."
+      },
+      {
+       "id": "LEGIARTI000033443497 (motif)",
+       "text": "La voie administrative subsidiaire permet de dépasser la moyenne de quarante-quatre heures en l’absence d’accord."
+      },
+      {
+       "id": "LEGIARTI000036483283 (source)",
+       "text": "La demande d'autorisation est adressée par l'employeur à l'inspecteur du travail."
+      },
+      {
+       "id": "LEGIARTI000033020389 (notes de revue)",
+       "text": "R3121-11 demeure dans le corpus « accordé dans les conditions définies à l'article R. 3121-10 » : coordination réglementaire nécessaire, non réalisée dans ce lot."
+      }
+     ],
+     "primary_references": [
+      "LEGIARTI000033020389",
+      "LEGIARTI000033443497",
+      "LEGIARTI000036483283",
+      "LEGIARTI000033471420 (instantané 20261027T044303Z)"
+     ],
+     "reasoning": "La loi proposée (L3121-24) supprime l'autorisation et interdit au règlement de la rétablir. R3121-11 est retenu inchangé : il soumet le même dépassement à R3121-10 (demande à l'inspecteur, justifications, avis du CSE joint, rapport, décision du directeur régional). Son motif décrit encore une « voie administrative ». R3124-11 proposé neutralise la sanction du défaut d'autorisation, ce qui confirme que la suppression est voulue. Le sens de la correction est donc d'aligner le décret sur la loi, sans rétablir de formalité. Rien dans la directive 2003/88/CE, telle que connue, n'exige une autorisation administrative pour un dépassement qui reste sous 48 heures en moyenne (à confirmer : texte EUR-Lex non lu).",
+     "consequences": "Deux normes contraires : l'employeur ne sait pas s'il doit déposer une demande ; l'administration peut continuer à instruire. La disposition réglementaire serait illégale, mais seulement après recours. R3121-11 est encore « pending » dans l'inventaire : la seconde passe peut le reprendre.",
+     "minimal_correction": "Rédiger R3121-11 ainsi : « Pour l'application de l'article L. 3121-24, le dépassement de la durée hebdomadaire moyenne de quarante-quatre heures n'est subordonné à aucune demande, justification, rapport ni décision administrative. Les autorisations accordées avant l'entrée en vigueur du présent article et les mesures compensatoires qu'elles fixent en application de l'article R. 3121-9 demeurent applicables jusqu'à leur terme. » Les conditions de fond sont déjà dans la loi proposée (circonstance exceptionnelle, 46 heures en moyenne sur douze semaines, avis du CSE).",
+     "other_options": [
+      "Abroger R3121-11 avec la même transition : plus court, mais L3121-24 proposé renvoie encore à des « conditions déterminées par décret en Conseil d'Etat » ; sans texte d'application, l'applicabilité directe de la loi pourrait être discutée.",
+      "Rétablir l'autorisation (correction de #7 en sens inverse) : écarté, contraire à la suppression décidée et à l'interdiction de toute formalité de remplacement."
+     ],
+     "preserve": [
+      "Mesures compensatoires et repos complémentaires déjà accordés (R3121-9)",
+      "Avis du CSE prévu par L3121-26 proposé",
+      "Autorisations distinctes de L3121-21/R3121-10 et L3121-25/R3121-12 à R3121-16",
+      "Limite absolue de 48 heures de L3121-20"
+     ],
+     "uncertainties": [
+      "R3121-11 n'a pas encore été relu par la seconde passe (inventaire « pending »).",
+      "Texte de la directive 2003/88/CE non relu sur source primaire."
+     ],
+     "evidence_files": [
+      "evidence/cited/20261027T044303Z/travail_L3121-24_LEGIARTI000033020389.json",
+      "evidence/cited/20261027T044303Z/travail_R3121-11_LEGIARTI000033443497.json",
+      "evidence/cited/20261027T044303Z/travail_R3121-10_LEGIARTI000036483283.json",
+      "evidence/cited/20261027T044303Z/travail_R3124-11_LEGIARTI000033471420.json",
+      "evidence/cited/20261027T044303Z/travail_R3121-9_LEGIARTI000033443342.json"
+     ]
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "read_in_full": [
+   "L1234-1 LEGIARTI000006901112",
+   "L1234-2 LEGIARTI000006901113",
+   "L1234-8 LEGIARTI000053153317",
+   "L1237-1 LEGIARTI000006901174",
+   "L2251-1 LEGIARTI000006901772",
+   "L2253-3 LEGIARTI000036262236",
+   "L2254-1 LEGIARTI000006901778",
+   "L2261-22 LEGIARTI000035902423",
+   "L2261-33 LEGIARTI000033006075",
+   "L1221-2 LEGIARTI000019071087",
+   "L5213-9 LEGIARTI000006903707",
+   "L3123-22 LEGIARTI000033019984",
+   "L3123-6 LEGIARTI000033020080",
+   "L3123-8 LEGIARTI000033020061",
+   "L3123-9 LEGIARTI000033020058",
+   "L3123-13 LEGIARTI000033020045",
+   "L3123-20 LEGIARTI000033019991",
+   "L3123-21 LEGIARTI000033019988",
+   "L3123-28 LEGIARTI000033019950",
+   "L3123-29 LEGIARTI000033019947",
+   "L2253-1 LEGIARTI000036761771",
+   "L241-17 LEGIARTI000037947458",
+   "L3121-20 LEGIARTI000033020414",
+   "L3121-21 LEGIARTI000035653102",
+   "L3121-22 LEGIARTI000033020402",
+   "L3121-23 LEGIARTI000033020397",
+   "L3121-24 LEGIARTI000033020389",
+   "L3121-25 LEGIARTI000033020386",
+   "L3121-26 LEGIARTI000035653098",
+   "L3121-69 LEGIARTI000033003428",
+   "R3121-8 LEGIARTI000054686685",
+   "R3121-9 LEGIARTI000033443342",
+   "R3121-10 LEGIARTI000036483283",
+   "R3121-11 LEGIARTI000033443497",
+   "R3121-12 LEGIARTI000033443858",
+   "R3124-11 LEGIARTI000033471420"
+  ],
+  "method": "cite.py sur chaque article (sources, NOTA, propositions, motifs, notes) ; recherches ciblées en lecture seule sur corpus.sqlite de l'instantané ; register.json, REGISTRE.md, reexam/TRAV.md et notes-contradictions/INDEX.md consultés pour les doublons.",
+  "not_examined": [
+   "Conventions collectives de branche (IDCC 3043, 1505)",
+   "Décisions et conclusions du CEDS",
+   "Textes des directives 97/81/CE et 2003/88/CE (EUR-Lex illisible pour l'outil)",
+   "Jurisprudence citée par les issues",
+   "L5213-9 (doublement du préavis des travailleurs handicapés supprimé pour les contrats nouveaux) : lu, non évalué au fond, inventaire « pending »"
+  ],
+  "production_read": false
+ }
+}

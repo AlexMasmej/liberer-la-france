@@ -3,8 +3,10 @@
 
 The synthesis (reports/RAPPORT.md) is written by hand; this only renders the register.
 """
-import collections, json, re
+import collections, json, re, sys
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from rounds import INITIAL, active
 
 HOME = Path(__file__).resolve().parent.parent
 reg = json.loads((HOME / 'reports/register.json').read_text())
@@ -49,12 +51,15 @@ merged = [o for o in objs if '_merged_into' in o]
 resolved = sorted((o for o in objs if closed(o)), key=lambda o: o['id'])
 dismissed = [o for o in objs if '_merged_into' not in o and not retained(o) and not closed(o)]
 
-lines = ['# Registre des objections — troisième passe (provisoire)', '',
-         f"Établi sur l'instantané `20261026T230545Z`, réexaminé sur l'instantané intermédiaire `{SNAP}` "
-         f"(seconde passe arrêtée à 15 597 / 30 314). {len(kept)} objections retenues · {len(resolved)} résolues "
-         f"ou obsolètes depuis · {len(merged)} doublons fusionnés · {len(dismissed)} alertes écartées ou faux positifs documentés.", '',
-         'La colonne « Réexamen » donne le verdict de la revue des différences (`reports/reexam/`) : '
-         '« — » signifie que l’objection ne cite aucun article modifié entre les deux instantanés ; '
+rounds = active()
+final = any(r['label'] == 'final' for r in rounds)
+done = ' puis '.join(f"l'instantané {r['label']} `{r['new']}` (`reports/{r['dir']}/`)" for r in rounds)
+lines = ['# Registre des objections — troisième passe' + ('' if final else ' (provisoire)'), '',
+         f"Établi sur l'instantané `{INITIAL}`, réexaminé sur {done}. {len(kept)} objections retenues · "
+         f"{len(resolved)} résolues ou obsolètes depuis · {len(merged)} doublons fusionnés · "
+         f"{len(dismissed)} alertes écartées ou faux positifs documentés.", '',
+         'La colonne « Réexamen » donne le verdict de la dernière revue des différences qui a touché l’objection, '
+         'suivi de « (final) » pour la revue finale : « — » signifie qu’aucun article cité n’a changé ; '
          '« nouveau » marque un constat apparu au réexamen. Une priorité suivie de « ← P1 » a changé.', '',
          'Statuts et priorités tels que qualifiés par les dossiers, après fusion des doublons (`reports/dedupe.json`). '
          'Les preuves, citations et empreintes complètes de chaque objection sont dans `reports/dossiers/<dossier>.json` '
@@ -70,6 +75,8 @@ for p in ('P0', 'P1', 'P2'):
               '| ID | Dossier | Nature | Statut | Réexamen | Articles | Constat |', '|---|---|---|---|---|---|---|']
     for o in group:
         rx = (o.get('reexam') or {}).get('verdict') or '—'
+        if (o.get('reexam') or {}).get('round') == 'final':
+            rx += ' (final)'
         was = (o.get('initial') or {}).get('priority')
         if was and was != o.get('priority'):
             rx += f' ← {was}'
@@ -86,7 +93,7 @@ lines += ['', '## Alertes écartées et faux positifs documentés', '', '| ID | 
 lines += [f"| {o['id']} | {o['_dossier']} | {cell(o.get('reasoning'), )} |" for o in dismissed]
 (HOME / 'reports/REGISTRE.md').write_text('\n'.join(lines) + '\n')
 
-cl = ['# Propositions de correction — séparées des textes courants (provisoire)', '',
+cl = ['# Propositions de correction — séparées des textes courants' + ('' if final else ' (provisoire)'), '',
       'Corrections minimales proposées par objection retenue, P0 puis P1. Les rédactions complètes (articles entiers, '
       'transitions, dépendances) figurent dans le rapport du dossier indiqué (`reports/dossiers/<dossier>.md`, '
       'section « Propositions de correction »). Aucune n\'est appliquée ; chacune doit être confrontée aux empreintes '
@@ -99,7 +106,7 @@ for o in kept:
            f"**Correction minimale :** {re.sub(r'\s+', ' ', str(o.get('minimal_correction') or '')).strip()}", '']
     rev = (o.get('reexam') or {}).get('revised_minimal_correction')
     if rev:
-        cl += [f"**Correction révisée au réexamen ({SNAP}) :** {re.sub(r'\s+', ' ', str(rev)).strip()}", '']
+        cl += [f"**Correction révisée au réexamen ({o['reexam'].get('snapshot') or SNAP}) :** {re.sub(r'\s+', ' ', str(rev)).strip()}", '']
     if o.get('other_options'):
         opts = o['other_options'] if isinstance(o['other_options'], list) else [o['other_options']]
         cl += ['**Autres options :**'] + [f'- {one_line(x, 600)}' for x in opts] + ['']

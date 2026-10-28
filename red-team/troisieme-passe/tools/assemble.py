@@ -6,6 +6,8 @@ against the triage (every live finding must be classified exactly once).
 """
 import collections, json, sys
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from rounds import active
 
 HOME = Path(__file__).resolve().parent.parent
 REQUIRED = ['id', 'priority', 'nature', 'status', 'articles', 'reasoning', 'consequences',
@@ -61,11 +63,9 @@ for f in sorted((HOME / 'reports/p1-work').glob('*-classification.jsonl')):
                 problems.append(f"P1 classé deux fois : {r['finding_id']}")
             classified[r['finding_id']] = r
             cls_count[r['classification'].split(' ')[0] if r['classification'].startswith('couvert') else r['classification']] += 1
-# Re-qualifications from the diff review (reports/reexam/) supersede the earlier line.
+# Re-qualifications from the diff-review rounds (tools/rounds.py) supersede the earlier line, in round order.
 requalified = 0
-for f in sorted((HOME / 'reports/reexam').glob('*.json')):
-    if f.name.startswith('packet') or f.name == 'merges.json':
-        continue
+for f in [f for rnd in active() for f in rnd['files']]:
     for r in json.loads(f.read_text()).get('alerts') or []:
         prev = classified.get(r['finding_id'])
         if prev:

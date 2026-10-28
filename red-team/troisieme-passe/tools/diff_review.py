@@ -43,7 +43,9 @@ for o in reg['objections']:
                               merged_into=o.get('_merged_into'), changed_articles=hits)
 out = dict(old=old['snapshot_id'], new=new['snapshot_id'], articles_changed=len(changed),
            field_counts=collections.Counter(f for v in changed.values() for f in v),
-           policy_changed=policy, objections_to_reexamine=by_id)
+           policy_changed=policy,
+           records_added_removed={k: v[0] for k, v in changed.items() if v[0] in ('added', 'removed')},
+           objections_to_reexamine=by_id)
 dest = HOME / 'reports' / f"diff-{old['snapshot_id']}-{new['snapshot_id']}.json"
 dest.write_text(json.dumps(out, ensure_ascii=False, indent=1))
 print(json.dumps({k: out[k] for k in ('old', 'new', 'articles_changed', 'field_counts', 'policy_changed')},
