@@ -29,3 +29,9 @@ The restoration verifies SHA-256 checksums and refuses to replace existing datab
 ## Export scope
 
 The export includes the available files from `sites/` and `legal-rewrite/`. Credentials, environment files, Python caches, locks, database sidecars, detected secret-bearing files, and local memory-service account/operational records are omitted. `export-exclusions.json` records omitted paths. Unrelated video material and the read-only synced project folder are outside this website export.
+
+## Latest interim snapshot — 28 October 2026
+
+The [user-requested snapshot](snapshots/2026-10-28-user-request/README.md) records the latest captured websites and drafting archive as a verified differential overlay on commit `cac48419271390c9d4f47917ffee30c1bd7f9c2a`. Earlier files in this repository remain preserved; use the snapshot manifest to restore the captured current state.
+
+This is an unfinished research and drafting snapshot: 30,314 entries addressed, 3 documentary entries pending and 2,548 second passes still awaiting review at capture. Remaining semantic coordination and final source/reference checks are not complete. The latest local website build passed its technical checks, but its deployment failed; this GitHub snapshot does not claim that build is live or lawyer-approved.
