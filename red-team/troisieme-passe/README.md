@@ -12,6 +12,8 @@ La revue recherche les contradictions, les fragilités juridiques, les effets in
 > - Les corrections proposées sont présentées **séparément des textes courants**. Aucune n'a été intégrée au projet.
 > - Rien n'a été modifié dans la production du projet pendant cette revue.
 
+> **29 octobre 2026 : corrections appliquées.** Les corrections des objections P0 et P1, et celles des issues GitHub qui relèvent d'une contradiction, ont été appliquées au projet, selon les orientations inspirées du programme 2027 de David Lisnard : voir [`reports/applied/CORRECTIONS-APPLIQUEES.md`](reports/applied/CORRECTIONS-APPLIQUEES.md) et le dossier `apply/`.
+
 ## Commencer ici
 
 | Document | Contenu |

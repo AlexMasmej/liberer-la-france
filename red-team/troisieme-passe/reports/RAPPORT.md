@@ -7,6 +7,11 @@
 - 28 octobre : tri des issues GitHub externes (§ D.9) ;
 - 29 octobre : **revue finale des différences sur l'instantané `20261029T034912Z`, pris après la fin de la seconde passe** (30 314 articles relus sur 30 314), avec l'examen des points transmis par la seconde passe (§ D.7 à D.10).
 
+> **Mise à jour du 29 octobre, après la revue finale : corrections appliquées.** À la demande de l'auteur, les corrections des 86 objections P0 et P1 ont été appliquées au projet, dans la mesure où elles sont alignées sur les orientations inspirées du programme 2027 de David Lisnard. Il en est de même des issues GitHub qui relèvent d'une contradiction ou d'une faille.
+> - Résultat : 64 objections appliquées, 21 en partie, 4 non appliquées ; 395 lignes, dont 158 propositions nouvelles sur des versions futures.
+> - Le détail, les arbitrages tranchés par délégation et les éléments non appliqués sont dans `reports/applied/CORRECTIONS-APPLIQUEES.md`.
+> - Le registre ci-dessous reste celui de la revue, avant application.
+
 Projet de réécriture du Code du travail, du CGI et de ses annexes I à IV, du Code de la sécurité sociale, du Code de l'urbanisme et du Code de la construction et de l'habitation. Corpus au **18 octobre 2026**.
 
 > **Statut.** Revue conduite par une IA (un coordinateur et 50 agents, dont certains ont délégué à des sous-agents), **sans validation par un juriste**. Elle a été conduite sur l'instantané figé `20261026T230545Z`, réexaminée sur l'instantané intermédiaire `20261027T044303Z`, puis **réexaminée une dernière fois sur l'instantané final `20261029T034912Z`**, pris après la fin de la seconde passe. Les chiffres ci-dessous sont ceux d'après la revue finale. L'instantané final est identique, fichier par fichier, à la publication de la seconde passe sur la branche `main` du dépôt (1 496 fichiers de lots, registre, politiques et index des contradictions comparés). Aucune modification n'a été apportée à la production.

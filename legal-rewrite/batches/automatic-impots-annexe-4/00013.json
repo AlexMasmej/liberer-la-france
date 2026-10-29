@@ -344,44 +344,81 @@
     "source_id": "LEGIARTI000006300442",
     "source_sha256": "9cf9d8ee84c3a0273211368c59aaf8c4857be5b373753c97c7702f75d3048cd3",
     "number": "50-0 G",
-    "proposed_xml": null,
-    "reason": "Maintien nécessaire : les deux rubriques rapprochent les clients livrés en exonération de leur identité professionnelle et de leur numéro. La liste constitue une preuve de destination admissible, distincte de la déclaration de profession ; supprimer ces données compromettrait la justification des livraisons exonérées. Pas de taxe ni de nouveau dossier institué par cet article.",
-    "review_notes": "111-0 E et F lus entièrement : la liste et la preuve de livraison à une personne autorisée sont imposées par E I 3°. Le numéro IN/UT est conservé dans 50-0 H proposé ; le renvoi demeure cohérent. La possibilité d’intégrer la liste à des outils ordinaires relève du texte de base, non d’une suppression fictive de ses obligations.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "proposed_xml": "<p>Pour l'application du 3° du I de l'article 111-0 E de l'annexe III au code général des impôts, les données d'identification des destinataires tirées des documents commerciaux ou des enregistrements de vente du fournisseur comportent le nom ou la raison sociale, l'adresse et l'activité professionnelle des personnes définies au 2° du II de l'article 111-0 E et à l'article 111-0 F de la même annexe. Aucun numéro d'identification issu d'une déclaration préalable de profession n'y est exigé. Ces données n'ont pas à être reprises dans une liste distincte de ces documents ou enregistrements.</p><p>Les listes établies avant l'entrée en vigueur de la réforme et comportant un tel numéro restent conservées dans les conditions de l'article L. 102 B du livre des procédures fiscales, sans avoir à être complétées ni corrigées.</p>",
+    "reason": "Coordination de fond avec la suppression de la déclaration préalable de profession et du numéro IN/UT (302 D bis III, 111-0 E et 111-0 F proposés, abrogation de 50-0 H) : la rubrique b, entièrement dépendante de ce numéro, disparaît. La rubrique a (nom ou raison sociale, adresse et activité du destinataire) est conservée comme preuve ordinaire de destination des livraisons exonérées, tirée des documents commerciaux ou enregistrements de vente, sans liste séparée, conformément à 111-0 E I 3° proposé. Le motif du maintien antérieur présentait la liste comme « distincte de la déclaration de profession » alors que son b en dépendait : il est retiré. Aucune donnée, liste ni attestation nouvelle n'est exigée ; il s'agit de la même mesure que l'abrogation de 50-0 H, sans gain supplémentaire compté.",
+    "review_notes": "Source 50-0 G (version 2006) lue en entier, ainsi que 111-0 E et 111-0 F proposés et 50-0 H abrogé par la troisième passe. L'arrêté du 24 mars 2006 à l'origine de cette version n'a pas été obtenu. Les identifiants d'accise exigés sur un autre fondement pour la circulation restent distincts et ne sont pas visés. Correction de la troisième passe (objection RT-INUT-02) : l'article, auparavant maintenu sans changement au motif que « le numéro IN/UT est conservé dans 50-0 H proposé », est réécrit : la rubrique b et la liste distincte sont retirées, la rubrique a est conservée comme preuve ordinaire de destination et les listes anciennes restent conservées sans complément.",
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien nécessaire : les deux rubriques rapprochent les clients livrés en exonération de leur identité professionnelle et de leur numéro. La liste constitue une preuve de destination admissible, distincte de la déclaration de profession ; supprimer ces données compromettrait la justification des livraisons exonérées. Pas de taxe ni de nouveau dossier institué par cet article.",
-      "scope_limitations": "111-0 E et F lus entièrement : la liste et la preuve de livraison à une personne autorisée sont imposées par E I 3°. Le numéro IN/UT est conservé dans 50-0 H proposé ; le renvoi demeure cohérent. La possibilité d’intégrer la liste à des outils ordinaires relève du texte de base, non d’une suppression fictive de ses obligations.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Suppression de la rubrique tenant au numéro IN/UT et de la liste récapitulative distincte, par coordination avec la fin de la déclaration de profession (302 D bis III) et avec 111-0 E I 3° ; l'identification ordinaire des destinataires est conservée.",
+      "scope_limitations": "Une seule mesure, déjà comptée à 302 D bis et à 111-0 E ; l'arrêté du 24 mars 2006 n'a pas été obtenu ; aucune concordance CIBS n'est affirmée.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les données du a figuraient déjà dans la liste source et sont désormais tirées des documents commerciaux existants, sans liste, attestation ni registre de remplacement.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "accises-exonerations-fin-declaration-profession",
+          "description": "Retrait du numéro issu de la déclaration de profession dans les données clients.",
+          "before": "Liste clients comportant le numéro IN/UT fixé dans les conditions de 50-0 H.",
+          "after": "Aucun numéro issu d'une déclaration de profession exigé.",
+          "unit": "legal_duty",
+          "affected_population": "Fournisseurs d'alcools livrant en exonération.",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la réforme ; listes anciennes conservées sans correction.",
+          "replacement_or_new_burdens": "Aucune donnée ni attestation de remplacement.",
+          "source_quote": "b. Le numéro d'identification porté sur la déclaration préalable de profession",
+          "proposed_quote": "Aucun numéro d'identification issu d'une déclaration préalable de profession n'y est exigé."
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "accises-liste-clients-support-distinct",
+          "description": "Les données d'identification ne sont plus reprises dans une liste distincte.",
+          "before": "Liste récapitulative des destinataires.",
+          "after": "Données tirées des documents commerciaux ou enregistrements de vente, sans liste distincte.",
+          "unit": "legal_duty",
+          "affected_population": "Fournisseurs d'alcools livrant en exonération.",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la réforme.",
+          "replacement_or_new_burdens": "Aucune liste ni registre de remplacement.",
+          "source_quote": "la liste récapitulative comporte les renseignements suivants",
+          "proposed_quote": "Ces données n'ont pas à être reprises dans une liste distincte de ces documents ou enregistrements."
+        }
+      ]
     },
     "benefit_review": "La liste justifie les livraisons en exonération aux intermédiaires et utilisateurs éligibles ; elle reste utilisable pour les opérations futures. Le maintien de l’identification ne ferme aucune exonération de 302 D bis ni aucune dispense prévue pour les échantillons.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "9cf9d8ee84c3a0273211368c59aaf8c4857be5b373753c97c7702f75d3048cd3",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "cb39192f1c245b5d4ba70f50d573662700305be3c8a4f39ed77570c13dfa120b",
+      "proposed_sha256": "02b819f4d1ff0c8a9f9069ad70d3181a417da3fc99a475b9a95d3615bd27a844",
+      "assessment_sha256": "cdc84ea4ba1eff0a3d4a49d2dd4c6f45b895b9f452214a4e5aca9fe0b2ccaff2",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e51734645c3d20256b0147ec1e4053764420f86acdc74bc192c21b876c173aa8"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Rubrique b : numéro d'identification porté sur la déclaration préalable de profession, fixé dans les conditions de l'article 50-0 H.",
+      "Liste récapitulative distincte des documents commerciaux ou enregistrements de vente du fournisseur."
+    ],
+    "third_pass_correction": {
+      "objection": "RT-INUT-02",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300443",
     "source_sha256": "d5ad5565a74dfa99ca70284597038ff62146d4cd33d5adfb0421d5a71c688a76",
     "number": "50-0 H",
-    "proposed_xml": "<p>Pour l'application du 2° du II de l'article 111-0 E, les opérateurs doivent établir une déclaration préalable de profession conforme au modèle de l'annexe I de l'arrêté du 4 juillet 2005 (JO du 6 juillet 2005). Pour l'application du 1° du I de l'article 111-0 F de l'annexe III au code général des impôts, ils doivent établir cette déclaration selon le modèle de l'annexe II ou de l'annexe III du même arrêté du 4 juillet 2005 (JO du 6 juillet 2005), selon le cas :</p><p>1° L'opérateur peut déposer ou transmettre la déclaration préalable de profession au service des douanes et droits indirects par tout moyen. Il doit y joindre :</p><p>a. Selon le cas, un extrait du registre du commerce et des sociétés, un document justifiant de l'inscription au répertoire des métiers ou une pièce justifiant de la qualité professionnelle ;</p><p>b. Si le déclarant est une personne physique, un justificatif d'identité ;</p><p>c. S'il s'agit d'une personne morale, un justificatif d'identité du déclarant et une procuration ;</p><p>2° La déclaration préalable de profession est transmise en un seul exemplaire au service des douanes et droits indirects territorialement compétent. Aucun second exemplaire original n’est exigé. Le déclarant conserve une copie pour les communications et contrôles prévus aux articles 111-0 E et 111-0 F ;</p><p>3° La déclaration porte un numéro d'identification composé de sept caractères numériques précédés des lettres « IN » pour les intermédiaires définis au 2° du II de l'article 111-0 E de l'annexe III au même code, ou des lettres « UT » pour les utilisateurs définis au 1° du I de l'article 111-0 F de cette annexe. Le numéro prend la forme suivante :<br/>IN ou UT/ XXX/ XXXX :</p><p>a. Les trois premiers caractères après « IN » ou « UT » identifient le service des douanes et droits indirects qui vise la déclaration préalable de profession ;</p><p>b. Les quatre derniers caractères constituent le numéro de la déclaration préalable, tiré d'une série chronologique gérée par ce service.</p><p>Le service des douanes et droits indirects qui reçoit la déclaration préalable de profession attribue le numéro d'identification. Ce numéro est personnel. Les personnes morales l'obtiennent pour elles-mêmes et pour les personnes physiques habilitées par procuration à les représenter ;</p><p>4° La déclaration préalable de profession doit comporter les renseignements suivants :</p><p>a. Les nom et prénoms usuels du déclarant ;</p><p>b. Les date et lieu d’établissement de la déclaration et la signature du déclarant ; aucun cachet d’entreprise n’est exigé ;</p><p>c. Le cas échéant, les nom et prénoms du représentant légal de la personne représentée qui a donné procuration au déclarant, ainsi que la date de cette procuration ;</p><p>d. Une case réservée à l'administration des douanes et droits indirects, indiquant la date de prise en charge de la déclaration, le numéro d'identification du déclarant, ainsi que l'adresse et le visa du service ;</p><p>5° Outre les renseignements prévus au 4°, la déclaration préalable de profession doit comporter les informations suivantes :</p><p>a. Pour les intermédiaires définis au 2° du II de l'article 111-0 E de l'annexe III au code général des impôts :</p><p>1. Le nom ou la raison sociale, l'adresse et le numéro d'accises que le service des douanes et droits indirects a attribué à l'intermédiaire pour son activité d'entrepositaire agréé ;</p><p>2. L'adresse du lieu de réception et de détention des alcools et boissons alcooliques, qui est aussi le lieu de tenue de la liste clients ;</p><p>b. Pour les utilisateurs définis au 1° du I de l'article 111-0 F de la même annexe :</p><p>1. Le nom ou la raison sociale, l'adresse, le numéro SIRET et l'activité de l'opérateur qui souhaite bénéficier des exonérations prévues à l'article 302 D bis du code général des impôts ;</p><p>2. L'adresse du lieu de réception et d'utilisation des alcools et boissons alcooliques, qui est aussi le lieu de tenue de la comptabilité matières pour les utilisateurs soumis à cette obligation ;</p><p>3. Le ou les cas d'utilisation prévus à l'article 302 D bis du code général des impôts.</p><p>Les présentes simplifications s’appliquent aux formalités accomplies à compter de l’entrée en vigueur de la réforme, y compris dans les procédures en cours, sans renouvellement des dépôts déjà effectués. Les droits, exonérations, créances et recours relatifs aux opérations antérieures sont conservés.</p>",
-    "reason": "Réduction de fond : un seul exemplaire original de la déclaration et suppression du cachet d’entreprise ; la copie nécessaire aux fournisseurs demeure. La procuration, l’identité, l’activité et les usages exonérés sont maintenus pour prévenir le détournement du régime. Le renvoi erroné du 4° c au b est remplacé expressément par la personne représentée.",
-    "review_notes": "111-0 E/F et 302 D bis lus. Deux originaux ne sont pas nécessaires à la preuve, mais les copies aux fournisseurs et la conservation demeurent. IN/UT, sept chiffres, XXX/XXXX et toutes rubriques du 5° conservés. Modèles I à III de l’arrêté du 4 juillet 2005 à adapter ; référence historique au répertoire des métiers et concordance CIBS restent à vérifier hors lot. Aucun nouvel accès à des données n’est créé.",
+    "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur de la réforme.</p><p>À compter de cette date, aucune déclaration préalable de profession, aucune pièce jointe, aucun exemplaire ni aucun modèle établi selon les annexes I à III de l'arrêté du 4 juillet 2005 ne peut être exigé des intermédiaires mentionnés au 2° du II de l'article 111-0 E ni des utilisateurs mentionnés à l'article 111-0 F de l'annexe III au code général des impôts. Les déclarations en cours d'instruction deviennent sans objet, sans nouveau dépôt.</p><p>Aucun numéro d'identification « IN » ou « UT » n'est plus attribué. Les numéros déjà attribués n'ont plus à être portés sur les documents d'accompagnement, documents économiques, listes ou déclarations ; leur mention éventuelle est sans effet. Leur absence, leur caducité ou leur retrait ne peut fonder un refus d'exonération pour les opérations réalisées à compter de cette date, sans préjudice du contrôle des conditions de fond.</p><p>Le numéro d'accise attribué à l'entrepositaire agréé, les identifiants exigés pour la circulation des produits soumis à accise et les autorisations de procédés de dénaturation demeurent régis par leurs dispositions propres.</p><p>Les opérations réalisées avant cette date demeurent régies, pour l'établissement des droits, par les dispositions qui leur étaient applicables, sous réserve de l'application de la loi répressive plus douce aux sanctions ayant le caractère de punition. Les pièces déjà soumises à conservation demeurent conservées dans les conditions de l'article L. 102 B du livre des procédures fiscales. Aucune attestation, déclaration ni registre de remplacement n'est institué.</p>",
+    "reason": "Abrogation de coordination : le présent arrêté fixait le modèle, les pièces, les exemplaires, le numéro « IN »/« UT » et les rubriques de la déclaration préalable de profession que le III proposé de l'article 302 D bis du CGI, le 2° du II proposé de 111-0 E et le I proposé de 111-0 F de l'annexe III suppriment entièrement. Un arrêté pris pour leur application ne peut maintenir cette formalité. Le précédent brouillon ne retirait que le second exemplaire et le cachet et conservait la copie destinée aux fournisseurs, que 111-0 E I 2° et 111-0 F I 2° proposés suppriment. Les identifiants autonomes (numéro d'accise de l'entrepositaire agréé, documents et identifiants de circulation, autorisations de procédés de dénaturation) restent régis par leurs propres textes. Aucune formalité de remplacement n'est créée ; les exonérations de 302 D bis restent ouvertes selon leurs conditions de fond.",
+    "review_notes": "CGI 302 D bis (source et proposition, III resserré par la troisième passe), annexe III 111-0 E et 111-0 F (sources et propositions), annexe IV 50-0 G et 50-0 I, annexe II 289 lus en entier. Les modèles I à III de l'arrêté du 4 juillet 2005 (JORFTEXT000000632265) n'ont pas été obtenus : leur abrogation formelle relève de l'arrêté lui-même, hors corpus ; le présent texte interdit seulement de les exiger. Le « numéro d'accises » de l'intermédiaire entrepositaire agréé (ancien 5° a 1) est un identifiant autonome, distinct de l'IN/UT, qui n'est pas supprimé par assimilation. Le 15° de l'annexe II 289 (attribution et retrait des numéros IN/UT) reste à nettoyer hors de ce lot ; sa clause finale lui refuse déjà tout fondement autonome. La concordance avec les exonérations du CIBS (L. 313-7 à L. 313-14) et le droit de l'Union reste à vérifier hors corpus. Correction de la troisième passe (objection RT-INUT-01) : la proposition, qui maintenait la déclaration préalable de profession, ses modèles et le numéro IN/UT supprimés par la loi et le décret proposés, est remplacée par une abrogation opératoire avec transition (déclarations en cours sans objet, numéros existants sans effet, opérations antérieures sous les règles antérieures, loi répressive plus douce, conservation L. 102 B).",
     "status": "rewrite_draft",
-    "change_type": "normative_reduction",
+    "change_type": "full_repeal",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
       "Suppression du second exemplaire original obligatoire de la déclaration préalable.",
@@ -389,23 +426,23 @@
     ],
     "substantive_impact": {
       "version": 1,
-      "classification": "material_reduction",
-      "assessment": "Réduction de fond : un seul exemplaire original de la déclaration et suppression du cachet d’entreprise ; la copie nécessaire aux fournisseurs demeure. La procuration, l’identité, l’activité et les usages exonérés sont maintenus pour prévenir le détournement du régime. Le renvoi erroné du 4° c au b est remplacé expressément par la personne représentée.",
-      "scope_limitations": "111-0 E/F et 302 D bis lus. Deux originaux ne sont pas nécessaires à la preuve, mais les copies aux fournisseurs et la conservation demeurent. IN/UT, sept chiffres, XXX/XXXX et toutes rubriques du 5° conservés. Modèles I à III de l’arrêté du 4 juillet 2005 à adapter ; référence historique au répertoire des métiers et concordance CIBS restent à vérifier hors lot. Aucun nouvel accès à des données n’est créé.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
+      "classification": "coordination_only",
+      "assessment": "Abrogation de l'arrêté d'application de la déclaration préalable de profession, en coordination avec la suppression décidée au III de 302 D bis et dans 111-0 E et 111-0 F : une seule mesure, déjà comptée à 302 D bis ; le retrait du second exemplaire et du cachet est absorbé.",
+      "scope_limitations": "Modèles de l'arrêté du 4 juillet 2005 non obtenus ; concordance CIBS et droit de l'Union non vérifiées ; 289 15° de l'annexe II reste à coordonner. Aucun solde global de complexité ni coût n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucune attestation, déclaration, registre ou numéro de remplacement n'est créé ; les identifiants d'accise autonomes et la conservation L. 102 B préexistaient.",
       "effects": [
         {
-          "kind": "obligation_removed",
-          "measure_id": "accises-profession-exemplaire-cachet",
-          "description": "Retrait du second original et du cachet sans retirer la preuve des exonérations.",
-          "before": "Deux exemplaires et signature appuyée du cachet.",
-          "after": "Un original, copie conservée et signature sans cachet.",
+          "kind": "coordination",
+          "measure_id": "accises-exonerations-fin-declaration-profession",
+          "description": "Retrait du modèle, des pièces, des exemplaires et du numéro IN/UT de la déclaration de profession supprimée par 302 D bis III.",
+          "before": "Déclaration préalable selon les modèles I à III, pièces jointes, deux exemplaires, numéro IN/UT et rubriques.",
+          "after": "Aucune déclaration, pièce, modèle ni numéro IN/UT exigible ; numéros existants sans effet.",
           "unit": "legal_duty",
-          "affected_population": "Intermédiaires et utilisateurs d’alcools bénéficiant du régime d’exonération.",
-          "conditions_and_transition": "Formalités accomplies à compter de l’entrée en vigueur ; droits et recours antérieurs conservés. Les conditions fiscales de fond demeurent.",
-          "replacement_or_new_burdens": "Aucune déclaration, autorisation ou pièce de remplacement créée.",
-          "source_quote": "La déclaration préalable de profession comprend deux exemplaires.",
-          "proposed_quote": "Aucun second exemplaire original n’est exigé."
+          "affected_population": "Intermédiaires et utilisateurs d'alcools exonérés et leurs fournisseurs.",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la réforme ; déclarations en cours sans objet ; opérations antérieures sous les règles antérieures, loi répressive plus douce.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; numéro d'accise, identifiants de circulation et autorisations de dénaturation régis par leurs textes propres.",
+          "source_quote": "les opérateurs établissent une déclaration préalable de profession conforme au modèle repris à l'annexe I de l'arrêté du 4 juillet 2005",
+          "proposed_quote": "aucune déclaration préalable de profession, aucune pièce jointe, aucun exemplaire ni aucun modèle établi selon les annexes I à III de l'arrêté du 4 juillet 2005 ne peut être exigé"
         }
       ]
     },
@@ -414,50 +451,69 @@
       "version": 1,
       "source_sha256": "d5ad5565a74dfa99ca70284597038ff62146d4cd33d5adfb0421d5a71c688a76",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "13ec37f6de66b37d0acfa22879f8180a4be2d1e611f7e88c9e72001e26f82af4",
-      "assessment_sha256": "1815e0edb5245c7a261cc9c84c4d14384d4c1fcdf0ba3d06e240cd42678c0674",
+      "proposed_sha256": "a55edee6d37399780b2ef8156fc48b29513bddca50f450fabd7ff4ad7e50d3e4",
+      "assessment_sha256": "04ed67d92e058987c91d2c85a4d5faf84beb2e278b3baa8b4a37208786d4782c",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "f2721ddcdea146fb934a257d48112a84b9a7b61776b5c3a648f26bbb58432766"
+    "prior_proposal_sha256": "13ec37f6de66b37d0acfa22879f8180a4be2d1e611f7e88c9e72001e26f82af4",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Abrogation de la déclaration préalable de profession des intermédiaires et utilisateurs d'alcools exonérés : modèles I à III de l'arrêté du 4 juillet 2005, pièces jointes, exemplaires, numéro IN/UT, case administrative et rubriques du 5°.",
+    "third_pass_correction": {
+      "objection": "RT-INUT-01",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006069576",
     "source_id": "LEGIARTI000006300444",
     "source_sha256": "ab4377f6c77e09cb78571151b66156e9befbc21a9f277696757d6a8624062a82",
     "number": "50-0 I",
-    "proposed_xml": "<p>I. – Pour l'application des dispositions du 2° de l'article 111-0 G et du 1° de l'article 111-0 H de l'annexe III au code général des impôts, la comptabilité matières doit reprendre notamment les renseignements suivants :</p><p>a. La nature, le numéro et la date de réception du document d'accompagnement mentionné à l'article 302 M dudit code, du document économique ou des pièces justificatives des entrées ou des fabrications ;</p><p>b. La nature et la date de toute autre opération constituant une \" entrée \" ou une \" sortie \" selon le 2° de l'article 111-0 G de la même annexe ;</p><p>c. L'espèce, la qualité et la nature des produits mentionnés à l'article 302 D bis du code général des impôts et des produits issus de la fabrication.</p><p>II. – Pour l'application des dispositions du 2° de l'article 111-0 H de l'annexe III au code général des impôts, la déclaration mensuelle récapitulant les quantités de produits vitivinicoles comporte les renseignements suivants :</p><p>a. La campagne vitivinicole au cours de laquelle sont mis en oeuvre les produits vitivinicoles ;</p><p>b. Le nom ou la raison sociale du fabricant de vinaigre ;</p><p>c. Le numéro d'identification attribué par le service des douanes et droits indirects dans les conditions fixées à l'article 50-0 H ;</p><p>d. L'adresse du lieu d'utilisation des produits vitivinicoles ;</p><p>e. Le mois au titre duquel la déclaration est établie ;</p><p>f. Les date et lieu d'établissement de la déclaration ;</p><p>g. La qualité et la signature du déclarant, sans cachet de l’entreprise.</p><p>A défaut d’opération de fabrication au cours du mois, aucune déclaration mensuelle portant la mention « néant » n’est exigée. Cette dispense ne modifie pas les obligations de comptabilité matières ni les déclarations des mois comportant une opération de fabrication.</p><p>Les présentes simplifications s’appliquent aux formalités accomplies à compter de l’entrée en vigueur de la réforme, y compris dans les procédures en cours, sans renouvellement des dépôts déjà effectués. Les droits, exonérations, créances et recours relatifs aux opérations antérieures sont conservés.</p>",
-    "reason": "Réduction de fond : suppression de la déclaration mensuelle « néant » et du cachet d’entreprise. La comptabilité matières et les déclarations des mois actifs conservent la preuve des quantités affectées à l’usage exonéré. Le précédent brouillon imposait encore ces deux formalités.",
-    "review_notes": "111-0 G/H lus entièrement : seuils de G (100 et 500 litres), unités et échéance du dixième jour pour H restent dans leur champ. Coordonner H 2° pour la dispense des mois sans fabrication. Les références anciennes 302 M (absent du corpus fourni) et 302 D bis demandent concordance CIBS ; aucune concordance inventée. Le fondement européen vitivinicole ancien doit être vérifié hors corpus ; aucune obligation européenne autonome n’est réputée abrogée.",
+    "proposed_xml": "<p>I. – Pour l'application des dispositions du 2° de l'article 111-0 G et du 1° de l'article 111-0 H de l'annexe III au code général des impôts, la comptabilité matières doit reprendre notamment les renseignements suivants :</p><p>a. La nature, le numéro et la date de réception du document d'accompagnement mentionné à l'article 302 M dudit code, du document économique ou des pièces justificatives des entrées ou des fabrications ;</p><p>b. La nature et la date de toute autre opération constituant une \" entrée \" ou une \" sortie \" selon le 2° de l'article 111-0 G de la même annexe ;</p><p>c. L'espèce, la qualité et la nature des produits mentionnés à l'article 302 D bis du code général des impôts et des produits issus de la fabrication.</p><p>II. – Pour les mois commençant à compter de la date à laquelle s'applique la suppression de la transmission mensuelle prévue au 2° de l'article 111-0 H de l'annexe III au code général des impôts, aucune déclaration mensuelle récapitulant les quantités de produits vitivinicoles n'est établie ni transmise, que le mois comporte ou non une opération de fabrication. Aucun modèle de cette déclaration ni aucune déclaration portant la mention « néant » n'est exigé pour ces mois. Les renseignements du I continuent d'être portés dans la comptabilité matières ; les données prévues au 2° de l'article 111-0 H ne sont communiquées que dans les conditions qu'il prévoit.</p><p>III. – Pour le mois en cours à la date mentionnée au II et pour les mois antérieurs, la déclaration mensuelle prévue au 2° de l'article 111-0 H de l'annexe III au code général des impôts dans sa rédaction antérieure reste due et comporte les renseignements suivants :</p><p>a. La campagne vitivinicole au cours de laquelle sont mis en oeuvre les produits vitivinicoles ;</p><p>b. Le nom ou la raison sociale du fabricant de vinaigre ;</p><p>c. Le cas échéant, le numéro d'identification attribué par le service des douanes et droits indirects avant cette date ;</p><p>d. L'adresse du lieu d'utilisation des produits vitivinicoles ;</p><p>e. Le mois au titre duquel la déclaration est établie ;</p><p>f. Les date et lieu d'établissement de la déclaration ;</p><p>g. La qualité et la signature du déclarant.</p><p>Lorsque la déclaration relative à l'un de ces mois est établie à compter de la date mentionnée au II, aucun cachet de l'entreprise n'est exigé et, à défaut d'opération de fabrication au cours de ce mois, aucune déclaration portant la mention « néant » n'est exigée. Les déclarations déjà déposées ne sont pas renouvelées. Les déclarations des mois comportant une opération de fabrication qui étaient dues et n'ont pas été déposées restent dues. Le contrôle et la rectification des déclarations de ces mois, ainsi que les droits, exonérations, créances et recours qui s'y rapportent, demeurent régis par les règles applicables à ces mois, sous réserve de l'application immédiate des dispositions répressives plus douces.</p>",
+    "reason": "Coordination de fond avec la suppression de la transmission mensuelle prévue au 2° de 111-0 H proposé : pour les mois commençant à compter de cette suppression, aucune déclaration mensuelle vitivinicole, aucun modèle ni aucune déclaration « néant » n'est exigé, que le mois comporte ou non une fabrication. Le précédent brouillon maintenait les déclarations des mois actifs, avec numéro UT et signature, en contradiction avec 111-0 H. Le I (renseignements de la comptabilité matières) est repris sans changement. Le III conserve le contenu des déclarations du mois en cours et des mois antérieurs, qui restent dues, avec les allègements déjà décidés pour les déclarations établies après la réforme (pas de cachet, pas de « néant ») ; le numéro n'y figure que s'il a été attribué. Aucune déclaration, registre ni attestation de remplacement n'est créé.",
+    "review_notes": "111-0 G et 111-0 H (sources et propositions) lus entièrement ; le II est rattaché au même déclencheur que 111-0 H 2°, et non à une date propre de l'arrêté, pour neutraliser un décalage d'entrée en vigueur entre décret et arrêté. Les références anciennes 302 M (absent du corpus fourni) et 302 D bis demandent concordance CIBS ; aucune concordance inventée. Le fondement européen vitivinicole ancien (règlement (CE) n° 1493/1999) doit être vérifié hors corpus au regard des règlements (UE) n° 1308/2013, 2018/273 et 2018/274 ; aucune obligation européenne autonome n'est réputée abrogée (clause expresse de 111-0 H 2°). L'existence d'un modèle de déclaration mensuelle dans l'arrêté du 4 juillet 2005 n'est pas établie (arrêté non obtenu). Le gain propre au présent article se limite aux déclarations d'anciens mois établies après la réforme (cachet et « néant ») ; la suppression de la déclaration des nouveaux mois est la mesure de 111-0 H, comptée une seule fois. Correction de la troisième passe (objection RT-MENS-01, avec RT-MENS-02 et la fiche d'impact de RT-MENS-05) : le II ne décrit plus une déclaration des mois actifs ; il exclut toute déclaration pour les nouveaux mois ; le III régit le mois en cours et les mois antérieurs (numéro « le cas échéant », déclarations dues non déposées, rectification, loi répressive plus douce).",
     "status": "rewrite_draft",
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Suppression de la déclaration mensuelle néant en l’absence de fabrication.",
-      "Suppression du cachet de l’entreprise sur la déclaration mensuelle."
+      "Déclaration mensuelle récapitulative des produits vitivinicoles et son modèle pour les mois commençant après la suppression prévue au 2° de 111-0 H.",
+      "Déclaration mensuelle portant la mention néant et cachet de l'entreprise pour les déclarations d'anciens mois établies après la réforme."
     ],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Réduction de fond : suppression de la déclaration mensuelle « néant » et du cachet d’entreprise. La comptabilité matières et les déclarations des mois actifs conservent la preuve des quantités affectées à l’usage exonéré. Le précédent brouillon imposait encore ces deux formalités.",
-      "scope_limitations": "111-0 G/H lus entièrement : seuils de G (100 et 500 litres), unités et échéance du dixième jour pour H restent dans leur champ. Coordonner H 2° pour la dispense des mois sans fabrication. Les références anciennes 302 M (absent du corpus fourni) et 302 D bis demandent concordance CIBS ; aucune concordance inventée. Le fondement européen vitivinicole ancien doit être vérifié hors corpus ; aucune obligation européenne autonome n’est réputée abrogée.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
+      "assessment": "Pour les nouveaux mois, la déclaration mensuelle vitivinicole disparaît par coordination avec 111-0 H 2° (mesure comptée à 111-0 H). Le gain propre du présent article se limite aux déclarations d'anciens mois établies après la réforme : signature sans cachet et absence de déclaration « néant ».",
+      "scope_limitations": "Arrêté du 4 juillet 2005 et éventuel modèle mensuel non obtenus ; obligations européennes vitivinicoles autonomes non vérifiées ; concordance CIBS non établie. Aucun solde global de coût ou de complexité n'est chiffré.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le I reprend la source, le III reprend le contenu antérieur des déclarations déjà dues ; aucun dépôt, registre ou justificatif de remplacement n'est institué.",
       "effects": [
         {
           "kind": "obligation_removed",
           "measure_id": "vinaigre-declaration-neant-cachet",
-          "description": "Retrait de deux formalités sans suppression de la comptabilité de contrôle.",
+          "description": "Retrait du cachet et de la déclaration « néant » pour les déclarations d'anciens mois établies après la réforme.",
           "before": "Déclaration même sans fabrication et cachet obligatoire.",
-          "after": "Déclaration seulement pour les mois actifs, signature suffisante.",
+          "after": "Nouveaux mois : aucune déclaration mensuelle (mesure de 111-0 H). Mois antérieurs déclarés après l'entrée en vigueur : signature sans cachet, pas de déclaration néant.",
           "unit": "legal_duty",
-          "affected_population": "Fabricants de vinaigre et utilisateurs soumis à comptabilité matières.",
-          "conditions_and_transition": "Formalités accomplies à compter de l’entrée en vigueur ; droits et recours antérieurs conservés. Les conditions fiscales de fond demeurent.",
+          "affected_population": "Fabricants de vinaigre visés au 2° de l'article 111-0 H.",
+          "conditions_and_transition": "Selon le III : mois en cours et mois antérieurs ; déclarations déposées non renouvelées ; déclarations dues non déposées restant dues ; loi répressive plus douce.",
           "replacement_or_new_burdens": "Aucune déclaration, autorisation ou pièce de remplacement créée.",
           "source_quote": "A défaut d'opération de fabrication, l'utilisateur adresse au service des douanes et droits indirects la déclaration mensuelle annotée de la mention \" néant \".",
-          "proposed_quote": "A défaut d’opération de fabrication au cours du mois, aucune déclaration mensuelle portant la mention « néant » n’est exigée."
+          "proposed_quote": "à défaut d'opération de fabrication au cours de ce mois, aucune déclaration portant la mention « néant » n'est exigée."
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "vinaigre-fin-declaration-mensuelle",
+          "description": "Alignement du contenu réglementaire sur la suppression de la transmission mensuelle de 111-0 H 2°.",
+          "before": "Contenu de la déclaration mensuelle, y compris pour les mois actifs futurs.",
+          "after": "Aucune déclaration ni modèle pour les mois commençant après la suppression.",
+          "unit": "legal_duty",
+          "affected_population": "Fabricants de vinaigre visés au 2° de l'article 111-0 H.",
+          "conditions_and_transition": "Même déclencheur que 111-0 H 2°.",
+          "replacement_or_new_burdens": "Aucune transmission de remplacement ; données communiquées seulement sur demande dans les conditions de 111-0 H.",
+          "source_quote": "la déclaration mensuelle récapitulant les quantités de produits vitivinicoles comporte les renseignements suivants",
+          "proposed_quote": "aucune déclaration mensuelle récapitulant les quantités de produits vitivinicoles n'est établie ni transmise"
         }
       ]
     },
@@ -466,15 +522,19 @@
       "version": 1,
       "source_sha256": "ab4377f6c77e09cb78571151b66156e9befbc21a9f277696757d6a8624062a82",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "5970baf2000055b42331f32309cef72b9c38ce22daaee984434db6c3d1d7976a",
-      "assessment_sha256": "c5bf0bd4eb14b0eac9f9a6caf04e0ffea50dfc5c1c71598f650525101259b2e9",
+      "proposed_sha256": "18f7264180a3c2514de19ca0c60b8a9c3c27a79730d6b8971a794f4d664489c7",
+      "assessment_sha256": "985e3ac0a38d9cded02a86b5ad004486c8d3dcaa8030a7148ea7561d55932205",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "53eb52ff1334baa6529ceb3b106a0c694f453c22f52e085f9b9d8bea0ccd91b9"
+    "prior_proposal_sha256": "5970baf2000055b42331f32309cef72b9c38ce22daaee984434db6c3d1d7976a",
+    "third_pass_correction": {
+      "objection": "RT-MENS-01",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006069576",

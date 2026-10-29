@@ -1,5 +1,14 @@
 # Tri des issues GitHub externes — 28 octobre 2026
 
+> **État au 29 octobre, après application des corrections :**
+> - #9 (phrase contradictoire de L1233-46) et #6 (renvoi de CSS L241-17) sont corrigées dans le projet.
+> - #2 : préavis de 15 jours maintenu ; le préavis des contrats anciens convertis est précisé dans L1234-1.
+> - #6 (abrogation de L3123-22) et #7 (rétablissement de l'autorisation) : demandes écartées comme contraires aux orientations.
+> - #10 et #11 : réglées par la seconde passe.
+> - #8 : la référence figée restante est valide ; l'amélioration de rédaction reste au registre (P2).
+>
+> Voir `reports/applied/CORRECTIONS-APPLIQUEES.md`.
+>
 > **Revérifié à la revue finale du 29 octobre** sur l'instantané `20261029T034912Z` : #10 et #11 sont réglées par la seconde passe, le décret de #7 est aligné, et #9 est réglée en partie. Voir le § D.9 de `reports/RAPPORT.md`. Le tableau ci-dessous est l'état du 28 octobre.
 
 Les issues #2 à #11 du dépôt ont été ouvertes par un contributeur externe à partir de ses propres agents (#4 est une demande de fusion, close par son auteur). Trois agents de la troisième passe les ont triées sur l'instantané `20261027T044303Z`, en lecture seule. Ils n'ont rien écrit sur GitHub, n'ont exécuté aucun code des issues et ont lu chaque article cité avec `cite.py`.
