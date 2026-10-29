@@ -69,6 +69,9 @@ def build(group):
         else:
             problems.append(f'{tag}: mode inconnu'); continue
         for f in TEXT_FIELDS:
+            # A maintained article (retained_unchanged) keeps no proposal: only its reason and notes change.
+            if f == 'proposed_xml' and c.get(f) is None and row.get('status') == 'retained_unchanged':
+                row[f] = None; continue
             if not isinstance(c.get(f), str) or not c[f].strip():
                 problems.append(f'{tag}: champ {f} manquant (texte complet attendu)'); break
             row[f] = c[f]
