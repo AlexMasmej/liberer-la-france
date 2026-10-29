@@ -240,32 +240,51 @@
     "source_id": "LEGIARTI000036412664",
     "source_sha256": "8b92a422a6aa23f78a7ed803cac8744ed62e7c07f474378c820d3fc03d5e3cff",
     "number": "R2312-30",
-    "proposed_xml": null,
-    "reason": "Maintien intégral, sans réécriture stylistique. La communication du rapport aux associés ou membres du GIE sous huit jours compense l'absence de conseil d'administration ou de surveillance. Ce circuit permet l'exercice de l'alerte économique ; sa suppression priverait les destinataires de cette information.",
+    "proposed_xml": "<p>Dans les sociétés autres que celles qui ont un conseil d'administration ou de surveillance ou dans les groupements d'intérêt économique, les administrateurs communiquent aux associés et aux membres du groupement le rapport du comité social et économique dans les huit jours de la délibération du comité social et économique demandant cette communication.</p>",
+    "reason": "Coordination : suppression des seules mentions des commissions abrogées (L2315-46 à L2315-49, L2315-56) ; attributions du CSE inchangées.",
     "review_notes": "Transition compatible : « ou le cas échéant de la commission économique » reste opérant avec L2315-46 proposé, qui rend la commission facultative, et L2312-63 proposé, qui attribue le rapport au CSE en son absence. L2312-65 lu maintient la décision à la majorité des membres présents ; les huit jours partent de cette délibération. Différence de destinataires : la suppression de l'envoi obligatoire au commissaire aux comptes dans L2312-63 ne supprime pas celui aux associés et membres du GIE. L2312-66 source et proposition mentionnent « le gérant ou les administrateurs » : le présent règlement visant les administrateurs ne dispense pas le gérant de son obligation législative. Aucun nouveau rapport requis. Les statuts individuels ne sont pas fournis.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien intégral, sans réécriture stylistique. La communication du rapport aux associés ou membres du GIE sous huit jours compense l'absence de conseil d'administration ou de surveillance. Ce circuit permet l'exercice de l'alerte économique ; sa suppression priverait les destinataires de cette information. Aucune réduction normative nouvelle n’est comptée par rapport à la source officielle entière.",
-      "scope_limitations": "Transition compatible : « ou le cas échéant de la commission économique » reste opérant avec L2315-46 proposé, qui rend la commission facultative, et L2312-63 proposé, qui attribue le rapport au CSE en son absence. L2312-65 lu maintient la décision à la majorité des membres présents ; les huit jours partent de cette délibération. Différence de destinataires : la suppression de l'envoi obligatoire au commissaire aux comptes dans L2312-63 ne supprime pas celui aux associés et membres du GIE. L2312-66 source et proposition mentionnent « le gérant ou les administrateurs » : le présent règlement visant les administrateurs ne dispense pas le gérant de son obligation législative. Aucun nouveau rapport requis. Les statuts individuels ne sont pas fournis.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun nouveau corps normatif, registre, donnée, délai ou condition ne remplace la source maintenue. Les obligations existantes restent celles examinées dans le motif ; aucun solde global des codes n’est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination : seules les mentions des commissions abrogées (L2315-46 à L2315-49, L2315-56) sont retirées ; le reste du texte du dépôt est inchangé.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai ni formalité n'est créé en remplacement ; les consultations et informations restent dues au comité social et économique dans les conditions inchangées.",
+      "scope_limitations": "Les commissions créées par accord (L2315-45) ne sont pas touchées. Les clauses de reprise et de maintien propres aux commissions abrogées disparaissent avec elles, sauf la reprise des travaux et la préservation des droits acquis en matière d'alerte économique (L2312-63).",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "cse-commissions-suppletives-abrogees",
+          "description": "Retrait des renvois aux commissions abrogées.",
+          "before": "Renvoi à une commission supplétive.",
+          "after": "Compétence du seul comité.",
+          "unit": "legal_duty",
+          "affected_population": "Comités sociaux et économiques.",
+          "conditions_and_transition": "Sans transition propre.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "Dans les sociétés autres que celles qui ont un conseil d'administration ou de",
+          "proposed_quote": "Dans les sociétés autres que celles qui ont un conseil d'administration ou de"
+        }
+      ]
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "8b92a422a6aa23f78a7ed803cac8744ed62e7c07f474378c820d3fc03d5e3cff",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "9b4f6a9b5a425c3801c613ce5ad45968b96e72837c391a90fd3c653f9b25e4b2",
+      "proposed_sha256": "fb094accb18a7a32b96710d34fc73d74087100f047d4e27990cde6b2a7209c82",
+      "assessment_sha256": "8f60422687bf9e5aa5bb10f62e440f046619d0d35168852a91378cfff769ff9b",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Retrait de la mention du rapport de la commission économique supplétive (L2315-46 abrogé)."
+    ]
   },
   {
     "code_id": "LEGITEXT000006072050",

@@ -157,10 +157,10 @@
     "source_id": "LEGIARTI000036262374",
     "source_sha256": "aba75210410f672418b0f224846ddc6b4bb1fb192530d3f72c113e4f65f788ba",
     "number": "L2312-41",
-    "proposed_xml": null,
-    "reason": "Maintien intégral : la réunion sous trois jours permet l'information utile lors d'une concentration ; l'expertise demeure facultative et sa restitution intervient seulement si elle est décidée. La dispense déjà prévue lorsque le CSE se réunit au titre d'une OPA évite le véritable doublon. Supprimer la première information ou l'audition des conclusions retirerait une garantie d'examen de changements économiques majeurs.",
+    "proposed_xml": "<p>Lorsqu'une entreprise est partie à une opération de concentration, telle que définie à l'article L. 430-1 du code de commerce, l'employeur réunit le comité social et économique au plus tard dans un délai de trois jours à compter de la publication du communiqué relatif à la notification du projet de concentration, émanant soit de l'autorité administrative française en application de l'article L. 430-3 du même code, soit de la Commission européenne en application du règlement (CE) n° 139/2004 du Conseil du 20 janvier 2004 sur les concentrations. Au cours de cette réunion, le comité social et économique peut proposer le recours à un expert-comptable dans les conditions prévues aux articles L. 2315-92 et L. 2315-93. Dans ce cas, le comité tient une deuxième réunion afin d'entendre les résultats des travaux de l'expert. Les dispositions du premier alinéa sont réputées satisfaites lorsque le comité social et économique se réunit suite au dépôt d'une offre publique d'acquisition en application des dispositions du sous-paragraphe 5.</p>",
+    "reason": "Coordination : suppression des seules mentions des commissions abrogées (L2315-46 à L2315-49, L2315-56) ; attributions du CSE inchangées.",
     "review_notes": "L2315-92 et L2315-93 ont été lus : l'expertise et l'accès aux documents des sociétés intéressées restent dans leur champ. Les trois jours sont un délai maximal d'information, non un délai minimal bloquant l'opération ; ils ne sont pas le préavis individuel. Le troisième alinéa et sa dispense pour les OPA restent applicables aux opérations futures. Les renvois L430-1/L430-3 du commerce et au règlement 139/2004 sont conservés tels que fournis ; ces textes extérieurs ne sont pas disponibles intégralement dans le corpus autorisé et leur concordance détaillée reste à vérifier, sans examen extérieur présenté comme accompli. Seconde passe : Transition compatible et avantage maintenu : « Les dispositions du premier alinéa sont réputées satisfaites » lorsque le CSE se réunit à la suite d'une OPA. La seconde réunion est conditionnée au recours à l'expertise ; elle n'est pas supprimée par la dispense de première réunion. L2315-92 I 1° et L2315-93 maintiennent respectivement la désignation facultative et l'accès aux documents des sociétés intéressées. Aucun délai individuel de rupture ne modifie les trois jours de cette information.",
-    "status": "retained_unchanged",
+    "status": "rewrite_draft",
     "source_conflict_ids": [],
     "impact_check_required": true,
     "benefit_check_required": false,
@@ -174,28 +174,47 @@
       "batch_row_sha256": "d928db62b44ede1559e508825b594fe34af8338dc83b2150aa4a38e1944f9f10"
     },
     "reference_checks": [],
-    "classification": "retained_necessary",
+    "classification": "coordination_only",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien intégral : la réunion sous trois jours permet l'information utile lors d'une concentration ; l'expertise demeure facultative et sa restitution intervient seulement si elle est décidée. La dispense déjà prévue lorsque le CSE se réunit au titre d'une OPA évite le véritable doublon. Supprimer la première information ou l'audition des conclusions retirerait une garantie d'examen de changements économiques majeurs.",
-      "scope_limitations": "Transition compatible et avantage maintenu : « Les dispositions du premier alinéa sont réputées satisfaites » lorsque le CSE se réunit à la suite d’une OPA. La seconde réunion est conditionnée au recours à l’expertise ; elle n’est pas supprimée par la dispense de première réunion. L2315-92 I 1° et L2315-93 maintiennent respectivement la désignation facultative et l’accès aux documents des sociétés intéressées. Aucun délai individuel de rupture ne modifie les trois jours de cette information.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : le corps officiel reste intégralement maintenu, sans nouveau document, registre, délai ou condition d'accès. Ce maintien ne démontre aucune réduction nette à l'échelle des codes.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination : seules les mentions des commissions abrogées (L2315-46 à L2315-49, L2315-56) sont retirées ; le reste du texte du dépôt est inchangé.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai ni formalité n'est créé en remplacement ; les consultations et informations restent dues au comité social et économique dans les conditions inchangées.",
+      "scope_limitations": "Les commissions créées par accord (L2315-45) ne sont pas touchées. Les clauses de reprise et de maintien propres aux commissions abrogées disparaissent avec elles, sauf la reprise des travaux et la préservation des droits acquis en matière d'alerte économique (L2312-63).",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "cse-commissions-suppletives-abrogees",
+          "description": "Retrait des renvois aux commissions abrogées.",
+          "before": "Renvoi à une commission supplétive.",
+          "after": "Compétence du seul comité.",
+          "unit": "legal_duty",
+          "affected_population": "Comités sociaux et économiques.",
+          "conditions_and_transition": "Sans transition propre.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "Lorsqu'une entreprise est partie à une opération de concentration, telle que",
+          "proposed_quote": "Lorsqu'une entreprise est partie à une opération de concentration, telle que"
+        }
+      ]
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "aba75210410f672418b0f224846ddc6b4bb1fb192530d3f72c113e4f65f788ba",
       "source_notes_sha256": "be65cfc750bba5010f9069b3e87695245f2dc27adba944cb2831cce9372e613e",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "c778b6a21a58f12b2d1184af7fce0fca8ad8b8b62997f10116d00efc7f2e8f63",
+      "proposed_sha256": "a2f99b0319eb0ea11f12a11d22ac6f0bda1a22eff533bcaaf20bf4fc5f1cac9e",
+      "assessment_sha256": "f734b83fe8487c7dd7b1194d42ff3769d9afb41b7d3d463440c6b17a42c4fc7b",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Retrait de la mention de la commission économique supplétive (L2315-46 abrogé) dans la procédure de concentration."
+    ]
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -955,47 +974,35 @@
     "source_id": "LEGIARTI000035610999",
     "source_sha256": "89329c7b528e79b1bed91c2180d26b362459bc39f5fc53af87b88c75f1196d0b",
     "number": "L2312-63",
-    "proposed_xml": "<p>Lorsque le comité social et économique a connaissance de faits de nature à affecter de manière préoccupante la situation économique de l'entreprise, il peut demander à l'employeur de lui fournir des explications. <br />\n<br />Cette demande est inscrite de droit à l'ordre du jour de la prochaine séance du comité. <br />\n<br />Si le comité n'a pu obtenir de réponse suffisante de l'employeur ou si celle-ci confirme le caractère préoccupant de la situation, il établit un rapport. Dans les entreprises employant au moins mille salariés et en l'absence d'accord prévu à l'article L. 2315-45, ce rapport est établi par la commission économique prévue par l'article L. 2315-46 lorsqu'elle est constituée ; à défaut de commission, il est établi par le comité social et économique. <br />\n<br />Ce rapport, au titre du droit d'alerte économique, est transmis à l'employeur. Le comité social et économique ou, le cas échéant, la commission économique peut également le transmettre au commissaire aux comptes ; cette transmission n'est pas obligatoire au titre du présent article.</p>\n<p>La suppression de la transmission obligatoire au commissaire aux comptes s'applique aux rapports établis à compter de l'entrée en vigueur de la loi qui l'institue. Les obligations antérieurement exigibles ainsi que les droits et recours qui s'y rapportent demeurent régis par les dispositions antérieures. Le droit de convoquer le commissaire aux comptes prévu à l'article L. 2312-64, les attributions et obligations légales propres de celui-ci ainsi que les règles de confidentialité restent applicables. Aucun autre envoi, dépôt ou document de remplacement n'est exigé au titre de cette suppression.</p><p>La compétence du comité en l'absence de commission économique s'applique à compter de l'entrée en vigueur de la loi rendant cette commission facultative. Le comité reprend les travaux en cours de la commission supprimée sans réitération des actes régulièrement accomplis ni établissement d'un second rapport sur les mêmes faits. Les rapports déjà établis, les droits à rémunération et les engagements valablement pris demeurent préservés.</p>",
-    "reason": "Réforme de fond : suppression de la transmission automatique au commissaire aux comptes de chaque rapport d'alerte économique, désormais laissée au choix du comité ou de la commission économique. Le rapport, sa transmission à l'employeur, la demande d'explications, son inscription de droit à l'ordre du jour et la compétence de la commission dans les entreprises d'au moins mille salariés sont conservés. La faculté de convoquer le commissaire et ses obligations autonomes préviennent la perte des garanties utiles ; le routage systématique n'a pas de fonction essentielle distincte démontrée. Seconde passe : correction de la contradiction de compétence avec L2315-46 proposé, qui rend la commission facultative. Le rapport reste dû et le CSE l'établit en l'absence de commission ; cette coordination ne constitue pas une deuxième suppression de rapport ou de commission.",
+    "proposed_xml": "<p>Lorsque le comité social et économique a connaissance de faits de nature à affecter de manière préoccupante la situation économique de l'entreprise, il peut demander à l'employeur de lui fournir des explications. Cette demande est inscrite de droit à l'ordre du jour de la prochaine séance du comité. Si le comité n'a pu obtenir de réponse suffisante de l'employeur ou si celle-ci confirme le caractère préoccupant de la situation, il établit un rapport. Ce rapport, au titre du droit d'alerte économique, est transmis à l'employeur. Le comité social et économique peut également le transmettre au commissaire aux comptes ; cette transmission n'est pas obligatoire au titre du présent article. La suppression de la transmission obligatoire au commissaire aux comptes s'applique aux rapports établis à compter de l'entrée en vigueur de la loi qui l'institue. Les obligations antérieurement exigibles ainsi que les droits et recours qui s'y rapportent demeurent régis par les dispositions antérieures. Le droit de convoquer le commissaire aux comptes prévu à l'article L. 2312-64, les attributions et obligations légales propres de celui-ci ainsi que les règles de confidentialité restent applicables. Aucun autre envoi, dépôt ou document de remplacement n'est exigé au titre de cette suppression. Le comité reprend les travaux en cours de la commission économique supprimée sans réitération des actes régulièrement accomplis ni établissement d'un second rapport sur les mêmes faits. Les rapports déjà établis, les droits à rémunération et les engagements valablement pris demeurent préservés.</p>",
+    "reason": "Coordination : suppression des seules mentions des commissions abrogées (L2315-46 à L2315-49, L2315-56) ; attributions du CSE inchangées.",
     "status": "rewrite_draft",
     "review_notes": "Contradiction effective entre brouillons : « ce rapport est établi par la commission économique » dans le précédent L2312-63, contre « une commission économique peut être créée » et « en l'absence de commission économique, le comité exerce lui-même les attributions prévues pour celle-ci » dans L2315-46 proposé. Correction au même alinéa : compétence de la commission lorsqu'elle existe, sinon du comité, avec reprise des travaux sans second rapport. Le seuil de mille salariés et la réserve de l'accord L2315-45 restent. L2315-45, L2315-46, L2315-92 et L2312-64 à 67 lus en entier, sources et propositions disponibles : l'expertise, la convocation du commissaire, les cinq heures rémunérées, le vote et la confidentialité ne disparaissent pas. Différence de champ : CSS R931-3-60 source et proposition prescrivent encore « Le rapport est transmis au directeur général et au commissaire aux comptes. » ; R931-1-29 VI proposé relaie ce régime spécial. Ces deux articles entiers ont été lus : l'envoi sectoriel autonome demeure pour les institutions, unions et sociétés de groupe concernées ; la dispense de L2312-63 n'est pas une dispense générale de tout envoi au commissaire. Le code de commerce extérieur n'est pas intégralement fourni : aucune conformité exhaustive de l'alerte du commissaire n'est affirmée.",
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Suppression de l'envoi obligatoire au commissaire aux comptes du rapport d'alerte sur le seul fondement de L2312-63."
+      "Suppression de l'envoi obligatoire au commissaire aux comptes du rapport d'alerte sur le seul fondement de L2312-63.",
+      "Retrait de l'établissement du rapport d'alerte par la commission économique supplétive (L2315-46 abrogé) et de la clause transitoire sur la compétence du comité en l'absence de cette commission."
     ],
     "substantive_impact": {
       "version": 1,
-      "classification": "material_reduction",
-      "assessment": "Réforme de fond : suppression de la transmission automatique au commissaire aux comptes de chaque rapport d'alerte économique, désormais laissée au choix du comité ou de la commission économique. Le rapport, sa transmission à l'employeur, la demande d'explications, son inscription de droit à l'ordre du jour et la compétence de la commission dans les entreprises d'au moins mille salariés sont conservés. La faculté de convoquer le commissaire et ses obligations autonomes préviennent la perte des garanties utiles ; le routage systématique n'a pas de fonction essentielle distincte démontrée. Seconde passe : correction de la contradiction de compétence avec L2315-46 proposé, qui rend la commission facultative. Le rapport reste dû et le CSE l'établit en l'absence de commission ; cette coordination ne constitue pas une deuxième suppression de rapport ou de commission.",
-      "scope_limitations": "Contradiction effective entre brouillons : « ce rapport est établi par la commission économique » dans le précédent L2312-63, contre « une commission économique peut être créée » et « en l'absence de commission économique, le comité exerce lui-même les attributions prévues pour celle-ci » dans L2315-46 proposé. Correction au même alinéa : compétence de la commission lorsqu'elle existe, sinon du comité, avec reprise des travaux sans second rapport. Le seuil de mille salariés et la réserve de l'accord L2315-45 restent. L2315-45, L2315-46, L2315-92 et L2312-64 à 67 lus en entier, sources et propositions disponibles : l'expertise, la convocation du commissaire, les cinq heures rémunérées, le vote et la confidentialité ne disparaissent pas. Différence de champ : CSS R931-3-60 source et proposition prescrivent encore « Le rapport est transmis au directeur général et au commissaire aux comptes. » ; R931-1-29 VI proposé relaie ce régime spécial. Ces deux articles entiers ont été lus : l'envoi sectoriel autonome demeure pour les institutions, unions et sociétés de groupe concernées ; la dispense de L2312-63 n'est pas une dispense générale de tout envoi au commissaire. Le code de commerce extérieur n'est pas intégralement fourni : aucune conformité exhaustive de l'alerte du commissaire n'est affirmée.",
-      "new_burdens_review": "Aucune charge nouvelle distincte identifiée : les droits et procédures conservés gardent leur champ, sans dépôt ou rapport de remplacement. Le solde global des coûts et des contraintes des codes n'est pas chiffré.",
+      "classification": "coordination_only",
+      "assessment": "Coordination : seules les mentions des commissions abrogées (L2315-46 à L2315-49, L2315-56) sont retirées ; le reste du texte du dépôt est inchangé.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai ni formalité n'est créé en remplacement ; les consultations et informations restent dues au comité social et économique dans les conditions inchangées.",
+      "scope_limitations": "Les commissions créées par accord (L2315-45) ne sont pas touchées. Les clauses de reprise et de maintien propres aux commissions abrogées disparaissent avec elles, sauf la reprise des travaux et la préservation des droits acquis en matière d'alerte économique (L2312-63).",
       "effects": [
         {
-          "kind": "obligation_removed",
-          "measure_id": "alerte-economique-envoi-cac-facultatif",
-          "description": "Envoi automatique du rapport au commissaire rendu facultatif dans le régime général.",
-          "before": "Rapport transmis obligatoirement à l'employeur et au commissaire aux comptes.",
-          "after": "Rapport toujours transmis à l'employeur ; envoi au commissaire facultatif au titre de cet article.",
-          "unit": "legal_duty",
-          "affected_population": "CSE et commissions économiques relevant du droit d’alerte économique.",
-          "conditions_and_transition": "Rapports établis après entrée en vigueur ; anciennes obligations exigibles préservées. Régime sectoriel CSS distinct.",
-          "replacement_or_new_burdens": "Aucun rapport, registre ou dépôt de remplacement ; les obligations autonomes demeurent dans leur champ.",
-          "source_quote": "Ce rapport, au titre du droit d'alerte économique, est transmis à l'employeur et au commissaire aux comptes.",
-          "proposed_quote": "Le comité social et économique ou, le cas échéant, la commission économique peut également le transmettre au commissaire aux comptes ; cette transmission n'est pas obligatoire au titre du présent article."
-        },
-        {
           "kind": "coordination",
-          "measure_id": "commission-economique-facultative",
-          "description": "Rapport établi par le CSE lorsque la commission facultative n'existe pas.",
-          "before": "Commission désignée comme auteur du rapport à partir de mille salariés en l'absence d'accord.",
-          "after": "Même rapport établi par la commission constituée ou, à défaut, par le CSE.",
-          "unit": "regime",
-          "affected_population": "Entreprises d’au moins mille salariés, en l’absence de l’accord prévu.",
-          "conditions_and_transition": "Bascule à l'entrée en vigueur de la commission facultative ; travaux repris et actes conservés.",
-          "replacement_or_new_burdens": "Aucun rapport, registre ou dépôt de remplacement ; les obligations autonomes demeurent dans leur champ.",
-          "source_quote": "ce rapport est établi par la commission économique prévue par l'article L. 2315-46.",
-          "proposed_quote": "à défaut de commission, il est établi par le comité social et économique."
+          "measure_id": "cse-commissions-suppletives-abrogees",
+          "description": "Retrait des renvois aux commissions abrogées.",
+          "before": "Renvoi à une commission supplétive.",
+          "after": "Compétence du seul comité.",
+          "unit": "legal_duty",
+          "affected_population": "Comités sociaux et économiques.",
+          "conditions_and_transition": "Sans transition propre.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "Lorsque le comité social et économique a connaissance de faits de nature à",
+          "proposed_quote": "Lorsque le comité social et économique a connaissance de faits de nature à"
         }
       ]
     },
@@ -1003,14 +1010,14 @@
       "version": 1,
       "source_sha256": "89329c7b528e79b1bed91c2180d26b362459bc39f5fc53af87b88c75f1196d0b",
       "source_notes_sha256": "be65cfc750bba5010f9069b3e87695245f2dc27adba944cb2831cce9372e613e",
-      "proposed_sha256": "b9826986463f9c2f37e2ed79fc390b07c3533f101adb6880a304ddfadc5a22d4",
-      "assessment_sha256": "8b383333257d4d1d47a0ed47320268116096bf0372b14c1a557268925db148e7",
+      "proposed_sha256": "53d76233e189badfeb9b6b9979703222799f9f57bab4faa9a7aca87ae03a43ca",
+      "assessment_sha256": "55b986f50c3007ee57d119497abf5c036e1f1b5b565c1e273d02a54ac68c50c7",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "0d21b33dd9924a3d63d0b245aaf9ea8ca2d504774c4f7337e0004dbc277afc70"
+    "prior_proposal_sha256": "b9826986463f9c2f37e2ed79fc390b07c3533f101adb6880a304ddfadc5a22d4"
   }
 ]
