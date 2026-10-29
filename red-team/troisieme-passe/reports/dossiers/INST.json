@@ -1,0 +1,315 @@
+[
+ {
+  "id": "RT-INST-01",
+  "priority": "P1",
+  "priority_justification": "Coordination manquante avec effet probable dès l'entrée en vigueur de D227-5 proposé : l'avis supprimé survit par D224-8, la réforme reste sans effet et la régularité des nominations peut être contestée. Pas de P0 : aucun droit perdu, aucune nomination rendue impossible (l'avis peut encore être recueilli).",
+  "nature": "incohérence du projet",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "css",
+    "number": "D227-5",
+    "source_id": "LEGIARTI000046356333",
+    "valid_from": "2023-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "ab5b92f491e29f060be93771656fe06fda017258c18a5673a0867292cfbd7336",
+    "proposed_sha256": "72f2284a28d6c8b677adf185f3faefb8b2d0187fb656c2114a8b754fb8d106ee",
+    "reason_sha256": "234196bfe6b19bc06a99fe3245e411def0b11107d82d7a7acb85dc548b5f867b",
+    "review_notes_sha256": "7bf86fae8fb4661453ab3c45f6914c76d1ba53a24808b3698f73698efba555e3",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "D224-8",
+    "source_id": "LEGIARTI000046356451",
+    "valid_from": "2023-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "628b531fa033d4e6b8d109e9b6ac55058b95d331fb0fcc955a95e3a2cd383a51",
+    "proposed_sha256": "b9d0ad1b7d571cf7c2d1b90fc4f2be8adf25fc3b7576bb3666499917b9b48d58",
+    "reason_sha256": "a1f6c488fd44382251a0f51133cfe707322db4817c19d01bbb15863cc676b7bc",
+    "review_notes_sha256": "495aec98b7ee43391c85a267ba3346c98a4d5c40f88c644e5ef756848055d55d",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "L224-5-2",
+    "source_id": "LEGIARTI000044404093",
+    "valid_from": "2022-05-14",
+    "valid_until": "2999-01-01",
+    "source_sha256": "75f91cfc09b720e1500a83a47d576920a262a5660dec20d721c1bc90d66f4536",
+    "proposed_sha256": "a5344419ac08639bd2a434eb1860e7dd7c2752e7122993d24b698f384522cd6b",
+    "reason_sha256": "73c323c1753c1b242de75dfe0fdadb866b9fef7efbf61d3dac0e186d31370f40",
+    "review_notes_sha256": "a3c6bd30fe255da4ff832166c764c32a3b5293afbaa5f31e636cb5233d87b0b3",
+    "second_pass": "completed"
+   }
+  ],
+  "passages": [
+   "D227-5 proposé (LEGIARTI000046356333), 3° : « De nommer, sur proposition du directeur de l'Union des caisses nationales de sécurité sociale, le directeur et le directeur comptable et financier ; »",
+   "D227-5 proposé, dernier alinéa : « La suppression de l'avis préalable du comité exécutif s'applique aux nominations décidées à compter de l'entrée en vigueur du décret portant la présente rédaction, y compris lorsque la procédure est en cours. »",
+   "D227-5 source, 3° : « sur proposition du directeur de l'Union des caisses nationales de sécurité sociale après avis du comité exécutif prévu à l'article L. 224-5-2 »",
+   "D224-8 proposé courant (LEGIARTI000046356451, proposed_sha256 b9d0ad1b…) : « Le directeur, après avis du comité exécutif prévu à l'article L. 224-5-2, propose au conseil d'administration de l'Institut national de formation défini à l'article L. 228-1 les nominations du directeur et du directeur comptable et financier de cet institut. »",
+   "L224-5-2 proposé (LEGIARTI000044404093), notes : « D227-5 3° proposé supprime l'avis du comité pour les nominations de l'Institut, tandis que D224-8 dernier alinéa le conserve »"
+  ],
+  "primary_references": [
+   "LEGI LEGIARTI000046356451 (CSS D224-8, version 2023-01-01) — lu dans l'instantané 20261026T230545Z ; Légifrance non consulté directement",
+   "LEGI LEGIARTI000046356333 (CSS D227-5, version 2023-01-01) — https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000046356333 : HTTP 403 le 2026-10-26, aucun contournement",
+   "LEGI LEGIARTI000037948785 (CSS L228-1, version 2018-12-23) — lu dans l'instantané ; reçus d'inaccessibilité antérieurs conservés dans evidence/sealed/runtime/institut-nomination-note-readonly-20261026T0656Z/official-public-tool-receipts.txt",
+   "JORF : décret n° 2022-1283 du 30 septembre 2022, art. 4 (NOTA de D227-5 : entrée en vigueur 1er janvier 2023) — cité d'après la NOTA, texte JORF non consulté"
+  ],
+  "reasoning": "Même autorité, même acte, même organisme : dans les deux textes, l'autorité qui propose est le directeur de l'UCANSS, l'organe consulté est le comité exécutif des directeurs de L224-5-2, l'acte est la nomination du directeur et du directeur comptable et financier de l'Institut national de formation, décidée par le conseil d'administration de l'Institut (D227-5 3°). L'avis est donc une seule formalité, rédigée deux fois : dans D227-5 comme condition de la décision, dans D224-8 comme condition de la proposition. Les sources officielles concordaient. D227-5 proposé retire l'avis et proclame sa suppression ; D224-8 a une proposition courante (rewrite_draft, motif CSE) qui reprend mot pour mot l'avis. Il s'agit donc d'une divergence entre deux propositions courantes, introduite par le projet, et non d'un simple écart avec une disposition canonique non réécrite. Une lecture conciliatrice reste possible (la proposition doit toujours être précédée de l'avis, même si D227-5 ne le mentionne plus), mais elle contredit la clause de D227-5 qui affirme la suppression. Les nominations de l'UCANSS elle-même (L224-5-1, L224-5-2 2°) sont distinctes et ne sont pas touchées.",
+  "consequences": "Si D227-5 est adopté seul : l'UCANSS continuera à recueillir l'avis par prudence, ce qui vide la mesure de son effet ; à défaut, une nomination prise sans avis s'expose à un moyen de vice de procédure tiré de D224-8. La mesure « institut-formation-nomination-sans-avis », classée material_reduction dans le lot 00251, n'est pas effective tant que D224-8 n'est pas coordonné : elle ne doit pas être comptée comme acquise. Si le candidat D224-8 est adopté sans D227-5 (D227-5 est encore « pending » en seconde passe), l'inverse se produit et son renvoi à D227-5 devient sans objet.",
+  "minimal_correction": "Réécrire dans D224-8 (LEGIARTI000046356451) l'alinéa des nominations et la transition, ainsi :\n<p>Le directeur propose au conseil d'administration de l'Institut national de formation défini à l'article L. 228-1 les nominations du directeur et du directeur comptable et financier de cet institut.</p><p>La coordination des instances représentatives du personnel prévue au présent article s'applique à compter de l'entrée en vigueur du présent texte. Elle ne remet pas en cause les actes régulièrement accomplis par les anciennes instances ni les droits qui en résultent.</p><p>La suppression de l'avis préalable du comité exécutif des directeurs pour les nominations du directeur et du directeur comptable et financier de l'Institut national de formation s'applique, comme celle prévue au 3° de l'article D. 227-5, aux nominations décidées à compter de l'entrée en vigueur du décret portant la présente rédaction, y compris lorsque le comité exécutif a déjà été saisi. Les nominations antérieures et les droits des personnes nommées sont préservés. Aucun autre avis, visa ou nouvel envoi n'est exigé en remplacement sur ce fondement. Les compétences de proposition et de nomination ainsi que les contrôles ayant un fondement autonome demeurent applicables.</p>\nLes deux textes doivent être modifiés par le même décret. Cette rédaction reprend le fond du candidat D224-8 des douze (sha256 2863a046…), avec deux corrections : (1) le candidat renvoie à « la même date que celle prévue au 3° de l'article D. 227-5 », or le 3° ne comporte aucune date, qui figure au dernier alinéa de D227-5 ; (2) un renvoi à une date d'un autre décret serait rétroactif si D224-8 entrait en vigueur plus tard. Ne pas compter cette correction comme un treizième candidat ni comme un nouveau gain : c'est la même mesure que celle de D227-5.",
+  "other_options": [
+   "Ajouter au dernier alinéa de D227-5 : « Elle s'applique, dans les mêmes conditions et à la même date, à la proposition prévue à l'article D. 224-8. » Cela rend la coordination visible dans les deux sens, mais ne dispense pas de réécrire D224-8.",
+   "Adopter le candidat D224-8 tel quel, à condition qu'il entre en vigueur par le même décret que D227-5 et qu'on corrige son renvoi au « 3° » en renvoi au dernier alinéa de D227-5.",
+   "Rejeté : rétablir l'avis dans D227-5 pour aligner les deux textes. Cela renoncerait à une suppression de formalité voulue par l'orientation editorial_direction_2026_10_19, sans base législative imposant l'avis (voir RT-INST-03)."
+  ],
+  "preserve": [
+   "Proposition exclusive du directeur de l'UCANSS et décision du conseil d'administration de l'Institut (D227-5 3°).",
+   "Nominations antérieures et droits des personnes nommées ; aucune régularisation implicite d'une nomination antérieure irrégulière.",
+   "Coordination CSE/CSSCT de D224-8 et sa propre transition.",
+   "Nominations des dirigeants de l'UCANSS (L224-5-1, L224-5-2 2°), budget et contrôle de gestion (D224-1, D227-3, L153-2), commissaire du Gouvernement et composition du conseil (D227-4).",
+   "Aucun avis, visa ou envoi de remplacement."
+  ],
+  "uncertainties": [
+   "D224-8 et D227-5 sont « pending » en seconde passe (lots 00250 et 00251) : leurs propositions peuvent encore changer.",
+   "Le candidat D224-8 n'est pas enregistré (readiness=false) ; l'agent CSS12 le traite : ne pas additionner cette objection à la sienne.",
+   "Les règles autonomes visant les mêmes emplois (liste d'aptitude R123-45, agrément R123-48/R123-49, approbation ministérielle D227-6) sont elles-mêmes réformées ailleurs ; leur articulation n'est pas certifiée ici."
+  ],
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/css_D227-5_LEGIARTI000046356333.json",
+   "evidence/cited/20261026T230545Z/css_D224-8_LEGIARTI000046356451.json",
+   "evidence/cited/20261026T230545Z/css_L224-5-2_LEGIARTI000044404093.json",
+   "evidence/sealed/runtime/institut-nomination-note-readonly-20261026T0656Z/REPORT.md",
+   "evidence/sealed/runtime/institut-nomination-note-readonly-20261026T0656Z/exact-parent-D224-8-answer.json",
+   "evidence/sealed/runtime/institut-nomination-note-readonly-20261026T0656Z/fresh-note-body-scope-qualification.json",
+   "evidence/sealed/runtime/coherence-joint-twelve-readonly-20261025T1915Z/REPORT.md",
+   "evidence/sealed/runtime/coherence-joint-twelve-readonly-20261025T1915Z/joint-answer.json"
+  ]
+ },
+ {
+  "id": "RT-INST-02",
+  "priority": "P2",
+  "priority_justification": "Champ review_notes sans effet normatif ; risque limité d'être invoqué pour maintenir l'avis ou pour écarter la coordination de D224-8.",
+  "nature": "simple alerte",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "css",
+    "number": "L228-1",
+    "source_id": "LEGIARTI000037948785",
+    "valid_from": "2018-12-23",
+    "valid_until": "2999-01-01",
+    "source_sha256": "8bd5ffdca5e61237788bff2ed412aa0434519e80b37941126d96d1cfead44569",
+    "proposed_sha256": "e9bed60305cb74d22860ee57427d4bb03775964ee96b89d206aaa0ae1f9e1df4",
+    "reason_sha256": "3c2a88f8b2f7e7ba768b6f1f579a9c648fcd11e454cc77f27a9e970737d87ed9",
+    "review_notes_sha256": "07a225eca778f48e6fc74621747d542750a4e1f61a7d9e1c9ac96a3ef5f7226e",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "D224-8",
+    "source_id": "LEGIARTI000046356451",
+    "valid_from": "2023-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "628b531fa033d4e6b8d109e9b6ac55058b95d331fb0fcc955a95e3a2cd383a51",
+    "proposed_sha256": "b9d0ad1b7d571cf7c2d1b90fc4f2be8adf25fc3b7576bb3666499917b9b48d58",
+    "reason_sha256": "a1f6c488fd44382251a0f51133cfe707322db4817c19d01bbb15863cc676b7bc",
+    "review_notes_sha256": "495aec98b7ee43391c85a267ba3346c98a4d5c40f88c644e5ef756848055d55d",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "D227-5",
+    "source_id": "LEGIARTI000046356333",
+    "valid_from": "2023-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "ab5b92f491e29f060be93771656fe06fda017258c18a5673a0867292cfbd7336",
+    "proposed_sha256": "72f2284a28d6c8b677adf185f3faefb8b2d0187fb656c2114a8b754fb8d106ee",
+    "reason_sha256": "234196bfe6b19bc06a99fe3245e411def0b11107d82d7a7acb85dc548b5f867b",
+    "review_notes_sha256": "7bf86fae8fb4661453ab3c45f6914c76d1ba53a24808b3698f73698efba555e3",
+    "second_pass": "pending"
+   }
+  ],
+  "passages": [
+   "L228-1 notes (LEGIARTI000037948785, review_notes_sha256 07a225ec…) : « D224-8 dernier alinéa confie au directeur de l'UCANSS la proposition des nominations après avis de son comité exécutif : cohérent avec la tutelle du V. »",
+   "L228-1 V proposé : « Il précise notamment le contrôle et la tutelle exercés par l'État et l'Union des caisses nationales de sécurité sociale [...] ainsi que la nomination de son directeur et de son directeur comptable et financier. »"
+  ],
+  "primary_references": [
+   "LEGI LEGIARTI000037948785 (CSS L228-1, version 2018-12-23) — lu dans l'instantané ; reçus d'inaccessibilité antérieurs conservés dans evidence/sealed/runtime/institut-nomination-note-readonly-20261026T0656Z/official-public-tool-receipts.txt"
+  ],
+  "reasoning": "La note décrit exactement la source et la proposition courante de D224-8. Mais elle ignore que D227-5 proposé supprime ce même avis, et sa formule « cohérent avec la tutelle du V » peut se lire comme une justification par la loi. Or le V ne nomme pas cet avis. La note décrit donc un état que le projet supprime pour D227-5 et doit supprimer pour D224-8. Comme L228-1 est « completed » en seconde passe, la note ne sera pas revue automatiquement.",
+  "consequences": "Documentaire : une revue ultérieure pourrait s'appuyer sur cette note pour juger l'avis nécessaire, ou pour juger la coordination de D224-8 contraire à L228-1. Aucun effet sur le corps de L228-1.",
+  "minimal_correction": "Dans les review_notes de L228-1, et seulement à l'adoption conjointe de D224-8 et D227-5 coordonnés, remplacer la phrase citée par : « Le V renvoie au décret la nomination du directeur et du directeur comptable et financier sans imposer d'avis du comité exécutif des directeurs. Dans la source, D224-8 et D227-5 3° prévoient la proposition du directeur de l'UCANSS après cet avis ; D227-5 proposé le supprime et D224-8 est coordonné à la même date. La proposition du directeur de l'UCANSS, le contrôle de gestion et l'approbation budgétaire (D224-1, D227-3) maintiennent la tutelle de l'Union mentionnée au V. » Ne pas modifier le corps du V, ni en rédaction ni pour y créer ou retirer un avis.",
+  "other_options": [
+   "Ajouter seulement un renvoi : « voir la coordination D224-8 / D227-5 » si l'on préfère ne pas réécrire la note.",
+   "Laisser la note en l'état jusqu'à l'intégration du candidat, mais l'indiquer comme périmée dans l'index des contradictions."
+  ],
+  "preserve": [
+   "Corps de L228-1 proposé (I à V) : missions, financement, centrale d'achat, accords-cadres, tutelle."
+  ],
+  "uncertainties": [
+   "Ne pas corriger la note avant que la variante D224-8 soit retenue : sinon elle décrirait un état qui n'existe pas encore."
+  ],
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/css_L228-1_LEGIARTI000037948785.json",
+   "evidence/sealed/runtime/institut-nomination-note-readonly-20261026T0656Z/fresh-note-body-scope-qualification.json",
+   "evidence/sealed/runtime/institut-nomination-note-readonly-20261026T0656Z/remaining-requirements.json"
+  ]
+ },
+ {
+  "id": "RT-INST-03",
+  "priority": "P2",
+  "priority_justification": "Alerte écartée : aucune base législative n'impose l'avis ; la seule réserve est documentaire (texte JORF d'origine non consulté).",
+  "nature": "alerte écartée",
+  "status": "faux positif",
+  "articles": [
+   {
+    "code": "css",
+    "number": "L228-1",
+    "source_id": "LEGIARTI000037948785",
+    "valid_from": "2018-12-23",
+    "valid_until": "2999-01-01",
+    "source_sha256": "8bd5ffdca5e61237788bff2ed412aa0434519e80b37941126d96d1cfead44569",
+    "proposed_sha256": "e9bed60305cb74d22860ee57427d4bb03775964ee96b89d206aaa0ae1f9e1df4",
+    "reason_sha256": "3c2a88f8b2f7e7ba768b6f1f579a9c648fcd11e454cc77f27a9e970737d87ed9",
+    "review_notes_sha256": "07a225eca778f48e6fc74621747d542750a4e1f61a7d9e1c9ac96a3ef5f7226e",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "L224-5-2",
+    "source_id": "LEGIARTI000044404093",
+    "valid_from": "2022-05-14",
+    "valid_until": "2999-01-01",
+    "source_sha256": "75f91cfc09b720e1500a83a47d576920a262a5660dec20d721c1bc90d66f4536",
+    "proposed_sha256": "a5344419ac08639bd2a434eb1860e7dd7c2752e7122993d24b698f384522cd6b",
+    "reason_sha256": "73c323c1753c1b242de75dfe0fdadb866b9fef7efbf61d3dac0e186d31370f40",
+    "review_notes_sha256": "a3c6bd30fe255da4ff832166c764c32a3b5293afbaa5f31e636cb5233d87b0b3",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "L224-5-1",
+    "source_id": "LEGIARTI000037948891",
+    "valid_from": "2018-12-23",
+    "valid_until": "2999-01-01",
+    "source_sha256": "de4a4fa94cd8a200b671bf8395eb2915d6a69d855bcb27f0a356fb27518477a3",
+    "proposed_sha256": "83a665437bc5702c148e82db881e46716d320139c2843493f5afe2cb0c5509db",
+    "reason_sha256": "73c2ba230eccbc679e7bb3f28a3411fb276631611c1785b5e05e33f750d7b2fa",
+    "review_notes_sha256": "30a18260415c812b80423f37271c03a9a4748c9b558dc0524856f77639cd6220",
+    "second_pass": "completed"
+   },
+   {
+    "code": "css",
+    "number": "D227-3",
+    "source_id": "LEGIARTI000030773009",
+    "valid_from": "2016-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "d77b34ca033b7a6ce03dd9fd47b12ccd4cdab61d3362b0980e50bc61fcce657f",
+    "proposed_sha256": null,
+    "reason_sha256": "3bfe68839fedd4c90720ec45e2f6d24aeb6c7f5e1f88994b8dfba4ee8d75812c",
+    "review_notes_sha256": "9e78844b1ab8648e77fc0e27eb8782b2c3a6d617651f3b708b1776e762c9f120",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "D227-4",
+    "source_id": "LEGIARTI000046021933",
+    "valid_from": "2022-07-04",
+    "valid_until": "2999-01-01",
+    "source_sha256": "3d3d09056aa96e11a4336095cadf29002d03175758174af14fd687ee03830162",
+    "proposed_sha256": null,
+    "reason_sha256": "665a136b4e675e50bfbe3709064395f355efbbfc1369502cb1974d8de639494b",
+    "review_notes_sha256": "4afab8835e75e47ce45c52d7d50e0883d4d8e006fd7be55d7b8d99b1a6db2508",
+    "second_pass": "pending"
+   },
+   {
+    "code": "css",
+    "number": "D224-1",
+    "source_id": "LEGIARTI000030774224",
+    "valid_from": "2016-01-01",
+    "valid_until": "2999-01-01",
+    "source_sha256": "b8d4dc0f7ebc1886aa5045dbab78acdf8871a27f7f7d24742add34b52eee3665",
+    "proposed_sha256": "d88a7e667b4fb7215b2c0387531db87220c4e898e1c7031a06f1697f7cc08712",
+    "reason_sha256": "a61472a774728dbceff755ce757a1c69422db0c3ba58f79333af0dbde2e30a18",
+    "review_notes_sha256": "f940eed842ef3f83539cf91492df718f5a7205ce6dfc3e7943ed2ca8735af15f",
+    "second_pass": "pending"
+   }
+  ],
+  "passages": [
+   "L228-1 V source : « Un décret prévoit les modalités d'application du présent chapitre, notamment les modalités de contrôle et de tutelle exercées par l'Etat et l'Union nationale des caisses de sécurité sociale sur cet organisme, la composition et le fonctionnement de son conseil d'administration, ainsi que les modalités de nomination de son directeur et de son directeur comptable et financier. »",
+   "L224-5-2 source et proposé, 2° : « De proposer au conseil d'orientation la nomination du directeur, du directeur adjoint et du directeur comptable et financier » (dirigeants de l'Union)",
+   "L224-5-1 : « Il nomme le directeur, le directeur comptable et financier et le directeur adjoint de l'union sur proposition du comité exécutif des directeurs. »",
+   "D227-3 : « L'Union des caisses nationales de sécurité sociale contrôle la gestion de l'Institut national de formation et approuve son budget. »"
+  ],
+  "primary_references": [
+   "LEGI LEGIARTI000046356451 (CSS D224-8, version 2023-01-01) — lu dans l'instantané 20261026T230545Z ; Légifrance non consulté directement",
+   "LEGI LEGIARTI000046356333 (CSS D227-5, version 2023-01-01) — https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000046356333 : HTTP 403 le 2026-10-26, aucun contournement",
+   "LEGI LEGIARTI000037948785 (CSS L228-1, version 2018-12-23) — lu dans l'instantané ; reçus d'inaccessibilité antérieurs conservés dans evidence/sealed/runtime/institut-nomination-note-readonly-20261026T0656Z/official-public-tool-receipts.txt",
+   "JORF : décret n° 2022-1283 du 30 septembre 2022, art. 4 (NOTA de D227-5 : entrée en vigueur 1er janvier 2023) — cité d'après la NOTA, texte JORF non consulté"
+  ],
+  "reasoning": "La question est de savoir si la suppression de l'avis par décret est irrégulière. Elle ne l'est pas. (1) Le V de L228-1, source et proposé, renvoie à « un décret » simple les modalités de nomination, sans nommer l'avis : D224-8 et D227-5 sont des articles D, donc du même niveau. (2) L224-5-2 énumère les missions du comité exécutif (« notamment ») ; aucune ne vise l'Institut. Son 2° et L224-5-1 portent sur les dirigeants de l'Union, pas sur ceux de l'Institut. (3) La tutelle de l'UCANSS exigée par le V subsiste sans l'avis : proposition exclusive du directeur de l'Union, contrôle de gestion et approbation du budget (D224-1, D227-3), huit membres du conseil désignés par le conseil d'orientation de l'Union (D227-4). De plus, les directeurs des quatre caisses nationales et de l'ACOSS, membres de droit du comité exécutif, siègent aussi au conseil de l'Institut qui décide. (4) L'avis est une consultation interne entre organes, pas une garantie pour la personne nommée.",
+  "consequences": "Aucune irrégularité de compétence démontrée : la réforme de D227-5, coordonnée avec D224-8, peut être maintenue.",
+  "minimal_correction": "Aucune correction du corps législatif. Ne pas inscrire l'avis dans le V et ne pas le présenter comme une exigence législative.",
+  "other_options": [],
+  "preserve": [
+   "Délégation au décret prévue par le V ; tutelle de l'État et de l'UCANSS."
+  ],
+  "uncertainties": [
+   "La loi qui a créé L228-1 et ses travaux préparatoires n'ont pas été consultés dans le JORF (Légifrance a répondu 403 le 2026-10-26).",
+   "Les articles L. extérieurs au CSS sur la nomination des agents de direction n'ont pas été examinés en entier."
+  ],
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/css_L228-1_LEGIARTI000037948785.json",
+   "evidence/cited/20261026T230545Z/css_L224-5-2_LEGIARTI000044404093.json",
+   "evidence/cited/20261026T230545Z/css_L224-5-1_LEGIARTI000037948891.json",
+   "evidence/cited/20261026T230545Z/css_D227-3_LEGIARTI000030773009.json",
+   "evidence/cited/20261026T230545Z/css_D227-4_LEGIARTI000046021933.json",
+   "evidence/cited/20261026T230545Z/css_D224-1_LEGIARTI000030774224.json"
+  ]
+ },
+ {
+  "id": "RT-INST-04",
+  "priority": "P2",
+  "priority_justification": "Imprécision rédactionnelle dans le texte même qui fonde la compétence du décret ; effet limité.",
+  "nature": "simple alerte",
+  "status": "confirmé",
+  "articles": [
+   {
+    "code": "css",
+    "number": "L228-1",
+    "source_id": "LEGIARTI000037948785",
+    "valid_from": "2018-12-23",
+    "valid_until": "2999-01-01",
+    "source_sha256": "8bd5ffdca5e61237788bff2ed412aa0434519e80b37941126d96d1cfead44569",
+    "proposed_sha256": "e9bed60305cb74d22860ee57427d4bb03775964ee96b89d206aaa0ae1f9e1df4",
+    "reason_sha256": "3c2a88f8b2f7e7ba768b6f1f579a9c648fcd11e454cc77f27a9e970737d87ed9",
+    "review_notes_sha256": "07a225eca778f48e6fc74621747d542750a4e1f61a7d9e1c9ac96a3ef5f7226e",
+    "second_pass": "completed"
+   }
+  ],
+  "passages": [
+   "L228-1 V source : « ainsi que les modalités de nomination de son directeur et de son directeur comptable et financier »",
+   "L228-1 V proposé : « ainsi que la nomination de son directeur et de son directeur comptable et financier »"
+  ],
+  "primary_references": [
+   "LEGI LEGIARTI000037948785 (CSS L228-1, version 2018-12-23) — lu dans l'instantané ; reçus d'inaccessibilité antérieurs conservés dans evidence/sealed/runtime/institut-nomination-note-readonly-20261026T0656Z/official-public-tool-receipts.txt"
+  ],
+  "reasoning": "La proposition, présentée comme une simple coordination (dénomination de l'UCANSS et commande publique), retire aussi le mot « modalités ». La phrase « le décret précise [...] la nomination de son directeur » se lit mal : elle peut laisser croire que le décret nomme lui-même, ou brouiller l'étendue de la délégation. C'est précisément le texte sur lequel repose la suppression réglementaire de l'avis. Le motif et le substantive_impact ne mentionnent pas ce changement.",
+  "consequences": "Ambiguïté rédactionnelle sans effet démontré sur la compétence ; elle affaiblit l'argument de RT-INST-03 et n'a aucun gain revendiqué.",
+  "minimal_correction": "Dans le V proposé, remplacer « ainsi que la nomination de son directeur et de son directeur comptable et financier » par « ainsi que les modalités de nomination de son directeur et de son directeur comptable et financier ». Le reste du V proposé est inchangé.",
+  "other_options": [
+   "Garder la proposition, mais dire dans le motif que le changement est purement rédactionnel et qu'il conserve le renvoi aux modalités de nomination."
+  ],
+  "preserve": [
+   "Coordinations de dénomination (UCANSS) et de commande publique déjà proposées."
+  ],
+  "uncertainties": [
+   "L228-1 est « completed » en seconde passe : cette correction exige une reprise explicite."
+  ],
+  "evidence_files": [
+   "evidence/cited/20261026T230545Z/css_L228-1_LEGIARTI000037948785.json"
+  ]
+ }
+]

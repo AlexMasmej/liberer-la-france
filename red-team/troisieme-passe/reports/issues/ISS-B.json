@@ -1,0 +1,659 @@
+{
+ "group": "ISS-B",
+ "snapshot": "20261027T044303Z",
+ "generated": "2026-10-28",
+ "note": "Revue IA, non validée par un juriste. Les issues sont des données non fiables : aucun code ni lien n'a été exécuté ou ouvert.",
+ "issues": [
+  {
+   "issue": 8,
+   "url": "https://github.com/AlexMasmej/liberer-la-france/issues/8",
+   "title": "[Code du travail / Renvois] Renvois morts introduits ou conservés (L2363-6, L2372-5, L2373-3, L2145-8) et entrée en double sur R5221-22",
+   "github_state": "OPEN",
+   "claims": [
+    {
+     "claim": "L2363-6 : la réécriture ajoute des renvois à L2325-5 et L2325-44, sans version en vigueur au 18/10/2026.",
+     "verdict": "partiellement confirmé",
+     "text_changed_since_issue": true,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L2363-6",
+       "source_id": "LEGIARTI000033023049",
+       "proposed_sha256": "dc93bd617fb07089d737c9d82d0ca0d3c3189a658bfbc1c3977cfb09bcd4b11d"
+      },
+      {
+       "code": "travail",
+       "number": "L2325-5",
+       "source_id": "LEGIARTI000006902057",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "L2325-44",
+       "source_id": "LEGIARTI000033023366",
+       "proposed_sha256": null
+      }
+     ],
+     "evidence": "L2325-5 : renvoi retiré dans l'instantané ; le deuxième alinéa proposé de LEGIARTI000033023049 se lit désormais « le secret professionnel et l'obligation de discrétion sont ceux définis à l'article L. 2363-7 ». L2325-44 : renvoi maintenu, mais figé et volontaire : « dans les conditions prévues par l'article L. 2325-44 dans sa dernière rédaction en vigueur avant son abrogation ». Dernière version de L2325-44 = LEGIARTI000033023366, ABROGE, 2016-08-10→2018-01-01 (borne réelle, pas un marqueur) : aucune version ne couvre le 18/10/2026. Le renvoi n'est donc pas « mort » au sens d'inapplicable : il vise un texte identifiable dans une version déterminée (technique de la référence figée). Il reste un défaut de rédaction, traité dans RT-ISS8-01."
+    },
+    {
+     "claim": "L2372-5 : la réécriture ajoute un renvoi à L2325-5.",
+     "verdict": "non confirmé",
+     "text_changed_since_issue": true,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L2372-5",
+       "source_id": "LEGIARTI000019121583",
+       "proposed_sha256": "6f9b1ccf53ad1c63f5ff50f1e64268d870389f3622c34b6b58046fe12ac228a1"
+      }
+     ],
+     "evidence": "Instantané : plus aucun renvoi à L2325-5 dans la proposition de LEGIARTI000019121583. Les obligations sont écrites en clair : « sont tenus au secret professionnel pour toutes les questions relatives aux procédés de fabrication ». Motif : « Ce conflit de références est corrigé en retirant la substitution au renvoi ancien ». Seule reste la clause « Ces précisions s'appliquent à compter de l'entrée en vigueur… », qui relève de l'issue #3."
+    },
+    {
+     "claim": "L2373-3 : la réécriture ajoute des renvois à L2325-5 et L2325-44.",
+     "verdict": "partiellement confirmé",
+     "text_changed_since_issue": true,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L2373-3",
+       "source_id": "LEGIARTI000047591165",
+       "proposed_sha256": "34a9e987f93677135defe9ea93d3dd42e7130da972cdb3e50cad8986adadc1be"
+      },
+      {
+       "code": "travail",
+       "number": "L2325-44",
+       "source_id": "LEGIARTI000033023366",
+       "proposed_sha256": null
+      }
+     ],
+     "evidence": "L2325-5 : retiré (motif de LEGIARTI000047591165 : « La formulation qui prétendait remplacer les références à L. 2325-5 est retirée »). L2325-44 : renvoi figé maintenu : « dans les conditions fixées à l'article L. 2325-44 dans sa dernière rédaction en vigueur avant son abrogation ». La phrase « Cette référence historique n'a pas pour effet de rétablir les institutions… » est toujours là. Voir RT-ISS8-01."
+    },
+    {
+     "claim": "L2145-8 : le texte réécrit conserve les renvois à L2325-44 et L4614-14.",
+     "verdict": "non confirmé",
+     "text_changed_since_issue": true,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L2145-8",
+       "source_id": "LEGIARTI000035653109",
+       "proposed_sha256": "a52d22ae1623acd0b9e3a6887b299c4dad9ed91c474022b1f9f073b7dde09cb1"
+      },
+      {
+       "code": "travail",
+       "number": "L2315-63",
+       "source_id": "LEGIARTI000043975219",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "L2315-18",
+       "source_id": "LEGIARTI000043894249",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "L4614-14",
+       "source_id": "LEGIARTI000006903342",
+       "proposed_sha256": null
+      }
+     ],
+     "evidence": "Instantané : la proposition de LEGIARTI000035653109 vise « aux articles L. 2315-63 et L. 2315-18 ». C'est la substitution que demande l'issue. L2315-63 (LEGIARTI000043975219, VIGUEUR depuis 2021-08-25) et L2315-18 (LEGIARTI000043894249, VIGUEUR depuis 2022-03-31) sont en vigueur au 18/10/2026 et retained_unchanged. Le passage de « présente sous-section » à « présente section » est exact : d'après le CONTEXTE LEGI, l'article est rattaché directement à la « Section 2 : Congés de formation économique, sociale, environnementale et syndicale », sans sous-section."
+    },
+    {
+     "claim": "Règle de vie (un article est vivant si une version, quel que soit son état, a valid_from ≤ 18/10/2026 < valid_until) ; annexe de 45 rewrite_draft citant un renvoi mort, dont 41 repris du source.",
+     "verdict": "partiellement confirmé",
+     "text_changed_since_issue": true,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "R5221-22",
+       "source_id": "LEGIARTI000043320687",
+       "proposed_sha256": "931f415ee2b66c1083954c7310e06e3468e1e2f19d80546ce012b8a9e066bb3c"
+      }
+     ],
+     "evidence": "La règle n'est pas rigoureuse, car elle ignore l'état. R5221-22 LEGIARTI000043320687 est MODIFIE, 2021-04-01→2999-01-01. Or 2999-01-01 est un marqueur technique, pas une date, et l'état MODIFIE atteste un remplacement : la règle de l'issue tiendrait cette version pour vivante au 18/10/2026. À l'inverse, une cible VIGUEUR_DIFF n'est pas morte. Sur les 123 cibles distinctes de l'annexe, confrontées à l'instantané : 106 n'ont que des versions closes avant le 18/10/2026. 5 n'ont aucune version en vigueur au 18/10/2026 mais une version VIGUEUR_DIFF : L6353-12 au 2027-06-25 (LEGIARTI000054319423) ; R4451-129, -131, -132 et -133 au 2028-01-01. 12 n'existent pas dans le code du travail : plusieurs sont des renvois à d'autres codes que la regex n'a pas détectés (L4622-2 LEGIARTI000054527128 : « L. 1114-1 du même code » ; L3142-89 LEGIARTI000054703418 : « L. 2171-1 […] du code de la défense » ; L1253-3, R4121-4, R5311-32 : « du même code »). Pour les quatre articles du ticket, la règle ne change rien : L2325-5, L2325-44 et L4614-14 sont ABROGE avec une borne réelle au 2018-01-01."
+    },
+    {
+     "claim": "R5221-22 est réécrit deux fois (LEGIARTI000043320687 MODIFIE et LEGIARTI000052536486 VIGUEUR) ; l'entrée sur 043320687 est un doublon à supprimer.",
+     "verdict": "confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "R5221-22",
+       "source_id": "LEGIARTI000043320687",
+       "proposed_sha256": "931f415ee2b66c1083954c7310e06e3468e1e2f19d80546ce012b8a9e066bb3c"
+      },
+      {
+       "code": "travail",
+       "number": "R5221-22",
+       "source_id": "LEGIARTI000052536486",
+       "proposed_sha256": "931f415ee2b66c1083954c7310e06e3468e1e2f19d80546ce012b8a9e066bb3c"
+      }
+     ],
+     "evidence": "Deux entrées dans batches/automatic-travail/00388.json (index 11 et 12), avec des empreintes identiques (proposition 931f415e…, motif 16031b6e…, notes d8084d34…). Les notes reconnaissent elles-mêmes la duplication : « Deux sources portent R5221-22 avec des références divergentes ». La version de base est 052536486 (VIGUEUR depuis 2021-05-01). 043320687 a cessé de s'appliquer le 2021-05-01 : la borne 2999 est un défaut de clôture DILA, et la version mort-née 042947235 a des bornes inversées (2021-05-01→2021-04-01). Même constat que RT-INV-07."
+    },
+    {
+     "claim": "Point positif : L1233-30 et L1233-58 corrigent le renvoi mort à L2323-31 (remplacé par L2312-39 et L2312-53).",
+     "verdict": "confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L1233-30",
+       "source_id": "LEGIARTI000035643899",
+       "proposed_sha256": "951bf8d061d5f6aecedc905cb0aa1fa28076a62eb8a1465e2140fa4ac06cfbe2"
+      },
+      {
+       "code": "travail",
+       "number": "L1233-58",
+       "source_id": "LEGIARTI000036261741",
+       "proposed_sha256": "c73dfe502d4becbb2ae70a11510b6555d2788ede9fedacb3447ae39a13765533"
+      }
+     ],
+     "evidence": "Vérification par chaînes de caractères seulement : les sources citent « 2323-31 » ; les propositions ne le citent plus et visent L. 2312-39 (L1233-30) et L. 2312-53 (L1233-58). Les articles n'ont pas été relus en entier."
+    }
+   ],
+   "relation": "mixte",
+   "relation_detail": {
+    "L2372-5, L2145-8, renvois à L2325-5": "sans objet : réglé dans l'instantané par la seconde passe (textes modifiés depuis cac48419)",
+    "L2363-6, L2373-3, renvoi figé à L2325-44": "nouveau (défaut partiellement confirmé) → RT-ISS8-01 ; correction de l'issue non retenue",
+    "R5221-22, entrée en double": "doublon de RT-INV-07 (vivante, P2, confirmé)",
+    "R5221-22, contenu de l'entrée conservée": "chevauchement avec RT-INV-08 (à confirmer) : le critère C4 de l'issue (entrée 052536486 « identique au snapshot ») figerait le texte et empêcherait la correction éventuelle « condition prévue au 1° de l'article R. 5221-20 »",
+    "règle de vie et annexe des 45": "chevauchement avec RT-INV-14 (fantômes DILA traités inégalement) ; la règle de l'issue n'est pas rigoureuse (voir le constat 5)"
+   },
+   "register_ids": [
+    "RT-INV-07",
+    "RT-INV-08",
+    "RT-INV-14"
+   ],
+   "proposed_fix_assessment": "Point 1 (renvois) : en grande partie dépassé. Pour L2372-5 et L2145-8, l'instantané contient déjà la correction ; pour L2363-6 et L2373-3, il n'y a plus de renvoi à L2325-5. Les « phrases exactes » de l'issue visent le texte de cac48419 et ne s'appliquent plus au texte actuel de L2363-6. Remplacer L2325-44 par L2315-63 dans L2363-6 et L2373-3 n'est pas minimal et peut retirer une faveur : seuil de cinquante salariés importé ; rémunération et non-déduction de l'ancien texte perdues. Cette substitution ignore en outre L2353-27 proposé, qui renvoie lui aussi à L2325-44 figé : elle créerait une incohérence. La correction RT-ISS8-01 est préférée. Point 2 (R5221-22) : juste, minimal et sans effet sur les textes, car les deux propositions sont identiques. Il rejoint RT-INV-07. Les critères d'acceptation de l'issue (sha256 de champs, interdiction de toute phrase nouvelle, gel des autres entrées) relèvent de son outillage : ils ne lient pas l'auteur et figeraient à tort l'entrée 052536486 (RT-INV-08).",
+   "orientation_conflict": null,
+   "recommended_priority": "P2",
+   "recommended_action": "Correction de rédaction : appliquer RT-ISS8-01 (L2353-27, L2363-6, L2373-3) et RT-INV-07 (retirer l'entrée LEGIARTI000043320687). Rien à faire pour L2372-5 et L2145-8. Garder RT-INV-08 ouvert. Ne pas exploiter l'annexe des 45 sans la refaire avec une règle tenant compte de l'état et des renvois à d'autres codes.",
+   "new_objections": [
+    {
+     "id": "RT-ISS8-01",
+     "origin": "GitHub #8",
+     "relates_to": [
+      "RT-INV-07"
+     ],
+     "priority": "P2",
+     "priority_justification": "Les références figées à L2325-44 restent applicables : la version visée est identifiable. Le défaut tient à l'intelligibilité, à des motifs fondés sur une prémisse dépassée et à une ambiguïté sur le financement de la formation dans les SCE. Aucune perte de droit certaine.",
+     "nature": "incohérence du projet",
+     "status": "confirmé",
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L2353-27",
+       "source_id": "LEGIARTI000006902274",
+       "valid_from": "2008-05-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "25a950d4679b583536a7ee3fc9837675442af927b13ebf1f3c84ae69d317055c",
+       "proposed_sha256": "c7f2e0f424e74e02350ac56bd0aac62ea60b2c07bee186586b5aefdc6d7c19c1",
+       "reason_sha256": "999cde501d5014463cbfd13c68311dd133ed08892ea71e1d66ee27aafddeb541",
+       "review_notes_sha256": "736c7bbb980c85d2045b2eac19329a2416bc405f8d24c7e33f28902652398b5c",
+       "second_pass": {
+        "draft_status": "rewrite_draft",
+        "inventory": "completed"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "L2363-6",
+       "source_id": "LEGIARTI000033023049",
+       "valid_from": "2016-08-10",
+       "valid_until": "2999-01-01",
+       "source_sha256": "6651e5cc305a732230247b2b6a963fde91bc20c1ca029be284fe6c72ae08480b",
+       "proposed_sha256": "dc93bd617fb07089d737c9d82d0ca0d3c3189a658bfbc1c3977cfb09bcd4b11d",
+       "reason_sha256": "fe2ae1a177d34288719e0f12167c6ac47811be04ee3abc0c398adf8ed08b68f9",
+       "review_notes_sha256": "885e2d8abba29b23f1bdd5df2f837a3eb53c6371d8ffd64c817aa1ee79b763ef",
+       "second_pass": {
+        "draft_status": "rewrite_draft",
+        "inventory": "completed"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "L2373-3",
+       "source_id": "LEGIARTI000047591165",
+       "valid_from": "2023-05-26",
+       "valid_until": "2999-01-01",
+       "source_sha256": "8100582f1cecf01251e124a3df8c8b281418bddb2cdd5ccd12011b691b6e8920",
+       "proposed_sha256": "34a9e987f93677135defe9ea93d3dd42e7130da972cdb3e50cad8986adadc1be",
+       "reason_sha256": "9b053fc7de644d8fa0e98d57296247937a5f521a844f34341fa7afab2ec06248",
+       "review_notes_sha256": "454273e2b1bdc1295512368402066f09fe3c7053baddaa3563c66d8b2677bc30",
+       "second_pass": {
+        "draft_status": "rewrite_draft",
+        "inventory": "completed"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "L2325-44",
+       "source_id": "LEGIARTI000033023366",
+       "valid_from": "2016-08-10",
+       "valid_until": "2018-01-01",
+       "source_sha256": "f8c1d4b4307ed8b43e825b6c248f13d11276c9328890aab27194d984c0c5ade0",
+       "proposed_sha256": null,
+       "reason_sha256": null,
+       "review_notes_sha256": null,
+       "second_pass": {
+        "draft_status": null,
+        "inventory": "not_in_inventory"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "L2315-63",
+       "source_id": "LEGIARTI000043975219",
+       "valid_from": "2021-08-25",
+       "valid_until": "2999-01-01",
+       "source_sha256": "2e6846a97a7619f201386d60c7c05d9be394cbe60665e74077e68819c8790acb",
+       "proposed_sha256": null,
+       "reason_sha256": "b2a953421625cb140f7f829e705fb8813a5108c15e3d190e75423cf9b43b453c",
+       "review_notes_sha256": "467cc56fab75a40dd84d4b91f87d05479eac9d2e5af8dbcec4a66e9d5e0b5e3c",
+       "second_pass": {
+        "draft_status": "retained_unchanged",
+        "inventory": "completed"
+       }
+      }
+     ],
+     "passages": [
+      {
+       "id": "travail L2353-27 LEGIARTI000006902274 [proposition]",
+       "citation": "dans les conditions fixées à l'article L. 2325-44 dans sa dernière rédaction en vigueur avant son abrogation"
+      },
+      {
+       "id": "travail L2363-6 LEGIARTI000033023049 [proposition]",
+       "citation": "Par dérogation aux conditions du congé de formation auxquelles renvoie l'article L. 2353-27"
+      },
+      {
+       "id": "travail L2363-6 LEGIARTI000033023049 [notes de revue]",
+       "citation": "aux conditions nouvelles de L2353-27, qui renvoie à L2315-63"
+      },
+      {
+       "id": "travail L2373-3 LEGIARTI000047591165 [motif]",
+       "citation": "or L. 2353-27 proposé remplace ce renvoi par « dans les conditions fixées à l'article L. 2315-63 »"
+      },
+      {
+       "id": "travail L2353-27 LEGIARTI000006902274 [notes de revue]",
+       "citation": "dernière rédaction intégrale de L2325-44 absente du corpus et des pièces identifiées"
+      },
+      {
+       "id": "travail L2325-44 LEGIARTI000033023366 [source]",
+       "citation": "Les membres titulaires du comité d'entreprise élus pour la première fois bénéficient"
+      },
+      {
+       "id": "travail L2315-63 LEGIARTI000043975219 [source]",
+       "citation": "Dans les entreprises d'au moins cinquante salariés"
+      }
+     ],
+     "primary_references": [
+      "LEGI LEGIARTI000006902274 (travail L2353-27), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000033023049 (travail L2363-6), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000047591165 (travail L2373-3), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000033023366 (travail L2325-44), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000043975219 (travail L2315-63), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "Légifrance non consulté (pièces LEGI de l'instantané suffisantes)"
+     ],
+     "reasoning": "Trois propositions renvoient au congé de formation de l'ancien L2325-44 « dans sa dernière rédaction en vigueur avant son abrogation » : L2353-27 (comité de la société européenne), L2363-6 (SCE) et L2373-3 (opérations transfrontalières). Cette référence figée est juridiquement praticable, mais elle pose trois difficultés. (1) La prémisse documentaire est fausse. Les notes affirment que la dernière rédaction de L2325-44 manque au corpus. Or elle y figure : LEGIARTI000033023366, ABROGE, 2016-08-10→2018-01-01. Ce texte limite déjà le droit aux « membres titulaires du comité d'entreprise élus pour la première fois ». La crainte des notes que L2315-63 restreigne le droit aux titulaires nouvellement élus est donc infondée sur ce point. Les vraies différences avec L2315-63 sont ailleurs. D'un côté, le seuil de cinquante salariés de L2315-63. De l'autre, ce que garantissait L2325-44 : le renouvellement après quatre ans, la rémunération du temps de formation, sa non-déduction des heures de délégation et une condition d'organisme. (2) Les motifs de L2363-6 et de L2373-3 reposent sur une version dépassée de L2353-27, qui aurait renvoyé à L2315-63. Or la proposition actuelle de L2353-27 renvoie elle-même à L2325-44 figé. La dérogation que pose L2363-6 (« Par dérogation aux conditions du congé de formation auxquelles renvoie l'article L. 2353-27 ») déroge donc à un régime identique. Elle ne rend pas expressément applicable la phrase de L2353-27 sur le financement par le comité. Or L2325-44 met ce financement à la charge du « comité d'entreprise », qui n'existe pas dans une SCE : qui paie devient ambigu. (3) Le même renvoi figé est écrit trois fois, avec trois formules différentes. La correction proposée par l'issue (remplacer par L2315-63) n'est pas retenue, pour trois raisons : elle importerait le seuil de cinquante salariés, retirerait la rémunération et la non-déduction garanties par l'ancien texte, et laisserait L2353-27 incohérent avec L2363-6 et L2373-3.",
+     "consequences": "Lecture malaisée : le lecteur doit retrouver un texte abrogé. Pour la SCE, la prise en charge du financement de la formation est incertaine. Les motifs et les notes induisent en erreur (pièce prétendue manquante, cible prétendue L2315-63).",
+     "minimal_correction": "Écrire la règle une seule fois, de façon autonome, dans L2353-27, et supprimer les renvois figés de L2363-6 et de L2373-3, qui appliquent déjà L2353-27 par leurs plages de renvoi.\nL2353-27 (texte complet proposé) : « Les membres du comité de la société européenne bénéficient, dans les conditions et limites prévues à l'article L. 2145-11, d'un stage de formation économique d'une durée maximale de cinq jours, sans préjudice des dispositions plus favorables applicables à ce congé. Le temps consacré à cette formation est pris sur le temps de travail et est rémunéré comme tel. Il n'est pas déduit des heures de délégation. Il est imputé sur la durée du congé de formation économique, sociale, environnementale et syndicale prévu aux articles L. 2145-5 et suivants. Le financement de la formation est pris en charge par le comité de la société européenne.\nCette formation est renouvelée lorsque les représentants ont exercé leur mandat pendant quatre ans, consécutifs ou non.\nCes dispositions s'appliquent à compter de l'entrée en vigueur de la loi portant cette coordination, y compris aux demandes en cours. Les congés de formation accordés avant cette date demeurent acquis. Les périodes de mandat antérieures à cette date sont prises en compte pour le renouvellement de la formation. Les droits et recours relatifs aux périodes antérieures restent préservés. »\nL2363-6, troisième alinéa : le remplacer par « Pour l'application de l'article L. 2353-27, la formation des membres du comité de la société coopérative européenne est prise en charge par ce comité. » Le remplacement garde la numérotation, donc le renvoi au « quatrième alinéa » du cinquième alinéa reste juste.\nL2373-3, troisième alinéa : le remplacer par « Pour l'application de l'article L. 2353-27 au même comité, la formation de ses membres est prise en charge par ce comité, sans préjudice des dispositions plus favorables applicables au congé de formation. » Le quatrième alinéa (« deuxième et troisième alinéas ») reste juste.\nCorriger les notes : la dernière version de L2325-44 est LEGIARTI000033023366.",
+     "other_options": "(a) Garder la référence figée, mais l'écrire seulement dans L2353-27, en nommant la version : « dans sa rédaction résultant de la loi n° 2016-1088 du 8 août 2016 ». L2363-6 et L2373-3 renverraient alors à L2353-27. (b) Reprendre aussi la condition d'organisme de l'ancien L2325-44 : c'est un choix de l'auteur, car L2315-63 en vigueur ne la contient plus. (c) Restreindre le droit aux membres « titulaires élus pour la première fois », comme l'ancien texte : déconseillé, car L2353-27 source vise « les membres du comité » sans distinction.",
+     "preserve": "Le congé de formation des membres des comités SE, SCE et transfrontaliers, sans seuil de cinquante salariés ; le renouvellement après quatre ans ; la rémunération et la non-déduction des heures de délégation ; les congés déjà accordés et les mandats antérieurs ; les dispositions plus favorables.",
+     "uncertainties": "Le JORF de la loi 2016-1088 n'a pas été relu. La version 033023366 est celle de LEGI. Dire si la condition « titulaires élus pour la première fois » s'appliquait aux membres du comité SE sous L2353-27 source est une question d'interprétation. Les clauses temporelles relèvent de l'issue #3 et ne sont pas tranchées ici. La seconde passe peut encore modifier ces propositions.",
+     "evidence_files": [
+      "evidence/cited/20261027T044303Z/travail_L2353-27_LEGIARTI000006902274.json",
+      "evidence/cited/20261027T044303Z/travail_L2363-6_LEGIARTI000033023049.json",
+      "evidence/cited/20261027T044303Z/travail_L2373-3_LEGIARTI000047591165.json",
+      "evidence/cited/20261027T044303Z/travail_L2325-44_LEGIARTI000033023366.json",
+      "evidence/cited/20261027T044303Z/travail_L2315-63_LEGIARTI000043975219.json",
+      "evidence/cited/20261027T044303Z/travail_L2325-44_LEGIARTI000006902102.json"
+     ]
+    }
+   ]
+  },
+  {
+   "issue": 9,
+   "url": "https://github.com/AlexMasmej/liberer-la-france/issues/9",
+   "title": "[Code du travail / Licenciements collectifs] Information de l'administration sur l'ouverture des négociations PSE et RCC : la loi et les décrets proposés se renvoient l'obligation (L1233-24-1, L1233-46, R1233-3-5 ; L1237-19, R1237-6-1, D1237-7)",
+   "github_state": "OPEN",
+   "claims": [
+    {
+     "claim": "PSE : L1233-24-1, L1233-46 et R1233-3-5 proposés se renvoient l'information de l'administration sur l'ouverture de la négociation ; aucun ne la fonde par lui-même.",
+     "verdict": "confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L1233-24-1",
+       "source_id": "LEGIARTI000036261836",
+       "proposed_sha256": "4981ff17342903efe8c849b2eda4c51bf992749a11a5497a93cc84580947d7d9"
+      },
+      {
+       "code": "travail",
+       "number": "L1233-46",
+       "source_id": "LEGIARTI000035652915",
+       "proposed_sha256": "b82f84af8e5771d9bc378f4605651b1058164a996a2ddb723ed1ee0223d50090"
+      },
+      {
+       "code": "travail",
+       "number": "R1233-3-5",
+       "source_id": "LEGIARTI000041541509",
+       "proposed_sha256": "4e76ddabcdcb147453c576e45e33f9be85dbf1edd2f2b48fb5bdf73311433585"
+      }
+     ],
+     "evidence": "L1233-24-1 LEGIARTI000036261836 : « l'information de l'autorité administrative sur l'ouverture de la négociation est assurée dans le cadre de la notification prévue à l'article L. 1233-46, sans information distincte exigée au titre du présent article ». L1233-46 LEGIARTI000035652915 : « n'a pas à être annoncée dans cette notification ; l'information sans délai sur l'ouverture effective de cette négociation prévue par cet article demeure applicable ». R1233-3-5 LEGIARTI000041541509 : « l'information sans délai de l'ouverture d'une négociation prévue à l'article L. 1233-24-1 est adressée au directeur régional du siège de l'entreprise ». Ses notes : « ces deux dispositions ont été lues et ne sont pas abrogées ». Chaque motif suppose l'autre texte maintenu, ce qui confirme la circularité : motif de L1233-24-1 : « L1233-46 prévoit déjà l'indication de l'intention de négocier dans la notification du projet » ; motif de L1233-46 : « L'information sans délai lors de l'ouverture effective, imposée par L. 1233-24-1, suffit ». Le texte est identique à celui que cite l'issue."
+    },
+    {
+     "claim": "RCC : L1237-19 proposé supprime l'information de l'administration sur l'ouverture de la négociation, mais R1237-6-1 et D1237-7, retained_unchanged, continuent de l'imposer ; le motif de D1237-7 est faux.",
+     "verdict": "confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L1237-19",
+       "source_id": "LEGIARTI000035623969",
+       "proposed_sha256": "aeb4110c27f1b04175da7ab528197b224bb74364dfc0ff52af8e117ed7c655f3"
+      },
+      {
+       "code": "travail",
+       "number": "R1237-6-1",
+       "source_id": "LEGIARTI000041541504",
+       "proposed_sha256": null
+      },
+      {
+       "code": "travail",
+       "number": "D1237-7",
+       "source_id": "LEGIARTI000036247490",
+       "proposed_sha256": null
+      }
+     ],
+     "evidence": "L1237-19 LEGIARTI000035623969 : « Aucune information distincte de l'administration sur l'ouverture de cette négociation n'est exigée ». Ses notes : « l'information dématérialisée d'intention d'ouvrir la négociation doit être supprimée en coordination ». D1237-7 LEGIARTI000036247490 (retained_unchanged) : « de son intention d'ouvrir une négociation en application de l'article L. 1237-19 » ; motif : « sa suppression réglementaire laisserait subsister L1237-19 ». R1237-6-1 LEGIARTI000041541504 (retained_unchanged) : « l'employeur informe le directeur régional du siège de l'entreprise de son intention d'ouvrir une négociation en application de l'article L. 1237-19 »."
+    },
+    {
+     "claim": "Le dépôt a déjà retiré le seul autre lien vers cette information : l'étude d'impact demandée « dès la notification de l'ouverture de la négociation » (D1233-38, II).",
+     "verdict": "confirmé",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "D1233-38",
+       "source_id": "LEGIARTI000047779099",
+       "proposed_sha256": "61bce3bf280870e491bf05fa616c185f8425e76352e92ea737576cc398baa476"
+      }
+     ],
+     "evidence": "Source LEGIARTI000047779099 : « dès la notification de l'ouverture de la négociation prévue à l'article L. 1237-19 ». Proposition : « aucune étude d'impact social et territorial supplémentaire ne peut être imposée à l'entreprise au titre du présent article »."
+    },
+    {
+     "claim": "La directive 98/59/CE n'impose pas l'information d'ouverture de la négociation ; elle impose la notification du projet (art. 3), conservée par L1233-46. La RCC sort de la directive.",
+     "verdict": "invérifiable",
+     "text_changed_since_issue": false,
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L1233-46",
+       "source_id": "LEGIARTI000035652915",
+       "proposed_sha256": "b82f84af8e5771d9bc378f4605651b1058164a996a2ddb723ed1ee0223d50090"
+      },
+      {
+       "code": "travail",
+       "number": "L1233-48",
+       "source_id": "LEGIARTI000006901060",
+       "proposed_sha256": null
+      }
+     ],
+     "evidence": "Texte primaire non relu : EUR-Lex (CELEX 31998L0059) a répondu HTTP 202 sans contenu le 28/10/2026, sans contournement. Dans le corpus, les deux transmissions qui correspondent, selon notre lecture, aux art. 2 § 3 et 3 sont maintenues. L1233-48 LEGIARTI000006901060 (retained_unchanged) : « est communiqué simultanément à l'autorité administrative ». L1233-46 : la notification du projet est maintenue. Les points des arrêts C-55/02, C-422/14 et C-429/16 cités par l'issue n'ont pas été vérifiés."
+    }
+   ],
+   "relation": "nouveau",
+   "relation_detail": {
+    "RT-P1-TRAVAIL-B-05": "pas un doublon : autres articles (congé de mobilité, L1237-18-5, D1237-4 et D1237-5). Même schéma (formalité supprimée par la loi, maintenue par le décret) et même sens de correction",
+    "RT-P1-TRAVAIL-A-04 (et B-07 fusionnée)": "pas un doublon : revitalisation RCC (L1237-19-9 et suivants, D1233-37 à D1233-48-3). Seul lien : D1233-38, dont le II, déjà réécrit, ne vise plus l'ouverture de la négociation"
+   },
+   "register_ids": [],
+   "proposed_fix_assessment": "Juste sur le fond et conforme à l'orientation : l'issue aligne sur la suppression sans formalité de remplacement, ce qui achève la solution déjà retenue dans L1237-19. Elle est presque minimale. Elle signale honnêtement ses pertes, sans les présenter comme neutres. Trois réserves. (1) Pour L1233-24-1, elle supprime toute clause transitoire ; une phrase calquée sur L1237-19 rend la symétrie explicite, mais c'est une option. (2) Pour R1237-6-1, la coupe de l'information de compétence au CSE et aux syndicats est une perte réelle, quoique mineure : les critères restent objectifs et la décision de validation leur est notifiée (L1237-19-4). L'auteur doit l'accepter expressément. (3) L'argument tiré de la directive est plausible, mais le texte primaire n'a pas été relu : à confirmer. Les critères d'acceptation de l'issue (motif et notes imposés mot pour mot, retrait de champs comme reference_checks ou reform_policy_id, gel des autres entrées) relèvent de son outillage et ne s'imposent pas. Aucun renvoi cassé n'est créé : R1233-15-1 et D1233-12 visent R1233-3-5 pour la compétence, qui demeure ; aucun article du corpus ne vise D1237-7 (recherche faite dans les neuf recueils de l'instantané). Aucune application défavorable aux salariés en cours : seule une formalité de l'employeur disparaît. L'option « garder l'information » serait un rétablissement contraire à l'orientation.",
+   "orientation_conflict": null,
+   "recommended_priority": "P1",
+   "recommended_action": "Correction de rédaction (RT-ISS9-01) : aligner L1233-24-1, L1233-46, R1233-3-5, R1237-6-1 et D1237-7 sur la suppression. L'auteur doit accepter la perte d'information de compétence en RCC multirégionale ; le point de droit de l'Union reste à confirmer.",
+   "new_objections": [
+    {
+     "id": "RT-ISS9-01",
+     "origin": "GitHub #9",
+     "relates_to": [
+      "RT-P1-TRAVAIL-B-05",
+      "RT-P1-TRAVAIL-A-04"
+     ],
+     "priority": "P1",
+     "priority_justification": "Pour le PSE, trois textes nouvellement rédigés renvoient chacun l'obligation à un autre : on ne peut pas savoir si l'information est due. Pour la RCC, le décret maintient une formalité que la loi proposée déclare non exigée. L'effet est probable : demandes administratives sans base légale, et moyen tiré de la procédure invoqué contre la validation (L1233-57-2, 1° ; L1237-19-3, 1°). Même schéma que RT-P1-TRAVAIL-B-05, classé P1.",
+     "nature": "incohérence du projet",
+     "status": "confirmé",
+     "articles": [
+      {
+       "code": "travail",
+       "number": "L1233-24-1",
+       "source_id": "LEGIARTI000036261836",
+       "valid_from": "2018-01-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "cf29586b62dd7cd3988fb57216b559b9790fc656432d58853557e301136c52b6",
+       "proposed_sha256": "4981ff17342903efe8c849b2eda4c51bf992749a11a5497a93cc84580947d7d9",
+       "reason_sha256": "f46c46089226034abdb6cf32736020706e56a1f0233a238397e75ea087b72b1c",
+       "review_notes_sha256": "06c25025159d48c45fb238172c980cf4ec0f69bb88749b09139e759ce5ee5e41",
+       "second_pass": {
+        "draft_status": "rewrite_draft",
+        "inventory": "completed"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "L1233-46",
+       "source_id": "LEGIARTI000035652915",
+       "valid_from": "2018-01-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "6c27733d8cf1eef68aace4ca21d10fa2ecfc54a2f30e79ae0d39b7dabb1e8397",
+       "proposed_sha256": "b82f84af8e5771d9bc378f4605651b1058164a996a2ddb723ed1ee0223d50090",
+       "reason_sha256": "60a12a4c093bfab420765466b3468bf9156a5c7a7346920107efd211a93b9c0f",
+       "review_notes_sha256": "35929405f534a540315c86cbf21e183915bdf6a9ccf182375dc66123e31aa2cd",
+       "second_pass": {
+        "draft_status": "rewrite_draft",
+        "inventory": "completed"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "R1233-3-5",
+       "source_id": "LEGIARTI000041541509",
+       "valid_from": "2020-02-07",
+       "valid_until": "2999-01-01",
+       "source_sha256": "b8abb0e256de5fbda0d0d01f8033fd68393eb302dd4374d2a3eef5ae792e654e",
+       "proposed_sha256": "4e76ddabcdcb147453c576e45e33f9be85dbf1edd2f2b48fb5bdf73311433585",
+       "reason_sha256": "b3b5cea15b29113e1112b44726404c8b0ce8619f4bdd5e832d640bcad594868e",
+       "review_notes_sha256": "b5cb4399b1353ae4f0118acb40989824aea2cc0c5529442719940e522e44fe2f",
+       "second_pass": {
+        "draft_status": "rewrite_draft",
+        "inventory": "pending"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "L1237-19",
+       "source_id": "LEGIARTI000035623969",
+       "valid_from": "2018-01-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "0ab608f5cddcca8493b1c9aa8ee3679027f8dca6265972364da683f257e5c38b",
+       "proposed_sha256": "aeb4110c27f1b04175da7ab528197b224bb74364dfc0ff52af8e117ed7c655f3",
+       "reason_sha256": "2be69cef6644f9a11ab8fe3f001c4df0e4d93417ad85e659eea8b1f32cb480a5",
+       "review_notes_sha256": "d9095251d2cf5ab2b6cb1b4899bcb641c87af2c1529d5ddd5707d7a82d31bcce",
+       "second_pass": {
+        "draft_status": "rewrite_draft",
+        "inventory": "completed"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "R1237-6-1",
+       "source_id": "LEGIARTI000041541504",
+       "valid_from": "2020-02-07",
+       "valid_until": "2999-01-01",
+       "source_sha256": "1f371e2832284856f671b64d21ce83f297996c396925a43a98155ef621ac730b",
+       "proposed_sha256": null,
+       "reason_sha256": "7b4c88f2f965604f48c4fe459055b9e0dc00d66165944f7c58d3c87c7e5cd73f",
+       "review_notes_sha256": "b1d2c2eb8707ed3532bbd75d3070dceea19ab950751a47cd91edb4f67412a03f",
+       "second_pass": {
+        "draft_status": "retained_unchanged",
+        "inventory": "pending"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "D1237-7",
+       "source_id": "LEGIARTI000036247490",
+       "valid_from": "2017-12-23",
+       "valid_until": "2999-01-01",
+       "source_sha256": "1a575458750e41760427d388b23bcb845e52ea7adba3751f32195222d497fbac",
+       "proposed_sha256": null,
+       "reason_sha256": "cef4a65fda67ba43876ef0a57201166aa04f5314a959661d591ed4f0cda70d8e",
+       "review_notes_sha256": "29eed46e6355c21ccd803459d028476fe3ba12a7fe2f70454ac9a880cc1d9820",
+       "second_pass": {
+        "draft_status": "retained_unchanged",
+        "inventory": "pending"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "L1233-57-6",
+       "source_id": "LEGIARTI000036261792",
+       "valid_from": "2018-01-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "b8c6e2d95a8b55d0236ae02640aa745e7b6dd74bfc63f4875f14ef423281b933",
+       "proposed_sha256": "4c65e4d91e24edf7d3218c08e3df0e610714e1e61e331b091a643629f66a4f95",
+       "reason_sha256": "8ad34ed7caf86292f559397833a749519adfe259e41d4dad63f4fd9d2f204153",
+       "review_notes_sha256": "09bf91579cb3cd71ccec14d699e6147c2f712c8b1ca41b9fbf5fc518073d041e",
+       "second_pass": {
+        "draft_status": "rewrite_draft",
+        "inventory": "completed"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "D1233-12",
+       "source_id": "LEGIARTI000036482984",
+       "valid_from": "2018-01-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "1a336089ee2e629a7a1c660219501cc7998528e13a241bff0267ac00a0f74e26",
+       "proposed_sha256": null,
+       "reason_sha256": "f97a2fa04f9847e4ff21c1fc210c323e0bef2a08f920c6266aa65088b2ea80ac",
+       "review_notes_sha256": "7ec012a9466125e581a855bf22249f786e1d16d1809add80a8f91853ff065766",
+       "second_pass": {
+        "draft_status": "retained_unchanged",
+        "inventory": "pending"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "L1237-19-3",
+       "source_id": "LEGIARTI000036762161",
+       "valid_from": "2018-04-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "6496ba46d60a4e1a97db6a9fd92a5525043c29395c0d34fff687c1e1385f7751",
+       "proposed_sha256": null,
+       "reason_sha256": "3c84532e013adbd2efb38e70eed33f1dc01847104fc0afd673c3c775dfb01364",
+       "review_notes_sha256": "45a8ab0cabe27b16e119d98f32c9c789db19ac1a3387df25ed4ba8ca5f9acb2a",
+       "second_pass": {
+        "draft_status": "retained_unchanged",
+        "inventory": "completed"
+       }
+      },
+      {
+       "code": "travail",
+       "number": "L1233-57-2",
+       "source_id": "LEGIARTI000035652786",
+       "valid_from": "2018-01-01",
+       "valid_until": "2999-01-01",
+       "source_sha256": "56aa3ea95eb4640459939d31628cdc8be2aee00e7b3e768a86756f8969ab2b43",
+       "proposed_sha256": null,
+       "reason_sha256": "7ebcdbcbb8623d04c2e4ac1c9a7383323faa9b090182785ea6ee892625bd88ff",
+       "review_notes_sha256": "dd806d99744809d3d39d97591d5191dbc2c4dabc253b2aef24b6cb5676a067b4",
+       "second_pass": {
+        "draft_status": "retained_unchanged",
+        "inventory": "completed"
+       }
+      }
+     ],
+     "passages": [
+      {
+       "id": "travail L1233-24-1 LEGIARTI000036261836 [proposition]",
+       "citation": "est assurée dans le cadre de la notification prévue à l'article L. 1233-46, sans information distincte exigée au titre du présent article"
+      },
+      {
+       "id": "travail L1233-46 LEGIARTI000035652915 [proposition]",
+       "citation": "l'information sans délai sur l'ouverture effective de cette négociation prévue par cet article demeure applicable"
+      },
+      {
+       "id": "travail R1233-3-5 LEGIARTI000041541509 [proposition]",
+       "citation": "Elle ne supprime pas la mention de l'intention de négocier dans la notification du projet lorsqu'elle est requise par l'article L. 1233-46"
+      },
+      {
+       "id": "travail L1237-19 LEGIARTI000035623969 [proposition]",
+       "citation": "Aucune information distincte de l'administration sur l'ouverture de cette négociation n'est exigée"
+      },
+      {
+       "id": "travail D1237-7 LEGIARTI000036247490 [motif]",
+       "citation": "sa suppression réglementaire laisserait subsister L1237-19"
+      },
+      {
+       "id": "travail R1237-6-1 LEGIARTI000041541504 [source]",
+       "citation": "de son intention d'ouvrir une négociation en application de l'article L. 1237-19"
+      },
+      {
+       "id": "travail L1237-19 LEGIARTI000035623969 [motif]",
+       "citation": "suppression de l'avis d'ouverture des négociations, sans notification de remplacement"
+      }
+     ],
+     "primary_references": [
+      "LEGI LEGIARTI000036261836 (travail L1233-24-1), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000035652915 (travail L1233-46), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000041541509 (travail R1233-3-5), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000035623969 (travail L1237-19), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000041541504 (travail R1237-6-1), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000036247490 (travail D1237-7), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000006901060 (travail L1233-48), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000036762161 (travail L1237-19-3), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000035652786 (travail L1233-57-2), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000036261792 (travail L1233-57-6), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000036482984 (travail D1233-12), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "LEGI LEGIARTI000041541522 (travail L1233-57-8), instantané 20261027T044303Z (corpus au 18/10/2026), lu le 28/10/2026",
+      "Directive 98/59/CE du Conseil du 20 juillet 1998, CELEX 31998L0059, art. 1er, 2 et 3 : non relue (EUR-Lex HTTP 202 sans contenu, consultation du 28/10/2026, non contournée)",
+      "CJCE 12 oct. 2004, C-55/02 ; CJUE 11 nov. 2015, C-422/14 ; CJUE 21 sept. 2017, C-429/16 : cités par l'issue, non vérifiés"
+     ],
+     "reasoning": "La réforme a retiré la moitié d'une obligation en double, chaque fois en comptant sur l'autre moitié. Pour le PSE, en droit en vigueur, l'administration apprend l'ouverture d'une négociation d'accord majoritaire de deux façons : par l'information sans délai de L1233-24-1 et, au plus tard, par la mention de l'intention dans la notification de L1233-46. La réécriture de L1233-24-1 supprime la première et renvoie à la seconde. Celle de L1233-46 supprime la seconde et renvoie à la première. R1233-3-5 organise encore l'envoi de la première et réserve la seconde, en affirmant (notes) que les deux articles légaux sont maintenus. Le texte résultant est inintelligible : une lecture fait disparaître l'obligation, une autre l'inscrit dans la notification malgré L1233-46. Pour la RCC, L1237-19 proposé déclare l'information non exigée, et ses notes demandent de coordonner D1237-7. Mais D1237-7 et R1237-6-1 sont maintenus sans changement, au motif erroné que L1237-19 la prévoit toujours. Un décret ne peut pas faire revivre une obligation que la loi écarte expressément. Il reste une formalité réglementaire contraire à la loi. Orientation : la ligne retenue pour L1237-19 (« sans notification de remplacement ») et la consigne générale de « fusionner les obligations doublonnées » vont dans le même sens. La correction attendue est donc d'aligner les textes sur la suppression, non de rétablir l'information. Droit de l'Union, à confirmer : selon notre lecture de la directive 98/59/CE, l'autorité publique reçoit copie de l'information écrite donnée aux représentants (art. 2 § 3) et la notification écrite du projet (art. 3), à partir de laquelle court le délai de l'art. 4. Ces transmissions sont assurées par L1233-48 (maintenu) et par L1233-46 et D1233-4 (notification conservée). La directive ne paraît pas exiger d'informer l'autorité de l'ouverture d'une négociation collective. Pour la RCC, les départs consentis ne sont en principe pas des licenciements au sens de la directive. Mais l'assimilation des cessations « à l'initiative de l'employeur » (art. 1er § 1, dernier alinéa) et le risque de requalification en cas de consentement vicié empêchent d'exclure toute application. Même dans ce cas, l'obligation européenne porterait sur la consultation et la notification du projet, non sur l'ouverture de la négociation. La transmission de l'accord pour validation (L1237-19-3) demeure.",
+     "consequences": "PSE : on ne sait pas si l'information est due, ni sous quelle forme. Un salarié ou un syndicat pourrait soutenir, contre la validation (L1233-57-2, 1° : conformité à L1233-24-1), qu'une obligation a été méconnue. La DREETS ne connaît plus la négociation avant la notification. Or L1233-57-6 et D1233-12 continuent de viser la négociation « engagée » : la copie des observations aux syndicats devient aléatoire. RCC : la DREETS continue de demander une information que la loi n'exige plus. Un moyen pourrait être tiré de sa méconnaissance, ou de l'illégalité du décret. Projets multirégionaux : désignation du directeur compétent et information du CSE et des syndicats (voir la correction).",
+     "minimal_correction": "Aligner les textes sur la suppression, sans formalité de remplacement.\n1. L1233-24-1 (texte complet proposé) : « Dans les entreprises de cinquante salariés et plus, un accord collectif peut déterminer le contenu du plan de sauvegarde de l'emploi mentionné aux articles L. 1233-61 à L. 1233-63 ainsi que les modalités de consultation du comité social et économique et de mise en œuvre des licenciements. Cet accord est signé par une ou plusieurs organisations syndicales représentatives ayant recueilli au moins 50 % des suffrages exprimés en faveur d'organisations reconnues représentatives au premier tour des dernières élections des titulaires au comité social et économique, quel que soit le nombre de votants, ou par le conseil d'entreprise dans les conditions prévues à l'article L. 2321-9.\nAucune information de l'administration sur l'ouverture de cette négociation n'est exigée à compter de l'entrée en vigueur de la loi portant la présente réforme, y compris pour les négociations déjà ouvertes. » Ce second alinéa reprend la formule de L1237-19 proposé. On peut aussi le supprimer purement et simplement, comme le propose l'issue : voir l'option (a).\n2. L1233-46 : supprimer « ; l'information sans délai sur l'ouverture effective de cette négociation prévue par cet article demeure applicable » et terminer la phrase après « notification ». Rien d'autre ne change.\n3. R1233-3-5 : nouvelle première phrase : « Lorsque le projet de licenciement collectif porte sur des établissements relevant de la compétence de plusieurs directeurs régionaux des entreprises, de la concurrence, de la consommation, du travail et de l'emploi, l'employeur notifie son projet de licenciement en application de l'article L. 1233-46 au directeur régional du siège de l'entreprise. » Supprimer les deuxième et troisième phrases actuelles (« Aucune information distincte préalable… » ; « L'employeur notifie à ce directeur… », devenue redondante). Dans le dernier alinéa, supprimer la phrase « Elle ne supprime pas la mention de l'intention de négocier… ». Les critères de compétence, l'information de l'employeur et celle du CSE et des syndicats restent : la notification les déclenche toujours.\n4. R1237-6-1 : réécrire le premier alinéa ainsi : « Lorsque le projet d'accord collectif portant rupture conventionnelle collective inclut des établissements relevant de la compétence de plusieurs directeurs régionaux des entreprises, de la concurrence, de la consommation, du travail et de l'emploi, le directeur régional compétent est celui dans le ressort duquel se situe : » et garder les 1° à 4°. Supprimer le dernier alinéa (notification de la compétence et information du CSE et des syndicats) : son déclencheur disparaît.\n5. D1237-7 : abrogé. Coordonner l'arrêté du 29 décembre 2017 (volet D1237-7), sans abroger ses dispositions relatives à D1237-8 à D1237-12.",
+     "other_options": "(a) L1233-24-1 sans aucune phrase transitoire (solution de l'issue). Elle a le même effet pour les négociations futures, mais laisse la question des négociations en cours à l'issue #3. (b) Garder un seul canal, la mention de l'intention dans la notification de L1233-46, rendue exigible, et supprimer l'information distincte. C'est une fusion de doublon conforme à la consigne générale, mais elle rompt la symétrie avec L1237-19 : arbitrage de l'auteur. (c) Pour R1237-6-1, garder l'information de compétence en la déclenchant par la transmission de l'accord pour validation. Ce serait une formalité de déclenchement nouvelle, déconseillée par l'orientation. (d) Rétablir partout l'information, comme le propose l'issue en option. C'est contraire à la suppression retenue par le projet : rejeté.",
+     "preserve": "La notification du projet (L1233-46 et D1233-4) et la communication simultanée des informations et procès-verbaux (L1233-48), transmissions qui correspondent aux art. 2 et 3 de la directive ; les règles de compétence (L1233-57-8, R1233-3-5 et les 1° à 4° de R1237-6-1) ; la validation et l'homologation (L1233-57-1 à L1233-57-4, L1237-19-3 et L1237-19-4) ; les observations et injonctions de la DREETS (L1233-57-5, L1233-57-6, D1233-12) ; l'absence d'entrave du seul fait d'ouvrir la négociation (L1233-46) ; la majorité de 50 % et la voie du conseil d'entreprise.",
+     "uncertainties": "Le texte de la directive 98/59/CE et la jurisprudence de la CJUE n'ont pas été relus (EUR-Lex inaccessible le 28/10/2026). La qualification au regard du droit de l'Union reste donc à confirmer. L'arrêté du 29 décembre 2017 et l'arrêté du 21 octobre 2019 ne figurent pas dans les pièces. La jurisprudence administrative sur la portée de l'information d'ouverture dans le contrôle de validation n'a pas été vérifiée. R1237-6-1 et D1237-7 sont « pending » en seconde passe et peuvent encore changer.",
+     "evidence_files": [
+      "evidence/cited/20261027T044303Z/travail_L1233-24-1_LEGIARTI000036261836.json",
+      "evidence/cited/20261027T044303Z/travail_L1233-46_LEGIARTI000035652915.json",
+      "evidence/cited/20261027T044303Z/travail_R1233-3-5_LEGIARTI000041541509.json",
+      "evidence/cited/20261027T044303Z/travail_L1237-19_LEGIARTI000035623969.json",
+      "evidence/cited/20261027T044303Z/travail_R1237-6-1_LEGIARTI000041541504.json",
+      "evidence/cited/20261027T044303Z/travail_D1237-7_LEGIARTI000036247490.json",
+      "evidence/cited/20261027T044303Z/travail_L1233-48_LEGIARTI000006901060.json",
+      "evidence/cited/20261027T044303Z/travail_L1237-19-3_LEGIARTI000036762161.json",
+      "evidence/cited/20261027T044303Z/travail_L1233-57-2_LEGIARTI000035652786.json",
+      "evidence/cited/20261027T044303Z/travail_L1233-57-6_LEGIARTI000036261792.json",
+      "evidence/cited/20261027T044303Z/travail_D1233-12_LEGIARTI000036482984.json",
+      "evidence/cited/20261027T044303Z/travail_D1233-4_LEGIARTI000036483183.json",
+      "evidence/cited/20261027T044303Z/travail_L1233-57-8_LEGIARTI000041541522.json",
+      "evidence/cited/20261027T044303Z/travail_D1233-38_LEGIARTI000047779099.json"
+     ]
+    }
+   ]
+  }
+ ]
+}

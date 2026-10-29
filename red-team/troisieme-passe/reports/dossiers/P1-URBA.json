@@ -1,0 +1,1085 @@
+{
+ "dossier": "P1-URBA",
+ "snapshot": "20261026T230545Z",
+ "audit": "global-reference-audit-20261025T2341Z",
+ "date": "2026-10-26",
+ "avertissement": "Revue IA indépendante ; ne vaut pas validation par un juriste. Conclusions provisoires : la seconde passe se poursuit.",
+ "objections": [
+  {
+   "id": "RT-P1-URBA-01",
+   "priority": "P1",
+   "priority_justification": "Contradiction certaine entre la loi proposée et des décrets maintenus ; effet probable (agréments, conventions, blocage des fonds publics réclamés sans base légale) mais la loi prévaut, d'où P1 et non P0.",
+   "nature": "incohérence du projet",
+   "status": "confirmé",
+   "passages": [
+    "urba L510-1 (LEGIARTI000053544648), proposition : « Aucun agrément fondé sur le présent article dans sa rédaction antérieure n'est exigé à compter de cette date » ; « L'absence de cet agrément ne peut [...] empêcher [...] l'engagement de fonds publics, l'affectation des bâtiments » ; « Les conventions relatives à la mise en œuvre de l'agrément ne peuvent le rétablir. »",
+    "urba R*510-5 (LEGIARTI000006820274), proposition : « La convention mentionnée au II de l'article L. 510-1 est passée pour une durée de trois à cinq ans » ; « s'applique aux conventions conclues ou renouvelées à compter de l'entrée en vigueur de la loi de réforme ».",
+    "urba R*510-1 (LEGIARTI000006820261), proposition : « Dans la région d'Ile-de-France, sont soumis à agrément [...] » ; notes : « le régime général est conservé ».",
+    "urba R*510-2 (LEGIARTI000022406053), notes : « L510-1 permet de fixer réglementairement ces conditions ; son régime législatif d'agrément reste applicable. »",
+    "urba R*510-8 (LEGIARTI000006820330), proposition : « Les fonds publics ne peuvent être engagés et l'affectation des bâtiments ne peut être prononcée que sur production de la décision d'agrément. »"
+   ],
+   "primary_references": [
+    "Snapshot 20261026T230545Z, corpus.sqlite (code de l'urbanisme LEGITEXT000006074075) — aucune source externe consultée"
+   ],
+   "reasoning": "L510-1 proposé abroge intégralement l'agrément (I à VI), y compris en Île-de-France, ses conventions, son bilan et ses sanctions. Les propositions réglementaires du chapitre R*510 ont été rédigées sous l'hypothèse antérieure (seul retrait du critère social SRU70 3°, cf. sru_abrogation « agrément préexistant distinct ») et maintiennent l'agrément : R*510-1 le rend obligatoire, R*510-2 en organise la délivrance, R*510-5 les conventions locales pour l'avenir (« conclues ou renouvelées »), R*510-8 subordonne l'engagement de fonds publics et l'affectation des bâtiments à la décision d'agrément, ce que la loi proposée interdit expressément. Ces décrets perdraient leur base légale (L510-1 IV abrogé) et contrediraient frontalement la loi. Le motif de L510-1 relève lui-même que « le circuit réglementaire restant [est] hors lot ».",
+   "consequences": "Maintien apparent d'un agrément IDF et de conventions préfectorales sans base légale ; risque que les services exigent l'agrément ou refusent fonds publics/affectation sur le fondement de R*510-8 ; contentieux d'illégalité et obligation d'abroger (CRPA L243-2). Les demandes en cours, que L510-1 déclare « sans objet », resteraient instruites selon R*510-2.",
+   "minimal_correction": "Abroger par décret l'ensemble du chapitre R*510 (R*510-1, R*510-2, R*510-4 à R*510-11, R*510-15, R*510-14 déjà abrogé) à la date d'entrée en vigueur de l'abrogation de L510-1, avec une transition commune. Texte proposé pour R*510-5 (modèle pour les autres) : « Le présent article est abrogé à compter de l'entrée en vigueur de la loi abrogeant l'article L. 510-1. À compter de cette date, aucune convention ne peut être conclue, renouvelée ou exécutée pour définir les modalités locales de l'agrément supprimé, et le préfet ne peut ni suspendre ni dénoncer une convention sur ce fondement pour en tirer une obligation d'agrément. Les conventions en cours cessent de produire effet en tant qu'elles organisent la délivrance de l'agrément ou imposent des engagements exclusivement liés à celui-ci ; leurs autres stipulations, les engagements financiers valablement conclus et les droits des tiers demeurent régis par leurs propres termes. Les décisions prises avant cette date et les recours qui s'y rapportent restent régis par les dispositions antérieures, sous réserve des effets de l'abrogation de l'article L. 510-1. » Pour R*510-8, retirer le deuxième alinéa (fonds publics/affectation) et le renvoi au g de R431-16.",
+   "other_options": [
+    "Si les auteurs entendent revenir à l'orientation sru_abrogation (retrait du seul critère social de L510-1, agrément préexistant conservé), rétablir dans L510-1 un I/III/IV sans le second alinéa du I : choix contraire à la dernière consigne « Cut harder », à trancher par les auteurs, non par coordination."
+   ],
+   "preserve": [
+    "Agréments déjà délivrés et droits acquis (non annulés)",
+    "Exonérations, remboursements et durées de référence de R520-14 pour les opérations antérieures",
+    "Indemnités de L510-4/R*510-14 pour mesures antérieures",
+    "Loi répressive plus douce pour les faits antérieurs",
+    "Aucune formalité de remplacement"
+   ],
+   "uncertainties": "R*510-4, R*510-6, R*510-7, R*510-9, R*510-10, R*510-11 et R*510-15 n'ont été vus que par leur statut et leurs premières lignes ; leur contenu exact n'a pas été lu en entier. R*510-1, R*510-5 et R*510-8 sont au statut d'inventaire « pending » : la seconde passe peut encore les modifier.",
+   "articles": [
+    {
+     "code": "urba",
+     "number": "L510-1",
+     "source_id": "LEGIARTI000053544648",
+     "valid_from": "2026-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "788bb810ba434f3870bfd62a02875d24df783f1c26aee0e583e0827380f12593",
+     "proposed_sha256": "3bfb770c116128cbdc614b043bec9e355d48108cc86b08b1a071e4f841d1cc10",
+     "reason_sha256": "eca4ca852471c85c7fe2efc9f925aeed233cb7a9a6a00cc85e170b55114cf828",
+     "review_notes_sha256": "342479ff97fdbda4ccfc3da5c01a55db08524872b59129806f65608bd0e2de66",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "R*510-5",
+     "source_id": "LEGIARTI000006820274",
+     "valid_from": "2001-03-28",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "967746dd0c32a57a042add96ed4d7ccaa4aec93f6a601ac50e9a4efacb54e310",
+     "proposed_sha256": "f9ef9010823b85e7fee081b4586fbed9361c7a1b30612e8c49893863c66773f6",
+     "reason_sha256": "6e517e59a020aa8ded572167c799eec6cc73da6f30544571812451db5338a4e3",
+     "review_notes_sha256": "d453b08817a10ced8c284a9ab9c0faed7f174ed941790b79805e534ee7298958",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "R*510-1",
+     "source_id": "LEGIARTI000006820261",
+     "valid_from": "2007-11-14",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "00fd0d4f136f35330fd81369d49503737fe52b57cce790653f6ac33f930b3c35",
+     "proposed_sha256": "c1c56e87374c7a829e5b9f14787a681f11e059afd2821714261d1b2c035249d1",
+     "reason_sha256": "554900f31f16f54116deb8a0cb6fdc076b5e5d87c9ce8aa631a61746a6b5f837",
+     "review_notes_sha256": "b8460126efc36602eb224e5506146a2a5f4181687207ee2571b03ba66554152e",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "R*510-2",
+     "source_id": "LEGIARTI000022406053",
+     "valid_from": "2010-07-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "588ed243a8fa3879a12bddcf723d273641635c42a31c7f8e100c2b77b93f9828",
+     "proposed_sha256": "f5bd92ba16c9eccd102b6811a2fd4ff480d8db29d6711c98fb1922b818bd1e4c",
+     "reason_sha256": "988549cccc1ed18e7376da964bcc6660140b2853d1b7b882a912d9cb906c7b08",
+     "review_notes_sha256": "3ea09bdc39843c63b788b8f35e425031b7389ed859adea5455479cd8d3140c77",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "R*510-8",
+     "source_id": "LEGIARTI000006820330",
+     "valid_from": "1973-11-13",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "23ab22ca531773a929e979b5b2d7562d6476e1c9f00ffcc6fd5400057b5993cb",
+     "proposed_sha256": "abee1549bff65a227c9394d1d7334fb15a5341c5152d9ab8fb64678874b9b9e1",
+     "reason_sha256": "9041ab6517a545b23185d5960a06360d0e817fd0d16ef658f21a7e6fe9d3dcf3",
+     "review_notes_sha256": "c2f283fb2c4557c690189857f4e07d416d79206e47957e125b038d40db40f1f1",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    }
+   ],
+   "evidence_files": [
+    "evidence/cited/20261026T230545Z/urba_L510-1_LEGIARTI000053544648.json",
+    "evidence/cited/20261026T230545Z/urba_R*510-5_LEGIARTI000006820274.json",
+    "evidence/cited/20261026T230545Z/urba_R*510-1_LEGIARTI000006820261.json",
+    "evidence/cited/20261026T230545Z/urba_R*510-2_LEGIARTI000022406053.json",
+    "evidence/cited/20261026T230545Z/urba_R*510-8_LEGIARTI000006820330.json"
+   ]
+  },
+  {
+   "id": "RT-P1-URBA-02",
+   "priority": "P2",
+   "priority_justification": "Clauses de réserve et pièce de dossier inertes en droit face à l'abrogation expresse de L510-1, mais contradictoires dans leur lettre ; effet limité à la lisibilité et à un risque de demande de pièce.",
+   "nature": "incohérence du projet",
+   "status": "confirmé",
+   "passages": [
+    "urba R*510-14 (LEGIARTI000026736154), proposition : « Les règles de planification, les autorisations d'urbanisme, l'agrément prévu à l'article L. 510-1 et les protections [...] demeurent applicables. »",
+    "urba L111-12 (LEGIARTI000031210201), proposition : « Les obligations et sanctions fondées sur les articles L. 421-1 à L. 421-4 et L. 510-1 demeurent applicables dans leur champ propre. »",
+    "urba R431-16 (LEGIARTI000053903389), proposition : « g) L'agrément prévu à l'article L. 510-1, lorsqu'il est exigé ; » ; notes : « son agrément autonome subsiste [...] donc g reste exigible lorsqu'il est requis ».",
+    "urba R*431-36 (LEGIARTI000054481641), proposition : « a, b, c, g, h, q, r et t de l'article R. 431-16 »"
+   ],
+   "primary_references": [
+    "Snapshot 20261026T230545Z, corpus.sqlite"
+   ],
+   "reasoning": "Le motif de L510-4 qualifiait déjà de « contradiction effective » la clause maintenant « l'agrément prévu à l'article L. 510-1 » et demandait l'alignement de R*510-14 ; cela n'a pas été fait. L111-12 (abrogé) déclare les sanctions de L510-1 « applicables », sans la réserve de la loi répressive plus douce que L510-1 prévoit pour les faits antérieurs. R431-16 g et le renvoi de R*431-36 au g subsistent avec un motif périmé ; L510-1 interdit pourtant que l'absence d'agrément rende un dossier incomplet.",
+   "consequences": "Aucune obligation nouvelle en droit (la loi spéciale prévaut), mais signaux contradictoires pour les services instructeurs et les juridictions, notamment sur la répression de faits antérieurs non définitivement jugés.",
+   "minimal_correction": "R*510-14, dernier alinéa : « Les règles de planification, les autorisations d'urbanisme et les protections relatives à la sécurité, aux risques et à la pollution des sols qui reposent sur des fondements autonomes demeurent applicables. Cette réserve ne maintient ni ne rétablit l'agrément supprimé par l'abrogation de l'article L. 510-1. » — L111-12, dernière phrase : « Les obligations et sanctions fondées sur les articles L. 421-1 à L. 421-4 demeurent applicables dans leur champ propre. Les faits antérieurs à l'abrogation de l'article L. 510-1 restent soumis aux règles qui leur étaient applicables, sous réserve de l'application de la loi répressive plus douce. » — R431-16 : « g) Abrogé ; » et ajout à la transition finale : « La suppression de la pièce prévue au g s'applique aux demandes nouvelles et en cours à compter de l'entrée en vigueur de l'abrogation de l'article L. 510-1, sans nouveau dépôt ni reprise des délais. » — R*431-36 : retirer « g » de l'énumération des rubriques de R. 431-16.",
+   "other_options": [
+    "Conserver g en le réservant expressément aux opérations antérieures soumises à un agrément délivré avant la réforme (sans exigence nouvelle)."
+   ],
+   "preserve": [
+    "Rubrique h de R431-16 (accès à la dérogation littorale R121-5) intacte",
+    "Indemnités anciennes de R*510-14",
+    "Absence de toute pièce de remplacement"
+   ],
+   "uncertainties": "Coordination de R*510-8 (renvoi au g) traitée dans RT-P1-URBA-01.",
+   "articles": [
+    {
+     "code": "urba",
+     "number": "R*510-14",
+     "source_id": "LEGIARTI000026736154",
+     "valid_from": "2013-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "c44337dcbf7f956c19061a3eb5c749ce5e810e7a1a1833b42f59e503c7684623",
+     "proposed_sha256": "22f362f9ebc18d04ebae09d407bf0c79f1e1a820216676d2abe69efdf2517d59",
+     "reason_sha256": "3dfbb71856f149b8701d397494b0dd2431dc4e835f41676c2a2e7250727a773b",
+     "review_notes_sha256": "98fcc7200734b0036799d9d8d01992574cd7d2490037aac92853849355d36e9e",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "L111-12",
+     "source_id": "LEGIARTI000031210201",
+     "valid_from": "2016-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "8fcc293a1ef3d5af285b40c1af131527bf78ab8f5cb00c8988fe6d5b6897a620",
+     "proposed_sha256": "00bcd17db417fcbcc8247ee04ee570d3ab08ea66be59087ba68e68df90300ebe",
+     "reason_sha256": "176402051ba04cc6369e64ae7d98e46176f15437e879446aaccbb27af7523375",
+     "review_notes_sha256": "0d062de9a663ba4c9fdf410a0740e95c09a2b1a2d49d404bc48a5d66f5a58f7c",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "R431-16",
+     "source_id": "LEGIARTI000053903389",
+     "valid_from": "2026-04-17",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "608d5a75f1c74104e3ad7edc35ccff1f57011ff307c7fc98388689607695a590",
+     "proposed_sha256": "da6cef7eceb549a4c928d7301f177fee219c8bbd819e47c51139140914fce43e",
+     "reason_sha256": "f0263c46eab88f82112904982d8d3395127d0462808f2df9152966d39833974e",
+     "review_notes_sha256": "034513cfbd6e49a0a23bf99fbb6d8365f2637a454352709258b24a77cadccd9a",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "R*431-36",
+     "source_id": "LEGIARTI000054481641",
+     "valid_from": "2026-07-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "5c048bbb9a96ec968ac09ed86b46ea452f851dbcf007f4209a874320decf2254",
+     "proposed_sha256": "3b39e407e9ab9ee2c9a0ddabdfe6e93bbfdb113d7d0f3e43d8a57d05354ffe36",
+     "reason_sha256": "361a05dd2e1f56e1dfbea70d6f9964113d566c61571e3585f2d59a97e24ecc90",
+     "review_notes_sha256": "d5030f700de7eac79614d46919c2bd794f1886ee1b7ede2f434f475d1041f167",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "L510-1",
+     "source_id": "LEGIARTI000053544648",
+     "valid_from": "2026-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "788bb810ba434f3870bfd62a02875d24df783f1c26aee0e583e0827380f12593",
+     "proposed_sha256": "3bfb770c116128cbdc614b043bec9e355d48108cc86b08b1a071e4f841d1cc10",
+     "reason_sha256": "eca4ca852471c85c7fe2efc9f925aeed233cb7a9a6a00cc85e170b55114cf828",
+     "review_notes_sha256": "342479ff97fdbda4ccfc3da5c01a55db08524872b59129806f65608bd0e2de66",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    }
+   ],
+   "evidence_files": [
+    "evidence/cited/20261026T230545Z/urba_R*510-14_LEGIARTI000026736154.json",
+    "evidence/cited/20261026T230545Z/urba_L111-12_LEGIARTI000031210201.json",
+    "evidence/cited/20261026T230545Z/urba_R431-16_LEGIARTI000053903389.json",
+    "evidence/cited/20261026T230545Z/urba_R*431-36_LEGIARTI000054481641.json",
+    "evidence/cited/20261026T230545Z/urba_L510-1_LEGIARTI000053544648.json"
+   ]
+  },
+  {
+   "id": "RT-P1-URBA-03",
+   "priority": "P1",
+   "priority_justification": "Deux lois du projet en conflit direct : un texte maintenu confère le pouvoir que la proposition voisine abroge et interdit ; effet probable de qualifications PIG contestées.",
+   "nature": "coordination manquante",
+   "status": "confirmé",
+   "passages": [
+    "urba L102-2 (LEGIARTI000031210080), proposition : « aucune mesure ni aucun projet ne peut être qualifié de projet d'intérêt général, ni voir cette qualification renouvelée, sur le fondement de l'article L. 102-5 »",
+    "urba L102-5 (LEGIARTI000033745638), source maintenue (retained_unchanged) : « l'autorité administrative peut, en application de l'article L. 102-2, qualifier de projet d'intérêt général [...] »",
+    "urba R102-1 (LEGIARTI000031721460), notes : « L102-5 conserve dans le corpus une source maintenue incompatible [...] sa réécriture demeure nécessaire et n'est pas déclarée accomplie. »",
+    "urba L172-7 (LEGIARTI000031211548), proposition : « Le renvoi à l'article L. 102-5 ne permet aucune qualification nouvelle »"
+   ],
+   "primary_references": [
+    "Snapshot 20261026T230545Z, corpus.sqlite"
+   ],
+   "reasoning": "L102-5 est conservé inchangé avec un motif (« Ce délai limite le pouvoir de l'Etat ») qui présuppose la survie de la voie spéciale DTADD. Or L102-2, R102-1, L102-4 et L172-7 proposés ferment cette voie. Le projet contiendrait simultanément une habilitation législative en vigueur et son interdiction expresse.",
+   "consequences": "Doute sur la possibilité de qualifier des PIG DTADD pendant le reliquat des douze ans ; arrêtés exposés à annulation ; mises en compatibilité forcées des documents d'urbanisme en vigueur (L153-49 à L153-53, L143-40 à L143-42) fondées sur une qualification contestée.",
+   "minimal_correction": "Remplacer L102-5 par : « Le présent article est abrogé à compter de l'entrée en vigueur de la loi abrogeant l'article L. 102-2. À compter de cette date, aucun projet ni aucune mesure ne peut être qualifié de projet d'intérêt général sur le fondement du présent article ou de la seule nécessité de mettre en œuvre une directive territoriale d'aménagement et de développement durables, y compris pendant la fraction non écoulée du délai de douze ans qu'il prévoyait et pour les procédures de qualification en cours. Les qualifications régulièrement prononcées avant cette date conservent leurs effets pour la durée restant à courir, sans renouvellement sur ce fondement, dans les conditions de l'article L. 102-2. Les avis déjà recueillis des collectivités territoriales, de leurs groupements et des comités de massif demeurent au dossier. La qualification de projets d'intérêt général sur le fondement de l'article L. 102-1 n'est pas affectée. »",
+   "other_options": [
+    "Maintenir L102-5 en le limitant expressément aux qualifications antérieures (consultations et douze ans comme bornes historiques)."
+   ],
+   "preserve": [
+    "Effets des qualifications PIG antérieures",
+    "PIG de droit commun de L102-1",
+    "Consultation des comités de massif pour le contentieux des actes antérieurs"
+   ],
+   "uncertainties": "Textes réglementaires d'application de L102-5 (décret en Conseil d'État) non identifiés dans le corpus.",
+   "articles": [
+    {
+     "code": "urba",
+     "number": "L102-2",
+     "source_id": "LEGIARTI000031210080",
+     "valid_from": "2016-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "970b87712236e0d4b0759b5f2e5849296f34858dd87a77e897119e69cd268d09",
+     "proposed_sha256": "8a00be25cb84ee461fe0631c00ac4526818f36c6f4daf71e15bba73cefbb1843",
+     "reason_sha256": "72e6fef34e92c2bb4e840582c09cd314380d96fdbba01f177a95fb5c23d2f35d",
+     "review_notes_sha256": "96579e3d9d26a4c5f9c333e0850de90f51a7256d668fdd583e64c55de13b054a",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "L102-5",
+     "source_id": "LEGIARTI000033745638",
+     "valid_from": "2016-12-30",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "8c2ed71dff8499bc0ddc2f025891a91003201ef846b7f3d3d001cb4b3e5d3802",
+     "proposed_sha256": null,
+     "reason_sha256": "753550673343cba4efa5bd5ab9fd4a517bf419dd83eecdb91a9efaa3de1df5ea",
+     "review_notes_sha256": "890a0399aa7b7cbd592e4a36a024dfd9d182bde9fcc917e21d995cdcacd29290",
+     "draft_status": "retained_unchanged",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "R102-1",
+     "source_id": "LEGIARTI000031721460",
+     "valid_from": "2016-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "5ca96c4e788d349fb25dc0f25778d0841bc6f01a2389a7f2b93b35862af21712",
+     "proposed_sha256": "7ba37053a2df2e9ab1d086786a959fc1f163694dbe6eb65ed412e0f1037cad78",
+     "reason_sha256": "3f89f0a7a5154f4d7c751efb7bb72a43dff2bfbae1464cfccd9e77c6fa76b68c",
+     "review_notes_sha256": "175ce1a5b938e9e9ec498aa4d322bee4778bf97a1f43705ab677df1122809754",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "L172-7",
+     "source_id": "LEGIARTI000031211548",
+     "valid_from": "2016-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "0b9c974b4165363d56f5b8004b94058ff2aa75ebbcdbd48c9bd0538fe37bd3a4",
+     "proposed_sha256": "6f43294674f0dd99262a0ce809b8a2cb698432ee00b5b998c7e9103319f33776",
+     "reason_sha256": "45c57290b185a712f28d64df62bc518552677da6617941104b38c1798dd21b98",
+     "review_notes_sha256": "5dcffa0378e03601e021995a1eb954d97f9f6312df544892ed2258ec169d98f6",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    }
+   ],
+   "evidence_files": [
+    "evidence/cited/20261026T230545Z/urba_L102-2_LEGIARTI000031210080.json",
+    "evidence/cited/20261026T230545Z/urba_L102-5_LEGIARTI000033745638.json",
+    "evidence/cited/20261026T230545Z/urba_R102-1_LEGIARTI000031721460.json",
+    "evidence/cited/20261026T230545Z/urba_L172-7_LEGIARTI000031211548.json"
+   ]
+  },
+  {
+   "id": "RT-P1-URBA-04",
+   "priority": "P1",
+   "priority_justification": "Renvoi dérogatoire orphelin auquel est attachée une consultation CDPENAF dont le caractère obligatoire devient incertain pour les autorisations en OIN ; risque probable de vice de procédure.",
+   "nature": "incohérence du projet",
+   "status": "confirmé",
+   "passages": [
+    "urba L102-13 (LEGIARTI000049399405), proposition, 1° : « Par dérogation à l'article L. 111-3, les constructions et installations nécessaires à la réalisation de l'opération peuvent être autorisées en dehors des parties urbanisées de la commune. Si ces constructions et installations nouvelles ont pour conséquence une réduction des surfaces [...] l'autorisation est délivrée après consultation de la commission départementale de préservation des espaces naturels, agricoles et forestiers »",
+    "urba L102-13, 4° : « Les associations foncières urbaines sont créées dans les conditions prévues à l'article L. 322-3-2. »",
+    "urba L111-3 (LEGIARTI000031210179), notes : « L102-13 1° doit conserver sa faculté favorable et son avis autonome sans renvoi dérogatoire orphelin. »",
+    "urba L111-5 (LEGIARTI000047303696), proposition : les consultations CDPENAF « ne sont plus exigées, y compris pour les demandes d'autorisation en cours »",
+    "urba L322-3-2 (LEGIARTI000037667133), notes : « L102-13 4° premier alinéa doit être mis formellement en concordance »"
+   ],
+   "primary_references": [
+    "Snapshot 20261026T230545Z, corpus.sqlite"
+   ],
+   "reasoning": "L111-3 n'est applicable que dans les communes sans document d'urbanisme (L111-1). Après son abrogation, la première phrase du 1° n'a plus d'objet ; la seconde (« Si ces constructions et installations nouvelles... ») est rattachée à la dérogation : on peut soutenir soit qu'elle disparaît avec elle, soit qu'elle subsiste comme consultation autonome propre aux OIN. Dans la seconde lecture, les OIN, régime censé faciliter l'aménagement, imposeraient une consultation supprimée en droit commun par L111-5. Le 4° renvoie à L322-3-2 abrogé (renvoi neutralisé par la clause de la cible, toilettage seulement).",
+   "consequences": "Incertitude sur une formalité substantielle pour les permis délivrés par l'État en OIN hors parties urbanisées ; contentieux possible contre des autorisations déjà délivrées après la réforme ; lecture restrictive contraire à l'orientation « fewer constraints ».",
+   "minimal_correction": "Remplacer le 1° et le 4° premier alinéa de L102-13 par : « 1° Les constructions et installations nécessaires à la réalisation de l'opération peuvent être autorisées en dehors des parties urbanisées de la commune, dans les conditions des règles applicables sur un fondement distinct ; aucune consultation n'est exigée au seul titre de cette localisation ; » et « 4° Les associations foncières urbaines sont créées dans les conditions prévues au chapitre II du titre II du livre III, sans l'accord ou l'avis supprimé par l'abrogation de l'article L. 322-3-2. » Ajouter à l'alinéa transitoire final : « La présente rédaction des 1° et 4° s'applique aux décisions prises à compter de l'entrée en vigueur de la loi abrogeant les articles L. 111-3, L. 111-5 et L. 322-3-2, y compris sur les demandes en cours, sans nouveau dépôt ni reprise des délais ; les consultations déjà accomplies restent au dossier et les autorisations antérieures conservent leur régime. »",
+   "other_options": [
+    "Si les auteurs veulent conserver l'avis CDPENAF en OIN (note de L111-3) : « 1° Lorsque, dans une commune dépourvue de plan local d'urbanisme, de document en tenant lieu et de carte communale, les constructions et installations nécessaires à l'opération réduisent les surfaces agricoles, naturelles ou forestières, l'autorisation est délivrée après consultation de la CDPENAF » — à assumer comme contrainte propre aux OIN, plus stricte que le droit commun après L111-5."
+   ],
+   "preserve": [
+    "Faculté favorable de construire en OIN",
+    "Autres dérogations et exonérations de L102-13 (2° à 11°, dont 9° taxe d'aménagement)",
+    "Transition du 6° sur le sursis",
+    "Autorisations déjà délivrées"
+   ],
+   "uncertainties": "Choix de politique entre les deux options laissé aux auteurs.",
+   "articles": [
+    {
+     "code": "urba",
+     "number": "L102-13",
+     "source_id": "LEGIARTI000049399405",
+     "valid_from": "2024-04-11",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "4065b014dfc9017d3639f9c0ce020d12958fcfce8d8dd3037f22e6cba7350e8f",
+     "proposed_sha256": "d84ec6d15faa95fad6c3dc40d134ede63828c65d21728b0a9c8c7b3904dc2bf4",
+     "reason_sha256": "a8f027b501018d49e68559b4abec46d130633ba32d302a2059374bc32fdbd178",
+     "review_notes_sha256": "e0322271eb6125379bde2e5f3d5a34dfad5e88faa5618e08d04a99d3d09a411e",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "L111-3",
+     "source_id": "LEGIARTI000031210179",
+     "valid_from": "2016-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "52582c01d3c0f5e5984897b5837eb8ace8cce7cb4431fd1a09537a06e5ade4df",
+     "proposed_sha256": "5505c049366f418c69f6fcdb258c78dbb3f160371181df461028024de69dadc0",
+     "reason_sha256": "86dad12ac9d5583c7024b64498da72f4fae15d36f0b0ae033700bca595861292",
+     "review_notes_sha256": "048d5e8ec4a3afbc836a26b35ac35171d91887a9e686a5c1d55b765b627676ce",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "L111-5",
+     "source_id": "LEGIARTI000047303696",
+     "valid_from": "2023-03-12",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "a64b604ea5776998b0a87a52c5209000ae3c749aabbea96ba8207de295753e86",
+     "proposed_sha256": "a7f09c148b3920e7dc8bb6f7620a9a2695033aa585b0939129d0c79a462130d6",
+     "reason_sha256": "01bb8b4582d7938aee828971ebcf83fd25cb7267f38b3f6350eb6db033cb4917",
+     "review_notes_sha256": "b369f8482b433a13e43039dd755e0e6518b29fa9989929777b880a983bf7ea16",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "L322-3-2",
+     "source_id": "LEGIARTI000037667133",
+     "valid_from": "2018-11-25",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "4f6cf6b915e90f3b26e0716ed5ae541a588c60afc0917dbe22e30ad072451753",
+     "proposed_sha256": "81820792a8759394daacb35c03466f70ca2d24462f8c839b80da900ba3288bb0",
+     "reason_sha256": "67dbb8218fc4b08a8efcb2183288903ad64d1afc33f6447580252a8390ec6175",
+     "review_notes_sha256": "cab2b9b08dadd9caa96fd7442907b28123c981e371b8f47c0b01b8ae7b860d64",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    }
+   ],
+   "evidence_files": [
+    "evidence/cited/20261026T230545Z/urba_L102-13_LEGIARTI000049399405.json",
+    "evidence/cited/20261026T230545Z/urba_L111-3_LEGIARTI000031210179.json",
+    "evidence/cited/20261026T230545Z/urba_L111-5_LEGIARTI000047303696.json",
+    "evidence/cited/20261026T230545Z/urba_L322-3-2_LEGIARTI000037667133.json"
+   ]
+  },
+  {
+   "id": "RT-P1-URBA-05",
+   "priority": "P1",
+   "priority_justification": "Une loi proposée maintient expressément des pouvoirs de l'État fondés sur un article que le projet abroge ; effet probable sur le caractère exécutoire des PLU tenant lieu de PLH (documents d'urbanisme en vigueur).",
+   "nature": "incohérence du projet",
+   "status": "confirmé",
+   "passages": [
+    "urba L153-26 (LEGIARTI000044190571), proposition : « aucune modification d'un plan local d'urbanisme tenant lieu de programme local de l'habitat ne peut être imposée sur le fondement du présent article »",
+    "urba L153-16 (LEGIARTI000033746220), proposition : « Pour l'application de l'article L. 153-26, [...] Les pouvoirs de l'autorité administrative compétente de l'Etat fondés sur la méconnaissance des objectifs de fond mentionnés au même article demeurent applicables. »",
+    "urba L153-16, notes : « Coordination à reporter dans L153-26 : retirer le seul motif autonome tiré de l'avis défavorable ou des réserves du CRHH, en maintenant les objectifs de fond »",
+    "urba L153-44 (LEGIARTI000052866363), proposition : « Les pouvoirs de notification de l'autorité administrative compétente de l'État, leurs conditions et délais d'exercice ainsi que l'obligation d'apporter les modifications légalement demandées demeurent applicables. »",
+    "urba L153-25 (LEGIARTI000044190574), proposition : « 6° Abrogé »"
+   ],
+   "primary_references": [
+    "Snapshot 20261026T230545Z, corpus.sqlite"
+   ],
+   "reasoning": "Les deux rédacteurs ont retenu des politiques opposées : L153-16 suppose que L153-26 subsiste et que l'État garde son contrôle sur les objectifs d'habitat (CCH L302-2) ; L153-26 abroge intégralement ce contrôle et son effet suspensif. L153-25 6° est aussi abrogé : il ne reste aucun fondement autonome pour les « objectifs de fond » que vise L153-16. L153-44 maintient des pouvoirs de notification sans les limiter à L153-25.",
+   "consequences": "L'État pourrait invoquer L153-16 pour demander des modifications d'un PLUi-H et contester son caractère exécutoire ; insécurité sur les PLU tenant lieu de PLH déjà transmis ; risque de rétablir indirectement des objectifs issus de SRU, contraire à sru_abrogation.",
+   "minimal_correction": "L153-16, remplacer l'alinéa « Pour l'application de l'article L. 153-26 [...] demeurent applicables. » par : « L'absence d'avis du comité mentionné au 3°, son avis défavorable ou ses réserves ne peuvent justifier une demande de modification du plan ni faire obstacle à son caractère exécutoire. Aucun pouvoir de l'autorité administrative compétente de l'État fondé sur l'article L. 153-26 dans sa rédaction antérieure à son abrogation ne peut être exercé à l'égard des plans transmis à compter de cette abrogation ; les pouvoirs prévus à l'article L. 153-25, le contrôle de légalité et les recours demeurent applicables dans leur champ propre. » — L153-44, deuxième alinéa, deuxième phrase : « Les pouvoirs de notification prévus à l'article L. 153-25, leurs conditions et délais d'exercice ainsi que l'obligation d'apporter les modifications légalement demandées sur ce fondement demeurent applicables ; aucune notification ne peut être fondée sur l'article L. 153-26 abrogé. »",
+   "other_options": [
+    "Supprimer aussi, dans L153-23 II 2°, l'attente d'un mois propre aux PLU tenant lieu de PLH couverts par un SCoT, dont la seule fonction était le contrôle de L153-26 (coupe supplémentaire à décider par les auteurs ; la cible la conserve explicitement)."
+   ],
+   "preserve": [
+    "Contrôle de L153-25 dans les territoires sans SCoT",
+    "Modifications déjà approuvées et recours",
+    "Transitions de la loi 2025-1129 pour les procédures en cours au 26 mai 2026",
+    "Missions autonomes des PLH"
+   ],
+   "uncertainties": "Texte de CCH L302-2 proposé non relu dans ce paquet.",
+   "articles": [
+    {
+     "code": "urba",
+     "number": "L153-26",
+     "source_id": "LEGIARTI000044190571",
+     "valid_from": "2023-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "b4ee56b3ad57699bc6917332bda33879a34187c77b5e94a673ca30d082b0e7bc",
+     "proposed_sha256": "d05345c89185eeca9f0c1f05b658ec6d9acbd301904df31c63ccdb409d8bcac9",
+     "reason_sha256": "108fc3b45dd07a5fd7e18c671c6da23b600b406ade060b9839259d4995d486ba",
+     "review_notes_sha256": "7381de09a22630d16c5a8d18216b51e8d9497af7e36c8025b02b3c5a84d51ade",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "L153-16",
+     "source_id": "LEGIARTI000033746220",
+     "valid_from": "2017-08-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "4a4942e469e08660897d9fae2b57b3194edd7638e56651e7b2b674d7b4cb740b",
+     "proposed_sha256": "ee995f32b067f17f467010c425bf1e857fd6f90e98a0a9d1402d7d4d3ad5f229",
+     "reason_sha256": "a019db90ff7afa5f3446b3f13950e8d0d4ce2b65aea1b25c7d62abc762301938",
+     "review_notes_sha256": "0a35d1b1d441d3741596a08e9361cff3eda520070800d3359d313de9326788d3",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "L153-44",
+     "source_id": "LEGIARTI000052866363",
+     "valid_from": "2026-05-26",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "02235516923a15895f8d2da385bb6b56c02199fcb397b67541ba09cd491ac64a",
+     "proposed_sha256": "32990a0928d9e637a261fefbeed54209f87058d0f90b95c7eebe9757be2860ad",
+     "reason_sha256": "80fe550b0650eda08ba967f5942e5164e2b0d9298bf456a5525a0507c2c9e61e",
+     "review_notes_sha256": "970ed52e2f5091e61d5979acaf23eb5a0f875bf31b03634ce225dc67ce81d9e1",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "L153-25",
+     "source_id": "LEGIARTI000044190574",
+     "valid_from": "2023-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "c2a77dc1dda74dcc75d35caefb40e1b41e6c10d2daabb325c247b7a4537499b2",
+     "proposed_sha256": "addabd7c7e5bb9404a9f0a9cef5b9deb66fe8db55b44535ce08f8509a894df5a",
+     "reason_sha256": "472ac8b0ad5dff2222eec9de754b03f58c424250a1f2295d3741a459f1287388",
+     "review_notes_sha256": "482638fd3cc3b75c4d2129d7e36fa60131c3b73e91999033998ff3d9b1d9d749",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "L153-23",
+     "source_id": "LEGIARTI000044190577",
+     "valid_from": "2023-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "e99e1352baa47a1da258bceb30699364c939d44acf1f9b929f03b6802406f151",
+     "proposed_sha256": "dd85ff4c5ceae8888fe06034f854143e7d811f9f7decacfcfdb6696d9bff447d",
+     "reason_sha256": "bd53528c6b735fcc3be40648e4c83883e4594f8f7cf950a0d73975b6d4929819",
+     "review_notes_sha256": "943a1fe138ea13b448c1faaa4b51695d2a8f83f4df7733593eccd894fcac40af",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    }
+   ],
+   "evidence_files": [
+    "evidence/cited/20261026T230545Z/urba_L153-26_LEGIARTI000044190571.json",
+    "evidence/cited/20261026T230545Z/urba_L153-16_LEGIARTI000033746220.json",
+    "evidence/cited/20261026T230545Z/urba_L153-44_LEGIARTI000052866363.json",
+    "evidence/cited/20261026T230545Z/urba_L153-25_LEGIARTI000044190574.json",
+    "evidence/cited/20261026T230545Z/urba_L153-23_LEGIARTI000044190577.json"
+   ]
+  },
+  {
+   "id": "RT-P1-URBA-06",
+   "priority": "P2",
+   "priority_justification": "Le délai d'avis applicable résulte clairement de R*423-59 proposé ; la phrase de R*423-27 n'en rétablit pas d'autre, mais son économie repose sur un délai abrogé.",
+   "nature": "incohérence du projet",
+   "status": "confirmé",
+   "passages": [
+    "urba R*423-61 (LEGIARTI000006819971), proposition : « Pour les demandes d'avis reçues à compter de cette date par les commissions nationales, le délai d'un mois prévu à l'article R. 423-59 s'applique »",
+    "urba R*423-27 (LEGIARTI000030864525), proposition : « La réduction prévue au a ne modifie ni l'obligation de consulter la commission nationale, ni son délai propre de réponse prévu à l'article R. 423-61 » ; motif : « Le délai propre de trois mois de la commission est préservé »",
+    "urba R*423-59 (LEGIARTI000033052369), notes : « R*423-27 a, lu en entier, conserve cinq mois pour consultation d'une commission nationale »"
+   ],
+   "primary_references": [
+    "Snapshot 20261026T230545Z, corpus.sqlite"
+   ],
+   "reasoning": "Trois propositions décrivent trois états différents : R*423-61 abroge les trois mois, R*423-27 réduit l'instruction à quatre mois en se fondant sur ces trois mois, R*423-59 décrit R*423-27 comme maintenant cinq mois.",
+   "consequences": "Incertitude rédactionnelle sur la date d'avis réputé favorable des commissions nationales et sur la justification du délai de quatre mois ; risque limité de contestation des permis délivrés après un mois sans avis.",
+   "minimal_correction": "R*423-27, avant-dernier alinéa : « La réduction prévue au a ne modifie ni l'obligation de consulter la commission nationale, ni le délai au terme duquel son avis est réputé émis en application de l'article R*423-59, ni les autres accords, évaluations et participations du public légalement requis. Les délais plus longs résultant d'un autre cas légalement applicable au projet demeurent applicables. » Corriger les notes de R*423-59.",
+   "other_options": [
+    "Conserver R*423-61 (trois mois) si les auteurs tiennent à l'économie du a de R*423-27 ; ou réexaminer la majoration de R*423-27 a au regard du mois de droit commun (aucun chiffre proposé ici)."
+   ],
+   "preserve": [
+    "Consultation des commissions nationales",
+    "Délais propres des R*423-61-1 à R*423-71-1",
+    "Saisines antérieures avec leur délai de trois mois"
+   ],
+   "uncertainties": "Liste des « commissions nationales » concernées non établie dans le corpus.",
+   "articles": [
+    {
+     "code": "urba",
+     "number": "R*423-61",
+     "source_id": "LEGIARTI000006819971",
+     "valid_from": "2007-10-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "e15f3b3d65b2a9fad88076ccea444911e9d7a0a27daa36663c0fad2f3060abed",
+     "proposed_sha256": "2c6b3c1205a5da60acb0cd944d367fbbdb45735829d6da83a0d2e202e4ad3fe3",
+     "reason_sha256": "698278ffc3055183d953da510ba9cb0e63fbfc55b76d75e0169345e7419c00a7",
+     "review_notes_sha256": "fe66575f996991c42bcff0a72ab13ad2500a931ef6a0860c28e7c83e444c614c",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "R*423-27",
+     "source_id": "LEGIARTI000030864525",
+     "valid_from": "2015-07-11",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "26ccadfdd4a3923a7047ac4ee713ede40bfcd7760e0d4b4b8dbaa1117760b25a",
+     "proposed_sha256": "7c4dda1a988fc9f66b38b5e327509416f496e67d27e5e63acec3c5e418eab790",
+     "reason_sha256": "7d9a5d6dfad1b34f551494d7f9ac94f3d8b8c5b50f27044ca2f4626a06041ae6",
+     "review_notes_sha256": "bb98794ba4c9c6318670149db0650ecb8b2ff4a9972f62325595acf66278a11d",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "R*423-59",
+     "source_id": "LEGIARTI000033052369",
+     "valid_from": "2016-08-15",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "5fba2590ff0939865d728d46e3ed7729b5688fed8abf7c64c71061b715e769da",
+     "proposed_sha256": "53923493ffdb305665b19ca7478761dd225484e4c3e9ae848a7fdb7f44ff1664",
+     "reason_sha256": "e910e052d8e98e50cc316a3326872f03901836c7d625212d0be878d9c37f4df0",
+     "review_notes_sha256": "0dffcbea4e31f02813fb51ab8f789c5a5b3aa1f8f3f0332dad96280749b2b56c",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    }
+   ],
+   "evidence_files": [
+    "evidence/cited/20261026T230545Z/urba_R*423-61_LEGIARTI000006819971.json",
+    "evidence/cited/20261026T230545Z/urba_R*423-27_LEGIARTI000030864525.json",
+    "evidence/cited/20261026T230545Z/urba_R*423-59_LEGIARTI000033052369.json"
+   ]
+  },
+  {
+   "id": "RT-P1-URBA-07",
+   "priority": "P1",
+   "priority_justification": "L'abrogation s'applique aux instances en cours et rend recevables des recours d'associations contre des autorisations déjà délivrées ; effet probable sur la sécurité juridique des titres, contraire à l'objectif de construire.",
+   "nature": "risque juridique",
+   "status": "à confirmer",
+   "passages": [
+    "urba L600-1-1 (LEGIARTI000037668002), source : « Une association n'est recevable à agir [...] que si le dépôt des statuts [...] est intervenu au moins un an avant l'affichage en mairie de la demande du pétitionnaire. »",
+    "urba L600-1-1, proposition : « cesse de s'appliquer aux recours introduits à compter de cette entrée en vigueur ainsi qu'aux instances en cours »",
+    "urba R*423-6 (LEGIARTI000054550543), source maintenue : « pour l'application des articles L. 600-1-1 et L. 600-1-3, la date de publication tient lieu de la date d'affichage »"
+   ],
+   "primary_references": [
+    "Conseil constitutionnel, décision n° 2011-138 QPC du 17 juin 2011, Association Vivraviry (L600-1-1 déclaré conforme) — https://www.conseil-constitutionnel.fr/decision/2011/2011138QPC.htm, consulté le 2026-10-26 (version de L600-1-1 antérieure à 2018)"
+   ],
+   "reasoning": "L600-1-1 limite les recours d'associations créées pour les besoins de la cause ; il protège les bénéficiaires d'autorisations, donc la construction. Son abrogation est présentée comme un allègement (« Cette attente frappe aussi une association nouvellement créée »), mais elle accroît la contrainte contentieuse pesant sur les projets. L'application aux instances en cours rend recevables des requêtes qui ne l'étaient pas, contre des permis déjà délivrés. Le renvoi de R*423-6 est lui-même inerte.",
+   "consequences": "Réouverture de fait de contentieux pendants contre des autorisations délivrées ; atteinte possible aux attentes légitimes des bénéficiaires ; tension avec l'orientation « Construire là où les logements manquent » et la préservation des autorisations délivrées.",
+   "minimal_correction": "Remplacer le deuxième alinéa proposé de L600-1-1 par : « La condition d'une ancienneté minimale d'un an du dépôt des statuts d'une association cesse de s'appliquer aux recours dirigés contre les décisions relatives à des demandes dont l'affichage ou la publication prévus à l'article R. 423-6 interviennent à compter de cette entrée en vigueur. Les recours dirigés contre les décisions relatives à des demandes affichées ou publiées avant cette date, y compris les instances en cours, restent soumis à cette condition. Aucun justificatif de cette ancienneté ne peut être exigé sur ce seul fondement pour les recours relevant de la présente rédaction. »",
+   "other_options": [
+    "Maintenir L600-1-1 : garantie favorable aux constructeurs, cohérente avec la politique du logement du projet.",
+    "Le cas échéant, toiletter R*423-6 en retirant la mention de L600-1-1 en même temps."
+   ],
+   "preserve": [
+    "Autorisations déjà délivrées et instances en cours",
+    "Équivalence date de publication/affichage pour L600-1-3",
+    "Autres garanties contre les recours abusifs (L600-7)"
+   ],
+   "uncertainties": "La qualification d'atteinte à une situation légalement acquise appelle une analyse juridictionnelle ; une revue IA ne la tranche pas. Le choix d'abroger relève des auteurs.",
+   "articles": [
+    {
+     "code": "urba",
+     "number": "L600-1-1",
+     "source_id": "LEGIARTI000037668002",
+     "valid_from": "2019-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "7441fcd0763b6778477cba64377502c60aa2a3da42519dfe73c3249458121cd8",
+     "proposed_sha256": "2051ba204b1169cb2f5fdf55cdbf8d4c1d2bfb173ad3475ec8ce9548bf4acc8f",
+     "reason_sha256": "4d2a81ab7c24379d8e109e49f13f302efa5d7072ab5826311751a861b6857a6c",
+     "review_notes_sha256": "e648fb0f1069c2ec7f5f20be0b16d3c080449461b103a4277460937cb2c01ae3",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "R*423-6",
+     "source_id": "LEGIARTI000054550543",
+     "valid_from": "2026-07-29",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "1ba9b456bc57a65f885217336f2523b17853dda4d3e0a194d10a3b5221df423b",
+     "proposed_sha256": null,
+     "reason_sha256": "5ce38b3ac84a27ff5f368e770f6fd8e72a20bd5ef97c30b36937fdd05325fb61",
+     "review_notes_sha256": "368dfd3af46ddddf9401d610fa49136b2622e603fce92afcde8519e84b7f734e",
+     "draft_status": "retained_unchanged",
+     "second_pass": "pending"
+    }
+   ],
+   "evidence_files": [
+    "evidence/cited/20261026T230545Z/urba_L600-1-1_LEGIARTI000037668002.json",
+    "evidence/cited/20261026T230545Z/urba_R*423-6_LEGIARTI000054550543.json"
+   ]
+  },
+  {
+   "id": "RT-P1-URBA-08",
+   "priority": "P2",
+   "priority_justification": "La loi (L423-1 proposé) et les abrogations interdisent déjà ces pièces ; effet limité à des demandes de pièces indues et à la lisibilité des listes de complétude.",
+   "nature": "coordination manquante",
+   "status": "confirmé",
+   "passages": [
+    "urba L423-1 (LEGIARTI000039784126), proposition : « Aucun plan intérieur ne peut être exigé du seul fait que le projet concerne la construction de logements collectifs. »",
+    "urba R*431-4 (LEGIARTI000030539010), proposition : « c) Le plan intérieur prévu à l'article R. 431-34-1, lorsqu'il est demandé dans les conditions de l'article L. 423-1. » ; notes : « une abrogation indistincte du c contredirait la loi »",
+    "urba R*434-2 (LEGIARTI000030538987), proposition : « lorsqu'il est requis en application de l'article R. 431-34-1, le contenu du plan intérieur »",
+    "urba R*431-36 (LEGIARTI000054481641), proposition : « R. 431-18, R. 431-18-1, R. 431-21, R. 431-23-2, R. 431-31 à R. 431-33 et R. 431-34-1 » ; notes : « plans intérieurs requis restent »",
+    "urba R*431-18-1 (LEGIARTI000033498226), proposition : « Le demandeur n'a plus à joindre un document distinct d'engagement »"
+   ],
+   "primary_references": [
+    "Snapshot 20261026T230545Z, corpus.sqlite"
+   ],
+   "reasoning": "R*431-34-1 est abrogé sous condition de la suppression législative au 4e alinéa de L423-1, condition remplie par la proposition de L423-1. Les listes réglementaires de composition du dossier (PC et DP) et l'arrêté de contenu n'ont pas suivi, et leurs notes reposent sur le maintien du plan intérieur.",
+   "consequences": "Risque de demandes de pièces supprimées pour les dossiers en cours ; contrariété apparente avec l'orientation « aucune formalité de remplacement » et le dossier unique.",
+   "minimal_correction": "R*431-4 : supprimer le c et, au dernier alinéa, la phrase « Elle ne retire pas le plan intérieur légalement demandé ni les informations nécessaires à l'instruction prévues aux a et b. » remplacée par « Le plan intérieur supprimé avec l'article R. 431-34-1 ne fait plus partie de la demande, y compris pour les demandes en cours. » — R*434-2 : « Les arrêtés prévus à l'article R. 434-1 ne peuvent imposer ni le plan intérieur supprimé avec l'article R. 431-34-1, ni les informations statistiques complémentaires supprimées avec l'article R. 431-34, ni un état, une attestation ou une déclaration de remplacement sur ces fondements. Les obligations statistiques pourvues d'un fondement légal autonome et les règles relatives aux secrets protégés et aux données personnelles restent applicables dans leur champ. » — R*431-36, deuxième alinéa : « Il est complété, s'il y a lieu, par les documents mentionnés aux a et b de l'article R. 431-10, à l'article R. 431-14, aux a, b, c, h, q, r et t de l'article R. 431-16 et aux articles R. 431-18, R. 431-21, R. 431-23-2 et R. 431-31 à R. 431-33. »",
+   "other_options": [
+    "Ajouter une clause générale dans R*431-4 et R*431-36 : les renvois à des pièces supprimées ne rétablissent aucune pièce."
+   ],
+   "preserve": [
+    "Pièces de sécurité, d'accessibilité, de patrimoine (L423-1 2e alinéa)",
+    "Pièce h (dérogation littorale) et pièces des dérogations favorables",
+    "Délais non prolongés par une demande de pièce supprimée"
+   ],
+   "uncertainties": "Formulaires CERFA correspondants non examinés.",
+   "articles": [
+    {
+     "code": "urba",
+     "number": "R*431-34-1",
+     "source_id": "LEGIARTI000030536171",
+     "valid_from": "2015-07-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "191573f60c8088162ad47347d46acfaf13897ee68452e10e614c4d244326588b",
+     "proposed_sha256": "2d4bc2f337f00f1af2e3b69658da21d51d1acadead0cee63095861aef7ef41a1",
+     "reason_sha256": "d6347a356e75f4dff3f6b95e492600d1774173e0f71703f462acdcaefddacf71",
+     "review_notes_sha256": "db73675e2b5643368d309cd54d5bdea03926e0c282017b420e7a8060c9770cf7",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "L423-1",
+     "source_id": "LEGIARTI000039784126",
+     "valid_from": "2019-12-27",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "e6213368de09c77b80f4cbf90fa28203f7c537e55a2d914201b977b4f4ad1743",
+     "proposed_sha256": "950ea36f76650f05fbfaa56ee74195e58029529e919e21ad9b8a9a58742d78a5",
+     "reason_sha256": "d3e5f41c8367152df1460ec7cb8e3d4ac36272706d46bb9b8bc195df4acc4451",
+     "review_notes_sha256": "0a41011f06173cf05305afdc6f839c7ed1b7c1599afd031374419b0a751f050c",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "R*431-4",
+     "source_id": "LEGIARTI000030539010",
+     "valid_from": "2015-07-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "c90f03d17411f0e1305536a062bffb57faa15bf61df43274f4f93ccf0d14725d",
+     "proposed_sha256": "e8ffd194194a95379d5ad08d546e758f3e0ea9462eff7714bc51f69da059941b",
+     "reason_sha256": "e72450c9ba44838bd78a8e7a741b54e5e352ef784e741203ae2befeda46dde62",
+     "review_notes_sha256": "37423d06fcdcbb7d43351995140f4426ac948f3e6681043a65184c6a0321e437",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "R*434-2",
+     "source_id": "LEGIARTI000030538987",
+     "valid_from": "2015-07-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "eeefbc6a55b3a9a5f5e23c6e66b1c1cf15c2cdaee1bfd617db6006d2814daacd",
+     "proposed_sha256": "c2c929f0c829eb4d6cfb0ffd713711fec55dacc2eb4353f90c90dbd54db6784b",
+     "reason_sha256": "5396e3b0bc5a207d4da6da019d39385c6e466eb99ea7630062e806d3bca576e7",
+     "review_notes_sha256": "d0dd2232c14025728b02d818bc9d48196b5450e77a99af1a6994b52443575bb5",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "R*431-36",
+     "source_id": "LEGIARTI000054481641",
+     "valid_from": "2026-07-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "5c048bbb9a96ec968ac09ed86b46ea452f851dbcf007f4209a874320decf2254",
+     "proposed_sha256": "3b39e407e9ab9ee2c9a0ddabdfe6e93bbfdb113d7d0f3e43d8a57d05354ffe36",
+     "reason_sha256": "361a05dd2e1f56e1dfbea70d6f9964113d566c61571e3585f2d59a97e24ecc90",
+     "review_notes_sha256": "d5030f700de7eac79614d46919c2bd794f1886ee1b7ede2f434f475d1041f167",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "R*431-18-1",
+     "source_id": "LEGIARTI000033498226",
+     "valid_from": "2016-11-28",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "f3390b8e91ca5372838fed2e2e151490200a787f48fcada8d854a11b552f44e5",
+     "proposed_sha256": "595074f47e4dd21bf6e40660e41d6775c400de0bc2a57acd618ee39fa623389d",
+     "reason_sha256": "fb38414175acb64965515dffa77d9fdd5f570d0788e6456fdbfd374b310ee83d",
+     "review_notes_sha256": "faf7f5020addf6b26011028f146bb1ce4904dffad55a6202851fa0b00265bea0",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    }
+   ],
+   "evidence_files": [
+    "evidence/cited/20261026T230545Z/urba_R*431-34-1_LEGIARTI000030536171.json",
+    "evidence/cited/20261026T230545Z/urba_L423-1_LEGIARTI000039784126.json",
+    "evidence/cited/20261026T230545Z/urba_R*431-4_LEGIARTI000030539010.json",
+    "evidence/cited/20261026T230545Z/urba_R*434-2_LEGIARTI000030538987.json",
+    "evidence/cited/20261026T230545Z/urba_R*431-36_LEGIARTI000054481641.json",
+    "evidence/cited/20261026T230545Z/urba_R*431-18-1_LEGIARTI000033498226.json"
+   ]
+  },
+  {
+   "id": "RT-P1-URBA-09",
+   "priority": "P2",
+   "priority_justification": "Consultation résiduelle pour le seul certificat d'urbanisme opérationnel, avec avis réputé favorable en un mois ; effet limité.",
+   "nature": "coordination manquante",
+   "status": "confirmé",
+   "passages": [
+    "urba R*423-52 (LEGIARTI000028678360), proposition : « La consultation des autorités et services publics en vue de la prescription des contributions ne peut plus être exigée sur ce seul fondement, y compris pour les demandes d'autorisation en cours. »",
+    "urba R*410-10 (LEGIARTI000031764615), source maintenue : « L'autorité compétente recueille [...] les avis prévus par les articles R. 423-52 et R. 423-53. » ; motif : « La consultation financière de R423-52 est déjà limitée aux besoins. »"
+   ],
+   "primary_references": [
+    "Snapshot 20261026T230545Z, corpus.sqlite"
+   ],
+   "reasoning": "R*410-10 est un fondement distinct (« recueille »), conservé avec un motif qui suppose R*423-52 vivant. La clause de la cible ne vise que les demandes d'autorisation, pas les certificats.",
+   "consequences": "La consultation supprimée pour les permis subsisterait pour les certificats opérationnels, ou serait contestée : coordination incomplète d'une formalité supprimée.",
+   "minimal_correction": "R*410-10, deuxième alinéa : « L'autorité compétente recueille l'avis des collectivités, établissements publics et services gestionnaires des réseaux mentionnés à l'article L. 111-11 ainsi que l'avis prévu par l'article R. 423-53. » ; ajouter : « La suppression de la consultation prévue par l'ancien article R. 423-52 s'applique aux demandes de certificat en cours, sans reprise du délai d'instruction ; les avis déjà émis restent au dossier. »",
+   "other_options": [
+    "Conserver expressément la consultation pour le seul certificat, avec motif propre (non recommandé : formalité supprimée ailleurs)."
+   ],
+   "preserve": [
+    "Délai de deux mois et avis réputés favorables en un mois",
+    "Dispense de R423-53",
+    "Contributions légalement dues (L332-8)"
+   ],
+   "uncertainties": "Néant au-delà de l'état courant de la seconde passe.",
+   "articles": [
+    {
+     "code": "urba",
+     "number": "R*423-52",
+     "source_id": "LEGIARTI000028678360",
+     "valid_from": "2014-04-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "edfb3f3f0bc81b19b5ca4c805e422161532232f372f4c2d1d114b44e4b73930c",
+     "proposed_sha256": "ebf1015fe8946cc23335ff5a108a57e65e7277839d5debfe84b0388140e6fc49",
+     "reason_sha256": "4bf0c6f1842f431fd15713a6afe875b395a6f85e60c45890d141b1e7071b880a",
+     "review_notes_sha256": "76f5f199e0ab2e0e6764e645b895c11bb8c44d35328f0c5940565f246a1a68b6",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "R*410-10",
+     "source_id": "LEGIARTI000031764615",
+     "valid_from": "2016-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "7e70fcce3bad4ad5bd23de2411dac37852f43ad9a965615b2d8d726c7e78cf91",
+     "proposed_sha256": null,
+     "reason_sha256": "496a7579fbcbd25b74e2d6c6fd71e63d10f3cbb98527c9aa05c08bfedd64c93c",
+     "review_notes_sha256": "ff09bed6cc59e7b8b3cb70039ae065fbf1b5fd212284dcccc3af5063b0a10e84",
+     "draft_status": "retained_unchanged",
+     "second_pass": "pending"
+    }
+   ],
+   "evidence_files": [
+    "evidence/cited/20261026T230545Z/urba_R*423-52_LEGIARTI000028678360.json",
+    "evidence/cited/20261026T230545Z/urba_R*410-10_LEGIARTI000031764615.json"
+   ]
+  },
+  {
+   "id": "RT-P1-URBA-10",
+   "priority": "P2",
+   "priority_justification": "Texte réglementaire permanent devenu sans champ futur, neutralisé par L520-1 ; risque limité d'exigence d'un formulaire supprimé.",
+   "nature": "incohérence du projet",
+   "status": "confirmé",
+   "passages": [
+    "urba A520-1 (LEGIARTI000031650475), proposition : « le dossier joint à la demande de permis de construire ou à la déclaration préalable comprend [...] une déclaration établie conformément au formulaire enregistré sous le numéro Cerfa 14600 » ; « La déclaration de cette taxe reste régie par les articles R. 520-10 à R. 520-13. »",
+    "urba A520-1, notes : « Aucune abolition de L520-1 ni de CGI231 ter n'est réalisée par cet arrêté. »",
+    "urba L520-1 (LEGIARTI000031816543), proposition : « Aucune déclaration, pièce justificative ou transmission exclusivement destinée à [...] cette taxe ne peut être exigée [...] y compris lorsque cette formalité était jointe à une demande d'autorisation d'urbanisme. »",
+    "urba A520-2 (LEGIARTI000031650470), proposition : « Les obligations déclaratives autonomes de la taxe régie par les articles L. 520-1 à L. 520-23 demeurent applicables. »"
+   ],
+   "primary_references": [
+    "Snapshot 20261026T230545Z, corpus.sqlite"
+   ],
+   "reasoning": "A520-1 a été réécrit comme si la taxe de L520-1 subsistait, en distinguant une « ancienne redevance » ; il reste en vigueur sans terme et renvoie à R520-10 à R520-13 tous abrogés pour l'avenir. A520-2 conserve une phrase sans borne temporelle. L520-1 neutralise ces exigences, mais l'arrêté n'est pas coordonné.",
+   "consequences": "Formulaire Cerfa 14600 maintenu en apparence dans la composition du dossier de permis ; lecture confuse pour les services.",
+   "minimal_correction": "A520-1 : « Le présent article est abrogé à compter de l'entrée en vigueur de la loi supprimant la taxe sur la création de locaux à usage de bureaux, de locaux commerciaux et de locaux de stockage en Île-de-France. Aucune déclaration établie conformément au formulaire Cerfa 14600, ni aucune autre déclaration exclusivement destinée à l'ancienne redevance ou à cette taxe, ne peut être exigée sur son fondement dans le dossier d'une demande de permis de construire ou d'une déclaration préalable lorsque le fait générateur n'est pas antérieur à cette date ; son absence ne rend pas la demande incomplète. Pour les opérations dont le fait générateur est antérieur à cette date, les déclarations déjà déposées conservent leurs effets et les articles R. 520-10 à R. 520-13, dans leur rédaction applicable à ces faits, régissent les déclarations encore dues, en un seul exemplaire. Les exonérations, décharges, réductions, restitutions, prescriptions et voies de recours applicables à ces opérations demeurent préservées. » — A520-2 : ajouter « pour les seuls faits générateurs antérieurs à la suppression de cette taxe, dans les conditions de l'article L. 520-1 » après « demeurent applicables ».",
+   "other_options": [
+    "Conserver A520-1 en le bornant expressément aux faits générateurs antérieurs."
+   ],
+   "preserve": [
+    "Régime des faits générateurs antérieurs (exonérations, plafonnements, imputations, remboursements)",
+    "DAACT de R462-1",
+    "Aucune taxe ni formalité de remplacement"
+   ],
+   "uncertainties": "A520-3, A520-4, A520-5 (« ancienne redevance ») non lus en entier ; filiation redevance/taxe de 2016 non vérifiée sur source primaire.",
+   "articles": [
+    {
+     "code": "urba",
+     "number": "A520-1",
+     "source_id": "LEGIARTI000031650475",
+     "valid_from": "2016-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "ccd552c510eecb51508b65f05d69006a368d332e6743418911a64eb44b54fa7b",
+     "proposed_sha256": "31cf4023485b98d6455074a4466c43b25342ae16f78c0f072c730b19d97f8d60",
+     "reason_sha256": "2007c9f5c99caa22cfbc7b3608c20e8c50b118d0358e6092a922c98d1c0f937b",
+     "review_notes_sha256": "42c2e74fa0e7211d497104b94b370d68cf8751614040345d4329165184f3e422",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "A520-2",
+     "source_id": "LEGIARTI000031650470",
+     "valid_from": "2016-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "cb8dd81a9b020e192c989ac9a78255ea85b011919a2de520025b879a014e462a",
+     "proposed_sha256": "da26321ebbd9bf65c5607a277624aff0c9427543aff075b1d78e886c20393d19",
+     "reason_sha256": "0e0512d5d7bfc9aabb9c801b30a8ecc89bc232e7f4a7e3deb89efefc4a68bc6d",
+     "review_notes_sha256": "ac84fc72c9376e5a6622aea771f87946e6d5731313c84864b003bb75ae747c9f",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    },
+    {
+     "code": "urba",
+     "number": "L520-1",
+     "source_id": "LEGIARTI000031816543",
+     "valid_from": "2016-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "5b4b80dc3854745d65415708a60de0fdcd472eb4157b679b6733efdb0b82c693",
+     "proposed_sha256": "d27568c39fafb5323df388a0625da055d714949745f2787b67b997a29e8d3c5a",
+     "reason_sha256": "0624a318ca7dc937ae870bbe83c4877cf8f3631ebefe42b2de21a59c27335dd9",
+     "review_notes_sha256": "a482cc9e9252a0fa6527403257e56a00f934c1a64402c1bd13f5be730adcb33c",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "R520-12",
+     "source_id": "LEGIARTI000035710563",
+     "valid_from": "2017-10-05",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "67f0f4aa4992eb1c7058fea844a8214f7324bdafc53470d4f2152f81a5ce72fd",
+     "proposed_sha256": "4819cf56a940d086e4b70c8aa03a290443989e77e3197af23241624c192fc544",
+     "reason_sha256": "e345c445d7e6ea4ce6685da2d969929574bbb3561a755e98b318825dc0de728e",
+     "review_notes_sha256": "1da75ac2c33a74377d5c4fcffd79196fa0d033fc13096251163b68e161aacc60",
+     "draft_status": "rewrite_draft",
+     "second_pass": "pending"
+    }
+   ],
+   "evidence_files": [
+    "evidence/cited/20261026T230545Z/urba_A520-1_LEGIARTI000031650475.json",
+    "evidence/cited/20261026T230545Z/urba_A520-2_LEGIARTI000031650470.json",
+    "evidence/cited/20261026T230545Z/urba_L520-1_LEGIARTI000031816543.json",
+    "evidence/cited/20261026T230545Z/urba_R520-12_LEGIARTI000035710563.json"
+   ]
+  },
+  {
+   "id": "RT-P1-URBA-11",
+   "priority": "P2",
+   "priority_justification": "La version différée sans proposition est neutralisée par la clause générale de L520-1 ; anomalie de couverture sans effet certain.",
+   "nature": "anomalie d'inventaire",
+   "status": "confirmé",
+   "passages": [
+    "urba L520-7 (LEGIARTI000045917236), état ABROGE_DIFF, 2022-09-01→2027-01-01, porte la proposition d'abrogation",
+    "urba L520-7 (LEGIARTI000054567160), état VIGUEUR_DIFF à compter du 2027-01-01, sans proposition, inventaire « not_in_inventory » : « réhabilitation aboutissant à un immeuble neuf au sens de l'article L. 231-12 du code des impositions sur les biens et services »",
+    "urba L520-7 (LEGIARTI000045917236), notes : « L'acte de bascule devra neutraliser toute version future de cette même taxe »"
+   ],
+   "primary_references": [
+    "Snapshot 20261026T230545Z, corpus.sqlite (versions LEGI de L520-7)"
+   ],
+   "reasoning": "La version d'assiette de L520-7 applicable à compter du 1er janvier 2027 n'est pas couverte par le projet ; seule la version qui s'éteint au 1er janvier 2027 reçoit l'abrogation. Si la loi proposée entre en vigueur après cette date, l'abrogation porterait sur une version déjà remplacée.",
+   "consequences": "Couverture formelle incomplète ; l'abrogation de L520-1 (« Les dispositions du présent titre [...] ne peuvent fonder une imposition ») évite toutefois une imposition future.",
+   "minimal_correction": "Rattacher la proposition d'abrogation de L520-7 à la version LEGIARTI000054567160 (texte identique, avec la référence CIBS L. 231-12 pour les seuls faits anciens postérieurs au 1er janvier 2027) et l'ajouter à l'inventaire de seconde passe.",
+   "other_options": [
+    "Rédiger une proposition commune visant « toutes les versions » de L520-7."
+   ],
+   "preserve": [
+    "Limitation d'assiette des reconstructions et exclusion des locaux sociaux/sanitaires pour les faits anciens"
+   ],
+   "uncertainties": "Les autres articles du titre V (L520-x) ne présentent pas, dans ce paquet, de version différée ; non vérifié hors paquet.",
+   "articles": [
+    {
+     "code": "urba",
+     "number": "L520-7",
+     "source_id": "LEGIARTI000045917236",
+     "valid_from": "2022-09-01",
+     "valid_until": "2027-01-01",
+     "state": "ABROGE_DIFF",
+     "source_sha256": "1922a2928f240e60ba8b60b75676d7aa3825b5b840593c45383929e12a42d55d",
+     "proposed_sha256": "94832b8d2dbecf9520e8485f5a9fb863733abcfb5f43081fef031b13ef4c4632",
+     "reason_sha256": "e62e7c96ed320cf00f75b91ba66f123a8a3fa787b9cbe3ba7c6f75b1534e3f49",
+     "review_notes_sha256": "a160c090680332e005f068cfc3a8fb355ddd9531d73321ac36a0210e6522322d",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "urba",
+     "number": "L520-7",
+     "source_id": "LEGIARTI000054567160",
+     "valid_from": "2027-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR_DIFF",
+     "source_sha256": "3a925735b46136b371b47b12cfe9d675c82c110dab78066e6fb4b900c2f16215",
+     "proposed_sha256": null,
+     "reason_sha256": null,
+     "review_notes_sha256": null,
+     "draft_status": null,
+     "second_pass": "not_in_inventory"
+    },
+    {
+     "code": "urba",
+     "number": "L520-1",
+     "source_id": "LEGIARTI000031816543",
+     "valid_from": "2016-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "5b4b80dc3854745d65415708a60de0fdcd472eb4157b679b6733efdb0b82c693",
+     "proposed_sha256": "d27568c39fafb5323df388a0625da055d714949745f2787b67b997a29e8d3c5a",
+     "reason_sha256": "0624a318ca7dc937ae870bbe83c4877cf8f3631ebefe42b2de21a59c27335dd9",
+     "review_notes_sha256": "a482cc9e9252a0fa6527403257e56a00f934c1a64402c1bd13f5be730adcb33c",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    }
+   ],
+   "evidence_files": [
+    "evidence/cited/20261026T230545Z/urba_L520-7_LEGIARTI000045917236.json",
+    "evidence/cited/20261026T230545Z/urba_L520-7_LEGIARTI000054567160.json",
+    "evidence/cited/20261026T230545Z/urba_L520-1_LEGIARTI000031816543.json"
+   ]
+  },
+  {
+   "id": "RT-P1-URBA-12",
+   "priority": "P2",
+   "priority_justification": "La neutralisation fiscale de L111-3 dépend d'un texte successeur absent du corpus ; pièce manquante, pas contradiction prouvée.",
+   "nature": "réserve documentaire",
+   "status": "à confirmer",
+   "passages": [
+    "urba L111-3 (LEGIARTI000031210179), proposition : « Pour les seuls renvois fiscaux au présent article, le critère de constructibilité résultant de sa rédaction antérieure continue d'être apprécié dans le champ propre de chaque imposition. »",
+    "cgi 257 (LEGIARTI000046196126), I 2 1° : « Comme terrains à bâtir, les terrains sur lesquels des constructions peuvent être autorisées en application [...] de l'article L. 111-3 du code de l'urbanisme »",
+    "cgi 257, NOTA : « Conformément au 27° de l'article 9, à l'article 15 et à l'article 49 de l'ordonnance n° 2025-1247 du 17 décembre 2025, ces dispositions [...] sont abrogées à compter du 1er janvier 2027. »"
+   ],
+   "primary_references": [
+    "Ordonnance n° 2025-1247 du 17 décembre 2025 (citée par le NOTA de CGI 257 ; texte non consulté)",
+    "Directive 2006/112/CE, art. 12 §3 et 135 §1 k (CELEX 32006L0112 ; non consultée dans cette revue)"
+   ],
+   "reasoning": "La clause fiscale de L111-3 évite qu'en RNU tout terrain devienne « terrain à bâtir » pour la TVA du seul fait de l'abrogation. CGI 257 est maintenu mais abrogé au 1er janvier 2027 au profit du CIBS. Si le texte successeur ne renvoie plus nommément à L111-3, la clause « renvois fiscaux au présent article » pourrait ne pas le couvrir. La compatibilité avec la notion européenne de terrain à bâtir d'un critère figé sur une règle abrogée n'est pas vérifiée.",
+   "consequences": "Risque d'extension du champ de la TVA immobilière (ou de modification du régime des droits d'enregistrement) aux cessions de terrains hors parties urbanisées, contraire à l'objectif de ne pas étendre une assiette.",
+   "minimal_correction": "Identifier le texte CIBS successeur ; si besoin, compléter la clause de L111-3 : « Pour les seuls renvois fiscaux au présent article, y compris ceux des dispositions qui leur succèdent dans le code des impositions sur les biens et services, [...] ».",
+   "other_options": [
+    "Définir directement dans le texte fiscal le critère conservé, sans renvoi à l'article abrogé."
+   ],
+   "preserve": [
+    "Exonérations, abattements et dispenses attachés aux renvois fiscaux",
+    "Absence d'extension d'assiette",
+    "Régime des cessions antérieures (331 K ter, 1605 nonies)"
+   ],
+   "uncertainties": "Texte CIBS et ordonnance 2025-1247 non disponibles dans l'instantané ; aucune consultation externe faite.",
+   "articles": [
+    {
+     "code": "urba",
+     "number": "L111-3",
+     "source_id": "LEGIARTI000031210179",
+     "valid_from": "2016-01-01",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "52582c01d3c0f5e5984897b5837eb8ace8cce7cb4431fd1a09537a06e5ade4df",
+     "proposed_sha256": "5505c049366f418c69f6fcdb258c78dbb3f160371181df461028024de69dadc0",
+     "reason_sha256": "86dad12ac9d5583c7024b64498da72f4fae15d36f0b0ae033700bca595861292",
+     "review_notes_sha256": "048d5e8ec4a3afbc836a26b35ac35171d91887a9e686a5c1d55b765b627676ce",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    },
+    {
+     "code": "cgi",
+     "number": "257",
+     "source_id": "LEGIARTI000046196126",
+     "valid_from": "2022-08-18",
+     "valid_until": "2222-02-22",
+     "state": "ABROGE_DIFF",
+     "source_sha256": "f0c4c719daf09dcd42f93c814483170005c3720b721087d086ad454f52734dd6",
+     "proposed_sha256": null,
+     "reason_sha256": "7eefbbd5927a306570430a3952675d2e03d9a28457795a824a546098fface130",
+     "review_notes_sha256": "042a9eed0f0731afc098f2399dbc87aad7db3a889beb2f6735ff32f0e04e8a39",
+     "draft_status": "retained_unchanged",
+     "second_pass": "completed"
+    },
+    {
+     "code": "a3",
+     "number": "331 K ter",
+     "source_id": "LEGIARTI000033498355",
+     "valid_from": "2016-11-28",
+     "valid_until": "2999-01-01",
+     "state": "VIGUEUR",
+     "source_sha256": "e16ee9cba18bbe646294cc91f4e33febdbd0b029e181b2e10bad40aa719def37",
+     "proposed_sha256": "b00eaa0242fd8e612b0c6a43630e2842e16273cb77db8e444714dff0358e8729",
+     "reason_sha256": "fb55d34dae02d73f7b0f1aea77c76cb1cf5e47c41b046dec167dae6e7735dc54",
+     "review_notes_sha256": "601a214f523122f27902995ae0134eef48274c9f5eea20a55329f608ee0299e9",
+     "draft_status": "rewrite_draft",
+     "second_pass": "completed"
+    }
+   ],
+   "evidence_files": [
+    "evidence/cited/20261026T230545Z/urba_L111-3_LEGIARTI000031210179.json",
+    "evidence/cited/20261026T230545Z/cgi_257_LEGIARTI000046196126.json",
+    "evidence/cited/20261026T230545Z/a3_331_K_ter_LEGIARTI000033498355.json"
+   ]
+  }
+ ]
+}

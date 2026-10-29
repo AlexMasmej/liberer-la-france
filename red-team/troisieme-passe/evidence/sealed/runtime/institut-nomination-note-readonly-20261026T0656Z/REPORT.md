@@ -1,0 +1,11 @@
+Dix-neuf textes courants entiers ont été reconfrontés dans deux transactions SQLite distinctes en lecture seule, puis une troisième après revue. Sources, NOTA, bornes, cinq champs, XML BLOB originaux, neuf fichiers propriétaires entiers et les dix-neuf entrées du registre et de la worklist concordent. Les77empreintes sont exactes. Le dossier commencé pour cette lecture garde ses vraies dates internes : capture et revue au26octobre après07h44UTC.
+
+Le D224-8 encore canonique conserve l’avis que le D227-5 proposé retire pour les mêmes deux nominations de l’Institut. Le candidat parental D224-8 existant reste byte-identique, son propriétaire antérieur entier correspond toujours, et il synchronise la suppression avec D227-5 en conservant les compétences et droits anciens. Il demeure non enregistré.
+
+La note actuelle L228-1 décrit ce D224-8 encore canonique et affirme une cohérence avec la tutelle de son V. Le V entier ne formule pas lui-même cet avis. Cette note ne peut être héritée comme preuve du maintien nécessaire de l’avis dans la future variante parentale. Aucune contradiction du corps législatif L228-1 n’est déduite de cette seule note ; aucun treizième candidat ou gain n’est créé et aucune note canonique n’est corrigée ici.
+
+Les nominations de l’Union, celles de l’Institut, le contrôle budgétaire de rattachement, l’approbation ministérielle spéciale, l’opposition interne UCANSS, les statuts et les instances représentatives ont des objets et transitions distincts. Le calendrier D227-6/L224-10 reste ouvert. Les19textes ne certifient pas tous leurs renvois extérieurs. Le vrai V de L228-1 ne résout pas le sélecteur V imprimé en2004 pour L281-6.
+
+Trois URLs officielles supplémentaires ont été inaccessibles via l’outil public ; les reçus entiers sont conservés. Aucun original, fac-similé authentifié ou équivalence juridique nouvellement obtenu n’est revendiqué, aucune cause générale ou contournement.
+
+Zéro candidat nouveau ou intégré, zéro lecture native ajoutée par ce travail, aucune validation ordinaire GLOBALE refaite, aucune mutation source/propriétaire/registre/worklist/politique/site/pointeur. Readiness=false ; préparation opérationnelle, rebase intégrale des douze, convergence, sources originales et trois réserves demeurent ouvertes. Ne pas rejouer la capture ou ses stades achevés.

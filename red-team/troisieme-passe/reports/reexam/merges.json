@@ -1,0 +1,13 @@
+{
+ "_purpose": "Fusions et clôtures propres au réexamen : un même effet relevé par plusieurs groupes n'est compté qu'une fois.",
+ "merges": {
+  "RT-RXINST-01": {"into": "RT-RXCGI-01", "note": "Même défaut : après des corrections faites des deux côtés d'une coordination, les notes de seconde passe décrivent encore la contradiction comme ouverte (CSS L123-1 et suivants ; urbanisme R425-15-2, R*510, R*423-27/61 ; travail L3134-16 ; CGI 1519 D et suivants)."},
+  "RT-RXLOG-01": {"into": "RT-RXCGI-01", "note": "Idem."},
+  "RT-RXTRAV-03": {"into": "RT-RXCGI-01", "note": "Idem (note de L3134-16 sur la CSA)."},
+  "RT-RXINST-02": {"into": "RT-FUTTL-19", "note": "Même défaut : des notes déclarent « non fournie » ou « manquante » une version future présente dans le corpus. RT-RXINST-02 en recense au moins 30 et en fait la cause de RT-XCUT-01."},
+  "RT-RXCSS-01": {"into": "RT-XCUT-01", "note": "Cas de version future sans proposition (R160-5, version du 1er janvier 2027), comme RT-FUTCSS-38."}
+ },
+ "closures": {
+  "RT-RXCGI-02": {"status": "résolu", "trace": "Ce constat ne vise pas le projet mais l'outil de triage du coordinateur (tools/p1_triage.py) : les numéros normalisés de l'audit (« 1406BIS ») n'étaient pas reconnus dans le texte (« 1406 bis ») lorsque l'article renvoyant avait été réécrit. Défaut corrigé le 27 octobre ; triage rejoué : 1 235 alertes P1 vivantes au lieu de 1 137 ; les 46 alertes qui avaient échappé aux paquets ont été requalifiées (groupe ALERTS2)."}
+ }
+}

@@ -1,0 +1,76 @@
+[
+ {
+  "id": "RT-D351-01",
+  "priority": "P2",
+  "priority_justification": "Divergence avérée dans une définition entrant dans la formule E, mais préexistante, non introduite par la réforme ; effet sur le barème arrêté non démontré ; la publication JO prime la consolidation.",
+  "nature": "conflit de source",
+  "status": "confirmé",
+  "articles": [
+   {"code": "css", "number": "D351-9", "source_id": "LEGIARTI000030400105", "valid_from": "2015-03-27", "valid_until": "2999-01-01", "source_sha256": "c3c358fa0c7fc2e30f40ba163b29fa4d1561ec57a3eb5cd9ada3137450aec1b2", "proposed_sha256": null, "reason_sha256": null, "review_notes_sha256": null, "second_pass": "documentary_hold"},
+   {"code": "css", "number": "D643-7", "source_id": "LEGIARTI000023395852", "valid_from": "2011-01-01", "valid_until": "2999-01-01", "source_sha256": "4aa19a84c4d0aa70a437d6eb8cd7572211c93e2237afaef369b9ad08f83df1aa", "proposed_sha256": "0e1581642ff4c3b437a4019e2d7c0b83882274da2e29b23adc0dffd1789d5873", "second_pass": "pending"}
+  ],
+  "passages": [
+   "D351-9 (LEGIARTI000030400105) : « A est l'âge de référence fixé à soixante-deux ans » ; « k est un coefficient dont la valeur varie de 0 à 55 » ; « L (A) est l'effectif à l'âge de soixante ans de la génération à laquelle appartient l'assuré »",
+   "Décret 2010-1737 art. 1-3-2° : « Aux a, b et c du 4° et à l'avant-dernier alinéa, les mots : « de soixante ans » sont remplacés par les mots : « de soixante-deux ans » »",
+   "D643-7 (LEGIARTI000023395852) : « L (A) est l'effectif à l'âge A de la génération à laquelle appartient l'assuré »"
+  ],
+  "primary_references": [
+   "JORFTEXT000023334387 (décret 2010-1737, JO 31/12/2010, texte 83) — image de page lue le 2026-10-26, sha256 a729d0384d3b9e33001f1d1ae7969bd9f18c13b0d001da05977a3c48ce510da4",
+   "JORFTEXT000000433712 (décret 2003-1376, JO 01/01/2004 p. 47) — détail de la formule E lu le 2026-10-26, sha256 543142002ac877696fc7db4528dcb3c02ddd146d41498621a0e574c87d6fa8e2",
+   "LEGIARTI000019993446 (version 2008-2011, ordre des définitions L(A+k), L(A), L(B))"
+  ],
+  "reasoning": "L'avant-dernier alinéa visé en 2010 est la définition de L(A). La consolidation a appliqué la substitution aux a, b, c et à A et k, mais pas à L(A). Avec A = 62, la notation L(A+0) = effectif à 62 ans contredit la définition de L(A) à 60 ans. En développant E = v^(A−B)/L(B)·[Σ v^k L(A+k) − (11/24+1/12)·L(A)], on voit que L(A) subsiste dans le terme correctif : la divergence a donc un effet numérique potentiel.",
+  "consequences": "Le texte consolidé republié par le projet est inexact et contradictoire. Le droit applicable, selon le JO, est vraisemblablement 62 ans. Le barème annuel pourrait s'écarter de la norme si 60 avait été utilisé (non démontré).",
+  "minimal_correction": "Appliquer, séparément de la source et sous garde d'empreinte, la proposition existante (« soixante-deux ans ») ; ou, de préférence, retenir « L (A) est l'effectif à l'âge A de la génération à laquelle appartient l'assuré indiqué par les tables mentionnées au 3° ci-dessus ; », comme dans D643-7.",
+  "other_options": ["Signaler la divergence dans le lecteur, à côté du texte source, sans modifier le XML canonique.", "Saisir la DILA d'un signalement de consolidation (après autorisation de l'auteur : contact extérieur)."],
+  "preserve": ["Texte source canonique intact", "Âge de référence 62, k 0..55, D = 172 et tables homologuées conservés", "Aucune nouvelle formule actuarielle inventée"],
+  "uncertainties": ["Âge utilisé par les arrêtés de barème annuels", "Effet de la loi 2023-270 sur A, non visible dans le corpus du 18 octobre 2026"],
+  "evidence_files": ["evidence/cited/20261026T230545Z/css_D351-9_LEGIARTI000030400105.json", "evidence/cited/20261026T230545Z/css_D351-9_LEGIARTI000019993446.json", "evidence/cited/20261026T230545Z/css_D643-7_LEGIARTI000023395852.json", "evidence/sealed/runtime/source-recovery-20261022/css/pages/modif2010-2.png", "evidence/sealed/runtime/source-recovery-20261022/css/captcha-authorized-followup/pages/d351-E-original-detail.png", "evidence/sealed/runtime/source-recovery-20261022/css/captcha-authorized-followup/d351-canonical-conflict.md", "evidence/sealed/runtime/source-recovery-20261022/css/captcha-authorized-followup/d351-definition-correction-proposal.json"]
+ },
+ {
+  "id": "RT-D351-02",
+  "priority": "P2",
+  "priority_justification": "Lacune documentaire qui empêche la vérification actuarielle ; pas de contradiction démontrée.",
+  "nature": "réserve documentaire",
+  "status": "à confirmer",
+  "articles": [
+   {"code": "css", "number": "D351-9", "source_id": "LEGIARTI000030400105", "source_sha256": "c3c358fa0c7fc2e30f40ba163b29fa4d1561ec57a3eb5cd9ada3137450aec1b2", "second_pass": "documentary_hold"},
+   {"code": "css", "number": "D351-8", "source_id": "LEGIARTI000041968546", "source_sha256": "9b147e2831d648c19b0b389709fd575cc1dca985c7480921a4febc9ad296cb01", "proposed_sha256": "69219f496dfadd4d10dc68fa58edf4c807c8efd232ea948d4202b2ec9dede7ed", "reason_sha256": "11997530a8a2e10e0e3f6cc950891e53eaad395c5e41512545f657ef5ee80610", "review_notes_sha256": "782ffeaf6f45ac5d84a35c1702acbcc5d605f32d3ab29d1109c20d0de10358b8", "second_pass": "pending"},
+   {"code": "css", "number": "L351-14-1", "source_id": "LEGIARTI000047452730", "source_sha256": "3b4961681e7200e129b126c18c724a020937b0c672c898408f9a6882311bbfaf", "proposed_sha256": "9e7228fdb488bd24ccdb41a4f7679fceb887e42644f97e2a22f9ba172604d2ee", "reason_sha256": "6eb6381b16336615d693079afa58bb21aca02ce910e2fda60cad61d3e807b526", "review_notes_sha256": "9837669268e4a3b7b3f04852486d1ac8c9bbc55e6765415edf689b484e300732", "second_pass": "completed"}
+  ],
+  "passages": ["D351-9 : « déterminé selon la formule suivante : (Formule non reproduite) »", "Notes de D351-8 : « formule du terme E non reproduite dans la source publique […] aucune formule ni correction actuarielle inventée »"],
+  "primary_references": ["JORFTEXT000000433712 p. 47 (formule E retrouvée)", "JORFTEXT000023334387 art. 1-3-3° (57→55)"],
+  "reasoning": "Le graphique original et la substitution 57→55 de 2010 sont établis dans le dossier scellé, mais la formule consolidée n'est jointe ni à la source ni au lecteur. Les relectures de D351-8 et de L351-14-1 concluent donc à l'impossibilité d'un contrôle actuariel, alors que D643-7 transcrit sa propre formule.",
+  "consequences": "Cohérence D351-8 / D351-9 non vérifiable dans le projet ; traitement documentaire hétérogène entre articles jumeaux.",
+  "minimal_correction": "Joindre au lecteur la formule E consolidée (2004 + 57→55), comme pièce documentaire distincte avec provenance et empreinte, sans modifier le XML canonique.",
+  "other_options": ["Maintenir la réserve ouverte, en citant explicitement dans D351-8 et L351-14-1 le dossier où la formule est retrouvée."],
+  "preserve": ["XML canonique et bornes intacts"],
+  "uncertainties": ["Validation de la transcription par un actuaire ou un juriste"],
+  "evidence_files": ["evidence/sealed/runtime/source-recovery-20261022/css/captcha-authorized-followup/d351-report.json", "evidence/cited/20261026T230545Z/css_D351-8_LEGIARTI000041968546.json", "evidence/cited/20261026T230545Z/css_L351-14-1_LEGIARTI000047452730.json"]
+ },
+ {
+  "id": "RT-D351-03",
+  "priority": "P2",
+  "priority_justification": "Le garde-fou de L241-3 III empêche le transfert avant coordination : le risque est futur et conditionnel, mais la liste de coordination omet un mécanisme qui exige par la loi la neutralité actuarielle.",
+  "nature": "coordination manquante",
+  "status": "à confirmer",
+  "articles": [
+   {"code": "css", "number": "L241-3", "source_id": "LEGIARTI000051289018", "source_sha256": "f24a47a718341114ed58d5d347d73421a343ddda2f51c3de23e245d594c2ee28", "proposed_sha256": "da4cf027a0b150a33727d5b84e712984a6b4a7ae2fd057c9f7372ba16370e07a", "reason_sha256": "927696df3e12038bebff8ff0ed38804a7eec2ac84194b97307f06d32a35ffe48", "review_notes_sha256": "868ead79a2424efaade9b19eb5a0dad4222ef0f5f85a827cbbff108e8b2efecf", "second_pass": "completed"},
+   {"code": "css", "number": "L351-14-1", "source_id": "LEGIARTI000047452730", "proposed_sha256": "9e7228fdb488bd24ccdb41a4f7679fceb887e42644f97e2a22f9ba172604d2ee", "second_pass": "completed"},
+   {"code": "css", "number": "D351-8", "source_id": "LEGIARTI000041968546", "proposed_sha256": "69219f496dfadd4d10dc68fa58edf4c807c8efd232ea948d4202b2ec9dede7ed", "second_pass": "pending"}
+  ],
+  "passages": [
+   "L351-14-1 I (proposé) : « sous réserve du versement de cotisations fixées dans des conditions définies par décret garantissant la neutralité actuarielle »",
+   "L241-3 III (proposé) : « Les cotisations transférées ne créent pas de droits futurs par répartition pour la fraction correspondante. […] Avant le premier transfert, les dispositions législatives et réglementaires de calcul doivent distinguer ces droits antérieurs et définir la réduction des droits futurs correspondant exactement à la fraction transférée. »",
+   "Notes de L241-3 : « le III exige une formule coordonnée de réduction des droits futurs, notamment avec L351-1 et les articles réglementaires de calcul des pensions »"
+  ],
+  "primary_references": ["Propositions du projet (instantané 20261026T230545Z)", "Orientation `retraite` de policy-coordinations.json"],
+  "reasoning": "Le prix d'un trimestre racheté (D351-8, D351-9) est calculé sur une pension par répartition au taux plein. Après transfert, cette pension future est réduite de la fraction transférée. Un barème inchangé ne serait plus actuariellement neutre, contrairement à l'exigence législative maintenue dans L351-14-1.",
+  "consequences": "Surtarification des rachats après le premier palier de transfert, à défaut de coordination explicite, et charge accrue pour les assurés, contraire à l'orientation de réforme.",
+  "minimal_correction": "Ajouter à la fin du premier alinéa du III de L241-3 proposé : « Cette coordination comprend les versements prévus aux articles L. 351-14-1 et L. 634-2-2 et par les dispositions équivalentes des autres régimes de base, dont les barèmes doivent rester actuariellement neutres au regard des seuls droits futurs par répartition. » (liste des renvois à vérifier).",
+  "other_options": ["Ajouter dans D351-8 un alinéa transitoire prévoyant l'ajustement du barème par arrêté à chaque palier de transfert.", "Mentionner le rachat dans les notes de coordination de L241-3, sans modifier le corps (solution plus faible)."],
+  "preserve": ["Rachat volontaire, limité à 12 trimestres", "Tarifs réduits des II à IV de L351-14-1", "Suppression du filtre d'établissements (réforme)", "Rachats acceptés avant chaque palier régis par le barème de la date de demande"],
+  "uncertainties": ["Renvois exacts pour les autres régimes (L634-2-2, L643-2 ou autres, à vérifier)", "Méthode de réduction des droits futurs non encore rédigée par le projet"],
+  "evidence_files": ["evidence/cited/20261026T230545Z/css_L241-3_LEGIARTI000051289018.json", "evidence/cited/20261026T230545Z/css_L351-14-1_LEGIARTI000047452730.json", "evidence/cited/20261026T230545Z/css_D351-8_LEGIARTI000041968546.json"]
+ }
+]
