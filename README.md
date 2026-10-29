@@ -22,6 +22,12 @@ La [publication de la seconde passe](snapshots/20261029T035156Z-second-pass-comp
 
 Les lots courants et notes restent consultables sous `legal-rewrite/`. L’état complet se restaure selon le manifeste du nouvel instantané, qui prolonge le précédent sans effacer l’historique. Les trois réserves documentaires, les questions de cohérence et la troisième passe demeurent ouvertes ; ceci ne constitue pas une validation par juriste. Les issues ouvertes sont conservées.
 
+## Methodological context for the planned arXiv preprint
+
+[CODEX_HANDOFF.md](CODEX_HANDOFF.md) is a public, dated account of how this AI-assisted legal rewriting project was carried out: official-source provenance, editorial decisions, models and prompts, the agent pipeline, validation controls, revision history, problems encountered, published outputs, and unresolved questions. It provides supporting context for preparing the planned arXiv preprint and for understanding or continuing the research.
+
+It describes the completed second-pass edition of 29 October 2026 UTC, with a [frozen snapshot](snapshots/20261029T035156Z-second-pass-complete/README.md); later third-pass corrections are separate. This public edition omits machine-specific paths and private operational records. It distinguishes documented results from unknowns and is neither the preprint manuscript nor a claim of legal certification or exhaustive human review.
+
 ## Restore the databases
 
 The SQLite databases exceed GitHub's ordinary file limit. Consistent SQLite snapshots are compressed and split into parts below 50 MiB. Restore them with Python 3.11 or later:
