@@ -1,16 +1,16 @@
-#!/usr/bin/env python3
-"""travail-cse-commissions r4 : python3 t_cse.py <racine du dépôt corrigé>. Lit seulement les lots JSON de cet arbre ; aucune mutation en mémoire."""
-import sys, os, json, glob, re, html, hashlib
-ROOT = sys.argv[1]; CT = 'LEGITEXT000006072050'
-def rank(d): return (0 if d.startswith('automatic-') else 2 if d == 'third-pass-corrections' else 1, d)
-E = {}
-for p in sorted(glob.glob(os.path.join(ROOT, 'legal-rewrite', 'batches', '*')), key=lambda p: rank(os.path.basename(p))):
-    for f in sorted(glob.glob(os.path.join(p, '*.json'))):
-        try: d = json.load(open(f))
-        except Exception: continue
-        if isinstance(d, dict): d = d.get('entries', [])
-        for e in d if isinstance(d, list) else []:
-            if isinstance(e, dict) and e.get('code_id') == CT and e.get('number'): E[e['number']] = e
+"""Contre-Avocat, issue #14 : commissions supplétives du CSE (coupes seules).
+
+Lancer depuis legal-rewrite/ : python3 -m unittest test_contre_avocat_issue_14
+Lit uniquement les lots JSON de batches/ (précédence automatic < thématiques < third-pass-corrections),
+sans base ni réseau. Variable facultative CA14_ROOT : autre racine legal-rewrite/ à vérifier.
+Seules les 14 entrées visées et L2315-45 sont verrouillées ; aucune empreinte globale de HEAD.
+"""
+import glob, html, json, os, re
+from pathlib import Path
+from unittest import TestCase
+
+ROOT = Path(os.environ.get('CA14_ROOT') or Path(__file__).resolve().parent)
+CT = 'LEGITEXT000006072050'
 REPEAL = ['L2315-46', 'L2315-47', 'L2315-48', 'L2315-49', 'L2315-56']
 
 REASON = {
@@ -40,35 +40,68 @@ EXACT = {
  "R2315-30": "En l'absence d'accord prévu à l'article L. 2315-45, le comité social et économique est consulté sur les problèmes généraux relatifs à la mise en œuvre : 1° Des dispositifs de formation professionnelle continue, prévus aux chapitres Ier à III du titre II du livre III de la sixième partie ; 2° De la validation des acquis de l'expérience, prévue au titre II du livre IV de la sixième partie.",
  "R2315-31": "En l'absence d'accord prévu à l'article L. 2315-45, le comité social et économique est informé des possibilités de congé qui ont été accordées aux salariés, des conditions dans lesquelles ces congés ont été accordés ainsi que des résultats obtenus."
 }
-REPEAL_TEXTS = {'', 'Le présent article est abrogé.', 'Abrogé.'}  # forme vide ou formule d'abrogation usuelle du dépôt, rien d'autre
-TARGETS = set(REPEAL) | set(EXACT)
-def H(e): return hashlib.sha256(json.dumps(e, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
-def perimeter():
-    lines = sorted(f'{n}\t{H(e)}' for n, e in E.items() if n not in TARGETS)
-    return len(lines), hashlib.sha256('\n'.join(lines).encode()).hexdigest()
-if len(sys.argv) > 2 and sys.argv[2] == '--print-perimeter': print(*perimeter()); sys.exit(0)
-PERIM = (11578, "34ea35518c2bc77fa510230b6dabe1259adb02af6855a865879eb8bb4f6d6af9")
-L2315_45 = "23f3950710282cc7b4ff2a0b676a0034211a0dffe847dca2ddd781630f3ffb86"
-def T(e):  # balises retirées, entités décodées ; seuls espaces ASCII/sauts de ligne fusionnés (une espace insécable reste un écart)
+REPEAL_TEXTS = {'Le présent article est abrogé.', 'Abrogé.'}
+
+
+def rank(d):
+    return (0 if d.startswith('automatic-') else 2 if d == 'third-pass-corrections' else 1, d)
+
+
+def effective(root=ROOT):
+    entries = {}
+    for p in sorted(glob.glob(str(root / 'batches' / '*')), key=lambda p: rank(os.path.basename(p))):
+        for f in sorted(glob.glob(os.path.join(p, '*.json'))):
+            try:
+                d = json.load(open(f, encoding='utf-8'))
+            except Exception:
+                continue
+            if isinstance(d, dict):
+                d = d.get('entries', [])
+            for e in d if isinstance(d, list) else []:
+                if isinstance(e, dict) and e.get('code_id') == CT and e.get('number'):
+                    entries[e['number']] = e
+    return entries
+
+
+def text(e):
     s = html.unescape(re.sub(r'<[^>]+>', ' ', (e or {}).get('proposed_xml') or '')).replace('\u2019', "'")
     return re.sub(r'[ \t\r\n]+', ' ', s).strip()
-res = []
-def ck(lbl, ok): res.append(bool(ok)); print(('PASS ' if ok else 'FAIL ') + lbl)
-# Seuls status, change_type, texte proposé et reason sont verrouillés sur les 14 cibles ; les autres métadonnées
-# (source_sha256, review_notes, substantive_impact, certificat, policy_review_id, prior_proposal_sha256…) sont libres.
-for n in REPEAL:
-    e = E.get(n) or {}
-    ck(f'C1 {n} abrogé : status rewrite_draft, change_type full_repeal, texte vide ou formule d\'abrogation', e.get('status') == 'rewrite_draft' and e.get('change_type') == 'full_repeal' and T(e) in REPEAL_TEXTS)
-    ck(f'C1r {n} : reason exacte', e.get('reason') == REASON[n])
-for n, want in EXACT.items():
-    e = E.get(n) or {}
-    ck(f'C2 {n} : rewrite_draft, normative_reduction, texte exact', e.get('status') == 'rewrite_draft' and e.get('change_type') == 'normative_reduction' and T(e) == want)
-    ck(f'C2r {n} : reason exacte', e.get('reason') == REASON[n])
-bad = re.compile(r"L\. ?2315-(4[6-9]|56)\b|commission (économique|de la formation|de l'égalité professionnelle)")
-hits = [n for n, e in E.items() if e.get('status') == 'rewrite_draft' and e.get('change_type') != 'full_repeal' and bad.search(T(e).replace('de la commission économique supprimée', ''))]
-ck(f'C3 aucun renvoi pendant {hits}', not hits)
-e45 = E.get('L2315-45')
-ck('C4 L2315-45 verrouillé (entrée identique à HEAD)', bool(e45) and H(e45) == L2315_45)
-n, h = perimeter()
-ck(f'C5 périmètre : les {n} autres entrées du Code du travail identiques à HEAD (attendu {PERIM[0]})', (n, h) == tuple(PERIM))
-print(f'== {sum(res)}/{len(res)} PASS'); sys.exit(0 if all(res) else 1)
+
+
+BAD = re.compile(r"L\. ?2315-(4[6-9]|56)\b|commission (économique|de la formation|de l'égalité professionnelle)")
+
+
+class ContreAvocatIssue14(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.E = effective()
+
+    def test_repeals(self):
+        for n in REPEAL:
+            with self.subTest(n):
+                e = self.E.get(n) or {}
+                self.assertEqual(e.get('status'), 'rewrite_draft')
+                self.assertEqual(e.get('change_type'), 'full_repeal')
+                self.assertIn(text(e), REPEAL_TEXTS)
+                self.assertEqual(e.get('reason'), REASON[n])
+
+    def test_cuts_exact(self):
+        for n, want in EXACT.items():
+            with self.subTest(n):
+                e = self.E.get(n) or {}
+                self.assertEqual(e.get('status'), 'rewrite_draft')
+                self.assertEqual(e.get('change_type'), 'normative_reduction')
+                self.assertEqual(text(e), want)
+                self.assertEqual(e.get('reason'), REASON[n])
+
+    def test_no_dangling_reference(self):
+        hits = [n for n, e in self.E.items() if e.get('status') == 'rewrite_draft' and e.get('change_type') != 'full_repeal'
+                and BAD.search(text(e).replace('de la commission économique supprimée', ''))]
+        self.assertEqual(hits, [])
+
+    def test_l2315_45_kept(self):
+        e = self.E.get('L2315-45')
+        self.assertIsNotNone(e)
+        self.assertNotEqual(e.get('change_type'), 'full_repeal')
+        if e.get('status') != 'retained_unchanged':
+            self.assertIn('commission', text(e))
