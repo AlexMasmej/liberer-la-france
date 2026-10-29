@@ -106,6 +106,18 @@
 | RT-ISS6-01 | P2 | appliquée | 1 (0) |  |
 | RT-ISS2-01 | P2 | appliquée | 1 (0) |  |
 
+## Issues #12 et #13 (ouvertes le 29 octobre)
+
+Ces deux issues ont été triées sur le texte de production après application ; voir `reports/issues/ISS-D.md` et `apply/I12/`.
+
+- 8 constats sur 12 étaient déjà réglés.
+- **Corrigés (13 lignes, groupe I12) :**
+  - D5424-69, frais du comité d'expertise supprimé (RT-ISS12-01) ;
+  - les notes de L2523-8 (RT-ISS12-02) ;
+  - L8241-1 1°, dont l'exception au prêt de main-d'œuvre lucratif était encore réservée au titulaire d'une licence supprimée ; il renvoie désormais à L7123-11, avec application de la loi pénale plus douce aux faits passés (résidu de RT-P1-TRAVAIL-B-03) ;
+  - L7123-13 et les notes de huit articles du chapitre.
+- Aucune incrimination ne sanctionne plus une obligation supprimée par ces deux issues.
+
 ## Ce qui n'a pas été appliqué, et pourquoi
 
 - **RT-DOMIS-02** (non appliquée) : arbitrage — Décision de l'auteur, transmise par le coordinateur : non appliquée, car elle rétablirait un IS annuel ; le risque au regard de l'article 4 de la directive 2016/1164 (ATAD) est signalé, à confirmer. Aucune modification de 212 bis ni du V de 219 à ce titre.

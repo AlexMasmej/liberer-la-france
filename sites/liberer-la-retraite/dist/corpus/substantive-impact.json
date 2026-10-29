@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-29T07:01:35.594926+00:00",
+  "generated_at": "2026-10-29T07:25:16.571861+00:00",
   "source_snapshot": "2026-10-18",
   "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
   "scope": "Current exported proposals only; hash checks do not establish independent semantic review.",
@@ -21,22 +21,22 @@
   },
   "coverage": {
     "exported_articles": 30317,
-    "exported_proposals": 14119,
-    "retained_sources": 16195,
+    "exported_proposals": 14121,
+    "retained_sources": 16193,
     "current_worker_declarations": 30287,
     "current_approved_independent_reviews": 27,
     "unassessed_proposals": 0,
     "unassessed_retained_sources": 0
   },
   "classification_counts": {
-    "coordination_only": 5737,
+    "coordination_only": 5739,
     "editorial_only": 1444,
     "financing_transfer": 19,
     "material_reduction": 6337,
     "mixed": 526,
     "payment_timing_relief": 56,
     "reserved": 7,
-    "retained_necessary": 16188
+    "retained_necessary": 16186
   },
   "measures": [
     {
@@ -12434,14 +12434,14 @@
           "kind": "coordination",
           "measure_id": "agences-mannequins-suppression-licence",
           "description": "Maintien effectif de l'exception au prêt illicite malgré la suppression de licence.",
-          "before": "Dérogation par renvoi à L7123-11 et licence encore mentionnée dans L8241-1.",
+          "before": "Dérogation par renvoi à L7123-11 et licence mentionnée dans la source de L8241-1.",
           "after": "Dérogation applicable aux activités futures sans licence ni déclaration.",
           "unit": "legal_duty",
           "affected_population": "Agences de mannequins et personnes concernées dans le champ précisé par cet article.",
           "conditions_and_transition": "À l'entrée en vigueur de la loi instituant le contrat de travail unique ; activités déjà exercées et futures couvertes, droits antérieurs et garanties autonomes préservés.",
           "replacement_or_new_burdens": "Aucune formalité de remplacement ; garanties préexistantes conservées.",
           "source_quote": "Les dispositions relatives au prêt de main-d'oeuvre illicite prévues à l'article L. 8241-1 ne s'appliquent pas",
-          "proposed_quote": "cette dérogation s'applique sans licence ni déclaration préalable, y compris lorsque le 1° de l'article L. 8241-1 mentionne une telle licence.",
+          "proposed_quote": "cette dérogation s'applique sans licence ni déclaration préalable.",
           "article": {
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000023755153",
@@ -12506,6 +12506,26 @@
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000006904622",
             "number": "L7123-23",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "agences-mannequins-suppression-licence",
+          "description": "L'exception au prêt de main-d'œuvre lucratif ne dépend plus d'une licence supprimée.",
+          "before": "Exception du 1° réservée à l'agence exercée par une personne titulaire de la licence d'agence de mannequin.",
+          "after": "Exception du 1° ouverte à l'agence exercée dans les conditions de L. 7123-11, sans licence ni déclaration.",
+          "unit": "legal_duty",
+          "affected_population": "Agences de mannequins, utilisateurs et mannequins mis à disposition.",
+          "conditions_and_transition": "À l'entrée en vigueur de la loi instituant le contrat de travail unique, y compris pour les opérations en cours ; loi pénale plus douce pour les faits antérieurs ; droits civils antérieurs préservés.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "lorsque celle-ci est exercée par une personne titulaire de la licence d'agence de mannequin",
+          "proposed_quote": "lorsque celle-ci est exercée dans les conditions prévues à l'article L. 7123-11",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000030442435",
+            "number": "L8241-1",
             "slug": "travail"
           },
           "evidence_origin": "worker_declaration"
@@ -363091,6 +363111,26 @@
             "slug": "travail"
           },
           "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "suppression-comite-expertise-intermittents",
+          "description": "Fin, pour l'avenir, du remboursement des frais des membres d'un comité supprimé.",
+          "before": "Remboursement des frais de déplacement des personnalités qualifiées non agents publics du comité d'expertise.",
+          "after": "Remboursement limité aux missions accomplies avant la suppression du comité.",
+          "unit": "legal_duty",
+          "affected_population": "Personnalités qualifiées du comité d'expertise et ministères chargés de l'emploi et de la culture.",
+          "conditions_and_transition": "Même date que l'abrogation de L5424-23 ; droits au remboursement des missions antérieures conservés dans les conditions alors applicables.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "Les personnalités qualifiées qui n'ont pas la qualité de fonctionnaire ou d'agent de l'Etat bénéficient du remboursement de leurs frais de déplacement",
+          "proposed_quote": "conservent le droit au remboursement des frais de déplacement exposés au titre des missions accomplies avant cette date",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000031817805",
+            "number": "D5424-69",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
         }
       ]
     },
@@ -459035,7 +459075,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Abrogation du rapport et de la transmission pénale automatiques pour absence devant le médiateur, en coordination avec la dépénalisation proposée à L. 2525-1. Ce circuit ne protège pas à lui seul une personne contre une violence, une fraude ou une discrimination et n'est pas nécessaire au constat de l'échec de la médiation. Il est retiré sans signalement administratif de remplacement. Les convocations et la représentation prévues à L. 2523-4 ne sont pas présentées comme supprimées.",
-        "scope_limitations": "Coordination nécessaire vérifiée : R. 2523-12 conserve dans le corpus « un rapport qu'il envoie au ministre chargé du travail ou au préfet, aux fins de transmission au parquet ». Son dernier alinéa doit être retiré hors lot ; la clause législative proposée en neutralise déjà l'application. L. 2525-1, hors lot, propose de supprimer « La sanction pénale de 3 750 euros » ; son adoption doit être concomitante. L. 2522-4 est déjà proposé à l'abrogation dans le corpus, sans être réécrit ici. Différence de champ : la comparution et le mandat de L. 2523-4/L. 2522-3 subsistent. Transition compatible : suppression des seuls rapports et transmissions restant à accomplir, conservation des documents remis ; aucune annulation des archives ni dispense de signaler une infraction autonome. Aucun solde financier ou de complexité de l'ensemble des codes n'est établi.",
+        "scope_limitations": "Coordination faite : la source de R. 2523-12 prévoit « un rapport qu'il envoie au ministre chargé du travail ou au préfet, aux fins de transmission au parquet » ; sa proposition retire ce rapport et toute transmission à raison de la seule non-comparution ou du seul défaut de représentation, y compris pour les faits antérieurs. L. 2525-1 et R. 2525-1 proposés suppriment « La sanction pénale de 3 750 euros » et la contravention de cinquième classe correspondante, avec application de la loi pénale plus douce aux faits antérieurs ; leur adoption doit être concomitante. L. 2522-4 est déjà proposé à l'abrogation dans le corpus, sans être réécrit ici. Différence de champ : la comparution et le mandat de L. 2523-4/L. 2522-3 subsistent. Transition compatible : suppression des seuls rapports et transmissions restant à accomplir, conservation des documents remis ; aucune annulation des archives ni dispense de signaler une infraction autonome. Aucun solde financier ou de complexité de l'ensemble des codes n'est établi.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : la proposition retire un circuit ou ouvre une voie facultative ; elle ne crée ni formulaire, ni dépôt, ni délai minimal de remplacement. Les sauvegardes des archives et des actes anciens ne prescrivent pas de nouvelle production.",
         "effects": [
           {
@@ -489946,7 +489986,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Abrogation de l'organe spécial d'expertise et de ses évaluations et transmissions obligatoires. Le cadrage et la négociation de L5424-22 sont maintenus : une expertise spéciale obligatoire de chaque proposition ne se justifie pas en plus des capacités des gestionnaires et services statistiques.",
-        "scope_limitations": "Contradiction effective hors lot : D5424-68 maintenu prévoit « Le comité est saisi dans les conditions prévues au II de l'article L. 5424-23. » et vingt jours d’évaluation ; D5424-67 proposé conserve « Le comité d'expertise se réunit sur convocation de son président. » Abroger prospectivement D5424-66 à D5424-68 au même moment, sans supprimer la confidentialité survivante ni les remboursements acquis de D5424-69. Correction du brouillon : réserve expresse de ces deux protections. D5424-69 ne saurait ouvrir de nouvelles missions après disparition du comité, mais les frais de missions antérieures restent remboursables. Les arrêtés de nomination et le décret n° 66-619 ne sont pas fournis ; leur coordination n’est pas déclarée achevée.",
+        "scope_limitations": "Coordinations faites : D5424-66 (composition), D5424-67 (fonctionnement), D5424-68 (saisine, délai de vingt jours, données) et D5424-69 (frais) sont abrogés par leurs propositions à la même date que le présent article, sans supprimer la confidentialité survivante ni les remboursements acquis au titre des missions antérieures. Correction du brouillon : réserve expresse de ces deux protections. D5424-69 ne saurait ouvrir de nouvelles missions après disparition du comité, mais les frais de missions antérieures restent remboursables. Les arrêtés de nomination et le décret n° 66-619 ne sont pas fournis ; leur coordination n’est pas déclarée achevée.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : aucune déclaration, condition d’accès, registre ou délai supplémentaire n’est institué. Les contrôles et conditions autonomes conservés ne sont pas comptés comme des charges nouvelles ; aucun solde global des codes n’est chiffré.",
         "effects": [
           {
@@ -504453,7 +504493,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Suppression réelle de l'autorisation d'exercer et de la déclaration préalable UE/EEE. Leur fonction de filtre administratif est retirée ; les protections directement opposables de santé, de salaire, de conflits d'intérêts et de garantie demeurent, sans formalité substitutive. Coordination nécessaire établie : les brouillons R7123-11 et R7123-12 conservent des circuits liés à la licence ; leur exigibilité est expressément écartée. La dispense de L7124-4 est sécurisée sans supprimer la protection spéciale des enfants. Le corps précédent est conservé sans reformulation stylistique, sauf les compléments de coordination expressément décrits.",
-        "scope_limitations": "Examen du champ propre de L7123-11 et des contreparties citées dans review_notes ; coordinations hors lot encore ouvertes, sans chiffrage du solde national ni contrôle exhaustif des engagements internationaux.",
+        "scope_limitations": "Examen du champ propre de L7123-11 et des contreparties citées dans review_notes ; coordinations réglementaires et pénales faites (voir review_notes), sans chiffrage du solde national ni contrôle exhaustif des engagements internationaux.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : les obligations conservées figurent déjà dans les sources ; les précisions ajoutées écartent les formalités supprimées ou préservent des facultés existantes, sans nouveau registre, délai, dépôt ou prélèvement.",
         "effects": [
           {
@@ -504512,21 +504552,21 @@
         "version": 1,
         "classification": "coordination_only",
         "assessment": "Maintien et coordination de la dérogation favorable au prêt lucratif de main-d'œuvre : la suppression de la licence ne doit pas rendre illicites les prestations des agences, futures comprises. Le corps précédent est conservé sans reformulation stylistique, sauf les compléments de coordination expressément décrits.",
-        "scope_limitations": "Examen du champ propre de L7123-13 et des contreparties citées dans review_notes ; coordinations hors lot encore ouvertes, sans chiffrage du solde national ni contrôle exhaustif des engagements internationaux.",
+        "scope_limitations": "Examen du champ propre de L7123-13 et des contreparties citées dans review_notes ; coordination de L8241-1 faite par sa proposition, sans chiffrage du solde national ni contrôle exhaustif des engagements internationaux.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : les obligations conservées figurent déjà dans les sources ; les précisions ajoutées écartent les formalités supprimées ou préservent des facultés existantes, sans nouveau registre, délai, dépôt ou prélèvement.",
         "effects": [
           {
             "kind": "coordination",
             "measure_id": "agences-mannequins-suppression-licence",
             "description": "Maintien effectif de l'exception au prêt illicite malgré la suppression de licence.",
-            "before": "Dérogation par renvoi à L7123-11 et licence encore mentionnée dans L8241-1.",
+            "before": "Dérogation par renvoi à L7123-11 et licence mentionnée dans la source de L8241-1.",
             "after": "Dérogation applicable aux activités futures sans licence ni déclaration.",
             "unit": "legal_duty",
             "affected_population": "Agences de mannequins et personnes concernées dans le champ précisé par cet article.",
             "conditions_and_transition": "À l'entrée en vigueur de la loi instituant le contrat de travail unique ; activités déjà exercées et futures couvertes, droits antérieurs et garanties autonomes préservés.",
             "replacement_or_new_burdens": "Aucune formalité de remplacement ; garanties préexistantes conservées.",
             "source_quote": "Les dispositions relatives au prêt de main-d'oeuvre illicite prévues à l'article L. 8241-1 ne s'appliquent pas",
-            "proposed_quote": "cette dérogation s'applique sans licence ni déclaration préalable, y compris lorsque le 1° de l'article L. 8241-1 mentionne une telle licence."
+            "proposed_quote": "cette dérogation s'applique sans licence ni déclaration préalable."
           }
         ]
       }
@@ -504542,7 +504582,7 @@
         "version": 1,
         "classification": "coordination_only",
         "assessment": "Abrogation de la procédure de délivrance, de la production périodique de pièces et de la caducité de la licence devenue sans objet. L'équivalence des exigences UE/EEE n'est plus nécessaire dans ce circuit entièrement supprimé ; les garanties autonomes ne sont pas abolies. Le corps précédent est conservé sans reformulation stylistique, sauf les compléments de coordination expressément décrits.",
-        "scope_limitations": "Examen du champ propre de L7123-14 et des contreparties citées dans review_notes ; coordinations hors lot encore ouvertes, sans chiffrage du solde national ni contrôle exhaustif des engagements internationaux.",
+        "scope_limitations": "Examen du champ propre de L7123-14 et des contreparties citées dans review_notes ; coordinations hors lot faites (voir review_notes), sans chiffrage du solde national ni contrôle exhaustif des engagements internationaux.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : les obligations conservées figurent déjà dans les sources ; les précisions ajoutées écartent les formalités supprimées ou préservent des facultés existantes, sans nouveau registre, délai, dépôt ou prélèvement.",
         "effects": [
           {
@@ -504801,7 +504841,7 @@
         "version": 1,
         "classification": "coordination_only",
         "assessment": "Contradiction effective corrigée : le précédent maintien sanctionnait l’exercice « sans être titulaire d'une licence d'agence de mannequins ou sans avoir déclaré préalablement son activité », tandis que L7123-11 proposé autorise cet exercice « sans licence d'agence de mannequins » et « sans déclaration préalable propre à cette activité ». Abrogation de la sanction devenue sans fondement, à la même date que ces suppressions. Il s’agit de leur coordination pénale, non d’une seconde suppression de licence ou de déclaration. La comparaison porte sur la source officielle entière ; une sanction retirée ne signifie pas une formalité ni un prélèvement supprimé.",
-        "scope_limitations": "Aucun solde national de coût ou de complexité n’est établi. Les obligations civiles, les infractions distinctes et les droits à réparation restent hors de la suppression. Les règlements de licence et de déclaration restent à coordonner comme détaillé dans review_notes.",
+        "scope_limitations": "Aucun solde national de coût ou de complexité n’est établi. Les obligations civiles, les infractions distinctes et les droits à réparation restent hors de la suppression. Les règlements de licence et de déclaration sont coordonnés comme détaillé dans review_notes.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : la proposition retire une peine ou une infraction sans formalité de remplacement ; les réserves maintiennent des obligations autonomes existantes, sans en élargir le champ. Aucun solde global des neuf recueils n’est chiffré.",
         "effects": [
           {
@@ -510839,15 +510879,29 @@
       "source_id": "LEGIARTI000030442435",
       "number": "L8241-1",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien de l'interdiction du prêt exclusivement lucratif et de toutes ses exceptions : travail temporaire, temps partagé, mannequins sous licence, sport et mise à disposition syndicale ou patronale. Le remboursement limité aux salaires, charges et frais reste non lucratif ; retirer ces dérogations fermerait des possibilités favorables. Aucune réduction nouvelle par rapport à la source officielle entière.",
-        "scope_limitations": "Différence de champ : « pendant la mise à disposition » désigne l'opération, non un terme du contrat d'emploi. L2135-7 entier conserve accord exprès, obligations de l'employeur, cotisations sur indemnités de fonction et retour à un emploi de rémunération au moins équivalente ; L2135-8 conserve l'accord collectif et L2231-1 les organisations habilitées. Leurs propositions lues ne ferment pas la dérogation du 3°. Les exceptions des 1° et 2° restent ouvertes aux futures opérations admissibles. Points non vérifiables : L222-3 du code du sport non fourni et examen exhaustif des régimes spéciaux du 1° non accompli ; leur coordination avec le contrat unique demeure distincte. L8231-1 ne disparaît pas pour une opération abusive qui répond à ses éléments propres.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans ajout de formalité, délai, registre, justificatif ni condition d'accès. Aucun solde global des codes n'est chiffré.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination de l'exception au prêt de main-d'œuvre lucratif avec la suppression de la licence d'agence de mannequins (L. 7123-11 proposé) : la condition de licence est remplacée par le renvoi aux conditions de L. 7123-11, déjà retenu par L. 7123-13 proposé. Les autres exceptions et l'interdiction sont maintenues.",
+        "scope_limitations": "Différence de champ : « pendant la mise à disposition » désigne l'opération, non un terme du contrat d'emploi. L2135-7 entier conserve accord exprès, obligations de l'employeur, cotisations sur indemnités de fonction et retour à un emploi de rémunération au moins équivalente ; L2135-8 conserve l'accord collectif et L2231-1 les organisations habilitées. Leurs propositions lues ne ferment pas la dérogation du 3°. Les exceptions des 1° et 2° restent ouvertes aux futures opérations admissibles. Points non vérifiables : L222-3 du code du sport non fourni et examen exhaustif des régimes spéciaux du 1° non accompli ; leur coordination avec le contrat unique demeure distincte. L8231-1 ne disparaît pas pour une opération abusive qui répond à ses éléments propres. La coordination du 1° avec L. 7123-11 et L. 7123-13 proposés est faite ; L. 222-3 du code du sport et les articles 112-1 et suivants du code pénal ne sont pas fournis au corpus.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : la condition de licence est retirée sans déclaration, autorisation, agrément ni registre de remplacement ; l'exception est ouverte à toutes les agences qui en bénéficiaient.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "agences-mannequins-suppression-licence",
+            "description": "L'exception au prêt de main-d'œuvre lucratif ne dépend plus d'une licence supprimée.",
+            "before": "Exception du 1° réservée à l'agence exercée par une personne titulaire de la licence d'agence de mannequin.",
+            "after": "Exception du 1° ouverte à l'agence exercée dans les conditions de L. 7123-11, sans licence ni déclaration.",
+            "unit": "legal_duty",
+            "affected_population": "Agences de mannequins, utilisateurs et mannequins mis à disposition.",
+            "conditions_and_transition": "À l'entrée en vigueur de la loi instituant le contrat de travail unique, y compris pour les opérations en cours ; loi pénale plus douce pour les faits antérieurs ; droits civils antérieurs préservés.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+            "source_quote": "lorsque celle-ci est exercée par une personne titulaire de la licence d'agence de mannequin",
+            "proposed_quote": "lorsque celle-ci est exercée dans les conditions prévues à l'article L. 7123-11"
+          }
+        ]
       }
     },
     {
@@ -624967,15 +625021,29 @@
       "source_id": "LEGIARTI000031817805",
       "number": "D5424-69",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien du remboursement des frais de déplacement des personnalités qualifiées non agents de l'État. Il s'agit d'un avantage permettant leur participation à l'expertise, ouvert aux futurs membres ; aucune formalité supplémentaire n'est prescrite par cet article.",
-        "scope_limitations": "Point non vérifiable : « dans les conditions prévues par le décret n° 66-619 du 10 août 1966 » appelle un texte extérieur absent des pièces locales. Le remboursement des non-agents est conservé sans restriction future ; aucune concordance actuelle de ce décret ne peut être certifiée.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien des règles existantes ne crée ni donnée, ni registre, ni délai supplémentaire. Aucun solde global des codes n’est chiffré.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Le remboursement des frais des personnalités qualifiées du comité d'expertise prend fin pour l'avenir avec ce comité, supprimé par L5424-23 proposé ; les frais des missions antérieures restent remboursables. Effet dédupliqué sous la mesure commune de suppression du comité.",
+        "scope_limitations": "Le décret n° 66-619 du 10 août 1966 et les arrêtés de nomination ne sont pas fournis. L5424-23, D5424-66, D5424-67 et D5424-68 proposés lus intégralement.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucune demande, pièce ni délai n'est créé ; les remboursements des missions antérieures suivent les conditions alors applicables.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "suppression-comite-expertise-intermittents",
+            "description": "Fin, pour l'avenir, du remboursement des frais des membres d'un comité supprimé.",
+            "before": "Remboursement des frais de déplacement des personnalités qualifiées non agents publics du comité d'expertise.",
+            "after": "Remboursement limité aux missions accomplies avant la suppression du comité.",
+            "unit": "legal_duty",
+            "affected_population": "Personnalités qualifiées du comité d'expertise et ministères chargés de l'emploi et de la culture.",
+            "conditions_and_transition": "Même date que l'abrogation de L5424-23 ; droits au remboursement des missions antérieures conservés dans les conditions alors applicables.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+            "source_quote": "Les personnalités qualifiées qui n'ont pas la qualité de fonctionnaire ou d'agent de l'Etat bénéficient du remboursement de leurs frais de déplacement",
+            "proposed_quote": "conservent le droit au remboursement des frais de déplacement exposés au titre des missions accomplies avant cette date"
+          }
+        ]
       }
     },
     {
@@ -653351,7 +653419,7 @@
         "version": 1,
         "classification": "coordination_only",
         "assessment": "Retrait effectif des formalités de la source entière en exécution d'une mesure déjà portée par L7123-11 ; classement de coordination, sans multiplier les réductions par article d'exécution.",
-        "scope_limitations": "La suppression réglementaire suppose l'entrée en vigueur concordante des propositions de L7123-11 et L7123-14 ; celles-ci ne sont pas le droit en vigueur. R7123-13 et R7123-14 restent à harmoniser hors lot ; aucune cohérence globale des neuf recueils ni économie nationale n'est établie.",
+        "scope_limitations": "La suppression réglementaire suppose l'entrée en vigueur concordante des propositions de L7123-11 et L7123-14 ; celles-ci ne sont pas le droit en vigueur. R7123-13 et R7123-14 sont harmonisés par leurs propositions ; aucune cohérence globale des neuf recueils ni économie nationale n'est établie.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : pas de formulaire, registre, donnée, délai ou procédure de remplacement ; les garanties et contrôles autonomes déjà applicables sont préservés. Le solde global de complexité et de coût reste non établi.",
         "effects": [
           {
@@ -653411,7 +653479,7 @@
         "version": 1,
         "classification": "coordination_only",
         "assessment": "Retrait effectif des formalités de la source entière en exécution d'une mesure déjà portée par L7123-11 ; classement de coordination, sans multiplier les réductions par article d'exécution.",
-        "scope_limitations": "La suppression réglementaire suppose l'entrée en vigueur concordante des propositions de L7123-11 et L7123-14 ; celles-ci ne sont pas le droit en vigueur. R7123-13 et R7123-14 restent à harmoniser hors lot ; aucune cohérence globale des neuf recueils ni économie nationale n'est établie.",
+        "scope_limitations": "La suppression réglementaire suppose l'entrée en vigueur concordante des propositions de L7123-11 et L7123-14 ; celles-ci ne sont pas le droit en vigueur. R7123-13 et R7123-14 sont harmonisés par leurs propositions ; aucune cohérence globale des neuf recueils ni économie nationale n'est établie.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : pas de formulaire, registre, donnée, délai ou procédure de remplacement ; les garanties et contrôles autonomes déjà applicables sont préservés. Le solde global de complexité et de coût reste non établi.",
         "effects": [
           {
@@ -653441,7 +653509,7 @@
         "version": 1,
         "classification": "coordination_only",
         "assessment": "Retrait effectif des formalités de la source entière en exécution d'une mesure déjà portée par L7123-11 ; classement de coordination, sans multiplier les réductions par article d'exécution.",
-        "scope_limitations": "La suppression réglementaire suppose l'entrée en vigueur concordante des propositions de L7123-11 et L7123-14 ; celles-ci ne sont pas le droit en vigueur. R7123-13 et R7123-14 restent à harmoniser hors lot ; aucune cohérence globale des neuf recueils ni économie nationale n'est établie. R7123-12-1 proposé doit être abrogé conjointement ; les règles européennes complètes de sécurité sociale et de travail des enfants ne sont pas jointes.",
+        "scope_limitations": "La suppression réglementaire suppose l'entrée en vigueur concordante des propositions de L7123-11 et L7123-14 ; celles-ci ne sont pas le droit en vigueur. R7123-13 et R7123-14 sont harmonisés par leurs propositions ; aucune cohérence globale des neuf recueils ni économie nationale n'est établie. R7123-12-1 proposé est abrogé conjointement ; les règles européennes complètes de sécurité sociale et de travail des enfants ne sont pas jointes.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : pas de formulaire, registre, donnée, délai ou procédure de remplacement ; les garanties et contrôles autonomes déjà applicables sont préservés. Le solde global de complexité et de coût reste non établi.",
         "effects": [
           {
@@ -653501,7 +653569,7 @@
         "version": 1,
         "classification": "coordination_only",
         "assessment": "La confirmation tous les trois ans et son courrier recommandé disparaissent par coordination de la suppression générale de la licence déjà portée par L. 7123-11. Le précédent maintien des contrôles de licence est corrigé ; pas de deuxième licence ou taxe supprimée comptabilisée.",
-        "scope_limitations": "La suppression exige l'adoption de la réforme législative à la même date. R. 7123-11 et R. 7123-12 restent à aligner hors lot. Les obligations de santé, de salaire, de transparence et de garantie financière restent autonomes.",
+        "scope_limitations": "La suppression exige l'adoption de la réforme législative à la même date. R. 7123-11 et R. 7123-12 sont alignés par leurs propositions. Les obligations de santé, de salaire, de transparence et de garantie financière restent autonomes.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : ni confirmation de substitution ni demande pour bénéficier de l'abrogation. La cessation des seuls obstacles liés à la licence n'ajoute aucune formalité.",
         "effects": [
           {
@@ -653531,7 +653599,7 @@
         "version": 1,
         "classification": "coordination_only",
         "assessment": "La source entière organise la police d'une licence. La proposition retire ce circuit, ses pièces judiciaires et ses effets futurs pour rendre effective la suppression législative déjà proposée, tout en maintenant les protections autonomes. Ce n'est pas une nouvelle taxe ni une seconde autorisation supprimée.",
-        "scope_limitations": "La bascule dépend de la suppression législative de la licence ; les coordinations R. 7123-11/12 et L. 8241-1 restent hors lot. Les agréments d'enfants, garanties financières et recours historiques ne sont pas supprimés. Aucun gain net national n'est établi.",
+        "scope_limitations": "La bascule dépend de la suppression législative de la licence ; les coordinations R. 7123-11/12 et L. 8241-1 sont faites par leurs propositions. Les agréments d'enfants, garanties financières et recours historiques ne sont pas supprimés. Aucun gain net national n'est établi.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : aucune procédure de remplacement, aucun registre ou nouveau motif d'interdiction d'exercer. Le rappel des protections autonomes et des recours n'étend pas leurs champs.",
         "effects": [
           {

@@ -444,36 +444,57 @@
     "source_id": "LEGIARTI000031817805",
     "source_sha256": "e427655f9853884da78bf5c28ee680c4bdaaceda498833f666bc2d193820d762",
     "number": "D5424-69",
-    "proposed_xml": null,
-    "reason": "Maintien du remboursement des frais de déplacement des personnalités qualifiées non agents de l'État. Il s'agit d'un avantage permettant leur participation à l'expertise, ouvert aux futurs membres ; aucune formalité supplémentaire n'est prescrite par cet article.",
-    "review_notes": "Point non vérifiable : « dans les conditions prévues par le décret n° 66-619 du 10 août 1966 » appelle un texte extérieur absent des pièces locales. Le remboursement des non-agents est conservé sans restriction future ; aucune concordance actuelle de ce décret ne peut être certifiée.",
-    "status": "retained_unchanged",
+    "proposed_xml": "<p>Le présent article est abrogé à compter de la date d'entrée en vigueur de l'abrogation de l'article L. 5424-23 supprimant le comité d'expertise.</p><p>Les personnalités qualifiées qui n'ont pas la qualité de fonctionnaire ou d'agent de l'Etat conservent le droit au remboursement des frais de déplacement exposés au titre des missions accomplies avant cette date, dans les conditions prévues par le décret n° 66-619 du 10 août 1966 applicables à la date de ces missions. Aucune mission postérieure à la suppression du comité ne peut ouvrir droit à remboursement sur le fondement du présent article.</p>",
+    "reason": "Coordination avec L. 5424-23 proposé, qui supprime le comité d'expertise sur l'indemnisation des intermittents du spectacle : le remboursement des frais de ses personnalités qualifiées n'a plus d'objet pour l'avenir. Abrogation à la même date que D. 5424-66 à D. 5424-68, avec conservation expresse des droits au remboursement des frais exposés au titre des missions accomplies avant la suppression. Coordination de la même suppression, non comptée comme une seconde réduction ; aucun droit acquis ni aucune faveur ouverte à une personne existante n'est retiré.",
+    "review_notes": "Point non vérifiable : « dans les conditions prévues par le décret n° 66-619 du 10 août 1966 » appelle un texte extérieur absent des pièces locales ; aucune concordance actuelle de ce décret ne peut être certifiée. L5424-23 proposé dispose : « Le comité d'expertise et les obligations particulières de saisine, d'évaluation et de transmission d'informations prévues par le présent article prennent fin à cette date » et conserve « Les droits au remboursement des frais de déplacement exposés au titre de missions accomplies avant cette suppression ». D5424-66, D5424-67 et D5424-68 proposés sont abrogés à la même date avec la même réserve. Le maintien antérieur, motivé par un avantage « ouvert aux futurs membres », supposait un comité qui ne peut plus avoir de membres. Correction de la troisième passe (objection RT-ISS12-01, issue GitHub #12) : abrogation à la même date que L5424-23, droits au remboursement des missions antérieures conservés ; aucune perte de droit acquis, aucune formalité nouvelle.",
+    "status": "rewrite_draft",
     "source_conflict_ids": [],
     "impact_check_required": true,
     "benefit_check_required": false,
     "reference_checks": [],
-    "classification": "retained_necessary",
+    "classification": "coordination_only",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien du remboursement des frais de déplacement des personnalités qualifiées non agents de l'État. Il s'agit d'un avantage permettant leur participation à l'expertise, ouvert aux futurs membres ; aucune formalité supplémentaire n'est prescrite par cet article.",
-      "scope_limitations": "Point non vérifiable : « dans les conditions prévues par le décret n° 66-619 du 10 août 1966 » appelle un texte extérieur absent des pièces locales. Le remboursement des non-agents est conservé sans restriction future ; aucune concordance actuelle de ce décret ne peut être certifiée.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien des règles existantes ne crée ni donnée, ni registre, ni délai supplémentaire. Aucun solde global des codes n’est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Le remboursement des frais des personnalités qualifiées du comité d'expertise prend fin pour l'avenir avec ce comité, supprimé par L5424-23 proposé ; les frais des missions antérieures restent remboursables. Effet dédupliqué sous la mesure commune de suppression du comité.",
+      "scope_limitations": "Le décret n° 66-619 du 10 août 1966 et les arrêtés de nomination ne sont pas fournis. L5424-23, D5424-66, D5424-67 et D5424-68 proposés lus intégralement.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucune demande, pièce ni délai n'est créé ; les remboursements des missions antérieures suivent les conditions alors applicables.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "suppression-comite-expertise-intermittents",
+          "description": "Fin, pour l'avenir, du remboursement des frais des membres d'un comité supprimé.",
+          "before": "Remboursement des frais de déplacement des personnalités qualifiées non agents publics du comité d'expertise.",
+          "after": "Remboursement limité aux missions accomplies avant la suppression du comité.",
+          "unit": "legal_duty",
+          "affected_population": "Personnalités qualifiées du comité d'expertise et ministères chargés de l'emploi et de la culture.",
+          "conditions_and_transition": "Même date que l'abrogation de L5424-23 ; droits au remboursement des missions antérieures conservés dans les conditions alors applicables.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "Les personnalités qualifiées qui n'ont pas la qualité de fonctionnaire ou d'agent de l'Etat bénéficient du remboursement de leurs frais de déplacement",
+          "proposed_quote": "conservent le droit au remboursement des frais de déplacement exposés au titre des missions accomplies avant cette date"
+        }
+      ]
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "e427655f9853884da78bf5c28ee680c4bdaaceda498833f666bc2d193820d762",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "267de4f80a183cf5d10550f49ba54eacf28a346a90511963d6403417ccd2b3ff",
+      "proposed_sha256": "f638e9741840fecf27a1288e52391070088b4e5ccad63db10016843f9c97c176",
+      "assessment_sha256": "d82d852d97a99102a25ce24b1947b6381b8cb0d428a9578800d46a22a321da5f",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "change_type": "full_repeal",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Fin du remboursement des frais de déplacement des personnalités qualifiées du comité d'expertise des intermittents pour les missions postérieures à sa suppression par L. 5424-23 ; frais des missions antérieures conservés.",
+    "third_pass_correction": {
+      "objection": "RT-ISS12-01",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006072050",
