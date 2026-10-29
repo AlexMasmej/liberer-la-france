@@ -6,25 +6,37 @@
     "number": "D2135-29-2",
     "proposed_xml": "<p>Les informations relatives aux entreprises redevables transmises à l'association gestionnaire du fonds paritaire mentionnée à l'article L. 2135-9 par l'institution mentionnée à l'article L. 6123-5 sont prévues par la convention mentionnée au dernier alinéa du III de l'article L. 2135-10. La convention prévoit la communication des seules informations suivantes :</p><p>1° Le numéro d'identification de l'établissement (SIRET) ;</p><p>2° L'identifiant de convention collective de l'établissement (IDCC) ;</p><p>3° Abrogé ;</p><p>4° L'effectif moyen annuel ;</p><p>5° Abrogé ;</p><p>6° Abrogé.</p><p>La présente liste s'applique aux transmissions effectuées à compter de l'entrée en vigueur de la réforme, y compris lorsqu'elles portent sur des périodes antérieures. Les informations déjà transmises n'ont pas à être transmises de nouveau du seul fait de cette réforme.</p>",
     "reason": "La transmission reste nécessaire pour affecter les contributions conventionnelles par branche ; les identifiants SIRET et IDCC et l’effectif sont conservés. La raison sociale, l’adresse et le code APET sont retirés de ce flux obligatoire, ainsi que son extension indéfinie à toute information utile. Il s’agit d’une réduction de données transmises, non d’une suppression de contribution.",
-    "review_notes": "D2135-29-1 conserve SIRET, assiette et montant déclaré ; R2135-29-3 reste applicable aux informations encore prévues. Adapter la convention avec France compétences prévue au dernier alinéa du III de L2135-10. Aucun nouveau formulaire employeur. La suppression de ces champs dans ce flux ne supprime pas leur collecte légalement autonome.",
+    "review_notes": "D2135-29-1 conserve SIRET, assiette et montant déclaré ; R2135-29-3 reste applicable aux informations encore prévues. Adapter la convention avec France compétences prévue au dernier alinéa du III de L2135-10. Aucun nouveau formulaire employeur. La suppression de ces champs dans ce flux ne supprime pas leur collecte légalement autonome. Seconde passe : proposition précédente conservée exactement. Transition compatible : « aux transmissions effectuées à compter de l'entrée en vigueur de la réforme » concerne le flux futur, y compris les périodes anciennes, non les créances de contributions. L2135-10 III, lu en entier, prévoit des modalités de communication sans imposer lui-même raison sociale, adresse ou APET. Son 2° a) permet une modulation par effectifs ou identification de branche : SIRET, IDCC et effectif demeurent. D2135-29-1, source entière, apporte assiette et montant déclaré ; R2135-29-3 relaie les seules informations maintenues. L6123-5 entier et sa proposition maintiennent France compétences ; la suppression de ses enquêtes au 14° et de la contribution CPF-CDD ne supprime pas le flux conventionnel de dialogue social. Différence de champ avec reporting_social : ce flux n'est pas un état annuel de protection complémentaire. La convention effective, non fournie, reste à adapter ; aucun contrôle de son contenu ni gain de coût mesuré n'est affirmé.",
     "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "6fe751dc334462922f1e64727ed0e1be6b04369a8e328133dbbd4b503a5cdb2a",
+      "status": "rewrite_draft",
+      "proposed_xml": "<p>Les informations relatives aux entreprises redevables transmises à l'association gestionnaire du fonds paritaire mentionnée à l'article L. 2135-9 par l'institution mentionnée à l'article L. 6123-5 sont prévues par la convention mentionnée au dernier alinéa du III de l'article L. 2135-10. La convention prévoit la communication des seules informations suivantes :</p><p>1° Le numéro d'identification de l'établissement (SIRET) ;</p><p>2° L'identifiant de convention collective de l'établissement (IDCC) ;</p><p>3° Abrogé ;</p><p>4° L'effectif moyen annuel ;</p><p>5° Abrogé ;</p><p>6° Abrogé.</p><p>La présente liste s'applique aux transmissions effectuées à compter de l'entrée en vigueur de la réforme, y compris lorsqu'elles portent sur des périodes antérieures. Les informations déjà transmises n'ont pas à être transmises de nouveau du seul fait de cette réforme.</p>",
+      "reason": "La transmission reste nécessaire pour affecter les contributions conventionnelles par branche ; les identifiants SIRET et IDCC et l’effectif sont conservés. La raison sociale, l’adresse et le code APET sont retirés de ce flux obligatoire, ainsi que son extension indéfinie à toute information utile. Il s’agit d’une réduction de données transmises, non d’une suppression de contribution.",
+      "review_notes": "D2135-29-1 conserve SIRET, assiette et montant déclaré ; R2135-29-3 reste applicable aux informations encore prévues. Adapter la convention avec France compétences prévue au dernier alinéa du III de L2135-10. Aucun nouveau formulaire employeur. La suppression de ces champs dans ce flux ne supprime pas leur collecte légalement autonome.",
+      "proposed_sha256": "20f5142cf3f192d7d7cd38958b6825ae3b13aa91f6f1eac67f5157e1f2f2bf09",
+      "batch_row_sha256": "afc12f1dd7b41c785f7a387deab87151496daa4815cfcad6448482f0edd4a023"
+    },
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
       "assessment": "La transmission reste nécessaire pour affecter les contributions conventionnelles par branche ; les identifiants SIRET et IDCC et l’effectif sont conservés. La raison sociale, l’adresse et le code APET sont retirés de ce flux obligatoire, ainsi que son extension indéfinie à toute information utile. Il s’agit d’une réduction de données transmises, non d’une suppression de contribution.",
-      "scope_limitations": "D2135-29-1 conserve SIRET, assiette et montant déclaré ; R2135-29-3 reste applicable aux informations encore prévues. Adapter la convention avec France compétences prévue au dernier alinéa du III de L2135-10. Aucun nouveau formulaire employeur. La suppression de ces champs dans ce flux ne supprime pas leur collecte légalement autonome.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : les modalités restantes figurent déjà dans la source ; aucune déclaration, donnée, taxe ou autorisation de remplacement n’est créée. Le coût net global n’est pas chiffré.",
+      "scope_limitations": "D2135-29-1 conserve SIRET, assiette et montant déclaré ; R2135-29-3 reste applicable aux informations encore prévues. Adapter la convention avec France compétences prévue au dernier alinéa du III de L2135-10. Aucun nouveau formulaire employeur. La suppression de ces champs dans ce flux ne supprime pas leur collecte légalement autonome. Seconde passe : proposition précédente conservée exactement. Transition compatible : « aux transmissions effectuées à compter de l'entrée en vigueur de la réforme » concerne le flux futur, y compris les périodes anciennes, non les créances de contributions. L2135-10 III, lu en entier, prévoit des modalités de communication sans imposer lui-même raison sociale, adresse ou APET. Son 2° a) permet une modulation par effectifs ou identification de branche : SIRET, IDCC et effectif demeurent. D2135-29-1, source entière, apporte assiette et montant déclaré ; R2135-29-3 relaie les seules informations maintenues. L6123-5 entier et sa proposition maintiennent France compétences ; la suppression de ses enquêtes au 14° et de la contribution CPF-CDD ne supprime pas le flux conventionnel de dialogue social. Différence de champ avec reporting_social : ce flux n'est pas un état annuel de protection complémentaire. La convention effective, non fournie, reste à adapter ; aucun contrôle de son contenu ni gain de coût mesuré n'est affirmé. Le solde de complexité ou de coût de l’ensemble des codes n’est pas établi.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les modifications retirent une contrainte de flux ou de support, ou coordonnent un renvoi ou le critère légal de financement ; aucun registre, déclaration de remplacement ni délai supplémentaire n'est institué. Le coût net global n'est pas chiffré.",
       "effects": [
         {
           "kind": "obligation_removed",
-          "measure_id": "donnees-fonds-paritaire-liste-limitee",
-          "description": "Retrait de trois champs et de la clause ouverte dans le flux de France compétences.",
-          "before": "Communication obligatoire de SIRET, IDCC, raison sociale, effectif, adresse et APET ; toute autre information utile prévue par convention.",
-          "after": "SIRET, IDCC et effectif seuls dans ce flux ; contributions inchangées.",
+          "measure_id": "fonds-paritaire-reduction-donnees",
+          "description": "Liste de transmission limitée à SIRET, IDCC et effectif ; trois champs et extension ouverte retirés.",
+          "before": "Six champs énumérés et toute autre information utile, transmis par France compétences au fonds.",
+          "after": "Trois champs maintenus ; plus de raison sociale, adresse ou APET obligatoires dans ce flux.",
           "unit": "legal_duty",
-          "affected_population": "France compétences, association gestionnaire du fonds paritaire et entreprises redevables concernées.",
-          "conditions_and_transition": "Flux transmis à compter de l’entrée en vigueur, y compris au titre de périodes antérieures ; informations déjà transmises non remises en cause.",
-          "replacement_or_new_burdens": "Aucune charge nouvelle de remplacement ; les obligations autonomes mentionnées dans les notes demeurent.",
+          "affected_population": "France compétences, fonds paritaire et associations de branche destinataires.",
+          "conditions_and_transition": "Transmissions à compter de la réforme, même relatives à des périodes antérieures ; pas de réémission des données déjà transmises.",
+          "replacement_or_new_burdens": "Aucune obligation nouvelle identifiée ; les garanties et obligations autonomes décrites dans les notes demeurent.",
           "source_quote": "La convention prévoit la communication de toute autre information utile à l'application du III de l'article L. 2135-10.",
           "proposed_quote": "La convention prévoit la communication des seules informations suivantes :"
         }
@@ -33,20 +45,24 @@
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Transmission obligatoire de la raison sociale, de l’adresse et du code APET dans le flux prévu par cet article.",
-      "Obligation conventionnelle de communiquer toute autre information utile sans liste limitative."
+      "Transmission obligatoire de la raison sociale prévue au 3° de la liste réglementaire.",
+      "Transmission obligatoire de l'adresse de l'établissement prévue au 5° de la liste.",
+      "Transmission obligatoire du code d'activité principale de l'établissement prévue au 6°.",
+      "Extension ouverte de la convention à toute autre information utile au recouvrement de branche."
     ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "6fe751dc334462922f1e64727ed0e1be6b04369a8e328133dbbd4b503a5cdb2a",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "20f5142cf3f192d7d7cd38958b6825ae3b13aa91f6f1eac67f5157e1f2f2bf09",
-      "assessment_sha256": "24e2af7dda2fb414a8fe9a2d88f2e0857a23b5f8f1553fbfa6ddbb43a325c1bb",
+      "assessment_sha256": "dd4a8c3a56b984933ece89182321989b75d03132b24b2e850ac6c8d834f0bcc2",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "20f5142cf3f192d7d7cd38958b6825ae3b13aa91f6f1eac67f5157e1f2f2bf09"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -55,15 +71,27 @@
     "number": "R2135-29-3",
     "proposed_xml": null,
     "reason": "Maintien du cadre conventionnel de transmission aux associations de branche attributaires : il permet de rattacher les ressources effectivement recouvrées aux bénéficiaires. Ce circuit ne crée pas une déclaration supplémentaire des employeurs ; sa suppression fragiliserait la traçabilité des sommes affectées.",
-    "review_notes": "Les renvois à D2135-29-1 et D2135-29-2 sont dynamiques et restent opérants avec la liste réduite proposée pour ce dernier. Le III et le 4° du I de L2135-10 ainsi que le 4° de L2135-12 ont été confrontés. Aucun montant de contribution modifié.",
+    "review_notes": "Les renvois à D2135-29-1 et D2135-29-2 sont dynamiques et restent opérants avec la liste réduite proposée pour ce dernier. Le III et le 4° du I de L2135-10 ainsi que le 4° de L2135-12 ont été confrontés. Aucun montant de contribution modifié. Seconde passe : maintien confirmé après lecture entière de L2135-9/10/11/12 et D2135-29-1. Le passage « mentionnées aux articles D. 2135-29-1 et D. 2135-29-2 » ne contient pas de liste autonome susceptible de rétablir les champs retirés dans D2135-29-2. Transition compatible : le relais des données futures suit la liste réduite sans supprimer la répartition des anciennes créances. Différence de champ avec les transmissions CPPNI supprimées : il s'agit ici de sommes affectées à leurs associations bénéficiaires. Les conventions effectives ne sont pas fournies et restent à adapter, sans nouveau formulaire d'employeur.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "402f72857bfa864d4369e86dd84761022bc644ccd35427996b5787fe55972294",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien du cadre conventionnel de transmission aux associations de branche attributaires : il permet de rattacher les ressources effectivement recouvrées aux bénéficiaires. Ce circuit ne crée pas une déclaration supplémentaire des employeurs ; sa suppression fragiliserait la traçabilité des sommes affectées.",
+      "review_notes": "Les renvois à D2135-29-1 et D2135-29-2 sont dynamiques et restent opérants avec la liste réduite proposée pour ce dernier. Le III et le 4° du I de L2135-10 ainsi que le 4° de L2135-12 ont été confrontés. Aucun montant de contribution modifié.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "424a94c02fe63ad6f78845565ffb3f7aa5e4bab2070cad3db02613475a2c0a77"
+    },
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien du cadre conventionnel de transmission aux associations de branche attributaires : il permet de rattacher les ressources effectivement recouvrées aux bénéficiaires. Ce circuit ne crée pas une déclaration supplémentaire des employeurs ; sa suppression fragiliserait la traçabilité des sommes affectées.",
-      "scope_limitations": "Les renvois à D2135-29-1 et D2135-29-2 sont dynamiques et restent opérants avec la liste réduite proposée pour ce dernier. Le III et le 4° du I de L2135-10 ainsi que le 4° de L2135-12 ont été confrontés. Aucun montant de contribution modifié.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
+      "scope_limitations": "Les renvois à D2135-29-1 et D2135-29-2 sont dynamiques et restent opérants avec la liste réduite proposée pour ce dernier. Le III et le 4° du I de L2135-10 ainsi que le 4° de L2135-12 ont été confrontés. Aucun montant de contribution modifié. Seconde passe : maintien confirmé après lecture entière de L2135-9/10/11/12 et D2135-29-1. Le passage « mentionnées aux articles D. 2135-29-1 et D. 2135-29-2 » ne contient pas de liste autonome susceptible de rétablir les champs retirés dans D2135-29-2. Transition compatible : le relais des données futures suit la liste réduite sans supprimer la répartition des anciennes créances. Différence de champ avec les transmissions CPPNI supprimées : il s'agit ici de sommes affectées à leurs associations bénéficiaires. Les conventions effectives ne sont pas fournies et restent à adapter, sans nouveau formulaire d'employeur. Le solde de complexité ou de coût de l’ensemble des codes n’est pas établi.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien intégral de la règle source sans ajout de registre, de donnée, de justificatif ou de délai.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -71,72 +99,128 @@
       "source_sha256": "402f72857bfa864d4369e86dd84761022bc644ccd35427996b5787fe55972294",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "f87fc5b39fe1728aa02fc83084bb647dcde4ae3c0b68eab4810533b5e2160104",
+      "assessment_sha256": "a6753fcdd58cd94e39ccfff1dfa2c292fd9e9d4b4a1dfa6782b0b6333b47d5b0",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000030172751",
     "source_sha256": "bc3ccb4af5b7aabef22b179cb2776969e56ac29b712ae785770c62728b2dcc1f",
     "number": "D2135-30",
-    "proposed_xml": null,
-    "reason": "Maintien des deux enveloppes de crédits publics de 80 % et 20 % et de leur partage égal entre organisations éligibles. Ces garanties de financement du dialogue social ne sont ni une taxe ni un rapport redondant ; leur suppression retirerait un financement favorable sans supprimer une charge correspondante.",
-    "review_notes": "Renvois confrontés à L2135-12, L2135-13, L2122-9 et L2152-2. Divergence préexistante : le règlement écrit « entre 3 % et 8 % », alors que la loi retient « plus de 3 % » et la représentativité exige notamment au moins 8 %. Ne pas déduire de la formulation réglementaire un droit contraire à la loi ; les bornes nécessitent une clarification distincte, sans retrait silencieux de bénéficiaires. Le 2° visé appartient au I de L2135-13.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "proposed_xml": "\n<p>En application du 2° du I de l'article L. 2135-13, le fonds attribue les crédits versés par l'Etat selon les modalités suivantes : <br />\n<br />1° 80 % de ses crédits, à parts égales, entre chacune des organisations syndicales de salariés représentatives au niveau national et interprofessionnel et des organisations professionnelles d'employeurs représentatives au niveau national et interprofessionnel ; <br />\n<br />2° 20 % de ses crédits, à parts égales, entre chacune des organisations syndicales de salariés dont la vocation statutaire revêt un caractère national et interprofessionnel et qui ont recueilli plus de 3 % des suffrages exprimés lors des élections prévues au 3° de l'article L. 2122-9 et aux organisations professionnelles d'employeurs représentatives au niveau national et multiprofessionnel mentionnées à l'article L. 2152-2.<br />\n</p>\n",
+    "reason": "Coordination nécessaire : la source réglementaire retient « entre 3 % et 8 % », tandis que L2135-12, 2° et L2135-13, I, 2° retiennent « plus de 3 % ». Le précédent maintien laissait cette discordance ouverte. Le texte reprend désormais le critère légal, sans plafond réglementaire de 8 %, et précise le renvoi au I. Les deux enveloppes de 80 % et 20 %, les parts égales, la vocation statutaire nationale et interprofessionnelle et les organisations patronales multiprofessionnelles restent intégralement conservées. Il ne s'agit ni d'une baisse de contribution ni d'une suppression de financement.",
+    "review_notes": "Sources et propositions entières de L2135-11, L2135-12, L2135-13, L2122-9 et L2152-2 lues. Contradiction effective : « entre 3 % et 8 % » ne peut ni rendre éligible un résultat égal à 3 % contre « plus de 3 % », ni écarter automatiquement une organisation dépassant 8 % qui ne satisfait pas aux autres critères de représentativité. L2122-9 exige aussi les critères de L2121-1 et une représentativité dans quatre secteurs. La proposition suit le champ légal sans inventer un nouveau seuil. Les droits légalement ouverts restent accessibles aux futurs bénéficiaires ; aucune reprise de crédits anciens n'est créée. Point à contrôler hors lot : L2135-13, I, 2° superpose littéralement les catégories représentatives et celles dépassant 3 %, tout en exigeant un forfait inférieur pour la seconde base ; ni le cumul ni son exclusion ne sont tranchés ici par une restriction réglementaire nouvelle. Le respect du montant forfaitaire inférieur dépend des effectifs de bénéficiaires, non fournis ; les enveloppes 80/20 ne le démontrent pas à elles seules. Les modalités d'attribution doivent respecter la loi. Les références rurales de L2152-2 ne sont pas documentées dans les neuf recueils.",
+    "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "bc3ccb4af5b7aabef22b179cb2776969e56ac29b712ae785770c62728b2dcc1f",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien des deux enveloppes de crédits publics de 80 % et 20 % et de leur partage égal entre organisations éligibles. Ces garanties de financement du dialogue social ne sont ni une taxe ni un rapport redondant ; leur suppression retirerait un financement favorable sans supprimer une charge correspondante.",
+      "review_notes": "Renvois confrontés à L2135-12, L2135-13, L2122-9 et L2152-2. Divergence préexistante : le règlement écrit « entre 3 % et 8 % », alors que la loi retient « plus de 3 % » et la représentativité exige notamment au moins 8 %. Ne pas déduire de la formulation réglementaire un droit contraire à la loi ; les bornes nécessitent une clarification distincte, sans retrait silencieux de bénéficiaires. Le 2° visé appartient au I de L2135-13.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "7cade5972a2cef40f88ed368c5907d1ebd1c7d8e875c5115594a3d82e211b7bd"
+    },
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien des deux enveloppes de crédits publics de 80 % et 20 % et de leur partage égal entre organisations éligibles. Ces garanties de financement du dialogue social ne sont ni une taxe ni un rapport redondant ; leur suppression retirerait un financement favorable sans supprimer une charge correspondante.",
-      "scope_limitations": "Renvois confrontés à L2135-12, L2135-13, L2122-9 et L2152-2. Divergence préexistante : le règlement écrit « entre 3 % et 8 % », alors que la loi retient « plus de 3 % » et la représentativité exige notamment au moins 8 %. Ne pas déduire de la formulation réglementaire un droit contraire à la loi ; les bornes nécessitent une clarification distincte, sans retrait silencieux de bénéficiaires. Le 2° visé appartient au I de L2135-13.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination nécessaire : la source réglementaire retient « entre 3 % et 8 % », tandis que L2135-12, 2° et L2135-13, I, 2° retiennent « plus de 3 % ». Le précédent maintien laissait cette discordance ouverte. Le texte reprend désormais le critère légal, sans plafond réglementaire de 8 %, et précise le renvoi au I. Les deux enveloppes de 80 % et 20 %, les parts égales, la vocation statutaire nationale et interprofessionnelle et les organisations patronales multiprofessionnelles restent intégralement conservées. Il ne s'agit ni d'une baisse de contribution ni d'une suppression de financement.",
+      "scope_limitations": "Sources et propositions entières de L2135-11, L2135-12, L2135-13, L2122-9 et L2152-2 lues. Contradiction effective : « entre 3 % et 8 % » ne peut ni rendre éligible un résultat égal à 3 % contre « plus de 3 % », ni écarter automatiquement une organisation dépassant 8 % qui ne satisfait pas aux autres critères de représentativité. L2122-9 exige aussi les critères de L2121-1 et une représentativité dans quatre secteurs. La proposition suit le champ légal sans inventer un nouveau seuil. Les droits légalement ouverts restent accessibles aux futurs bénéficiaires ; aucune reprise de crédits anciens n'est créée. Point à contrôler hors lot : L2135-13, I, 2° superpose littéralement les catégories représentatives et celles dépassant 3 %, tout en exigeant un forfait inférieur pour la seconde base ; ni le cumul ni son exclusion ne sont tranchés ici par une restriction réglementaire nouvelle. Le respect du montant forfaitaire inférieur dépend des effectifs de bénéficiaires, non fournis ; les enveloppes 80/20 ne le démontrent pas à elles seules. Les modalités d'attribution doivent respecter la loi. Les références rurales de L2152-2 ne sont pas documentées dans les neuf recueils. Le solde de complexité ou de coût de l’ensemble des codes n’est pas établi.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les modifications retirent une contrainte de flux ou de support, ou coordonnent un renvoi ou le critère légal de financement ; aucun registre, déclaration de remplacement ni délai supplémentaire n'est institué. Le coût net global n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "fonds-paritaire-seuil-financement",
+          "description": "Alignement du critère de financement sur la loi sans nouvelle restriction réglementaire.",
+          "before": "Intervalle réglementaire entre 3 % et 8 % des suffrages exprimés pour la seconde enveloppe de 20 %.",
+          "after": "Plus de 3 % des mêmes suffrages ; enveloppes 80 % et 20 % inchangées, critère légal et renvoi au I explicites.",
+          "unit": "other",
+          "affected_population": "Organisations syndicales à vocation nationale et interprofessionnelle ; organisations patronales éligibles inchangées.",
+          "conditions_and_transition": "Application du critère légal aux attributions ; aucun recouvrement rétroactif ni fermeture aux futurs bénéficiaires.",
+          "replacement_or_new_burdens": "Aucune obligation nouvelle identifiée ; les garanties et obligations autonomes décrites dans les notes demeurent.",
+          "source_quote": "qui ont recueilli entre 3 % et 8 % des suffrages exprimés",
+          "proposed_quote": "qui ont recueilli plus de 3 % des suffrages exprimés"
+        }
+      ]
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "bc3ccb4af5b7aabef22b179cb2776969e56ac29b712ae785770c62728b2dcc1f",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "f447e73a9cef19f80c78621bf635aa8ea298a379848164f4d7cd038e1b32285a",
+      "proposed_sha256": "d19aa70872832d2c4ab7332014f6b0bf1261bf2f127faec807aa4bfa8d35a07c",
+      "assessment_sha256": "8efada1078517d195bff21b080dc9cdb5b538e2e1fa93b752f2ad78e79e7a42b",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000030172753",
     "source_sha256": "6e932126429da4513b412db611858867a3e6d708c946329042f1ff8fdbb8843f",
     "number": "D2135-31",
-    "proposed_xml": null,
-    "reason": "Maintien de la répartition selon l’audience et du socle égalitaire : le minimum de 7,9 millions d’euros et la limite du quart de la part proportionnelle assurent un financement effectif de la formation syndicale. Aucun justificatif ni prélèvement accessoire n’est institué ici.",
-    "review_notes": "Les organisations visées au 3° de L2135-12 et l’audience électorale du 3° de L2122-9 sont conservées. Le 3° de L2135-13 se situe dans son I. Le cumul du plancher et du plafond dépend des crédits disponibles ; aucun financement additionnel présumé.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "proposed_xml": "\n<p>En application des dispositions du 3° du I de l'article L. 2135-13, le fonds attribue les crédits entre chacune des organisations mentionnées au 3° de l'article L. 2135-12 en fonction de leur audience selon les modalités suivantes : <br />\n<br />1° Une part est attribuée proportionnellement à l'audience obtenue par chacune d'entre elles lors des élections prévues au 3° de l'article L. 2122-9 ; <br />\n<br />2° Une part des crédits, qui ne peut être inférieure à 7,9 millions d'euros ni supérieure au quart de la part prévue au 1°, est répartie à parts égales entre chacune des organisations.</p>\n",
+    "reason": "Coordination nécessaire limitée à la subdivision : le « 3° de l'article L. 2135-13 » est le 3° de son I ; son II contient d'autres règles de calendrier. Le renvoi est précisé sans reformulation du corps. Les parts proportionnelle et égalitaire, le plancher de 7,9 millions d'euros, le plafond du quart et tous les bénéficiaires restent conservés. Aucun prélèvement ni justificatif n'est supprimé.",
+    "review_notes": "Les organisations visées au 3° de L2135-12 et l’audience électorale du 3° de L2122-9 sont conservées. Le 3° de L2135-13 se situe dans son I. Le cumul du plancher et du plafond dépend des crédits disponibles ; aucun financement additionnel présumé. L2135-11, L2135-12, L2135-13 et L2122-9 lus en entier, sources et propositions. Différence de champ : « plus de 3 % » ouvre la formation syndicale tandis que « au moins 8 % » contribue à la représentativité ; aucune borne de 8 % n'est ajoutée ici. Point non vérifiable : pour respecter simultanément « 7,9 millions d'euros » et « au quart de la part prévue au 1° », la part proportionnelle doit atteindre au moins 31,6 millions d'euros ; aucune donnée d'allocation ne permet de constater ici une insuffisance effective. Aucun crédit budgétaire supplémentaire n'est créé. Le II de L2135-13 conserve son année de prise en compte et la transition des regroupements de branches.",
+    "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "6e932126429da4513b412db611858867a3e6d708c946329042f1ff8fdbb8843f",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien de la répartition selon l’audience et du socle égalitaire : le minimum de 7,9 millions d’euros et la limite du quart de la part proportionnelle assurent un financement effectif de la formation syndicale. Aucun justificatif ni prélèvement accessoire n’est institué ici.",
+      "review_notes": "Les organisations visées au 3° de L2135-12 et l’audience électorale du 3° de L2122-9 sont conservées. Le 3° de L2135-13 se situe dans son I. Le cumul du plancher et du plafond dépend des crédits disponibles ; aucun financement additionnel présumé.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "a72af689c04de48969522b13578800cc8a0534dcbc9aa848f75e846d8033d74d"
+    },
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien de la répartition selon l’audience et du socle égalitaire : le minimum de 7,9 millions d’euros et la limite du quart de la part proportionnelle assurent un financement effectif de la formation syndicale. Aucun justificatif ni prélèvement accessoire n’est institué ici.",
-      "scope_limitations": "Les organisations visées au 3° de L2135-12 et l’audience électorale du 3° de L2122-9 sont conservées. Le 3° de L2135-13 se situe dans son I. Le cumul du plancher et du plafond dépend des crédits disponibles ; aucun financement additionnel présumé.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination nécessaire limitée à la subdivision : le « 3° de l'article L. 2135-13 » est le 3° de son I ; son II contient d'autres règles de calendrier. Le renvoi est précisé sans reformulation du corps. Les parts proportionnelle et égalitaire, le plancher de 7,9 millions d'euros, le plafond du quart et tous les bénéficiaires restent conservés. Aucun prélèvement ni justificatif n'est supprimé.",
+      "scope_limitations": "Les organisations visées au 3° de L2135-12 et l’audience électorale du 3° de L2122-9 sont conservées. Le 3° de L2135-13 se situe dans son I. Le cumul du plancher et du plafond dépend des crédits disponibles ; aucun financement additionnel présumé. L2135-11, L2135-12, L2135-13 et L2122-9 lus en entier, sources et propositions. Différence de champ : « plus de 3 % » ouvre la formation syndicale tandis que « au moins 8 % » contribue à la représentativité ; aucune borne de 8 % n'est ajoutée ici. Point non vérifiable : pour respecter simultanément « 7,9 millions d'euros » et « au quart de la part prévue au 1° », la part proportionnelle doit atteindre au moins 31,6 millions d'euros ; aucune donnée d'allocation ne permet de constater ici une insuffisance effective. Aucun crédit budgétaire supplémentaire n'est créé. Le II de L2135-13 conserve son année de prise en compte et la transition des regroupements de branches. Le solde de complexité ou de coût de l’ensemble des codes n’est pas établi.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les modifications retirent une contrainte de flux ou de support, ou coordonnent un renvoi ou le critère légal de financement ; aucun registre, déclaration de remplacement ni délai supplémentaire n'est institué. Le coût net global n'est pas chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "fonds-paritaire-repartition-renvois",
+          "description": "Identification du I de la disposition légale de répartition.",
+          "before": "Renvoi au 3° de L2135-13 sans indication du I.",
+          "after": "Renvoi au 3° du I de L2135-13 ; 7,9 millions et plafond du quart inchangés.",
+          "unit": "other",
+          "affected_population": "Organisations bénéficiaires du financement de la formation syndicale.",
+          "conditions_and_transition": "Aucun changement des périodes ou droits à financement.",
+          "replacement_or_new_burdens": "Aucune obligation nouvelle identifiée ; les garanties et obligations autonomes décrites dans les notes demeurent.",
+          "source_quote": "En application des dispositions du 3° de l'article L. 2135-13",
+          "proposed_quote": "En application des dispositions du 3° du I de l'article L. 2135-13"
+        }
+      ]
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "6e932126429da4513b412db611858867a3e6d708c946329042f1ff8fdbb8843f",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "d28e94dd6d030a000d7462900dbc2944f770c87b2a6b69154824ca51ed12580e",
+      "proposed_sha256": "aa15dfc0a5b8f306c8735ae7a95e4eb335dbc5189c5bea5f7ee96c14ff6246e0",
+      "assessment_sha256": "b284521c5ab275fdd13bf6e83552bc2e04020b6c2625be9e198a3f42e25c5a3c",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -145,25 +229,37 @@
     "number": "D2135-34",
     "proposed_xml": "<p>Le taux de la contribution prévue au I de l'article L. 2135-15-1 est fixé à 0,016 %.</p>",
     "reason": "Coordination du taux existant de 0,016 % avec son fondement législatif actuel, L2135-15-1 I, après constat que le II de L2135-10 est abrogé. Aucune baisse de taux n’est revendiquée. Cette contribution finance les missions collectives de L2135-11 ; son retrait isolé compromettrait leur financement et ne supprimerait pas l’obligation législative ni son plancher.",
-    "review_notes": "L2135-15-1 I impose une fourchette de 0,014 % à 0,02 %, sur les rémunérations relevant de L242-1 CSS et L741-10 du code rural, pour les employeurs de L2111-1. Aucun taux intermédiaire inventé. La contribution conventionnelle de branche du III de L2135-10 demeure distincte. Une suppression éventuelle exigerait une modification législative et le traitement du financement des missions ; elle n’est pas accomplie par ce règlement.",
+    "review_notes": "L2135-15-1 I impose une fourchette de 0,014 % à 0,02 %, sur les rémunérations relevant de L242-1 CSS et L741-10 du code rural, pour les employeurs de L2111-1. Aucun taux intermédiaire inventé. La contribution conventionnelle de branche du III de L2135-10 demeure distincte. Une suppression éventuelle exigerait une modification législative et le traitement du financement des missions ; elle n’est pas accomplie par ce règlement. Seconde passe : brouillon conservé exactement. Contradiction effective dans la source : « au II de l'article L. 2135-10 » renvoie à « II. ― (Abrogé) ». L2135-15-1 I, source et projet entiers, porte désormais la même contribution et ses bornes ; L2111-1 maintient le champ privé et la réserve statutaire du personnel public de droit privé. Les missions financées de L2135-11 et les bénéficiaires de L2135-12 ont été lus entièrement. La correction ne crée ni nouveau fait générateur ni rappel rétroactif. Les règles détaillées de l'assiette rurale L741-10 ne sont pas disponibles ; aucune vérification globale de cette assiette extérieure ni suppression implicite d'exonération n'est affirmée.",
     "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "6afbcdd9c4b8c315aec8226ba599fc706001bff6bf842c36a5eb5b0b9f6000fe",
+      "status": "rewrite_draft",
+      "proposed_xml": "<p>Le taux de la contribution prévue au I de l'article L. 2135-15-1 est fixé à 0,016 %.</p>",
+      "reason": "Coordination du taux existant de 0,016 % avec son fondement législatif actuel, L2135-15-1 I, après constat que le II de L2135-10 est abrogé. Aucune baisse de taux n’est revendiquée. Cette contribution finance les missions collectives de L2135-11 ; son retrait isolé compromettrait leur financement et ne supprimerait pas l’obligation législative ni son plancher.",
+      "review_notes": "L2135-15-1 I impose une fourchette de 0,014 % à 0,02 %, sur les rémunérations relevant de L242-1 CSS et L741-10 du code rural, pour les employeurs de L2111-1. Aucun taux intermédiaire inventé. La contribution conventionnelle de branche du III de L2135-10 demeure distincte. Une suppression éventuelle exigerait une modification législative et le traitement du financement des missions ; elle n’est pas accomplie par ce règlement.",
+      "proposed_sha256": "9d4abfccca0ec6080bd2b8f1f53e408589465018c08116d71092b2549320e5aa",
+      "batch_row_sha256": "39e7a6550f42bc549ad5bcf13c569230ebf222cd397a4b90c64a0d2f8a0c5bb5"
+    },
     "substantive_impact": {
       "version": 1,
       "classification": "coordination_only",
       "assessment": "Coordination du taux existant de 0,016 % avec son fondement législatif actuel, L2135-15-1 I, après constat que le II de L2135-10 est abrogé. Aucune baisse de taux n’est revendiquée. Cette contribution finance les missions collectives de L2135-11 ; son retrait isolé compromettrait leur financement et ne supprimerait pas l’obligation législative ni son plancher.",
-      "scope_limitations": "L2135-15-1 I impose une fourchette de 0,014 % à 0,02 %, sur les rémunérations relevant de L242-1 CSS et L741-10 du code rural, pour les employeurs de L2111-1. Aucun taux intermédiaire inventé. La contribution conventionnelle de branche du III de L2135-10 demeure distincte. Une suppression éventuelle exigerait une modification législative et le traitement du financement des missions ; elle n’est pas accomplie par ce règlement.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : les modalités restantes figurent déjà dans la source ; aucune déclaration, donnée, taxe ou autorisation de remplacement n’est créée. Le coût net global n’est pas chiffré.",
+      "scope_limitations": "L2135-15-1 I impose une fourchette de 0,014 % à 0,02 %, sur les rémunérations relevant de L242-1 CSS et L741-10 du code rural, pour les employeurs de L2111-1. Aucun taux intermédiaire inventé. La contribution conventionnelle de branche du III de L2135-10 demeure distincte. Une suppression éventuelle exigerait une modification législative et le traitement du financement des missions ; elle n’est pas accomplie par ce règlement. Seconde passe : brouillon conservé exactement. Contradiction effective dans la source : « au II de l'article L. 2135-10 » renvoie à « II. ― (Abrogé) ». L2135-15-1 I, source et projet entiers, porte désormais la même contribution et ses bornes ; L2111-1 maintient le champ privé et la réserve statutaire du personnel public de droit privé. Les missions financées de L2135-11 et les bénéficiaires de L2135-12 ont été lus entièrement. La correction ne crée ni nouveau fait générateur ni rappel rétroactif. Les règles détaillées de l'assiette rurale L741-10 ne sont pas disponibles ; aucune vérification globale de cette assiette extérieure ni suppression implicite d'exonération n'est affirmée. Le solde de complexité ou de coût de l’ensemble des codes n’est pas établi.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les modifications retirent une contrainte de flux ou de support, ou coordonnent un renvoi ou le critère légal de financement ; aucun registre, déclaration de remplacement ni délai supplémentaire n'est institué. Le coût net global n'est pas chiffré.",
       "effects": [
         {
           "kind": "coordination",
-          "measure_id": "financement-syndical-renvoi-contribution",
-          "description": "Rétablissement du bon fondement de la contribution existante.",
-          "before": "Taux de 0,016 % ; renvoi au II abrogé de L2135-10 ; assiette législative des rémunérations.",
-          "after": "Même taux de 0,016 % et même assiette législative ; référence à L2135-15-1 I.",
-          "unit": "legal_duty",
-          "affected_population": "Employeurs assujettis à la contribution de financement du dialogue social.",
-          "conditions_and_transition": "Application à l’entrée en vigueur de la réforme ; droits antérieurs et règles de fond inchangés.",
-          "replacement_or_new_burdens": "Aucune charge nouvelle de remplacement ; les obligations autonomes mentionnées dans les notes demeurent.",
+          "measure_id": "fonds-paritaire-contribution-renvoi",
+          "description": "Réparation du renvoi au fondement de la contribution.",
+          "before": "0,016 % sur les rémunérations de l’assiette L242-1 CSS et L741-10 rural ; renvoi au II abrogé de L2135-10.",
+          "after": "Même taux de 0,016 %, mêmes redevables et assiette ; renvoi au I de L2135-15-1.",
+          "unit": "percent",
+          "affected_population": "Employeurs relevant de L2111-1.",
+          "conditions_and_transition": "Aucune baisse, taxe nouvelle, rétroactivité ou suppression de créance.",
+          "replacement_or_new_burdens": "Aucune obligation nouvelle identifiée ; les garanties et obligations autonomes décrites dans les notes demeurent.",
           "source_quote": "Le taux de la contribution prévue au II de l'article L. 2135-10 est fixé à 0,016 %.",
           "proposed_quote": "Le taux de la contribution prévue au I de l'article L. 2135-15-1 est fixé à 0,016 %."
         }
@@ -174,12 +270,14 @@
       "source_sha256": "6afbcdd9c4b8c315aec8226ba599fc706001bff6bf842c36a5eb5b0b9f6000fe",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "9d4abfccca0ec6080bd2b8f1f53e408589465018c08116d71092b2549320e5aa",
-      "assessment_sha256": "dd79a265f1f2cab1ca109c8df8b1a1c01a60b2c9523bff94aceb38d5c7856b08",
+      "assessment_sha256": "72201d3d3627b740ae8f45adcae1c5c15755cb5c5254bbaaec92eb3f2da4dbf7",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "9d4abfccca0ec6080bd2b8f1f53e408589465018c08116d71092b2549320e5aa"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -188,15 +286,27 @@
     "number": "R2142-1",
     "proposed_xml": null,
     "reason": "Maintien de la demi-journée accordée au représentant de section syndicale pour un reliquat inférieur à quatre heures : supprimer cet arrondi favorable réduirait le temps effectif de représentation des salariés au forfait en jours. Aucun dépôt, agrément ou délai minimal inutile à retirer.",
-    "review_notes": "L2142-1-3 conserve la conversion des heures en demi-journées, le paiement et le recours judiciaire de l’employeur. La déduction porte sur les jours annuels de la convention individuelle ; aucun changement du forfait ni des heures mensuelles.",
+    "review_notes": "L2142-1-3 conserve la conversion des heures en demi-journées, le paiement et le recours judiciaire de l’employeur. La déduction porte sur les jours annuels de la convention individuelle ; aucun changement du forfait ni des heures mensuelles. Seconde passe : L2142-1-3, source et projet entiers, dit « Une demi-journée correspond à quatre heures de mandat » et réserve « Sauf accord collectif contraire ». Le règlement règle seulement le reliquat inférieur à quatre heures ; il n'efface pas cette réserve légale. L3121-58 entier délimite les salariés autonomes au forfait jours. Différence de champ : les quarante heures hebdomadaires du contrat unique ne modifient ni cette conversion ni le minimum de quatre heures mensuelles. Avantage ouvert aux futures situations éligibles et aux mandats en cours, sans nouvelle démarche.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "049b28350106b77e2391131b251095fa1eb6ba72661882a674e57a9290066244",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien de la demi-journée accordée au représentant de section syndicale pour un reliquat inférieur à quatre heures : supprimer cet arrondi favorable réduirait le temps effectif de représentation des salariés au forfait en jours. Aucun dépôt, agrément ou délai minimal inutile à retirer.",
+      "review_notes": "L2142-1-3 conserve la conversion des heures en demi-journées, le paiement et le recours judiciaire de l’employeur. La déduction porte sur les jours annuels de la convention individuelle ; aucun changement du forfait ni des heures mensuelles.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "22cb4065673c3ccba5cd9a219848e73f9fff487d44eb5d49702b57c1fd91e018"
+    },
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien de la demi-journée accordée au représentant de section syndicale pour un reliquat inférieur à quatre heures : supprimer cet arrondi favorable réduirait le temps effectif de représentation des salariés au forfait en jours. Aucun dépôt, agrément ou délai minimal inutile à retirer.",
-      "scope_limitations": "L2142-1-3 conserve la conversion des heures en demi-journées, le paiement et le recours judiciaire de l’employeur. La déduction porte sur les jours annuels de la convention individuelle ; aucun changement du forfait ni des heures mensuelles.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
+      "scope_limitations": "L2142-1-3 conserve la conversion des heures en demi-journées, le paiement et le recours judiciaire de l’employeur. La déduction porte sur les jours annuels de la convention individuelle ; aucun changement du forfait ni des heures mensuelles. Seconde passe : L2142-1-3, source et projet entiers, dit « Une demi-journée correspond à quatre heures de mandat » et réserve « Sauf accord collectif contraire ». Le règlement règle seulement le reliquat inférieur à quatre heures ; il n'efface pas cette réserve légale. L3121-58 entier délimite les salariés autonomes au forfait jours. Différence de champ : les quarante heures hebdomadaires du contrat unique ne modifient ni cette conversion ni le minimum de quatre heures mensuelles. Avantage ouvert aux futures situations éligibles et aux mandats en cours, sans nouvelle démarche. Le solde de complexité ou de coût de l’ensemble des codes n’est pas établi.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien intégral de la règle source sans ajout de registre, de donnée, de justificatif ou de délai.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -204,12 +314,14 @@
       "source_sha256": "049b28350106b77e2391131b251095fa1eb6ba72661882a674e57a9290066244",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "7558c6c6026c0002b3e9b13fda2d134cfd36ebf8b34bfe81e23c81bd3b29b479",
+      "assessment_sha256": "ddcbcf7ea5501cf3c2470f040372cb87cca59c6bfca27f071723f632fd42070a",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -218,15 +330,27 @@
     "number": "R2143-1",
     "proposed_xml": null,
     "reason": "Maintien du choix de l’échelon de fixation des délégués syndicaux, entreprise ou établissement distinct. Cette règle garantit une représentation adaptée à l’organisation du travail sans exiger de procédure administrative autonome.",
-    "review_notes": "Le premier alinéa de L2143-3 permet la désignation dans l’entreprise ou l’établissement d’au moins cinquante salariés. Articulation conservée avec R2143-2 et R2143-3 ; aucune réduction du nombre de représentants.",
+    "review_notes": "Le premier alinéa de L2143-3 permet la désignation dans l’entreprise ou l’établissement d’au moins cinquante salariés. Articulation conservée avec R2143-2 et R2143-3 ; aucune réduction du nombre de représentants. Seconde passe : L2143-3, L2143-12 et R2143-3 lus entièrement. « soit par entreprise, soit par établissement distinct » n'est pas une faculté de réduire librement les représentants : R2143-3 impose l'échelon d'établissement dans son champ. L2143-12 permet le dépassement du barème en application de L2143-4 et L2143-5, lus entièrement : le délégué supplémentaire et le central restent distincts. Aucun plafond global opposable à ces droits autonomes n'est ajouté.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "02a4ff7db6af302149448cd4bda84d30f3a284c61bf80ed21a36f4331ef1f7cb",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien du choix de l’échelon de fixation des délégués syndicaux, entreprise ou établissement distinct. Cette règle garantit une représentation adaptée à l’organisation du travail sans exiger de procédure administrative autonome.",
+      "review_notes": "Le premier alinéa de L2143-3 permet la désignation dans l’entreprise ou l’établissement d’au moins cinquante salariés. Articulation conservée avec R2143-2 et R2143-3 ; aucune réduction du nombre de représentants.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "72081bff4f01ed7fe9db18d0449d40fb79e6506b03caac34ef39b05a481dbd96"
+    },
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien du choix de l’échelon de fixation des délégués syndicaux, entreprise ou établissement distinct. Cette règle garantit une représentation adaptée à l’organisation du travail sans exiger de procédure administrative autonome.",
-      "scope_limitations": "Le premier alinéa de L2143-3 permet la désignation dans l’entreprise ou l’établissement d’au moins cinquante salariés. Articulation conservée avec R2143-2 et R2143-3 ; aucune réduction du nombre de représentants.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
+      "scope_limitations": "Le premier alinéa de L2143-3 permet la désignation dans l’entreprise ou l’établissement d’au moins cinquante salariés. Articulation conservée avec R2143-2 et R2143-3 ; aucune réduction du nombre de représentants. Seconde passe : L2143-3, L2143-12 et R2143-3 lus entièrement. « soit par entreprise, soit par établissement distinct » n'est pas une faculté de réduire librement les représentants : R2143-3 impose l'échelon d'établissement dans son champ. L2143-12 permet le dépassement du barème en application de L2143-4 et L2143-5, lus entièrement : le délégué supplémentaire et le central restent distincts. Aucun plafond global opposable à ces droits autonomes n'est ajouté. Le solde de complexité ou de coût de l’ensemble des codes n’est pas établi.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien intégral de la règle source sans ajout de registre, de donnée, de justificatif ou de délai.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -234,12 +358,14 @@
       "source_sha256": "02a4ff7db6af302149448cd4bda84d30f3a284c61bf80ed21a36f4331ef1f7cb",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "cdc2dad24a036a6195775958ffbc0cb5cb3a76f7b795bb81f2111b939b5d000d",
+      "assessment_sha256": "7be8aa92570d238751909772144ef6f1638107241e2a9a246c80d023f088961d",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -248,15 +374,27 @@
     "number": "R2143-2",
     "proposed_xml": null,
     "reason": "Maintien des cinq tranches d’effectifs et de leurs nombres de délégués : 1, 2, 3, 4 et 5. Ces moyens concrets d’exercice de la liberté syndicale ne constituent pas des formalités redondantes ; les réduire affecterait la représentation collective.",
-    "review_notes": "Seuils conservés : 50–999, 1 000–1 999, 2 000–3 999, 4 000–9 999 et au-delà de 9 999 salariés. R2143-3 étend ce barème à chaque établissement distinct éligible. Aucune incidence du contrat unique sur ce barème.",
+    "review_notes": "Seuils conservés : 50–999, 1 000–1 999, 2 000–3 999, 4 000–9 999 et au-delà de 9 999 salariés. R2143-3 étend ce barème à chaque établissement distinct éligible. Aucune incidence du contrat unique sur ce barème. Seconde passe : barème entier confronté à L2143-3/4/5/12 et R2143-1/3, sources et propositions. « Au-delà de 9 999 salariés : 5 délégués » conserve le passage à cinq dès 10 000. Les bornes successives n'ont ni trou ni chevauchement. Différence de champ : le supplément de L2143-4 à partir de cinq cents salariés et le central distinct de L2143-5 à partir de deux mille demeurent ; cinq n'est pas un plafond absolu tous mandats confondus. Les bénéficiaires futurs sont conservés.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "331cb71c901cf0bc3fb6ba9aa0315641d8998c82411d329c0b87fd435dae1f8d",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien des cinq tranches d’effectifs et de leurs nombres de délégués : 1, 2, 3, 4 et 5. Ces moyens concrets d’exercice de la liberté syndicale ne constituent pas des formalités redondantes ; les réduire affecterait la représentation collective.",
+      "review_notes": "Seuils conservés : 50–999, 1 000–1 999, 2 000–3 999, 4 000–9 999 et au-delà de 9 999 salariés. R2143-3 étend ce barème à chaque établissement distinct éligible. Aucune incidence du contrat unique sur ce barème.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "cf1e5bce876b26c2a76a039082d9fc14b8d2fe3e0b4bb0fecc7a2c0691818bf5"
+    },
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien des cinq tranches d’effectifs et de leurs nombres de délégués : 1, 2, 3, 4 et 5. Ces moyens concrets d’exercice de la liberté syndicale ne constituent pas des formalités redondantes ; les réduire affecterait la représentation collective.",
-      "scope_limitations": "Seuils conservés : 50–999, 1 000–1 999, 2 000–3 999, 4 000–9 999 et au-delà de 9 999 salariés. R2143-3 étend ce barème à chaque établissement distinct éligible. Aucune incidence du contrat unique sur ce barème.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
+      "scope_limitations": "Seuils conservés : 50–999, 1 000–1 999, 2 000–3 999, 4 000–9 999 et au-delà de 9 999 salariés. R2143-3 étend ce barème à chaque établissement distinct éligible. Aucune incidence du contrat unique sur ce barème. Seconde passe : barème entier confronté à L2143-3/4/5/12 et R2143-1/3, sources et propositions. « Au-delà de 9 999 salariés : 5 délégués » conserve le passage à cinq dès 10 000. Les bornes successives n'ont ni trou ni chevauchement. Différence de champ : le supplément de L2143-4 à partir de cinq cents salariés et le central distinct de L2143-5 à partir de deux mille demeurent ; cinq n'est pas un plafond absolu tous mandats confondus. Les bénéficiaires futurs sont conservés. Le solde de complexité ou de coût de l’ensemble des codes n’est pas établi.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien intégral de la règle source sans ajout de registre, de donnée, de justificatif ou de délai.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -264,12 +402,14 @@
       "source_sha256": "331cb71c901cf0bc3fb6ba9aa0315641d8998c82411d329c0b87fd435dae1f8d",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "773e09a7da573d1c13149bbdf60b15a5fc59ee988386a41c0b643f983c43d8f4",
+      "assessment_sha256": "909042995fc1ab5e0941e07372367b071c99376d445758fdb34ff95cb55eba9a",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -278,25 +418,37 @@
     "number": "R2143-3",
     "proposed_xml": "<p>\n<br />Dans les entreprises comportant des établissements distincts de cinquante salariés ou plus, le nombre des délégués syndicaux est fixé par établissement conformément à l'article R. 2143-2. <br />Pour apprécier le seuil de cinquante salariés, l'effectif est calculé conformément au troisième alinéa de l'article L. 2143-3.</p>",
     "reason": "Correction du renvoi au seuil de cinquante salariés : la condition de douze mois consécutifs se trouve au troisième alinéa de L2143-3, et non au deuxième, qui traite des candidats susceptibles d’être désignés. Le barème par établissement est intégralement conservé ; aucune réduction matérielle revendiquée.",
-    "review_notes": "La totalité de L2143-3 et de R2143-2 a été confrontée. Le seuil de cinquante salariés et la durée législative de douze mois demeurent ; correction de référence uniquement, sans modifier les droits de désignation.",
+    "review_notes": "La totalité de L2143-3 et de R2143-2 a été confrontée. Le seuil de cinquante salariés et la durée législative de douze mois demeurent ; correction de référence uniquement, sans modifier les droits de désignation. Seconde passe : brouillon conservé exactement. Contradiction effective : « deuxième alinéa » de la source vise les solutions de désignation subsidiaire ; le troisième de L2143-3, version du 26 octobre 2025 et proposition, dit « pendant douze mois consécutifs ». Le renvoi corrigé ne change ni seuil ni durée. Le quatrième alinéa définit l'établissement ; L2143-12 réserve les délégués supplémentaires et centraux de L2143-4/5. Les conditions de disparition du mandat en cas de baisse d'effectif restent celles de L2143-11, lu entier ; aucune cessation automatique ni nouveau délai n'est créé.",
     "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "429682f90bfbc4ea0720387858fc19eec676c0917e98f2167aa3036937250ee3",
+      "status": "rewrite_draft",
+      "proposed_xml": "<p>\n<br />Dans les entreprises comportant des établissements distincts de cinquante salariés ou plus, le nombre des délégués syndicaux est fixé par établissement conformément à l'article R. 2143-2. <br />Pour apprécier le seuil de cinquante salariés, l'effectif est calculé conformément au troisième alinéa de l'article L. 2143-3.</p>",
+      "reason": "Correction du renvoi au seuil de cinquante salariés : la condition de douze mois consécutifs se trouve au troisième alinéa de L2143-3, et non au deuxième, qui traite des candidats susceptibles d’être désignés. Le barème par établissement est intégralement conservé ; aucune réduction matérielle revendiquée.",
+      "review_notes": "La totalité de L2143-3 et de R2143-2 a été confrontée. Le seuil de cinquante salariés et la durée législative de douze mois demeurent ; correction de référence uniquement, sans modifier les droits de désignation.",
+      "proposed_sha256": "e7972675541da93348ea2fc51c0eef9f341d1e2675190439114d313bf8b4f195",
+      "batch_row_sha256": "9e31a15b40922d6b3c943defff034d83823f3f6335934af0e827ab6c1a70f35b"
+    },
     "substantive_impact": {
       "version": 1,
       "classification": "coordination_only",
       "assessment": "Correction du renvoi au seuil de cinquante salariés : la condition de douze mois consécutifs se trouve au troisième alinéa de L2143-3, et non au deuxième, qui traite des candidats susceptibles d’être désignés. Le barème par établissement est intégralement conservé ; aucune réduction matérielle revendiquée.",
-      "scope_limitations": "La totalité de L2143-3 et de R2143-2 a été confrontée. Le seuil de cinquante salariés et la durée législative de douze mois demeurent ; correction de référence uniquement, sans modifier les droits de désignation.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : les modalités restantes figurent déjà dans la source ; aucune déclaration, donnée, taxe ou autorisation de remplacement n’est créée. Le coût net global n’est pas chiffré.",
+      "scope_limitations": "La totalité de L2143-3 et de R2143-2 a été confrontée. Le seuil de cinquante salariés et la durée législative de douze mois demeurent ; correction de référence uniquement, sans modifier les droits de désignation. Seconde passe : brouillon conservé exactement. Contradiction effective : « deuxième alinéa » de la source vise les solutions de désignation subsidiaire ; le troisième de L2143-3, version du 26 octobre 2025 et proposition, dit « pendant douze mois consécutifs ». Le renvoi corrigé ne change ni seuil ni durée. Le quatrième alinéa définit l'établissement ; L2143-12 réserve les délégués supplémentaires et centraux de L2143-4/5. Les conditions de disparition du mandat en cas de baisse d'effectif restent celles de L2143-11, lu entier ; aucune cessation automatique ni nouveau délai n'est créé. Le solde de complexité ou de coût de l’ensemble des codes n’est pas établi.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les modifications retirent une contrainte de flux ou de support, ou coordonnent un renvoi ou le critère légal de financement ; aucun registre, déclaration de remplacement ni délai supplémentaire n'est institué. Le coût net global n'est pas chiffré.",
       "effects": [
         {
           "kind": "coordination",
-          "measure_id": "delegues-syndicaux-renvoi-effectif",
-          "description": "Correction du renvoi au seuil d’effectif.",
-          "before": "Renvoi au deuxième alinéa relatif aux personnes désignables.",
-          "after": "Renvoi au troisième alinéa : cinquante salariés pendant douze mois consécutifs.",
-          "unit": "legal_duty",
-          "affected_population": "Organisations syndicales et entreprises comportant des établissements distincts.",
-          "conditions_and_transition": "Application à l’entrée en vigueur de la réforme ; droits antérieurs et règles de fond inchangés.",
-          "replacement_or_new_burdens": "Aucune charge nouvelle de remplacement ; les obligations autonomes mentionnées dans les notes demeurent.",
+          "measure_id": "delegues-syndicaux-seuil-renvoi",
+          "description": "Correction de la cible du calcul du seuil.",
+          "before": "Renvoi au deuxième alinéa relatif aux candidats subsidiaires.",
+          "after": "Renvoi au troisième alinéa fixant cinquante salariés pendant douze mois consécutifs.",
+          "unit": "other",
+          "affected_population": "Établissements distincts d’au moins cinquante salariés et organisations syndicales.",
+          "conditions_and_transition": "Pas de modification du seuil, de la durée ou des mandats existants.",
+          "replacement_or_new_burdens": "Aucune obligation nouvelle identifiée ; les garanties et obligations autonomes décrites dans les notes demeurent.",
           "source_quote": "Pour apprécier le seuil de cinquante salariés, l'effectif est calculé conformément au deuxième alinéa de l'article L. 2143-3.",
           "proposed_quote": "Pour apprécier le seuil de cinquante salariés, l'effectif est calculé conformément au troisième alinéa de l'article L. 2143-3."
         }
@@ -307,12 +459,14 @@
       "source_sha256": "429682f90bfbc4ea0720387858fc19eec676c0917e98f2167aa3036937250ee3",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e7972675541da93348ea2fc51c0eef9f341d1e2675190439114d313bf8b4f195",
-      "assessment_sha256": "02f7cf523e6f1d3ff1c1b82788762fe75d6a18257fcd2a2541e23ea06e396317",
+      "assessment_sha256": "f1a45f78e7a9a577f732ffbffba033cf87bae85dd79d23480f4f3e2d645eecee",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e7972675541da93348ea2fc51c0eef9f341d1e2675190439114d313bf8b4f195"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -321,15 +475,27 @@
     "number": "R2143-3-1",
     "proposed_xml": null,
     "reason": "Maintien de la demi-journée favorable pour les reliquats de moins de quatre heures des délégués syndicaux et centraux. Ce droit rend utilisable le crédit de délégation dans les conventions de forfait en jours et ne peut être supprimé au titre des formalités.",
-    "review_notes": "L2143-13 et L2143-15 conservent leur conversion en demi-journées et leurs crédits propres. Aucun cumul supplémentaire, aucun changement des plafonds horaires ou des conventions individuelles.",
+    "review_notes": "L2143-13 et L2143-15 conservent leur conversion en demi-journées et leurs crédits propres. Aucun cumul supplémentaire, aucun changement des plafonds horaires ou des conventions individuelles. Seconde passe : L2143-13 et L2143-15 entiers conservent « Sauf accord collectif contraire », la conversion de quatre heures et leurs crédits mensuels propres. L2143-15 réserve le cumul aux fonctions autres que délégué d'établissement ; ce règlement ne le transforme pas en cumul général. L2143-5 et L3121-58 lus en entier. Différence de champ : la demi-journée de reliquat favorable ne relève ni du préavis individuel ni du seuil hebdomadaire de quarante heures. Maintien pour les futurs représentants éligibles.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "872a553d4dddeae623ae2828c072b1fc69fb54b92296c1402bd4195ba380dc06",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien de la demi-journée favorable pour les reliquats de moins de quatre heures des délégués syndicaux et centraux. Ce droit rend utilisable le crédit de délégation dans les conventions de forfait en jours et ne peut être supprimé au titre des formalités.",
+      "review_notes": "L2143-13 et L2143-15 conservent leur conversion en demi-journées et leurs crédits propres. Aucun cumul supplémentaire, aucun changement des plafonds horaires ou des conventions individuelles.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "4671b3964ef83f4960e663ecb3e3b9f06af4fc4e0d4683470ffdc4cfa21d63ce"
+    },
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien de la demi-journée favorable pour les reliquats de moins de quatre heures des délégués syndicaux et centraux. Ce droit rend utilisable le crédit de délégation dans les conventions de forfait en jours et ne peut être supprimé au titre des formalités.",
-      "scope_limitations": "L2143-13 et L2143-15 conservent leur conversion en demi-journées et leurs crédits propres. Aucun cumul supplémentaire, aucun changement des plafonds horaires ou des conventions individuelles.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
+      "scope_limitations": "L2143-13 et L2143-15 conservent leur conversion en demi-journées et leurs crédits propres. Aucun cumul supplémentaire, aucun changement des plafonds horaires ou des conventions individuelles. Seconde passe : L2143-13 et L2143-15 entiers conservent « Sauf accord collectif contraire », la conversion de quatre heures et leurs crédits mensuels propres. L2143-15 réserve le cumul aux fonctions autres que délégué d'établissement ; ce règlement ne le transforme pas en cumul général. L2143-5 et L3121-58 lus en entier. Différence de champ : la demi-journée de reliquat favorable ne relève ni du préavis individuel ni du seuil hebdomadaire de quarante heures. Maintien pour les futurs représentants éligibles. Le solde de complexité ou de coût de l’ensemble des codes n’est pas établi.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien intégral de la règle source sans ajout de registre, de donnée, de justificatif ou de délai.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -337,12 +503,14 @@
       "source_sha256": "872a553d4dddeae623ae2828c072b1fc69fb54b92296c1402bd4195ba380dc06",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "39be716fa9b1ab2daa8aa86cae6531e30e9cde94bc1a84067cac69d73aaabfaf",
+      "assessment_sha256": "f80597bed6b041a96c0ff814b72f507b09779469c310f3038b1e1b2095b1f84c",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -351,46 +519,60 @@
     "number": "D2143-4",
     "proposed_xml": "<p>Les nom et prénoms du ou des délégués syndicaux, du délégué syndical central et du représentant syndical au comité social et économique sont portés à la connaissance de l'employeur par tout moyen permettant d'établir la réception de cette information et sa date, notamment par lettre recommandée avec avis de réception ou par lettre remise contre récépissé.</p><p>Ces modalités s'appliquent aux communications effectuées à compter de l'entrée en vigueur de la réforme. Les communications antérieures et les délais qu'elles ont fait courir ne sont pas remis en cause.</p>",
     "reason": "Suppression de l’exclusivité des deux supports de notification des désignations. La réception certaine et sa date restent nécessaires pour identifier les représentants et sécuriser les contestations ; la notification par lettre reste possible sans être imposée. Réduction de contrainte de support, pas suppression de l’information.",
-    "review_notes": "L2143-7 conserve l’affichage, la copie simultanée à l’inspection du travail et la procédure applicable aux remplacements et cessations de fonctions. Le délai de contestation de L2143-8 n’est pas modifié. Aucun courriel simplement envoyé n’est présumé reçu ; ne pas attribuer un gain chiffré à une faculté de preuve déjà admise en pratique.",
+    "review_notes": "L2143-7 conserve l’affichage, la copie simultanée à l’inspection du travail et la procédure applicable aux remplacements et cessations de fonctions. Le délai de contestation de L2143-8 n’est pas modifié. Aucun courriel simplement envoyé n’est présumé reçu ; ne pas attribuer un gain chiffré à une faculté de preuve déjà admise en pratique. Seconde passe : proposition précédente conservée exactement. L2143-7/8, sources et projets entiers, distinguent publicité et recours : « dans les quinze jours suivants l'accomplissement des formalités » est un délai de contestation, non le préavis de rupture. La preuve de réception et de sa date préserve le point de départ sans faire disparaître l'affichage. L2142-1-2 étend les garanties de publicité et de contestation aux représentants de section ; L2143-5 étend les dispositions au central. R2143-5 conserve les notifications judiciaires du greffe par lettre recommandée, qui ont un objet distinct. Aucun changement de ces notifications ne résulte de la liberté de support offerte aux syndicats. L'effet relevé est la levée de l'exclusivité textuelle de deux supports ; la jurisprudence sur les preuves déjà recevables n'est pas fournie, donc le gain pratique net demeure non vérifiable.",
     "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "ebe06e5cf6edf5b5223bfb6bdbd6ee51c3a0a839d69f9f52e32c0bcb6e7c1989",
+      "status": "rewrite_draft",
+      "proposed_xml": "<p>Les nom et prénoms du ou des délégués syndicaux, du délégué syndical central et du représentant syndical au comité social et économique sont portés à la connaissance de l'employeur par tout moyen permettant d'établir la réception de cette information et sa date, notamment par lettre recommandée avec avis de réception ou par lettre remise contre récépissé.</p><p>Ces modalités s'appliquent aux communications effectuées à compter de l'entrée en vigueur de la réforme. Les communications antérieures et les délais qu'elles ont fait courir ne sont pas remis en cause.</p>",
+      "reason": "Suppression de l’exclusivité des deux supports de notification des désignations. La réception certaine et sa date restent nécessaires pour identifier les représentants et sécuriser les contestations ; la notification par lettre reste possible sans être imposée. Réduction de contrainte de support, pas suppression de l’information.",
+      "review_notes": "L2143-7 conserve l’affichage, la copie simultanée à l’inspection du travail et la procédure applicable aux remplacements et cessations de fonctions. Le délai de contestation de L2143-8 n’est pas modifié. Aucun courriel simplement envoyé n’est présumé reçu ; ne pas attribuer un gain chiffré à une faculté de preuve déjà admise en pratique.",
+      "proposed_sha256": "141ee25f7688cc12d0652ec00ca46546f0ff5535011f64601408bbd28834ae0c",
+      "batch_row_sha256": "2285be0155115bdc8f190b1f39933319ba70d4bd1844f40f48d83fd380b39874"
+    },
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
       "assessment": "Suppression de l’exclusivité des deux supports de notification des désignations. La réception certaine et sa date restent nécessaires pour identifier les représentants et sécuriser les contestations ; la notification par lettre reste possible sans être imposée. Réduction de contrainte de support, pas suppression de l’information.",
-      "scope_limitations": "L2143-7 conserve l’affichage, la copie simultanée à l’inspection du travail et la procédure applicable aux remplacements et cessations de fonctions. Le délai de contestation de L2143-8 n’est pas modifié. Aucun courriel simplement envoyé n’est présumé reçu ; ne pas attribuer un gain chiffré à une faculté de preuve déjà admise en pratique.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : les modalités restantes figurent déjà dans la source ; aucune déclaration, donnée, taxe ou autorisation de remplacement n’est créée. Le coût net global n’est pas chiffré.",
+      "scope_limitations": "L2143-7 conserve l’affichage, la copie simultanée à l’inspection du travail et la procédure applicable aux remplacements et cessations de fonctions. Le délai de contestation de L2143-8 n’est pas modifié. Aucun courriel simplement envoyé n’est présumé reçu ; ne pas attribuer un gain chiffré à une faculté de preuve déjà admise en pratique. Seconde passe : proposition précédente conservée exactement. L2143-7/8, sources et projets entiers, distinguent publicité et recours : « dans les quinze jours suivants l'accomplissement des formalités » est un délai de contestation, non le préavis de rupture. La preuve de réception et de sa date préserve le point de départ sans faire disparaître l'affichage. L2142-1-2 étend les garanties de publicité et de contestation aux représentants de section ; L2143-5 étend les dispositions au central. R2143-5 conserve les notifications judiciaires du greffe par lettre recommandée, qui ont un objet distinct. Aucun changement de ces notifications ne résulte de la liberté de support offerte aux syndicats. L'effet relevé est la levée de l'exclusivité textuelle de deux supports ; la jurisprudence sur les preuves déjà recevables n'est pas fournie, donc le gain pratique net demeure non vérifiable. Le solde de complexité ou de coût de l’ensemble des codes n’est pas établi.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les modifications retirent une contrainte de flux ou de support, ou coordonnent un renvoi ou le critère légal de financement ; aucun registre, déclaration de remplacement ni délai supplémentaire n'est institué. Le coût net global n'est pas chiffré.",
       "effects": [
         {
-          "kind": "compliance_cost_reduced",
+          "kind": "obligation_removed",
           "measure_id": "designation-syndicale-liberte-support",
-          "description": "Levée de l’exclusivité des deux supports de notification.",
-          "before": "Lettre recommandée avec avis de réception ou lettre remise contre récépissé imposée par le règlement.",
-          "after": "Tout moyen prouvant la réception et sa date ; destinataires inchangés.",
+          "description": "Retrait de la restriction réglementaire de support avec réception datée prouvable.",
+          "before": "Deux supports textuellement prévus : recommandé avec avis de réception ou remise contre récépissé.",
+          "after": "Tout moyen établissant réception et date ; les deux supports restent facultativement utilisables.",
           "unit": "legal_duty",
-          "affected_population": "Organisations désignant des délégués syndicaux, délégué central ou représentant au CSE, et employeurs destinataires.",
-          "conditions_and_transition": "Application à l’entrée en vigueur de la réforme ; droits antérieurs et règles de fond inchangés.",
-          "replacement_or_new_burdens": "Aucune charge nouvelle de remplacement ; les obligations autonomes mentionnées dans les notes demeurent.",
+          "affected_population": "Organisations notifiant les délégués, le central et le représentant syndical au CSE.",
+          "conditions_and_transition": "Communications après entrée en vigueur ; communications et délais antérieurs préservés. La portée pratique dépend aussi des solutions jurisprudentielles non fournies.",
+          "replacement_or_new_burdens": "Aucune obligation nouvelle identifiée ; les garanties et obligations autonomes décrites dans les notes demeurent.",
           "source_quote": "soit par lettre recommandée avec avis de réception, soit par lettre remise contre récépissé.",
-          "proposed_quote": "par tout moyen permettant d'établir la réception de cette information et sa date"
+          "proposed_quote": "par tout moyen permettant d'établir la réception de cette information et sa date, notamment par lettre recommandée avec avis de réception ou par lettre remise contre récépissé."
         }
       ]
     },
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Exclusivité de la lettre recommandée ou de la remise d’une lettre contre récépissé pour informer l’employeur."
+      "Exclusivité de la lettre recommandée avec avis de réception ou de la lettre remise contre récépissé pour informer l'employeur des désignations syndicales."
     ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "ebe06e5cf6edf5b5223bfb6bdbd6ee51c3a0a839d69f9f52e32c0bcb6e7c1989",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "141ee25f7688cc12d0652ec00ca46546f0ff5535011f64601408bbd28834ae0c",
-      "assessment_sha256": "8ff4b47c545ba53ea78f9fd12b90a5ab6cb45dc01a7b94b438a237a1786e762e",
+      "assessment_sha256": "f1754c093bbf0ce96d261c3fc089e61023b59d9de348b9e39f74d1cddeac9bcf",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "141ee25f7688cc12d0652ec00ca46546f0ff5535011f64601408bbd28834ae0c"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -399,15 +581,27 @@
     "number": "R2143-5",
     "proposed_xml": null,
     "reason": "Maintien intégral de la procédure judiciaire gratuite et rapide, avec avertissement des parties, notification et pourvoi. Les délais de dix jours et de trois jours garantissent l’exercice effectif des recours ; les retirer nuirait aux droits de la défense plutôt que supprimer une formalité inutile.",
-    "review_notes": "Notes historiques lues : entrée en vigueur au 1er janvier 2020, y compris instances en cours selon le décret de 2019. Renvoi aux articles 999 à 1008 CPC maintenu pour le pourvoi ; ces articles hors corpus n’ont pas été réécrits. Aucun rapport ni agrément supplémentaire.",
+    "review_notes": "Notes historiques lues : entrée en vigueur au 1er janvier 2020, y compris instances en cours selon le décret de 2019. Renvoi aux articles 999 à 1008 CPC maintenu pour le pourvoi ; ces articles hors corpus n’ont pas été réécrits. Aucun rapport ni agrément supplémentaire. Seconde passe : L2143-8 entier impose « dans les quinze jours suivants l'accomplissement des formalités » pour saisir le juge ; les dix jours pour statuer et les dix jours de pourvoi de R2143-5 concernent des étapes différentes, sans contradiction. D2143-4 proposé concerne seulement l'information de l'employeur et ne remplace pas « par le greffe dans un délai de trois jours par lettre recommandée avec avis de réception ». Les trois jours d'avertissement préalable assurent le contradictoire. L2143-8 maintient la prise en charge étatique des mesures d'instruction. Point non vérifiable : les textes intégraux du CPC 999 à 1008 et leurs versions transitoires ne sont pas fournis dans les neuf recueils ni identifiés parmi les pièces locales ; aucune conformité détaillée de ce renvoi externe n'est certifiée. Les NOTA de 2020 ne sont pas une date d'entrée en vigueur de la réforme proposée.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "b277cec17ed56ef6f25813be0455969cc381fe1e2df7c8eae3aa0ce4e4e86a13",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien intégral de la procédure judiciaire gratuite et rapide, avec avertissement des parties, notification et pourvoi. Les délais de dix jours et de trois jours garantissent l’exercice effectif des recours ; les retirer nuirait aux droits de la défense plutôt que supprimer une formalité inutile.",
+      "review_notes": "Notes historiques lues : entrée en vigueur au 1er janvier 2020, y compris instances en cours selon le décret de 2019. Renvoi aux articles 999 à 1008 CPC maintenu pour le pourvoi ; ces articles hors corpus n’ont pas été réécrits. Aucun rapport ni agrément supplémentaire.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "e2efdc9407b614c4641a079ade0bddd2c2d245e17eaa9d650f882122436a6ef7"
+    },
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien intégral de la procédure judiciaire gratuite et rapide, avec avertissement des parties, notification et pourvoi. Les délais de dix jours et de trois jours garantissent l’exercice effectif des recours ; les retirer nuirait aux droits de la défense plutôt que supprimer une formalité inutile.",
-      "scope_limitations": "Notes historiques lues : entrée en vigueur au 1er janvier 2020, y compris instances en cours selon le décret de 2019. Renvoi aux articles 999 à 1008 CPC maintenu pour le pourvoi ; ces articles hors corpus n’ont pas été réécrits. Aucun rapport ni agrément supplémentaire.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
+      "scope_limitations": "Notes historiques lues : entrée en vigueur au 1er janvier 2020, y compris instances en cours selon le décret de 2019. Renvoi aux articles 999 à 1008 CPC maintenu pour le pourvoi ; ces articles hors corpus n’ont pas été réécrits. Aucun rapport ni agrément supplémentaire. Seconde passe : L2143-8 entier impose « dans les quinze jours suivants l'accomplissement des formalités » pour saisir le juge ; les dix jours pour statuer et les dix jours de pourvoi de R2143-5 concernent des étapes différentes, sans contradiction. D2143-4 proposé concerne seulement l'information de l'employeur et ne remplace pas « par le greffe dans un délai de trois jours par lettre recommandée avec avis de réception ». Les trois jours d'avertissement préalable assurent le contradictoire. L2143-8 maintient la prise en charge étatique des mesures d'instruction. Point non vérifiable : les textes intégraux du CPC 999 à 1008 et leurs versions transitoires ne sont pas fournis dans les neuf recueils ni identifiés parmi les pièces locales ; aucune conformité détaillée de ce renvoi externe n'est certifiée. Les NOTA de 2020 ne sont pas une date d'entrée en vigueur de la réforme proposée. Le solde de complexité ou de coût de l’ensemble des codes n’est pas établi.",
+      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : maintien intégral de la règle source sans ajout de registre, de donnée, de justificatif ou de délai.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -415,12 +609,14 @@
       "source_sha256": "b277cec17ed56ef6f25813be0455969cc381fe1e2df7c8eae3aa0ce4e4e86a13",
       "source_notes_sha256": "811346c6a9639ddcf8a88304675597a825c56d4021d3ad44fc234f9e5a6b5e3b",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "07de9fe70f2aeeafd0740cbafb594d4acd8e5dd3929ddc2a752800c2624c8e76",
+      "assessment_sha256": "d9bc8aec17ff9f0acf263fb0ffff6f6b3e64640c789e9bfc7273c54367b5862c",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -429,25 +625,28 @@
     "number": "R2143-6",
     "proposed_xml": "<p>\n<br />En l'absence d'accord, la décision de suppression du mandat de délégué syndical prévue au troisième alinéa de l'article L. 2143-11 est prise par le             directeur régional des entreprises, de la concurrence, de la consommation, du travail et de l'emploi. <br />Le silence gardé pendant plus de quatre mois par le ministre saisi d'un recours hiérarchique contre cette décision vaut décision de rejet.</p>",
     "reason": "Correction du renvoi à L2143-11 afin de viser explicitement la suppression administrative du mandat en l’absence d’accord, régie par son troisième alinéa. L’autorisation protège l’indépendance du mandat contre une suppression unilatérale : elle n’est pas remplacée par une déclaration. Le recours hiérarchique est conservé.",
-    "review_notes": "Incohérence préexistante signalée : la source emploie l’ancienne dénomination DIRECCTE ; les textes organiques de succession des services, hors lot, doivent être coordonnés sans modifier la compétence territoriale. Les notes de 2009 et 2010 distinguent entrée en fonction des directeurs, Ile-de-France au 1er juillet 2010 et outre-mer. Elles ne datent pas la présente réforme. Le rejet implicite après plus de quatre mois reste inchangé.",
+    "review_notes": "Incohérence préexistante signalée : la source emploie l’ancienne dénomination DIRECCTE ; les textes organiques de succession des services, hors lot, doivent être coordonnés sans modifier la compétence territoriale. Les notes de 2009 et 2010 distinguent entrée en fonction des directeurs, Ile-de-France au 1er juillet 2010 et outre-mer. Elles ne datent pas la présente réforme. Le rejet implicite après plus de quatre mois reste inchangé. Coordination nécessaire confirmée : le deuxième alinéa de L2143-11 prévoit « un accord entre l'employeur et l'ensemble des organisations syndicales représentatives » ; son troisième commence « A défaut d'accord, l'autorité administrative peut décider ». La correction du brouillon est conservée. La baisse importante et durable sous cinquante salariés reste la condition, et non le préavis individuel de quinze jours. Point non vérifiable : actes organiques de succession DIRECCTE et adaptations ultramarines non fournis, sans transfert de compétence inventé.",
     "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
     "substantive_impact": {
       "version": 1,
       "classification": "coordination_only",
       "assessment": "Correction du renvoi à L2143-11 afin de viser explicitement la suppression administrative du mandat en l’absence d’accord, régie par son troisième alinéa. L’autorisation protège l’indépendance du mandat contre une suppression unilatérale : elle n’est pas remplacée par une déclaration. Le recours hiérarchique est conservé.",
-      "scope_limitations": "Incohérence préexistante signalée : la source emploie l’ancienne dénomination DIRECCTE ; les textes organiques de succession des services, hors lot, doivent être coordonnés sans modifier la compétence territoriale. Les notes de 2009 et 2010 distinguent entrée en fonction des directeurs, Ile-de-France au 1er juillet 2010 et outre-mer. Elles ne datent pas la présente réforme. Le rejet implicite après plus de quatre mois reste inchangé.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : les modalités restantes figurent déjà dans la source ; aucune déclaration, donnée, taxe ou autorisation de remplacement n’est créée. Le coût net global n’est pas chiffré.",
+      "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. Incohérence préexistante signalée : la source emploie l’ancienne dénomination DIRECCTE ; les textes organiques de succession des services, hors lot, doivent être coordonnés sans modifier la compétence territoriale. Les notes de 2009 et 2010 distinguent entrée en fonction des directeurs, Ile-de-France au 1er juillet 2010 et outre-mer. Elles ne datent pas la présente réforme. Le rejet implicite après plus de quatre mois reste inchangé. Coordination nécessaire confirmée : le deuxième alinéa de L2143-11 prévoit « un accord entre l'employeur et l'ensemble des organisations syndicales représentatives » ; son troisième commence « A défaut d'accord, l'autorité administrative peut décider ». La correction du brouillon est conservée. La baisse importante et durable sous cinquante salariés reste la condition, et non le préavis individuel de quinze jours. Point non vérifiable : actes organiques de succession DIRECCTE et adaptations ultramarines non fournis, sans transfert de compétence inventé. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la correction de renvoi ne crée ni agrément supplémentaire, ni nouvelle formalité ni nouveau délai.",
       "effects": [
         {
           "kind": "coordination",
-          "measure_id": "suppression-mandat-renvoi-decision",
-          "description": "Correction du fondement de la décision administrative sans retrait de protection.",
-          "before": "Renvoi au deuxième alinéa de L2143-11, relatif à l’accord.",
-          "after": "Renvoi au troisième alinéa, qui prévoit la décision administrative à défaut d’accord.",
-          "unit": "legal_duty",
-          "affected_population": "Employeurs, organisations syndicales et délégués concernés par une suppression de mandat.",
-          "conditions_and_transition": "Application à l’entrée en vigueur de la réforme ; droits antérieurs et règles de fond inchangés.",
-          "replacement_or_new_burdens": "Aucune charge nouvelle de remplacement ; les obligations autonomes mentionnées dans les notes demeurent.",
+          "measure_id": "suppression-mandat-renvoi-2143-11",
+          "description": "Rectification de l’alinéa fondant la compétence administrative.",
+          "before": "Renvoi au deuxième alinéa, relatif à l’accord.",
+          "after": "Renvoi au troisième alinéa, relatif à la décision administrative.",
+          "unit": "other",
+          "affected_population": "Employeurs, syndicats et administration du travail.",
+          "conditions_and_transition": "Même seuil légal, même recours et même délai de quatre mois.",
+          "replacement_or_new_burdens": "Aucune charge nouvelle.",
           "source_quote": "prévue au deuxième alinéa de l'article L. 2143-11",
           "proposed_quote": "prévue au troisième alinéa de l'article L. 2143-11"
         }
@@ -458,43 +657,63 @@
       "source_sha256": "c2309a21c6038245ca471b73fcb70d0ae29e5d0289f309bcccf3d41579a5f35e",
       "source_notes_sha256": "31d8b18b798b7f8e7bfb0946bbbb04cde2f9ed79e8e25a0dfa82b8b7ad4745da",
       "proposed_sha256": "02690e62b477c442cd1628fe310739492ecfbb6a3848adf871c8a451d0f397b2",
-      "assessment_sha256": "f45bfd0bff2d838df3436cad24018468f2bf5de528a50994e929e8bb8d449866",
+      "assessment_sha256": "b2308ab220887b0e80b8fc8eb9c76f4cf2caa2303592249a80d60d7193a533d4",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "02690e62b477c442cd1628fe310739492ecfbb6a3848adf871c8a451d0f397b2"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000045680806",
     "source_sha256": "062ba08b3bd095587b37c92458aca72c4f477a889ee82cb18d621e36be6fd053",
     "number": "R2145-1",
-    "proposed_xml": null,
-    "reason": "Maintien des programmes préalables indiquant matières et durée et des conventions d’emploi de l’aide. Ces éléments assurent la réalité de la formation financée, le paiement des enseignants et les bourses ; leur retrait sans support équivalent affaiblirait le contrôle de fonds publics. Aucun doublon de dépôt n’est imposé expressément par cet article.",
-    "review_notes": "L2145-2 conserve l’agrément des autres organismes spécialisés et L2145-3 le soutien financier. R2145-3 établit la liste ouvrant droit au congé : il ne décrit pas une procédure détaillée d’agrément. Cette terminologie préexistante est signalée, sans inventer une autorisation supplémentaire ni fermer les aides futures. Une durée de stage ne vaut pas durée d’emploi.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "proposed_xml": "<p>Pour bénéficier de l'aide financière de l'Etat, les organismes dispensant la formation économique, sociale, environnementale et syndicale, figurant sur la liste prévue à l'article R. 2145-3, établissent des programmes préalables de stages ou de sessions précisant, notamment, les matières enseignées et la durée de formation. Les organismes mentionnés au quatrième alinéa de l'article L. 2145-2 demeurent soumis à l'agrément prévu à cet alinéa.</p><p>Des conventions conclues entre, d'une part, les centres spécialisés mentionnés au 1° de l'article L. 2145-2 et les organismes mentionnés au quatrième alinéa de ce même article et, d'autre part, les ministères intéressés ou les universités ou instituts d'université, prévoient les conditions dans lesquelles cette aide est utilisée, notamment pour la rémunération du corps enseignant et l'octroi de bourses d'études.</p>",
+    "reason": "Coordination nécessaire, sans nouvelle coupe : « agréés dans les conditions prévues à l'article R. 2145-3 » désigne à tort une procédure d'agrément. R2145-3 dispose que « La liste des centres et instituts » est établie par arrêté, tandis que L2145-2 réserve l'agrément aux autres organismes de son quatrième alinéa. Le texte distingue inscription sur la liste et agrément légal, sans ajouter une procédure ni modifier les programmes, conventions, matières, durées, rémunérations et bourses. Le maintien antérieur sans correction de ce renvoi est remplacé par cette coordination.",
+    "review_notes": "L2145-2, L2145-3 et R2145-3 lus intégralement avec leurs propositions : l'agrément légal des autres organismes, la liste ouvrant droit au congé et les subventions restent distincts. La source évoquait « agréés dans les conditions prévues à l'article R. 2145-3 » alors que cet article établit une liste. Cette ambiguïté est corrigée sans nouveau dossier, autorisation ou renouvellement. La rémunération des enseignants et l'octroi de bourses restent dans le second alinéa. Le 3° du I de L2135-10 conserve la subvention de l'Etat ; aucune contribution nouvelle n'en résulte. Les arrêtés de liste et conventions individuelles ne sont pas joints : leur contenu n'est pas certifié. Une durée de stage n'est pas une durée d'emploi.",
+    "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": true,
+    "benefit_review": "L'aide financière de l'Etat, la rémunération du corps enseignant et les bourses d'études demeurent possibles pour les stages et bénéficiaires futurs comme pour les engagements antérieurs. Les conventions et programmes conservent leurs champs. La liste de R2145-3 est distinguée de l'agrément des seuls autres organismes de L2145-2 : aucune nouvelle autorisation n'est imposée aux centres spécialisés ou instituts universitaires. Aucun avantage fiscal n'est supprimé.",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien des programmes préalables indiquant matières et durée et des conventions d’emploi de l’aide. Ces éléments assurent la réalité de la formation financée, le paiement des enseignants et les bourses ; leur retrait sans support équivalent affaiblirait le contrôle de fonds publics. Aucun doublon de dépôt n’est imposé expressément par cet article.",
-      "scope_limitations": "L2145-2 conserve l’agrément des autres organismes spécialisés et L2145-3 le soutien financier. R2145-3 établit la liste ouvrant droit au congé : il ne décrit pas une procédure détaillée d’agrément. Cette terminologie préexistante est signalée, sans inventer une autorisation supplémentaire ni fermer les aides futures. Une durée de stage ne vaut pas durée d’emploi.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination nécessaire, sans nouvelle coupe : « agréés dans les conditions prévues à l'article R. 2145-3 » désigne à tort une procédure d'agrément. R2145-3 dispose que « La liste des centres et instituts » est établie par arrêté, tandis que L2145-2 réserve l'agrément aux autres organismes de son quatrième alinéa. Le texte distingue inscription sur la liste et agrément légal, sans ajouter une procédure ni modifier les programmes, conventions, matières, durées, rémunérations et bourses. Le maintien antérieur sans correction de ce renvoi est remplacé par cette coordination.",
+      "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. L2145-2, L2145-3 et R2145-3 lus intégralement avec leurs propositions : l'agrément légal des autres organismes, la liste ouvrant droit au congé et les subventions restent distincts. La source évoquait « agréés dans les conditions prévues à l'article R. 2145-3 » alors que cet article établit une liste. Cette ambiguïté est corrigée sans nouveau dossier, autorisation ou renouvellement. La rémunération des enseignants et l'octroi de bourses restent dans le second alinéa. Le 3° du I de L2135-10 conserve la subvention de l'Etat ; aucune contribution nouvelle n'en résulte. Les arrêtés de liste et conventions individuelles ne sont pas joints : leur contenu n'est pas certifié. Une durée de stage n'est pas une durée d'emploi. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la correction de renvoi ne crée ni agrément supplémentaire, ni nouvelle formalité ni nouveau délai.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "formation-syndicale-liste-agrement",
+          "description": "Distinguer la liste ministérielle du fondement légal de l’agrément.",
+          "before": "La liste est décrite comme fixant les conditions d’agrément.",
+          "after": "Liste R2145-3 et agrément L2145-2 quatrième alinéa distincts.",
+          "unit": "other",
+          "affected_population": "Organismes de formation et bénéficiaires des aides.",
+          "conditions_and_transition": "Aides, programmes et conventions demeurent ouverts aux situations futures.",
+          "replacement_or_new_burdens": "Aucune procédure supplémentaire.",
+          "source_quote": "agréés dans les conditions prévues à l'article R. 2145-3",
+          "proposed_quote": "figurant sur la liste prévue à l'article R. 2145-3"
+        }
+      ]
     },
-    "benefit_review": "L’aide financière de l’État aux formations, la rémunération du corps enseignant et les bourses d’études demeurent intégralement accessibles aux organismes et stagiaires futurs éligibles. Les programmes et conventions encadrent l’usage de cette aide sans ajouter de condition ; aucun agrément nouveau ni extinction des aides anciennes ou futures n’est proposé.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "062ba08b3bd095587b37c92458aca72c4f477a889ee82cb18d621e36be6fd053",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "563474f2cffbfc99213a5b764da2335161aefb07ebcd47c5ba6e463e1576eb95",
+      "proposed_sha256": "00348e4208ad9ff05a8977ae542f8851e480dae6e83d1d063e549c07f55e24df",
+      "assessment_sha256": "b6aafe0b2e7fdf1480bea4e6aee5032bcad216a84c521da65b162d97d396d715",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -503,15 +722,18 @@
     "number": "R2145-2",
     "proposed_xml": null,
     "reason": "Maintien de l’inscription des crédits aux missions emploi et travail, et recherche et enseignement supérieur pour les instituts universitaires. Cette règle soutient l’aide à la formation et ne constitue ni une cotisation ni une obligation déclarative des bénéficiaires.",
-    "review_notes": "L2145-3 fonde les aides ; aucun montant budgétaire, rendement ou recette de remplacement créé. L’inscription budgétaire conserve son champ annuel propre, sans rapport avec l’IS ou la durée de l’emploi.",
+    "review_notes": "L2145-3 fonde les aides ; aucun montant budgétaire, rendement ou recette de remplacement créé. L’inscription budgétaire conserve son champ annuel propre, sans rapport avec l’IS ou la durée de l’emploi. Transition compatible : L2145-3 vise « une subvention aux instituts mentionnés au 2° de l'article L. 2145-2 » ; les crédits universitaires restent donc nécessaires et ouverts aux financements futurs. L2135-10 I 3° conserve « Une subvention de l'Etat ». L'annualité budgétaire n'est pas l'annualité d'IS supprimée ; aucun chiffrage ni crédit voté n'est déduit de ce texte.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien de l’inscription des crédits aux missions emploi et travail, et recherche et enseignement supérieur pour les instituts universitaires. Cette règle soutient l’aide à la formation et ne constitue ni une cotisation ni une obligation déclarative des bénéficiaires.",
-      "scope_limitations": "L2145-3 fonde les aides ; aucun montant budgétaire, rendement ou recette de remplacement créé. L’inscription budgétaire conserve son champ annuel propre, sans rapport avec l’IS ou la durée de l’emploi.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
+      "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. L2145-3 fonde les aides ; aucun montant budgétaire, rendement ou recette de remplacement créé. L’inscription budgétaire conserve son champ annuel propre, sans rapport avec l’IS ou la durée de l’emploi. Transition compatible : L2145-3 vise « une subvention aux instituts mentionnés au 2° de l'article L. 2145-2 » ; les crédits universitaires restent donc nécessaires et ouverts aux financements futurs. L2135-10 I 3° conserve « Une subvention de l'Etat ». L'annualité budgétaire n'est pas l'annualité d'IS supprimée ; aucun chiffrage ni crédit voté n'est déduit de ce texte. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le texte source est conservé intégralement, sans registre, donnée, délai ou condition supplémentaire.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -519,12 +741,14 @@
       "source_sha256": "3754aa925a06b481f9448ece958e2773b9f1a249df04c8d6d6d0b3c85ee7c871",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "0552014857e7e62b01bc9d738f7c17a72ec7e262e0dc892687fd258474451799",
+      "assessment_sha256": "3c6f31eccb97472b59b06e7242a43a6117a51dd703686f3225e466eaebd10801",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -533,15 +757,18 @@
     "number": "R2145-3",
     "proposed_xml": null,
     "reason": "Maintien de la liste ministérielle des centres et instituts habilitant les stages au congé, ainsi que de l’avis syndical préalable. La liste sécurise le droit au congé rémunéré et l’avis garantit la participation des organisations concernées ; supprimer le dispositif sans fondement alternatif risquerait de retirer ces droits.",
-    "review_notes": "R2145-1 s’appuie sur cette liste ; les organismes législatifs de L2145-2 et le droit de L2145-5 demeurent. Aucun renouvellement périodique, dossier ou nouvelle condition ajouté. Le régime reste ouvert aux centres futurs remplissant les conditions.",
+    "review_notes": "R2145-1 s’appuie sur cette liste ; les organismes législatifs de L2145-2 et le droit de L2145-5 demeurent. Aucun renouvellement périodique, dossier ou nouvelle condition ajouté. Le régime reste ouvert aux centres futurs remplissant les conditions. Différence de champ confirmée : L2135-12 3° vise des organisations représentatives nationales interprofessionnelles et celles recueillant « plus de 3 % des suffrages exprimés ». Cette assiette ne devient ni toutes les organisations ni au moins 3 %. R2315-12 proposé supprime une liste préfectorale spéciale SSCT, non la présente liste ministérielle pour le congé syndical. La correction de R2145-1 distingue liste et agrément légal. Arrêté nominatif non fourni : aucun centre particulier n'est réputé vérifié.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien de la liste ministérielle des centres et instituts habilitant les stages au congé, ainsi que de l’avis syndical préalable. La liste sécurise le droit au congé rémunéré et l’avis garantit la participation des organisations concernées ; supprimer le dispositif sans fondement alternatif risquerait de retirer ces droits.",
-      "scope_limitations": "R2145-1 s’appuie sur cette liste ; les organismes législatifs de L2145-2 et le droit de L2145-5 demeurent. Aucun renouvellement périodique, dossier ou nouvelle condition ajouté. Le régime reste ouvert aux centres futurs remplissant les conditions.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
+      "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. R2145-1 s’appuie sur cette liste ; les organismes législatifs de L2145-2 et le droit de L2145-5 demeurent. Aucun renouvellement périodique, dossier ou nouvelle condition ajouté. Le régime reste ouvert aux centres futurs remplissant les conditions. Différence de champ confirmée : L2135-12 3° vise des organisations représentatives nationales interprofessionnelles et celles recueillant « plus de 3 % des suffrages exprimés ». Cette assiette ne devient ni toutes les organisations ni au moins 3 %. R2315-12 proposé supprime une liste préfectorale spéciale SSCT, non la présente liste ministérielle pour le congé syndical. La correction de R2145-1 distingue liste et agrément légal. Arrêté nominatif non fourni : aucun centre particulier n'est réputé vérifié. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le texte source est conservé intégralement, sans registre, donnée, délai ou condition supplémentaire.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -549,12 +776,14 @@
       "source_sha256": "d04980642101d03ebe6506723317e8d981cd23a784801fea634da1292684c9fa",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "1f27fc05c4d6f85360d6cda0789a2524a3198f3be3c439ce569803db86ac66d4",
+      "assessment_sha256": "7185f8ab846d3de398a9ced3f3d89c015f9e90ee4f8f15585b91f995d7760d75",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -563,76 +792,112 @@
     "number": "R2145-4",
     "proposed_xml": "<p>Le salarié adresse à l'employeur, avant le début du congé de formation économique, sociale, environnementale et syndicale, une demande l'informant de sa volonté de bénéficier de ce congé. Aucun délai minimal d'anticipation de cette demande n'est exigé.</p><p>Il précise la date et la durée de l'absence sollicitée ainsi que le nom de l'organisme responsable du stage ou de la session.</p><p>La suppression du délai minimal s'applique aux demandes présentées ou en cours à l'entrée en vigueur de la réforme. Elle ne remet pas en cause les décisions de refus antérieures ni les recours qui s'y rapportent. Les conditions légales de refus et le délai maximal de notification prévu à l'article R. 2145-5 demeurent applicables ; ce délai maximal ne suspend pas, par lui-même, le début du congé.</p>",
     "reason": "Suppression du minimum uniforme de trente jours entre la demande et le début du congé. La demande préalable, ses informations utiles et les motifs légaux de refus subsistent. Cette réduction de délai permet les formations annoncées tardivement sans supprimer les garanties de rémunération.",
-    "review_notes": "Articulation avec R2145-5 : le délai de huit jours demeure un délai maximal de réponse, sans suspension automatique du départ ni nouveau pouvoir de refus pour demande tardive. L2145-11 conserve les seuls motifs de refus et l’avis conforme du CSE. Les contestations et décisions déjà intervenues restent régies par leur droit ; les demandes pendantes bénéficient de la levée du minimum.",
+    "review_notes": "Articulation avec R2145-5 : le délai de huit jours demeure un délai maximal de réponse, sans suspension automatique du départ ni nouveau pouvoir de refus pour demande tardive. L2145-11 conserve les seuls motifs de refus et l’avis conforme du CSE. Les contestations et décisions déjà intervenues restent régies par leur droit ; les demandes pendantes bénéficient de la levée du minimum. Coordination nécessaire désormais opérée dans R2145-5 du présent lot : le refus doit être notifié avant le début du congé et dans les huit jours au maximum. La formule conservée « ce délai maximal ne suspend pas, par lui-même, le début du congé » devient ainsi opérante sans refus postérieur au départ. Différence de champ : R2315-17, lu entier, impose encore « au moins trente jours avant le début du stage » aux demandes relevant de son régime CSE ; le présent texte ne l'abroge pas. L2145-7 proposé permet moins d'une demi-journée sans modifier les plafonds annuels de douze et dix-huit jours.",
     "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Délai minimal de trente jours imposé au salarié avant le début du congé de formation."
+    ],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
       "assessment": "Suppression du minimum uniforme de trente jours entre la demande et le début du congé. La demande préalable, ses informations utiles et les motifs légaux de refus subsistent. Cette réduction de délai permet les formations annoncées tardivement sans supprimer les garanties de rémunération.",
-      "scope_limitations": "Articulation avec R2145-5 : le délai de huit jours demeure un délai maximal de réponse, sans suspension automatique du départ ni nouveau pouvoir de refus pour demande tardive. L2145-11 conserve les seuls motifs de refus et l’avis conforme du CSE. Les contestations et décisions déjà intervenues restent régies par leur droit ; les demandes pendantes bénéficient de la levée du minimum.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : les modalités restantes figurent déjà dans la source ; aucune déclaration, donnée, taxe ou autorisation de remplacement n’est créée. Le coût net global n’est pas chiffré.",
+      "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. Articulation avec R2145-5 : le délai de huit jours demeure un délai maximal de réponse, sans suspension automatique du départ ni nouveau pouvoir de refus pour demande tardive. L2145-11 conserve les seuls motifs de refus et l’avis conforme du CSE. Les contestations et décisions déjà intervenues restent régies par leur droit ; les demandes pendantes bénéficient de la levée du minimum. Coordination nécessaire désormais opérée dans R2145-5 du présent lot : le refus doit être notifié avant le début du congé et dans les huit jours au maximum. La formule conservée « ce délai maximal ne suspend pas, par lui-même, le début du congé » devient ainsi opérante sans refus postérieur au départ. Différence de champ : R2315-17, lu entier, impose encore « au moins trente jours avant le début du stage » aux demandes relevant de son régime CSE ; le présent texte ne l'abroge pas. L2145-7 proposé permet moins d'une demi-journée sans modifier les plafonds annuels de douze et dix-huit jours. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
+      "new_burdens_review": "Aucune charge nouvelle dans cet article : demande et informations existaient déjà. La coordination R2145-5 impose toutefois à l'employeur une réaction avant le départ ; ce coût est recensé dans cet article, sans solde global présumé.",
       "effects": [
         {
           "kind": "deadline_reduced",
-          "measure_id": "conge-syndical-fin-anticipation-trente-jours",
-          "description": "Retrait du délai minimal de trente jours avant le congé.",
-          "before": "Demande au moins trente jours avant le congé de formation.",
-          "after": "Demande avant le départ, sans minimum chiffré ; droit légal au congé et refus motivé conservés.",
+          "measure_id": "conge-syndical-fin-anticipation-minimale",
+          "description": "Retrait des trente jours obligatoires d’anticipation.",
+          "before": "Demande du salarié au moins trente jours avant le congé.",
+          "after": "Demande avant le congé sans nombre minimal de jours.",
           "unit": "calendar_days",
-          "affected_population": "Salariés demandant un congé de formation économique, sociale, environnementale et syndicale et leurs employeurs.",
-          "conditions_and_transition": "Demandes présentées ou en cours à l’entrée en vigueur ; refus antérieurs et recours non remis en cause rétroactivement.",
-          "replacement_or_new_burdens": "Aucune charge nouvelle de remplacement ; les obligations autonomes mentionnées dans les notes demeurent.",
-          "source_quote": "au moins trente jours avant le début du congé de formation économique, sociale, environnementale et syndicale",
+          "affected_population": "Salariés demandant le congé de formation syndicale, hors régime spécial CSE.",
+          "conditions_and_transition": "Demandes nouvelles ou en cours ; refus antérieurs et recours préservés.",
+          "replacement_or_new_burdens": "Demande préalable conservée ; réponse patronale coordonnée dans R2145-5.",
+          "source_quote": "au moins trente jours avant le début du congé",
           "proposed_quote": "Aucun délai minimal d'anticipation de cette demande n'est exigé."
         }
       ]
     },
-    "change_type": "normative_reduction",
-    "reform_policy_id": "editorial_direction_2026_10_19",
-    "removed_provisions": [
-      "Délai minimal obligatoire de trente jours entre la demande du salarié et le début du congé de formation."
-    ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "468a54268186765d4b3547fc7e6df4ab596d279bf793e552b163f6f9cc857869",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "6c6a5253577ccee8e2de87c8e6f53a78aac5154d4822b0870e60320ddb1d7dbc",
-      "assessment_sha256": "c001a8adf39688c915e878c030b4276beb0e7de981eb3eb859340fd2e23189d9",
+      "assessment_sha256": "502554f24d4ec103bd6a0a11865f152cd0bf769c5560c9229dfa975518e26545",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "6c6a5253577ccee8e2de87c8e6f53a78aac5154d4822b0870e60320ddb1d7dbc"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000045680792",
     "source_sha256": "242bae87da32395e8d20a1b878a3897c5d9a3237afc161af24489e532badd907",
     "number": "R2145-5",
-    "proposed_xml": null,
-    "reason": "Maintien du délai de huit jours pour notifier le refus et de l’accès direct au bureau de jugement selon la procédure accélérée au fond. Ces garanties encadrent le pouvoir de refus de l’employeur ; leur suppression ou leur allongement compliquerait l’exercice du droit au congé.",
-    "review_notes": "L2145-11 maintient motivation et avis conforme du CSE. La suppression du minimum de trente jours dans R2145-4 ne prolonge ni ce délai maximal de huit jours ni les délais judiciaires. Les demandes à bref délai restent soumises aux seules conditions légales du congé.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "proposed_xml": "<p>Le refus du congé de formation économique, sociale, environnementale et syndicale par l'employeur est notifié à l'intéressé dans un délai de huit jours à compter de la réception de sa demande et, en tout état de cause, avant le début du congé demandé. A défaut de notification dans ces limites, le congé ne peut être refusé.</p><p>En cas de différend, le bureau de jugement du conseil de prud'hommes saisi en application de l'article L. 2145-11 statue en dernier ressort, selon la procédure accélérée au fond.</p><p>La limite tenant au début du congé s'applique aux demandes présentées à compter de l'entrée en vigueur de la réforme. Pour les demandes en cours à cette date, elle s'applique lorsque le congé n'a pas encore débuté ; si le congé a déjà débuté, aucun refus ne peut être notifié après cette date. Les refus antérieurement notifiés et les recours qui s'y rapportent restent régis par les dispositions applicables à leur date.</p>",
+    "reason": "Coordination nécessaire avec l'allègement acquis dans R2145-4 : « Aucun délai minimal d'anticipation de cette demande n'est exigé. » Le maintien isolé de « dans un délai de huit jours » laisserait un refus intervenir après le départ, voire après une formation brève achevée. Le nouveau corps impose sa notification avant le début du congé, toujours au plus tard dans les huit jours, et ferme le refus tardif. C'est une modification de fond protectrice et une contrainte de réaction plus rapide pour l'employeur, non une simple reformulation ni une suppression du contrôle de L2145-11. Le recours accéléré et le dernier ressort sont conservés.",
+    "review_notes": "Coordination avec R2145-4 et L2145-11 lus entiers : « Le congé ... est de droit » dans la source de L2145-11 s'articule avec le refus motivé après avis conforme du CSE, qui reste requis ; aucun silence ne vaut avis conforme. Le début du congé est celui de la demande, qui comporte déjà date et durée. La transition évite un refus rétroactif pour les congés commencés et protège les refus déjà notifiés et leurs recours. R2146-6, lu entier, sanctionne la méconnaissance de L2145-11 et R2145-5 : la nouvelle borne s'applique prospectivement, sans punir rétroactivement un refus antérieur. Ce renvoi pénal doit être examiné lors de l'adoption de la coordination ; la contravention de troisième classe n'est pas relevée ici. La brièveté disponible pour obtenir l'avis du CSE est une contrainte réelle assumée, sans délai minimal rétabli pour le salarié. R2315-17 conserve trente jours dans son régime distinct de formation CSE.",
+    "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien du délai de huit jours pour notifier le refus et de l’accès direct au bureau de jugement selon la procédure accélérée au fond. Ces garanties encadrent le pouvoir de refus de l’employeur ; leur suppression ou leur allongement compliquerait l’exercice du droit au congé.",
-      "scope_limitations": "L2145-11 maintient motivation et avis conforme du CSE. La suppression du minimum de trente jours dans R2145-4 ne prolonge ni ce délai maximal de huit jours ni les délais judiciaires. Les demandes à bref délai restent soumises aux seules conditions légales du congé.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
-      "effects": []
+      "classification": "mixed",
+      "assessment": "Coordination nécessaire avec l'allègement acquis dans R2145-4 : « Aucun délai minimal d'anticipation de cette demande n'est exigé. » Le maintien isolé de « dans un délai de huit jours » laisserait un refus intervenir après le départ, voire après une formation brève achevée. Le nouveau corps impose sa notification avant le début du congé, toujours au plus tard dans les huit jours, et ferme le refus tardif. C'est une modification de fond protectrice et une contrainte de réaction plus rapide pour l'employeur, non une simple reformulation ni une suppression du contrôle de L2145-11. Le recours accéléré et le dernier ressort sont conservés.",
+      "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. Coordination avec R2145-4 et L2145-11 lus entiers : « Le congé ... est de droit » dans la source de L2145-11 s'articule avec le refus motivé après avis conforme du CSE, qui reste requis ; aucun silence ne vaut avis conforme. Le début du congé est celui de la demande, qui comporte déjà date et durée. La transition évite un refus rétroactif pour les congés commencés et protège les refus déjà notifiés et leurs recours. R2146-6, lu entier, sanctionne la méconnaissance de L2145-11 et R2145-5 : la nouvelle borne s'applique prospectivement, sans punir rétroactivement un refus antérieur. Ce renvoi pénal doit être examiné lors de l'adoption de la coordination ; la contravention de troisième classe n'est pas relevée ici. La brièveté disponible pour obtenir l'avis du CSE est une contrainte réelle assumée, sans délai minimal rétabli pour le salarié. R2315-17 conserve trente jours dans son régime distinct de formation CSE. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
+      "new_burdens_review": "Charge accrue identifiée : pour une demande proche du départ, l'employeur doit notifier le refus motivé après avis conforme du CSE avant le début du congé, donc plus vite que huit jours. La protection du salarié est renforcée ; aucun registre ou formulaire ajouté, mais solde net de coût non établi.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "conge-syndical-fin-anticipation-minimale",
+          "description": "Encadrement du refus pour rendre opérante la suppression du délai de demande.",
+          "before": "Huit jours après réception pour notifier le refus, sans borne expresse au départ.",
+          "after": "Huit jours au maximum et nécessairement avant le départ ; refus tardif fermé.",
+          "unit": "calendar_days",
+          "affected_population": "Employeurs, CSE et salariés demandant le congé.",
+          "conditions_and_transition": "Demandes nouvelles et pendantes selon la transition ; refus notifiés avant réforme préservés.",
+          "replacement_or_new_burdens": "Délai de réaction raccourci pour l’employeur ; avis conforme et motivation maintenus.",
+          "source_quote": "dans un délai de huit jours à compter de la réception de sa demande.",
+          "proposed_quote": "dans un délai de huit jours à compter de la réception de sa demande et, en tout état de cause, avant le début du congé demandé."
+        },
+        {
+          "kind": "obligation_added",
+          "measure_id": "conge-syndical-fin-anticipation-minimale",
+          "description": "Charge corrélative de la même mesure : notifier plus tôt le refus pour une demande proche du départ, sans compter une seconde réduction.",
+          "before": "L'employeur dispose d'un maximum de huit jours après réception ; absence de borne expresse au début du congé.",
+          "after": "Pour exercer la faculté de refus, l'employeur doit réunir les conditions de L2145-11 et notifier avant le départ, même si moins de huit jours sont disponibles.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs, CSE et salariés demandant le congé.",
+          "conditions_and_transition": "Demandes nouvelles et pendantes selon la transition ; refus notifiés avant réforme préservés.",
+          "replacement_or_new_burdens": "Délai de réaction raccourci pour l’employeur ; avis conforme et motivation maintenus.",
+          "source_quote": "dans un délai de huit jours à compter de la réception de sa demande.",
+          "proposed_quote": "dans un délai de huit jours à compter de la réception de sa demande et, en tout état de cause, avant le début du congé demandé."
+        }
+      ]
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "242bae87da32395e8d20a1b878a3897c5d9a3237afc161af24489e532badd907",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "5834ea25c80fd3232f562f88ceeed8f408834578f8d2c0f933842ec9bf547691",
+      "proposed_sha256": "17ed4ee4a2bf0f825db456dac9254de4461b229b6dbfbc8e856c8e389a2e54b0",
+      "assessment_sha256": "8b742d9ea42a02674512c27c0830976e815f05c52b0328acb1d6ac18d2c47ff0",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -641,47 +906,52 @@
     "number": "R2145-6",
     "proposed_xml": "<p>L'organisme chargé des stages ou sessions délivre au salarié qui la demande une attestation constatant sa fréquentation effective.</p><p>La fréquentation effective peut être établie par tout moyen. La délivrance systématique d'une attestation et sa remise à l'employeur au moment de la reprise du travail ne sont pas obligatoires. L'absence de cette attestation ne peut, à elle seule, priver le salarié des droits attachés au congé.</p><p>Ces dispositions s'appliquent aux reprises du travail intervenant à compter de l'entrée en vigueur de la réforme, même lorsque le stage ou la session a commencé auparavant. Les attestations déjà délivrées demeurent utilisables.</p>",
     "reason": "Suppression de la délivrance et de la remise systématiques d’une attestation spéciale à chaque retour de congé. La fréquentation effective reste vérifiable par tout moyen ; l’organisme délivre toujours une attestation au salarié qui la demande. Le droit au congé et au salaire ne dépend plus de la possession d’un formulaire particulier.",
-    "review_notes": "Maintien total de rémunération de L2145-6 et contrôle des absences réelles conservés. Le contrôle probatoire n’est ni supprimé ni remplacé par un registre obligatoire, une certification ou une transmission directe imposée. Aucun accès nouveau aux données syndicales de l’organisme.",
+    "review_notes": "Maintien total de rémunération de L2145-6 et contrôle des absences réelles conservés. Le contrôle probatoire n’est ni supprimé ni remplacé par un registre obligatoire, une certification ou une transmission directe imposée. Aucun accès nouveau aux données syndicales de l’organisme. Transition compatible confirmée avec L2145-6 : « maintien total par l'employeur de sa rémunération » ; L2145-10 conserve l'assimilation « pour l'ensemble des autres droits résultant pour l'intéressé de son contrat de travail ». La preuve libre n'abolit pas la fréquentation effective et ne rétablit pas de justificatif systématique. Les stages commencés avant l'entrée en vigueur sont couverts si la reprise est postérieure ; aucune durée d'emploi à terme n'en résulte.",
     "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Délivrance systématique d’une attestation spéciale de fréquentation à chaque salarié.",
+      "Remise obligatoire de cette attestation à l’employeur au moment de la reprise du travail."
+    ],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
       "assessment": "Suppression de la délivrance et de la remise systématiques d’une attestation spéciale à chaque retour de congé. La fréquentation effective reste vérifiable par tout moyen ; l’organisme délivre toujours une attestation au salarié qui la demande. Le droit au congé et au salaire ne dépend plus de la possession d’un formulaire particulier.",
-      "scope_limitations": "Maintien total de rémunération de L2145-6 et contrôle des absences réelles conservés. Le contrôle probatoire n’est ni supprimé ni remplacé par un registre obligatoire, une certification ou une transmission directe imposée. Aucun accès nouveau aux données syndicales de l’organisme.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : les modalités restantes figurent déjà dans la source ; aucune déclaration, donnée, taxe ou autorisation de remplacement n’est créée. Le coût net global n’est pas chiffré.",
+      "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. Maintien total de rémunération de L2145-6 et contrôle des absences réelles conservés. Le contrôle probatoire n’est ni supprimé ni remplacé par un registre obligatoire, une certification ou une transmission directe imposée. Aucun accès nouveau aux données syndicales de l’organisme. Transition compatible confirmée avec L2145-6 : « maintien total par l'employeur de sa rémunération » ; L2145-10 conserve l'assimilation « pour l'ensemble des autres droits résultant pour l'intéressé de son contrat de travail ». La preuve libre n'abolit pas la fréquentation effective et ne rétablit pas de justificatif systématique. Les stages commencés avant l'entrée en vigueur sont couverts si la reprise est postérieure ; aucune durée d'emploi à terme n'en résulte. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : l'attestation sur demande réduit l'obligation générale préexistante de délivrance ; aucun registre ni transmission directe ni conservation spéciale ne remplace la remise systématique.",
       "effects": [
         {
           "kind": "obligation_removed",
           "measure_id": "conge-syndical-fin-attestation-systematique",
-          "description": "Fin de la délivrance et de la remise systématiques d’un justificatif spécifique.",
-          "before": "Attestation délivrée par l’organisme et obligatoirement remise à l’employeur à la reprise.",
-          "after": "Attestation sur demande du salarié et preuve de fréquentation par tout moyen ; rémunération maintenue.",
+          "description": "Supprimer la délivrance et la remise systématiques de l’attestation.",
+          "before": "Attestation délivrée par l’organisme puis remise par le salarié à chaque reprise.",
+          "after": "Délivrance sur demande du salarié et preuve par tout moyen, sans remise obligatoire.",
           "unit": "legal_duty",
-          "affected_population": "Salariés en congé de formation syndicale, organismes de formation et employeurs.",
-          "conditions_and_transition": "Reprises de travail à compter de l’entrée en vigueur, y compris stages commencés auparavant ; attestations déjà délivrées utilisables.",
-          "replacement_or_new_burdens": "Aucune charge nouvelle de remplacement ; les obligations autonomes mentionnées dans les notes demeurent.",
+          "affected_population": "Organismes de stage et salariés bénéficiaires du congé.",
+          "conditions_and_transition": "Reprises à compter de la réforme, même pour les stages commencés avant ; anciennes attestations utilisables.",
+          "replacement_or_new_burdens": "Preuve de fréquentation subsiste sans formulaire obligatoire.",
           "source_quote": "Cette attestation est remise à l'employeur au moment de la reprise du travail.",
           "proposed_quote": "La délivrance systématique d'une attestation et sa remise à l'employeur au moment de la reprise du travail ne sont pas obligatoires."
         }
       ]
     },
-    "change_type": "normative_reduction",
-    "reform_policy_id": "editorial_direction_2026_10_19",
-    "removed_provisions": [
-      "Délivrance automatique par l’organisme d’une attestation spéciale de fréquentation pour chaque salarié.",
-      "Remise obligatoire de cette attestation à l’employeur au moment de chaque reprise du travail."
-    ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "bd14604d502b80a062aef20f719e5e607ace66d4923b86ea64b759e23e3fc5e8",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "7d0dbd44a6da618134a9b9d7f547df914b6ca3e89611109c319a52ead025b0d3",
-      "assessment_sha256": "f3a83e0064cbf930a2aa24839c267c14821aeb2ae1a799deb71e038dc028325e",
+      "assessment_sha256": "e11f4dfcc8248d0324afe191176ad20c204019e21bb69afe377c7875d74df5ba",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "7d0dbd44a6da618134a9b9d7f547df914b6ca3e89611109c319a52ead025b0d3"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -690,15 +960,18 @@
     "number": "R2146-1",
     "proposed_xml": null,
     "reason": "Maintien de la contravention sanctionnant l’opposition à la libre constitution d’un syndicat. Elle protège directement la liberté syndicale contre les dirigeants d’organisations concurrentes ; ce n’est pas une pénalité attachée à une simple formalité.",
-    "review_notes": "L2131-2 premier alinéa confronté ; champ professionnel et classe de contravention conservés. Ne pas confondre avec la pénalité de dépôt des statuts proposée à l’abrogation dans R2146-2.",
+    "review_notes": "L2131-2 premier alinéa confronté ; champ professionnel et classe de contravention conservés. Ne pas confondre avec la pénalité de dépôt des statuts proposée à l’abrogation dans R2146-2. Différence de champ : L2131-2 premier alinéa dispose « peuvent se constituer librement » ; sa dérogation pour employeurs de maison reste au second alinéa. L'abrogation R2146-2 n'atteint pas l'opposition à la liberté de constitution. Aucun agrément syndical ou nouveau dépôt n'est créé.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien de la contravention sanctionnant l’opposition à la libre constitution d’un syndicat. Elle protège directement la liberté syndicale contre les dirigeants d’organisations concurrentes ; ce n’est pas une pénalité attachée à une simple formalité.",
-      "scope_limitations": "L2131-2 premier alinéa confronté ; champ professionnel et classe de contravention conservés. Ne pas confondre avec la pénalité de dépôt des statuts proposée à l’abrogation dans R2146-2.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
+      "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. L2131-2 premier alinéa confronté ; champ professionnel et classe de contravention conservés. Ne pas confondre avec la pénalité de dépôt des statuts proposée à l’abrogation dans R2146-2. Différence de champ : L2131-2 premier alinéa dispose « peuvent se constituer librement » ; sa dérogation pour employeurs de maison reste au second alinéa. L'abrogation R2146-2 n'atteint pas l'opposition à la liberté de constitution. Aucun agrément syndical ou nouveau dépôt n'est créé. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le texte source est conservé intégralement, sans registre, donnée, délai ou condition supplémentaire.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -706,12 +979,14 @@
       "source_sha256": "e58dbe2670a48af7229d5e00faad0f66ec65ed6248bbb04301d2fb2bbbad3421",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "dc8724d6da884bd5b78331bcab298c339ec5acbecd9c63dcd4cf821074a96bb5",
+      "assessment_sha256": "c6f881187f798429c10e127739bbff1ce677090d5600ce32ac971d0edb3578e9",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -719,45 +994,50 @@
     "source_sha256": "a7eb9f838c7a13547de9f806d811918005b18231e527642be894172baa13161e",
     "number": "R2146-2",
     "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur de la réforme. Le défaut de dépôt des statuts mentionné à l'article L. 2131-3 n'est plus puni de la contravention prévue par le présent article.</p><p>Cette abrogation s'applique aux faits antérieurs qui n'ont pas donné lieu à une condamnation passée en force de chose jugée, conformément aux règles d'application de la loi pénale plus douce. Elle n'ouvre aucun droit général à restitution des amendes prononcées par une décision définitive.</p><p>Les obligations de dépôt prévues à l'article L. 2131-3 demeurent applicables. Les infractions constituées par des faits distincts restent soumises à leurs dispositions propres.</p>",
-    "reason": "Abrogation de la contravention autonome de cinquième classe pour le seul défaut de dépôt des statuts. L’obligation de publicité légale demeure, ainsi que les responsabilités fondées sur des faits distincts. La sanction pénale automatique d’une formalité est retirée sans toucher aux sanctions protégeant la liberté syndicale.",
-    "review_notes": "L2131-3, lu intégralement, impose le dépôt initial et son renouvellement lors des changements. Il n’est pas abrogé ici. Application de la loi pénale plus douce aux faits non définitivement jugés ; aucune restitution générale des amendes définitives. Aucun montant maximal en euros inventé.",
+    "reason": "Abrogation de la contravention autonome de cinquième classe pour le seul défaut de dépôt des statuts. L’obligation de publicité légale demeure, ainsi que les responsabilités fondées sur des faits distincts. La sanction pénale du défaut de cette formalité est retirée sans toucher aux sanctions protégeant la liberté syndicale.",
+    "review_notes": "L2131-3, lu intégralement, impose le dépôt initial et son renouvellement lors des changements. Il n’est pas abrogé ici. Application de la loi pénale plus douce aux faits non définitivement jugés ; aucune restitution générale des amendes définitives. Aucun montant maximal en euros inventé. Différence de champ vérifiée : L2131-3 impose « Ce dépôt est renouvelé en cas de changement de la direction ou des statuts. » R2131-1 proposé retire seulement la communication systématique au procureur, pas le dépôt en mairie. L2136-1 conserve « Toute fausse déclaration relative aux statuts et aux noms et qualités des directeurs ou administrateurs » : le mensonge est distinct du simple défaut de dépôt, sans rétablir la contravention abrogée. Transition plus douce préservée ; règles générales du code pénal sur cessation d'exécution d'une peine non reproduites dans les pièces autorisées, à contrôler sans déduire une poursuite obligatoire des peines définitives de l'absence de restitution générale.",
     "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "change_type": "full_repeal",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Suppression de la contravention de cinquième classe sanctionnant le seul défaut de dépôt des statuts syndicaux ; obligation légale de dépôt conservée.",
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Abrogation de la contravention autonome de cinquième classe pour le seul défaut de dépôt des statuts. L’obligation de publicité légale demeure, ainsi que les responsabilités fondées sur des faits distincts. La sanction pénale automatique d’une formalité est retirée sans toucher aux sanctions protégeant la liberté syndicale.",
-      "scope_limitations": "L2131-3, lu intégralement, impose le dépôt initial et son renouvellement lors des changements. Il n’est pas abrogé ici. Application de la loi pénale plus douce aux faits non définitivement jugés ; aucune restitution générale des amendes définitives. Aucun montant maximal en euros inventé.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : les modalités restantes figurent déjà dans la source ; aucune déclaration, donnée, taxe ou autorisation de remplacement n’est créée. Le coût net global n’est pas chiffré.",
+      "assessment": "Abrogation de la contravention autonome de cinquième classe pour le seul défaut de dépôt des statuts. L’obligation de publicité légale demeure, ainsi que les responsabilités fondées sur des faits distincts. La sanction pénale du défaut de cette formalité est retirée sans toucher aux sanctions protégeant la liberté syndicale.",
+      "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. L2131-3, lu intégralement, impose le dépôt initial et son renouvellement lors des changements. Il n’est pas abrogé ici. Application de la loi pénale plus douce aux faits non définitivement jugés ; aucune restitution générale des amendes définitives. Aucun montant maximal en euros inventé. Différence de champ vérifiée : L2131-3 impose « Ce dépôt est renouvelé en cas de changement de la direction ou des statuts. » R2131-1 proposé retire seulement la communication systématique au procureur, pas le dépôt en mairie. L2136-1 conserve « Toute fausse déclaration relative aux statuts et aux noms et qualités des directeurs ou administrateurs » : le mensonge est distinct du simple défaut de dépôt, sans rétablir la contravention abrogée. Transition plus douce préservée ; règles générales du code pénal sur cessation d'exécution d'une peine non reproduites dans les pièces autorisées, à contrôler sans déduire une poursuite obligatoire des peines définitives de l'absence de restitution générale. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la contravention est supprimée sans sanction de remplacement. L'obligation de dépôt et la répression autonome des fausses déclarations existaient déjà et ne sont pas accrues.",
       "effects": [
         {
           "kind": "obligation_removed",
-          "measure_id": "syndicats-fin-sanction-defaut-depot",
-          "description": "Retrait de la sanction pénale propre au défaut de dépôt, sans suppression du dépôt.",
-          "before": "Contravention de cinquième classe pour défaut de dépôt des statuts par le dirigeant syndical.",
-          "after": "Aucune contravention sur ce seul fondement ; obligation civile et responsabilités distinctes conservées.",
-          "unit": "legal_duty",
-          "affected_population": "Directeurs et administrateurs de syndicats ou unions de syndicats.",
-          "conditions_and_transition": "Abrogation à l’entrée en vigueur ; application de la loi pénale plus douce aux faits antérieurs non définitivement jugés, décisions définitives sans restitution générale.",
-          "replacement_or_new_burdens": "Aucune charge nouvelle de remplacement ; les obligations autonomes mentionnées dans les notes demeurent.",
+          "measure_id": "depenalisation-defaut-depot-statuts-syndicaux",
+          "description": "Retrait de la sanction contraventionnelle, non du dépôt lui-même.",
+          "before": "Défaut de dépôt punissable d’une contravention de cinquième classe.",
+          "after": "Aucune contravention au titre du présent article ; dépôt légal toujours obligatoire.",
+          "unit": "other",
+          "affected_population": "Directeurs et administrateurs des syndicats et unions.",
+          "conditions_and_transition": "Abrogation à l’entrée en vigueur, loi plus douce pour faits non définitivement jugés, pas de restitution générale.",
+          "replacement_or_new_burdens": "Aucune sanction nouvelle ; fausses déclarations distinctes.",
           "source_quote": "est puni de l'amende prévue pour les contraventions de la cinquième classe.",
           "proposed_quote": "Le défaut de dépôt des statuts mentionné à l'article L. 2131-3 n'est plus puni de la contravention prévue par le présent article."
         }
       ]
     },
-    "change_type": "full_repeal",
-    "repeal_policy_id": "editorial_direction_2026_10_19",
-    "repeal_scope": "Suppression de la contravention de cinquième classe attachée au seul défaut de dépôt des statuts syndicaux, sans abrogation de l’obligation de dépôt de L2131-3.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "a7eb9f838c7a13547de9f806d811918005b18231e527642be894172baa13161e",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "cacfc436e3b610250d4865bc314a83d97e1a11531d4ea80a71abde850cf6aed7",
-      "assessment_sha256": "2338bf11ffa3e2edf9e8626f76317acee48affda5f6e5835cc1519e1b9ace4d6",
+      "assessment_sha256": "2964681ce22264cfa0a6956bbd6a103b974721b3cf3c6b041647efd38a0e9f6e",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "cacfc436e3b610250d4865bc314a83d97e1a11531d4ea80a71abde850cf6aed7"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -766,15 +1046,18 @@
     "number": "R2146-3",
     "proposed_xml": null,
     "reason": "Maintien de la contravention protégeant l’accès des adhérents éligibles à la direction du syndicat. Elle sanctionne une atteinte à la démocratie syndicale, non une déclaration ou un délai administratif redondant.",
-    "review_notes": "L2131-4 et L2131-5 confrontés : aptitude à exercer les fonctions conservée, sans condition de nationalité nouvelle. Contravention de cinquième classe inchangée ; aucune suppression implicite par la réforme du contrat de travail.",
+    "review_notes": "L2131-4 et L2131-5 confrontés : aptitude à exercer les fonctions conservée, sans condition de nationalité nouvelle. Contravention de cinquième classe inchangée ; aucune suppression implicite par la réforme du contrat de travail. Différence de champ : L2131-4 dispose « Tout adhérent d'un syndicat professionnel peut » accéder aux fonctions sous les conditions de L2131-5 ; ce n'est pas une nomination automatique. L2133-2 étend ces règles aux unions. Aucune suppression de protection ne découle du retrait de la seule contravention de dépôt.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien de la contravention protégeant l’accès des adhérents éligibles à la direction du syndicat. Elle sanctionne une atteinte à la démocratie syndicale, non une déclaration ou un délai administratif redondant.",
-      "scope_limitations": "L2131-4 et L2131-5 confrontés : aptitude à exercer les fonctions conservée, sans condition de nationalité nouvelle. Contravention de cinquième classe inchangée ; aucune suppression implicite par la réforme du contrat de travail.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
+      "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. L2131-4 et L2131-5 confrontés : aptitude à exercer les fonctions conservée, sans condition de nationalité nouvelle. Contravention de cinquième classe inchangée ; aucune suppression implicite par la réforme du contrat de travail. Différence de champ : L2131-4 dispose « Tout adhérent d'un syndicat professionnel peut » accéder aux fonctions sous les conditions de L2131-5 ; ce n'est pas une nomination automatique. L2133-2 étend ces règles aux unions. Aucune suppression de protection ne découle du retrait de la seule contravention de dépôt. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le texte source est conservé intégralement, sans registre, donnée, délai ou condition supplémentaire.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -782,12 +1065,14 @@
       "source_sha256": "3d57322277446f2f56deea5c30424d99531825678dc8c178d1b8c13ccabc6bb1",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "24539e775cfdbce139baedd8cf94adde3d9d7898053f1d8657f886b11d4bea88",
+      "assessment_sha256": "afa5897f5661c2d0c755add6cacf07ccf63ae503cc77efffad48ead6b5b3a139",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -796,15 +1081,18 @@
     "number": "R2146-4",
     "proposed_xml": null,
     "reason": "Maintien de la sanction de l’exercice de fonctions dirigeantes en violation d’une privation ou incapacité relative aux droits civiques. Le respect des interdictions légales demeure une garantie de la gouvernance syndicale ; aucun justificatif systématique supplémentaire n’est exigé par cette disposition.",
-    "review_notes": "Le premier alinéa de L2131-5 conserve les conditions de droits civiques et le second les étend aux ressortissants étrangers majeurs. La rédaction pénale et son champ ne sont pas étendus. Aucune nouvelle enquête ni attestation.",
+    "review_notes": "Le premier alinéa de L2131-5 conserve les conditions de droits civiques et le second les étend aux ressortissants étrangers majeurs. La rédaction pénale et son champ ne sont pas étendus. Aucune nouvelle enquête ni attestation. Différence de champ : le premier alinéa de L2131-5 vise « Tout membre français » ; son second prévoit « tout ressortissant étranger âgé de dix-huit ans accomplis ». Le renvoi pénal au premier alinéa n'est pas étendu par analogie. Portée des droits civiques étrangers et normes supérieures non documentées ici : réserve maintenue, non validation générale.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien de la sanction de l’exercice de fonctions dirigeantes en violation d’une privation ou incapacité relative aux droits civiques. Le respect des interdictions légales demeure une garantie de la gouvernance syndicale ; aucun justificatif systématique supplémentaire n’est exigé par cette disposition.",
-      "scope_limitations": "Le premier alinéa de L2131-5 conserve les conditions de droits civiques et le second les étend aux ressortissants étrangers majeurs. La rédaction pénale et son champ ne sont pas étendus. Aucune nouvelle enquête ni attestation.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
+      "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. Le premier alinéa de L2131-5 conserve les conditions de droits civiques et le second les étend aux ressortissants étrangers majeurs. La rédaction pénale et son champ ne sont pas étendus. Aucune nouvelle enquête ni attestation. Différence de champ : le premier alinéa de L2131-5 vise « Tout membre français » ; son second prévoit « tout ressortissant étranger âgé de dix-huit ans accomplis ». Le renvoi pénal au premier alinéa n'est pas étendu par analogie. Portée des droits civiques étrangers et normes supérieures non documentées ici : réserve maintenue, non validation générale. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le texte source est conservé intégralement, sans registre, donnée, délai ou condition supplémentaire.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -812,12 +1100,14 @@
       "source_sha256": "49f92bb6f891deac507366a4e038894ce9edc1697f23b662a88490326b98d3c8",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "561cf81cc542c5229edfae5f4b402cbbea15a9b34aac20e9d05007599df5fe9b",
+      "assessment_sha256": "b490f525053841fbf0274cf73fca0f9432b8567faf1f7598770eb206d94412d5",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -826,15 +1116,18 @@
     "number": "R2146-5",
     "proposed_xml": null,
     "reason": "Maintien intégral des sanctions protégeant l’adhésion sans discrimination et la poursuite de l’adhésion après cessation d’activité. Il s’agit de protections essentielles des personnes, y compris retraitées, et non de charges accessoires supprimables.",
-    "review_notes": "L2141-1 renvoie plus largement aux motifs de L1132-1 : la liste pénale spécifique, plus étroite, est une différence préexistante signalée sans extension silencieuse de l’incrimination. L2141-2 conserve le libre choix après cessation d’activité ; aucune incidence de la réforme des retraites sur cette liberté.",
+    "review_notes": "L2141-1 renvoie plus largement aux motifs de L1132-1 : la liste pénale spécifique, plus étroite, est une différence préexistante signalée sans extension silencieuse de l’incrimination. L2141-2 conserve le libre choix après cessation d’activité ; aucune incidence de la réforme des retraites sur cette liberté. Différence de champ préexistante confirmée : L2141-1 protège contre « l'un des motifs visés à l'article L. 1132-1 », dont l'identité de genre et les lanceurs d'alerte absents de la liste pénale spécifique. Le maintien ne rétrécit pas la protection civile et n'étend pas l'incrimination. L2141-2 permet « adhérer ou continuer à adhérer » après cessation d'activité, et non seulement après retraite. Contrat unique et réforme des pensions n'ajoutent aucune condition à cette liberté.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien intégral des sanctions protégeant l’adhésion sans discrimination et la poursuite de l’adhésion après cessation d’activité. Il s’agit de protections essentielles des personnes, y compris retraitées, et non de charges accessoires supprimables.",
-      "scope_limitations": "L2141-1 renvoie plus largement aux motifs de L1132-1 : la liste pénale spécifique, plus étroite, est une différence préexistante signalée sans extension silencieuse de l’incrimination. L2141-2 conserve le libre choix après cessation d’activité ; aucune incidence de la réforme des retraites sur cette liberté.",
-      "new_burdens_review": "Aucune charge nouvelle n’est identifiée : maintien intégral des conditions et obligations de la source, sans formulaire, délai, donnée ou contrôle ajouté. Aucun solde global des codes n’est chiffré.",
+      "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. L2141-1 renvoie plus largement aux motifs de L1132-1 : la liste pénale spécifique, plus étroite, est une différence préexistante signalée sans extension silencieuse de l’incrimination. L2141-2 conserve le libre choix après cessation d’activité ; aucune incidence de la réforme des retraites sur cette liberté. Différence de champ préexistante confirmée : L2141-1 protège contre « l'un des motifs visés à l'article L. 1132-1 », dont l'identité de genre et les lanceurs d'alerte absents de la liste pénale spécifique. Le maintien ne rétrécit pas la protection civile et n'étend pas l'incrimination. L2141-2 permet « adhérer ou continuer à adhérer » après cessation d'activité, et non seulement après retraite. Contrat unique et réforme des pensions n'ajoutent aucune condition à cette liberté. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le texte source est conservé intégralement, sans registre, donnée, délai ou condition supplémentaire.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -842,11 +1135,13 @@
       "source_sha256": "c38702e503f84b2dbb562243de2f7c7150507e388056182140f7cbd08e7f7e7f",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "d06e95fd750645d645659c93e51ce733072369b516941cb0eab434bd325e36ef",
+      "assessment_sha256": "549330f38008eb3fc982ccb0d86678167e9de8de244cfdb367341ef4c243eed4",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   }
 ]

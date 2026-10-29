@@ -9,20 +9,27 @@ import hashlib,json,re
 
 MODEL='gpt-6-astra'
 EFFORT='medium'
+REVIEW={'model':'gpt-6.1-sol','reasoning_effort':'high'}
+APPROVED={(MODEL,EFFORT),(REVIEW['model'],REVIEW['reasoning_effort'])}
 
 
-def requested_execution(runtime):
+def requested_execution(runtime,kind=None):
     path=runtime/'model-policy.json'
     spec=json.loads(path.read_text()) if path.exists() else {'model':MODEL,'reasoning_effort':EFFORT}
     if spec.get('model')!=MODEL or spec.get('reasoning_effort')!=EFFORT:
         raise ValueError('Drafting execution policy must explicitly select gpt-6-astra and medium')
+    if kind=='review' and 'review_execution' in spec:
+        review=spec['review_execution']
+        if review!=REVIEW:raise ValueError('Second-pass policy must select gpt-6.1-sol high')
+        return dict(REVIEW)
+    if kind not in (None,'new','review'):raise ValueError('Unknown execution role')
     return {'model':MODEL,'reasoning_effort':EFFORT}
 
 
 def cli_options(spec):
-    if spec.get('model')!=MODEL or spec.get('reasoning_effort')!=EFFORT:
+    if (spec.get('model'),spec.get('reasoning_effort')) not in APPROVED:
         raise ValueError('Unapproved drafting model or reasoning effort')
-    return ['--model',MODEL,'-c','model_reasoning_effort="medium"','--color','never']
+    return ['--model',spec['model'],'-c','model_reasoning_effort='+json.dumps(spec['reasoning_effort']),'--color','never']
 
 
 def parse_startup_log(path):
@@ -55,7 +62,7 @@ def verify_execution(folder,expected=None,stderr_path=None):
         stderr_path=max(paths,key=lambda p:p.stat().st_mtime) if paths else folder/'missing-startup.log'
     observed=parse_startup_log(stderr_path)
     observed.update(verified=False,evidence_kind='native_cli_startup_header_and_model_response')
-    if expected.get('model')!=MODEL or expected.get('reasoning_effort')!=EFFORT:
+    if (expected.get('model'),expected.get('reasoning_effort')) not in APPROVED:
         observed['status']='unapproved_expected_execution';return observed
     if not observed.get('header_sha256'):
         observed['status']='no_runtime_header';return observed

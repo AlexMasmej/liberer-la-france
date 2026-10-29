@@ -4,31 +4,45 @@
     "source_id": "LEGIARTI000047715574",
     "source_sha256": "f548b9f02f288640661de297fd9565130e1e427c1b7d8a5b885d0c6297e607f0",
     "number": "R4451-111",
-    "proposed_xml": null,
-    "reason": "Le déclenchement d'une organisation de radioprotection reste limité aux situations appelant surveillance individuelle, zonage ou vérifications. Ces trois déclencheurs préviennent des expositions graves ; leur retrait supprimerait la responsabilité opérationnelle de prévention, sans doublon administratif identifié.",
-    "review_notes": "Les renvois R4451-64, R4451-22 et R4451-28 restent des déclencheurs sanitaires, sans condition de durée du contrat. La coquille source « cas échant » n'est pas corrigée par une réécriture artificielle.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "proposed_xml": "\n<br />\n<p>L'employeur, le chef de l'entreprise extérieure ou le travailleur indépendant met en place, le cas échant, une organisation de la radioprotection lorsque la nature et l'ampleur du risque d'exposition des travailleurs aux rayonnements ionisants le conduisent à mettre en œuvre au moins l'une des mesures suivantes : <br />\n<br />1° La mise en œuvre d'une surveillance dosimétrique individuelle en application de l'article R. 4451-64 ; <br />\n<br />2° La délimitation de zone dans les conditions fixées aux articles R. 4451-22 et R. 4451-28 ; <br />\n<br />3° Les vérifications prévues à la section 6 du présent chapitre.</p>\n<br />\n",
+    "reason": "Coordination nécessaire, sans réforme du champ sanitaire : le renvoi source « en application du I de l'article R. 4451-64 » ne correspond plus à la structure de la cible fournie depuis le 29 décembre 2025. Le I inexistant est retiré, avec maintien intégral des trois déclencheurs, des personnes responsables et des conditions de risque. Cette correction remplace le maintien proposé précédemment ; elle ne supprime ni surveillance, ni zonage, ni vérification.",
+    "review_notes": "Contradiction effective de renvoi dans la source : « en application du I de l'article R. 4451-64 » vise une subdivision absente de R4451-64, version du 29 décembre 2025 lue en entier, dont l'ouverture est « L'employeur met en œuvre une surveillance dosimétrique individuelle appropriée, lorsque le travailleur est : » et qui énumère directement 1° à 3°. Coordination nécessaire : supprimer seulement « du I ». Les trois déclencheurs restent alternatifs. R4451-22 (0,08 millisievert par mois, 4 millisieverts par mois et radon), R4451-28 (0,025 millisievert sur une heure) et la section 6, R4451-40 à R4451-51, ont été lus en entier. La suppression proposée du bilan spécifique de R4451-50 ne supprime aucune vérification et n'est pas rétablie ici. La coquille « cas échant » reste signalée, sans retouche stylistique. Aucun effet rétroactif ni modification des seuils. Contrôle local borné : recherche de renvois dans les neuf recueils ; l'Annexe III de concordance de 2010 lue en entier porte d'anciennes versions et ne rétablit pas les normes actuelles sous les mêmes numéros. Aucun audit exhaustif des neuf recueils ni validation par juriste n'est revendiqué. Reprise après refus : reference-targets.json, version 3, ne contient aucune cible ni aucun renvoyeur ; les vérifications ci-dessus reposent sur les textes entiers du corpus public local, relus avec leurs propositions et NOTA, et non sur un certificat antérieur. Les douze sources assignées ont des NOTA vides.",
+    "status": "rewrite_draft",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Le déclenchement d'une organisation de radioprotection reste limité aux situations appelant surveillance individuelle, zonage ou vérifications. Ces trois déclencheurs préviennent des expositions graves ; leur retrait supprimerait la responsabilité opérationnelle de prévention, sans doublon administratif identifié.",
-      "scope_limitations": "Les renvois R4451-64, R4451-22 et R4451-28 restent des déclencheurs sanitaires, sans condition de durée du contrat. La coquille source « cas échant » n'est pas corrigée par une réécriture artificielle. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Correction d'un renvoi à une subdivision absente de R4451-64. Aucun nouveau déclencheur ni aucune réduction matérielle des obligations de radioprotection.",
+      "scope_limitations": "Examen limité à cet article et aux interactions documentées dans review_notes ; les textes externes et versions futures manquants restent ouverts. Aucun solde net de coût ou de complexité de l'ensemble des codes n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le renvoi vise la surveillance existante de R4451-64, sans nouvel examen, registre, délai ni seuil.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "radioprotection-renvoi-surveillance-dosimetrique",
+          "description": "Retrait de la référence à un I inexistant dans la version cible fournie.",
+          "before": "Renvoi au I de R4451-64, alors que la version applicable fournie n'a plus de I.",
+          "after": "Renvoi à R4451-64 entier, qui énumère directement les trois situations de surveillance.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs, chefs d'entreprises extérieures et travailleurs indépendants soumis à R4451-111.",
+          "conditions_and_transition": "Correction pour l'application du texte proposé ; aucune modification des obligations et créances antérieures.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; déclencheurs matériels inchangés.",
+          "source_quote": "La mise en œuvre d'une surveillance dosimétrique individuelle en application du I de l'article R. 4451-64",
+          "proposed_quote": "La mise en œuvre d'une surveillance dosimétrique individuelle en application de l'article R. 4451-64"
+        }
+      ]
     },
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "f548b9f02f288640661de297fd9565130e1e427c1b7d8a5b885d0c6297e607f0",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "9556d49a9f7abee08e73e58b229036628d1d11b1b289c108e76c091c05a9eb73",
+      "proposed_sha256": "26a5737a78b1d126cba3d826ad22c3e24dc36dba46f7820d862abcd82c64145a",
+      "assessment_sha256": "642534cf159492aa9005e7b526c1dbaea04b9c82a3fdc624976ba79d9ddf606e",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -36,30 +50,31 @@
     "source_sha256": "550b1809bcca014ea318b33422e16fa55654af9127d8fd3f670d1f49091e0655",
     "number": "R4451-112",
     "proposed_xml": null,
-    "reason": "La désignation d'un conseiller assure une compétence identifiable de prévention. Le choix entre salarié compétent et organisme extérieur constitue déjà une souplesse utile, maintenue pour les désignations futures ; aucun agrément supplémentaire n'est créé.",
-    "review_notes": "R4451-117 permet toujours à certains employeurs d'assumer la fonction ; R4451-125 maintient les qualifications. La suppression de l'entité obligatoire à R4451-114 ne supprime pas la désignation.",
+    "reason": "La désignation d'un conseiller assure une compétence identifiable de prévention. Le choix entre salarié compétent et organisme extérieur constitue déjà une souplesse utile, maintenue pour les désignations futures ; aucun agrément supplémentaire n'est créé. Seconde passe : maintien du choix antérieur après examen des charges et interactions décrites dans review_notes, sans reformulation stylistique.",
+    "review_notes": "Différence de champ vérifiée : « au moins un conseiller » demeure compatible avec la continuité conditionnelle de R4451-114, la dérogation « moins de vingt salariés » de R4451-117 et le pôle spécial de R4451-113. R4451-125 et R4451-126, lus en entier, distinguent certificat de formation et certification d'organisme. Renvois entrants R4451-69, R4451-70 et R4451-101 lus : confidentialité et désignation en urgence ne sont pas supprimées. Point non vérifiable après le 1er juillet 2028 : source ABROGE_DIFF expirant à cette date, comme les versions disponibles de R4451-125 et R4451-126 ; les textes successeurs et leur acte modificatif ne sont pas fournis dans le corpus consulté. Le maintien ne proroge pas ces versions et n'invente pas leur remplacement. Vérifier alors R4451-115 à R4451-119 et R4451-121 ainsi que ces renvois entrants. Contrôle local borné : recherche de renvois dans les neuf recueils ; l'Annexe III de concordance de 2010 lue en entier porte d'anciennes versions et ne rétablit pas les normes actuelles sous les mêmes numéros. Aucun audit exhaustif des neuf recueils ni validation par juriste n'est revendiqué. Reprise après refus : reference-targets.json, version 3, ne contient aucune cible ni aucun renvoyeur ; les vérifications ci-dessus reposent sur les textes entiers du corpus public local, relus avec leurs propositions et NOTA, et non sur un certificat antérieur. Les douze sources assignées ont des NOTA vides.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "La désignation d'un conseiller assure une compétence identifiable de prévention. Le choix entre salarié compétent et organisme extérieur constitue déjà une souplesse utile, maintenue pour les désignations futures ; aucun agrément supplémentaire n'est créé.",
-      "scope_limitations": "R4451-117 permet toujours à certains employeurs d'assumer la fonction ; R4451-125 maintient les qualifications. La suppression de l'entité obligatoire à R4451-114 ne supprime pas la désignation. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Maintien du choix entre personne compétente et organisme compétent, avec désignation identifiable indispensable à la prévention. Aucun allègement nouveau par rapport à la source entière.",
+      "scope_limitations": "Examen limité à cet article et aux interactions documentées dans review_notes ; les textes externes et versions futures manquants restent ouverts. Aucun solde net de coût ou de complexité de l'ensemble des codes n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : texte intégralement maintenu, sans ajout de registre, donnée, délai, formalité ou condition d'accès aux avantages.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "550b1809bcca014ea318b33422e16fa55654af9127d8fd3f670d1f49091e0655",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "890c3d3ab1cccf941b7e652c3347dc26d5786ab841892c96af46554870302796",
+      "assessment_sha256": "6a18adac13c12e200cb270c3feba0017764776b4f39f3cd83cbfea6f7c568bde",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -67,79 +82,81 @@
     "source_sha256": "747b4d8aed904cce0dde9ae1f693dbc5a3c1076311ae4fda76328662595f933d",
     "number": "R4451-113",
     "proposed_xml": null,
-    "reason": "Le pôle spécialisé répond au risque propre aux installations nucléaires de base. Les deux exclusions du I, la mutualisation des missions du II et la faculté de vérifications initiales du III sont conservées intégralement : supprimer le pôle ou ses facultés désorganiserait la prévention ou retirerait un allègement existant.",
-    "review_notes": "Conserver exactement les exclusions sources scellées/accélérateur et entreprises extérieures. R593-3 du code de l'environnement n'est pas fourni dans les cibles : contenu externe non certifié ici ; aucun nouveau renvoi.",
+    "reason": "Le pôle spécialisé répond au risque propre aux installations nucléaires de base. Les deux exclusions du I, la mutualisation des missions du II et la faculté de vérifications initiales du III sont conservées intégralement : supprimer le pôle ou ses facultés désorganiserait la prévention ou retirerait un allègement existant. Seconde passe : maintien du choix antérieur après examen des charges et interactions décrites dans review_notes, sans reformulation stylistique.",
+    "review_notes": "Différence de champ : « constitue un pôle de compétences en radioprotection » est une obligation spéciale des installations nucléaires de base, distincte de l'entité générale du II de R4451-114. La proposition de ce dernier réserve désormais expressément ce pôle. R4451-40 III et R4451-44 II prévoient un organisme accrédité ; le III de R4451-113 (« peut accomplir les vérifications initiales ») est la faculté spéciale à préserver, avec R4451-127 (accord préalable) et R4451-128 4° (indépendance des missions), tous lus en entier. R4451-41, R4451-51 et R4451-123 lus également. Pas de suppression des deux exclusions du I ni de la mutualisation du II. Point non vérifiable : définition de l'accélérateur dans environnement R593-3, texte intégral absent du corpus fourni ; aucune extension de cette exclusion n'est présumée. Les arrêtés d'application de R4451-128 et les exigences européennes de radioprotection restent à confronter, sans certification de conformité. Contrôle local borné : recherche de renvois dans les neuf recueils ; l'Annexe III de concordance de 2010 lue en entier porte d'anciennes versions et ne rétablit pas les normes actuelles sous les mêmes numéros. Aucun audit exhaustif des neuf recueils ni validation par juriste n'est revendiqué. Reprise après refus : reference-targets.json, version 3, ne contient aucune cible ni aucun renvoyeur ; les vérifications ci-dessus reposent sur les textes entiers du corpus public local, relus avec leurs propositions et NOTA, et non sur un certificat antérieur. Les douze sources assignées ont des NOTA vides.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Le pôle spécialisé répond au risque propre aux installations nucléaires de base. Les deux exclusions du I, la mutualisation des missions du II et la faculté de vérifications initiales du III sont conservées intégralement : supprimer le pôle ou ses facultés désorganiserait la prévention ou retirerait un allègement existant.",
-      "scope_limitations": "Conserver exactement les exclusions sources scellées/accélérateur et entreprises extérieures. R593-3 du code de l'environnement n'est pas fourni dans les cibles : contenu externe non certifié ici ; aucun nouveau renvoi. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Maintien du pôle de prévention nucléaire, des deux exclusions et des facultés de mutualisation et vérification. Aucun avantage existant n'est compté comme une nouvelle réduction.",
+      "scope_limitations": "Examen limité à cet article et aux interactions documentées dans review_notes ; les textes externes et versions futures manquants restent ouverts. Aucun solde net de coût ou de complexité de l'ensemble des codes n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : texte intégralement maintenu, sans ajout de registre, donnée, délai, formalité ou condition d'accès aux avantages.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "747b4d8aed904cce0dde9ae1f693dbc5a3c1076311ae4fda76328662595f933d",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "a2b4d3be410a4dd650940293c34e5f93f41b17d40c58773af0e91851d29a7fcb",
+      "assessment_sha256": "fbbeb1ec3b243ef272bf2e2bdb03f3c4221bc69b01292eb998e52a2cb76749bb",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000047715572",
     "source_sha256": "6366fcbd62b9b9277e2aabd32689395ca3731c2f6c4437ff2914a9000e73f2bc",
     "number": "R4451-114",
-    "proposed_xml": "<p>I.- Lorsque la situation et les enjeux radiologiques le nécessitent, l'employeur s'assure de la continuité de service du conseiller en radioprotection.</p><p>II.- Lorsque plusieurs personnes compétentes en radioprotection sont désignées au sein d'un établissement, ou à défaut de l'entreprise, elles disposent de moyens de fonctionnement adaptés. Leur regroupement au sein d'une entité interne n'est pas obligatoire.</p><p>À compter de l'entrée en vigueur de la présente réforme, cette dispense de regroupement s'applique également aux désignations antérieures. Elle n'impose pas la dissolution des entités existantes et ne supprime ni les moyens nécessaires aux missions ni les obligations autonomes résultant des conventions ou accords applicables.</p>",
-    "reason": "Suppression de fond du regroupement imposé des personnes compétentes en une entité interne. La continuité de service conditionnée aux enjeux radiologiques et les moyens adaptés sont conservés ; l'organigramme obligatoire n'apporte pas, à lui seul, une protection supplémentaire démontrée.",
-    "review_notes": "Le II reste à sa place. R4451-118 continue d'imposer la définition écrite du temps et des moyens ; R4451-113 garde son pôle spécifique. La suppression ne dispense pas des obligations collectives ou des engagements conventionnels autonomes.",
+    "proposed_xml": "<p>I.- Lorsque la situation et les enjeux radiologiques le nécessitent, l'employeur s'assure de la continuité de service du conseiller en radioprotection.</p><p>II.- Lorsque plusieurs personnes compétentes en radioprotection sont désignées au sein d'un établissement, ou à défaut de l'entreprise, elles disposent de moyens de fonctionnement adaptés. Sans préjudice de l'obligation de constituer le pôle de compétences prévu à l'article R. 4451-113, leur regroupement au sein d'une entité interne n'est pas obligatoire.</p><p>À compter de l'entrée en vigueur de la présente réforme, cette dispense de regroupement s'applique également aux désignations antérieures. Elle n'impose pas la dissolution des entités existantes et ne supprime ni les moyens nécessaires aux missions ni les obligations autonomes résultant des conventions ou accords applicables.</p>",
+    "reason": "Suppression de fond du regroupement imposé des personnes compétentes en une entité interne. La continuité de service conditionnée aux enjeux radiologiques et les moyens adaptés sont conservés ; l'organigramme obligatoire n'apporte pas, à lui seul, une protection supplémentaire démontrée. Seconde passe : la dispense générale est expressément articulée avec R4451-113, qui exige « un pôle de compétences en radioprotection » dans son champ spécial. La réserve évite que la phrase du brouillon « Leur regroupement au sein d'une entité interne n'est pas obligatoire » soit interprétée comme abrogeant ce pôle ; elle ne rétablit pas le regroupement général supprimé. Continuité, moyens et transition sont conservés.",
+    "review_notes": "Coordination nécessaire du brouillon : « Leur regroupement au sein d'une entité interne n'est pas obligatoire » pouvait être lu sans réserve du pôle spécial. Ajout de la réserve expresse de R4451-113 ; sa constitution et l'accord de R4451-127 ne sont pas abolis. Différence de champ avec R4451-128 : les exigences organisationnelles du pôle restent autonomes. R4451-118 conserve l'écrit sur « le temps alloué et les moyens mis à sa disposition » ; R4451-120 conserve la consultation, R4451-122 les liens fonctionnels. Transition compatible conservée mot pour mot : « cette dispense de regroupement s'applique également aux désignations antérieures », sans dissolution ni retrait des obligations conventionnelles autonomes. Les arrêtés sectoriels non joints restent à vérifier pour éviter le rétablissement de la seule entité générale supprimée. Aucune conformité européenne globale ni économie nette chiffrée n'est établie. Contrôle local borné : recherche de renvois dans les neuf recueils ; l'Annexe III de concordance de 2010 lue en entier porte d'anciennes versions et ne rétablit pas les normes actuelles sous les mêmes numéros. Aucun audit exhaustif des neuf recueils ni validation par juriste n'est revendiqué. Reprise après refus : reference-targets.json, version 3, ne contient aucune cible ni aucun renvoyeur ; les vérifications ci-dessus reposent sur les textes entiers du corpus public local, relus avec leurs propositions et NOTA, et non sur un certificat antérieur. Les douze sources assignées ont des NOTA vides.",
     "status": "rewrite_draft",
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Suppression de fond du regroupement imposé des personnes compétentes en une entité interne. La continuité de service conditionnée aux enjeux radiologiques et les moyens adaptés sont conservés ; l'organigramme obligatoire n'apporte pas, à lui seul, une protection supplémentaire démontrée.",
-      "scope_limitations": "Le II reste à sa place. R4451-118 continue d'imposer la définition écrite du temps et des moyens ; R4451-113 garde son pôle spécifique. La suppression ne dispense pas des obligations collectives ou des engagements conventionnels autonomes. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : la suppression n'est remplacée ni par une déclaration ni par un registre ou rapport ; les obligations sanitaires autonomes restent seules applicables. Le solde net global n'est pas chiffré.",
+      "assessment": "Suppression effective du regroupement général obligatoire du II, déjà proposée au premier passage et maintenue. La seconde passe réserve explicitement le pôle nucléaire spécial, sans compter cette réserve comme un second allègement.",
+      "scope_limitations": "Examen limité à cet article et aux interactions documentées dans review_notes ; les textes externes et versions futures manquants restent ouverts. Aucun solde net de coût ou de complexité de l'ensemble des codes n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les moyens adaptés, la continuité et le pôle spécial sont préexistants. Aucun dépôt, agrément, registre ou délai ne remplace l'entité générale supprimée.",
       "effects": [
         {
           "kind": "obligation_removed",
-          "measure_id": "radioprotection-libre-organisation-interne",
-          "description": "Obligation de regrouper les personnes compétentes en radioprotection dans une entité interne distincte.",
-          "before": "Regroupement obligatoire dès que plusieurs personnes compétentes sont désignées ; moyens adaptés exigés.",
-          "after": "Regroupement facultatif pour les mêmes désignations ; moyens adaptés et continuité nécessaire conservés.",
+          "measure_id": "radioprotection-regroupement-interne-facultatif",
+          "description": "Le regroupement général dans une entité interne devient facultatif ; les moyens et le pôle nucléaire obligatoire sont préservés.",
+          "before": "Plusieurs personnes compétentes désignées au sein d'un établissement ou, à défaut, de l'entreprise devaient être regroupées dans une entité interne dotée de moyens adaptés.",
+          "after": "Moyens adaptés toujours exigés, regroupement général facultatif ; pôle de R4451-113 maintenu dans son champ.",
           "unit": "legal_duty",
-          "affected_population": "Employeurs désignant plusieurs personnes compétentes en radioprotection.",
-          "conditions_and_transition": "Dispense immédiate pour désignations nouvelles et antérieures, sans dissolution imposée ni extinction d'engagements autonomes.",
-          "replacement_or_new_burdens": "Aucune formalité de remplacement ; garanties sanitaires et obligations autonomes maintenues.",
+          "affected_population": "Employeurs désignant plusieurs personnes compétentes en radioprotection dans un établissement ou, à défaut, l'entreprise, sous réserve du pôle spécial.",
+          "conditions_and_transition": "Dès l'entrée en vigueur, y compris désignations antérieures ; aucune dissolution imposée, obligations conventionnelles autonomes et moyens conservés.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; continuité, moyens, consultation et pôle spécial déjà requis demeurent.",
           "source_quote": "elles sont regroupées au sein d'une entité interne dotée de moyens de fonctionnement adaptés.",
-          "proposed_quote": "Leur regroupement au sein d'une entité interne n'est pas obligatoire."
+          "proposed_quote": "Sans préjudice de l'obligation de constituer le pôle de compétences prévu à l'article R. 4451-113, leur regroupement au sein d'une entité interne n'est pas obligatoire."
         }
       ]
     },
-    "reference_checks": [],
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Obligation de regrouper les personnes compétentes en radioprotection dans une entité interne distincte."
+      "Suppression de l'obligation générale de regrouper plusieurs personnes compétentes en radioprotection dans une entité interne, hors obligation spéciale de pôle nucléaire."
     ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "6366fcbd62b9b9277e2aabd32689395ca3731c2f6c4437ff2914a9000e73f2bc",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "dba88393ad96e7cb15874cfe5220722471dcfdf9447027009ba082454184d418",
-      "assessment_sha256": "bc6e5de02ad2614704eff7e48779bbdf93858ea0c8732f220c4ca04bab57d06d",
+      "proposed_sha256": "810bee88fa990161cd87aa43e56967cd17509ff265b9ba95416a28ff7144dcb0",
+      "assessment_sha256": "31a56c191318770faceb0752e43a3f6f7b7d2e5cc0cc35c2cefa284b30049153",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "dba88393ad96e7cb15874cfe5220722471dcfdf9447027009ba082454184d418"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -147,31 +164,32 @@
     "source_sha256": "b0983c09140988dc02b31dfe4bea8cf963f4808598cfa0cd0cd80902acba9d5f",
     "number": "R4451-115",
     "proposed_xml": null,
-    "reason": "La coordination des conseils de l'organisme extérieur avec la prévention des autres risques évite des mesures contradictoires. Ce devoir matériel ne prescrit ni déclaration, ni dossier distinct, ni autorisation ; sa suppression fragiliserait la prévention intégrée.",
-    "review_notes": "Aucun renvoi au contrat unique. Le recours favorable à un organisme extérieur prévu par R4451-112 demeure possible et ne se transforme pas en obligation d'internaliser la prévention.",
+    "reason": "La coordination des conseils de l'organisme extérieur avec la prévention des autres risques évite des mesures contradictoires. Ce devoir matériel ne prescrit ni déclaration, ni dossier distinct, ni autorisation ; sa suppression fragiliserait la prévention intégrée. Seconde passe : maintien du choix antérieur après examen des charges et interactions décrites dans review_notes, sans reformulation stylistique. Correction du refus : ajout d'une analyse explicite des avantages dans benefit_review ; le corps source demeure intégralement maintenu et cette analyse ne constitue pas une réduction normative supplémentaire.",
+    "review_notes": "Différence de champ : « coordination des actions de prévention » est une obligation opérationnelle, non le regroupement structurel retiré à R4451-114. Le choix de l'organisme de R4451-112 2° et les conseils de R4451-123 demeurent ; aucun devoir de transmission n'est ajouté. L4644-1 I lu en entier dans la source et la proposition : la suppression de l'enregistrement des intervenants externes généraux n'abolit pas la certification sectorielle de R4451-125. Point ouvert : R4451-112/125 disponibles expirent le 1er juillet 2028 ; vérifier les catégories successeures avant coordination de cette date, sans prolongation implicite du droit actuel. Contrôle local borné : recherche de renvois dans les neuf recueils ; l'Annexe III de concordance de 2010 lue en entier porte d'anciennes versions et ne rétablit pas les normes actuelles sous les mêmes numéros. Aucun audit exhaustif des neuf recueils ni validation par juriste n'est revendiqué. Reprise après refus : reference-targets.json, version 3, ne contient aucune cible ni aucun renvoyeur ; les vérifications ci-dessus reposent sur les textes entiers du corpus public local, relus avec leurs propositions et NOTA, et non sur un certificat antérieur. Les douze sources assignées ont des NOTA vides.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "La coordination des conseils de l'organisme extérieur avec la prévention des autres risques évite des mesures contradictoires. Ce devoir matériel ne prescrit ni déclaration, ni dossier distinct, ni autorisation ; sa suppression fragiliserait la prévention intégrée.",
-      "scope_limitations": "Aucun renvoi au contrat unique. Le recours favorable à un organisme extérieur prévu par R4451-112 demeure possible et ne se transforme pas en obligation d'internaliser la prévention. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Maintien de la coordination matérielle des risques professionnels lorsque le conseil est externalisé. Aucun dossier ou agrément distinct susceptible d'être supprimé n'est prescrit ici.",
+      "scope_limitations": "Examen limité à cet article et aux interactions documentées dans review_notes ; les textes externes et versions futures manquants restent ouverts. Aucun solde net de coût ou de complexité de l'ensemble des codes n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : texte intégralement maintenu, sans ajout de registre, donnée, délai, formalité ou condition d'accès aux avantages.",
       "effects": []
     },
-    "reference_checks": [],
-    "benefit_review": "L'article R4451-115 ne crée pas une exonération fiscale ni une dispense : il impose la coordination des préventions. Le bénéfice possible est le recours à un organisme extérieur autorisé par R4451-112 ; cette possibilité demeure intégralement ouverte aux désignations futures, sans nouveau justificatif ni internalisation imposée.",
+    "classification": "retained_necessary",
+    "benefit_review": "L'article ne prévoit aucune exonération fiscale, réduction de cotisation, franchise, crédit, aide ou dispense de déclaration. L'avantage organisationnel possible est le recours à un organisme compétent extérieur, explicitement envisagé par « Lorsque l'employeur a désigné un organisme compétent en radioprotection » et autorisé au 2° de R4451-112. Le maintien intégral de R4451-115 conserve cette possibilité pour les désignations actuelles et futures éligibles : il n'impose ni recrutement interne, ni regroupement obligatoire, ni agrément ou déclaration supplémentaire. La coordination avec les autres risques professionnels est une obligation matérielle essentielle de prévention, et non une exonération à supprimer ; elle reste compatible avec la dispense de regroupement de R4451-114. La certification sectorielle de R4451-125 subsiste dans son champ, distinct de l'enregistrement général supprimé dans la proposition de L4644-1. La faculté distincte de confier au même conseiller les fonctions relevant du travail et de la santé publique, prévue à R4451-121, n'est pas fermée par ce maintien ; son articulation avec R1333-19 reste réservée faute de texte externe intégral. Aucune restriction aux seules situations antérieures n'est ajoutée. Les versions disponibles de R4451-112 et R4451-125 prenant fin le 1er juillet 2028, la continuité de leurs catégories et qualifications doit être confrontée aux textes successeurs manquants ; aucun titre équivalent n'est inventé.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "b0983c09140988dc02b31dfe4bea8cf963f4808598cfa0cd0cd80902acba9d5f",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "a65f832cce4860ea6c0284341bb8ab7c678986b0cff3f5f30501d4ab4d694be5",
+      "assessment_sha256": "ba000fb3721e4a5d9aada12a32ef1512b6b6476da2357a32eb519d7c87f8ec73",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -179,30 +197,31 @@
     "source_sha256": "c945b74a8d31ab4eae1013612a69b22cf805f1b786d853611511258dd611a186",
     "number": "R4451-116",
     "proposed_xml": null,
-    "reason": "La désignation d'au moins une personne pour exploiter les résultats dosimétriques garantit que les mesures sont effectivement analysées. Il ne s'agit pas d'un second relevé ni d'une transmission supplémentaire ; retirer cette responsabilité menacerait la détection des expositions.",
-    "review_notes": "La personne désignée exploite la surveillance prévue à R4451-64 et suivants ; la suppression de l'entité interne obligatoire ne retire ni cette désignation ni ses moyens.",
+    "reason": "La désignation d'au moins une personne pour exploiter les résultats dosimétriques garantit que les mesures sont effectivement analysées. Il ne s'agit pas d'un second relevé ni d'une transmission supplémentaire ; retirer cette responsabilité menacerait la détection des expositions. Seconde passe : maintien du choix antérieur après examen des charges et interactions décrites dans review_notes, sans reformulation stylistique.",
+    "review_notes": "Différence de champ vérifiée : « comprennent au moins une personne désignée » vise l'organisme et le pôle, et non l'entité interne facultative de R4451-114. R4451-64 à R4451-73 lus en entier : la collecte accréditée (R4451-65), la transmission au système (R4451-66), l'accès du travailleur (R4451-67), les accès médicaux (R4451-68) et les limites du conseiller (R4451-69/70) restent distincts de l'exploitation. Le présent texte n'ouvre aucun accès supplémentaire aux doses internes. R4451-74/75 lus : signalement médical compatible, sans nouvelle donnée nominative imposée. Réserve de version future sur la catégorie d'organisme après juillet 2028, non documentée. Contrôle local borné : recherche de renvois dans les neuf recueils ; l'Annexe III de concordance de 2010 lue en entier porte d'anciennes versions et ne rétablit pas les normes actuelles sous les mêmes numéros. Aucun audit exhaustif des neuf recueils ni validation par juriste n'est revendiqué. Reprise après refus : reference-targets.json, version 3, ne contient aucune cible ni aucun renvoyeur ; les vérifications ci-dessus reposent sur les textes entiers du corpus public local, relus avec leurs propositions et NOTA, et non sur un certificat antérieur. Les douze sources assignées ont des NOTA vides.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "La désignation d'au moins une personne pour exploiter les résultats dosimétriques garantit que les mesures sont effectivement analysées. Il ne s'agit pas d'un second relevé ni d'une transmission supplémentaire ; retirer cette responsabilité menacerait la détection des expositions.",
-      "scope_limitations": "La personne désignée exploite la surveillance prévue à R4451-64 et suivants ; la suppression de l'entité interne obligatoire ne retire ni cette désignation ni ses moyens. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Maintien d'une responsabilité identifiable pour exploiter les résultats dosimétriques dans l'organisme et le pôle. Aucune seconde collecte ni baisse de prélèvement n'est démontrée.",
+      "scope_limitations": "Examen limité à cet article et aux interactions documentées dans review_notes ; les textes externes et versions futures manquants restent ouverts. Aucun solde net de coût ou de complexité de l'ensemble des codes n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : texte intégralement maintenu, sans ajout de registre, donnée, délai, formalité ou condition d'accès aux avantages.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "c945b74a8d31ab4eae1013612a69b22cf805f1b786d853611511258dd611a186",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "4c1199dba5a4b5a8df89533f920818a7808e6231aef183b87219f05c5cb3b284",
+      "assessment_sha256": "2e6f71f4e8683da9f343ee0b023a12e6acf198272a1521d38ee6b45acdcf989f",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -210,30 +229,31 @@
     "source_sha256": "af17ed318b5d0ec08249398324eec03d7c868f51c150342ae2c8b1880ddba8d8",
     "number": "R4451-117",
     "proposed_xml": null,
-    "reason": "Maintien de la faculté offerte à l'employeur des entreprises de moins de vingt salariés d'exercer la fonction compétente. L'exclusion du risque d'exposition interne et le certificat constituent les garanties de cette dérogation favorable, qui reste ouverte aux entreprises futures éligibles.",
-    "review_notes": "Seuil strict de moins de vingt salariés et absence de risque interne conservés. Renvoi au 1° de R4451-125 cohérent avec le certificat de la personne physique ; aucune extension non étayée du seuil.",
+    "reason": "Maintien de la faculté offerte à l'employeur des entreprises de moins de vingt salariés d'exercer la fonction compétente. L'exclusion du risque d'exposition interne et le certificat constituent les garanties de cette dérogation favorable, qui reste ouverte aux entreprises futures éligibles. Seconde passe : maintien du choix antérieur après examen des charges et interactions décrites dans review_notes, sans reformulation stylistique.",
+    "review_notes": "Avantage maintenu pour les situations futures éligibles : « moins de vingt salariés », « exclut tout risque d'exposition interne » et certificat au 1° de R4451-125. Ce 1° lu exige bien le certificat de formation de la personne physique, non la certification d'organisme du 2°. Différence de champ avec la désignation salariée de R4451-112 : faculté spéciale de l'employeur, non obligation d'embauche d'un conseiller supplémentaire. Aucun seuil d'ancienneté ou préavis de rupture à importer. Point non vérifiable : R4451-125 disponible expire le 1er juillet 2028 ; préserver cette faculté dans la coordination avec son successeur, dont le texte manque, sans inventer une équivalence de titre. Contrôle local borné : recherche de renvois dans les neuf recueils ; l'Annexe III de concordance de 2010 lue en entier porte d'anciennes versions et ne rétablit pas les normes actuelles sous les mêmes numéros. Aucun audit exhaustif des neuf recueils ni validation par juriste n'est revendiqué. Reprise après refus : reference-targets.json, version 3, ne contient aucune cible ni aucun renvoyeur ; les vérifications ci-dessus reposent sur les textes entiers du corpus public local, relus avec leurs propositions et NOTA, et non sur un certificat antérieur. Les douze sources assignées ont des NOTA vides.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Maintien de la faculté offerte à l'employeur des entreprises de moins de vingt salariés d'exercer la fonction compétente. L'exclusion du risque d'exposition interne et le certificat constituent les garanties de cette dérogation favorable, qui reste ouverte aux entreprises futures éligibles.",
-      "scope_limitations": "Seuil strict de moins de vingt salariés et absence de risque interne conservés. Renvoi au 1° de R4451-125 cohérent avec le certificat de la personne physique ; aucune extension non étayée du seuil. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Maintien intégral de la faculté pour l'employeur de moins de vingt salariés, certifié et sans risque interne, d'assumer la fonction. L'avantage préexistant reste ouvert sans nouvelle baisse comptée.",
+      "scope_limitations": "Examen limité à cet article et aux interactions documentées dans review_notes ; les textes externes et versions futures manquants restent ouverts. Aucun solde net de coût ou de complexité de l'ensemble des codes n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : texte intégralement maintenu, sans ajout de registre, donnée, délai, formalité ou condition d'accès aux avantages.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "af17ed318b5d0ec08249398324eec03d7c868f51c150342ae2c8b1880ddba8d8",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "81b7d73fef1703c890d4e974ded7bdba8867c5278373c29e723b80d8856e97ce",
+      "assessment_sha256": "681d176238efe398bd51ca429956b96c259007c371a833eebd4824b1249f9dd1",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -241,30 +261,31 @@
     "source_sha256": "7a43c60e8f45c3e07702fcf4d962619f747713b60b06b33ca64df0cf1e70baf1",
     "number": "R4451-118",
     "proposed_xml": null,
-    "reason": "L'écrit définit temps, moyens et confidentialité des missions. Il permet de rendre effectifs les moyens du conseiller et de protéger les données de santé ; aucun modèle, dépôt ou renouvellement périodique autonome n'est prescrit. La charge de preuve a une fonction essentielle conservée.",
-    "review_notes": "Pas de nouveau registre ou conservation spécifique ajouté. Confidentialité dosimétrique et moyens restent requis, même en l'absence d'entité interne obligatoire après la modification de R4451-114.",
+    "reason": "L'écrit définit temps, moyens et confidentialité des missions. Il permet de rendre effectifs les moyens du conseiller et de protéger les données de santé ; aucun modèle, dépôt ou renouvellement périodique autonome n'est prescrit. La charge de preuve a une fonction essentielle conservée. Seconde passe : maintien du choix antérieur après examen des charges et interactions décrites dans review_notes, sans reformulation stylistique.",
+    "review_notes": "Compatibilité vérifiée : « consigne par écrit les modalités d'exercice » garantit les moyens maintenus au II de R4451-114 sans rendre obligatoire l'entité supprimée. R4451-69 III impose la confidentialité vis-à-vis des tiers et R4451-70 II les moyens liés au secret professionnel ; leur lecture entière justifie cette garantie et non un second registre. R4451-64 à R4451-73 lus : aucun élargissement de l'accès nominatif, aucune transmission supplémentaire ou échéance nouvelle. R4451-124 conserve de son côté les conseils pendant dix ans : objet distinct de l'écrit définissant les missions, non doublon démontré. Contrôle local borné : recherche de renvois dans les neuf recueils ; l'Annexe III de concordance de 2010 lue en entier porte d'anciennes versions et ne rétablit pas les normes actuelles sous les mêmes numéros. Aucun audit exhaustif des neuf recueils ni validation par juriste n'est revendiqué. Reprise après refus : reference-targets.json, version 3, ne contient aucune cible ni aucun renvoyeur ; les vérifications ci-dessus reposent sur les textes entiers du corpus public local, relus avec leurs propositions et NOTA, et non sur un certificat antérieur. Les douze sources assignées ont des NOTA vides.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "L'écrit définit temps, moyens et confidentialité des missions. Il permet de rendre effectifs les moyens du conseiller et de protéger les données de santé ; aucun modèle, dépôt ou renouvellement périodique autonome n'est prescrit. La charge de preuve a une fonction essentielle conservée.",
-      "scope_limitations": "Pas de nouveau registre ou conservation spécifique ajouté. Confidentialité dosimétrique et moyens restent requis, même en l'absence d'entité interne obligatoire après la modification de R4451-114. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Maintien de l'écrit garantissant temps, moyens et confidentialité, sans formulaire ou dépôt périodique. Sa nécessité subsiste lorsque le regroupement devient facultatif.",
+      "scope_limitations": "Examen limité à cet article et aux interactions documentées dans review_notes ; les textes externes et versions futures manquants restent ouverts. Aucun solde net de coût ou de complexité de l'ensemble des codes n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : texte intégralement maintenu, sans ajout de registre, donnée, délai, formalité ou condition d'accès aux avantages.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "7a43c60e8f45c3e07702fcf4d962619f747713b60b06b33ca64df0cf1e70baf1",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "036482bce4be943edd3d337f7d761c352e788b8d5c9cdf18510140bb38c73571",
+      "assessment_sha256": "ccb44c15115bd26f6e007ae24f5430eb8a3c48b6860717396d993a2d7c619df6",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -272,30 +293,31 @@
     "source_sha256": "378b111cd5665bf1704414e54aea7d7fd7ddb3456d3d35395c92bd32291d5317",
     "number": "R4451-119",
     "proposed_xml": null,
-    "reason": "La protection contre la discrimination en raison de la mission assure l'indépendance du conseiller salarié. Elle ne contient ni taxe ni formalité à supprimer ; elle protège également les futurs conseillers et ne dépend pas de l'ancienneté du contrat.",
-    "review_notes": "Le 1° de R4451-112 désigne la personne physique salariée ; la protection n'est pas étendue artificiellement à la personne morale. Les protections contre une rupture discriminatoire restent autonomes du barème ordinaire.",
+    "reason": "La protection contre la discrimination en raison de la mission assure l'indépendance du conseiller salarié. Elle ne contient ni taxe ni formalité à supprimer ; elle protège également les futurs conseillers et ne dépend pas de l'ancienneté du contrat. Seconde passe : maintien du choix antérieur après examen des charges et interactions décrites dans review_notes, sans reformulation stylistique.",
+    "review_notes": "Différence de champ : « ne peut subir de discrimination en raison de l'exercice de sa mission » est une protection autonome de la personne du 1° de R4451-112, non un avantage de rupture subordonné à un an d'ancienneté. Aucun montant d'indemnité ordinaire ne borne la réparation d'une discrimination. Le renvoi est cohérent avec la version de R4451-112 lue (personne physique salariée). Point non vérifiable : sa fin de validité annoncée au 1er juillet 2028 impose de vérifier le successeur avant cette date ; la présente conservation ne ferme pas la protection aux désignations futures éligibles et ne proroge pas la version cible. Contrôle local borné : recherche de renvois dans les neuf recueils ; l'Annexe III de concordance de 2010 lue en entier porte d'anciennes versions et ne rétablit pas les normes actuelles sous les mêmes numéros. Aucun audit exhaustif des neuf recueils ni validation par juriste n'est revendiqué. Reprise après refus : reference-targets.json, version 3, ne contient aucune cible ni aucun renvoyeur ; les vérifications ci-dessus reposent sur les textes entiers du corpus public local, relus avec leurs propositions et NOTA, et non sur un certificat antérieur. Les douze sources assignées ont des NOTA vides.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "La protection contre la discrimination en raison de la mission assure l'indépendance du conseiller salarié. Elle ne contient ni taxe ni formalité à supprimer ; elle protège également les futurs conseillers et ne dépend pas de l'ancienneté du contrat.",
-      "scope_limitations": "Le 1° de R4451-112 désigne la personne physique salariée ; la protection n'est pas étendue artificiellement à la personne morale. Les protections contre une rupture discriminatoire restent autonomes du barème ordinaire. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Maintien intégral de la protection contre les discriminations liées à la mission, y compris pour les futurs conseillers. Aucune charge administrative autonome n'est retirée.",
+      "scope_limitations": "Examen limité à cet article et aux interactions documentées dans review_notes ; les textes externes et versions futures manquants restent ouverts. Aucun solde net de coût ou de complexité de l'ensemble des codes n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : texte intégralement maintenu, sans ajout de registre, donnée, délai, formalité ou condition d'accès aux avantages.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "378b111cd5665bf1704414e54aea7d7fd7ddb3456d3d35395c92bd32291d5317",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "cee80255fedddac1c4b1adf586072ed21fba95674c07cba16ceafe71a52a8d11",
+      "assessment_sha256": "d5951864543d5ac479a821e2c983cfd2f0116b93ca68fece0d52dba18af01a0a",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -303,30 +325,31 @@
     "source_sha256": "7555f3f57e0ae6b2aec20fed2a19620ba05980d2bd4b10cd67b58e4683b364e2",
     "number": "R4451-120",
     "proposed_xml": null,
-    "reason": "La consultation du comité social et économique garantit la participation des travailleurs à l'organisation de la prévention d'un risque grave. Aucun délai minimal, rapport autonome ou autorisation administrative supplémentaire n'est imposé par cet article ; cette garantie collective est maintenue.",
-    "review_notes": "La consultation sur l'organisation couvre également son adaptation après suppression du regroupement obligatoire ; aucune autorisation du CSE n'est inventée. Les règles de participation européennes restent à leur champ propre.",
+    "reason": "La consultation du comité social et économique garantit la participation des travailleurs à l'organisation de la prévention d'un risque grave. Aucun délai minimal, rapport autonome ou autorisation administrative supplémentaire n'est imposé par cet article ; cette garantie collective est maintenue. Seconde passe : maintien du choix antérieur après examen des charges et interactions décrites dans review_notes, sans reformulation stylistique.",
+    "review_notes": "Différence de champ vérifiée : « est consulté sur l'organisation » n'exige ni autorisation du comité ni bilan annuel spécifique. La proposition de R4451-50 supprime ce dernier bilan mais maintient la mise à disposition des résultats et les consultations autonomes ; le maintien de R4451-120 ne le recrée pas. R4451-72 porte un bilan statistique dosimétrique distinct ; aucun de ses contenus n'est ajouté ici. Le choix de ne plus regrouper les conseillers selon R4451-114 reste soumis à cette consultation dans son champ propre, sans nouvelle procédure. Participation européenne à confronter aux textes externes non fournis ; aucune dispense de ces garanties n'est affirmée. Contrôle local borné : recherche de renvois dans les neuf recueils ; l'Annexe III de concordance de 2010 lue en entier porte d'anciennes versions et ne rétablit pas les normes actuelles sous les mêmes numéros. Aucun audit exhaustif des neuf recueils ni validation par juriste n'est revendiqué. Reprise après refus : reference-targets.json, version 3, ne contient aucune cible ni aucun renvoyeur ; les vérifications ci-dessus reposent sur les textes entiers du corpus public local, relus avec leurs propositions et NOTA, et non sur un certificat antérieur. Les douze sources assignées ont des NOTA vides.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "La consultation du comité social et économique garantit la participation des travailleurs à l'organisation de la prévention d'un risque grave. Aucun délai minimal, rapport autonome ou autorisation administrative supplémentaire n'est imposé par cet article ; cette garantie collective est maintenue.",
-      "scope_limitations": "La consultation sur l'organisation couvre également son adaptation après suppression du regroupement obligatoire ; aucune autorisation du CSE n'est inventée. Les règles de participation européennes restent à leur champ propre. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Maintien de la participation du comité à l'organisation de la prévention, distincte des rapports périodiques. Aucun nouveau rapport ni économie de procédure n'est revendiqué.",
+      "scope_limitations": "Examen limité à cet article et aux interactions documentées dans review_notes ; les textes externes et versions futures manquants restent ouverts. Aucun solde net de coût ou de complexité de l'ensemble des codes n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : texte intégralement maintenu, sans ajout de registre, donnée, délai, formalité ou condition d'accès aux avantages.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "7555f3f57e0ae6b2aec20fed2a19620ba05980d2bd4b10cd67b58e4683b364e2",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "f89813a87d493cb0dcc8956b43cb3582c05a38b12d7759d660f8e710fe2ae416",
+      "assessment_sha256": "3c0081ad223d471f1f3b425c4113c72a8eaeff9e221fbfb6b2d187d791e08af2",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -334,30 +357,31 @@
     "source_sha256": "27f8f7b85d0c1ef96cfb8b3ab919a522df29032c698f03ffb8bedcb3b2e3e6d2",
     "number": "R4451-121",
     "proposed_xml": null,
-    "reason": "La possibilité de désigner le même conseiller au titre du travail et de l'activité nucléaire évite déjà la multiplication des intervenants. Cette faculté favorable reste ouverte aux futures désignations ; elle ne doit pas être abrogée au nom de la suppression des doublons.",
-    "review_notes": "Renvoi R4451-112 cohérent avec la désignation ; R1333-19 du code de la santé publique est un fondement autonome externe, non une rupture de contrat privé. Son texte intégral n'est pas fourni dans les cibles.",
+    "reason": "La possibilité de désigner le même conseiller au titre du travail et de l'activité nucléaire évite déjà la multiplication des intervenants. Cette faculté favorable reste ouverte aux futures désignations ; elle ne doit pas être abrogée au nom de la suppression des doublons. Seconde passe : maintien du choix antérieur après examen des charges et interactions décrites dans review_notes, sans reformulation stylistique.",
+    "review_notes": "Faculté favorable maintenue : « peut également être désigné » autorise le même conseiller, sans rendre les deux fonctions obligatoirement communes. R4451-124 II lu en entier permet déjà que des conseils « lorsqu'ils portent sur le même objet » valent dans les deux cadres ; ce n'est pas une nouvelle fusion créée par ce lot. Point non vérifiable : santé publique R1333-19 entier absent des recueils et pièces identifiés, donc articulation externe non validée. Point temporel ouvert : successeur de R4451-112 à compter du 1er juillet 2028 absent. Aucun retrait de cette faculté pour les désignations futures éligibles ni remise en vigueur d'une version expirée. Contrôle local borné : recherche de renvois dans les neuf recueils ; l'Annexe III de concordance de 2010 lue en entier porte d'anciennes versions et ne rétablit pas les normes actuelles sous les mêmes numéros. Aucun audit exhaustif des neuf recueils ni validation par juriste n'est revendiqué. Reprise après refus : reference-targets.json, version 3, ne contient aucune cible ni aucun renvoyeur ; les vérifications ci-dessus reposent sur les textes entiers du corpus public local, relus avec leurs propositions et NOTA, et non sur un certificat antérieur. Les douze sources assignées ont des NOTA vides.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "La possibilité de désigner le même conseiller au titre du travail et de l'activité nucléaire évite déjà la multiplication des intervenants. Cette faculté favorable reste ouverte aux futures désignations ; elle ne doit pas être abrogée au nom de la suppression des doublons.",
-      "scope_limitations": "Renvoi R4451-112 cohérent avec la désignation ; R1333-19 du code de la santé publique est un fondement autonome externe, non une rupture de contrat privé. Son texte intégral n'est pas fourni dans les cibles. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Maintien intégral d'une possibilité existante de cumul des désignations travail et activité nucléaire. Ce maintien favorable ne constitue pas une nouvelle fusion de régimes.",
+      "scope_limitations": "Examen limité à cet article et aux interactions documentées dans review_notes ; les textes externes et versions futures manquants restent ouverts. Aucun solde net de coût ou de complexité de l'ensemble des codes n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : texte intégralement maintenu, sans ajout de registre, donnée, délai, formalité ou condition d'accès aux avantages.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "27f8f7b85d0c1ef96cfb8b3ab919a522df29032c698f03ffb8bedcb3b2e3e6d2",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "e72f96a88d1effa9febf43915c49f856b9f509b3d1fc6a370d0e5d8475b3bae4",
+      "assessment_sha256": "9de689b652c4531e08a619e6b5478f903fb855aa920229ef2b61ae8441cbc541",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -365,77 +389,91 @@
     "source_sha256": "a72dc606443d31ea0a4a9886ee17e9cb07a4981d99276cd4243ab77b40aa5505",
     "number": "R4451-122",
     "proposed_xml": null,
-    "reason": "Le rôle préventif du conseiller, sous la responsabilité de l'employeur et en lien avec médecin, prévention et comité, est nécessaire à la santé au travail. Ces liens fonctionnels ne créent pas un rapport ou un circuit d'autorisation distinct à retirer.",
-    "review_notes": "L4644-1 I désigne le salarié de prévention et non une catégorie de contrat. Aucun délai de notification ou seuil d'ancienneté à importer dans les relations avec le médecin ou le comité.",
+    "reason": "Le rôle préventif du conseiller, sous la responsabilité de l'employeur et en lien avec médecin, prévention et comité, est nécessaire à la santé au travail. Ces liens fonctionnels ne créent pas un rapport ou un circuit d'autorisation distinct à retirer. Seconde passe : maintien du choix antérieur après examen des charges et interactions décrites dans review_notes, sans reformulation stylistique.",
+    "review_notes": "Différence de champ vérifiée : « le salarié mentionné au I de l'article L. 4644-1 » désigne la compétence générale de prévention, que la source et la proposition de L4644-1 conservent. La suppression proposée de l'enregistrement administratif des intervenants externes ne retire ni cette désignation ni ses garanties d'indépendance. R4451-123/124 lus : missions et conservation des conseils complètent le lien fonctionnel sans exiger une entité interne. La réserve du pôle de R4451-113 et la dispense générale de R4451-114 restent compatibles. Aucune durée de mission de prévention ne vaut durée du contrat de travail. Aucun renvoi à une taxe ni financement substitutif identifié. Contrôle local borné : recherche de renvois dans les neuf recueils ; l'Annexe III de concordance de 2010 lue en entier porte d'anciennes versions et ne rétablit pas les normes actuelles sous les mêmes numéros. Aucun audit exhaustif des neuf recueils ni validation par juriste n'est revendiqué. Reprise après refus : reference-targets.json, version 3, ne contient aucune cible ni aucun renvoyeur ; les vérifications ci-dessus reposent sur les textes entiers du corpus public local, relus avec leurs propositions et NOTA, et non sur un certificat antérieur. Les douze sources assignées ont des NOTA vides.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Le rôle préventif du conseiller, sous la responsabilité de l'employeur et en lien avec médecin, prévention et comité, est nécessaire à la santé au travail. Ces liens fonctionnels ne créent pas un rapport ou un circuit d'autorisation distinct à retirer.",
-      "scope_limitations": "L4644-1 I désigne le salarié de prévention et non une catégorie de contrat. Aucun délai de notification ou seuil d'ancienneté à importer dans les relations avec le médecin ou le comité. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Maintien de la responsabilité de l'employeur et des liens entre conseiller, médecin, prévention et comité. Ces liens essentiels ne sont pas des formalités de remplacement.",
+      "scope_limitations": "Examen limité à cet article et aux interactions documentées dans review_notes ; les textes externes et versions futures manquants restent ouverts. Aucun solde net de coût ou de complexité de l'ensemble des codes n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : texte intégralement maintenu, sans ajout de registre, donnée, délai, formalité ou condition d'accès aux avantages.",
       "effects": []
     },
-    "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "a72dc606443d31ea0a4a9886ee17e9cb07a4981d99276cd4243ab77b40aa5505",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "7aa765217ab012f588b59a2d17caca79fb8bde2b8247ca6fc83b6a45c1a43a29",
+      "assessment_sha256": "288db4b3eb10a189aca231f08e496b088255f2a55448e234b3fe1591748ce3c7",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000037024190",
     "source_sha256": "18f8b394dc2ff3e849d8e8684902ae365c46d6b918e3b7d6a4cda15858486f86",
     "number": "R4451-123",
-    "proposed_xml": null,
-    "reason": "Les conseils, concours, mesurages et vérifications définissent les missions techniques indispensables du conseiller. Le 2° c) vise les conditions d'emploi au sens de la protection radiologique, et non le régime de rupture des contrats. Aucun changement stylistique ni suppression d'une protection n'est justifié.",
-    "review_notes": "Toutes les subdivisions 1° a) à f), 2° a) à g) et 3° a) à b) sont maintenues. Les imperfections syntaxiques « section 6 au présent chapitre » et « La définition et à la mise en œuvre » sont signalées sans changement de fond. R4451-58 proposé conserve l'information des anciens CDD, des temporaires et du droit public ; aucune réforme du barème de rupture n'est opérée ici.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
-    "substantive_impact": {
-      "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Les conseils, concours, mesurages et vérifications définissent les missions techniques indispensables du conseiller. Le 2° c) vise les conditions d'emploi au sens de la protection radiologique, et non le régime de rupture des contrats. Aucun changement stylistique ni suppression d'une protection n'est justifié.",
-      "scope_limitations": "Toutes les subdivisions 1° a) à f), 2° a) à g) et 3° a) à b) sont maintenues. Les imperfections syntaxiques « section 6 au présent chapitre » et « La définition et à la mise en œuvre » sont signalées sans changement de fond. R4451-58 proposé conserve l'information des anciens CDD, des temporaires et du droit public ; aucune réforme du barème de rupture n'est opérée ici. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
-      "effects": []
-    },
+    "proposed_xml": "\n<p>Le conseiller en radioprotection : <br />\n<br />1° Donne des conseils en ce qui concerne : <br />\n<br />a) La conception, la modification ou l'aménagement des lieux de travail et des dispositifs de sécurité destinés à prévenir les risques liés aux rayonnements ionisants ; <br />\n<br />b) Les programmes des vérifications des équipements de travail et des lieux de travail prévues à la section 6 au présent chapitre ainsi que les modalités de suivi de l'exposition individuelle des travailleurs ; <br />\n<br />c) L'instrumentation appropriée aux vérifications mentionnées au b) et les dosimètres opérationnels ; <br />\n<br />d) Les modalités de classement des travailleurs prévu à l'article R. 4451-57 ; <br />\n<br />e) Les modalités de délimitation et conditions d'accès aux zones mentionnées aux articles R. 4451-24 et R. 4451-28 ; <br />\n<br />f) La préparation et l'intervention en situations d'urgence radiologique prévues à la section 12 du présent chapitre ; <br />\n<br />2° Apporte son concours en ce qui concerne : <br />\n<br />a) L'évaluation des risques prévue à l'article R. 4451-13 et suivants ; <br />\n<br />b) La définition et à la mise en œuvre des dispositions relatives aux mesures et moyens de prévention prévus à la section 5 du présent chapitre, notamment celles concernant la définition des contraintes de dose prévue au 1° du I de l'article R. 4451-33, l'identification des zones prévue à l'article R. 4451-22, leur délimitation prévue à l'article R. 4451-24 et la signalisation prévue à l'article R. 4451-26 ; <br />\n<br />c) La définition et à la mise en œuvre des dispositions relatives aux conditions d'emploi des travailleurs prévue à la section 7 du présent chapitre, notamment celles concernant l'évaluation individuelle du risque lié aux rayonnements ionisants prévue à l'article R. 4451-52, les mesures de protection individuelle prévues à l'article R. 4451-56 et l'information et la formation à la sécurité des travailleurs prévue aux articles R. 4451-58 et R. 4451-59 ; <br />\n<br />d) La définition et à la mise en œuvre des dispositions relatives à la surveillance de l'exposition individuelle des travailleurs prévue à la section 9 du présent chapitre en liaison avec le médecin du travail ; <br />\n<br />e) La coordination des mesures de prévention relatives à la radioprotection au sens de l'article R. 4511-5 ; <br />\n<br />f) L'élaboration des procédures et moyens pour la décontamination des lieux de travail susceptibles de l'être ; <br />\n<br />g) L'enquête et l'analyse des événements significatifs mentionnés à l'article R. 4451-77 ; <br />\n<br />3° Exécute ou supervise : <br />\n<br />a) Les mesurages prévus à l'article R. 4451-15 ; <br />\n<br />b) Les vérifications de l'efficacité des moyens de prévention prévues à la section 6 du présent chapitre à l'exception de celles prévues aux articles R. 4451-40 et R. 4451-44.</p>\n",
+    "reason": "Coordination nécessaire à droit constant : correction du renvoi qui attribuait la délimitation à R4451-26, consacré à la signalisation, et précision du I de R4451-33. Toutes les autres missions sont reproduites sans reformulation. Aucune réduction des protections radiologiques ni réforme de la rupture n'est opérée.",
+    "review_notes": "Toutes les subdivisions 1° a) à f), 2° a) à g) et 3° a) à b) sont maintenues. Les imperfections syntaxiques « section 6 au présent chapitre » et « La définition et à la mise en œuvre » sont signalées sans changement de fond. R4451-58 proposé conserve l'information des anciens CDD, des temporaires et du droit public ; aucune réforme du barème de rupture n'est opérée ici. Contradiction effective de renvoi dans la source : « l'identification et la délimitation des zones prévues aux articles R. 4451-22 et R. 4451-26 ». R4451-26 dispose « Chaque source de rayonnements ionisants fait l'objet d'une signalisation spécifique et appropriée. » ; R4451-24 dispose « L'employeur délimite, par des moyens adaptés, les zones surveillée, contrôlées, radon ou de sécurité radiologique ». Le 2° b) distingue désormais identification, délimitation et signalisation. Coordination nécessaire : « au 1° de l'article R. 4451-33 » devient « au 1° du I » sans étendre ni réduire les autres mesures de prévention couvertes par le début de ce b). R4451-113 III autorise les vérifications initiales par le pôle ; R4451-128 4° impose leur indépendance : différence de fonctions compatible avec l'exception du 3° b). R4451-59 conserve la formation patronale renouvelée tous les trois ans. Aucun renvoi direct à L1234-1, L1221-2 ou L1234-9 n'existe ici.",
+    "status": "rewrite_draft",
     "reference_checks": [
       {
         "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
-        "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
-        "assessment": "L1234-1 concerne le préavis de licenciement : ni le 1°, ni le 2° c), ni le 3° de R4451-123 n'y renvoie. Les quinze jours du projet et les durées anciennes n'affectent pas les missions radiologiques ; aucune condition d'ancienneté ou de notification à introduire ici."
+        "view_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
+        "assessment": "Différence de champ : R4451-123 ne renvoie pas à L1234-1. Les seuils de six mois/deux ans de la source et les quinze jours du projet concernent la rupture, pas le conseil radiologique. Ni ancienneté ni notification de licenciement ne conditionnent les missions sanitaires ; les protections spéciales demeurent distinctes."
       },
       {
         "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
         "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
-        "assessment": "L1221-2 proposé distingue nouveaux contrats privés indéterminés et anciens CDD, sans supprimer le droit public. Le 2° c) de R4451-123 vise l'évaluation, les équipements et la formation, non la durée de l'emploi ; il n'autorise aucun nouveau CDD ni aucune fin automatique de mission."
+        "assessment": "Différence de champ : aucune durée d'emploi n'est fixée par R4451-123. L1221-2 proposé interdit les nouveaux termes privés, préserve les contrats anciens et les avantages futurs de même objet, et exclut le régime public. Le concours à la formation ne crée aucun CDD ni terme automatique ; aucun renvoi supplémentaire nécessaire."
       },
       {
         "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
-        "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
-        "assessment": "L1234-9 traite l'indemnité ordinaire, seuil d'un an à la fin effective préavis compris et calcul sur toute l'ancienneté, avec transition des anciens contrats. R4451-123 ne fixe aucune indemnité et n'y renvoie pas : ces conditions ne limitent pas les concours de prévention dus dès l'exposition."
+        "view_sha256": "07c3c02ea91c33bfe38f9dd4010d72cc213a2fee8e654638d29b3dec91f0446c",
+        "assessment": "Différence de champ : R4451-123 ne calcule aucune indemnité. Les huit mois de la source et sa NOTA de 2017, puis le seuil d'un an au terme effectif avec préavis, les 0,20 mois par année totale et le plafond de six mois du projet ne s'appliquent pas aux missions de prévention. Notifications antérieures, services acquis et indemnités spéciales restent au champ de L1234-9."
       },
       {
         "target_key": "LEGITEXT000006072050|LEGIARTI000053220713",
         "view_sha256": "3c6c0a13b4baa0a5a9f05449a175f08f1cd2254f8936f2845c0f60704126b193",
-        "assessment": "Le 2° c) renvoie à R4451-58 pour l'information et la formation à la sécurité, pas au préavis. Sa source vise notamment les CDD et temporaires au III 7° ; la proposition distingue anciens CDD privés, temporaires même en CDI, règles particulières applicables au contrat unique et CDD publics. Le renvoi global reste pertinent sans seuil d'ancienneté ni notification de rupture."
+        "assessment": "Renvoi direct du 2° c) : R4451-58 organise information et formation radiologiques, notamment son III 7°. Sa proposition conserve anciens CDD privés, intérim y compris en CDI, protections applicables aux contrats uniques et CDD publics sans borne de date. R4451-123 apporte son concours sans limiter ces populations ni imposer une condition d'ancienneté ou de notification de rupture."
       }
     ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Rectification des cibles de zonage et de l'ordinal du I de R4451-33 ; les missions de conseil, concours et vérification restent entières. Aucun allègement matériel n'est revendiqué.",
+      "scope_limitations": "Contradiction effective de renvoi dans la source : « l'identification et la délimitation des zones prévues aux articles R. 4451-22 et R. 4451-26 ». R4451-26 dispose « Chaque source de rayonnements ionisants fait l'objet d'une signalisation spécifique et appropriée. » ; R4451-24 dispose « L'employeur délimite, par des moyens adaptés, les zones surveillée, contrôlées, radon ou de sécurité radiologique ». Le 2° b) distingue désormais identification, délimitation et signalisation. Coordination nécessaire : « au 1° de l'article R. 4451-33 » devient « au 1° du I » sans étendre ni réduire les autres mesures de prévention couvertes par le début de ce b). R4451-113 III autorise les vérifications initiales par le pôle ; R4451-128 4° impose leur indépendance : différence de fonctions compatible avec l'exception du 3° b). R4451-59 conserve la formation patronale renouvelée tous les trois ans. Aucun renvoi direct à L1234-1, L1221-2 ou L1234-9 n'existe ici.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues n'ajoutent ni données, registre, délai, justificatif ni condition d'accès. Les corrections de renvoi ne créent pas de mission autonome ; aucun solde global des codes n'est chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "radioprotection-renvois-missions",
+          "description": "Rétablir les cibles exactes de délimitation, signalisation et contraintes de dose.",
+          "before": "R4451-26 cité pour la délimitation ; I de R4451-33 non précisé.",
+          "after": "R4451-24 pour délimitation, R4451-26 pour signalisation ; I de R4451-33 précisé.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs, conseillers en radioprotection et ASNR dans leurs attributions respectives.",
+          "conditions_and_transition": "Application de la correction à l'entrée en vigueur de la réforme ; les protections sanitaires et les situations antérieures demeurent.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ni nouvelle collecte ; aucun gain financier chiffré.",
+          "source_quote": "l'identification et la délimitation des zones prévues aux articles R. 4451-22 et R. 4451-26",
+          "proposed_quote": "l'identification des zones prévue à l'article R. 4451-22, leur délimitation prévue à l'article R. 4451-24 et la signalisation prévue à l'article R. 4451-26"
+        }
+      ]
+    },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "18f8b394dc2ff3e849d8e8684902ae365c46d6b918e3b7d6a4cda15858486f86",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "9dde95af6d5890c4903dfcaea26f6193a728fc4bd6761d107b75d5dfaa4c19b1",
+      "proposed_sha256": "49d61faf346dde457320d58d417ea6272884243a3d10aa11fcbd01d43a7f145c",
+      "assessment_sha256": "264e4eecafa6eade4a09cacde9fb0a8df05f2c07cd883eb562cbca27fa93c728",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
@@ -443,10 +481,10 @@
     },
     "reference_coherence": {
       "version": 3,
-      "referrer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "referrer_sha256": "49d61faf346dde457320d58d417ea6272884243a3d10aa11fcbd01d43a7f145c",
       "policy_sha256": {
         "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
-        "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+        "site-summaries.json": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
       },
       "referrer_source": {
         "code_id": "LEGITEXT000006072050",
@@ -461,7 +499,7 @@
           "source_id": "LEGIARTI000006901112",
           "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
           "view_kind": "proposal",
-          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
+          "view_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
           "source_xml_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
           "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
@@ -479,7 +517,7 @@
           "source_id": "LEGIARTI000035644154",
           "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
           "view_kind": "proposal",
-          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
+          "view_sha256": "07c3c02ea91c33bfe38f9dd4010d72cc213a2fee8e654638d29b3dec91f0446c",
           "source_xml_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
           "source_notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b"
         },
@@ -496,28 +534,30 @@
       "assessments": [
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
-          "view_sha256": "1b7be0af98978734f4057f70a2fb4a8225a7ca80c2545ba8ad5f79f7af9eca01",
-          "assessment": "L1234-1 concerne le préavis de licenciement : ni le 1°, ni le 2° c), ni le 3° de R4451-123 n'y renvoie. Les quinze jours du projet et les durées anciennes n'affectent pas les missions radiologiques ; aucune condition d'ancienneté ou de notification à introduire ici."
+          "view_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
+          "assessment": "Différence de champ : R4451-123 ne renvoie pas à L1234-1. Les seuils de six mois/deux ans de la source et les quinze jours du projet concernent la rupture, pas le conseil radiologique. Ni ancienneté ni notification de licenciement ne conditionnent les missions sanitaires ; les protections spéciales demeurent distinctes."
         },
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
           "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
-          "assessment": "L1221-2 proposé distingue nouveaux contrats privés indéterminés et anciens CDD, sans supprimer le droit public. Le 2° c) de R4451-123 vise l'évaluation, les équipements et la formation, non la durée de l'emploi ; il n'autorise aucun nouveau CDD ni aucune fin automatique de mission."
+          "assessment": "Différence de champ : aucune durée d'emploi n'est fixée par R4451-123. L1221-2 proposé interdit les nouveaux termes privés, préserve les contrats anciens et les avantages futurs de même objet, et exclut le régime public. Le concours à la formation ne crée aucun CDD ni terme automatique ; aucun renvoi supplémentaire nécessaire."
         },
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
-          "view_sha256": "9b7995e6bf0920d79088da1bdde4530c3088ef1c8f730592709774f2a86fdeb8",
-          "assessment": "L1234-9 traite l'indemnité ordinaire, seuil d'un an à la fin effective préavis compris et calcul sur toute l'ancienneté, avec transition des anciens contrats. R4451-123 ne fixe aucune indemnité et n'y renvoie pas : ces conditions ne limitent pas les concours de prévention dus dès l'exposition."
+          "view_sha256": "07c3c02ea91c33bfe38f9dd4010d72cc213a2fee8e654638d29b3dec91f0446c",
+          "assessment": "Différence de champ : R4451-123 ne calcule aucune indemnité. Les huit mois de la source et sa NOTA de 2017, puis le seuil d'un an au terme effectif avec préavis, les 0,20 mois par année totale et le plafond de six mois du projet ne s'appliquent pas aux missions de prévention. Notifications antérieures, services acquis et indemnités spéciales restent au champ de L1234-9."
         },
         {
           "target_key": "LEGITEXT000006072050|LEGIARTI000053220713",
           "view_sha256": "3c6c0a13b4baa0a5a9f05449a175f08f1cd2254f8936f2845c0f60704126b193",
-          "assessment": "Le 2° c) renvoie à R4451-58 pour l'information et la formation à la sécurité, pas au préavis. Sa source vise notamment les CDD et temporaires au III 7° ; la proposition distingue anciens CDD privés, temporaires même en CDI, règles particulières applicables au contrat unique et CDD publics. Le renvoi global reste pertinent sans seuil d'ancienneté ni notification de rupture."
+          "assessment": "Renvoi direct du 2° c) : R4451-58 organise information et formation radiologiques, notamment son III 7°. Sa proposition conserve anciens CDD privés, intérim y compris en CDI, protections applicables aux contrats uniques et CDD publics sans borne de date. R4451-123 apporte son concours sans limiter ces populations ni imposer une condition d'ancienneté ou de notification de rupture."
         }
       ],
-      "assessments_sha256": "b28097646a5d31e93eb93c9588d525b5895a5892ff10201a7d54c341895c5f08",
+      "assessments_sha256": "54ac955cd3a42fef85a9c3d31b2194064dcdf32963e4c4b71238ecc6b1e89db9",
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -526,29 +566,31 @@
     "number": "R4451-124",
     "proposed_xml": null,
     "reason": "La traçabilité pendant dix ans des conseils techniques permet le suivi des mesures et des expositions. Le réemploi pour le rapport de prévention et la reconnaissance des conseils de même objet donnés au titre de la santé publique évitent déjà des doublons ; ces facultés restent intactes.",
-    "review_notes": "Dix ans conservés ; le II demeure une faculté de reconnaissance de conseils de même objet, sans imposer une deuxième rédaction. Ne pas assimiler la conservation des conseils à celle des résultats SISERI de R4451-137.",
+    "review_notes": "Dix ans conservés ; le II demeure une faculté de reconnaissance de conseils de même objet, sans imposer une deuxième rédaction. Ne pas assimiler la conservation des conseils à celle des résultats SISERI de R4451-137. Transition compatible : « ces éléments sont utilisés pour établir le rapport et le programme » reste cohérent avec L2312-27, dont le projet conserve rapport et programme et supprime seulement la pièce jointe aux demandes d'aides. Différence de champ : « au moins dix ans » concerne les conseils, non les données dosimétriques conservées cinquante à soixante ans par R4451-137. Le II « lorsqu'ils portent sur le même objet » conserve le réemploi favorable sans nouvelle pièce. Point non vérifiable : texte intégral de R1333-19 santé publique absent du corpus des neuf recueils ; aucune équivalence plus large n'est inférée.",
     "status": "retained_unchanged",
+    "reference_checks": [],
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "La traçabilité pendant dix ans des conseils techniques permet le suivi des mesures et des expositions. Le réemploi pour le rapport de prévention et la reconnaissance des conseils de même objet donnés au titre de la santé publique évitent déjà des doublons ; ces facultés restent intactes.",
-      "scope_limitations": "Dix ans conservés ; le II demeure une faculté de reconnaissance de conseils de même objet, sans imposer une deuxième rédaction. Ne pas assimiler la conservation des conseils à celle des résultats SISERI de R4451-137. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "La traçabilité décennale et le réemploi des conseils de même objet sont maintenus : aucune duplication nouvelle ni réduction démontrée par rapport à la source entière.",
+      "scope_limitations": "Transition compatible : « ces éléments sont utilisés pour établir le rapport et le programme » reste cohérent avec L2312-27, dont le projet conserve rapport et programme et supprime seulement la pièce jointe aux demandes d'aides. Différence de champ : « au moins dix ans » concerne les conseils, non les données dosimétriques conservées cinquante à soixante ans par R4451-137. Le II « lorsqu'ils portent sur le même objet » conserve le réemploi favorable sans nouvelle pièce. Point non vérifiable : texte intégral de R1333-19 santé publique absent du corpus des neuf recueils ; aucune équivalence plus large n'est inférée.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues n'ajoutent ni données, registre, délai, justificatif ni condition d'accès. Les corrections de renvoi ne créent pas de mission autonome ; aucun solde global des codes n'est chiffré.",
       "effects": []
     },
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "354b962f8f11ea3029a17aa9f2e0cb51b3b329f507fd863c50b0c3b7a1bba663",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "d432b9831c70337f37d4f624dc3a3f142369911411f58d4370c52de1bdbcece5",
+      "assessment_sha256": "878a8c88fc908273eff4dcc2b12ef67acdef735099905c9d8a79f478eac3afc1",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -557,29 +599,31 @@
     "number": "R4451-125",
     "proposed_xml": null,
     "reason": "Certificat de formation et certification de l'organisme apportent une assurance de compétence pour des risques radiologiques graves. Le recours aux organismes mentionnés à R4724-1 reste possible. Supprimer cette qualification sans mécanisme de compétence démontré affaiblirait une protection essentielle.",
-    "review_notes": "Les 1° et 2° gardent leurs filières distinctes. Les règles européennes de reconnaissance des compétences en radioprotection nécessitent leur contrôle propre ; aucune suppression nationale de qualification n'est présumée compatible.",
+    "review_notes": "Les 1° et 2° gardent leurs filières distinctes. Les règles européennes de reconnaissance des compétences en radioprotection nécessitent leur contrôle propre ; aucune suppression nationale de qualification n'est présumée compatible. Transition à ne pas effacer : la version assignée est ABROGE_DIFF, du 1er janvier 2025 au 1er juillet 2028 ; maintien dans cette seule fenêtre, sans prorogation de la certification au-delà. R4724-1 admet « tout autre organisme d'accréditation désigné » selon le règlement 765/2008 et les prestations occasionnelles des organismes européens qualifiés : aucune exclusivité française ajoutée. Point non vérifiable : successeur applicable après le 1er juillet 2028 et arrêtés de qualification absents des textes lus ; coordination future de R4451-139 1° d) à contrôler sans inventer de nouveau certificat.",
     "status": "retained_unchanged",
+    "reference_checks": [],
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Certificat de formation et certification de l'organisme apportent une assurance de compétence pour des risques radiologiques graves. Le recours aux organismes mentionnés à R4724-1 reste possible. Supprimer cette qualification sans mécanisme de compétence démontré affaiblirait une protection essentielle.",
-      "scope_limitations": "Les 1° et 2° gardent leurs filières distinctes. Les règles européennes de reconnaissance des compétences en radioprotection nécessitent leur contrôle propre ; aucune suppression nationale de qualification n'est présumée compatible. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Les deux filières de qualification demeurent nécessaires à la compétence radiologique ; la reconnaissance européenne n'est pas fermée et aucune réduction n'est revendiquée.",
+      "scope_limitations": "Transition à ne pas effacer : la version assignée est ABROGE_DIFF, du 1er janvier 2025 au 1er juillet 2028 ; maintien dans cette seule fenêtre, sans prorogation de la certification au-delà. R4724-1 admet « tout autre organisme d'accréditation désigné » selon le règlement 765/2008 et les prestations occasionnelles des organismes européens qualifiés : aucune exclusivité française ajoutée. Point non vérifiable : successeur applicable après le 1er juillet 2028 et arrêtés de qualification absents des textes lus ; coordination future de R4451-139 1° d) à contrôler sans inventer de nouveau certificat.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues n'ajoutent ni données, registre, délai, justificatif ni condition d'accès. Les corrections de renvoi ne créent pas de mission autonome ; aucun solde global des codes n'est chiffré.",
       "effects": []
     },
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "5864a753c420ac6c58faf318130ff999a0f0e02771129ede341adff0b40e5dc2",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "ff59bba59f9ea737801dc3ef6de709c603465bc7f7abcfdfe47c5f12ab826193",
+      "assessment_sha256": "a0c2a57ae49c390b922b4b1107de7c66d89a91c7970647976972341989377387",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -588,29 +632,31 @@
     "number": "R4451-126",
     "proposed_xml": null,
     "reason": "L'habilitation réglementaire organise qualification, contrôle des connaissances, validité, renouvellement et accréditation, ainsi que la confidentialité. Aucun délai ou tarif n'est fixé ici ; les supprimer à ce niveau viderait les garanties de compétence de R4451-125 sans examen des arrêtés d'application.",
-    "review_notes": "Conserver les lettres a) à g) du 1° et a) à d) du 2°. Les arrêtés extérieurs ne sont pas réécrits par ce maintien ; aucune validation de leurs coûts ou délais n'est prétendue.",
+    "review_notes": "Conserver les lettres a) à g) du 1° et a) à d) du 2°. Les arrêtés extérieurs ne sont pas réécrits par ce maintien ; aucune validation de leurs coûts ou délais n'est prétendue. Transition compatible avec R4451-125 : même terme de version au 1er juillet 2028 (ABROGE_DIFF), non reporté par le maintien. « La durée de validité du certificat de formation » vise une qualification et ne fixe aucun terme à l'emploi selon L1221-2 proposé. « la confidentialité des données relatives à la surveillance dosimétrique individuelle » concorde avec R4451-136. Point non vérifiable : arrêté conjoint et régime successeur après cette date non fournis ; aucune validité perpétuelle ni nouvelle durée proposée.",
     "status": "retained_unchanged",
+    "reference_checks": [],
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "L'habilitation réglementaire organise qualification, contrôle des connaissances, validité, renouvellement et accréditation, ainsi que la confidentialité. Aucun délai ou tarif n'est fixé ici ; les supprimer à ce niveau viderait les garanties de compétence de R4451-125 sans examen des arrêtés d'application.",
-      "scope_limitations": "Conserver les lettres a) à g) du 1° et a) à d) du 2°. Les arrêtés extérieurs ne sont pas réécrits par ce maintien ; aucune validation de leurs coûts ou délais n'est prétendue. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Les onze rubriques de l'habilitation garantissent compétence et confidentialité ; aucune durée ni certification nouvelle n'est créée ou supprimée ici.",
+      "scope_limitations": "Transition compatible avec R4451-125 : même terme de version au 1er juillet 2028 (ABROGE_DIFF), non reporté par le maintien. « La durée de validité du certificat de formation » vise une qualification et ne fixe aucun terme à l'emploi selon L1221-2 proposé. « la confidentialité des données relatives à la surveillance dosimétrique individuelle » concorde avec R4451-136. Point non vérifiable : arrêté conjoint et régime successeur après cette date non fournis ; aucune validité perpétuelle ni nouvelle durée proposée.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues n'ajoutent ni données, registre, délai, justificatif ni condition d'accès. Les corrections de renvoi ne créent pas de mission autonome ; aucun solde global des codes n'est chiffré.",
       "effects": []
     },
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "4d1c7ff400d12305899666de507364a42ff989ba43ac4d660f2936969dccf650",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "2d3766da17a3a10290dc627314d6ae3dd7876a9565c04ced3fb4d8d86a07c1e7",
+      "assessment_sha256": "f35c6c4d54269a34a0efdf37eaf75bc36e337aca2998d67b2ef527e5e19bc36e",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -619,29 +665,31 @@
     "number": "R4451-127",
     "proposed_xml": null,
     "reason": "L'accord préalable porte sur le pôle des installations nucléaires de base, doté notamment de facultés de vérification initiale. Il a une fonction de contrôle spécialisé de compétences et d'indépendance face à un risque grave ; il n'est pas assimilable à un agrément économique inutile.",
-    "review_notes": "L'accord de l'ASNR ou du délégué défense reste applicable « le cas échéant ». Il n'est pas remplacé par une déclaration équivalente ; absence d'allègement revendiqué. Le contrôle de compétence européen reste à coordonner pour toute éventuelle réforme ultérieure.",
+    "review_notes": "L'accord de l'ASNR ou du délégué défense reste applicable « le cas échéant ». Il n'est pas remplacé par une déclaration équivalente ; absence d'allègement revendiqué. Le contrôle de compétence européen reste à coordonner pour toute éventuelle réforme ultérieure. Différence de champ vérifiée : R4451-113 I vise les établissements comprenant une installation nucléaire de base, avec exceptions pour certaines sources scellées, accélérateurs et entreprises extérieures ; II ouvre une faculté pour les autres activités du même établissement, III pour les vérifications initiales. « le cas échéant » et la compétence défense de R4451-127 demeurent. L'accord ne constitue ni une autorisation de licenciement ni un délai de préavis. Arrêté de recueil de cet accord non fourni : coût et éventuels doublons de pièces non vérifiables.",
     "status": "retained_unchanged",
+    "reference_checks": [],
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "L'accord préalable porte sur le pôle des installations nucléaires de base, doté notamment de facultés de vérification initiale. Il a une fonction de contrôle spécialisé de compétences et d'indépendance face à un risque grave ; il n'est pas assimilable à un agrément économique inutile.",
-      "scope_limitations": "L'accord de l'ASNR ou du délégué défense reste applicable « le cas échéant ». Il n'est pas remplacé par une déclaration équivalente ; absence d'allègement revendiqué. Le contrôle de compétence européen reste à coordonner pour toute éventuelle réforme ultérieure. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "L'accord spécialisé sur le pôle demeure une protection de compétence nucléaire ; aucune autorisation économique supprimable n'a été identifiée dans cet article.",
+      "scope_limitations": "Différence de champ vérifiée : R4451-113 I vise les établissements comprenant une installation nucléaire de base, avec exceptions pour certaines sources scellées, accélérateurs et entreprises extérieures ; II ouvre une faculté pour les autres activités du même établissement, III pour les vérifications initiales. « le cas échéant » et la compétence défense de R4451-127 demeurent. L'accord ne constitue ni une autorisation de licenciement ni un délai de préavis. Arrêté de recueil de cet accord non fourni : coût et éventuels doublons de pièces non vérifiables.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues n'ajoutent ni données, registre, délai, justificatif ni condition d'accès. Les corrections de renvoi ne créent pas de mission autonome ; aucun solde global des codes n'est chiffré.",
       "effects": []
     },
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "87b573e78500f8b88950719a6c4030e3b6e57944033b16761ae9f9cde14b97fe",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "e798682cab6f79e5409b3bb78ec61aaf4b6a60460520f2ab9dcc551d19ea4e09",
+      "assessment_sha256": "94dbab48e3cfef5d1337b2cee35b8452fdbae452b65d77b91dfb12041c6594d0",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -650,29 +698,31 @@
     "number": "R4451-128",
     "proposed_xml": null,
     "reason": "Les compétences, la confidentialité et l'indépendance entre conseil et vérifications initiales rendent possible la faculté de contrôle interne prévue à R4451-113. L'habilitation à fixer le recueil de l'accord est cohérente avec R4451-127 maintenu ; aucun circuit supplémentaire n'est créé.",
-    "review_notes": "Les quatre rubriques restent en place ; R4451-40 et R4451-44 sont les vérifications initiales également mentionnées à R4451-113 III et exclues de R4451-123 3° b). Aucune fusion des fonctions incompatibles.",
+    "review_notes": "Les quatre rubriques restent en place ; R4451-40 et R4451-44 sont les vérifications initiales également mentionnées à R4451-113 III et exclues de R4451-123 3° b). Aucune fusion des fonctions incompatibles. Cohérence des fonctions : « de manière indépendante de celles prévues aux articles R. 4451-40 et R. 4451-44 » préserve la séparation conseil/contrôle même si R4451-113 III permet au pôle ces vérifications initiales. Le 3° « l'accord mentionné à l'article R. 4451-127 » vise bien l'accord maintenu ; aucune habilitation privée de cible. Arrêté conjoint extérieur absent : modalités effectives et coûts non validés.",
     "status": "retained_unchanged",
+    "reference_checks": [],
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Les compétences, la confidentialité et l'indépendance entre conseil et vérifications initiales rendent possible la faculté de contrôle interne prévue à R4451-113. L'habilitation à fixer le recueil de l'accord est cohérente avec R4451-127 maintenu ; aucun circuit supplémentaire n'est créé.",
-      "scope_limitations": "Les quatre rubriques restent en place ; R4451-40 et R4451-44 sont les vérifications initiales également mentionnées à R4451-113 III et exclues de R4451-123 3° b). Aucune fusion des fonctions incompatibles. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "L'habilitation de compétence, confidentialité et indépendance du pôle est maintenue avec ses quatre rubriques ; elle évite la confusion entre conseil et contrôle initial.",
+      "scope_limitations": "Cohérence des fonctions : « de manière indépendante de celles prévues aux articles R. 4451-40 et R. 4451-44 » préserve la séparation conseil/contrôle même si R4451-113 III permet au pôle ces vérifications initiales. Le 3° « l'accord mentionné à l'article R. 4451-127 » vise bien l'accord maintenu ; aucune habilitation privée de cible. Arrêté conjoint extérieur absent : modalités effectives et coûts non validés.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues n'ajoutent ni données, registre, délai, justificatif ni condition d'accès. Les corrections de renvoi ne créent pas de mission autonome ; aucun solde global des codes n'est chiffré.",
       "effects": []
     },
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "1e3b7bf9eb962f4a8c0e7803e93f1fa933a197e55ed67399ea46d21b07a19c60",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "f4c12f1732c605efa3e0f93411227ce7cd3ff3da0bf7d4f6bd07cdb8c9b04211",
+      "assessment_sha256": "d7b65685af825f8b4c99af794644295f9e98de6a4143beb65e3251d9ab282c9b",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -681,29 +731,31 @@
     "number": "R4451-134",
     "proposed_xml": null,
     "reason": "SISERI centralise les résultats, permet l'alerte sans délai et produit un bilan public d'exposition. Ces finalités sanitaires et scientifiques sont distinctes du bilan administratif de R4451-139 supprimé ; maintenir le bilan public ne rétablit pas celui-ci. La base légale du traitement reste explicite.",
-    "review_notes": "Les quatre finalités et le fondement article 6, paragraphe 1, c), du RGPD restent inchangés ; le 3° conserve publication, transmission et communication aux partenaires sociaux. Le bilan supprimé à R4451-139 porte sur d'autres informations.",
+    "review_notes": "Les quatre finalités et le fondement article 6, paragraphe 1, c), du RGPD restent inchangés ; le 3° conserve publication, transmission et communication aux partenaires sociaux. Le bilan supprimé à R4451-139 porte sur d'autres informations. Différence de champ établie : le 3° porte sur « l'analyse des résultats de la surveillance dosimétrique individuelle », tandis que le bilan retiré de R4451-139 porte sur les informations administratives de son 1°. R4451-66 maintient la transmission des résultats et des doses calculées ; R4451-6, -8 et -9 maintiennent respectivement les limites générales, celles des jeunes et celle des urgences. Aucune suppression d'alerte « sans délai ». Le règlement européen intégral n'est pas fourni : pas d'affirmation de conformité globale.",
     "status": "retained_unchanged",
+    "reference_checks": [],
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "SISERI centralise les résultats, permet l'alerte sans délai et produit un bilan public d'exposition. Ces finalités sanitaires et scientifiques sont distinctes du bilan administratif de R4451-139 supprimé ; maintenir le bilan public ne rétablit pas celui-ci. La base légale du traitement reste explicite.",
-      "scope_limitations": "Les quatre finalités et le fondement article 6, paragraphe 1, c), du RGPD restent inchangés ; le 3° conserve publication, transmission et communication aux partenaires sociaux. Le bilan supprimé à R4451-139 porte sur d'autres informations. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Les quatre finalités SISERI, son alerte et son bilan public sont maintenus ; la suppression du bilan administratif distinct ne les remplace ni ne les réduit.",
+      "scope_limitations": "Différence de champ établie : le 3° porte sur « l'analyse des résultats de la surveillance dosimétrique individuelle », tandis que le bilan retiré de R4451-139 porte sur les informations administratives de son 1°. R4451-66 maintient la transmission des résultats et des doses calculées ; R4451-6, -8 et -9 maintiennent respectivement les limites générales, celles des jeunes et celle des urgences. Aucune suppression d'alerte « sans délai ». Le règlement européen intégral n'est pas fourni : pas d'affirmation de conformité globale.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues n'ajoutent ni données, registre, délai, justificatif ni condition d'accès. Les corrections de renvoi ne créent pas de mission autonome ; aucun solde global des codes n'est chiffré.",
       "effects": []
     },
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "cb1c96cc41089100be57b1c0f715241fa7011da052f8ae2d0c65db3dd2130c08",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "07b7cea35b1ebba4547149b2f8bd3c787cd8c41ceda9c1f921fdc2016f7ca4fd",
+      "assessment_sha256": "c66492056d642aada762b5b4bc89a8f21086ee5076d598d35e595a4422d560ef",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -712,29 +764,31 @@
     "number": "R4451-135",
     "proposed_xml": null,
     "reason": "Les catégories de données relient les doses à la personne et au contexte professionnel, notamment malgré les changements d'employeur. La délimitation des catégories protège contre une collecte indéfinie ; retirer l'identification ou les données de santé compromettrait le suivi individuel.",
-    "review_notes": "Conserver les trois catégories et l'identifiant national ; pas de nouvelle collecte liée au contrat unique. Les restrictions d'accès de R4451-136 et les bornes de R4451-137 restent applicables.",
+    "review_notes": "Conserver les trois catégories et l'identifiant national ; pas de nouvelle collecte liée au contrat unique. Les restrictions d'accès de R4451-136 et les bornes de R4451-137 restent applicables. Cohérence : « faisant ou ayant fait l'objet » inclut les expositions anciennes et ne dépend pas du maintien du contrat. R4451-65 distingue dosimétrie externe, interne, radon et équipages ; R4451-66 alimente SISERI. Le 2° conserve les données de santé auxquelles le dernier alinéa de R4451-136 limite les destinataires de recherche ; ce dernier ne leur ouvre pas toutes les catégories. Aucun avantage futur fermé.",
     "status": "retained_unchanged",
+    "reference_checks": [],
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Les catégories de données relient les doses à la personne et au contexte professionnel, notamment malgré les changements d'employeur. La délimitation des catégories protège contre une collecte indéfinie ; retirer l'identification ou les données de santé compromettrait le suivi individuel.",
-      "scope_limitations": "Conserver les trois catégories et l'identifiant national ; pas de nouvelle collecte liée au contrat unique. Les restrictions d'accès de R4451-136 et les bornes de R4451-137 restent applicables. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Les trois catégories de données nécessaires au suivi individuel sont maintenues sans élargissement ; les bornes de conservation et d'accès subsistent.",
+      "scope_limitations": "Cohérence : « faisant ou ayant fait l'objet » inclut les expositions anciennes et ne dépend pas du maintien du contrat. R4451-65 distingue dosimétrie externe, interne, radon et équipages ; R4451-66 alimente SISERI. Le 2° conserve les données de santé auxquelles le dernier alinéa de R4451-136 limite les destinataires de recherche ; ce dernier ne leur ouvre pas toutes les catégories. Aucun avantage futur fermé.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues n'ajoutent ni données, registre, délai, justificatif ni condition d'accès. Les corrections de renvoi ne créent pas de mission autonome ; aucun solde global des codes n'est chiffré.",
       "effects": []
     },
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "9543afbbef3c35e098b5f312d61bd5c15052b526cc4074260741e7187cba71ad",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "bf16002acdc986838499aa31b15ab023341486592ee8f0e6c3feb55143af0217",
+      "assessment_sha256": "aff7f8e7d95ac6b7d09e07c844b12797095c6f2f8ee5769e4109e478841bd71d",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -743,29 +797,31 @@
     "number": "R4451-136",
     "proposed_xml": null,
     "reason": "L'accès selon les attributions et le besoin d'en connaître, les limites de données pour la recherche et les garanties de secret médical protègent des données sensibles. Autorisations et convention de recherche ont ici une fonction de protection, non une formalité commerciale redondante.",
-    "review_notes": "Les habilitations 1° à 3° et le dernier alinéa ont des champs distincts ; les chercheurs destinataires restent limités au 2° de R4451-135. Les textes santé publique et loi de 1978 ne sont pas fournis intégralement ici : aucun élargissement d'accès ni conformité globale affirmée.",
+    "review_notes": "Les habilitations 1° à 3° et le dernier alinéa ont des champs distincts ; les chercheurs destinataires restent limités au 2° de R4451-135. Les textes santé publique et loi de 1978 ne sont pas fournis intégralement ici : aucun élargissement d'accès ni conformité globale affirmée. Différence de champ : « dans la limite du besoin d'en connaître » se combine aux accès du travailleur (R4451-67), des médecins et délégataires (R4451-68), du conseiller limité à l'exposition externe et à la dose efficace pendant le lien contractuel (R4451-69), et des contrôleurs (R4451-71). Conservation longue en R4451-137 ne prolonge pas l'accès du conseiller après la rupture. Les destinataires du dernier alinéa restent limités aux « seules données et informations mentionnées au 2° ». Santé publique L1110-4/L1121-3, loi de 1978 et article 28 RGPD non fournis intégralement : contrôle extérieur ouvert.",
     "status": "retained_unchanged",
+    "reference_checks": [],
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "L'accès selon les attributions et le besoin d'en connaître, les limites de données pour la recherche et les garanties de secret médical protègent des données sensibles. Autorisations et convention de recherche ont ici une fonction de protection, non une formalité commerciale redondante.",
-      "scope_limitations": "Les habilitations 1° à 3° et le dernier alinéa ont des champs distincts ; les chercheurs destinataires restent limités au 2° de R4451-135. Les textes santé publique et loi de 1978 ne sont pas fournis intégralement ici : aucun élargissement d'accès ni conformité globale affirmée. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Les habilitations, le secret et l'accès limité de recherche sont maintenus comme protections des données sensibles ; aucune autorisation redondante démontrée.",
+      "scope_limitations": "Différence de champ : « dans la limite du besoin d'en connaître » se combine aux accès du travailleur (R4451-67), des médecins et délégataires (R4451-68), du conseiller limité à l'exposition externe et à la dose efficace pendant le lien contractuel (R4451-69), et des contrôleurs (R4451-71). Conservation longue en R4451-137 ne prolonge pas l'accès du conseiller après la rupture. Les destinataires du dernier alinéa restent limités aux « seules données et informations mentionnées au 2° ». Santé publique L1110-4/L1121-3, loi de 1978 et article 28 RGPD non fournis intégralement : contrôle extérieur ouvert.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues n'ajoutent ni données, registre, délai, justificatif ni condition d'accès. Les corrections de renvoi ne créent pas de mission autonome ; aucun solde global des codes n'est chiffré.",
       "effects": []
     },
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "a7d5f8edd71f02e5c8605ea999b9a3cfc9f81cbcf1beeb76b208c63e756f5492",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "cde5d125f4431ea43a059a0b4b76dcd32a21375cc354c23b13471da6e707d273",
+      "assessment_sha256": "3c94aba0d3a8dd01498e7e19564211df9df5f270da8ed5f22578929b71db9de7",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -774,29 +830,31 @@
     "number": "R4451-137",
     "proposed_xml": null,
     "reason": "Les durées de cinquante à soixante ans depuis la dernière exposition soutiennent la traçabilité de risques à effets tardifs ; le maximum de cent ans vise les données non identifiantes de recherche. Aucun délai administratif d'attente n'est présent et aucune baisse arbitraire de conservation n'est justifiée.",
-    "review_notes": "Bornes 50/60 ans et maximum 100 ans inchangés ; point de départ individuel de dernière exposition conservé. Une durée de conservation sanitaire ne constitue pas un préavis ou un délai minimal d'autorisation.",
+    "review_notes": "Bornes 50/60 ans et maximum 100 ans inchangés ; point de départ individuel de dernière exposition conservé. Une durée de conservation sanitaire ne constitue pas un préavis ou un délai minimal d'autorisation. Différence de champ : « à compter de la dernière exposition du travailleur concerné » ne signifie ni dernière embauche ni notification de rupture ; aucun changement de contrat ne remet à zéro ce point de départ. « non identifiantes » limite la conservation de recherche de cent ans. Les droits de R4451-138 et les accès limités de R4451-136 ne sont pas écartés par ces durées. Aucun nouveau délai ni nouvelle donnée.",
     "status": "retained_unchanged",
+    "reference_checks": [],
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Les durées de cinquante à soixante ans depuis la dernière exposition soutiennent la traçabilité de risques à effets tardifs ; le maximum de cent ans vise les données non identifiantes de recherche. Aucun délai administratif d'attente n'est présent et aucune baisse arbitraire de conservation n'est justifiée.",
-      "scope_limitations": "Bornes 50/60 ans et maximum 100 ans inchangés ; point de départ individuel de dernière exposition conservé. Une durée de conservation sanitaire ne constitue pas un préavis ou un délai minimal d'autorisation. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Les durées sanitaires de cinquante à soixante ans et de recherche non identifiante de cent ans sont intégralement maintenues, sans gain administratif prétendu.",
+      "scope_limitations": "Différence de champ : « à compter de la dernière exposition du travailleur concerné » ne signifie ni dernière embauche ni notification de rupture ; aucun changement de contrat ne remet à zéro ce point de départ. « non identifiantes » limite la conservation de recherche de cent ans. Les droits de R4451-138 et les accès limités de R4451-136 ne sont pas écartés par ces durées. Aucun nouveau délai ni nouvelle donnée.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues n'ajoutent ni données, registre, délai, justificatif ni condition d'accès. Les corrections de renvoi ne créent pas de mission autonome ; aucun solde global des codes n'est chiffré.",
       "effects": []
     },
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "5ef2e0c8b42bcd0f3a54e46171f8bd8910292e254389c17b4c6229cc4afec1f4",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "c910c2d3a2f056fe955fa67776692a463dcd49e5d13dea89c9fc999c4d91b2ca",
+      "assessment_sha256": "0adf04c138d7c48aa83943fb6187a901c573aea57e3723ccba6d56578b117a7f",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -805,77 +863,94 @@
     "number": "R4451-138",
     "proposed_xml": null,
     "reason": "Les droits à l'information, à l'accès, à la rectification et à la limitation du traitement rendent effectives les protections du RGPD. Ils ne constituent pas des contraintes accessoires supprimables ; l'interlocuteur ASNR est conservé pour tous les travailleurs concernés.",
-    "review_notes": "Articles 13, 14, 15, 16 et 18 du RGPD inchangés. Pas de suppression nationale d'un droit européen ni de restriction aux seules expositions anciennes.",
+    "review_notes": "Articles 13, 14, 15, 16 et 18 du RGPD inchangés. Pas de suppression nationale d'un droit européen ni de restriction aux seules expositions anciennes. Cohérence interne : « auprès de l'Autorité de sûreté nucléaire et de radioprotection » correspond au gestionnaire désigné à R4451-134. « leurs droits d'accès et de rectification des données, ainsi que leur droit à la limitation du traitement » demeure ouvert aux personnes dont les données sont conservées, même après rupture, sans condition d'ancienneté. Les articles 13 à 18 du RGPD ne sont pas joints en entier : leur examen externe reste ouvert, aucune restriction nationale ajoutée.",
     "status": "retained_unchanged",
+    "reference_checks": [],
     "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Les droits à l'information, à l'accès, à la rectification et à la limitation du traitement rendent effectives les protections du RGPD. Ils ne constituent pas des contraintes accessoires supprimables ; l'interlocuteur ASNR est conservé pour tous les travailleurs concernés.",
-      "scope_limitations": "Articles 13, 14, 15, 16 et 18 du RGPD inchangés. Pas de suppression nationale d'un droit européen ni de restriction aux seules expositions anciennes. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle source, sans nouveau registre, déclaration, délai ou condition d’accès.",
+      "assessment": "Les droits d'information, accès, rectification et limitation sont maintenus pour toutes les données traitées ; aucune suppression ni charge nouvelle.",
+      "scope_limitations": "Cohérence interne : « auprès de l'Autorité de sûreté nucléaire et de radioprotection » correspond au gestionnaire désigné à R4451-134. « leurs droits d'accès et de rectification des données, ainsi que leur droit à la limitation du traitement » demeure ouvert aux personnes dont les données sont conservées, même après rupture, sans condition d'ancienneté. Les articles 13 à 18 du RGPD ne sont pas joints en entier : leur examen externe reste ouvert, aucune restriction nationale ajoutée.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues n'ajoutent ni données, registre, délai, justificatif ni condition d'accès. Les corrections de renvoi ne créent pas de mission autonome ; aucun solde global des codes n'est chiffré.",
       "effects": []
     },
-    "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "3bc6d0a7ad7432c86c4f0ee38c7f25a8beb1f73db0c55f015d06f4c42229b907",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "89051bab611fa89d05d4f624da7920d248b97b935c6e9b711206e5f05cd371d7",
+      "assessment_sha256": "39fd6181242de7402d91511d5825fc95c409a36b9f88de79718ec77ac8a4ca9a",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000050927615",
     "source_sha256": "a68185703b6d30a4cd212b2fb34855903df116096bf94707fe51ce355c098bcf",
     "number": "R4451-139",
-    "proposed_xml": "\n<p>L'Autorité de sûreté nucléaire et de radioprotection est chargée :<br />\n<br /> 1° De tenir à jour les systèmes d'informations concernant :<br />\n<br /> a) La déclaration des dépassements pérennes du niveau de radon dans des lieux de travail prévue à l'article R. 4451-17 ;<br />\n<br /> b) La déclaration des événements significatifs en matière de dépassement d'une des valeurs limites prévue à l'article R. 4451-78 ;<br />\n<br /> c) La liste des professionnels de santé au travail formés pour assurer le suivi individuel renforcé des travailleurs exposés prévue par l'arrêté mentionné à l'article R. 4451-85 ;<br />\n<br /> d) La liste des professionnels disposant d'un certificat mentionné à l'article R. 4451-125 prévue par l'arrêté mentionné à l'article R. 4451-126 ;<br />\n<br /> 2° De contribuer à la vérification de la qualité et la pertinence des moyens utilisés pour la surveillance dosimétrique individuelle par les organismes accrédités ou autorisés mentionnés à l'article R. 4451-65, notamment au moyen d'inter-comparaisons qu'elle réalise et d'avis qu'elle rend au ministre chargé du travail ;<br />\n<br /> 3° D'organiser, dans le respect des exigences liées à la défense nationale, l'accès aux relevés des sources et des appareils émettant des rayonnements ionisants qui lui sont transmis en application du II de l'article R. 1333-158 du code de la santé publique pour :<br />\n<br /> a) Les agents de contrôle de l'inspection du travail et les agents de contrôle assimilés mentionnés à l'article L. 8112-1 ;<br />\n<br /> b) Les inspecteurs de la radioprotection mentionnés à l'article L. 1333-29 du code de la santé publique ;<br />\n<br /> c) Lorsqu'ils interviennent en appui aux agents mentionnés au a :</p>\n<p>\n<br />-les ingénieurs de prévention mentionnés à l'article L. 8123-4 du présent code ;<br />\n<br />-les agents en charge du contrôle de la prévention en agriculture mentionnés à l'article L. 724-8 du code rural et de la pêche maritime.</p>\n<p>À compter de l'entrée en vigueur de la présente réforme, aucun bilan périodique des informations mentionnées au 1° n'est dû au ministre chargé du travail au titre du présent article, y compris pour une période antérieure dont le bilan n'a pas encore été transmis. Les bilans déjà transmis n'ont pas à être refaits. Les stipulations de la convention conclue avec ce ministre qui imposent ce bilan cessent de s'appliquer ; ses autres stipulations demeurent applicables.</p>",
-    "reason": "Suppression du bilan administratif périodique spécifique adressé au ministre sur les informations du 1°. Les systèmes à jour, les contrôles de qualité et l'accès des agents aux relevés restent intégraux. La collecte et l'alerte de sécurité ne sont pas supprimées ; aucun rapport de remplacement n'est institué.",
-    "review_notes": "Suppression du seul dernier alinéa ; maintien de 1° a) à d), 2°, 3° a) à c) et des deux catégories d'appui. La convention ministérielle doit être coordonnée pour retirer cette obligation périodique, sans supprimer ses stipulations autonomes. Le bilan public dosimétrique de R4451-134 demeure distinct.",
+    "proposed_xml": "\n<p>L'Autorité de sûreté nucléaire et de radioprotection est chargée :<br />\n<br /> 1° De tenir à jour les systèmes d'informations concernant :<br />\n<br /> a) La déclaration des dépassements pérennes du niveau de radon dans des lieux de travail prévue à l'article R. 4451-17 ;<br />\n<br /> b) La déclaration des événements significatifs en matière de dépassement d'une des valeurs limites prévue au III de l'article R. 4451-77 et dont les informations sont centralisées en application de l'article R. 4451-78 ;<br />\n<br /> c) La liste des professionnels de santé au travail formés pour assurer le suivi individuel renforcé des travailleurs exposés prévue par l'arrêté mentionné à l'article R. 4451-85 ;<br />\n<br /> d) La liste des professionnels disposant d'un certificat mentionné à l'article R. 4451-125 prévue par l'arrêté mentionné à l'article R. 4451-126 ;<br />\n<br /> 2° De contribuer à la vérification de la qualité et la pertinence des moyens utilisés pour la surveillance dosimétrique individuelle par les organismes accrédités ou autorisés mentionnés à l'article R. 4451-65, notamment au moyen d'inter-comparaisons qu'elle réalise et d'avis qu'elle rend au ministre chargé du travail ;<br />\n<br /> 3° D'organiser, dans le respect des exigences liées à la défense nationale, l'accès aux relevés des sources et des appareils émettant des rayonnements ionisants qui lui sont transmis en application du II de l'article R. 1333-158 du code de la santé publique pour :<br />\n<br /> a) Les agents de contrôle de l'inspection du travail et les agents de contrôle assimilés mentionnés à l'article L. 8112-1 ;<br />\n<br /> b) Les inspecteurs de la radioprotection mentionnés à l'article L. 1333-29 du code de la santé publique ;<br />\n<br /> c) Lorsqu'ils interviennent en appui aux agents mentionnés au a :</p>\n<p>\n<br />-les ingénieurs de prévention mentionnés à l'article L. 8123-4 du présent code ;<br />\n<br />-les agents en charge du contrôle de la prévention en agriculture mentionnés à l'article L. 724-8 du code rural et de la pêche maritime.</p>\n<p>À compter de l'entrée en vigueur de la présente réforme, aucun bilan périodique des informations mentionnées au 1° n'est dû au ministre chargé du travail au titre du présent article, y compris pour une période antérieure dont le bilan n'a pas encore été transmis. Les bilans déjà transmis n'ont pas à être refaits. Les stipulations de la convention conclue avec ce ministre qui imposent ce bilan cessent de s'appliquer ; ses autres stipulations demeurent applicables.</p>",
+    "reason": "Suppression du bilan administratif périodique spécifique adressé au ministre sur les informations du 1°. Les systèmes à jour, les contrôles de qualité et l'accès des agents aux relevés restent intégraux. La collecte et l'alerte de sécurité ne sont pas supprimées ; aucun rapport de remplacement n'est institué. Coordination nécessaire à droit constant du 1° b) : la déclaration relève de R4451-77 III et la centralisation de R4451-78. Le reste du précédent corps est conservé.",
+    "review_notes": "Suppression du seul dernier alinéa ; maintien de 1° a) à d), 2°, 3° a) à c) et des deux catégories d'appui. La convention ministérielle doit être coordonnée pour retirer cette obligation périodique, sans supprimer ses stipulations autonomes. Le bilan public dosimétrique de R4451-134 demeure distinct. Contradiction effective de renvoi : la source vise « La déclaration des événements significatifs en matière de dépassement d'une des valeurs limites prévue à l'article R. 4451-78 ». Or R4451-77 III dispose « L'employeur déclare chaque événement » ; R4451-78 organise centralisation, vérification et communication. Le 1° b) est corrigé vers ces deux fonctions sans supprimer l'enregistrement. Transition compatible : le projet de R4451-78 retire son bilan annuel spécifique, R4451-134 conserve son bilan public dosimétrique distinct. Le présent texte retire le bilan conventionnel du 1° sans nouveau rapport. Point non vérifiable : convention ministérielle et textes santé publique R1333-158 II/L1333-29, rural L724-8 non joints intégralement. R4451-125 et -126 expirent le 1er juillet 2028 : leur régime successeur et la liste du 1° d) restent à coordonner sur pièces, sans prorogation implicite des articles expirants.",
     "status": "rewrite_draft",
-    "substantive_impact": {
-      "version": 1,
-      "classification": "material_reduction",
-      "assessment": "Suppression du bilan administratif périodique spécifique adressé au ministre sur les informations du 1°. Les systèmes à jour, les contrôles de qualité et l'accès des agents aux relevés restent intégraux. La collecte et l'alerte de sécurité ne sont pas supprimées ; aucun rapport de remplacement n'est institué.",
-      "scope_limitations": "Suppression du seul dernier alinéa ; maintien de 1° a) à d), 2°, 3° a) à c) et des deux catégories d'appui. La convention ministérielle doit être coordonnée pour retirer cette obligation périodique, sans supprimer ses stipulations autonomes. Le bilan public dosimétrique de R4451-134 demeure distinct. Aucun solde financier ou de complexité à l’échelle des codes n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : la suppression n'est remplacée ni par une déclaration ni par un registre ou rapport ; les obligations sanitaires autonomes restent seules applicables. Le solde net global n'est pas chiffré.",
-      "effects": [
-        {
-          "kind": "obligation_removed",
-          "measure_id": "radioprotection-fin-bilan-ministeriel-specifique",
-          "description": "Obligation d'adresser au ministre un bilan périodique des informations du 1° selon une convention spécifique.",
-          "before": "Bilan au ministre obligatoire selon la périodicité conventionnelle, pour les informations du 1°.",
-          "after": "Aucun bilan périodique spécifique dû ; systèmes à jour, alertes, accès et bilan public dosimétrique distinct conservés.",
-          "unit": "legal_duty",
-          "affected_population": "Autorité de sûreté nucléaire et de radioprotection, destinataire ministériel.",
-          "conditions_and_transition": "Suppression dès l'entrée en vigueur, y compris périodes antérieures non transmises ; aucun bilan déposé à refaire.",
-          "replacement_or_new_burdens": "Aucune formalité de remplacement ; garanties sanitaires et obligations autonomes maintenues.",
-          "source_quote": "L'Autorité de sûreté nucléaire et de radioprotection adresse au ministre chargé du travail, selon des modalités et une périodicité fixées par une convention conclue avec ce ministre, un bilan des informations mentionnées au 1° du présent article.",
-          "proposed_quote": "aucun bilan périodique des informations mentionnées au 1° n'est dû au ministre chargé du travail au titre du présent article"
-        }
-      ]
-    },
     "reference_checks": [],
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Obligation d'adresser au ministre un bilan périodique des informations du 1° selon une convention spécifique."
+      "Obligation pour l'ASNR d'adresser au ministre un bilan périodique spécifique des informations du 1°, selon une convention, y compris les transmissions anciennes encore inexécutées."
     ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "material_reduction",
+      "assessment": "Le bilan périodique conventionnel au ministre est effectivement supprimé, avec extinction des échéances non exécutées, sans suppression des systèmes, du contrôle ou des accès. Un renvoi déclaratif est rectifié.",
+      "scope_limitations": "Contradiction effective de renvoi : la source vise « La déclaration des événements significatifs en matière de dépassement d'une des valeurs limites prévue à l'article R. 4451-78 ». Or R4451-77 III dispose « L'employeur déclare chaque événement » ; R4451-78 organise centralisation, vérification et communication. Le 1° b) est corrigé vers ces deux fonctions sans supprimer l'enregistrement. Transition compatible : le projet de R4451-78 retire son bilan annuel spécifique, R4451-134 conserve son bilan public dosimétrique distinct. Le présent texte retire le bilan conventionnel du 1° sans nouveau rapport. Point non vérifiable : convention ministérielle et textes santé publique R1333-158 II/L1333-29, rural L724-8 non joints intégralement. R4451-125 et -126 expirent le 1er juillet 2028 : leur régime successeur et la liste du 1° d) restent à coordonner sur pièces, sans prorogation implicite des articles expirants.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues n'ajoutent ni données, registre, délai, justificatif ni condition d'accès. Les corrections de renvoi ne créent pas de mission autonome ; aucun solde global des codes n'est chiffré.",
+      "effects": [
+        {
+          "kind": "obligation_removed",
+          "measure_id": "radioprotection-bilan-periodique-asnr",
+          "description": "Supprimer le bilan conventionnel des informations administratives du 1°.",
+          "before": "L'ASNR adresse au ministre un bilan suivant la périodicité fixée par convention.",
+          "after": "Aucun bilan de ce type à transmettre, même pour une période ancienne non transmise ; aucun remplacement.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs, conseillers en radioprotection et ASNR dans leurs attributions respectives.",
+          "conditions_and_transition": "À l'entrée en vigueur, suppression des transmissions futures, y compris bilans anciens non transmis ; bilans déjà transmis non refaits, autres stipulations conventionnelles préservées.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ni nouvelle collecte ; aucun gain financier chiffré.",
+          "source_quote": "L'Autorité de sûreté nucléaire et de radioprotection adresse au ministre chargé du travail, selon des modalités et une périodicité fixées par une convention conclue avec ce ministre, un bilan des informations mentionnées au 1° du présent article.",
+          "proposed_quote": "aucun bilan périodique des informations mentionnées au 1° n'est dû au ministre chargé du travail au titre du présent article, y compris pour une période antérieure dont le bilan n'a pas encore été transmis."
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "radioprotection-renvoi-evenements",
+          "description": "Distinguer déclaration et centralisation des événements significatifs.",
+          "before": "Déclaration attribuée à R4451-78.",
+          "after": "Déclaration R4451-77 III ; centralisation R4451-78, sans changement de champ.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs, conseillers en radioprotection et ASNR dans leurs attributions respectives.",
+          "conditions_and_transition": "Application de la correction à l'entrée en vigueur de la réforme ; les protections sanitaires et les situations antérieures demeurent.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ni nouvelle collecte ; aucun gain financier chiffré.",
+          "source_quote": "prévue à l'article R. 4451-78",
+          "proposed_quote": "prévue au III de l'article R. 4451-77 et dont les informations sont centralisées en application de l'article R. 4451-78"
+        }
+      ]
+    },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "a68185703b6d30a4cd212b2fb34855903df116096bf94707fe51ce355c098bcf",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "6be7564da6f6fe7d7258b8cff8e3ee770ff58c28f95c50b47b8a895c8524a7c3",
-      "assessment_sha256": "4e20f10a9ca8868deed2eaf000bc885507b28a06b7680fd4b40f642eaee1743a",
+      "proposed_sha256": "3143bd805e13ed500fd10508869111f4e0cc4a6280504415396ce074559eb3d2",
+      "assessment_sha256": "88c698ebb1197661ac674db51e4c4b06df52793c678fa7864dbbc09130cdd988",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "6be7564da6f6fe7d7258b8cff8e3ee770ff58c28f95c50b47b8a895c8524a7c3"
   }
 ]

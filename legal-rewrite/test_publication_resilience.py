@@ -33,6 +33,7 @@ class Publication(TestCase):
             if self.build_failure==Path(command[1]).name:raise subprocess.CalledProcessError(1,command)
             return SimpleNamespace(returncode=0)
         slug=kwargs['cwd'].parent.name;attempt=1+sum(x==slug for x in self.calls)
+        self.assertEqual('--archive=tgz' in command,slug=='liberer-la-retraite')
         self.calls.append(slug)
         self.assertEqual(kwargs['timeout'],900)
         initial=json.loads((self.runtime/'publication.json').read_text())
@@ -40,6 +41,9 @@ class Publication(TestCase):
         self.assertFalse(initial['all_sites_published'])
         if slug==self.first and self.mode=='timeout_exception' and attempt==1:
             raise subprocess.TimeoutExpired(command,900)
+        if slug==self.first and self.mode=='invalid_server_json' and attempt==1:
+            kwargs['stdout'].write('Error: FetchError: invalid json response body at https://api.vercel.com/v2/files reason: Unexpected token, "Internal S"... is not valid JSON\n')
+            return SimpleNamespace(returncode=1)
         if slug==self.first and (self.mode=='persistent' or self.mode=='timeout_then_success' and attempt==1):
             kwargs['stdout'].write('Error: read ETIMEDOUT '+self.marker+'\n')
             return SimpleNamespace(returncode=1)
@@ -68,6 +72,13 @@ class Publication(TestCase):
         self.mode='timeout_exception';report,_=self.invoke()
         self.assertTrue(report['all_sites_published'])
         self.assertEqual(report['deployments'][self.first]['attempts'][0]['failure_type'],'TimeoutExpired')
+
+    def test_internal_server_response_retries_without_loosening_validation(self):
+        self.mode='invalid_server_json';report,sleeps=self.invoke()
+        self.assertTrue(report['all_sites_published'])
+        self.assertEqual(self.calls.count(self.first),2);self.assertEqual(sleeps,1)
+        self.assertFalse(self.m.NETWORK_ERROR.search('FetchError: invalid json response body at https://api.vercel.com/v2/files: Authentication failed'))
+        self.assertTrue(self.m.NETWORK_ERROR.search('FetchError: request failed, reason: write EPIPE'))
 
     def test_persistent_first_failure_does_not_hide_other_results(self):
         self.mode='persistent';(self.runtime/'last-published.json').write_text('{"edition":"previous"}')
@@ -134,6 +145,13 @@ class Coordinator(TestCase):
         fake=SimpleNamespace(execute=lambda *args:[],close=lambda:None)
         with patch.object(self.m,'open_db',return_value=fake):status=self.m.progress({},'running')
         self.assertTrue(status['publication_pending'])
+
+    def test_busy_publisher_defers_without_claiming_validation_or_rewriting_report(self):
+        self.report={'status':'validating_local','local_checks_passed':False}
+        self.assertFalse(self.call(21))
+        self.assertFalse(self.m.STOP.is_set())
+        self.assertEqual(json.loads((self.root/'runtime/publication.json').read_text()),self.report)
+        self.assertFalse((self.runtime/'publication-state.json').exists())
 
     def test_local_failure_remains_an_exception_for_the_coordinator(self):
         self.report['local_checks_passed']=False

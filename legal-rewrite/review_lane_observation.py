@@ -17,7 +17,9 @@ def observe(runtime,coordinators,workers,now):
     run_path=runtime/'coordinator-run.json'
     run=json.loads(run_path.read_text()) if run_path.exists() else {}
     pid=run.get('pid')
-    expected={'model':'gpt-6-astra','reasoning_effort':'medium'}
+    from worker_execution import requested_execution
+    expected=requested_execution(runtime)
+    review_expected=requested_execution(runtime,kind='review')
     matched=len(coordinators)==1 and coordinators[0]['pid']==pid
     plan_path=runtime/'parallelism-plan.json'
     plan=json.loads(plan_path.read_text()) if plan_path.exists() else {}
@@ -40,7 +42,7 @@ def observe(runtime,coordinators,workers,now):
         except (ValueError,KeyError,TypeError):pass
     actual=[w for w in workers if w.get('ppid')==pid and
             w.get('execution',{}).get('verified') is True and
-            all(w['execution'].get(k)==v for k,v in expected.items())]
+            all(w['execution'].get(k)==v for k,v in (review_expected if w.get('kind')=='review' else expected).items())]
     counts={kind:sum(w.get('kind')==kind for w in actual) for kind in ['new','review']}
     all_distinct=(all(isinstance(w['execution'].get('session_id'),str) and w['execution']['session_id'].strip() for w in actual) and
                   len({w['pid'] for w in actual})==len(actual) and len({w['execution'].get('session_id') for w in actual})==len(actual))
@@ -69,7 +71,7 @@ def observe(runtime,coordinators,workers,now):
         proof=runtime/'review-tail-execution.json'
         previous=json.loads(proof.read_text()) if proof.exists() else {}
         if previous.get('coordinator_pid')!=pid or previous.get('verified_review_workers')!=tail_count:
-            atomic(proof,report|{'active_agents':actual,'verified_review_workers':tail_count,**expected})
+            atomic(proof,report|{'active_agents':actual,'verified_review_workers':tail_count,**review_expected})
     metrics=runtime/'job-metrics.jsonl'
     rows=[]
     if metrics.exists():

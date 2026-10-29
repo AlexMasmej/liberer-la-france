@@ -71,9 +71,9 @@ def job_workers(rows):
         modified=max((p.stat().st_mtime for p in logs),default=0)
         process_file=job/f'process-{row["pid"]}.json'
         process=read_json(process_file,{})
-        evidence=verify_execution(job,requested_execution(RUNTIME),process.get('stderr_log') or None)
+        evidence=verify_execution(job,requested_execution(RUNTIME,kind='review' if job.name.startswith(('review-','reference-review-')) else 'new'),process.get('stderr_log') or None)
         result.append({'pid':row['pid'],'ppid':row['ppid'],'job':job.name,
-                       'kind':'review' if job.name.startswith('review-') else 'new',
+                       'kind':'review' if job.name.startswith(('review-','reference-review-')) else 'new',
                        'last_event_unix':int(modified),'execution':evidence})
     return result
 

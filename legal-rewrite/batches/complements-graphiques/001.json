@@ -5,9 +5,67 @@
     "source_sha256": "a0522047f34ae72a7e49abff086b9a69702417e48596089bb557c33c6c0d88f5",
     "number": "D832-11",
     "proposed_xml": "<p>Le coefficient « K » mentionné au 2° de l'article D. 832-10 est calculé selon la formule suivante :</p>\n<p>K = 0,95 − R / (cm × N).</p>\n<p>Pour l'application de cette formule :</p>\n<p>1° « K » désigne le coefficient de prise en charge. Il est arrondi à deux décimales par défaut et plafonné à 0,95 ;</p>\n<p>2° « R » désigne les ressources du ménage, appréciées conformément à la section 2 du chapitre II du titre II du présent livre et arrondies à la centaine d'euros supérieure ;</p>\n<p>3° « cm » désigne le coefficient multiplicateur fixé par arrêté ;</p>\n<p>4° « N » désigne le nombre de parts résultant du barème suivant :</p><table>\n<tbody>\n<tr>\n<td>\n<p>bénéficiaire isolé</p>\n</td>\n<td>1,4</td>\n</tr>\n<tr>\n<td>\n<p>ménage sans personne à charge</p>\n</td>\n<td>1,8</td>\n</tr>\n<tr>\n<td>\n<p>bénéficiaire isolé ou ménage ayant une personne à charge</p>\n</td>\n<td>2,5</td>\n</tr>\n<tr>\n<td>\n<p>bénéficiaire isolé ou ménage ayant deux personnes à charge</p>\n</td>\n<td>3,0</td>\n</tr>\n<tr>\n<td>\n<p>bénéficiaire isolé ou ménage ayant trois personnes à charge</p>\n</td>\n<td>3,7</td>\n</tr>\n<tr>\n<td>\n<p>bénéficiaire isolé ou ménage ayant quatre personnes à charge</p>\n</td>\n<td>4,3</td>\n</tr>\n<tr>\n<td>\n<p>majoration par personne à charge supplémentaire</p>\n</td>\n<td>0,5</td>\n</tr>\n</tbody>\n</table>",
-    "reason": "Explicite le calcul et ses paramètres, réintègre la formule documentaire manquante et conserve intégralement les tableaux, plafonds, arrondis et champs de bénéficiaires. Aucun changement de fond recherché.",
-    "review_notes": "Réécriture à droit constant proposée. Formule(s) absente(s) du XML LEGI retrouvée(s) dans la brochure officielle du ministère, édition avril 2024, et vérifiée(s) visuellement. Cette brochure est une source documentaire, pas un extrait du JO authentifié : confrontation à l’original JO encore à effectuer. La brochure emploie cm3 pour distinguer le barème accession ; la proposition conserve le symbole cm défini au 3° de cet article. Le montant 22 111,33 de la brochure reste une valeur fixée par arrêté et n’est pas figé dans le code. Aucune validation par un juriste revendiquée.",
-    "status": "rewrite_draft"
+    "reason": "Conservation exacte du brouillon documentaire antérieur, sans nouvelle reformulation : la formule K retrouvée dans la brochure et les sept lignes du barème sont maintenues. Classement editorial_only : aucune baisse de taxe, obligation ou complexité juridique n'est démontrée. La concordance avec le JO authentifié reste une réserve explicite.",
+    "review_notes": "Brouillon antérieur conservé sans modification. Page 44 entière de la brochure ministérielle avril 2024 lue et rendue : formule APL « K = 0,95 – [ R / (cm3 * N) ] », plafond 0,95 et troncature à deux décimales confirmés visuellement ; la formule AL à 0,90 est d'un autre champ. Le symbole cm3 de la brochure est rendu par cm conformément au 3° de D832-11 ; le montant documentaire 22 111,33 n'est pas figé dans le code. Les sept lignes 1,4/1,8/2,5/3,0/3,7/4,3/0,5 restent intactes ; D832-15 et D832-16 visent bien le 4° pour N, et D832-10 le 2° pour le renvoi à cet article. Point non vérifiable : confrontation au JO authentifié JORFTEXT000038812273 toujours ouverte ; récupération documentaire ne vaut pas authentification. Les propositions du corpus sont des projets, distincts des sources officielles. Aucun contrôle technique ne constitue une validation juridique ni une preuve de cohérence globale des neuf recueils.",
+    "status": "rewrite_draft",
+    "previous_draft": {
+      "source_sha256": "a0522047f34ae72a7e49abff086b9a69702417e48596089bb557c33c6c0d88f5",
+      "status": "rewrite_draft",
+      "proposed_xml": "<p>Le coefficient « K » mentionné au 2° de l'article D. 832-10 est calculé selon la formule suivante :</p>\n<p>K = 0,95 − R / (cm × N).</p>\n<p>Pour l'application de cette formule :</p>\n<p>1° « K » désigne le coefficient de prise en charge. Il est arrondi à deux décimales par défaut et plafonné à 0,95 ;</p>\n<p>2° « R » désigne les ressources du ménage, appréciées conformément à la section 2 du chapitre II du titre II du présent livre et arrondies à la centaine d'euros supérieure ;</p>\n<p>3° « cm » désigne le coefficient multiplicateur fixé par arrêté ;</p>\n<p>4° « N » désigne le nombre de parts résultant du barème suivant :</p><table>\n<tbody>\n<tr>\n<td>\n<p>bénéficiaire isolé</p>\n</td>\n<td>1,4</td>\n</tr>\n<tr>\n<td>\n<p>ménage sans personne à charge</p>\n</td>\n<td>1,8</td>\n</tr>\n<tr>\n<td>\n<p>bénéficiaire isolé ou ménage ayant une personne à charge</p>\n</td>\n<td>2,5</td>\n</tr>\n<tr>\n<td>\n<p>bénéficiaire isolé ou ménage ayant deux personnes à charge</p>\n</td>\n<td>3,0</td>\n</tr>\n<tr>\n<td>\n<p>bénéficiaire isolé ou ménage ayant trois personnes à charge</p>\n</td>\n<td>3,7</td>\n</tr>\n<tr>\n<td>\n<p>bénéficiaire isolé ou ménage ayant quatre personnes à charge</p>\n</td>\n<td>4,3</td>\n</tr>\n<tr>\n<td>\n<p>majoration par personne à charge supplémentaire</p>\n</td>\n<td>0,5</td>\n</tr>\n</tbody>\n</table>",
+      "reason": "Explicite le calcul et ses paramètres, réintègre la formule documentaire manquante et conserve intégralement les tableaux, plafonds, arrondis et champs de bénéficiaires. Aucun changement de fond recherché.",
+      "review_notes": "Réécriture à droit constant proposée. Formule(s) absente(s) du XML LEGI retrouvée(s) dans la brochure officielle du ministère, édition avril 2024, et vérifiée(s) visuellement. Cette brochure est une source documentaire, pas un extrait du JO authentifié : confrontation à l’original JO encore à effectuer. La brochure emploie cm3 pour distinguer le barème accession ; la proposition conserve le symbole cm défini au 3° de cet article. Le montant 22 111,33 de la brochure reste une valeur fixée par arrêté et n’est pas figé dans le code. Aucune validation par un juriste revendiquée.",
+      "proposed_sha256": "40331ed62bced57e249db922392180298fbc06212adb6d3f144e6780920029cd",
+      "batch_row_sha256": "9b1bb5a484710dedf78a6d9c66dbff0f49b2716316fcd0c025f22594e61da629"
+    },
+    "source_conflict_ids": [],
+    "source_companions": {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000047401383",
+      "media": [],
+      "documents": [
+        {
+          "path": "apl/bareme-ministere-2024.pdf",
+          "sha256": "07d14cf835bc016b8d85bb188a9928d2fe52520659c8cba50a25bd4072ab79f4",
+          "url": "https://www.ecologie.gouv.fr/sites/default/files/documents/Brochure-bareme-2024-APL.pdf",
+          "label": "Ministère — Aides personnelles au logement, éléments de calcul, avril 2024"
+        }
+      ],
+      "transcriptions": [
+        {
+          "marker": 1,
+          "page": 44,
+          "text": "K = 0,95 − R / (cm × N)",
+          "verified_visually": true
+        }
+      ],
+      "expected_markers": 1,
+      "documentary_recovery_complete": true,
+      "authenticated_jo_crosscheck_complete": false,
+      "provenance_notes": "Réécriture à droit constant proposée. Formule(s) absente(s) du XML LEGI retrouvée(s) dans la brochure officielle du ministère, édition avril 2024, et vérifiée(s) visuellement. Cette brochure est une source documentaire, pas un extrait du JO authentifié : confrontation à l’original JO encore à effectuer. La brochure emploie cm3 pour distinguer le barème accession ; la proposition conserve le symbole cm défini au 3° de cet article. Le montant 22 111,33 de la brochure reste une valeur fixée par arrêté et n’est pas figé dans le code. Aucune validation par un juriste revendiquée."
+    },
+    "reference_checks": [],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "editorial_only",
+      "assessment": "Conservation exacte du brouillon documentaire antérieur, sans nouvelle reformulation : la formule K retrouvée dans la brochure et les sept lignes du barème sont maintenues. Classement editorial_only : aucune baisse de taxe, obligation ou complexité juridique n'est démontrée. La concordance avec le JO authentifié reste une réserve explicite.",
+      "scope_limitations": "Brouillon antérieur conservé sans modification. Page 44 entière de la brochure ministérielle avril 2024 lue et rendue : formule APL « K = 0,95 – [ R / (cm3 * N) ] », plafond 0,95 et troncature à deux décimales confirmés visuellement ; la formule AL à 0,90 est d'un autre champ. Le symbole cm3 de la brochure est rendu par cm conformément au 3° de D832-11 ; le montant documentaire 22 111,33 n'est pas figé dans le code. Les sept lignes 1,4/1,8/2,5/3,0/3,7/4,3/0,5 restent intactes ; D832-15 et D832-16 visent bien le 4° pour N, et D832-10 le 2° pour le renvoi à cet article. Point non vérifiable : confrontation au JO authentifié JORFTEXT000038812273 toujours ouverte ; récupération documentaire ne vaut pas authentification.",
+      "new_burdens_review": "Aucune charge nouvelle : restitution documentaire d'une formule existante et maintien des arrondis, plafond, ressources et parts. La saisie textuelle n'ajoute ni registre ni condition ; aucune réduction nette des codes n'est revendiquée.",
+      "effects": []
+    },
+    "classification": "editorial_only",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "a0522047f34ae72a7e49abff086b9a69702417e48596089bb557c33c6c0d88f5",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "40331ed62bced57e249db922392180298fbc06212adb6d3f144e6780920029cd",
+      "assessment_sha256": "786e65c7372699d13b2a88004fd2d958bea126061803eca3cd8121fcc008ca9c",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "40331ed62bced57e249db922392180298fbc06212adb6d3f144e6780920029cd"
   },
   {
     "code_id": "LEGITEXT000006074096",
@@ -15,8 +73,73 @@
     "source_sha256": "74966a032aecefd21cd3dcd8cc2eb2097b692c99db6d953a361dfa4371048856",
     "number": "D832-25",
     "proposed_xml": "<p>Le coefficient « K » défini au 2° de l'article D. 832-24 est calculé conformément au 1° du présent article.</p>\n<p>Par exception, le 2° s'applique aux logements-foyers de jeunes travailleurs conventionnés après le 30 septembre 1990 et aux résidences sociales conventionnées après le 31 décembre 1994 en application du 5° de l'article L. 831-1, mentionnés au 1° de l'article R. 832-21.</p>\n<p>1° K = 0,95 − (R − r × N) / (cm × N).</p>\n<p>Dans cette formule :</p>\n<p>a) « K » désigne le coefficient de prise en charge. Il est arrondi à deux décimales par défaut et plafonné à 0,95 ;</p>\n<p>b) « R » désigne les ressources du ménage, appréciées selon la section 2 du chapitre II du titre II du présent livre et arrondies à la centaine d'euros supérieure ;</p>\n<p>c) « r » désigne un coefficient fixé par arrêté ;</p>\n<p>d) « cm » désigne un coefficient multiplicateur fixé par arrêté ;</p>\n<p>e) « N » désigne le nombre de parts résultant du barème suivant :</p><table>\n<tbody>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé</td>\n<td>\n<br>\n\t\t\t1,4</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tménage sans personne à charge</td>\n<td>\n<br>\n\t\t\t1,8</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant une personne à charge</td>\n<td>\n<br>\n\t\t\t2,5</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant deux personnes à charge</td>\n<td>\n<br>\n\t\t\t3,0</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant trois personnes à charge</td>\n<td>\n<br>\n\t\t\t3,7</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant quatre personnes à charge</td>\n<td>\n<br>\n\t\t\t4,3</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tmajoration par personne à charge supplémentaire</td>\n<td>\n<br>\n\t\t\t0,5</td>\n</tr>\n</tbody>\n</table>\n<p>2° K = 0,90 − R / (cm × N).</p>\n<p>Dans cette formule :</p>\n<p>a) « K » désigne le coefficient de prise en charge. Il est arrondi à deux décimales par défaut et plafonné à 0,90 ;</p>\n<p>b) « R » désigne les ressources du ménage, appréciées selon la section 2 du chapitre II du titre II du présent livre et arrondies à la centaine d'euros supérieure ;</p>\n<p>c) « cm » désigne un coefficient multiplicateur fixé par arrêté ;</p>\n<p>d) « N » désigne le nombre de parts résultant du barème suivant :</p><table>\n<tbody>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé</td>\n<td>\n<br>\n\t\t\t1,2</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tménage sans personne à charge</td>\n<td>\n<br>\n\t\t\t1,5</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant une personne à charge</td>\n<td>\n<br>\n\t\t\t2,5</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant deux personnes à charge</td>\n<td>\n<br>\n\t\t\t3,0</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant trois personnes à charge</td>\n<td>\n<br>\n\t\t\t3,7</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant quatre personnes à charge</td>\n<td>\n<br>\n\t\t\t4,3</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tmajoration par personne à charge supplémentaire</td>\n<td>\n<br>\n\t\t\t0,5</td>\n</tr>\n</tbody>\n</table>",
-    "reason": "Explicite le calcul et ses paramètres, réintègre la formule documentaire manquante et conserve intégralement les tableaux, plafonds, arrondis et champs de bénéficiaires. Aucun changement de fond recherché.",
-    "review_notes": "Réécriture à droit constant proposée. Formule(s) absente(s) du XML LEGI retrouvée(s) dans la brochure officielle du ministère, édition avril 2024, et vérifiée(s) visuellement. Cette brochure est une source documentaire, pas un extrait du JO authentifié : confrontation à l’original JO encore à effectuer. La brochure distingue cm1 et cm2 ; la proposition garde cm dans chacun des deux régimes, conformément aux définitions du code. Les montants r=1 217,26, cm1=13 393,40 et cm2=21 420,91 ne sont pas ajoutés au code : ils relèvent de l’arrêté. Les deux barèmes N, seuils, arrondis et dates de conventionnement restent distincts. Aucune validation par un juriste revendiquée.",
-    "status": "rewrite_draft"
+    "reason": "Explicite le calcul et ses paramètres, réintègre la formule documentaire manquante et conserve intégralement les tableaux, plafonds, arrondis et champs de bénéficiaires. Aucun changement de fond recherché. Seconde passe : maintien exact du brouillon antérieur, sans nouvelle reformulation. Les renvois de calcul sont compatibles ; la restitution documentaire ne constitue aucune réduction normative.",
+    "review_notes": "Réécriture à droit constant proposée. Formule(s) absente(s) du XML LEGI retrouvée(s) dans la brochure officielle du ministère, édition avril 2024, et vérifiée(s) visuellement. Cette brochure est une source documentaire, pas un extrait du JO authentifié : confrontation à l’original JO encore à effectuer. La brochure distingue cm1 et cm2 ; la proposition garde cm dans chacun des deux régimes, conformément aux définitions du code. Les montants r=1 217,26, cm1=13 393,40 et cm2=21 420,91 ne sont pas ajoutés au code : ils relèvent de l’arrêté. Les deux barèmes N, seuils, arrondis et dates de conventionnement restent distincts. Aucune validation par un juriste revendiquée. Différence de champ vérifiée : le renvoi « mentionnés au 1° de l'article R. 832-21 » ne vise pas le c du 2° dont le projet supprime l'agrément. L831-1 5°, R832-21 et D832-24 ont été lus en entier. D832-26 renvoie au e du 1° et au d du 2° ; D842-6, D842-10 et D842-15 renvoient au second régime, sans confusion des parts 1,4/1,8 et 1,2/1,5. D861-21 exclut le deuxième alinéa et le 2° dans son champ ultramarin : ces emplacements sont conservés. Les ressources restent appréciées par la section 2 : les projets L822-5/R822-22 excluent le capital sans supprimer les revenus réels ; R822-18 maintient l'abattement de professionnalisation pour le contrat unique. Aucune valeur fiscale ou sociale nouvelle n'est incorporée à K. Brochure ministérielle avril 2024, page 31 intégralement lue et contrôlée visuellement ; page 32 lue pour les parts et E0. Empreinte PDF conforme à celle du compagnon. Les formules affichées concordent ; l'absence du JO authentifié demeure un point non vérifiable, pas une preuve d'authenticité juridique. Le brouillon est conservé exactement, sans nouveau changement stylistique ni baisse revendiquée.",
+    "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "source_companions": {
+      "code_id": "LEGITEXT000006074096",
+      "source_id": "LEGIARTI000047401364",
+      "media": [],
+      "documents": [
+        {
+          "path": "apl/bareme-ministere-2024.pdf",
+          "sha256": "07d14cf835bc016b8d85bb188a9928d2fe52520659c8cba50a25bd4072ab79f4",
+          "url": "https://www.ecologie.gouv.fr/sites/default/files/documents/Brochure-bareme-2024-APL.pdf",
+          "label": "Ministère — Aides personnelles au logement, éléments de calcul, avril 2024"
+        }
+      ],
+      "transcriptions": [
+        {
+          "marker": 1,
+          "page": 31,
+          "text": "K = 0,95 − (R − r × N) / (cm × N)",
+          "verified_visually": true
+        },
+        {
+          "marker": 2,
+          "page": 31,
+          "text": "K = 0,90 − R / (cm × N)",
+          "verified_visually": true
+        }
+      ],
+      "expected_markers": 2,
+      "documentary_recovery_complete": true,
+      "authenticated_jo_crosscheck_complete": false,
+      "provenance_notes": "Réécriture à droit constant proposée. Formule(s) absente(s) du XML LEGI retrouvée(s) dans la brochure officielle du ministère, édition avril 2024, et vérifiée(s) visuellement. Cette brochure est une source documentaire, pas un extrait du JO authentifié : confrontation à l’original JO encore à effectuer. La brochure distingue cm1 et cm2 ; la proposition garde cm dans chacun des deux régimes, conformément aux définitions du code. Les montants r=1 217,26, cm1=13 393,40 et cm2=21 420,91 ne sont pas ajoutés au code : ils relèvent de l’arrêté. Les deux barèmes N, seuils, arrondis et dates de conventionnement restent distincts. Aucune validation par un juriste revendiquée."
+    },
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "74966a032aecefd21cd3dcd8cc2eb2097b692c99db6d953a361dfa4371048856",
+      "status": "rewrite_draft",
+      "proposed_xml": "<p>Le coefficient « K » défini au 2° de l'article D. 832-24 est calculé conformément au 1° du présent article.</p>\n<p>Par exception, le 2° s'applique aux logements-foyers de jeunes travailleurs conventionnés après le 30 septembre 1990 et aux résidences sociales conventionnées après le 31 décembre 1994 en application du 5° de l'article L. 831-1, mentionnés au 1° de l'article R. 832-21.</p>\n<p>1° K = 0,95 − (R − r × N) / (cm × N).</p>\n<p>Dans cette formule :</p>\n<p>a) « K » désigne le coefficient de prise en charge. Il est arrondi à deux décimales par défaut et plafonné à 0,95 ;</p>\n<p>b) « R » désigne les ressources du ménage, appréciées selon la section 2 du chapitre II du titre II du présent livre et arrondies à la centaine d'euros supérieure ;</p>\n<p>c) « r » désigne un coefficient fixé par arrêté ;</p>\n<p>d) « cm » désigne un coefficient multiplicateur fixé par arrêté ;</p>\n<p>e) « N » désigne le nombre de parts résultant du barème suivant :</p><table>\n<tbody>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé</td>\n<td>\n<br>\n\t\t\t1,4</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tménage sans personne à charge</td>\n<td>\n<br>\n\t\t\t1,8</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant une personne à charge</td>\n<td>\n<br>\n\t\t\t2,5</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant deux personnes à charge</td>\n<td>\n<br>\n\t\t\t3,0</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant trois personnes à charge</td>\n<td>\n<br>\n\t\t\t3,7</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant quatre personnes à charge</td>\n<td>\n<br>\n\t\t\t4,3</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tmajoration par personne à charge supplémentaire</td>\n<td>\n<br>\n\t\t\t0,5</td>\n</tr>\n</tbody>\n</table>\n<p>2° K = 0,90 − R / (cm × N).</p>\n<p>Dans cette formule :</p>\n<p>a) « K » désigne le coefficient de prise en charge. Il est arrondi à deux décimales par défaut et plafonné à 0,90 ;</p>\n<p>b) « R » désigne les ressources du ménage, appréciées selon la section 2 du chapitre II du titre II du présent livre et arrondies à la centaine d'euros supérieure ;</p>\n<p>c) « cm » désigne un coefficient multiplicateur fixé par arrêté ;</p>\n<p>d) « N » désigne le nombre de parts résultant du barème suivant :</p><table>\n<tbody>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé</td>\n<td>\n<br>\n\t\t\t1,2</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tménage sans personne à charge</td>\n<td>\n<br>\n\t\t\t1,5</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant une personne à charge</td>\n<td>\n<br>\n\t\t\t2,5</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant deux personnes à charge</td>\n<td>\n<br>\n\t\t\t3,0</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant trois personnes à charge</td>\n<td>\n<br>\n\t\t\t3,7</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tbénéficiaire isolé ou ménage ayant quatre personnes à charge</td>\n<td>\n<br>\n\t\t\t4,3</td>\n</tr>\n<tr>\n<td>\n<br>\n\t\t\tmajoration par personne à charge supplémentaire</td>\n<td>\n<br>\n\t\t\t0,5</td>\n</tr>\n</tbody>\n</table>",
+      "reason": "Explicite le calcul et ses paramètres, réintègre la formule documentaire manquante et conserve intégralement les tableaux, plafonds, arrondis et champs de bénéficiaires. Aucun changement de fond recherché.",
+      "review_notes": "Réécriture à droit constant proposée. Formule(s) absente(s) du XML LEGI retrouvée(s) dans la brochure officielle du ministère, édition avril 2024, et vérifiée(s) visuellement. Cette brochure est une source documentaire, pas un extrait du JO authentifié : confrontation à l’original JO encore à effectuer. La brochure distingue cm1 et cm2 ; la proposition garde cm dans chacun des deux régimes, conformément aux définitions du code. Les montants r=1 217,26, cm1=13 393,40 et cm2=21 420,91 ne sont pas ajoutés au code : ils relèvent de l’arrêté. Les deux barèmes N, seuils, arrondis et dates de conventionnement restent distincts. Aucune validation par un juriste revendiquée.",
+      "proposed_sha256": "c0bd2554196effc4ff956565695c122b37c325fe185a7c941de2eebedcde824d",
+      "batch_row_sha256": "28fbb454f889bbc6e8c50692c0017df016cc89f4825115b920aa489a4744f23a"
+    },
+    "substantive_impact": {
+      "version": 1,
+      "classification": "editorial_only",
+      "assessment": "Conservation exacte du brouillon documentaire à droit constant : deux formules, deux plafonds et quatorze lignes de barème maintenus. Aucun prélèvement, délai ou devoir supprimé par rapport à la source officielle ; les images manquantes sont documentées, pas une réforme.",
+      "scope_limitations": "Confrontation au JO authentifié non disponible ; paramètres d'arrêtés non réécrits. La brochure de 2024 ne certifie pas les valeurs applicables à toutes les périodes ; adaptations D861-21 conservées.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le texte existant ou le brouillon antérieur est conservé sans nouveau document, registre, donnée, délai ou condition. Aucun solde de complexité ou coût national n'est chiffré.",
+      "effects": []
+    },
+    "reference_checks": [],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "74966a032aecefd21cd3dcd8cc2eb2097b692c99db6d953a361dfa4371048856",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "c0bd2554196effc4ff956565695c122b37c325fe185a7c941de2eebedcde824d",
+      "assessment_sha256": "bb2950e5712ad559402710ac8c95e5f856859f0a6b6db501791936da315e1d3b",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "c0bd2554196effc4ff956565695c122b37c325fe185a7c941de2eebedcde824d"
   }
 ]

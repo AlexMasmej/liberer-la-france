@@ -4,93 +4,108 @@
     "source_id": "LEGIARTI000018533182",
     "source_sha256": "4f96bd1473f62ffde8d7fde436aa22041985bf2402aca8811f96a58e81cb1001",
     "number": "D3325-4",
-    "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur de la loi portant la présente réforme. Aucune attestation rectificative n'est exigée à compter de cette date, y compris pour un exercice antérieur ou une demande en cours. Les attestations déjà établies restent utilisables comme éléments de preuve. La modification du bénéfice net conserve ses effets sur le calcul de la participation dans les conditions légales applicables ; les droits à complément de participation, intérêts, restitutions et recours ne sont pas supprimés. Aucun délai expiré ni décision passée en force de chose jugée n'est rouvert.</p>",
-    "reason": "Coordination de la suppression de l'attestation spécifique déjà proposée à L3326-1 : l'attestation rectificative ne doit pas rétablir le certificat initial supprimé. Le recalcul de la participation et ses intérêts demeurent ; aucune nouvelle réduction distincte n'est comptée.",
-    "review_notes": "L3326-1 et L3326-1-1 ont été lus dans le corpus : le premier projet supprime l'attestation ; le second conserve le recalcul après rectification définitive ou acceptée et les intérêts. D3325-1 à D3325-3, hors lot, restent à coordonner ; ils ne sont pas réputés abrogés ici.",
+    "proposed_xml": "<p>Le présent article est abrogé à compter de l’entrée en vigueur de la suppression de l’attestation spécifique prévue à l’article L. 3326-1. Aucune attestation rectificative n'est exigée à compter de cette date, y compris pour un exercice antérieur ou une demande en cours. Les attestations déjà établies restent utilisables comme éléments de preuve. La modification du bénéfice net conserve ses effets sur le calcul de la participation dans les conditions légales applicables ; les droits à complément de participation, intérêts, restitutions et recours ne sont pas supprimés. Aucun délai expiré ni décision passée en force de chose jugée n'est rouvert.</p>",
+    "reason": "Coordination nécessaire : le brouillon faisait courir l’abrogation « à compter de l'entrée en vigueur de la loi portant la présente réforme », tandis que D3325-1 à D3325-3 la subordonnent à la suppression de l’attestation législative. Alignement de ce déclencheur sur L3326-1 pour éviter une extinction isolée de la seule attestation rectificative. La suppression de fond acquise est conservée, avec le recalcul et les intérêts ; aucun simple changement stylistique.",
+    "review_notes": "Transition compatible après correction : L3326-1 proposé dispose « Aucune attestation spécifique de l'inspecteur des impôts ou du commissaire aux comptes n'est exigée. » D3325-1 à D3325-3 sont dans le présent lot et leur extinction est coordonnée, contrairement à l’ancienne note les disant « hors lot ». L3326-1-1, lu entier, maintient le recalcul après rectification définitive ou formellement acceptée, avec intérêt à compter du premier jour du sixième mois de l’exercice suivant l’exercice rectifié. R3326-1 proposé conserve la compétence judiciaire sous réserve des compétences fiscales. Le renvoi de transition ajouté vers L3326-1 n’est pas une cible fournie dans reference-targets.json ; source et proposition lues dans travail.json. Ni droits substantiels, ni décisions définitives, ni délais expirés ne sont rouverts.",
     "status": "rewrite_draft",
     "reference_checks": [],
+    "change_type": "full_repeal",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "L’exigence d’une attestation rectificative après modification de l’assiette du bénéfice net.",
     "substantive_impact": {
       "version": 1,
       "classification": "coordination_only",
-      "assessment": "Coordination de la suppression de l'attestation spécifique déjà proposée à L3326-1 : l'attestation rectificative ne doit pas rétablir le certificat initial supprimé. Le recalcul de la participation et ses intérêts demeurent ; aucune nouvelle réduction distincte n'est comptée.",
-      "scope_limitations": "L3326-1 et L3326-1-1 ont été lus dans le corpus : le premier projet supprime l'attestation ; le second conserve le recalcul après rectification définitive ou acceptée et les intérêts. D3325-1 à D3325-3, hors lot, restent à coordonner ; ils ne sont pas réputés abrogés ici.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun dépôt, registre, certificat ou délai de remplacement n'est institué. Les droits et contrôles autonomes demeurent ; le solde global de coût des codes n'est pas établi.",
+      "assessment": "Abrogation effective du mécanisme réglementaire de l’attestation : L’exigence d’une attestation rectificative après modification de l’assiette du bénéfice net. Exécution de la mesure commune de L3326-1, sans nouvelle coupe indépendante comptée.",
+      "scope_limitations": "Effet subordonné à la suppression législative de l’attestation ; participation, calculs annuels autonomes, rectifications, intérêts et droits de recours sont préservés.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun certificat ou déclaration ne remplace l’attestation retirée. Les données comptables et fiscales existantes continuent de fonder les droits.",
       "effects": [
         {
           "kind": "coordination",
-          "measure_id": "participation-fin-attestation-specifique",
-          "description": "Extinction du certificat rectificatif dépendant de l'attestation supprimée.",
-          "before": "Attestation rectificative obligatoire après modification du bénéfice net.",
-          "after": "Aucun certificat rectificatif à produire ; recalcul légal conservé.",
+          "measure_id": "participation-suppression-attestation-benefice",
+          "description": "L’exigence d’une attestation rectificative après modification de l’assiette du bénéfice net.",
+          "before": "Modalité obligatoire ou faculté administrative du circuit d’attestation spécifique en vigueur.",
+          "after": "Circuit éteint avec la suppression de l’attestation de L3326-1, y compris demandes anciennes pendantes.",
           "unit": "legal_duty",
-          "affected_population": "Entreprises et bénéficiaires du dispositif visé à l'article D3325-4",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme selon la transition écrite ; droits antérieurs conservés dans leur champ.",
-          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément maintenues conservent leur champ.",
-          "source_quote": "donne lieu à l'établissement d'une attestation rectificative",
-          "proposed_quote": "Aucune attestation rectificative n'est exigée à compter de cette date"
+          "affected_population": "Entreprises, administrations et bénéficiaires de participation.",
+          "conditions_and_transition": "Application simultanée à la réforme de L3326-1 ; preuves déjà délivrées utilisables, délais expirés non rouverts.",
+          "replacement_or_new_burdens": "Aucune attestation ou déclaration spécifique de remplacement.",
+          "source_quote": "La modification d'assiette du bénéfice net intervenue après la délivrance d'une attestation donne lieu à l'établissement d'une attestation rectificative établie dans les mêmes conditions que l'attestation initiale.",
+          "proposed_quote": "Le présent article est abrogé à compter de l’entrée en vigueur de la suppression de l’attestation spécifique prévue à l’article L. 3326-1."
         }
       ]
     },
-    "change_type": "full_repeal",
-    "repeal_policy_id": "editorial_direction_2026_10_19",
-    "repeal_scope": "Obligation d'établir une attestation rectificative du bénéfice net dans les formes de l'attestation initiale.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "4f96bd1473f62ffde8d7fde436aa22041985bf2402aca8811f96a58e81cb1001",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "210303ccc422928b9e45a2af0eabba6714d5413f4b3aab4cdd207467c74ec3b7",
-      "assessment_sha256": "b28b2626ac76aa446011df4352247b67c56608dcb90e03024c435a106189b266",
+      "proposed_sha256": "5fa5e0972bb283ac110c71d4cecbf0a4470e13925568c48cd1879f922d8004aa",
+      "assessment_sha256": "90359460995cb89577f6b53ff08609c0b5aeac8eb6db934d50c508e26dacf51f",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "210303ccc422928b9e45a2af0eabba6714d5413f4b3aab4cdd207467c74ec3b7"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000018533180",
     "source_sha256": "acf932f5bd411da3248843199c6db60d831ade7d397172fb4bbea745d6d42f05",
     "number": "D3325-5",
-    "proposed_xml": "\n<p>La constitution en franchise d'impôt de la provision pour investissement prévue à l'article L. 3325-3 et au II de l'article 237 bis A du code général des impôts est subordonnée au respect des dispositions prévues à l'article 171 bis de l'annexe II au code général des impôts.</p>\n<p>Pour les bénéfices relevant de l'impôt sur les sociétés à la distribution, le respect de ces dispositions ne rend pas exigible un impôt annuel sur les bénéfices conservés. Les conditions propres à la provision ne constituent pas une obligation d'investissement des autres bénéfices conservés. La provision, son utilisation et sa reprise sont prises en compte une seule fois conformément à l'article 237 bis A du code général des impôts. Les franchises définitivement acquises et les bénéfices déjà imposés ne sont pas soumis une seconde fois à l'impôt lors d'une distribution.</p><p>Ces dispositions s'appliquent à compter de l'entrée en vigueur du régime d'imposition à la distribution. Elles ne modifient ni le champ des provisions éligibles, ni les règles de l'impôt sur le revenu et des régimes distincts, ni les droits, dettes, restitutions et recours relatifs aux périodes antérieures.</p>",
-    "reason": "Coordination du renvoi à la provision pour investissement avec l'IS à la distribution : conserver la franchise sans transformer ses états ou délais propres en annualité de l'IS sur les bénéfices conservés. Aucun taux, avantage supplémentaire ni suppression d'un avantage existant n'est créé.",
-    "review_notes": "L'annexe II 171 bis exige la condition de forme de CGI39 et deux états ; sa proposition actuelle ne les supprime pas. CGI237 bis A IV limite les provisions nouvelles au champ subsistant, notamment les SCOP du II3. Le délai de quatre ans applicable à certaines dotations SCOP au II4 doit être coordonné avec l'état de deux ans de 171 bis : ne pas le raccourcir par ce renvoi. La suppression éventuelle des états nécessite une réforme de 171 bis, hors lot.",
+    "proposed_xml": "\n<p>La constitution en franchise d'impôt de la provision pour investissement prévue à l'article L. 3325-3 et au II de l'article 237 bis A du code général des impôts est subordonnée au respect des dispositions prévues à l'article 171 bis de l'annexe II au code général des impôts.</p><p>Ce renvoi n’exige pas les états supplémentaires supprimés par l’article 171 bis de l’annexe II au code général des impôts, pour les dépôts auxquels cette suppression s’applique. Leur absence ne peut justifier le refus de la franchise. Les conditions de fond et les délais propres à la provision demeurent ceux du II de l’article 237 bis A du même code, notamment le délai de quatre ans prévu au 4 de ce II lorsque la provision des sociétés coopératives de production est représentée par des dotations à la réserve légale et au fonds de développement.</p>\n<p>Pour les bénéfices relevant de l'impôt sur les sociétés à la distribution, le respect de ces dispositions ne rend pas exigible un impôt annuel sur les bénéfices conservés. Les conditions propres à la provision ne constituent pas une obligation d'investissement des autres bénéfices conservés. La provision, son utilisation et sa reprise sont prises en compte une seule fois conformément à l'article 237 bis A du code général des impôts. Les franchises définitivement acquises et les bénéfices déjà imposés ne sont pas soumis une seconde fois à l'impôt lors d'une distribution.</p><p>Les dispositions relatives à l'impôt sur les sociétés à la distribution s'appliquent à compter de l'entrée en vigueur de ce régime. Elles ne modifient ni le champ des provisions éligibles, ni les règles de l'impôt sur le revenu et des régimes distincts, ni les droits, dettes, restitutions et recours relatifs aux périodes antérieures.</p>",
+    "reason": "Coordination nécessaire du renvoi fiscal, sans nouvelle suppression indépendante : la proposition actuelle de 171 bis supprime les deux états que les anciennes notes disaient maintenus. Le corps explicite cette dispense selon sa propre transition et protège le délai SCOP de quatre ans contre la lecture du délai général de deux ans. Le dispositif antérieur de coordination à l’IS à la distribution reste entier : franchise conservée, pas d’IS annuel sur les bénéfices conservés, pas de double emploi.",
+    "review_notes": "Contradiction effective dans les anciennes notes : « sa proposition actuelle ne les supprime pas » est infirmé par 171 bis proposé : « L’état distinct de l’emploi de la provision dans les deux ans suivant sa constitution est supprimé. » Source et proposition de 171 bis lues en entier ; les deux états disparaissent pour les dépôts futurs, y compris les provisions antérieures, sans dépôt de rattrapage, mais la condition de forme du 5° du 1 de CGI39 et le tableau de l’annexe III38 restent. Ces deux dernières cibles de second rang n’ont pas été examinées intégralement ici ; leur réforme éventuelle n’est pas réputée accomplie. Le renvoi ne ressuscite ni états ni autorisation du transfert de provision supprimée dans CGI237 bis A II6/V proposé. Le II4 prévoit « Ce délai est porté à quatre ans pour les sociétés coopératives de production lorsque la provision pour investissement est représentée par des dotations à la réserve légale et au fonds de développement. » Les autres provisions gardent leurs conditions, dans les limites du IV ; aucune réouverture des dispositifs fermés en 2012. L3325-3 renvoie au CGI et ne crée pas de condition supplémentaire. La coordination prend effet avec chacune des réformes correspondantes, sans avancer leur date.",
     "status": "rewrite_draft",
     "reference_checks": [
       {
         "target_key": "LEGITEXT000006069577|LEGIARTI000049720129",
-        "view_sha256": "2d5cd94abad12d43cb76b1686d2d95bd6196726b7ed6584bb8e71d2e368112e1",
-        "assessment": "Le II de CGI237 bis A est la base de la franchise, sous la limitation du IV aux provisions encore admissibles. La proposition cible conserve les délais de deux ou quatre ans et le traitement unique à la distribution ; D3325-5 est coordonné pour qu'aucun état annuel n'entraîne d'IS ordinaire annuel. Il n'existe ici ni seuil d'ancienneté du salarié ni notification de rupture : les dates historiques concernent des accords et provisions, non des CDD. La cible reste un projet, pas le droit en vigueur."
+        "view_sha256": "a2eee7d4ca34e1fbe2c13dc27d388c0524bb94d92f23a24f9926ab7f59d1691d",
+        "assessment": "CGI237 bis A est un régime fiscal de participation, non une indemnité de rupture du contrat privé : ni ancienneté d’un an ni notification de quinze jours ne s’y appliquent. Son II3 conserve la provision SCOP et ses exceptions de capital ; le II4 porte à quatre ans le délai des dotations à réserve légale et fonds de développement. Le IV ferme les provisions nouvelles des II1/2 depuis les exercices clos le 17 août 2012, sans fermer le II3. Le V proposé supprime dépôt conditionnant la déduction et autorisation de transfert, et empêche reprise ou déduction de rendre exigible un IS ordinaire avant distribution. D3325-5 ne rétablit aucune de ces formalités, préserve les franchises et évite le double emploi ; le NOTA du 1er janvier 2025 ne vaut pas date de cette réforme."
       }
     ],
+    "benefit_review": "La franchise de provision pour investissement est conservée pour toute situation future éligible, notamment les SCOP relevant du II3 de CGI237 bis A, y compris ses exceptions de détention et transformations ou groupements éligibles. Le plafond lié à la participation et la faculté de substitution des dotations demeurent ; le délai favorable de quatre ans n’est pas ramené à deux ans. Les droits anciens et les provisions relevant des transitions du IV restent protégés. La dispense des deux états s’applique selon 171 bis sans certificat de remplacement. L’IS à la distribution préserve les franchises définitivement acquises et les bénéfices déjà taxés, sans transformer une provision simplement différée en exonération définitive.",
     "substantive_impact": {
       "version": 1,
       "classification": "coordination_only",
-      "assessment": "Coordination du renvoi à la provision pour investissement avec l'IS à la distribution : conserver la franchise sans transformer ses états ou délais propres en annualité de l'IS sur les bénéfices conservés. Aucun taux, avantage supplémentaire ni suppression d'un avantage existant n'est créé.",
-      "scope_limitations": "L'annexe II 171 bis exige la condition de forme de CGI39 et deux états ; sa proposition actuelle ne les supprime pas. CGI237 bis A IV limite les provisions nouvelles au champ subsistant, notamment les SCOP du II3. Le délai de quatre ans applicable à certaines dotations SCOP au II4 doit être coordonné avec l'état de deux ans de 171 bis : ne pas le raccourcir par ce renvoi. La suppression éventuelle des états nécessite une réforme de 171 bis, hors lot.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun dépôt, registre, certificat ou délai de remplacement n'est institué. Les droits et contrôles autonomes demeurent ; le solde global de coût des codes n'est pas établi.",
+      "assessment": "Préservation de la franchise et coordination des dispenses de 171 bis avec l’IS à la distribution. Aucune seconde suppression des états ni nouvelle exonération comptée.",
+      "scope_limitations": "Le IV de CGI237 bis A limite les provisions nouvelles ; l’IR et régimes distincts ne sont pas réformés. Formalisme comptable de droit commun maintenu ; pas de solde financier chiffré.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le renvoi exclut les états déjà supprimés, n’ajoute aucun registre et n’impose pas d’investissement des autres bénéfices conservés.",
       "effects": [
         {
           "kind": "coordination",
+          "measure_id": "provision-investissement-suppression-etats",
+          "description": "Empêcher le renvoi général de rétablir les états supprimés dans 171 bis.",
+          "before": "Renvoi intégral à 171 bis, dont la source exige deux états supplémentaires.",
+          "after": "Renvoi coordonné à la suppression des états, franchise et délais de fond préservés.",
+          "unit": "legal_duty",
+          "affected_population": "Entreprises éligibles à la provision, notamment SCOP.",
+          "conditions_and_transition": "Selon la transition propre de 171 bis, dépôts futurs y compris provisions anciennes.",
+          "replacement_or_new_burdens": "Aucune pièce de remplacement créée dans cet article.",
+          "source_quote": "est subordonnée au respect des dispositions prévues à l'article 171 bis de l'annexe II au code général des impôts.",
+          "proposed_quote": "Ce renvoi n’exige pas les états supplémentaires supprimés par l’article 171 bis de l’annexe II au code général des impôts, pour les dépôts auxquels cette suppression s’applique."
+        },
+        {
+          "kind": "coordination",
           "measure_id": "is-distribution-benefices-conserves",
-          "description": "Le renvoi à la provision ne rétablit pas l'exigibilité annuelle de l'IS.",
-          "before": "Renvoi sans distinction au régime de provision en franchise.",
-          "after": "Conditions de provision maintenues avec absence d'exigibilité annuelle de l'IS conservé.",
+          "description": "Coordination de la franchise avec l’absence d’IS ordinaire annuel sur les bénéfices conservés.",
+          "before": "Renvoi à la franchise dans un régime fiscal antérieur à l’IS à la distribution.",
+          "after": "Pas d’exigibilité annuelle par ce renvoi ; bénéfices taxés ou définitivement exonérés protégés.",
           "unit": "other",
-          "affected_population": "Entreprises et bénéficiaires du dispositif visé à l'article D3325-5",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme selon la transition écrite ; droits antérieurs conservés dans leur champ.",
-          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément maintenues conservent leur champ.",
+          "affected_population": "Entreprises relevant de l’IS à la distribution et éligibles à la provision.",
+          "conditions_and_transition": "À compter de l’entrée en vigueur du régime de distribution ; droits et dettes anciens préservés.",
+          "replacement_or_new_burdens": "Aucune nouvelle formalité ; pas de double déduction ou double imposition.",
           "source_quote": "La constitution en franchise d'impôt de la provision pour investissement",
-          "proposed_quote": "le respect de ces dispositions ne rend pas exigible un impôt annuel sur les bénéfices conservés"
+          "proposed_quote": "Pour les bénéfices relevant de l'impôt sur les sociétés à la distribution, le respect de ces dispositions ne rend pas exigible un impôt annuel sur les bénéfices conservés."
         }
       ]
     },
-    "benefit_review": "La franchise de provision est maintenue pour chaque situation éligible future et les créances anciennes. Le II de CGI237 bis A conserve les taux et régimes historiques, mais le IV ferme déjà les nouvelles déductions des II1 et II2 depuis le 17 août 2012 : le renvoi n'en crée pas la réouverture. Les SCOP éligibles du II3, l'assimilation des dotations aux réserves, les exceptions de détention et le délai favorable de quatre ans demeurent. Les fractions définitivement exonérées et déjà taxées sont protégées à la distribution, sans confondre provision temporaire et exonération définitive.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "acf932f5bd411da3248843199c6db60d831ade7d397172fb4bbea745d6d42f05",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "82ffbf3b7282549da7acb814058b9021274ccde0cb39e805ace26d5d52a13534",
-      "assessment_sha256": "b14deea25026654b6d8eb8fa704b3f4a236292919ae6ef63899e0038b844e2f0",
+      "proposed_sha256": "38058b2c7ded81409f2f36e700215c60dc819f501dd142081d1e0dd68ea12bc4",
+      "assessment_sha256": "33e7c8669a4e50cba376d63a9474ca29caabff7600586273c8450bf846a00f7f",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
@@ -98,10 +113,10 @@
     },
     "reference_coherence": {
       "version": 3,
-      "referrer_sha256": "82ffbf3b7282549da7acb814058b9021274ccde0cb39e805ace26d5d52a13534",
+      "referrer_sha256": "38058b2c7ded81409f2f36e700215c60dc819f501dd142081d1e0dd68ea12bc4",
       "policy_sha256": {
         "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
-        "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+        "site-summaries.json": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
       },
       "referrer_source": {
         "code_id": "LEGITEXT000006072050",
@@ -116,7 +131,7 @@
           "source_id": "LEGIARTI000049720129",
           "source_sha256": "2f30a84011b193d5357fdcefe7884fb8a1ff2f5780b8f6cbe2ef9712a92dd140",
           "view_kind": "proposal",
-          "view_sha256": "2d5cd94abad12d43cb76b1686d2d95bd6196726b7ed6584bb8e71d2e368112e1",
+          "view_sha256": "a2eee7d4ca34e1fbe2c13dc27d388c0524bb94d92f23a24f9926ab7f59d1691d",
           "source_xml_sha256": "c8d7e003da7c4db09a78aeaf811891c1877f1ceca79e1275acd3a34377d28738",
           "source_notes_sha256": "366effcb8e532ac0009417dd6cd2c543ddb63ef96b691c7bd72977bb7dd0bd04"
         }
@@ -124,13 +139,15 @@
       "assessments": [
         {
           "target_key": "LEGITEXT000006069577|LEGIARTI000049720129",
-          "view_sha256": "2d5cd94abad12d43cb76b1686d2d95bd6196726b7ed6584bb8e71d2e368112e1",
-          "assessment": "Le II de CGI237 bis A est la base de la franchise, sous la limitation du IV aux provisions encore admissibles. La proposition cible conserve les délais de deux ou quatre ans et le traitement unique à la distribution ; D3325-5 est coordonné pour qu'aucun état annuel n'entraîne d'IS ordinaire annuel. Il n'existe ici ni seuil d'ancienneté du salarié ni notification de rupture : les dates historiques concernent des accords et provisions, non des CDD. La cible reste un projet, pas le droit en vigueur."
+          "view_sha256": "a2eee7d4ca34e1fbe2c13dc27d388c0524bb94d92f23a24f9926ab7f59d1691d",
+          "assessment": "CGI237 bis A est un régime fiscal de participation, non une indemnité de rupture du contrat privé : ni ancienneté d’un an ni notification de quinze jours ne s’y appliquent. Son II3 conserve la provision SCOP et ses exceptions de capital ; le II4 porte à quatre ans le délai des dotations à réserve légale et fonds de développement. Le IV ferme les provisions nouvelles des II1/2 depuis les exercices clos le 17 août 2012, sans fermer le II3. Le V proposé supprime dépôt conditionnant la déduction et autorisation de transfert, et empêche reprise ou déduction de rendre exigible un IS ordinaire avant distribution. D3325-5 ne rétablit aucune de ces formalités, préserve les franchises et évite le double emploi ; le NOTA du 1er janvier 2025 ne vaut pas date de cette réforme."
         }
       ],
-      "assessments_sha256": "b61b16590b07dbbd24401fe4b5cd9a9cbebab7542d64c02bdfb67571ef27532d",
+      "assessments_sha256": "1c65feda0029db456dfa7256dfaf3b9dda119024db161b5595115657c55ffde4",
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "82ffbf3b7282549da7acb814058b9021274ccde0cb39e805ace26d5d52a13534"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -139,30 +156,32 @@
     "number": "D3325-6",
     "proposed_xml": null,
     "reason": "Maintien du mécanisme de restitution des crédits attachés aux revenus de participation : le certificat individualise le bénéficiaire et la fraction restituable, entière ou moitié. Sa suppression isolée compromettrait la preuve de la créance prévue à l'annexe II, article 77 ; aucune taxe nouvelle ni réduction de droit n'est retenue.",
-    "review_notes": "L'annexe II, article 77, lue dans le corpus, prévoit toujours le certificat et les crédits de retenues françaises ou étrangères. La mention d'avoir fiscal et celle d'une exonération de moitié sont historiques ; L3325-2 actuel ne crée pas à lui seul cette demi-exonération. Les conserver pour les créances encore recevables ne fait pas renaître un avoir fiscal supprimé. Aucun droit futur à crédit n'est fermé s'il dispose d'un fondement applicable.",
+    "review_notes": "L'annexe II, article 77, lue dans le corpus, prévoit toujours le certificat et les crédits de retenues françaises ou étrangères. La mention d'avoir fiscal et celle d'une exonération de moitié sont historiques ; L3325-2 actuel ne crée pas à lui seul cette demi-exonération. Les conserver pour les créances encore recevables ne fait pas renaître un avoir fiscal supprimé. Aucun droit futur à crédit n'est fermé s'il dispose d'un fondement applicable. Différence de champ vérifiée : l’annexe II77 b du 1 prescrit le certificat et son 2 b/c distingue crédits français et conventionnels étrangers ; la proposition de 77 corrige seulement la réserve de retenue de certains OPC. L3325-2 lu entier maintient l’exonération des revenus réaffectés, puis celle des placements conservés après indisponibilité : la branche « Lorsque l’exonération ne porte que sur la moitié de ces revenus » ne peut réduire cette exonération totale. Point non vérifiable : fondements historiques individuels de demi-exonération et d’avoir fiscal non fournis ; aucun droit actuel nouveau ne leur est attribué. Le NOTA de L3325-2 relatif aux « emprunts contractés à compter du 1er janvier 2017 » paraît sans rapport explicite avec cette restitution ; il est signalé sans correction silencieuse. Le certificat protège l’identification d’une créance fiscale existante et n’est pas l’attestation de bénéfice supprimée à L3326-1.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "reference_checks": [],
+    "benefit_review": "La restitution intégrale du crédit lorsque les revenus sont totalement exonérés et la restitution de moitié lorsque seule cette fraction est exonérée sont maintenues dans leurs champs propres. Les crédits de retenues françaises ou étrangères prévus par l’annexe II77 restent accessibles aux futures situations éligibles, avec certificat au nom du conservateur et demande par celui-ci. La référence historique à l’avoir fiscal ne recrée pas un crédit aboli ; les créances anciennes encore recevables ne sont pas éteintes. Le maintien de la branche de demi-exonération ne réduit pas l’exonération entière de L3325-2 et ne constitue pas un nouveau taux.",
+    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien du mécanisme de restitution des crédits attachés aux revenus de participation : le certificat individualise le bénéficiaire et la fraction restituable, entière ou moitié. Sa suppression isolée compromettrait la preuve de la créance prévue à l'annexe II, article 77 ; aucune taxe nouvelle ni réduction de droit n'est retenue.",
-      "scope_limitations": "L'annexe II, article 77, lue dans le corpus, prévoit toujours le certificat et les crédits de retenues françaises ou étrangères. La mention d'avoir fiscal et celle d'une exonération de moitié sont historiques ; L3325-2 actuel ne crée pas à lui seul cette demi-exonération. Les conserver pour les créances encore recevables ne fait pas renaître un avoir fiscal supprimé. Aucun droit futur à crédit n'est fermé s'il dispose d'un fondement applicable.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "scope_limitations": "L'annexe II, article 77, lue dans le corpus, prévoit toujours le certificat et les crédits de retenues françaises ou étrangères. La mention d'avoir fiscal et celle d'une exonération de moitié sont historiques ; L3325-2 actuel ne crée pas à lui seul cette demi-exonération. Les conserver pour les créances encore recevables ne fait pas renaître un avoir fiscal supprimé. Aucun droit futur à crédit n'est fermé s'il dispose d'un fondement applicable. Différence de champ vérifiée : l’annexe II77 b du 1 prescrit le certificat et son 2 b/c distingue crédits français et conventionnels étrangers ; la proposition de 77 corrige seulement la réserve de retenue de certains OPC. L3325-2 lu entier maintient l’exonération des revenus réaffectés, puis celle des placements conservés après indisponibilité : la branche « Lorsque l’exonération ne porte que sur la moitié de ces revenus » ne peut réduire cette exonération totale. Point non vérifiable : fondements historiques individuels de demi-exonération et d’avoir fiscal non fournis ; aucun droit actuel nouveau ne leur est attribué. Le NOTA de L3325-2 relatif aux « emprunts contractés à compter du 1er janvier 2017 » paraît sans rapport explicite avec cette restitution ; il est signalé sans correction silencieuse. Le certificat protège l’identification d’une créance fiscale existante et n’est pas l’attestation de bénéfice supprimée à L3326-1.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : texte officiel intégralement conservé, sans formalité ni délai ajouté. Les obligations existantes de garde, de compétence ou de preuve restent limitées à leur objet ; aucun solde global des codes n’est chiffré.",
       "effects": []
     },
-    "benefit_review": "Les avantages possibles sont la restitution intégrale du crédit ou de l'avoir fiscal pour les revenus totalement exonérés et la restitution de moitié lorsque seule cette fraction est exonérée. Le certificat au nom du conservateur, le montant et la demande par celui-ci restent inchangés. Les créances anciennes et les futurs crédits réellement ouverts par l'article 77 et les conventions gardent leur accès ; le maintien d'une mention historique ne ressuscite aucun avoir fiscal abrogé et n'étend pas la demi-exonération sans fondement.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "127c91e54ff7ba3c20a4472a8fdee5ccf348bbcc8ff8fc1985d8bad39b55f419",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "52a888efed8e9b6475b00149c6ea70421a0b1c20c07de59084bc61cb9d9fc112",
+      "assessment_sha256": "d120df71efa6a22f03266b28c4f458b48dadc7226dc54236bc12ea9df84f4bfc",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -170,17 +189,17 @@
     "source_sha256": "144a722d3d873fd657bab46942ffd2d3da73b220b26f344f782bbf2bc94d840b",
     "number": "D3325-7",
     "proposed_xml": null,
-    "reason": "Maintien du service compétent, du certificat d'appui et surtout de l'obligation de réaffecter les restitutions comme les revenus correspondants. Ce circuit protège la créance collective des salariés et évite qu'une restitution soit conservée librement par l'organisme ; aucun double envoi n'est imposé par cet article.",
-    "review_notes": "Coordination avec D3325-6 maintenu : totalité ou moitié selon le droit de la créance ; pas de remboursement multiple. Le siège de l'organisme détermine le service destinataire ; aucune suppression des droits de restitution futurs ou anciens n'est opérée.",
+    "reason": "Maintien du service compétent, du certificat d'appui et surtout de l'obligation de réaffecter les restitutions comme les revenus correspondants. Ce circuit protège la créance collective des salariés et évite qu'une restitution soit conservée librement par l'organisme ; aucun double envoi n'est imposé par cet article. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+    "review_notes": "Transition compatible : D3325-6, source et maintien lus intégralement, distingue « la totalité de l'avoir fiscal ou du crédit d'impôt » et « un montant réduit de moitié ». Le présent article impose « d'employer les sommes correspondantes de la même façon que les revenus auxquels elles se rattachent » : cette affectation protège les salariés et ne crée pas un second crédit. Les mentions historiques de D3325-6 ne ressuscitent pas un avoir fiscal disparu. L'annexe II 77 et L3325-2 doivent garder leurs champs propres ; aucune abolition des droits de restitution futurs fondés sur un crédit applicable n'est opérée.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Maintien du service compétent, du certificat d'appui et surtout de l'obligation de réaffecter les restitutions comme les revenus correspondants. Ce circuit protège la créance collective des salariés et évite qu'une restitution soit conservée librement par l'organisme ; aucun double envoi n'est imposé par cet article.",
-      "scope_limitations": "Coordination avec D3325-6 maintenu : totalité ou moitié selon le droit de la créance ; pas de remboursement multiple. Le siège de l'organisme détermine le service destinataire ; aucune suppression des droits de restitution futurs ou anciens n'est opérée.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "assessment": "Maintien du service compétent, du certificat d'appui et surtout de l'obligation de réaffecter les restitutions comme les revenus correspondants. Ce circuit protège la créance collective des salariés et évite qu'une restitution soit conservée librement par l'organisme ; aucun double envoi n'est imposé par cet article. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+      "scope_limitations": "Transition compatible : D3325-6, source et maintien lus intégralement, distingue « la totalité de l'avoir fiscal ou du crédit d'impôt » et « un montant réduit de moitié ». Le présent article impose « d'employer les sommes correspondantes de la même façon que les revenus auxquels elles se rattachent » : cette affectation protège les salariés et ne crée pas un second crédit. Les mentions historiques de D3325-6 ne ressuscitent pas un avoir fiscal disparu. L'annexe II 77 et L3325-2 doivent garder leurs champs propres ; aucune abolition des droits de restitution futurs fondés sur un crédit applicable n'est opérée.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien de cette règle n'ajoute ni document, ni délai, ni condition aux droits existants. Aucun solde global de complexité des codes n'est chiffré.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -188,12 +207,14 @@
       "source_sha256": "144a722d3d873fd657bab46942ffd2d3da73b220b26f344f782bbf2bc94d840b",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "429be882152c21ba609ae2b5f02ba557a585e714ff34cbd78678bac65f216cd9",
+      "assessment_sha256": "fb21996114d31438ae23ea18da54b3ab03a062c521b7832371ff75a0f3f2a6d0",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -201,29 +222,29 @@
     "source_sha256": "2215d900220063a858746057bb708f0a5cada9b0e808d0709dfb2679ec821df7",
     "number": "R3326-1",
     "proposed_xml": "<p>Les litiges relatifs à l'application du présent titre relèvent du tribunal judiciaire dans les conditions fixées à l'article R. 311-1 du code de l'organisation judiciaire, sous réserve des procédures et compétences fiscales prévues aux premier et deuxième alinéas de l'article L. 3326-1. Les contestations du bénéfice net et des capitaux propres pour le calcul de la participation ne sont pas exclues de cette compétence judiciaire par le seul fait qu'elles portent sur les montants mentionnés au premier alinéa de cet article.</p><p>Ces dispositions s'appliquent à compter de l'entrée en vigueur de la loi portant la présente réforme, y compris aux instances en cours. Elles ne rouvrent ni les délais expirés ni les décisions passées en force de chose jugée.</p>",
-    "reason": "Coordination de compétence avec L3326-1 proposé : le bénéfice net et les capitaux propres deviennent discutables devant le juge judiciaire pour la participation. L'ancienne exclusion globale du premier alinéa ne doit pas neutraliser ce recours ; les rectifications d'assiette fiscale restent réservées.",
-    "review_notes": "Le deuxième alinéa de L3326-1 conserve les procédures conventionnelles puis les juridictions fiscales pour les salaires et la valeur ajoutée ; le projet ouvre la saisine aux bénéficiaires. R311-1 du code de l'organisation judiciaire est un renvoi conservé, extérieur au corpus, dont la rédaction intégrale n'est pas fournie. Le 1er janvier 2020 des notes est une date historique, pas celle de cette réforme.",
+    "reason": "Coordination de compétence avec L3326-1 proposé : le bénéfice net et les capitaux propres deviennent discutables devant le juge judiciaire pour la participation. L'ancienne exclusion globale du premier alinéa ne doit pas neutraliser ce recours ; les rectifications d'assiette fiscale restent réservées. Seconde passe : maintien du corps antérieur, sans modification stylistique ; interactions détaillées en notes.",
+    "review_notes": "Coordination nécessaire confirmée par lecture entière de L3326-1 officiel et proposé : « Ils ne peuvent être remis en cause » devient « Ces montants peuvent être discutés devant le juge judiciaire ». La réserve réglementaire ne doit donc plus exclure globalement ces litiges. Le deuxième alinéa législatif garde les procédures conventionnelles puis les juridictions des impôts directs pour salaires/valeur ajoutée, avec qualité pour agir élargie aux bénéficiaires ; la rectification de l'impôt reste distincte. Transition compatible : les deux projets visent les instances en cours sans rouvrir délais expirés ni chose jugée. Le NOTA du 1er janvier 2020 reste historique. Point non vérifiable : texte entier de COJ R311-1 non fourni ni repéré dans les pièces locales ; compétence territoriale et concordance externe à contrôler avant adoption, sans les déclarer validées.",
     "status": "rewrite_draft",
     "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "coordination_only",
-      "assessment": "Coordination de compétence avec L3326-1 proposé : le bénéfice net et les capitaux propres deviennent discutables devant le juge judiciaire pour la participation. L'ancienne exclusion globale du premier alinéa ne doit pas neutraliser ce recours ; les rectifications d'assiette fiscale restent réservées.",
-      "scope_limitations": "Le deuxième alinéa de L3326-1 conserve les procédures conventionnelles puis les juridictions fiscales pour les salaires et la valeur ajoutée ; le projet ouvre la saisine aux bénéficiaires. R311-1 du code de l'organisation judiciaire est un renvoi conservé, extérieur au corpus, dont la rédaction intégrale n'est pas fournie. Le 1er janvier 2020 des notes est une date historique, pas celle de cette réforme.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun dépôt, registre, certificat ou délai de remplacement n'est institué. Les droits et contrôles autonomes demeurent ; le solde global de coût des codes n'est pas établi.",
+      "assessment": "Coordination de compétence avec L3326-1 proposé : le bénéfice net et les capitaux propres deviennent discutables devant le juge judiciaire pour la participation. L'ancienne exclusion globale du premier alinéa ne doit pas neutraliser ce recours ; les rectifications d'assiette fiscale restent réservées. Seconde passe : maintien du corps antérieur, sans modification stylistique ; interactions détaillées en notes.",
+      "scope_limitations": "Coordination nécessaire confirmée par lecture entière de L3326-1 officiel et proposé : « Ils ne peuvent être remis en cause » devient « Ces montants peuvent être discutés devant le juge judiciaire ». La réserve réglementaire ne doit donc plus exclure globalement ces litiges. Le deuxième alinéa législatif garde les procédures conventionnelles puis les juridictions des impôts directs pour salaires/valeur ajoutée, avec qualité pour agir élargie aux bénéficiaires ; la rectification de l'impôt reste distincte. Transition compatible : les deux projets visent les instances en cours sans rouvrir délais expirés ni chose jugée. Le NOTA du 1er janvier 2020 reste historique. Point non vérifiable : texte entier de COJ R311-1 non fourni ni repéré dans les pièces locales ; compétence territoriale et concordance externe à contrôler avant adoption, sans les déclarer validées.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée par comparaison au texte officiel : les protections et obligations autonomes réservées existaient déjà ; aucun dépôt ou justificatif de remplacement n'est créé. Le solde global de coût des codes n'est pas établi.",
       "effects": [
         {
           "kind": "coordination",
-          "measure_id": "participation-fin-attestation-specifique",
-          "description": "Adaptation du renvoi de compétence à la contestabilité du calcul.",
-          "before": "Exclusion des litiges visés au premier alinéa de L3326-1.",
-          "after": "Compétence judiciaire pour la participation, compétence fiscale réservée pour l'impôt.",
+          "measure_id": "participation-acces-au-juge",
+          "description": "Coordination réglementaire de la compétence judiciaire sur bénéfice net et capitaux propres.",
+          "before": "Exclusion des litiges des deux premiers alinéas de L3326-1.",
+          "after": "Compétence judiciaire pour les montants de participation, sous réserve fiscale ; réforme principale dans L3326-1.",
           "unit": "legal_duty",
-          "affected_population": "Entreprises et bénéficiaires du dispositif visé à l'article R3326-1",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme selon la transition écrite ; droits antérieurs conservés dans leur champ.",
-          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément maintenues conservent leur champ.",
+          "affected_population": "Employeurs et bénéficiaires du dispositif de participation ou du plan concerné.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur de la loi proposée, selon la transition expresse du corps ; droits anciens et recours conservés dans leurs limites.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; protections et obligations autonomes maintenues.",
           "source_quote": "autres que ceux mentionnés aux premier et deuxième alinéas de l'article L. 3326-1",
-          "proposed_quote": "Les contestations du bénéfice net et des capitaux propres pour le calcul de la participation ne sont pas exclues de cette compétence judiciaire"
+          "proposed_quote": "Les contestations du bénéfice net et des capitaux propres pour le calcul de la participation ne sont pas exclues de cette compétence judiciaire par le seul fait qu'elles portent sur les montants mentionnés au premier alinéa de cet article."
         }
       ]
     },
@@ -232,12 +253,14 @@
       "source_sha256": "2215d900220063a858746057bb708f0a5cada9b0e808d0709dfb2679ec821df7",
       "source_notes_sha256": "32382dab885b54b26e7ef28a897658ed130c87be6678d5cfa63ea5fc5646bf0d",
       "proposed_sha256": "60ba136d6088a894c37baa88a577722328260bd16fea560c41ee98f72515fbcb",
-      "assessment_sha256": "3a678de6d4c84fbcd808ec3136ff13e8bb5069b0e6f39c533b3b6819f0714a0c",
+      "assessment_sha256": "353f2b73191df5ea63d0327a42055e014023d1d33a369829d0676dc72b8f78d6",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "60ba136d6088a894c37baa88a577722328260bd16fea560c41ee98f72515fbcb"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -245,17 +268,17 @@
     "source_sha256": "fc235e2151c70caffad470989d532d556486868a05ced24f13176c47e3868a29",
     "number": "R3331-1",
     "proposed_xml": null,
-    "reason": "Maintien de l'extension des règles aux intermédiaires non salariés visés à l'avant-dernier alinéa de L3332-2. L'exception D3334-3-1 écarte leur adhésion par défaut au PERCO : elle protège leur choix et ne constitue pas un régime de CDD.",
-    "review_notes": "L3332-2 a été lu : l'avant-dernier alinéa vise les travailleurs non salariés commercialisant les produits d'une entreprise. D3334-3-1 ouvre une renonciation de quinze jours à une adhésion par défaut des salariés ; cette exception reste autonome.",
+    "reason": "Maintien de l'extension des règles aux intermédiaires non salariés visés à l'avant-dernier alinéa de L3332-2. L'exception D3334-3-1 écarte leur adhésion par défaut au PERCO : elle protège leur choix et ne constitue pas un régime de CDD. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+    "review_notes": "Différence de champ vérifiée sur L3332-2 et D3334-3-1 entiers : « Les travailleurs non salariés » figurent bien à l'avant-dernier alinéa ; l'exception vise l'adhésion par défaut et les « quinze jours » de renonciation du salarié au PERCO. Elle n'est ni un préavis individuel ni une restriction aux nouveaux contrats uniques. Le renvoi conserve sa place et n'exclut pas les bénéficiaires futurs. Les catégories professionnelles extérieures de L3332-2 ne sont pas redéfinies.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Maintien de l'extension des règles aux intermédiaires non salariés visés à l'avant-dernier alinéa de L3332-2. L'exception D3334-3-1 écarte leur adhésion par défaut au PERCO : elle protège leur choix et ne constitue pas un régime de CDD.",
-      "scope_limitations": "L3332-2 a été lu : l'avant-dernier alinéa vise les travailleurs non salariés commercialisant les produits d'une entreprise. D3334-3-1 ouvre une renonciation de quinze jours à une adhésion par défaut des salariés ; cette exception reste autonome.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "assessment": "Maintien de l'extension des règles aux intermédiaires non salariés visés à l'avant-dernier alinéa de L3332-2. L'exception D3334-3-1 écarte leur adhésion par défaut au PERCO : elle protège leur choix et ne constitue pas un régime de CDD. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+      "scope_limitations": "Différence de champ vérifiée sur L3332-2 et D3334-3-1 entiers : « Les travailleurs non salariés » figurent bien à l'avant-dernier alinéa ; l'exception vise l'adhésion par défaut et les « quinze jours » de renonciation du salarié au PERCO. Elle n'est ni un préavis individuel ni une restriction aux nouveaux contrats uniques. Le renvoi conserve sa place et n'exclut pas les bénéficiaires futurs. Les catégories professionnelles extérieures de L3332-2 ne sont pas redéfinies.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien de cette règle n'ajoute ni document, ni délai, ni condition aux droits existants. Aucun solde global de complexité des codes n'est chiffré.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -263,12 +286,14 @@
       "source_sha256": "fc235e2151c70caffad470989d532d556486868a05ced24f13176c47e3868a29",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "229f12ea16cd3aaee6cd56dfe07383f050b94283f3a8684647e8a36bad06f1d5",
+      "assessment_sha256": "e7edb4d7731f506056a3fba08d1d9d61cd0edd6ef8339d1066f703487c98df50",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -276,17 +301,17 @@
     "source_sha256": "1d5886b8e6c81fe2d28c055cc1d8b424d7b1a1a40fd4f85360690e007bd864d6",
     "number": "D3331-2",
     "proposed_xml": null,
-    "reason": "Maintien de l'accès des salariés d'un groupement aux plans des entreprises utilisatrices lorsque le groupement n'a pas de plan et que le règlement le prévoit. Cette faculté favorable n'impose ni cotisation ni autorisation administrative ; sa condition organise les engagements des entreprises utilisatrices.",
-    "review_notes": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
+    "reason": "Maintien de l'accès des salariés d'un groupement aux plans des entreprises utilisatrices lorsque le groupement n'a pas de plan et que le règlement le prévoit. Cette faculté favorable n'impose ni cotisation ni autorisation administrative ; sa condition organise les engagements des entreprises utilisatrices. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+    "review_notes": "Différence de champ : le sixième alinéa de L3332-2, lu entier, dispose « Le salarié d'un groupement d'employeurs peut bénéficier du plan d'épargne salariale ». D3331-2 précise cette faculté lorsque le groupement n'a pas de plan et que le règlement de l'entreprise utilisatrice la prévoit. La mise à disposition ne fixe aucun terme de l'emploi. Ces conditions demeurent pour les futurs salariés éligibles ; aucune obligation d'abondement nouvelle ni assimilation aux intermédiaires non salariés n'est créée.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Maintien de l'accès des salariés d'un groupement aux plans des entreprises utilisatrices lorsque le groupement n'a pas de plan et que le règlement le prévoit. Cette faculté favorable n'impose ni cotisation ni autorisation administrative ; sa condition organise les engagements des entreprises utilisatrices.",
-      "scope_limitations": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "assessment": "Maintien de l'accès des salariés d'un groupement aux plans des entreprises utilisatrices lorsque le groupement n'a pas de plan et que le règlement le prévoit. Cette faculté favorable n'impose ni cotisation ni autorisation administrative ; sa condition organise les engagements des entreprises utilisatrices. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+      "scope_limitations": "Différence de champ : le sixième alinéa de L3332-2, lu entier, dispose « Le salarié d'un groupement d'employeurs peut bénéficier du plan d'épargne salariale ». D3331-2 précise cette faculté lorsque le groupement n'a pas de plan et que le règlement de l'entreprise utilisatrice la prévoit. La mise à disposition ne fixe aucun terme de l'emploi. Ces conditions demeurent pour les futurs salariés éligibles ; aucune obligation d'abondement nouvelle ni assimilation aux intermédiaires non salariés n'est créée.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien de cette règle n'ajoute ni document, ni délai, ni condition aux droits existants. Aucun solde global de complexité des codes n'est chiffré.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -294,12 +319,14 @@
       "source_sha256": "1d5886b8e6c81fe2d28c055cc1d8b424d7b1a1a40fd4f85360690e007bd864d6",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "e6f08a084986e1326d2ed952edbb5f4446520cc1f06eaf939f88b71720799b17",
+      "assessment_sha256": "f1bf573370e7fc038a43cad562ee69d849445789e01bdbb3e14b657f6d87cad8",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -307,17 +334,17 @@
     "source_sha256": "006fbed81fe46f5abd22ae3538aff377228da35ee1e8415b76ea76b5de6ececb",
     "number": "D3331-3",
     "proposed_xml": null,
-    "reason": "Maintien du point de départ de l'ancienneté des intermédiaires non salariés : la date d'effet du contrat individuel. Il ne s'agit ni du seuil d'un an pour l'indemnité de rupture ni d'une condition nouvelle d'emploi ; supprimer cette règle rendrait incertain l'accès au plan.",
-    "review_notes": "Le contrat individuel de L3332-2 est celui de l'intermédiaire non salarié, non le contrat privé réformé. Aucun préavis, seuil de rupture ou remise à zéro d'ancienneté ne doit être importé ici.",
+    "reason": "Maintien du point de départ de l'ancienneté des intermédiaires non salariés : la date d'effet du contrat individuel. Il ne s'agit ni du seuil d'un an pour l'indemnité de rupture ni d'une condition nouvelle d'emploi ; supprimer cette règle rendrait incertain l'accès au plan. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+    "review_notes": "Différence de champ vérifiée : L3332-2 vise les « travailleurs non salariés » « ayant un contrat individuel avec une entreprise dont ils commercialisent des produits ». Le départ à « la date d'effet du contrat individuel » n'est donc pas l'ancienneté de rupture du contrat de travail. Aucun seuil d'un an, préavis de quinze jours ou prorata indemnitaire ne s'y applique. R3331-1 conserve le même alinéa cible ; ni le point de départ ni les bénéficiaires ne sont déplacés.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Maintien du point de départ de l'ancienneté des intermédiaires non salariés : la date d'effet du contrat individuel. Il ne s'agit ni du seuil d'un an pour l'indemnité de rupture ni d'une condition nouvelle d'emploi ; supprimer cette règle rendrait incertain l'accès au plan.",
-      "scope_limitations": "Le contrat individuel de L3332-2 est celui de l'intermédiaire non salarié, non le contrat privé réformé. Aucun préavis, seuil de rupture ou remise à zéro d'ancienneté ne doit être importé ici.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "assessment": "Maintien du point de départ de l'ancienneté des intermédiaires non salariés : la date d'effet du contrat individuel. Il ne s'agit ni du seuil d'un an pour l'indemnité de rupture ni d'une condition nouvelle d'emploi ; supprimer cette règle rendrait incertain l'accès au plan. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+      "scope_limitations": "Différence de champ vérifiée : L3332-2 vise les « travailleurs non salariés » « ayant un contrat individuel avec une entreprise dont ils commercialisent des produits ». Le départ à « la date d'effet du contrat individuel » n'est donc pas l'ancienneté de rupture du contrat de travail. Aucun seuil d'un an, préavis de quinze jours ou prorata indemnitaire ne s'y applique. R3331-1 conserve le même alinéa cible ; ni le point de départ ni les bénéficiaires ne sont déplacés.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien de cette règle n'ajoute ni document, ni délai, ni condition aux droits existants. Aucun solde global de complexité des codes n'est chiffré.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -325,12 +352,14 @@
       "source_sha256": "006fbed81fe46f5abd22ae3538aff377228da35ee1e8415b76ea76b5de6ececb",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "3caeead5cd9cbf7b005c11ef24c9b91aee8f3d1815f06ff95830f30206dc75e0",
+      "assessment_sha256": "c432a32e9cd08451df0eb9fdea94bde512ce123370058b69e69c2667ae0f147c",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -338,17 +367,17 @@
     "source_sha256": "423973ea51a7a8aadc6ada4fd08c4725a38ff450adb5b8daf1ac1e3ab4c57ff2",
     "number": "R3332-1",
     "proposed_xml": null,
-    "reason": "Maintien de l'annexe d'information sur les critères, la liste des placements et les notices SICAV et fonds. Ces informations permettent de comprendre les risques supportés par l'épargnant ; elles ne sont pas un agrément et leur communication demeure nécessaire même si le dépôt administratif est facultatif.",
-    "review_notes": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
+    "reason": "Maintien de l'annexe d'information sur les critères, la liste des placements et les notices SICAV et fonds. Ces informations permettent de comprendre les risques supportés par l'épargnant ; elles ne sont pas un agrément et leur communication demeure nécessaire même si le dépôt administratif est facultatif. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+    "review_notes": "Articulation vérifiée avec L3332-7 entier, qui impose l'information sur « son existence et de son contenu » et l'aide à la décision, et R3332-4 : l'annexe comporte critères, liste et notices ; le dépôt volontaire n'exige que les annexes relatives aux critères et à la liste. L'absence de dépôt ne dispense pas d'informer l'épargnant. Aucun double dépôt nouveau n'est démontré. Maintien de la protection contre un choix de placement non éclairé, pour tous les futurs adhérents également.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Maintien de l'annexe d'information sur les critères, la liste des placements et les notices SICAV et fonds. Ces informations permettent de comprendre les risques supportés par l'épargnant ; elles ne sont pas un agrément et leur communication demeure nécessaire même si le dépôt administratif est facultatif.",
-      "scope_limitations": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "assessment": "Maintien de l'annexe d'information sur les critères, la liste des placements et les notices SICAV et fonds. Ces informations permettent de comprendre les risques supportés par l'épargnant ; elles ne sont pas un agrément et leur communication demeure nécessaire même si le dépôt administratif est facultatif. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+      "scope_limitations": "Articulation vérifiée avec L3332-7 entier, qui impose l'information sur « son existence et de son contenu » et l'aide à la décision, et R3332-4 : l'annexe comporte critères, liste et notices ; le dépôt volontaire n'exige que les annexes relatives aux critères et à la liste. L'absence de dépôt ne dispense pas d'informer l'épargnant. Aucun double dépôt nouveau n'est démontré. Maintien de la protection contre un choix de placement non éclairé, pour tous les futurs adhérents également.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien de cette règle n'ajoute ni document, ni délai, ni condition aux droits existants. Aucun solde global de complexité des codes n'est chiffré.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -356,12 +385,14 @@
       "source_sha256": "423973ea51a7a8aadc6ada4fd08c4725a38ff450adb5b8daf1ac1e3ab4c57ff2",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "7c607825fde12b19967052fbfe27d8dd896c0f12e28b9f0a008046d29657f53d",
+      "assessment_sha256": "f2fa656298c8d2d6441a72ccc54830f3b27de5246f554612342b932390d585e9",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -369,17 +400,17 @@
     "source_sha256": "59e8b6f7db71f974877b05551fe166f3af86815b2ebc9c85e80464ff4ac25c68",
     "number": "R3332-2",
     "proposed_xml": null,
-    "reason": "Maintien des règles d'arbitrage et de leur transparence, ainsi que de la restriction propre aux sommes ayant reçu le supplément d'abondement de L3332-11, deuxième alinéa. La suppression isolée de cette affectation pourrait remettre en cause le régime favorable de l'actionnariat salarié ; aucun plafond fiscal n'est modifié.",
-    "review_notes": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
+    "reason": "Maintien des règles d'arbitrage et de leur transparence, ainsi que de la restriction propre aux sommes ayant reçu le supplément d'abondement de L3332-11, deuxième alinéa. La suppression isolée de cette affectation pourrait remettre en cause le régime favorable de l'actionnariat salarié ; aucun plafond fiscal n'est modifié. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+    "review_notes": "Renvoi ordinal vérifié dans L3332-11 officiel et proposé entiers : le deuxième alinéa conserve la majoration pour actions de l'entreprise ou du périmètre consolidé, plafonnée à « 80 % ». La suppression proposée du rapport au triple au premier alinéa ne déplace pas ce deuxième alinéa et ne supprime pas cette majoration. La phrase « L'investissement des sommes qui ont bénéficié du supplément d'abondement » ne vise pas indistinctement tous les versements unilatéraux des 1° et 2°. Restrictions de règlement et affectation spéciale demeurent dans leur champ ; aucun gain fiscal ou allègement nouveau n'est compté.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Maintien des règles d'arbitrage et de leur transparence, ainsi que de la restriction propre aux sommes ayant reçu le supplément d'abondement de L3332-11, deuxième alinéa. La suppression isolée de cette affectation pourrait remettre en cause le régime favorable de l'actionnariat salarié ; aucun plafond fiscal n'est modifié.",
-      "scope_limitations": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "assessment": "Maintien des règles d'arbitrage et de leur transparence, ainsi que de la restriction propre aux sommes ayant reçu le supplément d'abondement de L3332-11, deuxième alinéa. La suppression isolée de cette affectation pourrait remettre en cause le régime favorable de l'actionnariat salarié ; aucun plafond fiscal n'est modifié. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+      "scope_limitations": "Renvoi ordinal vérifié dans L3332-11 officiel et proposé entiers : le deuxième alinéa conserve la majoration pour actions de l'entreprise ou du périmètre consolidé, plafonnée à « 80 % ». La suppression proposée du rapport au triple au premier alinéa ne déplace pas ce deuxième alinéa et ne supprime pas cette majoration. La phrase « L'investissement des sommes qui ont bénéficié du supplément d'abondement » ne vise pas indistinctement tous les versements unilatéraux des 1° et 2°. Restrictions de règlement et affectation spéciale demeurent dans leur champ ; aucun gain fiscal ou allègement nouveau n'est compté.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien de cette règle n'ajoute ni document, ni délai, ni condition aux droits existants. Aucun solde global de complexité des codes n'est chiffré.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -387,12 +418,14 @@
       "source_sha256": "59e8b6f7db71f974877b05551fe166f3af86815b2ebc9c85e80464ff4ac25c68",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "34e4764e7132362d8689cd4fba16be2668f53f8fa4d5216f75d4a8102107acc7",
+      "assessment_sha256": "a1435313e941999d0683ebf8800826897ab60e9f51964b10e956f5b9af3b5fd5",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -400,28 +433,28 @@
     "source_sha256": "85cd2a185ee1b7dd584466e5bb317b388eaaddc2e17cdd8ac3616eb2c9e7356c",
     "number": "R3332-3",
     "proposed_xml": "\n<p>Le règlement du plan précise les modifications du choix de placement initial pouvant intervenir à l'occasion du départ du salarié de l'entreprise.</p>\n<p>Sans préjudice des dispositions du cinquième alinéa de l'article L. 214-164 et du septième alinéa de l'article L. 214-165 du code monétaire et financier, les signataires de l'accord peuvent modifier l'affectation de l'épargne des salariés investie dans des organismes de placement collectif en valeurs mobilières ou des placements collectifs lorsque les caractéristiques des nouveaux organismes ou des placements collectifs sont identiques à celles des organismes ou des placements collectifs antérieurement prévus.</p>\n<p>Lorsque la modification de l'affectation des sommes intervient durant la période d'indisponibilité, la durée totale de celle-ci n'est pas remise en cause.</p>\n<p>La faculté de substitution n'est pas limitée par la catégorie réglementaire de l'organisme ou du placement collectif. Elle demeure soumise aux règles légales d'éligibilité des placements au plan et aux protections applicables aux porteurs de parts. Elle s'applique aux modifications d'affectation décidées à compter de l'entrée en vigueur de la loi portant la présente réforme, y compris pour les sommes déjà investies. Les opérations antérieures, les droits et exonérations acquis et les recours correspondants ne sont pas remis en cause.</p>",
-    "reason": "Suppression de la limitation de la substitution aux catégories collectives énumérées : les signataires peuvent substituer un placement collectif légalement admissible de caractéristiques identiques, quelle que soit sa catégorie. Les protections des porteurs, l'identité des caractéristiques, l'information au départ et la durée totale d'indisponibilité demeurent. Il s'agit d'une extension de faculté, pas d'une simple correction typographique.",
-    "review_notes": "La source contient un renvoi incomplet « du sous-paragraphe 1 du paragraphe de la sous-section 3 ». Aucun numéro n'est reconstitué : l'énumération entière est retirée par choix de fond explicite. Les cinquième et septième alinéas de L214-164 et L214-165 sont conservés comme réserves protectrices ; leur concordance reste à contrôler sur le code monétaire et financier, hors corpus joint. La réforme n'autorise pas un véhicule interdit au plan, ni une dégradation des caractéristiques, ni un nouveau blocage.",
+    "reason": "Suppression de la limitation de la substitution aux catégories collectives énumérées : les signataires peuvent substituer un placement collectif légalement admissible de caractéristiques identiques, quelle que soit sa catégorie. Les protections des porteurs, l'identité des caractéristiques, l'information au départ et la durée totale d'indisponibilité demeurent. Il s'agit d'une extension de faculté, pas d'une simple correction typographique. Seconde passe : maintien du corps antérieur, sans modification stylistique ; interactions détaillées en notes.",
+    "review_notes": "Incohérence préexistante identifiée dans la source : « du sous-paragraphe 1 du paragraphe de la sous-section 3 » omet un numéro. Le brouillon supprime expressément l'énumération par réforme de fond et ne prétend pas reconstituer ce numéro. Corps précédent conservé. Transition compatible : opérations futures, y compris épargne ancienne, sans remise à zéro de l'indisponibilité. R3332-2 conserve la restriction propre au supplément d'abondement : la substitution de véhicules de caractéristiques identiques ne permet pas de détourner cette affectation. Point non vérifiable : textes complets de CMF L214-164/L214-165 et subdivisions des placements non fournis ni repérés dans les pièces locales ; leurs cinquième et septième alinéas et les protections européennes doivent être confrontés avant adoption. La réserve légale et l'éligibilité au plan sont maintenues sans inventer leur contenu.",
     "status": "rewrite_draft",
     "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Suppression de la limitation de la substitution aux catégories collectives énumérées : les signataires peuvent substituer un placement collectif légalement admissible de caractéristiques identiques, quelle que soit sa catégorie. Les protections des porteurs, l'identité des caractéristiques, l'information au départ et la durée totale d'indisponibilité demeurent. Il s'agit d'une extension de faculté, pas d'une simple correction typographique.",
-      "scope_limitations": "La source contient un renvoi incomplet « du sous-paragraphe 1 du paragraphe de la sous-section 3 ». Aucun numéro n'est reconstitué : l'énumération entière est retirée par choix de fond explicite. Les cinquième et septième alinéas de L214-164 et L214-165 sont conservés comme réserves protectrices ; leur concordance reste à contrôler sur le code monétaire et financier, hors corpus joint. La réforme n'autorise pas un véhicule interdit au plan, ni une dégradation des caractéristiques, ni un nouveau blocage.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun dépôt, registre, certificat ou délai de remplacement n'est institué. Les droits et contrôles autonomes demeurent ; le solde global de coût des codes n'est pas établi.",
+      "assessment": "Suppression de la limitation de la substitution aux catégories collectives énumérées : les signataires peuvent substituer un placement collectif légalement admissible de caractéristiques identiques, quelle que soit sa catégorie. Les protections des porteurs, l'identité des caractéristiques, l'information au départ et la durée totale d'indisponibilité demeurent. Il s'agit d'une extension de faculté, pas d'une simple correction typographique. Seconde passe : maintien du corps antérieur, sans modification stylistique ; interactions détaillées en notes.",
+      "scope_limitations": "Incohérence préexistante identifiée dans la source : « du sous-paragraphe 1 du paragraphe de la sous-section 3 » omet un numéro. Le brouillon supprime expressément l'énumération par réforme de fond et ne prétend pas reconstituer ce numéro. Corps précédent conservé. Transition compatible : opérations futures, y compris épargne ancienne, sans remise à zéro de l'indisponibilité. R3332-2 conserve la restriction propre au supplément d'abondement : la substitution de véhicules de caractéristiques identiques ne permet pas de détourner cette affectation. Point non vérifiable : textes complets de CMF L214-164/L214-165 et subdivisions des placements non fournis ni repérés dans les pièces locales ; leurs cinquième et septième alinéas et les protections européennes doivent être confrontés avant adoption. La réserve légale et l'éligibilité au plan sont maintenues sans inventer leur contenu.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée par comparaison au texte officiel : les protections et obligations autonomes réservées existaient déjà ; aucun dépôt ou justificatif de remplacement n'est créé. Le solde global de coût des codes n'est pas établi.",
       "effects": [
         {
           "kind": "relief_extended",
-          "measure_id": "pee-substitution-placements-equivalents",
-          "description": "Extension de la faculté de substitution entre placements collectifs équivalents légalement admissibles.",
-          "before": "Substitution limitée par une énumération de catégories, outre les caractéristiques identiques.",
-          "after": "Catégorie non limitative ; caractéristiques identiques et protections des porteurs conservées.",
+          "measure_id": "pee-substitution-placements-eligibles",
+          "description": "Extension de la faculté de substitution à caractéristiques identiques, sous éligibilité légale.",
+          "before": "Faculté limitée aux catégories collectives énumérées.",
+          "after": "Catégorie réglementaire non limitative, identité des caractéristiques et durée totale de blocage préservées.",
           "unit": "regime",
-          "affected_population": "Entreprises et bénéficiaires du dispositif visé à l'article R3332-3",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme selon la transition écrite ; droits antérieurs conservés dans leur champ.",
-          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément maintenues conservent leur champ.",
-          "source_quote": "relevant des paragraphes 1, 2 et 6 de la sous-section 2, du paragraphe 2 ou du sous-paragraphe 1 du paragraphe de la sous-section 3, ou de la sous-section 4 de la section 2 du chapitre IV du titre 1er du livre II du code monétaire et financier",
+          "affected_population": "Employeurs et bénéficiaires du dispositif de participation ou du plan concerné.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur de la loi proposée, selon la transition expresse du corps ; droits anciens et recours conservés dans leurs limites.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; protections et obligations autonomes maintenues.",
+          "source_quote": "des placements collectifs relevant des paragraphes 1, 2 et 6 de la sous-section 2, du paragraphe 2 ou du sous-paragraphe 1 du paragraphe de la sous-section 3, ou de la sous-section 4 de la section 2 du chapitre IV du titre 1er du livre II du code monétaire et financier",
           "proposed_quote": "La faculté de substitution n'est pas limitée par la catégorie réglementaire de l'organisme ou du placement collectif."
         }
       ]
@@ -429,68 +462,72 @@
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Limitation de la substitution de placements collectifs de caractéristiques identiques aux seules catégories réglementaires énumérées par l'article."
+      "Limitation réglementaire de la substitution aux catégories de placements collectifs énumérées, sans retrait des règles légales d’éligibilité ni des caractéristiques identiques."
     ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "85cd2a185ee1b7dd584466e5bb317b388eaaddc2e17cdd8ac3616eb2c9e7356c",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "4b6f550ab200e700c1c0e7b8a284b40b8725436bd54152b4705e6de36f080d3c",
-      "assessment_sha256": "53b726b4eac965929fa0c9084364ee2a43ff2790435fbf3a44058a6f7a3019cf",
+      "assessment_sha256": "5e70bec74839bd6ec1aca86daa07528eacd830e10718577899476dcfd1f3d704",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "4b6f550ab200e700c1c0e7b8a284b40b8725436bd54152b4705e6de36f080d3c"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000047171329",
     "source_sha256": "863d35901ced4064a4c39501f1b41b93bedcfe5ab248f2444f511fb7bf55abc8",
     "number": "R3332-4",
-    "proposed_xml": "<p>Le règlement du plan d'épargne d'entreprise mentionné aux articles L. 3332-7 et L. 3332-9 peut être déposé volontairement, avec les annexes relatives aux critères de choix et à la liste des instruments de placements, sur la plateforme de téléprocédure mentionnée à l'article D. 2231-4, dans les conditions de l'article L. 3332-27.</p><p>Le document unilatéral mentionné aux articles L. 3332-6-1 et L. 3333-7-1 peut être déposé sur la même plateforme. Ce dépôt est facultatif ; aucune transmission de remplacement n'est exigée.</p><p>La dispense s'applique aux règlements et documents établis ou modifiés à compter de l'entrée en vigueur de la loi portant la présente réforme. L'absence de dépôt d'un règlement ou document antérieur ne prive pas les versements effectués à compter de cette date des exonérations dont les conditions de fond sont remplies. Les garanties attachées aux dépôts déjà effectués et les droits, régularisations, restitutions, prescriptions et recours relatifs aux versements antérieurs sont conservés.</p>",
-    "reason": "Coordination du dépôt facultatif déjà proposé à L3332-27 et L3333-7-1 : R3332-4 ne doit pas reconstituer le dépôt obligatoire par la téléprocédure. Les annexes informatives et le dépôt volontaire garantissant les avantages restent accessibles, sans second gain compté.",
-    "review_notes": "L3332-27 proposé déroge expressément à L3332-9. L3332-6-1 proposé conserve encore un dépôt obligatoire tandis que L3333-7-1 le rend facultatif : incohérence de projets identifiée. Il faut aligner le quatrième alinéa de L3332-6-1 pour les documents unilatéraux sur la dispense avant adoption ; la présente règle réglementaire ne prétend pas écarter seule une obligation législative. Nouveau renvoi à L3332-27 lu dans le corpus, non fourni dans reference-targets ; aucune cible obligatoire ajoutée.",
+    "proposed_xml": "<p>Le règlement du plan d'épargne d'entreprise mentionné aux articles L. 3332-7 et L. 3332-9 peut être déposé volontairement, avec les annexes relatives aux critères de choix et à la liste des instruments de placements, sur la plateforme de téléprocédure mentionnée à l'article D. 2231-4, dans les conditions de l'article L. 3332-27.</p><p>Le document unilatéral mentionné aux articles L. 3332-6-1 et L. 3333-7-1 peut être déposé sur la même plateforme. Ce dépôt propre à l'épargne salariale est facultatif ; aucune transmission de remplacement n'est exigée. La dispense prévue au présent article ne supprime pas le dépôt des conventions et accords collectifs exigé sur un fondement distinct ; ce dépôt ne conditionne pas les déductions et exonérations prévues à l'article L. 3332-27.</p><p>La dispense s'applique aux règlements et documents établis ou modifiés à compter de l'entrée en vigueur de la loi portant la présente réforme. L'absence de dépôt d'un règlement ou document antérieur ne prive pas les versements effectués à compter de cette date des exonérations dont les conditions de fond sont remplies. Les garanties attachées aux dépôts déjà effectués et les droits, régularisations, restitutions, prescriptions et recours relatifs aux versements antérieurs sont conservés.</p>",
+    "reason": "Coordination du dépôt facultatif avec les propositions actualisées de L3332-6-1, L3332-9, L3332-27 et L3333-7-1. Ajout de la réserve des dépôts collectifs autonomes, déjà expressément prévue au niveau législatif, pour corriger l'ambiguïté du précédent corps. La réforme de fond antérieure du dépôt propre à l'épargne salariale est conservée ; aucun nouveau dépôt ni deuxième gain ne sont créés.",
+    "review_notes": "Coordination nécessaire : L3332-6-1 proposé et relu prévoit désormais « peut être déposé volontairement » ; l'ancienne note indiquant un dépôt encore obligatoire est périmée. L3332-9, L3332-27 et L3333-7-1 proposés ont été lus en entier. L3332-27 réserve « le dépôt des conventions et accords collectifs exigé sur un fondement distinct » ; D2231-4 officiel maintient ce dépôt sur la plateforme. Cette différence de champ est explicitée ici pour empêcher que « aucune transmission de remplacement » soit lue comme abolissant le dépôt collectif autonome. L3332-7 et R3332-1 gardent information et annexes. Transition compatible avec L3332-9/27 pour nouveaux documents et versements futurs sur plans anciens. La garantie de conformité de branche débute à la signature dans L3332-6-1 proposé, au dépôt volontaire dans L3333-7-1 proposé : harmonisation législative éventuelle hors lot, sans restreindre ici les exonérations sans dépôt. Le renvoi déjà proposé à L3332-27 n'est pas fourni dans reference-targets ; il a été vérifié au corpus, sans ajout de cible obligatoire.",
     "status": "rewrite_draft",
     "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "coordination_only",
-      "assessment": "Coordination du dépôt facultatif déjà proposé à L3332-27 et L3333-7-1 : R3332-4 ne doit pas reconstituer le dépôt obligatoire par la téléprocédure. Les annexes informatives et le dépôt volontaire garantissant les avantages restent accessibles, sans second gain compté.",
-      "scope_limitations": "L3332-27 proposé déroge expressément à L3332-9. L3332-6-1 proposé conserve encore un dépôt obligatoire tandis que L3333-7-1 le rend facultatif : incohérence de projets identifiée. Il faut aligner le quatrième alinéa de L3332-6-1 pour les documents unilatéraux sur la dispense avant adoption ; la présente règle réglementaire ne prétend pas écarter seule une obligation législative. Nouveau renvoi à L3332-27 lu dans le corpus, non fourni dans reference-targets ; aucune cible obligatoire ajoutée.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun dépôt, registre, certificat ou délai de remplacement n'est institué. Les droits et contrôles autonomes demeurent ; le solde global de coût des codes n'est pas établi.",
+      "assessment": "Coordination du dépôt facultatif avec les propositions actualisées de L3332-6-1, L3332-9, L3332-27 et L3333-7-1. Ajout de la réserve des dépôts collectifs autonomes, déjà expressément prévue au niveau législatif, pour corriger l'ambiguïté du précédent corps. La réforme de fond antérieure du dépôt propre à l'épargne salariale est conservée ; aucun nouveau dépôt ni deuxième gain ne sont créés.",
+      "scope_limitations": "Coordination nécessaire : L3332-6-1 proposé et relu prévoit désormais « peut être déposé volontairement » ; l'ancienne note indiquant un dépôt encore obligatoire est périmée. L3332-9, L3332-27 et L3333-7-1 proposés ont été lus en entier. L3332-27 réserve « le dépôt des conventions et accords collectifs exigé sur un fondement distinct » ; D2231-4 officiel maintient ce dépôt sur la plateforme. Cette différence de champ est explicitée ici pour empêcher que « aucune transmission de remplacement » soit lue comme abolissant le dépôt collectif autonome. L3332-7 et R3332-1 gardent information et annexes. Transition compatible avec L3332-9/27 pour nouveaux documents et versements futurs sur plans anciens. La garantie de conformité de branche débute à la signature dans L3332-6-1 proposé, au dépôt volontaire dans L3333-7-1 proposé : harmonisation législative éventuelle hors lot, sans restreindre ici les exonérations sans dépôt. Le renvoi déjà proposé à L3332-27 n'est pas fourni dans reference-targets ; il a été vérifié au corpus, sans ajout de cible obligatoire.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée par comparaison au texte officiel : les protections et obligations autonomes réservées existaient déjà ; aucun dépôt ou justificatif de remplacement n'est créé. Le solde global de coût des codes n'est pas établi.",
       "effects": [
         {
           "kind": "coordination",
           "measure_id": "pee-depot-facultatif",
-          "description": "Le règlement d'exécution conserve seulement une voie de dépôt volontaire.",
-          "before": "Dépôt prescrit du règlement et du document unilatéral.",
-          "after": "Dépôt volontaire, garanties acquises et exonérations de fond conservées.",
+          "description": "Coordination de la téléprocédure avec la dispense législative de dépôt propre au plan.",
+          "before": "Dépôt obligatoire du règlement, annexes et document unilatéral.",
+          "after": "Dépôt propre au plan volontaire ; dépôt collectif autonome réservé ; exonérations sans condition de dépôt.",
           "unit": "legal_duty",
-          "affected_population": "Entreprises et bénéficiaires du dispositif visé à l'article R3332-4",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme selon la transition écrite ; droits antérieurs conservés dans leur champ.",
-          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément maintenues conservent leur champ.",
-          "source_quote": "est déposé sur la même plateforme",
-          "proposed_quote": "Ce dépôt est facultatif ; aucune transmission de remplacement n'est exigée."
+          "affected_population": "Employeurs et bénéficiaires du dispositif de participation ou du plan concerné.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur de la loi proposée, selon la transition expresse du corps ; droits anciens et recours conservés dans leurs limites.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; protections et obligations autonomes maintenues.",
+          "source_quote": "Le document unilatéral mentionné aux articles L. 3332-6-1 et L. 3333-7-1 est déposé sur la même plateforme.",
+          "proposed_quote": "Ce dépôt propre à l'épargne salariale est facultatif ; aucune transmission de remplacement n'est exigée."
         }
       ]
     },
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Caractère obligatoire du dépôt du règlement et du document unilatéral sur la plateforme, en coordination avec la dispense législative."
+      "Caractère obligatoire du dépôt propre à l’épargne salariale des règlements, annexes et documents unilatéraux visés, en coordination de la dispense législative."
     ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "863d35901ced4064a4c39501f1b41b93bedcfe5ab248f2444f511fb7bf55abc8",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "0d8e47e9883c11213738ba3b074d81f49e5af72fff7eaf3c99229dfb60544cf8",
-      "assessment_sha256": "2db7fc3654b6d58f676fe02ffd6366ffd0430d9f67578d5558609f8af7562f6c",
+      "proposed_sha256": "bddea98e4f7b66e890edbf37f0efe39371488bf13e3c4b97973c1e297a927fbd",
+      "assessment_sha256": "92049317379d64e7db8253b60cce03e14b4c6daa214c6af7d85913ae01aaa520",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "0d8e47e9883c11213738ba3b074d81f49e5af72fff7eaf3c99229dfb60544cf8"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -498,46 +535,48 @@
     "source_sha256": "d2066bd1803b69cce6b07f71ed7e1789a08fbb65048933c78916fc5d8f8b5591",
     "number": "R3332-5",
     "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur de la loi portant la présente réforme. Aucun dépôt du procès-verbal de consultation du comité social et économique avec le règlement du plan n'est exigé à compter de cette date, y compris pour un règlement antérieur présenté au dépôt volontaire. La consultation du comité et les droits d'information des salariés conservent leur régime propre. Les procès-verbaux déjà établis ou déposés restent utilisables comme preuves. L'absence de ce dépôt après cette date ne remet pas en cause les avantages attachés au plan ; les droits, prescriptions et recours relatifs aux périodes antérieures sont conservés.</p>",
-    "reason": "Suppression effective de la pièce supplémentaire obligatoire au dépôt : le procès-verbal CSE n'a plus à être joint, même lorsqu'un dépôt volontaire est choisi. La consultation demeure une garantie essentielle ; la supprimer n'est pas nécessaire à cet allègement documentaire.",
-    "review_notes": "La mesure porte uniquement sur l'envoi du procès-verbal, distinct du caractère facultatif du dépôt du règlement à R3332-4 et L3332-27. Aucun rapport ou attestation de consultation ne le remplace ; l'établissement des preuves de consultation conserve son droit autonome.",
+    "reason": "Suppression effective de la pièce supplémentaire obligatoire au dépôt : le procès-verbal CSE n'a plus à être joint, même lorsqu'un dépôt volontaire est choisi. La consultation demeure une garantie essentielle ; la supprimer n'est pas nécessaire à cet allègement documentaire. Seconde passe : maintien du corps antérieur, sans modification stylistique ; interactions détaillées en notes.",
+    "review_notes": "Transition compatible avec R3332-4 et L3332-9/27 proposés : « Aucun dépôt du procès-verbal » vaut aussi pour le dépôt volontaire futur d'un ancien règlement, sans retirer la consultation ni ses preuves. L3332-7 conserve l'information et L3322-6, auquel renvoie R3332-7, conserve les modes de consentement lorsqu'un accord est conclu. La suppression de cette pièce propre au plan ne supprime pas les pièces exigibles sur un fondement collectif autonome. Aucun certificat de consultation de remplacement. Le corps précédent est conservé ; l'allègement de pièce est distinct du choix de déposer ou non le règlement, sans compter deux fois un même envoi.",
     "status": "rewrite_draft",
     "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "material_reduction",
-      "assessment": "Suppression effective de la pièce supplémentaire obligatoire au dépôt : le procès-verbal CSE n'a plus à être joint, même lorsqu'un dépôt volontaire est choisi. La consultation demeure une garantie essentielle ; la supprimer n'est pas nécessaire à cet allègement documentaire.",
-      "scope_limitations": "La mesure porte uniquement sur l'envoi du procès-verbal, distinct du caractère facultatif du dépôt du règlement à R3332-4 et L3332-27. Aucun rapport ou attestation de consultation ne le remplace ; l'établissement des preuves de consultation conserve son droit autonome.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun dépôt, registre, certificat ou délai de remplacement n'est institué. Les droits et contrôles autonomes demeurent ; le solde global de coût des codes n'est pas établi.",
+      "assessment": "Suppression effective de la pièce supplémentaire obligatoire au dépôt : le procès-verbal CSE n'a plus à être joint, même lorsqu'un dépôt volontaire est choisi. La consultation demeure une garantie essentielle ; la supprimer n'est pas nécessaire à cet allègement documentaire. Seconde passe : maintien du corps antérieur, sans modification stylistique ; interactions détaillées en notes.",
+      "scope_limitations": "Transition compatible avec R3332-4 et L3332-9/27 proposés : « Aucun dépôt du procès-verbal » vaut aussi pour le dépôt volontaire futur d'un ancien règlement, sans retirer la consultation ni ses preuves. L3332-7 conserve l'information et L3322-6, auquel renvoie R3332-7, conserve les modes de consentement lorsqu'un accord est conclu. La suppression de cette pièce propre au plan ne supprime pas les pièces exigibles sur un fondement collectif autonome. Aucun certificat de consultation de remplacement. Le corps précédent est conservé ; l'allègement de pièce est distinct du choix de déposer ou non le règlement, sans compter deux fois un même envoi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée par comparaison au texte officiel : les protections et obligations autonomes réservées existaient déjà ; aucun dépôt ou justificatif de remplacement n'est créé. Le solde global de coût des codes n'est pas établi.",
       "effects": [
         {
           "kind": "obligation_removed",
-          "measure_id": "pee-fin-depot-proces-verbal-cse",
-          "description": "Suppression de la pièce CSE jointe au dépôt.",
-          "before": "Procès-verbal à déposer avec le règlement pour le plan unilatéral.",
-          "after": "Aucune transmission obligatoire de ce procès-verbal même au dépôt volontaire.",
+          "measure_id": "pee-depot-proces-verbal-cse-suppression",
+          "description": "Suppression de la pièce CSE au dépôt propre du plan, y compris volontaire.",
+          "before": "Procès-verbal de consultation joint au règlement pour plan à initiative patronale.",
+          "after": "Aucun dépôt de cette pièce sur ce fondement ; consultation et preuve conservées.",
           "unit": "legal_duty",
-          "affected_population": "Entreprises et bénéficiaires du dispositif visé à l'article R3332-5",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme selon la transition écrite ; droits antérieurs conservés dans leur champ.",
-          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément maintenues conservent leur champ.",
-          "source_quote": "est déposé avec le règlement du plan",
-          "proposed_quote": "Aucun dépôt du procès-verbal de consultation du comité social et économique avec le règlement du plan n'est exigé"
+          "affected_population": "Employeurs et bénéficiaires du dispositif de participation ou du plan concerné.",
+          "conditions_and_transition": "Application à compter de l’entrée en vigueur de la loi proposée, selon la transition expresse du corps ; droits anciens et recours conservés dans leurs limites.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; protections et obligations autonomes maintenues.",
+          "source_quote": "le procès-verbal de consultation du            comité social et économique est déposé avec le règlement du plan.",
+          "proposed_quote": "Aucun dépôt du procès-verbal de consultation du comité social et économique avec le règlement du plan n'est exigé à compter de cette date, y compris pour un règlement antérieur présenté au dépôt volontaire."
         }
       ]
     },
     "change_type": "full_repeal",
     "repeal_policy_id": "editorial_direction_2026_10_19",
-    "repeal_scope": "Obligation de joindre au dépôt du règlement le procès-verbal de consultation du comité social et économique.",
+    "repeal_scope": "Suppression pour les dépôts futurs de l’obligation propre au plan de joindre le procès-verbal de consultation du CSE, sans supprimer la consultation ni les droits antérieurs.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "d2066bd1803b69cce6b07f71ed7e1789a08fbb65048933c78916fc5d8f8b5591",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "10799786f5d802102d9ba15972eaa1f1b38245a851c8c6f41dcef4b63e894b8c",
-      "assessment_sha256": "47c1d8c72af1ec88c1110842d6404e5dba28181ef30ab86825f63b3b55a95bf9",
+      "assessment_sha256": "7e0b7acc01ad45654954f4bc177db458341b599f313eb0ae3164005051374f7f",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "10799786f5d802102d9ba15972eaa1f1b38245a851c8c6f41dcef4b63e894b8c"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -545,17 +584,17 @@
     "source_sha256": "2bb18aa8784af6a6cba202ee1012f2c6e03dc1af37372954b710a8c3baeda8c3",
     "number": "R3332-7",
     "proposed_xml": null,
-    "reason": "Maintien des voies alternatives de conclusion de l'accord prévues par L3322-6 : négociation collective, représentants syndicaux, CSE ou ratification aux deux tiers selon leurs conditions. Ces modes protègent le consentement collectif ; le renvoi n'impose pas le dépôt supprimé ailleurs.",
-    "review_notes": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
+    "reason": "Maintien des voies alternatives de conclusion de l'accord prévues par L3322-6 : négociation collective, représentants syndicaux, CSE ou ratification aux deux tiers selon leurs conditions. Ces modes protègent le consentement collectif ; le renvoi n'impose pas le dépôt supprimé ailleurs. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+    "review_notes": "Différence de champ après lecture intégrale de L3322-6 : ses quatre voies sont alternatives, avec ratification « à la majorité des deux tiers du personnel » et demande conjointe dans les entreprises dotées de syndicats représentatifs ou d'un CSE. Le renvoi vise la conclusion et le consentement, pas un dépôt administratif. Il ne rétablit ni agrément ni transmission supprimés dans L3332-9/27 et R3332-4. Aucun changement du dénominateur de majorité ni importation du préavis de rupture n'est justifié.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "reference_checks": [],
+    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Maintien des voies alternatives de conclusion de l'accord prévues par L3322-6 : négociation collective, représentants syndicaux, CSE ou ratification aux deux tiers selon leurs conditions. Ces modes protègent le consentement collectif ; le renvoi n'impose pas le dépôt supprimé ailleurs.",
-      "scope_limitations": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "assessment": "Maintien des voies alternatives de conclusion de l'accord prévues par L3322-6 : négociation collective, représentants syndicaux, CSE ou ratification aux deux tiers selon leurs conditions. Ces modes protègent le consentement collectif ; le renvoi n'impose pas le dépôt supprimé ailleurs. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+      "scope_limitations": "Différence de champ après lecture intégrale de L3322-6 : ses quatre voies sont alternatives, avec ratification « à la majorité des deux tiers du personnel » et demande conjointe dans les entreprises dotées de syndicats représentatifs ou d'un CSE. Le renvoi vise la conclusion et le consentement, pas un dépôt administratif. Il ne rétablit ni agrément ni transmission supprimés dans L3332-9/27 et R3332-4. Aucun changement du dénominateur de majorité ni importation du préavis de rupture n'est justifié.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien de cette règle n'ajoute ni document, ni délai, ni condition aux droits existants. Aucun solde global de complexité des codes n'est chiffré.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -563,12 +602,14 @@
       "source_sha256": "2bb18aa8784af6a6cba202ee1012f2c6e03dc1af37372954b710a8c3baeda8c3",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "a7d9f2216e1c097c26df59f7063144c2a9bb2f1cf58176f3040684c425363a9b",
+      "assessment_sha256": "1bebc0a4c3b939bef2902710bc2162f1b7f0a01d5731ff794026117bc5e3fc8f",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -576,23 +617,23 @@
     "source_sha256": "d3b5b236bf503e93179c68d6ff5ae06a64d2c12bfac0b61524bcc308dea6b653",
     "number": "R3332-8",
     "proposed_xml": null,
-    "reason": "Maintien des plafonds d'abondement de 8 % et de 16 % du plafond annuel de sécurité sociale. Le plafond majoré préserve les versements unilatéraux éligibles ; ces pourcentages ne sont pas des cotisations et leur maintien n'annule pas la suppression du rapport au triple proposée dans L3332-11.",
-    "review_notes": "Le renvoi L241-3 désigne le plafond annuel, conservé au I de la proposition cible, non les taux du transfert vers la capitalisation du II. 8 % et 16 % restent calculés sur le PASS entier ; aucune condition de financement des retraites n'est transposée à l'abondement.",
+    "reason": "Maintien des plafonds d'abondement de 8 % et de 16 % du plafond annuel de sécurité sociale. Le plafond majoré préserve les versements unilatéraux éligibles ; ces pourcentages ne sont pas des cotisations et leur maintien n'annule pas la suppression du rapport au triple proposée dans L3332-11. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+    "review_notes": "Différence de champ confirmée par L241-3 officiel et proposé entiers : le plafond annuel, non décroissant, subsiste au I ; le transfert progressif du II n'est pas une nouvelle base de calcul de l'abondement. L3332-11 entier conserve son deuxième alinéa et ses 1°/2° : 8 % du PASS et 16 % pour le 1° demeurent, tandis que le 2° garde son plafond autonome de 30 % hors plafond général. Aucun rapport au triple supprimé par L3332-11 n'est rétabli. Ni condition d'ancienneté d'un an ni notification de rupture n'affectent ces plafonds ; le NOTA 2026 de la cible n'est pas une date de promulgation de la réforme.",
     "status": "retained_unchanged",
-    "classification": "retained_necessary",
     "reference_checks": [
       {
         "target_key": "LEGITEXT000006073189|LEGIARTI000051289018",
-        "view_sha256": "8f81e8c61a9f4c137863e68f212ca410c71e610f26ded53b87553b3b0883a48c",
-        "assessment": "L241-3 est visé uniquement pour le montant annuel du plafond de sécurité sociale. La source et le I proposé conservent sa revalorisation annuelle et son plancher ; les II à VII proposés organisent un transfert de financement distinct. Ni les taux de 0,5 à 4 %, ni la condition de financement, ni une ancienneté ou notification de rupture ne s'appliquent aux plafonds d'abondement de 8 % et 16 %, maintenus pour les situations futures éligibles."
+        "view_sha256": "da4cf027a0b150a33727d5b84e712984a6b4a7ae2fd057c9f7372ba16370e07a",
+        "assessment": "Différence de champ confirmée par L241-3 officiel et proposé entiers : le plafond annuel, non décroissant, subsiste au I ; le transfert progressif du II n'est pas une nouvelle base de calcul de l'abondement. L3332-11 entier conserve son deuxième alinéa et ses 1°/2° : 8 % du PASS et 16 % pour le 1° demeurent, tandis que le 2° garde son plafond autonome de 30 % hors plafond général. Aucun rapport au triple supprimé par L3332-11 n'est rétabli. Ni condition d'ancienneté d'un an ni notification de rupture n'affectent ces plafonds ; le NOTA 2026 de la cible n'est pas une date de promulgation de la réforme."
       }
     ],
+    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
-      "assessment": "Maintien des plafonds d'abondement de 8 % et de 16 % du plafond annuel de sécurité sociale. Le plafond majoré préserve les versements unilatéraux éligibles ; ces pourcentages ne sont pas des cotisations et leur maintien n'annule pas la suppression du rapport au triple proposée dans L3332-11.",
-      "scope_limitations": "Le renvoi L241-3 désigne le plafond annuel, conservé au I de la proposition cible, non les taux du transfert vers la capitalisation du II. 8 % et 16 % restent calculés sur le PASS entier ; aucune condition de financement des retraites n'est transposée à l'abondement.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "assessment": "Maintien des plafonds d'abondement de 8 % et de 16 % du plafond annuel de sécurité sociale. Le plafond majoré préserve les versements unilatéraux éligibles ; ces pourcentages ne sont pas des cotisations et leur maintien n'annule pas la suppression du rapport au triple proposée dans L3332-11. Seconde passe : maintien intégral après contrôle des contreparties disponibles ; aucune réduction nouvelle revendiquée.",
+      "scope_limitations": "Différence de champ confirmée par L241-3 officiel et proposé entiers : le plafond annuel, non décroissant, subsiste au I ; le transfert progressif du II n'est pas une nouvelle base de calcul de l'abondement. L3332-11 entier conserve son deuxième alinéa et ses 1°/2° : 8 % du PASS et 16 % pour le 1° demeurent, tandis que le 2° garde son plafond autonome de 30 % hors plafond général. Aucun rapport au triple supprimé par L3332-11 n'est rétabli. Ni condition d'ancienneté d'un an ni notification de rupture n'affectent ces plafonds ; le NOTA 2026 de la cible n'est pas une date de promulgation de la réforme.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien de cette règle n'ajoute ni document, ni délai, ni condition aux droits existants. Aucun solde global de complexité des codes n'est chiffré.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -600,7 +641,7 @@
       "source_sha256": "d3b5b236bf503e93179c68d6ff5ae06a64d2c12bfac0b61524bcc308dea6b653",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "01187fbde28aca8b9f3e959d55904cd1d04cf09661b88892bab0690b194e441f",
+      "assessment_sha256": "68b5918ae231d255b08907fe2e03d2ccc0952d02e70bb9c3c3ad0072c03b6ce3",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
@@ -611,7 +652,7 @@
       "referrer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "policy_sha256": {
         "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
-        "site-summaries.json": "3a600ec16c3959a626e262d51b47fd7b99e7ce1c9c356ed228f9e3ad43e4f740"
+        "site-summaries.json": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
       },
       "referrer_source": {
         "code_id": "LEGITEXT000006072050",
@@ -626,7 +667,7 @@
           "source_id": "LEGIARTI000051289018",
           "source_sha256": "f24a47a718341114ed58d5d347d73421a343ddda2f51c3de23e245d594c2ee28",
           "view_kind": "proposal",
-          "view_sha256": "8f81e8c61a9f4c137863e68f212ca410c71e610f26ded53b87553b3b0883a48c",
+          "view_sha256": "da4cf027a0b150a33727d5b84e712984a6b4a7ae2fd057c9f7372ba16370e07a",
           "source_xml_sha256": "8d35bc4f165ffa614db5e2902504de338ae1bccaedc9f6d70a2e2a2713d7ce5d",
           "source_notes_sha256": "8422c34317608b96fc744fcada974079076169e7cbe59dca6ff38d1e4f4a1763"
         }
@@ -634,13 +675,15 @@
       "assessments": [
         {
           "target_key": "LEGITEXT000006073189|LEGIARTI000051289018",
-          "view_sha256": "8f81e8c61a9f4c137863e68f212ca410c71e610f26ded53b87553b3b0883a48c",
-          "assessment": "L241-3 est visé uniquement pour le montant annuel du plafond de sécurité sociale. La source et le I proposé conservent sa revalorisation annuelle et son plancher ; les II à VII proposés organisent un transfert de financement distinct. Ni les taux de 0,5 à 4 %, ni la condition de financement, ni une ancienneté ou notification de rupture ne s'appliquent aux plafonds d'abondement de 8 % et 16 %, maintenus pour les situations futures éligibles."
+          "view_sha256": "da4cf027a0b150a33727d5b84e712984a6b4a7ae2fd057c9f7372ba16370e07a",
+          "assessment": "Différence de champ confirmée par L241-3 officiel et proposé entiers : le plafond annuel, non décroissant, subsiste au I ; le transfert progressif du II n'est pas une nouvelle base de calcul de l'abondement. L3332-11 entier conserve son deuxième alinéa et ses 1°/2° : 8 % du PASS et 16 % pour le 1° demeurent, tandis que le 2° garde son plafond autonome de 30 % hors plafond général. Aucun rapport au triple supprimé par L3332-11 n'est rétabli. Ni condition d'ancienneté d'un an ni notification de rupture n'affectent ces plafonds ; le NOTA 2026 de la cible n'est pas une date de promulgation de la réforme."
         }
       ],
-      "assessments_sha256": "eebea499804192c1167a04fcc4ea4b20b07dc5904957ecd6b4790373dac31afd",
+      "assessments_sha256": "636c9c52220c54ce8b9d99670a36e338206852cef782637a1b08ff967a8410f6",
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -648,17 +691,28 @@
     "source_sha256": "96ab0510c96a9965a279a8e784305a0cb089cc5bc783b5b2d9755d1d876b51a5",
     "number": "D3332-8-1",
     "proposed_xml": null,
-    "reason": "Maintien de l'accès de tous les adhérents remplissant l'ancienneté éventuelle, de la limite globale et de sa majoration pour les employeurs éligibles de la loi du 16 août 2022. L'imputation au plafond évite un double emploi ; retirer ce dispositif pourrait fermer un abondement exonéré futur.",
-    "review_notes": "Les plafonds renvoient aux premier et troisième alinéas du V, avec les catégories du sixième alinéa et des 1° ou 2°. La loi extérieure du 16 août 2022 n'est pas une source intégrale jointe à ce lot : aucune valeur chiffrée de remplacement n'est inventée. Le renvoi et les futures situations éligibles demeurent.",
+    "reason": "Maintien de l'accès de tous les adhérents remplissant l'ancienneté éventuelle, de la limite globale et de sa majoration pour les employeurs éligibles de la loi du 16 août 2022. L'imputation au plafond évite un double emploi ; retirer ce dispositif pourrait fermer un abondement exonéré futur. Seconde passe : maintien confirmé après examen des interactions précisées en notes ; aucune suppression justifiée d’une charge autonome ni correction normative démontrée dans ce champ.",
+    "review_notes": "Différence de champ vérifiée : « bénéficie à l'ensemble des adhérents » est compatible avec l'attribution uniforme du 1° de L3332-11 et l'ancienneté maximale de trois mois de L3342-1, textes source et proposés lus intégralement. R3332-8 conserve « 8 % » et « 16 % » du PASS ; la suppression du rapport au triple dans L3332-11 ne supprime pas ces plafonds en valeur ni l'imputation prévue ici. La source réglementaire vise les titres émis par l'entreprise, tandis que L3332-11 1° vise aussi le groupe : différence de rédaction préexistante, sans suppression de l'habilitation législative du groupe. Point non vérifiable : article 1 V de la loi 2022-1158 non repéré en texte intégral dans les pièces locales ; montants et numérotation des alinéas externes non certifiés. Aucun déplacement d'alinéa ni fermeture des bénéficiaires futurs. Références examinées dans le corpus local en lecture seule ; reference-targets.json ne fournit ici ni cible ni renvoyant. Les vérifications décrites ne constituent pas une validation globale des neuf recueils.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "96ab0510c96a9965a279a8e784305a0cb089cc5bc783b5b2d9755d1d876b51a5",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien de l'accès de tous les adhérents remplissant l'ancienneté éventuelle, de la limite globale et de sa majoration pour les employeurs éligibles de la loi du 16 août 2022. L'imputation au plafond évite un double emploi ; retirer ce dispositif pourrait fermer un abondement exonéré futur.",
+      "review_notes": "Les plafonds renvoient aux premier et troisième alinéas du V, avec les catégories du sixième alinéa et des 1° ou 2°. La loi extérieure du 16 août 2022 n'est pas une source intégrale jointe à ce lot : aucune valeur chiffrée de remplacement n'est inventée. Le renvoi et les futures situations éligibles demeurent.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "480020f3207c3888ad244e21a1ec7b92efe6dd0baad38945461b1b1182a3de47"
+    },
     "classification": "retained_necessary",
-    "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien de l'accès de tous les adhérents remplissant l'ancienneté éventuelle, de la limite globale et de sa majoration pour les employeurs éligibles de la loi du 16 août 2022. L'imputation au plafond évite un double emploi ; retirer ce dispositif pourrait fermer un abondement exonéré futur.",
-      "scope_limitations": "Les plafonds renvoient aux premier et troisième alinéas du V, avec les catégories du sixième alinéa et des 1° ou 2°. La loi extérieure du 16 août 2022 n'est pas une source intégrale jointe à ce lot : aucune valeur chiffrée de remplacement n'est inventée. Le renvoi et les futures situations éligibles demeurent.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "scope_limitations": "Différence de champ vérifiée : « bénéficie à l'ensemble des adhérents » est compatible avec l'attribution uniforme du 1° de L3332-11 et l'ancienneté maximale de trois mois de L3342-1, textes source et proposés lus intégralement. R3332-8 conserve « 8 % » et « 16 % » du PASS ; la suppression du rapport au triple dans L3332-11 ne supprime pas ces plafonds en valeur ni l'imputation prévue ici. La source réglementaire vise les titres émis par l'entreprise, tandis que L3332-11 1° vise aussi le groupe : différence de rédaction préexistante, sans suppression de l'habilitation législative du groupe. Point non vérifiable : article 1 V de la loi 2022-1158 non repéré en texte intégral dans les pièces locales ; montants et numérotation des alinéas externes non certifiés. Aucun déplacement d'alinéa ni fermeture des bénéficiaires futurs.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la règle source est maintenue intégralement, sans nouveau registre, délai, justificatif ni condition. Ce maintien ne démontre aucune réduction nette à l'échelle des codes.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -666,12 +720,14 @@
       "source_sha256": "96ab0510c96a9965a279a8e784305a0cb089cc5bc783b5b2d9755d1d876b51a5",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "74f46195e21b8ec49755fd82cf80148a50c1980eb7b8080fff19fb6d1cf7634e",
+      "assessment_sha256": "0b0cdef0dd007a30ccbc7ae90b39bbc2f75c8a09bbfac073d620765efd0c0dec",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -679,17 +735,28 @@
     "source_sha256": "c2791acffefa2f088517dd11cac533ce03b5f10af9e36592239ba87ac5e7d848",
     "number": "D3332-8-2",
     "proposed_xml": null,
-    "reason": "Maintien de la faculté de combiner les modalités de répartition de l'abondement dans un contrat de partage. Le renvoi au 2° de L3332-11 conserve son plafond autonome et la souplesse du dispositif ; ce contrat commercial ne constitue pas un contrat de travail à terme.",
-    "review_notes": "Les articles L23-11-2 et L23-11-3 du code de commerce sont hors corpus fourni ; pas de prétendue vérification de leur rédaction intégrale. Le 2° de L3332-11 lu dans le corpus conserve la limite de 30 % du PASS, distincte des plafonds ordinaires.",
+    "reason": "Maintien de la faculté de combiner les modalités de répartition de l'abondement dans un contrat de partage. Le renvoi au 2° de L3332-11 conserve son plafond autonome et la souplesse du dispositif ; ce contrat commercial ne constitue pas un contrat de travail à terme. Seconde passe : maintien confirmé après examen des interactions précisées en notes ; aucune suppression justifiée d’une charge autonome ni correction normative démontrée dans ce champ.",
+    "review_notes": "Différence de champ : « peut retenir conjointement les différentes modalités » est une faculté de répartition, non une autorisation de contrat de travail à terme. L3332-11 entier, source et proposition, conserve au 2° « dans la limite de 30 % » du PASS et « ne sont pas pris en compte pour l'appréciation du plafond mentionné au premier alinéa ». Il n'y a donc pas à cumuler ce plafond autonome avec le 8 % de R3332-8 pour le même versement. Commerce L23-11-2/L23-11-3 non repérés en texte intégral : concordance externe non vérifiable, aucune abrogation inférée de cette lacune. Références examinées dans le corpus local en lecture seule ; reference-targets.json ne fournit ici ni cible ni renvoyant. Les vérifications décrites ne constituent pas une validation globale des neuf recueils.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "c2791acffefa2f088517dd11cac533ce03b5f10af9e36592239ba87ac5e7d848",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien de la faculté de combiner les modalités de répartition de l'abondement dans un contrat de partage. Le renvoi au 2° de L3332-11 conserve son plafond autonome et la souplesse du dispositif ; ce contrat commercial ne constitue pas un contrat de travail à terme.",
+      "review_notes": "Les articles L23-11-2 et L23-11-3 du code de commerce sont hors corpus fourni ; pas de prétendue vérification de leur rédaction intégrale. Le 2° de L3332-11 lu dans le corpus conserve la limite de 30 % du PASS, distincte des plafonds ordinaires.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "046eca7c5d8d3120906bd764e2dd5b9ef0ed1077a95d1bcbd139e17e97f25b71"
+    },
     "classification": "retained_necessary",
-    "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien de la faculté de combiner les modalités de répartition de l'abondement dans un contrat de partage. Le renvoi au 2° de L3332-11 conserve son plafond autonome et la souplesse du dispositif ; ce contrat commercial ne constitue pas un contrat de travail à terme.",
-      "scope_limitations": "Les articles L23-11-2 et L23-11-3 du code de commerce sont hors corpus fourni ; pas de prétendue vérification de leur rédaction intégrale. Le 2° de L3332-11 lu dans le corpus conserve la limite de 30 % du PASS, distincte des plafonds ordinaires.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "scope_limitations": "Différence de champ : « peut retenir conjointement les différentes modalités » est une faculté de répartition, non une autorisation de contrat de travail à terme. L3332-11 entier, source et proposition, conserve au 2° « dans la limite de 30 % » du PASS et « ne sont pas pris en compte pour l'appréciation du plafond mentionné au premier alinéa ». Il n'y a donc pas à cumuler ce plafond autonome avec le 8 % de R3332-8 pour le même versement. Commerce L23-11-2/L23-11-3 non repérés en texte intégral : concordance externe non vérifiable, aucune abrogation inférée de cette lacune.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la règle source est maintenue intégralement, sans nouveau registre, délai, justificatif ni condition. Ce maintien ne démontre aucune réduction nette à l'échelle des codes.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -697,12 +764,14 @@
       "source_sha256": "c2791acffefa2f088517dd11cac533ce03b5f10af9e36592239ba87ac5e7d848",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "a1c0e781440502062fea92a16f4867b3309b8faf04e5de32f339c7a8d01498ad",
+      "assessment_sha256": "2695cbc1d9087e0d3f0be714bbb502b04e34aa42f8c84c3a09afbc0a39245cbd",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -711,26 +780,50 @@
     "number": "R3332-9",
     "proposed_xml": "<p>Un plan d'épargne d'entreprise peut recueillir, à l'initiative des participants, les versements des sommes issues de l'intéressement, de la participation, des versements volontaires et des contributions des entreprises prévues à l'article L. 3332-11.</p><p>Aucun montant minimum par support de placement ne peut être imposé pour un versement volontaire d'un participant.</p><p>Cette suppression s'applique aux versements effectués à compter de l'entrée en vigueur de la loi portant la présente réforme, y compris dans les plans existants. Les clauses du règlement imposant ce minimum cessent de produire effet pour ces versements, sans nouvelle adhésion ni modification préalable du règlement. Les placements déjà réalisés, les droits à abondement, les exonérations et les recours relatifs aux versements antérieurs ne sont pas remis en cause.</p>",
     "reason": "Suppression du ticket minimum facultativement imposé par le règlement pour chaque support : les petits versements ne peuvent plus être refusés sur ce seul fondement. Les sources d'alimentation du plan et les droits à abondement demeurent ; aucun taux fiscal n'est modifié.",
-    "review_notes": "L'arrêté conjoint fixant le maximum des minima autorisés devient sans objet pour ces nouveaux versements et doit être coordonné hors lot ; aucune valeur de cet arrêté non joint n'est inventée. Les plafonds annuels et la gamme des supports autorisés demeurent ; le coût opérationnel des petits versements pour les gestionnaires n'est pas chiffré.",
+    "review_notes": "Transition compatible : « y compris dans les plans existants » ne remet pas en cause les placements antérieurs. L3332-10 et L3332-11 lus en entier maintiennent les plafonds individuels et patronaux ; la suppression proposée du rapport au triple dans L3332-11 demeure distincte de celle du minimum par support. R3333-1 et R3334-1 lus en entier rendent les règles de versement applicables au PEI et au PERCO dans leur champ propre. Aucun plan nouveau de retraite n'est créé. L'arrêté conjoint fixant le plafond du minimum reste à coordonner hors lot ; son texte intégral n'est pas fourni. La suppression du minimum contraint aussi les gestionnaires à ne plus opposer ce seul motif : coût opérationnel net non établi. Corps du brouillon conservé sans retouche stylistique. Références examinées dans le corpus local en lecture seule ; reference-targets.json ne fournit ici ni cible ni renvoyant. Les vérifications décrites ne constituent pas une validation globale des neuf recueils.",
     "status": "rewrite_draft",
-    "reference_checks": [],
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "a533a44865efcc6144defcb66dc8a780d022fb67336f47dd9da0bf946b79891b",
+      "status": "rewrite_draft",
+      "proposed_xml": "<p>Un plan d'épargne d'entreprise peut recueillir, à l'initiative des participants, les versements des sommes issues de l'intéressement, de la participation, des versements volontaires et des contributions des entreprises prévues à l'article L. 3332-11.</p><p>Aucun montant minimum par support de placement ne peut être imposé pour un versement volontaire d'un participant.</p><p>Cette suppression s'applique aux versements effectués à compter de l'entrée en vigueur de la loi portant la présente réforme, y compris dans les plans existants. Les clauses du règlement imposant ce minimum cessent de produire effet pour ces versements, sans nouvelle adhésion ni modification préalable du règlement. Les placements déjà réalisés, les droits à abondement, les exonérations et les recours relatifs aux versements antérieurs ne sont pas remis en cause.</p>",
+      "reason": "Suppression du ticket minimum facultativement imposé par le règlement pour chaque support : les petits versements ne peuvent plus être refusés sur ce seul fondement. Les sources d'alimentation du plan et les droits à abondement demeurent ; aucun taux fiscal n'est modifié.",
+      "review_notes": "L'arrêté conjoint fixant le maximum des minima autorisés devient sans objet pour ces nouveaux versements et doit être coordonné hors lot ; aucune valeur de cet arrêté non joint n'est inventée. Les plafonds annuels et la gamme des supports autorisés demeurent ; le coût opérationnel des petits versements pour les gestionnaires n'est pas chiffré.",
+      "proposed_sha256": "faad87511756c61f7dbc7d1e822b68c3734e9987706fd9a69a03322fd8f09647",
+      "batch_row_sha256": "3500fc7a53d9cf2dbb51854f79392e13d04e417c1d3e12ca6655c0df10436ef0"
+    },
     "substantive_impact": {
       "version": 1,
-      "classification": "material_reduction",
+      "classification": "mixed",
       "assessment": "Suppression du ticket minimum facultativement imposé par le règlement pour chaque support : les petits versements ne peuvent plus être refusés sur ce seul fondement. Les sources d'alimentation du plan et les droits à abondement demeurent ; aucun taux fiscal n'est modifié.",
-      "scope_limitations": "L'arrêté conjoint fixant le maximum des minima autorisés devient sans objet pour ces nouveaux versements et doit être coordonné hors lot ; aucune valeur de cet arrêté non joint n'est inventée. Les plafonds annuels et la gamme des supports autorisés demeurent ; le coût opérationnel des petits versements pour les gestionnaires n'est pas chiffré.",
-      "new_burdens_review": "Aucune déclaration, donnée, pièce ou délai nouveau n'est imposé au participant. Le gestionnaire doit accepter les versements admissibles sans minimum par support : cette restriction à sa faculté de fixer un ticket peut augmenter le nombre de petites opérations à traiter. Aucun coût net global n'est chiffré ; il ne s'agit pas d'une nouvelle obligation de versement ou d'abondement.",
+      "scope_limitations": "Transition compatible : « y compris dans les plans existants » ne remet pas en cause les placements antérieurs. L3332-10 et L3332-11 lus en entier maintiennent les plafonds individuels et patronaux ; la suppression proposée du rapport au triple dans L3332-11 demeure distincte de celle du minimum par support. R3333-1 et R3334-1 lus en entier rendent les règles de versement applicables au PEI et au PERCO dans leur champ propre. Aucun plan nouveau de retraite n'est créé. L'arrêté conjoint fixant le plafond du minimum reste à coordonner hors lot ; son texte intégral n'est pas fourni. La suppression du minimum contraint aussi les gestionnaires à ne plus opposer ce seul motif : coût opérationnel net non établi. Corps du brouillon conservé sans retouche stylistique.",
+      "new_burdens_review": "Le seuil opposable au participant disparaît, mais les gestionnaires perdent la faculté de refuser les petits versements sur ce seul fondement. Cette contrainte nouvelle de traitement est recensée ; aucun registre ni déclaration supplémentaire n'est créé et le coût net n'est pas établi.",
       "effects": [
         {
           "kind": "obligation_removed",
-          "measure_id": "pee-fin-minimum-versement-volontaire",
-          "description": "Retrait du seuil d'accès à chaque support.",
-          "before": "Montant minimum par support possible sous plafond ministériel.",
-          "after": "Aucun minimum exigible pour les nouveaux versements, plans existants inclus.",
+          "measure_id": "pee-suppression-minimum-versement",
+          "description": "Retrait du ticket minimum par support opposable aux participants.",
+          "before": "Minimum facultatif fixé par le règlement, plafonné par arrêté.",
+          "after": "Aucun minimum opposable pour un versement volontaire ; plafonds annuels inchangés.",
           "unit": "legal_duty",
-          "affected_population": "Entreprises et bénéficiaires du dispositif visé à l'article R3332-9",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme selon la transition écrite ; droits antérieurs conservés dans leur champ.",
-          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément maintenues conservent leur champ.",
+          "affected_population": "Participants aux plans auxquels R3332-9 est applicable.",
+          "conditions_and_transition": "Versements dès entrée en vigueur, plans existants inclus, droits antérieurs préservés.",
+          "replacement_or_new_burdens": "Interdiction corrélative d’opposer ce minimum ; coût de traitement non chiffré.",
+          "source_quote": "Le règlement du plan d'épargne d'entreprise peut prévoir, pour chaque versement volontaire des participants, un montant minimum par support de placement.",
+          "proposed_quote": "Aucun montant minimum par support de placement ne peut être imposé pour un versement volontaire d'un participant."
+        },
+        {
+          "kind": "obligation_added",
+          "measure_id": "pee-suppression-minimum-versement",
+          "description": "Interdiction corrélative faite aux gestionnaires d’opposer un ticket minimum.",
+          "before": "Faculté d’imposer un minimum sous plafond réglementaire.",
+          "after": "Obligation de ne plus opposer un minimum par support aux versements volontaires.",
+          "unit": "legal_duty",
+          "affected_population": "Entreprises et gestionnaires de plans concernés.",
+          "conditions_and_transition": "Versements futurs, y compris plans existants ; aucun nouveau support imposé.",
+          "replacement_or_new_burdens": "Coûts de traitement possibles ; absence de solde net démontré.",
           "source_quote": "Le règlement du plan d'épargne d'entreprise peut prévoir, pour chaque versement volontaire des participants, un montant minimum par support de placement.",
           "proposed_quote": "Aucun montant minimum par support de placement ne peut être imposé pour un versement volontaire d'un participant."
         }
@@ -739,19 +832,22 @@
     "change_type": "normative_reduction",
     "reform_policy_id": "editorial_direction_2026_10_19",
     "removed_provisions": [
-      "Faculté d'imposer à chaque versement volontaire un montant minimum par support de placement."
+      "Faculté d'imposer un montant minimum pour chaque versement volontaire par support de placement.",
+      "Renvoi à un arrêté conjoint fixant la limite maximale des minima de versement autorisés."
     ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "a533a44865efcc6144defcb66dc8a780d022fb67336f47dd9da0bf946b79891b",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "faad87511756c61f7dbc7d1e822b68c3734e9987706fd9a69a03322fd8f09647",
-      "assessment_sha256": "6c25a7f7180b044328741113c00c20b367f59798f85f277bb5b46b2c271a5385",
+      "assessment_sha256": "15a7a6bdfc7740ecd458973ea4c8070683536eaaada05c9a8428ec9b149fd67d",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "faad87511756c61f7dbc7d1e822b68c3734e9987706fd9a69a03322fd8f09647"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -760,28 +856,39 @@
     "number": "D3332-9-1",
     "proposed_xml": "\n<p>Les versements annuels d'un bénéficiaire mentionné à l'avant-dernier alinéa de l'article L. 3332-2 aux plans d'épargne salariale auxquels il participe ne peuvent excéder un quart de son revenu professionnel imposé à l'impôt sur le revenu au titre de l'année précédente.</p>\n<p>Les dérogations et exclusions de l'assiette de ce plafond prévues à l'article L. 3332-10 demeurent applicables, notamment le plafond d'une fois le revenu professionnel de l'année précédente pour les versements à destination du fonds mentionné à l'article L. 3332-16.</p><p>Cette précision s'applique aux versements effectués à compter de l'entrée en vigueur de la loi portant la présente réforme, sans remettre en cause les droits et recours relatifs aux versements antérieurs.</p>",
     "reason": "Coordination favorable du plafond réglementaire d'un quart avec les exceptions législatives de L3332-10 : sa formulation absolue ne doit pas fermer le plafond d'une fois le revenu pour le fonds de reprise. Le taux ordinaire d'un quart n'est pas supprimé ni présenté comme un prélèvement.",
-    "review_notes": "L3332-10 lu dans le corpus vise aussi les personnes de L3332-2, donc les intermédiaires non salariés. Son premier alinéa comporte la limite d'une rémunération ou d'un revenu pour le fonds L3332-16 ; son troisième alinéa exclut certains droits CET et jours de repos selon leurs conditions. Nouveaux renvois L3332-10 et L3332-16 : tous deux lus intégralement dans le corpus, mais non fournis dans reference-targets ; aucune extension du champ du fonds n'est prétendue.",
+    "review_notes": "Coordination nécessaire déjà opérée, conservée : la source « ne peuvent excéder un quart » doit se lire avec L3332-10 entier qui autorise « une fois la rémunération annuelle ou le revenu professionnel » pour L3332-16. L3332-2 entier confirme que l'avant-dernier alinéa concerne les commerciaux non salariés, non les conjoints sans revenu du deuxième alinéa de L3332-10. Aucune nouvelle qualité de bénéficiaire n'est créée. L3332-16 source et projet entiers conservent le fonds et le 2° malgré la suppression de ses seuils et des trois ans. L3335-2 entier conserve également l'exclusion des transferts du plafond ; le présent article ne l'écarte pas. Transition compatible : les droits antérieurs restent réservés et la précision future ne vaut pas dénégation des dérogations législatives déjà applicables. Références examinées dans le corpus local en lecture seule ; reference-targets.json ne fournit ici ni cible ni renvoyant. Les vérifications décrites ne constituent pas une validation globale des neuf recueils.",
     "status": "rewrite_draft",
-    "reference_checks": [],
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "166915e3ccd02ca2a824e82786fd1144ae00c8c9a2baea35b770f37c5c18c2a3",
+      "status": "rewrite_draft",
+      "proposed_xml": "\n<p>Les versements annuels d'un bénéficiaire mentionné à l'avant-dernier alinéa de l'article L. 3332-2 aux plans d'épargne salariale auxquels il participe ne peuvent excéder un quart de son revenu professionnel imposé à l'impôt sur le revenu au titre de l'année précédente.</p>\n<p>Les dérogations et exclusions de l'assiette de ce plafond prévues à l'article L. 3332-10 demeurent applicables, notamment le plafond d'une fois le revenu professionnel de l'année précédente pour les versements à destination du fonds mentionné à l'article L. 3332-16.</p><p>Cette précision s'applique aux versements effectués à compter de l'entrée en vigueur de la loi portant la présente réforme, sans remettre en cause les droits et recours relatifs aux versements antérieurs.</p>",
+      "reason": "Coordination favorable du plafond réglementaire d'un quart avec les exceptions législatives de L3332-10 : sa formulation absolue ne doit pas fermer le plafond d'une fois le revenu pour le fonds de reprise. Le taux ordinaire d'un quart n'est pas supprimé ni présenté comme un prélèvement.",
+      "review_notes": "L3332-10 lu dans le corpus vise aussi les personnes de L3332-2, donc les intermédiaires non salariés. Son premier alinéa comporte la limite d'une rémunération ou d'un revenu pour le fonds L3332-16 ; son troisième alinéa exclut certains droits CET et jours de repos selon leurs conditions. Nouveaux renvois L3332-10 et L3332-16 : tous deux lus intégralement dans le corpus, mais non fournis dans reference-targets ; aucune extension du champ du fonds n'est prétendue.",
+      "proposed_sha256": "88e248ba475e0436193cc7d5a9bcdd62962f17650f7817c3a7122ebd3b6e1d42",
+      "batch_row_sha256": "6f0a3dda05766ca2ba2a33919e2c721377a8f2ee05e1515676b71d13c2331565"
+    },
     "substantive_impact": {
       "version": 1,
       "classification": "coordination_only",
       "assessment": "Coordination favorable du plafond réglementaire d'un quart avec les exceptions législatives de L3332-10 : sa formulation absolue ne doit pas fermer le plafond d'une fois le revenu pour le fonds de reprise. Le taux ordinaire d'un quart n'est pas supprimé ni présenté comme un prélèvement.",
-      "scope_limitations": "L3332-10 lu dans le corpus vise aussi les personnes de L3332-2, donc les intermédiaires non salariés. Son premier alinéa comporte la limite d'une rémunération ou d'un revenu pour le fonds L3332-16 ; son troisième alinéa exclut certains droits CET et jours de repos selon leurs conditions. Nouveaux renvois L3332-10 et L3332-16 : tous deux lus intégralement dans le corpus, mais non fournis dans reference-targets ; aucune extension du champ du fonds n'est prétendue.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun dépôt, registre, certificat ou délai de remplacement n'est institué. Les droits et contrôles autonomes demeurent ; le solde global de coût des codes n'est pas établi.",
+      "scope_limitations": "Coordination nécessaire déjà opérée, conservée : la source « ne peuvent excéder un quart » doit se lire avec L3332-10 entier qui autorise « une fois la rémunération annuelle ou le revenu professionnel » pour L3332-16. L3332-2 entier confirme que l'avant-dernier alinéa concerne les commerciaux non salariés, non les conjoints sans revenu du deuxième alinéa de L3332-10. Aucune nouvelle qualité de bénéficiaire n'est créée. L3332-16 source et projet entiers conservent le fonds et le 2° malgré la suppression de ses seuils et des trois ans. L3335-2 entier conserve également l'exclusion des transferts du plafond ; le présent article ne l'écarte pas. Transition compatible : les droits antérieurs restent réservés et la précision future ne vaut pas dénégation des dérogations législatives déjà applicables.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la coordination conserve les plafonds, garanties et procédures autonomes sans créer de déclaration, registre ou délai de remplacement. Aucun solde global des codes n'est chiffré.",
       "effects": [
         {
           "kind": "coordination",
-          "measure_id": "pee-plafond-versements-exceptions-legales",
-          "description": "Préservation explicite des exceptions légales favorables.",
-          "before": "Formulation réglementaire absolue du quart du revenu antérieur.",
-          "after": "Quart conservé sous les exceptions de L3332-10, notamment une fois le revenu pour le fonds éligible.",
+          "measure_id": "pee-plafond-fonds-reprise",
+          "description": "Explicitation de la primauté des dérogations législatives existantes.",
+          "before": "Plafond réglementaire formulé comme un quart du revenu professionnel imposé de l’année précédente ; dérogations légales déjà existantes.",
+          "after": "Même quart ordinaire, réserve expresse du plafond d’une fois le revenu pour le fonds de reprise et des exclusions légales.",
           "unit": "other",
-          "affected_population": "Entreprises et bénéficiaires du dispositif visé à l'article D3332-9-1",
-          "conditions_and_transition": "Application à compter de l'entrée en vigueur de la réforme selon la transition écrite ; droits antérieurs conservés dans leur champ.",
-          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes expressément maintenues conservent leur champ.",
-          "source_quote": "ne peuvent excéder un quart de son revenu professionnel",
-          "proposed_quote": "Les dérogations et exclusions de l'assiette de ce plafond prévues à l'article L. 3332-10 demeurent applicables"
+          "affected_population": "Bénéficiaires non salariés de l’avant-dernier alinéa de L3332-2.",
+          "conditions_and_transition": "Versements futurs ; aucune remise en cause des droits légaux antérieurs ni des conditions du fonds.",
+          "replacement_or_new_burdens": "Aucune formalité nouvelle ; aucun gain fiscal autonome compté.",
+          "source_quote": "ne peuvent excéder un quart de son revenu professionnel imposé à l'impôt sur le revenu au titre de l'année précédente.",
+          "proposed_quote": "Les dérogations et exclusions de l'assiette de ce plafond prévues à l'article L. 3332-10 demeurent applicables, notamment le plafond d'une fois le revenu professionnel de l'année précédente pour les versements à destination du fonds mentionné à l'article L. 3332-16."
         }
       ]
     },
@@ -790,12 +897,14 @@
       "source_sha256": "166915e3ccd02ca2a824e82786fd1144ae00c8c9a2baea35b770f37c5c18c2a3",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "88e248ba475e0436193cc7d5a9bcdd62962f17650f7817c3a7122ebd3b6e1d42",
-      "assessment_sha256": "1f61a26f4e9e0fc705135b9e31b5eebb199ad3e5ee79b533b0bc31185eac35ae",
+      "assessment_sha256": "bbe48f3b681c52ab1550c45583e99ebb1f5c67a1c48ac9588c3a1dcb8efb6d0b",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "88e248ba475e0436193cc7d5a9bcdd62962f17650f7817c3a7122ebd3b6e1d42"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -803,17 +912,28 @@
     "source_sha256": "bf64af5b5ef233b129c8561c72058652f34dc1517f66253a780c29da65a93d56",
     "number": "R3332-10",
     "proposed_xml": null,
-    "reason": "Maintien du délai maximal de quinze jours pour investir les fonds reçus ou dus. Cette obligation du gestionnaire protège le salarié contre une rétention de trésorerie : ce n'est ni un délai minimal d'attente ni le préavis de rupture. Les catégories d'actifs et le renvoi à la loi du 9 juillet 1984 sont conservés.",
-    "review_notes": "Les quinze jours courent du versement de l'adhérent ou de la date d'exigibilité selon l'origine des sommes. Le champ de la loi n°84-578 demeure inchangé ; le corpus ne permet pas une consolidation de cette loi extérieure.",
+    "reason": "Maintien du délai maximal de quinze jours pour investir les fonds reçus ou dus. Cette obligation du gestionnaire protège le salarié contre une rétention de trésorerie : ce n'est ni un délai minimal d'attente ni le préavis de rupture. Les catégories d'actifs et le renvoi à la loi du 9 juillet 1984 sont conservés. Seconde passe : maintien confirmé après examen des interactions précisées en notes ; aucune suppression justifiée d’une charge autonome ni correction normative démontrée dans ce champ.",
+    "review_notes": "Différence de champ : « dans un délai de quinze jours à compter respectivement de leur versement par l'adhérent ou de la date à laquelle elles sont dues » impose l'emploi des sommes reçues ou dues ; ce délai n'est ni le choix de paiement de R3313-12, ni le versement après perception de R3332-12. La suppression de ce dernier délai coordonnée dans le lot ne permet aucune rétention des fonds déjà reçus. L3332-11 conserve les versements unilatéraux et R3332-13 les sommes de la dernière période après départ. R3333-1/R3334-1 entiers étendent ces règles aux plans concernés. Article 11 de la loi 84-578 non repéré intégralement : validité du renvoi historique extérieur non vérifiable, sans suppression des titres éligibles par présomption. Références examinées dans le corpus local en lecture seule ; reference-targets.json ne fournit ici ni cible ni renvoyant. Les vérifications décrites ne constituent pas une validation globale des neuf recueils.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "bf64af5b5ef233b129c8561c72058652f34dc1517f66253a780c29da65a93d56",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien du délai maximal de quinze jours pour investir les fonds reçus ou dus. Cette obligation du gestionnaire protège le salarié contre une rétention de trésorerie : ce n'est ni un délai minimal d'attente ni le préavis de rupture. Les catégories d'actifs et le renvoi à la loi du 9 juillet 1984 sont conservés.",
+      "review_notes": "Les quinze jours courent du versement de l'adhérent ou de la date d'exigibilité selon l'origine des sommes. Le champ de la loi n°84-578 demeure inchangé ; le corpus ne permet pas une consolidation de cette loi extérieure.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "e7906a92c742dc7dc367ed89405706b043efb8d12c5d009da51a625df2b94a16"
+    },
     "classification": "retained_necessary",
-    "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien du délai maximal de quinze jours pour investir les fonds reçus ou dus. Cette obligation du gestionnaire protège le salarié contre une rétention de trésorerie : ce n'est ni un délai minimal d'attente ni le préavis de rupture. Les catégories d'actifs et le renvoi à la loi du 9 juillet 1984 sont conservés.",
-      "scope_limitations": "Les quinze jours courent du versement de l'adhérent ou de la date d'exigibilité selon l'origine des sommes. Le champ de la loi n°84-578 demeure inchangé ; le corpus ne permet pas une consolidation de cette loi extérieure.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "scope_limitations": "Différence de champ : « dans un délai de quinze jours à compter respectivement de leur versement par l'adhérent ou de la date à laquelle elles sont dues » impose l'emploi des sommes reçues ou dues ; ce délai n'est ni le choix de paiement de R3313-12, ni le versement après perception de R3332-12. La suppression de ce dernier délai coordonnée dans le lot ne permet aucune rétention des fonds déjà reçus. L3332-11 conserve les versements unilatéraux et R3332-13 les sommes de la dernière période après départ. R3333-1/R3334-1 entiers étendent ces règles aux plans concernés. Article 11 de la loi 84-578 non repéré intégralement : validité du renvoi historique extérieur non vérifiable, sans suppression des titres éligibles par présomption.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la règle source est maintenue intégralement, sans nouveau registre, délai, justificatif ni condition. Ce maintien ne démontre aucune réduction nette à l'échelle des codes.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -821,12 +941,14 @@
       "source_sha256": "bf64af5b5ef233b129c8561c72058652f34dc1517f66253a780c29da65a93d56",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "a2438f10c14eff16a594728010ce63b6025b3c6652bf358b1e758821f753a2db",
+      "assessment_sha256": "a8bc4ccf27745b6682b69365271a27cef78ebadcf0fc23ebb485aa65bf223209",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -834,17 +956,28 @@
     "source_sha256": "c5df7afa39a6c75adf9f6117e0afe8eec726fb876f4c2b0a0249dcd3f6e0950b",
     "number": "R3332-11",
     "proposed_xml": null,
-    "reason": "Maintien de l'échéance d'exécution de l'abondement promis : concomitance, au plus tard fin d'exercice et avant le départ. La supprimer permettrait à l'employeur de retarder un droit déjà engagé ; aucun rapport annuel ou prélèvement accessoire ne résulte de cet article.",
-    "review_notes": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
+    "reason": "Maintien de l'échéance d'exécution de l'abondement promis : concomitance, au plus tard fin d'exercice et avant le départ. La supprimer permettrait à l'employeur de retarder un droit déjà engagé ; aucun rapport annuel ou prélèvement accessoire ne résulte de cet article. Seconde passe : maintien confirmé après examen des interactions précisées en notes ; aucune suppression justifiée d’une charge autonome ni correction normative démontrée dans ce champ.",
+    "review_notes": "Différence de champ et articulation spéciale : « avant le départ de l'adhérent de l'entreprise » concerne l'abondement engagé sur les versements pendant l'emploi ; R3332-13 alinéa 2 prévoit expressément, pour la dernière période d'activité payée après départ, que « ce versement fait l'objet d'un versement complémentaire de l'entreprise ». Cette permission spéciale postérieure au départ ne doit pas être neutralisée par l'échéance générale antérieure. Les deux règles sont conservées, sans imposer un abondement nouveau ni un délai supplémentaire. L3332-11 source et projet conservent le caractère complémentaire hors ses 1° et 2°. Le préavis individuel de quinze jours ne diffère pas cette créance et ne l'assimile pas à l'indemnité ordinaire de rupture. Références examinées dans le corpus local en lecture seule ; reference-targets.json ne fournit ici ni cible ni renvoyant. Les vérifications décrites ne constituent pas une validation globale des neuf recueils.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "c5df7afa39a6c75adf9f6117e0afe8eec726fb876f4c2b0a0249dcd3f6e0950b",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien de l'échéance d'exécution de l'abondement promis : concomitance, au plus tard fin d'exercice et avant le départ. La supprimer permettrait à l'employeur de retarder un droit déjà engagé ; aucun rapport annuel ou prélèvement accessoire ne résulte de cet article.",
+      "review_notes": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "d2009d55ee4a53e67b90608381a76a145a58da21c7f9e748fcd6b437be00de50"
+    },
     "classification": "retained_necessary",
-    "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien de l'échéance d'exécution de l'abondement promis : concomitance, au plus tard fin d'exercice et avant le départ. La supprimer permettrait à l'employeur de retarder un droit déjà engagé ; aucun rapport annuel ou prélèvement accessoire ne résulte de cet article.",
-      "scope_limitations": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "scope_limitations": "Différence de champ et articulation spéciale : « avant le départ de l'adhérent de l'entreprise » concerne l'abondement engagé sur les versements pendant l'emploi ; R3332-13 alinéa 2 prévoit expressément, pour la dernière période d'activité payée après départ, que « ce versement fait l'objet d'un versement complémentaire de l'entreprise ». Cette permission spéciale postérieure au départ ne doit pas être neutralisée par l'échéance générale antérieure. Les deux règles sont conservées, sans imposer un abondement nouveau ni un délai supplémentaire. L3332-11 source et projet conservent le caractère complémentaire hors ses 1° et 2°. Le préavis individuel de quinze jours ne diffère pas cette créance et ne l'assimile pas à l'indemnité ordinaire de rupture.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la règle source est maintenue intégralement, sans nouveau registre, délai, justificatif ni condition. Ce maintien ne démontre aucune réduction nette à l'échelle des codes.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -852,74 +985,138 @@
       "source_sha256": "c5df7afa39a6c75adf9f6117e0afe8eec726fb876f4c2b0a0249dcd3f6e0950b",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "86b8f0c46758d8e1f38275a0e918d8159d810ebd21e9ddcf904c6c1039bdc9ac",
+      "assessment_sha256": "29e0066c4690cf47349393e3bd7633a81f9f01ca73646b12679d56dd14c247b2",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000018533132",
     "source_sha256": "8918f0a6b937b75d28dd44b15f3e920487f96220453df8e3f7a397bf4107c590",
     "number": "R3332-12",
-    "proposed_xml": null,
-    "reason": "Maintien du délai de quinze jours d'affectation volontaire de l'intéressement reçu. Ce délai articule le choix de placement avec l'avantage fiscal ; une suppression réglementaire isolée ne garantirait pas le maintien de l'exonération fiscale correspondante. Il n'impose aucun versement au salarié qui ne choisit pas le plan.",
-    "review_notes": "Le délai maximum court de la perception effective et non de la notification d'une rupture. La coordination fiscale éventuelle doit porter sur l'article 163 bis B du CGI avant de retirer ce délai ; aucune extension fiscale non écrite n'est présumée.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
-    "reference_checks": [],
+    "proposed_xml": "<p>Les sommes attribuées au titre de l'intéressement que les salariés souhaitent affecter à la réalisation d'un plan d'épargne d'entreprise peuvent être versées dans ce plan sans délai maximum à compter de leur perception.</p><p>Cette règle s'applique aux sommes attribuées à compter de l'entrée en vigueur de la loi supprimant la condition de délai d'affectation prévue à l'article L. 3315-2. Elle ne modifie ni les délais de demande du versement immédiat ni l'affectation par défaut, ni les règles d'indisponibilité, ni le délai d'emploi des fonds reçus ou dus prévu à l'article R. 3332-10. L'exonération reste régie par l'article L. 3315-2, notamment pour son plafond, son rattachement à l'année d'imposition initiale, l'absence de double exonération et les délais de réclamation et de restitution.</p><p>Les sommes attribuées avant cette entrée en vigueur demeurent soumises au délai maximum de quinze jours à compter de leur perception, selon les dispositions antérieurement applicables ; leurs droits à exonération et leurs recours demeurent préservés.</p>",
+    "reason": "Contradiction effective avec le maintien précédent : R3332-12 exigeait un « délai maximum de quinze jours », alors que L3315-2 proposé dispose que « l'affectation au plan et l'exonération prévue au premier alinéa ne peuvent être refusées au seul motif du dépassement d'un délai réglementaire ». Coordination de la réforme déjà acquise : suppression du délai pour les attributions nouvelles, maintien explicite du droit ancien. Ce n'est ni une baisse du taux d'impôt ni une seconde mesure d'allègement distincte.",
+    "review_notes": "L3315-2, R3313-12, R3332-10 et CGI 81/163 bis B, sources et propositions disponibles intégrales avec NOTA, ont été lus. Correction du motif antérieur : le fondement direct de l'exonération de l'intéressement est L3315-2 et CGI 81 18° bis, pas seulement 163 bis B. CGI 81 conserve « Dans la limite du montant prévu au premier alinéa de l'article L. 3315-2 » et la condition de dépôt de l'accord ; aucune de ces conditions autonomes n'est retirée ici. R3313-12 garde les quinze jours à compter de l'information pour demander le paiement ; R3332-10 garde ceux d'emploi des fonds. Transition compatible : attribution après entrée en vigueur, non simple paiement après celle-ci ; prescriptions non rouvertes. L3315-2 proposé contient déjà le rattachement fiscal et l'interdiction de double exonération. R3333-1 et R3334-1 entiers conservent leurs renvois d'application aux autres plans ; aucune extension aux PER du CMF non couverts par ces renvois n'est présumée. Références examinées dans le corpus local en lecture seule ; reference-targets.json ne fournit ici ni cible ni renvoyant. Les vérifications décrites ne constituent pas une validation globale des neuf recueils.",
+    "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "8918f0a6b937b75d28dd44b15f3e920487f96220453df8e3f7a397bf4107c590",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien du délai de quinze jours d'affectation volontaire de l'intéressement reçu. Ce délai articule le choix de placement avec l'avantage fiscal ; une suppression réglementaire isolée ne garantirait pas le maintien de l'exonération fiscale correspondante. Il n'impose aucun versement au salarié qui ne choisit pas le plan.",
+      "review_notes": "Le délai maximum court de la perception effective et non de la notification d'une rupture. La coordination fiscale éventuelle doit porter sur l'article 163 bis B du CGI avant de retirer ce délai ; aucune extension fiscale non écrite n'est présumée.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "34cea405edab58ee579a72560dbaee2d7291e5da937213aa69655e98baa578ca"
+    },
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien du délai de quinze jours d'affectation volontaire de l'intéressement reçu. Ce délai articule le choix de placement avec l'avantage fiscal ; une suppression réglementaire isolée ne garantirait pas le maintien de l'exonération fiscale correspondante. Il n'impose aucun versement au salarié qui ne choisit pas le plan.",
-      "scope_limitations": "Le délai maximum court de la perception effective et non de la notification d'une rupture. La coordination fiscale éventuelle doit porter sur l'article 163 bis B du CGI avant de retirer ce délai ; aucune extension fiscale non écrite n'est présumée.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Contradiction effective avec le maintien précédent : R3332-12 exigeait un « délai maximum de quinze jours », alors que L3315-2 proposé dispose que « l'affectation au plan et l'exonération prévue au premier alinéa ne peuvent être refusées au seul motif du dépassement d'un délai réglementaire ». Coordination de la réforme déjà acquise : suppression du délai pour les attributions nouvelles, maintien explicite du droit ancien. Ce n'est ni une baisse du taux d'impôt ni une seconde mesure d'allègement distincte.",
+      "scope_limitations": "L3315-2, R3313-12, R3332-10 et CGI 81/163 bis B, sources et propositions disponibles intégrales avec NOTA, ont été lus. Correction du motif antérieur : le fondement direct de l'exonération de l'intéressement est L3315-2 et CGI 81 18° bis, pas seulement 163 bis B. CGI 81 conserve « Dans la limite du montant prévu au premier alinéa de l'article L. 3315-2 » et la condition de dépôt de l'accord ; aucune de ces conditions autonomes n'est retirée ici. R3313-12 garde les quinze jours à compter de l'information pour demander le paiement ; R3332-10 garde ceux d'emploi des fonds. Transition compatible : attribution après entrée en vigueur, non simple paiement après celle-ci ; prescriptions non rouvertes. L3315-2 proposé contient déjà le rattachement fiscal et l'interdiction de double exonération. R3333-1 et R3334-1 entiers conservent leurs renvois d'application aux autres plans ; aucune extension aux PER du CMF non couverts par ces renvois n'est présumée.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la coordination conserve les plafonds, garanties et procédures autonomes sans créer de déclaration, registre ou délai de remplacement. Aucun solde global des codes n'est chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "interessement-suppression-delai-affectation",
+          "description": "Mise en cohérence du règlement avec la suppression du délai dans L3315-2 proposé.",
+          "before": "Affectation dans les quinze jours de la perception, pour les salariés souhaitant placer leur intéressement.",
+          "after": "Aucun délai maximum depuis la perception pour les attributions nouvelles ; quinze jours conservés pour les attributions antérieures.",
+          "unit": "calendar_days",
+          "affected_population": "Salariés affectant l’intéressement au PEE et plans auxquels la règle est applicable.",
+          "conditions_and_transition": "Attributions à compter de la même entrée en vigueur que L3315-2 ; plafond fiscal et prescriptions maintenus.",
+          "replacement_or_new_burdens": "Aucune déclaration ou justificatif nouveau ; délais de choix et d’emploi des fonds conservés.",
+          "source_quote": "dans un délai maximum de quinze jours à compter de la date à laquelle elles ont été perçues.",
+          "proposed_quote": "peuvent être versées dans ce plan sans délai maximum à compter de leur perception."
+        }
+      ]
     },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Délai maximum de quinze jours après perception pour affecter au plan l'intéressement attribué après la réforme."
+    ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "8918f0a6b937b75d28dd44b15f3e920487f96220453df8e3f7a397bf4107c590",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "c479dda8e29909474d640c0476fb292f9e3a23067beda0bfd0bf15e4b679ee11",
+      "proposed_sha256": "7aba5a2ea3c805aeca6c1846a7b765378b25f74ada5ae3cd52212d8edc5c4140",
+      "assessment_sha256": "8d5e0d56aa0901cffe1c40fb561dd14e0f63954c3b7d9ecb577bdedc2c3cf00d",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000020464952",
     "source_sha256": "33e49db108946be4f5e7b288c217b1e2e7f80d9cc3e0748fba966e9b07313112",
     "number": "R3332-13",
-    "proposed_xml": null,
-    "reason": "Maintien de la continuité des versements au PERCO faute d'accès à un autre plan, et du droit d'affecter l'intéressement ou la participation de la dernière période après le départ, avec abondement possible. Les autres départs et les retraités gardent leurs champs distincts ; la rupture du contrat unique ne ferme pas ces avantages.",
-    "review_notes": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
-    "reference_checks": [],
+    "proposed_xml": "<p>L'ancien salarié de l'entreprise peut continuer à effectuer des versements dans le plan d'épargne pour la retraite collectif de son ancienne entreprise, même lorsqu'il a accès à un tel plan dans la nouvelle entreprise où il est employé, dans les conditions de l'article L. 3334-7. Cette faculté concerne le plan d'épargne pour la retraite collectif. Sous réserve du deuxième alinéa du présent article, l'ancien salarié qui a quitté l'entreprise pour un motif autre que le départ en retraite ou en préretraite ne peut effectuer de nouveaux versements au plan d'épargne d'entreprise.</p><p>Toutefois, lorsque le versement de l'intéressement, ou de la participation, au titre de la dernière période d'activité du salarié intervient après son départ de l'entreprise, il peut affecter cet intéressement ou cette participation au plan d'épargne de l'entreprise qu'il vient de quitter. Le règlement du plan peut prévoir que ce versement fait l'objet d'un versement complémentaire de l'entreprise suivant les conditions prévues pour l'ensemble des salariés.</p><p>La suppression de la condition d'absence d'accès à un plan d'épargne pour la retraite collectif s'applique aux versements effectués à compter de l'entrée en vigueur de la loi supprimant cette condition à l'article L. 3334-7, sur un plan dont le fonctionnement demeure légalement autorisé. Elle ne rétablit pas de versements antérieurs ni de droit à un abondement de l'ancien employeur. Les droits constitués, les frais antérieurs et les recours correspondants conservent leur régime. La faculté prévue au deuxième alinéa demeure applicable aux situations futures qui en remplissent les conditions.</p>",
+    "reason": "Contradiction effective : la source et le maintien précédent exigeaient que l'ancien salarié « n'a pas accès à un plan d'épargne pour la retraite collectif », alors que L3334-7 proposé dispose que « Cette possibilité demeure ouverte même lorsque le salarié a accès à un plan ». Retrait de cette restriction réglementaire ; coordination d'une seule mesure, sans nouvel avantage d'abondement. La phrase « Sauf dans ce cas » est remplacée pour éviter que l'élargissement du PERCO ouvre par inadvertance tous les versements au PEE. L'exception autonome de dernière période et son abondement possible sont intégralement conservés au deuxième alinéa.",
+    "review_notes": "L3334-7 source et proposition entières lues : les versements ordinaires de l'ancien salarié ne bénéficient pas d'abondement et leurs frais restent à sa charge avec plafonds. L3332-2 entier maintient les versements PEE des retraités et préretraités ; le deuxième alinéa du présent article maintient l'intéressement/participation de dernière période et l'abondement facultatif particulier, sans assimilation à un versement volontaire ordinaire de retraité. R3332-11 « avant le départ » est la règle générale ; la permission spéciale « intervient après son départ » demeure opérante. R3334-1 et R3333-1, lus entiers, ne doivent pas être utilisés pour transformer cette continuité PERCO en ouverture générale du PEE. Transition alignée sur L3334-7 : versements futurs, plans encore légalement autorisés, aucune réouverture de plans fermés ; le régime externe de fermeture/conversion des PERCO et les règlements privés ne sont pas fournis intégralement. Aucun préavis ni indemnité de rupture ne conditionne ce droit. Références examinées dans le corpus local en lecture seule ; reference-targets.json ne fournit ici ni cible ni renvoyant. Les vérifications décrites ne constituent pas une validation globale des neuf recueils.",
+    "status": "rewrite_draft",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "33e49db108946be4f5e7b288c217b1e2e7f80d9cc3e0748fba966e9b07313112",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien de la continuité des versements au PERCO faute d'accès à un autre plan, et du droit d'affecter l'intéressement ou la participation de la dernière période après le départ, avec abondement possible. Les autres départs et les retraités gardent leurs champs distincts ; la rupture du contrat unique ne ferme pas ces avantages.",
+      "review_notes": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "73665b16e4a6b432f9607fc570d71600eb0d44379e7bcc9dd96e049667030cbd"
+    },
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien de la continuité des versements au PERCO faute d'accès à un autre plan, et du droit d'affecter l'intéressement ou la participation de la dernière période après le départ, avec abondement possible. Les autres départs et les retraités gardent leurs champs distincts ; la rupture du contrat unique ne ferme pas ces avantages.",
-      "scope_limitations": "Maintien du champ et des conditions de la source, pour les situations futures éligibles comme pour les droits antérieurs. Aucune réforme de la rupture du contrat ne modifie cette règle d'épargne salariale.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Contradiction effective : la source et le maintien précédent exigeaient que l'ancien salarié « n'a pas accès à un plan d'épargne pour la retraite collectif », alors que L3334-7 proposé dispose que « Cette possibilité demeure ouverte même lorsque le salarié a accès à un plan ». Retrait de cette restriction réglementaire ; coordination d'une seule mesure, sans nouvel avantage d'abondement. La phrase « Sauf dans ce cas » est remplacée pour éviter que l'élargissement du PERCO ouvre par inadvertance tous les versements au PEE. L'exception autonome de dernière période et son abondement possible sont intégralement conservés au deuxième alinéa.",
+      "scope_limitations": "L3334-7 source et proposition entières lues : les versements ordinaires de l'ancien salarié ne bénéficient pas d'abondement et leurs frais restent à sa charge avec plafonds. L3332-2 entier maintient les versements PEE des retraités et préretraités ; le deuxième alinéa du présent article maintient l'intéressement/participation de dernière période et l'abondement facultatif particulier, sans assimilation à un versement volontaire ordinaire de retraité. R3332-11 « avant le départ » est la règle générale ; la permission spéciale « intervient après son départ » demeure opérante. R3334-1 et R3333-1, lus entiers, ne doivent pas être utilisés pour transformer cette continuité PERCO en ouverture générale du PEE. Transition alignée sur L3334-7 : versements futurs, plans encore légalement autorisés, aucune réouverture de plans fermés ; le régime externe de fermeture/conversion des PERCO et les règlements privés ne sont pas fournis intégralement. Aucun préavis ni indemnité de rupture ne conditionne ce droit.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la coordination conserve les plafonds, garanties et procédures autonomes sans créer de déclaration, registre ou délai de remplacement. Aucun solde global des codes n'est chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "perco-continuite-versements-ancien-salarie",
+          "description": "Suppression du verrou réglementaire incompatible avec L3334-7 proposé.",
+          "before": "Versements sur l’ancien PERCO autorisés faute d’accès à un PERCO dans la nouvelle entreprise.",
+          "after": "Accès au nouveau PERCO sans effet d’exclusion sur l’alimentation de l’ancien PERCO légalement autorisé.",
+          "unit": "legal_duty",
+          "affected_population": "Anciens salariés disposant d’un PERCO antérieur encore autorisé.",
+          "conditions_and_transition": "Versements futurs à la même date que L3334-7 ; frais, droits antérieurs et exception de dernière période préservés.",
+          "replacement_or_new_burdens": "Aucun nouvel abondement obligatoire ; frais et plafonds propres au PERCO conservés.",
+          "source_quote": "Lorsque l'ancien salarié de l'entreprise n'a pas accès à un plan d'épargne pour la retraite collectif, il peut continuer à effectuer des versements dans le plan d'épargne pour la retraite collectif de son ancienne entreprise.",
+          "proposed_quote": "L'ancien salarié de l'entreprise peut continuer à effectuer des versements dans le plan d'épargne pour la retraite collectif de son ancienne entreprise, même lorsqu'il a accès à un tel plan dans la nouvelle entreprise où il est employé, dans les conditions de l'article L. 3334-7."
+        }
+      ]
     },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Condition d'absence d'accès à un PERCO du nouvel emploi pour continuer les versements sur le PERCO antérieur."
+    ],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "33e49db108946be4f5e7b288c217b1e2e7f80d9cc3e0748fba966e9b07313112",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "2705888b2c1aad8be601b78d7f6417003ffb76c01e8c26c49fae18e1d6126289",
+      "proposed_sha256": "8354ac9c12af3d27d2e48c49cb8ecc8f70acb794d74e49ba537f797b24fca5bf",
+      "assessment_sha256": "0c42aebbc1a6639fad8296cf2e00bdd2ac3497f19e02d0e38d4ff4bb52f684e9",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "code_id": "LEGITEXT000006072050",
@@ -927,17 +1124,28 @@
     "source_sha256": "ef69ee84b0a9d2b2d20bd9c2064d06d9c3670653ae7eb8c76cf9d2145af7d4ba",
     "number": "R3332-13-1",
     "proposed_xml": null,
-    "reason": "Maintien de l'affectation subsidiaire au profil le moins risqué dans le plan d'entreprise, de groupe ou interentreprises. Cette protection du bénéficiaire silencieux évite une affectation arbitraire ; elle ne crée ni compte de capitalisation obligatoire de retraite ni prélèvement nouveau.",
-    "review_notes": "Les renvois au code monétaire et financier déterminent les véhicules admissibles, pas une garantie de capital. Les sources de ces articles extérieurs ne sont pas jointes ; le profil le moins risqué et la subsidiarité des trois plans restent inchangés.",
+    "reason": "Maintien de l'affectation subsidiaire au profil le moins risqué dans le plan d'entreprise, de groupe ou interentreprises. Cette protection du bénéficiaire silencieux évite une affectation arbitraire ; elle ne crée ni compte de capitalisation obligatoire de retraite ni prélèvement nouveau. Seconde passe : maintien confirmé après examen des interactions précisées en notes ; aucune suppression justifiée d’une charge autonome ni correction normative démontrée dans ce champ.",
+    "review_notes": "Différence de champ vérifiée : « A défaut de stipulation conventionnelle » est la règle subsidiaire de L3315-2 alinéa 2 et de R3313-12, lus en entier, lorsque le bénéficiaire ne demande pas le versement ou l'affectation. La suppression du délai d'affectation après perception dans R3332-12 ne supprime ni l'information ni les quinze jours de choix du paiement immédiat. Le « profil d'investissement le moins risqué » n'est pas une garantie de capital. CMF L214-7 à L214-7-4, L214-24-29 à L214-24-33 et L214-163 à L214-166 non fournis intégralement : concordance des véhicules non vérifiable ici. Aucun transfert obligatoire de cotisations vieillesse n'en résulte. Références examinées dans le corpus local en lecture seule ; reference-targets.json ne fournit ici ni cible ni renvoyant. Les vérifications décrites ne constituent pas une validation globale des neuf recueils.",
     "status": "retained_unchanged",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "ef69ee84b0a9d2b2d20bd9c2064d06d9c3670653ae7eb8c76cf9d2145af7d4ba",
+      "status": "retained_unchanged",
+      "proposed_xml": null,
+      "reason": "Maintien de l'affectation subsidiaire au profil le moins risqué dans le plan d'entreprise, de groupe ou interentreprises. Cette protection du bénéficiaire silencieux évite une affectation arbitraire ; elle ne crée ni compte de capitalisation obligatoire de retraite ni prélèvement nouveau.",
+      "review_notes": "Les renvois au code monétaire et financier déterminent les véhicules admissibles, pas une garantie de capital. Les sources de ces articles extérieurs ne sont pas jointes ; le profil le moins risqué et la subsidiarité des trois plans restent inchangés.",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "batch_row_sha256": "fcc3b75daf5ed27062402eba572d2f26f0ab014c26059d3032b6ed6f1b227da5"
+    },
     "classification": "retained_necessary",
-    "reference_checks": [],
     "substantive_impact": {
       "version": 1,
       "classification": "retained_necessary",
       "assessment": "Maintien de l'affectation subsidiaire au profil le moins risqué dans le plan d'entreprise, de groupe ou interentreprises. Cette protection du bénéficiaire silencieux évite une affectation arbitraire ; elle ne crée ni compte de capitalisation obligatoire de retraite ni prélèvement nouveau.",
-      "scope_limitations": "Les renvois au code monétaire et financier déterminent les véhicules admissibles, pas une garantie de capital. Les sources de ces articles extérieurs ne sont pas jointes ; le profil le moins risqué et la subsidiarité des trois plans restent inchangés.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps officiel est maintenu intégralement, sans ajout de donnée, justificatif, délai ou condition. Aucun solde de coût global des codes n'est chiffré.",
+      "scope_limitations": "Différence de champ vérifiée : « A défaut de stipulation conventionnelle » est la règle subsidiaire de L3315-2 alinéa 2 et de R3313-12, lus en entier, lorsque le bénéficiaire ne demande pas le versement ou l'affectation. La suppression du délai d'affectation après perception dans R3332-12 ne supprime ni l'information ni les quinze jours de choix du paiement immédiat. Le « profil d'investissement le moins risqué » n'est pas une garantie de capital. CMF L214-7 à L214-7-4, L214-24-29 à L214-24-33 et L214-163 à L214-166 non fournis intégralement : concordance des véhicules non vérifiable ici. Aucun transfert obligatoire de cotisations vieillesse n'en résulte.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la règle source est maintenue intégralement, sans nouveau registre, délai, justificatif ni condition. Ce maintien ne démontre aucune réduction nette à l'échelle des codes.",
       "effects": []
     },
     "substantive_impact_certificate": {
@@ -945,11 +1153,13 @@
       "source_sha256": "ef69ee84b0a9d2b2d20bd9c2064d06d9c3670653ae7eb8c76cf9d2145af7d4ba",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "888f7b54ed22f887c3028e0c0dfbee53f0507525c4e7116d98fe40e3b4e999ed",
+      "assessment_sha256": "8512577acf3a94b0aeba45ccb165790380cb660d3d823a8823074abd6431d16e",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
-    }
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   }
 ]

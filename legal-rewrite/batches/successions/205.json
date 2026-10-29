@@ -292,48 +292,241 @@
     "source_id": "LEGIARTI000048852299",
     "source_sha256": "20fb9d240f35c6e5e1599f2d45af4cc9bab7cec8e94ad880a1c1935b138c4d16",
     "number": "397",
-    "proposed_xml": "<p>Le présent article est abrogé pour les décès survenus à compter de l’entrée en vigueur de la présente loi.</p>\n<p>Pour les décès antérieurs à l’entrée en vigueur de la présente loi, les dispositions applicables à la date du décès continuent de régir les droits, obligations, garanties, contrôles, recouvrements, restitutions et recours. La suppression ne crée pas de droit général au remboursement des droits de ces décès.</p>\n<p>Cette abrogation ne remet pas en cause les créances civiles, les règles professionnelles de dépôt, les obligations de transparence pour un impôt distinct ni les engagements attachés à une donation entre vifs antérieure.</p>",
-    "reason": "Les crédits successoraux de paiement différé sur nue-propriété, soultes et droits viagers du conjoint cessent de s’appliquer aux décès futurs.",
-    "review_notes": " Orientation expresse editorial_direction_2026_10_19 et successions. Suppression sans seuil, condition de financement ni prélèvement de remplacement pour les décès futurs. Donations entre vifs, droit civil et impôts ayant un fait générateur distinct préservés. Coordination légistique finale et contrôle juridique restant nécessaires.",
+    "proposed_xml": "<p>Le présent article est abrogé pour les décès survenus à compter de l’entrée en vigueur de la loi supprimant les droits de mutation par décès. Aucun paiement différé, intérêt ni garantie n’est exigible au titre de ces droits pour ces décès.</p>\n<p>Pour les décès antérieurs, le crédit de paiement différé demeure ouvert pour les droits restant légalement dus dans chacun des trois cas prévus par le présent article dans sa rédaction antérieure : dévolution de biens en nue-propriété ; attribution préférentielle ou réduction dans les conditions de l’article 1722 bis du code général des impôts ; exercice des droits viagers d’habitation et d’usage du conjoint successible, dans la limite de la fraction des droits correspondant à la valeur imposable de l’immeuble grevé. Les conditions, limites, dispenses d’intérêts, garanties admises et échéances de ces crédits restent applicables selon leurs règles temporelles propres, y compris aux demandes formées après cette entrée en vigueur.</p>\n<p>La date du décès ne fige pas les règles procédurales du crédit : les dispositions du présent article issues du décret n° 2023-1324 du 28 décembre 2023 continuent à s’appliquer aux demandes formulées à compter du 1er février 2024. Les simplifications des articles 399 et 400 et les garanties de l’article 403 s’appliquent dans leur champ et selon leurs transitions propres aux crédits relatifs à ces décès antérieurs.</p>\n<p>Les créances, restitutions, contrôles, recouvrements, prescriptions et recours relatifs aux décès antérieurs sont conservés. La suppression n’ouvre aucun droit général au remboursement des droits légalement dus. Les créances civiles, l’attribution préférentielle, les soultes, les droits du conjoint et les donations entre vifs conservent leur régime propre ; aucune taxe de remplacement n’est instituée.</p>",
+    "reason": "Contradiction effective de transition : le brouillon retenait « les dispositions applicables à la date du décès », tandis que la NOTA officielle prévoit « aux demandes de crédit de paiement fractionné ou différé formulées à compter du 1er février 2024 ». Le décès fixe le champ de l’abolition, non toutes les règles procédurales. La transition est corrigée pour conserver les trois cas favorables et les simplifications 399/400/403, y compris pour les demandes futures sur un décès ancien. L’abrogation prospective demeure une coordination de la suppression des droits successoraux, sans suppression d’un avantage sur une dette subsistante.",
+    "review_notes": "1717, 1722 bis et 404 B source/projet lus entièrement. Le 1° de 397 correspond à la nue-propriété avec option de dispense d’intérêts de 404 B ; le 2° aux soultes/récompenses avec limites et échéances propres ; le 3° aux droits viagers, pour la fraction immobilière imposable seulement. La note de 404 B distingue application au 1er février 2024 et application aux demandes à compter de cette date. Coordination hors lot nécessaire : les projets 1722 bis, 404 A, 404 B et 404 GA reprennent encore « à la date du décès » et doivent préserver leurs règles procédurales temporelles et les allègements des crédits en cours. Textes civils entiers 832, 924-3, 764 et LPF L269 non joints : aucun remaniement de leur régime civil ni de l’hypothèque n’est présumé. Les conditions anciennes sont conservées par transition d’abrogation, non réinventées. Sources et avant-images assignées conservées sans modification dans source.json ; cibles obligatoires et leurs empreintes conservées dans reference-targets.json. Les projets cités ne sont pas le droit en vigueur et cette analyse ne constitue pas une validation par juriste.",
+    "status": "rewrite_draft",
+    "reference_checks": [],
     "change_type": "full_repeal",
     "repeal_policy_id": "editorial_direction_2026_10_19",
-    "repeal_scope": "Les crédits successoraux de paiement différé sur nue-propriété, soultes et droits viagers du conjoint cessent de s’appliquer aux décès futurs."
+    "repeal_scope": "Extinction pour les nouveaux décès du régime fiscal de crédit différé lié aux droits successoraux intégralement supprimés ; droits aux crédits sur dettes anciennes conservés selon leurs transitions procédurales.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination de l’abolition successorale et correction d’une transition susceptible de retirer un crédit favorable aux demandes postérieures. Aucun nouvel allègement autonome de taux, d’intérêts ou de durée n’est créé.",
+      "scope_limitations": "Seuls les décès nouveaux sortent du régime ; les trois catégories de crédits anciens restent accessibles. Les transitions de 1722 bis, 404 A/B/GA nécessitent une correction hors lot. Textes civils externes non certifiés.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien des droits procéduraux applicables aux demandes anciennes ou futures sur une dette ancienne, sans formulaire, garantie ou délai supplémentaire ; aucun solde national chiffré.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "droits-succession-suppression",
+          "description": "Articuler les crédits et leurs accessoires avec l’absence de droits sur les nouveaux décès.",
+          "before": "Crédit ou intérêts successoraux sans exclusion générale des décès futurs.",
+          "after": "Crédits et avantages conservés pour les anciennes dettes ; aucun accessoire fiscal pour les droits supprimés.",
+          "unit": "legal_duty",
+          "affected_population": "Héritiers, légataires et bénéficiaires éligibles des crédits ; donations maintenues dans leur champ.",
+          "conditions_and_transition": "Décès à compter de l’entrée en vigueur hors taxe ; demandes et recours sur décès anciens conservés selon les règles temporelles propres.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; contrôles et droits autonomes conservés.",
+          "source_quote": "Le crédit de paiement différé prévu par l'article 1717 du code général des impôts est applicable aux droits d'enregistrement exigibles en raison des mutations par décès :",
+          "proposed_quote": "Le présent article est abrogé pour les décès survenus à compter de l’entrée en vigueur de la loi supprimant les droits de mutation par décès."
+        }
+      ]
+    },
+    "benefit_review": "Les trois avantages sont conservés sur dettes anciennes : différé de nue-propriété avec dispense d’intérêts optionnelle de 404 B, différé des soultes/récompenses, différé de la fraction immobilière grevée des droits viagers du conjoint. Les demandes postérieures bénéficient de leurs règles procédurales propres et des simplifications 399/400 ; aucun gel au décès ne les ferme. Les décès nouveaux sont intégralement hors droits successoraux, sans remplacement.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "20fb9d240f35c6e5e1599f2d45af4cc9bab7cec8e94ad880a1c1935b138c4d16",
+      "source_notes_sha256": "2fbce5aa26e56d14ec74bc4e7224d1615f479fda880024f57d1b293da5c40a93",
+      "proposed_sha256": "8bee94be1e946e40232005031f57a96e4819dde098d1e0e3757aaa9442ebc1e1",
+      "assessment_sha256": "e8ad78e144d687ccc211be53c70696b5caed73f081cdc56e44a55d7b3b69aa81",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "db322747d178ef4cea5167f4b992d1d03f84edbdd0d9ec6bbb4a79b22dc3e915"
   },
   {
     "code_id": "LEGITEXT000006069574",
     "source_id": "LEGIARTI000048852254",
     "source_sha256": "035e3e34d4bb87f3fb042b7e6aebea8837b26714f011fdaace525515151a8f85",
     "number": "404 A",
-    "proposed_xml": "<p>Le présent article est abrogé pour les décès survenus à compter de l’entrée en vigueur de la présente loi.</p>\n<p>Pour les décès antérieurs à l’entrée en vigueur de la présente loi, les dispositions applicables à la date du décès continuent de régir les droits, obligations, garanties, contrôles, recouvrements, restitutions et recours. La suppression ne crée pas de droit général au remboursement des droits de ces décès.</p>\n<p>Cette abrogation ne remet pas en cause les créances civiles, les règles professionnelles de dépôt, les obligations de transparence pour un impôt distinct ni les engagements attachés à une donation entre vifs antérieure.</p>",
-    "reason": "Les hypothèques, fractionnements, seuils de biens non liquides, échéanciers successoraux et leur justification cessent de s’appliquer aux décès futurs.",
-    "review_notes": " Orientation expresse editorial_direction_2026_10_19 et successions. Suppression sans seuil, condition de financement ni prélèvement de remplacement pour les décès futurs. Donations entre vifs, droit civil et impôts ayant un fait générateur distinct préservés. Coordination légistique finale et contrôle juridique restant nécessaires.",
+    "proposed_xml": "<p>Le présent article est abrogé pour les décès survenus à compter de l’entrée en vigueur de la présente loi.</p>\n<p>Pour les décès antérieurs à l’entrée en vigueur de la présente loi, les droits restant dus, leurs exonérations, les demandes de crédit, y compris celles présentées après cette entrée en vigueur, les garanties, contrôles, recouvrements, restitutions, prescriptions et recours demeurent régis par les dispositions applicables à ces décès et à ces demandes selon leurs règles temporelles propres. Les simplifications des articles 399, 400 et 403 applicables aux crédits en cours demeurent applicables. La suppression ne crée pas de droit général au remboursement des droits de ces décès.</p>\n<p>Cette abrogation ne remet pas en cause les créances civiles, les règles professionnelles de dépôt, les obligations de transparence pour un impôt distinct ni les engagements attachés à une donation entre vifs antérieure.</p>",
+    "reason": "Les hypothèques, fractionnements, seuils de biens non liquides, échéanciers successoraux et leur justification cessent de s’appliquer aux décès futurs. Coordination nécessaire de la transition : « les dispositions applicables à la date du décès » dans le brouillon pouvait figer les règles de demande de crédit et exclure les simplifications des crédits en cours. La transition conserve désormais leurs règles temporelles propres, sans rétablir les droits sur les décès nouveaux.",
+    "review_notes": "Transition corrigée après lecture des sources et NOTA : le 1er février 2024 est une date historique, non celle de la réforme. 396, 1° conserve les droits des anciens décès ; 402 conserve le premier versement et son mois de paiement. Le seuil de 50 %, les trois ou sept versements, les durées de un ou trois ans et toute la liste des biens non liquides restent dans le régime ancien applicable. 404 B continue à bénéficier de la garantie du premier alinéa pour ces anciens décès. Point hors lot : les transitions de 397 et 1722 bis emploient encore « à la date du décès » ; elles doivent être coordonnées pour ne pas figer les règles procédurales applicables selon la date de demande. LPF L. 269 II et les textes civils ne sont pas fournis dans le corpus des neuf recueils : contenu actuel non vérifiable ici, aucun changement de leurs garanties autonomes proposé.",
+    "status": "rewrite_draft",
     "change_type": "full_repeal",
     "repeal_policy_id": "editorial_direction_2026_10_19",
-    "repeal_scope": "Les hypothèques, fractionnements, seuils de biens non liquides, échéanciers successoraux et leur justification cessent de s’appliquer aux décès futurs."
+    "repeal_scope": "Suppression pour les nouveaux décès du dispositif de crédit successoral et de ses garanties devenus sans objet avec la suppression intégrale des droits de mutation par décès.",
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006069574|LEGIARTI000022343738",
+        "view_sha256": "cc4b0b375b17f1f3423326a67951a367e7b752e6e7ba5a9deb7b3ea52e409a4c",
+        "assessment": "Le 1° de 396 vise les mutations par décès et sa proposition réserve les droits aux décès anciens. La fermeture prospective de 404 A conserve leurs demandes futures et leurs garanties ; elle ne touche pas les 2° à 5°. Il s’agit de crédits fiscaux, sans condition d’ancienneté d’emploi ni notification de rupture ; le contrat unique privé est inapplicable."
+      }
+    ],
+    "benefit_review": "Les facilités et taux favorables de cet article sont conservés pour toutes les opérations encore imposables dans leur champ, y compris les demandes futures recevables. La fermeture aux nouveaux décès ou apports gratuits résulte de la suppression intégrale de leurs droits, sans prélèvement de remplacement ; elle ne ferme aucun avantage d’une donation entre vifs imposable. Transition corrigée après lecture des sources et NOTA : le 1er février 2024 est une date historique, non celle de la réforme. 396, 1° conserve les droits des anciens décès ; 402 conserve le premier versement et son mois de paiement. Le seuil de 50 %, les trois ou sept versements, les durées de un ou trois ans et toute la liste des biens non liquides restent dans le régime ancien applicable. 404 B continue à bénéficier de la garantie du premier alinéa pour ces anciens décès. Point hors lot : les transitions de 397 et 1722 bis emploient encore « à la date du décès » ; elles doivent être coordonnées pour ne pas figer les règles procédurales applicables selon la date de demande. LPF L. 269 II et les textes civils ne sont pas fournis dans le corpus des neuf recueils : contenu actuel non vérifiable ici, aucun changement de leurs garanties autonomes proposé.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Les hypothèques, fractionnements, seuils de biens non liquides, échéanciers successoraux et leur justification cessent de s’appliquer aux décès futurs. Coordination nécessaire de la transition : « les dispositions applicables à la date du décès » dans le brouillon pouvait figer les règles de demande de crédit et exclure les simplifications des crédits en cours. La transition conserve désormais leurs règles temporelles propres, sans rétablir les droits sur les décès nouveaux.",
+      "scope_limitations": "Examen limité au lot et aux cibles intégralement disponibles. Aucun solde national de coût ou de recettes chiffré ; les coordinations hors lot signalées restent ouvertes. Les anciens droits et les régimes autonomes ne sont pas supprimés.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : pas de déclaration, registre, délai minimal ou garantie de remplacement. Les preuves du prêt et garanties effectives déjà requises subsistent ; la précision des transitions ne crée pas de formalité.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "suppression-droits-succession",
+          "description": "Neutralisation du crédit accessoire lorsque le principal fiscal est supprimé, avec maintien des avantages anciens.",
+          "before": "Crédit et accessoires applicables aux opérations imposables de la source.",
+          "after": "Aucun crédit exigé pour les opérations nouvelles dont le principal est supprimé ; anciens droits protégés.",
+          "unit": "regime",
+          "affected_population": "Bénéficiaires des transmissions visées par cet article.",
+          "conditions_and_transition": "Entrée en vigueur de la loi proposée ; anciennes créances et recours préservés selon la transition intégrale du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ajoutée ; les garanties et dettes autonomes demeurent.",
+          "source_quote": "I. – Les garanties fournies en contrepartie du fractionnement prévu au 1° de l'article 396 peuvent outre les formes énumérées à l'article 400, revêtir celle de l'hypothèque légale prévue au II de l'article L. 269 du livre des procédures fiscales. ",
+          "proposed_quote": "Le présent article est abrogé pour les décès survenus à compter de l’entrée en vigueur de la présente loi."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "035e3e34d4bb87f3fb042b7e6aebea8837b26714f011fdaace525515151a8f85",
+      "source_notes_sha256": "b28e59041293fe45ba728eedc763197be5e7332663ba4e8fdd215270c6ffdcc2",
+      "proposed_sha256": "16e2766579c85907b787badfc6e082d7fb9507337e99a47797cfd0c8a3466f71",
+      "assessment_sha256": "937478f530718ebbf2d316216bb116d63d6ad68aed007a2aa994da7c09946312",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "reference_coherence": {
+      "version": 3,
+      "referrer_sha256": "16e2766579c85907b787badfc6e082d7fb9507337e99a47797cfd0c8a3466f71",
+      "policy_sha256": {
+        "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "site-summaries.json": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+      },
+      "referrer_source": {
+        "code_id": "LEGITEXT000006069574",
+        "source_id": "LEGIARTI000048852254",
+        "source_sha256": "035e3e34d4bb87f3fb042b7e6aebea8837b26714f011fdaace525515151a8f85",
+        "source_xml_sha256": "e33f84144faeaef70206fd363876fcdbe843719c7893db52b576b42404b74a12",
+        "source_notes_sha256": "b28e59041293fe45ba728eedc763197be5e7332663ba4e8fdd215270c6ffdcc2"
+      },
+      "targets": {
+        "LEGITEXT000006069574|LEGIARTI000022343738": {
+          "code_id": "LEGITEXT000006069574",
+          "source_id": "LEGIARTI000022343738",
+          "source_sha256": "0e0c401f9ec76dfb86c56cd6716aa54ff12211a79b4bbce19019aa29f520a4d3",
+          "view_kind": "proposal",
+          "view_sha256": "cc4b0b375b17f1f3423326a67951a367e7b752e6e7ba5a9deb7b3ea52e409a4c",
+          "source_xml_sha256": "bcacf792048a49949731e49d522eb00fc6d2edfde91062068103486cc9d5ff09",
+          "source_notes_sha256": "d3d85ca99b022c5b574347a1c69560e364d0d3ebbbfb00e6ce1d761f3659a38f"
+        }
+      },
+      "assessments": [
+        {
+          "target_key": "LEGITEXT000006069574|LEGIARTI000022343738",
+          "view_sha256": "cc4b0b375b17f1f3423326a67951a367e7b752e6e7ba5a9deb7b3ea52e409a4c",
+          "assessment": "Le 1° de 396 vise les mutations par décès et sa proposition réserve les droits aux décès anciens. La fermeture prospective de 404 A conserve leurs demandes futures et leurs garanties ; elle ne touche pas les 2° à 5°. Il s’agit de crédits fiscaux, sans condition d’ancienneté d’emploi ni notification de rupture ; le contrat unique privé est inapplicable."
+        }
+      ],
+      "assessments_sha256": "b8535d6c3ba30879649936538da89453b5324986e2cd8c23d47632464329963b",
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "db322747d178ef4cea5167f4b992d1d03f84edbdd0d9ec6bbb4a79b22dc3e915"
   },
   {
     "code_id": "LEGITEXT000006069574",
     "source_id": "LEGIARTI000048852245",
     "source_sha256": "979816866e90bfc53d61f34faa862bca5de3c35e48017b72193b38968edb0a68",
     "number": "404 B",
-    "proposed_xml": "<p>Le présent article est abrogé pour les décès survenus à compter de l’entrée en vigueur de la présente loi.</p>\n<p>Pour les décès antérieurs à l’entrée en vigueur de la présente loi, les dispositions applicables à la date du décès continuent de régir les droits, obligations, garanties, contrôles, recouvrements, restitutions et recours. La suppression ne crée pas de droit général au remboursement des droits de ces décès.</p>\n<p>Cette abrogation ne remet pas en cause les créances civiles, les règles professionnelles de dépôt, les obligations de transparence pour un impôt distinct ni les engagements attachés à une donation entre vifs antérieure.</p>",
-    "reason": "Les garanties, différés, intérêts, accélérations et échéances des seuls crédits successoraux cessent de s’appliquer aux décès futurs.",
-    "review_notes": " Orientation expresse editorial_direction_2026_10_19 et successions. Suppression sans seuil, condition de financement ni prélèvement de remplacement pour les décès futurs. Donations entre vifs, droit civil et impôts ayant un fait générateur distinct préservés. Coordination légistique finale et contrôle juridique restant nécessaires.",
+    "proposed_xml": "<p>Le présent article est abrogé pour les décès survenus à compter de l’entrée en vigueur de la présente loi.</p>\n<p>Pour les décès antérieurs à l’entrée en vigueur de la présente loi, les droits restant dus, leurs exonérations, les demandes de crédit, y compris celles présentées après cette entrée en vigueur, les garanties, contrôles, recouvrements, restitutions, prescriptions et recours demeurent régis par les dispositions applicables à ces décès et à ces demandes selon leurs règles temporelles propres. Les simplifications des articles 399, 400 et 403 applicables aux crédits en cours demeurent applicables. La suppression ne crée pas de droit général au remboursement des droits de ces décès.</p>\n<p>Cette abrogation ne remet pas en cause les créances civiles, les règles professionnelles de dépôt, les obligations de transparence pour un impôt distinct ni les engagements attachés à une donation entre vifs antérieure.</p>",
+    "reason": "Les garanties, différés, intérêts, accélérations et échéances des seuls crédits successoraux cessent de s’appliquer aux décès futurs. Coordination nécessaire de la transition : « les dispositions applicables à la date du décès » dans le brouillon pouvait figer les règles de demande de crédit et exclure les simplifications des crédits en cours. La transition conserve désormais leurs règles temporelles propres, sans rétablir les droits sur les décès nouveaux.",
+    "review_notes": "Transition corrigée après lecture des sources et NOTA : le 1er février 2024 est une date historique, non celle de la réforme. 397 et CGI 1722 bis concernent exclusivement les droits de mutation par décès, même lorsque leur texte mentionne un donataire débiteur de soulte : différence de champ avec une donation entre vifs. Le différé de nue-propriété, les soultes ou récompenses, la dispense d’intérêts sur option pour la pleine propriété et les droits viagers du conjoint gardent leurs conditions et leurs délais de six mois pour les anciens décès. Le renvoi à 404 A reste opérant dans ce champ ancien. Point hors lot : les transitions de 397 et 1722 bis emploient encore « à la date du décès » ; elles doivent être coordonnées pour ne pas figer les règles procédurales applicables selon la date de demande. LPF L. 269 II et les textes civils ne sont pas fournis dans le corpus des neuf recueils : contenu actuel non vérifiable ici, aucun changement de leurs garanties autonomes proposé.",
+    "status": "rewrite_draft",
     "change_type": "full_repeal",
     "repeal_policy_id": "editorial_direction_2026_10_19",
-    "repeal_scope": "Les garanties, différés, intérêts, accélérations et échéances des seuls crédits successoraux cessent de s’appliquer aux décès futurs."
+    "repeal_scope": "Suppression pour les nouveaux décès du dispositif de crédit successoral et de ses garanties devenus sans objet avec la suppression intégrale des droits de mutation par décès.",
+    "reference_checks": [],
+    "benefit_review": "Le différé sur nue-propriété, soultes ou récompenses et droits viagers, la faculté hypothécaire et la dispense d’intérêts sur option pour la pleine propriété restent applicables aux anciens décès, même pour une demande ultérieure selon ses règles temporelles. Pour les nouveaux décès, aucun impôt successoral ni remplacement ne subsiste : ces seules facilités deviennent sans objet. Les donations autonomes restent distinctes.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Les garanties, différés, intérêts, accélérations et échéances des seuls crédits successoraux cessent de s’appliquer aux décès futurs. Coordination nécessaire de la transition : « les dispositions applicables à la date du décès » dans le brouillon pouvait figer les règles de demande de crédit et exclure les simplifications des crédits en cours. La transition conserve désormais leurs règles temporelles propres, sans rétablir les droits sur les décès nouveaux.",
+      "scope_limitations": "Examen limité au lot et aux cibles intégralement disponibles. Aucun solde national de coût ou de recettes chiffré ; les coordinations hors lot signalées restent ouvertes. Les anciens droits et les régimes autonomes ne sont pas supprimés.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : pas de déclaration, registre, délai minimal ou garantie de remplacement. Les preuves du prêt et garanties effectives déjà requises subsistent ; la précision des transitions ne crée pas de formalité.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "suppression-droits-succession",
+          "description": "Neutralisation du crédit accessoire lorsque le principal fiscal est supprimé, avec maintien des avantages anciens.",
+          "before": "Crédit et accessoires applicables aux opérations imposables de la source.",
+          "after": "Aucun crédit exigé pour les opérations nouvelles dont le principal est supprimé ; anciens droits protégés.",
+          "unit": "regime",
+          "affected_population": "Bénéficiaires des transmissions visées par cet article.",
+          "conditions_and_transition": "Entrée en vigueur de la loi proposée ; anciennes créances et recours préservés selon la transition intégrale du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ajoutée ; les garanties et dettes autonomes demeurent.",
+          "source_quote": "Le paiement différé prévu à l'article 397 est limité à la fraction des droits correspondant :",
+          "proposed_quote": "Le présent article est abrogé pour les décès survenus à compter de l’entrée en vigueur de la présente loi."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "979816866e90bfc53d61f34faa862bca5de3c35e48017b72193b38968edb0a68",
+      "source_notes_sha256": "e365c76eeb15b835c527da837a943a37ac8cdf5b11d580dfac2d80586e93069e",
+      "proposed_sha256": "16e2766579c85907b787badfc6e082d7fb9507337e99a47797cfd0c8a3466f71",
+      "assessment_sha256": "39d5f016197714f34e1583b17edad5466fe368ff7f7ca7d9277118834a0b9b83",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "db322747d178ef4cea5167f4b992d1d03f84edbdd0d9ec6bbb4a79b22dc3e915"
   },
   {
     "code_id": "LEGITEXT000006069574",
     "source_id": "LEGIARTI000048852235",
     "source_sha256": "136c0d8b42f5728bd60534d7e621fc2fa0b8a522a04ca6e4876a59ded00ed391",
     "number": "404 GA",
-    "proposed_xml": "<p>Le présent article est abrogé pour les décès survenus à compter de l’entrée en vigueur de la présente loi.</p>\n<p>Pour les décès antérieurs à l’entrée en vigueur de la présente loi, les dispositions applicables à la date du décès continuent de régir les droits, obligations, garanties, contrôles, recouvrements, restitutions et recours. La suppression ne crée pas de droit général au remboursement des droits de ces décès.</p>\n<p>Cette abrogation ne remet pas en cause les créances civiles, les règles professionnelles de dépôt, les obligations de transparence pour un impôt distinct ni les engagements attachés à une donation entre vifs antérieure.</p>",
-    "reason": "L’hypothèque légale propre au différé et au fractionnement successoraux des entreprises n’est plus constituée au titre des décès futurs.",
-    "review_notes": " Orientation expresse editorial_direction_2026_10_19 et successions. Suppression sans seuil, condition de financement ni prélèvement de remplacement pour les décès futurs. Donations entre vifs, droit civil et impôts ayant un fait générateur distinct préservés. Coordination légistique finale et contrôle juridique restant nécessaires.",
+    "proposed_xml": "<p>Le présent article est abrogé pour les décès survenus à compter de l’entrée en vigueur de la présente loi.</p>\n<p>Pour les décès antérieurs à l’entrée en vigueur de la présente loi, les droits restant dus, leurs exonérations, les demandes de crédit, y compris celles présentées après cette entrée en vigueur, les garanties, contrôles, recouvrements, restitutions, prescriptions et recours demeurent régis par les dispositions applicables à ces décès et à ces demandes selon leurs règles temporelles propres. Les simplifications des articles 399, 400 et 403 applicables aux crédits en cours demeurent applicables. La suppression ne crée pas de droit général au remboursement des droits de ces décès.</p>\n<p>Cette abrogation ne remet pas en cause les créances civiles, les règles professionnelles de dépôt, les obligations de transparence pour un impôt distinct ni les engagements attachés à une donation entre vifs antérieure.</p>",
+    "reason": "L’hypothèque légale propre au différé et au fractionnement successoraux des entreprises n’est plus constituée au titre des décès futurs. Coordination nécessaire de la transition : « les dispositions applicables à la date du décès » dans le brouillon pouvait figer les règles de demande de crédit et exclure les simplifications des crédits en cours. La transition conserve désormais leurs règles temporelles propres, sans rétablir les droits sur les décès nouveaux.",
+    "review_notes": "Transition corrigée après lecture des sources et NOTA : le 1er février 2024 est une date historique, non celle de la réforme. 397 A maintient le différé de cinq ans et le fractionnement de dix ans pour les donations futures et les anciens décès. La source de 404 GA limite expressément la faculté hypothécaire aux droits « exigibles en raison de mutation par décès » : aucune garantie favorable propre aux donations n’est supprimée. Point hors lot : les transitions de 397 et 1722 bis emploient encore « à la date du décès » ; elles doivent être coordonnées pour ne pas figer les règles procédurales applicables selon la date de demande. LPF L. 269 II et les textes civils ne sont pas fournis dans le corpus des neuf recueils : contenu actuel non vérifiable ici, aucun changement de leurs garanties autonomes proposé.",
+    "status": "rewrite_draft",
     "change_type": "full_repeal",
     "repeal_policy_id": "editorial_direction_2026_10_19",
-    "repeal_scope": "L’hypothèque légale propre au différé et au fractionnement successoraux des entreprises n’est plus constituée au titre des décès futurs."
+    "repeal_scope": "Suppression pour les nouveaux décès du dispositif de crédit successoral et de ses garanties devenus sans objet avec la suppression intégrale des droits de mutation par décès.",
+    "reference_checks": [],
+    "benefit_review": "Les facilités et taux favorables de cet article sont conservés pour toutes les opérations encore imposables dans leur champ, y compris les demandes futures recevables. La fermeture aux nouveaux décès ou apports gratuits résulte de la suppression intégrale de leurs droits, sans prélèvement de remplacement ; elle ne ferme aucun avantage d’une donation entre vifs imposable. Transition corrigée après lecture des sources et NOTA : le 1er février 2024 est une date historique, non celle de la réforme. 397 A maintient le différé de cinq ans et le fractionnement de dix ans pour les donations futures et les anciens décès. La source de 404 GA limite expressément la faculté hypothécaire aux droits « exigibles en raison de mutation par décès » : aucune garantie favorable propre aux donations n’est supprimée. Point hors lot : les transitions de 397 et 1722 bis emploient encore « à la date du décès » ; elles doivent être coordonnées pour ne pas figer les règles procédurales applicables selon la date de demande. LPF L. 269 II et les textes civils ne sont pas fournis dans le corpus des neuf recueils : contenu actuel non vérifiable ici, aucun changement de leurs garanties autonomes proposé.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "L’hypothèque légale propre au différé et au fractionnement successoraux des entreprises n’est plus constituée au titre des décès futurs. Coordination nécessaire de la transition : « les dispositions applicables à la date du décès » dans le brouillon pouvait figer les règles de demande de crédit et exclure les simplifications des crédits en cours. La transition conserve désormais leurs règles temporelles propres, sans rétablir les droits sur les décès nouveaux.",
+      "scope_limitations": "Examen limité au lot et aux cibles intégralement disponibles. Aucun solde national de coût ou de recettes chiffré ; les coordinations hors lot signalées restent ouvertes. Les anciens droits et les régimes autonomes ne sont pas supprimés.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : pas de déclaration, registre, délai minimal ou garantie de remplacement. Les preuves du prêt et garanties effectives déjà requises subsistent ; la précision des transitions ne crée pas de formalité.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "suppression-droits-succession",
+          "description": "Neutralisation du crédit accessoire lorsque le principal fiscal est supprimé, avec maintien des avantages anciens.",
+          "before": "Crédit et accessoires applicables aux opérations imposables de la source.",
+          "after": "Aucun crédit exigé pour les opérations nouvelles dont le principal est supprimé ; anciens droits protégés.",
+          "unit": "regime",
+          "affected_population": "Bénéficiaires des transmissions visées par cet article.",
+          "conditions_and_transition": "Entrée en vigueur de la loi proposée ; anciennes créances et recours préservés selon la transition intégrale du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ajoutée ; les garanties et dettes autonomes demeurent.",
+          "source_quote": "Les garanties fournies en contrepartie du paiement différé et fractionné des droits d'enregistrement prévu à l'article 397 A, lorsqu'ils sont exigibles en raison de mutation par décès, peuvent, outre les formes énumérées à l'article 400, revêtir celle de l'hypothèque légale prévue au II de l'article L. 269 du livre des procédures fiscales. ",
+          "proposed_quote": "Le présent article est abrogé pour les décès survenus à compter de l’entrée en vigueur de la présente loi."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "136c0d8b42f5728bd60534d7e621fc2fa0b8a522a04ca6e4876a59ded00ed391",
+      "source_notes_sha256": "b28e59041293fe45ba728eedc763197be5e7332663ba4e8fdd215270c6ffdcc2",
+      "proposed_sha256": "16e2766579c85907b787badfc6e082d7fb9507337e99a47797cfd0c8a3466f71",
+      "assessment_sha256": "b7f60e0dc521d95befb92764e1093f15de8ad8c9e012b9300a93634d7133f602",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "db322747d178ef4cea5167f4b992d1d03f84edbdd0d9ec6bbb4a79b22dc3e915"
   },
   {
     "code_id": "LEGITEXT000006069574",
@@ -838,36 +1031,367 @@
     "source_id": "LEGIARTI000031116715",
     "source_sha256": "390ed4ff09e17c62d74052f17656344d2299d0b372eb85e48eaf7549af70561d",
     "number": "344 G nonies",
-    "proposed_xml": "<p>Le présent article s’applique aux sommes dont l’imposition demeure due à raison d’un décès antérieur à l’entrée en vigueur de la présente loi ou d’un fait générateur distinct. Aucune déclaration d’assiette, d’abattement ou de prélèvement de succession n’est requise pour des sommes attribuées à raison d’un décès survenu à compter de cette entrée en vigueur, même si la Caisse des dépôts et consignations les restitue ultérieurement.</p>\n<p>I. – La Caisse des dépôts et consignations, lorsqu&#x27;elle reverse les sommes qui entrent dans le champ d&#x27;application du I ter de l&#x27;article 990 I et de l&#x27;article 990 I bis du code général des impôts, adresse au comptable de la direction générale des finances publiques, au plus tard dans les quinze jours qui suivent la fin du mois au cours duquel les sommes sont versées au bénéficiaire ou au notaire chargé d&#x27;établir l&#x27;actif successoral en vue du règlement de la succession pour laquelle il a été mandaté, une déclaration contenant les informations suivantes pour chaque bénéficiaire des sommes : </p>\n<p>1° Pour les sommes issues de chaque contrat mentionné au I ter de l&#x27;article 990 I et au I de l&#x27;article 990 I bis du code général des impôts, les informations mentionnées à l&#x27;article R. 132-5-5 du code des assurances et à l&#x27;article R. 223-11 du code de la mutualité ; </p>\n<p>2° Pour chaque compte mentionné au II de l&#x27;article 990 I bis du code général des impôts, les informations mentionnées à l&#x27;article R. 312-20 du code monétaire et financier ; </p>\n<p>3° Pour les sommes issues de chaque contrat mentionné au I ter de l&#x27;article 990 I et au I de l&#x27;article 990 I bis du code général des impôts et pour chaque compte mentionné au II de l&#x27;article 990 I bis du code précité : </p>\n<p>a) L&#x27;identification de l&#x27;établissement mentionné au I de l&#x27;article L. 312-19 du code monétaire et financier, de l&#x27;entreprise d&#x27;assurance, institution de prévoyance ou union mentionnée à l&#x27;article L. 132-9-3-1 du code des assurances ou de la mutuelle ou union mentionnée à l&#x27;article L. 223-25-4 du code de la mutualité ; </p>\n<p>b) L&#x27;assiette et la nature du prélèvement ; </p>\n<p>c) Le montant des intérêts versés par la Caisse des dépôts et consignations ; </p>\n<p>d) Le montant de l&#x27;abattement appliqué ; </p>\n<p>e) Le montant du prélèvement acquitté au titre des sommes, rentes ou valeurs dues à chaque bénéficiaire. </p>\n<p>II. – Les déclarations mentionnées au I sont établies sur des formules imprimées délivrées sans frais par le service des impôts.</p>\n",
-    "reason": "Retire les déclarations de prélèvement CDC des décès futurs et conserve le dossier des seuls faits distincts et anciens décès.",
-    "review_notes": "Tous les champs et délai de quinze jours fin de mois conservés pour leur champ résiduel. Les déclarations autonomes d’intérêts ou de lutte contre le blanchiment ne sont pas supprimées. Orientation expresse editorial_direction_2026_10_19 et successions. Suppression sans seuil, condition de financement ni prélèvement de remplacement pour les décès futurs. Donations entre vifs, droit civil et impôts ayant un fait générateur distinct préservés. Coordination légistique finale et contrôle juridique restant nécessaires."
+    "proposed_xml": "<p>Le présent article s’applique aux sommes dont l’imposition demeure due à raison d’un décès antérieur à l’entrée en vigueur de la présente loi ou, dans le champ de l’article 990 I bis du code général des impôts, de l’échéance d’un contrat indépendamment d’un décès. Le seul dépôt ou reversement des sommes après cette entrée en vigueur ne constitue pas un fait générateur distinct permettant de rétablir un prélèvement supprimé à raison du décès. Aucune déclaration d’assiette, d’abattement ou de prélèvement de succession n’est requise pour des sommes attribuées à raison d’un décès survenu à compter de cette entrée en vigueur, même si la Caisse des dépôts et consignations les restitue ultérieurement.</p>\n<p>I. – La Caisse des dépôts et consignations, lorsqu&#x27;elle reverse les sommes qui entrent dans le champ d&#x27;application du I ter de l&#x27;article 990 I et de l&#x27;article 990 I bis du code général des impôts, adresse au comptable de la direction générale des finances publiques, au plus tard dans les quinze jours qui suivent la fin du mois au cours duquel les sommes sont versées au bénéficiaire ou au notaire chargé d&#x27;établir l&#x27;actif successoral en vue du règlement de la succession pour laquelle il a été mandaté, une déclaration contenant les informations suivantes pour chaque bénéficiaire des sommes : </p>\n<p>1° Pour les sommes issues de chaque contrat mentionné au I ter de l&#x27;article 990 I et au I de l&#x27;article 990 I bis du code général des impôts, les informations mentionnées à l&#x27;article R. 132-5-5 du code des assurances et à l&#x27;article R. 223-11 du code de la mutualité ; </p>\n<p>2° Pour chaque compte mentionné au II de l&#x27;article 990 I bis du code général des impôts, les informations mentionnées à l&#x27;article R. 312-20 du code monétaire et financier ; </p>\n<p>3° Pour les sommes issues de chaque contrat mentionné au I ter de l&#x27;article 990 I et au I de l&#x27;article 990 I bis du code général des impôts et pour chaque compte mentionné au II de l&#x27;article 990 I bis du code précité : </p>\n<p>a) L&#x27;identification de l&#x27;établissement mentionné au I de l&#x27;article L. 312-19 du code monétaire et financier, de l&#x27;entreprise d&#x27;assurance, institution de prévoyance ou union mentionnée à l&#x27;article L. 132-9-3-1 du code des assurances ou de la mutuelle ou union mentionnée à l&#x27;article L. 223-25-4 du code de la mutualité ; </p>\n<p>b) L&#x27;assiette et la nature du prélèvement ; </p>\n<p>c) Le montant des intérêts versés par la Caisse des dépôts et consignations ; </p>\n<p>d) Le montant de l&#x27;abattement appliqué ; </p>\n<p>e) Le montant du prélèvement acquitté au titre des sommes, rentes ou valeurs dues à chaque bénéficiaire. </p>\n<p>II. – Les déclarations mentionnées au I sont établies sur des formules imprimées délivrées sans frais par le service des impôts.</p>\n",
+    "reason": "Coordination nécessaire avec la suppression des prélèvements au décès : le brouillon réservait un « fait générateur distinct » sans exclure expressément le reversement lui-même. La réserve est précisée pour empêcher ce contournement ; l'échéance contractuelle autonome de 990 I bis et le régime des décès anciens subsistent. Les rubriques I 1° à 3° a à e et II restent entières, sans nouvelle baisse de taxe autonome.",
+    "review_notes": "Transition compatible : 990 I proposé dispose que « Le fait générateur propre au versement ne peut rendre imposable un contrat dénoué par un décès postérieur à l'entrée en vigueur. » 990 I bis, source et proposition du corpus lues en entier, distingue les sommes dues « à raison du décès » de celles dues « à raison de l'échéance ». Le délai de quinze jours suivant la fin du mois, l'abattement déclaré et la gratuité des imprimés demeurent dans le champ résiduel. Point non vérifiable localement : contenu intégral de R.132-5-5 assurances, R.223-11 mutualité, R.312-20 et L.312-19 CMF, L.132-9-3-1 assurances et L.223-25-4 mutualité ; leurs obligations autonomes ne sont pas supprimées. Aucun nouveau renvoi créé. Cette coordination n'abolit ni l'impôt sur les intérêts ni les obligations civiles d'identification. Recherche textuelle des renvois entrants effectuée dans les neuf recueils fournis : seuls les renvois explicites intra-lot identifiés sont présents. Ce repérage ne démontre pas une cohérence globale ni l'absence de liens sans renvoi. Aucune validation par juriste n'est revendiquée.",
+    "status": "rewrite_draft",
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006069577|LEGIARTI000047288653",
+        "view_sha256": "a2c56d1d7356008bc608e7189d61d3aedd3b8c718bc1100593e9e393fe2e3924",
+        "assessment": "990 I, source et proposition intégrales lues : le I ter vise les reversements CDC et le II fixe le paiement dans les quinze jours suivant la fin du mois. La proposition supprime le prélèvement pour les décès nouveaux, même si le versement est ultérieur ; 344 G nonies est borné de façon concordante. Les décès anciens conservent abattements, exemptions et procédures. Le renvoi à L.7342-2 concerne l'assurance professionnelle des travailleurs de plateforme, non le contrat unique : ni ancienneté d'emploi ni notification de rupture ne conditionnent ici la dispense fiscale."
+      }
+    ],
+    "benefit_review": "L'indication de l'abattement au I 3° d et les imprimés délivrés sans frais au II sont conservés. Les abattements de 990 I (20 % et 152 500 €), celui de 990 I bis (15 000 €), les exonérations personnelles et la répartition en démembrement demeurent applicables aux décès anciens et aux faits autonomes dans leur champ. Pour les nouveaux décès, l'impôt correspondant est entièrement supprimé, sans remplacement ; aucune formalité d'abattement ne conditionne cette suppression.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "La déclaration CDC ne peut plus servir à percevoir un prélèvement sur les décès nouveaux. Coordination de la mesure successorale unique, sans compter une seconde taxe supprimée ; le reversement tardif ne contourne plus la bascule.",
+      "scope_limitations": "Décès anciens et échéances contractuelles autonomes restent hors de la suppression. Les règlements des autres codes cités ne sont pas fournis ; aucune purge de leurs obligations autonomes n'est affirmée.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps ne crée ni registre, ni autorisation, ni échéance supplémentaire. Les données et contrôles maintenus proviennent de la source et des cibles lues ; aucun solde net de l'ensemble des codes n'est affirmé.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "successions-prelevements-deces-suppression",
+          "description": "Coordonner les déclarations CDC avec la suppression des prélèvements au décès.",
+          "before": "Déclaration des sommes relevant de 990 I I ter ou 990 I bis, sous quinze jours après la fin du mois de reversement.",
+          "after": "Même déclaration pour les décès anciens et les échéances autonomes ; aucune pour les sommes dues à raison des décès nouveaux.",
+          "unit": "legal_duty",
+          "affected_population": "Caisse des dépôts et consignations et bénéficiaires de sommes en déshérence.",
+          "conditions_and_transition": "Application selon la transition du texte proposé ; les actes déjà accomplis et les droits antérieurs restent régis par leurs règles propres.",
+          "replacement_or_new_burdens": "Aucun dépôt, agrément ou registre de remplacement créé ; les contrôles et données nécessaires subsistent dans leur champ antérieur.",
+          "source_quote": "L'assiette et la nature du prélèvement",
+          "proposed_quote": "Aucune déclaration d’assiette, d’abattement ou de prélèvement de succession n’est requise"
+        }
+      ]
+    },
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Suppression des déclarations CDC exclusivement liées aux prélèvements supprimés pour les nouveaux décès."
+    ],
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": true,
+    "previous_draft": {
+      "source_sha256": "390ed4ff09e17c62d74052f17656344d2299d0b372eb85e48eaf7549af70561d",
+      "status": "rewrite_draft",
+      "proposed_xml": "<p>Le présent article s’applique aux sommes dont l’imposition demeure due à raison d’un décès antérieur à l’entrée en vigueur de la présente loi ou d’un fait générateur distinct. Aucune déclaration d’assiette, d’abattement ou de prélèvement de succession n’est requise pour des sommes attribuées à raison d’un décès survenu à compter de cette entrée en vigueur, même si la Caisse des dépôts et consignations les restitue ultérieurement.</p>\n<p>I. – La Caisse des dépôts et consignations, lorsqu&#x27;elle reverse les sommes qui entrent dans le champ d&#x27;application du I ter de l&#x27;article 990 I et de l&#x27;article 990 I bis du code général des impôts, adresse au comptable de la direction générale des finances publiques, au plus tard dans les quinze jours qui suivent la fin du mois au cours duquel les sommes sont versées au bénéficiaire ou au notaire chargé d&#x27;établir l&#x27;actif successoral en vue du règlement de la succession pour laquelle il a été mandaté, une déclaration contenant les informations suivantes pour chaque bénéficiaire des sommes : </p>\n<p>1° Pour les sommes issues de chaque contrat mentionné au I ter de l&#x27;article 990 I et au I de l&#x27;article 990 I bis du code général des impôts, les informations mentionnées à l&#x27;article R. 132-5-5 du code des assurances et à l&#x27;article R. 223-11 du code de la mutualité ; </p>\n<p>2° Pour chaque compte mentionné au II de l&#x27;article 990 I bis du code général des impôts, les informations mentionnées à l&#x27;article R. 312-20 du code monétaire et financier ; </p>\n<p>3° Pour les sommes issues de chaque contrat mentionné au I ter de l&#x27;article 990 I et au I de l&#x27;article 990 I bis du code général des impôts et pour chaque compte mentionné au II de l&#x27;article 990 I bis du code précité : </p>\n<p>a) L&#x27;identification de l&#x27;établissement mentionné au I de l&#x27;article L. 312-19 du code monétaire et financier, de l&#x27;entreprise d&#x27;assurance, institution de prévoyance ou union mentionnée à l&#x27;article L. 132-9-3-1 du code des assurances ou de la mutuelle ou union mentionnée à l&#x27;article L. 223-25-4 du code de la mutualité ; </p>\n<p>b) L&#x27;assiette et la nature du prélèvement ; </p>\n<p>c) Le montant des intérêts versés par la Caisse des dépôts et consignations ; </p>\n<p>d) Le montant de l&#x27;abattement appliqué ; </p>\n<p>e) Le montant du prélèvement acquitté au titre des sommes, rentes ou valeurs dues à chaque bénéficiaire. </p>\n<p>II. – Les déclarations mentionnées au I sont établies sur des formules imprimées délivrées sans frais par le service des impôts.</p>\n",
+      "reason": "Retire les déclarations de prélèvement CDC des décès futurs et conserve le dossier des seuls faits distincts et anciens décès.",
+      "review_notes": "Tous les champs et délai de quinze jours fin de mois conservés pour leur champ résiduel. Les déclarations autonomes d’intérêts ou de lutte contre le blanchiment ne sont pas supprimées. Orientation expresse editorial_direction_2026_10_19 et successions. Suppression sans seuil, condition de financement ni prélèvement de remplacement pour les décès futurs. Donations entre vifs, droit civil et impôts ayant un fait générateur distinct préservés. Coordination légistique finale et contrôle juridique restant nécessaires.",
+      "proposed_sha256": "0f0bad963f22bd01adfea3c1cb3f83dbe82fe9cbe6b7699e9d95c41c9f68036a",
+      "batch_row_sha256": "eb9d517f4dc62b8064823959c4eba5ba71b8f502803540e5597c3d5da98688e7"
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "390ed4ff09e17c62d74052f17656344d2299d0b372eb85e48eaf7549af70561d",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "fc0fecb303047d0f172deb8f08aa19458ee742064212ca31f5c27f1c7d39b8a9",
+      "assessment_sha256": "a76a9e0bd8b5d11b08f6e7b1293bf6a17185887702d265a85e30f380acaee41f",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "reference_coherence": {
+      "version": 3,
+      "referrer_sha256": "fc0fecb303047d0f172deb8f08aa19458ee742064212ca31f5c27f1c7d39b8a9",
+      "policy_sha256": {
+        "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "site-summaries.json": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+      },
+      "referrer_source": {
+        "code_id": "LEGITEXT000006069574",
+        "source_id": "LEGIARTI000031116715",
+        "source_sha256": "390ed4ff09e17c62d74052f17656344d2299d0b372eb85e48eaf7549af70561d",
+        "source_xml_sha256": "527a3e2164bc4f408e37a8f84c7f94e090d1d46e3bc609f7563be366ef23ad89",
+        "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "targets": {
+        "LEGITEXT000006069577|LEGIARTI000047288653": {
+          "code_id": "LEGITEXT000006069577",
+          "source_id": "LEGIARTI000047288653",
+          "source_sha256": "1ce6e5c458216f8bc2b3fc7b819245bc213a64cfe60383823bc676c880bfff48",
+          "view_kind": "proposal",
+          "view_sha256": "a2c56d1d7356008bc608e7189d61d3aedd3b8c718bc1100593e9e393fe2e3924",
+          "source_xml_sha256": "9da945bd452d27378a12a6c18c8d3e1f35ffdcaeebeec72457523b818afa7add",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assessments": [
+        {
+          "target_key": "LEGITEXT000006069577|LEGIARTI000047288653",
+          "view_sha256": "a2c56d1d7356008bc608e7189d61d3aedd3b8c718bc1100593e9e393fe2e3924",
+          "assessment": "990 I, source et proposition intégrales lues : le I ter vise les reversements CDC et le II fixe le paiement dans les quinze jours suivant la fin du mois. La proposition supprime le prélèvement pour les décès nouveaux, même si le versement est ultérieur ; 344 G nonies est borné de façon concordante. Les décès anciens conservent abattements, exemptions et procédures. Le renvoi à L.7342-2 concerne l'assurance professionnelle des travailleurs de plateforme, non le contrat unique : ni ancienneté d'emploi ni notification de rupture ne conditionnent ici la dispense fiscale."
+        }
+      ],
+      "assessments_sha256": "9612d6f12060d3d43fff29668294c1ab4a375367848d628a5c04dc8bd2b9a846",
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "0f0bad963f22bd01adfea3c1cb3f83dbe82fe9cbe6b7699e9d95c41c9f68036a"
   },
   {
     "code_id": "LEGITEXT000006069574",
     "source_id": "LEGIARTI000047623583",
     "source_sha256": "21cb6276f73a36c72863f4414f101e444ed7977ccd93917ef2286d1f7c827cc4",
     "number": "350 terdecies",
-    "proposed_xml": "\n<br>\n<p>I. – Sous réserve des dispositions des articles 409 et 410 de l&#x27;annexe II au code général des impôts, seuls les fonctionnaires de la direction générale des finances publiques appartenant à des corps des catégories A et B peuvent fixer les bases d&#x27;imposition et liquider les impôts, taxes et redevances ainsi que proposer les rectifications.</p>\n<p>Les fonctionnaires mentionnés au premier alinéa peuvent se faire assister pour les opérations de contrôle par des fonctionnaires stagiaires et par tout autre fonctionnaire de la direction générale des finances publiques affecté ou non dans le même service déconcentré ou service à compétence nationale.</p>\n<p>II. – 1. Les fonctionnaires mentionnés au premier alinéa du I peuvent exercer les attributions que ces dispositions leur confèrent à l&#x27;égard des personnes physiques ou morales ou groupements de personne de droit ou de fait qui ont déposé ou auraient dû déposer dans le ressort territorial du service déconcentré ou du service à compétence nationale dans lequel ils sont affectés une déclaration, un acte ou tout autre document ainsi qu&#x27;à l&#x27;égard des personnes ou groupements qui, en l&#x27;absence d&#x27;obligation déclarative, y ont été ou auraient dû y être imposés ou qui y ont leur résidence principale, leur siège ou leur principal établissement.</p>\n<p>Ils sont également compétents dans le ressort territorial de leur service d&#x27;affectation pour dresser les procès-verbaux prévus au d de l&#x27;article L. 212 et à l&#x27;article L. 213 du même livre.</p>\n<p>2. Les fonctionnaires territorialement compétents en application du 1 pour contrôler les déclarations de revenus, les déclarations de bénéfices ou de résultat d&#x27;une personne physique ou morale ou d&#x27;un groupement peuvent exercer les attributions définies au premier alinéa du I pour l&#x27;ensemble des impositions, taxes et redevances dues par ce contribuable, quel que soit le lieu d&#x27;imposition ou de dépôt des déclarations ou actes relatifs à ces impositions, taxes et redevances.</p>\n<p>3. Les fonctionnaires mentionnés au premier alinéa du I peuvent exercer les attributions que ces dispositions leur confèrent à l&#x27;égard des personnes physiques ou morales et des groupements liés aux personnes ou groupements qui relèvent de leur compétence en application du 1.</p>\n<p>Les liens existant entre les personnes ou groupements s&#x27;entendent de l&#x27;appartenance ou du rattachement à un même foyer fiscal, de l&#x27;exercice d&#x27;un rôle de direction de droit ou de fait, d&#x27;une relation d&#x27;association, de subordination ou d&#x27;interposition, ou de l&#x27;appartenance à un même groupe d&#x27;intérêts. Les arrêtés d&#x27;attributions des services déconcentrés et des services à compétence nationale définissent, s&#x27;il y a lieu, la compétence des agents au regard des personnes unies par ces liens.</p>\n<p>III. – Par dérogation au II, les fonctionnaires mentionnés au premier alinéa du I peuvent exercer les attributions que ces dispositions leur confèrent à l&#x27;égard des actes et déclarations déposés au service national de l&#x27;enregistrement lorsque le défunt, s&#x27;agissant des déclarations de succession relatives aux seuls décès antérieurs à l’entrée en vigueur de la présente loi, ou les personnes physiques ou morales ou groupements de personne de droit ou de fait, dans les autres cas, sont domiciliés dans le ressort territorial de leur service d&#x27;affectation.</p>\n<p>IV. – (Abrogé).</p>\n<p>V. – (Abrogé).</p>\n<p>VI. – (Sans objet).</p>\n<p>VII. – (Sans objet).</p>\n<p>VIII. – Par dérogation au II, les fonctionnaires mentionnés au premier alinéa du I peuvent exercer les attributions que cet alinéa leur confère pour le contrôle :</p>\n<p>1° Des déclarations qui doivent être souscrites ainsi que des impôts, droits, taxes et sommes, quelle qu&#x27;en soit la nature, dus par :</p>\n<p>a) Les personnes physiques ou morales, les groupements de personnes de fait ou de droit et toutes entités, quelle que soit leur nature juridique, de nationalité française ou étrangère, non domiciliés ou établis fiscalement en France mais disposant de revenus de source française ou disposant, à quelque titre que ce soit, directement ou indirectement, d&#x27;une ou de plusieurs habitations ou biens immobiliers dans ce pays ;</p>\n<p>b) Les personnes physiques ou morales, les groupements de personnes de fait ou de droit et toutes entités, quelle que soit leur nature juridique, de nationalité française ou étrangère, n&#x27;ayant pas en France le lieu de leur domicile, établissement ou siège social, imposables ou taxables en France en application des dispositions du code général des impôts ou des stipulations d&#x27;une convention internationale ;</p>\n<p>c) Tout assujetti n&#x27;ayant pas le siège de son activité en France mais y réalisant des opérations taxables ;</p>\n<p>d) Les fonctionnaires et agents de l&#x27;Etat en service à l&#x27;étranger ou les fonctionnaires et autres agents au service de la Commission européenne, qu&#x27;ils disposent ou non d&#x27;une habitation en France, à l&#x27;exception de ceux qui y ont conservé leur foyer fiscal ;</p>\n<p>e) Les personnes transférant leur domicile hors de France, imposables en France en vertu des articles 167 ou 167 bis du code général des impôts ;</p>\n<p>2° Des déclarations souscrites et des retenues et perceptions à la source dues par les établissements payeurs et débiteurs divers à raison des rémunérations, revenus et gains de toute nature versés à des personnes physiques ou morales, groupements ou entités domiciliés ou établis en France ou hors de France ;</p>\n<p>3° Des exonérations, abattements, remboursements ou restitutions, quelle qu&#x27;en soit la nature, qui bénéficient aux personnes, groupements ou entités domiciliés ou établis en France ou hors de France ainsi qu&#x27;aux organisations internationales établies dans ce pays.</p>\n<br>\n<p>Aucune compétence du présent article ne permet d’exiger une déclaration fiscale de succession ou de liquider des droits de mutation par décès au titre d’un décès survenu à compter de l’entrée en vigueur de la présente loi. Les contrôles relatifs aux donations et aux impôts ayant un fait générateur distinct restent ouverts dans leur champ propre.</p>",
-    "reason": "Coordonne la compétence territoriale successorale des agents sans réduire les contrôles des autres impôts.",
-    "review_notes": " Orientation expresse editorial_direction_2026_10_19 et successions. Suppression sans seuil, condition de financement ni prélèvement de remplacement pour les décès futurs. Donations entre vifs, droit civil et impôts ayant un fait générateur distinct préservés. Coordination légistique finale et contrôle juridique restant nécessaires."
+    "proposed_xml": "\n<br>\n<p>I. – Sous réserve des dispositions des articles 409 et 410 de l'annexe II au code général des impôts, seuls les fonctionnaires de la direction générale des finances publiques appartenant à des corps des catégories A et B peuvent fixer les bases d'imposition et liquider les impôts, taxes et redevances ainsi que proposer les rectifications.</p>\n<p>Les fonctionnaires mentionnés au premier alinéa peuvent se faire assister pour les opérations de contrôle par des fonctionnaires stagiaires et par tout autre fonctionnaire de la direction générale des finances publiques affecté ou non dans le même service déconcentré ou service à compétence nationale.</p>\n<p>II. – 1. Les fonctionnaires mentionnés au premier alinéa du I peuvent exercer les attributions que ces dispositions leur confèrent à l'égard des personnes physiques ou morales ou groupements de personne de droit ou de fait qui ont déposé ou auraient dû déposer dans le ressort territorial du service déconcentré ou du service à compétence nationale dans lequel ils sont affectés une déclaration, un acte ou tout autre document ainsi qu'à l'égard des personnes ou groupements qui, en l'absence d'obligation déclarative, y ont été ou auraient dû y être imposés ou qui y ont leur résidence principale, leur siège ou leur principal établissement.</p>\n<p>Ils sont également compétents dans le ressort territorial de leur service d'affectation pour dresser les procès-verbaux prévus au d de l'article L. 212 et à l'article L. 213 du livre des procédures fiscales.</p>\n<p>2. Les fonctionnaires territorialement compétents en application du 1 pour contrôler les déclarations de revenus, les déclarations de bénéfices ou de résultat d'une personne physique ou morale ou d'un groupement peuvent exercer les attributions définies au premier alinéa du I pour l'ensemble des impositions, taxes et redevances dues par ce contribuable, quel que soit le lieu d'imposition ou de dépôt des déclarations ou actes relatifs à ces impositions, taxes et redevances.</p>\n<p>3. Les fonctionnaires mentionnés au premier alinéa du I peuvent exercer les attributions que ces dispositions leur confèrent à l'égard des personnes physiques ou morales et des groupements liés aux personnes ou groupements qui relèvent de leur compétence en application du 1.</p>\n<p>Les liens existant entre les personnes ou groupements s'entendent de l'appartenance ou du rattachement à un même foyer fiscal, de l'exercice d'un rôle de direction de droit ou de fait, d'une relation d'association, de subordination ou d'interposition, ou de l'appartenance à un même groupe d'intérêts. Les arrêtés d'attributions des services déconcentrés et des services à compétence nationale définissent, s'il y a lieu, la compétence des agents au regard des personnes unies par ces liens.</p>\n<p>III. – Par dérogation au II, les fonctionnaires mentionnés au premier alinéa du I peuvent exercer les attributions que ces dispositions leur confèrent à l'égard des actes et déclarations déposés au service national de l'enregistrement lorsque le défunt, s'agissant des déclarations de succession relatives aux seuls décès antérieurs à l’entrée en vigueur de la présente loi, ou les personnes physiques ou morales ou groupements de personne de droit ou de fait, dans les autres cas, sont domiciliés dans le ressort territorial de leur service d'affectation.</p>\n<p>IV. – (Abrogé).</p>\n<p>V. – (Abrogé).</p>\n<p>VI. – (Sans objet).</p>\n<p>VII. – (Sans objet).</p>\n<p>VIII. – Par dérogation au II, les fonctionnaires mentionnés au premier alinéa du I peuvent exercer les attributions que cet alinéa leur confère pour le contrôle :</p>\n<p>1° Des déclarations qui doivent être souscrites ainsi que des impôts, droits, taxes et sommes, quelle qu'en soit la nature, dus par :</p>\n<p>a) Les personnes physiques ou morales, les groupements de personnes de fait ou de droit et toutes entités, quelle que soit leur nature juridique, de nationalité française ou étrangère, non domiciliés ou établis fiscalement en France mais disposant de revenus de source française ou disposant, à quelque titre que ce soit, directement ou indirectement, d'une ou de plusieurs habitations ou biens immobiliers dans ce pays ;</p>\n<p>b) Les personnes physiques ou morales, les groupements de personnes de fait ou de droit et toutes entités, quelle que soit leur nature juridique, de nationalité française ou étrangère, n'ayant pas en France le lieu de leur domicile, établissement ou siège social, imposables ou taxables en France en application des dispositions du code général des impôts ou des stipulations d'une convention internationale ;</p>\n<p>c) Tout assujetti n'ayant pas le siège de son activité en France mais y réalisant des opérations taxables ;</p>\n<p>d) Les fonctionnaires et agents de l'Etat en service à l'étranger ou les fonctionnaires et autres agents au service de la Commission européenne, qu'ils disposent ou non d'une habitation en France, à l'exception de ceux qui y ont conservé leur foyer fiscal ;</p>\n<p>e) Les personnes transférant leur domicile hors de France, imposables en France en vertu des articles 167 ou 167 bis du code général des impôts ;</p>\n<p>2° Des déclarations souscrites et des retenues et perceptions à la source dues par les établissements payeurs et débiteurs divers à raison des rémunérations, revenus et gains de toute nature versés à des personnes physiques ou morales, groupements ou entités domiciliés ou établis en France ou hors de France ;</p>\n<p>3° Des exonérations, abattements, remboursements ou restitutions, quelle qu'en soit la nature, qui bénéficient aux personnes, groupements ou entités domiciliés ou établis en France ou hors de France ainsi qu'aux organisations internationales établies dans ce pays.</p>\n<br>\n<p>Aucune compétence du présent article ne permet d’exiger une déclaration fiscale de succession ou de liquider des droits de mutation par décès au titre d’un décès survenu à compter de l’entrée en vigueur de la présente loi. Les contrôles relatifs aux donations et aux impôts ayant un fait générateur distinct restent ouverts dans leur champ propre.</p>",
+    "reason": "Coordination de la suppression des droits et déclarations successorales pour les décès nouveaux, sans compter une deuxième abolition. Le III conserve la compétence territoriale sur les décès anciens et le VIII 3° conserve intégralement exonérations, abattements, remboursements et restitutions. Correction légistique du renvoi sans antécédent « du même livre » en précisant le livre des procédures fiscales ; aucune compétence nouvelle.",
+    "review_notes": "Transition compatible : la restriction « déclarations de succession relatives aux seuls décès antérieurs » laisse ouverts contrôles et restitutions historiques, comme les 805 et 808 proposés. Le VIII 3° (« Des exonérations, abattements, remboursements ou restitutions, quelle qu'en soit la nature ») n'est pas limité aux droits anciens pour les autres impôts. Les articles 409 et 410 de l'annexe II, lus entiers, maintiennent intérim et délégation ; 350 quaterdecies conserve ses propres conditions de consultation. Incohérence préexistante : « du même livre » au II 1 n'avait aucun antécédent ; désignation explicite du LPF, sans inventer le contenu de L.212/L.213, absents du corpus. Les arrêtés de compétences et ces cibles LPF demeurent à confronter. Le texte ne rétablit ni CVAE ni taxe sur les salaires ni IS annuel ; seuls les impôts légalement dus peuvent être contrôlés.",
+    "status": "rewrite_draft",
+    "previous_draft": {
+      "source_sha256": "21cb6276f73a36c72863f4414f101e444ed7977ccd93917ef2286d1f7c827cc4",
+      "status": "rewrite_draft",
+      "proposed_xml": "\n<br>\n<p>I. – Sous réserve des dispositions des articles 409 et 410 de l&#x27;annexe II au code général des impôts, seuls les fonctionnaires de la direction générale des finances publiques appartenant à des corps des catégories A et B peuvent fixer les bases d&#x27;imposition et liquider les impôts, taxes et redevances ainsi que proposer les rectifications.</p>\n<p>Les fonctionnaires mentionnés au premier alinéa peuvent se faire assister pour les opérations de contrôle par des fonctionnaires stagiaires et par tout autre fonctionnaire de la direction générale des finances publiques affecté ou non dans le même service déconcentré ou service à compétence nationale.</p>\n<p>II. – 1. Les fonctionnaires mentionnés au premier alinéa du I peuvent exercer les attributions que ces dispositions leur confèrent à l&#x27;égard des personnes physiques ou morales ou groupements de personne de droit ou de fait qui ont déposé ou auraient dû déposer dans le ressort territorial du service déconcentré ou du service à compétence nationale dans lequel ils sont affectés une déclaration, un acte ou tout autre document ainsi qu&#x27;à l&#x27;égard des personnes ou groupements qui, en l&#x27;absence d&#x27;obligation déclarative, y ont été ou auraient dû y être imposés ou qui y ont leur résidence principale, leur siège ou leur principal établissement.</p>\n<p>Ils sont également compétents dans le ressort territorial de leur service d&#x27;affectation pour dresser les procès-verbaux prévus au d de l&#x27;article L. 212 et à l&#x27;article L. 213 du même livre.</p>\n<p>2. Les fonctionnaires territorialement compétents en application du 1 pour contrôler les déclarations de revenus, les déclarations de bénéfices ou de résultat d&#x27;une personne physique ou morale ou d&#x27;un groupement peuvent exercer les attributions définies au premier alinéa du I pour l&#x27;ensemble des impositions, taxes et redevances dues par ce contribuable, quel que soit le lieu d&#x27;imposition ou de dépôt des déclarations ou actes relatifs à ces impositions, taxes et redevances.</p>\n<p>3. Les fonctionnaires mentionnés au premier alinéa du I peuvent exercer les attributions que ces dispositions leur confèrent à l&#x27;égard des personnes physiques ou morales et des groupements liés aux personnes ou groupements qui relèvent de leur compétence en application du 1.</p>\n<p>Les liens existant entre les personnes ou groupements s&#x27;entendent de l&#x27;appartenance ou du rattachement à un même foyer fiscal, de l&#x27;exercice d&#x27;un rôle de direction de droit ou de fait, d&#x27;une relation d&#x27;association, de subordination ou d&#x27;interposition, ou de l&#x27;appartenance à un même groupe d&#x27;intérêts. Les arrêtés d&#x27;attributions des services déconcentrés et des services à compétence nationale définissent, s&#x27;il y a lieu, la compétence des agents au regard des personnes unies par ces liens.</p>\n<p>III. – Par dérogation au II, les fonctionnaires mentionnés au premier alinéa du I peuvent exercer les attributions que ces dispositions leur confèrent à l&#x27;égard des actes et déclarations déposés au service national de l&#x27;enregistrement lorsque le défunt, s&#x27;agissant des déclarations de succession relatives aux seuls décès antérieurs à l’entrée en vigueur de la présente loi, ou les personnes physiques ou morales ou groupements de personne de droit ou de fait, dans les autres cas, sont domiciliés dans le ressort territorial de leur service d&#x27;affectation.</p>\n<p>IV. – (Abrogé).</p>\n<p>V. – (Abrogé).</p>\n<p>VI. – (Sans objet).</p>\n<p>VII. – (Sans objet).</p>\n<p>VIII. – Par dérogation au II, les fonctionnaires mentionnés au premier alinéa du I peuvent exercer les attributions que cet alinéa leur confère pour le contrôle :</p>\n<p>1° Des déclarations qui doivent être souscrites ainsi que des impôts, droits, taxes et sommes, quelle qu&#x27;en soit la nature, dus par :</p>\n<p>a) Les personnes physiques ou morales, les groupements de personnes de fait ou de droit et toutes entités, quelle que soit leur nature juridique, de nationalité française ou étrangère, non domiciliés ou établis fiscalement en France mais disposant de revenus de source française ou disposant, à quelque titre que ce soit, directement ou indirectement, d&#x27;une ou de plusieurs habitations ou biens immobiliers dans ce pays ;</p>\n<p>b) Les personnes physiques ou morales, les groupements de personnes de fait ou de droit et toutes entités, quelle que soit leur nature juridique, de nationalité française ou étrangère, n&#x27;ayant pas en France le lieu de leur domicile, établissement ou siège social, imposables ou taxables en France en application des dispositions du code général des impôts ou des stipulations d&#x27;une convention internationale ;</p>\n<p>c) Tout assujetti n&#x27;ayant pas le siège de son activité en France mais y réalisant des opérations taxables ;</p>\n<p>d) Les fonctionnaires et agents de l&#x27;Etat en service à l&#x27;étranger ou les fonctionnaires et autres agents au service de la Commission européenne, qu&#x27;ils disposent ou non d&#x27;une habitation en France, à l&#x27;exception de ceux qui y ont conservé leur foyer fiscal ;</p>\n<p>e) Les personnes transférant leur domicile hors de France, imposables en France en vertu des articles 167 ou 167 bis du code général des impôts ;</p>\n<p>2° Des déclarations souscrites et des retenues et perceptions à la source dues par les établissements payeurs et débiteurs divers à raison des rémunérations, revenus et gains de toute nature versés à des personnes physiques ou morales, groupements ou entités domiciliés ou établis en France ou hors de France ;</p>\n<p>3° Des exonérations, abattements, remboursements ou restitutions, quelle qu&#x27;en soit la nature, qui bénéficient aux personnes, groupements ou entités domiciliés ou établis en France ou hors de France ainsi qu&#x27;aux organisations internationales établies dans ce pays.</p>\n<br>\n<p>Aucune compétence du présent article ne permet d’exiger une déclaration fiscale de succession ou de liquider des droits de mutation par décès au titre d’un décès survenu à compter de l’entrée en vigueur de la présente loi. Les contrôles relatifs aux donations et aux impôts ayant un fait générateur distinct restent ouverts dans leur champ propre.</p>",
+      "reason": "Coordonne la compétence territoriale successorale des agents sans réduire les contrôles des autres impôts.",
+      "review_notes": " Orientation expresse editorial_direction_2026_10_19 et successions. Suppression sans seuil, condition de financement ni prélèvement de remplacement pour les décès futurs. Donations entre vifs, droit civil et impôts ayant un fait générateur distinct préservés. Coordination légistique finale et contrôle juridique restant nécessaires.",
+      "proposed_sha256": "dd45f81ede2ee71c1146e38fbeeec30c156a273234f43c99537c585bb8a9957a",
+      "batch_row_sha256": "6a33d9cc60c1c14ea07ae112b09b644112f33fc14f132c0dd8e24168cb86f257"
+    },
+    "source_conflict_ids": [],
+    "reference_checks": [],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Restriction de compétence successorale cohérente avec l'abolition pour nouveaux décès ; maintien des compétences fiscales autonomes et des avantages futurs.",
+      "scope_limitations": "La mesure fiscale est portée par les articles législatifs ; cet article n'en chiffre pas une seconde réduction. LPF et arrêtés de compétences externes restent à vérifier.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucune déclaration successorale ni registre de remplacement ; les compétences préexistantes sont limitées à leur champ légal subsistant.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "successions-droits-suppression",
+          "description": "Compétence fiscale limitée aux successions anciennes.",
+          "before": "Compétence pour déclarations successorales sans distinction de date du décès.",
+          "after": "Aucune déclaration ni liquidation de droits de succession pour nouveaux décès.",
+          "unit": "legal_duty",
+          "affected_population": "Personnes relevant du dispositif de cet article",
+          "conditions_and_transition": "Application dans le champ et selon la transition précisés dans la proposition.",
+          "replacement_or_new_burdens": "Aucun dépôt ni prélèvement de remplacement ; les garanties et obligations autonomes demeurent.",
+          "source_quote": "s'agissant des déclarations de succession",
+          "proposed_quote": "Aucune compétence du présent article ne permet d’exiger une déclaration fiscale de succession ou de liquider des droits de mutation par décès au titre d’un décès survenu à compter de l’entrée en vigueur de la présente loi."
+        }
+      ]
+    },
+    "benefit_review": "Le VIII 3° conserve sans limitation aux situations antérieures tous les contrôles d'exonérations, abattements, remboursements et restitutions des résidents, non-résidents et organisations internationales. La limitation successorale vise seulement l'impôt entièrement supprimé pour nouveaux décès ; donations et avantages d'autres impôts restent ouverts. Les anciennes restitutions successorales ne sont pas fermées.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "21cb6276f73a36c72863f4414f101e444ed7977ccd93917ef2286d1f7c827cc4",
+      "source_notes_sha256": "33fbd8a9c9908e1731cc3725c00d18823c7de8f0eb782a163bd5caa81b356eec",
+      "proposed_sha256": "371bb2770af60eae4e530b476a8fda81234d7913b4e612a5ffc2bd2f6e77a41b",
+      "assessment_sha256": "be21751d7259649f4cff9cd401858f5ccf18b0f6d31f5d040c255e30a6231dcb",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "dd45f81ede2ee71c1146e38fbeeec30c156a273234f43c99537c585bb8a9957a"
   },
   {
     "code_id": "LEGITEXT000006069574",
     "source_id": "LEGIARTI000022343738",
     "source_sha256": "0e0c401f9ec76dfb86c56cd6716aa54ff12211a79b4bbce19019aa29f520a4d3",
     "number": "396",
-    "proposed_xml": "\n<p>Le crédit de paiement fractionné prévu à l&#x27;article 1717 du code général des impôts est applicable aux droits d&#x27;enregistrement, à la taxe de publicité foncière et aux taxes additionnelles exigibles en raison :</p>\n<p>1° des mutations à raison de décès antérieurs à l’entrée en vigueur de la présente loi, pour les droits restant dus selon leur régime antérieur ;</p>\n<p>2° des apports en société prévus aux 3° du I et au II de l&#x27;article 809 du code précité ;</p>\n<p>3° des acquisitions effectuées dans le cadre des dispositions des articles L. 626-1, L. 631-22 et L. 642-1 du code de commerce ;</p>\n<p>4° des paiements d&#x27;indemnités entre officiers publics et ministériels par suite de suppression d&#x27;offices ;</p>\n<p>5° des acquisitions effectuées par des Français rapatriés d&#x27;outre-mer à l&#x27;aide des prêts de reclassement prévus à l&#x27;article 30 du décret n° 62-261 modifié du 10 mars 1962 et de celles effectuées par des migrants agricoles à l&#x27;aide de prêts consentis dans le cadre des dispositions de l&#x27;article R. 341-5 du code rural et de la pêche maritime au profit d&#x27;agriculteurs dont la qualité de migrant a été reconnue par le ministre de l&#x27;agriculture ;</p>\n<p>6° (Abrogé).</p>\n<p>Aucun crédit, intérêt, garantie ou paiement n’est dû au titre de droits de mutation par décès pour les décès survenus à compter de l’entrée en vigueur de la présente loi.</p>",
-    "reason": "Retire les décès futurs du fractionnement sans supprimer les cinq autres catégories et leurs facilités de paiement.",
-    "review_notes": " Orientation expresse editorial_direction_2026_10_19 et successions. Suppression sans seuil, condition de financement ni prélèvement de remplacement pour les décès futurs. Donations entre vifs, droit civil et impôts ayant un fait générateur distinct préservés. Coordination légistique finale et contrôle juridique restant nécessaires."
+    "proposed_xml": "\n<p>Le crédit de paiement fractionné prévu à l&#x27;article 1717 du code général des impôts est applicable aux droits d&#x27;enregistrement, à la taxe de publicité foncière et aux taxes additionnelles exigibles en raison :</p>\n<p>1° des mutations à raison de décès antérieurs à l’entrée en vigueur de la présente loi, pour les droits restant dus selon leur régime antérieur ;</p>\n<p>2° des apports en société et changements de régime fiscal prévus au 3° du I et au II de l'article 809 du code précité, pour les seuls droits restant légalement dus à raison d'opérations antérieures à l'entrée en vigueur des dispositions de gratuité ou de non-exigibilité prévues par cet article ;</p>\n<p>3° des acquisitions effectuées dans le cadre des dispositions des articles L. 626-1, L. 631-22 et L. 642-1 du code de commerce ;</p>\n<p>4° des paiements d&#x27;indemnités entre officiers publics et ministériels par suite de suppression d&#x27;offices ;</p>\n<p>5° des acquisitions effectuées par des Français rapatriés d&#x27;outre-mer à l&#x27;aide des prêts de reclassement prévus à l&#x27;article 30 du décret n° 62-261 modifié du 10 mars 1962 et de celles effectuées par des migrants agricoles à l&#x27;aide de prêts consentis dans le cadre des dispositions de l&#x27;article R. 341-5 du code rural et de la pêche maritime au profit d&#x27;agriculteurs dont la qualité de migrant a été reconnue par le ministre de l&#x27;agriculture ;</p>\n<p>6° (Abrogé).</p>\n<p>Aucun crédit, intérêt, garantie ou paiement n’est dû au titre de droits de mutation par décès pour les décès survenus à compter de l’entrée en vigueur de la présente loi.</p>\n<p>Le 2° ne rend exigible aucun droit sur un apport ou un changement de régime fiscal bénéficiant de la gratuité ou de la non-exigibilité prévue à l’article 809. Il demeure ouvert pour les droits anciens éligibles, même si la demande de crédit est postérieure à cette entrée en vigueur. Les 3°, 4° et 5° restent applicables aux opérations futures qui en remplissent les conditions ; les indemnités entre officiers publics et ministériels visées au 4° ne sont pas des indemnités de rupture d’un contrat de travail.</p>",
+    "reason": "Coordination nécessaire : le 2° du brouillon visait toujours sans borne « des apports en société prévus aux 3° du I et au II de l’article 809 », alors que le projet 809 dispose « le changement de régime fiscal ne rend exigible aucun droit ni taxe de mutation à titre onéreux ». La référence ne doit créer ni dette ni demande de crédit pour les nouvelles opérations gratuites. Maintien de l’avantage pour les dettes anciennes, y compris demandes futures ; maintien entier des 3° à 5°. Le 4° vise les indemnités entre officiers par suppression d’offices, non le licenciement d’un salarié.",
+    "review_notes": "809 source/projet de reference-targets.json lus : I 3° concerne les apports par une personne non soumise à l’IS à une personne passible de cet impôt ; II les changements de régime. Le renvoi ne porte ni sur I 2° (syndicats professionnels), ni sur le préavis, ni sur l’indemnité du code du travail. 1717, 398 et 402 à 404 F lus : l’éligibilité au crédit n’est pas un fait générateur ; trois annuités pour le II de 809 et cinq pour le I 3° restent utiles au stock ancien (404 C). Cinq annuités pour les 3°/4° et dispense d’intérêts de 404 F pour le 5° subsistent. Les textes entiers du code de commerce L626-1/L631-22/L642-1, du décret 62-261 art.30 et du code rural R341-5 ne sont pas fournis dans le contexte consulté : leur portée externe n’est pas certifiée, leurs renvois et avantages restent inchangés. La durée d’un plan commercial n’est pas celle d’un emploi. Rectification du motif ancien parlant de « cinq autres catégories » : hors 1°, seules quatre catégories actives 2° à 5° et un 6° abrogé. Sources et avant-images assignées conservées sans modification dans source.json ; cibles obligatoires et leurs empreintes conservées dans reference-targets.json. Les projets cités ne sont pas le droit en vigueur et cette analyse ne constitue pas une validation par juriste.",
+    "status": "rewrite_draft",
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006069577|LEGIARTI000037986535",
+        "view_sha256": "8181f309cf842e6126932733b0a270f9ff5fea0e5556eb0e985cd38acd2b7847",
+        "assessment": "Coordination nécessaire du 2° de 396 : il vise I 3° et II de 809, non I 2° relatif notamment aux syndicats. La proposition fournie rend les nouveaux apports gratuits et les nouveaux changements non taxables ; le corps final borne donc le crédit aux droits anciens restant dus, avec demandes futures admises. Le statut de société passible de l’IS demeure malgré l’absence d’impôt sur bénéfices conservés. Aucun champ d’ancienneté ou notification de licenciement n’est engagé."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+        "view_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
+        "assessment": "Différence de champ : les « indemnités entre officiers publics et ministériels » du 4° de 396 sont liées à une suppression d’offices, non à un licenciement de salarié. Le préavis de quinze jours du contrat unique et les préavis/anciennetés conservés pour anciens contrats ne déterminent ni ces indemnités ni leur crédit fiscal. Aucun renvoi direct ou délai de notification de rupture n’est introduit dans 396."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+        "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+        "assessment": "Différence de champ : 396 3° traite d’acquisitions sous procédures commerciales et son 4° d’indemnités entre officiers ; il n’autorise aucun emploi à terme. La proposition L1221-2 réserve les anciens contrats, impose le contrat unique aux nouvelles embauches privées et préserve les avantages futurs. Ni durée d’un plan de cession ni échéancier fiscal ne devient durée d’emploi ; régime public et garanties spéciales restent distincts."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+        "view_sha256": "07c3c02ea91c33bfe38f9dd4010d72cc213a2fee8e654638d29b3dec91f0446c",
+        "assessment": "Différence de champ : l’indemnité entre officiers par suppression d’offices du 4° de 396 n’est pas l’indemnité ordinaire patronale de L1234-9. Le seuil d’un an au terme effectif préavis inclus, les 0,20 mois sur ancienneté totale au prorata des mois complets et le plafond de six mois ne s’y appliquent pas. Les anciens CDI et licenciements notifiés avant bascule gardent la transition propre de la cible ; aucun calcul fiscal de 396 ne la modifie."
+      }
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Le fractionnement demeure pour les droits anciens et les opérations autonomes éligibles. La restriction du 2° coordonne la gratuité de 809 et celle du 1° l’abolition successorale : aucune nouvelle baisse de taux ou suppression distincte n’est attribuée à cet article.",
+      "scope_limitations": "Les catégories 3° à 5° restent ouvertes ; les fondements externes de leurs opérations ne sont pas intégralement fournis. L’article 404 C doit être lu avec le champ résiduel du 2°. Aucun chiffrage global ni extension aux indemnités salariales.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la précision de champ n’ajoute aucune condition au crédit ancien, aucun dépôt ou délai ; elle exclut les formalités fiscales devenues sans objet pour les opérations non imposables.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "droits-succession-suppression",
+          "description": "Articuler les crédits et leurs accessoires avec l’absence de droits sur les nouveaux décès.",
+          "before": "Crédit ou intérêts successoraux sans exclusion générale des décès futurs.",
+          "after": "Crédits et avantages conservés pour les anciennes dettes ; aucun accessoire fiscal pour les droits supprimés.",
+          "unit": "legal_duty",
+          "affected_population": "Héritiers, légataires et bénéficiaires éligibles des crédits ; donations maintenues dans leur champ.",
+          "conditions_and_transition": "Décès à compter de l’entrée en vigueur hors taxe ; demandes et recours sur décès anciens conservés selon les règles temporelles propres.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; contrôles et droits autonomes conservés.",
+          "source_quote": "1° des mutations par décès ;",
+          "proposed_quote": "1° des mutations à raison de décès antérieurs à l’entrée en vigueur de la présente loi, pour les droits restant dus selon leur régime antérieur ;"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "apports-societes-gratuite-sans-conservation",
+          "description": "Réserver le 2° aux droits d’apports et de changements de régime restant dus.",
+          "before": "Renvoi non borné aux I 3° et II de 809.",
+          "after": "Aucun crédit ni droit rétabli pour les opérations gratuites ; crédits anciens toujours ouverts.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés et apporteurs concernés par I 3°/II de 809.",
+          "conditions_and_transition": "Même fait générateur et entrée en vigueur que la gratuité de 809 ; demandes futures sur droits anciens admises.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; contrôles et droits autonomes conservés.",
+          "source_quote": "2° des apports en société prévus aux 3° du I et au II de l'article 809 du code précité ;",
+          "proposed_quote": "Le 2° ne rend exigible aucun droit sur un apport ou un changement de régime fiscal bénéficiant de la gratuité ou de la non-exigibilité prévue à l’article 809."
+        }
+      ]
+    },
+    "benefit_review": "Les crédits pour décès anciens et apports/changements anciens restent ouverts aux demandes futures éligibles. Les acquisitions de procédures collectives, indemnités entre officiers et acquisitions aidées de rapatriés/migrants des 3° à 5° restent éligibles pour l’avenir. Le fractionnement sans intérêts de 404 F est conservé. La disparition du crédit pour les seuls nouveaux décès/apports gratuits suit l’abolition de la dette correspondante, sans remplacement.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "0e0c401f9ec76dfb86c56cd6716aa54ff12211a79b4bbce19019aa29f520a4d3",
+      "source_notes_sha256": "d3d85ca99b022c5b574347a1c69560e364d0d3ebbbfb00e6ce1d761f3659a38f",
+      "proposed_sha256": "389713014457799da772b4ffbfd04a80251495b56734af32317229537b7b5522",
+      "assessment_sha256": "fbe1324f96a8de89a9b9dadeba560c1cbc0d2027139b2ed52212f154c80f6ae9",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "reference_coherence": {
+      "version": 3,
+      "referrer_sha256": "389713014457799da772b4ffbfd04a80251495b56734af32317229537b7b5522",
+      "policy_sha256": {
+        "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "site-summaries.json": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+      },
+      "referrer_source": {
+        "code_id": "LEGITEXT000006069574",
+        "source_id": "LEGIARTI000022343738",
+        "source_sha256": "0e0c401f9ec76dfb86c56cd6716aa54ff12211a79b4bbce19019aa29f520a4d3",
+        "source_xml_sha256": "bcacf792048a49949731e49d522eb00fc6d2edfde91062068103486cc9d5ff09",
+        "source_notes_sha256": "d3d85ca99b022c5b574347a1c69560e364d0d3ebbbfb00e6ce1d761f3659a38f"
+      },
+      "targets": {
+        "LEGITEXT000006069577|LEGIARTI000037986535": {
+          "code_id": "LEGITEXT000006069577",
+          "source_id": "LEGIARTI000037986535",
+          "source_sha256": "c3aee81dace0fe6ca0723fc218ccb0c6429f67351c187a65c9d877f1ba84cdcc",
+          "view_kind": "proposal",
+          "view_sha256": "8181f309cf842e6126932733b0a270f9ff5fea0e5556eb0e985cd38acd2b7847",
+          "source_xml_sha256": "84c0ce4ea57550375995e918095f2bbbf615a0fd4a9e9a2aa12019b9fb9a190f",
+          "source_notes_sha256": "89259c0086bf67fc5184990d782165d4bc94dc800b97d720bb64bbf58fa362f8"
+        },
+        "LEGITEXT000006072050|LEGIARTI000006901112": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000006901112",
+          "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+          "view_kind": "proposal",
+          "view_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
+          "source_xml_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000019071087": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000019071087",
+          "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+          "view_kind": "proposal",
+          "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+          "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000035644154": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000035644154",
+          "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+          "view_kind": "proposal",
+          "view_sha256": "07c3c02ea91c33bfe38f9dd4010d72cc213a2fee8e654638d29b3dec91f0446c",
+          "source_xml_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
+          "source_notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b"
+        }
+      },
+      "assessments": [
+        {
+          "target_key": "LEGITEXT000006069577|LEGIARTI000037986535",
+          "view_sha256": "8181f309cf842e6126932733b0a270f9ff5fea0e5556eb0e985cd38acd2b7847",
+          "assessment": "Coordination nécessaire du 2° de 396 : il vise I 3° et II de 809, non I 2° relatif notamment aux syndicats. La proposition fournie rend les nouveaux apports gratuits et les nouveaux changements non taxables ; le corps final borne donc le crédit aux droits anciens restant dus, avec demandes futures admises. Le statut de société passible de l’IS demeure malgré l’absence d’impôt sur bénéfices conservés. Aucun champ d’ancienneté ou notification de licenciement n’est engagé."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+          "view_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
+          "assessment": "Différence de champ : les « indemnités entre officiers publics et ministériels » du 4° de 396 sont liées à une suppression d’offices, non à un licenciement de salarié. Le préavis de quinze jours du contrat unique et les préavis/anciennetés conservés pour anciens contrats ne déterminent ni ces indemnités ni leur crédit fiscal. Aucun renvoi direct ou délai de notification de rupture n’est introduit dans 396."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+          "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+          "assessment": "Différence de champ : 396 3° traite d’acquisitions sous procédures commerciales et son 4° d’indemnités entre officiers ; il n’autorise aucun emploi à terme. La proposition L1221-2 réserve les anciens contrats, impose le contrat unique aux nouvelles embauches privées et préserve les avantages futurs. Ni durée d’un plan de cession ni échéancier fiscal ne devient durée d’emploi ; régime public et garanties spéciales restent distincts."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+          "view_sha256": "07c3c02ea91c33bfe38f9dd4010d72cc213a2fee8e654638d29b3dec91f0446c",
+          "assessment": "Différence de champ : l’indemnité entre officiers par suppression d’offices du 4° de 396 n’est pas l’indemnité ordinaire patronale de L1234-9. Le seuil d’un an au terme effectif préavis inclus, les 0,20 mois sur ancienneté totale au prorata des mois complets et le plafond de six mois ne s’y appliquent pas. Les anciens CDI et licenciements notifiés avant bascule gardent la transition propre de la cible ; aucun calcul fiscal de 396 ne la modifie."
+        }
+      ],
+      "assessments_sha256": "ca753ee09d196b013c8bf1deeb11de6b9f713d49864ff5ed49b9ad4cd81d4db6",
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "cc4b0b375b17f1f3423326a67951a367e7b752e6e7ba5a9deb7b3ea52e409a4c"
   },
   {
     "code_id": "LEGITEXT000006069574",
     "source_id": "LEGIARTI000006299725",
     "source_sha256": "ddf00df62b4a1e0c451e14d78547eb8477ef0c0e4299dd532a7a32548d5260bf",
     "number": "397 A",
-    "proposed_xml": "\n<p>Le paiement des droits de donation entre vifs et des droits de mutation par décès restant dus au titre des décès antérieurs à l’entrée en vigueur de la présente loi peut être différé pendant cinq ans à compter de la date d&#x27;exigibilité des droits et, à l&#x27;expiration de ce délai, fractionné pendant dix ans lorsque les mutations portent :</p>\n<br>\n<p>a) Sur l&#x27;ensemble des biens meubles et immeubles, corporels ou incorporels affectés à l&#x27;exploitation d&#x27;une entreprise individuelle ayant une activité industrielle, commerciale, artisanale, agricole ou libérale et exploitée par le donateur ou, pour ces seuls anciens décès, par le défunt ;</p>\n<br>\n<p>b) Sur les parts sociales ou les actions d&#x27;une société ayant une activité industrielle, commerciale, artisanale, agricole ou libérale, non cotée en bourse, à condition que le bénéficiaire reçoive au moins 5% du capital social.</p>\n<br>\n<p>Aucune condition de 5 % du capital, aucune garantie, aucun différé ni fractionnement n’est exigé pour la transmission d’une entreprise résultant d’un décès survenu à compter de l’entrée en vigueur de la présente loi. Aucun droit de mutation par décès n’est dû.</p>",
-    "reason": "Conserve les différés cinq ans puis fractionnements dix ans des donations d’entreprise et anciens décès, retire tout crédit successoral futur.",
-    "review_notes": " Orientation expresse editorial_direction_2026_10_19 et successions. Suppression sans seuil, condition de financement ni prélèvement de remplacement pour les décès futurs. Donations entre vifs, droit civil et impôts ayant un fait générateur distinct préservés. Coordination légistique finale et contrôle juridique restant nécessaires."
+    "proposed_xml": "\n<p>Le paiement des droits de donation entre vifs et des droits de mutation par décès restant dus au titre des décès antérieurs à l’entrée en vigueur de la présente loi peut être différé pendant cinq ans à compter de la date d&#x27;exigibilité des droits et, à l&#x27;expiration de ce délai, fractionné pendant dix ans lorsque les mutations portent :</p>\n<br>\n<p>a) Sur l&#x27;ensemble des biens meubles et immeubles, corporels ou incorporels affectés à l&#x27;exploitation d&#x27;une entreprise individuelle ayant une activité industrielle, commerciale, artisanale, agricole ou libérale et exploitée par le donateur ou, pour ces seuls anciens décès, par le défunt ;</p>\n<br>\n<p>b) Sur les parts sociales ou les actions d&#x27;une société ayant une activité industrielle, commerciale, artisanale, agricole ou libérale, non cotée en bourse, à condition que le bénéficiaire reçoive au moins 5% du capital social.</p>\n<br>\n<p>Pour une transmission d’entreprise résultant d’un décès survenu à compter de l’entrée en vigueur de la présente loi, aucun droit de mutation par décès n’est dû. Aucune condition de 5 % du capital, aucune garantie, aucun différé ni fractionnement n’est exigé au titre de ces droits supprimés. Les garanties et obligations civiles ou celles fondées sur un impôt distinct conservent leur régime propre.</p>",
+    "reason": "Coordination de champ : le brouillon disait « aucune garantie […] n’est exigé pour la transmission d’une entreprise », formule trop large au regard des protections civiles et des dettes autonomes à conserver. La dispense est expressément bornée aux droits successoraux supprimés. Le différé de cinq ans puis le fractionnement de dix ans, le seuil d’au moins 5 % et les deux catégories d’entreprises demeurent intacts pour les donations futures et les anciens décès.",
+    "review_notes": "1717 et 404 GA/GB/GC/GD lus : 404 GB fixe les fractions égales semestrielles, la première au terme du différé, puis paiement dans le mois ; 404 GC conserve la réduction des deux tiers du taux sous ses conditions propres (plus de 10 % ou plus du tiers global), distinctes du seuil d’accès de 5 %. Aucun taux nouveau. Le projet 404 GD supprime l’exigibilité anticipée pour les cessions nouvelles, y compris titres issus d’apports antérieurs : cet allègement n’est pas remis en cause. La transition de 404 GA figée à la date du décès reste à corriger hors lot. Une donation entre vifs ne devient pas exonérée par l’abolition des décès ; la durée de cinq/dix ans ne concerne aucun contrat de travail. Sources et avant-images assignées conservées sans modification dans source.json ; cibles obligatoires et leurs empreintes conservées dans reference-targets.json. Les projets cités ne sont pas le droit en vigueur et cette analyse ne constitue pas une validation par juriste.",
+    "status": "rewrite_draft",
+    "reference_checks": [],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Conservation du crédit d’entreprise pour les donations et les dettes successorales anciennes, coordination de l’abolition pour les décès nouveaux et délimitation de la dispense de garantie au seul impôt supprimé.",
+      "scope_limitations": "Ni baisse des droits de donation ni nouvel étalement n’est démontré : cinq ans puis dix ans sont déjà le droit source. Les sûretés civiles et impôts distincts subsistent ; coût global inconnu.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : la réserve sur les garanties autonomes évite de les effacer implicitement, sans créer de nouvelle sûreté ni condition. Les conditions d’accès existantes aux crédits subsistants sont inchangées.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "droits-succession-suppression",
+          "description": "Articuler les crédits et leurs accessoires avec l’absence de droits sur les nouveaux décès.",
+          "before": "Crédit ou intérêts successoraux sans exclusion générale des décès futurs.",
+          "after": "Crédits et avantages conservés pour les anciennes dettes ; aucun accessoire fiscal pour les droits supprimés.",
+          "unit": "legal_duty",
+          "affected_population": "Héritiers, légataires et bénéficiaires éligibles des crédits ; donations maintenues dans leur champ.",
+          "conditions_and_transition": "Décès à compter de l’entrée en vigueur hors taxe ; demandes et recours sur décès anciens conservés selon les règles temporelles propres.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; contrôles et droits autonomes conservés.",
+          "source_quote": "Le paiement des droits de mutation à titre gratuit peut être différé pendant cinq ans",
+          "proposed_quote": "Le paiement des droits de donation entre vifs et des droits de mutation par décès restant dus au titre des décès antérieurs à l’entrée en vigueur de la présente loi peut être différé pendant cinq ans"
+        }
+      ]
+    },
+    "benefit_review": "Le différé cinq ans puis fractionnement dix ans demeure pour toutes donations futures éligibles : ensemble des biens de l’entreprise individuelle ou titres non cotés avec au moins 5 % reçus. Mêmes droits pour les décès anciens. Les intérêts réduits de 404 GC et les échéances de 404 GB restent ; les nouveaux décès sont hors taxe sans garantie fiscale, les obligations civiles demeurant distinctes.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "ddf00df62b4a1e0c451e14d78547eb8477ef0c0e4299dd532a7a32548d5260bf",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "886a0f27b4cbaaace521f889715afbcbf58284de5337290d91c3cfa9662a7129",
+      "assessment_sha256": "41824ec76227450471249e26c65f6f23b3fb927473b71a819ee0d500734c0088",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "eb678c0023f2dc1ffc9b1401b7300e4f0f6878e389f8bbf0e6456026dfb688f5"
   },
   {
     "code_id": "LEGITEXT000006069574",
@@ -875,8 +1399,46 @@
     "source_sha256": "bc909ca2c3d4e9c9e9d161b547c226c9567cd722473d7e789d1d671bfe436344",
     "number": "401",
     "proposed_xml": "\n<p>Sous réserve des dispositions de l&#x27;article 404 GC, les droits et taxes dont le paiement est fractionné ou différé donnent lieu au versement d&#x27;intérêts dont le taux est égal à celui du taux effectif moyen pratiqué par les établissements de crédit pour des prêts à taux fixe aux particuliers entrant dans le champ d&#x27;application des articles L. 312-1 à L. 312-36 du code de la consommation, au cours du quatrième trimestre de l&#x27;année précédant celle de la demande de paiement fractionné ou différé, réduit d&#x27;un tiers. Toutefois, seule la première décimale est retenue. Ce taux est applicable pendant toute la durée du crédit.</p>\n<p>Les intérêts sont acquittés :</p>\n<p>s&#x27;il s&#x27;agit d&#x27;un paiement fractionné, lors du versement de chaque fraction, à laquelle ils s&#x27;ajoutent ;</p>\n<p>s&#x27;il s&#x27;agit d&#x27;un paiement différé, annuellement, le premier terme venant à échéance un an après l&#x27;expiration du délai imparti pour souscrire la déclaration relative à un décès antérieur à l’entrée en vigueur de la présente loi.</p>\n<p>Aucun intérêt du présent article ne court au titre de droits de mutation par décès pour un décès survenu à compter de l’entrée en vigueur de la présente loi. Les intérêts des autres crédits demeurent soumis à leurs échéances propres, notamment à l’article 404 GC pour le crédit de l’article 397 A.</p>",
-    "reason": "Supprime l’échéance d’intérêts attachée à une déclaration successorale future ; maintient les intérêts des crédits distincts.",
-    "review_notes": " Orientation expresse editorial_direction_2026_10_19 et successions. Suppression sans seuil, condition de financement ni prélèvement de remplacement pour les décès futurs. Donations entre vifs, droit civil et impôts ayant un fait générateur distinct préservés. Coordination légistique finale et contrôle juridique restant nécessaires."
+    "reason": "Corps du brouillon conservé après contrôle : la mention « pour un décès survenu à compter de l’entrée en vigueur » exclut l’intérêt d’une dette successorale supprimée, sans modifier le taux ni les échéances propres aux donations. Le renvoi initial à 404 GC protège ses conditions plus favorables et son calendrier. Les dérogations de 404 B et 404 F demeurent applicables dans leur champ ; aucune réduction supplémentaire du taux n’est inventée.",
+    "review_notes": "404 B source/projet prévoit la dispense d’intérêts sous option d’assiette pleine propriété pour la nue-propriété des anciens décès ; 404 F source/projet exonère d’intérêts le crédit du 5° de 396. 404 GC conserve la réduction des deux tiers, ses seuils stricts, le premier intérêt un an après exigibilité et les fractions autres que la première, distincts du calendrier successoral ordinaire. La première décimale, le taux fixé pour toute la durée et la réduction initiale d’un tiers restent exacts. Renvoi L312-1 à L312-36 du code de la consommation : source extérieure non fournie, périmètre de la série de taux non certifié ; ne pas substituer silencieusement une autre série de taux. NOTA 1er février 2024 conservée comme historique. Transition procédurale de 404 B à corriger hors lot pour éviter un gel au jour du décès. Sources et avant-images assignées conservées sans modification dans source.json ; cibles obligatoires et leurs empreintes conservées dans reference-targets.json. Les projets cités ne sont pas le droit en vigueur et cette analyse ne constitue pas une validation par juriste.",
+    "status": "rewrite_draft",
+    "reference_checks": [],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "L’intérêt est écarté pour les seuls droits successoraux nouveaux supprimés ; le taux et les calendriers des autres crédits, leurs réductions et dispenses restent inchangés. Ce n’est pas une nouvelle suppression d’intérêts sur des dettes subsistantes.",
+      "scope_limitations": "Série bancaire externe du code de la consommation non vérifiée intégralement ; pas de taux numérique annuel inventé. La correction hors lot des transitions de crédits successoraux reste nécessaire ; solde budgétaire inconnu.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : mêmes échéances et même taux pour les crédits subsistants, sans sûreté ou donnée supplémentaire. Les exceptions favorables 404 B, 404 F et 404 GC restent à leur champ propre.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "droits-succession-suppression",
+          "description": "Articuler les crédits et leurs accessoires avec l’absence de droits sur les nouveaux décès.",
+          "before": "Crédit ou intérêts successoraux sans exclusion générale des décès futurs.",
+          "after": "Crédits et avantages conservés pour les anciennes dettes ; aucun accessoire fiscal pour les droits supprimés.",
+          "unit": "legal_duty",
+          "affected_population": "Héritiers, légataires et bénéficiaires éligibles des crédits ; donations maintenues dans leur champ.",
+          "conditions_and_transition": "Décès à compter de l’entrée en vigueur hors taxe ; demandes et recours sur décès anciens conservés selon les règles temporelles propres.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; contrôles et droits autonomes conservés.",
+          "source_quote": "s'il s'agit d'un paiement différé, annuellement, le premier terme venant à échéance un an après l'expiration du délai imparti pour souscrire la déclaration de succession.",
+          "proposed_quote": "Aucun intérêt du présent article ne court au titre de droits de mutation par décès pour un décès survenu à compter de l’entrée en vigueur de la présente loi."
+        }
+      ]
+    },
+    "benefit_review": "Réduction d’un tiers du taux effectif moyen, première décimale et fixité sur toute la durée maintenues. La réduction supplémentaire de 404 GC, la dispense de 404 F et l’option sans intérêts de 404 B restent à leur champ, pour les donations futures et les dettes anciennes éligibles. Les droits successoraux nouveaux et leurs intérêts sont entièrement supprimés, sans taxe ni intérêt de remplacement.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "bc909ca2c3d4e9c9e9d161b547c226c9567cd722473d7e789d1d671bfe436344",
+      "source_notes_sha256": "b28e59041293fe45ba728eedc763197be5e7332663ba4e8fdd215270c6ffdcc2",
+      "proposed_sha256": "72bbccdbea3cdf9f0653d631b7f85cd18ec3566eea4dd989ef80d25356ba32b7",
+      "assessment_sha256": "4ac2c1666b66367b53a37f7f608396fb9e9033ab5572266f9823857da1374141",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "72bbccdbea3cdf9f0653d631b7f85cd18ec3566eea4dd989ef80d25356ba32b7"
   },
   {
     "code_id": "LEGITEXT000006069574",
@@ -885,6 +1447,44 @@
     "number": "404 GC",
     "proposed_xml": "\n<p>Les droits dont le paiement est différé et fractionné en application des dispositions de l&#x27;article 397 A donnent lieu au versement d&#x27;intérêts au taux prévu par l&#x27;article 401.</p>\n<p> </p>\n<p> Ce taux est applicable pendant toute la durée du crédit. Il est réduit des deux tiers lorsque la valeur de l&#x27;entreprise ou la valeur nominale des titres comprise dans la part taxable de chaque donataire ou, pour les décès antérieurs à l’entrée en vigueur de la présente loi, de chaque héritier ou légataire est supérieure à 10 % de la valeur de l&#x27;entreprise ou du capital social ou lorsque, globalement, plus du tiers du capital social est transmis. Seule la première décimale est retenue. </p>\n<p>Les intérêts sont acquittés :</p>\n<p>a. S&#x27;agissant du paiement différé, annuellement, le premier terme venant à échéance un an après la date d&#x27;exigibilité des droits ;</p>\n<p>b. S&#x27;agissant du paiement fractionné, lors du versement de chaque fraction autre que la première. Ils sont alors calculés sur le montant des droits restant dus après le versement de la précédente échéance.</p>\n<p>Aucun intérêt du présent article n’est dû au titre d’une transmission résultant d’un décès survenu à compter de l’entrée en vigueur de la présente loi. Les seuils et intérêts applicables aux donations et anciens décès demeurent inchangés.</p>",
     "reason": "Réserve aux donations et anciens décès le taux réduit des crédits d’entreprise, sans intérêts successoraux sur nouveaux décès.",
-    "review_notes": " Orientation expresse editorial_direction_2026_10_19 et successions. Suppression sans seuil, condition de financement ni prélèvement de remplacement pour les décès futurs. Donations entre vifs, droit civil et impôts ayant un fait générateur distinct préservés. Coordination légistique finale et contrôle juridique restant nécessaires."
+    "review_notes": "Transition compatible avec 397 A et 401 lus intégralement : les donations futures restent éligibles, les nouveaux décès ne produisent plus de droits ni d’intérêts. Maintien exact de la réduction des deux tiers, du seuil strictement supérieur à 10 %, de plus du tiers globalement transmis et de la première décimale. Le a conserve la première échéance annuelle un an après l’exigibilité ; le b exclut la première fraction et calcule sur le solde après l’échéance précédente. 404 GB règle le principal, non ces intérêts ; 404 règle leur arrêt lors du paiement anticipé. 404 GD proposé retire une accélération mais non le coût contractuel du crédit. Aucune assimilation à l’IS annuel ni aux indemnités de rupture.",
+    "status": "rewrite_draft",
+    "reference_checks": [],
+    "benefit_review": "Les facilités et taux favorables de cet article sont conservés pour toutes les opérations encore imposables dans leur champ, y compris les demandes futures recevables. La fermeture aux nouveaux décès ou apports gratuits résulte de la suppression intégrale de leurs droits, sans prélèvement de remplacement ; elle ne ferme aucun avantage d’une donation entre vifs imposable. Transition compatible avec 397 A et 401 lus intégralement : les donations futures restent éligibles, les nouveaux décès ne produisent plus de droits ni d’intérêts. Maintien exact de la réduction des deux tiers, du seuil strictement supérieur à 10 %, de plus du tiers globalement transmis et de la première décimale. Le a conserve la première échéance annuelle un an après l’exigibilité ; le b exclut la première fraction et calcule sur le solde après l’échéance précédente. 404 GB règle le principal, non ces intérêts ; 404 règle leur arrêt lors du paiement anticipé. 404 GD proposé retire une accélération mais non le coût contractuel du crédit. Aucune assimilation à l’IS annuel ni aux indemnités de rupture.",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Réserve aux donations et anciens décès le taux réduit des crédits d’entreprise, sans intérêts successoraux sur nouveaux décès.",
+      "scope_limitations": "Examen limité au lot et aux cibles intégralement disponibles. Aucun solde national de coût ou de recettes chiffré ; les coordinations hors lot signalées restent ouvertes. Les anciens droits et les régimes autonomes ne sont pas supprimés.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : pas de déclaration, registre, délai minimal ou garantie de remplacement. Les preuves du prêt et garanties effectives déjà requises subsistent ; la précision des transitions ne crée pas de formalité.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "suppression-droits-succession",
+          "description": "Neutralisation du crédit accessoire lorsque le principal fiscal est supprimé, avec maintien des avantages anciens.",
+          "before": "Crédit et accessoires applicables aux opérations imposables de la source.",
+          "after": "Aucun crédit exigé pour les opérations nouvelles dont le principal est supprimé ; anciens droits protégés.",
+          "unit": "regime",
+          "affected_population": "Bénéficiaires des transmissions visées par cet article.",
+          "conditions_and_transition": "Entrée en vigueur de la loi proposée ; anciennes créances et recours préservés selon la transition intégrale du texte.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ajoutée ; les garanties et dettes autonomes demeurent.",
+          "source_quote": "Les droits dont le paiement est différé et fractionné en application des dispositions de l'article 397 A donnent lieu au versement d'intérêts au taux prévu par l'article 401.",
+          "proposed_quote": "Aucun intérêt du présent article n’est dû au titre d’une transmission résultant d’un décès survenu à compter de l’entrée en vigueur de la présente loi. Les seuils et intérêts applicables aux donations et anciens décès demeurent inchangés."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "7c4b475636b5a6ada6ef8d9f5941000a133c3dda1ab182e6e11cbf7c538af88d",
+      "source_notes_sha256": "b28e59041293fe45ba728eedc763197be5e7332663ba4e8fdd215270c6ffdcc2",
+      "proposed_sha256": "30ef6ec4441d6df61c479cb87dc773a0140b494fda2e9ab465c82061513a789c",
+      "assessment_sha256": "6a33fb4a6c1f48fa27ad5817f44932c57b1f57ce9e563be1e7d34c9432f21d41",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "30ef6ec4441d6df61c479cb87dc773a0140b494fda2e9ab465c82061513a789c"
   }
 ]

@@ -6,22 +6,27 @@ from source coverage or from the mere existence of a batch file.
 from pathlib import Path
 import argparse,hashlib,html,json,re,sqlite3,sys,fcntl
 from contextlib import contextmanager
+from functools import lru_cache
 from html.parser import HTMLParser
 from ingest import HERE,open_db,source_notes,source_evidence
 import substantive_impact as impact_audit
-from source_assets import verified_image,graphic_markers,load_companions,recovery_complete,recovered_content_present
+from source_assets import verified_image,graphic_markers,load_companions,recovery_complete,recovered_content_present,asset_path
 
 FIELDS={'code_id','source_id','source_sha256','number','proposed_xml','reason','review_notes'}
 ALLOWED={'p','br','table','thead','tbody','tfoot','tr','th','td','b','strong','i','em','u','sup','sub','ul','ol','li','div','span','blockquote','img'}
 
 class Markup(HTMLParser):
-    def __init__(self,strict=True):super().__init__(convert_charrefs=True);self.words=[];self.tables=0;self.rows=0;self.cells=0;self.stack=[];self.strict=strict
+    def __init__(self,strict=True,verified_media=None):super().__init__(convert_charrefs=True);self.words=[];self.tables=0;self.rows=0;self.cells=0;self.stack=[];self.strict=strict;self.verified_media=verified_media
     def handle_starttag(self,tag,attrs):
         if self.strict and tag not in ALLOWED:raise ValueError('Unexpected HTML tag: '+tag)
         if self.strict and tag=='img':
             values=dict(attrs)
             if set(values)!={'src','alt'} or not values['alt'] or len(attrs)!=2:raise ValueError('Formula image needs only a local src and descriptive alt')
-            verified_image(values['src'])
+            if self.verified_media is None:verified_image(values['src'])
+            else:
+                if not values['src'] or not values['src'].startswith('media/'):raise ValueError('Only registered local formula images are allowed')
+                if values['src'] not in self.verified_media:raise ValueError('Unregistered formula image: '+values['src'])
+                asset_path(values['src'])
             return
         for name,value in attrs:
             if self.strict and (name not in {'rowspan','colspan'} or not value or not value.isdigit()):raise ValueError('Unexpected HTML attribute: '+name)
@@ -44,12 +49,12 @@ def references(value):
     value=html.unescape(re.sub('<[^>]*>',' ',value))
     return sorted(set(re.sub(r'\s+|\.', '',s).upper() for s in re.findall(r'\b(?:LO|[LRDA])\.?\s*\d{1,5}(?:\s*-\s*\d+[A-Za-z]*)+',value,re.I)))
 
-def full_repeal(row):
+def full_repeal(row,policy_decoder=json.loads):
     """A deliberate repeal may remove the norm and its tables, never its source."""
     if row.get('change_type')!='full_repeal':return False
     policy_id='editorial_direction_2026_10_19'
     policy=HERE/'policy-coordinations.json'
-    if row.get('repeal_policy_id')!=policy_id or not policy.exists() or not json.loads(policy.read_text()).get(policy_id):
+    if row.get('repeal_policy_id')!=policy_id or not policy.exists() or not policy_decoder(policy.read_text()).get(policy_id):
         raise ValueError('Full repeal requires the explicit author policy')
     body,_=text(row.get('proposed_xml') or '')
     if not re.match(r'(?:Le présent article est abrogé|Abrogé)\b',body,re.I):
@@ -58,12 +63,12 @@ def full_repeal(row):
         raise ValueError('Full repeal needs an article-specific explanation of the removed duties')
     return True
 
-def authorized_reduction(row):
-    if full_repeal(row):return True
+def authorized_reduction(row,policy_decoder=json.loads):
+    if full_repeal(row,policy_decoder):return True
     if row.get('change_type')!='normative_reduction':return False
     policy_id='editorial_direction_2026_10_19'
     policy=HERE/'policy-coordinations.json'
-    if row.get('reform_policy_id')!=policy_id or not policy.exists() or not json.loads(policy.read_text()).get(policy_id):
+    if row.get('reform_policy_id')!=policy_id or not policy.exists() or not policy_decoder(policy.read_text()).get(policy_id):
         raise ValueError('Normative reduction requires the explicit author policy')
     removed=row.get('removed_provisions')
     if not isinstance(removed,list) or not removed or any(not isinstance(item,str) or len(item.strip())<30 for item in removed):
@@ -72,14 +77,21 @@ def authorized_reduction(row):
 
 def validate_batches(db,root):
     records={};diagnostics=[];batch_files=[]
+    # Invocation-local decoding only. Re-read complete policy text at EVERY
+    # authorization check; changed/malformed content is never hidden by a cache.
+    policy_decoder=lru_cache(maxsize=1)(json.loads)
     companions=load_companions()
+    # All document/media hashes are checked at both boundaries. Reuse only
+    # membership within this invocation; never cache a prior validation result.
+    verified_media={item['path'] for record in companions.values() for item in record.get('media',[])}
     registry_path=HERE/'registered-batches.json'
     registry=json.loads(registry_path.read_text()) if registry_path.exists() else {}
     for path in sorted(root.glob('*/*.json')):
         if not re.fullmatch(r'(?:batch)?\d+\.json',path.name):continue
-        rows=json.loads(path.read_text())
+        payload=path.read_bytes()
+        rows=json.loads(payload.decode('utf-8'))
         if not isinstance(rows,list):raise ValueError(f'{path}: expected an article array')
-        batch_files.append({'file':str(path.relative_to(HERE)),'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'articles':len(rows)})
+        batch_files.append({'file':str(path.relative_to(HERE)),'sha256':hashlib.sha256(payload).hexdigest(),'articles':len(rows)})
         for row in rows:
             if FIELDS-set(row):raise ValueError(f'{path}: missing fields {FIELDS-set(row)}')
             retained=row.get('status')=='retained_unchanged'
@@ -94,10 +106,12 @@ def validate_batches(db,root):
             if sha!=row['source_sha256'] or number!=row['number']:raise ValueError('Source version or number mismatch: '+str(key))
             impact_source={'source_xml':body,'source_notes_xml':source_notes(db,*key),'source_sha256':sha}
             impact=impact_audit.validate(row,impact_source,required=False,enforce_workflow=False)
-            original,source_tables=text(body,False)
-            proposed,tables=text(row['proposed_xml'] or '')
-            repealed=full_repeal(row)
-            reduced=authorized_reduction(row)
+            source_parser=Markup(False);source_parser.feed(body)
+            original=source_parser.result();source_tables=source_parser.tables
+            draft_parser=Markup(verified_media=verified_media);draft_parser.feed(row['proposed_xml'] or '')
+            proposed=draft_parser.result();tables=draft_parser.tables
+            repealed=full_repeal(row,policy_decoder)
+            reduced=authorized_reduction(row,policy_decoder)
             if retained:
                 if row['proposed_xml'] is not None:raise ValueError('A retained source has no altered proposal')
                 if original not in {'Réservé.','Réservé','(Réservé)'} and (not impact or impact['classification']!='retained_necessary'):
@@ -106,8 +120,6 @@ def validate_batches(db,root):
             elif proposed==original:raise ValueError('Unchanged source cannot count as rewritten: '+str(key))
             if re.search(r'\[\s*(?:\.\.\.|…|à compléter|texte inchangé)\s*\]|<placeholder>|TODO',proposed,re.I):raise ValueError('Placeholder in article '+str(key))
             if not retained and not reduced and source_tables and tables<source_tables:raise ValueError('Source table missing from draft: '+str(key))
-            source_parser=Markup(False);source_parser.feed(body)
-            draft_parser=Markup();draft_parser.feed(row['proposed_xml'] or '');draft_parser.result()
             if not retained and not reduced and (draft_parser.rows<source_parser.rows or draft_parser.cells<source_parser.cells):raise ValueError('Source table rows or cells missing from draft: '+str(key))
             if graphic_markers(body) and not repealed:
                 companion=companions.get(key)
@@ -116,7 +128,7 @@ def validate_batches(db,root):
             ratio=len(proposed)/max(1,len(original))
             if reduced:diagnostics.append({'source_id':key[1],'number':number,'check':'explicit_normative_reduction','scope':row.get('repeal_scope') or row['removed_provisions']})
             if not retained and (ratio<.45 or ratio>2.5):diagnostics.append({'source_id':key[1],'number':number,'check':'length_change','ratio':round(ratio,2)})
-            original_refs=references(body);draft_refs=references(body if retained else row['proposed_xml'])
+            original_refs=references(body);draft_refs=original_refs if retained else references(row['proposed_xml'])
             if original_refs!=draft_refs:diagnostics.append({'source_id':key[1],'number':number,'check':'references_changed','removed':sorted(set(original_refs)-set(draft_refs)),'added':sorted(set(draft_refs)-set(original_refs))})
             existing=db.execute('SELECT source_sha256,proposed_xml FROM drafts WHERE code_id=? AND source_id=?',key).fetchone()
             if existing and existing!=(sha,row['proposed_xml']):
@@ -124,6 +136,7 @@ def validate_batches(db,root):
                 if not previous or existing[0]!=sha or hashlib.sha256((existing[1] or '').encode()).hexdigest()!=previous['proposed_sha256']:
                     raise ValueError('Refusing to overwrite an existing different draft: '+str(key))
             records[key]=(row,body,start,end)
+    if load_companions()!=companions:raise ValueError('Source companions changed during validation; retry')
     return records,diagnostics,batch_files
 
 @contextmanager
