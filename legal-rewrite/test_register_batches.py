@@ -1,4 +1,5 @@
 import hashlib,json,tempfile,unittest
+from unittest.mock import patch
 from pathlib import Path
 import register_batches as mod
 from ingest import open_db
@@ -24,6 +25,24 @@ class BatchRegistrationTests(unittest.TestCase):
     def test_rejects_wrong_source_version(self):
         self.write(self.row|{'source_sha256':'0'*64})
         with self.assertRaisesRegex(ValueError,'mismatch'):mod.validate_batches(self.db,self.root/'batches')
+    def test_rejects_companion_manifest_changed_during_validation(self):
+        self.write()
+        with patch.object(mod,'load_companions',side_effect=[{}, {('CODE','ARTICLE'):{'media':[]}}]):
+            with self.assertRaisesRegex(ValueError,'companions changed'):
+                mod.validate_batches(self.db,self.root/'batches')
+    def test_rechecks_companion_hashes_before_returning_success(self):
+        self.write()
+        with patch.object(mod,'load_companions',side_effect=[{}, ValueError('Companion hash mismatch')]):
+            with self.assertRaisesRegex(ValueError,'hash mismatch'):
+                mod.validate_batches(self.db,self.root/'batches')
+    def test_preverified_media_cannot_escape_media_directory(self):
+        parser=mod.Markup(verified_media={'other/image.png'})
+        with self.assertRaisesRegex(ValueError,'Only registered local'):
+            parser.feed('<img src="other/image.png" alt="Formula">')
+    def test_preverified_media_still_checks_file_presence(self):
+        parser=mod.Markup(verified_media={'media/not-present.png'})
+        with self.assertRaisesRegex(ValueError,'Missing or unsafe'):
+            parser.feed('<img src="media/not-present.png" alt="Formula">')
     def test_rejects_duplicate_article(self):
         self.write();(self.folder/'002.json').write_text(json.dumps([self.row]))
         with self.assertRaisesRegex(ValueError,'Duplicate'):mod.validate_batches(self.db,self.root/'batches')

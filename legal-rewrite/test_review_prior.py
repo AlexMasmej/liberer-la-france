@@ -45,6 +45,22 @@ class PriorReviewTests(unittest.TestCase):
         self.assertEqual(json.loads(archive[0].read_text())[0]['proposed_xml'],self.prior['proposed_xml'])
         self.assertEqual(json.loads(review.revisions_manifest().read_text())['completed_second_pass'],1)
         self.assertEqual(len(list((self.root/'batches').glob('*/*.json'))),1)
+    def test_owner_lookup_never_reuses_mutated_returned_rows(self):
+        keys={('CODE','ARTICLE')}
+        _,files=review.batch_owners(keys)
+        files[self.path][0]['reason']='Only changed in caller memory'
+        _,fresh=review.batch_owners(keys)
+        self.assertEqual(fresh[self.path][0]['reason'],self.row['reason'])
+    def test_owner_lookup_invalidates_index_when_rows_move(self):
+        keys={('CODE','ARTICLE')}
+        review.batch_owners(keys)
+        other=self.row|{'source_id':'OTHER'}
+        self.path.write_text(json.dumps([other,self.row]))
+        owners,_=review.batch_owners(keys)
+        self.assertEqual(owners[('CODE','ARTICLE')],(self.path,1))
+        self.path.write_text(json.dumps([self.row,self.row]))
+        with self.assertRaisesRegex(ValueError,'Duplicate active batch owner'):
+            review.batch_owners(keys)
     def test_refuses_to_overwrite_an_intervening_author(self):
         before=self.path.read_text()
         self.db.execute('UPDATE drafts SET proposed_xml=?',('<p>Une autre décision de l’auteur.</p>',));self.db.commit()
@@ -65,6 +81,23 @@ class PriorReviewTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'full validation rejected'):
                 review.commit([self.new],self.expected)
         self.assertEqual(review.revisions_manifest().read_bytes(),before)
+    def test_failed_global_validation_restores_mirrors_and_allows_safe_retry(self):
+        batch=self.path.read_bytes();registry=(self.root/'registered-batches.json').read_bytes()
+        with patch.object(review,'register_locked',side_effect=ValueError('full validation rejected')):
+            with self.assertRaisesRegex(ValueError,'full validation rejected'):review.commit([self.new.copy()],self.expected)
+        self.assertEqual(self.path.read_bytes(),batch)
+        self.assertEqual((self.root/'registered-batches.json').read_bytes(),registry)
+        self.assertEqual(self.db.execute('SELECT proposed_xml FROM drafts').fetchone()[0],self.prior['proposed_xml'])
+        with contextlib.redirect_stdout(io.StringIO()):review.commit([self.new.copy()],self.expected)
+        self.assertEqual(json.loads(review.revisions_manifest().read_text())['completed_second_pass'],1)
+    def test_post_commit_failure_does_not_restore_old_files_over_new_database(self):
+        def committed_then_failed(db,*args):
+            db.execute('UPDATE drafts SET proposed_xml=?',(self.new['proposed_xml'],));db.commit()
+            raise OSError('receipt failed after database commit')
+        with patch.object(review,'register_locked',side_effect=committed_then_failed):
+            with self.assertRaisesRegex(OSError,'receipt failed'):review.commit([self.new.copy()],self.expected)
+        self.assertEqual(json.loads(self.path.read_text())[0]['proposed_xml'],self.new['proposed_xml'])
+        self.assertEqual(json.loads(review.revisions_manifest().read_text())['prior_articles'][0]['review_status'],'pending')
     def test_refuses_a_changed_official_source_before_editing_batches(self):
         before=self.path.read_text()
         self.db.execute('UPDATE articles SET source_sha256=?',('0'*64,));self.db.commit()

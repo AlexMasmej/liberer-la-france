@@ -69,7 +69,7 @@ def validate(row, source, required=False, enforce_workflow=True):
     if not isinstance(effects, list):
         raise ValueError('Substantive effects must be an explicit list')
     before = plain(source['source_xml'])
-    after = plain(row.get('proposed_xml') or source['source_xml'])
+    after = plain(row['proposed_xml']) if row.get('proposed_xml') else before
     ids = set()
     for effect in effects:
         if not isinstance(effect, dict) or effect.get('kind') not in KINDS:
@@ -89,7 +89,8 @@ def validate(row, source, required=False, enforce_workflow=True):
                 raise ValueError('Missing before/after effect detail: ' + field)
         for field, body in [('source_quote', before), ('proposed_quote', after)]:
             quote = effect.get(field)
-            if not isinstance(quote, str) or len(plain(quote)) < 12 or plain(quote) not in body:
+            normalized_quote = plain(quote) if isinstance(quote, str) else ''
+            if not isinstance(quote, str) or len(normalized_quote) < 12 or normalized_quote not in body:
                 raise ValueError('Effect evidence is not an exact passage of the full article: ' + field)
         if effect['kind'] in CUTS and effect['before'].strip() == effect['after'].strip():
             raise ValueError('An unchanged value or duty is not a substantive reduction')
