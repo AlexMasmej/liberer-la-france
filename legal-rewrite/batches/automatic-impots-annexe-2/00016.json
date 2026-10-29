@@ -37,33 +37,56 @@
     "source_id": "LEGIARTI000050811261",
     "source_sha256": "a3dd40b75f6ec8eaccfa50480d93b6471e53894e6ff0b67d7fefc6342c3bb899",
     "number": "254",
-    "proposed_xml": null,
-    "reason": "Maintien intégral après examen d'une suppression des déclarations locales. Les a à c exécutent les obligations légales des articles 286, 286 ter et 287 en cas de défaillance du circuit de l'Etat d'établissement. Les seuils réglementaires de retard évitent leur déclenchement pour un retard isolé limité : abroger seulement cet article pourrait retirer cet encadrement favorable sans supprimer les obligations législatives. Leur suppression complète nécessiterait une réforme coordonnée de ces trois articles et du cadre européen, non démontrée par les pièces du lot. La rédaction antérieure était seulement stylistique.",
-    "review_notes": "Lecture intégrale de 293 B bis, 286, 286 ter et 287 : 286 II 1-0, 286 ter 7° et 287 6 c fondent les obligations en cas de manquement dans l'Etat d'établissement. Ne pas confondre mise à jour/identification avec perte automatique de franchise. Deux déclencheurs alternatifs : plus de trente jours après le délai d'un mois, ou retard sur deux trimestres consécutifs ; a à c cumulatifs. Directive 284 ter citée dans la source, sans texte européen complet joint. Les textes législatifs annoncent une reprise CIBS au-delà de 2027 : coordonner les trois fondements lors de cette reprise, sans substitution actuelle non vérifiée.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "proposed_xml": "<p>Lorsqu'un assujetti non établi en France, bénéficiant du régime de franchise en base en application de l'article 293 B bis du code général des impôts, communique à l'Etat membre d'établissement les informations prévues au paragraphe 1 de l'article 284 ter de la directive 2006/112/ CE du Conseil du 28 novembre 2006 relative au système commun de la taxe sur la valeur ajoutée plus de trente jours après l'expiration du délai d'un mois suivant la fin du trimestre civil ou après l'expiration de ce délai au titre de deux trimestres consécutifs, cet assujetti est tenu :</p><p>a) De déposer une déclaration d'existence conformément au 1° du I de l'article 286 du code général des impôts ;</p><p>b) D'être identifié par un numéro individuel conformément au 7° de l'article 286 ter du code général des impôts ;</p><p>c) De déposer des déclarations de recettes conformément au c du 6 de l'article 287 du code général des impôts.</p>",
+    "reason": "Coordination avec la suppression, par 286 proposé, du 2° du I de cet article. Les a à c exécutent les obligations légales des articles 286, 286 ter et 287 en cas de défaillance du circuit de l'Etat d'établissement et restent en place, avec les seuils réglementaires de retard qui évitent leur déclenchement pour un retard isolé limité. Le seul changement retire du a la fourniture de « tous renseignements relatifs à son activité professionnelle » conformément au 2° du I de l'article 286, que le projet abroge sans formalité de remplacement : la déclaration d'existence du 1° demeure. Le reste de l'article est la version officielle.",
+    "review_notes": "Lecture intégrale de 293 B bis, 286, 286 ter et 287 : 286 II 1-0, 286 ter 7° et 287 6 c fondent les obligations en cas de manquement dans l'Etat d'établissement. Ne pas confondre mise à jour/identification avec perte automatique de franchise. Deux déclencheurs alternatifs : plus de trente jours après le délai d'un mois, ou retard sur deux trimestres consécutifs ; a à c cumulatifs. Directive 284 ter citée dans la source, sans texte européen complet joint. Les textes législatifs annoncent une reprise CIBS au-delà de 2027 : coordonner les trois fondements lors de cette reprise, sans substitution actuelle non vérifiée. Correction de la troisième passe (objection SWEEP-J15-a4-35) : renvoi au 2° abrogé du I de 286 retiré, sans renseignement de remplacement ; le b) et le c) sont inchangés. 286 proposé (LEGIARTI000054337091) porte « 2° Abrogé ; » et limite déjà la dispense de son II 1-0 au seul 1° du I ; son IV règle la transition des demandes fondées sur le seul 2°. Les a à c restaient sinon une obligation réglementaire de fournir le questionnaire supprimé par la loi. Revue IA, sans validation par un juriste.",
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
     "benefit_review": "La franchise de 293 B bis n'est pas retirée par cet article et demeure ouverte aux futurs bénéficiaires. Les seuils de trente jours et de deux trimestres consécutifs limitent favorablement le déclenchement des formalités françaises ; ils restent entiers, sans sanction ou condition nouvelle.",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Aucune réduction comptée : maintien de l'encadrement des manquements déclaratifs et des tolérances de retard, sans disparition de la franchise.",
-      "scope_limitations": "Maintien limité à cet article et aux renvois lus dans le corpus local ; aucun solde net de complexité de l'ensemble des codes, ni conformité européenne exhaustive, n'est établi.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : le texte officiel est maintenu intégralement, sans registre, donnée, délai, justificatif ou condition supplémentaire.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination avec la suppression du questionnaire professionnel du 2° du I de 286 : le a ne renvoie plus qu'à la déclaration d'existence du 1° ; aucune seconde réduction n'est comptée, la mesure étant portée par 286.",
+      "scope_limitations": "Une seule mesure, déjà comptée à 286 ; la franchise de 293 B bis, les seuils de retard et les b et c sont inchangés. La reprise CIBS et le texte complet de la directive ne sont pas vérifiés ici.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun renseignement, imprimé, déclaration ou délai de remplacement ; la déclaration d'existence, l'identification et les déclarations de recettes existaient déjà.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "tva-questionnaire-professionnel-supprime",
+          "description": "Retrait du renvoi au questionnaire professionnel abrogé pour les franchisés non établis défaillants.",
+          "before": "Déclaration d'existence et fourniture de tous renseignements professionnels conformément aux 1° et 2° du I de 286.",
+          "after": "Déclaration d'existence conformément au seul 1° du I de 286 ; aucun questionnaire professionnel.",
+          "unit": "legal_duty",
+          "affected_population": "Assujettis non établis en France bénéficiant de la franchise de 293 B bis, en retard dans l'Etat d'établissement",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi supprimant le 2° du I de 286, selon la transition du IV de cet article.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "a) De déposer une déclaration d'existence et de fournir tous renseignements relatifs à son activité professionnelle conformément aux 1° et 2° du I de l'article 286 du code général des impôts ;",
+          "proposed_quote": "a) De déposer une déclaration d'existence conformément au 1° du I de l'article 286 du code général des impôts ;"
+        }
+      ]
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "a3dd40b75f6ec8eaccfa50480d93b6471e53894e6ff0b67d7fefc6342c3bb899",
       "source_notes_sha256": "06398cb69897f52716ec791967a82a5590ec79aad4fd0bb843afd4c345e1000a",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "2651db79aaed2d924bf4d13e9ae615b53c8659cba94e90e57c3c6b7911a1f3ab",
+      "proposed_sha256": "28e75e7ee293f8885bc218d036f59ac081949fd69f556c3d045f6857dcb50c81",
+      "assessment_sha256": "b7474899e2eb4476f452caa56b739dd05872aeda845bc2c9ca13b1c4808c852d",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "dbebf097a4a6ceaae5dd3ab410853541e4dd8465bfcf3dda2ec16b8e0743e780"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Fourniture de tous renseignements relatifs à l'activité professionnelle conformément au 2° du I de l'article 286, abrogé par le projet."
+    ],
+    "third_pass_correction": {
+      "objection": "SWEEP-J15-a4-35",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006069569",

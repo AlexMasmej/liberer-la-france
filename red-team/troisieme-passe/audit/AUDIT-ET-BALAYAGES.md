@@ -86,9 +86,30 @@ Les pistes, réparties sur 916 articles en 18 groupes disjoints (`apply/Y01` à 
 
   Le balayage complet n'a donc pas été lancé. Les 12 défauts du pilote sont corrigés.
 
+## 2 quinquies. Quatrième mesure et quatrième balayage
+
+| Mesure | Défauts grossiers | Grossiers et mineurs |
+|---|---|---|
+| Audit 4 (après les P2 et le pilote) | 8 / 314, **2,5 % ± 1,7** | 14,6 % ± 3,9 |
+
+Échantillon : `sample-4.json`, graine 20261101, tiré hors des 937 articles déjà lus.
+
+- **Les 8 défauts** (K011, K041, K202, K058, K098, K260, K290, K299) sont corrigés (groupe X4 et une variante, 17 lignes), ainsi que 4 constats incidents d'audits antérieurs restés sans correction.
+- **Ce que l'audit a appris sur la méthode** : deux de ces défauts étaient déjà repérés. L'un figurait comme constat incident d'un audit antérieur, l'autre comme piste S9 écartée par un filtre trop étroit (liste fixe de mots de formalité).
+- **Quatrième balayage** (`tools/sweeps4.py`, groupes J01 à J16, 854 articles, 918 pistes). Il porte sur cinq familles tirées des défauts de l'audit :
+  - S9x : décret qui reprend les mots de ce que la loi a retiré ;
+  - S9a : annexes du CGI appliquant un article réduit ;
+  - S12 : abrogation affirmée à tort d'un autre article ;
+  - S13 : renvoi à un « n° » disparu ;
+  - S15 : effet suspendu à une modification législative non faite.
+
+  Résultats : 45 pistes G (4,9 %), 15 m, 395 déjà réglées, 463 faux positifs. Ces pistes ont donné **47 lignes appliquées**, dont 3 demandes croisées (X5).
+- **Point faible repéré : les annexes du CGI.** Les pistes S9a y donnent 20 G sur environ 450. Plusieurs décrets d'application y organisent encore des états, des délais ou des justificatifs que l'article du CGI réécrit a supprimés.
+- **Total de la quatrième ronde** : 64 lignes appliquées ; 321 tests OK.
+
 ## 4. Taux mesuré et ce qu'il signifie
 
-- **Taux mesuré** : environ **3 à 4 % des articles** gardent un défaut qu'un juriste remarquerait. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
+- **Taux mesuré** : environ **3 % des articles** gardent un défaut qu'un juriste remarquerait. Sur quatre mesures indépendantes, on compte 41 défauts grossiers sur 1 251 articles (3,3 %), et la dernière mesure donne 2,5 % ± 1,7. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
 - **Probabilité pour un juriste** qui lit 20 articles de sa matière de tomber sur au moins un défaut grossier : environ une chance sur deux.
 - **Ce qu'il faudrait pour descendre sous 1 %** : une lecture systématique de l'ensemble des articles, ou au moins des articles réécrits les plus importants. Aucun signal mécanique ne concentre plus assez les défauts restants pour qu'un balayage ciblé suffise.
 - **Les signalements extérieurs ont le meilleur rendement mesuré** : 9 des 11 issues du premier contributeur visaient un vrai défaut. Voir ci-dessous comment signaler une erreur.
@@ -106,7 +127,8 @@ Chaque issue est triée contre le registre, corrigée si elle relève d'une cont
 
 ## 3. Ce qui reste
 
-- Une **nouvelle mesure** sur un échantillon aléatoire indépendant, tiré hors du premier, pour vérifier la baisse du taux.
+- Une **cinquième mesure**, pour confirmer que la baisse de l'audit 4 (2,5 %) ne tient pas au hasard de l'échantillon.
+- Le **reste des pistes S9 larges** hors annexes (environ 2 000 articles au score faible), non balayé.
 - **S3** (numéros introuvables) : l'échantillon de 40 montre surtout des renvois à d'autres codes ; il n'est pas balayé en entier.
 - **S6** (désignations de la loi de réforme) : 60 formules différentes, dont « loi portant la présente réforme » (1 452 occurrences), « loi instituant le contrat de travail unique » (394) et « loi instituant le contrat unique » (338). Une désignation unique est un choix de rédaction à arrêter.
 - Les défauts mineurs (notes et motifs) ne sont corrigés que sur les articles déjà modifiés.

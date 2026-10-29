@@ -790,46 +790,37 @@
     "source_id": "LEGIARTI000022765016",
     "source_sha256": "9342f044d3964cfb8e5ce1a5034e46c9babee13aac413f36b2d14e1947f22760",
     "number": "R4215-2",
-    "proposed_xml": "<p>Le maître d'ouvrage établit et transmet à l'employeur un dossier technique comportant la description et les caractéristiques des installations électriques réalisées.</p><p>Le contenu du dossier technique est précisé par un arrêté conjoint des ministres du travail, de l'agriculture et de la construction.</p><p>Pour les opérations auxquelles l'article R. 4211-3 demeure applicable, ce dossier technique fait partie du dossier de maintenance des lieux de travail prévu par cet article. Cette intégration demeure régie par les dispositions applicables à ces opérations ; elle ne proroge pas l'application de l'article R. 4211-3 aux autres opérations. Lorsque cet article n'est pas applicable, l'établissement et la transmission du dossier technique prévus au premier alinéa restent exigés.</p>",
-    "reason": "Coordination nécessaire, sans réduction matérielle revendiquée : les mots « Ce dossier technique fait partie du dossier de maintenance des lieux de travail prévu à l'article R. 4211-3. » maintenaient un rattachement inconditionnel à une cible dont le corpus annonce la fin de validité au 1er janvier 2027. Le troisième alinéa borne ce rattachement aux opérations encore régies par la cible et préserve leur régime applicable, sans inventer son successeur. Le dossier électrique, son contenu fixé par arrêté et sa transmission à l'employeur demeurent entièrement exigés. Aucun doublon matériel de dossier ni suppression justifiée de données de sécurité n'est établi. Il s'agit d'une correction temporelle du brouillon, non d'une réforme de fond de la sécurité électrique.",
-    "review_notes": "R4211-3 lu intégralement, notes comprises : il inclut expressément R4215-2. Arrêté conjoint fixant le contenu non joint ; aucune suppression de pièces techniques non examinées. Conserver la transmission à l'employeur. Seconde passe : Coordination temporelle nécessaire : la source prévoit « Ce dossier technique fait partie du dossier de maintenance des lieux de travail prévu à l'article R. 4211-3. ». La cible LEGIARTI000024769357 est signalée ABROGE_DIFF, valid_until=2027-01-01 ; son texte inclut expressément « R. 4215-2 ». Le maintien inconditionnel du rattachement dans le brouillon ne traitait pas cette extinction annoncée. Le nouveau troisième alinéa subordonne seulement l'intégration à l'applicabilité effective de la cible à l'opération ; il ne proroge ni ne recrée celle-ci. Les deux premiers alinéas restent entiers. R4226-6 conserve « Le cas échéant » pour la mise à jour du dossier par l'employeur. La source complète de l'acte portant abrogation et son éventuel dispositif de remplacement au CCH ne sont pas fournis dans les documents textuels repérés. La date du 1er janvier 2027 provient des métadonnées de la cible, non d'une date de réforme inventée. Aucun successeur ni régime transitoire inconnu n'est institué ; le rattachement à un éventuel nouveau dossier reste à vérifier hors lot.",
-    "status": "rewrite_draft",
+    "proposed_xml": null,
+    "reason": "Maintien intégral : le dossier technique des installations électriques, son contenu fixé par arrêté, sa transmission à l'employeur et son intégration au dossier de maintenance des lieux de travail prévu à l'article R. 4211-3 conservent leur fonction de prévention. R4211-3 n'est pas abrogé : sa version en vigueur jusqu'au 1er janvier 2027 est remplacée à cette date par une version qui maintient ce dossier. Aucun doublon matériel ni suppression justifiée de données de sécurité n'est établi.",
+    "review_notes": "R4211-3 lu intégralement, notes comprises : il inclut expressément R4215-2, dans sa version LEGIARTI000024769357 comme dans sa version LEGIARTI000052645178 (VIGUEUR_DIFF au 1er janvier 2027), qui maintient le dossier de maintenance et ne change que le renvoi du 5° (article R. 144-14 du code de la construction et de l'habitation). Arrêté conjoint fixant le contenu non joint ; aucune suppression de pièces techniques non examinées. R4226-6 conserve « Le cas échéant » pour la mise à jour du dossier par l'employeur. Correction de la troisième passe (quatrième audit, constat incident lié au défaut K058) : la proposition ne rattachait le dossier technique au dossier de maintenance que « pour les opérations auxquelles l'article R. 4211-3 demeure applicable » et précisait qu'elle « ne proroge pas l'application de l'article R. 4211-3 aux autres opérations », lecture erronée de l'état ABROGE_DIFF. Le texte officiel est rétabli et l'article redevient maintenu ; aucune formalité n'est ajoutée ni retirée. Revue IA, sans validation par un juriste.",
+    "status": "retained_unchanged",
     "source_conflict_ids": [],
     "substantive_impact": {
       "version": 1,
-      "classification": "coordination_only",
-      "assessment": "Coordination seule : le dossier électrique et sa transmission restent exigés, sans dossier supplémentaire. Le rattachement au dossier de maintenance ne survit pas artificiellement à la disparition de son fondement applicable.",
-      "scope_limitations": "La source complète de l’acte portant abrogation et son éventuel dispositif de remplacement au CCH ne sont pas fournis dans les documents textuels repérés. La date du 1er janvier 2027 provient des métadonnées de la cible, non d’une date de réforme inventée. Aucun successeur ni régime transitoire inconnu n’est institué ; le rattachement à un éventuel nouveau dossier reste à vérifier hors lot.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : les deux premières obligations sont conservées mot pour mot ; leur maintien hors du dossier de maintenance ne crée ni seconde transmission ni pièce supplémentaire. Le rattachement est seulement borné au champ temporel de sa cible.",
-      "effects": [
-        {
-          "kind": "coordination",
-          "measure_id": "dossier-electrique-rattachement-temporel",
-          "description": "Borner le rattachement au dossier de maintenance au champ encore applicable de R4211-3, sans proroger la cible ni supprimer le dossier électrique autonome.",
-          "before": "Intégration formulée sans réserve temporelle dans le dossier de maintenance de R4211-3 ; cible annoncée valide jusqu’au 1er janvier 2027 dans le corpus.",
-          "after": "Intégration pour les opérations auxquelles R4211-3 demeure applicable ; établissement et transmission du dossier électrique maintenus dans les autres cas.",
-          "unit": "legal_duty",
-          "affected_population": "Maîtres d’ouvrage des installations électriques et employeurs destinataires du dossier.",
-          "conditions_and_transition": "Respect des dispositions applicables aux opérations restant régies par R4211-3 ; aucune prolongation de la cible, aucune date de réforme ni substitution au CCH inventée.",
-          "replacement_or_new_burdens": "Aucun nouveau dossier, dépôt, registre ou contrôle ; contenu technique et transmission déjà exigés conservés.",
-          "source_quote": "Ce dossier technique fait partie du dossier de maintenance des lieux de travail prévu à l'article R. 4211-3.",
-          "proposed_quote": "Pour les opérations auxquelles l'article R. 4211-3 demeure applicable, ce dossier technique fait partie du dossier de maintenance des lieux de travail prévu par cet article."
-        }
-      ]
+      "classification": "retained_necessary",
+      "assessment": "Maintien de la source officielle : dossier technique électrique, contenu fixé par arrêté, transmission à l'employeur et intégration au dossier de maintenance de R4211-3, maintenu en 2027 par sa version LEGIARTI000052645178.",
+      "scope_limitations": "L'arrêté conjoint fixant le contenu du dossier n'est pas au corpus. Aucune validation par un juriste.",
+      "new_burdens_review": "Aucune charge nouvelle : la source est conservée sans pièce, transmission ni condition supplémentaire.",
+      "effects": []
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "9342f044d3964cfb8e5ce1a5034e46c9babee13aac413f36b2d14e1947f22760",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "ff541f0f906b8f61359f2e4567e307ea18381b7e8b9aa5fbb3f930c9d94fb7a3",
-      "assessment_sha256": "739e2f00549012e58609f68ab3c5a793b4d1641889da054d1ddbc3a0b1043597",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "7161a62d3268a3264a9317e084adddefa67be1de3e5e2c23300691e297b5ce2b",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "ff541f0f906b8f61359f2e4567e307ea18381b7e8b9aa5fbb3f930c9d94fb7a3",
+    "classification": "retained_necessary",
+    "third_pass_correction": {
+      "objection": "AUDIT-K058/S14 (travail R4215-2)",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006072050",

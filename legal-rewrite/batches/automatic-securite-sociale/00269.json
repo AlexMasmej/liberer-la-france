@@ -2260,10 +2260,10 @@
     "source_id": "LEGIARTI000006736835",
     "source_sha256": "26e439a3db7dc7fb5e1b84f07b58459c36493703f08d317665b9bc3b8e50540e",
     "number": "D412-85",
-    "proposed_xml": "\n<br />Le salaire servant de base au calcul des cotisations est égal au double du salaire annuel minimum prévu à l'article L. 434-16. Un arrêté du ministre chargé de la sécurité sociale peut fixer des cotisations forfaitaires. <br />\n<br />Le salaire servant de base au calcul des indemnités et des rentes est égal au double dudit salaire minimum, tel qu'il est en vigueur soit à la date de l'arrêt de travail résultant de l'accident, de la rechute ou de l'aggravation, soit, s'il n'y a pas eu d'arrêt de travail, à la date de constatation de l'incapacité permanente.<br />\n<p>Pour l'application du présent article à compter de l'abrogation de l'article L. 434-16, le salaire annuel minimum de référence est celui applicable la veille de cette abrogation. Il est revalorisé au 1er avril de chaque année suivant les règles de l'article L. 161-25. Cette disposition conserve une base de calcul autonome ; elle ne modifie pas les autres règles d'ouverture des droits et de calcul des prestations, qui demeurent applicables dans leur champ temporel propre. Les cotisations, prestations, droits et recours afférents aux périodes antérieures demeurent régis par les dispositions qui leur sont applicables.</p>",
-    "reason": "Maintien des deux assiettes au double du salaire minimum annuel, de la faculté de forfait et des dates de référence en cas d'arrêt, rechute, aggravation ou constatation. Ce régime d'assurance des missions est distinct de l'indemnité de rupture ; aucun taux de cotisation nouveau ni économie fictive n'est proposé. Coordination nécessaire ajoutée : la base minimale spéciale subsiste expressément après l'abrogation programmée de L434-16, à sa dernière valeur légalement revalorisée, avec maintien de l'indexation annuelle. Aucun montant nouveau ni nouvelle formule de rente n'est créé.",
-    "status": "rewrite_draft",
-    "review_notes": "Coordination nécessaire : « prévu à l'article L. 434-16 » vise une version dont valid_until est 2026-11-01 et source_state ABROGE_DIFF. Le simple maintien antérieur laissait sans relais explicite la base de ces cotisations et prestations. La garantie autonome proposée conserve le dernier minimum et son indexation sans reconstituer la future formule générale des rentes. R434-27 lu fixe seulement la valeur historique « 18 281,80 euros à la date du 1er avril 2016 », non un montant actuel. L161-25 lu maintient le coefficient plancher à un. D412-97, hors lot, porte le même double minimum pour le congé de représentation et nécessite le même raccordement ; il n'est pas modifié ici. La clause de relais conserve les dates de référence de l'article sans figer les règles de fond au jour de l'accident pour les rechutes et aggravations. Son adoption doit être coordonnée avec les textes d'application de la réforme générale AT-MP ; elle ne proroge pas L434-16 en son entier.",
+    "proposed_xml": null,
+    "reason": "Maintien des deux assiettes au double du salaire minimum annuel, de la faculté de forfait et des dates de référence en cas d'arrêt, rechute, aggravation ou constatation. Ce régime d'assurance des missions est distinct de l'indemnité de rupture ; aucun taux de cotisation nouveau ni économie fictive n'est proposé. Le renvoi à L434-16 reste valable : cet article n'est pas abrogé, sa version en vigueur jusqu'au 31 octobre 2026 étant remplacée au 1er novembre 2026 par une nouvelle rédaction qui maintient le minimum indexé.",
+    "status": "retained_unchanged",
+    "review_notes": "R434-27 lu fixe seulement la valeur historique « 18 281,80 euros à la date du 1er avril 2016 », non un montant actuel. L161-25 lu maintient le coefficient plancher à un. Correction de la troisième passe (balayage J01, piste S12, SWEEP-J01-S12-L434-16) : l'alinéa ajouté (« Pour l'application du présent article à compter de l'abrogation de l'article L. 434-16 [...] ») reposait sur une abrogation qui n'existe pas. L434-16 LEGIARTI000031688385 (ABROGE_DIFF au 1er novembre 2026) est remplacé par LEGIARTI000051288487 (VIGUEUR_DIFF au 1er novembre 2026, loi n° 2025-199, art. 90), qui maintient « un minimum déterminé au 1er avril de chaque année d'après le coefficient mentionné à l'article L. 161-25 » ; les deux versions ont une proposition qui conserve ce minimum. L'alinéa figeait en outre le montant à « la veille de cette abrogation ». Les notes antérieures selon lesquelles la base restait « sans relais explicite » et D412-97 « nécessite le même raccordement » sont dépassées. Il est retiré et l'article revient à la source officielle, maintenue, comme D412-97 (correction AUDIT-S11N-04). Revue IA, sans validation par un juriste.",
     "source_conflict_ids": [],
     "impact_check_required": true,
     "benefit_check_required": false,
@@ -2295,32 +2295,18 @@
     ],
     "substantive_impact": {
       "version": 1,
-      "classification": "coordination_only",
-      "assessment": "Maintien des deux assiettes au double du salaire minimum annuel, de la faculté de forfait et des dates de référence en cas d'arrêt, rechute, aggravation ou constatation. Ce régime d'assurance des missions est distinct de l'indemnité de rupture ; aucun taux de cotisation nouveau ni économie fictive n'est proposé. Coordination nécessaire ajoutée : la base minimale spéciale subsiste expressément après l'abrogation programmée de L434-16, à sa dernière valeur légalement revalorisée, avec maintien de l'indexation annuelle. Aucun montant nouveau ni nouvelle formule de rente n'est créé.",
-      "scope_limitations": "Examen limité à cette couverture AT-MP et aux cibles lues ; aucun solde financier national ni cohérence intégrale des neuf recueils n'est démontré. Le corps de remplacement de la réforme générale AT-MP et sa transition manquent : cette clause sécurise uniquement la base spéciale. L161-25 est un nouveau renvoi lu dans le corpus, non une cible fournie dans reference-targets ; D412-97 et les autres renvois hors lot restent à coordonner.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : la clause conserve un minimum et une revalorisation déjà calculés par les organismes, sans attestation, nouveau barème ni demande de l'assuré. Le coût administratif global n'est pas chiffré.",
-      "effects": [
-        {
-          "kind": "coordination",
-          "measure_id": "atmp-continuite-minimum-special",
-          "description": "Maintien opératoire du minimum spécial après abrogation différée de sa référence législative.",
-          "before": "Base définie par renvoi à L434-16, abrogation annoncée au 1er novembre 2026 ; double de ce minimum dans D412-85, minimum simple dans D412-89 et D412-92.",
-          "after": "Même multiplicateur et mêmes dates de référence ; dernier minimum applicable repris et revalorisation annuelle conservée après abrogation.",
-          "unit": "other",
-          "affected_population": "Salariés mandatés pour D412-85 ; bénéficiaires des actions d’insertion pour D412-89 ; bénéficiaires des actions du 11° pour D412-92.",
-          "conditions_and_transition": "Relais à l'abrogation de L434-16 ; droits et périodes antérieurs conservés, autres règles de prestations inchangées.",
-          "replacement_or_new_burdens": "Pas de pièce nouvelle ; continuité du calcul existant pour les caisses, sans nouveau montant ni formule générale de rente.",
-          "source_quote": "Le salaire servant de base au calcul des cotisations est égal au double du salaire annuel minimum prévu à l'article L. 434-16.",
-          "proposed_quote": "Pour l'application du présent article à compter de l'abrogation de l'article L. 434-16, le salaire annuel minimum de référence est celui applicable la veille de cette abrogation. Il est revalorisé au 1er avril de chaque année suivant les règles de l'article L. 161-25."
-        }
-      ]
+      "classification": "retained_necessary",
+      "assessment": "Maintien de la source officielle : le double du salaire annuel minimum de L434-16 sert d'assiette aux cotisations, indemnités et rentes des salariés mandatés ; L434-16 demeure, dans sa rédaction du 1er novembre 2026, avec son minimum indexé.",
+      "scope_limitations": "La rédaction de L434-16 et L434-2 au 1er novembre 2026 (loi n° 2025-199, art. 90) est au corpus et lue ; la réforme AT-MP de 2025 n'est pas examinée au-delà. Aucune validation par un juriste.",
+      "new_burdens_review": "Aucune charge nouvelle : la source est conservée sans assiette, taux, déclaration ni formalité supplémentaire ; la clause de relais retirée reposait sur une abrogation inexistante.",
+      "effects": []
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "26e439a3db7dc7fb5e1b84f07b58459c36493703f08d317665b9bc3b8e50540e",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "8cd435f362e62078d351ef2784ae6cfcfb703d0112b87b8c096ff94bf4a74249",
-      "assessment_sha256": "b32fa046b756f8a76b87c949c929418906436485d987058c849bcf023044502b",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "4bf58d5bb77f40e49fd4a4cacd9317bcab827c1564c8d49950ae90321562ca4e",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
@@ -2390,7 +2376,12 @@
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "8cd435f362e62078d351ef2784ae6cfcfb703d0112b87b8c096ff94bf4a74249",
+    "classification": "retained_necessary",
+    "third_pass_correction": {
+      "objection": "SWEEP-J01-S12-L434-16",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006073189",

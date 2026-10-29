@@ -66,3 +66,21 @@ Termine par un résumé court : nombre de pistes par qualification, nombre de co
 **Pour S9**, lis la ligne `removed_provisions` de la loi visée (dans son lot) et la proposition de la loi. La question est de savoir si le décret organise encore la formalité ou la condition retirée, ou s'il la vise seulement pour l'ancien régime (transition).
 
 **Pour S10**, vérifie que l'article visé dit encore ce que la dérogation suppose. Si la dérogation porte sur une règle que l'article visé ne contient plus, ou contredit ce qu'il dit désormais, c'est un défaut F5.
+
+## Quatrième balayage : familles tirées du quatrième audit (S9x, S9a, S12, S13, S15)
+
+| Code | Ce que l'outil a détecté | Exemple de l'audit |
+|---|---|---|
+| **S9x/F1+F5** | Un décret ou une annexe applique une loi **réduite**, et il emploie encore des mots distinctifs des dispositions retirées de cette loi (`shared_words`). | Annexe II 74 S septies garde déclaration, paiement et justificatif d'exportation que 150 VL ne demande plus. |
+| **S9a/F1+F5** | Un article des annexes du CGI applique un article du CGI réduit par le projet (piste large). | Annexe II 95 ZE et 95 ZJ maintiennent le double conservé et la convention de trois ans que 170 ter supprime. |
+| **S12/F4** | Une proposition tient un autre article pour abrogé, alors que sa version actuelle est `ABROGE_DIFF` et qu'une version `VIGUEUR_DIFF` publiée la remplace (`cited_successor`). | R4224-17 dit R4211-3 abrogé ; la version 2027 le maintient. |
+| **S13/F3** | Renvoi au « n° de l'article X » alors que X, tel que proposé ou dans sa prochaine version publiée, n'a plus ce n°. | Annexe D353-59 vise « 2° ou 3° de l'article R. 331-15 », qui n'a plus que deux items. |
+| **S15/F5** | Une proposition fait dépendre son effet d'une modification législative future. | D351-1-15 attend une modification de L351-4-2 que le projet ne fait pas. |
+
+Pour **S9x** et **S9a** : lis `removed_provisions` de la loi visée et sa proposition. La question reste de savoir si le texte d'application organise encore ce qui a été retiré, ou s'il le vise seulement pour l'ancien régime.
+
+Pour **S12** : beaucoup de fenêtres attrapent un simple « (Abrogé) » d'un item voisin. C'est un faux positif. Le défaut, c'est une phrase qui dit que l'article cité disparaît alors que sa version future le maintient. Corrige la phrase (renvoi à l'article dans sa rédaction en vigueur), sans recréer de formalité que le projet a supprimée ailleurs.
+
+Pour **S15** : si la loi visée ne fait pas, en production, la modification attendue, retire la condition et reviens au texte qui produit l'effet voulu. N'étends aucune faveur qui n'est pas décidée.
+
+Le champ `previous_owner` indique qu'un autre groupe possède déjà l'article. Dans ce cas, crée un dossier de variante pour ce groupe (par exemple `apply/B06j/` pour B06), et valide-le aussi.
