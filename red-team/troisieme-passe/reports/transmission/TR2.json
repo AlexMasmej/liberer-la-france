@@ -1,0 +1,1277 @@
+{
+ "group": "TR2",
+ "snapshot": "20261029T034912Z",
+ "scope_note": "Lecture seule. cite.py lancé sur tous les articles cités ; preuves dans evidence/cited/20261029T034912Z/. Lecture de production limitée à des fichiers de runtime/heartbeat-check-20261025T0653Z et aux compteurs de runtime/*/reconciliation-final.json, faute de pièce dans l'instantané. Une revue IA ne vaut pas validation par un juriste.",
+ "coverage": [
+  {
+   "point": "2a",
+   "aspect": "CSS D351-9 : L(A) à 60 ans dans la consolidation contre instruction modificatrice (décret 2010-1737) à 62 ans ; rédaction applicable à établir sur actes complets",
+   "register_ids": [
+    "RT-D351-01",
+    "RT-D351-02"
+   ],
+   "related": [
+    "RT-D351-03",
+    "RT-DOC-03"
+   ],
+   "merges_followed": [],
+   "uncovered": null,
+   "final_text_check": "Inchangé au 29/10 : LEGIARTI000030400105 sans proposition (documentary_hold) ; « A est l'âge de référence fixé à soixante-deux ans » mais « L (A) est l'effectif à l'âge de soixante ans ». RT-D351-01 porte la divergence, RT-D351-02 la formule non jointe."
+  },
+  {
+   "point": "2b",
+   "aspect": "Annexe I à l'art. R434-32 (7) : figure normative manquante",
+   "register_ids": [
+    "RT-DOC-01"
+   ],
+   "related": [
+    "RT-DOC-03",
+    "RT-INV-03 (successeur de R434-32, autre question)",
+    "RT-FUTCSS-01 -> RT-INV-03",
+    "RT-INTEG-03 -> RT-XCUT-01"
+   ],
+   "merges_followed": [
+    "RT-FUTCSS-01 -> RT-INV-03",
+    "RT-INTEG-03 -> RT-XCUT-01"
+   ],
+   "uncovered": null,
+   "final_text_check": "LEGIARTI000028675462 toujours documentary_hold, sans proposition ; « Les quadranopsies peuvent être évaluées en assignant à chaque quadrant une valeur de : » sans figure."
+  },
+  {
+   "point": "2c",
+   "aspect": "CGI annexe IV art. 15 : CERFA 30-0812 et 30-0813 non obtenus",
+   "register_ids": [
+    "RT-DOC-02"
+   ],
+   "related": [
+    "RT-DOC-03"
+   ],
+   "merges_followed": [],
+   "uncovered": null,
+   "final_text_check": "LEGIARTI000019493914 documentary_hold, sans proposition : « conformes aux modèles ci-après (non reproduits-Cerfa n° 30-0812 et n° 30-0813) »."
+  },
+  {
+   "point": "3",
+   "aspect": "Douze coordinations CSS (R123-1, R123-1-1, D224-7, R152-8, D224-8, R153-2, R151-1, R151-3, R612-7, R216-2, R281-4, R213-5) : agréments, statuts, nominations, opposition, budgets, tutelle",
+   "register_ids": [
+    "RT-CSS12-01",
+    "RT-CSS12-02",
+    "RT-CSS12-03",
+    "RT-CSS12-04",
+    "RT-CSS12-05",
+    "RT-CSS12-06",
+    "RT-CSS12-08",
+    "RT-CSS12-09",
+    "RT-CSS12-10",
+    "RT-CSS12-11",
+    "RT-UNION-03",
+    "RT-UNION-04",
+    "RT-TUT-04",
+    "RT-INST-01"
+   ],
+   "related": [
+    "RT-RXINST-01 -> RT-RXCGI-01 (notes supersédées après corrections de R123-1-1, R152-8, R123-1 ; fusion motivée par le registre : « Même défaut »)"
+   ],
+   "merges_followed": [
+    "RT-RXINST-01 -> RT-RXCGI-01"
+   ],
+   "uncovered": null,
+   "final_text_check": "Constat factuel : aucun des douze candidats parentaux scellés (joint-answer.json du 25/10) n'est intégré tel quel, mais les douze articles portent tous au 29/10 une proposition native rewrite_draft, seconde passe completed, d'empreinte différente du candidat (ex. D224-7 3c414c9f…, D224-8 5abb9152…, R612-7 dcb2cda0…, R216-2 12ce445d…, R281-4 18692bb2…, R213-5 712b65fb…). Six d'entre eux ont changé depuis l'instantané intermédiaire et sont déjà dans les paquets reexam-final F01/F02/F05. La formule « non intégrées, readiness=false » de la transmission décrit donc les candidats, pas l'état final des articles : la cohérence doit être jugée sur les propositions natives finales."
+  },
+  {
+   "point": "3",
+   "aspect": "D224-8 / D227-5 / note de L228-1 (avis du comité exécutif sur les nominations de l'Institut)",
+   "register_ids": [
+    "RT-INST-01",
+    "RT-INST-02",
+    "RT-INST-03",
+    "RT-INST-04",
+    "RT-TUT-01"
+   ],
+   "related": [],
+   "merges_followed": [],
+   "uncovered": null,
+   "final_text_check": "L228-1 inchangé (e9bed603…) ; D224-8 modifié (5abb9152…) et D227-5 (motif/notes) modifiés : réexamen dans le paquet F02 (RT-INST-01/02). RT-INST-03 (faux positif) couvre la question du niveau de norme : le V de L228-1 n'impose pas lui-même l'avis."
+  },
+  {
+   "point": "3",
+   "aspect": "L216-3 / L281-6 / modèles de statuts : catégories, double avis, sélecteur « V » de l'acte de 2004",
+   "register_ids": [
+    "RT-UNION-01",
+    "RT-UNION-02",
+    "RT-UNION-06",
+    "RT-UNION-07",
+    "RT-CSS12-11",
+    "RT-DOC-04"
+   ],
+   "related": [],
+   "merges_followed": [],
+   "uncovered": null,
+   "final_text_check": "L216-3 (c0172888…) et L281-6 (cd8c1994…) inchangés depuis le registre. RT-UNION-01 traite le sélecteur « Au dernier alinéa du V » (conflit de source), RT-UNION-02 les catégories et le double avis."
+  },
+  {
+   "point": "3",
+   "aspect": "Modèles extérieurs, notamment UGECAM annexe 14 : portée et approbation",
+   "register_ids": [
+    "RT-DOC-04"
+   ],
+   "related": [
+    "RT-UNION-02 (incertitude seulement)"
+   ],
+   "merges_followed": [],
+   "uncovered": "Partiel : aucune objection ne porte spécifiquement sur l'arrêté de modèles ou l'annexe 14 UGECAM ; RT-UNION-02 la cite comme incertitude, RT-DOC-04 couvre génériquement les « modèles de statuts L281-6 » absents. Qualification sur texte final : pièce manquante. Aucun texte du corpus (articles, propositions, motifs, notes) ne contient « UGECAM » ni « annexe 14 » ; L281-6 proposé maintient « Les dispositions obligatoires et facultatives des modèles ainsi que les avis prévus au présent article demeurent applicables. » Aucun défaut confirmé : pas de nouvelle objection.",
+   "final_text_check": "Requête SQL en lecture seule sur l'instantané final : zéro occurrence de « UGECAM » et de « annexe 14 »."
+  },
+  {
+   "point": "3",
+   "aspect": "D227-6 / L224-10 : approbation, opposition, tutelle, calendriers, procédures résiduelles",
+   "register_ids": [
+    "RT-TUT-01",
+    "RT-TUT-02",
+    "RT-TUT-03",
+    "RT-TUT-05",
+    "RT-TUT-06",
+    "RT-TUT-07",
+    "RT-UNION-07",
+    "RT-CSS12-08"
+   ],
+   "related": [
+    "RT-CSS12-09 (faux positif)"
+   ],
+   "merges_followed": [],
+   "uncovered": null,
+   "final_text_check": "L224-10 inchangé (2888d113…) ; D227-6 : proposition inchangée (8de55705…), motif et notes modifiés, seconde passe completed ; réexamen en F05."
+  },
+  {
+   "point": "4a",
+   "aspect": "Annexe I 165 / 185 / 186 : dossier général supprimé, dépendances de 185/186, autorisation spéciale de méthode et avantages autonomes",
+   "register_ids": [
+    "RT-A1-01",
+    "RT-A1-02",
+    "RT-A1-03",
+    "RT-A1-04",
+    "RT-A1-06",
+    "RT-INUT-04"
+   ],
+   "related": [],
+   "merges_followed": [
+    "RT-A1-05 -> RT-INUT-04"
+   ],
+   "uncovered": null,
+   "final_text_check": "165 (6d4be25d…), 185 (5d4a6c19…), 186 (eef280bd…) inchangés depuis le registre (manifestes 26/10, 27/10, 29/10)."
+  },
+  {
+   "point": "4b",
+   "aspect": "302 D bis III / annexe III 111-0 E–F / annexe IV 50-0 G–H / annexe II 289 : suppression de la déclaration de profession et du numéro IN/UT ; distinction avec identifiants d'accise, autorisations spéciales, preuves de destination ; motif de 50-0 G",
+   "register_ids": [
+    "RT-INUT-01",
+    "RT-INUT-02",
+    "RT-INUT-03",
+    "RT-INUT-04",
+    "RT-INUT-05",
+    "RT-INUT-06",
+    "RT-INUT-07",
+    "RT-INUT-08",
+    "RT-A1-02"
+   ],
+   "related": [
+    "RT-A1-03"
+   ],
+   "merges_followed": [
+    "RT-A1-05 -> RT-INUT-04",
+    "RT-MENS-04 -> RT-INUT-04"
+   ],
+   "uncovered": null,
+   "final_text_check": "Textes inchangés ; seules les notes de 302 D bis ont changé entre le 26 et le 27/10 (pending -> completed). 50-0 G reste retained_unchanged (RT-INUT-02 porte le corps et le motif qui supposent le numéro)."
+  },
+  {
+   "point": "4c",
+   "aspect": "Annexe III 111-0 H 2° / annexe IV 50-0 I II : rapport mensuel supprimé contre déclaration des mois actifs et numéro UT ; transition mensuelle ; comptabilité quotidienne et anciens mois",
+   "register_ids": [
+    "RT-MENS-01",
+    "RT-MENS-02",
+    "RT-MENS-05",
+    "RT-INUT-04"
+   ],
+   "related": [
+    "RT-MENS-03 (faux positif, 50-00 D)",
+    "RT-INUT-09 (faux positif)"
+   ],
+   "merges_followed": [
+    "RT-MENS-04 -> RT-INUT-04"
+   ],
+   "uncovered": null,
+   "final_text_check": "111-0 H (d49acbe9…) et 50-0 I (5970baf2…) inchangés."
+  },
+  {
+   "point": "4d",
+   "aspect": "Annexe III 171 / ancien CGI 435 / CIBS L313-6 et contexte UE : champs, définitions, versions, transitions",
+   "register_ids": [
+    "RT-CIBS-01",
+    "RT-CIBS-02",
+    "RT-CIBS-03",
+    "RT-CIBS-04",
+    "RT-CIBS-05"
+   ],
+   "related": [
+    "RT-CIBS-06 (faux positif)"
+   ],
+   "merges_followed": [],
+   "uncovered": null,
+   "final_text_check": "171 (31619282…) inchangé ; CGI 435 abrogé (dernière version 2002-2022) ; versions gelées CIBS non dans le corpus (RT-CIBS-05)."
+  },
+  {
+   "point": "5a",
+   "aspect": "AAH : L174-4 / L821-6 / R821-8, dispense de réduction y compris pour séjours futurs",
+   "register_ids": [
+    "RT-P1-CSS-B-01"
+   ],
+   "related": [
+    "RT-FUTCSS-24",
+    "RT-FUTCSS-28"
+   ],
+   "merges_followed": [],
+   "uncovered": "L821-6 n'est visé par aucune objection ; sur le texte final, la chaîne est cohérente : L821-6 proposé (ce939d4c…) « Elles s'appliquent également aux hospitalisations et hébergements commençant après cette suppression, sans exiger le paiement du forfait ni une attestation de paiement. » ; R821-8 proposé (9cfaba2a…) « Elle s'applique également aux hospitalisations et hébergements commençant après cette suppression, sans exiger le paiement d'un forfait ni une attestation de paiement. » ; L174-4 (5878b4aa…) maintient la même fiction. Qualification : résolu dans le texte final pour le noyau AAH.",
+   "superseded_premise": "RT-P1-CSS-B-01 (registre) décrit R821-8 « retained_unchanged ; inventaire=pending » et propose précisément la réécriture du I a) ; au 29/10, R821-8 est rewrite_draft/completed avec une clause équivalente. Le volet R821-8 de cette objection repose sur un état supersédé ; ses autres volets (D174-1, D325-1, D325-6, R381-80, R381-83, R871-2, L162-22-11-1) ont aussi changé et sont dans le paquet F04. Aucun verdict n'est rendu ici. De plus, les notes finales de L174-4, L821-6 et R821-8 décrivent encore ces coordinations comme à faire : voir RT-TR2-01."
+  },
+  {
+   "point": "5a",
+   "aspect": "Concordance externe CASF L312-1 à la date gelée (R821-8 II : « au b du 5° et au 7° du I de l'article L. 312-1 du code de l'action sociale et des familles »)",
+   "register_ids": [],
+   "related": [],
+   "merges_followed": [],
+   "uncovered": "Non couvert. Qualification : pièce manquante (CASF absent du corpus ; le renvoi est celui de la source, inchangé par la proposition). Tentative de consultation Légifrance du 28/10/2026 infructueuse (mauvais identifiant d'article ; aucune nouvelle tentative). Aucun défaut du projet : pas d'objection.",
+   "final_text_check": "Les notes de R821-8 le reconnaissent : « textes entiers CASF L312-1 et arrêtés du forfait absents »."
+  },
+  {
+   "point": "5b",
+   "aspect": "CGI 244 quater X / annexe III 49 septies ZZX et ZZX bis : deux conflits initiaux, sources, NOTA, transitions des programmes antérieurs, justificatifs par branche de travaux",
+   "register_ids": [],
+   "related": [],
+   "merges_followed": [],
+   "uncovered": "Entièrement non couvert par le registre (aucune objection sur ces trois articles). Lu sur le texte final : les deux conflits initiaux sont résolus (voir points 5b), la réserve ZZT 6° c / 46 AG terdecies A n'est pas confirmée, les pièces extérieures (décision 2012/21/UE, décrets et formulaires) sont des pièces manquantes, et les notes de 244 quater X décrivent encore les deux conflits comme à corriger (RT-TR2-02).",
+   "superseded_premise": "Aucune objection du registre ne repose sur ces notes ; le risque est qu'un lecteur les reprenne : RT-TR2-02."
+  }
+ ],
+ "points": [
+  {
+   "point": "2a",
+   "summary": "D351-9 : définition de L(A) à 60 ans contre A = 62 ans.",
+   "qualification": "pièce manquante",
+   "evidence": "LEGIARTI000030400105 (source, aucune proposition) : « A est l'âge de référence fixé à soixante-deux ans » ; « L (A) est l'effectif à l'âge de soixante ans ». Conflit de source déjà qualifié par RT-D351-01 ; la résolution suppose l'acte complet (décret 2010-1737).",
+   "articles": [
+    {
+     "code": "css",
+     "number": "D351-9",
+     "source_id": "LEGIARTI000030400105",
+     "proposed_sha256": null
+    }
+   ],
+   "register_ids": [
+    "RT-D351-01",
+    "RT-D351-02"
+   ],
+   "minimal_correction": "Celle de RT-D351-01 (pas de nouvelle correction).",
+   "new_objections": []
+  },
+  {
+   "point": "2b",
+   "summary": "Figure manquante de l'annexe I à R434-32 (7).",
+   "qualification": "pièce manquante",
+   "evidence": "LEGIARTI000028675462 (documentary_hold, sans proposition) : « Les quadranopsies peuvent être évaluées en assignant à chaque quadrant une valeur de : » (figure absente).",
+   "articles": [
+    {
+     "code": "css",
+     "number": "Annexe I à l'art. R434-32 (7)",
+     "source_id": "LEGIARTI000028675462",
+     "proposed_sha256": null
+    }
+   ],
+   "register_ids": [
+    "RT-DOC-01"
+   ],
+   "minimal_correction": "Celle de RT-DOC-01.",
+   "new_objections": []
+  },
+  {
+   "point": "2c",
+   "summary": "CERFA 30-0812 / 30-0813 de l'annexe IV art. 15 non obtenus.",
+   "qualification": "pièce manquante",
+   "evidence": "LEGIARTI000019493914 (documentary_hold) : « fiches individuelles conformes aux modèles ci-après (non reproduits-Cerfa n° 30-0812 et n° 30-0813) ».",
+   "articles": [
+    {
+     "code": "a4",
+     "number": "15",
+     "source_id": "LEGIARTI000019493914",
+     "proposed_sha256": null
+    }
+   ],
+   "register_ids": [
+    "RT-DOC-02"
+   ],
+   "minimal_correction": "Celle de RT-DOC-02.",
+   "new_objections": []
+  },
+  {
+   "point": "3",
+   "summary": "Douze coordinations CSS et cinq réserves. Les candidats parentaux ne sont pas intégrés, mais les douze articles portent des propositions natives finales distinctes ; toutes les réserves ont une objection du registre, sauf l'annexe 14 UGECAM, qui est une pièce manquante.",
+   "qualification": "coordination nécessaire (couverte par le registre ; réexamen par F01/F02/F05) ; UGECAM annexe 14 : pièce manquante",
+   "evidence": "Comparaison des empreintes : candidat scellé contre proposition finale. Exemple : D224-7 LEGIARTI000046356432, candidat 4b016e92…, final 3c414c9f… (completed). L281-6 LEGIARTI000006742239 proposé : « Les dispositions obligatoires et facultatives des modèles ainsi que les avis prévus au présent article demeurent applicables. »",
+   "articles": [
+    {
+     "code": "css",
+     "number": "R123-1",
+     "source_id": "LEGIARTI000029389194",
+     "proposed_sha256": "84199b7a320e1a14599d1436d1037ef19e53d39f1df80787f89ecbf66ef276fd"
+    },
+    {
+     "code": "css",
+     "number": "R123-1-1",
+     "source_id": "LEGIARTI000038790652",
+     "proposed_sha256": "dc099cea17cc2203182d62dc86fe26f02974a9885b372e420549cfe7e46b858b"
+    },
+    {
+     "code": "css",
+     "number": "D224-7",
+     "source_id": "LEGIARTI000046356432",
+     "proposed_sha256": "3c414c9f4f2a813b836ed264e8251926a030c17d1f086e2c5d9bb20339a7c099"
+    },
+    {
+     "code": "css",
+     "number": "R152-8",
+     "source_id": "LEGIARTI000029388285",
+     "proposed_sha256": "f90f6f7fad866c2248463c68d6163beaa01d6243cd05874780a37e8dc65685c0"
+    },
+    {
+     "code": "css",
+     "number": "D224-8",
+     "source_id": "LEGIARTI000046356451",
+     "proposed_sha256": "5abb915253dedeb7a4a0ae42a27dc5d4aedd8ac6fc785686e1ac9a86b04ff84b"
+    },
+    {
+     "code": "css",
+     "number": "R153-2",
+     "source_id": "LEGIARTI000022055116",
+     "proposed_sha256": "647f3ff5a380db0d8f42fad444b40afe318be088796f99dc5efeacd81c66c615"
+    },
+    {
+     "code": "css",
+     "number": "R151-1",
+     "source_id": "LEGIARTI000021508199",
+     "proposed_sha256": "019a61d822cf52cd2b1dffb30b880c2538ecfe3681ac0ca49a9f98bf87dce835"
+    },
+    {
+     "code": "css",
+     "number": "R151-3",
+     "source_id": "LEGIARTI000029389202",
+     "proposed_sha256": "690e54732f00d14d2bd8f78a1835213e9a9145db2b717aeab79a93e3b7fa5a8f"
+    },
+    {
+     "code": "css",
+     "number": "R612-7",
+     "source_id": "LEGIARTI000042363356",
+     "proposed_sha256": "dcb2cda07cd8540824a4ed8d2b93a4b4177a99f4e48bb70010c579f69e4e3746"
+    },
+    {
+     "code": "css",
+     "number": "R216-2",
+     "source_id": "LEGIARTI000036914470",
+     "proposed_sha256": "12ce445dbc11ef5dfa4786f65fe1a00b5a83b36ebc76c31291c40a5f24e6e7d4"
+    },
+    {
+     "code": "css",
+     "number": "R281-4",
+     "source_id": "LEGIARTI000036914411",
+     "proposed_sha256": "18692bb23b8c0c8657c85e6d0c7ef56825f9e258b81f1950eea0bb9d2f39235d"
+    },
+    {
+     "code": "css",
+     "number": "R213-5",
+     "source_id": "LEGIARTI000006748552",
+     "proposed_sha256": "712b65fb063cad86307afd564920c066ec7410e4735e9359e15a50c6a6862864"
+    },
+    {
+     "code": "css",
+     "number": "D227-5",
+     "source_id": "LEGIARTI000046356333",
+     "proposed_sha256": "72f2284a28d6c8b677adf185f3faefb8b2d0187fb656c2114a8b754fb8d106ee"
+    },
+    {
+     "code": "css",
+     "number": "L228-1",
+     "source_id": "LEGIARTI000037948785",
+     "proposed_sha256": "e9bed60305cb74d22860ee57427d4bb03775964ee96b89d206aaa0ae1f9e1df4"
+    },
+    {
+     "code": "css",
+     "number": "L216-3",
+     "source_id": "LEGIARTI000006741713",
+     "proposed_sha256": "c01728888c94ab4d0f098f84bb11f5d0d015e371e8620177bed25563cd14a2c3"
+    },
+    {
+     "code": "css",
+     "number": "L281-6",
+     "source_id": "LEGIARTI000006742239",
+     "proposed_sha256": "cd8c1994a2e5a7a5bfe4ad7c231a4a9f0f6f131a08339eef5ab3cc9f0cd11078"
+    },
+    {
+     "code": "css",
+     "number": "D227-6",
+     "source_id": "LEGIARTI000030773015",
+     "proposed_sha256": "8de55705e688e2536a0540fa975460824d2c8a340a2b962b183afe58cb4ba9e9"
+    },
+    {
+     "code": "css",
+     "number": "L224-10",
+     "source_id": "LEGIARTI000044404083",
+     "proposed_sha256": "2888d1139c2bbd212f8ae01a74094f43aea05df8f37a8952cf683e956ac9e399"
+    }
+   ],
+   "register_ids": [
+    "RT-CSS12-01",
+    "RT-CSS12-02",
+    "RT-CSS12-03",
+    "RT-CSS12-04",
+    "RT-CSS12-05",
+    "RT-CSS12-06",
+    "RT-CSS12-08",
+    "RT-CSS12-09",
+    "RT-CSS12-10",
+    "RT-CSS12-11",
+    "RT-INST-01",
+    "RT-INST-02",
+    "RT-INST-03",
+    "RT-INST-04",
+    "RT-TUT-01",
+    "RT-TUT-02",
+    "RT-TUT-03",
+    "RT-TUT-04",
+    "RT-TUT-05",
+    "RT-TUT-06",
+    "RT-TUT-07",
+    "RT-UNION-01",
+    "RT-UNION-02",
+    "RT-UNION-03",
+    "RT-UNION-04",
+    "RT-UNION-06",
+    "RT-UNION-07",
+    "RT-DOC-04"
+   ],
+   "minimal_correction": "Aucune nouvelle. Ne plus traiter les candidats du 25/10 comme base de correction : juger les propositions natives finales.",
+   "new_objections": []
+  },
+  {
+   "point": "4a",
+   "summary": "Annexe I 165/185/186.",
+   "qualification": "coordination nécessaire (couverte)",
+   "evidence": "Propositions inchangées depuis le registre (165 6d4be25d…, 185 5d4a6c19…, 186 eef280bd…).",
+   "articles": [
+    {
+     "code": "a1",
+     "number": "165",
+     "source_id": "LEGIARTI000032881253",
+     "proposed_sha256": "6d4be25d50c853313b4df91fc92b0c612a51076ddd874266c78b8b869e9f9d8f"
+    },
+    {
+     "code": "a1",
+     "number": "185",
+     "source_id": "LEGIARTI000006293344",
+     "proposed_sha256": "5d4a6c1957c5440e7e6bc3f16d4373419722d8933720acca5c9b71f8bca0a1bd"
+    },
+    {
+     "code": "a1",
+     "number": "186",
+     "source_id": "LEGIARTI000032881225",
+     "proposed_sha256": "eef280bd11ec3181c82a7cec3c42a7b37532511878ab09ad69289b536de90a0a"
+    }
+   ],
+   "register_ids": [
+    "RT-A1-01",
+    "RT-A1-02",
+    "RT-A1-03",
+    "RT-A1-04",
+    "RT-A1-06",
+    "RT-INUT-04"
+   ],
+   "minimal_correction": "Celles du registre.",
+   "new_objections": []
+  },
+  {
+   "point": "4b",
+   "summary": "IN/UT : 302 D bis III, 111-0 E–F, 50-0 G–H, annexe II 289.",
+   "qualification": "coordination nécessaire (couverte)",
+   "evidence": "Propositions inchangées depuis le registre ; 50-0 G retained_unchanged (proposed NULL).",
+   "articles": [
+    {
+     "code": "cgi",
+     "number": "302 D bis",
+     "source_id": "LEGIARTI000041472187",
+     "proposed_sha256": "f96e9f7b83e7a219bc58ff0f6baed3dbca5282147a24751da6188813fdedfb3d"
+    },
+    {
+     "code": "a3",
+     "number": "111-0 E",
+     "source_id": "LEGIARTI000006298854",
+     "proposed_sha256": "3ec29fb448666418e2e3ea97ef2ef4b8afdde24d27471f78276f5f0b5ef9e03b"
+    },
+    {
+     "code": "a3",
+     "number": "111-0 F",
+     "source_id": "LEGIARTI000006298856",
+     "proposed_sha256": "2eaacc5693dd49110a675ee90d9f808fc0a0b1b3d321beae924ad33cba82fe86"
+    },
+    {
+     "code": "a4",
+     "number": "50-0 G",
+     "source_id": "LEGIARTI000006300442",
+     "proposed_sha256": null
+    },
+    {
+     "code": "a4",
+     "number": "50-0 H",
+     "source_id": "LEGIARTI000006300443",
+     "proposed_sha256": "13ec37f6de66b37d0acfa22879f8180a4be2d1e611f7e88c9e72001e26f82af4"
+    },
+    {
+     "code": "a2",
+     "number": "289",
+     "source_id": "LEGIARTI000054363092",
+     "proposed_sha256": "6fac3dcbd3000539426958f361832c659b94cb3f40337e1eb99f0437f59f0509"
+    }
+   ],
+   "register_ids": [
+    "RT-INUT-01",
+    "RT-INUT-02",
+    "RT-INUT-03",
+    "RT-INUT-04",
+    "RT-INUT-05",
+    "RT-INUT-06",
+    "RT-INUT-07",
+    "RT-INUT-08",
+    "RT-A1-02"
+   ],
+   "minimal_correction": "Celles du registre.",
+   "new_objections": []
+  },
+  {
+   "point": "4c",
+   "summary": "Rapport mensuel 111-0 H 2° contre 50-0 I II.",
+   "qualification": "contradiction confirmée au registre (RT-MENS-01), couverte",
+   "evidence": "Propositions inchangées (111-0 H d49acbe9…, 50-0 I 5970baf2…).",
+   "articles": [
+    {
+     "code": "a3",
+     "number": "111-0 H",
+     "source_id": "LEGIARTI000006298858",
+     "proposed_sha256": "d49acbe901ab2554bb8f5a201feda7dc0f6b18803017afc5350856e74c2869cd"
+    },
+    {
+     "code": "a4",
+     "number": "50-0 I",
+     "source_id": "LEGIARTI000006300444",
+     "proposed_sha256": "5970baf2000055b42331f32309cef72b9c38ce22daaee984434db6c3d1d7976a"
+    }
+   ],
+   "register_ids": [
+    "RT-MENS-01",
+    "RT-MENS-02",
+    "RT-MENS-05",
+    "RT-INUT-04"
+   ],
+   "minimal_correction": "Celles du registre.",
+   "new_objections": []
+  },
+  {
+   "point": "4d",
+   "summary": "Annexe III 171 / CGI 435 / CIBS L313-6.",
+   "qualification": "coordination nécessaire et pièce manquante (couvertes)",
+   "evidence": "171 inchangé (31619282…) ; versions CIBS gelées absentes (RT-CIBS-05).",
+   "articles": [
+    {
+     "code": "a3",
+     "number": "171",
+     "source_id": "LEGIARTI000006298919",
+     "proposed_sha256": "31619282fdf3cc2fda13e8975c1140987a21bfc1290cc85e7bd2a435dcd979c4"
+    }
+   ],
+   "register_ids": [
+    "RT-CIBS-01",
+    "RT-CIBS-02",
+    "RT-CIBS-03",
+    "RT-CIBS-04",
+    "RT-CIBS-05"
+   ],
+   "minimal_correction": "Celles du registre.",
+   "new_objections": []
+  },
+  {
+   "point": "5a",
+   "summary": "AAH : correctif R821-8 intégré ; noyau AAH cohérent ; concordance CASF L312-1 non établie ; notes finales supersédées.",
+   "qualification": "résolu dans le texte final (noyau AAH) ; pièce manquante (CASF L312-1) ; coordination nécessaire pour les textes connexes (couverte, F04)",
+   "evidence": "R821-8 LEGIARTI000031828843 proposé : « la dispense de réduction prévue au a du I demeure applicable aux personnes qui, au regard de leur situation, auraient été astreintes à ce forfait » ; L821-6 LEGIARTI000006745026 proposé : « Elles s'appliquent également aux hospitalisations et hébergements commençant après cette suppression ». Notes de L174-4 (LEGIARTI000053713364) : « Coordination rédactionnelle hors lot encore nécessaire à L. 821-6 et R. 821-8, I, a) » (supersédé).",
+   "articles": [
+    {
+     "code": "css",
+     "number": "L174-4",
+     "source_id": "LEGIARTI000053713364",
+     "proposed_sha256": "5878b4aa5260f3391b61ab624611aefbef7018e730b5f2ae00c149ec8e009bba"
+    },
+    {
+     "code": "css",
+     "number": "L821-6",
+     "source_id": "LEGIARTI000006745026",
+     "proposed_sha256": "ce939d4c62389827a0bd2aae174524e0032980ac0ea31925cf50a6bcc212ed70"
+    },
+    {
+     "code": "css",
+     "number": "R821-8",
+     "source_id": "LEGIARTI000031828843",
+     "proposed_sha256": "9cfaba2acadd2beca2791fa3ebbdd7109dfa0478fc59516fd9deb920c4ea10ee"
+    }
+   ],
+   "register_ids": [
+    "RT-P1-CSS-B-01",
+    "RT-FUTCSS-24",
+    "RT-FUTCSS-28"
+   ],
+   "minimal_correction": "Mettre à jour les notes (RT-TR2-01). Aucune modification des corps.",
+   "new_objections": [
+    "RT-TR2-01"
+   ]
+  },
+  {
+   "point": "5b",
+   "summary": "244 quater X / ZZX / ZZX bis : les deux conflits initiaux sont réglés dans les corps finaux ; ZZT 6° c / 46 AG terdecies A non confirmé ; notes de 244 quater X supersédées.",
+   "qualification": "résolu dans le texte final (deux conflits) ; non confirmé (ZZT 6° c) ; pièce manquante (décision 2012/21/UE, décrets et formulaires)",
+   "evidence": "ZZX LEGIARTI000031107059 proposé : « ce premier fait générateur ne peut, à lui seul, maintenir cette condition pour l'avenir » (concorde avec X de 244 quater X LEGIARTI000046894126). ZZX bis LEGIARTI000052050854 proposé, II : « ces exigences de performances propres à l'autre voie d'éligibilité et leur justification ne sont pas cumulativement requises » (concorde avec VIII 2). ZZT LEGIARTI000045759826 (retained_unchanged) 6° c : « s'entendent de ceux qui satisfont aux conditions prévues à l'article 46 AG terdecies A » ; 46 AG terdecies A LEGIARTI000006298105 : « par leur nature, équivalent à de la reconstruction ».",
+   "articles": [
+    {
+     "code": "cgi",
+     "number": "244 quater X",
+     "source_id": "LEGIARTI000046894126",
+     "proposed_sha256": "82e3c203cde86a2b8075edb153b592f5fbb538a1452364d39f0bd68990b9526c"
+    },
+    {
+     "code": "a3",
+     "number": "49 septies ZZX",
+     "source_id": "LEGIARTI000031107059",
+     "proposed_sha256": "47b4f0a3763c9640d014e52fab76620cccd80a1c0d207584931d8c5788c34f64"
+    },
+    {
+     "code": "a3",
+     "number": "49 septies ZZX bis",
+     "source_id": "LEGIARTI000052050854",
+     "proposed_sha256": "c1b906531345bce1900cbaa54d7b8c7177f731047267a202e33c792aa3205490"
+    },
+    {
+     "code": "a3",
+     "number": "49 septies ZZT",
+     "source_id": "LEGIARTI000045759826",
+     "proposed_sha256": null
+    },
+    {
+     "code": "a3",
+     "number": "46 AG terdecies A",
+     "source_id": "LEGIARTI000006298105",
+     "proposed_sha256": null
+    }
+   ],
+   "register_ids": [],
+   "minimal_correction": "Mettre à jour les notes de 244 quater X (RT-TR2-02). Pour ZZT 6° c : aucune correction ; une précision facultative est possible (« y compris les travaux de confortation contre le risque sismique ou cyclonique portant sur le gros œuvre ») si les décrets de définition des travaux le requièrent. Ce n'est pas proposé comme correction, faute de défaut démontré.",
+   "new_objections": [
+    "RT-TR2-02"
+   ]
+  },
+  {
+   "point": "7",
+   "summary": "Liste des 18 certificats signalés périmés, reconfrontation d'un échantillon et état des anciennes analyses L1242-2 et CVAE.",
+   "qualification": "simple alerte (aucune contradiction confirmée dans l'échantillon) ; anomalie d'inventaire : certificats non renouvelés",
+   "provenance": {
+    "found_in_snapshot": "Ni INDEX.md ni GUIDE-TROISIEME-PASSE.md ne listent les 18 certificats : l'INDEX parle seulement de « certificats de références devenus périmés ». Les preuves scellées (joint-twelve 1915Z et 2012Z, alcohol 1305Z) mentionnent « aucun des 18 certificats périmés renouvelé » sans liste.",
+    "production_read": "Pièce manquante dans l'instantané : la liste a été lue EN LECTURE SEULE en production (signalé conformément au brief), dans runtime/heartbeat-check-20261025T0653Z/ : current-reference-dispositions.json (sha256 8d8a5ec7e8f4595f306d76c1a9bca12809a4d9467867d312db141448c4e86a6f), target-change-explanations.json (a8ad7095fc6b6330ee549281eba62000553329cde08e8d5374966848237402bf), REPORT.md (679140eed7f2fff65a7a62ff103613c20e3ca7e893d0d19bdc901defb46d65a7). Origine : « Dans le seul périmètre des 681 articles, les gardes courantes de renvois REFUSENT 10 snapshots et 18 certificats ». Rien n'a été écrit ni exécuté en production.",
+    "definition": "Certificats « reference_coherence » (version 3) des lignes de lots, refusés le 25/10 parce qu'une cible avait changé (target_view_changed)."
+   },
+   "certificates": [
+    {
+     "code": "css",
+     "number": "L224-10",
+     "source_id": "LEGIARTI000044404083",
+     "owner": "batches/automatic-securite-sociale/00042.json",
+     "proposed_sha256": "2888d1139c2bbd212f8ae01a74094f43aea05df8f37a8952cf683e956ac9e399",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L224-5-1 (LEGIARTI000037948891)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L225-1-1",
+     "source_id": "LEGIARTI000051289059",
+     "owner": "batches/automatic-securite-sociale/00042.json",
+     "proposed_sha256": "5b9efb21183950013a865d8895b40d990a541e64efd2af24dbead060baf45f9d",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L241-13 (LEGIARTI000053280526)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L224-5",
+     "source_id": "LEGIARTI000044404097",
+     "owner": "batches/automatic-securite-sociale/00042.json",
+     "proposed_sha256": "23c16e25225c67820318b17b5b772c8b712de272b3b3b7b7036ff007a857e25f",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L224-5-1 (LEGIARTI000037948891)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L224-5-2",
+     "source_id": "LEGIARTI000044404093",
+     "owner": "batches/automatic-securite-sociale/00042.json",
+     "proposed_sha256": "a5344419ac08639bd2a434eb1860e7dd7c2752e7122993d24b698f384522cd6b",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L224-5-1 (LEGIARTI000037948891)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L241-3-1",
+     "source_id": "LEGIARTI000037074809",
+     "owner": "batches/automatic-securite-sociale/00044.json",
+     "proposed_sha256": "293fb77f581c966d0f9732b4f7f487597569803f4b2171f086029598b6974bd5",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L241-3 (LEGIARTI000051289018)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L241-3-2",
+     "source_id": "LEGIARTI000037074800",
+     "owner": "batches/automatic-securite-sociale/00044.json",
+     "proposed_sha256": "cd7a345a0ec9eb7aa4902d228d23f07502c19303a60d3f2e9f833d74e559bbec",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L241-3 (LEGIARTI000051289018)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L241-5",
+     "source_id": "LEGIARTI000037947554",
+     "owner": "batches/automatic-securite-sociale/00044.json",
+     "proposed_sha256": "76b3e1808ec2ca3d644c0c681bf38b6131a8ca2f76be8b6e12206e149f0c5b4f",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L241-10 (LEGIARTI000051284555)",
+      "L241-13 (LEGIARTI000053280526)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L241-5-1",
+     "source_id": "LEGIARTI000006742333",
+     "owner": "batches/automatic-securite-sociale/00044.json",
+     "proposed_sha256": "e533ad94f842c414a795e70e20167aa9dc32299738dfc24a75da3e769e114d20",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L241-5 (LEGIARTI000037947554)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L241-10",
+     "source_id": "LEGIARTI000051284555",
+     "owner": "batches/contrat-unique-cross-codes-20261019/001.json",
+     "proposed_sha256": "6ae5c3d046f48e8e36398dde99c49d140d60021aac10cfd87048090ca2d8d4f1",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L241-5 (LEGIARTI000037947554)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "urba",
+     "number": "L322-3",
+     "source_id": "LEGIARTI000006815565",
+     "owner": "batches/automatic-urbanisme/00026.json",
+     "proposed_sha256": "ee98b9d9bc01cb5f79b53941cafb8dd6b4f81046c20ed9a4994af15347ee3142",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L322-5 (LEGIARTI000044073374)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L241-13",
+     "source_id": "LEGIARTI000053280526",
+     "owner": "batches/continuation-contrat-intercodes/001.json",
+     "proposed_sha256": "fefc051c58f6dcaf25dcbb6f8bfb41e7f4f8acaeab377e8fa9760a8b26d0f6cb",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L241-18 (LEGIARTI000038610232)",
+      "L241-18-1 (LEGIARTI000053278678)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L241-14",
+     "source_id": "LEGIARTI000042683654",
+     "owner": "batches/automatic-securite-sociale/00044.json",
+     "proposed_sha256": "ef5f6297e5c583a3dea67aad4b2a190fe328d1d25be7258a439cd97d3ba6bc0f",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L241-13 (LEGIARTI000053280526)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L242-3",
+     "source_id": "LEGIARTI000031686588",
+     "owner": "batches/poursuite-social-20261020/001.json",
+     "proposed_sha256": "93ca7e954f7e494caf0a0f8412eab17f5c19020bfe04e756e54c9b2191ba1f88",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L242-5 (LEGIARTI000053282379)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L242-6",
+     "source_id": "LEGIARTI000006741986",
+     "owner": "batches/automatic-securite-sociale/00045.json",
+     "proposed_sha256": null,
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L242-5 (LEGIARTI000053282379)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L242-7",
+     "source_id": "LEGIARTI000021941705",
+     "owner": "batches/automatic-securite-sociale/00045.json",
+     "proposed_sha256": "38a51ee82c86e706e32c861a3c47a45691d4cedab303658d4ddaa729573c3bbd",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L242-5 (LEGIARTI000053282379)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L241-19",
+     "source_id": "LEGIARTI000054140323",
+     "owner": "batches/contrat-unique-cross-codes-20261019/001.json",
+     "proposed_sha256": "ad5b8fa4ba07862504cedd142a10d38d53f2e641f1f7d4a90449c15ef31ff048",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L241-18 (LEGIARTI000038610232)",
+      "L241-18-1 (LEGIARTI000053278678)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "css",
+     "number": "L241-20",
+     "source_id": "LEGIARTI000048846851",
+     "owner": "batches/automatic-securite-sociale/00044.json",
+     "proposed_sha256": "d100165e38ba658d7772b4ee988bcd82cab9b82cabe96899ac203727f30e98fd",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L241-19 (LEGIARTI000054140323)"
+     ],
+     "certificate_still_stale_on_final": true
+    },
+    {
+     "code": "urba",
+     "number": "L322-11",
+     "source_id": "LEGIARTI000006815288",
+     "owner": "batches/automatic-urbanisme/00027.json",
+     "proposed_sha256": "b60578a8a3efa8ebdbafbc340d73090e8f9b7b43996f4199b32b2d2a14a05c7c",
+     "second_pass": "completed",
+     "referrer_proposal_still_certified": true,
+     "policy_hashes_current": true,
+     "targets_changed_since_certificate": [
+      "L322-5 (LEGIARTI000044073374)"
+     ],
+     "certificate_still_stale_on_final": true
+    }
+   ],
+   "final_state": "Sur l'instantané final, les 18 restent périmés. Pour chacun, la proposition du référent et les empreintes de politique correspondent encore au certificat, mais au moins une cible a une proposition différente de la vue certifiée. Aucun n'a été renouvelé, alors que les 18 référents sont « completed » en seconde passe.",
+   "samples": [
+    {
+     "referrers": [
+      "css L241-13 (LEGIARTI000053280526)",
+      "css L241-19 (LEGIARTI000054140323)"
+     ],
+     "changed_targets": [
+      "L241-18 (LEGIARTI000038610232, final 4ac1c186…)",
+      "L241-18-1 (LEGIARTI000053278678, final 5300a59e…)"
+     ],
+     "why": "Enjeu financier direct : cumul de la réduction générale avec les déductions pour heures supplémentaires, champ des moins et des au moins vingt salariés.",
+     "result": "Assertions du certificat confirmées sur les versions finales. L241-18 I : « Dans les entreprises de moins de vingt salariés » ; heures « au-delà de trente-cinq heures et jusqu'à quarante heures » ; II « sept fois le montant prévu au I ». L241-18-1 I : « Dans les entreprises d'au moins vingt salariés » ; VII « s'applique à Mayotte et à Saint-Pierre-et-Miquelon ». L241-13 VI (proposé) : « cumulable avec les déductions forfaitaires prévues aux articles L. 241-18 et L. 241-18-1 ». Qualification : non confirmé (aucune contradiction) ; certificat périmé par empreinte seulement."
+    },
+    {
+     "referrers": [
+      "css L241-3-1 (LEGIARTI000037074809)",
+      "css L241-3-2 (LEGIARTI000037074800)"
+     ],
+     "changed_targets": [
+      "L241-3 (LEGIARTI000051289018, final da4cf027…)"
+     ],
+     "why": "Réforme majeure : transfert vers un compte de capitalisation, articulé avec la surcotisation à temps plein.",
+     "result": "Confirmé. L241-3 II final : « ce transfert concerne les salariés relevant du régime général employés par une personne de droit privé » ; « dans la limite des cotisations vieillesse effectivement dues pour chacune des parts salariale et patronale » ; III : « Tant que cette coordination n'est pas entrée en vigueur, aucun transfert ne peut être mis en œuvre. » La dérogation de L241-3-1 reste autonome. Non confirmé."
+    },
+    {
+     "referrers": [
+      "css L224-10 (LEGIARTI000044404083)",
+      "css L224-5 (LEGIARTI000044404097)",
+      "css L224-5-2 (LEGIARTI000044404093)"
+     ],
+     "changed_targets": [
+      "L224-5-1 (LEGIARTI000037948891, final 83a66543…)"
+     ],
+     "why": "Lié au point 3 (UCANSS, suppression de l'agrément, opposition).",
+     "result": "Confirmé. L224-5-1 final : « les accords collectifs nationaux conclus par l'union ne sont pas soumis à agrément ministériel. Le conseil d'orientation peut s'y opposer à la majorité des trois quarts de ses membres désignés dans le mois suivant leur réception », avec exécution « dès que le conseil décide expressément de ne pas s'y opposer » et transition pour les demandes en cours. Non confirmé. Remarque : « À la même majorité, le comité peut demander l'évocation » reprend la source (« A la même majorité le comité peut demander l'évocation ») : rien n'est introduit par le projet."
+    },
+    {
+     "referrers": [
+      "urba L322-3 (LEGIARTI000006815565)",
+      "urba L322-11 (LEGIARTI000006815288)"
+     ],
+     "changed_targets": [
+      "L322-5 (LEGIARTI000044073374, final 45f47969…)"
+     ],
+     "why": "Droit de délaissement (garantie patrimoniale) ; chaîne voisine du dossier R322-8/L322-6-1.",
+     "result": "Le certificat signalait un renvoi erroné au « troisième alinéa » de L322-7. La version finale de L322-5 le corrige : « l'arrêté de l'autorité administrative visé à l'article L. 322-7 (quatrième alinéa) ». Le quatrième alinéa de L322-7 est bien l'arrêté de constat. Les délais de trois mois et les protections des créanciers et des absents sont conservés. La réserve du certificat est levée par le texte final. Qualification : résolu dans le texte final."
+    },
+    {
+     "referrers": [
+      "css L242-3 (LEGIARTI000031686588)",
+      "css L242-6 (LEGIARTI000006741986)",
+      "css L242-7 (LEGIARTI000021941705)"
+     ],
+     "changed_targets": [
+      "L242-5 (LEGIARTI000053282379, final 5cb8dbf8…)"
+     ],
+     "why": "Renvois ordinaux (« neuvième alinéa », « deuxième alinéa ») sensibles à toute réécriture.",
+     "result": "Confirmé. L242-5 final conserve l'ordre des alinéas : 2e alinéa, juridiction du « 7° de l'article L. 142-1 » ; 9e alinéa, commission AT-MP ; 11e : « ne respectent pas le neuvième alinéa ». Non confirmé."
+    },
+    {
+     "referrers": [
+      "css L241-5-1 (LEGIARTI000006742333)",
+      "css L241-10 (LEGIARTI000051284555)",
+      "css L241-5 (LEGIARTI000037947554)"
+     ],
+     "changed_targets": [
+      "L241-5 (final 76b3e180…)",
+      "L241-10",
+      "L241-13"
+     ],
+     "why": "Renvoi ordinal « seconde phrase du deuxième alinéa » et correction de la pénalité L4163-2 vers L4162-4.",
+     "result": "Confirmé. L241-5 final, 2e alinéa, seconde phrase : « Les réductions prévues au III de l'article L. 241-10 et à l'article L. 241-13 peuvent s'imputer sur ces cotisations » ; « pénalité prévue à l'article L. 4162-4 du code du travail ». Non confirmé."
+    }
+   ],
+   "sample_coverage": "15 des 18 certificats reconfrontés sur au moins une cible modifiée (L241-13, L241-19, L241-3-1, L241-3-2, L224-10, L224-5, L224-5-2, L322-3, L322-11, L242-3, L242-6, L242-7, L241-5-1, L241-10, L241-5). Non relus : L225-1-1 -> L241-13, L241-14 -> L241-13 et L241-20 -> L241-19.",
+   "beyond_18": "Indication non exhaustive, sans recompter l'audit GLOBAL : en reproduisant seulement les contrôles d'empreinte (référent, politiques, source et vue des cibles), 1 737 des 5 388 certificats présents dans les lots finaux ne correspondent plus. Pour comparaison, la réconciliation de production du 27/10 en comptait 2 996 (« stale_pending »). Les 18 ne sont donc qu'un sous-ensemble, comme le dit la transmission.",
+   "old_analyses": [
+    {
+     "analysis": "Relecture limitée L1242-2 (evidence/sealed/runtime/l1242-semantic-recheck-20261022T183007Z, gardes du 22/10 18:26 UTC)",
+     "guards": 15,
+     "sources_unchanged": 15,
+     "proposals_changed_on_final": 10,
+     "changed": [
+      "L1251-37-1",
+      "L2412-13",
+      "L2412-9",
+      "L2412-8",
+      "L2412-2",
+      "L1242-2",
+      "L1241-1",
+      "L1244-2-2",
+      "L1251-37",
+      "L1251-6"
+     ],
+     "unchanged": [
+      "L2412-5",
+      "L2412-4",
+      "L2412-3",
+      "L1221-2",
+      "L2411-1"
+     ],
+     "reconfrontation": "Échantillon : L2412-2 (LEGIARTI000036762283, final 830e710c…). La conclusion ancienne (prolongation future autonome pour les catégories saisonnières ou d'usage) tient : « la prolongation des délais de protection reste applicable ». La proposition finale ajoute un contenu que l'analyse ancienne n'a pas examiné : remplacement de « délais prévus à l'article L. 2411-5 » par « pendant l'exercice du mandat de délégué syndical et pendant les six premiers mois suivant la cessation de ses fonctions […] sans préjudice de la protection plus favorable prévue à l'article L. 2411-3 ». Cette durée de six mois reproduit l'effet du renvoi source à L2411-5 et réserve L2411-3 : aucune perte de protection n'est constatée. L'analyse du 22/10 ne peut pas être héritée, ce qui confirme l'INDEX. Aucune objection du registre ne vise ce groupe.",
+     "register_ids": []
+    },
+    {
+     "analysis": "Relecture CVAE (evidence/sealed/runtime/cvae-semantic-recheck-20261023T1956Z, 18 gardes du 23/10)",
+     "guards": 18,
+     "sources_unchanged": 18,
+     "proposals_changed_on_final": 8,
+     "changed": [
+      "a3 38",
+      "238 bis HW",
+      "1586 ter",
+      "1647 B sexies",
+      "1586 quater",
+      "172 bis (désormais retained_unchanged)",
+      "1655 ter"
+     ],
+     "unchanged": [
+      "a3 46 C",
+      "a3 344 quindecies",
+      "a3 39",
+      "1586 quinquies",
+      "1586 sexies",
+      "1635 sexies",
+      "1586 octies",
+      "238 bis HV",
+      "234 nonies",
+      "217 quindecies",
+      "1641"
+     ],
+     "reconfrontation": "Pas de nouvelle lecture sémantique : le domaine est couvert par des objections vivantes du registre (RT-FUTFISC-13, RT-FUTFISC-14, RT-FUTFISC-15, RT-FUTFISC-32, RT-DOMCVAE-03, RT-DOMCVAE-05 ; RT-DOMCVAE-01 -> RT-FUTFISC-13, RT-DOMCVAE-02 -> RT-FUTFISC-14), que d'autres groupes réexaminent. La conclusion « aucune contradiction CVAE effective » du 23/10 ne peut pas être reprise : 8 des 18 gardes ne correspondent plus, dont 1586 ter, qui porte la date de suppression.",
+     "register_ids": [
+      "RT-FUTFISC-13",
+      "RT-FUTFISC-14",
+      "RT-FUTFISC-15",
+      "RT-FUTFISC-32",
+      "RT-DOMCVAE-03",
+      "RT-DOMCVAE-05"
+     ]
+    }
+   ],
+   "register_ids": [],
+   "new_objections": []
+  }
+ ],
+ "new_objections": [
+  {
+   "id": "RT-TR2-01",
+   "origin": "transmission seconde passe, point 5a",
+   "relates_to": [
+    "RT-RXCGI-01",
+    "RT-P1-CSS-B-01"
+   ],
+   "proposed_merge_into": "RT-RXCGI-01",
+   "merge_rationale": "Même nature que RT-RXCGI-01 (notes de seconde passe décrivant comme ouverte une coordination faite des deux côtés) ; nouvelles instances non listées par celle-ci. À fusionner comme instance, sans compter un défaut distinct.",
+   "priority": "P2",
+   "priority_justification": "Aucun effet sur le droit proposé : les corps sont cohérents. Risque documentaire : un lecteur, ou une troisième passe, pourrait tenir pour encore ouvertes des coordinations déjà faites, et rouvrir un correctif intégré sur la foi d'une note.",
+   "nature": "anomalie d'inventaire",
+   "status": "confirmé",
+   "articles": [
+    {
+     "code": "css",
+     "number": "L174-4",
+     "source_id": "LEGIARTI000053713364",
+     "valid_from": "2017-01-01",
+     "valid_until": "2999-01-01",
+     "source_sha256": "fdf455f6a2ec99e74bcb42ce58fadb22435eb505c83c041160ff05f9234e90e9",
+     "proposed_sha256": "5878b4aa5260f3391b61ab624611aefbef7018e730b5f2ae00c149ec8e009bba",
+     "reason_sha256": "f8a8431894d33662fd11dd7946c907ae39ca9fa8d4691c94b8394281d71790b5",
+     "review_notes_sha256": "ce51642d189f7d2a90220124ace186c918eeaa5245f989005f2a3926d72f13f5",
+     "second_pass": "completed"
+    },
+    {
+     "code": "css",
+     "number": "L821-6",
+     "source_id": "LEGIARTI000006745026",
+     "valid_from": "2005-02-12",
+     "valid_until": "2999-01-01",
+     "source_sha256": "5dff6546bd9485af76ee4cc039e0a5da7c626792bd3441d4d9ae5c5fea3f19e6",
+     "proposed_sha256": "ce939d4c62389827a0bd2aae174524e0032980ac0ea31925cf50a6bcc212ed70",
+     "reason_sha256": "ee75e75f31d80ed4df7c8998d14979abc6811ea65f08c6948f5ae45b5813816b",
+     "review_notes_sha256": "5ee9545f058a5a4a90d999868baa1a9b7d5f009da6d6df0a3ae9773ccbe182b2",
+     "second_pass": "completed"
+    },
+    {
+     "code": "css",
+     "number": "R821-8",
+     "source_id": "LEGIARTI000031828843",
+     "valid_from": "2016-01-01",
+     "valid_until": "2999-01-01",
+     "source_sha256": "5c29c91cae39496fc7763e7433f78a621bffd90d5483500e7ca73a18a5dd84be",
+     "proposed_sha256": "9cfaba2acadd2beca2791fa3ebbdd7109dfa0478fc59516fd9deb920c4ea10ee",
+     "reason_sha256": "91476f906a8ac200f64edbb70a085f2a279a0e4a56313ce0492d54e8b4a9c8e9",
+     "review_notes_sha256": "22082940c759da3cbe29eb56a43f706d57f6d7db5402f8b9126ea4d7fa40660a",
+     "second_pass": "completed"
+    }
+   ],
+   "passages": [
+    {
+     "id": "LEGIARTI000053713364 (L174-4, notes)",
+     "text": "Coordination rédactionnelle hors lot encore nécessaire à L. 821-6 et R. 821-8, I, a)"
+    },
+    {
+     "id": "LEGIARTI000006745026 (L821-6, notes)",
+     "text": "Son I a doit être coordonné hors lot avec la référence à l'assujettissement théorique antérieur"
+    },
+    {
+     "id": "LEGIARTI000031828843 (R821-8, notes)",
+     "text": "Candidat préparé hors du corpus actif."
+    },
+    {
+     "id": "LEGIARTI000031828843 (R821-8, proposition)",
+     "text": "Elle s'applique également aux hospitalisations et hébergements commençant après cette suppression, sans exiger le paiement d'un forfait ni une attestation de paiement."
+    }
+   ],
+   "primary_references": [],
+   "reasoning": "Au 29/10, R821-8 porte la clause de maintien de la dispense (rewrite_draft, seconde passe completed, 9cfaba2a…), et L821-6 porte un troisième alinéa équivalent. Les notes de L174-4 et L821-6 présentent encore la coordination de R821-8 I a) comme hors lot et à faire. Celles de R821-8 le décrivent comme un candidat préparé hors du corpus, à examiner avant intégration. L'INDEX du 29/10 prévient lui-même que « les anciennes formulations des notes éditoriales ne valent pas preuve du statut actuel d'intégration ». Le défaut est confirmé sur les notes finales.",
+   "consequences": "Aucune sur le droit proposé. Risque de double travail ou de réouverture d'un correctif intégré, que la transmission (point 5) demande d'éviter.",
+   "minimal_correction": "Remplacer, dans les notes de L174-4 : « Coordination rédactionnelle hors lot encore nécessaire à L. 821-6 et R. 821-8, I, a) » par « Coordination faite dans les propositions de L. 821-6 (troisième alinéa) et de R. 821-8 (dernier alinéa) ». Dans les notes de L821-6, remplacer « Son I a doit être coordonné hors lot… » par « Son I a est coordonné par le dernier alinéa proposé de R. 821-8 ». Dans les notes de R821-8, supprimer les deux premières phrases (candidat hors corpus, examen avant intégration). Aucune modification des corps ni des motifs.",
+   "other_options": [
+    "Laisser les notes et ajouter à l'INDEX une ligne qui les déclare historiques."
+   ],
+   "preserve": [
+    "Dispense de réduction de l'AAH pour les séjours futurs sans paiement ni attestation ; dispenses b et c, plafond, soixante jours, 30 %, II et III de R821-8 ; journées antérieures régies par les règles anciennes."
+   ],
+   "uncertainties": [
+    "Concordance CASF L312-1 (R821-8 II) non vérifiée : pièce manquante, distincte de cette anomalie."
+   ],
+   "evidence_files": [
+    "evidence/cited/20261029T034912Z/css_L174-4_LEGIARTI000053713364.json",
+    "evidence/cited/20261029T034912Z/css_L821-6_LEGIARTI000006745026.json",
+    "evidence/cited/20261029T034912Z/css_R821-8_LEGIARTI000031828843.json"
+   ]
+  },
+  {
+   "id": "RT-TR2-02",
+   "origin": "transmission seconde passe, point 5b",
+   "relates_to": [
+    "RT-RXCGI-01"
+   ],
+   "proposed_merge_into": "RT-RXCGI-01",
+   "merge_rationale": "Même nature que RT-RXCGI-01 ; instance nouvelle (244 quater X / ZZX / ZZX bis). À fusionner comme instance.",
+   "priority": "P2",
+   "priority_justification": "Aucun effet sur le droit proposé : 244 quater X, ZZX et ZZX bis concordent. Risque documentaire : les notes présentent comme encore établies deux contradictions que les corps finaux ont réglées.",
+   "nature": "anomalie d'inventaire",
+   "status": "confirmé",
+   "articles": [
+    {
+     "code": "cgi",
+     "number": "244 quater X",
+     "source_id": "LEGIARTI000046894126",
+     "valid_from": "2026-01-01",
+     "valid_until": "2999-01-01",
+     "source_sha256": "d0ede6c65747bde70f9382f44e722dafc64f47ac2984e6a91212f9324c36012f",
+     "proposed_sha256": "82e3c203cde86a2b8075edb153b592f5fbb538a1452364d39f0bd68990b9526c",
+     "reason_sha256": "a2d81bd2c363371738b580e88cbbfcb20ee5bd083072dcb034db6d3097b4bd3b",
+     "review_notes_sha256": "718f1b0ff2c45b5dba9d9725dcf99f740be0fcfe3fe8cd2858374cfe49a2651c",
+     "second_pass": "completed"
+    },
+    {
+     "code": "a3",
+     "number": "49 septies ZZX",
+     "source_id": "LEGIARTI000031107059",
+     "valid_from": "2015-08-28",
+     "valid_until": "2999-01-01",
+     "source_sha256": "6b402e6e8598109244e71b1305aedee84a37a826c79485584396d22ff7dfef5a",
+     "proposed_sha256": "47b4f0a3763c9640d014e52fab76620cccd80a1c0d207584931d8c5788c34f64",
+     "reason_sha256": "c686ca898a9d5a688f3c3b145f0f48bee2bf7f3d77aacbab15ab274bc6e55c18",
+     "review_notes_sha256": "d15cce62711b45e3b9db9f3a75bd0c89d6daed640d878c8f53e8c47928913d50",
+     "second_pass": "completed"
+    },
+    {
+     "code": "a3",
+     "number": "49 septies ZZX bis",
+     "source_id": "LEGIARTI000052050854",
+     "valid_from": "2025-08-07",
+     "valid_until": "2999-01-01",
+     "source_sha256": "4f395bc18e6fab1af1597c5e6c0b07f7bf2b26b5f50cde71fc5ce754cf94a974",
+     "proposed_sha256": "c1b906531345bce1900cbaa54d7b8c7177f731047267a202e33c792aa3205490",
+     "reason_sha256": "0b74bb8ce5d7e3abc394d184a210baaa076419b92838e62843065baa6cd3aeea",
+     "review_notes_sha256": "cf8aac9885da718f97083b105f943d7fbdfe41cd0c971972400b0db410344cb6",
+     "second_pass": "completed"
+    }
+   ],
+   "passages": [
+    {
+     "id": "LEGIARTI000046894126 (244 quater X, notes)",
+     "text": "Contradiction effective et coordination hors lot : le troisième alinéa proposé de 49 septies ZZX conserve la fraction pour tous les programmes au premier fait générateur antérieur"
+    },
+    {
+     "id": "LEGIARTI000046894126 (244 quater X, notes)",
+     "text": "Coordination nécessaire : ZZX bis II exige pour les bénéficiaires « au titre des 3 et 4 du même I » de justifier les performances du I sans réserver la branche de confortation."
+    },
+    {
+     "id": "LEGIARTI000031107059 (ZZX, proposition)",
+     "text": "ce premier fait générateur ne peut, à lui seul, maintenir cette condition pour l'avenir"
+    },
+    {
+     "id": "LEGIARTI000052050854 (ZZX bis, proposition, II)",
+     "text": "ces exigences de performances propres à l'autre voie d'éligibilité et leur justification ne sont pas cumulativement requises"
+    }
+   ],
+   "primary_references": [],
+   "reasoning": "Les propositions finales de ZZX (47b4f0a3…) et ZZX bis (c1b90653…), modifiées depuis l'instantané intermédiaire, reprennent exactement le critère du X de 244 quater X (le premier fait générateur antérieur ne maintient pas la condition) et la non-cumulation du VIII 2. Les notes de 244 quater X (inchangées, 718f1b…) qualifient pourtant toujours ces deux points de contradiction ou de coordination hors lot à faire. Le défaut est confirmé sur les notes finales.",
+   "consequences": "Aucune sur le droit proposé. Un lecteur pourrait présenter comme établies des erreurs déjà corrigées, ce que la transmission (point 5) proscrit.",
+   "minimal_correction": "Dans les notes de 244 quater X, remplacer les deux paragraphes cités par : « Coordinations faites dans les propositions de 49 septies ZZX (transition des programmes antérieurs alignée sur le X) et de 49 septies ZZX bis (II limité à la voie performances, non-cumul avec la confortation). Reste ouverte l'articulation de ZZT 6° c avec 46 AG terdecies A, à vérifier. » Aucune modification des corps.",
+   "other_options": [
+    "Mention dans l'INDEX que ces notes sont historiques."
+   ],
+   "preserve": [
+    "Crédit 40 %, plafonds, transitions des programmes antérieurs (reprises nées de faits antérieurs, créances, recours, prescriptions), trois tableaux et présomptions de ZZX bis, régimes transitoires du décret 2025-766, règles de sécurité autonomes, absence de formalité de remplacement."
+   ],
+   "uncertainties": [
+    "Effet de ZZT 6° c / 46 AG terdecies A sur la seule confortation : non confirmé comme défaut (voir point 5b). Décision 2012/21/UE, décrets de définition des travaux et formulaires non fournis."
+   ],
+   "evidence_files": [
+    "evidence/cited/20261029T034912Z/cgi_244_quater_X_LEGIARTI000046894126.json",
+    "evidence/cited/20261029T034912Z/a3_49_septies_ZZX_LEGIARTI000031107059.json",
+    "evidence/cited/20261029T034912Z/a3_49_septies_ZZX_bis_LEGIARTI000052050854.json",
+    "evidence/cited/20261029T034912Z/a3_49_septies_ZZT_LEGIARTI000045759826.json",
+    "evidence/cited/20261029T034912Z/a3_46_AG_terdecies_A_LEGIARTI000006298105.json"
+   ]
+  }
+ ]
+}

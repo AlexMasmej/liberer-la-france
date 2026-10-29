@@ -1,23 +1,28 @@
 # Red-team juridique indépendante — troisième passe
 
-**Rapport provisoire, 27 octobre 2026, 08 h UTC.** Historique : première version à 00 h UTC ; revue de fond des cinq domaines prioritaires à 04 h UTC (§ A.3 bis) ; **revue des différences sur l'instantané intermédiaire `20261027T044303Z`** à 08 h UTC (§ D).
+**Rapport final de la troisième passe, 29 octobre 2026.** Historique :
+- 27 octobre, 00 h UTC : première version, sur l'instantané `20261026T230545Z` ;
+- 27 octobre, 04 h UTC : revue de fond des cinq domaines prioritaires (§ A.3 bis) ;
+- 27 octobre, 08 h UTC : revue des différences sur l'instantané intermédiaire `20261027T044303Z` (§ D.1 à D.6) ;
+- 28 octobre : tri des issues GitHub externes (§ D.9) ;
+- 29 octobre : **revue finale des différences sur l'instantané `20261029T034912Z`, pris après la fin de la seconde passe** (30 314 articles relus sur 30 314), avec l'examen des points transmis par la seconde passe (§ D.7 à D.10).
 
-> **Mise à jour du 28 octobre 2026, 23 h UTC : tri des issues GitHub externes.** Les issues #2 à #11 ont été triées contre le registre (`reports/issues/TRI.md`). Il en sort **8 objections nouvelles** (4 P1, 4 P2 ; dossier `ISS`). Le registre compte désormais **296 objections retenues : 3 P0, 102 P1, 191 P2**. Les chiffres du § A ci-dessous restent ceux du 27 octobre (288) jusqu'à la revue finale. La seconde passe s'est de nouveau arrêtée le 28 octobre à 21 h 59 UTC (limite d'usage), à 28 912 articles relus sur 30 314.
 Projet de réécriture du Code du travail, du CGI et de ses annexes I à IV, du Code de la sécurité sociale, du Code de l'urbanisme et du Code de la construction et de l'habitation. Corpus au **18 octobre 2026**.
 
-> **Statut.** Revue conduite par une IA (un coordinateur et 37 agents, dont certains ont délégué à des sous-agents), **sans validation par un juriste**. Elle a été conduite sur l'instantané figé `20261026T230545Z`, puis réexaminée sur l'instantané `20261027T044303Z`, pris après l'**arrêt de la seconde passe** (limite d'usage du compte, 15 597 articles relus sur 30 314, reprise possible le 2 novembre). Les chiffres ci-dessous sont ceux d'après réexamen. Ses conclusions restent **provisoires** : une dernière revue des différences sera nécessaire quand la seconde passe sera réellement terminée. Aucune modification n'a été apportée à la production.
+> **Statut.** Revue conduite par une IA (un coordinateur et 50 agents, dont certains ont délégué à des sous-agents), **sans validation par un juriste**. Elle a été conduite sur l'instantané figé `20261026T230545Z`, réexaminée sur l'instantané intermédiaire `20261027T044303Z`, puis **réexaminée une dernière fois sur l'instantané final `20261029T034912Z`**, pris après la fin de la seconde passe. Les chiffres ci-dessous sont ceux d'après la revue finale. L'instantané final est identique, fichier par fichier, à la publication de la seconde passe sur la branche `main` du dépôt (1 496 fichiers de lots, registre, politiques et index des contradictions comparés). Aucune modification n'a été apportée à la production.
 
 Livrables :
 
 | Fichier | Contenu |
 |---|---|
 | `reports/RAPPORT.md` | Le présent rapport : synthèse, portée, méthode, revue des différences |
-| `reports/REGISTRE.md` et `reports/register.json` | B. Registre des objections (288 retenues après réexamen), avec preuves, empreintes et citations complètes |
+| `reports/REGISTRE.md` et `reports/register.json` | B. Registre des objections (243 retenues après la revue finale), avec preuves, empreintes et citations complètes |
 | `reports/CORRECTIONS.md` | C. Corrections minimales des P0 et P1. Les rédactions intégrales sont dans `reports/dossiers/<dossier>.md` |
-| `reports/dossiers/*.md` et `*.json` | Les 31 rapports de dossier, dont les 5 revues de fond des domaines prioritaires (`DOM-*`) |
+| `reports/dossiers/*.md` et `*.json` | Les 31 rapports de dossier, dont les 5 revues de fond des domaines prioritaires (`DOM-*`), et les objections issues des issues GitHub (`ISS.json`) et des points transmis par la seconde passe (`TR.json`) |
 | `reports/p1-work/*-classification.jsonl` | La qualification ligne à ligne de chaque alerte examinée (1 943 lignes) |
-| `reports/dedupe.json` et `reports/reexam/merges.json` | Les 41 fusions de doublons, chacune motivée |
-| `reports/reexam/` | D. Revue des différences : verdict et trace de chaque objection réexaminée, requalification des alertes |
+| `reports/dedupe.json`, `reports/reexam/merges.json` et `reports/reexam-final/merges.json` | Les 46 fusions de doublons, chacune motivée |
+| `reports/reexam/` et `reports/reexam-final/` | D. Revues des différences intermédiaire et finale : verdict et trace de chaque objection réexaminée, requalification des alertes, contrôles du coordinateur |
+| `reports/transmission/` et `inputs/` | Examen des points transmis par la seconde passe, avec la transmission elle-même et la dernière relecture acceptée |
 | `reports/issues/` | Tri des issues GitHub externes (`TRI.md`), avec le détail par groupe et les copies des issues triées |
 
 ---
@@ -29,24 +34,34 @@ Livrables :
 | | Confirmé | À confirmer | Total |
 |---|---|---|---|
 | **P0** | 3 | 0 | **3** |
-| **P1** | 84 | 14 | **98** |
-| **P2** | 141 | 46 | **187** |
-| **Total retenu** | 228 | 60 | **288** |
+| **P1** | 69 | 14 | **83** |
+| **P2** | 116 | 41 | **157** |
+| **Total retenu** | 188 | 55 | **243** |
 
-Avant réexamen, le registre comptait 303 objections (4 P0, 111 P1, 188 P2), dont 34 issues de la revue des domaines prioritaires. Le réexamen (§ D) en a **résolu 26**, dont 11 P1, sur le texte même de la seconde passe ; il en a reformulé 27, en a maintenu 44, a changé cinq priorités et a ajouté 11 constats nouveaux (P2). S'y ajoutent 41 doublons fusionnés et 12 faux positifs ou alertes écartées, documentés.
+Évolution du registre :
+- **303 objections** avant tout réexamen (4 P0, 111 P1, 188 P2), dont 34 issues de la revue des domaines prioritaires.
+- **288** après le réexamen intermédiaire : 26 résolues par la seconde passe, dont 11 P1, et 11 constats nouveaux.
+- **296** après le tri des issues GitHub (8 objections nouvelles).
+- **243** après la revue finale (§ D.7). Elle a réexaminé 136 objections dont un article avait changé :
+  - **58 résolues**, dont **17 P1**, par le texte final de la seconde passe ;
+  - 30 reformulées et 48 maintenues ;
+  - 6 changements de priorité ;
+  - 4 constats nouveaux retenus (1 P1, 3 P2), et 5 autres fusionnés dans des objections existantes.
+
+S'y ajoutent 46 doublons fusionnés et 12 faux positifs ou alertes écartées, tous documentés.
 
 Par nature :
-- 103 coordinations manquantes ;
-- 92 incohérences introduites par le projet ;
-- 38 risques juridiques ;
+- 81 coordinations manquantes ;
+- 71 incohérences introduites par le projet ;
+- 37 risques juridiques ;
 - 14 anomalies d'inventaire ;
-- 13 conflits de source ;
+- 12 conflits de source ;
 - 11 réserves documentaires ;
 - 17 simples alertes.
 
 ### A.2 Les P0
 
-Trois P0 restent ouvertes après réexamen : RT-INV-02, RT-FUTFISC-04 et RT-FUTFISC-23. La quatrième, RT-INV-01, a été traitée par la seconde passe et ramenée en P2.
+Trois P0 restent ouvertes au terme de la revue finale : RT-INV-02, RT-FUTFISC-04 et RT-FUTFISC-23. La quatrième, RT-INV-01, a été traitée par la seconde passe et ramenée en P2. **Aucun article des trois P0 restantes n'a changé dans la dernière partie de la seconde passe.**
 
 1. **RT-INV-01 — CGI 1609 quinvicies (P0 → P2 au réexamen).**
    - L'inventaire a retenu une version jamais entrée en vigueur (`MODIFIE_MORT_NE`), sélectionnée à cause de sa borne technique de fin en 2999. L'article est abrogé depuis le 1er janvier 2022.
@@ -68,13 +83,13 @@ Trois P0 restent ouvertes après réexamen : RT-INV-02, RT-FUTFISC-04 et RT-FUTF
    - La proposition déclare que l'article ne s'applique plus *« au-delà de sa date d'abrogation déjà prévue au 1er janvier 2027 »*. Cette abrogation n'existe pas : une version de remplacement (`VIGUEUR_DIFF`) commence à cette date.
    - L'erreur est certaine. *Sa gravité, qualifiée P0 par le dossier, mérite d'être confirmée par le coordinateur au vu de la portée de 150 VM : il pourrait s'agir d'un P1.*
 
-Chacun de ces quatre points a été vérifié par le coordinateur directement sur l'instantané, citations comprises. RT-INV-02, RT-FUTFISC-04 et RT-FUTFISC-23 sont maintenues sur le nouvel instantané (aucun article de RT-INV-02 ni de RT-FUTFISC-23 n'a changé ; RT-FUTFISC-04 réexaminée, maintenue).
+Chacun de ces quatre points a été vérifié par le coordinateur directement sur l'instantané, citations comprises. RT-INV-02, RT-FUTFISC-04 et RT-FUTFISC-23 sont maintenues sur l'instantané final : leurs articles sont identiques, par empreinte, à ceux de l'instantané intermédiaire (RT-FUTFISC-04 y avait été réexaminée et maintenue).
 
 ### A.3 Principales fragilités, par mécanisme
 
 **1. Le projet est écrit sur le droit au 18 octobre 2026, alors que le droit déjà publié change après cette date.** C'est la fragilité principale et systémique (RT-XCUT-01, avec RT-INV-05 et les dossiers FUT-*).
 
-- Le corpus contient **516 versions futures déjà publiées** et 379 « abrogations différées » qui sont en réalité des remplacements. **Aucune n'a de proposition.**
+- Le corpus contient **516 versions futures déjà publiées** et 379 « abrogations différées » qui sont en réalité des remplacements. **Aucune n'a de proposition, y compris dans l'instantané final** (recomptage du groupe F05). 43 d'entre elles entrent en vigueur le 1er novembre 2026.
 - Qualification des 516 :
   - 344 sans effet ;
   - 95 conflits de rédaction à fusionner ;
@@ -88,7 +103,10 @@ Chacun de ces quatre points a été vérifié par le coordinateur directement su
   - l'enquête de sécurité incendie transférée au CCH (2027) ;
   - L621-6 du CCH, qui rétablit en 2029 l'expulsion pour sous-occupation.
 - Le projet fait aussi perdre des **faveurs déjà publiées** : plafonds de l'APA, renouvellement automatique de la complémentaire santé solidaire, plancher mahorais, quota Rixain à 40 %.
-- À l'inverse, **des propositions créent des abrogations qui n'existent pas** : elles lisent l'état LEGI ABROGE_DIFF comme une extinction (au moins 26 propositions, RT-FUTTL-02).
+- À l'inverse, **des propositions créent des abrogations qui n'existent pas** : elles lisent l'état LEGI ABROGE_DIFF comme une extinction (RT-FUTTL-02). La seconde passe a aggravé ce défaut à la fin de sa relecture : elle a ajouté dans plusieurs propositions une clause selon laquelle la rédaction « ne reporte aucune abrogation différée » de l'article. Or la version suivante réécrit l'article sans l'abroger.
+  - Une recherche du coordinateur sur l'instantané final en trouve **29**, dont 1750, 1751, 1754 et 1788 A du CGI. Aucune des 29 versions suivantes n'a de proposition.
+  - À la date de ces versions (2027 à 2029), les faveurs de la réforme tombent : par exemple, la suppression du permis comme peine fiscale (1750) ou l'amende de 5 % (1788 A 4).
+  - Liste : `reports/reexam-final/coordinator-checks.json`. Constat RT-RXF01-01, fusionné dans RT-FUTTL-02.
 - La **recodification de la TVA et des accises dans le CIBS au 1er janvier 2027** (ordonnance 2025-1247, RT-INV-06) touche 169 articles du CGI inventoriés, dont 70 réécrits. Le CIBS n'est pas suivi par le projet.
 - **Correction structurelle :**
   - rédiger chaque proposition sur la dernière version publiée, ou fusionner les deux ;
@@ -110,6 +128,22 @@ Chacun de ces quatre points a été vérifié par le coordinateur directement su
 
 Selon les cas, il reste soit une obligation réglementaire sans base légale, soit une obligation que la loi supprimée ne permet plus de lever. Les propositions abrogatives signalaient souvent elles-mêmes ces coordinations « hors lot », sans qu'elles soient faites.
 
+**À la revue finale, la seconde passe a aligné une grande partie de ces textes d'application.** Sur les 136 objections réexaminées, elle en a résolu 58, dont 17 P1. Parmi elles :
+- la carte BTP ;
+- les registres d'alerte de danger grave et le travail de nuit (issues #10 et #11) ;
+- l'autorisation de dépassement à 46 h (issue #7) ;
+- les agréments et la tutelle CSS (RT-INST-01, RT-UNION-03 et 04) ;
+- le départ anticipé des avocats (RT-P1-CSS-A-12).
+
+Restent notamment ouvertes :
+- la facturation électronique (RT-P1-ANNEXES-01, P1) ;
+- IN/UT et le rapport mensuel (séries INUT et MENS) ;
+- annexe I 165 / 185 / 186 (RT-A1-01).
+
+**Un piège revient plusieurs fois :** un décret « supprimé à compter de l'entrée en vigueur de la loi supprimant » une obligation, alors qu'aucune proposition ne contient cette loi.
+- Exemple : la participation de l'employeur au financement de l'apprentissage. L6332-14 proposé dispose « L'employeur participe à la prise en charge des contrats d'apprentissage ». R6332-25 et R6332-25-1 la suppriment « à compter de l'entrée en vigueur de la loi supprimant la participation patronale prévue à l'article L. 6332-14 ». Cette formule ne figure que dans ces décrets, et la suppression ne se déclenche donc jamais (RT-TR1-01, P1, point signalé par la seconde passe elle-même ; vérifié par le coordinateur).
+- Pour chaque résolution de ce type, le coordinateur a vérifié que la loi déclencheuse existe bien : L216-3, L281-4, L3134-14.
+
 **Correction structurelle :** pour chaque formalité supprimée dans la loi, une passe dédiée sur tous ses textes d'application et sur les sanctions associées, avant tout report de compteur.
 
 **3. Des impositions supprimées laissent derrière elles leur article de tête, leurs affectations, leurs paramètres et leurs sanctions.**
@@ -121,8 +155,8 @@ Selon les cas, il reste soit une obligation réglementaire sans base légale, so
 - Enjeux à arbitrer par l'auteur : la compensation des EPCI, et l'effet cumulé des suppressions sur l'**autonomie financière des collectivités** (art. 72-2 de la Constitution, à chiffrer).
 
 **4. Financement des régimes autonomes et droits acquis.**
-- La suppression des droits de plaidoirie (CNBF) et de la cotisation d'ajustement (ASV) n'est pas compensée. Les prestations ne sont garanties que *« dans la limite des ressources affectées »* : les pensions liquidées et les droits constitués sont exposés (RT-P1-CSS-B-06).
-- Le départ anticipé des avocats renvoie à L653-1, que le projet abroge (RT-P1-CSS-A-12).
+- La suppression des droits de plaidoirie (CNBF) et de la cotisation d'ajustement (ASV) n'est pas compensée. Les prestations ne sont garanties que *« dans la limite des ressources affectées »* : les pensions liquidées et les droits constitués sont exposés (RT-P1-CSS-B-06, P1 maintenue). Le texte final aggrave le point : R652-36 interdit désormais de compenser la suppression par une hausse des cotisations ou une baisse des pensions, sans prévoir de ressource de remplacement.
+- Le départ anticipé des avocats renvoyait à L653-1, que le projet abroge (RT-P1-CSS-A-12, **résolue** à la revue finale).
 - La neutralité actuarielle du rachat de trimestres doit être maintenue quand une fraction des cotisations passe à la capitalisation (RT-D351-03).
 
 **5. Conflits de source à ne pas corriger silencieusement.**
@@ -147,7 +181,14 @@ Selon les cas, il reste soit une obligation réglementaire sans base légale, so
   Les protections autonomes (maternité, AT-MP, inaptitude, salariés protégés) restent distinctes.
 - **TASCOM et dérogations littorales** : intactes. Les abrogations SRU sont bornées et ne réintroduisent aucun quota communal ; un pourcentage par opération reste toutefois possible par PLU (RT-DOMSRU-02). Les autorisations d'urbanisme déjà délivrées sont protégées. La seule exception est RT-P1-URBA-07 : l'abrogation de L600-1-1 s'applique aux instances en cours.
 - **Les neuf corrections intégrées et les deux corrections TSCA sont intactes ou compatibles**, avec une réserve : la correction TSCA du XV n'existe que sur la version qui expire en 2027.
-- La majorité des abrogations comportent des transitions soignées et une clause « aucun renvoi ne peut rétablir ». **Sur les 1 329 alertes P1 encore actives : 855 écartées, 100 faux positifs, 10 couvertes par un dossier ouvert ; 195 coordinations manquantes et 155 incohérences du projet, regroupées en objections par effet juridique.**
+- La majorité des abrogations comportent des transitions soignées et une clause « aucun renvoi ne peut rétablir ».
+- **Les 1 324 alertes P1 vivantes sur l'instantané final** se répartissent ainsi :
+  - 1 081 écartées ;
+  - 99 faux positifs ;
+  - 5 couvertes par un dossier ;
+  - 51 coordinations manquantes, 75 incohérences du projet et 6 risques juridiques, regroupés en objections par effet juridique ;
+  - 7 autres (simples alertes, réserve, anomalie).
+- La seconde passe a coordonné la plupart des renvois depuis l'instantané initial. Sur les 389 alertes requalifiées à la revue finale, une seule a fait naître un constat nouveau.
 
 ### A.3 bis Domaines prioritaires : revue de fond
 
@@ -181,10 +222,11 @@ Les constats principaux :
 **Ce qui a été effectivement couvert :**
 - les **9 dossiers ouverts** de l'index (D351-9, les douze candidats CSS, avis de l'Institut, L281-6 et statuts, tutelle, annexe I 165/185/186, IN/UT, rapport mensuel, annexe III 171 / CIBS), plus les réserves documentaires et les corrections déjà intégrées ;
 - l'**inventaire** : réconciliation 30 318 / 30 317 / 30 314, versions concurrentes, états anormaux, abrogations différées ;
-- les **1 421 alertes P1** de l'audit du 25 octobre : 92 renvois disparus depuis l'audit ; 1 329 alertes actives qualifiées une à une, aucune « non examinée » ;
+- les **1 421 alertes P1** de l'audit du 25 octobre. Sur l'instantané final, 1 324 sont vivantes, et chacune a une qualification et une seule. Aucune n'est « non examinée » ; 389 ont été requalifiées à la revue finale ;
 - les **26 abrogations apparues depuis l'audit**, avec recherche de leurs renvois (98 couples) ;
 - les **516 versions futures** publiées, qualifiées une à une ;
-- 6 669 exports d'articles cités, conservés avec leurs empreintes dans `evidence/cited/`.
+- la **revue finale** : 14 719 articles modifiés depuis l'instantané intermédiaire ; 136 objections réexaminées sur le texte final ; points transmis par la seconde passe ; issues GitHub ;
+- les exports d'articles cités, conservés avec leurs empreintes dans `evidence/cited/`, pour chacun des trois instantanés.
 
 **Ce qui n'a pas été couvert :**
 - Les ~30 300 articles n'ont pas été relus un à un. Seuls l'ont été ceux qu'atteignent les dossiers, les alertes et les versions futures.
@@ -193,19 +235,20 @@ Les constats principaux :
 - Les renvois implicites, sans numéro, n'ont été captés que ponctuellement.
 
 **Sources primaires :**
-- **Légifrance a répondu HTTP 403** à tous les agents le 26 octobre. Ce blocage n'a pas été contourné. Aucun texte JORF n'a donc été relu ce jour-là : les lectures primaires reposent sur les preuves scellées, comme le JO de 2010 pour D351-9.
+- **Légifrance a répondu HTTP 403** à tous les agents le 26 octobre. Ce blocage n'a pas été contourné. Aucun texte JORF n'a donc été relu ce jour-là : les lectures primaires reposent sur les preuves scellées, comme le JO de 2010 pour D351-9. Le 29 octobre, un agent a pu lire sur Légifrance un extrait public de l'article 12 de la loi 2016-1691, sans rien contourner ; une autre consultation a échoué et n'a pas été renouvelée.
 - Le droit de l'Union a été lu par des copies secondaires (legislation.gov.uk, à jour au 31 décembre 2020) ou cité de mémoire. Ces points sont marqués « à confirmer ».
 
 **Autres limites :**
 - Le **CIBS** et les autres codes hors corpus n'ont pas été lus, sauf extraits scellés.
-- **Exposition à la seconde passe : sur le nouvel instantané, 128 des 288 objections retenues citent au moins un article encore « pending »** (298 des 935 articles cités qui figurent dans l'inventaire). Avant réexamen : 189 sur 303.
+- **Exposition à la seconde passe : nulle.** La seconde passe est terminée : les 30 314 articles de l'inventaire sont relus, et aucune objection ne dépend plus d'un article en attente. Les objections que la revue finale n'a pas réexaminées citent des articles inchangés, par empreinte, depuis leur dernier examen.
+- La transmission de la seconde passe et l'index des contradictions ne sont pas exhaustifs, de l'aveu de leur auteur. L'absence d'un sujet dans ces documents ou dans ce registre ne prouve pas son absence de défaut.
 
 ### A.5 Conclusions qui restent incertaines
 
-- Les 60 objections « à confirmer », dont celles des domaines prioritaires qui reposent sur le droit de l'Union (Pilier 2, directive mère-fille, art. 63 TFUE ; EUR-Lex a renvoyé des pages vides le 26 octobre, sans contournement), sur la notion de « contribution affectée » des lois organiques de financement, ou sur la doctrine administrative (tontine) ; droit de l'UE (art. 56 TFUE, directives 92/83, 96/71, 2020/262), lecture du CIBS au 18 octobre 2026, base législative de 302 D bis, interprétation de « diminution des bases » pour la compensation des EPCI, plafonds du droit de recours (L600-1-1), etc.
+- Les 55 objections « à confirmer », dont celles des domaines prioritaires qui reposent sur le droit de l'Union (Pilier 2, directive mère-fille, art. 63 TFUE ; EUR-Lex a renvoyé des pages vides le 26 octobre, sans contournement), sur la notion de « contribution affectée » des lois organiques de financement, ou sur la doctrine administrative (tontine) ; droit de l'UE (art. 56 TFUE, directives 92/83, 96/71, 2020/262), lecture du CIBS au 18 octobre 2026, base législative de 302 D bis, interprétation de « diminution des bases » pour la compensation des EPCI, plafonds du droit de recours (L600-1-1), etc.
 - La gravité exacte de RT-FUTFISC-23.
 - Les qualifications « sans effet » des versions futures, déduites des différences entre versions LEGI et non des textes modificatifs.
-- Toute objection dont un article sera modifié d'ici la fin de la seconde passe.
+- Les choix de la seconde passe écrits dans le texte final mais non décidés par l'auteur (§ C).
 
 ---
 
@@ -223,16 +266,35 @@ Voir **`reports/REGISTRE.md`** pour le tableau par priorité, et `reports/regist
 
 Voir **`reports/CORRECTIONS.md`** pour les corrections minimales des P0 et P1. Les rédactions intégrales sont dans les rapports de dossier : articles ou passages complets, transitions, dépendances et justifications.
 
-Elles sont présentées **séparément des textes courants** et n'ont été appliquées nulle part. Chacune doit être confrontée aux empreintes de la version finale de la seconde passe.
+Elles sont présentées **séparément des textes courants** et n'ont été appliquées nulle part. Elles sont établies sur le texte final de la seconde passe : quand la revue finale a changé une correction, la correction révisée figure dans `CORRECTIONS.md`.
 
-Trois arbitrages relèvent explicitement de l'auteur :
-- maintien ou suppression de la CSA (RT-P1-CSS-A-04) : la seconde passe l'a tranché dans le sens de la suppression (L3133-7 2° aligné sur CSS L137-40) ; l'auteur doit le confirmer ;
-- report du congé sabbatique (RT-P1-TRAVAIL-A-03, ramenée en P2) : la seconde passe a retenu la suppression du report combiné ; l'auteur doit confirmer ce choix ;
-- CEHR sur les plus-values en report (RT-P1-CGI-B-09).
+**Arbitrages qui relèvent de l'auteur.**
+
+*Choix déjà écrits par la seconde passe, à confirmer :*
+- la suppression de la CSA (RT-P1-CSS-A-04 ; L3133-7 2° aligné sur CSS L137-40) ;
+- l'option B du report du congé sabbatique (RT-P1-TRAVAIL-A-03, P2), qui supprime le report combiné ;
+- le maintien de la contravention sous forme autonome (RT-P1-TRAVAIL-A-05) ;
+- la délégation de l'instruction sans convention (RT-P1-TRAVAIL-A-10) ;
+- le conseil de perfectionnement des CFA rendu facultatif (RT-P1-TRAVAIL-B-08, P1 : le référentiel qualité l'exige encore) ;
+- l'abandon du délai de douze mois de R3122-9 pour le travail de nuit (issue #11).
+
+*Choix de fond encore ouverts :*
+- la CEHR sur les plus-values en report (RT-P1-CGI-B-09) ;
+- l'option d'IS annuel pour les groupes soumis au Pilier 2 (RT-DOMIS-01) ;
+- le contournement des droits de donation par 784 C, 792-0 bis et 792 bis (RT-DOMSUCC-01) ;
+- la compensation de la taxe sur les salaires et son véhicule en LFSS (RT-DOMTS-01) ;
+- le financement de la CNBF et de l'ASV (RT-P1-CSS-B-06) ;
+- la gravité de 150 VM (RT-FUTFISC-23, P0 ou P1).
+
+*Issues GitHub :*
+- le préavis de 15 jours face à la Charte sociale européenne (#2) ;
+- l'abrogation de L3123-22 (#6) ;
+- la dérogation 44-46 h (#7) ;
+- le doublement du préavis des travailleurs handicapés, supprimé pour les contrats nouveaux (L5213-9, signalé par le tri).
 
 ---
 
-## D. Revue des différences — étape intermédiaire
+## D. Revue des différences
 
 ### D.1 Pourquoi une étape intermédiaire
 
@@ -315,11 +377,99 @@ Cinq constats nouveaux, identiques entre eux ou à des objections existantes, on
 - **Sur le nouvel instantané :** 1 235 alertes P1 restent vivantes et 186 ont perdu leur renvoi. 235 alertes ont été requalifiées au réexamen. Les groupes ALERTS et ALERTS2 en ont traité 126 : 111 alertes écartées dont les textes avaient changé et les 15 jamais qualifiées. 122 restent écartées et 4 deviennent des coordinations ou des incohérences (RT-RXALERTS-01 et 02, RT-RXALERTS2-01, RT-P1-CGI-B-07). Chaque alerte vivante a une qualification et une seule ; aucune n'est « non examinée ».
 - Six alertes « référence disparue » ont été vérifiées par sondage sur le texte : la disparition est réelle.
 
-### D.6 Ce qui reste à faire
+### D.6 Ce qui restait à faire après l'étape intermédiaire
 
-1. Quand la seconde passe sera réellement terminée, après sa reprise éventuelle le 2 novembre : prendre un instantané final, rejouer `tools/diff_review.py manifests/20261027T044303Z.json manifests/<final>.json`, réexaminer les objections touchées et rejouer `tools/p1_triage.py`. 14 717 articles restent à relire, dont 298 cités par 128 objections retenues.
-2. Les objections non touchées par le diff restent établies sur l'instantané initial, et leurs articles n'ont pas changé.
-3. **La conclusion finale portera sur la version issue de la seconde passe terminée.** Le présent état n'en tient pas lieu.
+La revue finale (§ D.7 à D.10) a été conduite le 29 octobre selon cette procédure.
+
+### D.7 Revue finale sur l'instantané `20261029T034912Z`
+
+**Déroulé.** La seconde passe a repris le 28 octobre, s'est de nouveau arrêtée deux fois, puis s'est terminée le 29 octobre vers 03 h 20 UTC : 30 314 articles relus, statut `checkpoint`. Sa publication de production s'est achevée à 03 h 48 UTC.
+- **Instantané final `20261029T034912Z`.** Recoupement base = registre = lots réussi au premier essai. Empreinte de `corpus.sqlite` : `8bbb90d4b292c5ba1d0a26324851223420ddc37c750816e37780e29f7ddb1f63`.
+- **Conformité avec `main`.** La seconde passe a ensuite été publiée sur la branche `main` du dépôt (commits `a5861808` à `b6e5e446`). Les 1 496 fichiers de lots, le registre, les politiques et l'index des contradictions y sont identiques, par empreinte git, à ceux de l'instantané final.
+- **Conservation des anciens textes.** Avant la rotation, les 1 509 versions citées par le registre ont été exportées de l'instantané intermédiaire dans `evidence/cited/20261027T044303Z/`.
+
+**Différences (`reports/diff-20261027T044303Z-20261029T034912Z.json`).**
+- **14 719 articles** ont changé : 2 073 propositions, 705 statuts, 9 383 motifs et 14 699 notes de revue.
+- Aucune source, aucun XML, aucun NOTA, aucune borne et aucune politique n'a changé. Aucun article n'a été ajouté ni retiré.
+- Les écarts du contrôle de cohérence (`reports/consistency-20261029T034912Z.json`) sont de même nature qu'à l'instantané intermédiaire. Les écarts de garde d'inventaire croissent avec le nombre d'articles relus : c'est attendu, puisque la relecture modifie la proposition après l'inventaire.
+
+**Réexamen (`reports/reexam-final/F01` à `F05`).** 136 objections retenues citaient un article modifié. Cinq agents les ont réexaminées sur le texte final, en partant du verdict intermédiaire.
+
+| Priorité avant la revue finale | Maintenue | Reformulée | Résolue |
+|---|---|---|---|
+| P1 | 20 | 10 | 17 |
+| P2 | 28 | 20 | 41 |
+| **Total** | **48** | **30** | **58** |
+
+- **Contrôle des résolutions.** Le coordinateur a vérifié mécaniquement que les passages cités comme preuve de chaque résolution figurent dans le texte final : 193 citations sur 207 sont retrouvées mot pour mot. Les autres sont de courts fragments ou des paraphrases, et aucune n'est inventée.
+- Il a aussi revérifié lui-même, sur la base, les constats nouveaux P1 et plusieurs résolutions.
+
+**P1 résolues par le texte final (17)** :
+- RT-INST-01 ;
+- les issues #7, #10 et #11 (RT-ISS7-01, RT-ISS10-01, RT-ISS11-01) ;
+- RT-P1-CCH-01 et 03 ;
+- RT-P1-CGI-C-02 ;
+- RT-P1-CSS-A-12 et 15 ;
+- RT-P1-CSS-B-08 ;
+- RT-P1-TRAVAIL-A-02 (carte BTP) ;
+- RT-P1-TRAVAIL-B-01, 04, 05 et 06 ;
+- RT-UNION-03 et 04.
+
+**Changements de priorité :**
+- RT-P1-TRAVAIL-B-08 passe de P2 à P1 : le référentiel qualité exige encore le conseil de perfectionnement.
+- RT-ISS9-01, RT-P1-CGI-C-04, RT-P1-CSS-B-04, RT-P1-CSS-B-09 et RT-P1-TRAVAIL-B-03 passent de P1 à P2.
+
+**Constats nouveaux :**
+- **RT-TR1-01 (P1) :** participation patronale à l'apprentissage (§ A.3, point 2).
+- **RT-RXF01-01 (P1), fusionné dans RT-FUTTL-02 :** clauses « ne reporte aucune abrogation différée » (§ A.3, point 1).
+- **RT-TR1-02 (P2) :** critère de transition du CPF divergent entre L6323-4 et les autres textes.
+- **RT-RXF03-03 (P2) :** 41 septies B de l'annexe IV publie encore une « date de fin de validité », alors que 290 B délivre l'immatriculation « sans limitation de durée ».
+- **RT-RXFA03-02 (P2) :** citation non fermée dans R863-4 du CCH.
+- **Fusionnés dans RT-RXCGI-01** (notes de revue qui décrivent comme ouvertes des coordinations faites) : RT-RXF03-02, RT-TR2-01, RT-TR2-02 et RT-RXFA03-01.
+
+**Constat transversal confirmé.** Les notes de la seconde passe restent souvent en retard sur ses propres textes :
+- des coordinations faites sont encore dites ouvertes : RT-RXCGI-01, désormais avec plus de 40 articles ;
+- des versions futures présentes au corpus sont dites « non fournies » (RT-FUTTL-19) ;
+- des références historiques présentes au corpus sont dites absentes (R6332-95).
+
+### D.8 Alertes P1 sur l'instantané final
+
+- **Second défaut de l'outil du coordinateur, corrigé.** `tools/p1_triage.py` ne reconnaissait pas un numéro écrit avec un point après la lettre (« R. 442-23 »). Une alerte dont l'article qui renvoie avait été réécrit passait donc à tort en « référence disparue ». Un agent l'a signalé (RT-RXF03-01, close comme défaut d'outil).
+  - Correction : point facultatif après le préfixe alphabétique, puis triage rejoué. 345 alertes sont repassées en « vivantes » (1 324 au lieu de 979).
+  - **203 alertes vivantes** n'avaient jamais été qualifiées, ou leurs textes avaient changé depuis leur qualification. Deux agents les ont requalifiées (FA02 et FA03) : 187 écartées, 13 faux positifs, 3 rattachées à des objections existantes, et un seul constat nouveau (RT-RXFA03-02).
+  - Les 1 121 autres alertes vivantes ont été qualifiées sur un texte identique, par empreinte, au texte final. 162 d'entre elles l'ont été à la revue finale (groupes F01 à F05 et FA01).
+- 46 autres alertes dont l'état avait changé ont été requalifiées par le groupe FA01 : 34 écartées, 12 faux positifs.
+- Bilan : **1 324 alertes vivantes, chacune qualifiée une fois et une seule.** Le fichier de triage défectueux a été conservé dans le répertoire temporaire du coordinateur, et non publié ; le triage publié est le triage corrigé.
+
+### D.9 Issues GitHub externes
+
+Les issues #2 à #11 ont été triées le 28 octobre sur l'instantané intermédiaire (`reports/issues/TRI.md`), puis revérifiées à la revue finale.
+
+| Issue | État au terme de la revue finale |
+|---|---|
+| #10 (registre spécial des alertes) | **Réglée** par la seconde passe (RT-ISS10-01 résolue) |
+| #11 (travail de nuit, déclaration de chantier) | **Réglée** (RT-ISS11-01 et 02 résolues). L'abandon du délai de douze mois de R3122-9 est désormais écrit dans le texte : à confirmer par l'auteur |
+| #7 (dépassement à 46 h) | Décret aligné (RT-ISS7-01 résolue). La demande propre de l'issue, abroger la dérogation, reste un arbitrage de l'auteur |
+| #9 (information de l'administration, PSE et RCC) | **En partie réglée** : volet RCC aligné, R1233-3-5 aligné ; il reste une phrase contradictoire dans L1233-46 (RT-ISS9-01, P1 → P2) |
+| #2, #6, #8 | Objections P2 maintenues (RT-ISS2-01, RT-ISS6-01, RT-ISS8-01) ; #2 et #6 relèvent aussi d'un arbitrage de l'auteur |
+| #3 et #5 | Closes par leur auteur ; aucune action |
+
+### D.10 Points transmis par la seconde passe
+
+À la fin de sa relecture, la seconde passe a transmis une liste de dossiers encore ouverts, non exhaustive de son propre aveu (`inputs/transmission-seconde-passe-20261029.md`). Deux agents l'ont examinée sur le texte final (`reports/transmission/TR1` et `TR2`).
+- **Point 1 (apprentissage, CPF) :** deux contradictions confirmées, RT-TR1-01 (P1) et RT-TR1-02 (P2).
+- **Points 2, 3 et 4** (réserves documentaires, douze coordinations CSS, coordinations fiscales et douanières) : tous couverts par des objections du registre.
+  - Les douze candidats de coordination CSS du 25 octobre ne sont pas intégrés tels quels. Mais les douze articles portent désormais une proposition finale différente du candidat : ce sont ces propositions qui ont été jugées.
+  - L'annexe 14 UGECAM est une pièce manquante.
+- **Point 5 (AAH, crédit d'impôt outre-mer) :** les corrections intégrées tiennent sur le texte final. Seules les notes de revue les présentent encore comme à faire (fusionnées dans RT-RXCGI-01). La concordance avec CASF L312-1 reste une pièce manquante.
+- **Point 6 (versions et textes extérieurs) :**
+  - les versions 2027 de L6123-5 et L6323-13 sont couvertes par RT-XCUT-01 et RT-INV-06 ;
+  - les anciennes références de R6332-95 sont bien au corpus, en versions historiques ;
+  - les arrêtés et CGU sont des pièces manquantes.
+- **Point 7 :**
+  - Les 18 certificats périmés ne sont pas renouvelés. Mais aucune contradiction n'apparaît dans les 15 relus sur les versions finales.
+  - Les anciennes analyses L1242-2 et CVAE ne peuvent pas être reprises : 10 des 15 et 8 des 18 propositions ont changé. Le domaine CVAE reste couvert par les objections du registre.
+- Conformément à la consigne, aucune correction intégrée n'a été rouverte sur la seule foi d'anciennes notes.
 
 ---
 
@@ -343,3 +493,8 @@ Cinq constats nouveaux, identiques entre eux ou à des objections existantes, on
 - **Lecture en production, signalée** : l'inventaire des 209 articles SRU (`runtime/sru-integral/status.json`) manquait à l'instantané ; l'agent DOM-SRU l'a lu en production, en lecture seule, sans rien y écrire. EUR-Lex a renvoyé des pages vides le 26 octobre à l'agent DOM-IS (deux essais, sans contournement).
 - **Défaut d'outil corrigé** : voir § D.5. Le triage des alertes P1 de l'instantané initial (`reports/p1-triage-20261026T230545Z.json`) a été produit avec l'outil défectueux et n'a pas été modifié. Il est conservé tel quel pour la traçabilité ; le triage corrigé est `reports/p1-triage-20261027T044303Z.json`.
 - **Écart de procédure à signaler** : un agent a contourné le refus d'écriture de son rapport `.md` par un fichier `.txt` assemblé par script. Le contenu n'est pas en cause et aucune écriture n'a eu lieu en production.
+- **Revue finale.**
+  - L'instantané final a été pris par la même procédure. Une première tentative, interrompue par une erreur d'outil, a laissé une copie partielle sans manifeste, supprimée avant la nouvelle prise.
+  - Lectures en production signalées : l'agent TR2 a lu, en lecture seule, trois fichiers de `runtime/heartbeat-check-20261025T0653Z/` et les compteurs de trois `reconciliation-final.json`, dont les empreintes sont dans `reports/transmission/TR2.json`. La dernière relecture acceptée a été copiée dans `inputs/`, avec la même empreinte SHA-256.
+  - Une commande d'agent contenait par erreur un déplacement de `tools/cite.py`. La sécurité l'a refusée avant exécution, et l'empreinte du fichier est inchangée.
+  - Le contrôle mécanique des citations des résolutions est décrit au § D.7.

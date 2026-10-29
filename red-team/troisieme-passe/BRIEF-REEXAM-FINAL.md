@@ -4,11 +4,11 @@
 
 ## Ce qui change
 
-- **L'instantané courant est l'instantané final `snapshots/{NEW}/`**, pris après la fin de la seconde passe.
+- **L'instantané courant est l'instantané final `snapshots/20261029T034912Z/`**, pris après la fin de la seconde passe.
   - L'instantané intermédiaire `20261027T044303Z` a été supprimé par rotation.
   - L'instantané final est cohérent : base = registre = lots, sans écriture en vol.
-- **Les anciens textes** (instantané `20261027T044303Z`) restent disponibles dans `evidence/cited/20261027T044303Z/` : une export JSON par version citée par le registre, avec ses empreintes. Les empreintes par article des deux instantanés sont dans `manifests/20261027T044303Z.json` et `manifests/{NEW}.json`.
-- **Les nouveaux textes** se lisent avec `python3 -I tools/cite.py <code> <numéro|LEGIARTI>`. L'outil lit le nouvel instantané et écrit dans `evidence/cited/{NEW}/`.
+- **Les anciens textes** (instantané `20261027T044303Z`) restent disponibles dans `evidence/cited/20261027T044303Z/` : une export JSON par version citée par le registre, avec ses empreintes. Les empreintes par article des deux instantanés sont dans `manifests/20261027T044303Z.json` et `manifests/20261029T034912Z.json`.
+- **Les nouveaux textes** se lisent avec `python3 -I tools/cite.py <code> <numéro|LEGIARTI>`. L'outil lit le nouvel instantané et écrit dans `evidence/cited/20261029T034912Z/`.
 - **Le registre a déjà été réexaminé une fois**, sur l'instantané intermédiaire (`reports/reexam/`).
   - Le champ `previous_reexam` de ton paquet donne ce verdict et sa trace.
   - Le champ `reexam.revised_minimal_correction` de `reports/register.json` donne la correction révisée.
@@ -42,7 +42,7 @@ Pour chaque objection :
 Écris `reports/reexam-final/<GROUPE>.json` :
 
 ```json
-{"group": "...", "snapshot_old": "20261027T044303Z", "snapshot_new": "{NEW}",
+{"group": "...", "snapshot_old": "20261027T044303Z", "snapshot_new": "20261029T034912Z",
  "objections": [{"id": "...", "verdict": "maintenue|reformulée|résolue|obsolète",
    "new_priority": "P0|P1|P2|null", "new_status": "confirmé|à confirmer|résolu|obsolète",
    "trace": "ce qui a changé, ce que dit le nouveau texte (citation courte exacte), pourquoi ce verdict",

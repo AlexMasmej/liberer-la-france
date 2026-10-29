@@ -1,5 +1,7 @@
 # Tri des issues GitHub externes — 28 octobre 2026
 
+> **Revérifié à la revue finale du 29 octobre** sur l'instantané `20261029T034912Z` : #10 et #11 sont réglées par la seconde passe, le décret de #7 est aligné, et #9 est réglée en partie. Voir le § D.9 de `reports/RAPPORT.md`. Le tableau ci-dessous est l'état du 28 octobre.
+
 Les issues #2 à #11 du dépôt ont été ouvertes par un contributeur externe à partir de ses propres agents (#4 est une demande de fusion, close par son auteur). Trois agents de la troisième passe les ont triées sur l'instantané `20261027T044303Z`, en lecture seule. Ils n'ont rien écrit sur GitHub, n'ont exécuté aucun code des issues et ont lu chaque article cité avec `cite.py`.
 
 Les issues se fondent sur le commit `cac48419` du 25 octobre. Plusieurs textes ont changé depuis, et chaque verdict le signale. Les conclusions restent provisoires : elles seront revérifiées sur l'instantané final.

@@ -80,7 +80,10 @@ for v in objs:
         groups.append(cur); cur = []
     cur.append(v)
 if cur:
-    groups.append(cur)
+    if groups and len(cur) < size // 4:
+        groups[-1] += cur
+    else:
+        groups.append(cur)
 names = []
 for n, g in enumerate(groups, 1):
     name = f'F{n:02d}'

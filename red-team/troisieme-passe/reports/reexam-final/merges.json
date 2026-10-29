@@ -1,0 +1,30 @@
+{
+ "merges": {
+  "RT-RXF03-02": {
+   "into": "RT-RXCGI-01",
+   "note": "Même défaut (notes de revue qui décrivent encore comme ouvertes des coordinations faites) ; 13 articles ajoutés comme instances."
+  },
+  "RT-TR2-01": {
+   "into": "RT-RXCGI-01",
+   "note": "Même défaut : notes de L174-4, L821-6 et R821-8 qui présentent comme à faire la coordination AAH intégrée."
+  },
+  "RT-TR2-02": {
+   "into": "RT-RXCGI-01",
+   "note": "Même défaut : notes de 244 quater X qui qualifient encore de contradiction effective les conflits ZZX et ZZX bis réglés."
+  },
+  "RT-RXF01-01": {
+   "into": "RT-FUTTL-02",
+   "note": "Même défaut transversal : des propositions affirment ne pas reporter une « abrogation différée » alors que la version suivante du corpus réécrit l'article sans l'abroger (état LEGI ABROGE_DIFF de la version, successeur VIGUEUR_DIFF de même numéro). RT-RXF01-01 en donne les instances CGI (1750, 1751, 1754, 1788 A), où les faveurs de la réforme tombent dès 2027 ou 2029. Recherche transversale du coordinateur sur l'instantané final : 29 propositions portent une telle clause alors que le successeur est un texte de remplacement (liste dans reports/reexam-final/coordinator-checks.json)."
+  },
+  "RT-RXFA03-01": {
+   "into": "RT-RXCGI-01",
+   "note": "Même défaut : notes de revue de 16 articles visés qui annoncent encore « à coordonner » des renvois coordonnés."
+  }
+ },
+ "closures": {
+  "RT-RXF03-01": {
+   "status": "résolu",
+   "trace": "Défaut de l'outil de triage du coordinateur (tools/p1_triage.py ne reconnaissait pas « R. 442-23 »), pas du projet. Corrigé le 29 octobre (préfixe alphabétique suivi d'un point facultatif) ; triage rejoué : 345 alertes repassent en « live » ; les 203 alertes vivantes jamais qualifiées ou dont les textes ont changé depuis leur qualification ont été requalifiées (groupes FA02 et FA03)."
+  }
+ }
+}

@@ -1,4 +1,4 @@
-# Propositions de correction — séparées des textes courants (provisoire)
+# Propositions de correction — séparées des textes courants
 
 Corrections minimales proposées par objection retenue, P0 puis P1. Les rédactions complètes (articles entiers, transitions, dépendances) figurent dans le rapport du dossier indiqué (`reports/dossiers/<dossier>.md`, section « Propositions de correction »). Aucune n'est appliquée ; chacune doit être confrontée aux empreintes de la version finale de la seconde passe avant usage.
 
@@ -335,7 +335,7 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **Correction minimale :** Rebaser chaque proposition concernée sur la rédaction future publiée : reporter mot pour mot les passages modifiés par la version future que la proposition reproduit, sans autre changement (citations dans le fichier de classification). Pour les passages reformulés (80, 1509, 1609 sexvicies, 119 ter, 200 quater, 200 quater A, 207), adopter la rédaction fusionnée des fiches de lot. Dans la loi de réforme, viser l'article « dans sa rédaction en vigueur à la date de publication de la présente loi ».
 
-**Correction révisée au réexamen (20261027T044303Z) :** Étendre aux couples restants la méthode déjà retenue par la seconde passe : formule matérielle autonome (1042, 809) ou renvoi figé à une rédaction datée antérieure au 18 octobre 2026 (1460, 1464 A, 1594 F quinquies), sans inventer de numéro CIBS ; ou, à défaut, report mécanique des passages modifiés par la version future. Priorités : 1509 V, 1382-0 II 2° (figer « dans sa rédaction antérieure à la loi n° 2026-103 », comme la version 2027), 1594-0 G et 1115 (256 A), 1594 F quinquies (268), 302 bis WA VI, WB V et WC III (L. 180-1 CIBS), 1613 ter V A, B et F, 299 septies I 2° (« (Abrogé) » comme en 2027), et 1635 quinquies (« contributions douanières » à compter de 2029). Pour 1384-0 A et 1391 E, soit revenir au maintien (retained_unchanged), puisque la version 2027 assure déjà la continuité, soit rebaser sur les versions 2027. Garder dans la loi de réforme la clause « dans sa rédaction en vigueur à la date de publication de la présente loi » et corriger les notes qui lisent ABROGE_DIFF comme une abrogation.
+**Correction révisée au réexamen (20261029T034912Z) :** Correction révisée au réexamen intermédiaire maintenue, à étendre aux couples suivants. 1656 quater IV, premier alinéa, pour les impositions établies à compter de 2027 : « Les articles 1382-0 et 1388-0 ne s'appliquent pas à la Ville de Paris », le renvoi au 3 des I et III de 1518 A quinquies étant limité aux impositions antérieures. 1740 B, troisième alinéa : « aux seuils prévus au c du III de l'article 302 septies A bis » pour les constats intervenant à compter du 1er janvier 2027 (LF 2025, art. 38, VI), et « aux 1° et 2° de l'article L. 162-4 » pour les constats antérieurs. 1698 D : à compter du 1er janvier 2027, « acquittent le droit de licence par télérèglement », avec la réserve proposée sur le stock du droit de licence, sans étendre l'obligation aux autres droits. 1737 I et II, 1727 I et IV 1, 1750 chapeau, 1754 II, 1751 (« tribunal délictuel ») et 1929 quater : report mécanique des passages modifiés par les versions 2027, 2029 ou 2030. Corriger les notes qui disent la version suivante « non fournie ».
 
 **Autres options :**
 - Clause générale de la loi de réforme : « Les renvois faits par la présente loi à des dispositions du code général des impôts transférées dans le code des impositions sur les biens et services s'entendent des dispositions correspondantes de ce code. » Solution de secours, plus fragile, car elle laisse au juge la concordance.
@@ -552,6 +552,8 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **Correction minimale :** Supprimer du corps des 18 propositions toute phrase qui affirme ou crée une abrogation ou une fin d'application à la date de la version suivante. Reporter les allègements sur la version future (rédaction unique applicable à compter de la réforme), puis neutraliser expressément l'instruction modificative future lorsqu'elle porte sur un passage modifié par le projet. Rédactions complètes pour les cas les plus graves : (1) L651-3 : conserver les quatre premiers alinéas proposés et supprimer le cinquième (« La présente rédaction ne reporte pas l'abrogation […] »). Dans la loi de réforme, ajouter une disposition non codifiée : « La modification de l'article L. 651-3 du code de la construction et de l'habitation prévue par l'ordonnance n° 2025-1091 du 19 novembre 2025 est sans objet en tant qu'elle porte sur la phrase supprimée par la présente loi. » (2) L313-4 : retirer la proposition (elle est stylistique) et conserver la version officielle, avec sa rédaction de 2027. (3) L3422-5 : supprimer « Le présent article est abrogé à compter du 1er janvier 2028. » et rebaser le a) sur la version 2028, en complétant le renvoi tronqué (RT-FUTTL-20). (4) L452-5 : remplacer le troisième alinéa par « La cotisation est recouvrée et contrôlée dans les conditions prévues par les dispositions du livre II du code général des impôts et du livre des procédures fiscales qui sont applicables aux taxes sur les biens et services, sous réserve du deuxième alinéa et des obligations supprimées par le présent article. L'absence d'une déclaration périodique ou de l'utilisation d'un formulaire dont l'obligation est supprimée ne peut justifier une sanction ni une taxation d'office. Les contrôles de l'exactitude des renseignements et les conséquences des manquements aux obligations subsistantes demeurent applicables. », et supprimer le dernier alinéa (« L'abrogation du présent article prévue au 1er janvier 2027 […] »). (5) D1142-4, -5, -6, -6-2, -8, annexes I et II de l'index, L112-16, L861-5, D2135-7/8 et L302-16-1/2 : supprimer la phrase « ne proroge(nt) pas […] abrogation » ou son équivalent, sans autre changement.
 
+**Correction révisée au réexamen (20261029T034912Z) :** Correction de l'objection maintenue (points 1 à 5) et étendue. (6) L5524-2 et L5524-6 : supprimer dans les deux articles le membre « , sans reporter l'abrogation du présent article prévue au 1er janvier 2028 », puis rebaser ces deux articles sur leurs versions de 2028 comme le prévoit RT-FUTTL-09. (7) D353-145 : supprimer le dernier alinéa « La présente rédaction ne reporte pas l'abrogation du présent article prévue le 1er janvier 2027. » et rebaser sur LEGIARTI000053470707 (RT-FUTTL-14). (8) R4451-61 : supprimer le dernier alinéa (« La présente rédaction ne reporte pas l'abrogation […] régis par les dispositions applicables à cette abrogation. ») et le remplacer par : « La présente rédaction s'applique jusqu'à l'entrée en vigueur de la rédaction issue du décret n° 2023-489 du 21 juin 2023, dont elle ne modifie pas le contenu. » Le reste relève de RT-FUTTL-14. (9) 1840 P, D2135-7/8 et D1142-4 à -8 : supprimer la phrase finale de non-prorogation, comme au point 5. Corriger les notes de 1840 P et de D2135-8, qui disent absent un successeur présent dans l'instantané.
+
 **Autres options :**
 - Clause générale dans la loi de réforme : « Les références, dans les dispositions issues de la présente loi, à une abrogation différée ou à une fin de validité d'une version ne valent pas abrogation de l'article concerné. » C'est une solution fragile, déconseillée.
 
@@ -634,19 +636,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** Publication publique par l'Etat (L6113-8-1); Information des apprenants avant engagement financier
 
-## RT-INST-01 (P1, confirmé) — INST
-
-**Articles :** css D227-5, css D224-8, css L224-5-2
-
-**Correction minimale :** Réécrire dans D224-8 (LEGIARTI000046356451) l'alinéa des nominations et la transition, ainsi : <p>Le directeur propose au conseil d'administration de l'Institut national de formation défini à l'article L. 228-1 les nominations du directeur et du directeur comptable et financier de cet institut.</p><p>La coordination des instances représentatives du personnel prévue au présent article s'applique à compter de l'entrée en vigueur du présent texte. Elle ne remet pas en cause les actes régulièrement accomplis par les anciennes instances ni les droits qui en résultent.</p><p>La suppression de l'avis préalable du comité exécutif des directeurs pour les nominations du directeur et du directeur comptable et financier de l'Institut national de formation s'applique, comme celle prévue au 3° de l'article D. 227-5, aux nominations décidées à compter de l'entrée en vigueur du décret portant la présente rédaction, y compris lorsque le comité exécutif a déjà été saisi. Les nominations antérieures et les droits des personnes nommées sont préservés. Aucun autre avis, visa ou nouvel envoi n'est exigé en remplacement sur ce fondement. Les compétences de proposition et de nomination ainsi que les contrôles ayant un fondement autonome demeurent applicables.</p> Les deux textes doivent être modifiés par le même décret. Cette rédaction reprend le fond du candidat D224-8 des douze (sha256 2863a046…), avec deux corrections : (1) le candidat renvoie à « la même date que celle prévue au 3° de l'article D. 227-5 », or le 3° ne comporte aucune date, qui figure au dernier alinéa de D227-5 ; (2) un renvoi à une date d'un autre décret serait rétroactif si D224-8 entrait en vigueur plus tard. Ne pas compter cette correction comme un treizième candidat ni comme un nouveau gain : c'est la même mesure que celle de D227-5.
-
-**Autres options :**
-- Ajouter au dernier alinéa de D227-5 : « Elle s'applique, dans les mêmes conditions et à la même date, à la proposition prévue à l'article D. 224-8. » Cela rend la coordination visible dans les deux sens, mais ne dispense pas de réécrire D224-8.
-- Adopter le candidat D224-8 tel quel, à condition qu'il entre en vigueur par le même décret que D227-5 et qu'on corrige son renvoi au « 3° » en renvoi au dernier alinéa de D227-5.
-- Rejeté : rétablir l'avis dans D227-5 pour aligner les deux textes. Cela renoncerait à une suppression de formalité voulue par l'orientation editorial_direction_2026_10_19, sans base législative imposant l'avis (voir RT-INST-03).
-
-**À préserver :** Proposition exclusive du directeur de l'UCANSS et décision du conseil d'administration de l'Institut (D227-5 3°).; Nominations antérieures et droits des personnes nommées ; aucune régularisation implicite d'une nomination antérieure irrégulière.; Coordination CSE/CSSCT de D224-8 et sa propre transition.; Nominations des dirigeants de l'UCANSS (L224-5-1, L224-5-2 2°), budget et contrôle de gestion (D224-1, D227-3, L153-2), commissaire du Gouvernement et composition du conseil (D227-4).; Aucun avis, visa ou envoi de remplacement.
-
 ## RT-INUT-01 (P1, confirmé) — INUT
 
 **Articles :** a4 50-0 H, a3 111-0 E, a3 111-0 F, cgi 302 D bis
@@ -709,6 +698,8 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **Correction minimale :** Rebaser la proposition sur LEGIARTI000054612711 : reprendre l'intégralité de ce texte (indicateurs 1 à 33), puis appliquer au seul II, 2 la modification du projet et la transition déjà rédigée (voir INV.md).
 
+**Correction révisée au réexamen (20261029T034912Z) :** Rebaser sur LEGIARTI000054612711 : reprendre l'intégralité des indicateurs 1 à 33 de 2026. Appliquer au seul II, 2 la modification du projet (« La certification n'est soumise ni à expiration périodique ni à renouvellement », a) « sans limitation de durée », suppression du c) et la transition déjà rédigée. Dans l'indicateur 20 de 2026, remplacer seulement la première phrase par « Le prestataire assure l'appui à la mobilité nationale et internationale, sans obligation de disposer d'un personnel dédié à cette mission. Il dispose d'un référent handicap et d'un conseil de perfectionnement. » Garder les deux phrases suivantes de 2026 (pilotage et gouvernance ; supervision pédagogique renforcée sous le seuil d'intervenants permanents). Reprendre la transition de l'indicateur 20 déjà rédigée. Corriger les notes.
+
 **Autres options :**
 - Si le rebasage attend, retirer la proposition du lecteur à compter du 1er novembre 2026 et la marquer « à rebaser ».
 
@@ -724,51 +715,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 - Adopter la loi du projet avant le 1er janvier 2027, hypothèse irréaliste au 26 octobre 2026. Ou insérer une clause générale de transposition (« les modifications apportées aux articles du CGI abrogés par l'ordonnance 2025-1247 s'appliquent aux articles du CIBS qui les reprennent »), juridiquement fragile car elle n'a pas d'objet défini.
 
 **À préserver :** Toutes les mesures TVA favorables du projet (franchise sans prorata, etc.), les taux réduits existants et les exonérations ; les règles TVA des opérations antérieures au 1er janvier 2027.
-
-## RT-ISS10-01 (P1, confirmé) — ISS
-
-**Articles :** travail L4132-2, travail L4133-1, travail L4133-2, travail D4132-1, travail D4132-2, travail D4133-1, travail D4133-2, travail D4133-3, travail L4131-4
-
-**Correction minimale :** Aligner les décrets sur la loi, à la même date d'entrée en vigueur que celle-ci : (1) D4132-1, D4133-1 et D4133-2 : abrogation totale, par exemple « Le présent article est abrogé à compter de l'entrée en vigueur de la loi qui fixe aux articles L. 4132-2, L. 4133-1 et L. 4133-2 le contenu de l'écrit de consignation. Les avis et alertes consignés avant cette date demeurent régis par sa rédaction antérieure. » ; (2) D4132-2 et D4133-3 : limiter expressément leur objet aux registres antérieurs, par exemple « Les registres spéciaux ouverts avant l'entrée en vigueur de la loi mentionnée à l'article L. 4132-2 [L. 4133-1 pour D4133-3] restent tenus, sous la responsabilité de l'employeur, à la disposition des représentants du personnel au comité social et économique. Aucun registre n'est exigé pour les avis [alertes] consignés après cette date. » ; (3) réécrire les motifs et notes des huit entrées (ceux des lois annoncent une coordination « hors lot » ; ceux des décrets affirment le maintien du registre).
-
-**Autres options :**
-- (a) Solution de l'issue : abroger D4132-1, D4133-1 et D4133-2 et garder D4132-2 et D4133-3 inchangés ; acceptable, mais « Le registre spécial est tenu » reste lisible comme une obligation de tenue continue, faute de référent. (b) Abroger les cinq décrets et s'en remettre à la clause législative de survie (« selon les règles qui leur étaient applicables ») ; plus court, mais la survie de règles abrogées est moins lisible. (c) Arbitrage de l'auteur, non nécessaire à la cohérence : ajouter à L4131-4 ou à L4132-2 que « la preuve du signalement peut être rapportée par tout moyen » ; c'est une règle…
-
-**À préserver :** Alerte immédiate, enquête conjointe, droit de retrait (L4131-1 à L4132-5) ; présomption de faute inexcusable de L4131-4 ; date, signature et trois mentions de l'écrit ; accès du CSE et confidentialité…
-
-## RT-ISS11-01 (P1, confirmé) — ISS
-
-**Articles :** travail L3122-21, travail R3122-9, travail R3122-10, travail R3124-15, travail L3122-1
-
-**Correction minimale :** (1) R3122-9 et R3122-10 : abrogation totale à la date d'entrée en vigueur de L3122-21 proposé, par exemple « Le présent article est abrogé à compter de l'entrée en vigueur de la loi supprimant l'autorisation prévue à l'article L. 3122-21. Les recours formés contre les décisions notifiées avant cette date demeurent régis par sa rédaction antérieure. » (seconde phrase pour R3122-10 seulement). (2) L3122-21 proposé, premier alinéa : supprimer « , selon des modalités fixées par décret en Conseil d'Etat » et remplacer « Ces modalités ne peuvent imposer une autorisation ou une déclaration de remplacement. » par « Aucune autorisation ni déclaration ne peut être exigée pour cette affectation. » (3) Déclarer dans removed_provisions la perte du délai de douze mois de R3122-9 2°. (4) Mettre à jour motifs et notes de L3122-21, R3122-9 et R3122-10.
-
-**Autres options :**
-- (a) Solution de l'issue : mêmes abrogations et suppression pure de la phrase de garde ; acceptable, mais elle retire une garde législative contre une formalité de remplacement que le pouvoir réglementaire autonome pourrait encore créer. (b) Arbitrage de l'auteur : conserver la fraîcheur de la négociation comme condition de fond, sans formalité (« des négociations engagées au cours des douze mois précédant la première affectation »), ou accepter expressément sa perte.
-
-**À préserver :** Négociation loyale et sérieuse et ses trois éléments ; contreparties de L3122-8 ; pauses ; avis des représentants ou information des salariés ; caractère exceptionnel du travail de nuit (L3122-1) ; su…
-
-## RT-ISS7-01 (P1, confirmé) — ISS
-
-**Articles :** travail L3121-24, travail R3121-11, travail R3121-10, travail R3124-11
-
-**Correction minimale :** Rédiger R3121-11 ainsi : « Pour l'application de l'article L. 3121-24, le dépassement de la durée hebdomadaire moyenne de quarante-quatre heures n'est subordonné à aucune demande, justification, rapport ni décision administrative. Les autorisations accordées avant l'entrée en vigueur du présent article et les mesures compensatoires qu'elles fixent en application de l'article R. 3121-9 demeurent applicables jusqu'à leur terme. » Les conditions de fond sont déjà dans la loi proposée (circonstance exceptionnelle, 46 heures en moyenne sur douze semaines, avis du CSE).
-
-**Autres options :**
-- Abroger R3121-11 avec la même transition : plus court, mais L3121-24 proposé renvoie encore à des « conditions déterminées par décret en Conseil d'Etat » ; sans texte d'application, l'applicabilité directe de la loi pourrait être discutée.
-- Rétablir l'autorisation (correction de #7 en sens inverse) : écarté, contraire à la suppression décidée et à l'interdiction de toute formalité de remplacement.
-
-**À préserver :** Mesures compensatoires et repos complémentaires déjà accordés (R3121-9); Avis du CSE prévu par L3121-26 proposé; Autorisations distinctes de L3121-21/R3121-10 et L3121-25/R3121-12 à R3121-16; Limite absolue de 48 heures de L3121-20
-
-## RT-ISS9-01 (P1, confirmé) — ISS
-
-**Articles :** travail L1233-24-1, travail L1233-46, travail R1233-3-5, travail L1237-19, travail R1237-6-1, travail D1237-7, travail L1233-57-6, travail D1233-12, travail L1237-19-3, travail L1233-57-2
-
-**Correction minimale :** Aligner les textes sur la suppression, sans formalité de remplacement. 1. L1233-24-1 (texte complet proposé) : « Dans les entreprises de cinquante salariés et plus, un accord collectif peut déterminer le contenu du plan de sauvegarde de l'emploi mentionné aux articles L. 1233-61 à L. 1233-63 ainsi que les modalités de consultation du comité social et économique et de mise en œuvre des licenciements. Cet accord est signé par une ou plusieurs organisations syndicales représentatives ayant recueilli au moins 50 % des suffrages exprimés en faveur d'organisations reconnues représentatives au premier tour des dernières élections des titulaires au comité social et économique, quel que soit le nombre de votants, ou par le conseil d'entreprise dans les conditions prévues à l'article L. 2321-9. Aucune information de l'administration sur l'ouverture de cette négociation n'est exigée à compter de l'entrée en vigueur de la loi portant la présente réforme, y compris pour les négociations déjà ouvertes. » Ce second alinéa reprend la formule de L1237-19 proposé. On peut aussi le supprimer purement et simplement, comme le propose l'issue : voir l'option (a). 2. L1233-46 : supprimer « ; l'information sans délai sur l'ouverture effective de cette négociation prévue par cet article demeure applicable » et terminer la phrase après « notification ». Rien d'autre ne change. 3. R1233-3-5 : nouvelle première phrase : « Lorsque le projet de licenciement collectif porte sur des établissements relevant de la compétence de plusieurs directeurs régionaux des entreprises, de la concurrence, de la consommation, du travail et de l'emploi, l'employeur notifie son projet de licenciement en application de l'article L. 1233-46 au directeur régional du siège de l'entreprise. » Supprimer les deuxième et troisième phrases actuelles (« Aucune information distincte préalable… » ; « L'employeur notifie à ce directeur… », devenue redondante). Dans le dernier alinéa, supprimer la phrase « Elle ne supprime pas la mention de l'intention de négocier… ». Les critères de compétence, l'information de l'employeur et celle du CSE et des syndicats restent : la notification les déclenche toujours. 4. R1237-6-1 : réécrire le premier alinéa ainsi : « Lorsque le projet d'accord collectif portant rupture conventionnelle collective inclut des établissements relevant de la compétence de plusieurs directeurs régionaux des entreprises, de la concurrence, de la consommation, du travail et de l'emploi, le directeur régional compétent est celui dans le ressort duquel se situe : » et garder les 1° à 4°. Supprimer le dernier alinéa (notification de la compétence et information du CSE et des syndicats) : son déclencheur disparaît. 5. D1237-7 : abrogé. Coordonner l'arrêté du 29 décembre 2017 (volet D1237-7), sans abroger ses dispositions relatives à D1237-8 à D1237-12.
-
-**Autres options :**
-- (a) L1233-24-1 sans aucune phrase transitoire (solution de l'issue). Elle a le même effet pour les négociations futures, mais laisse la question des négociations en cours à l'issue #3. (b) Garder un seul canal, la mention de l'intention dans la notification de L1233-46, rendue exigible, et supprimer l'information distincte. C'est une fusion de doublon conforme à la consigne générale, mais elle rompt la symétrie avec L1237-19 : arbitrage de l'auteur. (c) Pour R1237-6-1, garder l'information de compétence en la déclenchant par la transmission de l'accord pour validation. Ce serait une formalité …
-
-**À préserver :** La notification du projet (L1233-46 et D1233-4) et la communication simultanée des informations et procès-verbaux (L1233-48), transmissions qui correspondent aux art. 2 et 3 de la directive ; les règl…
 
 ## RT-MENS-01 (P1, confirmé) — MENS
 
@@ -787,6 +733,8 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 **Articles :** a2 242 nonies E, a2 242 nonies G, a4 41 septies J, a4 41 septies K, a4 41 septies L, a4 41 septies N, a4 41 septies O, a2 242 nonies J, a2 242 nonies L, a2 242 nonies M, a2 242 nonies N, a2 242 nonies O (+1)
 
 **Correction minimale :** Réécrire 242 nonies E en retirant de 1° la mention des données de J et P, de 6° c la transmission à l'administration, et les 7° et 8°, avec une clause de non-rétablissement (texte complet au rapport, § 5.1). Abroger 242 nonies G et 41 septies J, L, N et O avec une transition alignée sur celle des cibles. Réécrire 41 septies K pour ne conserver que les identifiants de substitution du 2°, sur lesquels s'appuie 41 septies D, et retirer les contrôles de transmission.
+
+**Correction révisée au réexamen (20261029T034912Z) :** Correction d'origine maintenue pour l'annexe II (242 nonies E 1°, 6° c, 7° et 8° ; 242 nonies G) et l'annexe IV (41 septies H, J, K, L, N, O), avec clause de non-rétablissement et interdiction d'en faire une condition d'immatriculation au titre de 290 B. Le volet 1737 IV (version 2026) est retiré de la correction. Ajouter le volet RT-FUTFISC-09 : rédiger une proposition pour les versions du 1er janvier 2027 de 1788 D (abrogation, ou neutralisation des amendes attachées aux transmissions de L. 216-47 et L. 216-48 CIBS si la suppression de l'e-reporting est maintenue, avec application des montants 2027 plus doux aux manquements antérieurs non définitivement sanctionnés) et de 1788 E (reprise du corps 2026 proposé : 1° abrogé, attente de six mois et double information supprimées). Remplacer dans 1788 D et 1788 E (2026) la phrase « ne reportent pas l'abrogation du présent article prévue au 1er janvier 2027 » par une clause visant expressément la rédaction issue de l'ordonnance n° 2025-1247. La version 2027 de 1737 relève de RT-FUTFISC-01.
 
 **Autres options :**
 - Option A : une clause générale unique dans l'annexe II (« les articles 242 nonies E à 242 nonies P ne peuvent fonder aucun recueil ni aucune transmission de données à l'administration »), mais elle laisse subsister des textes contradictoires. Option B : maintenir les flux et renoncer à l'abrogation de 289 E, 290 et 290 A. Ce serait contraire à l'orientation de réduction des formalités.
@@ -826,29 +774,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** Exonération de 163 quinquies B et ses cas de maintien (invalidité, décès, retraite, licenciement, rupture patronale du contrat unique), réduction d'impôt FCPI, information du porteur (41 duovicies F),…
 
-## RT-P1-CCH-01 (P1, confirmé) — P1-CCH
-
-**Articles :** cch L813-4, cch L813-5, css D241-7, css D711-8, css L241-13
-
-**Correction minimale :** Réécrire D241-7 III et D711-8 II pour distinguer les périodes antérieures (valeurs actuelles, catégories de L813-5 dans sa rédaction applicable) et les périodes nouvelles (valeurs de la branche du 1° pour tous les employeurs, sans critère d'effectif, avec la règle existante de réduction de Tdelta jusqu'à égalité avec la somme des taux effectivement dus, étendue à D711-8). Texte complet proposé au rapport (section Propositions, RT-P1-CCH-01).
-
-**Autres options :**
-- Recalcul chiffré des valeurs Tdelta hors FNAL par le pouvoir réglementaire (non inventé ici ; à établir par la DSS et le simulateur URSSAF).
-- Rattacher le choix de branche au seul critère d'effectif de L130-1 CSS pour les périodes nouvelles : déconseillé, il maintiendrait un écart de 0,4 point fondé sur une contribution disparue.
-
-**À préserver :** Suppression intégrale et prospective de la contribution FNAL par période d'activité ; créances, exonérations et recours des périodes antérieures ; réduction générale et réduction minière intégralement…
-
-## RT-P1-CCH-03 (P1, confirmé) — P1-CCH
-
-**Articles :** cch R445-5-1, cch R445-2-8, cch L445-1, cch R445-5-2
-
-**Correction minimale :** Supprimer R445-5-1 du deuxième alinéa de R445-2-8 et ajouter une transition : à compter de l'entrée en vigueur, les engagements fixés sur le fondement de R445-5-1, y compris dans les conventions en cours, ne sont plus évalués et ne peuvent fonder ni mise en demeure ni pénalité, même pour une période antérieure, sous réserve des pénalités définitives. Texte complet au rapport.
-
-**Autres options :**
-- Maintenir l'évaluation des engagements PP-5/PS-3 déjà souscrits jusqu'au terme des conventions en cours : contraire au texte de R445-5-1 proposé, qui vise expressément les conventions en cours.
-
-**À préserver :** Évaluations de R445-2-8 sur les indicateurs de R445-5 ; procédure contradictoire et proportionnalité de L445-1 ; priorités DALO et obligations autonomes d'attribution (L441-1, L441-2-3) ; pénalités dé…
-
 ## RT-P1-CGI-B-01 (P1, confirmé) — P1-CGI-B
 
 **Articles :** cgi 1406 bis, cch L433-2, cch L302-1, urba L151-22, urba L151-36-1, urba L151-14-1
@@ -870,17 +795,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 - Compensation budgétaire de l'État (non décidée, à chiffrer, ne peut être présumée) ; révision de droit commun par délibérations concordantes seulement (statu quo, à écrire comme choix assumé).
 
 **À préserver :** Attributions et droits à compensation acquis pour les années antérieures ; garanties de révision concertée ; TASCOM et ses avantages (inclus dans l'attribution) ; absence de taxe de remplacement.
-
-## RT-P1-CGI-C-04 (P1, confirmé) — P1-CGI-C
-
-**Articles :** cgi 115 quinquies, cgi 1673 bis, a2 379, a2 380, a2 381
-
-**Correction minimale :** Borner 1673 bis, 379, 380 et 381 aux exercices ouverts avant l'abrogation de 115 quinquies, en supprimant les branches « régime nouveau » (textes complets de 1673 bis et 379 et passages de 380 et 381 au rapport, C-04).
-
-**Autres options :**
-- Abroger 1673 bis et 379 pour les exercices nouveaux par une clause de 115 quinquies les citant expressément ; maintenir 380 et 381 pour les seules retenues anciennes.
-
-**À préserver :** Révision favorable sur distributions effectives (fenêtre de douze mois, trois mois), restitution pour bénéficiaires français (31 décembre de l'année suivante), allègement des pièces, absence de double…
 
 ## RT-P1-CGI-C-06 (P1, confirmé) — P1-CGI-C
 
@@ -915,71 +829,18 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** Calcul distinct optionnel par affectation temporaire du contrat unique, facteur congés des missions, III bis, Mayotte, cumul avec L241-18 et L241-18-1 ; aucune baisse de la réduction sur les cotisatio…
 
-## RT-P1-CSS-A-12 (P1, confirmé) — P1-CSS-A
-
-**Articles :** css L653-1, css D653-1, css L653-2
-
-**Correction minimale :** Remplacer D653-1 par : « La pension de retraite du régime d'assurance vieillesse de base des avocats peut être liquidée avant l'âge prévu à l'article L. 161-17-2, en application du II de l'article L. 653-2, pour les assurés qui justifient, dans ce régime et, le cas échéant, dans un ou plusieurs autres régimes obligatoires, de périodes d'assurance ou de périodes reconnues équivalentes d'une durée minimale au moins égale à celle fixée à l'article D. 351-1-1, à l'âge et dans les conditions fixées audit article et selon les modalités fixées aux articles D. 351-1-2 et D. 351-1-3. L'abrogation de l'article L. 653-1 ne peut être opposée à une demande de liquidation anticipée ; les pensions liquidées avant cette abrogation conservent leurs droits. »
-
-**Autres options :**
-- Désignation neutre sans renvoi au II de L653-2 (« La pension de retraite de base des avocats ») si la concordance L653-2 II / D653-1 doit encore être vérifiée.
-
-**À préserver :** Départ anticipé carrière longue des avocats, conditions de durée tous régimes, périodes équivalentes, paramètres D351-1-1 à D351-1-3, pensions liquidées, renvoi de D173-21-2.
-
-## RT-P1-CSS-A-15 (P1, confirmé) — P1-CSS-A
-
-**Articles :** css R931-3-13, css R931-1-28
-
-**Correction minimale :** Remplacer l'alinéa de R931-1-28 commençant par « Pour l'application de l'article R. 931-3-13 » par : « L'abrogation de l'article R. 931-3-13 s'applique aux sociétés de groupe assurantiel de protection sociale dans les mêmes conditions et à la même date. Aucune délibération annuelle particulière du conseil sur l'égalité professionnelle et salariale, ni examen particulier d'un rapport ou d'un plan, n'est exigé de ces sociétés sur le fondement du présent article. Les délibérations déjà prises conservent leurs effets ; les obligations légales distinctes d'égalité professionnelle et salariale, de prévention des discriminations, d'information, de consultation et de négociation demeurent applicables. »
-
-**Autres options :**
-- Remplacer en outre « R. 931-3-13 à R. 931-3-14-1 » par « R. 931-3-14 et R. 931-3-14-1 » dans le premier alinéa.
-
-**À préserver :** Suppression des limites d'âge, plancher des limites librement stipulées, autonomie du contrat de travail, obligations légales d'égalité et de non-discrimination.
-
-## RT-P1-CSS-B-04 (P1, confirmé) — P1-CSS-B
-
-**Articles :** css L652-6, css R652-26, css R652-27, css R652-28, css R652-29, css R652-32, css R652-35
-
-**Correction minimale :** Récrire R652-26 (version courante et version 2029) ainsi : « Le présent article est abrogé pour les plaidoiries et représentations intervenant à compter du 1er janvier de l'année suivant celle de l'entrée en vigueur de la loi abrogeant l'article L. 652-6. Pour les plaidoiries et représentations antérieures, le droit de plaidoirie demeure exigible devant les juridictions administratives de droit commun et les juridictions de l'ordre judiciaire, dans les conditions et sous les exemptions prévues par la rédaction antérieure du présent article. Aucune exigibilité ni interdiction de dispense ne peut résulter du présent article pour les plaidoiries et représentations postérieures. » Appliquer la même borne à R652-27, R652-28 et R652-29 (faits antérieurs) et à R652-32 (années de contribution antérieures). Dans R652-35, deuxième alinéa, remplacer « l'intégralité du produit des droits de plaidoirie » par « l'intégralité du produit des droits de plaidoirie et des contributions équivalentes dus au titre des périodes antérieures à leur suppression ».
-
-**Autres options :**
-- Une clause dans L652-6 proposé : « Les dispositions réglementaires prises pour l'application du présent article cessent de produire effet pour les plaidoiries, représentations et années mentionnées au deuxième alinéa, y compris dans leurs rédactions entrant en vigueur ultérieurement. » Elle couvrirait aussi la version de 2029.
-
-**À préserver :** Exemptions de R652-26 (prud'hommes, contraventions des quatre premières classes, sécurité sociale, élections, aide juridictionnelle totale) pour les faits antérieurs ; plafonnement à sept fois la prem…
-
 ## RT-P1-CSS-B-06 (P1, confirmé) — P1-CSS-B
 
 **Articles :** css L652-6, css L652-7, css R652-35, css R652-36, css L645-3, css D645-5
 
 **Correction minimale :** Option recommandée, cohérente avec la méthode du projet pour la C3S : ajouter à L652-6 proposé (et, de même, à L645-3) : « La suppression prévue au premier alinéa prend effet au 1er janvier de l'année suivant l'entrée en vigueur d'une loi de financement de la sécurité sociale qui identifie, pour le régime d'assurance vieillesse de base de la Caisse nationale des barreaux français, une ressource compensant la perte de recettes correspondante. Les pensions liquidées et les droits constitués au titre des périodes antérieures ne peuvent être réduits, ni les cotisations prévues à l'article L. 652-7 relevées, du fait de cette suppression ; la limitation de la garantie des prestations aux ressources affectées prévue par voie réglementaire ne leur est pas opposable à raison de cette suppression. » En coordination, compléter R652-36 et D645-5 : « Cette limitation ne peut être opposée aux pensions liquidées et aux droits constitués à raison de la suppression des ressources prévues aux articles L. 652-6 [ou L. 645-3]. »
 
+**Correction révisée au réexamen (20261029T034912Z) :** Conserver la clause ajoutée à R652-36. Reste à faire : 1) subordonner la suppression de L652-6 (et de même celle de L645-3) à une ressource votée. Ajouter : « La suppression prévue au premier alinéa prend effet au 1er janvier de l'année suivant l'entrée en vigueur d'une loi de financement de la sécurité sociale qui identifie, pour le régime d'assurance vieillesse de base de la Caisse nationale des barreaux français [pour L645-3 : pour les régimes de prestations complémentaires de vieillesse mentionnés à l'article L. 645-1], une ressource compensant la perte de recettes correspondante. » Option : compensation par l'État selon le principe de L131-7. 2) Compléter D645-5 : « Cette limitation ne peut être opposée aux pensions liquidées et aux droits constitués à raison de la suppression de la cotisation prévue à l'article L. 645-3. »
+
 **Autres options :**
 - 1) Compensation intégrale par le budget de l'État selon le principe de L131-7, avec inscription en LFSS : elle donne la même sécurité aux droits mais crée une dépense publique non chiffrée. 2) Garantie conservée seulement pour les pensions liquidées, avec un ajustement possible des droits futurs annoncé et proportionné : solution moins protectrice, à justifier.
 
 **À préserver :** Suppression intégrale des droits de plaidoirie et de la cotisation d'ajustement (objectif conservé, sans taxe de remplacement) ; pensions liquidées, réversions, points acquis ; exonérations et prorati…
-
-## RT-P1-CSS-B-08 (P1, confirmé) — P1-CSS-B
-
-**Articles :** css L162-17-1, css R163-7, css R163-2
-
-**Correction minimale :** R163-7 II 1° : « 1° Abrogé pour les décisions de radiation prises à compter de l'entrée en vigueur de la loi abrogeant l'article L. 162-17-1, y compris dans les procédures en cours. Aucune spécialité ne peut être radiée au seul motif que sa dénomination de fantaisie n'est pas complétée par un suffixe. Les radiations prononcées auparavant et les recours correspondants demeurent régis par les règles antérieures ; ». R163-2 II : « II. – Lorsqu'a été notifiée, conformément aux dispositions du code de la santé publique relatives à l'identification des spécialités génériques, la décision du directeur général de l'Agence nationale de sécurité du médicament et des produits de santé identifiant un médicament comme spécialité générique, l'arrêté d'inscription de ce médicament sur les listes prévues au premier alinéa de l'article L. 162-17 du présent code et à l'article L. 5123-2 du code de la santé publique mentionne sa dénomination. À compter de l'entrée en vigueur de la loi abrogeant l'article L. 162-17-1, aucun suffixe ne peut être exigé sur le fondement du présent article, ni dans l'arrêté d'inscription, ni dans l'étiquetage, la notice, le résumé des caractéristiques du produit ou la publicité, sans préjudice des obligations d'identification et d'étiquetage prévues par le code de la santé publique et le droit de l'Union. Les inscriptions et mentions antérieures demeurent valables. »
-
-**Autres options :**
-- Étendre la clause de L162-17-1 proposé à la radiation et au maintien sur les listes : « ni la radiation ou le maintien d'une inscription ne peuvent dépendre de ces exigences ».
-
-**À préserver :** Identification ANSM des génériques ; étiquetage et pharmacovigilance de droit commun ; autres motifs de radiation de R163-7 ; allègements déjà proposés dans R163-7 (fin de la radiation pour absence de…
-
-## RT-P1-CSS-B-09 (P1, confirmé) — P1-CSS-B
-
-**Articles :** css L533-1, css D532-2, css D532-1, css D545-8
-
-**Correction minimale :** D532-2, dernière phrase : « Cette abrogation ne supprime pas les examens médicaux obligatoires prévus par le code de la santé publique. Conformément à l'article L. 533-1, le versement de la prime à la naissance ne peut être subordonné à la réalisation de ces examens. » D532-1, deuxième alinéa : « La déclaration de grossesse est attestée par un document médical constatant la grossesse. Le document constatant la passation du premier examen prénatal, établi le cas échéant sur le formulaire homologué du ministre chargé de la sécurité sociale, en tient lieu ; tout autre document médical établissant le même fait est recevable. Pour l'attribution de la prime à la naissance, la réalisation de cet examen ne peut être exigée. Aucun examen ni certificat médical supplémentaire n'est exigé du seul fait du dépôt unique. »
-
-**Autres options :**
-- Ne corriger que D532-2 et laisser à la loi le soin de neutraliser D532-1 : solution moins sûre.
-
-**À préserver :** Examens prénatals obligatoires (code de la santé publique L2122-1) ; délai de quatorze semaines et dépôt unique opposable aux deux organismes (D532-1 proposé) ; preuve pour l'allocation forfaitaire en…
 
 ## RT-P1-NEW-01 (P1, confirmé) — P1-NEW
 
@@ -1003,71 +864,18 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** BDESE et mise à jour de L2312-18, consultations annuelles L2312-17 et suivantes, égalité professionnelle, droits d'alerte, informations déjà communiquées sans réfection, recours pour manquements antér…
 
-## RT-P1-TRAVAIL-A-02 (P1, confirmé) — P1-TRAVAIL-A
+## RT-P1-TRAVAIL-B-08 (P1, confirmé) — P1-TRAVAIL-B
 
-**Articles :** travail L8291-1, travail R8291-2, travail R8292-1, travail R8293-1, travail R8295-2, travail R8295-3-1, travail R8294-6, travail R8294-5, travail R8295-1, travail R8295-3, travail R8291-4
+**Articles :** travail L6231-3, travail R6231-3, travail R6231-4, travail R6231-5
 
-**Correction minimale :** Abroger pour l'avenir R8294-5, R8294-6, R8295-3 et R8295-3-1. Réécrire R8295-1 en traitement résiduel de conservation et d'effacement. Limiter le dernier alinéa de R8295-2 aux données antérieures. Les textes complets figurent au rapport, § 5.2.
+**Correction minimale :** Ajouter à R6231-3 : « Les dispositions de la présente section ne s'appliquent qu'aux centres qui instituent volontairement un conseil de perfectionnement ; aucun manquement ne peut être relevé du seul fait de son absence. » ou abroger R6231-3 à R6231-5.
 
-**Autres options :**
-- Une abrogation unique par un article de coordination qui viserait toute la section réglementaire, à condition qu'elle préserve explicitement R8291-4 et R8294-8.
-
-**À préserver :** Limitation de finalité de R8291-4 ; document d'information des travailleurs détachés (L1262-4, R8294-8), remis par l'employeur selon L8291-1 proposé ; pouvoirs de contrôle autonomes (L8271-1-2, déclar…
-
-## RT-P1-TRAVAIL-B-01 (P1, confirmé) — P1-TRAVAIL-B
-
-**Articles :** travail L1221-12-1, travail L1221-12, travail R1221-5, travail R1221-13, travail D1221-18, travail D1221-19
-
-**Correction minimale :** Abroger D1221-18 et D1221-19 à la même date que L1221-12-1, avec la même transition (décharge et restitution des pénalités non définitives, recouvrement des seules pénalités définitives) ; retirer de R1221-5 la phrase sur D1221-18 et ouvrir le choix de la voie ; remplacer dans R1221-13 la réserve de D1221-19 par un renvoi au régime transitoire de L1221-12-1. Textes complets au rapport.
+**Correction révisée au réexamen (20261029T034912Z) :** Dans l'indicateur 20 du référentiel national qualité, retirer l'exigence de conseil de perfectionnement, dans la proposition de LEGIARTI000038591641 et surtout dans la version successeur LEGIARTI000054612711, à coordonner avec RT-INV-04. Pour la version successeur : « 20) Le prestataire assure l'appui à la mobilité nationale et internationale, sans obligation de disposer d'un personnel dédié à cette mission. Il dispose d'un référent handicap. Il s'assure, par tout moyen, de la qualité du pilotage de la formation et de la participation des apprentis, formateurs et entreprises à sa gouvernance ; l'institution d'un conseil de perfectionnement est facultative. » Ajouter la transition : « À compter de l'entrée en vigueur de l'abrogation de l'article L. 6231-3, l'absence de conseil de perfectionnement ne peut, à elle seule, fonder une non-conformité, un refus, une suspension ou un retrait de certification. Les audits et certifications antérieurs conservent leurs effets. » Retirer de la transition de LEGIARTI000038591641 les mots « ni le conseil de perfectionnement ». Conserver le référent handicap, la mission d'appui à la mobilité, les indicateurs ajoutés en 2026 et le reste du référentiel.
 
 **Autres options :**
-- À défaut d'abrogation immédiate : clause dans L1221-12-1 portant abrogation expresse de D1221-18 et D1221-19 (le législateur peut abroger un décret pris pour son application) ; ou maintien de l'obligation électronique et de la pénalité, ce qui contredirait la décision prise et n'est pas recommandé.
+- Abrogation pure des trois articles.
 
-**À préserver :** DPAE elle-même et son délai ; contravention R1227-1 dans son champ ; recouvrement des seules pénalités définitives antérieures ; liberté de continuer à déclarer par voie électronique ; aucune formalit…
-
-## RT-P1-TRAVAIL-B-03 (P1, confirmé) — P1-TRAVAIL-B
-
-**Articles :** travail L7123-11, travail L7123-14, travail L7123-26, travail R7123-14, travail R7123-11, travail R7123-12, travail R7123-10-1, travail L7124-4
-
-**Correction minimale :** Abroger L7123-26 pour l'exercice sans licence ou déclaration, avec la loi pénale plus douce ; abroger R7123-11, R7123-12 et R7123-14 à la même date avec transition (procédures en cours éteintes, décisions définitives non remises en cause) ; coordonner L8241-1 1° (« par une personne exerçant cette activité dans les conditions de l'article L. 7123-11 »). Texte de L7123-26 au rapport.
-
-**Autres options :**
-- Si le législateur veut un contrôle minimal de moralité, il doit le prévoir au niveau législatif, de façon identique pour les agences nationales et européennes (contraire à l'orientation de suppression sans formalité de remplacement : non recommandé).
-
-**À préserver :** Agrément pour l'engagement d'enfants de moins de seize ans (L7124-4, L7124-5) et autorisations individuelles ; garantie financière L7123-19, santé, rémunération, prévention des conflits d'intérêts (L7…
-
-## RT-P1-TRAVAIL-B-04 (P1, confirmé) — P1-TRAVAIL-B
-
-**Articles :** travail L3132-21, travail L3132-20, travail L3132-23, travail R3132-16, travail R3132-17, travail R3135-2
-
-**Correction minimale :** Abroger R3132-16 ; réécrire R3132-17 en ne gardant que les conditions de fond (même localité, même activité, même clientèle ; accord collectif ou décision unilatérale approuvée par référendum) déjà reprises par L3132-23 proposé, ou l'abroger comme redondant.
-
-**Autres options :**
-- Insérer dans L3132-21 une abrogation expresse des dispositions réglementaires prises pour son application.
-
-**À préserver :** Garanties de fond : accord collectif ou référendum, volontariat, contreparties (L3132-25-3, L3132-25-4) ; extensions et dérogations déjà acquises ; droits des salariés pour les périodes antérieures.
-
-## RT-P1-TRAVAIL-B-05 (P1, confirmé) — P1-TRAVAIL-B
-
-**Articles :** travail L1237-18-5, travail D1237-5, travail D1237-4, travail L1237-19-1
-
-**Correction minimale :** Abroger D1237-4 et D1237-5 à la date d'abrogation de L1237-18-5 : « Le présent article est abrogé à compter de l'entrée en vigueur de l'abrogation de l'article L. 1237-18-5. Aucune information semestrielle ni document relatif aux ruptures intervenues dans le cadre du congé de mobilité n'est exigé à compter de cette date, y compris pour des périodes antérieures ; les informations déjà transmises n'ont pas à être refaites. »
-
-**Autres options :**
-- Aucune option ne permet de conserver D1237-5 sans contredire la loi proposée.
-
-**À préserver :** Droits du congé de mobilité (rémunération, formation, indemnités, exonérations), autorisations des salariés protégés, suivi RCC autonome de L1237-19-7.
-
-## RT-P1-TRAVAIL-B-06 (P1, confirmé) — P1-TRAVAIL-B
-
-**Articles :** travail D4622-56, travail D4622-27-6
-
-**Correction minimale :** Remplacer dans D4622-27-6 V « le rapport comptable d'entreprise mentionné à l'article D. 4622-56 » par « les comptes annuels du dernier exercice clos ». Le ratio fonds propres/charges d'exploitation se calcule sur ces comptes sans document nouveau.
-
-**Autres options :**
-- Supprimer purement le V (la décision de l'assemblée générale reste contrôlable sur pièces comptables existantes).
-
-**À préserver :** Bornes de 80 % et 120 %, motifs II 1° à 4°, condition III 1°, extension favorable du III, missions IV, agréments ordinaires.
+**À préserver :** Règle agricole R811-46 code rural ; conseils volontaires ; missions pédagogiques et protection des apprentis.
 
 ## RT-P1-URBA-03 (P1, confirmé) — P1-URBA
 
@@ -1116,6 +924,18 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 
 **À préserver :** Autorisations déjà délivrées et instances en cours; Équivalence date de publication/affichage pour L600-1-3; Autres garanties contre les recours abusifs (L600-7)
 
+## RT-TR1-01 (P1, confirmé) — TR
+
+**Articles :** travail L6332-14, travail R6332-25, travail R6332-25-1, travail R6332-25-2
+
+**Correction minimale :** Aligner la loi sur la réforme réglementaire, sans revenir sur celle-ci. Dans L6332-14 proposé (LEGIARTI000052437380) : (1) au I 1°, supprimer les deux phrases « L'employeur participe [...] minorée de cette participation. » ; (2) remplacer le III par : « III. - La participation de l'employeur aux contrats d'apprentissage visant un diplôme ou un titre à finalité professionnelle équivalant au moins au niveau 6 du cadre national des certifications professionnelles, et la minoration corrélative de la prise en charge par l'opérateur de compétences, ne s'appliquent qu'aux contrats conclus avant l'entrée en vigueur de la loi portant la présente rédaction. Pour ces contrats, elles demeurent régies par les dispositions antérieures du présent article et par le décret en Conseil d'Etat pris pour leur application, avec leurs plafonnements, réductions, créances, restitutions, prescriptions et recours. Aucune participation ni charge équivalente n'est due pour les contrats conclus à compter de cette entrée en vigueur. » ; (3) dans R6332-25 III 1° et dernier alinéa, R6332-25-1 et R6332-25-2, entendre « la loi supprimant la participation patronale prévue à l'article L. 6332-14 » comme la loi portant cette rédaction de L6332-14, avec une entrée en vigueur commune. Aucune formalité n'est rétablie : copie de facture, délai de quatre mois et attestation préalable restent supprimés.
+
+**Autres options :**
+- Si l'auteur renonce à la suppression : rétablir R6332-25-1/-2 et la déduction de R6332-25 III 1°. Cela retirerait une faveur déjà décidée et n'est pas recommandé par la présente passe.
+- Conserver le III comme simple habilitation transitoire pour les anciens contrats, avec la même rédaction de transition.
+
+**À préserver :** Plafonnement à 750 €, réduction à 50 % proratisée en cas de rupture dans les 45 premiers jours et forfait de 200 € pour les contrats antérieurs; Créances, restitutions, prescriptions et recours nés sous l'ancien régime; Suppression de la copie de facture, du délai de quatre mois et de la déchéance du solde (R6332-25); Niveaux de prise en charge, majorations et modulations (handicap, distance); Phases d'apprentissage du contrat unique
+
 ## RT-TUT-01 (P1, confirmé) — TUT
 
 **Articles :** css D227-6, css L224-10, css R226-4, css D224-11, css D227-5, css L228-1, css L153-8, css L612-1
@@ -1139,28 +959,6 @@ Corrections minimales proposées par objection retenue, P0 puis P1. Les rédacti
 - Option C (coupe plus forte, conforme à cuts_and_reliefs) : supprimer l’extension des modèles obligatoires aux groupements volontaires de L216-3, qui adoptent librement leurs statuts. Décision de fond de l’auteur ; ne pas l’adopter par simple souci de cohérence.
 
 **À préserver :** Suppression de l’approbation préalable des statuts et règlements (L281-4, L216-3) ; absence de visa ou déclaration de remplacement ; maintien des avis sur les modèles ; organismes historiques compris …
-
-## RT-UNION-03 (P1, confirmé) — UNION
-
-**Articles :** css R216-2, css L216-3, css R155-1
-
-**Correction minimale :** Proposition pour R216-2 : « Le présent article est abrogé à compter de l’entrée en vigueur de la loi supprimant l’approbation des statuts des unions et fédérations prévue à l’article L. 216-3. Les demandes d’approbation pendantes à cette date sont closes sans décision ni nouveau dépôt. Aucune approbation, aucun visa ni aucune déclaration ne peut être exigé sur le fondement du présent article. Les approbations antérieurement données, les actes accomplis sur leur fondement et les recours correspondants conservent leurs effets. » Mettre à jour son motif.
-
-**Autres options :**
-- Si l’abrogation réglementaire ne peut être concomitante à la loi, prévoir dans L216-3 proposé que les dispositions réglementaires d’approbation cessent de s’appliquer à la même date (déjà implicite par « sans approbation préalable »).
-
-**À préserver :** Contrôle du service de R155-1 sur la gestion (hors approbation statutaire) ; autorisations sectorielles autonomes ; statuts existants.
-
-## RT-UNION-04 (P1, confirmé) — UNION
-
-**Articles :** css R281-4, css R213-5, css R752-1, css L281-4, css R281-6, css L283-1
-
-**Correction minimale :** R281-4 : « Le présent article est abrogé à compter de l’entrée en vigueur de l’abrogation de l’article L. 281-4. Les procédures d’approbation en cours prennent fin sans nouveau dépôt ; aucun visa, aucune homologation ni aucune déclaration préalable ne peut être exigé sur son fondement. Les actes antérieurs, les droits qu’ils ont créés et les recours correspondants sont préservés. » — R213-5 : « Les dispositions des articles L. 281-5, R. 231-1 et R. 281-6 sont applicables aux conseils d’administration des unions de recouvrement des cotisations de sécurité sociale et d’allocations familiales. Leurs statuts et règlements intérieurs ainsi que leurs modifications ne sont plus soumis à approbation à compter de l’entrée en vigueur de l’abrogation de l’article L. 281-4 ; les procédures en cours prennent fin sans nouveau dépôt. » — R752-1 : « Les dispositions des articles R. 231-1 et R. 281-6 sont applicables aux caisses générales de sécurité sociale et caisses d’allocations familiales des départements mentionnés à l’article L. 751-1. »
-
-**Autres options :**
-- Compléter L281-4 proposé : « y compris les organismes auxquels ses dispositions étaient rendues applicables par d’autres textes » pour couvrir les URSSAF et toute autre extension.
-
-**À préserver :** Modèles de L281-5 et compétence du ministre (R281-6) ; règles de réunion de R231-1 ; contrôles de L281-1 à L281-3.
 
 ## RT-XCUT-01 (P1, confirmé) — XCUT
 

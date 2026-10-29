@@ -51,7 +51,8 @@ for f in p1:
         unchanged = arts.get(key, (None, None))[1] == g.get('source_sha256')
     num = ref.get('number') or ''
     # The audit normalises numbers ("1406BIS", "1599QUATERA"); the text writes "1406 bis", "1599 quater A".
-    pattern = r'\s*'.join(re.escape(ch) for ch in num)
+    # A letter prefix may be followed by a dot in the text ("R. 442-23", "L. 813-5").
+    pattern = r'\s*'.join(re.escape(ch) + (r'\.?' if ch.isalpha() and i == 0 else '') for i, ch in enumerate(num))
     present = unchanged or (bool(num) and re.search(r'(?<![\w-])' + pattern + r'(?![\w-])', plain(text), re.I) is not None)
     target_repealed = bool(t and t[2] and repeal(t[2]))
     target_changed = bool(t) and digest(t[2]) != (f.get('target_guard') or {}).get('proposal_sha256')
