@@ -376,20 +376,34 @@
     "source_id": "LEGIARTI000038878655",
     "source_sha256": "f9271f9da5e254844212a0fe6e2950535529b47384b47dcab34a13af0cb124c7",
     "number": "D842-15",
-    "proposed_xml": null,
-    "reason": "Maintien de la formule Af = K × (L + C-L0), de ses cinq définitions et des règles de liquidation. Ce barème d'une prestation ne constitue pas une taxe : plafond de redevance, arrondi et seuil de paiement assurent la liquidation cohérente ; aucun taux de remplacement n'est inventé. Seconde passe : proposition antérieure conservée sans reformulation ; Renvois vérifiés : D823-9, 3°, couvre les foyers non visés au 2° et les chambres CROUS ; L633-1 définit le logement collectif avec locaux privatifs et communs.",
-    "review_notes": "Renvois vérifiés : D823-9, 3°, couvre les foyers non visés au 2° et les chambres CROUS ; L633-1 définit le logement collectif avec locaux privatifs et communs. L’exception « des étudiants logés dans un studio » conserve le calcul du 1° de D823-9. D832-25, 2°, porte K et D832-26, deuxième alinéa, le calcul E0 auquel L0 se substitue ; D842-16 détermine L et D842-17 la dépense nette. La minoration forfaitaire est au neuvième alinéa et la dépense nette au dixième. D863-15 exclut D842-15 à D842-18 à Saint-Pierre-et-Miquelon. La brochure ministérielle avril 2024, page 31 entière, et la notice apl-D832-25 documentent K = 0,90 − R / (cm2 × N), sans authentification du JO ; aucune inférence de formule ni montant 2024 ajouté au code. Le contrôle du barème réglementaire actuel complet reste hors du résultat ; aucune validation numérique globale.",
-    "status": "retained_unchanged",
+    "proposed_xml": "<p>\n<br />Pour les bénéficiaires résidant dans un logement-foyer, ou assimilé, mentionné au 3° de l'article D. 823-9, à l'exception des étudiants logés dans un studio d'un logement-foyer défini à l'article L. 633-1 pour lesquels le montant mensuel de l'aide est calculé selon les modalités précisées au 1° de l'article D. 823-9, le montant mensuel de l'aide est calculé selon la formule et les modalités suivantes : <br />\" Af = K × (L + C-L0) \" <br />où : <br />1° \" Af \" est l'aide mensuelle issue de la formule de calcul ; <br />2° \" K \" est le coefficient de prise en charge ; il est calculé selon les dispositions du 2° de l'article D. 832-25 ; <br />3° \" L \" est l'équivalence de loyer prise en compte, déterminée selon les dispositions de l'article D. 842-16 ; <br />4° \" C \" est le montant forfaitaire au titre des charges, fixé par arrêté en fonction de la composition familiale ; <br />5° \" L0 \" est le loyer minimal ; il est calculé selon les dispositions du deuxième alinéa de l'article D. 832-26, dans lequel il se substitue à \" E0 \". <br />Le montant ainsi calculé est minoré d'un montant fixé forfaitairement par arrêté. <br />Ce résultat est minoré d'un abattement au titre de la dépense nette minimale. Les modalités de calcul de la dépense nette, de sa valeur minimale et de l'abattement sont fixées à l'article D. 842-17. <br />Si le montant obtenu par application des dispositions des alinéas précédents est supérieur au montant de la redevance supportée par le résident, il est rapporté au montant de cette redevance. <br />Ce dernier résultat est diminué d'un montant représentatif des contributions sociales qui s'y appliquent, arrondi à l'euro inférieur, puis majoré de ce montant représentatif. <br />Lorsque le montant mensuel de l'aide calculé selon les dispositions des alinéas précédents est inférieur à un montant fixé par arrêté, il n'est pas procédé à son versement au titre des mois commençant avant l'entrée en vigueur de la loi abrogeant l'article L. 823-7. Pour les mois commençant à compter de cette entrée en vigueur, tout montant positif ainsi calculé est versé, quel que soit son montant, sans démarche distincte ; les droits, indus, restitutions, prescriptions et recours relatifs aux mois antérieurs restent régis par les dispositions qui leur étaient applicables.</p>",
+    "reason": "Coordination avec L823-7 proposé, qui abroge le seuil de non-versement pour les mois commençant à compter de l'entrée en vigueur de la loi et dispose que « le versement d'un montant positif d'aide personnelle au logement ne peut être refusé en raison de sa seule faiblesse ». Le non-versement sous seuil du dernier alinéa est réservé aux mois antérieurs ; pour les mois nouveaux, tout montant positif est versé, sans démarche distincte. La formule, ses variables, les minorations, la dégressivité et ses exceptions, les arrondis et les contributions sociales sont repris sans changement. Il s'agit de l'effet de la réforme décidée par la loi, non d'une extension supplémentaire.",
+    "review_notes": "Renvois vérifiés : D823-9, 3°, couvre les foyers non visés au 2° et les chambres CROUS ; L633-1 définit le logement collectif avec locaux privatifs et communs. L’exception « des étudiants logés dans un studio » conserve le calcul du 1° de D823-9. D832-25, 2°, porte K et D832-26, deuxième alinéa, le calcul E0 auquel L0 se substitue ; D842-16 détermine L et D842-17 la dépense nette. La minoration forfaitaire est au neuvième alinéa et la dépense nette au dixième. D863-15 exclut D842-15 à D842-18 à Saint-Pierre-et-Miquelon. La brochure ministérielle avril 2024, page 31 entière, et la notice apl-D832-25 documentent K = 0,90 − R / (cm2 × N), sans authentification du JO ; aucune inférence de formule ni montant 2024 ajouté au code. Le contrôle du barème réglementaire actuel complet reste hors du résultat ; aucune validation numérique globale. Le maintien antérieur conservait le seuil de non-versement alors que L823-7 proposé (LEGIARTI000038814908) l'abroge : contradiction relevée par l'audit aléatoire et par les notes de L823-7. Correction de la troisième passe (objection AUDIT3-Q242) : le dernier alinéa réserve le non-versement aux mois antérieurs à l'abrogation de L823-7 et prévoit le versement de tout montant positif pour les mois nouveaux. Les arrêtés fixant le seuil sont hors corpus et restent à abroger pour l'avenir. Le reste de l'article est repris sans changement. Revue IA, sans validation par un juriste.",
+    "status": "rewrite_draft",
     "reference_checks": [],
-    "benefit_review": "La prestation et son calcul familial sont maintenus intégralement, ainsi que l’exception favorable de calcul ordinaire des étudiants en studio. Les renvois préservent les parts familiales, les catégories de loyer et le forfait de charges. Minoration forfaitaire, dépense minimale, plafond de redevance et seuil de versement sont des paramètres de liquidation de l’aide, non des exonérations fiscales. Aucun avantage futur existant n’est fermé et aucune contribution sociale n’est réputée supprimée.",
-    "classification": "retained_necessary",
+    "benefit_review": "Le versement de tout montant positif pour les mois nouveaux résulte de L823-7 proposé ; formule, minorations, exceptions AAH/AEEH et droits antérieurs sont conservés.",
+    "classification": "coordination_only",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien de la formule Af = K × (L + C-L0), de ses cinq définitions et des règles de liquidation. Ce barème d'une prestation ne constitue pas une taxe : plafond de redevance, arrondi et seuil de paiement assurent la liquidation cohérente ; aucun taux de remplacement n'est inventé.",
-      "scope_limitations": "Renvois vérifiés : D823-9, 3°, couvre les foyers non visés au 2° et les chambres CROUS ; L633-1 définit le logement collectif avec locaux privatifs et communs. L’exception « des étudiants logés dans un studio » conserve le calcul du 1° de D823-9. D832-25, 2°, porte K et D832-26, deuxième alinéa, le calcul E0 auquel L0 se substitue ; D842-16 détermine L et D842-17 la dépense nette. La minoration forfaitaire est au neuvième alinéa et la dépense nette au dixième. D863-15 exclut D842-15 à D842-18 à Saint-Pierre-et-Miquelon. La brochure ministérielle avril 2024, page 31 entière, et la notice apl-D832-25 documentent K = 0,90 − R / (cm2 × N), sans authentification du JO ; aucune inférence de formule ni montant 2024 ajouté au code. Le contrôle du barème réglementaire actuel complet reste hors du résultat ; aucune validation numérique globale. Aucun solde national de coût ou de complexité n’est établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le texte source demeure intégralement applicable, sans nouveau registre, justificatif, délai ou condition.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination du dernier alinéa avec l'abrogation législative du seuil de non-versement par L823-7 proposé ; la mesure est comptée à L823-7 et n'est pas recomptée ici.",
+      "scope_limitations": "Les arrêtés fixant le seuil ne sont pas au corpus ; le coût budgétaire n'est pas chiffré. Le reste de la formule n'est pas réexaminé. Aucune validation par un juriste.",
+      "new_burdens_review": "Aucune charge nouvelle pour les allocataires : aucune demande ni pièce n'est ajoutée ; le versement des petits montants découle de la loi.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "aides-logement-fin-seuil-non-versement",
+          "description": "Fin du non-versement sous seuil pour les mois nouveaux.",
+          "before": "Aide calculée inférieure au montant fixé par arrêté non versée.",
+          "after": "Non-versement limité aux mois antérieurs ; tout montant positif versé pour les mois nouveaux.",
+          "unit": "legal_duty",
+          "affected_population": "Résidents de logements-foyers bénéficiant de l'allocation de logement.",
+          "conditions_and_transition": "Mois commençant à compter de l'entrée en vigueur de la loi abrogeant L823-7 ; mois antérieurs régis par les règles antérieures.",
+          "replacement_or_new_burdens": "Aucune formalité, déclaration, pièce, sanction ni condition de remplacement n'est créée.",
+          "source_quote": "il n'est pas procédé à son versement.",
+          "proposed_quote": "tout montant positif ainsi calculé est versé, quel que soit son montant, sans démarche distincte"
+        }
+      ]
     },
     "source_conflict_ids": [],
     "impact_check_required": true,
@@ -398,15 +412,19 @@
       "version": 1,
       "source_sha256": "f9271f9da5e254844212a0fe6e2950535529b47384b47dcab34a13af0cb124c7",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "ec5c7c5c9669157c77b41c1ae826be09cc69d48894c972fefbb6be2d11802dcd",
+      "proposed_sha256": "f849f1fc7549b9dc8b573baa6d0fa28b014862b2b1785360e88a8b8517f7016b",
+      "assessment_sha256": "2d0a8dfa6d89541f707cc1f6b6bbe35e5d2e9655e18eb2faf12345bf48d99706",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_pass_correction": {
+      "objection": "AUDIT3-Q242 (cch D842-15)",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006074096",

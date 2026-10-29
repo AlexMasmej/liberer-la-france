@@ -1037,10 +1037,10 @@
     "source_id": "LEGIARTI000006736846",
     "source_sha256": "fba9c650e39f476b0bfc68b534b108a2239a4df2aa570c656a7b0343eff2fcca",
     "number": "D412-97",
-    "proposed_xml": "\n<br />Le salaire servant de base au calcul des cotisations est égal au double du salaire annuel minimum prévu à l'article L. 434-16. <br />\n<br />Le salaire servant de base au calcul des indemnités et des rentes est égal au double dudit salaire minimum tel qu'il est en vigueur soit à la date de l'arrêt de travail résultant de l'accident, de la rechute ou de l'aggravation, soit, s'il n'y a pas eu d'arrêt de travail, à la date de constatation de l'incapacité permanente.<br />\n<p>Pour l'application du présent article à compter de l'abrogation de l'article L. 434-16, le salaire annuel minimum de référence est égal au montant de ce minimum applicable la veille de cette abrogation, revalorisé au 1er avril de chaque année suivant cette abrogation par application du coefficient mentionné à l'article L. 161-25. Cette règle conserve une référence propre au présent article ; elle ne proroge pas les autres dispositions de l'article L. 434-16 ni ne modifie les conditions légales d'ouverture et de calcul des prestations. Elle s'applique à compter de l'entrée en vigueur de la présente rédaction, sans remettre en cause les cotisations, prestations, restitutions et recours afférents aux périodes antérieures.</p>",
-    "reason": "Coordination nécessaire, sans baisse de prélèvement : Maintien du double du minimum annuel pour les cotisations et pour les indemnités et rentes. Ce couplage finance et protège le congé de représentation ; réduire mécaniquement la base de prestations supprimerait un avantage, et aucun taux de substitution n'est décidé. Le précédent maintien ne résolvait pas la disparition annoncée de la référence L434-16. La nouvelle clause rend autonome le montant de référence après son abrogation et conserve sa revalorisation, pour les situations futures aussi. Il ne s’agit pas de proroger le régime général des rentes ni de réécrire ses composantes manquantes.",
-    "review_notes": "Coordination nécessaire : « au double du salaire annuel minimum prévu à l'article L. 434-16 » devient un renvoi privé de support pour l'avenir, cette cible étant ABROGE_DIFF au 1er novembre 2026. L434-16 officiel et proposé, L434-2, R434-27 et L161-25 lus en entier : minimum indexé au 1er avril, plancher du coefficient à un, et montant historique de 18 281,80 euros au 1er avril 2016, non montant actuel. La clause ajoutée conserve cette référence après abrogation, sans reconstruire le régime futur des rentes. D412-95/96 confirment les missions et trajets du congé, l'association ou mutuelle payeuse. Les deux bases restent au double et les dates accident/rechute/aggravation ou constatation sans arrêt sont intactes. Nouveau renvoi L161-25 hors fichier des cibles requises, vérifié dans le corpus. Le corps successeur de L434-2 manque ; conformité de cette référence autonome aux nouvelles composantes des rentes et habilitation réglementaire à coordonner avec la loi de réforme AT-MP, hors lot. Aucun gel des pensions de retraite appliqué aux rentes.",
-    "status": "rewrite_draft",
+    "proposed_xml": null,
+    "reason": "Maintien du double du minimum annuel pour les cotisations et pour les indemnités et rentes. Ce couplage finance et protège le congé de représentation ; réduire mécaniquement la base de prestations supprimerait un avantage, et aucun taux de substitution n'est décidé. Le renvoi à L434-16 reste valable : cet article n'est pas abrogé, sa version en vigueur jusqu'au 31 octobre 2026 étant remplacée au 1er novembre 2026 par une nouvelle rédaction qui maintient le minimum indexé.",
+    "review_notes": "Conserver les dates alternatives : arrêt causé par accident, rechute ou aggravation, et constatation d'incapacité permanente sans arrêt. Correction de la troisième passe (objection AUDIT-S11N-04, pilote « notes » P1) : l'alinéa ajouté (« Pour l'application du présent article à compter de l'abrogation de l'article L. 434-16 [...] ») reposait sur une abrogation qui n'existe pas. L434-16 LEGIARTI000031688385 (ABROGE_DIFF au 1er novembre 2026) est remplacé par LEGIARTI000051288487 (VIGUEUR_DIFF au 1er novembre 2026, loi n° 2025-199, art. 90), qui maintient « un minimum déterminé au 1er avril de chaque année d'après le coefficient mentionné à l'article L. 161-25 » ; les deux versions ont une proposition qui conserve ce minimum. L'alinéa figeait en outre le montant à « la veille de cette abrogation ». Il est retiré et l'article revient à la source officielle, maintenue. Les notes antérieures selon lesquelles le renvoi devenait « privé de support » et « Le corps successeur de L434-2 manque » sont inexactes : LEGIARTI000051288493 (L434-2, VIGUEUR_DIFF au 1er novembre 2026) figure au corpus. Aucun gel des pensions de retraite n'est appliqué aux rentes. Revue IA, sans validation par un juriste.",
+    "status": "retained_unchanged",
     "previous_draft": {
       "source_sha256": "fba9c650e39f476b0bfc68b534b108a2239a4df2aa570c656a7b0343eff2fcca",
       "status": "retained_unchanged",
@@ -1053,28 +1053,14 @@
     "source_conflict_ids": [],
     "impact_check_required": true,
     "benefit_check_required": false,
-    "classification": "coordination_only",
+    "classification": "retained_necessary",
     "substantive_impact": {
       "version": 1,
-      "classification": "coordination_only",
-      "assessment": "Coordination nécessaire, sans baisse de prélèvement : Maintien du double du minimum annuel pour les cotisations et pour les indemnités et rentes. Ce couplage finance et protège le congé de représentation ; réduire mécaniquement la base de prestations supprimerait un avantage, et aucun taux de substitution n'est décidé. Le précédent maintien ne résolvait pas la disparition annoncée de la référence L434-16. La nouvelle clause rend autonome le montant de référence après son abrogation et conserve sa revalorisation, pour les situations futures aussi. Il ne s’agit pas de proroger le régime général des rentes ni de réécrire ses composantes manquantes.",
-      "scope_limitations": "Coordination nécessaire : « au double du salaire annuel minimum prévu à l'article L. 434-16 » devient un renvoi privé de support pour l'avenir, cette cible étant ABROGE_DIFF au 1er novembre 2026. L434-16 officiel et proposé, L434-2, R434-27 et L161-25 lus en entier : minimum indexé au 1er avril, plancher du coefficient à un, et montant historique de 18 281,80 euros au 1er avril 2016, non montant actuel. La clause ajoutée conserve cette référence après abrogation, sans reconstruire le régime futur des rentes. D412-95/96 confirment les missions et trajets du congé, l'association ou mutuelle payeuse. Les deux bases restent au double et les dates accident/rechute/aggravation ou constatation sans arrêt sont intactes. Nouveau renvoi L161-25 hors fichier des cibles requises, vérifié dans le corpus. Le corps successeur de L434-2 manque ; conformité de cette référence autonome aux nouvelles composantes des rentes et habilitation réglementaire à coordonner avec la loi de réforme AT-MP, hors lot. Aucun gel des pensions de retraite appliqué aux rentes. Le solde net de coût ou de complexité des neuf recueils n’est pas établi par cette revue locale.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : la coordination conserve les bases, les calculs et les responsables existants, sans registre, délai, dépôt ni justificatif supplémentaire.",
-      "effects": [
-        {
-          "kind": "coordination",
-          "measure_id": "atmp-minimum-reference-continuite",
-          "description": "Conserver la référence monétaire propre à cette catégorie malgré l’abrogation annoncée du texte qui la définit.",
-          "before": "Renvoi au minimum annuel de L434-16, applicable selon la période, sans clause de référence autonome après abrogation.",
-          "after": "Dernier minimum applicable puis revalorisation annuelle au 1er avril selon L161-25 ; multiplicateurs et usages propres à cet article inchangés.",
-          "unit": "other",
-          "affected_population": "Salariés en congé de représentation",
-          "conditions_and_transition": "Application à compter de la présente rédaction après abrogation de la cible ; périodes antérieures et recours conservés ; conditions légales des prestations inchangées.",
-          "replacement_or_new_burdens": "Pas de déclaration, pièce, registre ou taux nouveau ; poursuite du calcul indexé déjà nécessaire.",
-          "source_quote": "Le salaire servant de base au calcul des cotisations est égal au double du salaire annuel minimum prévu à l'article L. 434-16. ",
-          "proposed_quote": "Pour l'application du présent article à compter de l'abrogation de l'article L. 434-16, le salaire annuel minimum de référence est égal au montant de ce minimum applicable la veille de cette abrogation, revalorisé au 1er avril de chaque année suivant cette abrogation par application du coefficient mentionné à l'article L. 161-25."
-        }
-      ]
+      "classification": "retained_necessary",
+      "assessment": "Maintien de la source officielle : le double du salaire annuel minimum de L434-16 sert d'assiette aux cotisations et aux prestations du congé de représentation ; L434-16 demeure, dans sa rédaction du 1er novembre 2026, avec son minimum indexé.",
+      "scope_limitations": "La rédaction de L434-16 et L434-2 au 1er novembre 2026 (loi n° 2025-199, art. 90) est au corpus et lue ; la réforme AT-MP de 2025 n'est pas examinée au-delà. Aucune validation par un juriste.",
+      "new_burdens_review": "Aucune charge nouvelle : la source est conservée sans assiette, taux, déclaration ni formalité supplémentaire ; la clause de gel retirée ne profitait à personne.",
+      "effects": []
     },
     "reference_checks": [
       {
@@ -1097,8 +1083,8 @@
       "version": 1,
       "source_sha256": "fba9c650e39f476b0bfc68b534b108a2239a4df2aa570c656a7b0343eff2fcca",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "abb54b92038967395b1bff70e29e5c51f67005c5d072c664936c4ec576b8c5d4",
-      "assessment_sha256": "e44b88266b51aad785c6141ec5cc0f21b84297d307d1c0d9c23b74c1aa99f241",
+      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assessment_sha256": "0790b7ff887135c62d9871f5c1b0c6b0d3d7058e2d73bc4015fc3470cebcfffe",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
@@ -1168,7 +1154,11 @@
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "abb54b92038967395b1bff70e29e5c51f67005c5d072c664936c4ec576b8c5d4",
+    "third_pass_correction": {
+      "objection": "AUDIT-S11N-04 (css D412-97)",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006073189",

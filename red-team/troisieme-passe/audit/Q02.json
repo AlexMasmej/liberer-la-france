@@ -1,0 +1,662 @@
+{
+ "group": "Q02",
+ "read_from": "production",
+ "read_date": "2026-10-29",
+ "reference_date": "2026-10-18",
+ "method": "CITE_PRODUCTION=1 python3 -I tools/cite.py pour chaque article et ses liens principaux, requêtes en lecture seule (mode=ro, query_only) sur la base de production pour les renvois entrants et les versions. Qualification faite avant toute lecture de reports/register.json, audit/U*, audit/V*, audit/sweeps et apply/.",
+ "counts": {
+  "G": 2,
+  "m": 4,
+  "0": 26
+ },
+ "articles": [
+  {
+   "sample_id": "Q002",
+   "code": "travail",
+   "number": "D2315-33",
+   "source_id": "LEGIARTI000036433847",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : seuils (50 salariés, montants de R612-1 du code de commerce) ouvrant au CSE la présentation simplifiée et l'enregistrement des créances et dettes à la clôture (L2315-64 II, maintenu). D2315-34 proposé corrige ses propres renvois (R2312-49, D2316-7, R2312-43) ; D2315-40 proposé renvoie désormais à D2315-34 pour les ressources ; D2315-29 proposé reprend les mêmes seuils sans commission obligatoire. Cohérent.",
+   "evidence": "",
+   "links_read": [
+    "travail L2315-64 LEGIARTI000035627352 (maintenu)",
+    "travail D2315-34 LEGIARTI000036433849 (proposition)",
+    "travail D2315-29 LEGIARTI000037538198 (proposition)",
+    "travail D2315-40 LEGIARTI000036433861 (proposition)",
+    "travail R2312-49/R2312-50"
+   ],
+   "links_not_read": "Code de commerce R612-1 (hors corpus) : montants non vérifiés.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q012",
+   "code": "travail",
+   "number": "R1232-3",
+   "source_id": "LEGIARTI000018537720",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : le conseiller du salarié confirme sa venue ou signale son empêchement. Compatible avec R1232-2 proposé (plus d'information séparée de l'employeur), L1232-2 proposé (temps nécessaire, report) et L1232-4 proposé (assistance maintenue).",
+   "evidence": "",
+   "links_read": [
+    "travail R1232-1 LEGIARTI000018537724 (proposition)",
+    "travail R1232-2 LEGIARTI000018537722 (proposition)",
+    "travail L1232-2 LEGIARTI000006901000 (proposition)",
+    "travail L1232-4 LEGIARTI000006901002 (proposition)"
+   ],
+   "links_not_read": "Liste des conseillers du salarié (D1232-4 s.) non lue.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q022",
+   "code": "css",
+   "number": "L160-8",
+   "source_id": "LEGIARTI000054711241",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Panier de soins maintenu dans la version du 20 août 2026 (3° rétabli : procédure de la section 2 bis du chapitre Ier du titre Ier du livre Ier de la première partie du CSP). Renvois CSS vérifiés présents dans le projet (L162-58, L162-64, L162-65, L162-4-1, L322-5, L162-59, L162-63) ; aucun n'est abrogé. Coquille source « du même codeainsi » conservée (source maintenue, sans effet).",
+   "evidence": "",
+   "links_read": [
+    "css L162-58 LEGIARTI000053283035",
+    "css L162-64 LEGIARTI000054250137",
+    "css L162-65 LEGIARTI000054250139",
+    "css L162-4-1 LEGIARTI000053283630",
+    "css L322-5 LEGIARTI000051284883",
+    "css L162-59 LEGIARTI000048673558",
+    "css L162-63 LEGIARTI000053267111",
+    "css L111-2-1 LEGIARTI000047452779",
+    "versions historiques de L160-8"
+   ],
+   "links_not_read": "Articles du code de la santé publique visés (L1411-6, L2132-2-1, L6316-1, etc.) : hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q032",
+   "code": "travail",
+   "number": "R4745-1",
+   "source_id": "LEGIARTI000029237358",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Contravention de 5e classe pour méconnaissance de L4622-1 à L4622-17 ; la proposition exclut expressément les obligations supprimées ou allégées (certification L4622-9-3, périodicité annuelle du 5° de L4622-2, mutualisation L4622-8-1, avis et annexion de L4622-10, transmission distincte de L4622-16-1) avec loi plus douce. Vérifié : ce sont exactement les articles L4622-* réécrits ; D4622-47-1 à 47-6 abrogent la certification réglementaire. Pas de sanction survivante.",
+   "evidence": "",
+   "links_read": [
+    "travail L4622-1 à L4622-17 (motifs et statuts)",
+    "travail L4622-9-3 LEGIARTI000043890111 (proposition)",
+    "travail L4622-2 LEGIARTI000054527128 (proposition)",
+    "travail L4745-1 LEGIARTI000033024930 (proposition)",
+    "renvois entrants à L4622-9-3 (D4622-47-1 à 47-6, L4641-2-1, R4641-4, R4641-8)"
+   ],
+   "links_not_read": "Décrets D4622-* autres que ceux de la certification non relus un à un.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q042",
+   "code": "travail",
+   "number": "D3324-10",
+   "source_id": "LEGIARTI000042053882",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : salaire de répartition de la RSP plafonné à trois PASS ; renvois au dernier alinéa de D3324-1, au deuxième alinéa de L3323-6, au troisième alinéa de L3324-2 et au premier alinéa de L3324-5 : alinéas vérifiés inchangés de position dans les propositions.",
+   "evidence": "",
+   "links_read": [
+    "travail D3324-1 LEGIARTI000037456740",
+    "travail L3323-6 LEGIARTI000038613188 (proposition)",
+    "travail L3324-2 LEGIARTI000038610149 (proposition)",
+    "travail L3324-5 LEGIARTI000038589722"
+   ],
+   "links_not_read": "CSS L242-1 et L241-3 non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q052",
+   "code": "css",
+   "number": "R653-12",
+   "source_id": "LEGIARTI000038770329",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : réversion CNBF de moitié, condition de durée du mariage, partage entre conjoints, rejet implicite à quatre mois. Aucune orientation de réforme ne la vise ; droits constitués préservés.",
+   "evidence": "",
+   "links_read": [
+    "notes : L653-1 proposé, R653-13, R653-25 (cités par les notes)"
+   ],
+   "links_not_read": "R653-13 et R653-25 non relus intégralement par l'auditeur.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q062",
+   "code": "css",
+   "number": "R731-8",
+   "source_id": "LEGIARTI000006753018",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : révision des obligations et avantages des institutions de prévoyance par accord majoritaire à bulletin secret ou convention collective. Renvois entrants R731-3, R731-14, R731-15, R732-2 cohérents.",
+   "evidence": "",
+   "links_read": [
+    "css R731-3 (proposition)",
+    "css R731-14 (proposition)",
+    "css R731-15",
+    "css R732-2 (renvois entrants)"
+   ],
+   "links_not_read": "Base légale historique (ancien L731-1 s.) non examinée.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q072",
+   "code": "cch",
+   "number": "R342-27",
+   "source_id": "LEGIARTI000046112604",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "ANCOLS, élection au CSA : suppression du procès-verbal récapitulatif ; PV par collège, transmission aux listes et transmission du PV du collège salarié au prestataire de R2314-22 maintenues. Aucun autre article du CCH ne mentionne le PV récapitulatif ; R2314-22 proposé identifie toujours le prestataire. Sièges attribués par collège : pas d'effet utile perdu.",
+   "evidence": "",
+   "links_read": [
+    "cch L342-19 LEGIARTI000038922413 (proposition)",
+    "travail R2314-22 LEGIARTI000040341167 (proposition)",
+    "recherche « récapitulatif » dans le CCH"
+   ],
+   "links_not_read": "Décret n° 2020-1427 (articles 30 à 46) hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q082",
+   "code": "css",
+   "number": "D162-10-2",
+   "source_id": "LEGIARTI000043709211",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Rescrit tarifaire hospitalier : suppression de la publication au BO ; point de départ du délai aligné sur la réception de la demande complète (L162-23-13-1 II, trois mois) ; V renvoie désormais aux éléments d'identification du I. Cohérent avec L162-23-13-1 proposé (fin des irrecevabilités du III).",
+   "evidence": "",
+   "links_read": [
+    "css L162-23-13-1 LEGIARTI000048702825 (proposition)"
+   ],
+   "links_not_read": "CSP L4021-3 hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q092",
+   "code": "css",
+   "number": "R162-4",
+   "source_id": "LEGIARTI000006747519",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Conventions locales des auxiliaires médicaux : suppression de l'approbation du préfet de région, avec transition. Coordonné avec R162-2, R162-6, R162-8 et R162-9 proposés, qui empêchent une convention type de rétablir l'approbation. Plafonds de R162-5 maintenus.",
+   "evidence": "",
+   "links_read": [
+    "css R162-2 LEGIARTI000038790472 (proposition)",
+    "css R162-3",
+    "css R162-5",
+    "css R162-6 LEGIARTI000038790449 (proposition)",
+    "css R162-7",
+    "css R162-8 (proposition)",
+    "css R162-9 (proposition)"
+   ],
+   "links_not_read": "Conventions types (décret n° 60-451) hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q102",
+   "code": "cgi",
+   "number": "237 bis",
+   "source_id": "LEGIARTI000018619525",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : déductibilité des contributions patronales d'assurance chômage et de l'allocation complémentaire. L5422-10 proposé conserve la déductibilité au premier alinéa, avec une clause pour l'IS à la distribution ; L3232-6 proposé renvoie à L5428-1. Cohérent.",
+   "evidence": "",
+   "links_read": [
+    "travail L5422-10 LEGIARTI000042683508 (proposition)",
+    "travail L3232-6 LEGIARTI000006902850 (proposition)",
+    "travail L5422-1 LEGIARTI000048590547 (proposition)"
+   ],
+   "links_not_read": "L5428-1 et CGI 158 non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q112",
+   "code": "css",
+   "number": "L224-5-2",
+   "source_id": "LEGIARTI000044404093",
+   "status": "rewrite_draft",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Réécriture à droit constant du comité exécutif de l'UCANSS, sans défaut normatif. Les notes de revue sont périmées : elles signalent une incohérence encore ouverte (D224-8 conserverait « après avis du comité exécutif »). Or D224-8 proposé est désormais coordonné (avis supprimé, transition liée à D227-5 3°).",
+   "evidence": "LEGIARTI000044404093 (notes) : « Incohérence hors lot : D227-5 3° proposé supprime l'avis du comité pour les nominations de l'Institut, tandis que D224-8 dernier alinéa le conserve (« après avis du comité exécutif ») ; il faut coordonner ce dernier ». D224-8 proposé (LEGIARTI000046356451) : « Le directeur propose au conseil d'administration de l'Institut national de formation défini à l'article L. 228-1 les nominations du directeur et du directeur comptable et financier de cet institut. »",
+   "links_read": [
+    "css D224-8 LEGIARTI000046356451 (proposition)",
+    "css D224-10 LEGIARTI000006735744 (renvoi au dernier alinéa, toujours le 5°)",
+    "css D227-5 LEGIARTI000046356333 (proposition)",
+    "css L224-5-1 (proposition)",
+    "css D224-5, D224-7, D227-3 (renvois entrants)"
+   ],
+   "links_not_read": "D224-3 et D224-6 non relus.",
+   "known_objection": "Défaut de fond (avis survivant dans D224-8) : RT-INST-01 (résolu) ; la note périmée n'est pas répertoriée.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q122",
+   "code": "cch",
+   "number": "D314-16",
+   "source_id": "LEGIARTI000038971280",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Conventions de logement des militaires : suppression de la communication préalable aux ministres des finances et du logement et du délai d'opposition d'un mois ; visa du CGEFI, commission et signature maintenus, avec transition. D314-17 et D314-18 renvoient correctement à D314-16 ; R441-2-9 (maintenu) le vise toujours.",
+   "evidence": "",
+   "links_read": [
+    "cch R314-4 LEGIARTI000041615470",
+    "cch D314-17 LEGIARTI000038971289 (proposition)",
+    "cch D314-18 LEGIARTI000038971297 (proposition)",
+    "cch R441-2-9 LEGIARTI000039048723"
+   ],
+   "links_not_read": "Décret n° 68-1070 hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q132",
+   "code": "travail",
+   "number": "R2122-23",
+   "source_id": "LEGIARTI000042069095",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : décision du DGT notifiée sous dix jours, silence valant rejet. Cohérent avec R2122-21 (recours préalable), R2122-22 proposé (pièces de fond non requises pour la recevabilité) et R2122-26 (contestation judiciaire sous dix jours).",
+   "evidence": "",
+   "links_read": [
+    "travail R2122-21 LEGIARTI000049762087",
+    "travail R2122-22 LEGIARTI000042069099 (proposition)",
+    "travail R2122-26 LEGIARTI000042069092"
+   ],
+   "links_not_read": "R2122-25 non relu.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q142",
+   "code": "cch",
+   "number": "L255-7",
+   "source_id": "LEGIARTI000037671889",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Bail réel solidaire : réécriture à droit constant, contenu normatif inchangé après comparaison phrase à phrase (travaux, démolition, propriété temporaire des constructions, jouissance, servitudes, entretien, copropriété). Le dernier alinéa renvoie à L255-8 pour les redevances ; L255-8 proposé, lui aussi à droit constant, porte bien sur la redevance (renvoi déjà imprécis dans la source).",
+   "evidence": "",
+   "links_read": [
+    "cch L255-8 LEGIARTI000032919254 (proposition)"
+   ],
+   "links_not_read": "L255-16, R255-5 et la loi n° 65-557 (article 14) non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q152",
+   "code": "cgi",
+   "number": "199 tervicies A",
+   "source_id": "LEGIARTI000053521304",
+   "status": "rewrite_draft",
+   "verdict": "m",
+   "families": [
+    "F5"
+   ],
+   "description": "Réduction d'impôt du Fort des Têtes (Briançon) : la proposition supprime tout délai de première occupation ou location et fait courir les quinze ans de la première occupation ou location. La réduction s'impute pourtant dès l'année de mise en état définitif, en six fractions. Le contribuable peut donc l'imputer entièrement sans que l'engagement d'affectation commence jamais. La reprise du V A 1° (« non-respect d'une condition du I relative ... à son affectation ») ne peut alors être déclenchée tant que le bien est conservé vide. L'avantage est conforme à l'orientation (moins de contraintes), mais la condition d'affectation devient invérifiable. Renvois vérifiés : 156 bis II 1° à 3° existent toujours.",
+   "evidence": "LEGIARTI000053521304 (proposition) : « Ils doivent conserver la propriété du local et l'occuper ou le louer nu comme habitation principale pendant quinze ans à compter de la première occupation ou de la prise d'effet de la première location. Aucun délai maximal de première occupation ou de première mise en location n'est imposé à compter de l'achèvement du local ou de son acquisition si elle est postérieure. » ; IV : « Elle est accordée au titre de l'année de mise en état définitif du local ou de son acquisition si elle est postérieure. »",
+   "links_read": [
+    "cgi 156 bis LEGIARTI000037099838 (proposition)",
+    "cgi 199 tervicies, 199 novovicies, 197 A (via notes)"
+   ],
+   "links_not_read": "Décret fixant le plafond au mètre carré non identifié ; 199 tervicies et 197 A non relus intégralement.",
+   "known_objection": null,
+   "suggested_correction": "Ajouter au I : « La première occupation ou la première location intervient au plus tard le 31 décembre de la deuxième année suivant la mise en état définitif ou l'acquisition si elle est postérieure ; à défaut, la réduction est reprise selon le V. » (ou différer l'imputation à l'année de la première occupation ou location)."
+  },
+  {
+   "sample_id": "Q162",
+   "code": "cch",
+   "number": "D863-7",
+   "source_id": "LEGIARTI000044636789",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Adaptation à Saint-Pierre-et-Miquelon : correction utile du renvoi de D823-16 (formule locative rattachée au 2° du D823-9 adapté, et non au 1° qui vise les propriétaires). D823-9, D823-16, D823-17 5°, D823-19 et D823-25 métropolitains sont maintenus : les mots remplacés existent toujours.",
+   "evidence": "",
+   "links_read": [
+    "cch D823-9 LEGIARTI000038878923",
+    "cch D823-16 LEGIARTI000038878905",
+    "cch D823-17 LEGIARTI000041419255",
+    "cch D823-19 LEGIARTI000038878899",
+    "cch D823-25 LEGIARTI000038878883"
+   ],
+   "links_not_read": "D842-6 à D842-13 non relus un à un.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q172",
+   "code": "css",
+   "number": "L671-1",
+   "source_id": "LEGIARTI000036380485",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : habilitation réglementaire générale du livre VI. Les notes sur L655-2 et L663-3 proposés sont exactes (fin de la forclusion et de la cotisation spéciale ; rachat sans date limite).",
+   "evidence": "",
+   "links_read": [
+    "css L655-2 LEGIARTI000037056327 (proposition)",
+    "css L663-3 LEGIARTI000037053502 (proposition)"
+   ],
+   "links_not_read": "Décrets d'application du livre VI non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q182",
+   "code": "a4",
+   "number": "51 A",
+   "source_id": "LEGIARTI000006300458",
+   "status": "rewrite_draft",
+   "verdict": "m",
+   "families": [
+    "F3",
+    "F9"
+   ],
+   "description": "Rachat d'alambics par l'État : la proposition supprime la renonciation définitive et remplace le renvoi mort à l'article 311 bis du CGI par « l'autorisation d'exercer cette profession ». Mais 311 bis (dérogations au principe de l'établissement fixe) est abrogé : dernière version LEGIARTI000044873306, abrogée au 1er juillet 2025 par l'ordonnance n° 2023-1210, art. 25. Annexe I 57 renvoie désormais au CIBS ; 51 A et 51 bis à 51 quater (réécrits) ne visent aucune base légale CIBS. Ils maintiennent un régime d'autorisation professionnelle sans fondement législatif identifié. Réserve documentaire reconnue dans les notes ; à confirmer sur le CIBS.",
+   "evidence": "LEGIARTI000006300458 (proposition) : « Les loueurs d'alambics ambulants auxquels l'autorisation d'exercer cette profession a été refusée ou retirée, même temporairement. » ; notes : « Le renvoi à CGI 311 bis, absent du corpus consulté, est remplacé par la désignation directe de l'autorisation régie par 51 bis à 51 quater. » (311 bis est en fait présent dans le corpus, à l'état ABROGE.)",
+   "links_read": [
+    "a4 51 bis LEGIARTI000006300682 (proposition)",
+    "a4 51 ter LEGIARTI000006300461 (proposition)",
+    "a4 51 quater LEGIARTI000006301395 (proposition)",
+    "a4 51 B LEGIARTI000006300680 (proposition)",
+    "cgi 311 bis, toutes versions (LEGIARTI000044873306 ABROGE)",
+    "a1 57 LEGIARTI000051821205 (renvois CIBS)"
+   ],
+   "links_not_read": "CIBS (L311-39, L313-15 et dispositions sur les bouilleurs et alambics) hors corpus : base légale actuelle non vérifiée.",
+   "known_objection": "Réserve générale seulement : audit/U01.json S131 (verdict 0), base légale du CGI sur les alcools abrogée, survie de la section non vérifiée.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q192",
+   "code": "css",
+   "number": "L245-5-2",
+   "source_id": "LEGIARTI000026798837",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Contribution sur la promotion des dispositifs médicaux : abrogation pour les charges comptabilisées à compter de la loi, avec maintien intégral des règles et abattements pour le stock ancien. Chaîne coordonnée : L245-5-1, L245-5-3 à L245-5-6, R245-16, R245-16-1, R245-16-2 et R245-4 proposés. L241-2 6° et L138-20 conservent la mention pour le recouvrement des créances anciennes. Conforme à l'orientation (moins de taxes).",
+   "evidence": "",
+   "links_read": [
+    "css L245-5-1 LEGIARTI000037064538 (proposition)",
+    "css L245-5-3/-4/-5/-6 (propositions)",
+    "css R245-16 LEGIARTI000028093219 (proposition)",
+    "renvois entrants R245-4, R245-16-1, R245-16-2, R138-19, L241-2, L138-20"
+   ],
+   "links_not_read": "L138-22 et R138-19 lus seulement par extrait.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q202",
+   "code": "cgi",
+   "number": "138",
+   "source_id": "LEGIARTI000026949244",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : exonération de retenue à la source (119 bis 1) et de prélèvement (125 A I) pour d'anciens emprunts HLM. 119 bis et 125 A proposés conservent ces dispositifs ; R431-49 CCH maintenu.",
+   "evidence": "",
+   "links_read": [
+    "cgi 119 bis LEGIARTI000051218411 (proposition)",
+    "cgi 125 A LEGIARTI000037526745 (proposition)",
+    "cch R431-49 LEGIARTI000006899485"
+   ],
+   "links_not_read": "Lois de 1928 et 1934 hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q212",
+   "code": "css",
+   "number": "Annexe à l'article D160-4",
+   "source_id": "LEGIARTI000049915899",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Annexe ALD : seuls trois changements par rapport à la source (diff complet). Titre recalé de L322-3 vers L160-14 3° ; condition d'ancienneté d'un an supprimée pour les affections psychiatriques (rubrique 23) ; contradiction source corrigée au 29.2 (« Relève du ticket modérateur » devient « Relève de l'exonération du ticket modérateur »). Transition présente. Rédaction un peu maladroite au 23 (« Deux ordres de critères », numérotés 1° et 3°, avec un 2° « Absence de condition d'ancienneté »), sans effet normatif. Coquilles de transcription de la source (¸/¹) relevées par les notes, non corrigées.",
+   "evidence": "",
+   "links_read": [
+    "css D160-4 (via notes)",
+    "css L160-14 (via notes)",
+    "diff source/proposition effectué par l'auditeur"
+   ],
+   "links_not_read": "L160-14, R160-11 à R160-13 non relus directement.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q222",
+   "code": "a4",
+   "number": "152",
+   "source_id": "LEGIARTI000006301681",
+   "status": "rewrite_draft",
+   "verdict": "G",
+   "families": [
+    "F1",
+    "F5"
+   ],
+   "description": "Cercles et maisons de jeux : la proposition réécrit et maintient les formalités de perception de l'impôt sur les maisons de jeux (plan de salle, enregistrement par séance et par table, totalisation, certification, déclaration mensuelle de la recette, abonnement). Or cet impôt n'a plus de base légale. Les articles 1559, 1560 et 1700 du CGI sont abrogés par l'article 26 de la loi n° 2025-127 du 14 février 2025 (fin de vigueur au 1er janvier 2025). Le projet l'admet lui-même à l'annexe IV 138, qu'il abroge comme « règle de perception d'un impôt éteint ». Il laisse pourtant vivants 147 (recettes « passibles de l'impôt au titre de l'article 1560 »), 149 à 153 et 154, maintenu (« L'impôt exigible doit être acquitté ... dans le délai maximal de deux jours »). La phrase finale ajoutée à 152 (« ne constitue aucun fondement de perception d'un impôt supprimé ») ne lève pas la contradiction : elle maintient la déclaration mensuelle et rattache l'abonnement à 139, mécanisme de paiement forfaitaire du même impôt. Le renvoi à l'article 1700, abrogé, est remplacé au lieu d'être neutralisé.",
+   "evidence": "LEGIARTI000006301681 (proposition) : « Le 1er de chaque mois, le président du comité de direction des jeux ou son suppléant déclare la recette totale du mois écoulé conformément aux prescriptions de l'administration (1). » et « des abonnements peuvent être consentis dans les conditions prévues à l'article 139 de la présente annexe. Cette faculté reste ouverte aux nouvelles demandes ». a4 138 LEGIARTI000006301663 (proposition) : « l'article 1559 du même code, limité aux réunions sportives et aux cercles et maisons de jeux, puis à compter du 1er janvier 2015 aux seuls cercles et maisons de jeux, est abrogé depuis le 1er janvier 2025 ». a4 154 LEGIARTI000006300927 (maintenu) : « L'impôt exigible doit être acquitté auprès du service des douanes et droits indirects dans le délai maximal de deux jours à dater de l'établissement de la déclaration des recettes mensuelles. » CGI 1559 LEGIARTI000036364730 et 1560 LEGIARTI000036366547, état ABROGE, fin 2025-01-01, lien ABROGE : LOI n°2025-127 du 14 février 2025, art. 26. CGI 1700 LEGIARTI000006313635, même lien.",
+   "links_read": [
+    "a4 138 LEGIARTI000006301663 (proposition)",
+    "a4 139 LEGIARTI000006300885 (proposition)",
+    "a4 147 LEGIARTI000030684923 (maintenu)",
+    "a4 149 LEGIARTI000006300888 (proposition)",
+    "a4 150, 151, 153 (propositions/sources)",
+    "a4 154 LEGIARTI000006300927 (maintenu)",
+    "cgi 1559, 1560, 1566, 1700 (toutes versions, liens d'abrogation)"
+   ],
+   "links_not_read": "Texte de l'article 26 de la loi n° 2025-127 et CIBS non consultés : une éventuelle recodification de cet impôt dans le CIBS n'est pas vérifiée. Même dans ce cas, les renvois de 147 et 149 à 154 au CGI seraient morts et contrediraient la proposition de 138. La consultation Légifrance du 29 octobre 2026 n'a pas restitué le texte. Arrêté du 17 juin 2025 modifiant 151 non lu.",
+   "known_objection": "Même cause, autres articles : reports/register.json RT-P1-ANNEXES-11 (a4 146 et 124 ; confirmé, P2 ; correction proposée : « abroger 146 à 154 avec une transition ») ; audit/V06.json T236 (a4 138, G, depuis corrigé par l'abrogation de 138). L'article 152 lui-même n'y figure pas.",
+   "suggested_correction": "Remplacer 152 par : « Le présent article est abrogé. L'impôt sur les cercles et maisons de jeux auquel il se rapportait est abrogé depuis le 1er janvier 2025 (loi n° 2025-127 du 14 février 2025, art. 26). Aucune déclaration, aucun enregistrement, aucun abonnement ni aucune autre formalité ne peut être exigé sur son fondement. Les impositions nées avant cette date, leurs restitutions, prescriptions et recours restent régis par les dispositions qui leur étaient applicables. Aucune formalité de remplacement n'est instituée. » Même traitement pour 147, 149 à 151, 153 et 154 (et 139 pour le seul champ des maisons de jeux), sous réserve d'une recodification CIBS à vérifier."
+  },
+  {
+   "sample_id": "Q232",
+   "code": "cgi",
+   "number": "782",
+   "source_id": "LEGIARTI000006305419",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : réduction de moitié (plafond 305 €) des DMTG pour mutilés de guerre ; reste utile aux donations, 777 proposé excluant les décès nouveaux. Notes corrigées sur 783 (abrogé pour l'avenir). Cohérent.",
+   "evidence": "",
+   "links_read": [
+    "cgi 777 LEGIARTI000030061736 (proposition)",
+    "cgi 783 LEGIARTI000006305421 (proposition)"
+   ],
+   "links_not_read": "750 ter non relu.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q242",
+   "code": "cch",
+   "number": "L823-7",
+   "source_id": "LEGIARTI000038814908",
+   "status": "rewrite_draft",
+   "verdict": "G",
+   "families": [
+    "F1",
+    "F5"
+   ],
+   "description": "La loi proposée abroge le seuil de non-versement de l'aide personnelle au logement et dispose qu'un montant positif ne peut être refusé « en raison de sa seule faiblesse ». Les cinq décrets de liquidation sont pourtant maintenus tels quels et prévoient toujours « il n'est pas procédé à son versement » sous un montant fixé par arrêté : D823-16 (locataires), D832-10 et D832-24 (APL accession et foyers), D842-6 (AL accession), D842-15 (AL foyers). R823-6, réécrit, présuppose encore un « seuil de versement ». Les notes de L823-7 identifient elles-mêmes la coordination de D823-16 comme nécessaire, sans qu'elle ait été faite ; les quatre autres ne sont pas repérées. La loi a supprimé le seuil, mais le règlement continue de l'organiser.",
+   "evidence": "LEGIARTI000038814908 (proposition) : « Pour ces mois, le versement d'un montant positif d'aide personnelle au logement ne peut être refusé en raison de sa seule faiblesse, quelle que soit la nature de l'aide ou la qualité du demandeur. » D823-16 LEGIARTI000038878905 (maintenu) : « Lorsque ce dernier résultat, calculé selon les dispositions précédentes, est inférieur à un montant fixé par arrêté, selon celle des trois aides dont le ménage bénéficie, il n'est pas procédé à son versement. » D842-6 LEGIARTI000038878675 (maintenu) : « Lorsque le montant mensuel de l'allocation, ainsi calculé, est inférieur à un montant fixé par arrêté, il n'est pas procédé à son versement. » D832-10 LEGIARTI000038878746, D832-24 LEGIARTI000038878712, D842-15 LEGIARTI000038878655 (maintenus) : même formule. R823-6 LEGIARTI000041419232 (proposition) : « Un versement nul ou inférieur au seuil de versement n'impose pas le dépôt d'une nouvelle demande ». Notes de L823-7 : « Coordination nécessaire hors lot identifiée précisément : D823-16 dernier alinéa dispose encore « il n'est pas procédé à son versement ». »",
+   "links_read": [
+    "cch D823-16 LEGIARTI000038878905",
+    "cch D832-10 LEGIARTI000038878746",
+    "cch D832-24 LEGIARTI000038878712",
+    "cch D842-6 LEGIARTI000038878675",
+    "cch D842-15 LEGIARTI000038878655",
+    "cch R823-6 LEGIARTI000041419232 (proposition)",
+    "cch L823-1 LEGIARTI000038814920 (proposition)",
+    "cch L843-4"
+   ],
+   "links_not_read": "Arrêtés fixant le seuil (hors corpus) ; CSS D133-2 non relu par l'auditeur.",
+   "known_objection": "Pas pour ces décrets. Voisin distinct : reports/register.json RT-P1-CCH-11 (CSS D133-2, résolu). D823-16, D832-10, D832-24, D842-6, D842-15 et R823-6 n'apparaissent dans aucune objection ni piste (D823-16 figure dans audit/sweeps/candidates.json pour un autre renvoi, L541-1).",
+   "suggested_correction": "Dans D823-16, D832-10, D832-24, D842-6 et D842-15, remplacer l'alinéa « ... il n'est pas procédé à son versement » par : « Pour les aides dues au titre des mois commençant à compter de l'entrée en vigueur de la loi abrogeant l'article L. 823-7, tout montant positif ainsi calculé est versé, quel que soit son montant. Pour les mois antérieurs, les dispositions alors applicables demeurent. » Dans R823-6, réserver la mention du « seuil de versement » aux mois antérieurs à cette entrée en vigueur. Abroger pour l'avenir les arrêtés fixant ces montants. Aucune démarche nouvelle."
+  },
+  {
+   "sample_id": "Q252",
+   "code": "a1",
+   "number": "58",
+   "source_id": "LEGIARTI000006293503",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Distilleries : suppression du délai de prévenance de deux mois et faculté de réunir les plans b et c sur un même document ; renvoi au « cinquième alinéa de l'article 57 » exact (régime général, après ajout de la transition dans 57). Annexe I 57 vise désormais le CIBS (L313-15, L311-39). Renvois entrants 65, 79, 81 cohérents.",
+   "evidence": "",
+   "links_read": [
+    "a1 57 LEGIARTI000051821205 (proposition, comptage des alinéas)",
+    "a1 65, 79, 81 (renvois entrants)"
+   ],
+   "links_not_read": "Dispositions CIBS hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q262",
+   "code": "a2",
+   "number": "202 H",
+   "source_id": "LEGIARTI000036416158",
+   "status": "rewrite_draft",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Abrogation coordonnée de la procédure contradictoire de refus d'agrément d'opérateur de détaxe, conforme à 262-0 bis proposé. 202 E, 202 F, 202 G, 202 I et 202 J proposés sont cohérents. Les notes sont périmées : elles indiquent que 202 E et 202 F « restent à mettre en cohérence », alors qu'ils le sont. 262-0 bis est en ABROGE_DIFF (recodification CIBS annoncée) : réserve signalée dans les notes.",
+   "evidence": "LEGIARTI000036416158 (notes) : « Les articles 202 E et 202 F du corpus restent à mettre en cohérence (suppression du dossier d'agrément, de ses pièces financières et pénales et de sa recevabilité ; conservation du seul dossier technique). » 202 E LEGIARTI000049642241 (proposition) : « L'activité d'opérateur de détaxe mentionnée à l'article 262-0 bis du code général des impôts s'exerce sans demande d'agrément. »",
+   "links_read": [
+    "cgi 262-0 bis LEGIARTI000053562169 (proposition, ABROGE_DIFF)",
+    "a2 202 E LEGIARTI000049642241",
+    "a2 202 F LEGIARTI000041531230",
+    "a2 202 G LEGIARTI000043663251",
+    "a2 202 I LEGIARTI000036416164",
+    "a2 202 J LEGIARTI000036416170"
+   ],
+   "links_not_read": "CIBS L213-15 et L215-40, LPF L80 I hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q272",
+   "code": "cch",
+   "number": "R256-1",
+   "source_id": "LEGIARTI000050005450",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : plafonds de prix de cession des droits réels du BRS d'activité fixés par l'OFS avec une décote significative. Conforme à L256-1 proposé, qui renvoie la méthode à un décret et permet des seuils inférieurs ; R256-2 maintenu.",
+   "evidence": "",
+   "links_read": [
+    "cch L256-1 LEGIARTI000047108356 (proposition)",
+    "cch R256-2 LEGIARTI000050005452"
+   ],
+   "links_not_read": "",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q282",
+   "code": "css",
+   "number": "R124-1",
+   "source_id": "LEGIARTI000006746962",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : habilitation à fixer par décret les règles de gestion, placements et investissements des organismes de sécurité sociale. Aucune orientation contraire.",
+   "evidence": "",
+   "links_read": [
+    "(pas de renvoi chiffré ; notes sur L241-3 proposé)"
+   ],
+   "links_not_read": "Décrets de gestion (R. 253-* et suivants) non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q292",
+   "code": "travail",
+   "number": "R4625-15",
+   "source_id": "LEGIARTI000033746871",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Abrogation des indications particulières propres à l'intérim dans le document de D4622-22, qui reste proposé avec effectifs, catégories et risques. Aucun renvoi entrant à R4625-15.",
+   "evidence": "",
+   "links_read": [
+    "travail D4622-22 LEGIARTI000045676988 (proposition)",
+    "recherche des renvois entrants à R4625-15 (aucun)"
+   ],
+   "links_not_read": "Arrêté d'application hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q302",
+   "code": "travail",
+   "number": "L1248-3",
+   "source_id": "LEGIARTI000006901239",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Abrogation de l'incrimination propre aux CDD interdits (L1242-5 et L1242-6) : cohérente avec l'interdiction des nouveaux CDD et la requalification en contrat unique (L1245-1 proposé), avec application de la loi pénale plus douce. Les interdictions d'intérim (L1251-10) et leurs sanctions (L1255-2 proposé) subsistent. À signaler hors article : sous contrat unique, rien n'interdit d'embaucher pour remplacer des grévistes puis de rompre avec quinze jours de préavis. Le droit actuel admet le recrutement en CDI, mais le risque de contournement du droit de grève (alinéa 7 du Préambule de 1946) est à confirmer.",
+   "evidence": "",
+   "links_read": [
+    "travail L1242-5 LEGIARTI000035653074 (proposition)",
+    "travail L1242-6 LEGIARTI000006901199 (proposition)",
+    "travail L1245-1 LEGIARTI000036262152 (proposition)",
+    "travail L1251-10 (proposition)",
+    "travail L1255-2 (proposition)"
+   ],
+   "links_not_read": "L1241-1 (noyau du contrat unique) non relu.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "Q312",
+   "code": "css",
+   "number": "L162-1-12",
+   "source_id": "LEGIARTI000051284949",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Source maintenue : tiers payant intégral pour l'examen bucco-dentaire de prévention et les soins des six mois suivants. Faveur conservée, conforme aux orientations.",
+   "evidence": "",
+   "links_read": [
+    "css L160-8 6° (renvoi au même examen)"
+   ],
+   "links_not_read": "CSP L2132-2-1 et convention dentaire de 2023 hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null
+  }
+ ],
+ "disclaimer": "Revue IA : ce n'est pas une validation par un juriste."
+}

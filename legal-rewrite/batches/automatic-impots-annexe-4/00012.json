@@ -281,33 +281,56 @@
     "source_id": "LEGIARTI000026447158",
     "source_sha256": "074ddb086e0e9db8a1cc1da0f3af80cd86df6564d879d69c81b0fd80b2065f49",
     "number": "50 quaterdecies-0 A ter",
-    "proposed_xml": null,
-    "reason": "Les deux tarifs ont des assiettes différentes et financent le contrôle des résidus dans le lait et les œufs. Une suppression indifférenciée serait susceptible d'affecter le financement des contrôles essentiels ; les données locales ne démontrent ni doublon ni marge européenne suffisante pour l'abolir. Il n'y a pas de formalité propre dans cet article. Maintien intégral de la source, sans conserver le seul toilettage du brouillon.",
-    "review_notes": "302 bis WC lu en entier : lait cru introduit dans centres/établissements agréés et poids d'œufs de poule en coquille introduits dans les établissements d'ovoproduits. Maintenir 0,02 €/m³ et 0,46 €/t d'œufs en coquille, pas par tonne d'ovoproduits. La limite légale de 0,76 € pour les œufs ne prouve pas à elle seule une liberté d'abolition ; financement et exigences européens des contrôles restent à examiner dans leur texte complet. Aucun taux nouveau déduit de ces plafonds.",
-    "status": "retained_unchanged",
+    "proposed_xml": "<p>Le tarif de la redevance sanitaire pour le contrôle de certaines substances et de leurs résidus s'établit comme suit :</p><table><tbody><tr><td>Pour le lait</td><td>0,02 € par mètre cube</td></tr><tr><td>Pour les ovoproduits, au titre des seules introductions d'œufs en coquille réalisées avant l'entrée en vigueur de la loi supprimant la redevance applicable aux ovoproduits prévue à l'article 302 bis WC du code général des impôts</td><td>0,46 € par tonne d'œufs en coquille</td></tr></tbody></table><p>Aucun tarif n'est applicable aux ovoproduits pour les introductions d'œufs en coquille réalisées à compter de cette date. Les introductions antérieures restent régies par le tarif antérieur pour la liquidation, le paiement, les contrôles, les restitutions, les prescriptions et les recours, même lorsque l'échéance intervient après cette date. Le tarif applicable au lait n'est pas modifié.</p>",
+    "reason": "Coordination nécessaire avec 302 bis WC proposé (versions LEGIARTI000022334934 et LEGIARTI000053187686), qui dispose qu'« Aucune redevance n'est due sur le fondement du présent article au titre des œufs de poule en coquille » et qu'« Aucun tarif de redevance applicable aux ovoproduits ne peut être fixé ». Le tarif de 0,46 € est borné aux introductions antérieures, dont les créances sont conservées ; le tarif du lait est inchangé. Le maintien antérieur (« Une suppression indifférenciée serait susceptible d'affecter le financement des contrôles ») n'est plus exact : la loi proposée retire elle-même la composante ovoproduits, et le contrôle sanitaire des résidus demeure.",
+    "review_notes": "302 bis WC lu en entier : lait cru introduit dans centres/établissements agréés et poids d'œufs de poule en coquille introduits dans les établissements d'ovoproduits. Maintenir 0,02 €/m³ et 0,46 €/t d'œufs en coquille, pas par tonne d'ovoproduits. La limite légale de 0,76 € pour les œufs ne prouve pas à elle seule une liberté d'abolition ; financement et exigences européens des contrôles restent à examiner dans leur texte complet. Aucun taux nouveau déduit de ces plafonds. Correction de la troisième passe (objection AUDIT-S11N-03, pilote « notes » P1) : l'article était maintenu à l'identique alors que 302 bis WC proposé supprime la redevance sur les ovoproduits pour les introductions réalisées à compter de l'entrée en vigueur de la loi (V de 302 bis WC proposé). Les deux lignes et les deux cellules du tableau sont conservées : la ligne ovoproduits est seulement bornée aux introductions antérieures, et un alinéa exclut tout tarif pour les introductions nouvelles, sans formalité de remplacement. Les mises en forme de cellule (alignement, largeur) de la source ne sont pas reprises, faute d'attributs autorisés. Revue IA, sans validation par un juriste.",
+    "status": "rewrite_draft",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien intégral du régime tarifaire de contrôle des substances et résidus après comparaison source/brouillon : aucun changement normatif, aucune réduction comptée.",
-      "scope_limitations": "Les contraintes européennes de financement et les coûts effectifs des contrôles ne sont pas entièrement documentés. Le maintien ne constitue ni certification du régime ni bilan financier national.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : tarifs, assiettes, catégories et conditions restent ceux de la source ; aucune nouvelle déclaration, donnée ou autorisation.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination du tarif réglementaire avec la suppression de la composante ovoproduits de la redevance sanitaire décidée à 302 bis WC proposé ; la suppression est comptée à 302 bis WC et n'est pas comptée une seconde fois ici.",
+      "scope_limitations": "Le tarif du lait et les introductions d'œufs antérieures sont conservés. Les arrêtés tarifaires et les textes européens de financement des contrôles ne sont pas au corpus. Aucune validation par un juriste.",
+      "new_burdens_review": "Aucune charge nouvelle : aucun tarif, déclaration, pièce ou condition n'est ajouté ; la ligne ovoproduits est bornée aux introductions antérieures.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "redevance-sanitaire-ovoproduits-suppression",
+          "description": "Fin du tarif ovoproduits pour les introductions nouvelles, par coordination avec 302 bis WC.",
+          "before": "Tarif de 0,46 € par tonne d'œufs en coquille pour toutes les introductions.",
+          "after": "Tarif réservé aux introductions antérieures ; aucun tarif pour les introductions nouvelles.",
+          "unit": "legal_duty",
+          "affected_population": "Établissements agréés de fabrication ou de traitement d'ovoproduits.",
+          "conditions_and_transition": "Introductions réalisées à compter de l'entrée en vigueur de la loi ; créances antérieures régies par l'ancien tarif.",
+          "replacement_or_new_burdens": "Aucune redevance, déclaration ni formalité de remplacement.",
+          "source_quote": "0,46 € par tonne d'œufs en coquille",
+          "proposed_quote": "Aucun tarif n'est applicable aux ovoproduits pour les introductions d'œufs en coquille réalisées à compter de cette date."
+        }
+      ]
     },
-    "classification": "retained_necessary",
-    "benefit_review": "Les montants actuels inférieurs aux plafonds législatifs sont préservés pour les anciennes et futures opérations ; l'assiette des ovoproduits reste limitée aux œufs en coquille prévue par le régime. Ni relèvement vers un plafond ni nouvelle taxe de contrôle.",
+    "classification": "coordination_only",
+    "benefit_review": "Le tarif du lait est inchangé ; aucun relèvement vers un plafond ni taxe de contrôle nouvelle. Les introductions d'œufs antérieures gardent l'ancien tarif, leurs restitutions et leurs recours ; aucune redevance n'est due pour les introductions nouvelles.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "074ddb086e0e9db8a1cc1da0f3af80cd86df6564d879d69c81b0fd80b2065f49",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "635a36833999a0ec39c72a52bb1d4eb4c59235f8dcfad8724748cd6cdcfe7fe3",
+      "proposed_sha256": "24bd451d7489323b91256d85fc98923936885f84db6e755cd461139a09b44eb1",
+      "assessment_sha256": "fb93ecfb1a402c23b4b021912c74fca946aa8b1aeef03d8fe8c3a22fff9591b9",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "51604106341e9ebcd2d5b511ffcdeb0578b174acf81ba9e690db3447a36283f0"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Fin du tarif de 0,46 € par tonne d'œufs en coquille pour les introductions nouvelles, par coordination avec la suppression de la composante ovoproduits de 302 bis WC."
+    ],
+    "third_pass_correction": {
+      "objection": "AUDIT-S11N-03 (a4 50 quaterdecies-0 A ter, cgi 302 bis WC)",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006069576",

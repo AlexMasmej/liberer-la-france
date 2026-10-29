@@ -67,6 +67,43 @@ Les pistes, réparties sur 916 articles en 18 groupes disjoints (`apply/Y01` à 
 
 **33 corrections appliquées**, surtout dans les annexes du CGI. Le Code du travail, le CSS et le CCH n'en comptent presque plus. Les dérogations entre propositions (S10) sont propres : un seul défaut sur 150 pistes. **Le rendement est d'environ 3 % des pistes, contre 14 % au balayage précédent** : la famille « la loi retire, le décret garde » est presque épuisée.
 
+## 2 quater. Troisième mesure, objections P2 et pilote « notes »
+
+| Mesure | Défauts grossiers | Grossiers et mineurs |
+|---|---|---|
+| Audit 1 (avant balayages) | 12 / 309, **4,0 % ± 2,2** | 21,1 % ± 4,6 |
+| Audit 2 (après le deuxième balayage) | 9 / 314, **2,9 % ± 1,9** | 22,1 % ± 4,5 |
+| Audit 3 (après le troisième balayage) | 12 / 314, **3,8 % ± 2,1** | 17,7 % ± 4,1 |
+
+- **Le taux de défauts grossiers plafonne autour de 3,5 %** : 33 sur 937 articles tirés au hasard dans les trois mesures. Les défauts mineurs reculent. Les balayages corrigent bien la famille qu'ils visent, mais les défauts restants sont dispersés.
+- **Défauts connus mais non corrigés** : environ la moitié des défauts grossiers de l'audit 3 étaient déjà connus. Il s'agissait d'objections P2 du registre, ou de volets de P1 non appliqués. Ces 12 défauts sont corrigés (43 lignes).
+- **Objections P2** : les 157 objections P2 retenues ont ensuite été traitées sur le texte de production, avec le même critère d'alignement que les P1. Elles ont donné **201 lignes appliquées**. Une partie était déjà réglée par les corrections antérieures. Les autres n'ont pas été appliquées, chacune avec son motif : arbitrage, texte hors corpus ou point à confirmer (`apply/B01` à `B10`).
+- **Pilote « notes »** : 4 333 articles portent des notes de revue qui annoncent une coordination ouverte. Sur 250 d'entre eux, tirés au hasard :
+  - 60 % des notes sont périmées (la coordination est faite) ;
+  - 21 % visent un texte hors corpus ;
+  - 15 % relèvent d'un défaut mineur ;
+  - 4,8 % révèlent un défaut grossier, à peine plus que la lecture au hasard.
+
+  Le balayage complet n'a donc pas été lancé. Les 12 défauts du pilote sont corrigés.
+
+## 4. Taux mesuré et ce qu'il signifie
+
+- **Taux mesuré** : environ **3 à 4 % des articles** gardent un défaut qu'un juriste remarquerait. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
+- **Probabilité pour un juriste** qui lit 20 articles de sa matière de tomber sur au moins un défaut grossier : environ une chance sur deux.
+- **Ce qu'il faudrait pour descendre sous 1 %** : une lecture systématique de l'ensemble des articles, ou au moins des articles réécrits les plus importants. Aucun signal mécanique ne concentre plus assez les défauts restants pour qu'un balayage ciblé suffise.
+- **Les signalements extérieurs ont le meilleur rendement mesuré** : 9 des 11 issues du premier contributeur visaient un vrai défaut. Voir ci-dessous comment signaler une erreur.
+
+## 5. Signaler une erreur
+
+Ouvrez une issue sur le dépôt avec :
+- l'article (code, numéro et identifiant LEGIARTI) ;
+- la date de lecture ;
+- le passage exact ;
+- le problème, en le rattachant si possible à une famille : contradiction loi/décret, renvoi mort ou décalé, sanction orpheline, version future, transition, droit supérieur ;
+- la correction proposée.
+
+Chaque issue est triée contre le registre, corrigée si elle relève d'une contradiction ou d'une faille, et close avec un lien vers le commit. Les demandes qui changeraient une orientation du projet sont expliquées et closes comme non retenues.
+
 ## 3. Ce qui reste
 
 - Une **nouvelle mesure** sur un échantillon aléatoire indépendant, tiré hors du premier, pour vérifier la baisse du taux.
