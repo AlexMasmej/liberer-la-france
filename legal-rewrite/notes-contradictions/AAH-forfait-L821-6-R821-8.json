@@ -1,0 +1,27 @@
+{
+  "observed_at_unix": 1793055694.6144,
+  "category": "rewrite_introduced_inconsistency",
+  "status": "open_registered_and_native_reviewed_final_coupled_qualification_pending",
+  "articles": [
+    "L174-4",
+    "L821-6",
+    "R821-8"
+  ],
+  "article_ids": [
+    "LEGIARTI000006745026",
+    "LEGIARTI000031828843"
+  ],
+  "evidence_report": "legal-rewrite/runtime/validation-optimization-20261026/second-pass-examples-20261026.json",
+  "correction_applied": "L821-6 replacement explicitly preserves AAH guarantees when the proposed repeal of the hospital daily charge takes effect, including future stays.",
+  "remaining_issue": "R821-8 correction is registered and independently reviewed with accepted native execution. Final current coupled source/NOTA/reference qualification remains open; historical preparation language does not undo registration.",
+  "consequence": "The proposal could leave an inconsistent trigger for a benefit protection unless the related regulation is coordinated.",
+  "proposed_resolution": "Review and coordinate R821-8 through the existing validated workflow, retaining all benefit exceptions and prior-period rights; do not certify the entire chain on the basis of the L821-6 correction alone.",
+  "canonical_sources_modified": false,
+  "last_checked_at_unix": 1793183681.75791,
+  "candidate": "legal-rewrite/runtime/coordination-followups-20261026/R821-8-candidate.json",
+  "guards": "legal-rewrite/runtime/coordination-followups-20261026/R821-8-guards.json",
+  "readiness": "legal-rewrite/runtime/coordination-followups-20261026/R821-8-readiness.json",
+  "native_second_pass_pending": false,
+  "integration_evidence": "runtime/coordination-three-safe-point-20261027T2115Z-v2/installed.json",
+  "native_acceptance_evidence": "runtime/coordination-followups-20261026/R821-8-native-acceptance-20261028T1004.json"
+}

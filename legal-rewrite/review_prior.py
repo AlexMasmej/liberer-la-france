@@ -5,7 +5,7 @@ No old draft is overwritten unless its full database before-image matches.
 New jobs also pin the complete active batch row, including audit metadata.
 """
 from pathlib import Path
-import json,hashlib,re,sqlite3
+import json,hashlib,re,sqlite3,time,os
 import concurrent.futures,subprocess,sys,itertools
 from register_batches import writer_lock,register,_register as register_locked
 from ingest import HERE,open_db
@@ -20,15 +20,28 @@ def batch_row_sha256(row):
     """Hash one whole JSON row, independent of file layout or key order."""
     return digest(json.dumps(row,ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False))
 
+_OWNER_INDEX_CACHE={}
+
 def batch_owners(keys,root=None):
     """Caller holds writer_lock from this scan through capture or revision."""
     owners={};files={}
     for path in sorted(((HERE if root is None else root)/'batches').glob('*/*.json')):
         if not re.fullmatch(r'(?:batch)?\d+\.json',path.name):continue
-        items=json.loads(path.read_text())
-        for index,item in enumerate(items):
-            key=(item['code_id'],item['source_id'])
-            if key not in keys:continue
+        payload=path.read_bytes();sha=hashlib.sha256(payload).hexdigest()
+        cached=_OWNER_INDEX_CACHE.get(path)
+        items=None
+        if cached is not None and cached[0]==sha:
+            index_rows=cached[1]
+        else:
+            items=json.loads(payload.decode('utf-8'))
+            index_rows=tuple((index,(item['code_id'],item['source_id'])) for index,item in enumerate(items))
+            if len(_OWNER_INDEX_CACHE)>=2048:_OWNER_INDEX_CACHE.clear()
+            _OWNER_INDEX_CACHE[path]=(sha,index_rows)
+        # Only the location index is reused, after hashing the complete current
+        # file. Selected rows are decoded afresh, never shared mutable objects.
+        selected=[(index,key) for index,key in index_rows if key in keys]
+        if selected and items is None:items=json.loads(payload.decode('utf-8'))
+        for index,key in selected:
             if key in owners:raise ValueError('Duplicate active batch owner: '+str(key))
             owners[key]=(path,index);files[path]=items
     return owners,files
@@ -75,9 +88,13 @@ def pending_sources(sources):
     return result
 
 def commit(rows,expected,reference_snapshot=None):
+    started=time.perf_counter()
     prior={(a['code_id'],a['source_id']):a['previous_draft'] for a in expected}
     with writer_lock():
+        acquired=time.perf_counter()
         owners,files=batch_owners(prior)
+        file_before={path:path.read_bytes() for path in files}
+        legacy_path=None
         archive=[];legacy=[]
         db=open_db(HERE/'corpus.sqlite')
         try:
@@ -109,7 +126,7 @@ def commit(rows,expected,reference_snapshot=None):
             audit=HERE/'revisions/radical-review';audit.mkdir(parents=True,exist_ok=True)
             identifier=digest(json.dumps(archive,ensure_ascii=False,sort_keys=True))
             (audit/(identifier+'.json')).write_text(json.dumps(archive,ensure_ascii=False,indent=2)+'\n')
-            registry_path=HERE/'registered-batches.json';registry=json.loads(registry_path.read_text())
+            registry_path=HERE/'registered-batches.json';registry_before=registry_path.read_bytes();registry=json.loads(registry_before)
             # Legacy first drafts may precede the batch registry: adopt only the
             # exact, archived before-image, never a different independent draft.
             for row in rows:
@@ -121,11 +138,27 @@ def commit(rows,expected,reference_snapshot=None):
             if legacy:
                 folder=HERE/'batches/radical-review-legacy';folder.mkdir(exist_ok=True)
                 index=1+max((int(p.stem) for p in folder.glob('*.json')),default=0)
-                (folder/f'{index:05d}.json').write_text(json.dumps(legacy,ensure_ascii=False,indent=2)+'\n')
+                legacy_path=folder/f'{index:05d}.json'
+                legacy_path.write_text(json.dumps(legacy,ensure_ascii=False,indent=2)+'\n')
             # Keep the same non-reentrant writer lock from target checks through
             # canonical registration. The public register() wrapper would lock
             # again; use its already-locked implementation here.
-            register_locked(db,HERE/'batches',True)
+            validation_started=time.perf_counter()
+            try:
+                register_locked(db,HERE/'batches',True)
+            except Exception:
+                db.rollback()
+                unchanged=all(db.execute('SELECT source_sha256,status,proposed_xml,reason,review_notes FROM drafts WHERE code_id=? AND source_id=?',key).fetchone()==draft_values(old) for key,old in prior.items())
+                # A validation/transaction failure must not leak staged batch
+                # writes into a later worker's full-corpus registration. Once
+                # SQLite committed, retain evidence for manual reconciliation.
+                if unchanged:
+                    for path,payload in file_before.items():
+                        temporary=path.with_suffix('.rollback.tmp');temporary.write_bytes(payload);temporary.replace(path)
+                    if legacy_path is not None:legacy_path.unlink()
+                    temporary=registry_path.with_suffix('.rollback.tmp');temporary.write_bytes(registry_before);temporary.replace(registry_path)
+                raise
+            validation_finished=time.perf_counter()
         finally:db.close()
         # Finalize successful acceptance before releasing the writer lock.
         # Reacquiring it here lets other full-corpus registrations indefinitely
@@ -135,6 +168,16 @@ def commit(rows,expected,reference_snapshot=None):
             if (article['code_id'],article['source_id']) in done:article['review_status']='completed'
         report['completed_second_pass']=sum(a['review_status']=='completed' for a in report['prior_articles'])
         temporary=revisions_manifest().with_suffix('.tmp');temporary.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');temporary.replace(revisions_manifest())
+    # Operational timing only: never let a telemetry write undo acceptance.
+    finished=time.perf_counter()
+    measurement={'pid':os.getpid(),'accepted_at_unix':time.time(),'articles':len(rows),
+                 'writer_wait_seconds':acquired-started,
+                 'full_registration_seconds':validation_finished-validation_started,
+                 'writer_section_seconds':finished-acquired,'total_seconds':finished-started}
+    try:
+        with (HERE/'runtime/registration-timings.jsonl').open('a') as log:
+            log.write(json.dumps(measurement)+'\n')
+    except OSError:pass
 
 def build_jobs(sources):
     pending=pending_sources(sources);per_code=[]

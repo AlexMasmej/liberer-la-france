@@ -6,4 +6,5 @@ Chaque note précise les articles et versions concernés, les passages incompati
 
 ## Cas documentés
 
+- [Index central des dossiers connus et des alertes à qualifier](INDEX.md) — inventaire documentaire daté, sans prétention d'exhaustivité juridique.
 - [D351-9 : divergence de définition entre consolidation et décret](D351-9.md) — source officielle, non résolue.

@@ -5,35 +5,353 @@
     "source_sha256": "4e24f6b7ac3214d232ab02fd978554658e789aef32333f7fa59bdb71746b9b0f",
     "number": "L3121-41",
     "proposed_xml": "<p>Lorsque le temps de travail est aménagé sur une période de référence supérieure à la semaine, les heures supplémentaires sont décomptées à la fin de cette période.</p><p>La période ne dépasse pas trois ans si elle est fixée par accord collectif, ni neuf semaines si elle résulte d’une décision unilatérale de l’employeur.</p><p>Pour une période annuelle, sont supplémentaires les heures dépassant 1 607 heures.</p><p>Pour une période plus courte ou plus longue qu’un an, sont supplémentaires les heures dépassant une moyenne de trente-cinq heures par semaine sur cette période.</p><p>Ces seuils propres à l’aménagement sur une période supérieure à la semaine restent applicables aux contrats dont la référence hebdomadaire est de quarante heures en vertu de l’article L. 3121-27.</p>",
+    "status": "rewrite_draft",
     "reason": "Conserve explicitement les seuils plus favorables d’annualisation et de moyenne existants, y compris pour les nouveaux contrats à quarante heures, afin de ne pas créer implicitement un seuil annuel non arbitré.",
-    "review_notes": "Cette rédaction assume une différence entre décompte hebdomadaire à quarante heures et aménagement plurihebdomadaire à trente-cinq heures/1 607 heures. Tout alignement annuel exige une décision chiffrée et une transition supplémentaires ; ne pas présenter l’uniformisation de tous les régimes comme acquise."
+    "review_notes": "Différence de champ expressément décidée : « Pour une période annuelle, sont supplémentaires les heures dépassant 1 607 heures » et « une moyenne de trente-cinq heures par semaine » demeurent, y compris pour les nouveaux contrats à quarante heures. L3121-44 lu en entier : accord de branche requis au-delà d’un an, plafond de trois ans, limite annuelle éventuellement inférieure, paiement mensuel des dépassements hebdomadaires sans double compte. L3121-45 lu borne la décision unilatérale à neuf semaines en dessous de cinquante salariés et quatre semaines à partir de cinquante : le maximum de neuf semaines de L3121-41 ne supprime pas ce sous-plafond. D3121-25 lu conserve 39 heures hebdomadaires, moyenne de 35 heures, arrivées/départs et absences ; ces règles spéciales ne deviennent pas 40 heures par renvoi. Les quatre alinéas sources gardent leur place, le cinquième explicite la coordination.",
+    "previous_draft": {
+      "source_sha256": "4e24f6b7ac3214d232ab02fd978554658e789aef32333f7fa59bdb71746b9b0f",
+      "status": "rewrite_draft",
+      "proposed_xml": "<p>Lorsque le temps de travail est aménagé sur une période de référence supérieure à la semaine, les heures supplémentaires sont décomptées à la fin de cette période.</p><p>La période ne dépasse pas trois ans si elle est fixée par accord collectif, ni neuf semaines si elle résulte d’une décision unilatérale de l’employeur.</p><p>Pour une période annuelle, sont supplémentaires les heures dépassant 1 607 heures.</p><p>Pour une période plus courte ou plus longue qu’un an, sont supplémentaires les heures dépassant une moyenne de trente-cinq heures par semaine sur cette période.</p><p>Ces seuils propres à l’aménagement sur une période supérieure à la semaine restent applicables aux contrats dont la référence hebdomadaire est de quarante heures en vertu de l’article L. 3121-27.</p>",
+      "reason": "Conserve explicitement les seuils plus favorables d’annualisation et de moyenne existants, y compris pour les nouveaux contrats à quarante heures, afin de ne pas créer implicitement un seuil annuel non arbitré.",
+      "review_notes": "Cette rédaction assume une différence entre décompte hebdomadaire à quarante heures et aménagement plurihebdomadaire à trente-cinq heures/1 607 heures. Tout alignement annuel exige une décision chiffrée et une transition supplémentaires ; ne pas présenter l’uniformisation de tous les régimes comme acquise.",
+      "proposed_sha256": "3866f0f0d8e0a362b2b7a3d2ce9b2b6e8cfae876905768680d38d63fd954d30f",
+      "batch_row_sha256": "2d98528e02553a1da4f5c0486c3a592238882ce4ec27ac1beaff30b2ad88c34d"
+    },
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "reference_checks": [],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Les seuils officiels de 1 607 heures par an et de trente-cinq heures en moyenne sont conservés ; le cinquième alinéa confirme leur autonomie à l’égard des quarante heures hebdomadaires. Coordination protectrice, sans baisse autonome de charge.",
+      "scope_limitations": "Trois ans est le maximum légal, soumis aux conditions de branche de L3121-44 ; neuf semaines reste soumis au sous-plafond de quatre semaines de L3121-45. Aucun seuil annuel nouveau.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : les décomptes, seuils et durées existaient dans la source ; la précision évite leur relèvement implicite et ne prescrit aucune nouvelle tenue de registre.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "seuil-hebdomadaire-quarante-heures",
+          "description": "Maintien explicite des seuils propres à l’aménagement plurihebdomadaire malgré le nouveau seuil hebdomadaire.",
+          "before": "1 607 heures si période annuelle ; moyenne de trente-cinq heures si période inférieure ou supérieure à un an.",
+          "after": "Mêmes seuils, expressément applicables aussi aux contrats à référence hebdomadaire de quarante heures.",
+          "unit": "other",
+          "affected_population": "Salariés soumis à un aménagement du temps de travail sur une période supérieure à la semaine.",
+          "conditions_and_transition": "Anciens et nouveaux contrats ; conditions de L3121-44 et L3121-45 maintenues, sans relèvement automatique.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ni donnée supplémentaire ; les garanties autonomes demeurent.",
+          "source_quote": "Si la période de référence est annuelle, constituent des heures supplémentaires les heures effectuées au delà de 1 607 heures.",
+          "proposed_quote": "Ces seuils propres à l’aménagement sur une période supérieure à la semaine restent applicables aux contrats dont la référence hebdomadaire est de quarante heures en vertu de l’article L. 3121-27."
+        }
+      ]
+    },
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "4e24f6b7ac3214d232ab02fd978554658e789aef32333f7fa59bdb71746b9b0f",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "3866f0f0d8e0a362b2b7a3d2ce9b2b6e8cfae876905768680d38d63fd954d30f",
+      "assessment_sha256": "c2a84c77f4fce9bced19b41f412a559fdbc828c1a055b5fe9bf99f3180ee020a",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "3866f0f0d8e0a362b2b7a3d2ce9b2b6e8cfae876905768680d38d63fd954d30f"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000033020295",
-    "source_sha256": "b4cd77a53a7289b41bb47ef532d18b55fdf43a6a81469349e0e74bf31e0dd524",
     "number": "L3121-44",
+    "path": [
+      "Partie législative",
+      "Troisième partie : Durée du travail, salaire, intéressement, participation et épargne salariale",
+      "Livre Ier : Durée du travail, repos et congés",
+      "Titre II : Durée du travail, répartition et aménagement des horaires",
+      "Chapitre Ier : Durée et aménagement du travail",
+      "Section 4 : Aménagement du temps de travail sur une période supérieure à la semaine, horaires individualisés et récupération des heures perdues",
+      "Sous-section 1 : Aménagement du temps de travail sur une période supérieure à la semaine.",
+      "Paragraphe 2 : Champ de la négociation collective"
+    ],
+    "valid_from": "2016-08-10",
+    "valid_until": "2999-01-01",
+    "source_state": "VIGUEUR",
+    "source_xml": "\n<p>En application de l'article L. 3121-41, un accord d'entreprise ou d'établissement ou, à défaut, une convention ou un accord de branche peut définir les modalités d'aménagement du temps de travail et organiser la répartition de la durée du travail sur une période supérieure à la semaine. Il prévoit : </p>\n<p>1° La période de référence, qui ne peut excéder un an ou, si un accord de branche l'autorise, trois ans ; </p>\n<p>2° Les conditions et délais de prévenance des changements de durée ou d'horaires de travail ; </p>\n<p>3° Les conditions de prise en compte, pour la rémunération des salariés, des absences ainsi que des arrivées et des départs en cours de période de référence. </p>\n<p>Lorsque l'accord s'applique aux salariés à temps partiel, il prévoit les modalités de communication et de modification de la répartition de la durée et des horaires de travail. </p>\n<p>L'accord peut prévoir une limite annuelle inférieure à 1 607 heures pour le décompte des heures supplémentaires. </p>\n<p>Si la période de référence est supérieure à un an, l'accord prévoit une limite hebdomadaire, supérieure à trente-cinq heures, au delà de laquelle les heures de travail effectuées au cours d'une même semaine constituent en tout état de cause des heures supplémentaires dont la rémunération est payée avec le salaire du mois considéré. Si la période de référence est inférieure ou égale à un an, l'accord peut prévoir cette même limite hebdomadaire. Les heures supplémentaires résultant de l'application du présent alinéa n'entrent pas dans le décompte des heures travaillées opéré à l'issue de la période de référence mentionnée au 1°. </p>\n<p>L'accord peut prévoir que la rémunération mensuelle des salariés est indépendante de l'horaire réel et détermine alors les conditions dans lesquelles cette rémunération est calculée, dans le respect de l'avant-dernier alinéa.</p>\n<br />\n",
+    "source_notes_xml": "",
+    "source_sha256": "b4cd77a53a7289b41bb47ef532d18b55fdf43a6a81469349e0e74bf31e0dd524",
+    "source_archive": "LEGI_20261016-213852.tar.gz",
+    "source_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033020295/",
+    "status": "rewrite_draft",
     "proposed_xml": "<p>Un accord d’entreprise ou d’établissement ou, à défaut, une convention ou un accord de branche peut, selon l’article L. 3121-41, organiser le temps de travail sur une période supérieure à la semaine. Il fixe :</p><p>1° La période de référence, d’au plus un an, ou d’au plus trois ans si un accord de branche l’autorise ;</p><p>2° Les conditions et délais de prévenance des changements de durée ou d’horaires ;</p><p>3° La prise en compte, pour la rémunération, des absences et des arrivées ou départs en cours de période.</p><p>S’il concerne des salariés à temps partiel, il fixe aussi la communication et la modification de la répartition de leur durée et de leurs horaires.</p><p>Il peut retenir, pour le décompte des heures supplémentaires, une limite annuelle inférieure à 1 607 heures.</p><p>Si la période dépasse un an, l’accord fixe une limite hebdomadaire supérieure à trente-cinq heures au-delà de laquelle les heures sont, dans tous les cas, supplémentaires et payées avec le salaire du mois concerné. Pour une période d’au plus un an, il peut fixer une telle limite. Les heures déjà comptées à ce titre ne sont pas décomptées une seconde fois à la fin de la période de référence.</p><p>L’accord peut lisser la rémunération mensuelle indépendamment de l’horaire réel. Il en détermine le calcul en respectant le paiement mensuel des heures supplémentaires prévu à l’alinéa précédent.</p>",
-    "reason": "Réécrit intégralement l’aménagement négocié en conservant les seuils plus favorables de trente-cinq heures/1 607 heures et la prévention du double décompte.",
-    "review_notes": "L. 3121-41 maintient expressément ces seuils pour l’aménagement plurihebdomadaire, même si le contrat nouveau relève de quarante heures en décompte hebdomadaire. Vérifier les textes réglementaires et accords existants avant toute généralisation de quarante heures."
+    "reason": "Conservation sans nouvelle modification du brouillon antérieur à droit constant : les seuils, les huit alinéas, les trois subdivisions, le temps partiel et le paiement des heures supplémentaires restent conservés. La source autorisait déjà ces aménagements. Aucune réduction matérielle ne résulte de cette seule reformulation ; les renvois et leurs différences de champ sont examinés dans review_notes.",
+    "review_notes": "Brouillon antérieur conservé sans nouvelle reformulation. Les huit alinéas gardent les trois subdivisions et le sixième alinéa sur la limite annuelle : le renvoi de L3141-22, 4°, au « sixième alinéa de l'article L. 3121-44 » reste exact. Le septième alinéa reste celui de la limite hebdomadaire, visé par D3121-25. Le 1° reste visé par L2253-1, 6°, pour la compétence de branche au-delà d'un an ; les garanties équivalentes n'effacent pas cette condition légale. Les limites d'un an/trois ans, 1 607 heures et trente-cinq heures restent inchangées, conformément à L3121-41 proposé. Le dernier alinéa ne supprime pas le paiement mensuel des heures supplémentaires. Les renvois du temps partiel L3123-2/6/13/20/27/28, du congé L3141-5/22 et de L2312-26 gardent leur fonction propre ; le renvoi historique de L3133-11 ne rétablit pas la journée de solidarité dont l'abrogation est proposée. D241-27 CSS, III, vise la durée moyenne pour reconstituer des heures : aucune baisse de cotisation n'en résulte ici. Incohérence hors lot à corriger : L3171-1 proposé dit « il n'est pas obligatoire lorsque ces informations sont effectivement accessibles par un autre moyen », alors que D3171-5 proposé conserve « l'affichage indique ». Il faut coordonner ce support sans retirer les délais et informations. D3171-12/13 proposent déjà des supports de paie alternatifs. Cette réserve ne justifie pas de changer L3121-44.",
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "previous_draft": {
+      "source_sha256": "b4cd77a53a7289b41bb47ef532d18b55fdf43a6a81469349e0e74bf31e0dd524",
+      "status": "rewrite_draft",
+      "proposed_xml": "<p>Un accord d’entreprise ou d’établissement ou, à défaut, une convention ou un accord de branche peut, selon l’article L. 3121-41, organiser le temps de travail sur une période supérieure à la semaine. Il fixe :</p><p>1° La période de référence, d’au plus un an, ou d’au plus trois ans si un accord de branche l’autorise ;</p><p>2° Les conditions et délais de prévenance des changements de durée ou d’horaires ;</p><p>3° La prise en compte, pour la rémunération, des absences et des arrivées ou départs en cours de période.</p><p>S’il concerne des salariés à temps partiel, il fixe aussi la communication et la modification de la répartition de leur durée et de leurs horaires.</p><p>Il peut retenir, pour le décompte des heures supplémentaires, une limite annuelle inférieure à 1 607 heures.</p><p>Si la période dépasse un an, l’accord fixe une limite hebdomadaire supérieure à trente-cinq heures au-delà de laquelle les heures sont, dans tous les cas, supplémentaires et payées avec le salaire du mois concerné. Pour une période d’au plus un an, il peut fixer une telle limite. Les heures déjà comptées à ce titre ne sont pas décomptées une seconde fois à la fin de la période de référence.</p><p>L’accord peut lisser la rémunération mensuelle indépendamment de l’horaire réel. Il en détermine le calcul en respectant le paiement mensuel des heures supplémentaires prévu à l’alinéa précédent.</p>",
+      "reason": "Réécrit intégralement l’aménagement négocié en conservant les seuils plus favorables de trente-cinq heures/1 607 heures et la prévention du double décompte.",
+      "review_notes": "L. 3121-41 maintient expressément ces seuils pour l’aménagement plurihebdomadaire, même si le contrat nouveau relève de quarante heures en décompte hebdomadaire. Vérifier les textes réglementaires et accords existants avant toute généralisation de quarante heures.",
+      "proposed_sha256": "10579908ee3fe8ba4b52d453be82c75562e436592c7fa434d3cbd8cfec910108",
+      "batch_row_sha256": "212e955005bc9cd1051682f79c7ce1a98289ccd6fa49ba41ac4e3ea60de93c48"
+    },
+    "classification": "editorial_only",
+    "substantive_impact": {
+      "version": 1,
+      "classification": "editorial_only",
+      "assessment": "Conservation sans nouvelle modification du brouillon antérieur à droit constant : les seuils, les huit alinéas, les trois subdivisions, le temps partiel et le paiement des heures supplémentaires restent conservés. La source autorisait déjà ces aménagements. Aucune réduction matérielle ne résulte de cette seule reformulation ; les renvois et leurs différences de champ sont examinés dans review_notes.",
+      "scope_limitations": "Brouillon antérieur conservé sans nouvelle reformulation. Les huit alinéas gardent les trois subdivisions et le sixième alinéa sur la limite annuelle : le renvoi de L3141-22, 4°, au « sixième alinéa de l'article L. 3121-44 » reste exact. Le septième alinéa reste celui de la limite hebdomadaire, visé par D3121-25. Le 1° reste visé par L2253-1, 6°, pour la compétence de branche au-delà d'un an ; les garanties équivalentes n'effacent pas cette condition légale. Les limites d'un an/trois ans, 1 607 heures et trente-cinq heures restent inchangées, conformément à L3121-41 proposé. Le dernier alinéa ne supprime pas le paiement mensuel des heures supplémentaires. Les renvois du temps partiel L3123-2/6/13/20/27/28, du congé L3141-5/22 et de L2312-26 gardent leur fonction propre ; le renvoi historique de L3133-11 ne rétablit pas la journée de solidarité dont l'abrogation est proposée. D241-27 CSS, III, vise la durée moyenne pour reconstituer des heures : aucune baisse de cotisation n'en résulte ici. Incohérence hors lot à corriger : L3171-1 proposé dit « il n'est pas obligatoire lorsque ces informations sont effectivement accessibles par un autre moyen », alors que D3171-5 proposé conserve « l'affichage indique ». Il faut coordonner ce support sans retirer les délais et informations. D3171-12/13 proposent déjà des supports de paie alternatifs. Cette réserve ne justifie pas de changer L3121-44. Cette revue ciblée ne démontre ni cohérence exhaustive des neuf recueils ni solde national de coût ou de complexité.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : le corps antérieur du brouillon est conservé à droit constant, sans registre, donnée, délai ni condition supplémentaire. Aucun solde global des codes n’est chiffré.",
+      "effects": []
+    },
+    "reference_checks": [],
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "b4cd77a53a7289b41bb47ef532d18b55fdf43a6a81469349e0e74bf31e0dd524",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "10579908ee3fe8ba4b52d453be82c75562e436592c7fa434d3cbd8cfec910108",
+      "assessment_sha256": "ae8fd251dc7156f7a13db42acda869f57d713f5f28e42f9ce3d47a14d299eb27",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "10579908ee3fe8ba4b52d453be82c75562e436592c7fa434d3cbd8cfec910108"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000033020098",
     "source_sha256": "3e7c65d4ae5657dd3ec03bd50d4def297784cf4d212a0d023e4714ceeb69252e",
     "number": "L3123-1",
+    "status": "rewrite_draft",
     "proposed_xml": "<p>Est à temps partiel le salarié dont la durée de travail est inférieure à la référence correspondant à son mode de décompte :</p><p>1° Pour une durée hebdomadaire, la durée légale qui lui est applicable selon l’article L. 3121-27, ou, si elle est plus courte, la durée fixée pour la branche ou l’entreprise par convention ou accord, ou la durée applicable dans l’établissement ;</p><p>2° Pour une durée mensuelle, l’équivalent mensuel de cette durée légale, ou, si elle est plus courte, de la durée conventionnelle de la branche ou de l’entreprise, ou de la durée applicable dans l’établissement ;</p><p>3° Pour une durée annuelle, 1 607 heures, ou, si elle est plus courte, la durée annuelle conventionnelle de la branche ou de l’entreprise, ou celle applicable dans l’établissement.</p><p>La référence annuelle de 1 607 heures est conservée, y compris pour les nouveaux contrats visés à l’article L. 3121-27, dans les conditions du régime d’aménagement de l’article L. 3121-41.</p>",
-    "reason": "Coordonne les références hebdomadaire et mensuelle avec les deux régimes de contrats, tout en maintenant explicitement la référence annuelle plus favorable existante.",
-    "review_notes": "La coexistence de seuils distincts est délibérée pour ne pas inventer une durée annuelle à quarante heures. Vérifier les effets de qualification du temps partiel et les accords plus courts ; un ancien contrat n’est pas requalifié à temps partiel du seul fait de la réforme."
+    "reason": "Coordonne les références hebdomadaire et mensuelle avec les deux régimes de contrats, tout en maintenant explicitement la référence annuelle plus favorable existante. Seconde passe : maintien du corps précédent après confrontation de L3121-27, L3121-41 et L3121-44 ; aucune reformulation supplémentaire. La coordination est nécessaire pour ne pas relever implicitement 1 607 heures avec le seuil hebdomadaire.",
+    "review_notes": "Transition compatible : L3121-27 proposé maintient « trente-cinq heures par semaine » pour les contrats antérieurs, y compris leur poursuite après transfert, et réserve quarante heures aux nouveaux contrats à temps complet. L3121-41 proposé maintient « 1 607 heures » et la moyenne de trente-cinq heures sur les autres périodes supérieures à la semaine ; L3121-44 conserve les seuils d'accord et évite le double décompte. La définition compare le temps partiel à la référence du temps complet correspondant, sans transformer les contrats anciens. Les références plus courtes de branche, entreprise et établissement sont conservées aux 1° à 3°. Renvois ajoutés dans le brouillon, absents du paquet obligatoire reference-targets mais lus au corpus : L3121-27 et L3121-41. CSS L241-3-1 conserve l'option d'assiette vieillesse à temps plein et l'exclusion de CSG de la prise en charge patronale ; L242-8/9 conservent l'abattement et ses conditions. Pas d'effet national chiffré ni d'inventaire exhaustif des seuils sociaux.",
+    "previous_draft": {
+      "source_sha256": "3e7c65d4ae5657dd3ec03bd50d4def297784cf4d212a0d023e4714ceeb69252e",
+      "status": "rewrite_draft",
+      "proposed_xml": "<p>Est à temps partiel le salarié dont la durée de travail est inférieure à la référence correspondant à son mode de décompte :</p><p>1° Pour une durée hebdomadaire, la durée légale qui lui est applicable selon l’article L. 3121-27, ou, si elle est plus courte, la durée fixée pour la branche ou l’entreprise par convention ou accord, ou la durée applicable dans l’établissement ;</p><p>2° Pour une durée mensuelle, l’équivalent mensuel de cette durée légale, ou, si elle est plus courte, de la durée conventionnelle de la branche ou de l’entreprise, ou de la durée applicable dans l’établissement ;</p><p>3° Pour une durée annuelle, 1 607 heures, ou, si elle est plus courte, la durée annuelle conventionnelle de la branche ou de l’entreprise, ou celle applicable dans l’établissement.</p><p>La référence annuelle de 1 607 heures est conservée, y compris pour les nouveaux contrats visés à l’article L. 3121-27, dans les conditions du régime d’aménagement de l’article L. 3121-41.</p>",
+      "reason": "Coordonne les références hebdomadaire et mensuelle avec les deux régimes de contrats, tout en maintenant explicitement la référence annuelle plus favorable existante.",
+      "review_notes": "La coexistence de seuils distincts est délibérée pour ne pas inventer une durée annuelle à quarante heures. Vérifier les effets de qualification du temps partiel et les accords plus courts ; un ancien contrat n’est pas requalifié à temps partiel du seul fait de la réforme.",
+      "proposed_sha256": "38edab758283e22d590a230198d1a952fbe784a8e429f6ea1a60eff64063ed73",
+      "batch_row_sha256": "59da84d5babe47c2126ffc37404d57afc881bd0922c1337db1e8d6c2293c2278"
+    },
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "reference_checks": [],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "coordination_only",
+      "assessment": "Coordination de la définition du temps partiel avec les deux références hebdomadaires du projet et maintien explicite de 1 607 heures annuelles. Aucun deuxième relèvement ni réduction de prélèvement n'est compté ici.",
+      "scope_limitations": "La portée des seuils dépend du régime de décompte et de la génération du contrat. Les effets de tous les renvois sociaux sur les assiettes n'ont pas été chiffrés ; les références conventionnelles plus courtes restent applicables.",
+      "new_burdens_review": "Aucune formalité nouvelle identifiée : l'article définit des seuils, sans registre ni déclaration. La coexistence des références par génération de contrats reste une complexité du projet, sans réduction nette démontrée.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "duree-hebdomadaire-nouveaux-contrats-quarante-heures",
+          "description": "Maintien de la référence annuelle lors de la coordination hebdomadaire.",
+          "before": "Définition hebdomadaire et mensuelle par la durée légale ; référence annuelle de 1 607 heures.",
+          "after": "Référence hebdomadaire selon le contrat et référence annuelle maintenue à 1 607 heures.",
+          "unit": "other",
+          "affected_population": "Salariés dont la durée du travail est appréciée pour la qualification de temps partiel.",
+          "conditions_and_transition": "Anciens contrats à trente-cinq heures et nouveaux à quarante selon L3121-27 ; seuils aménagés maintenus.",
+          "replacement_or_new_burdens": "Aucune obligation de remplacement ; les garanties de fond restent applicables.",
+          "source_quote": "soit 1 607 heures",
+          "proposed_quote": "La référence annuelle de 1 607 heures est conservée"
+        }
+      ]
+    },
+    "benefit_review": "Les références conventionnelles et d'établissement plus courtes et le seuil annuel de 1 607 heures restent applicables aux situations éligibles futures. Les allègements sociaux dépendant du temps partiel ne sont pas supprimés par cette définition.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "3e7c65d4ae5657dd3ec03bd50d4def297784cf4d212a0d023e4714ceeb69252e",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "38edab758283e22d590a230198d1a952fbe784a8e429f6ea1a60eff64063ed73",
+      "assessment_sha256": "699dbab7cc31abf212057392d9bc56db93e8db1fbd13163c8539146be6eafdeb",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "38edab758283e22d590a230198d1a952fbe784a8e429f6ea1a60eff64063ed73"
   },
   {
     "code_id": "LEGITEXT000006072050",
     "source_id": "LEGIARTI000036262948",
     "source_sha256": "0efbca7beaadda1fbe746a99e32b92b30148899e15d3f33e878c1d8783e5686a",
     "number": "L3123-3",
-    "proposed_xml": "<p>Les salariés à temps partiel qui souhaitent augmenter leur durée contractuelle ou occuper un emploi à temps complet, et les salariés à temps complet qui souhaitent un emploi à temps partiel, ont priorité pour un emploi disponible de leur catégorie professionnelle ou équivalent dans le même établissement ou, à défaut, dans la même entreprise.</p><p>Une convention ou un accord d’entreprise ou d’établissement ou, à défaut, une convention ou un accord de branche étendu peut étendre cette priorité à des emplois de caractéristiques différentes.</p><p>L’employeur informe les salariés concernés de la liste des emplois disponibles correspondants.</p>",
-    "reason": "Coordination de fond avec la suppression du minimum légal : ouvre clairement la priorité à l’augmentation du volume garanti, sans renvoi devenu vide au plancher de L. 3123-7. Les priorités de passage temps plein/temps partiel restent maintenues.",
-    "review_notes": "Vérifier les limites de la catégorie professionnelle et les critères départageant plusieurs demandes ; ne pas transformer cette priorité en droit à créer un poste inexistant."
+    "status": "rewrite_draft",
+    "proposed_xml": "<p>Les salariés à temps partiel qui souhaitent occuper ou reprendre un emploi à temps partiel ou à temps complet et les salariés à temps complet qui souhaitent occuper ou reprendre un emploi à temps partiel dans le même établissement ou, à défaut, dans la même entreprise ont priorité pour l'attribution d'un emploi ressortissant à leur catégorie professionnelle ou d'un emploi équivalent ou, si une convention ou un accord d'entreprise ou d'établissement ou, à défaut, une convention ou un accord de branche étendu le prévoit, d'un emploi présentant des caractéristiques différentes.</p>\n<p>L'employeur porte à la connaissance de ces salariés la liste des emplois disponibles correspondants.</p>\n<p>La priorité des salariés à temps partiel n'est subordonnée ni à une augmentation de leur durée contractuelle ni à l'atteinte d'une durée minimale. Elle s'applique aux emplois attribués à compter de l'entrée en vigueur de la loi supprimant le minimum légal général de durée du travail, y compris lorsque la demande a été présentée avant cette date. Les droits et recours relatifs aux attributions antérieures sont conservés. Cette priorité n'impose pas la création d'un emploi ni ne permet de réduire unilatéralement la durée ou la rémunération convenues.</p>",
+    "reason": "Contradiction effective du brouillon avec l'avantage source : « souhaitent augmenter leur durée contractuelle » pouvait écarter un salarié souhaitant reprendre un autre poste de durée égale ou moindre, alors que la source ouvrait la priorité pour « un emploi d'une durée au moins égale à celle mentionnée au premier alinéa de l'article L. 3123-7 ». Correction de fond : suppression de cette condition de durée, sans restreindre la priorité à une augmentation. La priorité couvre les emplois à temps partiel et à temps complet, avec catégorie, équivalence, extension conventionnelle et périmètre établissement/entreprise conservés. La liste demeure au deuxième alinéa. Il s'agit d'une extension favorable, avec élargissement corrélatif de l'obligation patronale, et non d'une nouvelle baisse de prélèvement.",
+    "review_notes": "Coordination nécessaire : la cible proposée L3123-7 remplace « durée minimale de travail hebdomadaire » par « durée de travail hebdomadaire ou mensuelle garantie par son contrat écrit ». Un renvoi à son premier alinéa n'exprimerait plus le seuil initial. Le texte ouvre la priorité sans seuil, sans supprimer les minima conventionnels ni leurs dispenses pour la durée effectivement convenue. Transition compatible : seules les attributions futures relèvent de cette extension ; demandes pendantes incluses, droits antérieurs préservés. La priorité ne commande ni poste nouveau ni embauche externe. Différence de champ : le minimum parental de seize heures figure au 2° de L1225-47, lu intégralement, et non dans L3123-3 contrairement à la désignation abrégée de coordination.json ; il n'est ni déplacé ni supprimé. Les conflits de priorité entre plusieurs candidats ne sont pas résolus arbitrairement par une nouvelle règle de classement.",
+    "previous_draft": {
+      "source_sha256": "0efbca7beaadda1fbe746a99e32b92b30148899e15d3f33e878c1d8783e5686a",
+      "status": "rewrite_draft",
+      "proposed_xml": "<p>Les salariés à temps partiel qui souhaitent augmenter leur durée contractuelle ou occuper un emploi à temps complet, et les salariés à temps complet qui souhaitent un emploi à temps partiel, ont priorité pour un emploi disponible de leur catégorie professionnelle ou équivalent dans le même établissement ou, à défaut, dans la même entreprise.</p><p>Une convention ou un accord d’entreprise ou d’établissement ou, à défaut, une convention ou un accord de branche étendu peut étendre cette priorité à des emplois de caractéristiques différentes.</p><p>L’employeur informe les salariés concernés de la liste des emplois disponibles correspondants.</p>",
+      "reason": "Coordination de fond avec la suppression du minimum légal : ouvre clairement la priorité à l’augmentation du volume garanti, sans renvoi devenu vide au plancher de L. 3123-7. Les priorités de passage temps plein/temps partiel restent maintenues.",
+      "review_notes": "Vérifier les limites de la catégorie professionnelle et les critères départageant plusieurs demandes ; ne pas transformer cette priorité en droit à créer un poste inexistant.",
+      "proposed_sha256": "6617a4fd381ca6fc8d1939f7faefcdbd6f79fc52f92ee1f568a9c18f6e01c683",
+      "batch_row_sha256": "d89b8abd85f9cbcd362d6a06752c3b1eb8e90d05c375b267a95f3ee000da60a0"
+    },
+    "source_conflict_ids": [],
+    "impact_check_required": true,
+    "benefit_check_required": false,
+    "reference_checks": [
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+        "view_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
+        "assessment": "La priorité sur un emploi disponible ne vaut ni rupture de l'emploi actuel ni remise à zéro de l'ancienneté ; un changement de poste n'est pas à lui seul une embauche distincte. Différence de champ : la cible proposée règle le préavis patronal, quinze jours calendaires sans seuil d'ancienneté pour les nouveaux contrats, et conserve le régime des anciens. Aucun délai d'horaire du présent article ne le remplace. Notification selon L1234-3, départ le lendemain pour le nouveau contrat ; procédures collectives, autorisations et régimes spéciaux demeurent distincts."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+        "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+        "assessment": "La priorité sur un emploi disponible ne vaut ni rupture de l'emploi actuel ni remise à zéro de l'ancienneté ; un changement de poste n'est pas à lui seul une embauche distincte. Cohérence avec la cible proposée : tous les nouveaux emplois privés sont indéterminés ; aucune période d'aménagement ne rétablit un CDD. Les anciens contrats conservent leur terme valable et leurs créances, sans nouveau renouvellement ; les avantages restent accessibles aux situations futures de même objet. Le régime des agents publics n'est pas modifié."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+        "view_sha256": "07c3c02ea91c33bfe38f9dd4010d72cc213a2fee8e654638d29b3dec91f0446c",
+        "assessment": "La priorité sur un emploi disponible ne vaut ni rupture de l'emploi actuel ni remise à zéro de l'ancienneté ; un changement de poste n'est pas à lui seul une embauche distincte. La cible officielle ouvre l'indemnité à huit mois ; la proposition réserve aux nouveaux contrats le seuil d'un an à la fin effective, préavis inclus. À ce seuil, toute l'ancienneté compte à 0,20 mois par année, prorata des mois complets et plafond six mois, employeur seul et exception de faute grave ; anciens services et licenciements déjà notifiés, salaires, congés et indemnités spéciales restent distincts. Aucune condition d'indemnisation n'est ajoutée aux droits du présent article."
+      },
+      {
+        "target_key": "LEGITEXT000006072050|LEGIARTI000047453545",
+        "view_sha256": "11258e4e3c52ea1656485766524854b680835284fe07631648715ff49bdb2164",
+        "assessment": "Coordination nécessaire et correction : le renvoi source à la « durée minimale » ne peut viser le nouveau volume contractuel garanti sans restreindre la priorité. L3123-3 ouvre donc la priorité aux emplois à temps partiel sans seuil, y compris sans augmentation, en conservant les minima conventionnels et dispenses de L3123-7 pour la durée convenue. La transition vise les attributions futures ; les anciens droits restent protégés. La durée du besoin ou du cumul d'emplois n'est pas un terme autorisé du contrat unique."
+      }
+    ],
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Condition d'atteinte de la durée minimale de L3123-7 pour la priorité des salariés à temps partiel demandant un autre emploi."
+    ],
+    "substantive_impact": {
+      "version": 1,
+      "classification": "mixed",
+      "assessment": "Le seuil de durée pour la priorité de passage à un autre emploi est supprimé ; le brouillon est corrigé pour préserver aussi les reprises sans augmentation de durée. L'avantage est étendu, avec extension corrélative de l'obligation de priorité et d'information de l'employeur. Ce n'est pas une seconde suppression du minimum de vingt-quatre heures.",
+      "scope_limitations": "La priorité ne crée aucun poste et reste limitée à la catégorie, à l'équivalence ou à l'extension conventionnelle dans l'établissement puis l'entreprise. Le coût net de son extension et les conflits entre candidats ne sont pas chiffrés.",
+      "new_burdens_review": "L'obligation patronale de priorité et de communication des emplois disponibles couvre davantage de demandes de salariés à temps partiel. Aucun registre ni formulaire nouveau ; le solde net de charges n'est pas établi.",
+      "effects": [
+        {
+          "kind": "relief_extended",
+          "measure_id": "temps-partiel-priorite-sans-seuil",
+          "description": "Ouverture de la priorité sans condition de durée du poste demandé.",
+          "before": "Pour un salarié à temps partiel, priorité sur emploi atteignant le minimum de L3123-7 ou à temps complet.",
+          "after": "Priorité sur emploi à temps partiel ou complet, même sans augmentation de durée.",
+          "unit": "legal_duty",
+          "affected_population": "Salariés souhaitant occuper ou reprendre un emploi à temps partiel ou complet dans le périmètre légal et leurs employeurs.",
+          "conditions_and_transition": "Attributions après entrée en vigueur, demandes déjà présentées incluses ; droits antérieurs préservés.",
+          "replacement_or_new_burdens": "Extension corrélative de l'obligation patronale de priorité et d'information, sans nouveau support.",
+          "source_quote": "un emploi d'une durée au moins égale à celle mentionnée au premier alinéa de l'article L. 3123-7",
+          "proposed_quote": "La priorité des salariés à temps partiel n'est subordonnée ni à une augmentation de leur durée contractuelle ni à l'atteinte d'une durée minimale."
+        },
+        {
+          "kind": "obligation_added",
+          "measure_id": "temps-partiel-priorite-sans-seuil",
+          "description": "Extension du champ des demandes auxquelles l'employeur doit donner priorité et information.",
+          "before": "Priorité des salariés à temps partiel conditionnée au seuil de L3123-7 ou au temps complet.",
+          "after": "Demandes pour tous emplois à temps partiel incluses dans les limites de catégorie et d'établissement.",
+          "unit": "legal_duty",
+          "affected_population": "Salariés souhaitant occuper ou reprendre un emploi à temps partiel ou complet dans le périmètre légal et leurs employeurs.",
+          "conditions_and_transition": "La population visée au premier alinéa est élargie pour les attributions futures.",
+          "replacement_or_new_burdens": "Même obligation d'information sur un champ élargi ; pas de nouveau document imposé.",
+          "source_quote": "L'employeur porte à la connaissance de ces salariés la liste des emplois disponibles correspondants.",
+          "proposed_quote": "L'employeur porte à la connaissance de ces salariés la liste des emplois disponibles correspondants."
+        }
+      ]
+    },
+    "benefit_review": "La priorité de mobilité vers le temps complet ou partiel est préservée et ouverte sans seuil aux futures attributions. Les reprises sans augmentation ne sont plus exclues par le brouillon ; l'extension conventionnelle aux emplois différents demeure disponible.",
+    "substantive_impact_certificate": {
+      "version": 1,
+      "source_sha256": "0efbca7beaadda1fbe746a99e32b92b30148899e15d3f33e878c1d8783e5686a",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_sha256": "709ef4ac5c17e60f7a779aa2e64a49e655375a6a61d9889fc01263d8bdadacb8",
+      "assessment_sha256": "edd64da51f6a5b24dd0abb4bac82afe2cd5a174f03019a71d10ff752874c0318",
+      "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+      "verification": "exact_passages_and_hashes_only",
+      "independent_impact_audit": false,
+      "semantic_review_by_jurist": false
+    },
+    "reference_coherence": {
+      "version": 3,
+      "referrer_sha256": "709ef4ac5c17e60f7a779aa2e64a49e655375a6a61d9889fc01263d8bdadacb8",
+      "policy_sha256": {
+        "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+        "site-summaries.json": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+      },
+      "referrer_source": {
+        "code_id": "LEGITEXT000006072050",
+        "source_id": "LEGIARTI000036262948",
+        "source_sha256": "0efbca7beaadda1fbe746a99e32b92b30148899e15d3f33e878c1d8783e5686a",
+        "source_xml_sha256": "0942edd33f3a3f3ca155c31839d44668430fbfe1d410a5f879b096cfc1fd3def",
+        "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "targets": {
+        "LEGITEXT000006072050|LEGIARTI000006901112": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000006901112",
+          "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+          "view_kind": "proposal",
+          "view_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
+          "source_xml_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000019071087": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000019071087",
+          "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+          "view_kind": "proposal",
+          "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+          "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
+          "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "LEGITEXT000006072050|LEGIARTI000035644154": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000035644154",
+          "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+          "view_kind": "proposal",
+          "view_sha256": "07c3c02ea91c33bfe38f9dd4010d72cc213a2fee8e654638d29b3dec91f0446c",
+          "source_xml_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
+          "source_notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b"
+        },
+        "LEGITEXT000006072050|LEGIARTI000047453545": {
+          "code_id": "LEGITEXT000006072050",
+          "source_id": "LEGIARTI000047453545",
+          "source_sha256": "4ac14bc3220c17c2d0b61dad796d7f49db7e813a92a0ffb5d22d0b8d0940a56f",
+          "view_kind": "proposal",
+          "view_sha256": "11258e4e3c52ea1656485766524854b680835284fe07631648715ff49bdb2164",
+          "source_xml_sha256": "bcfde253ef66534ac0205d93592a83fd8cef8d41044951f5b875ed35e9cc78be",
+          "source_notes_sha256": "bc69462686dda881c46eb54e68e80511a0b410a8019f30f2abff8865d302506e"
+        }
+      },
+      "assessments": [
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+          "view_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
+          "assessment": "La priorité sur un emploi disponible ne vaut ni rupture de l'emploi actuel ni remise à zéro de l'ancienneté ; un changement de poste n'est pas à lui seul une embauche distincte. Différence de champ : la cible proposée règle le préavis patronal, quinze jours calendaires sans seuil d'ancienneté pour les nouveaux contrats, et conserve le régime des anciens. Aucun délai d'horaire du présent article ne le remplace. Notification selon L1234-3, départ le lendemain pour le nouveau contrat ; procédures collectives, autorisations et régimes spéciaux demeurent distincts."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+          "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+          "assessment": "La priorité sur un emploi disponible ne vaut ni rupture de l'emploi actuel ni remise à zéro de l'ancienneté ; un changement de poste n'est pas à lui seul une embauche distincte. Cohérence avec la cible proposée : tous les nouveaux emplois privés sont indéterminés ; aucune période d'aménagement ne rétablit un CDD. Les anciens contrats conservent leur terme valable et leurs créances, sans nouveau renouvellement ; les avantages restent accessibles aux situations futures de même objet. Le régime des agents publics n'est pas modifié."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+          "view_sha256": "07c3c02ea91c33bfe38f9dd4010d72cc213a2fee8e654638d29b3dec91f0446c",
+          "assessment": "La priorité sur un emploi disponible ne vaut ni rupture de l'emploi actuel ni remise à zéro de l'ancienneté ; un changement de poste n'est pas à lui seul une embauche distincte. La cible officielle ouvre l'indemnité à huit mois ; la proposition réserve aux nouveaux contrats le seuil d'un an à la fin effective, préavis inclus. À ce seuil, toute l'ancienneté compte à 0,20 mois par année, prorata des mois complets et plafond six mois, employeur seul et exception de faute grave ; anciens services et licenciements déjà notifiés, salaires, congés et indemnités spéciales restent distincts. Aucune condition d'indemnisation n'est ajoutée aux droits du présent article."
+        },
+        {
+          "target_key": "LEGITEXT000006072050|LEGIARTI000047453545",
+          "view_sha256": "11258e4e3c52ea1656485766524854b680835284fe07631648715ff49bdb2164",
+          "assessment": "Coordination nécessaire et correction : le renvoi source à la « durée minimale » ne peut viser le nouveau volume contractuel garanti sans restreindre la priorité. L3123-3 ouvre donc la priorité aux emplois à temps partiel sans seuil, y compris sans augmentation, en conservant les minima conventionnels et dispenses de L3123-7 pour la durée convenue. La transition vise les attributions futures ; les anciens droits restent protégés. La durée du besoin ou du cumul d'emplois n'est pas un terme autorisé du contrat unique."
+        }
+      ],
+      "assessments_sha256": "ea70d27e1a0268b50aeb2eab74401b3d188a98fe323a685cd9cdac74a7a0616b",
+      "semantic_review_by_jurist": false
+    },
+    "policy_review_id": "substantive_outcomes_2026_10_19",
+    "prior_proposal_sha256": "6617a4fd381ca6fc8d1939f7faefcdbd6f79fc52f92ee1f568a9c18f6e01c683"
   },
   {
     "code_id": "LEGITEXT000006072050",

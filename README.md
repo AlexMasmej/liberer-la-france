@@ -16,6 +16,12 @@ Each `dist/` directory contains a static website, including its available assets
 
 `legal-rewrite/` contains the drafting scripts, tests, batches, archived revisions, source attachments, and available research/validation state. See its README for provenance, editorial rules, rebuilding, and limitations. The legal rewrite is unfinished; these materials are not represented as lawyer-validated or a completed rewrite.
 
+## Seconde passe complète
+
+La [publication de la seconde passe](snapshots/20261029T035156Z-second-pass-complete/README.md) rassemble les 30 314 secondes passes terminées et vérifiées, la base active sauvegardée de façon cohérente et les textes finaux. Les sept derniers articles ont été rapprochés et relus avec GPT-6.1 Sol High. Le suivi dédié est arrêté.
+
+Les lots courants et notes restent consultables sous `legal-rewrite/`. L’état complet se restaure selon le manifeste du nouvel instantané, qui prolonge le précédent sans effacer l’historique. Les trois réserves documentaires, les questions de cohérence et la troisième passe demeurent ouvertes ; ceci ne constitue pas une validation par juriste. Les issues ouvertes sont conservées.
+
 ## Restore the databases
 
 The SQLite databases exceed GitHub's ordinary file limit. Consistent SQLite snapshots are compressed and split into parts below 50 MiB. Restore them with Python 3.11 or later:
@@ -30,7 +36,7 @@ The restoration verifies SHA-256 checksums and refuses to replace existing datab
 
 The export includes the available files from `sites/` and `legal-rewrite/`. Credentials, environment files, Python caches, locks, database sidecars, detected secret-bearing files, and local memory-service account/operational records are omitted. `export-exclusions.json` records omitted paths. Unrelated video material and the read-only synced project folder are outside this website export.
 
-## Latest interim snapshot — 28 October 2026
+## Previous interim snapshot — 28 October 2026
 
 The [user-requested snapshot](snapshots/2026-10-28-user-request/README.md) records the latest captured websites and drafting archive as a verified differential overlay on commit `cac48419271390c9d4f47917ffee30c1bd7f9c2a`. Earlier files in this repository remain preserved; use the snapshot manifest to restore the captured current state.
 

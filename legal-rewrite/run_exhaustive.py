@@ -117,10 +117,27 @@ def native_access_failure(stderr):
     return any(denied.search(message) for message in diagnostics)
 
 
+
+def routing_retry_delay(attempt, diagnostics):
+    """Bounded delay for an explicit terminal routing-discovery failure only.
+
+    Authentication/usage denials stay blocking. No request, account, model,
+    transport, TLS, source or acceptance policy is changed by this helper.
+    """
+    if attempt not in {1,2} or native_access_failure(diagnostics):return 0
+    lines=[line.strip() for line in diagnostics.splitlines() if line.strip()]
+    return 30*attempt if lines and lines[-1]=='ERROR: workspace routing discovery failed' else 0
+
+
 def publish_checkpoint(deploy=False):
     """Only a reported deployment failure is nonfatal; local defects still stop."""
     command=[sys.executable,str(HERE/'publish_snapshot.py')]+(['--deploy'] if deploy else [])
     result=subprocess.run(command,cwd=ROOT,check=False)
+    if result.returncode==21:
+        # An existing publisher owns validation and its report. Defer this
+        # request without claiming that its validation/deployment succeeded.
+        print('PUBLICATION ALREADY RUNNING; no additional publisher queued.',flush=True)
+        return False
     if result.returncode not in {0,20}:
         raise subprocess.CalledProcessError(result.returncode,command)
     if result.returncode==0 and not deploy:return True
@@ -372,14 +389,17 @@ def _run_job(job,codex,sources,review=False,measurement=None):
         reference_hash=digest((folder/'reference-targets.json').read_text())
         reference_prompt=reference_audit.PROMPT if reference_snapshot['targets'] else ''
         reference_retry=attempt>1 and provisional and failure and failure.startswith(('Reference target changed during drafting:','New reference needs its complete target text;'))
-        if reference_retry:
+        validation_retry=attempt>1 and provisional and failure and measurement.get('retries',[])[-1:] == ['validation']
+        if reference_retry or validation_retry:
             atomic(folder/'previous-answer.json',provisional)
             reference_prompt+='\nprevious-answer.json conserve ton brouillon du précédent essai de ce même lot, non accepté. Repars de ses articles complets pour corriger les renvois concernés et leurs analyses sur les cibles actuelles entières de reference-targets.json. Conserve les autres corrections valides ; ne réécris pas le style sans nécessité. Recompare source.json et ses previous_draft, la politique et les textes cibles : le brouillon et ses anciennes analyses ne font pas autorité. Écris un nouvel answer.json, avec les empreintes actuelles ; ne réutilise aucun ancien certificat.\n'
+            if validation_retry:
+                reference_prompt+='\nREPRISE APRÈS REFUS DE VALIDATION : previous-answer.json est le brouillon NON ACCEPTÉ du même lot, conservé uniquement comme point de départ. Corrige la cause exacte indiquée ci-dessous sans repartir d’une réécriture stylistique des autres articles. Relis les sources ENTIÈRES/NOTA/previous_draft, motifs/notes, politiques et cibles ENTIÈRES actuelles ; revalide toutes les dispositions et leurs interactions. Réécris answer.json ENTIER pour TOUS les articles assignés. Aucune portion conservée ni ancien certificat ne vaut acceptation, et tous les contrôles ordinaires restent obligatoires.\n'
         elif (folder/'previous-answer.json').exists():
             (folder/'previous-answer.json').unlink()
         for stale in ['answer.json','result.json']:
             if (folder/stale).exists():(folder/stale).unlink()
-        execution=requested_execution(RUNTIME)
+        execution=requested_execution(RUNTIME,kind='review' if review else 'new')
         atomic(folder/f'execution-requested-{attempt}.json',execution)
         with (folder/f'events-{attempt}.log').open('w') as events,(folder/f'errors-{attempt}.log').open('w') as errors:
             # Text mode retains the native resolved-session header on stderr.
@@ -399,6 +419,10 @@ def _run_job(job,codex,sources,review=False,measurement=None):
                 with LOCK:progress(sources,'blocked','Codex authentication or usage limit; see job '+folder.name)
                 print('BLOCKED',folder.name,'authentication or usage limit',flush=True);return
             measurement.setdefault('retries',[]).append('invocation')
+            delay=routing_retry_delay(attempt,diagnostics)
+            if delay:
+                atomic(folder/f'routing-retry-delay-{attempt}.json',{'attempt':attempt,'delay_seconds':delay,'reason':'explicit_terminal_workspace_routing_discovery_failure','accepted':False,'ordinary_attempt_limit':3})
+                if STOP.wait(delay):return
             failure='Agent invocation failed; inspect local job logs';continue
         observed=verify_execution(folder,execution,folder/f'errors-{attempt}.log')
         atomic(folder/f'execution-observed-{attempt}.json',observed)
@@ -726,6 +750,7 @@ def main():
     atomic(RUNTIME/'coordinator-run.json',{'pid':os.getpid(),'capacity':args.workers,
            'started_at_unix':int(time.time()),'dependency_leases':True,
            'requested_execution':requested_execution(RUNTIME),
+           'review_requested_execution':requested_execution(RUNTIME,kind='review'),
            'continuation_mode':'recover_new_before_reviews' if args.recover_new_before_reviews else None,
            'review_tail_capacity':worker_settings(RUNTIME).get('review_tail_capacity'),
            'role_limits':role_ceiling,

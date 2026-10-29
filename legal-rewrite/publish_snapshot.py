@@ -4,7 +4,7 @@ An edition with unprocessed articles never claims exhaustive rewriting.
 """
 from pathlib import Path
 from contextlib import redirect_stdout
-import argparse,errno,fcntl,json,re,subprocess,sys,time
+import argparse,errno,fcntl,json,os,re,subprocess,sys,time
 from ingest import HERE,open_db
 from register_batches import register
 
@@ -18,7 +18,22 @@ PROJECTS={
 
 
 DEPLOYMENT_PENDING_EXIT=20
-NETWORK_ERROR=re.compile(r'\b(?:ETIMEDOUT|ECONNRESET|EAI_AGAIN|ENETUNREACH|EHOSTUNREACH|ECONNREFUSED)\b|socket hang up|(?:HTTP|status(?: code)?)\s*[:=]?\s*(?:502|503|504)\b',re.I)
+PUBLICATION_BUSY_EXIT=21
+NETWORK_ERROR=re.compile(r'\b(?:ETIMEDOUT|ECONNRESET|EPIPE|EAI_AGAIN|ENETUNREACH|EHOSTUNREACH|ECONNREFUSED)\b|socket hang up|(?:HTTP|status(?: code)?)\s*[:=]?\s*(?:502|503|504)\b|FetchError: invalid json response body at https://api\.vercel\.com/[^\n]*"Internal S',re.I)
+
+def deployment_environment():
+    """Select a publication-only Node runtime; preserve transport security."""
+    env=os.environ.copy()
+    if env.get('NODE_TLS_REJECT_UNAUTHORIZED')=='0':
+        raise ValueError('TLS certificate verification must remain enabled')
+    config=HERE/'publication-runtime.json'
+    if config.exists():
+        value=json.loads(config.read_text())
+        folder=Path(value['node_bin_directory'])
+        if not folder.is_absolute() or not (folder/'node').is_file() or not os.access(folder/'node',os.X_OK):
+            raise ValueError('Configured publication Node runtime is unavailable')
+        env['PATH']=str(folder)+os.pathsep+env.get('PATH','')
+    return env
 
 def save_report(runtime,report):
     report['updated_at_unix']=int(time.time())
@@ -29,7 +44,13 @@ def save_report(runtime,report):
 def publish(deploy=False):
     runtime=HERE/'runtime';runtime.mkdir(exist_ok=True)
     with (runtime/'publication.lock').open('a') as lock:
-        fcntl.flock(lock,fcntl.LOCK_EX)
+        try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        except BlockingIOError:
+            # Coalesce overlapping requests; never queue another full validation
+            # or overwrite the report owned by the active publisher.
+            report={'status':'publication_in_progress','publication_pending':True,
+                    'all_sites_published':False,'local_checks_passed':False}
+            print(json.dumps(report));return report
         prior=json.loads((runtime/'publication.json').read_text()) if (runtime/'publication.json').exists() else {}
         report={'updated_at_unix':int(time.time()),'exhaustive_rewriting_complete':False,
                 'local_checks_passed':False,'deployment_requested':deploy,
@@ -52,6 +73,7 @@ def publish(deploy=False):
             report.update(drafted_articles=manifest['drafted_articles'],source_records=manifest['source_records'],local_checks_passed=True)
             if deploy:
                 stage='destination_validation'
+                deployment_env=deployment_environment()
                 for slug,project in PROJECTS.items():
                     folder=HERE.parent/'sites'/slug/'dist'
                     linked=json.loads((folder/'.vercel/project.json').read_text())
@@ -72,7 +94,11 @@ def publish(deploy=False):
                     transient=False;returncode=None;failure_type=None
                     try:
                         with (runtime/log_name).open('w') as output:
-                            result=subprocess.run(['vercel','deploy','--prod','--yes','--scope','personal-9062d8ea'],cwd=folder,stdout=output,stderr=subprocess.STDOUT,check=False,timeout=900)
+                            command=['vercel','deploy','--prod','--yes','--scope','personal-9062d8ea']
+                            # Vercel's supported archive transport preserves the validated
+                            # files while avoiding repeated large individual-file uploads.
+                            if slug=='liberer-la-retraite':command.append('--archive=tgz')
+                            result=subprocess.run(command,cwd=folder,stdout=output,stderr=subprocess.STDOUT,check=False,timeout=900,env=deployment_env)
                         returncode=result.returncode
                         if returncode:transient=bool(NETWORK_ERROR.search((runtime/log_name).read_text(errors='replace')))
                     except subprocess.TimeoutExpired:
@@ -104,6 +130,7 @@ def main():
         # The report names the failed stage; raw CLI/auth output stays in logs.
         print('Local publication checks failed; see runtime/publication.json.',file=sys.stderr)
         return 1
+    if report['status']=='publication_in_progress':return PUBLICATION_BUSY_EXIT
     return DEPLOYMENT_PENDING_EXIT if args.deploy and report['publication_pending'] else 0
 
 if __name__=='__main__':raise SystemExit(main())
