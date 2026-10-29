@@ -1,0 +1,614 @@
+{
+ "group": "V09",
+ "read_from": "production",
+ "read_date": "2026-10-29",
+ "method": "CITE_PRODUCTION=1 python3 -I tools/cite.py pour chaque article du paquet ; liens lus dans la base de production en lecture seule (mode=ro, query_only). Qualification faite avant toute consultation de reports/register.json, audit/U*.json et audit/sweeps/. Revue IA : ce n'est pas une validation par un juriste.",
+ "counts": {
+  "G": 1,
+  "m": 5,
+  "0": 25
+ },
+ "articles": [
+  {
+   "sample_id": "T009",
+   "code": "cch",
+   "number": "R125-16-1",
+   "source_id": "LEGIARTI000048521237",
+   "status": "rewrite_draft",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Proposition cohérente avec L122-12 proposé (suppression de l'agrément spécifique) : l'équivalence est conservée pour les attestations antérieures, aucune équivalence n'est exigée pour l'avenir, l'agrément L125-3 reste distinct. Défaut limité aux notes : elles indiquent que R125-23 à R125-31 et R122-25 « restent à coordonner hors lot », alors que R125-23, R125-25 et R122-25 portent désormais des propositions coordonnées (abrogation sans formalité de remplacement, retrait du bureau « agréé »).",
+   "evidence": "LEGIARTI000048521237, notes : « R125-23 à R125-31 et R122-25 restent à coordonner hors lot ». LEGIARTI000048521625, proposition : « Le présent article est abrogé à compter de l'entrée en vigueur de la suppression de l'agrément spécifique prévue à l'article L. 122-12 ». LEGIARTI000048562951, proposition : « Aucune déclaration ne remplace l'agrément spécifique ou la convention supprimés. »",
+   "links_read": [
+    "cch L122-12 (LEGIARTI000046123669, proposition)",
+    "cch R125-22 (LEGIARTI000048521621)",
+    "cch R125-23 (LEGIARTI000048521625)",
+    "cch R125-25 (LEGIARTI000048521641)",
+    "cch R122-25 (LEGIARTI000048562951)"
+   ],
+   "links_not_read": "R125-24, R125-26 à R125-31, L125-3, L181-13 non relus en entier ; décret 2023-1143 hors corpus.",
+   "known_objection": "Non pour cet article. Même famille (notes périmées sur la chaîne de l'agrément L122-12) signalée par audit/U06.json pour R125-26 ; U06 qualifie R122-28 à 0 en relevant que la chaîne R125-16-1 / R125-22 à R*125-31 / R122-25 est coordonnée.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T019",
+   "code": "css",
+   "number": "R382-89",
+   "source_id": "LEGIARTI000006749795",
+   "status": "rewrite_draft",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Coordination correcte : la base forfaitaire des cotisations vieillesse des cultes reste calculée sur trente-cinq heures malgré les quarante heures de L3121-27 proposé pour les nouveaux contrats uniques ; R382-90 (part des collectivités) porte la même clause. Défaut limité aux notes : elles disent que R382-88 reste à coordonner (« son garde-fou actuel porte seulement sur le taux »), alors que la proposition actuelle de R382-88 contient la clause sur les heures.",
+   "evidence": "LEGIARTI000006749795, notes : « Hors lot : même ambiguïté d'heures à coordonner dans R382-88 ; son garde-fou actuel porte seulement sur le taux. » LEGIARTI000006749794, proposition : « le relèvement à quarante heures du seuil des heures supplémentaires applicable aux nouveaux contrats de travail de droit privé n'emporte aucun relèvement du nombre légal d'heures de travail mensuel retenu ».",
+   "links_read": [
+    "travail L3121-27 (LEGIARTI000033020376, proposition)",
+    "css L382-25 (LEGIARTI000051289014)",
+    "css R382-88 (LEGIARTI000006749794, proposition)",
+    "css R382-90 (LEGIARTI000006749796, proposition)"
+   ],
+   "links_not_read": "R382-72, R382-121 et R382-126 (renvois entrants cités par les notes) non relus.",
+   "known_objection": "Non.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T029",
+   "code": "travail",
+   "number": "R4227-18",
+   "source_id": "LEGIARTI000018532107",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Règle de prévention incendie maintenue. Elle reste compatible avec R4216-17 (conception des locaux), qui renvoie à R4227-18 et dont la source porte une abrogation différée au 1er janvier 2027 (ABROGE_DIFF) : cette question relève de R4216-17, pas du présent article. Base légale L4111-6 / L4121-1 non affectée.",
+   "evidence": null,
+   "links_read": [
+    "travail R4216-17 (LEGIARTI000018532402, ABROGE_DIFF au 2027-01-01)",
+    "travail R4227-19 et R4227-20 (cités par les notes, non ouverts)"
+   ],
+   "links_not_read": "R4227-19, R4227-20 et L4111-6 non ouverts ; texte qui remplace R4216-17 en 2027 non recherché.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T039",
+   "code": "travail",
+   "number": "R4452-17",
+   "source_id": "LEGIARTI000036483535",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Article maintenu. Les renvois R4452-5 et R4452-6 (valeurs limites) et L4643-1 sont opérants ; la consultation du CSE et du médecin du travail est maintenue, comme l'exige l'orientation (protections de santé et sécurité préservées). Directive 2006/25/CE : rien à signaler sans source primaire.",
+   "evidence": null,
+   "links_read": [
+    "travail R4452-5 (LEGIARTI000022442856)",
+    "travail R4452-6 (LEGIARTI000022442851)",
+    "travail L4643-1 (LEGIARTI000006903379)"
+   ],
+   "links_not_read": "R4452-18 et directive 2006/25/CE non relues.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T049",
+   "code": "travail",
+   "number": "D3123-1-1",
+   "source_id": "LEGIARTI000047958629",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "La proposition retire le recommandé et le préavis de deux mois. Elle reste alignée sur L3123-4-1 proposé (écrit à date certaine, accord tacite à deux mois, refus motivé) et règle le cas où la date souhaitée est déjà passée. Transition explicite. Rien de grossier.",
+   "evidence": null,
+   "links_read": [
+    "travail L3123-4-1 (LEGIARTI000052437146, proposition)",
+    "css L161-22-1-5 (LEGIARTI000052437156)",
+    "css L161-22-1-9 (LEGIARTI000047450671)"
+   ],
+   "links_not_read": "Textes réglementaires CSS de la retraite progressive (R161-19-x) non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T059",
+   "code": "travail",
+   "number": "R2312-15",
+   "source_id": "LEGIARTI000036411594",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "La base de données de groupe facultative est maintenue. Elle s'articule avec R2312-11 (base au niveau de l'entreprise à défaut d'accord), L2312-21 (accord sur l'organisation) et L2312-18 proposé (support libre, sans recopie). Aucune contradiction.",
+   "evidence": null,
+   "links_read": [
+    "travail L2312-18 (LEGIARTI000052437125, proposition)",
+    "travail R2312-11 (LEGIARTI000036411584)",
+    "travail L2312-21 (LEGIARTI000043975329)"
+   ],
+   "links_not_read": "L2312-36 non relu.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T069",
+   "code": "css",
+   "number": "R172-18",
+   "source_id": "LEGIARTI000032586906",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Le rattachement de l'invalidité au régime de la date de constatation médicale, avec totalisation par R172-19, est maintenu. Les renvois R172-16 et R172-19 sont opérants.",
+   "evidence": null,
+   "links_read": [
+    "css R172-16 (LEGIARTI000032586917)",
+    "css R172-19 (LEGIARTI000032586902)",
+    "css L172-1 (LEGIARTI000036392746, proposition)"
+   ],
+   "links_not_read": "R172-17, R172-21 et R172-21-1 non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T079",
+   "code": "travail",
+   "number": "L1226-22",
+   "source_id": "LEGIARTI000006900989",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "La garantie AGS est maintenue pour les indemnités d'inaptitude des anciens CDD (L1226-20, L1226-21). Pour les nouveaux contrats uniques, le texte renvoie à L1226-17, qui couvre L1226-14 et L1226-15. Il exclut le double paiement. L'articulation avec L1226-20 proposé est cohérente : indemnité doublée sans seuil d'un an, composantes ancienne et nouvelle, conforme à l'orientation sur l'inaptitude professionnelle.",
+   "evidence": null,
+   "links_read": [
+    "travail L1226-17 (LEGIARTI000006900984)",
+    "travail L1226-20 (LEGIARTI000033024877, proposition)",
+    "travail L1226-21 (LEGIARTI000033024870, proposition)",
+    "travail L1226-14 (LEGIARTI000006900981, proposition)",
+    "travail L1226-15 (LEGIARTI000035643503, proposition)",
+    "travail L1226-18, L1226-19 (propositions)"
+   ],
+   "links_not_read": "L3253-15 et L3253-19 à L3253-21 (garanties AGS) non relus dans leur proposition actuelle.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T089",
+   "code": "css",
+   "number": "R931-3-14-1",
+   "source_id": "LEGIARTI000030575991",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Le droit de convocation du conseil par le tiers des administrateurs ou par le directeur général est maintenu. Il est compatible avec R931-3-15 (le président fixe l'ordre du jour) : le dernier alinéa le lie expressément.",
+   "evidence": null,
+   "links_read": [
+    "css R931-3-15 (LEGIARTI000006754829)"
+   ],
+   "links_not_read": "R931-3-19 et base légale L931-x non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T099",
+   "code": "travail",
+   "number": "L2523-8",
+   "source_id": "LEGIARTI000006902410",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Le rapport et la transmission au parquet en cas de non-comparution devant le médiateur sont abrogés. La coordination est faite avec L2525-1 (sanction de 3 750 euros supprimée, loi pénale plus douce), R2525-1 et R2523-12 (rapport réglementaire retiré). La comparution et la représentation de L2523-4 sont maintenues. Aucun autre article ne renvoie à L2523-8. La phrase « Les dispositions réglementaires imposant ce circuit cessent d'être applicables » est une injonction superflue, mais elle n'a pas d'effet puisque R2523-12 est coordonné.",
+   "evidence": null,
+   "links_read": [
+    "travail L2525-1 (LEGIARTI000006902428, proposition)",
+    "travail R2525-1 (LEGIARTI000018534736, proposition)",
+    "travail R2523-12 (LEGIARTI000018534812, proposition)",
+    "travail L2523-4 (LEGIARTI000006902406, proposition)",
+    "recherche des renvois entrants à L. 2523-8 dans le code du travail (seul R2523-12)"
+   ],
+   "links_not_read": "L2522-3 et L2522-4 non relus.",
+   "known_objection": "Cluster déjà traité : reports/register.json RT-P1-TRAVAIL-B-15 (résolu, P2, sur le motif de maintien du « rapport de non-comparution ») ; notes : correction RT-ISS12-02 (issue #12) ; audit/sweeps/W08.json. Aucun défaut résiduel constaté.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T109",
+   "code": "css",
+   "number": "R313-6",
+   "source_id": "LEGIARTI000031827945",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Les deux renvois au « a » inexistant (3° et 5°) sont corrigés en « 1° ». Les six voies d'ouverture du droit et leurs seuils sont intégralement conservés. C'est la correction d'une erreur de la source, rédigée correctement.",
+   "evidence": null,
+   "links_read": [
+    "css R313-1, R313-7 à R313-9 (cités par les notes, non ouverts)"
+   ],
+   "links_not_read": "R313-1, R313-7, R313-8 et R313-9 non ouverts (ils ne sont pas modifiés par l'article).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T119",
+   "code": "css",
+   "number": "L712-5",
+   "source_id": "LEGIARTI000006744006",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "La commission paritaire de L712-5 est maintenue. Elle est appliquée par D712-28 proposé : les CAP en exercent les attributions, et une commission est prévue pour les magistrats, à saisine facultative au titre de R142-1. L712-3 est inchangé.",
+   "evidence": null,
+   "links_read": [
+    "css L712-3 (LEGIARTI000047452656)",
+    "css D712-28 (LEGIARTI000006738838, proposition)",
+    "recherche des renvois entrants à L. 712-5 (seul D712-28)"
+   ],
+   "links_not_read": "D712-29 et suivants lus seulement en partie.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T129",
+   "code": "travail",
+   "number": "L6523-1-3",
+   "source_id": "LEGIARTI000038983829",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Le gestionnaire interprofessionnel unique à Saint-Martin et Saint-Barthélemy est maintenu. R6523-2-15 proposé applique l'article, sans durée limitée. L6523-1 proposé ouvre la gestion à plusieurs opérateurs dans les quatre DROM : l'asymétrie est un choix assumé et motivé, pas une contradiction. Les contributions du titre III subsistent (L6131-1 proposé, CPF-CDD supprimée pour l'avenir).",
+   "evidence": null,
+   "links_read": [
+    "travail R6523-2-15 (LEGIARTI000042827823, proposition)",
+    "travail L6523-1 (LEGIARTI000038987386, proposition)",
+    "travail L6131-1 (LEGIARTI000043709709, proposition)",
+    "recherche des renvois entrants (R6523-2-15, R6523-2-16)"
+   ],
+   "links_not_read": "R6523-2-16 et R6523-2-13 non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T139",
+   "code": "travail",
+   "number": "D5221-2-1",
+   "source_id": "LEGIARTI000033329579",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Les sept domaines dispensés d'autorisation de travail pour trois mois au plus sont conservés. L'ajout précise que la durée vise l'activité en France et non le terme du contrat unique, en miroir exact de L5221-2-1 proposé. Le renvoi L1262-1 est opérant.",
+   "evidence": null,
+   "links_read": [
+    "travail L5221-2-1 (LEGIARTI000038887829, proposition)",
+    "travail L5221-2 (LEGIARTI000006903732)",
+    "travail L1262-1 (LEGIARTI000018764665, proposition)"
+   ],
+   "links_not_read": "CSS D133-26 (cité par les notes) non relu.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T149",
+   "code": "css",
+   "number": "R932-7-1",
+   "source_id": "LEGIARTI000017872659",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Le régime de provisionnement des institutions issues d'IRS est maintenu. Les renvois L932-24 et R932-7-2 sont opérants.",
+   "evidence": null,
+   "links_read": [
+    "css L932-24 (LEGIARTI000034387898)",
+    "css R932-7-2 (LEGIARTI000030586115, proposition)"
+   ],
+   "links_not_read": "L941-1 et R932-7-3 à R932-7-5 non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T159",
+   "code": "css",
+   "number": "R842-5",
+   "source_id": "LEGIARTI000033979182",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "La déchéance partielle pour demande tardive (délai de six mois) de la majoration pour isolement de la prime d'activité est supprimée. Les douze mois et la prolongation jusqu'aux trois ans de l'enfant sont maintenus, les mois déjà servis sont imputés, et il n'y a pas de rappel antérieur à la demande : R846-2 fixe l'ouverture au mois de la demande. Cohérent avec L842-7 proposé.",
+   "evidence": null,
+   "links_read": [
+    "css L842-7 (LEGIARTI000031077047, proposition)",
+    "css R846-2 (LEGIARTI000031676112)",
+    "css R843-2 (LEGIARTI000051300726)"
+   ],
+   "links_not_read": "Liens directs principaux lus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T169",
+   "code": "css",
+   "number": "D213-4",
+   "source_id": "LEGIARTI000036704556",
+   "status": "retained_unchanged",
+   "verdict": "G",
+   "families": [
+    "F3"
+   ],
+   "description": "Renvoi mort maintenu. D213-4 rend applicable aux conseils d'administration des URSSAF « l'article R. 231-24 », qui n'existe pas : aucune version de R231-24 dans le corpus, ni sur Légifrance. Le décret n° 2018-174 du 9 mars 2018 a transféré, à son article 15, l'ancien D231-24 (élection du président et des vice-présidents, renouvellement du mandat du président) à R231-4 : le lien LEGI de D231-24 vers R231-4 est de type CONCORDE. Le même décret, à son article 16, a modifié D213-4 en y écrivant « R. 231-24 ». Le projet maintient le texte en disant la cible « non retrouvée » et en faisant une réserve documentaire, alors que la concordance figure dans le corpus. Effet : la règle d'élection du président et des vice-présidents des conseils d'URSSAF n'a plus de cible textuelle certaine. Nature : conflit de source préexistant, non corrigé.",
+   "evidence": "LEGIARTI000036704556, source : « Les dispositions de l'article R. 231-24 sont applicables aux conseils d'administration des unions de recouvrement des cotisations de sécurité sociale et d'allocations familiales. » Notes : « Nouvelle recherche dans le corpus : aucun article numéroté R231-24 trouvé. » LEGIARTI000029572315 (D231-24), lien : « Décret n°2018-174 du 9 mars 2018 - art. 15 », typelien TRANSFERE, et lien CONCORDE vers « art. R231-4 ». LEGIARTI000036697417 (R231-4) : « Le conseil d'administration élit un président, un premier vice-président et, le cas échéant, un ou deux autres vice-présidents au scrutin secret ».",
+   "links_read": [
+    "css D231-24 (LEGIARTI000029572315, TRANSFERE 2018-01-01, liens LEGI)",
+    "css R231-4 (LEGIARTI000036697417, liens LEGI)",
+    "css R231-6 (LEGIARTI000036697440)",
+    "recherche de toutes les versions R231-*/D231-* du CSS en production",
+    "Légifrance, article D213-4 (LEGIARTI000036704556), consulté le 2026-10-29 (consolidation postérieure au 18 octobre 2026, texte identique)"
+   ],
+   "links_not_read": "Texte JORF intégral des articles 15 et 16 du décret 2018-174 non consulté. Règles propres aux conseils d'URSSAF en L213-x / R213-x non relues.",
+   "known_objection": null,
+   "suggested_correction": "Remplacer le texte de D213-4 par : « Les dispositions de l'article R. 231-4 sont applicables aux conseils d'administration des unions de recouvrement des cotisations de sécurité sociale et d'allocations familiales. La présente rectification de renvoi s'applique aux élections et renouvellements intervenant à compter de son entrée en vigueur ; les élections et délibérations antérieures des conseils demeurent valables. » Aucune formalité nouvelle. À confirmer sur le JORF (décret 2018-174, art. 15 et 16)."
+  },
+  {
+   "sample_id": "T179",
+   "code": "travail",
+   "number": "L3123-34",
+   "source_id": "LEGIARTI000033020658",
+   "status": "retained_unchanged",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Le contrat intermittent, déjà à durée indéterminée, est maintenu. Il est compatible avec L1221-2 proposé (contrat unique) et avec L3123-38 et D3123-4 proposés (adaptations sans liste réglementaire). La sanction R3124-5 3° ne vise les mentions que « lorsque ces mentions sont obligatoires ». Défaut limité aux notes : elles disent que « D3123-4 reste à coordonner hors lot », alors que sa proposition est coordonnée.",
+   "evidence": "LEGIARTI000033020658, notes : « D3123-4 reste à coordonner hors lot ». LEGIARTI000033515858, proposition : « Cette reconnaissance n'établit pas une liste limitative de secteurs ».",
+   "links_read": [
+    "travail L3123-38 (LEGIARTI000033005861, proposition)",
+    "travail D3123-4 (LEGIARTI000033515858, proposition)",
+    "travail L1221-2 (LEGIARTI000019071087, proposition)",
+    "travail R3124-5 (LEGIARTI000033471450)",
+    "travail L3123-33 (LEGIARTI000033020661)"
+   ],
+   "links_not_read": "L3123-35, L3123-36 et L3123-37 non relus.",
+   "known_objection": "Non pour cet article. Défaut identique signalé par audit/U09.json pour L3123-33 (notes périmées sur D3123-4).",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T189",
+   "code": "travail",
+   "number": "D3142-81",
+   "source_id": "LEGIARTI000044203028",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Le plafond supplétif de 2 % des heures annuelles pour le report du congé d'enseignement ou de recherche est maintenu. Il est cohérent avec L3142-128, L3142-129 7° et L3142-130 4° proposé (« heures d'absence »).",
+   "evidence": null,
+   "links_read": [
+    "travail L3142-128 (LEGIARTI000042803430)",
+    "travail L3142-129 (LEGIARTI000042803434, proposition)",
+    "travail L3142-130 (LEGIARTI000042803438, proposition)",
+    "travail D3142-80 (LEGIARTI000044203026)"
+   ],
+   "links_not_read": "Liens directs principaux lus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T199",
+   "code": "cgi",
+   "number": "887",
+   "source_id": "LEGIARTI000006310988",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Les modes de paiement du timbre sont maintenus. Ils sont cohérents avec 899 (timbre dématérialisé), 900 proposé (validité illimitée) et 900 A proposé (remboursement sans délai). Aucun renvoi entrant problématique dans les annexes II à IV.",
+   "evidence": null,
+   "links_read": [
+    "cgi 899 (LEGIARTI000030062713)",
+    "cgi 900 (LEGIARTI000041822888, proposition)",
+    "cgi 900 A (LEGIARTI000030062709, proposition)",
+    "recherche des renvois à l'article 887 dans le CGI et les annexes II à IV"
+   ],
+   "links_not_read": "Annexe III 301 (citée par les notes) et décrets d'application non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T209",
+   "code": "travail",
+   "number": "R4624-29",
+   "source_id": "LEGIARTI000045371016",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "La visite de préreprise après plus de trente jours d'arrêt est maintenue. Elle est cohérente avec L4624-2-4 (« durée fixée par décret »), R4624-30 et R4624-31 (dispense de visite de reprise après préreprise dans les trente jours).",
+   "evidence": null,
+   "links_read": [
+    "travail L4624-2-4 (LEGIARTI000043891306)",
+    "travail R4624-30 (LEGIARTI000054250636)",
+    "travail R4624-31 (LEGIARTI000054250639)"
+   ],
+   "links_not_read": "CSS D323-3 et R4626-29-1 (cités par les notes) non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T219",
+   "code": "css",
+   "number": "L242-10",
+   "source_id": "LEGIARTI000031685873",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Les exclusions de l'abattement temps partiel sont maintenues. Les renvois L242-8, L242-9, L242-3 et L242-4-4 sont opérants. La suppression du plancher de vingt-quatre heures et la durée de quarante heures ne touchent pas la définition du temps partiel de L3123-1.",
+   "evidence": null,
+   "links_read": [
+    "css L242-8 (LEGIARTI000033021383)",
+    "css L242-9 (LEGIARTI000033021353)",
+    "css L242-4-4 (LEGIARTI000029956922)"
+   ],
+   "links_not_read": "L242-3 et R242-2 non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T229",
+   "code": "travail",
+   "number": "D3243-8",
+   "source_id": "LEGIARTI000033627046",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "Les garanties de disponibilité du bulletin électronique sont maintenues : cinquante ans ou âge de L1237-5 dernier alinéa (soixante-neuvième anniversaire) plus six ans, préavis de trois mois avant fermeture, récupération. Cohérent avec L3243-2 proposé, qui renvoie à D3243-8 et rend facultatif le raccordement CPA, et avec D3243-7 proposé.",
+   "evidence": null,
+   "links_read": [
+    "travail L1237-5 (LEGIARTI000052437183)",
+    "travail L3243-2 (LEGIARTI000033024092, proposition)",
+    "travail D3243-7 (LEGIARTI000033627030, proposition)"
+   ],
+   "links_not_read": "L5151-6 non relu.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T239",
+   "code": "travail",
+   "number": "R6222-8",
+   "source_id": "LEGIARTI000041771287",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Le renvoi est corrigé du « dernier alinéa » au « troisième alinéa » de L6222-7-1, conformément à la proposition de cet article où la convention tripartite figure au troisième alinéa. La réserve des obligations du certificateur est maintenue. Cohérent avec R6222-7 proposé (modèle de convention facultatif).",
+   "evidence": null,
+   "links_read": [
+    "travail L6222-7-1 (LEGIARTI000038951821, source et proposition)",
+    "travail R6222-7 (LEGIARTI000041771297, proposition)"
+   ],
+   "links_not_read": "L6222-11 non relu.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T249",
+   "code": "travail",
+   "number": "R4533-4",
+   "source_id": "LEGIARTI000018529350",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "L'exigence de puissance électrique suffisante est maintenue. Le renvoi de R4533-6 2° est opérant ; R4533-7 proposé retire la seule consultation de l'OPPBTP.",
+   "evidence": null,
+   "links_read": [
+    "travail R4533-1 (LEGIARTI000018529356)",
+    "travail R4533-6 (LEGIARTI000022357100)",
+    "travail R4533-7 (LEGIARTI000022357104, proposition)"
+   ],
+   "links_not_read": "Liens directs principaux lus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T259",
+   "code": "travail",
+   "number": "L5143-1",
+   "source_id": "LEGIARTI000033012294",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "Mise à jour des désignations : autorité régionale à la place du DIRECCTE, chambres de métiers et de l'artisanat à la place de l'ancien article 5-1 du code de l'artisanat. Le droit à l'information des entreprises de moins de trois cents salariés et la preuve de bonne foi sont intacts. Aucun renvoi entrant dans le code du travail.",
+   "evidence": null,
+   "links_read": [
+    "recherche des renvois entrants à L. 5143-1 dans le code du travail (aucun)"
+   ],
+   "links_not_read": "L23-111-1, code de commerce L710-1, code rural L511-1 et loi 91-647 art. 54 non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T269",
+   "code": "travail",
+   "number": "L2231-8",
+   "source_id": "LEGIARTI000006901677",
+   "status": "rewrite_draft",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "La proposition est une pure reformulation, que le motif reconnaît comme stylistique (« conservation exacte du brouillon stylistique antérieur »). Le fond est inchangé : écrit, motifs, points de désaccord, notification aux signataires. Elle est classée rewrite_draft, alors que l'orientation substantive_outcomes_2026_10_19 demande de laisser le texte source « sans fabriquer un changement stylistique ni compter une réécriture ». Aucun effet juridique.",
+   "evidence": "LEGIARTI000006901677, source : « L'opposition à l'entrée en vigueur d'une convention ou d'un accord est exprimée par écrit et motivée. » Proposition : « L'opposition à l'entrée en vigueur d'une convention ou d'un accord est formulée par écrit. Elle expose ses motifs et précise les points de désaccord. » Motif : « conservation exacte du brouillon stylistique antérieur, sans nouvelle reformulation ».",
+   "links_read": [
+    "orientations policy-coordinations.json (negociation_collective, substantive_outcomes_2026_10_19)"
+   ],
+   "links_not_read": "L2232-2, L2232-6 et L2232-12 (délais et majorités d'opposition) non relus dans leur proposition actuelle.",
+   "known_objection": "Non.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T279",
+   "code": "css",
+   "number": "R178-7",
+   "source_id": "LEGIARTI000052196468",
+   "status": "rewrite_draft",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "La proposition aligne DCdPAN sur L223-11 1° en vigueur depuis la LFSS 2026 (dépenses « en 2025 »), réserve l'expérimentation de l'article 79 et le coefficient géographique, et ajoute une transition. Le fond est cohérent avec la loi. Rédaction maladroite sans effet : la variable garde l'indice N (« DCdPAN ») alors qu'elle désigne désormais les dépenses de 2025.",
+   "evidence": "LEGIARTI000052196468, proposition : « 2° DCdPAN représente les dépenses mentionnées au a du 3° de l'article L. 223-8 réalisées par le département pour l'année 2025, conformément au 1° de l'article L. 223-11 ». LEGIARTI000053284036 : « 1° Les dépenses réalisées par chaque département mentionnées au même a en 2025 ».",
+   "links_read": [
+    "css L223-11 (LEGIARTI000053284036, source et proposition)"
+   ],
+   "links_not_read": "L223-8, L223-12, R178-10 et R178-11 non relus. Articles 47, 79 et 86 des LFSS citées hors corpus.",
+   "known_objection": "Non.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T289",
+   "code": "cch",
+   "number": "R201-5",
+   "source_id": "LEGIARTI000033068006",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "L'avis du ministre du logement sur l'agrément des réviseurs est supprimé, sans avis de remplacement. L'agrément par le ministre de l'ESS et l'exigence d'expérience immobilière sont maintenus. Cohérent avec R201-4 proposé (révision périodique abrogée, révisions volontaires renvoyant à R201-5) et L201-10 proposé.",
+   "evidence": null,
+   "links_read": [
+    "cch R201-4 (LEGIARTI000033068004, proposition)",
+    "cch L201-10 (LEGIARTI000028778485, proposition)"
+   ],
+   "links_not_read": "Décret 2015-706 (art. 1er à 10) hors corpus, non lu.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T299",
+   "code": "travail",
+   "number": "L3255-1",
+   "source_id": "LEGIARTI000006902926",
+   "status": "rewrite_draft",
+   "verdict": "0",
+   "families": [],
+   "description": "L'incrimination est restreinte à la contrainte de dépense du salaire (2° maintenu de L3254-1). L'annexion d'un économat n'est plus punissable (1° abrogé), avec application de la loi pénale plus douce. Pas de sanction orpheline.",
+   "evidence": null,
+   "links_read": [
+    "travail L3254-1 (LEGIARTI000006902924, proposition)",
+    "travail L3254-2 (LEGIARTI000006902925, proposition)",
+    "recherche des renvois entrants à L. 3254-1 et L. 3255-1"
+   ],
+   "links_not_read": "Liens directs principaux lus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "T309",
+   "code": "a1",
+   "number": "206",
+   "source_id": "LEGIARTI000006293623",
+   "status": "retained_unchanged",
+   "verdict": "0",
+   "families": [],
+   "description": "La restitution immédiate au fabricant après essai est maintenue. Les renvois 204 (déclaration préalable proposée sans délai d'exportation) et 205 (ouvrages bruts) sont opérants.",
+   "evidence": null,
+   "links_read": [
+    "a1 204 (LEGIARTI000006293353, proposition)",
+    "a1 205 (LEGIARTI000006293356)"
+   ],
+   "links_not_read": "Base légale CGI 545 et suivants (garantie) non relue.",
+   "known_objection": null,
+   "suggested_correction": null
+  }
+ ]
+}

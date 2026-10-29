@@ -1,0 +1,643 @@
+{
+ "group": "U04",
+ "read_from": "production",
+ "read_date": "2026-10-29",
+ "method": "Lecture par CITE_PRODUCTION=1 python3 -I tools/cite.py (production en lecture seule) de chaque article (toutes versions, NOTA, proposition, motif, notes) et de ses liens directs ; recherche des renvois entrants dans la base de production (mode=ro, query_only). Qualification faite avant toute lecture de reports/register.json ; registre consulté ensuite pour known_objection.",
+ "counts": {
+  "G": 2,
+  "m": 4,
+  "0": 25
+ },
+ "disclaimer": "Revue IA : ce n'est pas une validation par un juriste.",
+ "articles": [
+  {
+   "sample_id": "S004",
+   "code": "cch",
+   "number": "R634-5",
+   "source_id": "LEGIARTI000050432433",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Abrogation coordonnée avec L634-1, L634-4 et L634-5 proposés : plus de titre nouveau, recouvrement des seules amendes anciennes définitives selon le droit commun des créances locales. Texte cohérent. Seul défaut : le motif affirme comme acquis que R. 2342-4 CGCT est abrogé, alors que les notes de revue disent que ce point n'est pas confirmé. Le motif et les notes se contredisent ; l'affirmation du motif est à vérifier (à notre connaissance, l'article est toujours en vigueur ; non vérifié sur Légifrance).",
+   "evidence": "Motif (LEGIARTI000050432433) : « sans renvoi à R2342-4 abrogé ». Notes de revue (même article) : « l’affirmation antérieure de l’abrogation de R2342-4 n’est donc pas confirmée ici ».",
+   "links_read": [
+    "cch L634-1 LEGIARTI000049397568",
+    "cch L634-4 LEGIARTI000049397952",
+    "cch L634-5 LEGIARTI000028781495",
+    "cch R634-4 LEGIARTI000050432440",
+    "cch R634-1 à R634-3",
+    "recherche des renvois entrants à R. 634-5 dans le CCH (aucun)"
+   ],
+   "links_not_read": "CGCT R2342-4 et L1617-5 (hors corpus) ; arrêtés de formulaires.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cch_R634-5_LEGIARTI000050432433.json",
+    "evidence/cited/production-20261029/cch_L634-4_LEGIARTI000049397952.json"
+   ]
+  },
+  {
+   "sample_id": "S014",
+   "code": "travail",
+   "number": "L2232-33",
+   "source_id": "LEGIARTI000033023175",
+   "verdict": "0",
+   "families": [],
+   "description": "Réécriture à droit constant des négociations de groupe et des deux dispenses. L2222-3-1 proposé réserve expressément L2232-33 ; le chapitre II du titre IV (L2242-1) est maintenu. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "travail L2222-3-1 LEGIARTI000033008810",
+    "travail L2242-1 LEGIARTI000043893962"
+   ],
+   "links_not_read": "L2232-34 et suivants de la section ; L2242-10 à L2242-13 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S024",
+   "code": "css",
+   "number": "R434-15",
+   "source_id": "LEGIARTI000006750365",
+   "verdict": "0",
+   "families": [],
+   "description": "Article maintenu (20 ans ; 25 %, 20 % et 30 %). Sa base légale L434-10 n'est modifiée que pour un renvoi institutionnel (L311-7 devenu L5312-1). Cohérent.",
+   "evidence": "",
+   "links_read": [
+    "css L434-10 LEGIARTI000020123584",
+    "recherche des renvois entrants à R. 434-15 (aucun)"
+   ],
+   "links_not_read": "L434-8, L434-9 et R434-16 et suivants non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S034",
+   "code": "a3",
+   "number": "49 septies H",
+   "source_id": "LEGIARTI000043682634",
+   "verdict": "G",
+   "families": [
+    "F1",
+    "F5",
+    "F10"
+   ],
+   "description": "La proposition abroge l'agrément des organismes et experts de recherche (CIR, d bis du II de 244 quater B) pour les dépenses exposées après l'entrée en vigueur, et 244 quater B proposé dit qu'aucun agrément n'est requis. Mais le texte d'application, l'annexe IV 23 L duodecies proposé, continue d'organiser les pièces de la « demande d'agrément mentionnée au I de l'article 49 septies H » et s'applique aux « demandes initiales et de renouvellement déposées à compter de l'entrée en vigueur de la loi de réforme ». Ses notes affirment que l'agrément et ses échéances « ne sont pas supprimés ici ». Un juriste qui ouvre l'article et son texte d'application trouve donc une formalité supprimée par la loi et par l'annexe III, mais organisée pour l'avenir par l'annexe IV (F1). Les notes de 49 septies H sont en outre périmées : elles disent que le corpus conserve l'exigence d'agrément, alors que 244 quater B proposé l'a retirée (F10).",
+   "evidence": "49 septies H (LEGIARTI000043682634), proposition : « Aucune demande initiale ou de renouvellement, aucun modèle ni pièce justificative d'agrément, aucune durée de validité ni échéance de dépôt ne sont exigés pour les dépenses exposées à compter de cette date. » CGI 244 quater B (LEGIARTI000053544409), proposition, II d bis : « Aucun agrément de ces organismes ou experts n'est requis pour l'application du présent d bis ; ». Annexe IV 23 L duodecies (LEGIARTI000043681810), proposition : « Ces dispositions s'appliquent aux demandes initiales et de renouvellement déposées à compter de l'entrée en vigueur de la loi de réforme ainsi qu'aux demandes en cours, sans nouveau dépôt ni reprise des délais. » Notes de 23 L duodecies : « le modèle de la demande elle-même, l’agrément, ses durées de 1/3/5 ans et ses échéances ne sont pas supprimés ici ». Notes de 49 septies H : « Le corpus conserve encore cette exigence. »",
+   "links_read": [
+    "cgi 244 quater B LEGIARTI000053544409 (d bis, d ter et transition)",
+    "a4 23 L duodecies LEGIARTI000043681810",
+    "a3 49 septies VA LEGIARTI000052218721",
+    "recherche des renvois à 49 septies H et au d bis dans cgi, a2, a3, a4"
+   ],
+   "links_not_read": "Arrêté conjoint budget/recherche fixant la liste des pièces (hors corpus).",
+   "known_objection": "RT-P1-ANNEXES-09 (P2, confirmé : 23 L duodecies non coordonné) ; RT-P1-ANNEXES-14 (P2, confirmé : notes périmées de 49 septies H). Défaut toujours visible en production.",
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/a3_49_septies_H_LEGIARTI000043682634.json",
+    "evidence/cited/production-20261029/a4_23_L_duodecies_LEGIARTI000043681810.json"
+   ]
+  },
+  {
+   "sample_id": "S044",
+   "code": "travail",
+   "number": "R2313-7",
+   "source_id": "LEGIARTI000051863757",
+   "verdict": "0",
+   "families": [],
+   "description": "Recours contre la désignation d'un représentant de proximité maintenu. L2313-7, sa base légale, est maintenu. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "travail L2313-7 LEGIARTI000035650943",
+    "recherche des renvois entrants à R. 2313-7 (aucun)"
+   ],
+   "links_not_read": "CPC 999 à 1008 et décret 2025-619 (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S054",
+   "code": "cch",
+   "number": "L112-1",
+   "source_id": "LEGIARTI000041587664",
+   "verdict": "0",
+   "families": [],
+   "description": "Obligation de résultat maintenue. L112-4 et L112-2, maintenus, restent cohérents. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "cch L112-4 LEGIARTI000041587642",
+    "cch L112-2 LEGIARTI000041587657",
+    "liste des renvois entrants (R342-13, L181-11, annexes à R373-3 et R353-159)"
+   ],
+   "links_not_read": "Titre VIII (sanctions) et annexes à R. 373-3 non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S064",
+   "code": "travail",
+   "number": "L3142-42",
+   "source_id": "LEGIARTI000033022181",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "La suppression de la liste ministérielle des instances est cohérente avec L3142-43 à L3142-47, D3142-32 et CSS D412-82 proposés. Seul défaut, dans un lien direct : CSS L412-8 7° proposé renvoie encore à la plage « L3142-42 à L3142-47 », alors que L3142-47 est abrogé par le projet. Le renvoi reste lisible (la plage couvre encore L3142-42), donc sans effet ; les notes le signalent comme à nettoyer.",
+   "evidence": "CSS L412-8 (LEGIARTI000053283575), proposition, 7° : « les salariés désignés, en application des article L3142-42 à L3142-47 du code du travail ». L3142-47 (LEGIARTI000033022158), proposition : « Le présent article est abrogé à compter de l'entrée en vigueur de la loi ».",
+   "links_read": [
+    "travail L3142-43 LEGIARTI000033022177",
+    "travail L3142-44 LEGIARTI000037387757",
+    "travail L3142-45 LEGIARTI000038791169",
+    "travail L3142-46 LEGIARTI000033022165",
+    "travail L3142-47 LEGIARTI000033022158",
+    "travail D3142-32 LEGIARTI000033509429",
+    "css D412-82 LEGIARTI000006736965",
+    "css L412-8 LEGIARTI000053283575 (7°)"
+   ],
+   "links_not_read": "R3142-31 et R3142-30 non relus ; arrêté interministériel de liste (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_L3142-42_LEGIARTI000033022181.json",
+    "evidence/cited/production-20261029/css_L412-8_LEGIARTI000053283575.json"
+   ]
+  },
+  {
+   "sample_id": "S074",
+   "code": "css",
+   "number": "D622-10",
+   "source_id": "LEGIARTI000054856685",
+   "verdict": "0",
+   "families": [],
+   "description": "La dispense d'arrêt préalable à temps complet est étendue au temps partiel thérapeutique des indépendants. La transition du décret 2026-867 est préservée. Le texte est cohérent avec L622-1 proposé (renvoi à L323-3) et avec D622-11. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "css L622-1 LEGIARTI000047803294",
+    "css D622-11 LEGIARTI000043688323",
+    "css D622-9 LEGIARTI000041921323"
+   ],
+   "links_not_read": "R323-1 et L323-3 non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S084",
+   "code": "css",
+   "number": "D482-1",
+   "source_id": "LEGIARTI000006737042",
+   "verdict": "0",
+   "families": [],
+   "description": "Les modèles ministériels du livre IV deviennent facultatifs, sauf texte de rang supérieur. C'est cohérent avec les propositions de D433-3 et R434-31 (modèles facultatifs) et de D461-31. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "css D433-3 LEGIARTI000021957792",
+    "css R434-31 LEGIARTI000006750380",
+    "recherche « modèle » dans le livre IV"
+   ],
+   "links_not_read": "L461-5 et arrêtés de modèles (hors corpus) non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S094",
+   "code": "cch",
+   "number": "R361-4-1",
+   "source_id": "LEGIARTI000038959667",
+   "verdict": "0",
+   "families": [],
+   "description": "Collège de quatre associations au sein du CNH maintenu. L'article est cohérent avec L361-1, D361-4 (maintenu) et D361-6 proposé (désignation sans arrêté). Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "cch L361-1 LEGIARTI000037289883",
+    "cch D361-4 LEGIARTI000048577959",
+    "cch D361-6 LEGIARTI000039048503"
+   ],
+   "links_not_read": "Article 31 de la loi 98-657 (hors corpus) ; D361-3.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S104",
+   "code": "cgi",
+   "number": "259 D",
+   "source_id": "LEGIARTI000048835152",
+   "verdict": "G",
+   "families": [
+    "F4"
+   ],
+   "description": "Le projet réécrit tout l'article 259 D pour une seule réforme de fond : la dénonciation libre de l'option du 2 du II après deux ans. Or le NOTA officiel de cette version indique que l'ordonnance n° 2025-1247 abroge l'article au 1er janvier 2027. Seul le 2 du II est maintenu, et seulement jusqu'à sa reprise par les mesures réglementaires prises en application du premier alinéa de l'article L. 222-17 du CIBS. Le tableau de l'article 15 de cette ordonnance (lu dans un fichier de coordination de la production) fait correspondre le 2 du II de 259 D au « Premier alinéa de l'article L. 232-17 » du CIBS. La loi de réforme sera adoptée après le 1er janvier 2027. La proposition réécrit donc des I, II 1 et III déjà abrogés, et place sa seule mesure dans une disposition qui disparaîtra dès la reprise réglementaire au CIBS : la réforme sera écrasée sans rien dans le CIBS pour la porter. Les notes le reconnaissent sans corriger : « Les reprises CIBS [...] restent à traiter dans leurs textes propres ». Article absent des cinq codes : la coordination doit se faire hors corpus.",
+   "evidence": "NOTA de 259 D (LEGIARTI000048835152) : « ces dispositions, à l’exception de celles mentionnées à la première colonne du tableau de l’article 15, sont abrogées à compter du 1er janvier 2027 » ; « les dispositions du 2 du II du présent article sont maintenues en vigueur jusqu'à leur reprise par les mesures réglementaires mentionnées au premier alinéa de l'article L. 222-17 du code des impositions sur les biens et services ». Proposition, II 2 : « L'assujetti peut la dénoncer à tout moment auprès du service des impôts ». Motif : « Les I, II 1, première phrase du II 2 et III sont intégralement conservés ». Ordonnance 2025-1247, art. 15, tableau (version issue de l'ordonnance 2026-671, LEGIARTI000054567046, cité dans coordinations/sru-quotas/manifest.json de la production) : « 2 du II de l'article 259 D » / « Premier alinéa de l'article L. 232-17 ».",
+   "links_read": [
+    "cgi 258 A (renvois au 2 du II et au 3 du I, selon les notes ; non relu en entier)",
+    "ordonnance 2025-1247 art. 15 (tableau, via coordinations/sru-quotas/manifest.json de la production)",
+    "recherche des coordinations CIBS dans policy-coordinations.json et coordinations/ (aucune pour 259 D)"
+   ],
+   "links_not_read": "CIBS L. 222-17 et L. 232-17 et la mesure réglementaire de reprise (hors corpus) ; article 59 quater de la directive 2006/112/CE (non consulté) ; 259 B, 259-0 A, annexe II 242-0 O, annexe III 95 D non relus.",
+   "known_objection": "RT-INV-06 (P1, confirmé) au titre de la catégorie (70 réécritures CGI à borne 2222-02-22 liées à l'ordonnance 2025-1247) ; 259 D n'y est pas nommé. Également RT-FUTFISC-01 et RT-FUTTL-03 en termes généraux.",
+   "suggested_correction": "Ne pas porter la réforme dans le seul 259 D. 1° Ramener la proposition de 259 D à une disposition transitoire visant le seul 2 du II, tant qu'il reste maintenu par l'article 15 de l'ordonnance n° 2025-1247 : « Tant que le 2 du II demeure en vigueur, l'option qu'il prévoit, après une période initiale de deux années civiles, se poursuit sans nouvelle durée minimale ; l'assujetti peut la dénoncer à tout moment, la dénonciation prenant effet à sa réception ou, si elle est reçue avant l'expiration de la période initiale, à l'expiration de celle-ci. » Ne pas réécrire les I, II 1 et III, abrogés au 1er janvier 2027. 2° Ajouter à la loi de réforme, hors des cinq codes, un article qui porte la même règle dans le texte de reprise : « Les mesures prises en application du premier alinéa de l'article L. 232-17 du code des impositions sur les biens et services pour l'option prévue au 2 du II de l'article 259 D du code général des impôts ne peuvent imposer, après une période initiale de deux années civiles, ni reconduction pour une nouvelle durée minimale ni délai de dénonciation. » Les options en cours gardent la période déjà accomplie, sans nouveau dépôt ni formalité de remplacement. La cible CIBS est à vérifier sur son texte au 18 octobre 2026 avant rédaction finale.",
+   "evidence_files": [
+    "evidence/cited/production-20261029/cgi_259_D_LEGIARTI000048835152.json"
+   ]
+  },
+  {
+   "sample_id": "S114",
+   "code": "travail",
+   "number": "L6227-8",
+   "source_id": "LEGIARTI000037947687",
+   "verdict": "0",
+   "families": [],
+   "description": "Le renvoi est déplacé du « dernier alinéa » vers le « deuxième alinéa » de L6243-3, dont la proposition ajoute un alinéa de transition. C'est exact : le complément vieillesse est bien au deuxième alinéa. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "travail L6243-3 LEGIARTI000051289076",
+    "recherche des renvois entrants à L. 6227-8"
+   ],
+   "links_not_read": "L6227-1 et L6227-8-1 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S124",
+   "code": "cch",
+   "number": "L443-16",
+   "source_id": "LEGIARTI000006825491",
+   "verdict": "0",
+   "families": [],
+   "description": "Le renvoi déclaratif à l'ancien L325 du CPMIVG est retiré, et le bénéfice reste autonome (50 %, prêts HLM, conditions de L443-1). L443-1 proposé (sans apport minimal) reste compatible. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "cch L443-1 LEGIARTI000006825448",
+    "liste des renvois entrants à L. 443-1"
+   ],
+   "links_not_read": "CPMIVG (hors corpus) ; textes réglementaires des avantages.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S134",
+   "code": "travail",
+   "number": "R4746-3",
+   "source_id": "LEGIARTI000045645802",
+   "verdict": "0",
+   "families": [],
+   "description": "Contravention de non-communication maintenue. Les obligations sanctionnées (R4746-1 I, R4313-6, R4313-14, R4313-16, R4313-31) subsistent : R4313-14 n'est allégé que pour les remises répétées au même preneur. Pas de sanction orpheline.",
+   "evidence": "",
+   "links_read": [
+    "travail R4746-1 LEGIARTI000045645798",
+    "travail R4313-14 LEGIARTI000019761264",
+    "travail R4313-16 LEGIARTI000019761257",
+    "travail R4313-6 LEGIARTI000019761296",
+    "travail R4313-31 LEGIARTI000019761197"
+   ],
+   "links_not_read": "L4311-6, L4314-1 ; règlements (UE) 2016/425, 2019/1020 et 2023/1230 (non consultés).",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S144",
+   "code": "cgi",
+   "number": "80 undecies A",
+   "source_id": "LEGIARTI000033812681",
+   "verdict": "0",
+   "families": [],
+   "description": "Article maintenu ; le 1° de l'article 81, auquel il déroge, est conservé dans la proposition de 81. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "cgi 81 (1°, proposition)",
+    "recherche des renvois entrants (aucun pertinent)"
+   ],
+   "links_not_read": "Loi 2002-1050 art. 14 et ordonnance 58-1099 (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S154",
+   "code": "css",
+   "number": "R163-18",
+   "source_id": "LEGIARTI000049737602",
+   "verdict": "0",
+   "families": [],
+   "description": "La faculté de recommander la clause d'information préalable du contrôle médical est bornée par la suppression de cette clause au III proposé de R163-2. Coordination exacte. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "css R163-2 LEGIARTI000053212995 (III et IV)",
+    "liste des renvois entrants (R161-71, R161-71-3, R162-37-3, R160-5, R163-21-1)"
+   ],
+   "links_not_read": "R163-4 et CSP L5123-2/3 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S164",
+   "code": "a1",
+   "number": "76",
+   "source_id": "LEGIARTI000006293538",
+   "verdict": "0",
+   "families": [],
+   "description": "Présomption de fabrication frauduleuse supprimée ; procès-verbal maintenu. L'article est cohérent avec l'article 79 proposé (régime spécial) et l'article 58. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "a1 79 LEGIARTI000032881261",
+    "a1 58 LEGIARTI000006293503"
+   ],
+   "links_not_read": "Textes CIBS/LPF d'accise et de preuve (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S174",
+   "code": "travail",
+   "number": "L1237-11",
+   "source_id": "LEGIARTI000019071187",
+   "verdict": "0",
+   "families": [],
+   "description": "Principe de la rupture conventionnelle maintenu. L1237-12 à L1237-15 proposés restent cohérents (indemnité minimale coordonnée avec le contrat unique, homologation avec modèle facultatif). Rien à signaler sur l'article.",
+   "evidence": "",
+   "links_read": [
+    "travail L1237-12 LEGIARTI000019071185",
+    "travail L1237-13 LEGIARTI000019071182",
+    "travail L1237-14 LEGIARTI000019071180",
+    "travail L1237-15 LEGIARTI000024396475"
+   ],
+   "links_not_read": "R1237-3 et suivants non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S184",
+   "code": "cgi",
+   "number": "115",
+   "source_id": "LEGIARTI000051203481",
+   "verdict": "0",
+   "families": [],
+   "description": "Agrément et engagement de conservation du 2 bis supprimés. Le renvoi aux a, b et c du 3 de 210 B reste exact, ces subdivisions ayant été réécrites sans agrément ni conservation. Aucune annexe n'organise encore cet agrément.",
+   "evidence": "",
+   "links_read": [
+    "cgi 210 B LEGIARTI000037987763 (3 et 4)",
+    "cgi 121 LEGIARTI000006307291",
+    "a2 379, 380, 381 (renvois homonymes, sans lien)",
+    "recherche des renvois à 115 dans cgi et annexes"
+   ],
+   "links_not_read": "1649 nonies et 210-0 A non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S194",
+   "code": "cgi",
+   "number": "44 sexies A",
+   "source_id": "LEGIARTI000051217257",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "L'option devient révocable pour l'avenir, sans délai de neuf mois, et le régime est coordonné avec l'IS à la distribution. Le fond est cohérent. Défaut de rédaction sans effet : le III renvoie à « la déclaration prévue au II », or le II ne prévoit aucune déclaration. Il renvoie aux modalités de détermination du bénéfice des articles 50-0, 53 A, 96 à 100, 102 ter et 103.",
+   "evidence": "44 sexies A (LEGIARTI000051217257), proposition, III : « dans la déclaration prévue au II relative à l'exercice ou à la période » ; II : « est celui déclaré selon les modalités prévues aux articles 50-0,53 A, 96 à 100,102 ter et 103 ».",
+   "links_read": [
+    "cgi 44 sexies A, versions et NOTA",
+    "notes : 44 sexies-0 A, 44 sexdecies (non relus par moi en entier)"
+   ],
+   "links_not_read": "44 sexies-0 A, 44 sexies, 44 quindecies A, 44 sexdecies, 44 septdecies, 244 quater E non relus ; règlement (UE) 2023/2831 non consulté.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cgi_44_sexies_A_LEGIARTI000051217257.json"
+   ]
+  },
+  {
+   "sample_id": "S204",
+   "code": "cch",
+   "number": "R143-9",
+   "source_id": "LEGIARTI000043818955",
+   "verdict": "0",
+   "families": [],
+   "description": "Interdiction maintenue. La sanction de R184-4 proposé vise toujours R143-9 et l'obligation subsiste. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "cch R184-4 LEGIARTI000043819569",
+    "cch R143-12 LEGIARTI000043818961"
+   ],
+   "links_not_read": "Code de l'environnement L512-1 et L512-7 (hors corpus) ; règlement de sécurité.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S214",
+   "code": "a4",
+   "number": "51 octies A",
+   "source_id": "LEGIARTI000006300701",
+   "verdict": "0",
+   "families": [],
+   "description": "Propreté des bacs de coulage maintenue ; cohérent avec 51 octies (proposition) et 51 septies D. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "a4 51 octies LEGIARTI000006300466",
+    "a4 51 septies D LEGIARTI000006300689"
+   ],
+   "links_not_read": "Annexe I 57 et CIBS (fondement d'accise) non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S224",
+   "code": "a1",
+   "number": "190",
+   "source_id": "LEGIARTI000032881246",
+   "verdict": "0",
+   "families": [],
+   "description": "Franchise pour alcool non dénaturé sur autorisation maintenue ; cohérente avec 189 et 191, maintenus. Rien à signaler sur le projet.",
+   "evidence": "",
+   "links_read": [
+    "a1 189 LEGIARTI000032881214",
+    "a1 191 LEGIARTI000006293619"
+   ],
+   "links_not_read": "Fondement CIBS des exonérations d'accise (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S234",
+   "code": "cch",
+   "number": "L200-6",
+   "source_id": "LEGIARTI000028778404",
+   "verdict": "0",
+   "families": [],
+   "description": "Continuité de la personne morale maintenue ; cohérente avec L200-1, L200-2, L200-5 et L200-7 proposés. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "cch L200-1 LEGIARTI000028778394",
+    "cch L200-2 LEGIARTI000028778396",
+    "cch L200-5 LEGIARTI000028778402",
+    "cch L200-7 LEGIARTI000028778406"
+   ],
+   "links_not_read": "Aucun renvoi entrant trouvé.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S244",
+   "code": "travail",
+   "number": "L6351-7",
+   "source_id": "LEGIARTI000021343620",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Le retrait du bilan pédagogique et financier de la communication régionale est cohérent avec L6352-11 proposé, et R6352-22 et R6352-23 proposés sont désormais des abrogations. Le texte est sans défaut, mais les notes de revue sont périmées : elles disent que R6352-23 est « maintenu » et que R6352-22 doit « encore » retirer le circuit.",
+   "evidence": "Notes de L6351-7 (LEGIARTI000021343620) : « R6352-23 maintenu et R6352-22 proposé dans le corpus doivent encore retirer le circuit annuel du bilan. » Proposition de R6352-23 (LEGIARTI000043766609) : « Le présent article est abrogé à compter de l’entrée en vigueur de la suppression de la transmission annuelle du bilan pédagogique et financier ». Proposition de R6352-22 (LEGIARTI000039355607) : « Le présent article est abrogé à compter de l'entrée en vigueur de la suppression de l'obligation annuelle prévue à l'article L. 6352-11. »",
+   "links_read": [
+    "travail L6352-11 LEGIARTI000037386206",
+    "travail R6352-22 LEGIARTI000039355607",
+    "travail R6352-23 LEGIARTI000043766609",
+    "travail R6351-14 LEGIARTI000052016225",
+    "travail R6351-9 LEGIARTI000022257953",
+    "travail L6351-6 LEGIARTI000021343608",
+    "recherche « bilan pédagogique » dans travail et a2"
+   ],
+   "links_not_read": "L6351-7-1, R6351-13, R6351-16/17, L6356-1, annexe II 202 A/C non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_L6351-7_LEGIARTI000021343620.json",
+    "evidence/cited/production-20261029/travail_R6352-23_LEGIARTI000043766609.json"
+   ]
+  },
+  {
+   "sample_id": "S254",
+   "code": "travail",
+   "number": "R5212-14",
+   "source_id": "LEGIARTI000047480920",
+   "verdict": "0",
+   "families": [],
+   "description": "Abrogation de la transmission pour agrément, cohérente avec L5212-8, R5212-12, R5212-15 et R5212-18 proposés (plus d'agrément) et avec R5212-17 (bilan final distinct). Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "travail L5212-8 LEGIARTI000037388686",
+    "travail L5212-10 LEGIARTI000037388673",
+    "travail R5212-12 LEGIARTI000038620084",
+    "travail R5212-13",
+    "travail R5212-15 LEGIARTI000038620073",
+    "travail R5212-16",
+    "travail R5212-17 LEGIARTI000053488981",
+    "travail R5212-18 LEGIARTI000038620066",
+    "travail D5212-21",
+    "travail R5212-31"
+   ],
+   "links_not_read": "Arrêté de transmission (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S264",
+   "code": "css",
+   "number": "R231-2",
+   "source_id": "LEGIARTI000051821423",
+   "verdict": "0",
+   "families": [],
+   "description": "Règle de suppléance maintenue ; cohérente avec R231-1 proposé et R612-7 proposé. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "css R231-1 LEGIARTI000006748728",
+    "css R612-7 LEGIARTI000042363356"
+   ],
+   "links_not_read": "Décret 2025-589 art. 16 (hors corpus) ; R227-4.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S274",
+   "code": "travail",
+   "number": "D5134-50-1",
+   "source_id": "LEGIARTI000029775664",
+   "verdict": "0",
+   "families": [],
+   "description": "Périodes de mise en situation pendant un CAE maintenues ; cohérentes avec L5134-20 (sans agrément), L5134-24 (CAE en contrat unique) et L5134-25 (abrogé) proposés. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "travail L5134-20 LEGIARTI000028698696",
+    "travail L5134-24 LEGIARTI000026549790",
+    "travail L5134-25 LEGIARTI000036261978"
+   ],
+   "links_not_read": "D5135-2, D5135-3 et L5135-4 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S284",
+   "code": "cgi",
+   "number": "788",
+   "source_id": "LEGIARTI000042194220",
+   "verdict": "0",
+   "families": [],
+   "description": "Abrogation pour les décès futurs, coordonnée avec 750 ter proposé (plus de droits de mutation par décès) ; régime ancien conservé. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "cgi 750 ter (proposition)",
+    "recherche des renvois à 788 (aucun)"
+   ],
+   "links_not_read": "777, 200 et 794 non relus ; arrêté de modèle des pièces.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S294",
+   "code": "cgi",
+   "number": "825",
+   "source_id": "LEGIARTI000037986474",
+   "verdict": "0",
+   "families": [],
+   "description": "Gratuité des rachats de SPPICAV, coordonnée avec 730 quinquies proposé (seuils réservés aux cessions anciennes). Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "cgi 730 quinquies (proposition)",
+    "recherche des renvois à 825 (aucun)"
+   ],
+   "links_not_read": "726 et 749 non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  },
+  {
+   "sample_id": "S304",
+   "code": "css",
+   "number": "D161-2-1-8-3",
+   "source_id": "LEGIARTI000053355846",
+   "verdict": "0",
+   "families": [],
+   "description": "Délai de six mois entre entretiens supprimé ; renvois au relevé et au GIP corrigés. Le sixième alinéa du II reste à sa place pour le renvoi de D161-2-1-8-4. Cohérent avec L161-17 VII et L161-17-1. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "css D161-2-1-8-4 LEGIARTI000053355860",
+    "css L161-17 (proposition)",
+    "css L161-17-1 (proposition)"
+   ],
+   "links_not_read": "R161-10, R161-11 et D161-2-1-8-2 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": []
+  }
+ ]
+}

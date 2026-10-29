@@ -82,6 +82,7 @@ def main(since):
     rsync(THIRD / 'apply', red / 'apply', '__pycache__', 'TEST', 'changes.before-coordinator.json')
     rsync(THIRD / 'reports', red / 'reports', 'new-repeals-since-audit-*')
     rsync(THIRD / 'issues', red / 'issues')
+    rsync(THIRD / 'audit', red / 'audit')
     subprocess.run([sys.executable, '-B', str(PROJECT / 'github-sync-support/package-large-exports.py')], check=True)
     git('add', '-A')
     names = [n for n in git('diff', '--cached', '--name-only', '-z').split('\0') if n]

@@ -1,0 +1,719 @@
+{
+ "group": "V01",
+ "read_from": "production",
+ "read_date": "2026-10-29",
+ "method": "Lecture de la production par CITE_PRODUCTION=1 python3 -I tools/cite.py (exports dans evidence/cited/production-20261029/), version en vigueur au 18 octobre 2026 et versions futures. Renvois cherchés en lecture seule dans la base de production (mode=ro, query_only). Qualification de chaque article avant toute lecture de reports/register.json, d'audit/U*.json et d'audit/sweeps/*.json. Ces fichiers ont ensuite été consultés par identifiant LEGIARTI pour renseigner known_objection. Revue IA : pas une validation par un juriste.",
+ "articles": [
+  {
+   "sample_id": "T001",
+   "code": "css",
+   "number": "R815-61",
+   "source_id": "LEGIARTI000042964341",
+   "verdict": "0",
+   "families": [],
+   "description": "Article d'application à l'ASI des règles de l'ASPA. La proposition ventile le renvoi « R. 815-38 à R. 815-44 » pour exclure R815-40, proposé à l'abrogation, et ajoute deux adaptations. Le 5° empêche d'étendre à l'ASI la liquidation sans demande de l'ASPA. Le 6° empêche d'y importer la récupération sur succession. Ces ajouts concordent avec R815-5, R815-18, R815-30, R815-40 et R815-44 proposés. Le 6° recoupe le dernier alinéa de R815-44 proposé : c'est une coordination volontaire des deux côtés du renvoi, sans contradiction. Rien à signaler.",
+   "evidence": "R815-61 LEGIARTI000042964341, proposition : « des articles R. 815-38 et R. 815-39, des articles R. 815-41 à R. 815-44 » ; R815-40 LEGIARTI000006753820, proposition : « Le présent article est abrogé à compter de l’entrée en vigueur du présent décret. » ; R815-44 LEGIARTI000026618365, proposition : « la réserve relative à l'article L. 815-13 ne rétablit aucune récupération sur succession ».",
+   "links_read": [
+    "css R815-40 LEGIARTI000006753820",
+    "css R815-44 LEGIARTI000026618365",
+    "css R815-50 LEGIARTI000039308781",
+    "css R815-52 LEGIARTI000026313157",
+    "css R815-53 LEGIARTI000006753926",
+    "css R815-5 LEGIARTI000006753542",
+    "css R815-18 LEGIARTI000006753648",
+    "css R815-30 LEGIARTI000006753746",
+    "css R815-39 LEGIARTI000006753812",
+    "css R815-59 LEGIARTI000042964327",
+    "css R815-60 LEGIARTI000042964332"
+   ],
+   "links_not_read": "L815-24, L815-24-1 et L815-13 (fondement législatif de l'ASI et de la récupération) ; R815-2 à R815-4, R815-6 à R815-11, R815-17, R815-19 à R815-29, R815-34 à R815-37, R815-41 à R815-43, R815-45 à R815-57 non relus un par un.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_R815-61_LEGIARTI000042964341.json",
+    "evidence/cited/production-20261029/css_R815-40_LEGIARTI000006753820.json",
+    "evidence/cited/production-20261029/css_R815-44_LEGIARTI000026618365.json"
+   ]
+  },
+  {
+   "sample_id": "T011",
+   "code": "css",
+   "number": "D542-35",
+   "source_id": "LEGIARTI000043841334",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "La proposition supprime le renvoi « et de l'article 1090 du code rural » sans le remplacer, et garde seulement « en application de l'article L. 212-1 du présent code ». Or L212-1 (proposé) ne vise que les CAF et, par décret, les salariés agricoles. Les prêts du 1° de L542-9 servis par la MSA aux non-salariés agricoles perdent donc leur fondement nommé. La formule générale « caisses, organismes, collectivités et administrations chargés du paiement des prestations familiales » couvre sans doute encore la MSA. Mais le rattachement à « L. 212-1 » peut se lire de façon restrictive. Il vaut mieux actualiser le renvoi vers l'article du code rural et de la pêche maritime correspondant que le supprimer. La concordance de l'ancien article 1090 n'a pas été vérifiée sur une source primaire. À confirmer.",
+   "evidence": "D542-35 LEGIARTI000043841334, source : « en application de l'article L. 212-1 du présent code et de l'article 1090 du code rural » ; proposition : « en application de l'article L. 212-1 du présent code. » ; notes : « L1090 rural n’est pas fourni : aucune concordance moderne inventée. » L212-1 LEGIARTI000031686187, proposition : « Les caisses d'allocations familiales servent les prestations familiales dues aux salariés de toute profession, aux employeurs et aux travailleurs indépendants des professions non agricoles ».",
+   "links_read": [
+    "css L212-1 LEGIARTI000031686187",
+    "css L542-9 LEGIARTI000023271184 (base légale, maintenu)"
+   ],
+   "links_not_read": "Code rural et de la pêche maritime (ancien article 1090 et article de concordance) ; CASF D421-4 ; CCH L141-2 (lu par la revue, non relu ici).",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_D542-35_LEGIARTI000043841334.json",
+    "evidence/cited/production-20261029/css_L212-1_LEGIARTI000031686187.json",
+    "evidence/cited/production-20261029/css_L542-9_LEGIARTI000023271184.json"
+   ]
+  },
+  {
+   "sample_id": "T021",
+   "code": "travail",
+   "number": "L4731-3",
+   "source_id": "LEGIARTI000032376227",
+   "verdict": "0",
+   "families": [],
+   "description": "L'autorisation de reprise après arrêt de travaux pour danger est maintenue. Elle concorde avec R4731-4, R4731-5, R4731-11 et R4731-12 : information « par tout moyen donnant date certaine », délais de deux jours ouvrés et de huit jours, et décision notifiée. Le recours en référé de L4731-4 est maintenu. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "travail R4731-4 LEGIARTI000038353474",
+    "travail R4731-5 LEGIARTI000038353471",
+    "travail R4731-11 LEGIARTI000038353466",
+    "travail R4731-12 LEGIARTI000032458648",
+    "travail L4731-4 LEGIARTI000032376273",
+    "recherche des renvois entrants (R4731-6 seul, vers R4731-3)"
+   ],
+   "links_not_read": "L4731-1, L4731-2, R4731-6 à R4731-10 et L8112-1 non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_L4731-3_LEGIARTI000032376227.json"
+   ]
+  },
+  {
+   "sample_id": "T031",
+   "code": "css",
+   "number": "L133-9-5",
+   "source_id": "LEGIARTI000006741105",
+   "verdict": "0",
+   "families": [],
+   "description": "Article maintenu : action civile du guichet habilité, au nom des organismes parties aux conventions de L133-9-1. La version publiée pour le 1er janvier 2029 (LEGIARTI000052851010, sans proposition) ne fait qu'actualiser le renvoi au nouveau code de procédure pénale : comme l'article est maintenu, elle n'écrase aucune réforme. Les notes lisent correctement la borne de 2029 comme la fin d'une version. L'homologation des conventions est supprimée dans L133-9-1 proposé, ce qui n'atteint pas cet article. La version future reste hors inventaire (« not_in_inventory »), sans effet sur le texte. Rien à signaler.",
+   "evidence": "L133-9-5 LEGIARTI000052851010 (VIGUEUR_DIFF 2029-01-01) : « L'action civile prévue par les articles L. 1221-1 et L. 1221-2 du code de procédure pénale est exercée par l'organisme habilité ».",
+   "links_read": [
+    "css L133-9-5 LEGIARTI000052851010 (version future)",
+    "css L133-9-1 LEGIARTI000033812365",
+    "css L133-9-6 LEGIARTI000006741106"
+   ],
+   "links_not_read": "R133-9-5 et suivants, renvoyant à la section, non relus.",
+   "known_objection": "RT-FUTCSS-38 (P2, anomalie d'inventaire) vise ce numéro : lecture d'ABROGE_DIFF comme une extinction. Ce défaut n'apparaît plus dans les notes actuelles. Seule reste l'absence de la version 2029 à l'inventaire.",
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_L133-9-5_LEGIARTI000006741105.json",
+    "evidence/cited/production-20261029/css_L133-9-5_LEGIARTI000052851010.json",
+    "evidence/cited/production-20261029/css_L133-9-1_LEGIARTI000033812365.json"
+   ]
+  },
+  {
+   "sample_id": "T041",
+   "code": "css",
+   "number": "D766-19",
+   "source_id": "LEGIARTI000006738759",
+   "verdict": "0",
+   "families": [],
+   "description": "L'interdiction de distribuer des documents le jour du scrutin du conseil d'administration de la caisse des Français de l'étranger est maintenue. Elle reste cohérente avec D766-18, D766-21 et D766-22 proposés, qui retirent d'autres restrictions sans toucher au jour du vote. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "css D766-18 LEGIARTI000006738756",
+    "css D766-20 LEGIARTI000038676884",
+    "css D766-21 LEGIARTI000006738765",
+    "css D766-22 LEGIARTI000006738767",
+    "css D766-23 LEGIARTI000006738769"
+   ],
+   "links_not_read": "Base légale (L766-5 et suivants) non relue.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_D766-19_LEGIARTI000006738759.json"
+   ]
+  },
+  {
+   "sample_id": "T051",
+   "code": "cch",
+   "number": "D481-5-7",
+   "source_id": "LEGIARTI000021632161",
+   "verdict": "0",
+   "families": [],
+   "description": "Deux coordinations exactes : R. 481-5-6, qui n'existe pas, devient D. 481-5-6 (compte dédié) ; l'article 3 de la loi de 1991 devient l'article L. 111-3 du CPCE, aux 1° à 5°. Le reste est inchangé, y compris la reddition et ses cinq pièces. D481-5-2 proposé, sur la libre périodicité, réserve expressément le V. Rien à signaler.",
+   "evidence": "D481-5-7 LEGIARTI000021632161, proposition : « le compte mentionné à l'article D. 481-5-6 » ; « aux 1° à 5° de l'article L. 111-3 du code des procédures civiles d'exécution ».",
+   "links_read": [
+    "cch D481-5-6 LEGIARTI000021632165",
+    "cch D481-5-2 LEGIARTI000032660315",
+    "vérification : R481-5-6 introuvable dans le CCH"
+   ],
+   "links_not_read": "CPCE L111-3 (connu, non relu sur source primaire) ; CGCT D1617-19 et son annexe I.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cch_D481-5-7_LEGIARTI000021632161.json",
+    "evidence/cited/production-20261029/cch_D481-5-6_LEGIARTI000021632165.json",
+    "evidence/cited/production-20261029/cch_D481-5-2_LEGIARTI000032660315.json"
+   ]
+  },
+  {
+   "sample_id": "T061",
+   "code": "cch",
+   "number": "R321-8",
+   "source_id": "LEGIARTI000041648089",
+   "verdict": "m",
+   "families": [
+    "F1"
+   ],
+   "description": "La proposition supprime deux attestations de comptables publics. La première est celle du comptable de l'EPCI ou du département délégataire, selon laquelle il détient les pièces justificatives des aides de l'ANAH qu'il paie. La seconde est celle du comptable de l'ANAH, qui fondait le paiement des avances ultérieures par la collectivité mandante. Le choix est conforme à l'orientation de réduction des formalités, et pièces, certificat de l'ordonnateur et reddition sont maintenus. Mais ces attestations servent de pièces justificatives entre deux comptables publics distincts. La nomenclature des pièces justificatives de la dépense locale (CGCT D1617-19, annexe I) et le décret GBCP 2012-1246 peuvent continuer de les exiger. Le comptable de la collectivité refuserait alors le paiement, malgré la clause selon laquelle les conventions « cessent de les exiger ». Les notes reconnaissent ce point non vérifié. Coordination avec des textes hors des cinq codes, à confirmer.",
+   "evidence": "R321-8 LEGIARTI000041648089, proposition : « Aucune attestation distincte du comptable relative à la détention de ces pièces n'est exigée ni communiquée à l'agence au titre du présent article. » ; « sans attestation distincte du comptable de l'agence relative aux pièces justificatives des paiements. » ; notes : « Point non vérifiable : décret 2012-1246, article 15 de la loi de finances pour 2020 et clauses types concrètes non fournis ici ».",
+   "links_read": [
+    "cch L321-1-1, L312-2-1 (signalés par la recherche de renvois ; contenu cité par les notes, non relus en entier)",
+    "recherche des renvois entrants vers R321-8 dans le CCH (aucun renvoi exprès)"
+   ],
+   "links_not_read": "Décret 2012-1246 (titres Ier et III), CGCT D1617-19 et annexe I (nomenclature des pièces justificatives), conventions types ANAH : hors corpus. L321-1-1 et L312-2-1 non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cch_R321-8_LEGIARTI000041648089.json"
+   ]
+  },
+  {
+   "sample_id": "T071",
+   "code": "travail",
+   "number": "L8271-6-5",
+   "source_id": "LEGIARTI000046804016",
+   "verdict": "0",
+   "families": [],
+   "description": "L'enquête sous pseudonyme contre le travail illégal en ligne est maintenue, avec habilitation spéciale et nullité de la provocation. Les 4° et 8° de L8271-1-2 (agents des organismes sociaux agréés, agents de France Travail chargés de la prévention des fraudes) restent inchangés. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "travail L8271-1-2 LEGIARTI000054334961",
+    "recherche des renvois entrants (aucun)"
+   ],
+   "links_not_read": "L8112-1 et l'arrêté conjoint d'habilitation non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_L8271-6-5_LEGIARTI000046804016.json",
+    "evidence/cited/production-20261029/travail_L8271-1-2_LEGIARTI000054334961.json"
+   ]
+  },
+  {
+   "sample_id": "T081",
+   "code": "cgi",
+   "number": "283",
+   "source_id": "LEGIARTI000051214570",
+   "verdict": "G",
+   "families": [
+    "F4",
+    "F6"
+   ],
+   "description": "La proposition supprime les solidarités du vendeur (2 bis, 2 ter, 2 quater) et celle du donneur d'ordre d'un façonnier dépendant (5) « à compter de l'entrée en vigueur de la loi ». Or la NOTA officielle de la version réécrite annonce l'abrogation de l'article 283 au 1er janvier 2027 par l'ordonnance n° 2025-1247 : la TVA passe au CIBS, et seul le 2 septies est maintenu jusqu'à sa reprise réglementaire. La loi de réforme ne peut raisonnablement entrer en vigueur avant cette date. Elle modifierait donc un article déjà abrogé, et les solidarités reprises au CIBS continueraient de s'appliquer. La réforme serait sans effet. Les notes voient la « reprise annoncée dans le CIBS au 1er janvier 2027 » mais ne la traitent pas. Aucune proposition ne vise les articles du CIBS de destination. Un juriste fiscaliste le relèverait d'emblée. Le reste du texte (3, 4, 4 bis et 4 ter maintenus) est cohérent.",
+   "evidence": "283 LEGIARTI000051214570, NOTA : « ces dispositions, à l’exception de celles mentionnées à la première colonne du tableau de l’article 15, sont abrogées à compter du 1er janvier 2027. » ; proposition : « La solidarité fondée sur la part du chiffre d'affaires réalisée par un façonnier avec un même donneur d'ordre est supprimée pour les opérations dont le fait générateur intervient à compter de l'entrée en vigueur de la loi supprimant cette solidarité. » ; notes : « Examiner les coordinations réglementaires du recouvrement de ces solidarités, ainsi que la reprise annoncée dans le CIBS au 1er janvier 2027 ».",
+   "links_read": [
+    "cgi 283 LEGIARTI000051214570 (NOTA complète, borne 2222-02-22)",
+    "requête : 284 articles courants du CGI portant la NOTA 2025-1247, dont 162 rewrite_draft",
+    "annexe III 82 (cité par les notes, via U08)"
+   ],
+   "links_not_read": "Articles du CIBS issus de l'ordonnance 2025-1247 (hors corpus) ; CGI 272, 258 D, 277 A et annexe II 242-0 O, cités par les notes, non relus ici ; directive 2006/112/CE, art. 193 à 205 (faculté de solidarité), non consultée.",
+   "known_objection": "Famille connue : RT-INV-06 (P1, confirmé, réécritures CGI liées à l'ordonnance 2025-1247 et non rebasées sur le CIBS) et RT-FUTFISC-01 (P1, confirmé). L'article 283 n'y est pas nommé.",
+   "suggested_correction": "Ne pas modifier seulement CGI 283. Porter la mesure dans les articles du CIBS (livre II, TVA) qui reprennent, au 1er janvier 2027, les 2 bis, 2 ter, 2 quater et 5 de l'article 283, identifiés par la table de concordance de l'ordonnance 2025-1247. Suggestion : « Les solidarités du vendeur prévues aux articles [CIBS de destination des 2 bis, 2 ter et 2 quater de l'ancien article 283 du CGI] et la solidarité du donneur d'ordre prévue à l'article [CIBS de destination du 5] sont supprimées pour les opérations dont le fait générateur intervient à compter de l'entrée en vigueur de la présente loi. Les opérations antérieures restent régies par leurs règles de redevabilité et de solidarité, avec leurs droits à déduction, restitutions, prescriptions et recours. » Conserver les solidarités pour fraude (4 bis, 4 ter) et la dette de facturation (3, 4) dans leur rédaction CIBS. Aucune formalité de remplacement.",
+   "evidence_files": [
+    "evidence/cited/production-20261029/cgi_283_LEGIARTI000051214570.json"
+   ]
+  },
+  {
+   "sample_id": "T091",
+   "code": "a1",
+   "number": "208",
+   "source_id": "LEGIARTI000032881207",
+   "verdict": "m",
+   "families": [
+    "F8",
+    "F7"
+   ],
+   "description": "La proposition supprime le délai d'apurement de trois mois et l'accord exprès du directeur interrégional avant la remise en fabrication d'ouvrages refondus. La décharge du compte des ouvrages déclarés pour l'exportation, non poinçonnés, s'obtient alors par la seule refonte, sans délai, sans accord et sans mode de preuve défini. Des ouvrages d'or ou d'argent sans poinçon français peuvent rester indéfiniment hors du circuit de garantie, puis être déchargés sur simple affirmation de la refonte. Les orientations demandent de ne pas retirer au hasard une protection contre la fraude, et la garantie protège ici le titre vendu au consommateur. Le compte et le contrôle douanier subsistent, et le choix est discutable plutôt que manifestement anormal. Défaut rédactionnel secondaire : une annexe réglementaire fait courir l'application « à compter de l'entrée en vigueur de la loi », sans désigner cette loi. Enfin, la base législative de la garantie (CGI 524 et suivants) est en abrogation différée au profit du code de commerce. L'annexe IV, article 56 J decies, vise déjà « L. 832-4 du code de commerce » : la coordination avec cette nouvelle base n'est pas faite.",
+   "evidence": "208 (annexe I) LEGIARTI000032881207, proposition : « Aucun délai de trois mois ni accord administratif préalable à la remise en fabrication des ouvrages refondus n'est exigé pour cette décharge. » ; « Ces dispositions s'appliquent à compter de l'entrée en vigueur de la loi, y compris aux ouvrages déjà pris en compte. » CGI 524 LEGIARTI000006309990, NOTA : « L'abrogation du présent article prend effet conformément aux dispositions de l'article 38 de l'ordonnance n° 2021-1843 ». Annexe IV 56 J decies LEGIARTI000051829385 : « marchands visés à l'article L. 832-4 du code de commerce ».",
+   "links_read": [
+    "a1 204 LEGIARTI000006293353",
+    "a1 210 LEGIARTI000006293640",
+    "a1 207 et 209 (abrogés)",
+    "cgi 524 LEGIARTI000006309990",
+    "a4 56 J decies LEGIARTI000051829385"
+   ],
+   "links_not_read": "Code de commerce, livre VIII, titre III (nouvelle base de la garantie) : hors corpus ; CGI 521 à 553 non relus un par un ; annexe I 205, 206 et 211 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/a1_208_LEGIARTI000032881207.json",
+    "evidence/cited/production-20261029/a1_204_LEGIARTI000006293353.json",
+    "evidence/cited/production-20261029/cgi_524_LEGIARTI000006309990.json",
+    "evidence/cited/production-20261029/a4_56_J_decies_LEGIARTI000051829385.json"
+   ]
+  },
+  {
+   "sample_id": "T101",
+   "code": "cch",
+   "number": "R200-2",
+   "source_id": "LEGIARTI000031682338",
+   "verdict": "0",
+   "families": [],
+   "description": "L'écrit et la mention apparente de la durée de la convention d'occupation temporaire (habitat participatif) sont maintenus. L'article reste cohérent avec L200-9-1 (maintenu) et avec R200-1 proposé, où les dérogations de droit subsistent et l'information se fait par tout moyen. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "cch L200-9-1 LEGIARTI000030989277",
+    "cch R200-1 LEGIARTI000033706527"
+   ],
+   "links_not_read": "L201-2, L202-2, L201-9 et L202-9-1 non relus ; loi 89-462 hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cch_R200-2_LEGIARTI000031682338.json"
+   ]
+  },
+  {
+   "sample_id": "T111",
+   "code": "travail",
+   "number": "L2251-1",
+   "source_id": "LEGIARTI000006901772",
+   "verdict": "0",
+   "families": [],
+   "description": "Le principe de faveur et la limite d'ordre public sont maintenus. Rien à signaler. Le préavis impératif de quinze jours des nouveaux contrats relève d'une règle spéciale et ne contredit pas ce principe.",
+   "evidence": "",
+   "links_read": [
+    "travail L1234-9 LEGIARTI000035644154 (proposition)",
+    "recherche des renvois entrants vers L2251-1"
+   ],
+   "links_not_read": "L1234-1 et L2253-3 proposés non relus en entier ; CSS L911-5.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_L2251-1_LEGIARTI000006901772.json"
+   ]
+  },
+  {
+   "sample_id": "T121",
+   "code": "travail",
+   "number": "L7345-2",
+   "source_id": "LEGIARTI000045135592",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Le texte maintenu (gouvernance de l'ARPE) est cohérent. Les notes sont périmées : elles annoncent qu'une coordination « hors lot » reste à faire sur R7345-3 II 2°, alors que la proposition actuelle de R7345-3 porte déjà « 2° Abrogé. », avec sa transition. Défaut de notes seulement.",
+   "evidence": "L7345-2 LEGIARTI000045135592, notes : « Coordination hors lot encore nécessaire : R7345-3 II 2° conserve la consultation sur la liste de travailleurs et doit être adapté » ; R7345-3 LEGIARTI000044312245, proposition : « 2° Abrogé. ».",
+   "links_read": [
+    "travail R7345-3 LEGIARTI000044312245",
+    "travail R7345-1 LEGIARTI000046323170"
+   ],
+   "links_not_read": "L7343-4, L7343-24 et L7345-1 non relus ; R7345-10 non relu.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_L7345-2_LEGIARTI000045135592.json",
+    "evidence/cited/production-20261029/travail_R7345-3_LEGIARTI000044312245.json"
+   ]
+  },
+  {
+   "sample_id": "T131",
+   "code": "cgi",
+   "number": "1731 A bis",
+   "source_id": "LEGIARTI000029355548",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "L'article sanctionne la sous-estimation du versement anticipé de la contribution exceptionnelle de l'article 235 ter ZAA (1668 B). Cette contribution est éteinte depuis longtemps : les notes reconnaissent que son texte n'est même plus dans le corpus. L'alinéa ajouté sur l'IS à la distribution règle donc un cas sans objet. Sa rédaction est obscure : « aucune contribution additionnelle ni […] aucun versement anticipé supprimé à raison de l'impôt sur les sociétés liquidé sur une distribution ». Redondance sans effet, sans contradiction.",
+   "evidence": "1731 A bis LEGIARTI000029355548, proposition : « Pour les exercices ouverts à compter de l'entrée en vigueur de la présente loi, le présent article ne s'applique à aucune contribution additionnelle ni à aucun versement anticipé supprimé à raison de l'impôt sur les sociétés liquidé sur une distribution. » ; 1668 B LEGIARTI000029355581 : « La contribution mentionnée à l'article 235 ter ZAA est payée spontanément au comptable public compétent ».",
+   "links_read": [
+    "cgi 1668 B LEGIARTI000029355581"
+   ],
+   "links_not_read": "CGI 235 ter ZAA (absent du corpus), 1727 et 1731 non relus ; code de commerce L232-2 hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cgi_1731_A_bis_LEGIARTI000029355548.json",
+    "evidence/cited/production-20261029/cgi_1668_B_LEGIARTI000029355581.json"
+   ]
+  },
+  {
+   "sample_id": "T141",
+   "code": "travail",
+   "number": "R4515-9",
+   "source_id": "LEGIARTI000018529674",
+   "verdict": "0",
+   "families": [],
+   "description": "Le protocole de sécurité unique pour les opérations répétitives de chargement et de déchargement est maintenu : c'est déjà un allègement. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "recherche des renvois entrants (aucun)"
+   ],
+   "links_not_read": "R4515-1 à R4515-8, R4515-10 et R4515-11 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R4515-9_LEGIARTI000018529674.json"
+   ]
+  },
+  {
+   "sample_id": "T151",
+   "code": "a4",
+   "number": "14",
+   "source_id": "LEGIARTI000027511568",
+   "verdict": "m",
+   "families": [
+    "F1",
+    "F10"
+   ],
+   "description": "Article maintenu. Il fixe le contenu des relevés de coupons « en exécution […] de l'article 57 de l'annexe II ». Or l'annexe II, article 57 proposé, fait tenir la déclaration 242 ter lieu de relevé et supprime tout relevé distinct dans ce champ, qui couvre en pratique presque tous les paiements visés aux 1° à 3°. L'article 14 et les articles 15 (modèles Cerfa, sans proposition) et 16 (envoi mensuel) organisent toujours ces relevés. La hiérarchie (décret sur arrêté) et le renvoi à 57 en limitent l'effet, mais le texte n'est pas coordonné. Le motif de l'article 14 affirme par ailleurs l'inverse de la proposition de 57 : il n'existerait « aucune identité intégrale avec une autre déclaration ».",
+   "evidence": "14 (annexe IV) LEGIARTI000027511568, source : « Les relevés à adresser à la direction départementale ou, le cas échéant, régionale des finances publiques en exécution des dispositions de l'article 57 de l'annexe II » ; motif : « aucune identité intégrale avec une autre déclaration n'est établie dans les textes lus ». 57 (annexe II) LEGIARTI000025622239, proposition : « la déclaration prévue par cet article tient lieu du relevé prévu au présent alinéa ; aucun relevé distinct de coupons n'est exigé ». 16 (annexe IV) LEGIARTI000027511564, proposition : « Les relevés visés à l'article 14 et afférents aux paiements faits dans le courant de chaque mois sont envoyés ».",
+   "links_read": [
+    "a2 57 LEGIARTI000025622239",
+    "a4 13 LEGIARTI000006300256",
+    "a4 15 LEGIARTI000019493914",
+    "a4 16 LEGIARTI000027511564"
+   ],
+   "links_not_read": "CGI 242 ter (proposition) non relu en entier ; annexe IV 17 non relu ; annexe II 57-1 introuvable sous ce numéro.",
+   "known_objection": "RT-DOC-02 (P2, confirmé) : il relève que « la limitation résulte seulement du renvoi de l'article 14 à 57 » et propose de réécrire l'article 15. Le défaut reste visible.",
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/a4_14_LEGIARTI000027511568.json",
+    "evidence/cited/production-20261029/a2_57_LEGIARTI000025622239.json",
+    "evidence/cited/production-20261029/a4_15_LEGIARTI000019493914.json",
+    "evidence/cited/production-20261029/a4_16_LEGIARTI000027511564.json"
+   ]
+  },
+  {
+   "sample_id": "T161",
+   "code": "travail",
+   "number": "R4532-59",
+   "source_id": "LEGIARTI000018529453",
+   "verdict": "0",
+   "families": [],
+   "description": "La communication par le coordonnateur des PPSPS du gros œuvre et des travaux à risques particuliers est maintenue. Elle reste cohérente avec L4532-8 et R4532-58 (maintenus). Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "travail L4532-8 LEGIARTI000006903270",
+    "travail R4532-58 LEGIARTI000018529455",
+    "travail R4532-56 LEGIARTI000018529460"
+   ],
+   "links_not_read": "L4532-1 (déclaration préalable, à laquelle renvoie L4532-8) non relu ; arrêté listant les travaux à risques particuliers hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R4532-59_LEGIARTI000018529453.json"
+   ]
+  },
+  {
+   "sample_id": "T171",
+   "code": "a3",
+   "number": "49 septies VE",
+   "source_id": "LEGIARTI000046051361",
+   "verdict": "0",
+   "families": [],
+   "description": "La déclaration spéciale du crédit d'impôt recherche collaborative est supprimée : les éléments sont portés dans la déclaration fiscale déjà due. L'article est coordonné avec l'IS à la distribution (pas de relevé de solde, pas de retard de la créance) et garde la centralisation de groupe, l'indication par l'associé et l'accès du ministère de la recherche. Cohérent ; l'incohérence 53 A / 223 signalée par les notes ne vient pas de cet article.",
+   "evidence": "",
+   "links_read": [
+    "cgi 209 LEGIARTI000048847486 (XI proposé, pour le régime de distribution)",
+    "recherche : renvois vers 244 quater B bis (non relus en entier)"
+   ],
+   "links_not_read": "CGI 244 quater B bis, 199 ter B bis, 220 B bis, 53 A et 223 non relus en entier ; annexe III 360.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/a3_49_septies_VE_LEGIARTI000046051361.json"
+   ]
+  },
+  {
+   "sample_id": "T181",
+   "code": "css",
+   "number": "L273-1",
+   "source_id": "LEGIARTI000006742221",
+   "verdict": "0",
+   "families": [],
+   "description": "L'article qui charge les autorités de l'État de veiller à l'affiliation et aux cotisations est maintenu. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "recherche des renvois entrants : R273-1, L752-13, L641-1"
+   ],
+   "links_not_read": "R273-1, L752-13 et L641-1 non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_L273-1_LEGIARTI000006742221.json"
+   ]
+  },
+  {
+   "sample_id": "T191",
+   "code": "travail",
+   "number": "L2261-33",
+   "source_id": "LEGIARTI000033006075",
+   "verdict": "m",
+   "families": [
+    "F7",
+    "F5"
+   ],
+   "description": "Le fond est cohérent avec L2261-32 proposé : le pouvoir ministériel de fusion est abrogé, les fusions anciennes restent sous le régime ancien et l'harmonisation des regroupements volontaires futurs devient facultative. La réserve de la décision QPC 2019-816 est rendue explicite. Mais le dernier alinéa recopie, dans un article sur la restructuration des branches, l'essentiel du régime de rupture du contrat unique : préavis de quinze jours, point de départ, indemnité de 0,20 mois, seuil d'un an, plafond, faute grave. Cette paraphrase de L1234-1 et L1234-9 n'a pas sa place ici. Elle crée un risque de divergence à chaque modification de ces articles. Redondance sans contradiction actuelle avec L1234-9 proposé.",
+   "evidence": "L2261-33 LEGIARTI000033006075, proposition : « Pour les contrats uniques nouveaux, elle ne permet ni un terme automatique de l'emploi ni une durée conventionnelle de préavis individuel différente des quinze jours calendaires légalement applicables. » ; « L'indemnité ordinaire légale est due dans les conditions de l'article L. 1234-9 : à l'initiative de l'employeur, à partir d'un an d'ancienneté ».",
+   "links_read": [
+    "travail L2261-32 LEGIARTI000046194104",
+    "travail L1234-9 LEGIARTI000035644154"
+   ],
+   "links_not_read": "L2261-34, L1221-2 et L1234-1 proposés non relus en entier ; décision 2019-816 QPC non consultée.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_L2261-33_LEGIARTI000033006075.json",
+    "evidence/cited/production-20261029/travail_L2261-32_LEGIARTI000046194104.json",
+    "evidence/cited/production-20261029/travail_L1234-9_LEGIARTI000035644154.json"
+   ]
+  },
+  {
+   "sample_id": "T201",
+   "code": "travail",
+   "number": "R3132-20",
+   "source_id": "LEGIARTI000031213135",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Le texte est cohérent : le critère de stationnement (9°) est retiré du classement en zone touristique. Les 1° à 8°, qui restent indicatifs (« notamment »), et le renvoi aux « six alinéas précédents » restent exacts, et L3132-25 et L3132-25-2 proposés concordent. Les notes contiennent cependant une phrase étrangère à l'article, sans doute recopiée d'un autre : « seul R3135-3 vise expressément D3133-1 ». Défaut de notes seulement.",
+   "evidence": "R3132-20 LEGIARTI000031213135, notes : « Recherche de renvois textuels entrants dans les neuf recueils : seul R3135-3 vise expressément D3133-1 ».",
+   "links_read": [
+    "travail L3132-25 LEGIARTI000031013500",
+    "travail L3132-25-2 LEGIARTI000031013489",
+    "travail R3132-21 LEGIARTI000018534363"
+   ],
+   "links_not_read": "L3132-25-3, L3132-25-4 et R3132-21-1 non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R3132-20_LEGIARTI000031213135.json",
+    "evidence/cited/production-20261029/travail_L3132-25-2_LEGIARTI000031013489.json"
+   ]
+  },
+  {
+   "sample_id": "T211",
+   "code": "cgi",
+   "number": "38 septies",
+   "source_id": "LEGIARTI000036355226",
+   "verdict": "0",
+   "families": [],
+   "description": "Le report d'imposition des échanges de terres agricoles devient de plein droit. Le III, qui renvoie au XI de 209 proposé (compartiments) et aux V et VI de 219, le coordonne avec l'IS à la distribution. Le IV prévoit une transition propre. Le renvoi au XI de 209 est vérifié : le 2 du XI organise bien les compartiments. Rien de grossier. La perte de l'option (choix d'une imposition immédiate) est sans enjeu réel dans un régime où l'IS ne frappe que la distribution.",
+   "evidence": "",
+   "links_read": [
+    "cgi 209 LEGIARTI000048847486 (XI et XIII proposés)",
+    "recherche des renvois vers 38 septies (annexe II 50 A et annexe III 381 K : sans lien avec l'option)"
+   ],
+   "links_not_read": "CGI 63 et 219 (V, VI) non relus en entier ; code rural L121-1 hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cgi_38_septies_LEGIARTI000036355226.json"
+   ]
+  },
+  {
+   "sample_id": "T221",
+   "code": "travail",
+   "number": "R4541-10",
+   "source_id": "LEGIARTI000018528887",
+   "verdict": "0",
+   "families": [],
+   "description": "Le marquage du poids des colis d'au moins une tonne transportés par voie d'eau est maintenu. Il découle de la convention OIT n° 27. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "recherche des renvois entrants (aucun)"
+   ],
+   "links_not_read": "R4541-9 et la convention OIT n° 27 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R4541-10_LEGIARTI000018528887.json"
+   ]
+  },
+  {
+   "sample_id": "T231",
+   "code": "travail",
+   "number": "R23-112-17",
+   "source_id": "LEGIARTI000039347756",
+   "verdict": "0",
+   "families": [],
+   "description": "Le pourvoi en cassation dans les dix jours contre les décisions sur la désignation des membres des CPRI est maintenu. R23-112-14 à 16 et L23-112-1 sont maintenus. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "travail R23-112-14 LEGIARTI000034524042",
+    "travail R23-112-15 LEGIARTI000039624985",
+    "travail R23-112-16 LEGIARTI000039347759",
+    "travail L23-112-1 LEGIARTI000031129357"
+   ],
+   "links_not_read": "CPC 999 à 1008 hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R23-112-17_LEGIARTI000039347756.json"
+   ]
+  },
+  {
+   "sample_id": "T241",
+   "code": "cgi",
+   "number": "1383 C ter",
+   "source_id": "LEGIARTI000053544535",
+   "verdict": "0",
+   "families": [],
+   "description": "L'exonération de TFPB en QPV (2026-2030) est conservée : durée de cinq ans, bordures de voie, sorties, délibération contraire, plafond de minimis. Sont retirés la déclaration spéciale réglementaire, l'option avant le 1er janvier et son irrévocabilité. Les articles concurrents (1382 H, 1383 A à 1383 K, 1388 quinquies) font l'objet d'une dérogation expresse. Le maintien de 1406 I et I bis est réservé. Le texte est long mais cohérent. Rien de grossier.",
+   "evidence": "",
+   "links_read": [
+    "recherche des renvois : 1382 H, 1383 F, 1383 H, 1383 J, 1383 K, 1388 quinquies (deux versions), 1382-0, 1639 A quater, 1640, annexe III 315 quindecies A (signalés, non relus en entier)"
+   ],
+   "links_not_read": "CGI 1466 A I septies, 44 octies B, 1406 et 1388 quinquies VII non relus en entier ; règlement (UE) 2023/2831 non consulté.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cgi_1383_C_ter_LEGIARTI000053544535.json"
+   ]
+  },
+  {
+   "sample_id": "T251",
+   "code": "cch",
+   "number": "L313-19-2",
+   "source_id": "LEGIARTI000048840464",
+   "verdict": "0",
+   "families": [],
+   "description": "Simple reformulation du fonds unique d'Action Logement. La PEEC de L313-1 est maintenue dans sa proposition, ce qui laisse exacts les renvois au minimum obligatoire. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "cch L313-1 LEGIARTI000038610274",
+    "recherche des renvois entrants (L313-19-1, L313-33, R313-18 etc.)"
+   ],
+   "links_not_read": "L313-3, L313-19-1 et L313-33 non relus en entier ; CMF L313-23 hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cch_L313-19-2_LEGIARTI000048840464.json",
+    "evidence/cited/production-20261029/cch_L313-1_LEGIARTI000038610274.json"
+   ]
+  },
+  {
+   "sample_id": "T261",
+   "code": "cch",
+   "number": "L261-5",
+   "source_id": "LEGIARTI000021311345",
+   "verdict": "m",
+   "families": [
+    "F7",
+    "F10"
+   ],
+   "description": "L261-5 est un article « suiveur » qui reproduit mot pour mot l'article 1642-1 du code civil (« Ainsi qu'il est dit à »). La proposition paraphrase le texte pilote sans modifier le code civil, et le CCH ne reproduit donc plus l'article qu'il annonce (« Conformément à l'article 1642-1 »). Le sens paraît conservé : réception et délai d'un mois cumulatifs, et pas de résolution si le vendeur s'engage à réparer. Mais deux rédactions de la même règle coexistent, sans aucun gain. Les motifs et notes contiennent en outre des formules hors sujet : « Transition compatible avec L261-7 », « Le mois ne constitue pas un préavis de licenciement ».",
+   "evidence": "L261-5 LEGIARTI000021311345, source : « Ainsi qu'il est dit à l'article 1642-1 du code civil » ; proposition : « Le vendeur d'un immeuble à construire ne peut être déchargé des vices de construction ou des défauts de conformité alors apparents que lorsque les travaux ont été reçus et que le délai d'un mois suivant la prise de possession par l'acquéreur a expiré. » ; notes : « Le mois ne constitue pas un préavis de licenciement. »",
+   "links_read": [
+    "cch L261-16, R261-1, R261-8, L211-2 (recherche des renvois ; contenus résumés par les notes, non relus en entier)"
+   ],
+   "links_not_read": "Code civil 1642-1 et 1648 (hors corpus) ; L261-7 non relu.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cch_L261-5_LEGIARTI000021311345.json"
+   ]
+  },
+  {
+   "sample_id": "T271",
+   "code": "css",
+   "number": "R135-28",
+   "source_id": "LEGIARTI000026624667",
+   "verdict": "0",
+   "families": [],
+   "description": "Le régime comptable et budgétaire du FRR est maintenu. L'article reste cohérent avec R135-24 et R135-26 proposés (fin de la tutelle d'approbation) et avec L135-6 proposé. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "css R135-24 LEGIARTI000021311808",
+    "css R135-26 LEGIARTI000006747058",
+    "css L135-6 LEGIARTI000051288968"
+   ],
+   "links_not_read": "Décret 2012-1246 hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_R135-28_LEGIARTI000026624667.json"
+   ]
+  },
+  {
+   "sample_id": "T281",
+   "code": "travail",
+   "number": "R1441-3",
+   "source_id": "LEGIARTI000033231509",
+   "verdict": "0",
+   "families": [],
+   "description": "La répartition des sièges prud'homaux (collège salarié) d'après l'audience départementale est maintenue. Elle concorde avec L1441-4 proposé, reformulé sans changement, et avec R*2122-3 (maintenu). Le renvoi « R. 2122-3 » vise l'article R*2122-3. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "travail L1441-4 LEGIARTI000033023448",
+    "travail R*2122-3 LEGIARTI000019759975"
+   ],
+   "links_not_read": "R1441-4, R1441-5 et R1523-1 non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R1441-3_LEGIARTI000033231509.json",
+    "evidence/cited/production-20261029/travail_L1441-4_LEGIARTI000033023448.json"
+   ]
+  },
+  {
+   "sample_id": "T291",
+   "code": "css",
+   "number": "L422-2",
+   "source_id": "LEGIARTI000021941560",
+   "verdict": "0",
+   "families": [],
+   "description": "Coordination exacte : le renvoi au CHSCT disparu est remplacé par « les instances […] exerçant les attributions en matière de santé, de sécurité et de conditions de travail ». La communication reste subordonnée à leur demande. Statistiques et études maintenues. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "recherche des renvois entrants (R422-3, L169-1, L169-4, L169-10, D169-4, L931-7-2)"
+   ],
+   "links_not_read": "R422-3 et code du travail L2312-5, L2312-8 et L2312-9 non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_L422-2_LEGIARTI000021941560.json"
+   ]
+  },
+  {
+   "sample_id": "T301",
+   "code": "a2",
+   "number": "195 C",
+   "source_id": "LEGIARTI000006294356",
+   "verdict": "0",
+   "families": [],
+   "description": "L'option TVA des groupements d'aveugles ou de travailleurs handicapés et sa dénonciation se font par simple notification, sans formulaire. Ce régime est coordonné avec 195 B proposé (dénonciation à tout moment, régularisations réservées). Rien de grossier. Le transfert de la TVA au CIBS au 1er janvier 2027 touche la base législative (CGI 261 et 286, ABROGE_DIFF), mais pas directement cet article réglementaire.",
+   "evidence": "",
+   "links_read": [
+    "a2 195 A LEGIARTI000006294348",
+    "a2 195 B LEGIARTI000006294353",
+    "a2 195 D LEGIARTI000006294354",
+    "cgi 261 LEGIARTI000054374042 (état ABROGE_DIFF, non relu en entier)"
+   ],
+   "links_not_read": "CGI 286 I 1° et article législatif ouvrant l'option non relus ; CIBS hors corpus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/a2_195_C_LEGIARTI000006294356.json",
+    "evidence/cited/production-20261029/a2_195_B_LEGIARTI000006294353.json"
+   ]
+  },
+  {
+   "sample_id": "T311",
+   "code": "travail",
+   "number": "L1133-1",
+   "source_id": "LEGIARTI000018881575",
+   "verdict": "0",
+   "families": [],
+   "description": "L'exception pour exigence professionnelle essentielle et déterminante est maintenue. Elle est conforme aux directives 2000/43 et 2000/78. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "recherche des renvois entrants (aucun renvoi exprès)"
+   ],
+   "links_not_read": "L1132-1 non relu en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_L1133-1_LEGIARTI000018881575.json"
+   ]
+  }
+ ]
+}

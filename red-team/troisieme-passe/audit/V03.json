@@ -1,0 +1,712 @@
+{
+ "group": "V03",
+ "read_from": "production",
+ "read_date": "2026-10-29",
+ "method": "Lecture de chaque article par CITE_PRODUCTION=1 python3 -I tools/cite.py (sources, NOTA, propositions, motifs, notes, toutes versions), liens lus dans la base de production en lecture seule (mode=ro, query_only). Qualification faite avant toute lecture de reports/register.json, audit/U*.json et audit/sweeps/. Revue IA : ce n'est pas une validation par un juriste.",
+ "counts": {
+  "G": 1,
+  "m": 11,
+  "zero": 20,
+  "total": 32
+ },
+ "articles": [
+  {
+   "sample_id": "T003",
+   "code": "css",
+   "number": "R743-5",
+   "source_id": "LEGIARTI000006752147",
+   "verdict": "m",
+   "families": [
+    "F5",
+    "F10"
+   ],
+   "description": "Corps source repris, mais la proposition ajoute un alinéa interprétatif qui part d'une lecture inexacte : le motif dit que L434-1 « figure dans le corpus avec une fin de validité au 1er novembre 2026 ». Seule la version LEGIARTI000031688413 prend fin ; l'article continue dans la version LEGIARTI000051288500, applicable aux consolidations à compter de cette date. La formule « dans le seul champ temporel de cet article » peut se lire comme limitant l'exclusion du capital aux victimes consolidées avant le 1er novembre 2026. Les bénévoles pourraient alors réclamer le nouveau capital en deux parts. Les notes disent le contraire (« ne l'ouvre pas aux bénévoles »). Ambiguïté sans effet certain : doute raisonnable.",
+   "evidence": "R743-5 proposé (LEGIARTI000006752147) : « L'exclusion de l'indemnité en capital mentionnée à l'article L. 434-1 s'applique dans le seul champ temporel de cet article. Elle n'est pas étendue à une prestation distincte par le seul effet de ce renvoi. » ; L434-1 LEGIARTI000051288500 (VIGUEUR_DIFF 2026-11-01→2999-01-01) : « Une indemnité en capital est attribuée à la victime d'un accident du travail atteinte d'une incapacité permanente professionnelle inférieure à un pourcentage déterminé. Elle est constituée : ».",
+   "links_read": [
+    "css L434-1 (LEGIARTI000031688413, LEGIARTI000051288500, versions antérieures)",
+    "css L434-1 A LEGIARTI000051288442",
+    "css R743-4 LEGIARTI000006752145",
+    "css R743-9 LEGIARTI000006752555",
+    "css R743-10 LEGIARTI000006752556",
+    "css L743-2 LEGIARTI000006744150"
+   ],
+   "links_not_read": "L433-1 (indemnité journalière) et L434-2 successeur (LEGIARTI000051288493) non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_R743-5_LEGIARTI000006752147.json",
+    "evidence/cited/production-20261029/css_L434-1_LEGIARTI000051288500.json"
+   ]
+  },
+  {
+   "sample_id": "T013",
+   "code": "travail",
+   "number": "L3133-1",
+   "source_id": "LEGIARTI000033020901",
+   "verdict": "0",
+   "families": [],
+   "description": "Liste des onze fêtes légales maintenue telle quelle. Les renvois entrants (L3132-26, L7211-3, L3422-3) restent cohérents. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "travail L3133-1 (versions 2008 et 2016)",
+    "recherche des renvois entrants à L. 3133-1 (L3132-26, L7211-3, L3422-3)"
+   ],
+   "links_not_read": "L3133-3 à L3133-6 non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_L3133-1_LEGIARTI000033020901.json"
+   ]
+  },
+  {
+   "sample_id": "T023",
+   "code": "css",
+   "number": "R161-4",
+   "source_id": "LEGIARTI000031827756",
+   "verdict": "0",
+   "families": [],
+   "description": "L'âge limite de vingt ans du 2° de L161-1 est maintenu. La base légale (L161-1 2°, maintenu) et le renvoi entrant de R353-9 sont cohérents.",
+   "evidence": "",
+   "links_read": [
+    "css L161-1 LEGIARTI000031686766",
+    "css R353-9 LEGIARTI000031828755 (renvoi entrant)"
+   ],
+   "links_not_read": "D160-14 non relu.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_R161-4_LEGIARTI000031827756.json"
+   ]
+  },
+  {
+   "sample_id": "T033",
+   "code": "cgi",
+   "number": "244 quater B bis",
+   "source_id": "LEGIARTI000053544406",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Conflit de source non traité. La proposition (suppression de l'agrément des organismes de recherche, VII sur l'IS à la distribution) porte sur la version LEGIARTI000053544406 (2026-01-01, « 31 décembre 2028 »). Or le document LEGI de la version LEGIARTI000053561758 (VIGUEUR depuis le 2026-02-21, hors inventaire, sans proposition) clôt la précédente au 21 février 2026 (« etat=\"MODIFIE\" fin=\"2026-02-21\" »). Cette version, en vigueur au 18 octobre 2026 selon la chaîne LEGI, revient à « 31 décembre 2025 » et à l'agrément ministériel, alors que son propre NOTA renvoie à l'article 37 de la loi n° 2026-103. Elle paraît donc être une erreur DILA. Le texte retenu par le projet est sans doute le bon sur le fond, mais ni le motif ni les notes ne mentionnent cette version ni ne justifient le choix. Un lecteur de Légifrance verrait une version courante sans proposition. Qualification indépendante initiale : G (F4). Je l'ai ramenée à m après avoir constaté que la version de février contredit son propre NOTA, ce qui en fait vraisemblablement un fantôme DILA ; la révision ne vient pas de la lecture du registre.",
+   "evidence": "244 quater B bis LEGIARTI000053544406 (proposé) : « conclu jusqu'au 31 décembre 2028 » ; « Aucun agrément de ces organismes n'est requis pour l'application du présent article. » — LEGIARTI000053561758 (VIGUEUR 2026-02-21→2999-01-01, sans proposition) : « conclu jusqu'au 31 décembre 2025 » ; « Ils sont agréés par le ministre chargé de la recherche selon des modalités définies par décret. » ; NOTA de LEGIARTI000053561758 : « Conformément au II de l’article 37 de la loi n° 2026-103 du 19 février 2026, ces dispositions, dans leur rédaction résultant du I du même article, s'appliquent aux contrats de collaboration de recherche conclus à compter du 1er janvier 2026. »",
+   "links_read": [
+    "cgi 244 quater B bis : les cinq versions, dont LEGIARTI000051217633, LEGIARTI000053544406 et LEGIARTI000053561758 (métadonnées VERSIONS/LIENS)"
+   ],
+   "links_not_read": "Annexe III 49 septies V à VE, 199 ter B bis, 220 B bis et 223 O non relus par moi (lus selon les notes du projet). Loi n° 2026-103 art. 37 et 42 non consultée au JORF.",
+   "known_objection": "RT-INV-14 (P2, anomalie d'inventaire, à confirmer) classe 244 quater B bis parmi les « fantômes DILA doublant une version incluse ». Défaut toujours visible : les notes ne documentent pas le conflit.",
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cgi_244_quater_B_bis_LEGIARTI000053544406.json",
+    "evidence/cited/production-20261029/cgi_244_quater_B_bis_LEGIARTI000053561758.json",
+    "evidence/cited/production-20261029/cgi_244_quater_B_bis_LEGIARTI000051217633.json"
+   ]
+  },
+  {
+   "sample_id": "T043",
+   "code": "cgi",
+   "number": "223 WS quinquies",
+   "source_id": "LEGIARTI000048807689",
+   "verdict": "0",
+   "families": [],
+   "description": "La reprise du solde d'impôt sur les distributions présumées au quatrième exercice est maintenue. Elle reste cohérente avec 223 WS, WS bis, WS ter et WS quater, tous maintenus. Les notes réservent à juste titre la non-éligibilité du nouvel IS français (223 VK 39° c, régime en vigueur au plus tard le 1er juillet 2021).",
+   "evidence": "",
+   "links_read": [
+    "cgi 223 WS LEGIARTI000048804149",
+    "cgi 223 WS bis LEGIARTI000048804151",
+    "cgi 223 WS ter LEGIARTI000048804153",
+    "cgi 223 WS quater LEGIARTI000048804155"
+   ],
+   "links_not_read": "223 WC, 223 VK et 223 WS sexies non relus ; directive 2022/2523 non consultée.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cgi_223_WS_quinquies_LEGIARTI000048807689.json"
+   ]
+  },
+  {
+   "sample_id": "T053",
+   "code": "travail",
+   "number": "L3111-3",
+   "source_id": "LEGIARTI000033001438",
+   "verdict": "0",
+   "families": [],
+   "description": "Article d'architecture (ordre public, champ de la négociation, règles supplétives) maintenu à l'identique. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "travail L3111-3 (source, motif et notes)"
+   ],
+   "links_not_read": "L3132-1 et L3121-6 à L3121-8 non relus par moi.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_L3111-3_LEGIARTI000033001438.json"
+   ]
+  },
+  {
+   "sample_id": "T063",
+   "code": "travail",
+   "number": "R5424-73",
+   "source_id": "LEGIARTI000038876694",
+   "verdict": "0",
+   "families": [],
+   "description": "La fenêtre de douze mois entre la fin d'activité et l'inscription est maintenue. Elle reste compatible avec L5424-25 proposé (dispense du tiers de confiance) et avec L5424-26 maintenu. La suppression de la forclusion de L5422-4 est d'un autre ordre que cette condition d'ouverture.",
+   "evidence": "",
+   "links_read": [
+    "travail L5424-25 LEGIARTI000045180455",
+    "travail L5424-26 LEGIARTI000037388319"
+   ],
+   "links_not_read": "D5424-76 et L5422-4 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R5424-73_LEGIARTI000038876694.json"
+   ]
+  },
+  {
+   "sample_id": "T073",
+   "code": "css",
+   "number": "Annexe II : Tableau n° 88",
+   "source_id": "LEGIARTI000006746412",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Tableau maintenu intégralement : rien à redire au fond. Les notes sont fausses sur l'état du corpus : elles disent que le successeur de L461-1 n'est pas fourni. Or deux versions futures existent en production avec proposition : LEGIARTI000053285183 (2026-11-01) et LEGIARTI000053285169 (2027-01-01). Elles conservent la présomption liée aux tableaux.",
+   "evidence": "Notes du tableau n° 88 (LEGIARTI000006746412) : « La version locale de L461-1 cesse sa validité le 1er novembre 2026 ; son texte successeur n’est pas fourni dans le corpus consulté. » — L461-1 LEGIARTI000053285169 (VIGUEUR_DIFF 2027-01-01), source : « Est présumée d'origine professionnelle toute maladie désignée dans un tableau de maladies professionnelles et contractée dans les conditions mentionnées à ce tableau. »",
+   "links_read": [
+    "css L461-1 : toutes les versions, dont LEGIARTI000053281596, LEGIARTI000053285183 et LEGIARTI000053285169 (sources et propositions)"
+   ],
+   "links_not_read": "R461-3, L461-2 et D461-1-1 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_L461-1_LEGIARTI000053285169.json"
+   ]
+  },
+  {
+   "sample_id": "T083",
+   "code": "travail",
+   "number": "R6223-23",
+   "source_id": "LEGIARTI000018523964",
+   "verdict": "0",
+   "families": [],
+   "description": "Maître d'apprentissage référent maintenu. La base L6223-6 est maintenue. R6227-1 sanctionne toujours la méconnaissance de R6223-23, dont l'obligation subsiste : pas de F2.",
+   "evidence": "",
+   "links_read": [
+    "travail L6223-6 LEGIARTI000006904041",
+    "travail R6227-1 LEGIARTI000025684788 (renvoi entrant)"
+   ],
+   "links_not_read": "L6223-5 et L6223-8-1 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R6223-23_LEGIARTI000018523964.json"
+   ]
+  },
+  {
+   "sample_id": "T093",
+   "code": "travail",
+   "number": "L2135-15",
+   "source_id": "LEGIARTI000033023424",
+   "verdict": "0",
+   "families": [],
+   "description": "L'agrément ministériel du règlement intérieur de l'association paritaire est supprimé, avec une transition. Aucun texte réglementaire R2135-* ne maintient cet agrément (recherche « agré » sans résultat). R2135-14 1° conserve la seule adoption du règlement par le conseil. Le commissaire du Gouvernement et son opposition sont conservés.",
+   "evidence": "",
+   "links_read": [
+    "travail R2135-14 LEGIARTI000030172707",
+    "R2135-16 LEGIARTI000030172711",
+    "R2135-19 LEGIARTI000030172721",
+    "R2135-20 LEGIARTI000030172723 (extraits)",
+    "recherche « agré » dans R2135/D2135"
+   ],
+   "links_not_read": "R2135-15 et L2135-9 non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_L2135-15_LEGIARTI000033023424.json"
+   ]
+  },
+  {
+   "sample_id": "T103",
+   "code": "a4",
+   "number": "50-00 H",
+   "source_id": "LEGIARTI000006300440",
+   "verdict": "0",
+   "families": [],
+   "description": "La compétence de la DGCCRF sur les registres vitivinicoles (50-00 C à G) est maintenue. La plage visée existe toujours en production. Les renvois de 50-00 C au CGI ancien (302 M, 407…) relèvent de 50-00 C et non de cet article.",
+   "evidence": "",
+   "links_read": [
+    "annexe IV 50-00 C LEGIARTI000032694368",
+    "50-00 D LEGIARTI000006300435",
+    "50-00 E LEGIARTI000032694360",
+    "50-00 F LEGIARTI000006300437",
+    "50-00 G LEGIARTI000051821545 (sources et motifs)"
+   ],
+   "links_not_read": "Annexe II 286 I et 286 J non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/a4_50-00_H_LEGIARTI000006300440.json"
+   ]
+  },
+  {
+   "sample_id": "T113",
+   "code": "css",
+   "number": "D133-13-15",
+   "source_id": "LEGIARTI000048864312",
+   "verdict": "m",
+   "families": [
+    "F7",
+    "F10"
+   ],
+   "description": "Le corps normatif est conservé. Deux maladresses. Le deuxième alinéa écarte une « seconde déclaration » que la source n'imposait pas : le motif le reconnaît, c'est une phrase sans objet. La transition vise « l'entrée en vigueur du présent décret » à l'intérieur d'un article codifié, renvoi déictique sans référent stable.",
+   "evidence": "D133-13-15 proposé (LEGIARTI000048864312) : « Le recours à un titre spécial ne donne pas lieu à une seconde déclaration de la même période par le particulier » ; « s’appliquent aux démarches restant à accomplir à l’entrée en vigueur du présent décret » ; motif : « La source n’impose pas de seconde déclaration au particulier ».",
+   "links_read": [
+    "travail R1271-8 LEGIARTI000038681538",
+    "travail L1271-1 LEGIARTI000048590028"
+   ],
+   "links_not_read": "D133-13-8 et D133-13-2 non relus.",
+   "known_objection": "Le motif déictique « présent décret » est relevé ailleurs (RT-FUTTL-14, RT-TUT-04), mais pas pour cet article.",
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_D133-13-15_LEGIARTI000048864312.json"
+   ]
+  },
+  {
+   "sample_id": "T123",
+   "code": "css",
+   "number": "D531-5",
+   "source_id": "LEGIARTI000030058462",
+   "verdict": "G",
+   "families": [
+    "F5",
+    "F8"
+   ],
+   "description": "La proposition supprime toute condition de montant des indemnités d'élu pour la PreParE à taux plein. L531-4 I 1 réserve le taux plein à la personne qui « choisit de ne plus exercer d'activité professionnelle » et charge le décret de fixer « les conditions d'assimilation d'un mandat d'élu à une activité professionnelle ». Le décret proposé n'assimile plus jamais le mandat à une activité. Un parlementaire ou un maire de grande ville qui exerce son mandat à temps plein, avec ses indemnités entières, toucherait la prestation de cessation d'activité à taux plein. Le décret vide ainsi l'habilitation de son objet, ce qui revient à méconnaître la loi qu'il applique. Ce n'est ni une baisse d'impôt ni le retrait d'une contrainte : c'est l'extension non décidée d'une prestation sociale à des personnes en activité rémunérée. Point préexistant et non vu : le renvoi de la source à l'article 204-0 bis du CGI est mort (abrogé depuis le 1er janvier 2017 selon le corpus) ; le défaut à corriger était ce renvoi, non le plafond. Également : « présent décret » dans la transition.",
+   "evidence": "D531-5 source (LEGIARTI000030058462) : « est versée lorsque les indemnités de fonction perçues sont au plus égales à la fraction représentative des frais d'emploi telle que définie à l'article 204-0 bis du code général des impôts » ; proposé : « est versée sans condition tenant au montant de leurs indemnités de fonction » et « le droit à cette prestation est ouvert sans condition tenant au montant de leurs indemnités » ; L531-4 (LEGIARTI000030055645) : « La prestation partagée d'éducation de l'enfant est versée à taux plein à la personne qui choisit de ne plus exercer d'activité professionnelle » ; « Les conditions d'assimilation d'un mandat d'élu à une activité professionnelle au sens de l'alinéa précédent sont définies par décret. » ; CGI 204-0 bis LEGIARTI000022171776 : état ABROGE 2010-05-01→2017-01-01.",
+   "links_read": [
+    "css L531-4 LEGIARTI000030055645 (source et proposition)",
+    "cgi 204-0 bis (toutes versions, dernière ABROGE)",
+    "cgi 81 LEGIARTI000054354206 (1°, fraction des indemnités d’élus)"
+   ],
+   "links_not_read": "D531-4, R531-3 et R531-4 non relus ; ordonnance n° 58-1210 (indemnité parlementaire) hors corpus.",
+   "known_objection": null,
+   "suggested_correction": "Rétablir le plafond en corrigeant seulement le renvoi mort. Rédaction proposée : « Pour les élus locaux qui ont cessé leur activité professionnelle pour se consacrer à leur mandat, la prestation partagée d'éducation de l'enfant à taux plein mentionnée au 1 du I de l'article L. 531-4 est versée lorsque les indemnités de fonction perçues n'excèdent pas la fraction affranchie de l'impôt en application du 1° de l'article 81 du code général des impôts. Pour les titulaires d'un mandat parlementaire qui ont cessé leur activité professionnelle pour se consacrer à leur mandat, le droit à cette prestation est ouvert lorsque les indemnités perçues sont au plus égales à la fraction représentative des frais d'emploi définie au 1° de l'article 81 du code général des impôts. La substitution du renvoi s'applique aux prestations dues à compter de l'entrée en vigueur du décret portant la présente rédaction ; les droits ouverts antérieurement sont conservés. » Aucune formalité nouvelle. Si l'auteur veut vraiment étendre la prestation aux élus en exercice, il faut une décision expresse et une modification de L531-4, pas le seul décret.",
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_D531-5_LEGIARTI000030058462.json",
+    "evidence/cited/production-20261029/css_L531-4_LEGIARTI000030055645.json"
+   ]
+  },
+  {
+   "sample_id": "T133",
+   "code": "css",
+   "number": "R815-13",
+   "source_id": "LEGIARTI000006753607",
+   "verdict": "0",
+   "families": [],
+   "description": "Le destinataire commun des demandes séparées d'ASPA est maintenu. Compatible avec R815-12 maintenu et avec L815-7 proposé (liquidation sans demande quand les données suffisent).",
+   "evidence": "",
+   "links_read": [
+    "css R815-12 LEGIARTI000006753599",
+    "css L815-7 LEGIARTI000033715689 (source et proposition)"
+   ],
+   "links_not_read": "R815-14 et R815-5 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_R815-13_LEGIARTI000006753607.json"
+   ]
+  },
+  {
+   "sample_id": "T143",
+   "code": "a2",
+   "number": "242-0 Q",
+   "source_id": "LEGIARTI000022146960",
+   "verdict": "m",
+   "families": [
+    "F9"
+   ],
+   "description": "Maintien de la source. Le troisième alinéa fait corriger le prorata dans une demande « déposée durant la même année civile ». Il est douteux que cela corresponde à l'article 13 de la directive 2008/9/CE, qui viserait, d'après mon souvenir, l'année civile suivant la période de remboursement. Les notes signalent elles-mêmes cette « ambiguïté préexistante ». Point de droit de l'Union à confirmer : la source primaire n'a pas pu être lue (EUR-Lex, consultation du 29 octobre 2026, page vide).",
+   "evidence": "242-0 Q (LEGIARTI000022146960) : « La correction s'effectue à l'occasion d'une nouvelle demande de remboursement déposée durant la même année civile pour une période postérieure à celle au titre de laquelle le remboursement à rectifier a été demandé ou obtenu » ; notes : « Ambiguïté préexistante sur « même année civile » dans Q et Z ter signalée ».",
+   "links_read": [
+    "annexe II 242-0 Q (source, motif et notes)"
+   ],
+   "links_not_read": "242-0 Z ter et 242-0 N non relus ; directive 2008/9/CE non lue (EUR-Lex inaccessible).",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/a2_242-0_Q_LEGIARTI000022146960.json"
+   ]
+  },
+  {
+   "sample_id": "T153",
+   "code": "css",
+   "number": "R431-1",
+   "source_id": "LEGIARTI000006750288",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Le seuil de 10 % reste opérant, y compris avec la version future de L431-1 (LEGIARTI000051288444, 2026-11-01), dont le 4° vise désormais le « taux de l'incapacité professionnelle ». Les notes sont fausses sur le corpus : elles disent que L434-1 A n'est pas fourni, alors que LEGIARTI000051288442 y figure. Défaut de notes seulement.",
+   "evidence": "Notes de R431-1 (LEGIARTI000006750288) : « le régime postérieur annoncé, notamment L434-1 A, n'est pas fourni en entier et reste à confronter » ; L431-1 LEGIARTI000051288444 (VIGUEUR_DIFF 2026-11-01) : « une indemnité en capital lorsque le taux de l'incapacité professionnelle est inférieur à un taux déterminé, une rente au-delà ».",
+   "links_read": [
+    "css L431-1 LEGIARTI000035640835 et LEGIARTI000051288444",
+    "css L434-1 A LEGIARTI000051288442",
+    "css L434-1 LEGIARTI000051288500"
+   ],
+   "links_not_read": "R434-1 et L434-2 successeur non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_R431-1_LEGIARTI000006750288.json",
+    "evidence/cited/production-20261029/css_L431-1_LEGIARTI000051288444.json"
+   ]
+  },
+  {
+   "sample_id": "T163",
+   "code": "cch",
+   "number": "L521-1",
+   "source_id": "LEGIARTI000049398958",
+   "verdict": "0",
+   "families": [],
+   "description": "Le tiret isolé « -lorsqu'un établissement recevant du public… » vient de la consolidation officielle depuis l'ordonnance 2020-1144 : les versions de 2021 l'ont déjà. La proposition le rattache explicitement (« s'applique également »). L'obligation générale reste encadrée par les cas de L521-3-1, maintenu (interdiction temporaire ou définitive, évacuation). Correction adéquate.",
+   "evidence": "",
+   "links_read": [
+    "cch L521-1 : toutes les versions, dont LEGIARTI000006825779, LEGIARTI000042343009 et LEGIARTI000041586711",
+    "cch L521-3-1 LEGIARTI000049397643"
+   ],
+   "links_not_read": "L184-1 et L521-3-2 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cch_L521-1_LEGIARTI000049398958.json"
+   ]
+  },
+  {
+   "sample_id": "T173",
+   "code": "travail",
+   "number": "R7111-30",
+   "source_id": "LEGIARTI000018521965",
+   "verdict": "0",
+   "families": [],
+   "description": "Le délai d'un mois franc, ou de six mois, pour saisir la commission supérieure est maintenu. Il reste cohérent avec R7111-29, R7111-31 proposé (dépôt contre récépissé, délais non rouverts), R7111-12, R7111-13 et L7111-6.",
+   "evidence": "",
+   "links_read": [
+    "travail L7111-6",
+    "R7111-1",
+    "R7111-12",
+    "R7111-13",
+    "R7111-29",
+    "R7111-31 (sources et propositions)"
+   ],
+   "links_not_read": "R7111-32 non relu.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R7111-30_LEGIARTI000018521965.json"
+   ]
+  },
+  {
+   "sample_id": "T183",
+   "code": "css",
+   "number": "R223-14",
+   "source_id": "LEGIARTI000046016825",
+   "verdict": "0",
+   "families": [],
+   "description": "Les compétences du directeur de la caisse nationale sont maintenues. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "css R223-14 (source, motif et notes)"
+   ],
+   "links_not_read": "L223-7, L227-1 et R223-12 non relus par moi.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_R223-14_LEGIARTI000046016825.json"
+   ]
+  },
+  {
+   "sample_id": "T193",
+   "code": "cch",
+   "number": "R261-28",
+   "source_id": "LEGIARTI000039041555",
+   "verdict": "0",
+   "families": [],
+   "description": "Les plafonds du dépôt de garantie (5 %, 2 %, puis aucun dépôt) sont maintenus. Ils restent cohérents avec L261-15 réécrit à droit constant et avec R261-29 maintenu.",
+   "evidence": "",
+   "links_read": [
+    "cch L261-15 LEGIARTI000037667790",
+    "cch R261-29 LEGIARTI000039041552"
+   ],
+   "links_not_read": "R261-30, R261-31, R281-1 et R662-1 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cch_R261-28_LEGIARTI000039041555.json"
+   ]
+  },
+  {
+   "sample_id": "T203",
+   "code": "travail",
+   "number": "D3142-7",
+   "source_id": "LEGIARTI000033925216",
+   "verdict": "m",
+   "families": [
+    "F5",
+    "F7"
+   ],
+   "description": "La suppression du certificat préalable en cas d'urgence est cohérente avec L3142-19 proposé, dont le troisième alinéa garde les trois cas. Deux réserves. Le texte ne dit plus du tout comment la situation d'urgence s'établit, ni si une justification peut être demandée après coup ; la phrase « Les conditions d'ouverture du droit au congé demeurent applicables » ne dit pas comment les vérifier. Ensuite, la transition d'un article réglementaire renvoie à « la loi portant la présente réforme ». Doute raisonnable, sans effet grossier.",
+   "evidence": "D3142-7 proposé (LEGIARTI000033925216) : « sans que la production préalable d'un certificat médical constatant la dégradation soudaine de l'état de santé ou la situation de crise, ou d'une attestation de cessation brutale de l'hébergement délivrée par l'établissement, puisse être exigée » ; « Ces dispositions s'appliquent aux informations et demandes présentées à compter de l'entrée en vigueur de la loi portant la présente réforme ».",
+   "links_read": [
+    "travail L3142-19 LEGIARTI000033022063",
+    "L3142-20 LEGIARTI000033022059",
+    "D3142-8 LEGIARTI000046086859",
+    "L3142-26 LEGIARTI000038498902",
+    "L3142-27 LEGIARTI000033022024"
+   ],
+   "links_not_read": "D3142-9 et suivants non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_D3142-7_LEGIARTI000033925216.json"
+   ]
+  },
+  {
+   "sample_id": "T213",
+   "code": "css",
+   "number": "D432-2",
+   "source_id": "LEGIARTI000006736976",
+   "verdict": "0",
+   "families": [],
+   "description": "Les conditions de condamnation, de moralité et de résidence propre aux étrangers sont supprimées pour la prime de fin de rééducation. La coordination est faite dans D432-3 (renvoi au seul 3°) et R432-10. Numérotation conservée, transition présente.",
+   "evidence": "",
+   "links_read": [
+    "css D432-3 LEGIARTI000006736977",
+    "D432-4",
+    "D432-5",
+    "D432-7",
+    "D432-8",
+    "R432-10 (extraits des sources et propositions)"
+   ],
+   "links_not_read": "L432-9 non relu en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_D432-2_LEGIARTI000006736976.json"
+   ]
+  },
+  {
+   "sample_id": "T223",
+   "code": "css",
+   "number": "R139-6",
+   "source_id": "LEGIARTI000038738881",
+   "verdict": "0",
+   "families": [],
+   "description": "Les règles d'adossement et de liquidité sont maintenues. Les renvois R139-5 4°, R139-14 3° et 6°, R139-16 3° et R139-18 7°, tous maintenus, visent bien les catégories attendues : pas de décalage.",
+   "evidence": "",
+   "links_read": [
+    "css R139-5 LEGIARTI000038786078",
+    "R139-14 LEGIARTI000038739042",
+    "R139-16 LEGIARTI000038739141",
+    "R139-18 LEGIARTI000038739184"
+   ],
+   "links_not_read": "R139-21 non relu ; décision CE n° 412177 non consultée.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_R139-6_LEGIARTI000038738881.json"
+   ]
+  },
+  {
+   "sample_id": "T233",
+   "code": "travail",
+   "number": "R5132-18",
+   "source_id": "LEGIARTI000028651385",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "Le fond est cohérent avec L5132-9 proposé (« aucun plafond cumulé ») et avec D5132-18-1 proposé. Mais la rédaction est auto-abrogeante : l'article reste dans le code, annonce sa propre abrogation sous condition, puis édicte des règles « au titre du présent article ». Une abrogation se fait par le décret modificatif, pas dans le texte codifié. Maladroit, sans effet de fond.",
+   "evidence": "R5132-18 proposé (LEGIARTI000028651385) : « Le présent article est abrogé à compter de l'entrée en vigueur de la suppression du plafond cumulé des mises à disposition prévue au 2° de l'article L. 5132-9. Ni le seuil de seize heures ni la durée totale de quatre cent quatre-vingts heures ne sont opposables au titre du présent article aux mises à disposition exécutées à compter de cette date, y compris celles déjà convenues. »",
+   "links_read": [
+    "travail L5132-9 LEGIARTI000042674154",
+    "D5132-18-1 LEGIARTI000049754347",
+    "R5132-17 LEGIARTI000049816212",
+    "L5132-7 LEGIARTI000033021132"
+   ],
+   "links_not_read": "R5523-15-43 non relu.",
+   "known_objection": "Formule « Le présent article est abrogé à compter… » relevée ailleurs (RT-FUTCSS-28, à propos de R613-9) ; RT-P1-TRAVAIL-A-14 (résolu) traite le renvoi de R5523-15-43 à D5132-18-1, pas cet article.",
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R5132-18_LEGIARTI000028651385.json"
+   ]
+  },
+  {
+   "sample_id": "T243",
+   "code": "travail",
+   "number": "R5221-34",
+   "source_id": "LEGIARTI000049999754",
+   "verdict": "0",
+   "families": [],
+   "description": "Les motifs facultatifs de refus de renouvellement sont maintenus. Les 2°, 3°, 4° et 6° de R5221-20 proposé gardent leur place et leur objet. Pas de renvoi décalé.",
+   "evidence": "",
+   "links_read": [
+    "travail R5221-20 LEGIARTI000049999760",
+    "R5221-32 LEGIARTI000043320773",
+    "R5221-33 LEGIARTI000043320764"
+   ],
+   "links_not_read": "R5221-19 non relu.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R5221-34_LEGIARTI000049999754.json"
+   ]
+  },
+  {
+   "sample_id": "T253",
+   "code": "css",
+   "number": "R380-4",
+   "source_id": "LEGIARTI000034623626",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "La coordination avec l'abrogation prospective de L380-2 est faite : l'article est borné aux années antérieures. Le IV fait toutefois courir la suppression de l'assiette forfaitaire de cinq PASS « à compter de l'entrée en vigueur du présent décret », renvoi déictique sans référent stable dans un article codifié. Le IV parle en outre d'« employeur » pour une cotisation due par l'assuré ; c'est préexistant et les notes le relèvent. Maladresse sans effet de fond.",
+   "evidence": "R380-4 proposé (LEGIARTI000034623626) : « Aucune assiette forfaitaire égale à cinq fois le plafond annuel de la sécurité sociale ne peut être fixée sur le fondement du présent article à compter de l'entrée en vigueur du présent décret. » ; « Pour la cotisation mentionnée à l'article L. 380-2, le présent article ne s'applique qu'aux années antérieures au 1er janvier de l'année suivant celle de l'entrée en vigueur de la loi portant abrogation de cet article. »",
+   "links_read": [
+    "css L380-2 LEGIARTI000037947779 (source et proposition)",
+    "css R380-6 LEGIARTI000039222872",
+    "css R380-7 LEGIARTI000034623600 (renvois entrants)"
+   ],
+   "links_not_read": "R380-3, R380-5 et L380-3-1 non relus en entier.",
+   "known_objection": "RT-P1-CSS-A-07 (résolu) traite la coordination avec L380-2, et W03 classe R380-4 « déjà réglé » sur ce point ; le renvoi « présent décret » n'y est pas relevé.",
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_R380-4_LEGIARTI000034623626.json"
+   ]
+  },
+  {
+   "sample_id": "T263",
+   "code": "travail",
+   "number": "R1235-3",
+   "source_id": "LEGIARTI000049816295",
+   "verdict": "0",
+   "families": [],
+   "description": "La procédure de contrainte de France Travail est maintenue. Elle reste cohérente avec L1235-4 maintenu, R1235-2 (dénomination corrigée) et R1235-4 proposé.",
+   "evidence": "",
+   "links_read": [
+    "travail L1235-4 LEGIARTI000048600688",
+    "R1235-2 LEGIARTI000049816299",
+    "R1235-4 LEGIARTI000038322478"
+   ],
+   "links_not_read": "Aucun autre lien utile.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R1235-3_LEGIARTI000049816295.json"
+   ]
+  },
+  {
+   "sample_id": "T273",
+   "code": "a1",
+   "number": "59",
+   "source_id": "LEGIARTI000051821197",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "La suppression de la transmission systématique du nouveau certificat de jaugeage est cohérente : certificat préalable, tenue à disposition et interdiction d'usage avant un nouveau certificat sont maintenus. La transition d'un texte réglementaire, l'annexe I, se réfère à « la loi » sans la désigner, et à « Ces dispositions » sans délimitation. Maladresse sans effet de fond.",
+   "evidence": "Annexe I art. 59 proposé (LEGIARTI000051821197) : « Ces dispositions s'appliquent à compter de l'entrée en vigueur de la loi. »",
+   "links_read": [
+    "annexe I art. 59 (source 2025, NOTA, proposition)"
+   ],
+   "links_not_read": "Décret n° 2001-387 hors corpus ; CIBS L313-15 non relu.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/a1_59_LEGIARTI000051821197.json"
+   ]
+  },
+  {
+   "sample_id": "T283",
+   "code": "css",
+   "number": "R161-33-5",
+   "source_id": "LEGIARTI000046844819",
+   "verdict": "0",
+   "families": [],
+   "description": "L'extension de la sous-section carte Vitale à la CFE est maintenue. La sous-section R161-33-1 à R161-33-21 existe toujours en production. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "liste des articles R161-33-* et L766-* en vigueur (statuts et extraits)"
+   ],
+   "links_not_read": "R161-33-3 proposé non relu en entier.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_R161-33-5_LEGIARTI000046844819.json"
+   ]
+  },
+  {
+   "sample_id": "T293",
+   "code": "travail",
+   "number": "R1263-11-1",
+   "source_id": "LEGIARTI000042168312",
+   "verdict": "0",
+   "families": [],
+   "description": "Le renvoi mort à L8112-5 est retiré à bon droit, puisque L8112-1 vise tous les agents de contrôle. Le manquement de L1263-3, réécrit en liste à droit constant, reste cohérent.",
+   "evidence": "",
+   "links_read": [
+    "travail L1263-3 LEGIARTI000037388985",
+    "L8112-1 LEGIARTI000033025397"
+   ],
+   "links_not_read": "R1263-11-7 non relu.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/travail_R1263-11-1_LEGIARTI000042168312.json"
+   ]
+  },
+  {
+   "sample_id": "T303",
+   "code": "css",
+   "number": "R742-12",
+   "source_id": "LEGIARTI000006752533",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "La suppression de la fiche d'état civil et de l'attestation de domicile est cohérente avec R742-11 maintenu et L742-1. Mais les 2° et 3° d'une liste introduite par « Le demandeur fournit les justifications suivantes : » sont rédigés comme des négations (« Aucune fiche… n'est exigée »). Les remplacer par « Abrogé » serait plus propre. Maladresse sans effet.",
+   "evidence": "R742-12 proposé (LEGIARTI000006752533) : « Le demandeur fournit les justifications suivantes : » ; « 2°) Aucune fiche d’état civil distincte n’est exigée ; » ; « 3°) Aucune attestation de domicile n’est exigée ; ».",
+   "links_read": [
+    "css R742-11 LEGIARTI000006752531",
+    "R742-13 LEGIARTI000006752534",
+    "L742-1 LEGIARTI000047453412"
+   ],
+   "links_not_read": "L381-2 non relu.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/css_R742-12_LEGIARTI000006752533.json"
+   ]
+  },
+  {
+   "sample_id": "T313",
+   "code": "cch",
+   "number": "D331-28",
+   "source_id": "LEGIARTI000038975171",
+   "verdict": "0",
+   "families": [],
+   "description": "L'exclusion territoriale (sous-section 6 « Départements d'outre-mer » de la section 1) est maintenue. Rien à signaler.",
+   "evidence": "",
+   "links_read": [
+    "cch D331-28 (contexte LEGI TITRE_TM)"
+   ],
+   "links_not_read": "D331-1 à D331-27 et R372-1 non relus.",
+   "known_objection": null,
+   "suggested_correction": null,
+   "evidence_files": [
+    "evidence/cited/production-20261029/cch_D331-28_LEGIARTI000038975171.json"
+   ]
+  }
+ ]
+}

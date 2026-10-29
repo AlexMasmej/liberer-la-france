@@ -1324,32 +1324,50 @@
     "source_id": "LEGIARTI000036704528",
     "source_sha256": "37185922d64a0a7606afc98c95adcd1e9b7be38f7f485451c7d6966c92c48748",
     "number": "D752-1",
-    "proposed_xml": null,
-    "reason": "Maintien intégral de l’extension aux caisses ultramarines de la règle commune de R231-24. Le seul renvoi ne démontre ni prélèvement ni double formalité autonome à supprimer, et son retrait priverait ces organismes d’un cadre commun sans règle territoriale de remplacement.",
-    "review_notes": "Point non vérifiable : « Les dispositions de l’article R. 231-24 » (apostrophe typographique dans la présente note) vise une cible absente du corpus. D213-4, D224-3 et D224-6, lus intégralement, partagent ce renvoi, les deux derniers pour les élections ; ils ne permettent pas de reconstituer la règle complète. Aucun remplacement certain ne peut être rédigé. L751-1 lu couvre les six collectivités et les professions agricoles ; son abrogation différée au 1er janvier 2028 appelle une concordance hors lot, non fournie. Sources et avant-images conservées dans source.json. La vérification locale ne constitue ni audit indépendant ni validation par un juriste.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "proposed_xml": "<p>Les dispositions de l'article R. 231-4 sont applicables aux caisses générales de sécurité sociale et aux caisses d'allocations familiales des départements mentionnés à l'article L. 751-1.</p><p>Cette rectification de renvoi, conforme au 4° de l'article 16 du décret n° 2018-174 du 9 mars 2018, ne remet pas en cause les élections et délibérations intervenues antérieurement.</p>",
+    "reason": "Rectification d'un renvoi mort : l'article R. 231-24 n'existe pas. Le décret n° 2018-174 a transféré l'ancien article D. 231-24 à l'article R. 231-4 et remplacé, à l'article D752-1, la référence à D. 231-24 par la référence à R. 231-4 ; la consolidation porte par erreur « R. 231-24 ». Le rattachement aux règles communes d'élection du président et des vice-présidents est maintenu sans changement de fond. Motif antérieur : Maintien intégral de l’extension aux caisses ultramarines de la règle commune de R231-24. Le seul renvoi ne démontre ni prélèvement ni double formalité autonome à supprimer, et son retrait priverait ces organismes d’un cadre commun sans règle territoriale de remplacement.",
+    "review_notes": "Décret n° 2018-174 du 9 mars 2018 (JORFTEXT000036694251), consulté sur Légifrance le 29 octobre 2026 : article 15, 27° : « L'article D. 231-24 devient l'article R. 231-4 » ; article 16, 4° : « A l'article D. 213-4, aux premiers alinéas des articles D. 224-3 et D. 224-6 et à l'article D. 752-1, la référence : « D. 231-24 » est remplacée par la référence : « R. 231-4 » ». La consolidation LEGI porte « R. 231-24 », numéro qui n'existe dans aucune version du corpus. D231-24 (LEGIARTI000029572315, TRANSFERE au 2018-01-01, lien CONCORDE vers R231-4) et R231-4 (LEGIARTI000036697417) ont un texte identique : élection du président et des vice-présidents au scrutin secret, durée et renouvellement unique du mandat du président. Les notes antérieures tenaient la cible pour introuvable : la concordance figure au corpus. Notes antérieures : Point non vérifiable : « Les dispositions de l’article R. 231-24 » (apostrophe typographique dans la présente note) vise une cible absente du corpus. D213-4, D224-3 et D224-6, lus intégralement, partagent ce renvoi, les deux derniers pour les élections ; ils ne permettent pas de reconstituer la règle complète. Aucun remplacement certain ne peut être rédigé. L751-1 lu couvre les six collectivités et les professions agricoles ; son abrogation différée au 1er janvier 2028 appelle une concordance hors lot, non fournie. Sources et avant-images conservées dans source.json. La vérification locale ne constitue ni audit indépendant ni validation par un juriste. Correction de la troisième passe (objection AUDIT2-T169) : renvoi rectifié vers R. 231-4, sans changement de fond ; élections et délibérations antérieures maintenues. Même rectification à D213-4, D224-3, D224-6 et D752-1.",
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien intégral de l’extension aux caisses ultramarines de la règle commune de R231-24. Le seul renvoi ne démontre ni prélèvement ni double formalité autonome à supprimer, et son retrait priverait ces organismes d’un cadre commun sans règle territoriale de remplacement.",
-      "scope_limitations": "Point non vérifiable : « Les dispositions de l’article R. 231-24 » (apostrophe typographique dans la présente note) vise une cible absente du corpus. D213-4, D224-3 et D224-6, lus intégralement, partagent ce renvoi, les deux derniers pour les élections ; ils ne permettent pas de reconstituer la règle complète. Aucun remplacement certain ne peut être rédigé. L751-1 lu couvre les six collectivités et les professions agricoles ; son abrogation différée au 1er janvier 2028 appelle une concordance hors lot, non fournie.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le texte maintenu ne crée ni dossier, ni transmission, ni délai supplémentaire. Aucun solde global des codes n’est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Rectification du renvoi inexistant à R. 231-24 vers R. 231-4, conformément au décret n° 2018-174 ; aucune réduction ni charge nouvelle n'est revendiquée.",
+      "scope_limitations": "Le décret n° 2018-174 est lu au JORF par extraits (articles 15 et 16) ; les règles propres aux organismes concernés ne sont pas réexaminées. Aucune validation par un juriste.",
+      "new_burdens_review": "Aucune charge nouvelle : la règle d'élection visée est celle que le décret de 2018 désigne ; aucune formalité n'est ajoutée et les élections antérieures restent valables.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "css-renvoi-election-president-r231-4",
+          "description": "Rectification du renvoi aux règles d'élection du président et des vice-présidents.",
+          "before": "Renvoi à un article R. 231-24 inexistant.",
+          "after": "Renvoi à l'article R. 231-4, désigné par le décret n° 2018-174.",
+          "unit": "legal_duty",
+          "affected_population": "Conseils et organes des organismes de sécurité sociale concernés.",
+          "conditions_and_transition": "Élections et délibérations antérieures maintenues.",
+          "replacement_or_new_burdens": "Aucune formalité, déclaration, pièce, sanction ni condition de remplacement n'est créée.",
+          "source_quote": "Les dispositions de l'article R. 231-24 sont applicables aux caisses générales",
+          "proposed_quote": "Les dispositions de l'article R. 231-4 sont applicables aux caisses générales"
+        }
+      ]
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "37185922d64a0a7606afc98c95adcd1e9b7be38f7f485451c7d6966c92c48748",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "d60e232a55f84ecb538ed11d7e9927a502a59cf5dc7680e87a9ec55e8f15b2ca",
+      "proposed_sha256": "188b5109fbd21a98c3c933daadfdcce14333213380fb938bcdfe5f239b2d405d",
+      "assessment_sha256": "f358eb14f2ae26c980462c3b2ca70e59b5e8b14326e4e9e04a969721cfbe56b7",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_pass_correction": {
+      "objection": "AUDIT2-T169 (css D752-1)",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006073189",
