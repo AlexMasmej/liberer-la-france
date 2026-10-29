@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-29T10:26:30.468594+00:00",
+  "generated_at": "2026-10-29T11:24:28.787504+00:00",
   "source_snapshot": "2026-10-18",
   "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
   "scope": "Current exported proposals only; hash checks do not establish independent semantic review.",
@@ -21,22 +21,22 @@
   },
   "coverage": {
     "exported_articles": 30317,
-    "exported_proposals": 14158,
-    "retained_sources": 16156,
+    "exported_proposals": 14163,
+    "retained_sources": 16151,
     "current_worker_declarations": 30287,
     "current_approved_independent_reviews": 27,
     "unassessed_proposals": 0,
     "unassessed_retained_sources": 0
   },
   "classification_counts": {
-    "coordination_only": 5778,
+    "coordination_only": 5785,
     "editorial_only": 1444,
     "financing_transfer": 19,
-    "material_reduction": 6335,
+    "material_reduction": 6333,
     "mixed": 526,
     "payment_timing_relief": 56,
     "reserved": 7,
-    "retained_necessary": 16149
+    "retained_necessary": 16144
   },
   "measures": [
     {
@@ -2473,6 +2473,26 @@
         {
           "kind": "coordination",
           "measure_id": "accises-exonerations-fin-declaration-profession",
+          "description": "Retrait de la compétence d'attribuer et de retirer les numéros issus de la déclaration de profession supprimée par 302 D bis proposé.",
+          "before": "Attribution et retrait des numéros d'identification des intermédiaires et des utilisateurs en exonération.",
+          "after": "Compétence abrogée pour l'avenir ; décisions antérieures sans effet sur les opérations nouvelles.",
+          "unit": "legal_duty",
+          "affected_population": "Intermédiaires et utilisateurs d'alcools en exonération de droits d'accises.",
+          "conditions_and_transition": "Opérations réalisées à compter de l'entrée en vigueur de la loi de suppression, comme au 111-0 F proposé.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les conditions de fond de l'exonération et leurs contrôles demeurent.",
+          "source_quote": "15° Attribution et retrait du numéro d'identification des intermédiaires",
+          "proposed_quote": "15° (Abrogé à compter de l'entrée en vigueur de la loi supprimant la déclaration préalable de profession et le numéro d'identification",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000054363092",
+            "number": "289",
+            "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "accises-exonerations-fin-declaration-profession",
           "description": "Retrait du numéro issu de la déclaration de profession dans les données clients.",
           "before": "Liste clients comportant le numéro IN/UT fixé dans les conditions de 50-0 H.",
           "after": "Aucun numéro issu d'une déclaration de profession exigé.",
@@ -3133,7 +3153,8 @@
     {
       "measure_id": "accises-representant-fiscal-fin-agrement",
       "kinds": [
-        "authorization_removed"
+        "authorization_removed",
+        "coordination"
       ],
       "effects": [
         {
@@ -3153,6 +3174,26 @@
             "source_id": "LEGIARTI000041472195",
             "number": "302 V bis",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "accises-representant-fiscal-fin-agrement",
+          "description": "Retrait de la compétence de délivrer l'agrément de représentant fiscal supprimé par 302 V bis proposé.",
+          "before": "Délivrance de l'agrément de représentant fiscal par le directeur interrégional.",
+          "after": "Compétence abrogée pour l'avenir ; agréments et numéros acquis utilisables.",
+          "unit": "legal_duty",
+          "affected_population": "Représentants fiscaux des vendeurs à distance de produits soumis à accise.",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi supprimant l'agrément ; demandes en cours sans objet, comme le prévoit 302 V bis proposé.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; caution, déclaration mensuelle et comptabilité de 302 V bis conservées.",
+          "source_quote": "68° Délivrance de l'agrément de représentant fiscal, prévu à l'article 302 V bis du code général des impôts",
+          "proposed_quote": "68° (Abrogé à compter de l'entrée en vigueur de la loi supprimant l'agrément du représentant fiscal prévu à l'article 302 V bis du code général des impôts",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000054363092",
+            "number": "289",
+            "slug": "impots-annexe-2"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -14216,13 +14257,13 @@
           "measure_id": "agrements-fiscaux-competence-territoriale",
           "description": "Actualiser la désignation de l’autorité sans nouvelle saisine.",
           "before": "Directeur des services fiscaux selon le siège et le chef-lieu de la direction de contrôle fiscal.",
-          "after": "Directeur départemental ou régional des finances publiques dans le même ressort, avec la règle spéciale de 170 octies.",
+          "after": "Directeur départemental ou régional des finances publiques dans le même ressort, avec la règle spéciale de 170 octies, pour les seules demandes résiduelles relatives aux dons antérieurs.",
           "unit": "legal_duty",
-          "affected_population": "Organismes sollicitant l’agrément de 238 bis 4.",
-          "conditions_and_transition": "Demandes nouvelles et en cours dès la réforme, décisions antérieures valables.",
+          "affected_population": "Organismes ayant sollicité l’agrément de 238 bis 4 pour des dons et versements antérieurs à sa suppression.",
+          "conditions_and_transition": "Demandes en cours dès la réforme ; demandes concernant exclusivement des dons nouveaux sans objet ; décisions antérieures valables.",
           "replacement_or_new_burdens": "Aucune déclaration, autorisation ou tenue de registre nouvelle ; les obligations autonomes expressément conservées gardent leur champ.",
           "source_quote": "Il est statué par le directeur des services fiscaux du département",
-          "proposed_quote": "Le directeur départemental ou, le cas échéant, régional des finances publiques du département au chef-lieu duquel est localisée la direction de contrôle fiscal dans le ressort de laquelle est situé le siège de l’organisme statue sur les demandes d’agrément présentées en application du 4 de l’article 238 bis du code général des impôts, sous réserve de la compétence territoriale spéciale prévue à l’article 170 octies.",
+          "proposed_quote": "statue sur les demandes d’agrément présentées en application du 4 de l’article 238 bis du code général des impôts dans sa rédaction antérieure à la loi supprimant cet agrément",
           "article": {
             "code_id": "LEGITEXT000006069576",
             "source_id": "LEGIARTI000006301159",
@@ -14417,6 +14458,26 @@
             "source_id": "LEGIARTI000006308082",
             "number": "74 B",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "agricole-reel-simplifie-fin-bilan-joint",
+          "description": "Retrait du bilan simplifié de la déclaration annuelle, coordonné à la dispense de 74 A proposé.",
+          "before": "Bilan simplifié produit avec la déclaration annuelle des résultats agricoles au régime simplifié.",
+          "after": "Bilan simplifié non produit ; compte simplifié, tableau des immobilisations et provisions conservés.",
+          "unit": "legal_duty",
+          "affected_population": "Exploitants agricoles au régime simplifié selon le bénéfice réel.",
+          "conditions_and_transition": "Déclarations dont l'échéance intervient à compter de l'entrée en vigueur de la loi, comme dans 74 A proposé.",
+          "replacement_or_new_burdens": "Aucun document de remplacement ; obligations comptables de tenue et de conservation inchangées.",
+          "source_quote": "La déclaration annuelle des résultats qui est faite sur un imprimé établi par l'administration comporte un compte simplifié de résultat fiscal",
+          "proposed_quote": "le bilan simplifié n'est pas produit à l'appui de cette déclaration, conformément à la dispense prévue à l'article 74 A du code général des impôts",
+          "article": {
+            "code_id": "LEGITEXT000006069574",
+            "source_id": "LEGIARTI000006296668",
+            "number": "38 sexdecies RB",
+            "slug": "impots-annexe-3"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -29110,6 +29171,26 @@
             "source_id": "LEGIARTI000037986520",
             "number": "810",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "apports-societes-gratuite-generalisee",
+          "description": "Extinction, pour les changements futurs, de la règle d'évaluation d'une déclaration supprimée par 809 II et 295 à 297 proposés.",
+          "before": "Évaluation des biens sur la déclaration de changement de régime.",
+          "after": "Aucune déclaration ni estimation pour les changements nouveaux ; règle source pour les anciens.",
+          "unit": "legal_duty",
+          "affected_population": "Personnes morales devenant passibles de l’impôt sur les sociétés.",
+          "conditions_and_transition": "Changements à compter de l'entrée en vigueur ; changements antérieurs régis par les règles alors applicables.",
+          "replacement_or_new_burdens": "Aucune formalité, déclaration, taxe ou condition de remplacement.",
+          "source_quote": "au jour de l'ouverture de la première période d'imposition à l'impôt sur les sociétés.",
+          "proposed_quote": "Aucune déclaration de remplacement n'est instituée.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000006294774",
+            "number": "298",
+            "slug": "impots-annexe-2"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -67135,10 +67216,10 @@
           "after": "Accréditation conservée ; certification complète utilisable sans attestation distincte ni convention obligatoire.",
           "unit": "legal_duty",
           "affected_population": "Maîtres d’ouvrage et organismes de certification.",
-          "conditions_and_transition": "Demandes nouvelles et pendantes ; certificats et exonérations acquis conservés.",
+          "conditions_and_transition": "Demandes concernant les années antérieures, déposées ou pendantes après l'entrée en vigueur ; certificats et exonérations acquis conservés.",
           "replacement_or_new_burdens": "Aucun prélèvement, registre ou dépôt de remplacement ; les conditions autonomes expressément conservées restent applicables.",
           "source_quote": "et ayant signé une convention à cet effet avec le ministre chargé de la construction",
-          "proposed_quote": "La convention avec le ministre chargé de la construction ne peut plus être exigée comme condition de délivrance du certificat.",
+          "proposed_quote": "la convention avec le ministre chargé de la construction ne peut plus être exigée comme condition de délivrance du certificat",
           "article": {
             "code_id": "LEGITEXT000006069569",
             "source_id": "LEGIARTI000047785488",
@@ -76065,6 +76146,7 @@
     {
       "measure_id": "charges-financieres-groupe-etat-particulier",
       "kinds": [
+        "coordination",
         "obligation_removed"
       ],
       "effects": [
@@ -76085,6 +76167,26 @@
             "source_id": "LEGIARTI000042159750",
             "number": "223 B bis",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "charges-financieres-groupe-etat-particulier",
+          "description": "Retrait de l'état des charges financières, reports et capacités joint à la déclaration de la mère.",
+          "before": "État annuel des charges financières nettes non déduites, de leur suivi et des capacités inemployées joint par la société mère.",
+          "after": "Aucun état particulier ; justification à partir de la comptabilité et des documents de suivi existants.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés mères des groupes de l'article 223 A.",
+          "conditions_and_transition": "Déclarations souscrites à compter de l'entrée en vigueur, y compris pour les exercices antérieurs non encore déclarés, comme au X de 223 B bis.",
+          "replacement_or_new_burdens": "Aucun dépôt, modèle ou état de remplacement.",
+          "source_quote": "Un état faisant apparaître les charges financières nettes non admises en déduction",
+          "proposed_quote": "Aucun état des charges financières nettes non admises en déduction",
+          "article": {
+            "code_id": "LEGITEXT000006069574",
+            "source_id": "LEGIARTI000049642443",
+            "number": "46 quater-0 ZL",
+            "slug": "impots-annexe-3"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -114293,7 +114395,7 @@
           "after": "Règlement : CEPS avant le 15 juillet et quinze jours après information ; mêmes remises que la liste législative.",
           "unit": "legal_duty",
           "affected_population": "CEPS, organismes de recouvrement et entreprises pharmaceutiques redevables.",
-          "conditions_and_transition": "Communications futures, y compris pour années antérieures ; délais déjà ouverts et rectifications régulières protégés.",
+          "conditions_and_transition": "Communications futures, y compris pour années antérieures ; délais déjà ouverts et rectifications régulières protégés. Champ limité aux contributions régies par la rédaction de L138-15 antérieure à l'article 28 de la LFSS pour 2024 ; aucune déclaration ni échéance supplémentaire pour les contributions régies par la version de 2027.",
           "replacement_or_new_burdens": "Aucune obligation ni aucun prélèvement de remplacement ; les règles autonomes restent à leur champ propre.",
           "source_quote": "Les entreprises concernées disposent alors d'un délai courant jusqu'au 15 mai inclus pour rectifier, le cas échéant, la déclaration qu'elles ont transmise.",
           "proposed_quote": "Les entreprises concernées disposent alors d'un délai de quinze jours à compter de cette information pour rectifier, le cas échéant, la déclaration qu'elles ont transmise, conformément au I de l'article L. 138-15.",
@@ -164661,11 +164763,11 @@
           "measure_id": "eolien-outremer-suppression-avis-ministeriels",
           "description": "Suppression des avis obligatoires des trois ministres chargés de l'urbanisme, de l'environnement et de l'énergie avant l'autorisation régionale.",
           "before": "Trois avis ministériels requis en plus de celui de la commission ; silence favorable après deux mois.",
-          "after": "Aucun avis ministériel requis ; commission maintenue avec silence favorable après deux mois, sans promesse de délai global réduit de deux mois.",
+          "after": "Aucun avis ministériel requis, dès l'entrée en vigueur du décret ; puis plus aucune autorisation ni avis au titre de la dérogation à compter de la loi.",
           "unit": "legal_duty",
           "affected_population": "Porteurs de projets éoliens relevant de L121-39 et services instructeurs.",
-          "conditions_and_transition": "Application aux demandes ou procédures nouvelles et en cours à l'entrée en vigueur du présent article, sans nouveau dépôt ni reprise des délais ; actes antérieurs protégés selon le texte proposé.",
-          "replacement_or_new_burdens": "Aucune déclaration, attestation ou consultation de remplacement ; les exigences légales de fond demeurent.",
+          "conditions_and_transition": "Application aux demandes nouvelles et en cours, sans nouveau dépôt ni reprise des délais ; avis déjà recueillis conservés.",
+          "replacement_or_new_burdens": "Aucune déclaration, attestation ou consultation de remplacement.",
           "source_quote": "après avis des ministres chargés de l'urbanisme, de l'environnement et de l'énergie.",
           "proposed_quote": "Les avis des ministres chargés de l'urbanisme, de l'environnement et de l'énergie ne sont pas requis.",
           "article": {
@@ -169978,6 +170080,7 @@
     {
       "measure_id": "exit-tax-fin-exigibilite-pour-defaut-declaratif",
       "kinds": [
+        "coordination",
         "payment_deferred"
       ],
       "effects": [
@@ -169998,6 +170101,26 @@
             "source_id": "LEGIARTI000048806379",
             "number": "167 bis",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "exit-tax-fin-exigibilite-pour-defaut-declaratif",
+          "description": "Bornage de l'exigibilité après mise en demeure aux manquements antérieurs.",
+          "before": "Exigibilité de l'impôt en sursis rétablie après mise en demeure restée sans effet trente jours, pour tout défaut déclaratif.",
+          "after": "Même règle pour les seuls manquements antérieurs ; pour les manquements nouveaux, le seul défaut déclaratif n'entraîne pas l'exigibilité.",
+          "unit": "legal_duty",
+          "affected_population": "Contribuables ayant transféré leur domicile fiscal hors de France et bénéficiant du sursis de paiement de 167 bis.",
+          "conditions_and_transition": "Manquements commis à compter de l'entrée en vigueur ; manquements antérieurs sous l'ancien régime, sous réserve de la loi répressive plus douce, comme au XI de 167 bis.",
+          "replacement_or_new_burdens": "Aucune formalité, mise en demeure ou sanction de remplacement.",
+          "source_quote": "l'exigibilité de l'impôt en sursis de paiement est rétablie lorsque le contribuable n'a pas satisfait à ses obligations déclaratives",
+          "proposed_quote": "n'entraîne pas, à lui seul, l'exigibilité immédiate de l'impôt en sursis de paiement",
+          "article": {
+            "code_id": "LEGITEXT000006069574",
+            "source_id": "LEGIARTI000038950376",
+            "number": "41 tervicies E",
+            "slug": "impots-annexe-3"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -170138,6 +170261,7 @@
     {
       "measure_id": "exit-tax-representant-obligatoire-suppression",
       "kinds": [
+        "coordination",
         "obligation_removed"
       ],
       "effects": [
@@ -170158,6 +170282,26 @@
             "source_id": "LEGIARTI000048806379",
             "number": "167 bis",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "exit-tax-representant-obligatoire-suppression",
+          "description": "Coordination réglementaire de la fin du représentant obligatoire décidée au V de 167 bis.",
+          "before": "Indication du représentant fiscal et engagement de celui-ci sur le formulaire de demande de sursis.",
+          "after": "Mention facultative du représentant choisi ; aucune désignation ni engagement exigé.",
+          "unit": "legal_duty",
+          "affected_population": "Contribuables demandant le sursis de paiement du V de 167 bis.",
+          "conditions_and_transition": "Conditions du XI de 167 bis, y compris sursis en cours ; mandats conservés au gré des contribuables.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "Le contribuable y indique le nom ou la dénomination sociale ainsi que l'adresse de son représentant fiscal.",
+          "proposed_quote": "Aucune désignation d'un représentant établi en France ni engagement de représentation n'est exigé pour bénéficier du sursis de paiement.",
+          "article": {
+            "code_id": "LEGITEXT000006069574",
+            "source_id": "LEGIARTI000038950368",
+            "number": "41 tervicies A",
+            "slug": "impots-annexe-3"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -220399,6 +220543,7 @@
     {
       "measure_id": "ir-option-couple-rectification",
       "kinds": [
+        "coordination",
         "relief_extended"
       ],
       "effects": [
@@ -220419,6 +220564,26 @@
             "source_id": "LEGIARTI000046197457",
             "number": "6",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "ir-option-couple-rectification",
+          "description": "Le défaut d'option dans les délais initiaux n'entraîne plus une imposition commune définitive.",
+          "before": "Imposition commune définitive si l'option n'est pas exercée dans les délais du premier alinéa de l'article 175.",
+          "after": "Option encore possible, ou révocable, d'un commun accord dans le délai de réclamation, par réclamation commune sans dépôt séparé.",
+          "unit": "legal_duty",
+          "affected_population": "Époux et partenaires de PACS au titre de l'année du mariage ou de la conclusion du pacte.",
+          "conditions_and_transition": "Années civiles commençant à compter de l'entrée en vigueur de la loi ; années antérieures régies par les règles antérieures.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "les époux ou partenaires sont soumis à l'imposition commune dans les conditions de droit commun",
+          "proposed_quote": "l'option peut être exercée ou révoquée d'un commun accord des deux intéressés",
+          "article": {
+            "code_id": "LEGITEXT000006069574",
+            "source_id": "LEGIARTI000025631743",
+            "number": "43 bis",
+            "slug": "impots-annexe-3"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -225504,26 +225669,6 @@
             "code_id": "LEGITEXT000006069569",
             "source_id": "LEGIARTI000006294242",
             "number": "171 O",
-            "slug": "impots-annexe-2"
-          },
-          "evidence_origin": "worker_declaration"
-        },
-        {
-          "kind": "coordination",
-          "measure_id": "is-distribution",
-          "description": "Coordination de fond avec l’IS à la distribution : remplacer l’ouverture de la première période d’imposition par le changement de régime fiscal prévu à 809 II. La valeur vénale et la déclaration demeurent nécessaires à la liquidation des droits de mutation subsistants ; aucune annualité ni première distribution ne déclenche à nouveau cette évaluation.",
-          "before": "Évaluation à l’ouverture de la première période d’imposition à l’IS.",
-          "after": "Évaluation à la date de changement de régime fiscal, indépendamment des distributions.",
-          "unit": "legal_duty",
-          "affected_population": "Personnes morales visées à 809 II.",
-          "conditions_and_transition": "Changements à compter de l’entrée en vigueur ; droit ancien conservé auparavant.",
-          "replacement_or_new_burdens": "Aucune formalité, déclaration, taxe ou condition de remplacement.",
-          "source_quote": "au jour de l'ouverture de la première période d'imposition à l'impôt sur les sociétés.",
-          "proposed_quote": "indépendamment de toute distribution de bénéfices ou du paiement effectif de cet impôt.",
-          "article": {
-            "code_id": "LEGITEXT000006069569",
-            "source_id": "LEGIARTI000006294774",
-            "number": "298",
             "slug": "impots-annexe-2"
           },
           "evidence_origin": "worker_declaration"
@@ -234116,6 +234261,7 @@
       "measure_id": "littoral-eolien-outre-mer-derogation-directe",
       "kinds": [
         "authorization_removed",
+        "coordination",
         "relief_extended"
       ],
       "effects": [
@@ -234155,6 +234301,26 @@
             "code_id": "LEGITEXT000006074075",
             "source_id": "LEGIARTI000031210528",
             "number": "L121-39",
+            "slug": "urbanisme"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "littoral-eolien-outre-mer-derogation-directe",
+          "description": "Abrogation de la procédure réglementaire de l'autorisation et de l'avis de la commission supprimés par L121-39.",
+          "before": "Autorisation du préfet de région après avis de la commission départementale de la nature, des paysages et des sites.",
+          "after": "Plus d'autorisation ni d'avis au titre de la dérogation à compter de la loi ; demandes en cours non instruites sur ce seul fondement.",
+          "unit": "legal_duty",
+          "affected_population": "Porteurs de projets éoliens relevant de L121-39 et services instructeurs.",
+          "conditions_and_transition": "Même date et même transition que L121-39 : autorisations antérieures, prescriptions et recours conservés ; refus définitifs non rouverts.",
+          "replacement_or_new_burdens": "Aucune charge de remplacement ; mesure comptée à L121-39.",
+          "source_quote": "L'autorisation prévue à l'article L. 121-39 est accordée par le préfet de région",
+          "proposed_quote": "aucune autorisation du préfet de région ni aucun avis de la commission départementale de la nature, des paysages et des sites ou des ministres n'est requis au titre de cette dérogation",
+          "article": {
+            "code_id": "LEGITEXT000006074075",
+            "source_id": "LEGIARTI000031720948",
+            "number": "R121-33",
             "slug": "urbanisme"
           },
           "evidence_origin": "worker_declaration"
@@ -239695,7 +239861,7 @@
           "unit": "legal_duty",
           "affected_population": "Lotisseurs réalisant seulement des espaces communs ou des aménagements de voies ou équipements existants.",
           "conditions_and_transition": "Nouvelles demandes dès entrée en vigueur ; option pour demandes en cours. Titres antérieurs, contrats, garanties et recours préservés ; autres fondements d'autorisation réservés.",
-          "replacement_or_new_burdens": "Aucune déclaration générale de remplacement ; déclaration ciblée L115-3 conservée dans son champ. Coordination avec L442-3 et L442-14 proposés nécessaire.",
+          "replacement_or_new_burdens": "Aucune déclaration générale de remplacement ; pouvoir d'opposition ciblé de L115-3 conservé dans son champ, sans déclaration. Coordination avec L442-3 et L442-14 proposés nécessaire.",
           "source_quote": "Un décret en Conseil d'Etat précise, en fonction de la localisation de l'opération ou du fait que l'opération comprend ou non la création de voies, d'espaces ou d'équipements communs, les cas dans lesquels la réalisation d'un lotissement doit être précédée d'un permis d'aménager.",
           "proposed_quote": "La seule localisation de l'opération, la création ou l'aménagement d'espaces communs et les travaux d'aménagement de voies ou d'équipements communs existants ne peuvent, à eux seuls ou combinés entre eux, justifier un permis d'aménager au titre du lotissement.",
           "article": {
@@ -254796,7 +254962,8 @@
     {
       "measure_id": "obligations-historiques-fin-autorisation",
       "kinds": [
-        "authorization_removed"
+        "authorization_removed",
+        "coordination"
       ],
       "effects": [
         {
@@ -254816,6 +254983,46 @@
             "source_id": "LEGIARTI000026949261",
             "number": "131 ter",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "obligations-historiques-fin-autorisation",
+          "description": "La demande spéciale ne conditionne plus le régime pour les produits perçus après la réforme, comme le prévoit 131 ter proposé.",
+          "before": "Demande spéciale préalable à la DGFiP, condition d'admission au régime du 1 de 131 ter, sans distinction de date de perception des produits.",
+          "after": "Demande et autorisation non requises pour les produits perçus à compter de la réforme ; la demande ne vaut que pour les produits antérieurs.",
+          "unit": "legal_duty",
+          "affected_population": "Émetteurs français de séries historiques émises à l'étranger avant 1976 et bénéficiaires de leurs produits.",
+          "conditions_and_transition": "Produits perçus à compter de l'entrée en vigueur de la loi ; produits antérieurs et autorisations acquises régis par les règles antérieures.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ni déclaration distincte.",
+          "source_quote": "doivent déposer au préalable une demande spéciale à la direction générale des finances publiques",
+          "proposed_quote": "le bénéfice de ce régime n'est subordonné ni à la demande prévue au présent article ni à une autorisation",
+          "article": {
+            "code_id": "LEGITEXT000006069574",
+            "source_id": "LEGIARTI000025624706",
+            "number": "41 terdecies",
+            "slug": "impots-annexe-3"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "obligations-historiques-fin-autorisation",
+          "description": "Le régime n'attend plus la notification d'une autorisation pour les produits perçus après la réforme.",
+          "before": "Régime du 1 de 131 ter sans effet avant la notification de l'autorisation ministérielle, pour toute émission.",
+          "after": "Pour les produits perçus après la réforme, aucune demande, autorisation ni notification ; règles antérieures pour les produits antérieurs.",
+          "unit": "legal_duty",
+          "affected_population": "Émetteurs français de séries historiques émises à l'étranger avant 1976 et bénéficiaires de leurs produits.",
+          "conditions_and_transition": "Produits perçus à compter de l'entrée en vigueur de la loi ; autorisations acquises et intérêts échus antérieurement conservés.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "n'a d'effet pour aucune émission qu'à dater de la notification de l'autorisation ministérielle",
+          "proposed_quote": "n'est subordonné ni à une demande, ni à une autorisation, ni à sa notification",
+          "article": {
+            "code_id": "LEGITEXT000006069574",
+            "source_id": "LEGIARTI000006297806",
+            "number": "41 quindecies",
+            "slug": "impots-annexe-3"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -261219,6 +261426,34 @@
             "source_id": "LEGIARTI000054373456",
             "number": "207",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "outre-mer-agrement-competence-coordination-170-decies",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "outre-mer-agrement-competence-coordination-170-decies",
+          "unit": "legal_duty",
+          "description": "Borner les règles de délivrance et de saisine aux agréments antérieurs à leur suppression.",
+          "before": "Délivrance de l’agrément et saisine des autorités pour tout programme, sans limite de temps.",
+          "after": "Compétences conservées pour les seuls agréments antérieurs, leur contestation et leur retrait ; aucune demande nouvelle.",
+          "affected_population": "Investisseurs et exploitants ultramarins relevant de 199 undecies A, 217 undecies et 244 quater W.",
+          "conditions_and_transition": "Démarches restant à accomplir dès l’entrée en vigueur des suppressions ; agréments, décisions, dispenses et recours antérieurs préservés.",
+          "replacement_or_new_burdens": "Aucune déclaration, autorisation ou demande de remplacement.",
+          "source_quote": "Dans le secteur du logement, l'agrément prévu au 4 de l'article 199 undecies A, aux II quater et III de l'article 217 undecies et au VII de l'article 244 quater W du code général des impôts",
+          "proposed_quote": "Les I à III ne s’appliquent qu’aux agréments délivrés avant l’entrée en vigueur des dispositions législatives supprimant",
+          "article": {
+            "code_id": "LEGITEXT000006069576",
+            "source_id": "LEGIARTI000045759960",
+            "number": "170 decies",
+            "slug": "impots-annexe-4"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -273777,15 +274012,15 @@
         {
           "kind": "obligation_removed",
           "measure_id": "pep-fin-declaration-sans-produits",
-          "description": "Suppression de la transmission annuelle propre au PEP sans versement de produits dans l’année.",
+          "description": "Suppression de la transmission annuelle propre au PEP, avec ou sans versement de produits, coordonnée à la dispense du 22° de l'article 157 proposé.",
           "before": "Identité, références et ouverture déclarées annuellement même sans produit versé.",
-          "after": "Transmission propre au II seulement avec versement de produits ; autres obligations autonomes réservées.",
+          "after": "Aucune transmission propre au II ; obligations déclaratives relatives aux revenus imposables réservées.",
           "unit": "legal_duty",
           "affected_population": "Titulaires de PEP et organismes gestionnaires.",
           "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
           "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
           "source_quote": "avant le 16 février de chaque année, les renseignements suivants relatifs à l'année précédente",
-          "proposed_quote": "Aucune transmission annuelle n'est exigée sur le seul fondement du II pour un plan n'ayant donné lieu à aucun versement de produits pendant l'année considérée.",
+          "proposed_quote": "Aucune transmission annuelle n'est exigée sur le fondement du II, que le plan ait ou non donné lieu à un versement de produits pendant l'année considérée.",
           "article": {
             "code_id": "LEGITEXT000006069569",
             "source_id": "LEGIARTI000006293903",
@@ -273827,6 +274062,7 @@
     {
       "measure_id": "pep-suppression-reporting-fiscal-specifique",
       "kinds": [
+        "coordination",
         "obligation_removed"
       ],
       "effects": [
@@ -273847,6 +274083,26 @@
             "source_id": "LEGIARTI000053543192",
             "number": "157",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "pep-suppression-reporting-fiscal-specifique",
+          "description": "Retrait des renseignements spécifiques au PEP encore organisés par le II, contraire à la dispense du 22° de l'article 157 proposé.",
+          "before": "Identité, références, ouverture et produits exonérés déclarés sur la déclaration de l'article 242 ter en cas de versement de produits.",
+          "after": "Aucun de ces renseignements n'est transmis, conformément au 22° de l'article 157 proposé.",
+          "unit": "legal_duty",
+          "affected_population": "Organismes gestionnaires de PEP et titulaires.",
+          "conditions_and_transition": "Transmissions dont l'échéance intervient à compter de l'entrée en vigueur de la réforme, même pour une année antérieure ; obligations échues antérieures conservées, loi répressive plus douce.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "le montant des produits payés non soumis à l'impôt sur le revenu en application du 22° de l'article 157 du code général des impôts",
+          "proposed_quote": "n'est tenu d'adresser aux services fiscaux, ni sur la déclaration prévue au 1 de l'article 242 ter du code général des impôts ni sur un autre support, aucun des renseignements spécifiques à ce plan suivants",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000006293903",
+            "number": "91 quater B",
+            "slug": "impots-annexe-2"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -275875,6 +276131,34 @@
             "code_id": "LEGITEXT000006073189",
             "source_id": "LEGIARTI000043198094",
             "number": "R138-2",
+            "slug": "securite-sociale"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "pharmacie-clause-sauvegarde-2027-sans-declaration-entreprise",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "pharmacie-clause-sauvegarde-2027-sans-declaration-entreprise",
+          "description": "Bornage de la déclaration réglementaire aux contributions régies par la rédaction de L. 138-15 antérieure à 2027.",
+          "before": "Déclaration annuelle du chiffre d'affaires par l'entreprise exigée sans limite de temps.",
+          "after": "Aucune déclaration de l'entreprise pour les contributions régies par la rédaction de L. 138-15 applicable au 1er janvier 2027.",
+          "unit": "legal_duty",
+          "affected_population": "Entreprises redevables de la contribution de L. 138-10",
+          "conditions_and_transition": "Contributions régies par la rédaction issue de l'article 28 de la loi n° 2023-1250 ; déclarations dues pour les contributions antérieures maintenues.",
+          "replacement_or_new_burdens": "Aucune ; les données sont transmises par la CNAM, l'ATIH et l'ANSP selon la loi.",
+          "source_quote": "Les entreprises redevables de la contribution mentionnée à l'article L. 138-10 sont tenues de remettre",
+          "proposed_quote": "aucune déclaration du chiffre d'affaires n'est exigée des entreprises sur le fondement du présent article.",
+          "article": {
+            "code_id": "LEGITEXT000006073189",
+            "source_id": "LEGIARTI000028093189",
+            "number": "R138-10",
             "slug": "securite-sociale"
           },
           "evidence_origin": "worker_declaration"
@@ -320223,6 +320507,7 @@
     {
       "measure_id": "remboursement-agricole-attestation-annuelle-suppression",
       "kinds": [
+        "coordination",
         "obligation_removed"
       ],
       "effects": [
@@ -320243,6 +320528,26 @@
             "source_id": "LEGIARTI000006304458",
             "number": "290 bis",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "remboursement-agricole-attestation-annuelle-suppression",
+          "description": "Mandat et attestation rendus facultatifs, coordonnés à la suppression de l'attestation annuelle de 290 bis proposé et des pièces jointes de 266 proposé.",
+          "before": "Attestations à joindre à la déclaration annuelle ; attestation obligatoire pour chaque client se substituant à celle de 290 bis.",
+          "after": "Attestations facultatives et non jointes, opposables au client lorsqu'elles sont établies ; non-cumul conservé.",
+          "unit": "legal_duty",
+          "affected_population": "Exploitants agricoles au remboursement forfaitaire et leurs clients redevables.",
+          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi supprimant l'attestation de 290 bis, y compris pour les années encore ouvertes, comme dans 290 bis proposé.",
+          "replacement_or_new_burdens": "Aucune attestation, récapitulatif ni certification de remplacement.",
+          "source_quote": "les attestations qu'ils doivent joindre à la déclaration annuelle prévue au I de l'article 266 de l'annexe II au code général des impôts",
+          "proposed_quote": "elles ne sont ni obligatoires ni obligatoirement jointes à cette déclaration",
+          "article": {
+            "code_id": "LEGITEXT000006069574",
+            "source_id": "LEGIARTI000006296971",
+            "number": "98 bis",
+            "slug": "impots-annexe-3"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -324987,6 +325292,46 @@
             "source_id": "LEGIARTI000051200525",
             "number": "244 bis B",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "representant-fiscal-obligatoire-suppression",
+          "description": "Désignation d'un représentant accrédité réservée aux cessions antérieures à la suppression prévue au IV de 244 bis A proposé.",
+          "before": "Désignation obligatoire d'un représentant accrédité pour toute cession soumise au prélèvement.",
+          "after": "Aucun représentant ni accréditation pour les cessions nouvelles ; régime ancien pour les cessions antérieures.",
+          "unit": "legal_duty",
+          "affected_population": "Cédants passibles du prélèvement de 244 bis A.",
+          "conditions_and_transition": "Cessions réalisées à compter de l'entrée en vigueur de la loi de suppression ; responsabilités antérieures conservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "désignent un représentant, accrédité dans les conditions prévues par cet article",
+          "proposed_quote": "Pour les cessions réalisées à compter de cette entrée en vigueur, aucun représentant fiscal ni aucune accréditation ne sont exigés",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000054363238",
+            "number": "171 quater",
+            "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "representant-fiscal-obligatoire-suppression",
+          "description": "Limitation de la procédure d'accréditation aux cessions antérieures, coordonnée à la suppression du représentant obligatoire au IV de 244 bis A proposé.",
+          "before": "Accréditation, garanties et obligations du représentant exigées pour toute cession relevant de 244 bis A.",
+          "after": "Procédure réservée aux cessions antérieures ; aucune accréditation ni garantie pour les cessions nouvelles.",
+          "unit": "legal_duty",
+          "affected_population": "Cédants non résidents et représentants fiscaux.",
+          "conditions_and_transition": "Cessions réalisées à compter de l'entrée en vigueur de la loi de suppression ; responsabilités valablement nées antérieurement conservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; assistance ou représentation de droit commun facultative.",
+          "source_quote": "Le représentant fiscal mentionné au IV de l'article 244 bis A du code général des impôts est accrédité au titre d'une cession déterminée ou pour une durée indéterminée",
+          "proposed_quote": "Le présent article ne s'applique qu'aux représentants accrédités au titre des cessions réalisées avant l'entrée en vigueur de la loi supprimant l'obligation de désigner un représentant fiscal",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000054363221",
+            "number": "171 quater A",
+            "slug": "impots-annexe-2"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -382517,6 +382862,7 @@
     {
       "measure_id": "tfpb-performance-fin-certificat",
       "kinds": [
+        "coordination",
         "obligation_removed"
       ],
       "effects": [
@@ -382537,6 +382883,26 @@
             "source_id": "LEGIARTI000046900644",
             "number": "1384 A",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "tfpb-performance-fin-certificat",
+          "description": "Abrogation pour l'avenir du circuit de certification retiré par le I bis de 1384 A proposé.",
+          "before": "Attestation accréditée, certificat départemental et transmission avec la déclaration de 1406.",
+          "after": "Aucun de ces documents pour les impositions des années postérieures ; critères techniques conservés.",
+          "unit": "legal_duty",
+          "affected_population": "Maîtres d’ouvrage de logements bénéficiant de la durée renforcée.",
+          "conditions_and_transition": "Impositions des années dont le 1er janvier suit l'entrée en vigueur, y compris pour la période restant à courir, comme au V de 1384 A proposé.",
+          "replacement_or_new_burdens": "Aucune attestation ni formalité de remplacement.",
+          "source_quote": "La transmission du certificat au centre des impôts foncier du lieu de situation de la construction doit être accompagnée de la déclaration mentionnée à l'article 1406 du code général des impôts.",
+          "proposed_quote": "Le présent article est abrogé pour les impositions établies au titre des années dont le 1er janvier intervient à compter de l'entrée en vigueur de la loi supprimant le certificat",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000047785488",
+            "number": "310-0 H bis",
+            "slug": "impots-annexe-2"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -392929,7 +393295,7 @@
           "measure_id": "tva-agricole-option-comptable-liberation",
           "description": "Retrait du verrou quinquennal de l'option comptable, du préavis et des formes postales imposées.",
           "before": "Option pour cinq ans renouvelables, éventuellement alignée sur 260 G ; recommandé avec accusé pour l'option, recommandé et préavis de deux mois pour la sortie.",
-          "after": "Option continue avec sortie à chaque clôture par écrit envoyé ou remis au plus tard ce jour, sans recommandé ni préavis minimal ; option initiale toujours avant l'exercice.",
+          "after": "Option continue avec sortie à chaque clôture par écrit envoyé ou remis au plus tard ce jour, sans recommandé ni préavis minimal ; option initiale exercée dans la première déclaration de l'exercice.",
           "unit": "legal_duty",
           "affected_population": "Exploitants agricoles optant pour l'imposition selon leur exercice comptable.",
           "conditions_and_transition": "Options en cours et nouvelles après réforme, sans remise en cause des périodes closes ni des notifications antérieures.",
@@ -392977,6 +393343,7 @@
     {
       "measure_id": "tva-agricole-option-exercice-sans-envoi-distinct",
       "kinds": [
+        "coordination",
         "obligation_merged"
       ],
       "effects": [
@@ -392997,6 +393364,26 @@
             "source_id": "LEGIARTI000044873402",
             "number": "298 bis",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "tva-agricole-option-exercice-sans-envoi-distinct",
+          "description": "Coordination avec le 1° du I de l'article 298 bis proposé : l'option est portée dans la première déclaration, sans exercice préalable ni envoi distinct.",
+          "before": "Option adressée au service par écrit distinct et formulée avant le début du premier exercice.",
+          "after": "Option exercée par une mention dans la première déclaration de l'exercice, dans le délai de 298 bis.",
+          "unit": "legal_duty",
+          "affected_population": "Exploitants agricoles optant pour l'imposition selon leur exercice comptable.",
+          "conditions_and_transition": "Exercices ouverts à compter de l'entrée en vigueur de la loi de réforme, comme au VI de 298 bis proposé ; options antérieures conservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement : la mention figure dans une déclaration déjà due.",
+          "source_quote": "est adressée par lettre recommandée avec accusé de réception au service des impôts dont dépend l'exploitation intéressée",
+          "proposed_quote": "est exercée par une mention portée dans la première déclaration relative au premier exercice auquel elle s'applique",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000006294562",
+            "number": "260 J",
+            "slug": "impots-annexe-2"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -397106,7 +397493,8 @@
     {
       "measure_id": "tva-regimes-suspensifs-suppression-autorisation",
       "kinds": [
-        "authorization_removed"
+        "authorization_removed",
+        "coordination"
       ],
       "effects": [
         {
@@ -397126,6 +397514,66 @@
             "source_id": "LEGIARTI000051203238",
             "number": "277 A",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "tva-regimes-suspensifs-suppression-autorisation",
+          "description": "Retrait du circuit réglementaire de demande d'autorisation d'ouverture.",
+          "before": "Demande d'autorisation d'ouverture déposée par l'assujetti ou le gestionnaire, avec dossier de renseignements.",
+          "after": "Ouverture de plein droit selon 277 A ; aucune demande ni dossier préalable.",
+          "unit": "legal_duty",
+          "affected_population": "Assujettis plaçant des biens sous les régimes du 2° du I de 277 A.",
+          "conditions_and_transition": "À compter de l'entrée en vigueur ; demandes en cours sans objet ; régimes autorisés et décisions acquises conservés.",
+          "replacement_or_new_burdens": "Aucune déclaration d'ouverture ni dossier de remplacement ; informations des III et V de 277 A déjà prévues par la loi.",
+          "source_quote": "La demande d'autorisation d'ouverture d'un régime mentionné au 2° du I de l'article 277 A",
+          "proposed_quote": "ne donne lieu à aucune demande d'autorisation ni déclaration d'ouverture",
+          "article": {
+            "code_id": "LEGITEXT000006069574",
+            "source_id": "LEGIARTI000046157964",
+            "number": "85",
+            "slug": "impots-annexe-3"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "tva-regimes-suspensifs-suppression-autorisation",
+          "description": "Abrogation de la décision réglementaire d'autorisation d'ouverture.",
+          "before": "Décision d'autorisation expresse ou tacite à trente jours, conditionnée à la régularité déclarative et de paiement.",
+          "after": "Aucune décision ; ouverture de plein droit selon 277 A ; décisions antérieures conservées.",
+          "unit": "legal_duty",
+          "affected_population": "Assujettis plaçant des biens sous les régimes du 2° du I de 277 A.",
+          "conditions_and_transition": "À compter de l'entrée en vigueur ; demandes en cours sans objet ; décisions et autorisations tacites antérieures conservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "La décision autorisant l'ouverture d'un régime mentionné au 2° du I de l'article 277 A",
+          "proposed_quote": "Le présent article est abrogé à compter de l'entrée en vigueur de la loi supprimant l'autorisation d'ouverture",
+          "article": {
+            "code_id": "LEGITEXT000006069574",
+            "source_id": "LEGIARTI000046157957",
+            "number": "85 A",
+            "slug": "impots-annexe-3"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "tva-regimes-suspensifs-suppression-autorisation",
+          "description": "Abrogation de l'autorisation modificative des changements affectant les régimes.",
+          "before": "Tout changement affectant les éléments constitutifs des régimes autorisés soumis à autorisation par décision modificative.",
+          "after": "Aucune autorisation modificative ni déclaration de remplacement ; décisions modificatives antérieures conservées.",
+          "unit": "legal_duty",
+          "affected_population": "Titulaires, gestionnaires et entreposeurs des régimes du 2° du I de 277 A.",
+          "conditions_and_transition": "À compter de l'entrée en vigueur ; demandes en cours sans objet ; décisions antérieures conservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "Tout changement qui affecte les éléments constitutifs des régimes autorisés tels qu'ils figurent dans la demande d'ouverture est soumis à autorisation.",
+          "proposed_quote": "aucun changement des éléments d'un régime, y compris d'un régime antérieurement autorisé, n'est soumis à autorisation modificative",
+          "article": {
+            "code_id": "LEGITEXT000006069574",
+            "source_id": "LEGIARTI000023099623",
+            "number": "85 B",
+            "slug": "impots-annexe-3"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -397867,7 +398315,7 @@
           "before": "Renvoi à un III abrogé.",
           "after": "Renvoi aux exceptions du I ; pas de nouvelle exemption créée.",
           "unit": "legal_duty",
-          "affected_population": "Demandeurs établis hors Union européenne.",
+          "affected_population": "Titulaires établis hors Union européenne.",
           "conditions_and_transition": "Coordination des demandes après entrée en vigueur, droits acquis conservés.",
           "replacement_or_new_burdens": "Aucune formalité, taxe ou donnée de remplacement ; les conditions de fond et contrôles distincts demeurent.",
           "source_quote": "sous réserve des dispositions énoncées au III de ce même article",
@@ -398155,6 +398603,7 @@
     {
       "measure_id": "tva-simplifie-suppression-acomptes",
       "kinds": [
+        "coordination",
         "obligation_removed",
         "payment_deferred"
       ],
@@ -398196,6 +398645,46 @@
             "source_id": "LEGIARTI000048826856",
             "number": "287",
             "slug": "impots"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "tva-simplifie-suppression-acomptes",
+          "description": "Le remboursement intermédiaire sur immobilisations reste ouvert sans acompte, comme le prévoit 287 proposé pour les exercices décalés.",
+          "before": "Demande liée au relevé accompagnant l'acompte de juillet ou de 242 septies A.",
+          "after": "Même relevé, sans versement d'acompte lorsque 287 écarte les acomptes ; renvoi au relevé de 242 sexies désigné par son objet.",
+          "unit": "legal_duty",
+          "affected_population": "Assujettis encore placés sous le régime simplifié pour un exercice décalé.",
+          "conditions_and_transition": "Exercices pour lesquels 287 proposé écarte les acomptes à compter de l'entrée en vigueur de la loi ; demandes antérieures conservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; le relevé existant porte la demande.",
+          "source_quote": "lors du dépôt du relevé mentionné au dernier alinéa de l'article 242 sexies relatif à l'acompte de juillet",
+          "proposed_quote": "ce remboursement peut être demandé par le même relevé, sans versement d'acompte.",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000030066036",
+            "number": "242-0 C",
+            "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "tva-simplifie-suppression-acomptes",
+          "description": "Coordination de la suppression des acomptes semestriels résiduels et des déclarations de modulation ou de suspension décidée par 287.",
+          "before": "La déclaration annuelle détermine les acomptes ultérieurement exigibles ; modulation et suspension maintenues.",
+          "after": "Aucun acompte échu après l'entrée en vigueur pour les exercices où 287 les écarte ; ni modulation ni suspension à déclarer ; taxe acquittée avec la déclaration annuelle.",
+          "unit": "legal_duty",
+          "affected_population": "Entreprises au régime simplifié, exercice décalé, relevant du VI de l’article 38 de la loi n° 2025-127.",
+          "conditions_and_transition": "Acomptes dont l'échéance intervient à compter de l'entrée en vigueur ; acomptes antérieurs régis par les règles antérieures ; sommes versées imputées une fois, excédent remboursé (287).",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; le relevé de remboursement reste facultatif et ne conditionne aucun acompte.",
+          "source_quote": "détermine les acomptes ultérieurement exigibles selon la périodicité suivante",
+          "proposed_quote": "la déclaration annuelle ne détermine aucun acompte dont l'échéance intervient à compter de l'entrée en vigueur de la loi portant la présente réforme",
+          "article": {
+            "code_id": "LEGITEXT000006069569",
+            "source_id": "LEGIARTI000049826453",
+            "number": "242 septies A",
+            "slug": "impots-annexe-2"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -398316,6 +398805,7 @@
     {
       "measure_id": "tva-suppression-interet-reversement-national",
       "kinds": [
+        "coordination",
         "tax_reduced"
       ],
       "effects": [
@@ -398338,31 +398828,23 @@
             "slug": "impots"
           },
           "evidence_origin": "worker_declaration"
-        }
-      ]
-    },
-    {
-      "measure_id": "tva-suspension-accord-tacite-toutes-entreprises",
-      "kinds": [
-        "relief_extended"
-      ],
-      "effects": [
+        },
         {
-          "kind": "relief_extended",
-          "measure_id": "tva-suspension-accord-tacite-toutes-entreprises",
-          "description": "Extension de l'accord tacite aux entreprises de deux ans ou moins.",
-          "before": "Accord tacite à 30 jours réservé aux entreprises de plus de deux ans.",
-          "after": "Accord tacite à 30 jours pour toutes les entreprises, sans acte complémentaire de prise d'effet.",
-          "unit": "regime",
-          "affected_population": "Entreprises nouvelles ou âgées de deux ans au plus sollicitant un régime suspensif.",
-          "conditions_and_transition": "Demandes nouvelles et en cours, sans redémarrage du délai.",
-          "replacement_or_new_burdens": "Aucune formalité, taxe ou donnée de remplacement ; les conditions de fond et contrôles distincts demeurent.",
-          "source_quote": "pour les entreprises créées depuis plus de deux ans",
-          "proposed_quote": "quelle que soit l'ancienneté de l'entreprise",
+          "kind": "coordination",
+          "measure_id": "tva-suppression-interet-reversement-national",
+          "description": "Retrait du renvoi à l'intérêt de retard supprimé par 277 A pour le reversement national.",
+          "before": "Versement sur le marché métropolitain sous réserve de l'acquittement de l'intérêt de retard du 4° du 3 du II de 277 A.",
+          "after": "Versement sans intérêt de retard au seul motif du reversement ; intérêt maintenu pour les sorties antérieures.",
+          "unit": "legal_duty",
+          "affected_population": "Titulaires d'un régime fiscal suspensif de stockage destiné à l'exportation ou à l'expédition.",
+          "conditions_and_transition": "Sorties de régime intervenant à compter de l'entrée en vigueur, y compris pour des biens placés auparavant, comme au VI de 277 A.",
+          "replacement_or_new_burdens": "Aucune formalité ni accessoire de remplacement ; intérêts pour retard réel après exigibilité et fraude régis par leurs règles propres.",
+          "source_quote": "sous réserve de l'acquittement de l'intérêt de retard prévu au 4° du 3 du II de l'article 277 A",
+          "proposed_quote": "n'est pas assortie d'un intérêt de retard au seul motif de ce versement",
           "article": {
             "code_id": "LEGITEXT000006069574",
-            "source_id": "LEGIARTI000046157957",
-            "number": "85 A",
+            "source_id": "LEGIARTI000046157930",
+            "number": "85 E",
             "slug": "impots-annexe-3"
           },
           "evidence_origin": "worker_declaration"
@@ -398438,7 +398920,7 @@
           "before": "Identification française et mandataire obligatoires pour le demandeur établi dans un autre État membre.",
           "after": "Identification française maintenue ; exécution directe ou mandat facultatif.",
           "unit": "legal_duty",
-          "affected_population": "Demandeurs établis dans un autre État membre de l'Union européenne.",
+          "affected_population": "Titulaires établis dans un autre État membre de l'Union européenne.",
           "conditions_and_transition": "Demandes nouvelles et en cours ; mandats contractuels existants non annulés.",
           "replacement_or_new_burdens": "Aucune formalité, taxe ou donnée de remplacement ; les conditions de fond et contrôles distincts demeurent.",
           "source_quote": "il doit être identifié à la taxe sur la valeur ajoutée en France et y avoir désigné un mandataire",
@@ -398447,34 +398929,6 @@
             "code_id": "LEGITEXT000006069574",
             "source_id": "LEGIARTI000046157964",
             "number": "85",
-            "slug": "impots-annexe-3"
-          },
-          "evidence_origin": "worker_declaration"
-        }
-      ]
-    },
-    {
-      "measure_id": "tva-suspension-modifications-identification",
-      "kinds": [
-        "authorization_removed"
-      ],
-      "effects": [
-        {
-          "kind": "authorization_removed",
-          "measure_id": "tva-suspension-modifications-identification",
-          "description": "Dispense ciblée d'autorisation modificative.",
-          "before": "Tout changement affectant les éléments de la demande soumis à autorisation.",
-          "after": "Dénomination et coordonnées sans modification substantielle dispensées d'autorisation et de déclaration spéciale.",
-          "unit": "legal_duty",
-          "affected_population": "Titulaires, gestionnaires et entreposeurs des régimes autorisés.",
-          "conditions_and_transition": "Changements futurs et demandes pendantes ; identités et lieux inchangés.",
-          "replacement_or_new_burdens": "Aucune formalité, taxe ou donnée de remplacement ; les conditions de fond et contrôles distincts demeurent.",
-          "source_quote": "Tout changement qui affecte les éléments constitutifs des régimes autorisés tels qu'ils figurent dans la demande d'ouverture est soumis à autorisation.",
-          "proposed_quote": "Ils ne donnent lieu à aucune déclaration supplémentaire au titre du présent article",
-          "article": {
-            "code_id": "LEGITEXT000006069574",
-            "source_id": "LEGIARTI000023099623",
-            "number": "85 B",
             "slug": "impots-annexe-3"
           },
           "evidence_origin": "worker_declaration"
@@ -417202,6 +417656,26 @@
         "coordination"
       ],
       "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "veuvage-suppression-exclusion-nouvelle-union",
+          "description": "Retrait réglementaire de la condition conjugale, coordonné à l'abrogation du 1° de L356-3 proposé.",
+          "before": "Allocation subordonnée à l'absence de remariage, de pacte civil de solidarité et de concubinage.",
+          "after": "Pour les périodes nouvelles, une nouvelle union ne fait pas, à elle seule, obstacle à l'allocation.",
+          "unit": "legal_duty",
+          "affected_population": "Conjoints survivants demandeurs ou bénéficiaires de l’allocation de veuvage",
+          "conditions_and_transition": "Périodes courant à compter de l'entrée en vigueur de la loi supprimant l'exclusion de L356-3, même si le décès ou l'union est antérieur ; périodes antérieures et décisions définitives conservent leur régime.",
+          "replacement_or_new_burdens": "Aucune déclaration ni condition de ressources du couple de remplacement ; les conditions de résidence, d'âge et de ressources personnelles demeurent.",
+          "source_quote": "4° Ne pas être remarié, ne pas avoir conclu de pacte civil de solidarité et ne pas vivre en concubinage.",
+          "proposed_quote": "La suppression de la condition prévue au 4°, relative au remariage, à la conclusion d'un pacte civil de solidarité ou au concubinage, s'applique aux périodes courant à compter de l'entrée en vigueur de la loi supprimant l'exclusion prévue au 1° de l'article L. 356-3",
+          "article": {
+            "code_id": "LEGITEXT000006073189",
+            "source_id": "LEGIARTI000023413984",
+            "number": "D356-2",
+            "slug": "securite-sociale"
+          },
+          "evidence_origin": "worker_declaration"
+        },
         {
           "kind": "coordination",
           "measure_id": "veuvage-suppression-exclusion-nouvelle-union",
@@ -640204,7 +640678,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Les deux parcours d'ancienneté fusionnent en vingt-quatre mois de salariat portable. Les restrictions propres à l'entreprise, à la récence et à la voie CDD disparaissent réellement par rapport à la source entière, sans nouveau gain depuis le brouillon.",
-        "scope_limitations": "Le minimum général, les dispenses et les règles propres au fonds de prévention demeurent. L'ouverture peut accroître les financements ; aucun solde public net ou réduction globale de complexité n'est établi.",
+        "scope_limitations": "Les vingt-quatre mois ne sont plus une condition générale d'accès, par coordination avec L6323-17-2 proposé ; ils restent la durée de référence des dispositions qui y renvoient, notamment l'activité exposée de D6323-9-2. Les dispenses et les règles propres au fonds de prévention demeurent. L'ouverture peut accroître les financements ; aucun solde public net ou réduction globale de complexité n'est établi.",
         "new_burdens_review": "Aucune charge nouvelle de déclaration, registre, donnée, délai ou justificatif n'est identifiée : la proposition retire les exigences décrites et conserve les contrôles nécessaires sans circuit de remplacement. La charge de traitement ou de financement des demandes supplémentaires reste non chiffrée ; aucun solde global des codes n'est établi.",
         "effects": [
           {
@@ -793319,7 +793793,7 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Coordination nécessaire de deux incohérences préexistantes : le 1er mars réglementaire devient le 1er avril déjà fixé par L. 138-15 ; le c de L. 138-11 n'existe plus dans la rédaction actuelle et ne reste visé que pour les périodes anciennes où cette part était légalement applicable. La règle n'exige pas un second dépôt et ne recrée pas une taxe. Il ne s'agit ni d'une baisse d'impôt ni d'un délai légal nouvellement accordé. Seconde passe : Contradiction effective supplémentaire : « conforme à un modèle » rétablissait le modèle que L. 138-15 proposé rend facultatif. La date déjà légale du 1er avril et la réserve historique du c sont conservées ; la liberté de modèle est alignée sur sa date législative.",
+        "assessment": "Coordination nécessaire de deux incohérences préexistantes : le 1er mars réglementaire devient le 1er avril déjà fixé par L. 138-15 ; le c de L. 138-11 n'existe plus dans la rédaction actuelle et ne reste visé que pour les périodes anciennes où cette part était légalement applicable. La règle n'exige pas un second dépôt et ne recrée pas une taxe. Il ne s'agit ni d'une baisse d'impôt ni d'un délai légal nouvellement accordé. Seconde passe : Contradiction effective supplémentaire : « conforme à un modèle » rétablissait le modèle que L. 138-15 proposé rend facultatif. La date déjà légale du 1er avril et la réserve historique du c sont conservées ; la liberté de modèle est alignée sur sa date législative. Troisième passe : coordination nécessaire avec les rédactions de L. 138-10, L. 138-11, L. 138-12 et L. 138-15 applicables au 1er janvier 2027, que le projet accepte : l'assiette y devient le montant remboursé transmis par la CNAM, l'ATIH et l'ANSP, sans déclaration de l'entreprise ; la déclaration réglementaire est bornée aux contributions régies par l'ancienne rédaction.",
         "scope_limitations": "Analyse limitée aux douze articles et aux textes locaux expressément lus dans review_notes. Les textes extérieurs et versions historiques ou différées non fournis ne sont pas réputés vérifiés. Aucun rendement, solde national de prélèvements ou coût net global n'est établi. Les effets et transitions restent bornés aux contributions et obligations visées, sans extension aux autres régimes.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, dépôt, donnée, autorisation ou délai supplémentaire n'est créé ; les réserves ajoutées empêchent le rétablissement d'obligations supprimées. Les procédures et informations autonomes maintenues existaient dans la source. Aucun solde global des codes n'est chiffré.",
         "effects": [
@@ -793361,6 +793835,19 @@
             "replacement_or_new_burdens": "Aucun dépôt, registre ou prélèvement de remplacement ; les obligations autonomes demeurent dans leur champ.",
             "source_quote": "conforme à un modèle fixé par arrêté du ministre chargé de la sécurité sociale",
             "proposed_quote": "les informations nécessaires à la détermination du chiffre d'affaires sont recevables sans recours obligatoire au modèle."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "pharmacie-clause-sauvegarde-2027-sans-declaration-entreprise",
+            "description": "Bornage de la déclaration réglementaire aux contributions régies par la rédaction de L. 138-15 antérieure à 2027.",
+            "before": "Déclaration annuelle du chiffre d'affaires par l'entreprise exigée sans limite de temps.",
+            "after": "Aucune déclaration de l'entreprise pour les contributions régies par la rédaction de L. 138-15 applicable au 1er janvier 2027.",
+            "unit": "legal_duty",
+            "affected_population": "Entreprises redevables de la contribution de L. 138-10",
+            "conditions_and_transition": "Contributions régies par la rédaction issue de l'article 28 de la loi n° 2023-1250 ; déclarations dues pour les contributions antérieures maintenues.",
+            "replacement_or_new_burdens": "Aucune ; les données sont transmises par la CNAM, l'ATIH et l'ANSP selon la loi.",
+            "source_quote": "Les entreprises redevables de la contribution mentionnée à l'article L. 138-10 sont tenues de remettre",
+            "proposed_quote": "aucune déclaration du chiffre d'affaires n'est exigée des entreprises sur le fondement du présent article."
           }
         ]
       }
@@ -867681,7 +868168,7 @@
         "version": 1,
         "classification": "coordination_only",
         "assessment": "Le règlement est aligné sur le calendrier législatif déjà applicable et sur sa liste de remises. Le délai jusqu’au 15 mai était incohérent ; la correction ne constitue pas une nouvelle baisse de prélèvement.",
-        "scope_limitations": "Le délai administratif de réponse du CEPS est déplacé de mai à juillet dans le règlement, comme l’exige déjà la loi ; ce n’est pas un allègement du principal dû. Les textes sanitaires extérieurs restent à leur champ.",
+        "scope_limitations": "Le délai administratif de réponse du CEPS est déplacé de mai à juillet dans le règlement, comme l’exige déjà la loi ; ce n’est pas un allègement du principal dû. Les textes sanitaires extérieurs restent à leur champ. Le présent article ne régit que les contributions relevant de la rédaction de L138-15 antérieure à l'article 28 de la LFSS pour 2024 ; les contributions régies par la version en vigueur au 1er janvier 2027 suivent les seules communications et rectifications de cette version.",
         "new_burdens_review": "Aucune charge nouvelle n'est identifiée dans cet article : aucun registre, justificatif, autorisation ou déclaration supplémentaire n'est créé. Les coordinations reprennent les obligations légales subsistantes sans chiffrer un solde global des codes.",
         "effects": [
           {
@@ -867692,7 +868179,7 @@
             "after": "Règlement : CEPS avant le 15 juillet et quinze jours après information ; mêmes remises que la liste législative.",
             "unit": "legal_duty",
             "affected_population": "CEPS, organismes de recouvrement et entreprises pharmaceutiques redevables.",
-            "conditions_and_transition": "Communications futures, y compris pour années antérieures ; délais déjà ouverts et rectifications régulières protégés.",
+            "conditions_and_transition": "Communications futures, y compris pour années antérieures ; délais déjà ouverts et rectifications régulières protégés. Champ limité aux contributions régies par la rédaction de L138-15 antérieure à l'article 28 de la LFSS pour 2024 ; aucune déclaration ni échéance supplémentaire pour les contributions régies par la version de 2027.",
             "replacement_or_new_burdens": "Aucune obligation ni aucun prélèvement de remplacement ; les règles autonomes restent à leur champ propre.",
             "source_quote": "Les entreprises concernées disposent alors d'un délai courant jusqu'au 15 mai inclus pour rectifier, le cas échéant, la déclaration qu'elles ont transmise.",
             "proposed_quote": "Les entreprises concernées disposent alors d'un délai de quinze jours à compter de cette information pour rectifier, le cas échéant, la déclaration qu'elles ont transmise, conformément au I de l'article L. 138-15."
@@ -882578,7 +883065,7 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Retrait de la forclusion réglementaire, nécessaire à la suppression déjà proposée au troisième alinéa de L356-1. Les quatre conditions, la dispense de résidence et le plafond de 3,75 allocations restent intégralement conservés. Aucun allongement de la période de service n'est créé. Les conditions sont appréciées pour la période demandée afin que le dépôt tardif ne neutralise pas la suppression de la forclusion.",
+        "assessment": "Retrait de la forclusion réglementaire, nécessaire à la suppression déjà proposée au troisième alinéa de L356-1. Les trois conditions de résidence, d'âge et de ressources, la dispense de résidence et le plafond de 3,75 allocations restent intégralement conservés. Aucun allongement de la période de service n'est créé. Les conditions sont appréciées pour la période demandée afin que le dépôt tardif ne neutralise pas la suppression de la forclusion. Troisième passe : coordination nécessaire avec L356-3 proposé, dont le 1° est abrogé : la condition conjugale du 4° est retirée pour les périodes nouvelles, comme le font déjà D356-11 et D356-12 proposés ; le numéro 4° reste en place, marqué Abrogé, pour ne pas décaler leurs renvois.",
         "scope_limitations": "Coordination nécessaire conservée : L356-1 proposé dit « et non au seul jour du dépôt de la demande » ; le premier alinéa proposé de D356-2 apprécie donc les conditions pour la période demandée. Son cinquième alinéa législatif demeure bien la dispense de résidence. D356-5 conserve deux ans depuis le premier jour du mois du décès et la prolongation jusqu’à 55 ans si 50 ans au décès ; D356-6 fixe le départ au mois du décès ou au mois où les conditions sont remplies. L’absence de forclusion ne garantit donc aucun arrérage hors période de service ou prescrit.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien ou la coordination ne crée ni déclaration, ni registre, ni justificatif, ni condition supplémentaire. Aucun solde de coût à l’échelle des codes n’est chiffré.",
         "effects": [
@@ -882594,6 +883081,19 @@
             "replacement_or_new_burdens": "Aucune obligation de remplacement ; les conditions de fond et garanties non supprimées demeurent.",
             "source_quote": "la demande doit être déposée dans un délai n'excédant pas la période maximum de versement",
             "proposed_quote": "Aucun délai de forclusion à compter du décès n'est opposable à la demande."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "veuvage-suppression-exclusion-nouvelle-union",
+            "description": "Retrait réglementaire de la condition conjugale, coordonné à l'abrogation du 1° de L356-3 proposé.",
+            "before": "Allocation subordonnée à l'absence de remariage, de pacte civil de solidarité et de concubinage.",
+            "after": "Pour les périodes nouvelles, une nouvelle union ne fait pas, à elle seule, obstacle à l'allocation.",
+            "unit": "legal_duty",
+            "affected_population": "Conjoints survivants demandeurs ou bénéficiaires de l’allocation de veuvage",
+            "conditions_and_transition": "Périodes courant à compter de l'entrée en vigueur de la loi supprimant l'exclusion de L356-3, même si le décès ou l'union est antérieur ; périodes antérieures et décisions définitives conservent leur régime.",
+            "replacement_or_new_burdens": "Aucune déclaration ni condition de ressources du couple de remplacement ; les conditions de résidence, d'âge et de ressources personnelles demeurent.",
+            "source_quote": "4° Ne pas être remarié, ne pas avoir conclu de pacte civil de solidarité et ne pas vivre en concubinage.",
+            "proposed_quote": "La suppression de la condition prévue au 4°, relative au remariage, à la conclusion d'un pacte civil de solidarité ou au concubinage, s'applique aux périodes courant à compter de l'entrée en vigueur de la loi supprimant l'exclusion prévue au 1° de l'article L. 356-3"
           }
         ]
       }
@@ -929457,7 +929957,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Par rapport à la source officielle entière, réduction de l'habilitation au permis aux créations de voies ou équipements communs qualifiés. Espaces communs seuls et réaménagements existants sortent de ce permis. La dispense déclarative est une coordination de L442-3 déjà rédigé, non une seconde mesure indépendante.",
-        "scope_limitations": "Les créations de voies et équipements communs restent contrôlées par permis ; L115-3 et les autorisations autonomes subsistent. La localisation n'est déjà plus un critère dans R*421-19 a courant. R*421-19/23, sanctions et formulaires restent à coordonner ; aucun solde national ni coût net chiffré n'est démontré.",
+        "scope_limitations": "Les créations de voies et équipements communs restent contrôlées par permis ; Le pouvoir d'opposition motivée de L115-3, sans déclaration, et les autorisations autonomes subsistent. La localisation n'est déjà plus un critère dans R*421-19 a courant. Sanctions et formulaires restent à coordonner ; aucun solde national ni coût net chiffré n'est démontré.",
         "new_burdens_review": "Aucune charge nouvelle n'est identifiée : pas de déclaration générale remplaçant le permis retiré, aucun registre ou attestation. L'option pour les demandes en cours est facultative et sans redépôt ; les procédures autonomes conservées ne sont pas des obligations créées par ce texte.",
         "effects": [
           {
@@ -929469,7 +929969,7 @@
             "unit": "legal_duty",
             "affected_population": "Lotisseurs réalisant seulement des espaces communs ou des aménagements de voies ou équipements existants.",
             "conditions_and_transition": "Nouvelles demandes dès entrée en vigueur ; option pour demandes en cours. Titres antérieurs, contrats, garanties et recours préservés ; autres fondements d'autorisation réservés.",
-            "replacement_or_new_burdens": "Aucune déclaration générale de remplacement ; déclaration ciblée L115-3 conservée dans son champ. Coordination avec L442-3 et L442-14 proposés nécessaire.",
+            "replacement_or_new_burdens": "Aucune déclaration générale de remplacement ; pouvoir d'opposition ciblé de L115-3 conservé dans son champ, sans déclaration. Coordination avec L442-3 et L442-14 proposés nécessaire.",
             "source_quote": "Un décret en Conseil d'Etat précise, en fonction de la localisation de l'opération ou du fait que l'opération comprend ou non la création de voies, d'espaces ou d'équipements communs, les cas dans lesquels la réalisation d'un lotissement doit être précédée d'un permis d'aménager.",
             "proposed_quote": "La seule localisation de l'opération, la création ou l'aménagement d'espaces communs et les travaux d'aménagement de voies ou d'équipements communs existants ne peuvent, à eux seuls ou combinés entre eux, justifier un permis d'aménager au titre du lotissement."
           }
@@ -937721,22 +938221,35 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "La source entière impose trois consultations centrales : elles disparaissent réellement, sans remplacement. Le préfet et la consultation départementale demeurent. Ce gain reprend le brouillon et ne supprime pas l'autorisation du projet, ni ne garantit un délai total plus court.",
-        "scope_limitations": "Le gain décrit porte seulement sur les exigences réglementaires identifiées, pas sur les autorisations légales ou les autres procédures. Aucune économie nationale ni réduction nette de complexité de l'ensemble des codes n'est établie. La filiation historique SRU reste incomplète ; aucune suppression supplémentaire au brouillon n'est comptée.",
-        "new_burdens_review": "Aucune charge nouvelle de déclaration, registre, donnée, justificatif ou délai n'est identifiée : les règles conservées sont existantes et aucune formalité ne remplace les suppressions. Les dispositions transitoires évitent de redéposer les dossiers ou de recommencer les procédures en cours.",
+        "assessment": "La source entière impose une autorisation du préfet de région après trois avis ministériels et l'avis de la commission. Le brouillon retirait déjà les avis ministériels. La présente rédaction abroge en outre l'autorisation et l'avis de la commission à la date de la loi qui les supprime à L121-39 : c'est la coordination de cette mesure législative, qui n'est pas comptée une seconde fois ici.",
+        "scope_limitations": "Le gain propre à cet article porte sur les avis ministériels ; la suppression de l'autorisation et de l'avis de la commission est comptée à L121-39. Les autorisations, évaluations et participations requises sur un autre fondement ne sont pas touchées. Aucun délai total gagné ni solde national n'est chiffré.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucune demande, déclaration, pièce ou consultation ne remplace l'autorisation abrogée ; les dispositions transitoires évitent tout nouveau dépôt et toute reprise des délais.",
         "effects": [
           {
             "kind": "obligation_removed",
             "measure_id": "eolien-outremer-suppression-avis-ministeriels",
             "description": "Suppression des avis obligatoires des trois ministres chargés de l'urbanisme, de l'environnement et de l'énergie avant l'autorisation régionale.",
             "before": "Trois avis ministériels requis en plus de celui de la commission ; silence favorable après deux mois.",
-            "after": "Aucun avis ministériel requis ; commission maintenue avec silence favorable après deux mois, sans promesse de délai global réduit de deux mois.",
+            "after": "Aucun avis ministériel requis, dès l'entrée en vigueur du décret ; puis plus aucune autorisation ni avis au titre de la dérogation à compter de la loi.",
             "unit": "legal_duty",
             "affected_population": "Porteurs de projets éoliens relevant de L121-39 et services instructeurs.",
-            "conditions_and_transition": "Application aux demandes ou procédures nouvelles et en cours à l'entrée en vigueur du présent article, sans nouveau dépôt ni reprise des délais ; actes antérieurs protégés selon le texte proposé.",
-            "replacement_or_new_burdens": "Aucune déclaration, attestation ou consultation de remplacement ; les exigences légales de fond demeurent.",
+            "conditions_and_transition": "Application aux demandes nouvelles et en cours, sans nouveau dépôt ni reprise des délais ; avis déjà recueillis conservés.",
+            "replacement_or_new_burdens": "Aucune déclaration, attestation ou consultation de remplacement.",
             "source_quote": "après avis des ministres chargés de l'urbanisme, de l'environnement et de l'énergie.",
             "proposed_quote": "Les avis des ministres chargés de l'urbanisme, de l'environnement et de l'énergie ne sont pas requis."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "littoral-eolien-outre-mer-derogation-directe",
+            "description": "Abrogation de la procédure réglementaire de l'autorisation et de l'avis de la commission supprimés par L121-39.",
+            "before": "Autorisation du préfet de région après avis de la commission départementale de la nature, des paysages et des sites.",
+            "after": "Plus d'autorisation ni d'avis au titre de la dérogation à compter de la loi ; demandes en cours non instruites sur ce seul fondement.",
+            "unit": "legal_duty",
+            "affected_population": "Porteurs de projets éoliens relevant de L121-39 et services instructeurs.",
+            "conditions_and_transition": "Même date et même transition que L121-39 : autorisations antérieures, prescriptions et recours conservés ; refus définitifs non rouverts.",
+            "replacement_or_new_burdens": "Aucune charge de remplacement ; mesure comptée à L121-39.",
+            "source_quote": "L'autorisation prévue à l'article L. 121-39 est accordée par le préfet de région",
+            "proposed_quote": "aucune autorisation du préfet de région ni aucun avis de la commission départementale de la nature, des paysages et des sites ou des ministres n'est requis au titre de cette dérogation"
           }
         ]
       }
@@ -1072990,22 +1073503,22 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Réforme de fond : une déclaration annuelle de simple détention n'est pas nécessaire au calcul de l'impôt sur des produits non versés. Maintien du II en cas de versement et du I qui permet de prouver la sortie exonérée, avec ses durées et son antériorité. Le brouillon fourni avait déjà supprimé cette transmission sans produits et corrigé un ancien diagnostic de renvoi vide ; ces corrections sont conservées. Seconde passe : outre la dispense annuelle déjà acquise, supprimer la nouvelle remise d'un justificatif dont le gestionnaire dispose déjà. Maintenir la preuve de l'événement, son délai et l'antériorité du plan, nécessaires à l'exonération anticipée.",
+        "assessment": "Réforme de fond : une déclaration annuelle de simple détention n'est pas nécessaire au calcul de l'impôt sur des produits non versés. Maintien du II en cas de versement et du I qui permet de prouver la sortie exonérée, avec ses durées et son antériorité. Le brouillon fourni avait déjà supprimé cette transmission sans produits et corrigé un ancien diagnostic de renvoi vide ; ces corrections sont conservées. Seconde passe : outre la dispense annuelle déjà acquise, supprimer la nouvelle remise d'un justificatif dont le gestionnaire dispose déjà. Maintenir la preuve de l'événement, son délai et l'antériorité du plan, nécessaires à l'exonération anticipée. Troisième passe : le II est aligné sur la dispense générale du reporting spécifique au PEP portée par le 22° de l'article 157 proposé ; la mesure est celle de 157, non une seconde coupe.",
         "scope_limitations": "Correction expresse du diagnostic précédent : le texte officiel ENTIER de 157 fourni contient bien au 22° décès, expiration des droits chômage après licenciement, liquidation judiciaire et invalidité. Le renvoi de 91 quater B est donc cohérent sans inventer de liste. Huit ans, deux ans et avant le 16 février conservés. La dispense propre ne supprime pas les obligations autonomes de 242 ter ; leur articulation opérationnelle reste à coordonner dans les formulaires. La dispense documentaire nouvelle concerne les pièces déjà détenues par le gestionnaire, sans nouvel accès aux données ni transfert à un tiers ; ce n'est pas une déclaration sur l'honneur substituée. Aucun solde net pour l’ensemble des codes ni rendement budgétaire n’est établi.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : les informations, destinataires et conditions de fond maintenus proviennent de la source ; aucun registre, agrément, dépôt ou délai de remplacement n'est créé.",
         "effects": [
           {
             "kind": "obligation_removed",
             "measure_id": "pep-fin-declaration-sans-produits",
-            "description": "Suppression de la transmission annuelle propre au PEP sans versement de produits dans l’année.",
+            "description": "Suppression de la transmission annuelle propre au PEP, avec ou sans versement de produits, coordonnée à la dispense du 22° de l'article 157 proposé.",
             "before": "Identité, références et ouverture déclarées annuellement même sans produit versé.",
-            "after": "Transmission propre au II seulement avec versement de produits ; autres obligations autonomes réservées.",
+            "after": "Aucune transmission propre au II ; obligations déclaratives relatives aux revenus imposables réservées.",
             "unit": "legal_duty",
             "affected_population": "Titulaires de PEP et organismes gestionnaires.",
             "conditions_and_transition": "Application à compter de l’entrée en vigueur selon la transition du texte proposé ; conditions fiscales maintenues et droits antérieurs préservés dans ce champ.",
             "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
             "source_quote": "avant le 16 février de chaque année, les renseignements suivants relatifs à l'année précédente",
-            "proposed_quote": "Aucune transmission annuelle n'est exigée sur le seul fondement du II pour un plan n'ayant donné lieu à aucun versement de produits pendant l'année considérée."
+            "proposed_quote": "Aucune transmission annuelle n'est exigée sur le fondement du II, que le plan ait ou non donné lieu à un versement de produits pendant l'année considérée."
           },
           {
             "kind": "obligation_removed",
@@ -1073019,6 +1073532,19 @@
             "replacement_or_new_burdens": "Aucune formalité de remplacement ; les règles de preuve et obligations autonomes maintenues restent dans leur champ.",
             "source_quote": "le titulaire du plan présente, le cas échéant, à l'organisme gestionnaire un document",
             "proposed_quote": "Le titulaire n'est pas tenu de remettre ce document lorsque l'organisme gestionnaire dispose déjà d'une pièce établissant le même événement et sa date."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "pep-suppression-reporting-fiscal-specifique",
+            "description": "Retrait des renseignements spécifiques au PEP encore organisés par le II, contraire à la dispense du 22° de l'article 157 proposé.",
+            "before": "Identité, références, ouverture et produits exonérés déclarés sur la déclaration de l'article 242 ter en cas de versement de produits.",
+            "after": "Aucun de ces renseignements n'est transmis, conformément au 22° de l'article 157 proposé.",
+            "unit": "legal_duty",
+            "affected_population": "Organismes gestionnaires de PEP et titulaires.",
+            "conditions_and_transition": "Transmissions dont l'échéance intervient à compter de l'entrée en vigueur de la réforme, même pour une année antérieure ; obligations échues antérieures conservées, loi répressive plus douce.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+            "source_quote": "le montant des produits payés non soumis à l'impôt sur le revenu en application du 22° de l'article 157 du code général des impôts",
+            "proposed_quote": "n'est tenu d'adresser aux services fiscaux, ni sur la déclaration prévue au 1 de l'article 242 ter du code général des impôts ni sur un autre support, aucun des renseignements spécifiques à ce plan suivants"
           }
         ]
       }
@@ -1075220,15 +1075746,29 @@
       "source_id": "LEGIARTI000054363238",
       "number": "171 quater",
       "slug": "impots-annexe-2",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien intégral après réexamen : le texte met en œuvre la responsabilité de paiement imposée par le IV de 244 bis A pour les cédants concernés. Le dépôt avec l'acte évite un circuit distinct et le dépôt au domicile du représentant traite les cessions sans acte. Les dispenses légales de représentant demeurent opposables. Les simplifications des pièces et du suivi sont portées directement à 171 quater A ; une seconde suppression de représentation n'est pas revendiquée ici.",
-        "scope_limitations": "Le IV et le IV bis de 244 bis A ont été consultés : dispense UE/EEE sous conventions d'assistance administrative et de recouvrement, appréciation par associé dans les sociétés visées, et circuits propres aux fonds immobiliers demeurent applicables. Le renvoi à 171 quater A ne rétablit pas ses états annuels supprimés. Le prélèvement non-résident est un régime distinct ; aucune abolition par assimilation à l'IS ordinaire n'est faite. LPF titre IV, amende 1761 et articles 1701 à 1712 demeurent à leur champ propre, sans nouvelle certification de leur concordance intégrale.",
-        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : le texte source est maintenu sans ajout de donnée, de registre, de délai ou de condition ; aucun solde net de l'ensemble des codes n'est chiffré.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination nécessaire avec le IV de 244 bis A proposé, qui supprime pour les cessions nouvelles le représentant fiscal obligatoire et son accréditation : l'obligation de désigner un représentant accrédité est réservée aux cessions antérieures. Les lieux de dépôt, l'exigibilité et le recouvrement sont conservés. Aucune seconde suppression n'est comptée : la mesure est celle de 244 bis A.",
+        "scope_limitations": "Le service compétent à l'égard d'un cédant sans représentant, pour une cession non constatée par un acte, n'est désigné que par renvoi aux règles de compétence existantes, sans service nouveau. Les dispenses UE/EEE, les circuits des fonds immobiliers du IV bis de 244 bis A, l'amende de 1761 et les articles 1701 à 1712 demeurent dans leur champ.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucune déclaration, aucun registre ni délai n'est ajouté ; la mention du représentant devient conditionnelle.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "representant-fiscal-obligatoire-suppression",
+            "description": "Désignation d'un représentant accrédité réservée aux cessions antérieures à la suppression prévue au IV de 244 bis A proposé.",
+            "before": "Désignation obligatoire d'un représentant accrédité pour toute cession soumise au prélèvement.",
+            "after": "Aucun représentant ni accréditation pour les cessions nouvelles ; régime ancien pour les cessions antérieures.",
+            "unit": "legal_duty",
+            "affected_population": "Cédants passibles du prélèvement de 244 bis A.",
+            "conditions_and_transition": "Cessions réalisées à compter de l'entrée en vigueur de la loi de suppression ; responsabilités antérieures conservées.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+            "source_quote": "désignent un représentant, accrédité dans les conditions prévues par cet article",
+            "proposed_quote": "Pour les cessions réalisées à compter de cette entrée en vigueur, aucun représentant fiscal ni aucune accréditation ne sont exigés"
+          }
+        ]
       }
     },
     {
@@ -1075257,6 +1075797,19 @@
             "replacement_or_new_burdens": "Aucune formalité de remplacement ; les conditions de fond et les obligations autonomes expressément maintenues subsistent.",
             "source_quote": "VI. - Le représentant fiscal accrédité pour une durée indéterminée remet au service mentionné au premier alinéa du III, au titre de chaque année civile, avant une date fixée par arrêté du ministre chargé du budget :",
             "proposed_quote": "VI. - Les transmissions annuelles spécifiques au présent VI sont supprimées :"
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "representant-fiscal-obligatoire-suppression",
+            "description": "Limitation de la procédure d'accréditation aux cessions antérieures, coordonnée à la suppression du représentant obligatoire au IV de 244 bis A proposé.",
+            "before": "Accréditation, garanties et obligations du représentant exigées pour toute cession relevant de 244 bis A.",
+            "after": "Procédure réservée aux cessions antérieures ; aucune accréditation ni garantie pour les cessions nouvelles.",
+            "unit": "legal_duty",
+            "affected_population": "Cédants non résidents et représentants fiscaux.",
+            "conditions_and_transition": "Cessions réalisées à compter de l'entrée en vigueur de la loi de suppression ; responsabilités valablement nées antérieurement conservées.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; assistance ou représentation de droit commun facultative.",
+            "source_quote": "Le représentant fiscal mentionné au IV de l'article 244 bis A du code général des impôts est accrédité au titre d'une cession déterminée ou pour une durée indéterminée",
+            "proposed_quote": "Le présent article ne s'applique qu'aux représentants accrédités au titre des cessions réalisées avant l'entrée en vigueur de la loi supprimant l'obligation de désigner un représentant fiscal"
           }
         ]
       }
@@ -1077585,6 +1078138,19 @@
             "replacement_or_new_burdens": "Aucune formalité de remplacement ; les conditions de fond et les contrôles autonomes demeurent.",
             "source_quote": "Les demandes de remboursement doivent être déposées au cours du mois de janvier et porter sur un montant au moins égal à 150 €.",
             "proposed_quote": "Les demandes de remboursement du crédit constaté au terme de l'année civile peuvent être déposées dès le mois de janvier suivant et jusqu'à l'expiration du délai de réclamation applicable, sans montant minimal."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "tva-simplifie-suppression-acomptes",
+            "description": "Le remboursement intermédiaire sur immobilisations reste ouvert sans acompte, comme le prévoit 287 proposé pour les exercices décalés.",
+            "before": "Demande liée au relevé accompagnant l'acompte de juillet ou de 242 septies A.",
+            "after": "Même relevé, sans versement d'acompte lorsque 287 écarte les acomptes ; renvoi au relevé de 242 sexies désigné par son objet.",
+            "unit": "legal_duty",
+            "affected_population": "Assujettis encore placés sous le régime simplifié pour un exercice décalé.",
+            "conditions_and_transition": "Exercices pour lesquels 287 proposé écarte les acomptes à compter de l'entrée en vigueur de la loi ; demandes antérieures conservées.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; le relevé existant porte la demande.",
+            "source_quote": "lors du dépôt du relevé mentionné au dernier alinéa de l'article 242 sexies relatif à l'acompte de juillet",
+            "proposed_quote": "ce remboursement peut être demandé par le même relevé, sans versement d'acompte."
           }
         ]
       }
@@ -1078315,7 +1078881,7 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Coordination de la dispense générale de relevé d'acompte aux exercices décalés : le 3 cesse effectivement d'exiger ce dépôt pour un versement ordinaire. La mesure est comptée dans 242 sexies, sans seconde réduction générale ni modification du tableau.",
+        "assessment": "Coordination de la dispense générale de relevé d'acompte aux exercices décalés : le 3 cesse effectivement d'exiger ce dépôt pour un versement ordinaire. La mesure est comptée dans 242 sexies, sans seconde réduction générale ni modification du tableau. Coordination complémentaire avec 287 proposé : la déclaration annuelle ne détermine plus, pour les exercices décalés où 287 les écarte, les acomptes échus après l'entrée en vigueur ; la mesure est comptée dans 287.",
         "scope_limitations": "Seul le régime simplifié de TVA est concerné. Pas de réduction de taxe ni de report de paiement ; coûts privés et adaptation des téléprocédures non chiffrés. Coordination CIBS et formulaire restant hors du lot.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : le tableau des échéances est intégralement maintenu ; le relevé résiduel reprend les données déjà exigées pour le remboursement. Aucun dépôt de substitution ni nouvelle date. Coûts de mise en œuvre non chiffrés.",
         "effects": [
@@ -1078331,6 +1078897,19 @@
             "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes de preuve, de déclaration et de contrôle demeurent dans leur champ.",
             "source_quote": "Chaque versement des acomptes est accompagné d'un relevé indiquant son échéance, son montant",
             "proposed_quote": "Le versement d'un acompte n'est pas subordonné au dépôt d'un relevé distinct."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "tva-simplifie-suppression-acomptes",
+            "description": "Coordination de la suppression des acomptes semestriels résiduels et des déclarations de modulation ou de suspension décidée par 287.",
+            "before": "La déclaration annuelle détermine les acomptes ultérieurement exigibles ; modulation et suspension maintenues.",
+            "after": "Aucun acompte échu après l'entrée en vigueur pour les exercices où 287 les écarte ; ni modulation ni suspension à déclarer ; taxe acquittée avec la déclaration annuelle.",
+            "unit": "legal_duty",
+            "affected_population": "Entreprises au régime simplifié, exercice décalé, relevant du VI de l’article 38 de la loi n° 2025-127.",
+            "conditions_and_transition": "Acomptes dont l'échéance intervient à compter de l'entrée en vigueur ; acomptes antérieurs régis par les règles antérieures ; sommes versées imputées une fois, excédent remboursé (287).",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; le relevé de remboursement reste facultatif et ne conditionne aucun acompte.",
+            "source_quote": "détermine les acomptes ultérieurement exigibles selon la périodicité suivante",
+            "proposed_quote": "la déclaration annuelle ne détermine aucun acompte dont l'échéance intervient à compter de l'entrée en vigueur de la loi portant la présente réforme"
           }
         ]
       }
@@ -1079707,13 +1080286,26 @@
             "measure_id": "tva-agricole-option-comptable-liberation",
             "description": "Retrait du verrou quinquennal de l'option comptable, du préavis et des formes postales imposées.",
             "before": "Option pour cinq ans renouvelables, éventuellement alignée sur 260 G ; recommandé avec accusé pour l'option, recommandé et préavis de deux mois pour la sortie.",
-            "after": "Option continue avec sortie à chaque clôture par écrit envoyé ou remis au plus tard ce jour, sans recommandé ni préavis minimal ; option initiale toujours avant l'exercice.",
+            "after": "Option continue avec sortie à chaque clôture par écrit envoyé ou remis au plus tard ce jour, sans recommandé ni préavis minimal ; option initiale exercée dans la première déclaration de l'exercice.",
             "unit": "legal_duty",
             "affected_population": "Exploitants agricoles optant pour l'imposition selon leur exercice comptable.",
             "conditions_and_transition": "Options en cours et nouvelles après réforme, sans remise en cause des périodes closes ni des notifications antérieures.",
             "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations fiscales autonomes et les régularisations de TVA restent applicables.",
             "source_quote": "L'option entraîne l'imposition selon l'exercice comptable pour une période de cinq ans. Elle est ensuite renouvelable par tacite reconduction par période de cinq ans.",
             "proposed_quote": "L'exploitant peut y renoncer à la fin de chaque période annuelle d'imposition, sans engagement de cinq ans ni prorogation d'un tel engagement."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "tva-agricole-option-exercice-sans-envoi-distinct",
+            "description": "Coordination avec le 1° du I de l'article 298 bis proposé : l'option est portée dans la première déclaration, sans exercice préalable ni envoi distinct.",
+            "before": "Option adressée au service par écrit distinct et formulée avant le début du premier exercice.",
+            "after": "Option exercée par une mention dans la première déclaration de l'exercice, dans le délai de 298 bis.",
+            "unit": "legal_duty",
+            "affected_population": "Exploitants agricoles optant pour l'imposition selon leur exercice comptable.",
+            "conditions_and_transition": "Exercices ouverts à compter de l'entrée en vigueur de la loi de réforme, comme au VI de 298 bis proposé ; options antérieures conservées.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement : la mention figure dans une déclaration déjà due.",
+            "source_quote": "est adressée par lettre recommandée avec accusé de réception au service des impôts dont dépend l'exploitation intéressée",
+            "proposed_quote": "est exercée par une mention portée dans la première déclaration relative au premier exercice auquel elle s'applique"
           }
         ]
       }
@@ -1081520,7 +1082112,7 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Coordination de fond du 67° avec la suppression déjà décidée du second agrément français des entrepositaires d'autres États membres : la liste de compétences ne doit pas le rétablir. Le reste désigne l'autorité qui statue, sans ajouter de procédure ; retirer les rubriques de dispenses et remboursements entraverait les avantages. Les anciens renvois ne reçoivent aucun effet constitutif.",
+        "assessment": "Coordination de fond du 67° avec la suppression déjà décidée du second agrément français des entrepositaires d'autres États membres : la liste de compétences ne doit pas le rétablir. Le reste désigne l'autorité qui statue, sans ajouter de procédure ; retirer les rubriques de dispenses et remboursements entraverait les avantages. Les anciens renvois ne reçoivent aucun effet constitutif. Troisième passe : coordination des 15° et 68° avec 302 D bis et 302 V bis proposés, qui suppriment la déclaration de profession, ses numéros et l'agrément du représentant fiscal ; la clause générale finale ne suffisait pas à retirer ces compétences expresses.",
         "scope_limitations": "Portée limitée au dispositif de cet article. Tous les numéros présents, de 1° à 71°, et les renvois à leurs subdivisions sont conservés. Au 70°, 3,5 devient 3, 5 : il s'agit des deux articles distincts du décret, sans modification numérique. Incohérences ou limites préexistantes : le 50° ne précise pas l'annexe de l'article 164 AD bis, contrairement au 49° ; 164 AD bis ne figure pas dans le fichier annexe IV fourni. Le a de 54-0 C consulté mentionne encore le directeur régional alors que le présent article désigne, hors des quatre territoires cités, le directeur interrégional : harmonisation à contrôler. Plusieurs anciens renvois du CGI, notamment 302 D, 302 K, 302 M, 302 M bis, 302 M ter, 306, 309, 311 bis, 327 et 328, ne figurent pas dans le fichier fourni ; 302 J y est marqué ABROGE avec une borne technique en 2222. Ces références sont conservées sans inventer de substitution ni conclure à leur portée résiduelle. La note du décret n° 2025-590 du 27 juin 2025 reste une indication historique, sans servir de date à une réforme nouvelle. Seconde passe : 111 I et 50-0 C lus dans le corpus ; la proposition de 50-0 C demeure stylistique et nécessite encore la coordination de marquage décidée dans formalites_accises_et_cidre. Le présent 67° rend expressément substituable le numéro d'accise. Les renvois anciens manquants ou abrogés ne sont pas présentés comme concordés avec le CIBS ; la clause finale évite de les rétablir mais leur table de concordance externe reste à établir. Ni les autres agréments ni les régimes européens ne sont supprimés par une simple modification de compétence.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, dépôt, délai ou justificatif de remplacement n'est institué. Le solde de complexité de l'ensemble des codes n'est pas chiffré.",
         "effects": [
@@ -1081536,6 +1082128,32 @@
             "replacement_or_new_burdens": "Aucun dépôt, registre ou prélèvement de remplacement créé.",
             "source_quote": "67° Délivrance du numéro d'agrément des personnes responsables de l'embouteillage du produit prévue à l'article 111 I de l'annexe III au code général des impôts et au a de l'article 50-0 C de l'annexe IV ;",
             "proposed_quote": "67° Pour les opérations relevant de l'article 111 I de l'annexe III au code général des impôts réalisées à compter de l'entrée en vigueur de la présente réforme, aucune délivrance d'un numéro d'agrément français supplémentaire n'est exigée des opérateurs établis dans un autre État membre de l'Union européenne ayant la qualité d'entrepositaire agréé. Leur numéro d'accise en cours de validité tient lieu du numéro mentionné au a de l'article 50-0 C de l'annexe IV. Les numéros déjà attribués restent utilisables tant que cette qualité est conservée ; les capsules et récipients déjà marqués n'ont pas à être remarqués. Les demandes pendantes de ce seul agrément deviennent sans objet ; les opérations antérieures demeurent régies par les dispositions qui leur étaient applicables ;"
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "accises-representant-fiscal-fin-agrement",
+            "description": "Retrait de la compétence de délivrer l'agrément de représentant fiscal supprimé par 302 V bis proposé.",
+            "before": "Délivrance de l'agrément de représentant fiscal par le directeur interrégional.",
+            "after": "Compétence abrogée pour l'avenir ; agréments et numéros acquis utilisables.",
+            "unit": "legal_duty",
+            "affected_population": "Représentants fiscaux des vendeurs à distance de produits soumis à accise.",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi supprimant l'agrément ; demandes en cours sans objet, comme le prévoit 302 V bis proposé.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; caution, déclaration mensuelle et comptabilité de 302 V bis conservées.",
+            "source_quote": "68° Délivrance de l'agrément de représentant fiscal, prévu à l'article 302 V bis du code général des impôts",
+            "proposed_quote": "68° (Abrogé à compter de l'entrée en vigueur de la loi supprimant l'agrément du représentant fiscal prévu à l'article 302 V bis du code général des impôts"
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "accises-exonerations-fin-declaration-profession",
+            "description": "Retrait de la compétence d'attribuer et de retirer les numéros issus de la déclaration de profession supprimée par 302 D bis proposé.",
+            "before": "Attribution et retrait des numéros d'identification des intermédiaires et des utilisateurs en exonération.",
+            "after": "Compétence abrogée pour l'avenir ; décisions antérieures sans effet sur les opérations nouvelles.",
+            "unit": "legal_duty",
+            "affected_population": "Intermédiaires et utilisateurs d'alcools en exonération de droits d'accises.",
+            "conditions_and_transition": "Opérations réalisées à compter de l'entrée en vigueur de la loi de suppression, comme au 111-0 F proposé.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les conditions de fond de l'exonération et leurs contrôles demeurent.",
+            "source_quote": "15° Attribution et retrait du numéro d'identification des intermédiaires",
+            "proposed_quote": "15° (Abrogé à compter de l'entrée en vigueur de la loi supprimant la déclaration préalable de profession et le numéro d'identification"
           }
         ]
       }
@@ -1082089,22 +1082707,22 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Coordination de fond avec l’IS à la distribution : remplacer l’ouverture de la première période d’imposition par le changement de régime fiscal prévu à 809 II. La valeur vénale et la déclaration demeurent nécessaires à la liquidation des droits de mutation subsistants ; aucune annualité ni première distribution ne déclenche à nouveau cette évaluation.",
-        "scope_limitations": "809 II fixe expressément la valeur à la date du changement. 295 et 297 doivent être coordonnés hors lot au statut de personne passible de l’IS, indépendamment du paiement ; leur double exemplaire et leurs circuits sont à alléger dans leurs articles propres. Aucune suppression des exonérations de 810 III ni nouvelle taxation des réserves.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : la proposition ne crée ni registre, ni pièce, ni déclaration de remplacement ; les transitions préservent les droits et contrôles existants. Aucun solde global des codes n’est chiffré.",
+        "assessment": "Coordination de fond avec 809 II proposé et l'abrogation, pour les changements futurs, des articles 295 à 297 : la déclaration dont le présent article règle l'évaluation n'existe plus pour ces changements. L'article est donc abrogé pour l'avenir et conserve la règle d'évaluation de la source pour les changements antérieurs. Aucune seconde suppression de droit n'est comptée.",
+        "scope_limitations": "La cible 809 est une proposition ; son II doit entrer en vigueur simultanément. La précédente règle d'évaluation au jour où la personne morale devient passible de l'IS ne visait que des changements futurs, pour lesquels aucune déclaration n'est plus due : elle est retirée sans objet. Les exonérations de 810 III et le stock ancien ne sont pas modifiés.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, aucune pièce ni déclaration de remplacement ; les changements antérieurs gardent leur régime.",
         "effects": [
           {
             "kind": "coordination",
-            "measure_id": "is-distribution",
-            "description": "Coordination de fond avec l’IS à la distribution : remplacer l’ouverture de la première période d’imposition par le changement de régime fiscal prévu à 809 II. La valeur vénale et la déclaration demeurent nécessaires à la liquidation des droits de mutation subsistants ; aucune annualité ni première distribution ne déclenche à nouveau cette évaluation.",
-            "before": "Évaluation à l’ouverture de la première période d’imposition à l’IS.",
-            "after": "Évaluation à la date de changement de régime fiscal, indépendamment des distributions.",
+            "measure_id": "apports-societes-gratuite-generalisee",
+            "description": "Extinction, pour les changements futurs, de la règle d'évaluation d'une déclaration supprimée par 809 II et 295 à 297 proposés.",
+            "before": "Évaluation des biens sur la déclaration de changement de régime.",
+            "after": "Aucune déclaration ni estimation pour les changements nouveaux ; règle source pour les anciens.",
             "unit": "legal_duty",
-            "affected_population": "Personnes morales visées à 809 II.",
-            "conditions_and_transition": "Changements à compter de l’entrée en vigueur ; droit ancien conservé auparavant.",
+            "affected_population": "Personnes morales devenant passibles de l’impôt sur les sociétés.",
+            "conditions_and_transition": "Changements à compter de l'entrée en vigueur ; changements antérieurs régis par les règles alors applicables.",
             "replacement_or_new_burdens": "Aucune formalité, déclaration, taxe ou condition de remplacement.",
             "source_quote": "au jour de l'ouverture de la première période d'imposition à l'impôt sur les sociétés.",
-            "proposed_quote": "indépendamment de toute distribution de bénéfices ou du paiement effectif de cet impôt."
+            "proposed_quote": "Aucune déclaration de remplacement n'est instituée."
           }
         ]
       }
@@ -1082626,7 +1083244,7 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Deux formalités supplémentaires à la preuve technique sont retirées ; l'exonération renforcée reste accessible aux constructions futures éligibles.",
+        "assessment": "Deux formalités supplémentaires à la preuve technique sont retirées ; l'exonération renforcée reste accessible aux constructions futures éligibles. Troisième passe : le circuit entier est abrogé pour les années futures, en coordination avec le I bis de 1384 A proposé, qui ne subordonne plus la durée d'exonération à un certificat ; la mesure est celle de 1384 A, non une seconde coupe.",
         "scope_limitations": "Aucune suppression de taxe foncière ni de contrôle technique ; aucun gain monétaire national démontré. La certification accréditée reste nécessaire.",
         "new_burdens_review": "Aucune charge nouvelle n'est identifiée : les conditions et informations utiles existantes sont conservées, sans registre ni dépôt de remplacement. Le solde global de complexité des codes n'est pas chiffré.",
         "effects": [
@@ -1082638,10 +1083256,23 @@
             "after": "Accréditation conservée ; certification complète utilisable sans attestation distincte ni convention obligatoire.",
             "unit": "legal_duty",
             "affected_population": "Maîtres d’ouvrage et organismes de certification.",
-            "conditions_and_transition": "Demandes nouvelles et pendantes ; certificats et exonérations acquis conservés.",
+            "conditions_and_transition": "Demandes concernant les années antérieures, déposées ou pendantes après l'entrée en vigueur ; certificats et exonérations acquis conservés.",
             "replacement_or_new_burdens": "Aucun prélèvement, registre ou dépôt de remplacement ; les conditions autonomes expressément conservées restent applicables.",
             "source_quote": "et ayant signé une convention à cet effet avec le ministre chargé de la construction",
-            "proposed_quote": "La convention avec le ministre chargé de la construction ne peut plus être exigée comme condition de délivrance du certificat."
+            "proposed_quote": "la convention avec le ministre chargé de la construction ne peut plus être exigée comme condition de délivrance du certificat"
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "tfpb-performance-fin-certificat",
+            "description": "Abrogation pour l'avenir du circuit de certification retiré par le I bis de 1384 A proposé.",
+            "before": "Attestation accréditée, certificat départemental et transmission avec la déclaration de 1406.",
+            "after": "Aucun de ces documents pour les impositions des années postérieures ; critères techniques conservés.",
+            "unit": "legal_duty",
+            "affected_population": "Maîtres d’ouvrage de logements bénéficiant de la durée renforcée.",
+            "conditions_and_transition": "Impositions des années dont le 1er janvier suit l'entrée en vigueur, y compris pour la période restant à courir, comme au V de 1384 A proposé.",
+            "replacement_or_new_burdens": "Aucune attestation ni formalité de remplacement.",
+            "source_quote": "La transmission du certificat au centre des impôts foncier du lieu de situation de la construction doit être accompagnée de la déclaration mentionnée à l'article 1406 du code général des impôts.",
+            "proposed_quote": "Le présent article est abrogé pour les impositions établies au titre des années dont le 1er janvier intervient à compter de l'entrée en vigueur de la loi supprimant le certificat"
           }
         ]
       }
@@ -1091174,6 +1091805,19 @@
             "replacement_or_new_burdens": "Aucun dépôt ou registre supplémentaire ; contrôles et obligations autonomes conservés.",
             "source_quote": "à l'exception, pour les sociétés, des listes prévues aux 1° et 2°.",
             "proposed_quote": "y compris les listes prévues aux 1° et 2° de ce II pour les sociétés"
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "agricole-reel-simplifie-fin-bilan-joint",
+            "description": "Retrait du bilan simplifié de la déclaration annuelle, coordonné à la dispense de 74 A proposé.",
+            "before": "Bilan simplifié produit avec la déclaration annuelle des résultats agricoles au régime simplifié.",
+            "after": "Bilan simplifié non produit ; compte simplifié, tableau des immobilisations et provisions conservés.",
+            "unit": "legal_duty",
+            "affected_population": "Exploitants agricoles au régime simplifié selon le bénéfice réel.",
+            "conditions_and_transition": "Déclarations dont l'échéance intervient à compter de l'entrée en vigueur de la loi, comme dans 74 A proposé.",
+            "replacement_or_new_burdens": "Aucun document de remplacement ; obligations comptables de tenue et de conservation inchangées.",
+            "source_quote": "La déclaration annuelle des résultats qui est faite sur un imprimé établi par l'administration comporte un compte simplifié de résultat fiscal",
+            "proposed_quote": "le bilan simplifié n'est pas produit à l'appui de cette déclaration, conformément à la dispense prévue à l'article 74 A du code général des impôts"
           }
         ]
       }
@@ -1092644,7 +1093288,7 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Coordination de fond limitée au champ temporel : la rédaction prospective de la source est bornée aux séries historiques éligibles. La demande n'est pas supprimée, car elle matérialise l'autorisation législative et la voie favorable de 41 quindecies ; aucun gain matériel n'est revendiqué.",
+        "assessment": "Coordination de fond limitée au champ temporel : la rédaction prospective de la source est bornée aux séries historiques éligibles. La demande n'est pas supprimée, car elle matérialise l'autorisation législative et la voie favorable de 41 quindecies ; aucun gain matériel n'est revendiqué. Troisième passe : le dernier alinéa coordonne la demande avec la dispense d'autorisation et de demande déjà décidée au 1 de 131 ter pour les produits perçus après la réforme ; ce n'est pas une seconde suppression.",
         "scope_limitations": "Le 1 de 131 ter, lu intégralement avec ses notes dans le corpus, limite le régime aux émissions antérieures au 1er janvier 1976 pour toute leur durée ; le 2 concerne un autre circuit. Aucune ouverture aux nouvelles émissions n'est décidée. La discordance ministre/DGFiP est préexistante et les délégations ne sont pas documentées ici.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : les informations conservées étaient déjà requises, sans nouveau registre, destinataire ni échéance. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
         "effects": [
@@ -1092660,6 +1093304,19 @@
             "replacement_or_new_burdens": "Pas de déclaration ni autorisation de remplacement ; informations utiles et contrôles autonomes maintenus.",
             "source_quote": "qui se proposent d'émettre à l'étranger des séries spéciales d'obligations",
             "proposed_quote": "Le présent article ne permet pas l'admission au régime des émissions réalisées à compter du 1er janvier 1976."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "obligations-historiques-fin-autorisation",
+            "description": "La demande spéciale ne conditionne plus le régime pour les produits perçus après la réforme, comme le prévoit 131 ter proposé.",
+            "before": "Demande spéciale préalable à la DGFiP, condition d'admission au régime du 1 de 131 ter, sans distinction de date de perception des produits.",
+            "after": "Demande et autorisation non requises pour les produits perçus à compter de la réforme ; la demande ne vaut que pour les produits antérieurs.",
+            "unit": "legal_duty",
+            "affected_population": "Émetteurs français de séries historiques émises à l'étranger avant 1976 et bénéficiaires de leurs produits.",
+            "conditions_and_transition": "Produits perçus à compter de l'entrée en vigueur de la loi ; produits antérieurs et autorisations acquises régis par les règles antérieures.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement ni déclaration distincte.",
+            "source_quote": "doivent déposer au préalable une demande spéciale à la direction générale des finances publiques",
+            "proposed_quote": "le bénéfice de ce régime n'est subordonné ni à la demande prévue au présent article ni à une autorisation"
           }
         ]
       }
@@ -1092685,15 +1093342,29 @@
       "source_id": "LEGIARTI000006297806",
       "number": "41 quindecies",
       "slug": "impots-annexe-3",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien intégral de la rétroactivité favorable pour les séries antérieures à la publication du décret de 1955 et de la date ordinaire de prise d'effet. Retirer cet article fermerait une voie favorable ou effacerait la règle temporelle des autorisations anciennes ; aucune réforme matérielle acquise dans le précédent brouillon.",
-        "scope_limitations": "Le 1 de 131 ter, lu intégralement avec ses notes dans le corpus, limite le régime aux émissions antérieures au 1er janvier 1976 pour toute leur durée ; le 2 concerne un autre circuit. Aucune ouverture aux nouvelles émissions n'est décidée. La discordance ministre/DGFiP est préexistante et les délégations ne sont pas documentées ici. Le 30 avril 1955 est la date du décret, non une date de publication présumée. Le renvoi à 41 terdecies reste opérant pour la demande historique.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : les informations conservées étaient déjà requises, sans nouveau registre, destinataire ni échéance. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination de l'annexe avec la suppression, déjà décidée au 1 de 131 ter proposé, de l'autorisation et de la demande pour les produits perçus après la réforme. La prise d'effet à notification et la rétroactivité favorable de 1955 sont conservées pour les produits antérieurs. Ce n'est pas une seconde suppression.",
+        "scope_limitations": "Le nombre de séries encore en circulation n'est pas établi ; l'effet pratique peut être faible. Les annexes II 51 à 53 concernent le 2 de 131 ter et ne sont pas touchées. 41 quaterdecies (autorité qui accorde l'autorisation) reste utile pour les produits antérieurs.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucune déclaration, demande, attestation ni délai n'est ajouté ; la dispense reprend la loi proposée.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "obligations-historiques-fin-autorisation",
+            "description": "Le régime n'attend plus la notification d'une autorisation pour les produits perçus après la réforme.",
+            "before": "Régime du 1 de 131 ter sans effet avant la notification de l'autorisation ministérielle, pour toute émission.",
+            "after": "Pour les produits perçus après la réforme, aucune demande, autorisation ni notification ; règles antérieures pour les produits antérieurs.",
+            "unit": "legal_duty",
+            "affected_population": "Émetteurs français de séries historiques émises à l'étranger avant 1976 et bénéficiaires de leurs produits.",
+            "conditions_and_transition": "Produits perçus à compter de l'entrée en vigueur de la loi ; autorisations acquises et intérêts échus antérieurement conservés.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+            "source_quote": "n'a d'effet pour aucune émission qu'à dater de la notification de l'autorisation ministérielle",
+            "proposed_quote": "n'est subordonné ni à une demande, ni à une autorisation, ni à sa notification"
+          }
+        ]
       }
     },
     {
@@ -1093456,7 +1094127,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Suppression de quatre-vingt-dix jours d'anticipation obligatoire pour la demande de sursis ; ce n'est ni une abolition d'impôt ni un nouveau sursis automatique.",
-        "scope_limitations": "Le V de 167 bis et ses garanties préalables continuent de s'appliquer. Les anciens refus définitifs ne sont pas rouverts ; le coût de traitement des demandes rapprochées du départ n'est pas évalué.",
+        "scope_limitations": "Le V de 167 bis et ses garanties préalables continuent de s'appliquer. Les anciens refus définitifs ne sont pas rouverts ; le coût de traitement des demandes rapprochées du départ n'est pas évalué. La suppression du représentant obligatoire est comptée sous 167 bis ; le présent article n'en porte que la coordination réglementaire.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : les informations utiles déjà requises restent seules exigées, sans registre, attestation ni procédure de remplacement. Le solde de coût de l'ensemble des codes n'est pas chiffré.",
         "effects": [
           {
@@ -1093471,6 +1094142,19 @@
             "replacement_or_new_burdens": "Aucun dépôt, registre ou justificatif de remplacement ; les conditions de fond et le contrôle subsistent.",
             "source_quote": "au plus tard quatre-vingt-dix jours avant le transfert du domicile fiscal hors de France",
             "proposed_quote": "Aucun délai minimal entre le dépôt de la demande et le transfert n'est exigé."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "exit-tax-representant-obligatoire-suppression",
+            "description": "Coordination réglementaire de la fin du représentant obligatoire décidée au V de 167 bis.",
+            "before": "Indication du représentant fiscal et engagement de celui-ci sur le formulaire de demande de sursis.",
+            "after": "Mention facultative du représentant choisi ; aucune désignation ni engagement exigé.",
+            "unit": "legal_duty",
+            "affected_population": "Contribuables demandant le sursis de paiement du V de 167 bis.",
+            "conditions_and_transition": "Conditions du XI de 167 bis, y compris sursis en cours ; mandats conservés au gré des contribuables.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+            "source_quote": "Le contribuable y indique le nom ou la dénomination sociale ainsi que l'adresse de son représentant fiscal.",
+            "proposed_quote": "Aucune désignation d'un représentant établi en France ni engagement de représentation n'est exigé pour bénéficier du sursis de paiement."
           }
         ]
       }
@@ -1093556,15 +1094240,29 @@
       "source_id": "LEGIARTI000038950376",
       "number": "41 tervicies E",
       "slug": "impots-annexe-3",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien nécessaire des compétences, échéances légales et garantie de régularisation préalable. Aucun allègement nouveau n'est revendiqué.",
-        "scope_limitations": "Les suppressions d'annualité de l'IS ne s'étendent pas à l'impôt personnel de sortie. Les droits de sursis et les délais de notification restent inchangés.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de donnée, délai, registre ou condition. Ce maintien ne démontre aucune baisse du coût global des codes.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination du décret d'application avec le 4 du IX proposé de 167 bis : l'exigibilité immédiate de l'impôt en sursis pour seul défaut déclaratif, organisée par le troisième alinéa source après mise en demeure de trente jours, ne s'applique plus qu'aux manquements antérieurs à la réforme. Les deux premiers alinéas sont repris à l'identique.",
+        "scope_limitations": "La mesure de fond est portée et comptée par 167 bis (exit-tax-fin-exigibilite-pour-defaut-declaratif) ; cet article ne la compte pas une seconde fois. Les formulaires 2074-ETD/ETS et leurs notices ne sont pas fournis et restent à adapter. Les autres causes d'expiration du sursis (VII de 167 bis) ne sont pas touchées.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucune déclaration, mise en demeure, donnée, délai ou condition n'est ajouté ; la mise en demeure ancienne subsiste seulement pour les manquements antérieurs, à droit constant.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "exit-tax-fin-exigibilite-pour-defaut-declaratif",
+            "description": "Bornage de l'exigibilité après mise en demeure aux manquements antérieurs.",
+            "before": "Exigibilité de l'impôt en sursis rétablie après mise en demeure restée sans effet trente jours, pour tout défaut déclaratif.",
+            "after": "Même règle pour les seuls manquements antérieurs ; pour les manquements nouveaux, le seul défaut déclaratif n'entraîne pas l'exigibilité.",
+            "unit": "legal_duty",
+            "affected_population": "Contribuables ayant transféré leur domicile fiscal hors de France et bénéficiant du sursis de paiement de 167 bis.",
+            "conditions_and_transition": "Manquements commis à compter de l'entrée en vigueur ; manquements antérieurs sous l'ancien régime, sous réserve de la loi répressive plus douce, comme au XI de 167 bis.",
+            "replacement_or_new_burdens": "Aucune formalité, mise en demeure ou sanction de remplacement.",
+            "source_quote": "l'exigibilité de l'impôt en sursis de paiement est rétablie lorsque le contribuable n'a pas satisfait à ses obligations déclaratives",
+            "proposed_quote": "n'entraîne pas, à lui seul, l'exigibilité immédiate de l'impôt en sursis de paiement"
+          }
+        ]
       }
     },
     {
@@ -1094887,15 +1095585,29 @@
       "source_id": "LEGIARTI000025631743",
       "number": "43 bis",
       "slug": "impots-annexe-3",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien intégral de règles nécessaires pour attribuer les revenus et protéger l'option personnelle de chaque membre ; aucune suppression artificielle d'un avantage ou simple réécriture stylistique.",
-        "scope_limitations": "La réforme n'étend pas ici les délais d'option fixés par la loi et ne modifie pas les régimes matrimoniaux ni les présomptions de propriété.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun document, consentement supplémentaire ou dépôt spontané ajouté aux règles existantes.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination du règlement avec la réforme déjà décidée au deuxième alinéa du 5 de l'article 6 proposé : le défaut d'option dans les délais de 175 ne ferme plus définitivement l'option, qui peut être exercée ou révoquée d'un commun accord par réclamation commune. Les règles de répartition et de preuve sont maintenues. Ce n'est pas une seconde réduction.",
+        "scope_limitations": "Les formulaires de déclaration et les modalités de réclamation du LPF ne sont pas réécrits ici. La transition reprend celle de 6 proposé, sans rouvrir les années antérieures.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : la réclamation commune est la voie prévue par la loi proposée et dispense de tout dépôt séparé ; aucun délai ni justificatif nouveau n'est ajouté.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "ir-option-couple-rectification",
+            "description": "Le défaut d'option dans les délais initiaux n'entraîne plus une imposition commune définitive.",
+            "before": "Imposition commune définitive si l'option n'est pas exercée dans les délais du premier alinéa de l'article 175.",
+            "after": "Option encore possible, ou révocable, d'un commun accord dans le délai de réclamation, par réclamation commune sans dépôt séparé.",
+            "unit": "legal_duty",
+            "affected_population": "Époux et partenaires de PACS au titre de l'année du mariage ou de la conclusion du pacte.",
+            "conditions_and_transition": "Années civiles commençant à compter de l'entrée en vigueur de la loi ; années antérieures régies par les règles antérieures.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+            "source_quote": "les époux ou partenaires sont soumis à l'imposition commune dans les conditions de droit commun",
+            "proposed_quote": "l'option peut être exercée ou révoquée d'un commun accord des deux intéressés"
+          }
+        ]
       }
     },
     {
@@ -1098873,6 +1099585,19 @@
             "replacement_or_new_burdens": "Aucun dépôt ou registre de remplacement ; les conditions de fond et contrôles autonomes subsistent.",
             "source_quote": "Ces renseignements sont présentés sur des documents conformes aux modèles établis par l'administration.",
             "proposed_quote": "Ces renseignements peuvent être présentés sur les modèles établis par l'administration ou sur un document contenant les mêmes informations, avec identification des rubriques."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "charges-financieres-groupe-etat-particulier",
+            "description": "Retrait de l'état des charges financières, reports et capacités joint à la déclaration de la mère.",
+            "before": "État annuel des charges financières nettes non déduites, de leur suivi et des capacités inemployées joint par la société mère.",
+            "after": "Aucun état particulier ; justification à partir de la comptabilité et des documents de suivi existants.",
+            "unit": "legal_duty",
+            "affected_population": "Sociétés mères des groupes de l'article 223 A.",
+            "conditions_and_transition": "Déclarations souscrites à compter de l'entrée en vigueur, y compris pour les exercices antérieurs non encore déclarés, comme au X de 223 B bis.",
+            "replacement_or_new_burdens": "Aucun dépôt, modèle ou état de remplacement.",
+            "source_quote": "Un état faisant apparaître les charges financières nettes non admises en déduction",
+            "proposed_quote": "Aucun état des charges financières nettes non admises en déduction"
           }
         ]
       }
@@ -1105737,8 +1106462,8 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Réduction de fond : le mandataire français devient facultatif pour le demandeur établi dans un autre État membre, qui peut accomplir directement ses obligations. L'identification TVA demeure. Correction expresse du renvoi au III abrogé de 289 A : le I et ses exceptions gouvernent la représentation hors Union. Le réemploi des renseignements du brouillon est conservé, mais relève du droit existant et n'est pas compté comme une seconde réduction.",
-        "scope_limitations": "289 A lu intégralement : son I dispense notamment les États couverts par l'assistance mutuelle et les opérateurs réalisant uniquement les opérations suspensives visées. Son III est abrogé : le précédent renvoi ne doit pas subsister. L'autorisation initiale reste exigée par 277 A I 2° et assure l'identification des responsables de stocks non taxés ; aucune déclaration équivalente ne lui est substituée. La recodification annoncée au 1er janvier 2027 par les notes de 277 A et 289 A appelle une concordance avec l'ordonnance n° 2025-1247, notamment ses articles 9, 15 et 49 et le CIBS ; ces textes extérieurs ne sont pas réécrits dans ce lot. Les renvois proposés correspondent au corpus fourni, sans prétendre prolonger les dispositions abrogées par cette recodification. Aucun solde national de recettes ou de complexité n'est chiffré ni démontré par cet article.",
+        "assessment": "Réduction de fond : le mandataire français devient facultatif pour le demandeur établi dans un autre État membre, qui peut accomplir directement ses obligations. L'identification TVA demeure. Correction expresse du renvoi au III abrogé de 289 A : le I et ses exceptions gouvernent la représentation hors Union. Le réemploi des renseignements du brouillon est conservé, mais relève du droit existant et n'est pas compté comme une seconde réduction. Troisième passe : coordination avec la suppression législative de l'autorisation d'ouverture (277 A I 2°) ; le circuit de demande et le dossier préalable sont retirés, sans être comptés comme une seconde réduction.",
+        "scope_limitations": "289 A lu intégralement : son I dispense notamment les États couverts par l'assistance mutuelle et les opérateurs réalisant uniquement les opérations suspensives visées. Son III est abrogé : le précédent renvoi ne doit pas subsister. L'autorisation initiale n'est plus exigée par 277 A I 2° proposé ; aucune déclaration équivalente ne lui est substituée. La désignation du service chargé de la gestion des régimes ouverts sans autorisation n'est pas fixée ici. La recodification annoncée au 1er janvier 2027 par les notes de 277 A et 289 A appelle une concordance avec l'ordonnance n° 2025-1247, notamment ses articles 9, 15 et 49 et le CIBS ; ces textes extérieurs ne sont pas réécrits dans ce lot. Les renvois proposés correspondent au corpus fourni, sans prétendre prolonger les dispositions abrogées par cette recodification. Aucun solde national de recettes ou de complexité n'est chiffré ni démontré par cet article.",
         "new_burdens_review": "Aucune charge nouvelle n'est identifiée : aucune déclaration, registre, donnée ou taxe ne remplace les exigences retirées.",
         "effects": [
           {
@@ -1105748,7 +1106473,7 @@
             "before": "Identification française et mandataire obligatoires pour le demandeur établi dans un autre État membre.",
             "after": "Identification française maintenue ; exécution directe ou mandat facultatif.",
             "unit": "legal_duty",
-            "affected_population": "Demandeurs établis dans un autre État membre de l'Union européenne.",
+            "affected_population": "Titulaires établis dans un autre État membre de l'Union européenne.",
             "conditions_and_transition": "Demandes nouvelles et en cours ; mandats contractuels existants non annulés.",
             "replacement_or_new_burdens": "Aucune formalité, taxe ou donnée de remplacement ; les conditions de fond et contrôles distincts demeurent.",
             "source_quote": "il doit être identifié à la taxe sur la valeur ajoutée en France et y avoir désigné un mandataire",
@@ -1105761,11 +1106486,24 @@
             "before": "Renvoi à un III abrogé.",
             "after": "Renvoi aux exceptions du I ; pas de nouvelle exemption créée.",
             "unit": "legal_duty",
-            "affected_population": "Demandeurs établis hors Union européenne.",
+            "affected_population": "Titulaires établis hors Union européenne.",
             "conditions_and_transition": "Coordination des demandes après entrée en vigueur, droits acquis conservés.",
             "replacement_or_new_burdens": "Aucune formalité, taxe ou donnée de remplacement ; les conditions de fond et contrôles distincts demeurent.",
             "source_quote": "sous réserve des dispositions énoncées au III de ce même article",
             "proposed_quote": "sous réserve des exceptions prévues par ce même I"
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "tva-regimes-suspensifs-suppression-autorisation",
+            "description": "Retrait du circuit réglementaire de demande d'autorisation d'ouverture.",
+            "before": "Demande d'autorisation d'ouverture déposée par l'assujetti ou le gestionnaire, avec dossier de renseignements.",
+            "after": "Ouverture de plein droit selon 277 A ; aucune demande ni dossier préalable.",
+            "unit": "legal_duty",
+            "affected_population": "Assujettis plaçant des biens sous les régimes du 2° du I de 277 A.",
+            "conditions_and_transition": "À compter de l'entrée en vigueur ; demandes en cours sans objet ; régimes autorisés et décisions acquises conservés.",
+            "replacement_or_new_burdens": "Aucune déclaration d'ouverture ni dossier de remplacement ; informations des III et V de 277 A déjà prévues par la loi.",
+            "source_quote": "La demande d'autorisation d'ouverture d'un régime mentionné au 2° du I de l'article 277 A",
+            "proposed_quote": "ne donne lieu à aucune demande d'autorisation ni déclaration d'ouverture"
           }
         ]
       }
@@ -1105779,23 +1106517,23 @@
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "material_reduction",
-        "assessment": "Suppression de la condition d'ancienneté supérieure à deux ans pour l'accord tacite. Les entreprises nouvelles accèdent à la même garantie de décision sous trente jours ; aucun délai nouveau n'est créé. La prise d'effet tacite est expressément coordonnée pour empêcher que l'absence de date administrative neutralise cet avantage. L'autorisation et les conditions de régularité fiscale sont maintenues pour sécuriser l'entrée de stocks en suspension.",
-        "scope_limitations": "Les 30 jours courent toujours de la réception. Pour les demandes pendantes depuis au moins 30 jours, l'accord peut naître dès la réforme, pas rétroactivement avant elle. Les compétences et réserves de 1788 A, L. 80 K et L. 80 L sont inchangées ; ces textes de contrôle ne sont pas réécrits ici. La recodification annoncée au 1er janvier 2027 par les notes de 277 A et 289 A appelle une concordance avec l'ordonnance n° 2025-1247, notamment ses articles 9, 15 et 49 et le CIBS ; ces textes extérieurs ne sont pas réécrits dans ce lot. Les renvois proposés correspondent au corpus fourni, sans prétendre prolonger les dispositions abrogées par cette recodification. Aucun solde national de recettes ou de complexité n'est chiffré ni démontré par cet article.",
-        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : aucune déclaration, registre, donnée ou taxe ne remplace les exigences retirées.",
+        "classification": "coordination_only",
+        "assessment": "Abrogation de coordination : la décision réglementaire d'autorisation d'ouverture, sa condition de régularité, son accord tacite et sa prise d'effet n'ont plus d'objet depuis que 277 A proposé ouvre ces régimes de plein droit. La mesure de fond est portée par 277 A.",
+        "scope_limitations": "La suppression de l'autorisation est comptée une seule fois sous 277 A ; l'extension antérieure de l'accord tacite, devenue sans objet, n'est plus revendiquée. La désignation du service chargé de la gestion des régimes ouverts sans autorisation n'est fixée par aucun texte du corpus et reste à décider par l'auteur. L'ordonnance n° 2025-1247 et les reprises CIBS ne sont pas réécrites.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucune déclaration, notification, donnée ou condition ne remplace l'autorisation ; les décisions acquises restent valables sans démarche.",
         "effects": [
           {
-            "kind": "relief_extended",
-            "measure_id": "tva-suspension-accord-tacite-toutes-entreprises",
-            "description": "Extension de l'accord tacite aux entreprises de deux ans ou moins.",
-            "before": "Accord tacite à 30 jours réservé aux entreprises de plus de deux ans.",
-            "after": "Accord tacite à 30 jours pour toutes les entreprises, sans acte complémentaire de prise d'effet.",
-            "unit": "regime",
-            "affected_population": "Entreprises nouvelles ou âgées de deux ans au plus sollicitant un régime suspensif.",
-            "conditions_and_transition": "Demandes nouvelles et en cours, sans redémarrage du délai.",
-            "replacement_or_new_burdens": "Aucune formalité, taxe ou donnée de remplacement ; les conditions de fond et contrôles distincts demeurent.",
-            "source_quote": "pour les entreprises créées depuis plus de deux ans",
-            "proposed_quote": "quelle que soit l'ancienneté de l'entreprise"
+            "kind": "coordination",
+            "measure_id": "tva-regimes-suspensifs-suppression-autorisation",
+            "description": "Abrogation de la décision réglementaire d'autorisation d'ouverture.",
+            "before": "Décision d'autorisation expresse ou tacite à trente jours, conditionnée à la régularité déclarative et de paiement.",
+            "after": "Aucune décision ; ouverture de plein droit selon 277 A ; décisions antérieures conservées.",
+            "unit": "legal_duty",
+            "affected_population": "Assujettis plaçant des biens sous les régimes du 2° du I de 277 A.",
+            "conditions_and_transition": "À compter de l'entrée en vigueur ; demandes en cours sans objet ; décisions et autorisations tacites antérieures conservées.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+            "source_quote": "La décision autorisant l'ouverture d'un régime mentionné au 2° du I de l'article 277 A",
+            "proposed_quote": "Le présent article est abrogé à compter de l'entrée en vigueur de la loi supprimant l'autorisation d'ouverture"
           }
         ]
       }
@@ -1105809,23 +1106547,23 @@
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "material_reduction",
-        "assessment": "Suppression de l'autorisation modificative pour les seuls changements de dénomination ou de coordonnées sans effet sur les responsables juridiques, les lieux ou les opérations. La portée générale du texte source imposait ce circuit même pour ces changements. Aucun dépôt de remplacement n'est créé. Les modifications substantielles gardent l'autorisation nécessaire à la maîtrise des stocks sous suspension. Le réemploi antérieur est conservé sans nouveau gain CRPA revendiqué.",
-        "scope_limitations": "Coordination avec 85 et 85 A : l'accord tacite et sa prise d'effet valent aussi pour les demandes modificatives. La dispense ne couvre ni changement de personne, ni nouveau lieu de stockage, ni nouvelle fonction. Les mises à jour fiscales autonomes ne sont pas supprimées ni doublées. La recodification annoncée au 1er janvier 2027 par les notes de 277 A et 289 A appelle une concordance avec l'ordonnance n° 2025-1247, notamment ses articles 9, 15 et 49 et le CIBS ; ces textes extérieurs ne sont pas réécrits dans ce lot. Les renvois proposés correspondent au corpus fourni, sans prétendre prolonger les dispositions abrogées par cette recodification. Aucun solde national de recettes ou de complexité n'est chiffré ni démontré par cet article.",
-        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : aucune déclaration, registre, donnée ou taxe ne remplace les exigences retirées.",
+        "classification": "coordination_only",
+        "assessment": "Abrogation de coordination : l'autorisation modificative des changements affectant les éléments des régimes fiscaux suspensifs du 2° du I de 277 A n'a plus d'objet depuis que 277 A proposé ouvre ces régimes de plein droit et que 85 A est abrogé. La mesure de fond est portée par 277 A.",
+        "scope_limitations": "La suppression de l'autorisation est comptée une seule fois sous 277 A ; la dispense antérieure limitée aux changements de dénomination ou de coordonnées, devenue sans objet, n'est plus revendiquée. L'ordonnance n° 2025-1247 et les reprises CIBS ne sont pas réécrites.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucune déclaration, notification, donnée ou condition ne remplace l'autorisation modificative ; les décisions acquises restent valables sans démarche.",
         "effects": [
           {
-            "kind": "authorization_removed",
-            "measure_id": "tva-suspension-modifications-identification",
-            "description": "Dispense ciblée d'autorisation modificative.",
-            "before": "Tout changement affectant les éléments de la demande soumis à autorisation.",
-            "after": "Dénomination et coordonnées sans modification substantielle dispensées d'autorisation et de déclaration spéciale.",
+            "kind": "coordination",
+            "measure_id": "tva-regimes-suspensifs-suppression-autorisation",
+            "description": "Abrogation de l'autorisation modificative des changements affectant les régimes.",
+            "before": "Tout changement affectant les éléments constitutifs des régimes autorisés soumis à autorisation par décision modificative.",
+            "after": "Aucune autorisation modificative ni déclaration de remplacement ; décisions modificatives antérieures conservées.",
             "unit": "legal_duty",
-            "affected_population": "Titulaires, gestionnaires et entreposeurs des régimes autorisés.",
-            "conditions_and_transition": "Changements futurs et demandes pendantes ; identités et lieux inchangés.",
-            "replacement_or_new_burdens": "Aucune formalité, taxe ou donnée de remplacement ; les conditions de fond et contrôles distincts demeurent.",
+            "affected_population": "Titulaires, gestionnaires et entreposeurs des régimes du 2° du I de 277 A.",
+            "conditions_and_transition": "À compter de l'entrée en vigueur ; demandes en cours sans objet ; décisions antérieures conservées.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement.",
             "source_quote": "Tout changement qui affecte les éléments constitutifs des régimes autorisés tels qu'ils figurent dans la demande d'ouverture est soumis à autorisation.",
-            "proposed_quote": "Ils ne donnent lieu à aucune déclaration supplémentaire au titre du présent article"
+            "proposed_quote": "aucun changement des éléments d'un régime, y compris d'un régime antérieurement autorisé, n'est soumis à autorisation modificative"
           }
         ]
       }
@@ -1105913,7 +1106651,7 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Suppression de fond des deux autorisations particulières exceptionnelles de versement sur le marché métropolitain, aux b et e du 1. La sortie est déjà suivie et taxée par 277 A : le visa supplémentaire n'est pas nécessaire à la liquidation. Le caractère dûment justifié, l'exclusion spéciale des biens temporairement maintenus en France, l'intérêt légal et l'ensemble des fonctions restent inchangés. La limite contractuelle et le plafond de trois ans du séjour technique ne sont pas supprimés ; aucun report fiscal nouveau n'est ici revendiqué.",
+        "assessment": "Suppression de fond des deux autorisations particulières exceptionnelles de versement sur le marché métropolitain, aux b et e du 1. La sortie est déjà suivie et taxée par 277 A : le visa supplémentaire n'est pas nécessaire à la liquidation. Le caractère dûment justifié, l'exclusion spéciale des biens temporairement maintenus en France, l'ensemble des fonctions restent inchangés ; l'intérêt de retard sur le reversement n'est plus exigé que pour les sorties antérieures, en coordination avec 277 A. La limite contractuelle et le plafond de trois ans du séjour technique ne sont pas supprimés ; aucun report fiscal nouveau n'est ici revendiqué.",
         "scope_limitations": "Les cinq fonctions, les catégories d'opérations et qualifications, la limite de trois ans, les importations 291/294, les exonérations 262/262 ter et le contrôle de sécurité/fraude du 2 sont conservés dans la source entière. Le II de 277 A lu prévoit taxe de sortie, intérêts et dispenses de paiement : ils ne sont pas supprimés par le retrait du visa. Les procédures européennes douanières autonomes ne sont pas dispensées ; la compatibilité de la simplification nationale avec la directive TVA et les textes d'exécution doit être coordonnée, sans la présenter comme vérifiée ici. La recodification annoncée au 1er janvier 2027 par les notes de 277 A et 289 A appelle une concordance avec l'ordonnance n° 2025-1247, notamment ses articles 9, 15 et 49 et le CIBS ; ces textes extérieurs ne sont pas réécrits dans ce lot. Les renvois proposés correspondent au corpus fourni, sans prétendre prolonger les dispositions abrogées par cette recodification. Aucun solde national de recettes ou de complexité n'est chiffré ni démontré par cet article.",
         "new_burdens_review": "Aucune charge nouvelle n'est identifiée : aucune déclaration, registre, donnée ou taxe ne remplace les exigences retirées.",
         "effects": [
@@ -1105929,6 +1106667,19 @@
             "replacement_or_new_burdens": "Aucune formalité, taxe ou donnée de remplacement ; les conditions de fond et contrôles distincts demeurent.",
             "source_quote": "peut être autorisé à titre exceptionnel par le service des impôts ou le service des douanes compétent",
             "proposed_quote": "est permis sans autorisation particulière du service des impôts ou du service des douanes compétent"
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "tva-suppression-interet-reversement-national",
+            "description": "Retrait du renvoi à l'intérêt de retard supprimé par 277 A pour le reversement national.",
+            "before": "Versement sur le marché métropolitain sous réserve de l'acquittement de l'intérêt de retard du 4° du 3 du II de 277 A.",
+            "after": "Versement sans intérêt de retard au seul motif du reversement ; intérêt maintenu pour les sorties antérieures.",
+            "unit": "legal_duty",
+            "affected_population": "Titulaires d'un régime fiscal suspensif de stockage destiné à l'exportation ou à l'expédition.",
+            "conditions_and_transition": "Sorties de régime intervenant à compter de l'entrée en vigueur, y compris pour des biens placés auparavant, comme au VI de 277 A.",
+            "replacement_or_new_burdens": "Aucune formalité ni accessoire de remplacement ; intérêts pour retard réel après exigibilité et fraude régis par leurs règles propres.",
+            "source_quote": "sous réserve de l'acquittement de l'intérêt de retard prévu au 4° du 3 du II de l'article 277 A",
+            "proposed_quote": "n'est pas assortie d'un intérêt de retard au seul motif de ce versement"
           }
         ]
       }
@@ -1106951,6 +1107702,19 @@
             "replacement_or_new_burdens": "Aucune formalité de remplacement ; les obligations autonomes restent applicables.",
             "source_quote": "régime du remboursement forfaitaire prévu aux articles 298 bis, 298 quater et 298 quinquies du code général des impôts",
             "proposed_quote": "régime du remboursement forfaitaire de taxe sur la valeur ajoutée applicable aux exploitants agricoles"
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "remboursement-agricole-attestation-annuelle-suppression",
+            "description": "Mandat et attestation rendus facultatifs, coordonnés à la suppression de l'attestation annuelle de 290 bis proposé et des pièces jointes de 266 proposé.",
+            "before": "Attestations à joindre à la déclaration annuelle ; attestation obligatoire pour chaque client se substituant à celle de 290 bis.",
+            "after": "Attestations facultatives et non jointes, opposables au client lorsqu'elles sont établies ; non-cumul conservé.",
+            "unit": "legal_duty",
+            "affected_population": "Exploitants agricoles au remboursement forfaitaire et leurs clients redevables.",
+            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi supprimant l'attestation de 290 bis, y compris pour les années encore ouvertes, comme dans 290 bis proposé.",
+            "replacement_or_new_burdens": "Aucune attestation, récapitulatif ni certification de remplacement.",
+            "source_quote": "les attestations qu'ils doivent joindre à la déclaration annuelle prévue au I de l'article 266 de l'annexe II au code général des impôts",
+            "proposed_quote": "elles ne sont ni obligatoires ni obligatoirement jointes à cette déclaration"
           }
         ]
       }
@@ -1131357,8 +1132121,8 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Correction d’autorité et protection des dossiers en cours ; aucun impôt ni dépôt supplémentaire supprimé par rapport à la source officielle.",
-        "scope_limitations": "L’agrément légal et les conditions fiscales de 238 bis restent distincts ; aucune économie de traitement ou baisse nette de complexité n’est mesurée.",
+        "assessment": "Correction d’autorité et bornage de la compétence aux demandes d’agrément qui restent instruites pour les dons antérieurs, en coordination avec la suppression de l’agrément par 238 bis 4 et 9 ; aucun impôt ni dépôt supplémentaire supprimé par cet article.",
+        "scope_limitations": "L’agrément du 4 de 238 bis est supprimé pour les dons nouveaux par la proposition de cet article, qui porte seule la mesure ; les conditions de fond de 238 bis restent distinctes. Aucune économie de traitement ou baisse nette de complexité n’est mesurée ici.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : la correction est interne aux services et interdit un nouveau dépôt ou une remise à zéro des délais.",
         "effects": [
           {
@@ -1131366,13 +1132130,13 @@
             "measure_id": "agrements-fiscaux-competence-territoriale",
             "description": "Actualiser la désignation de l’autorité sans nouvelle saisine.",
             "before": "Directeur des services fiscaux selon le siège et le chef-lieu de la direction de contrôle fiscal.",
-            "after": "Directeur départemental ou régional des finances publiques dans le même ressort, avec la règle spéciale de 170 octies.",
+            "after": "Directeur départemental ou régional des finances publiques dans le même ressort, avec la règle spéciale de 170 octies, pour les seules demandes résiduelles relatives aux dons antérieurs.",
             "unit": "legal_duty",
-            "affected_population": "Organismes sollicitant l’agrément de 238 bis 4.",
-            "conditions_and_transition": "Demandes nouvelles et en cours dès la réforme, décisions antérieures valables.",
+            "affected_population": "Organismes ayant sollicité l’agrément de 238 bis 4 pour des dons et versements antérieurs à sa suppression.",
+            "conditions_and_transition": "Demandes en cours dès la réforme ; demandes concernant exclusivement des dons nouveaux sans objet ; décisions antérieures valables.",
             "replacement_or_new_burdens": "Aucune déclaration, autorisation ou tenue de registre nouvelle ; les obligations autonomes expressément conservées gardent leur champ.",
             "source_quote": "Il est statué par le directeur des services fiscaux du département",
-            "proposed_quote": "Le directeur départemental ou, le cas échéant, régional des finances publiques du département au chef-lieu duquel est localisée la direction de contrôle fiscal dans le ressort de laquelle est situé le siège de l’organisme statue sur les demandes d’agrément présentées en application du 4 de l’article 238 bis du code général des impôts, sous réserve de la compétence territoriale spéciale prévue à l’article 170 octies."
+            "proposed_quote": "statue sur les demandes d’agrément présentées en application du 4 de l’article 238 bis du code général des impôts dans sa rédaction antérieure à la loi supprimant cet agrément"
           }
         ]
       }
@@ -1131398,15 +1132162,29 @@
       "source_id": "LEGIARTI000045759960",
       "number": "170 decies",
       "slug": "impots-annexe-4",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien intégral après examen des deux seuils, du circuit de saisine et du représentant unique. Les seuils de 10 et 20 millions sont des seuils de compétence, non des taxes ni des seuils supplémentaires d’éligibilité. Le dépôt par représentant unique évite les demandes parallèles des investisseurs ; sa remise de décision leur permet de connaître les conditions opposables de l’avantage. Retirer la seule compétence ou la seule transmission ne supprimerait pas les agréments légaux et fragiliserait les bénéficiaires. Aucun gain n’est attribué à l’ancien toilettage stylistique.",
-        "scope_limitations": "Les I, I bis, I ter, II, III et IV, les neuf alinéas, les territoires, l’évocation ministérielle et les deux plafonds inclusifs sont maintenus. Les avantages de 199 undecies A, 217 undecies et 244 quater W restent accessibles aux programmes futurs éligibles. Une suppression de l’agrément lui-même exigerait de traiter ces fondements législatifs et, selon le dispositif, les conditions européennes d’aides : elle n’est pas opérée par une suppression de l’autorité signataire. Les demandes antérieures à l’arrêté du 13 janvier 2020 conservent la procédure de leur présentation, selon la note source. Les dates historiques ne fixent pas l’entrée en vigueur du projet.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : le texte officiel est maintenu intégralement, sans formulaire, délai ou condition de remplacement. Aucun solde de complexité de l’ensemble des codes n’est chiffré.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination de l’arrêté de compétence avec la suppression de l’agrément national préalable par les propositions du 4 de 199 undecies A, des II quater et III de 217 undecies et du VII de 244 quater W : les règles de compétence et de saisine ne valent plus que pour les agréments antérieurs, leur contestation et leur retrait.",
+        "scope_limitations": "Les suppressions d’agrément sont portées et comptées par les articles législatifs ; le présent article ne fait que les coordonner. Les règles européennes de notification des aides et les autres agréments ayant un fondement autonome ne sont pas examinés ici.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucune demande, déclaration, pièce ni délai n’est ajouté ; les demandes pendantes n’ont pas à être renouvelées et les droits acquis sont préservés.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "outre-mer-agrement-competence-coordination-170-decies",
+            "unit": "legal_duty",
+            "description": "Borner les règles de délivrance et de saisine aux agréments antérieurs à leur suppression.",
+            "before": "Délivrance de l’agrément et saisine des autorités pour tout programme, sans limite de temps.",
+            "after": "Compétences conservées pour les seuls agréments antérieurs, leur contestation et leur retrait ; aucune demande nouvelle.",
+            "affected_population": "Investisseurs et exploitants ultramarins relevant de 199 undecies A, 217 undecies et 244 quater W.",
+            "conditions_and_transition": "Démarches restant à accomplir dès l’entrée en vigueur des suppressions ; agréments, décisions, dispenses et recours antérieurs préservés.",
+            "replacement_or_new_burdens": "Aucune déclaration, autorisation ou demande de remplacement.",
+            "source_quote": "Dans le secteur du logement, l'agrément prévu au 4 de l'article 199 undecies A, aux II quater et III de l'article 217 undecies et au VII de l'article 244 quater W du code général des impôts",
+            "proposed_quote": "Les I à III ne s’appliquent qu’aux agréments délivrés avant l’entrée en vigueur des dispositions législatives supprimant"
+          }
+        ]
       }
     },
     {

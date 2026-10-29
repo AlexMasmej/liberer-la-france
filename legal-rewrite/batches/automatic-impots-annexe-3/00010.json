@@ -103,34 +103,52 @@
     "source_id": "LEGIARTI000038950376",
     "source_sha256": "74c9bec6ee9ffaf2a31f2dc8d0afc897d039071d5745b2ad24ef066d9f88a96c",
     "number": "41 tervicies E",
-    "reason": "Maintien intégral : le premier alinéa donne le destinataire et l'échéance des formulaires légalement requis ; le deuxième raccorde les transferts ultérieurs ; le troisième protège le sursis par une mise en demeure et trente jours de régularisation avant exigibilité. Supprimer cette dernière garantie rendrait le régime moins favorable face au IX 4 de 167 bis. Aucun dépôt autonome doublonné n'est ajouté par ces règles d'exécution. La simple reformulation du brouillon ne justifie pas un nouveau corps.",
-    "review_notes": "Lecture de 167 bis IX 2 à 5 et de la proposition : l'annualité concerne ici l'IR et non l'IS ordinaire. Le délai de trente jours court de la notification au contribuable ou à son représentant ; il ne s'agit pas d'un préavis d'emploi. Le premier alinéa demeure intact pour I et J, et pour le renvoi de K extérieur au lot. Les réductions de pièces de I et J ne dispensent pas des données de calcul législatives.",
+    "reason": "Coordination nécessaire avec le 4 du IX proposé de 167 bis, qui dispose que le défaut déclaratif « n'entraîne pas, à lui seul, l'exigibilité immédiate de l'impôt en sursis de paiement », et avec son X, qui interdit au décret de rétablir cette exigibilité. Le troisième alinéa source organisait encore cette exigibilité après mise en demeure : il est limité aux manquements antérieurs, comme le prévoit le XI de 167 bis. Les deux premiers alinéas (dépôt du formulaire, information des transferts ultérieurs) sont repris sans changement. Aucune réduction nouvelle n'est comptée : la mesure est celle de 167 bis.",
+    "review_notes": "Lecture de 167 bis IX 2 à 5 et de la proposition : l'annualité concerne ici l'IR et non l'IS ordinaire. Le délai de trente jours court de la notification au contribuable ou à son représentant ; il ne s'agit pas d'un préavis d'emploi. Le premier alinéa demeure intact pour I et J, et pour le renvoi de K extérieur au lot. Les réductions de pièces de I et J ne dispensent pas des données de calcul législatives. Correction de la troisième passe (objection SWEEP-Y17-41TE) : le maintien intégral antérieur reposait sur l'idée que supprimer la mise en demeure rendrait le régime moins favorable « face au IX 4 de 167 bis » ; or le IX 4 proposé supprime l'exigibilité pour seul défaut déclaratif et le X de 167 bis interdit de la rétablir par décret. La source disait : « l'exigibilité de l'impôt en sursis de paiement est rétablie lorsque le contribuable n'a pas satisfait à ses obligations déclaratives dans les trente jours suivant la notification d'une mise en demeure ». La règle est conservée pour les seuls manquements antérieurs, avec la loi répressive plus douce ; aucune formalité ni sanction de remplacement n'est créée. Les notes de 167 bis (LEGIARTI000048806379) signalaient cette contradiction hors lot.",
     "reference_checks": [],
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien nécessaire des compétences, échéances légales et garantie de régularisation préalable. Aucun allègement nouveau n'est revendiqué.",
-      "scope_limitations": "Les suppressions d'annualité de l'IS ne s'étendent pas à l'impôt personnel de sortie. Les droits de sursis et les délais de notification restent inchangés.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de donnée, délai, registre ou condition. Ce maintien ne démontre aucune baisse du coût global des codes.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination du décret d'application avec le 4 du IX proposé de 167 bis : l'exigibilité immédiate de l'impôt en sursis pour seul défaut déclaratif, organisée par le troisième alinéa source après mise en demeure de trente jours, ne s'applique plus qu'aux manquements antérieurs à la réforme. Les deux premiers alinéas sont repris à l'identique.",
+      "scope_limitations": "La mesure de fond est portée et comptée par 167 bis (exit-tax-fin-exigibilite-pour-defaut-declaratif) ; cet article ne la compte pas une seconde fois. Les formulaires 2074-ETD/ETS et leurs notices ne sont pas fournis et restent à adapter. Les autres causes d'expiration du sursis (VII de 167 bis) ne sont pas touchées.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucune déclaration, mise en demeure, donnée, délai ou condition n'est ajouté ; la mise en demeure ancienne subsiste seulement pour les manquements antérieurs, à droit constant.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "exit-tax-fin-exigibilite-pour-defaut-declaratif",
+          "description": "Bornage de l'exigibilité après mise en demeure aux manquements antérieurs.",
+          "before": "Exigibilité de l'impôt en sursis rétablie après mise en demeure restée sans effet trente jours, pour tout défaut déclaratif.",
+          "after": "Même règle pour les seuls manquements antérieurs ; pour les manquements nouveaux, le seul défaut déclaratif n'entraîne pas l'exigibilité.",
+          "unit": "legal_duty",
+          "affected_population": "Contribuables ayant transféré leur domicile fiscal hors de France et bénéficiant du sursis de paiement de 167 bis.",
+          "conditions_and_transition": "Manquements commis à compter de l'entrée en vigueur ; manquements antérieurs sous l'ancien régime, sous réserve de la loi répressive plus douce, comme au XI de 167 bis.",
+          "replacement_or_new_burdens": "Aucune formalité, mise en demeure ou sanction de remplacement.",
+          "source_quote": "l'exigibilité de l'impôt en sursis de paiement est rétablie lorsque le contribuable n'a pas satisfait à ses obligations déclaratives",
+          "proposed_quote": "n'entraîne pas, à lui seul, l'exigibilité immédiate de l'impôt en sursis de paiement"
+        }
+      ]
     },
-    "status": "retained_unchanged",
-    "proposed_xml": null,
-    "classification": "retained_necessary",
+    "status": "rewrite_draft",
+    "proposed_xml": "<p>Pour l'application des 2 et 3 du IX de l'article 167 bis du code général des impôts, le formulaire mentionné au premier alinéa du 3 du IX de l'article 167 bis du code précité dûment renseigné est déposé au service des impôts des particuliers non résidents, à l'appui de la déclaration prévue au 1 de l'article 170 du même code, dans le délai prévu à l'article 175 de ce code.</p><p>Les transferts de domicile fiscal intervenant postérieurement au transfert de domicile fiscal hors de France sont portés à la connaissance du service des impôts des particuliers non résidents dans les conditions prévues au 5 du IX de l'article 167 bis précité.</p><p>Pour les manquements commis avant l'entrée en vigueur de la loi portant la présente réforme, et pour l'application du 4 du IX de l'article 167 bis précité dans sa rédaction antérieure, l'exigibilité de l'impôt en sursis de paiement est rétablie lorsque le contribuable n'a pas satisfait à ses obligations déclaratives dans les trente jours suivant la notification d'une mise en demeure qui lui est adressée, ou est adressée, le cas échéant, à son représentant fiscal, sous réserve de l'application de la loi répressive plus douce aux sanctions non définitives.</p><p>Pour les manquements commis à compter de cette entrée en vigueur, le défaut de production de la déclaration ou du formulaire ou l'omission de renseignements n'entraîne pas, à lui seul, l'exigibilité immédiate de l'impôt en sursis de paiement, conformément au 4 du IX de l'article 167 bis précité. Aucune mise en demeure ni formalité de remplacement n'est prévue à ce titre. Les événements mettant fin au sursis en application du VII du même article et les obligations déclaratives maintenues demeurent applicables.</p>",
+    "classification": "coordination_only",
     "benefit_review": "La régularisation dans les trente jours après mise en demeure protège le sursis contre une exigibilité sans avertissement. Les dégrèvements et restitutions référencés par I et J restent ouverts aux événements futurs éligibles.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "74c9bec6ee9ffaf2a31f2dc8d0afc897d039071d5745b2ad24ef066d9f88a96c",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "d9ae3a3d51af1198d6f8cba7c9d24092bcc3e2faac599576da739b0278af4322",
+      "proposed_sha256": "7f76a519508b1dfcb313f965df329b3fd8d60e838664d767f1e6a0f2c085ccf9",
+      "assessment_sha256": "b7a205e0b393399e09c0cc6ade899d59a292d1cd7a5b56cd437e39670b90fb69",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "55873903e840b54e0517705986ce7dd75e58c5c894a520e9a895cbb88d21d02c"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_pass_correction": {
+      "objection": "SWEEP-Y17-41TE",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006069574",

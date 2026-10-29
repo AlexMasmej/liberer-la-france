@@ -55,3 +55,14 @@ Exemples de faux positifs :
 - `audit/sweeps/<GROUPE>.json` : `{"group": "...", "leads": [{"key": "...", "family": "...", "qualification": "faux positif|déjà réglé|G|m", "evidence": "...", "corrected": true}]}`.
 
 Termine par un résumé court : nombre de pistes par qualification, nombre de corrections, points pour l'auteur. Revue IA : ce n'est pas une validation par un juriste.
+
+## Troisième balayage : contradictions entre propositions (S9, S10)
+
+| Code | Ce que l'outil a détecté |
+|---|---|
+| **S9/F1+F5** | Un décret ou une annexe applique une loi que le projet a **réduite** (`normative_reduction`), et il mentionne encore une formalité du même type que celle retirée de la loi (par exemple, la loi retire l'autorisation et le décret parle encore d'autorisation). |
+| **S10/F5** (échantillon) | Une proposition déroge à une autre proposition (« nonobstant », « par dérogation », « sans préjudice », « à l'exception »…). |
+
+**Pour S9**, lis la ligne `removed_provisions` de la loi visée (dans son lot) et la proposition de la loi. La question est de savoir si le décret organise encore la formalité ou la condition retirée, ou s'il la vise seulement pour l'ancien régime (transition).
+
+**Pour S10**, vérifie que l'article visé dit encore ce que la dérogation suppose. Si la dérogation porte sur une règle que l'article visé ne contient plus, ou contredit ce qu'il dit désormais, c'est un défaut F5.

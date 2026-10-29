@@ -50,6 +50,23 @@ Défauts grossiers par famille : S5 67, S8 36, S7 15, F3 14, AUDIT 12, S1 4, F4 
 - **Défauts inconnus** : 6 des 9 défauts grossiers étaient inconnus.
 - **Probabilité pour un juriste** qui lit 20 articles de sa matière de tomber sur au moins un défaut grossier : environ 44 %, contre environ 56 % avant les balayages.
 
+## 2 ter. Troisième balayage : contradictions entre propositions
+
+Ce balayage vise la famille passée au premier plan dans la seconde mesure (F5), avec deux pistes mécaniques :
+- **S9** : un décret ou une annexe applique une loi réduite par le projet et mentionne encore une formalité du même type que celle retirée de la loi (964 pistes) ;
+- **S10** : une proposition déroge à une autre proposition (échantillon de 150 pistes sur 1 134).
+
+Les pistes, réparties sur 916 articles en 18 groupes disjoints (`apply/Y01` à `Y18`), se répartissent ainsi :
+
+| Qualification | Pistes |
+|---|---|
+| faux positif | 607 |
+| déjà réglé | 457 |
+| défaut mineur | 20 |
+| défaut grossier | 33 |
+
+**33 corrections appliquées**, surtout dans les annexes du CGI. Le Code du travail, le CSS et le CCH n'en comptent presque plus. Les dérogations entre propositions (S10) sont propres : un seul défaut sur 150 pistes. **Le rendement est d'environ 3 % des pistes, contre 14 % au balayage précédent** : la famille « la loi retire, le décret garde » est presque épuisée.
+
 ## 3. Ce qui reste
 
 - Une **nouvelle mesure** sur un échantillon aléatoire indépendant, tiré hors du premier, pour vérifier la baisse du taux.
