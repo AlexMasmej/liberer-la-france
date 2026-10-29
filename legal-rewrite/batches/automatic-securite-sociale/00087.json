@@ -767,10 +767,10 @@
     "source_id": "LEGIARTI000048539683",
     "source_sha256": "b5f41a6515ad3d50904038e618b55ea75e40bd1e5c5b7b769cc4aff9f9613290",
     "number": "L931-14-1",
-    "proposed_xml": null,
-    "reason": "Maintien intégral des deux exemptions de comité spécialisé : contrôle par une entité dotée volontairement d'un comité et lien à un organisme de référence lui-même soumis à l'obligation ou doté volontairement d'un comité. Ces exemptions réduisent les doublons de gouvernance ; les supprimer sous prétexte d'allègement ferait renaître des organes inutiles. Aucun gain nouveau n'est attribué à leur maintien.",
-    "review_notes": "Conserver séparément le contrôle au sens de L. 233-16 et le lien à l'organisme de référence du 1° de L. 933-2, avec les conditions de L. 821-67. La note au 1er janvier 2024 concerne l'ancienne recodification. Le suivi des risques de L. 931-14-2 réserve explicitement ces personnes exemptées. Seconde passe : absence de conflit interne avec L931-14-2, qui réserve expressément « à l’exception de celles mentionnées à l’article L. 931-14-1 ». Les deux voies d’exemption demeurent ouvertes aux futures entités satisfaisant leurs conditions. Point non vérifiable : le corps de L933-2 n’a pas été trouvé dans securite-sociale.json ; l’organisme de référence et la concordance du 1° doivent être documentés historiquement. Cette absence ne justifie pas de supprimer l’avantage ni de substituer une nouvelle définition de groupe. L233-16 et L821-67 commerciaux ne sont pas joints. Ce maintien ne présente donc pas le renvoi manquant comme validé.",
-    "status": "retained_unchanged",
+    "proposed_xml": "\n<p>Sont exemptées des obligations mentionnées à l'article L. 821-67 du code de commerce :</p>\n<p>1° Les personnes et entités contrôlées au sens de l'article L. 233-16 du même code lorsque la personne ou l'entité qui les contrôle s'est volontairement dotée d'un comité spécialisé au sens et selon les modalités de l'article L. 821-67 dudit code ;</p>\n<p>2° Les personnes et entités liées à un organisme de référence au sens du 1° de l'article L. 933-2 du présent code dans sa dernière rédaction en vigueur avant son abrogation lorsque l'organisme de référence est lui-même soumis à ces obligations ou s'est volontairement doté d'un comité spécialisé au sens et selon les modalités de l'article L. 821-67 du code de commerce.</p>\n<br />\n<br />\n",
+    "reason": "Coordination de renvoi seule : le 2° définit l'organisme de référence « au sens du 1° de l'article L. 933-2 », article abrogé au 1er janvier 2016 dont aucun article en vigueur du code ne reprend la définition. Le renvoi vise désormais la dernière rédaction de ce 1°, qui définit l'organisme de référence et l'organisme subordonné. Maintien intégral des deux exemptions de comité spécialisé : contrôle par une entité dotée volontairement d'un comité et lien à un organisme de référence lui-même soumis à l'obligation ou doté volontairement d'un comité. Ces exemptions réduisent les doublons de gouvernance ; les supprimer ferait renaître des organes inutiles. Aucun gain nouveau n'est attribué à cette coordination.",
+    "review_notes": "Conserver séparément le contrôle au sens de L. 233-16 et le lien à l'organisme de référence du 1° de L. 933-2, avec les conditions de L. 821-67. La note au 1er janvier 2024 concerne l'ancienne recodification. Le suivi des risques de L. 931-14-2 réserve explicitement ces personnes exemptées. Seconde passe : absence de conflit interne avec L931-14-2, qui réserve expressément « à l’exception de celles mentionnées à l’article L. 931-14-1 ». Les deux voies d’exemption demeurent ouvertes aux futures entités satisfaisant leurs conditions. L233-16 et L821-67 commerciaux ne sont pas joints. Correction de la troisième passe (balayage W06, piste S8/F3) : L933-2 figure au corpus ; sa dernière version (LEGIARTI000028636436), en vigueur du 22 février 2014 au 1er janvier 2016, définit au 1° l'« organisme de référence » comme « un organisme ayant une activité économique qui contrôle de manière exclusive un autre organisme au sens du II de l'article L. 233-16 du code de commerce ou qui exerce une influence dominante » sur un autre organisme. Aucun article en vigueur du code ne reprend cette définition : le renvoi est rattaché à cette dernière rédaction, sans définition de groupe nouvelle ni changement du champ des exemptions. L'ancienne mention selon laquelle le corps de L933-2 n'avait pas été trouvé est rectifiée. Revue assistée par IA, non validée par un juriste.",
+    "status": "rewrite_draft",
     "previous_draft": {
       "source_sha256": "b5f41a6515ad3d50904038e618b55ea75e40bd1e5c5b7b769cc4aff9f9613290",
       "status": "retained_unchanged",
@@ -785,27 +785,45 @@
     "benefit_check_required": false,
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Les deux exemptions évitent déjà des comités redondants et sont conservées intégralement ; aucune économie nouvelle n’est attribuée au maintien de ces avantages.",
-      "scope_limitations": "Examen borné au texte assigné et aux contreparties locales nommées dans review_notes. Les cibles externes manquantes et concordances signalées restent ouvertes ; ni cohérence exhaustive des neuf recueils ni solde national de coûts ne sont établis.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la source, sans ajout de donnée, registre, condition, délai ou procédure. Les charges existantes justifiées dans reason subsistent, sans gain global allégué.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination du seul renvoi du 2° à la définition de l'organisme de référence du 1° de L933-2, abrogé au 1er janvier 2016 : le renvoi vise sa dernière rédaction en vigueur. Les deux exemptions de comité spécialisé sont maintenues sans changement.",
+      "scope_limitations": "La définition visée est celle de la version LEGIARTI000028636436 de L933-2 ; L233-16 et L821-67 du code de commerce ne sont pas joints. Aucun solde de coût ou de complexité n'est chiffré.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucun comité, déclaration, délai ou condition n'est ajouté ; seule la rédaction visée par le renvoi est précisée.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "l931-14-1-renvoi-organisme-reference",
+          "description": "Rattachement du renvoi à L933-2, abrogé, à sa dernière rédaction en vigueur.",
+          "before": "Renvoi au 1° de L933-2, article abrogé au 1er janvier 2016.",
+          "after": "Renvoi au 1° de L933-2 dans sa dernière rédaction en vigueur avant son abrogation, même définition.",
+          "unit": "regime",
+          "affected_population": "Institutions de prévoyance et entités liées à un organisme de référence.",
+          "conditions_and_transition": "Pure coordination, sans effet sur les exemptions acquises ni sur les comités existants.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement ; aucune condition nouvelle.",
+          "source_quote": "au sens du 1° de l'article L. 933-2 du présent code",
+          "proposed_quote": "au sens du 1° de l'article L. 933-2 du présent code dans sa dernière rédaction en vigueur avant son abrogation"
+        }
+      ]
     },
-    "classification": "retained_necessary",
+    "classification": "coordination_only",
     "benefit_review": "Les deux exemptions du comité spécialisé sont intégralement maintenues, aussi pour les futures entités éligibles : contrôle par une entité volontairement dotée du comité, ou lien à un organisme de référence lui-même soumis à l’obligation ou volontairement doté. L’absence locale du texte L933-2 est signalée sans fermer la seconde exemption ni inventer une condition de remplacement.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "b5f41a6515ad3d50904038e618b55ea75e40bd1e5c5b7b769cc4aff9f9613290",
       "source_notes_sha256": "a1c5a82356c26a49d4ae4c19502812abbd453a674e992d81b7daaae51eab3313",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "5fe158bd085b60598c0ead5674143918813ae4b80a16eb391ea7dcda3e68587b",
+      "proposed_sha256": "9a05f0730a1973e87501ed424f05a0016d9f48e9e704c3f3ad6b16244c5fdda6",
+      "assessment_sha256": "06994ec7d9fcdeb0949c7d9b3373080eb7fa9c852c1e66c95e6c72c53984e618",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_pass_correction": {
+      "objection": "SWEEP-W06-S8-L931-14-1",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006073189",

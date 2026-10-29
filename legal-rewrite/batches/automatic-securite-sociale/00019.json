@@ -718,33 +718,51 @@
     "source_id": "LEGIARTI000033714741",
     "source_sha256": "d69c3158e51f13a2e2a2c2a4e439c849299196a764e67222e902eeb8ac32f87a",
     "number": "L161-36-5",
-    "proposed_xml": null,
-    "reason": "Maintien intégral nécessaire : le renvoi limité permet à la Caisse des Français de l'étranger de mettre en œuvre la dispense favorable de restitution du moyen d'identification prévue au dernier alinéa de L161-15-4. L'habilitation réglementaire adapte cette facilité au régime volontaire ; sa suppression risquerait de fermer le bénéfice futur. Aucune formalité individuelle supplémentaire n'est créée.",
-    "review_notes": "L161-15-4 officiel du corpus a été lu intégralement : son dernier alinéa dispense de restitution les adhérents aux assurances volontaires des chapitres II, III et V du titre VI du livre VII, pour les soins de L766-2. Le renvoi source est cohérent ; l'application reste limitée aux dispositions nécessaires, sans étendre toute la section inconditionnellement à la CFE ni fermer la dispense aux futurs adhérents.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "proposed_xml": "<p>Les dispositions de la présente section, en tant qu'elles sont nécessaires à la mise en œuvre du troisième alinéa de l'article L. 161-15-4, sont applicables à la Caisse des Français de l'étranger selon des modalités fixées par décret en Conseil d'Etat.</p>",
+    "reason": "Coordination de renvoi : le renvoi limité permet à la Caisse des Français de l'étranger de mettre en œuvre la dispense favorable de restitution du moyen d'identification prévue au troisième alinéa de L161-15-4. La proposition de cet article ajoute un quatrième et dernier alinéa transitoire : le renvoi ordinal « dernier alinéa » est remplacé par « troisième alinéa », qui désigne la même dispense dans la source comme dans la proposition. L'habilitation réglementaire est maintenue ; aucune formalité individuelle supplémentaire n'est créée.",
+    "review_notes": "L161-15-4 officiel (trois alinéas) et proposé (quatre alinéas) lus intégralement : la dispense de restitution des adhérents aux assurances volontaires des chapitres II, III et V du titre VI du livre VII figure au troisième alinéa ; le quatrième, ajouté par le projet, porte la transition de la suppression générale de la restitution. Correction de la troisième passe (objection SWEEP-W02-06) : « dernier alinéa » devient « troisième alinéa », pour que le renvoi continue de viser la dispense et non la transition ; sans effet de fond. L'application reste limitée aux dispositions nécessaires, sans étendre toute la section à la CFE ni fermer la dispense aux futurs adhérents. Point signalé hors lot : L161-15-4 vise aussi L766-2, abrogé depuis le 27 décembre 2018 (LEGIARTI000037063427) ; renvoi hérité, non corrigé ici faute de successeur établi au corpus.",
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
     "reference_checks": [],
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien intégral nécessaire : le renvoi limité permet à la Caisse des Français de l'étranger de mettre en œuvre la dispense favorable de restitution du moyen d'identification prévue au dernier alinéa de L161-15-4. L'habilitation réglementaire adapte cette facilité au régime volontaire ; sa suppression risquerait de fermer le bénéfice futur. Aucune formalité individuelle supplémentaire n'est créée.",
-      "scope_limitations": "Examen limité à cet article et aux renvois documentés ; aucun solde national de prélèvements ou de complexité n'est chiffré.",
-      "new_burdens_review": "Aucune charge nouvelle n'est identifiée : le maintien intégral n'ajoute ni donnée, ni dépôt, ni délai, ni condition d'accès.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination d'un renvoi ordinal décalé par la proposition de L161-15-4 ; aucune réduction ni charge nouvelle.",
+      "scope_limitations": "Examen limité à cet article et à L161-15-4, source et proposition ; aucun solde national n'est chiffré.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : ni donnée, ni dépôt, ni délai, ni condition d'accès.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "identification-restitution-cfe-renvoi",
+          "description": "Renvoi ordinal maintenu sur la dispense de restitution de la CFE.",
+          "before": "Renvoi au dernier alinéa de L161-15-4, devenu la transition dans la proposition.",
+          "after": "Renvoi au troisième alinéa, qui porte la dispense dans la source et dans la proposition.",
+          "unit": "other",
+          "affected_population": "Adhérents de la Caisse des Français de l'étranger.",
+          "conditions_and_transition": "Effet immédiat, sans changement de fond.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "nécessaires à la mise en œuvre du dernier alinéa de l'article L. 161-15-4",
+          "proposed_quote": "nécessaires à la mise en œuvre du troisième alinéa de l'article L. 161-15-4"
+        }
+      ]
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "d69c3158e51f13a2e2a2c2a4e439c849299196a764e67222e902eeb8ac32f87a",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "32b649a5caf394658c6bcdb3e7af9e074c431bee54a41a74d90be9878792528a",
+      "proposed_sha256": "aaa749648c0aef70b493cfdc80d1655a0ec3205fb3cf72345fcda760aa858252",
+      "assessment_sha256": "d5006e0e64c68ae4630425d6263dd2f416f2e169b6811d57339e14de25ba6e50",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "29574254b898028fb63ad8a487e6bb0e0608cd3375413d5d542f9fad555269a5"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_pass_correction": {
+      "objection": "SWEEP-W02-06",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006073189",
