@@ -14,7 +14,7 @@ La revue recherche les contradictions, les fragilités juridiques, les effets in
 
 > **29 octobre 2026 : corrections appliquées.** Les corrections des objections P0 et P1, et celles des issues GitHub qui relèvent d'une contradiction, ont été appliquées au projet, selon les orientations inspirées du programme 2027 de David Lisnard : voir [`reports/applied/CORRECTIONS-APPLIQUEES.md`](reports/applied/CORRECTIONS-APPLIQUEES.md) et le dossier `apply/`.
 
-> **Fiabilité mesurée (29 octobre 2026).** Quatre audits par tirage aléatoire (1 251 articles lus à l'aveugle) donnent un taux de défauts grossiers d'environ **3 %** des articles (41 / 1 251 ; dernière mesure 2,5 % ± 1,7), après plus de 930 corrections appliquées. Méthode, résultats et façon de signaler une erreur : [`audit/AUDIT-ET-BALAYAGES.md`](audit/AUDIT-ET-BALAYAGES.md).
+> **Fiabilité mesurée (30 octobre 2026).** Cinq audits par tirage aléatoire (1 565 articles lus à l'aveugle) donnent un taux de défauts grossiers d'environ **3 %** des articles (51 / 1 565 ; dernière mesure 3,2 % ± 1,9), après plus de 1 000 corrections appliquées. Méthode, résultats et façon de signaler une erreur : [`audit/AUDIT-ET-BALAYAGES.md`](audit/AUDIT-ET-BALAYAGES.md).
 
 ## Commencer ici
 

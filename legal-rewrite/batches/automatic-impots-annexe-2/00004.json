@@ -710,10 +710,10 @@
     "source_id": "LEGIARTI000006293832",
     "source_sha256": "eea9216d6b4b25f2a63c8c944b4209ea3d75bc6818b6b01a8cc11d613f5bc738",
     "number": "74 SI",
-    "proposed_xml": null,
-    "reason": "Maintien intégral confirmé après comparaison de la source entière et du précédent maintien. Aucune coupe supplémentaire justifiée. Le texte limite déjà la fourniture des preuves à une demande de l'administration et utilise les pièces justifiant des éléments d'assiette déductibles ou d'une exonération. Il ne prescrit ni formulaire spécial, ni dépôt initial systématique, ni renouvellement périodique. Un contrôle ciblé de frais réels et du remploi conserve une fonction fiscale nécessaire.",
-    "review_notes": "150 VA III, 150 VB II et 150 U II 4° ont été lus avec leurs propositions. Les forfaits de 7,5 % et 15 % de 150 VB ne sont pas transformés en dépenses réelles à justifier ; l'exonération d'expropriation garde le remploi intégral sous douze mois. Le droit existant de réemploi des pièces ne constitue pas une suppression nouvelle ici.",
-    "status": "retained_unchanged",
+    "proposed_xml": "<p>Les pièces justifiant des frais ou charges mentionnés au III de l'article 150 VA et au II de l'article 150 VB du code général des impôts sont fournies par le contribuable sur demande de l'administration. Pour les cessions réalisées avant l'entrée en vigueur de la loi supprimant la condition de remploi prévue au 4° du II de l'article 150 U du même code, il en est de même des pièces justifiant du remploi de l'indemnité pour le bénéfice de l'exonération prévue à ce 4°. Aucune justification de remploi n'est exigée pour les cessions réalisées à compter de cette date.</p>",
+    "reason": "Coordination nécessaire avec l'article 150 U proposé : son 4° du II n'exige plus le remploi de l'indemnité d'expropriation ou du prix de cession pour les cessions réalisées à compter de la loi (V de 150 U). La production sur demande des pièces de frais et charges de 150 VA III et 150 VB II est maintenue telle quelle. La justification du remploi est limitée aux cessions antérieures, qui conservent leur régime ; aucune justification n'est exigée pour les cessions nouvelles. Aucune formalité de remplacement.",
+    "review_notes": "150 VA III, 150 VB II et 150 U (LEGIARTI000053544910, source, proposition, motif et notes) lus. Correction des notes antérieures : l'exonération d'expropriation proposée ne « garde » pas le remploi intégral sous douze mois ; 150 U proposé dispose au 4° du II que « l'exonération n'est subordonnée à aucune obligation de remploi de l'indemnité d'expropriation ou du prix de cession », et son V applique cette suppression aux cessions réalisées à compter de l'entrée en vigueur de la loi. Les forfaits de 7,5 % et 15 % de 150 VB ne sont pas transformés en dépenses réelles à justifier. La rédaction pour les cessions antérieures reprend la source (« remploi de l'indemnité ») sans l'étendre. Formulaires et commentaires administratifs hors corpus. Correction de la troisième passe (objection AUDIT5-H161, audit 5) : justification du remploi bornée aux cessions antérieures, conformément à 150 U proposé ; aucune pièce de remplacement. Revue IA, sans validation par un juriste.",
+    "status": "rewrite_draft",
     "reference_checks": [
       {
         "target_key": "LEGITEXT000006069577|LEGIARTI000006302812",
@@ -746,22 +746,36 @@
         "assessment": "Les pièces demandées prouvent les frais fiscaux ou le remploi d'une indemnité d'expropriation selon 150 U II 4°, non une rupture d'emploi. Le seuil proposé d'un an à la fin effective, préavis inclus, et le calcul de 0,20 mois sur l'ancienneté totale, plafonné à six mois, ne concernent pas ces indemnités. L'ancien seuil de huit mois et les indemnités spéciales restent hors de ce calcul fiscal. Aucun renvoi à cette cible du code du travail ne doit être ajouté ; le rapprochement requis est inapplicable."
       }
     ],
-    "classification": "retained_necessary",
+    "classification": "coordination_only",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien intégral confirmé après comparaison de la source entière et du précédent maintien. Aucune coupe supplémentaire justifiée. Le texte limite déjà la fourniture des preuves à une demande de l'administration et utilise les pièces justifiant des éléments d'assiette déductibles ou d'une exonération. Il ne prescrit ni formulaire spécial, ni dépôt initial systématique, ni renouvellement périodique. Un contrôle ciblé de frais réels et du remploi conserve une fonction fiscale nécessaire.",
-      "scope_limitations": "150 VA III, 150 VB II et 150 U II 4° ont été lus avec leurs propositions. Les forfaits de 7,5 % et 15 % de 150 VB ne sont pas transformés en dépenses réelles à justifier ; l'exonération d'expropriation garde le remploi intégral sous douze mois. Le droit existant de réemploi des pièces ne constitue pas une suppression nouvelle ici. Aucun solde national de coût ou de complexité n’est établi dans ce lot.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien intégral ne crée ni donnée, ni dépôt, ni délai, ni condition supplémentaire.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination avec 150 U proposé, qui supprime la condition de remploi de l'exonération des cessions sous déclaration d'utilité publique ou après délaissement pour les cessions réalisées à compter de la loi : la justification du remploi n'est plus demandée pour ces cessions, et reste possible pour les cessions antérieures.",
+      "scope_limitations": "Formulaire 2048-IMM et commentaires administratifs hors corpus, non coordonnés ici. La production sur demande des frais et charges de 150 VA III et 150 VB II est inchangée. Aucun solde national n'est établi.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucune pièce, déclaration ni délai n'est ajouté ; la justification du remploi disparaît pour les cessions nouvelles et demeure, sur demande seulement, pour les cessions antérieures.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "plus-values-expropriation-sans-remploi",
+          "description": "Fin de la justification du remploi pour les cessions soumises au nouveau 4° de 150 U.",
+          "before": "Pièces justifiant du remploi de l'indemnité fournies sur demande pour toute cession exonérée au titre du 4°.",
+          "after": "Pièces de remploi demandées seulement pour les cessions antérieures à la loi ; aucune pour les cessions postérieures.",
+          "unit": "legal_duty",
+          "affected_population": "Cédants d'immeubles expropriés ou délaissés.",
+          "conditions_and_transition": "Cessions réalisées à compter de l'entrée en vigueur de la loi supprimant le remploi ; cessions antérieures inchangées.",
+          "replacement_or_new_burdens": "Aucune pièce ni attestation de remplacement.",
+          "source_quote": "Il en est de même des pièces justifiant du remploi de l'indemnité",
+          "proposed_quote": "Aucune justification de remploi n'est exigée pour les cessions réalisées à compter de cette date."
+        }
+      ]
     },
-    "benefit_review": "74 SI maintient la production sur demande, sans dépôt systématique, des pièces utiles aux déductions de TVA et de frais de cession de 150 VA III, aux charges, indemnités, frais d'acquisition, travaux, voirie et restauration de 150 VB II, et à l'exonération pour remploi intégral de l'indemnité d'expropriation de 150 U II 4°. Tous ces avantages restent accessibles aux futures situations éligibles. Les forfaits de 7,5 % et 15 % restent utilisables dans leur champ sans preuve de dépenses réelles ; le délai de douze mois de remploi reste celui du législateur. Aucune taxe correspondante n'est supprimée ici et aucun bénéfice n'est fermé.",
+    "benefit_review": "74 SI maintient la production sur demande, sans dépôt systématique, des pièces utiles aux déductions de 150 VA III et 150 VB II. L'exonération de 150 U II 4° est accessible sans remploi pour les cessions nouvelles, sans aucune pièce de remploi ; les cessions antérieures gardent leur exonération et la seule justification sur demande. Aucun avantage n'est fermé.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "eea9216d6b4b25f2a63c8c944b4209ea3d75bc6818b6b01a8cc11d613f5bc738",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "8b9c720dc7cf8b8f4ebb7a37b2eda9ab11c455ca0a88516fbe166517f81a2a9d",
+      "proposed_sha256": "59ad1f91b94260b81704298c695cc4b9769daec0d7d03ec83f5d0d485038a141",
+      "assessment_sha256": "df65df9a72f05ed74454c262e02b06dd74d9260baca879f057f6269cb5135fdb",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
@@ -873,7 +887,11 @@
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_pass_correction": {
+      "objection": "AUDIT5-H161",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006069569",

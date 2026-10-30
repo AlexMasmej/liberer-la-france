@@ -107,9 +107,28 @@ Les pistes, réparties sur 916 articles en 18 groupes disjoints (`apply/Y01` à 
 - **Point faible repéré : les annexes du CGI.** Les pistes S9a y donnent 20 G sur environ 450. Plusieurs décrets d'application y organisent encore des états, des délais ou des justificatifs que l'article du CGI réécrit a supprimés.
 - **Total de la quatrième ronde** : 64 lignes appliquées ; 321 tests OK.
 
+## 2 sexies. Cinquième mesure et cinquième balayage
+
+| Mesure | Défauts grossiers | Grossiers et mineurs |
+|---|---|---|
+| Audit 5 (après la quatrième ronde) | 10 / 314, **3,2 % ± 1,9** | 22,6 % ± 4,6 |
+
+Échantillon : `sample-5.json`, graine 20261102, tiré hors des 1 251 articles déjà lus.
+
+- **Pas de baisse confirmée.** La baisse de l'audit 4 (2,5 %) tenait au hasard de l'échantillon. Sur cinq mesures, on compte 51 défauts grossiers sur 1 565 articles, soit **3,3 %**.
+- **Les 10 défauts sont corrigés** (groupe X6 et cinq variantes, 23 lignes). Exemples :
+  - taux « réduit » de 24 % des organismes sans but lucratif, devenu supérieur au taux normal de 20 % (CGI 219 bis) ;
+  - chapeau de CGI 200 qui, lu à la lettre, ouvrait la réduction de 66 % à tout don ;
+  - régimes réécrits sans base légale (emplois-jeunes, conventions de 1649 quater N, rescrit Agefiph).
+- **Lacune de méthode trouvée.** Les pistes S1, S2 et S8 ne lisaient que les numéros L, R, D et A. Elles n'avaient donc rien produit dans le CGI et ses annexes. `tools/sweeps5.py` lit les numéros du CGI.
+- **Cinquième balayage** (groupes M01 à M09, 365 articles, 548 pistes) : S1c, S2c, S8c (CGI), S16 (base légale éteinte, autres codes) et S17. S17 réexamine les 166 pistes de balayages antérieurs qualifiées « m » sans correction.
+  - Résultats : 114 pistes G (21 %), 135 m, 104 déjà réglées, 195 faux positifs. Ces pistes ont donné **74 lignes appliquées**, dont 13 abrogations pour l'avenir des régimes emplois-jeunes et prime de retour à l'emploi (X7).
+  - **S17 donne 56 G** : les premiers balayages avaient classé « m » des renvois morts qu'un juriste juge grossiers. Le seuil de qualification a été resserré pour ce balayage.
+- **Total de la cinquième ronde** : 97 lignes appliquées ; 321 tests OK.
+
 ## 4. Taux mesuré et ce qu'il signifie
 
-- **Taux mesuré** : environ **3 % des articles** gardent un défaut qu'un juriste remarquerait. Sur quatre mesures indépendantes, on compte 41 défauts grossiers sur 1 251 articles (3,3 %), et la dernière mesure donne 2,5 % ± 1,7. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
+- **Taux mesuré** : environ **3 % des articles** gardent un défaut qu'un juriste remarquerait. Sur cinq mesures indépendantes, on compte 51 défauts grossiers sur 1 565 articles (3,3 %). Les deux dernières mesures donnent 2,5 % ± 1,7 et 3,2 % ± 1,9. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
 - **Probabilité pour un juriste** qui lit 20 articles de sa matière de tomber sur au moins un défaut grossier : environ une chance sur deux.
 - **Ce qu'il faudrait pour descendre sous 1 %** : une lecture systématique de l'ensemble des articles, ou au moins des articles réécrits les plus importants. Aucun signal mécanique ne concentre plus assez les défauts restants pour qu'un balayage ciblé suffise.
 - **Les signalements extérieurs ont le meilleur rendement mesuré** : 9 des 11 issues du premier contributeur visaient un vrai défaut. Voir ci-dessous comment signaler une erreur.
@@ -127,7 +146,7 @@ Chaque issue est triée contre le registre, corrigée si elle relève d'une cont
 
 ## 3. Ce qui reste
 
-- Une **cinquième mesure**, pour confirmer que la baisse de l'audit 4 (2,5 %) ne tient pas au hasard de l'échantillon.
+- Une **sixième mesure**, pour savoir si la cinquième ronde, qui a corrigé une lacune de méthode (CGI), fait enfin baisser le taux.
 - Le **reste des pistes S9 larges** hors annexes (environ 2 000 articles au score faible), non balayé.
 - **S3** (numéros introuvables) : l'échantillon de 40 montre surtout des renvois à d'autres codes ; il n'est pas balayé en entier.
 - **S6** (désignations de la loi de réforme) : 60 formules différentes, dont « loi portant la présente réforme » (1 452 occurrences), « loi instituant le contrat de travail unique » (394) et « loi instituant le contrat unique » (338). Une désignation unique est un choix de rédaction à arrêter.

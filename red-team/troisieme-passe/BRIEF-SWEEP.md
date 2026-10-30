@@ -84,3 +84,19 @@ Pour **S12** : beaucoup de fenêtres attrapent un simple « (Abrogé) » d'un it
 Pour **S15** : si la loi visée ne fait pas, en production, la modification attendue, retire la condition et reviens au texte qui produit l'effet voulu. N'étends aucune faveur qui n'est pas décidée.
 
 Le champ `previous_owner` indique qu'un autre groupe possède déjà l'article. Dans ce cas, crée un dossier de variante pour ce groupe (par exemple `apply/B06j/` pour B06), et valide-le aussi.
+
+## Cinquième balayage : CGI et bases légales mortes (S1c, S2c, S8c, S16, S17)
+
+Les pistes S1, S2 et S8 antérieures ne lisaient que les numéros L, R, D et A. Elles n'ont donc rien produit dans le CGI ni dans ses annexes. `tools/sweeps5.py` lit les numéros du CGI (« 290 quater », « 1649 quater N »).
+
+| Code | Ce que l'outil a détecté | Exemple de l'audit |
+|---|---|---|
+| **S1c/F1** | Un article d'annexe, non abrogé, cite un article du CGI dont la proposition est une abrogation. | Annexe IV 50 sexies G garde la billetterie de 290 quater abrogé. |
+| **S2c/F2+F3** | Un article du CGI qui porte une sanction cite un article du CGI abrogé, réduit (pour les articles 17xx) ou éteint. | 1729 C ter vise « le dernier alinéa du II de l'article 1649 AG », devenu la clause de suppression. |
+| **S8c/F3** | Un article du CGI ou d'annexe s'appuie sur un article du CGI dont toutes les versions ont pris fin. | Annexe II 371 ter A à H réforment les conventions de 1649 quater N, abrogé en 2025. |
+| **S16/F3** | Un décret réécrit, dans un autre code, cite hors transition un article L du même code éteint. | D5134-1 organise le contrat emploi-jeune de L5134-1, abrogé en 2015, pour les contrats futurs. |
+| **S17** | Piste d'un balayage antérieur qualifiée « m » et non corrigée. | A932-4-1 (renvois morts structurants) et D5134-1 étaient des « m » ; l'audit 5 les juge G. |
+
+Pour **S8c** et **S16**, quand la base légale est éteinte, la correction alignée est de cesser d'organiser le régime pour l'avenir (abrogation ou limitation aux situations en cours), sans formalité de remplacement et avec une transition. Ne réécris pas un régime mort.
+
+Pour **S17**, requalifie avec le critère de l'audit : un juriste qui ouvre l'article le jugerait-il anormal ? Si oui, c'est un G à corriger, même si le défaut vient de la source. Sinon, il reste m.
