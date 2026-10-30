@@ -1,0 +1,233 @@
+{
+ "group": "W05y",
+ "changes": [
+  {
+   "objection": "AUDIT6-E069",
+   "code_id": "LEGITEXT000006073189",
+   "source_id": "LEGIARTI000043495346",
+   "mode": "replace",
+   "proposed_xml": "<p>Le versement forfaitaire résultant de l'application du 5°  de l'article L. 135-2 est égal au produit, d'une part, du taux et de l'assiette de cotisations ci-après fixés, d'autre part, de l'effectif réel des personnes effectuant un volontariat civil pour l'année en cause notifié par les ministères concernés. </p>\n<p>Le taux de cotisation mentionné à l'alinéa précédent est égal au taux cumulé de la cotisation patronale et salariale prévu à l'article R. 135-17 dans le régime général de sécurité sociale pour la couverture du risque vieillesse. Cette cotisation est assise sur une assiette forfaitaire annuelle égale à 90 p. 100 de la valeur de 1820 fois le montant du salaire horaire minimum de croissance prévu à l'article R. 135-17. </p>\n<p>Ce versement est réparti entre les régimes concernés au prorata du total de cotisants à chacun des régimes intéressés. Le nombre de cotisants est celui retenu par la commission prévue à l'article L. 114-3.</p><p>Le fonds de solidarité vieillesse a été supprimé au 1er janvier 2026 par l'abrogation des articles L. 135-1 à L. 135-5 (article 24 de la loi n° 2025-199 du 28 février 2025) ; ses droits et obligations ont été dévolus à cette date à la Caisse nationale d'assurance vieillesse, et ses dépenses relèvent depuis lors de la branche mentionnée au 3° de l'article L. 200-2 en application de l'article L. 222-2-1. À compter de cette date, le versement forfaitaire prévu au présent article n'est dû que dans la mesure où il est pris en charge par cette branche en application de l'article L. 222-2-1 ; les mentions du fonds et de l'article L. 135-2 s'entendent alors de la Caisse nationale d'assurance vieillesse, au titre de cette branche, et de l'article L. 222-2-1. Les versements afférents aux exercices antérieurs, leurs régularisations et les recours qui s'y rapportent restent régis par les dispositions alors applicables. Aucune formalité de remplacement n'est instituée.</p>",
+   "reason": "Maintien intégral du financement des périodes de volontariat civil : taux vieillesse cumulé, assiette de 90 % de 1 820 SMIC horaires, effectif réel annuel notifié par les ministères et répartition au prorata des cotisants. Il ne s’agit pas d’une cotisation privée accessoire sur le volontaire ; supprimer ce versement retirerait un financement de droits solidaires sans baisse démontrée de prélèvement. Correction de la troisième passe : le fonds étant supprimé depuis le 1er janvier 2026, la formule ne s'applique plus qu'aux sommes prises en charge par la branche vieillesse en application de l'article L. 222-2-1, la Caisse nationale d'assurance vieillesse se substituant au fonds ; les exercices antérieurs gardent leur régime.",
+   "review_notes": "R135-17 conserve les valeurs moyennes annuelles et reçoit une coordination sur l’affectation capitalisée sans réduire la référence de solidarité. Les effectifs de cotisants restent ceux de la commission visée à L114-3, sans nouveau recensement imposé au volontaire. Le 5° de L135-2 n’est pas fourni dans le corpus de contrôle : aucun champ supplémentaire ou extinction du volontariat n’en est déduit. Point non vérifiable : L114-3, comme L135-2, manque dans le corpus autorisé ; composition de la commission et champ législatif actuel non certifiés. Les renvois sont conservés faute de contradiction établie, et non déclarés globalement validés. « 90 p. 100 de la valeur de 1820 fois » reste une base de financement, pas une baisse de cotisation du volontaire. Correction de la troisième passe (objection AUDIT6-E069, sixième audit, groupe X8) : le fonds de solidarité vieillesse est supprimé au 1er janvier 2026 (L. 135-1 LEGIARTI000037290440 et L. 135-2 LEGIARTI000042683484 figurent au corpus à l'état ABROGE à cette date, avec un lien ABROGE vers l'article 24 de la loi n° 2025-199 ; L. 135-3 à L. 135-5 aussi) ; les mentions des présentes notes qui les disent absents du corpus, ou qui supposent le fonctionnement futur du fonds, sont périmées. le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge. Même solution que R135-2, R135-6 et R135-14 (variantes W02ma et W04ma) ; transferts à la Caisse nationale d'assurance vieillesse conservés ; aucune formalité de remplacement. Revue IA, sans validation par un juriste.",
+   "overrides": {
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
+    "substantive_impact": {
+     "version": 1,
+     "classification": "coordination_only",
+     "assessment": "Coordination avec la suppression législative du fonds de solidarité vieillesse au 1er janvier 2026 : le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge.",
+     "scope_limitations": "Le XXII de l'article 24 de la loi n° 2025-199 (dévolution à la Caisse nationale d'assurance vieillesse) est cité d'après la lecture faite par l'audit E09 sur Légifrance le 29 octobre 2026 ; les textes de dissolution, de liquidation et l'arrêté d'approbation des comptes 2025 ne sont pas au corpus.",
+     "new_burdens_review": "Aucune charge nouvelle : ni convention, ni déclaration, ni approbation de remplacement ; les droits et créances antérieurs sont conservés et les sommes dues par la branche restent dues.",
+     "effects": [
+      {
+       "kind": "coordination",
+       "measure_id": "fsv-suppression-r135-15-1",
+       "description": "Rattachement d'un versement forfaitaire à la branche qui a repris les dépenses du fonds.",
+       "before": "Versement forfaitaire du fonds aux régimes au titre des périodes validées.",
+       "after": "Versement dû seulement dans la mesure de sa prise en charge par la branche vieillesse, gérée par la CNAV, selon la même formule.",
+       "unit": "regime",
+       "affected_population": "Fonds de solidarité vieillesse en liquidation, Caisse nationale d'assurance vieillesse et régimes concernés.",
+       "conditions_and_transition": "Depuis le 1er janvier 2026 ; exercices antérieurs, régularisations et recours régis par les règles alors applicables.",
+       "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+       "source_quote": "Le versement forfaitaire résultant de l'application du 5° de l'article L. 135-2",
+       "proposed_quote": "À compter de cette date, le versement forfaitaire prévu au présent article"
+      }
+     ]
+    },
+    "benefit_review": "Aucune faveur ni prise en charge n'est retirée : les sommes restent dues dans la mesure où la loi les met à la charge de la branche vieillesse, et les droits nés des exercices antérieurs sont conservés."
+   }
+  },
+  {
+   "objection": "AUDIT6-E069",
+   "code_id": "LEGITEXT000006073189",
+   "source_id": "LEGIARTI000043495357",
+   "mode": "replace",
+   "proposed_xml": "\n<p>Le versement forfaitaire résultant du a du 2° de l'article L. 135-2, concernant les périodes mentionnées au 8° de l'article L. 351-3, est égal à 81 % du produit, d'une part, du taux et de l'assiette mentionnés au troisième alinéa du I de l'article R. 135-16 et, d'autre part, des effectifs relevant de chaque régime concerné tels que définis au deuxième alinéa du présent article.</p>\n<p>Les effectifs mentionnés au premier alinéa correspondent à l'effectif des stagiaires de la formation professionnelle constaté en fin d'année par l'Agence de services et de paiement et les régions, lorsque l'agence n'assure pas pour elles la gestion du dispositif.</p>\n<p>La rectification du renvoi aux effectifs s’applique aux calculs non définitivement arrêtés à compter de l’entrée en vigueur de la loi de simplification. Les décisions définitives, les droits acquis et les voies de recours demeurent régis par les règles qui leur sont applicables.</p><p>Le fonds de solidarité vieillesse a été supprimé au 1er janvier 2026 par l'abrogation des articles L. 135-1 à L. 135-5 (article 24 de la loi n° 2025-199 du 28 février 2025) ; ses droits et obligations ont été dévolus à cette date à la Caisse nationale d'assurance vieillesse, et ses dépenses relèvent depuis lors de la branche mentionnée au 3° de l'article L. 200-2 en application de l'article L. 222-2-1. À compter de cette date, le versement forfaitaire prévu au présent article n'est dû que dans la mesure où il est pris en charge par cette branche en application de l'article L. 222-2-1 ; les mentions du fonds et de l'article L. 135-2 s'entendent alors de la Caisse nationale d'assurance vieillesse, au titre de cette branche, et de l'article L. 222-2-1. Les versements afférents aux exercices antérieurs, leurs régularisations et les recours qui s'y rapportent restent régis par les dispositions alors applicables. Aucune formalité de remplacement n'est instituée.</p>",
+   "reason": "Coordination nécessaire d’une erreur préexistante de renvoi : les effectifs de stagiaires sont ceux définis au deuxième alinéa du présent article par l’ASP ou les régions, et non les effectifs de chômeurs mensuels du deuxième alinéa du I de R135-16. Le versement à 81 % et son taux et assiette de référence demeurent intégralement conservés. Correction de la troisième passe : le fonds étant supprimé depuis le 1er janvier 2026, la formule ne s'applique plus qu'aux sommes prises en charge par la branche vieillesse en application de l'article L. 222-2-1, la Caisse nationale d'assurance vieillesse se substituant au fonds ; les exercices antérieurs gardent leur régime.",
+   "review_notes": "Le renvoi au troisième alinéa du I de R135-16 conserve le taux cumulé et les 90 % de 1 820 SMIC ; seul le renvoi d’effectifs est rectifié. Les effectifs restent constatés en fin d’année, non en moyenne mensuelle. Le 8° de L351-3 vise des stages de formation professionnelle et ne constitue pas un CDD. La correction est applicable aux calculs non définitivement arrêtés après l’entrée en vigueur de la loi de simplification, sans remise en cause des décisions définitives, droits acquis ou voies de recours selon leurs règles. Contradiction effective préexistante : « tels que définis au deuxième alinéa du même I » renvoie à la moyenne mensuelle France Travail, alors que le deuxième alinéa propre impose « l'effectif des stagiaires de la formation professionnelle constaté en fin d'année ». La proposition précédente corrige ce conflit en gardant 81 % et le troisième alinéa du I pour le seul taux et la seule assiette. Correction de la troisième passe (objection AUDIT6-E069, sixième audit, groupe X8) : le fonds de solidarité vieillesse est supprimé au 1er janvier 2026 (L. 135-1 LEGIARTI000037290440 et L. 135-2 LEGIARTI000042683484 figurent au corpus à l'état ABROGE à cette date, avec un lien ABROGE vers l'article 24 de la loi n° 2025-199 ; L. 135-3 à L. 135-5 aussi) ; les mentions des présentes notes qui les disent absents du corpus, ou qui supposent le fonctionnement futur du fonds, sont périmées. le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge. Même solution que R135-2, R135-6 et R135-14 (variantes W02ma et W04ma) ; transferts à la Caisse nationale d'assurance vieillesse conservés ; aucune formalité de remplacement. Revue IA, sans validation par un juriste.",
+   "overrides": {
+    "substantive_impact": {
+     "version": 1,
+     "classification": "coordination_only",
+     "assessment": "Coordination nécessaire d’une erreur préexistante de renvoi : les effectifs de stagiaires sont ceux définis au deuxième alinéa du présent article par l’ASP ou les régions, et non les effectifs de chômeurs mensuels du deuxième alinéa du I de R135-16. Le versement à 81 % et son taux et assiette de référence demeurent intégralement conservés.",
+     "scope_limitations": "Correction de population de calcul, sans baisse revendiquée du versement à 81 % ; les décisions définitives et les recours restent protégés. Le solde net de coût de l’ensemble des codes n’est pas établi. Le XXII de l'article 24 de la loi n° 2025-199 (dévolution à la Caisse nationale d'assurance vieillesse) est cité d'après la lecture faite par l'audit E09 sur Légifrance le 29 octobre 2026 ; les textes de dissolution, de liquidation et l'arrêté d'approbation des comptes 2025 ne sont pas au corpus.",
+     "new_burdens_review": "Aucune charge nouvelle identifiée : la proposition conserve les contenus et contrôles utiles, sans imposer de visa, registre, donnée ou déclaration de remplacement ; ses transitions protègent les actes antérieurs.",
+     "effects": [
+      {
+       "kind": "coordination",
+       "measure_id": "fsv-stagiaires-effectifs-renvoi",
+       "description": "Rectification de la population de référence des stagiaires.",
+       "before": "Renvoi à la moyenne mensuelle des chômeurs, contredit par l’effectif de stagiaires en fin d’année.",
+       "after": "Effectif de stagiaires du deuxième alinéa propre ; taux de 81 % et assiette inchangés.",
+       "unit": "legal_duty",
+       "affected_population": "Fonds de solidarité vieillesse et organismes concernés",
+       "conditions_and_transition": "Application selon la transition expresse du texte proposé ; actes, créances et recours antérieurs préservés dans leur champ.",
+       "replacement_or_new_burdens": "Aucune formalité de remplacement ; les contrôles et contenus autonomes conservés ne sont pas de nouvelles obligations.",
+       "source_quote": "des effectifs relevant de chaque régime concerné tels que définis au deuxième alinéa du même I.",
+       "proposed_quote": "des effectifs relevant de chaque régime concerné tels que définis au deuxième alinéa du présent article."
+      },
+      {
+       "kind": "coordination",
+       "measure_id": "fsv-suppression-r135-16-1",
+       "description": "Rattachement d'un versement forfaitaire à la branche qui a repris les dépenses du fonds.",
+       "before": "Versement forfaitaire du fonds aux régimes au titre des périodes validées.",
+       "after": "Versement dû seulement dans la mesure de sa prise en charge par la branche vieillesse, gérée par la CNAV, selon la même formule.",
+       "unit": "regime",
+       "affected_population": "Fonds de solidarité vieillesse en liquidation, Caisse nationale d'assurance vieillesse et régimes concernés.",
+       "conditions_and_transition": "Depuis le 1er janvier 2026 ; exercices antérieurs, régularisations et recours régis par les règles alors applicables.",
+       "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+       "source_quote": "Le versement forfaitaire résultant du a du 2° de l'article L. 135-2",
+       "proposed_quote": "À compter de cette date, le versement forfaitaire prévu au présent article"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "objection": "AUDIT6-E069",
+   "code_id": "LEGITEXT000006073189",
+   "source_id": "LEGIARTI000043495335",
+   "mode": "replace",
+   "proposed_xml": "<p>Le versement forfaitaire résultant, pour ce qui concerne les périodes mentionnées au 1° de l'article L. 351-3, pendant lesquelles des assurés ont bénéficié de prestations maladie, maternité, accident du travail et maladie professionnelle, de l'application du a du 2°  de l'article L. 135-2 est égal au produit du montant résultant de l'application du taux de cotisation à l'assiette fixé à l'alinéa suivant par une fraction, fixée dans les conditions définies à l'article R. 135-16-7, du nombre total des journées indemnisées à ce titre par chacun des régimes concernés au cours de l'année en cause. </p>\n<p>Le taux de cotisation mentionné au premier alinéa est égal au taux cumulé de la cotisation patronale et salariale prévu à l'article R. 135-17 en vigueur dans le régime général de sécurité sociale pour la couverture du risque vieillesse. Cette cotisation est assise sur une assiette forfaitaire égale à 7 fois le montant du salaire horaire minimum de croissance prévu à l'article R. 135-17.</p>\n<br /><p>Le fonds de solidarité vieillesse a été supprimé au 1er janvier 2026 par l'abrogation des articles L. 135-1 à L. 135-5 (article 24 de la loi n° 2025-199 du 28 février 2025) ; ses droits et obligations ont été dévolus à cette date à la Caisse nationale d'assurance vieillesse, et ses dépenses relèvent depuis lors de la branche mentionnée au 3° de l'article L. 200-2 en application de l'article L. 222-2-1. À compter de cette date, le versement forfaitaire prévu au présent article n'est dû que dans la mesure où il est pris en charge par cette branche en application de l'article L. 222-2-1 ; les mentions du fonds et de l'article L. 135-2 s'entendent alors de la Caisse nationale d'assurance vieillesse, au titre de cette branche, et de l'article L. 222-2-1. Les versements afférents aux exercices antérieurs, leurs régularisations et les recours qui s'y rapportent restent régis par les dispositions alors applicables. Aucune formalité de remplacement n'est instituée.</p>",
+   "reason": "Maintien intégral du financement solidaire des périodes indemnisées de maladie, maternité et AT-MP : journées annuelles, fraction de R135-16-7, taux cumulé vieillesse et assiette de sept SMIC horaires. Cette formule n’impose ni cotisation au malade ni justificatif périodique nouveau ; la retirer réduirait le financement d’un avantage essentiel. Correction de la troisième passe : le fonds étant supprimé depuis le 1er janvier 2026, la formule ne s'applique plus qu'aux sommes prises en charge par la branche vieillesse en application de l'article L. 222-2-1, la Caisse nationale d'assurance vieillesse se substituant au fonds ; les exercices antérieurs gardent leur régime.",
+   "review_notes": "Le 1° de L351-3 vise des périodes d’assurance ; R135-16-7 encadre la fraction de financement à 75 % au plus sans plafonner de cette manière les droits individuels. La version de L351-3 fournie vise aussi le congé supplémentaire de naissance depuis 2026, et R351-12 comporte sa validation : l’énumération plus ancienne de ce financement ne permet pas d’en supprimer la validation ni d’affirmer son financement nouveau sans L135-2 et les arrêtés non fournis. Cette articulation législative reste signalée ; aucune équivalence artificielle avec une indemnité de rupture n’est créée. R135-17 est coordonné pour ne pas baisser la référence de solidarité lors du transfert capitalisé.\n\nSeconde passe : différence de champ confirmée par « prestations maladie, maternité, accident du travail et maladie professionnelle » et par le 1° de L351-3. Celui-ci inclut aussi le congé supplémentaire de naissance ; R351-12 2° c prévoit cinquante-huit jours et sa note le 1er juillet 2026. Point non vérifiable : sans L135-2 ni les dispositions d'affectation de ce nouveau congé, le financeur de cette extension ne peut être déduit de l'énumération réglementaire ancienne. Ce maintien ne ferme pas la validation législative future ; la coordination de financement reste ouverte, sans addition arbitraire de prestation à la formule. Correction de la troisième passe (objection AUDIT6-E069, sixième audit, groupe X8) : le fonds de solidarité vieillesse est supprimé au 1er janvier 2026 (L. 135-1 LEGIARTI000037290440 et L. 135-2 LEGIARTI000042683484 figurent au corpus à l'état ABROGE à cette date, avec un lien ABROGE vers l'article 24 de la loi n° 2025-199 ; L. 135-3 à L. 135-5 aussi) ; les mentions des présentes notes qui les disent absents du corpus, ou qui supposent le fonctionnement futur du fonds, sont périmées. le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge. Même solution que R135-2, R135-6 et R135-14 (variantes W02ma et W04ma) ; transferts à la Caisse nationale d'assurance vieillesse conservés ; aucune formalité de remplacement. Revue IA, sans validation par un juriste.",
+   "overrides": {
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
+    "substantive_impact": {
+     "version": 1,
+     "classification": "coordination_only",
+     "assessment": "Coordination avec la suppression législative du fonds de solidarité vieillesse au 1er janvier 2026 : le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge.",
+     "scope_limitations": "Le XXII de l'article 24 de la loi n° 2025-199 (dévolution à la Caisse nationale d'assurance vieillesse) est cité d'après la lecture faite par l'audit E09 sur Légifrance le 29 octobre 2026 ; les textes de dissolution, de liquidation et l'arrêté d'approbation des comptes 2025 ne sont pas au corpus.",
+     "new_burdens_review": "Aucune charge nouvelle : ni convention, ni déclaration, ni approbation de remplacement ; les droits et créances antérieurs sont conservés et les sommes dues par la branche restent dues.",
+     "effects": [
+      {
+       "kind": "coordination",
+       "measure_id": "fsv-suppression-r135-16-3",
+       "description": "Rattachement d'un versement forfaitaire à la branche qui a repris les dépenses du fonds.",
+       "before": "Versement forfaitaire du fonds aux régimes au titre des périodes validées.",
+       "after": "Versement dû seulement dans la mesure de sa prise en charge par la branche vieillesse, gérée par la CNAV, selon la même formule.",
+       "unit": "regime",
+       "affected_population": "Fonds de solidarité vieillesse en liquidation, Caisse nationale d'assurance vieillesse et régimes concernés.",
+       "conditions_and_transition": "Depuis le 1er janvier 2026 ; exercices antérieurs, régularisations et recours régis par les règles alors applicables.",
+       "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+       "source_quote": "de l'application du a du 2° de l'article L. 135-2 est égal au produit",
+       "proposed_quote": "À compter de cette date, le versement forfaitaire prévu au présent article"
+      }
+     ]
+    },
+    "benefit_review": "Aucune faveur ni prise en charge n'est retirée : les sommes restent dues dans la mesure où la loi les met à la charge de la branche vieillesse, et les droits nés des exercices antérieurs sont conservés."
+   }
+  },
+  {
+   "objection": "AUDIT6-E069",
+   "code_id": "LEGITEXT000006073189",
+   "source_id": "LEGIARTI000043495313",
+   "mode": "replace",
+   "proposed_xml": "<p>Le versement forfaitaire résultant, pour ce qui concerne les périodes mentionnées au 1° de l'article L. 351-3, pendant lesquelles des assurés ont perçu une pension au titre de l'invalidité, de l'application du a du 2°  de l'article L. 135-2 est égal au produit du montant résultant de l'application du taux de cotisation à l'assiette fixé à l'alinéa suivant par une fraction, fixée dans les conditions définies à l'article R. 135-16-7, des effectifs des assurés bénéficiant de cette prestation au 31 décembre de l'année en cause, selon les statistiques tenues par les régimes. </p>\n<p>Le taux de cotisation mentionné au premier alinéa est égal au taux cumulé de la cotisation patronale et salariale prévu à l'article R. 135-17 en vigueur dans le régime général de sécurité sociale pour la couverture du risque vieillesse. Cette cotisation est assise sur une assiette forfaitaire égale à 1 820 fois le montant du salaire horaire minimum de croissance prévu à l'article R. 135-17.</p><p>Le fonds de solidarité vieillesse a été supprimé au 1er janvier 2026 par l'abrogation des articles L. 135-1 à L. 135-5 (article 24 de la loi n° 2025-199 du 28 février 2025) ; ses droits et obligations ont été dévolus à cette date à la Caisse nationale d'assurance vieillesse, et ses dépenses relèvent depuis lors de la branche mentionnée au 3° de l'article L. 200-2 en application de l'article L. 222-2-1. À compter de cette date, le versement forfaitaire prévu au présent article n'est dû que dans la mesure où il est pris en charge par cette branche en application de l'article L. 222-2-1 ; les mentions du fonds et de l'article L. 135-2 s'entendent alors de la Caisse nationale d'assurance vieillesse, au titre de cette branche, et de l'article L. 222-2-1. Les versements afférents aux exercices antérieurs, leurs régularisations et les recours qui s'y rapportent restent régis par les dispositions alors applicables. Aucune formalité de remplacement n'est instituée.</p>",
+   "reason": "Maintien intégral du financement des périodes de pension d’invalidité : effectif au 31 décembre, fraction réglementaire, taux vieillesse cumulé et assiette de 1 820 SMIC horaires. Il s’agit du financement solidaire de périodes de retraite et non d’un prélèvement accessoire sur les invalides ; supprimer le versement ne démontrerait pas une baisse de charge. Correction de la troisième passe : le fonds étant supprimé depuis le 1er janvier 2026, la formule ne s'applique plus qu'aux sommes prises en charge par la branche vieillesse en application de l'article L. 222-2-1, la Caisse nationale d'assurance vieillesse se substituant au fonds ; les exercices antérieurs gardent leur régime.",
+   "review_notes": "L351-3 1° ouvre la prise en compte des périodes d’invalidité ; R135-16-7 conserve le plafond de fraction de 75 % propre au financement. L’effectif au 31 décembre ne doit pas être remplacé par une moyenne mensuelle comme dans R135-16-5. Le taux moyen de R135-17 n’est pas un taux nouveau fixé ici. Les règles privées de rupture pour inaptitude, notamment les indemnités spéciales, restent hors du dispositif.\n\nSeconde passe : transition compatible avec L351-3 1° ; « au 31 décembre de l'année en cause » vise un stock annuel d'invalidité et non une moyenne mensuelle. Le plafond « dans la limite de 75 % » de R135-16-7 porte sur le financement, jamais sur la pension ou la réparation d'une inaptitude. Aucune correction du corps n'est justifiée. L135-2 et l'arrêté fixant la fraction ne sont pas fournis : leur concordance actuelle n'est pas certifiée. Correction de la troisième passe (objection AUDIT6-E069, sixième audit, groupe X8) : le fonds de solidarité vieillesse est supprimé au 1er janvier 2026 (L. 135-1 LEGIARTI000037290440 et L. 135-2 LEGIARTI000042683484 figurent au corpus à l'état ABROGE à cette date, avec un lien ABROGE vers l'article 24 de la loi n° 2025-199 ; L. 135-3 à L. 135-5 aussi) ; les mentions des présentes notes qui les disent absents du corpus, ou qui supposent le fonctionnement futur du fonds, sont périmées. le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge. Même solution que R135-2, R135-6 et R135-14 (variantes W02ma et W04ma) ; transferts à la Caisse nationale d'assurance vieillesse conservés ; aucune formalité de remplacement. Revue IA, sans validation par un juriste.",
+   "overrides": {
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
+    "substantive_impact": {
+     "version": 1,
+     "classification": "coordination_only",
+     "assessment": "Coordination avec la suppression législative du fonds de solidarité vieillesse au 1er janvier 2026 : le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge.",
+     "scope_limitations": "Le XXII de l'article 24 de la loi n° 2025-199 (dévolution à la Caisse nationale d'assurance vieillesse) est cité d'après la lecture faite par l'audit E09 sur Légifrance le 29 octobre 2026 ; les textes de dissolution, de liquidation et l'arrêté d'approbation des comptes 2025 ne sont pas au corpus.",
+     "new_burdens_review": "Aucune charge nouvelle : ni convention, ni déclaration, ni approbation de remplacement ; les droits et créances antérieurs sont conservés et les sommes dues par la branche restent dues.",
+     "effects": [
+      {
+       "kind": "coordination",
+       "measure_id": "fsv-suppression-r135-16-4",
+       "description": "Rattachement d'un versement forfaitaire à la branche qui a repris les dépenses du fonds.",
+       "before": "Versement forfaitaire du fonds aux régimes au titre des périodes validées.",
+       "after": "Versement dû seulement dans la mesure de sa prise en charge par la branche vieillesse, gérée par la CNAV, selon la même formule.",
+       "unit": "regime",
+       "affected_population": "Fonds de solidarité vieillesse en liquidation, Caisse nationale d'assurance vieillesse et régimes concernés.",
+       "conditions_and_transition": "Depuis le 1er janvier 2026 ; exercices antérieurs, régularisations et recours régis par les règles alors applicables.",
+       "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+       "source_quote": "de l'application du a du 2° de l'article L. 135-2 est égal au produit",
+       "proposed_quote": "À compter de cette date, le versement forfaitaire prévu au présent article"
+      }
+     ]
+    },
+    "benefit_review": "Aucune faveur ni prise en charge n'est retirée : les sommes restent dues dans la mesure où la loi les met à la charge de la branche vieillesse, et les droits nés des exercices antérieurs sont conservés."
+   }
+  },
+  {
+   "objection": "AUDIT6-E069",
+   "code_id": "LEGITEXT000006073189",
+   "source_id": "LEGIARTI000043495298",
+   "mode": "replace",
+   "proposed_xml": "<p>Le versement forfaitaire résultant, pour ce qui concerne les périodes mentionnées au 1° de l'article L. 351-3, pendant lesquelles des assurés ont perçu une rente au titre d'un accident du travail ou d'une maladie professionnelle, de l'application du a du 2°  de l'article L. 135-2 est égal au produit du montant résultant de l'application du taux de cotisation à l'assiette fixé à l'alinéa suivant par une fraction, fixée dans les conditions définies à l'article R. 135-16-7, des effectifs des assurés ayant bénéficié dans chacun des régimes concernés, au cours de l'année en cause, de ces prestations pour une incapacité permanente dont le taux est au moins égal à celui qui est fixé par l'article R. 351-12 ou en application de l'article L. 634-2. </p>\n<p>Les effectifs mentionnés à l'alinéa précédent correspondent à la moyenne des effectifs des bénéficiaires constatés chaque mois au cours de l'année selon les statistiques tenues par les régimes. </p>\n<p>Le taux de cotisation mentionné au premier alinéa est égal au taux cumulé de la cotisation patronale et salariale prévu à l'article R. 135-17 en vigueur dans le régime général de sécurité sociale pour la couverture du risque vieillesse. Cette cotisation est assise sur une assiette forfaitaire égale à 1 820 fois le montant du salaire horaire minimum de croissance prévu à l'article R. 135-17.</p>\n<br /><p>Le fonds de solidarité vieillesse a été supprimé au 1er janvier 2026 par l'abrogation des articles L. 135-1 à L. 135-5 (article 24 de la loi n° 2025-199 du 28 février 2025) ; ses droits et obligations ont été dévolus à cette date à la Caisse nationale d'assurance vieillesse, et ses dépenses relèvent depuis lors de la branche mentionnée au 3° de l'article L. 200-2 en application de l'article L. 222-2-1. À compter de cette date, le versement forfaitaire prévu au présent article n'est dû que dans la mesure où il est pris en charge par cette branche en application de l'article L. 222-2-1 ; les mentions du fonds et de l'article L. 135-2 s'entendent alors de la Caisse nationale d'assurance vieillesse, au titre de cette branche, et de l'article L. 222-2-1. Les versements afférents aux exercices antérieurs, leurs régularisations et les recours qui s'y rapportent restent régis par les dispositions alors applicables. Aucune formalité de remplacement n'est instituée.</p>",
+   "reason": "Maintien intégral du financement des périodes de rente AT-MP : seuil d’incapacité renvoyé, moyenne des effectifs mensuels, fraction de R135-16-7, taux cumulé et assiette de 1 820 SMIC. Ces éléments garantissent la couverture de périodes assimilées ; ils ne créent pas de taxe ou de cotisation accessoire du bénéficiaire. Correction de la troisième passe : le fonds étant supprimé depuis le 1er janvier 2026, la formule ne s'applique plus qu'aux sommes prises en charge par la branche vieillesse en application de l'article L. 222-2-1, la Caisse nationale d'assurance vieillesse se substituant au fonds ; les exercices antérieurs gardent leur régime.",
+   "review_notes": "R351-12 entier a été lu : son 5° fixe à 66 % le seuil de rente pour incapacité permanente et son dernier alinéa limite à quatre les trimestres annuels. La cible n’est pas le barème de rupture pour inaptitude professionnelle du code du travail. Le renvoi alternatif à L634-2 conserve le champ des assurés concernés ; son contenu n’est pas fourni dans les cibles et aucun seuil distinct n’est inventé. Le plafond de fraction de 75 % concerne le versement FSV, non le taux d’incapacité de 66 % ni les droits individuels. Contrôle facultatif complémentaire : L634-2 officiel, sa note et sa proposition ont été lus dans le corpus ; le renvoi applique, sous adaptations, les règles des chapitres de retraite du régime général aux indépendants de L631-1. Sa proposition corrige notamment le dernier alinéa de L351-1 et préserve l’absence de raccordement automatique à la capitalisation ; elle n’institue aucun seuil alternatif d’incapacité. La filiation du renvoi historique à L633-1 dans cette cible demeure sa réserve propre, sans modification silencieuse ici.\n\nSeconde passe : renvoi cohérent entre « au moins égal à celui qui est fixé par l'article R. 351-12 » et « une incapacité permanente au moins égale à 66 % ». La moyenne mensuelle reste distincte du stock au 31 décembre de R135-16-4. L634-2 entier a été relu : son renvoi général sous adaptations ne fournit aucun autre taux à inventer. L135-2 et les adaptations réglementaires non fournies restent des limites documentaires. Aucun nouveau corps nécessaire. Correction de la troisième passe (objection AUDIT6-E069, sixième audit, groupe X8) : le fonds de solidarité vieillesse est supprimé au 1er janvier 2026 (L. 135-1 LEGIARTI000037290440 et L. 135-2 LEGIARTI000042683484 figurent au corpus à l'état ABROGE à cette date, avec un lien ABROGE vers l'article 24 de la loi n° 2025-199 ; L. 135-3 à L. 135-5 aussi) ; les mentions des présentes notes qui les disent absents du corpus, ou qui supposent le fonctionnement futur du fonds, sont périmées. le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge. Même solution que R135-2, R135-6 et R135-14 (variantes W02ma et W04ma) ; transferts à la Caisse nationale d'assurance vieillesse conservés ; aucune formalité de remplacement. Revue IA, sans validation par un juriste.",
+   "overrides": {
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
+    "substantive_impact": {
+     "version": 1,
+     "classification": "coordination_only",
+     "assessment": "Coordination avec la suppression législative du fonds de solidarité vieillesse au 1er janvier 2026 : le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge.",
+     "scope_limitations": "Le XXII de l'article 24 de la loi n° 2025-199 (dévolution à la Caisse nationale d'assurance vieillesse) est cité d'après la lecture faite par l'audit E09 sur Légifrance le 29 octobre 2026 ; les textes de dissolution, de liquidation et l'arrêté d'approbation des comptes 2025 ne sont pas au corpus.",
+     "new_burdens_review": "Aucune charge nouvelle : ni convention, ni déclaration, ni approbation de remplacement ; les droits et créances antérieurs sont conservés et les sommes dues par la branche restent dues.",
+     "effects": [
+      {
+       "kind": "coordination",
+       "measure_id": "fsv-suppression-r135-16-5",
+       "description": "Rattachement d'un versement forfaitaire à la branche qui a repris les dépenses du fonds.",
+       "before": "Versement forfaitaire du fonds aux régimes au titre des périodes validées.",
+       "after": "Versement dû seulement dans la mesure de sa prise en charge par la branche vieillesse, gérée par la CNAV, selon la même formule.",
+       "unit": "regime",
+       "affected_population": "Fonds de solidarité vieillesse en liquidation, Caisse nationale d'assurance vieillesse et régimes concernés.",
+       "conditions_and_transition": "Depuis le 1er janvier 2026 ; exercices antérieurs, régularisations et recours régis par les règles alors applicables.",
+       "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+       "source_quote": "de l'application du a du 2° de l'article L. 135-2 est égal au produit",
+       "proposed_quote": "À compter de cette date, le versement forfaitaire prévu au présent article"
+      }
+     ]
+    },
+    "benefit_review": "Aucune faveur ni prise en charge n'est retirée : les sommes restent dues dans la mesure où la loi les met à la charge de la branche vieillesse, et les droits nés des exercices antérieurs sont conservés."
+   }
+  },
+  {
+   "objection": "AUDIT6-E069",
+   "code_id": "LEGITEXT000006073189",
+   "source_id": "LEGIARTI000043495324",
+   "mode": "replace",
+   "proposed_xml": "<p>Le versement forfaitaire résultant, pour ce qui concerne la prise en compte des indemnités maternité dans le salaire de base mentionné à l'article L. 351-1, de l'application du 7°  de l'article L. 135-2 est égal au produit du taux de cotisation fixé à l'alinéa suivant par une fraction, fixée dans les conditions définies à l'article R. 135-16-7, du montant total des journées indemnisées comptabilisées dans chacun des régimes concernés à ce titre au cours de l'année en cause. </p>\n<p>Le taux de la cotisation mentionné au premier alinéa est égal au taux cumulé de la cotisation patronale et salariale prévu à l'article R. 135-17 en vigueur dans le régime général de sécurité sociale pour la couverture du risque vieillesse.</p>\n<br /><p>Le fonds de solidarité vieillesse a été supprimé au 1er janvier 2026 par l'abrogation des articles L. 135-1 à L. 135-5 (article 24 de la loi n° 2025-199 du 28 février 2025) ; ses droits et obligations ont été dévolus à cette date à la Caisse nationale d'assurance vieillesse, et ses dépenses relèvent depuis lors de la branche mentionnée au 3° de l'article L. 200-2 en application de l'article L. 222-2-1. À compter de cette date, le versement forfaitaire prévu au présent article n'est dû que dans la mesure où il est pris en charge par cette branche en application de l'article L. 222-2-1 ; les mentions du fonds et de l'article L. 135-2 s'entendent alors de la Caisse nationale d'assurance vieillesse, au titre de cette branche, et de l'article L. 222-2-1. Les versements afférents aux exercices antérieurs, leurs régularisations et les recours qui s'y rapportent restent régis par les dispositions alors applicables. Aucune formalité de remplacement n'est instituée.</p>",
+   "reason": "Maintien intégral du financement de l’inclusion des indemnités maternité dans le salaire de base de retraite : taux cumulé, fraction de R135-16-7 et montant total annuel des journées indemnisées. Enlever ce versement ne supprime pas une cotisation accessoire mais affaiblit la couverture financière d’un avantage de maternité à conserver. Correction de la troisième passe : le fonds étant supprimé depuis le 1er janvier 2026, la formule ne s'applique plus qu'aux sommes prises en charge par la branche vieillesse en application de l'article L. 222-2-1, la Caisse nationale d'assurance vieillesse se substituant au fonds ; les exercices antérieurs gardent leur régime.",
+   "review_notes": "L351-1, ses notes entières et sa proposition distinguent inclusion des indemnités journalières dans le salaire de base, pension par répartition et transfert futur ; les notes conservent notamment le champ des congés débutant à compter du 1er janvier 2012. R135-16-7, second alinéa, fixe une proportion d’indemnités effectivement retenues, sans plafond de 75 % applicable à cette fraction. La prise en compte n’est pas un salaire de référence d’indemnité de rupture. La formule source « montant total des journées indemnisées » est conservée sans lui substituer un nombre de jours ; aucune conversion non sourcée n’est inventée.\n\nSeconde passe : articulation vérifiée entre « prise en compte des indemnités maternité dans le salaire de base » et L351-1, quatrième alinéa, qui prévoit leur inclusion. La fraction relève du second alinéa de R135-16-7, distinct de la limite de 75 %. La note de L351-1 relative aux congés débutant en 2012 et la préservation des solidarités dans sa proposition sont compatibles. Le 7° de L135-2 manque : l'affectation législative actuelle reste à contrôler, sans nier le droit à pension maintenu. Correction de la troisième passe (objection AUDIT6-E069, sixième audit, groupe X8) : le fonds de solidarité vieillesse est supprimé au 1er janvier 2026 (L. 135-1 LEGIARTI000037290440 et L. 135-2 LEGIARTI000042683484 figurent au corpus à l'état ABROGE à cette date, avec un lien ABROGE vers l'article 24 de la loi n° 2025-199 ; L. 135-3 à L. 135-5 aussi) ; les mentions des présentes notes qui les disent absents du corpus, ou qui supposent le fonctionnement futur du fonds, sont périmées. le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge. Même solution que R135-2, R135-6 et R135-14 (variantes W02ma et W04ma) ; transferts à la Caisse nationale d'assurance vieillesse conservés ; aucune formalité de remplacement. Revue IA, sans validation par un juriste.",
+   "overrides": {
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
+    "substantive_impact": {
+     "version": 1,
+     "classification": "coordination_only",
+     "assessment": "Coordination avec la suppression législative du fonds de solidarité vieillesse au 1er janvier 2026 : le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge.",
+     "scope_limitations": "Le XXII de l'article 24 de la loi n° 2025-199 (dévolution à la Caisse nationale d'assurance vieillesse) est cité d'après la lecture faite par l'audit E09 sur Légifrance le 29 octobre 2026 ; les textes de dissolution, de liquidation et l'arrêté d'approbation des comptes 2025 ne sont pas au corpus.",
+     "new_burdens_review": "Aucune charge nouvelle : ni convention, ni déclaration, ni approbation de remplacement ; les droits et créances antérieurs sont conservés et les sommes dues par la branche restent dues.",
+     "effects": [
+      {
+       "kind": "coordination",
+       "measure_id": "fsv-suppression-r135-16-6",
+       "description": "Rattachement d'un versement forfaitaire à la branche qui a repris les dépenses du fonds.",
+       "before": "Versement forfaitaire du fonds aux régimes au titre des périodes validées.",
+       "after": "Versement dû seulement dans la mesure de sa prise en charge par la branche vieillesse, gérée par la CNAV, selon la même formule.",
+       "unit": "regime",
+       "affected_population": "Fonds de solidarité vieillesse en liquidation, Caisse nationale d'assurance vieillesse et régimes concernés.",
+       "conditions_and_transition": "Depuis le 1er janvier 2026 ; exercices antérieurs, régularisations et recours régis par les règles alors applicables.",
+       "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+       "source_quote": "de l'application du 7° de l'article L. 135-2 est égal au produit",
+       "proposed_quote": "À compter de cette date, le versement forfaitaire prévu au présent article"
+      }
+     ]
+    },
+    "benefit_review": "Aucune faveur ni prise en charge n'est retirée : les sommes restent dues dans la mesure où la loi les met à la charge de la branche vieillesse, et les droits nés des exercices antérieurs sont conservés."
+   }
+  }
+ ],
+ "requests": [],
+ "skipped": []
+}

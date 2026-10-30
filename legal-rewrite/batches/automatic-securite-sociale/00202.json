@@ -65,10 +65,10 @@
     "source_id": "LEGIARTI000006753046",
     "source_sha256": "017bb953961e8fc07f47bb68b3188a04e2c698844d4411e81aa7d29275961bda",
     "number": "R731-20",
-    "proposed_xml": null,
-    "reason": "Maintien de la compétence conjointe des ministres de la sécurité sociale et du budget : ce texte répartit la compétence réglementaire et ne crée ni demande d'agrément individuelle ni prélèvement. Sa suppression isolée ne démontre aucun allègement pour les institutions.",
-    "review_notes": "Point non vérifiable : « Les arrêtés prévus à l'article L. 731-9 » reste une référence historique dont la cible est absente du corpus local. Aucune contradiction effective ni concordance actuelle n’est établie. Maintien conservatoire de la compétence, sans certifier le fondement des arrêtés ni recréer une autorisation supprimée.",
-    "status": "retained_unchanged",
+    "proposed_xml": "<p>Le présent article est abrogé.</p><p>Il désignait les ministres compétents pour prendre les arrêtés prévus à l'article L. 731-9, transféré au 2 janvier 1990 à l'article L. 731-2, lui-même abrogé au 10 août 1994. Les arrêtés pris sur ce fondement avant l'entrée en vigueur de la présente abrogation ne sont pas remis en cause. Aucune formalité de remplacement n'est instituée.</p>",
+    "reason": "Abrogation d'un article sans objet : il répartit la compétence pour des arrêtés prévus par l'article L. 731-9, qui a pris fin le 2 janvier 1990 (transfert à L. 731-2, abrogé au 10 août 1994). L'extension des accords de retraite et de prévoyance complémentaires relève aujourd'hui de l'article L. 911-3, qui désigne lui-même le ministre chargé de la sécurité sociale. Rediriger le renvoi vers L. 911-3 ajouterait une cosignature du ministre chargé du budget que la loi ne prévoit pas : c'est une contrainte, non une coordination. L'article est donc abrogé, sans formalité de remplacement ; les arrêtés antérieurs sont conservés.",
+    "review_notes": "Lecture en production le 30 octobre 2026 : R731-20 (LEGIARTI000006753046) entier, toutes les versions de L731-9 et de L731-2, et L911-3 en vigueur. L731-9 figure au corpus : version MODIFIE de 1987 à 1989, puis TRANSFERE du 12 juillet 1989 au 2 janvier 1990, avec un lien de CONCORDANCE vers L731-2 ; L731-2 est ABROGE au 10 août 1994. L'ancienne note qui disait la cible absente du corpus était inexacte. L911-3 (LEGIARTI000042654569) confie la décision au « ministre chargé de la sécurité sociale », sans cosignature. Aucun article en vigueur ne renvoie au présent article. Le chapitre R. 731 est par ailleurs limité aux institutions autorisées avant 1994 (corrections M01 de R731-3 et R731-3-1). Correction de la troisième passe (objection SWEEP-Z01-S16b-R731-20, sixième balayage, piste S16b) : article à base légale éteinte depuis 1990, abrogé sans formalité de remplacement, arrêtés antérieurs conservés. Revue IA, sans validation par un juriste.",
+    "status": "rewrite_draft",
     "source_conflict_ids": [],
     "impact_check_required": true,
     "benefit_check_required": false,
@@ -82,38 +82,61 @@
       "batch_row_sha256": "370b8bd313c470eec3a8cec54e682a81f8be9869e98dc98c95102cbe551c182a"
     },
     "reference_checks": [],
-    "classification": "retained_necessary",
+    "classification": "coordination_only",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien de la compétence conjointe des ministres de la sécurité sociale et du budget : ce texte répartit la compétence réglementaire et ne crée ni demande d'agrément individuelle ni prélèvement. Sa suppression isolée ne démontre aucun allègement pour les institutions.",
-      "scope_limitations": "Point non vérifiable : « Les arrêtés prévus à l'article L. 731-9 » reste une référence historique dont la cible est absente du corpus local. Aucune contradiction effective ni concordance actuelle n’est établie. Maintien conservatoire de la compétence, sans certifier le fondement des arrêtés ni recréer une autorisation supprimée.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans formalité, registre, donnée ou condition supplémentaire. Aucun solde global des codes n’est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Abrogation d'un article dont la base légale (L. 731-9) a pris fin en 1990 ; aucune obligation en vigueur n'est supprimée et aucune n'est créée.",
+      "scope_limitations": "Les arrêtés anciens ne sont pas au corpus et ne sont pas réécrits ; ils sont conservés. L. 911-3 désigne lui-même le ministre compétent.",
+      "new_burdens_review": "Aucune charge nouvelle : ni déclaration, ni avis, ni cosignature de remplacement.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "r731-20-abrogation-base-eteinte",
+          "description": "Abrogation de R731-20, règle de compétence pour des arrêtés de L. 731-9 éteint.",
+          "before": "Arrêtés de L. 731-9 pris par les ministres chargés de la sécurité sociale et du budget.",
+          "after": "Article abrogé ; arrêtés antérieurs conservés.",
+          "unit": "legal_duty",
+          "affected_population": "Administration ; partenaires sociaux des régimes complémentaires.",
+          "conditions_and_transition": "À l'entrée en vigueur de l'abrogation ; arrêtés antérieurs non remis en cause.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "Les arrêtés prévus à l'article L. 731-9 sont pris par le ministre chargé de la sécurité sociale",
+          "proposed_quote": "Les arrêtés pris sur ce fondement avant l'entrée en vigueur de la présente abrogation ne sont pas remis en cause."
+        }
+      ]
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "017bb953961e8fc07f47bb68b3188a04e2c698844d4411e81aa7d29275961bda",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "d715e4f892dc45475636c5ceee0fe33564fdba0e89acfc353c7fa05117cfb90c",
+      "proposed_sha256": "e862c1608a6524fd4e8a9ba6623c7e511a0c3e4ef6de11b8b62e11a25856685c",
+      "assessment_sha256": "ff69d5e8841c4a446b8c19a4eb85a5350f54294746fe110c4f72ab661dd91f0a",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "change_type": "full_repeal",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Abrogation de l'article R. 731-20, qui désigne les ministres compétents pour les arrêtés de l'article L. 731-9, éteint depuis le 2 janvier 1990.",
+    "reform_policy_id": null,
+    "removed_provisions": null,
+    "third_pass_correction": {
+      "objection": "SWEEP-Z01-S16b-R731-20",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000006753048",
     "source_sha256": "71c75b934dded25815fd5f908fb0c43050e566b3f46c86241707d4e1093abdde",
     "number": "R731-21",
-    "proposed_xml": null,
-    "reason": "Maintien de la désignation des deux ministres compétents pour les arrêtés : supprimer cette règle de compétence ne retire pas l'obligation substantielle à laquelle elle se rattache et rendrait l'autorité compétente incertaine.",
-    "review_notes": "Point non vérifiable : « Les arrêtés prévus à l'article L. 731-10 » désigne une cible absente du corpus local. L’identité des ministres avec R731-20 ne prouve pas que les deux arrêtés ont le même objet : aucune fusion de compétences n’est justifiée. La portée historique de ce renvoi reste ouverte.",
-    "status": "retained_unchanged",
+    "proposed_xml": "<p>Le présent article est abrogé.</p><p>Il désignait les ministres compétents pour prendre les arrêtés prévus à l'article L. 731-10, transféré au 2 janvier 1990 à l'article L. 731-3, lui-même abrogé au 10 août 1994. Les arrêtés pris sur ce fondement avant l'entrée en vigueur de la présente abrogation ne sont pas remis en cause. Aucune formalité de remplacement n'est instituée.</p>",
+    "reason": "Abrogation d'un article sans objet : il répartit la compétence pour des arrêtés prévus par l'article L. 731-10, qui a pris fin le 2 janvier 1990 (transfert à L. 731-3, abrogé au 10 août 1994). L'élargissement des accords étendus relève aujourd'hui de l'article L. 911-4, qui désigne lui-même le ministre chargé de la sécurité sociale. Rediriger le renvoi vers L. 911-4 ajouterait une cosignature du ministre chargé du budget que la loi ne prévoit pas : c'est une contrainte, non une coordination. L'article est donc abrogé, sans formalité de remplacement ; les arrêtés antérieurs sont conservés.",
+    "review_notes": "Lecture en production le 30 octobre 2026 : R731-21 (LEGIARTI000006753048) entier, toutes les versions de L731-10 et de L731-3, et L911-4 en vigueur. L731-10 figure au corpus : version MODIFIE de 1987 à 1989, puis TRANSFERE du 12 juillet 1989 au 2 janvier 1990, avec un lien de CONCORDANCE vers L731-3 ; L731-3 est ABROGE au 10 août 1994. L'ancienne note qui disait la cible absente du corpus était inexacte. L911-4 (LEGIARTI000042654564) confie la décision au « ministre chargé de la sécurité sociale », sans cosignature. Aucun article en vigueur ne renvoie au présent article. Le chapitre R. 731 est par ailleurs limité aux institutions autorisées avant 1994 (corrections M01 de R731-3 et R731-3-1). Correction de la troisième passe (objection SWEEP-Z01-S16b-R731-21, sixième balayage, piste S16b) : article à base légale éteinte depuis 1990, abrogé sans formalité de remplacement, arrêtés antérieurs conservés. Revue IA, sans validation par un juriste.",
+    "status": "rewrite_draft",
     "source_conflict_ids": [],
     "impact_check_required": true,
     "benefit_check_required": false,
@@ -127,28 +150,51 @@
       "batch_row_sha256": "6343d370c9507721095f309eaeedcccf1a0bf3860c6673643e4e77c25f599174"
     },
     "reference_checks": [],
-    "classification": "retained_necessary",
+    "classification": "coordination_only",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien de la désignation des deux ministres compétents pour les arrêtés : supprimer cette règle de compétence ne retire pas l'obligation substantielle à laquelle elle se rattache et rendrait l'autorité compétente incertaine.",
-      "scope_limitations": "Point non vérifiable : « Les arrêtés prévus à l'article L. 731-10 » désigne une cible absente du corpus local. L’identité des ministres avec R731-20 ne prouve pas que les deux arrêtés ont le même objet : aucune fusion de compétences n’est justifiée. La portée historique de ce renvoi reste ouverte.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans formalité, registre, donnée ou condition supplémentaire. Aucun solde global des codes n’est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Abrogation d'un article dont la base légale (L. 731-10) a pris fin en 1990 ; aucune obligation en vigueur n'est supprimée et aucune n'est créée.",
+      "scope_limitations": "Les arrêtés anciens ne sont pas au corpus et ne sont pas réécrits ; ils sont conservés. L. 911-4 désigne lui-même le ministre compétent.",
+      "new_burdens_review": "Aucune charge nouvelle : ni déclaration, ni avis, ni cosignature de remplacement.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "r731-21-abrogation-base-eteinte",
+          "description": "Abrogation de R731-21, règle de compétence pour des arrêtés de L. 731-10 éteint.",
+          "before": "Arrêtés de L. 731-10 pris par les ministres chargés de la sécurité sociale et du budget.",
+          "after": "Article abrogé ; arrêtés antérieurs conservés.",
+          "unit": "legal_duty",
+          "affected_population": "Administration ; partenaires sociaux des régimes complémentaires.",
+          "conditions_and_transition": "À l'entrée en vigueur de l'abrogation ; arrêtés antérieurs non remis en cause.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "Les arrêtés prévus à l'article L. 731-10 sont pris par le ministre chargé de la sécurité sociale",
+          "proposed_quote": "Les arrêtés pris sur ce fondement avant l'entrée en vigueur de la présente abrogation ne sont pas remis en cause."
+        }
+      ]
     },
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "71c75b934dded25815fd5f908fb0c43050e566b3f46c86241707d4e1093abdde",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "87733985ae44ccde8031505ee5075ec2a0332ea57fb75f81e65ffa916b81738c",
+      "proposed_sha256": "663136f072e5ffc42f53edb1356668c70700ffc8a09035980039215f5c1b47c8",
+      "assessment_sha256": "41262e84f2ae067e1723ebbdebefe9ce2ca554ee76a53a090349cccd1c6a254d",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "change_type": "full_repeal",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Abrogation de l'article R. 731-21, qui désigne les ministres compétents pour les arrêtés de l'article L. 731-10, éteint depuis le 2 janvier 1990.",
+    "reform_policy_id": null,
+    "removed_provisions": null,
+    "third_pass_correction": {
+      "objection": "SWEEP-Z01-S16b-R731-21",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006073189",

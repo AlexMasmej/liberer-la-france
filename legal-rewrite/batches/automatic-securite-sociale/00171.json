@@ -424,148 +424,166 @@
     "source_id": "LEGIARTI000006749482",
     "source_sha256": "f6c6db54219972364df3e430b45202d7b6ce8bee42583cd057f3877c7091ff1d",
     "number": "R371-9",
-    "proposed_xml": null,
-    "reason": "Maintien de l'égalité de traitement et de l'absence de participation aux frais des assurés indigents. Retirer la réserve légale sans examen du régime d'aide pourrait altérer la prise en charge ; aucune charge autonome inutile n'est imposée ici. Maintien favorable de « ils ne supportent aucune participation aux frais de traitement ».",
-    "review_notes": "Maintien favorable de « ils ne supportent aucune participation aux frais de traitement ». Point non vérifiable : L371-12 n'a pas été trouvé comme article autonome dans le corpus CSS fourni. La précédente note affirmant qu'il demeure un fondement ne suffit donc pas à en établir la vigueur. La réserve est conservée sans prétendre son incohérence établie ; historique de l'aide sociale et relais CASF à documenter hors lot. R371-10 et R371-11 proposés sauvegardent expressément les dispenses.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "proposed_xml": "<p>Les assurés sociaux indigents sont traités dans les mêmes conditions que les autres assurés. Toutefois, ils ne supportent aucune participation aux frais de traitement.</p>",
+    "reason": "Coordination nécessaire : la réserve « sous réserve de l'application des dispositions de l'article L. 371-12 » renvoie à un article abrogé depuis le 25 janvier 1990, qui permettait de remplacer le régime par des règlements départementaux d'aide sociale. Elle est retirée ; l'égalité de traitement et l'absence de participation aux frais de traitement des assurés sociaux indigents sont conservées sans changement.",
+    "review_notes": "Maintien favorable de « ils ne supportent aucune participation aux frais de traitement ». Point non vérifiable : L371-12 n'a pas été trouvé comme article autonome dans le corpus CSS fourni. La précédente note affirmant qu'il demeure un fondement ne suffit donc pas à en établir la vigueur. La réserve est conservée sans prétendre son incohérence établie ; historique de l'aide sociale et relais CASF à documenter hors lot. R371-10 et R371-11 proposés sauvegardent expressément les dispenses. Correction de la troisième passe (objection AUDIT6-E152, sixième audit, groupe X8) : L371-12 figure au corpus (LEGIARTI000006742726), à l'état ABROGE depuis le 25 janvier 1990 ; la mention « L371-12 n'a pas été trouvé comme article autonome » est inexacte. Seul le renvoi mort est retiré ; R371-10 et R371-11, qui organisaient les règlements pris sur ce fondement, sont abrogés. Revue IA, sans validation par un juriste.",
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien de l'égalité de traitement et de l'absence de participation aux frais des assurés indigents. Retirer la réserve légale sans examen du régime d'aide pourrait altérer la prise en charge ; aucune charge autonome inutile n'est imposée ici. Maintien favorable de « ils ne supportent aucune participation aux frais de traitement ».",
-      "scope_limitations": "Maintien favorable de « ils ne supportent aucune participation aux frais de traitement ». Point non vérifiable : L371-12 n'a pas été trouvé comme article autonome dans le corpus CSS fourni. La précédente note affirmant qu'il demeure un fondement ne suffit donc pas à en établir la vigueur. La réserve est conservée sans prétendre son incohérence établie ; historique de l'aide sociale et relais CASF à documenter hors lot. R371-10 et R371-11 proposés sauvegardent expressément les dispenses.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues ne créent ni dépôt, registre, justificatif, délai ni condition supplémentaire. Aucun solde de complexité de l'ensemble des codes n'est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Retrait du seul renvoi à l'article L. 371-12, abrogé depuis le 25 janvier 1990 : l'égalité de traitement et l'absence de participation aux frais des assurés sociaux indigents sont conservées sans réserve devenue sans objet.",
+      "scope_limitations": "Le texte abrogeant L. 371-12 n'est connu que par le corpus LEGI (LEGIARTI000006742726, ABROGE au 25 janvier 1990) ; le relais éventuel par le code de l'action sociale et des familles n'est pas au corpus.",
+      "new_burdens_review": "Aucune charge nouvelle : ni condition, ni pièce, ni délai ; la faveur existante est conservée telle quelle.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "aide-sociale-l371-12-renvoi-mort",
+          "description": "Retrait d'une réserve renvoyant à un article abrogé en 1990.",
+          "before": "Absence de participation aux frais sous réserve de L. 371-12.",
+          "after": "Absence de participation aux frais, sans la réserve devenue sans objet.",
+          "unit": "legal_duty",
+          "affected_population": "Assurés sociaux indigents.",
+          "conditions_and_transition": "Dès l'entrée en vigueur ; situations antérieures inchangées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "sous réserve de l'application des dispositions de l'article L. 371-12",
+          "proposed_quote": "ils ne supportent aucune participation aux frais de traitement."
+        }
+      ]
     },
     "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "f6c6db54219972364df3e430b45202d7b6ce8bee42583cd057f3877c7091ff1d",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "8e5b60cb0a44a8deb8a643cf5a442ede171eebf6ee22cc85f9f30dee00a5a799",
+      "proposed_sha256": "e9c53a06ab2ebd58a643d070f33979ee79d421747baf8738d1139c503ef2209d",
+      "assessment_sha256": "dfe66bf74b60c4ef67559ecf5cadcb46b357a35abc5b2024604f4f94c9fbb91e",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "benefit_review": "La faveur « ils ne supportent aucune participation aux frais de traitement » est conservée, sans la réserve renvoyant à un article abrogé.",
+    "third_pass_correction": {
+      "objection": "AUDIT6-E152",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000006749483",
     "source_sha256": "58574e972594a69e627f02a8274bf3fa1b671e053e24938e149d6fdde1f7c473",
     "number": "R371-10",
-    "proposed_xml": "<p>Les règlements prévus à l'article L. 371-12 ne sont soumis à aucune durée minimale de validité.</p><p>Ils cessent d'avoir effet au premier jour du trimestre civil suivant leur abrogation par l'autorité administrative compétente en vertu de la loi n° 83-663 du 22 juillet 1983 ou la dénonciation par les caisses ou les syndicats médicaux intéressés de l'accord intervenu par l'application de l'article précité.</p><p>Si le règlement s'applique à plusieurs caisses d'assurance maladie, la dénonciation mentionnée à l'alinéa précédent ne produit d'effet qu'à l'égard de la ou des caisses qui ont dénoncé l'accord.</p><p>L'absence de durée minimale s'applique aux règlements adoptés à compter de l'entrée en vigueur du présent décret. Les règlements antérieurs conservent leur régime. La cessation du règlement ne supprime ni les prestations et dispenses de participation prévues par la loi ni les créances nées sous son empire.</p>",
-    "reason": "Suppression de la durée minimale d'un an qui fige les arrangements administratifs ; maintien de l'effet au trimestre suivant, de la dénonciation limitée à chaque caisse et des droits des assurés. Transition compatible avec R371-9 : « La cessation du règlement ne supprime ni les prestations et dispenses de participation prévues par la loi ni les créances nées sous son empire.",
-    "review_notes": "Transition compatible avec R371-9 : « La cessation du règlement ne supprime ni les prestations et dispenses de participation prévues par la loi ni les créances nées sous son empire. » Maintien du premier jour du trimestre civil, de la dénonciation limitée aux seules caisses concernées et du régime des règlements antérieurs. Point non vérifiable : L371-12 absent comme article autonome du corpus consulté et portée actuelle de la loi 83-663 non documentée. La coupe du minimum annuel ne vaut ni abrogation des prestations ni préavis de rupture d'emploi.",
+    "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur du décret portant la présente modification. L'article L. 371-12, qui prévoyait les règlements départementaux d'aide sociale auxquels il s'appliquait, est abrogé depuis le 25 janvier 1990 ; aucun règlement ne peut plus être pris ni appliqué sur ce fondement. Aucune formalité ni condition de remplacement n'est instituée.</p><p>Cette abrogation ne remet en cause ni les prestations et dispenses de participation prévues par la loi et par l'article R. 371-9, ni les créances nées sous l'empire des règlements antérieurement pris sur ce fondement, qui restent régies par les dispositions alors applicables, avec les recours qui s'y rapportent.</p>",
+    "reason": "Coordination nécessaire : l'article organise la durée et la fin des règlements d'aide sociale prévus par l'article L. 371-12, abrogé depuis le 25 janvier 1990. La proposition antérieure le réformait au fond pour des règlements « adoptés à compter de l'entrée en vigueur du présent décret », alors qu'aucun règlement ne peut plus être pris sur ce fondement. L'article est abrogé, sans formalité de remplacement ; les prestations et dispenses légales et les créances antérieures sont conservées.",
+    "review_notes": "Transition compatible avec R371-9 : « La cessation du règlement ne supprime ni les prestations et dispenses de participation prévues par la loi ni les créances nées sous son empire. » Maintien du premier jour du trimestre civil, de la dénonciation limitée aux seules caisses concernées et du régime des règlements antérieurs. Point non vérifiable : L371-12 absent comme article autonome du corpus consulté et portée actuelle de la loi 83-663 non documentée. La coupe du minimum annuel ne vaut ni abrogation des prestations ni préavis de rupture d'emploi. Correction de la troisième passe (objection AUDIT6-E152, sixième audit, groupe X8) : L371-12 figure au corpus (LEGIARTI000006742726), à l'état ABROGE depuis le 25 janvier 1990 ; les mentions « L371-12 absent du corpus » sont inexactes. L'article est abrogé ; l'allègement antérieurement proposé n'avait pas d'objet. Revue IA, sans validation par un juriste.",
     "status": "rewrite_draft",
     "substantive_impact": {
       "version": 1,
-      "classification": "material_reduction",
-      "assessment": "Suppression de la durée minimale d'un an qui fige les arrangements administratifs ; maintien de l'effet au trimestre suivant, de la dénonciation limitée à chaque caisse et des droits des assurés. Transition compatible avec R371-9 : « La cessation du règlement ne supprime ni les prestations et dispenses de participation prévues par la loi ni les créances nées sous son empire.",
-      "scope_limitations": "Transition compatible avec R371-9 : « La cessation du règlement ne supprime ni les prestations et dispenses de participation prévues par la loi ni les créances nées sous son empire. » Maintien du premier jour du trimestre civil, de la dénonciation limitée aux seules caisses concernées et du régime des règlements antérieurs. Point non vérifiable : L371-12 absent comme article autonome du corpus consulté et portée actuelle de la loi 83-663 non documentée. La coupe du minimum annuel ne vaut ni abrogation des prestations ni préavis de rupture d'emploi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : les règles maintenues ne créent ni dépôt, registre, justificatif, délai ni condition supplémentaire. Aucun solde de complexité de l'ensemble des codes n'est chiffré.",
+      "classification": "coordination_only",
+      "assessment": "Abrogation d'un article réglementaire qui organisait la durée et la fin des règlements d'aide sociale prévus par L. 371-12, abrogé depuis le 25 janvier 1990 ; la proposition antérieure réformait un régime sans base légale depuis trente-six ans.",
+      "scope_limitations": "Le texte abrogeant L. 371-12 n'est connu que par le corpus LEGI (LEGIARTI000006742726). L'existence de règlements antérieurs encore appliqués n'est pas connue.",
+      "new_burdens_review": "Aucune charge nouvelle : ni règlement, ni pièce, ni délai ; les prestations et dispenses légales et les créances antérieures sont conservées.",
       "effects": [
         {
-          "kind": "obligation_removed",
-          "measure_id": "reglements-aide-sociale-fin-duree-minimale",
-          "description": "Retrait du minimum annuel pour les nouveaux règlements.",
-          "before": "Validité minimale un an.",
-          "after": "Aucune durée minimale ; sortie au trimestre suivant maintenue.",
-          "unit": "other",
-          "affected_population": "Autorités, caisses et syndicats parties aux règlements de L371-12.",
-          "conditions_and_transition": "Transition compatible avec R371-9 : « La cessation du règlement ne supprime ni les prestations et dispenses de participation prévues par la loi ni les créances nées sous son empire. » Maintien du premier jour du trimestre civil, de la dénonciation limitée aux seules caisses concernées et du régime des règlements antérieurs. Point non vérifiable : L371-12 absent comme article autonome du corpus consulté et portée actuelle de la loi 83-663 non documentée. La coupe du minimum annuel ne vaut ni abrogation des prestations ni préavis de rupture d'emploi.",
-          "replacement_or_new_burdens": "Aucune charge nouvelle identifiée : les règles maintenues ne créent ni dépôt, registre, justificatif, délai ni condition supplémentaire. Aucun solde de complexité de l'ensemble des codes n'est chiffré.",
+          "kind": "coordination",
+          "measure_id": "aide-sociale-l371-12-renvoi-mort",
+          "description": "Abrogation d'un règlement d'application dont la base légale est abrogée depuis 1990.",
+          "before": "Règles applicables aux règlements de L. 371-12, réformées par la proposition antérieure.",
+          "after": "Article abrogé ; prestations, dispenses et créances antérieures conservées.",
+          "unit": "regime",
+          "affected_population": "Caisses primaires, praticiens et assurés sociaux bénéficiaires de l'aide sociale.",
+          "conditions_and_transition": "Dès l'entrée en vigueur ; créances et recours antérieurs régis par les règles alors applicables.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
           "source_quote": "Les règlements prévus à l'article L. 371-12 sont valables pour un an au moins.",
-          "proposed_quote": "Les règlements prévus à l'article L. 371-12 ne sont soumis à aucune durée minimale de validité."
+          "proposed_quote": "aucun règlement ne peut plus être pris ni appliqué sur ce fondement"
         }
       ]
     },
     "reference_checks": [],
-    "change_type": "normative_reduction",
-    "reform_policy_id": "editorial_direction_2026_10_19",
-    "removed_provisions": [
-      "Suppression de la durée minimale d'un an des nouveaux règlements d'aide sociale."
-    ],
+    "change_type": "full_repeal",
+    "reform_policy_id": null,
+    "removed_provisions": null,
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "58574e972594a69e627f02a8274bf3fa1b671e053e24938e149d6fdde1f7c473",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "a4d4254c894b1f85c7220201fb084cc5bbf984adca75fed0e37e57a819aa51a8",
-      "assessment_sha256": "9ac9d8f931d2466e09601bd4f6245ab190c7d98ab26217aa7f515dfac08bca1d",
+      "proposed_sha256": "599675326ff6f448b04487a701d50385bd399e605878131738c5438310d16ed4",
+      "assessment_sha256": "2e06ea282a32154e63b4831f2ecbbb4888c7cba97cac883f45f6f8f66d67774c",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "a4d4254c894b1f85c7220201fb084cc5bbf984adca75fed0e37e57a819aa51a8"
+    "prior_proposal_sha256": "a4d4254c894b1f85c7220201fb084cc5bbf984adca75fed0e37e57a819aa51a8",
+    "classification": "coordination_only",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Abrogation des règles de durée et de fin des règlements d'aide sociale de L. 371-12, abrogé en 1990, sous lequel aucun règlement ne peut plus être pris.",
+    "benefit_review": "Aucune faveur effective n'est retirée : aucun règlement ne peut exister depuis 1990 ; l'absence de participation des assurés indigents est conservée à l'article R. 371-9.",
+    "third_pass_correction": {
+      "objection": "AUDIT6-E152",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006073189",
     "source_id": "LEGIARTI000006749484",
     "source_sha256": "883061b1f0adf22f11b4977e8dd80c1997191262aae844fb6ecc37e227bbcec3",
     "number": "R371-11",
-    "proposed_xml": "<p>En cas d'application d'un règlement ne prévoyant l'inscription sur les listes d'assistance que pour l'hospitalisation, les assurés sociaux indigents paient directement aux praticiens les frais médicaux et pharmaceutiques, qui leur sont remboursés par la caisse primaire d'assurance maladie, dans les conditions fixées par ledit règlement.</p><p>Les praticiens peuvent, avec l'accord de l'assuré, se faire rembourser directement par la caisse primaire d'assurance maladie, sans autorisation du règlement. Les formalités de facturation applicables au remboursement de ces mêmes frais demeurent, sans dossier d'autorisation distinct. L'assuré ne peut être tenu d'avancer les frais ainsi facturés directement à la caisse.</p><p>Cette faculté s'applique aux soins dispensés à compter de l'entrée en vigueur du présent décret, y compris sous un règlement antérieur. Les frais antérieurs restent soumis à leur régime. Aucun même frais ne peut être remboursé deux fois ; les dispenses de participation demeurent applicables.</p>",
-    "reason": "Suppression de l'autorisation réglementaire préalable au remboursement direct : la faculté devient ouverte pour les soins futurs, avec accord de l'assuré et facturation ordinaire. Le remboursement sur avance demeure possible. Le premier alinéa pose l'avance, le second y déroge expressément : « L'assuré ne peut être tenu d'avancer les frais ainsi facturés directement à la caisse.",
-    "review_notes": "Le premier alinéa pose l'avance, le second y déroge expressément : « L'assuré ne peut être tenu d'avancer les frais ainsi facturés directement à la caisse. » Pas de contradiction interne ; choix du praticien et accord de l'assuré, sans tiers payant obligatoire général. La condition d'accord est nouvelle dans ce texte et doit être recensée ; aucune attestation n'est exigée. R371-9 reste entier. La compétence et les modalités des règlements référés à L371-12 restent à documenter, ce dernier étant absent du corpus consulté.",
+    "proposed_xml": "<p>Le présent article est abrogé à compter de l'entrée en vigueur du décret portant la présente modification. L'article L. 371-12, qui prévoyait les règlements départementaux d'aide sociale auxquels il s'appliquait, est abrogé depuis le 25 janvier 1990 ; aucun règlement ne peut plus être pris ni appliqué sur ce fondement. Aucune formalité ni condition de remplacement n'est instituée.</p><p>Cette abrogation ne remet en cause ni les prestations et dispenses de participation prévues par la loi et par l'article R. 371-9, ni les créances nées sous l'empire des règlements antérieurement pris sur ce fondement, qui restent régies par les dispositions alors applicables, avec les recours qui s'y rapportent.</p>",
+    "reason": "Coordination nécessaire : l'article organise le remboursement des frais sous un règlement d'aide sociale prévus par l'article L. 371-12, abrogé depuis le 25 janvier 1990. La proposition antérieure le réformait au fond pour des règlements « adoptés à compter de l'entrée en vigueur du présent décret », alors qu'aucun règlement ne peut plus être pris sur ce fondement. L'article est abrogé, sans formalité de remplacement ; les prestations et dispenses légales et les créances antérieures sont conservées.",
+    "review_notes": "Le premier alinéa pose l'avance, le second y déroge expressément : « L'assuré ne peut être tenu d'avancer les frais ainsi facturés directement à la caisse. » Pas de contradiction interne ; choix du praticien et accord de l'assuré, sans tiers payant obligatoire général. La condition d'accord est nouvelle dans ce texte et doit être recensée ; aucune attestation n'est exigée. R371-9 reste entier. La compétence et les modalités des règlements référés à L371-12 restent à documenter, ce dernier étant absent du corpus consulté. Correction de la troisième passe (objection AUDIT6-E152, sixième audit, groupe X8) : L371-12 figure au corpus (LEGIARTI000006742726), à l'état ABROGE depuis le 25 janvier 1990 ; les mentions « L371-12 absent du corpus » sont inexactes. L'article est abrogé ; l'allègement antérieurement proposé n'avait pas d'objet. Revue IA, sans validation par un juriste.",
     "status": "rewrite_draft",
     "substantive_impact": {
       "version": 1,
-      "classification": "mixed",
-      "assessment": "Suppression de l'autorisation réglementaire préalable au remboursement direct : la faculté devient ouverte pour les soins futurs, avec accord de l'assuré et facturation ordinaire. Le remboursement sur avance demeure possible. Le premier alinéa pose l'avance, le second y déroge expressément : « L'assuré ne peut être tenu d'avancer les frais ainsi facturés directement à la caisse.",
-      "scope_limitations": "Le premier alinéa pose l'avance, le second y déroge expressément : « L'assuré ne peut être tenu d'avancer les frais ainsi facturés directement à la caisse. » Pas de contradiction interne ; choix du praticien et accord de l'assuré, sans tiers payant obligatoire général. La condition d'accord est nouvelle dans ce texte et doit être recensée ; aucune attestation n'est exigée. R371-9 reste entier. La compétence et les modalités des règlements référés à L371-12 restent à documenter, ce dernier étant absent du corpus consulté.",
-      "new_burdens_review": "Condition nouvelle d'accord de l'assuré pour le remboursement direct, sans écrit ni registre imposé ; obligation pour la caisse de permettre ce paiement et interdiction d'avance pour les mêmes frais. Facturation existante conservée. Solde net de gestion et coûts publics non établis.",
+      "classification": "coordination_only",
+      "assessment": "Abrogation d'un article réglementaire qui organisait le remboursement des frais sous un règlement d'aide sociale prévus par L. 371-12, abrogé depuis le 25 janvier 1990 ; la proposition antérieure réformait un régime sans base légale depuis trente-six ans.",
+      "scope_limitations": "Le texte abrogeant L. 371-12 n'est connu que par le corpus LEGI (LEGIARTI000006742726). L'existence de règlements antérieurs encore appliqués n'est pas connue.",
+      "new_burdens_review": "Aucune charge nouvelle : ni règlement, ni pièce, ni délai ; les prestations et dispenses légales et les créances antérieures sont conservées.",
       "effects": [
         {
-          "kind": "authorization_removed",
-          "measure_id": "aide-sociale-remboursement-direct-sans-autorisation",
-          "description": "Faculté directe sans habilitation du règlement.",
-          "before": "Paiement direct seulement si le règlement l’autorise.",
-          "after": "Paiement direct possible avec accord de l’assuré ; pas de dossier distinct.",
-          "unit": "legal_duty",
-          "affected_population": "Assurés indigents et praticiens dans le champ du premier alinéa.",
-          "conditions_and_transition": "Le premier alinéa pose l'avance, le second y déroge expressément : « L'assuré ne peut être tenu d'avancer les frais ainsi facturés directement à la caisse. » Pas de contradiction interne ; choix du praticien et accord de l'assuré, sans tiers payant obligatoire général. La condition d'accord est nouvelle dans ce texte et doit être recensée ; aucune attestation n'est exigée. R371-9 reste entier. La compétence et les modalités des règlements référés à L371-12 restent à documenter, ce dernier étant absent du corpus consulté.",
-          "replacement_or_new_burdens": "Condition nouvelle d'accord de l'assuré pour le remboursement direct, sans écrit ni registre imposé ; obligation pour la caisse de permettre ce paiement et interdiction d'avance pour les mêmes frais. Facturation existante conservée. Solde net de gestion et coûts publics non établis.",
-          "source_quote": "Ce règlement peut, toutefois, autoriser les praticiens à se faire rembourser directement par la caisse primaire d'assurance maladie.",
-          "proposed_quote": "Les praticiens peuvent, avec l'accord de l'assuré, se faire rembourser directement par la caisse primaire d'assurance maladie, sans autorisation du règlement."
-        },
-        {
-          "kind": "obligation_added",
-          "measure_id": "aide-sociale-remboursement-direct-sans-autorisation",
-          "description": "Accord du bénéficiaire et protection contre une double avance.",
-          "before": "Source sans exigence expresse d’accord du bénéficiaire.",
-          "after": "Accord requis pour la faculté ; aucune avance des frais facturés directement.",
-          "unit": "legal_duty",
-          "affected_population": "Assurés indigents et praticiens dans le champ du premier alinéa.",
-          "conditions_and_transition": "Le premier alinéa pose l'avance, le second y déroge expressément : « L'assuré ne peut être tenu d'avancer les frais ainsi facturés directement à la caisse. » Pas de contradiction interne ; choix du praticien et accord de l'assuré, sans tiers payant obligatoire général. La condition d'accord est nouvelle dans ce texte et doit être recensée ; aucune attestation n'est exigée. R371-9 reste entier. La compétence et les modalités des règlements référés à L371-12 restent à documenter, ce dernier étant absent du corpus consulté.",
-          "replacement_or_new_burdens": "Condition nouvelle d'accord de l'assuré pour le remboursement direct, sans écrit ni registre imposé ; obligation pour la caisse de permettre ce paiement et interdiction d'avance pour les mêmes frais. Facturation existante conservée. Solde net de gestion et coûts publics non établis.",
-          "source_quote": "Il indique, dans ce cas, les formalités à remplir par eux.",
-          "proposed_quote": "L'assuré ne peut être tenu d'avancer les frais ainsi facturés directement à la caisse."
+          "kind": "coordination",
+          "measure_id": "aide-sociale-l371-12-renvoi-mort",
+          "description": "Abrogation d'un règlement d'application dont la base légale est abrogée depuis 1990.",
+          "before": "Règles applicables aux règlements de L. 371-12, réformées par la proposition antérieure.",
+          "after": "Article abrogé ; prestations, dispenses et créances antérieures conservées.",
+          "unit": "regime",
+          "affected_population": "Caisses primaires, praticiens et assurés sociaux bénéficiaires de l'aide sociale.",
+          "conditions_and_transition": "Dès l'entrée en vigueur ; créances et recours antérieurs régis par les règles alors applicables.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "En cas d'application d'un règlement ne prévoyant l'inscription sur les listes d'assistance que pour l'hospitalisation",
+          "proposed_quote": "aucun règlement ne peut plus être pris ni appliqué sur ce fondement"
         }
       ]
     },
     "reference_checks": [],
-    "change_type": "normative_reduction",
-    "reform_policy_id": "editorial_direction_2026_10_19",
-    "removed_provisions": [
-      "Suppression de la nécessité d'une autorisation dans le règlement pour le remboursement direct aux praticiens."
-    ],
+    "change_type": "full_repeal",
+    "reform_policy_id": null,
+    "removed_provisions": null,
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "883061b1f0adf22f11b4977e8dd80c1997191262aae844fb6ecc37e227bbcec3",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "a6014ee708a47ea2a353d0225122b4b08016bc7c84aa785fb127715bb69ad8bd",
-      "assessment_sha256": "40e3d45dcc901c7e42bee71b7655c96880420fd41ee9a68932cd9b528cf35213",
+      "proposed_sha256": "599675326ff6f448b04487a701d50385bd399e605878131738c5438310d16ed4",
+      "assessment_sha256": "e7481a0073548d3d1b2a4121963d30538f86aef02d52c2e7c6cd923053cabc77",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "a6014ee708a47ea2a353d0225122b4b08016bc7c84aa785fb127715bb69ad8bd"
+    "prior_proposal_sha256": "a6014ee708a47ea2a353d0225122b4b08016bc7c84aa785fb127715bb69ad8bd",
+    "classification": "coordination_only",
+    "repeal_policy_id": "editorial_direction_2026_10_19",
+    "repeal_scope": "Abrogation du régime de remboursement des frais médicaux sous un règlement d'aide sociale de L. 371-12, abrogé en 1990, sous lequel aucun règlement ne peut plus exister.",
+    "benefit_review": "Aucune faveur effective n'est retirée : aucun règlement ne peut exister depuis 1990 ; l'absence de participation des assurés indigents est conservée à l'article R. 371-9.",
+    "third_pass_correction": {
+      "objection": "AUDIT6-E152",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006073189",

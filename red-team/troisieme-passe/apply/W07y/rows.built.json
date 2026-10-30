@@ -1,0 +1,250 @@
+[
+ {
+  "mode": "replace",
+  "objection": "AUDIT6-E069",
+  "row": {
+   "code_id": "LEGITEXT000006073189",
+   "source_id": "LEGIARTI000053335371",
+   "source_sha256": "d5bc4ccac759c701532a6ac77d8eb83de4ec5ca6dd7fd2c72f9ed730406fbf10",
+   "number": "R135-16-2",
+   "proposed_xml": "\n<br />\n<p>Les versements forfaitaires résultant de l'application des a et b du 2° de l'article L. 135-2 pour les travailleurs indépendants mentionnés à l'article L. 611-1 et pour les personnes non salariées des professions agricoles, concernant les périodes mentionnées aux 2° et 3° de l'article L. 351-3, aux articles L. 643-3-1 et L. 653-3-1 du présent code et au 2° de l'article L. 732-21 du code rural et de la pêche maritime , sont égaux aux produits, d'une part, du taux et de l'assiette de cotisations fixés au troisième alinéa du présent article et, d'autre part, des effectifs des assurés mentionnés ci-dessus ayant bénéficié de l'allocation mentionnée à l' article L. 5424-25 du code du travail .</p>\n<p>S'agissant des périodes de chômage indemnisé, les effectifs mentionnés au premier alinéa correspondent à la moyenne annuelle de l'effectif constaté chaque fin de mois selon les statistiques de l'opérateur France Travail. S'agissant des périodes de chômage non indemnisé des travailleurs indépendants du régime général mentionnés à l'article L. 631-1 du présent code, les effectifs concernés sont constitués d'une fraction de l'effectif des travailleurs indépendants du régime général indemnisés, fixée par arrêté du ministre chargé de la sécurité sociale.</p>\n<p>Le taux de la cotisation mentionnée au premier alinéa est égal au taux de la cotisation en vigueur pour la couverture du risque vieillesse de base des travailleurs indépendants du régime général mentionnée à l'article L. 633-10. Cette cotisation est assise sur une assiette forfaitaire annuelle égale à 11,5 % de la valeur du plafond annuel mentionné au premier alinéa de l'article L. 241-3.</p>\n<p>S'agissant des périodes de chômage indemnisé, le versement du Fonds de solidarité vieillesse est réparti entre les régimes concernés, au prorata de leurs effectifs d'assurés bénéficiant de l'allocation mentionnée à l' article L. 5424-25 du code du travail  et notifié à chacun d'eux par l'opérateur France Travail.</p>\n<br /><p>Le fonds de solidarité vieillesse a été supprimé au 1er janvier 2026 par l'abrogation des articles L. 135-1 à L. 135-5 (article 24 de la loi n° 2025-199 du 28 février 2025) ; ses droits et obligations ont été dévolus à cette date à la Caisse nationale d'assurance vieillesse, et ses dépenses relèvent depuis lors de la branche mentionnée au 3° de l'article L. 200-2 en application de l'article L. 222-2-1. À compter de cette date, les versements forfaitaires prévus au présent article ne sont dus que dans la mesure où ils sont pris en charge par cette branche en application de l'article L. 222-2-1 ; les mentions du fonds et de l'article L. 135-2 s'entendent alors de la Caisse nationale d'assurance vieillesse, au titre de cette branche, et de l'article L. 222-2-1. Les versements afférents aux exercices antérieurs, leurs régularisations et les recours qui s'y rapportent restent régis par les dispositions alors applicables. Aucune formalité de remplacement n'est instituée.</p>",
+   "reason": "Coordination nécessaire de l’identité du fournisseur d’effectifs : la source juxtapose Pôle emploi au deuxième alinéa et France Travail au dernier ; le même opérateur est désormais nommé uniformément. Le doublon matériel « au au 2° » est rectifié explicitement. Aucun changement de formule : chômage indemnisé, fraction du non-indemnisé, professions et régimes, taux L633-10, assiette de 11,5 % du PASS et répartition sont conservés. Correction de la troisième passe : le fonds étant supprimé depuis le 1er janvier 2026, la formule ne s'applique plus qu'aux sommes prises en charge par la branche vieillesse en application de l'article L. 222-2-1, la Caisse nationale d'assurance vieillesse se substituant au fonds ; les exercices antérieurs gardent leur régime.",
+   "review_notes": "La rédaction source applicable au 1er janvier 2026, ses notes et les cibles L643-3-1/L653-3-1/L241-3 ont été lues. L5424-25 officiel, lu dans travail.json, concerne l’allocation des travailleurs indépendants, non le préavis ou l’indemnité d’un salarié ; L633-10 n’est pas présent dans le corpus fourni, sa valeur de taux n’est donc pas inventée. Le renvoi au premier alinéa de L241-3 demeure celui du plafond, y compris si la proposition de ce texte le regroupe dans un I. L732-21 rural est hors des cinq codes et non fourni : sa concordance n’est pas certifiée. Les modalités du II de l’article 2 du décret de 2025 cité en note restent distinctes. L’absence de L633-10 du corpus n’est pas une preuve de son abrogation ni une table de concordance. L633-1 et D633-3 ont été lus en entier : le premier vise les cotisations de base plafonnées et déplafonnées et le second fixe deux taux distincts, 17,15 % et 0,72 %. Sans filiation locale établissant quelle composante remplace exactement la cotisation visée par L633-10 pour ce versement, aucune substitution ni somme de taux n’est inventée. Ce renvoi de calcul reste expressément non résolu et ne compte pas comme coordination de formule achevée ; le changement de nom de l’opérateur n’en prouve pas la validité.\n\nSeconde passe : coordination nécessaire confirmée entre « selon les statistiques de Pôle emploi » et « notifié à chacun d'eux par l'opérateur France Travail ». Le corps précédent est conservé. L5424-25, L611-1, L631-1, L633-1 et D633-3 ont été relus dans le corpus. Point non vérifiable : « mentionnée à l'article L. 633-10 » reste sans cible ni concordance historique fournie ; les deux composantes de D633-3 (17,15 % plafonnée et 0,72 % déplafonnée) ne suffisent pas à identifier la composante voulue. Aucune substitution de taux n'est donc affirmée. L135-2, L732-21 rural et le II de l'article 2 du décret 2025-1409 demeurent des pièces manquantes à obtenir avant consolidation. La formule n'est pas déclarée entièrement validée. Correction de la troisième passe (objection AUDIT6-E069, sixième audit, groupe X8) : le fonds de solidarité vieillesse est supprimé au 1er janvier 2026 (L. 135-1 LEGIARTI000037290440 et L. 135-2 LEGIARTI000042683484 figurent au corpus à l'état ABROGE à cette date, avec un lien ABROGE vers l'article 24 de la loi n° 2025-199 ; L. 135-3 à L. 135-5 aussi) ; les mentions des présentes notes qui les disent absents du corpus, ou qui supposent le fonctionnement futur du fonds, sont périmées. le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge. Même solution que R135-2, R135-6 et R135-14 (variantes W02ma et W04ma) ; transferts à la Caisse nationale d'assurance vieillesse conservés ; aucune formalité de remplacement. Revue IA, sans validation par un juriste.",
+   "status": "rewrite_draft",
+   "previous_draft": {
+    "source_sha256": "d5bc4ccac759c701532a6ac77d8eb83de4ec5ca6dd7fd2c72f9ed730406fbf10",
+    "status": "rewrite_draft",
+    "proposed_xml": "\n<br />\n<p>Les versements forfaitaires résultant de l'application des a et b du 2° de l'article L. 135-2 pour les travailleurs indépendants mentionnés à l'article L. 611-1 et pour les personnes non salariées des professions agricoles, concernant les périodes mentionnées aux 2° et 3° de l'article L. 351-3, aux articles L. 643-3-1 et L. 653-3-1 du présent code et au 2° de l'article L. 732-21 du code rural et de la pêche maritime , sont égaux aux produits, d'une part, du taux et de l'assiette de cotisations fixés au troisième alinéa du présent article et, d'autre part, des effectifs des assurés mentionnés ci-dessus ayant bénéficié de l'allocation mentionnée à l' article L. 5424-25 du code du travail .</p>\n<p>S'agissant des périodes de chômage indemnisé, les effectifs mentionnés au premier alinéa correspondent à la moyenne annuelle de l'effectif constaté chaque fin de mois selon les statistiques de l'opérateur France Travail. S'agissant des périodes de chômage non indemnisé des travailleurs indépendants du régime général mentionnés à l'article L. 631-1 du présent code, les effectifs concernés sont constitués d'une fraction de l'effectif des travailleurs indépendants du régime général indemnisés, fixée par arrêté du ministre chargé de la sécurité sociale.</p>\n<p>Le taux de la cotisation mentionnée au premier alinéa est égal au taux de la cotisation en vigueur pour la couverture du risque vieillesse de base des travailleurs indépendants du régime général mentionnée à l'article L. 633-10. Cette cotisation est assise sur une assiette forfaitaire annuelle égale à 11,5 % de la valeur du plafond annuel mentionné au premier alinéa de l'article L. 241-3.</p>\n<p>S'agissant des périodes de chômage indemnisé, le versement du Fonds de solidarité vieillesse est réparti entre les régimes concernés, au prorata de leurs effectifs d'assurés bénéficiant de l'allocation mentionnée à l' article L. 5424-25 du code du travail  et notifié à chacun d'eux par l'opérateur France Travail.</p>\n<br />\n",
+    "reason": "Coordination nécessaire de l’identité du fournisseur d’effectifs : la source juxtapose Pôle emploi au deuxième alinéa et France Travail au dernier ; le même opérateur est désormais nommé uniformément. Le doublon matériel « au au 2° » est rectifié explicitement. Aucun changement de formule : chômage indemnisé, fraction du non-indemnisé, professions et régimes, taux L633-10, assiette de 11,5 % du PASS et répartition sont conservés.",
+    "review_notes": "La rédaction source applicable au 1er janvier 2026, ses notes et les cibles L643-3-1/L653-3-1/L241-3 ont été lues. L5424-25 officiel, lu dans travail.json, concerne l’allocation des travailleurs indépendants, non le préavis ou l’indemnité d’un salarié ; L633-10 n’est pas présent dans le corpus fourni, sa valeur de taux n’est donc pas inventée. Le renvoi au premier alinéa de L241-3 demeure celui du plafond, y compris si la proposition de ce texte le regroupe dans un I. L732-21 rural est hors des cinq codes et non fourni : sa concordance n’est pas certifiée. Les modalités du II de l’article 2 du décret de 2025 cité en note restent distinctes. L’absence de L633-10 du corpus n’est pas une preuve de son abrogation ni une table de concordance. L633-1 et D633-3 ont été lus en entier : le premier vise les cotisations de base plafonnées et déplafonnées et le second fixe deux taux distincts, 17,15 % et 0,72 %. Sans filiation locale établissant quelle composante remplace exactement la cotisation visée par L633-10 pour ce versement, aucune substitution ni somme de taux n’est inventée. Ce renvoi de calcul reste expressément non résolu et ne compte pas comme coordination de formule achevée ; le changement de nom de l’opérateur n’en prouve pas la validité.",
+    "proposed_sha256": "e03f63ef7bb633983161286524e6750fddf798518c2788caf83a7bf46b0e62a0",
+    "batch_row_sha256": "320c728334d8a03b079c8795b4070292a0b3c8bbe2c3e4ab17082a0ede92a205"
+   },
+   "source_conflict_ids": [],
+   "impact_check_required": true,
+   "benefit_check_required": false,
+   "reference_checks": [
+    {
+     "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+     "view_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
+     "assessment": "R135-16-2 : Différence de champ : le préavis de licenciement salarié (ancien régime de six mois/deux ans et régime proposé de quinze jours calendaires) ne règle pas ce dispositif. Aucun délai de versement, de statistique ou de mandat n'est une notification de rupture ; les protections et procédures spéciales ne sont pas écartées."
+    },
+    {
+     "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+     "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+     "assessment": "R135-16-2 : Différence de champ : le contrat unique proposé concerne les nouvelles relations privées, sans fin automatique de mission ou de formation ; il préserve les contrats anciens et les avantages futurs de même objet. Le présent article ne crée aucun emploi à durée déterminée et ne transforme ni période d'assurance, ni convention entre organismes, ni mandat en contrat de travail."
+    },
+    {
+     "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+     "view_sha256": "07c3c02ea91c33bfe38f9dd4010d72cc213a2fee8e654638d29b3dec91f0446c",
+     "assessment": "R135-16-2 : Différence de champ : l'indemnité ordinaire proposée naît à un an au terme effectif, préavis inclus, puis porte sur toute l'ancienneté à 0,20 mois par année, mois complets au prorata et plafond de six mois. Les notifications antérieures et indemnités spéciales ont leurs règles propres. Aucun montant, effectif ni mandat du présent article ne relève de ce barème ; aucune condition d'ancienneté salariée ne lui est ajoutée."
+    },
+    {
+     "target_key": "LEGITEXT000006073189|LEGIARTI000037379155",
+     "view_sha256": "f811f8c76a7b87946135604a1998725068a4b8f0817bbda29b2d773e82a09063",
+     "assessment": "R135-16-2 : Le texte officiel valide comme périodes d'assurance de base des avocats les périodes d'allocation L5424-25. R135-16-2 les finance sans les transformer en indemnités de licenciement ; les futurs bénéficiaires demeurent inclus et aucun seuil d'un an de salariat n'est importé."
+    },
+    {
+     "target_key": "LEGITEXT000006073189|LEGIARTI000037388247",
+     "view_sha256": "6a41c8807278c8a89515290e47c1daf3cd1c9d1368f0b0962d52693fe6cd4115",
+     "assessment": "R135-16-2 : Le texte officiel valide l'allocation L5424-25 pour la retraite de base des professions libérales. Le renvoi de R135-16-2 correspond bien à cette population, distincte des indépendants du régime général pour le chômage non indemnisé. Le changement de nom de l'opérateur ne ferme aucun droit futur."
+    },
+    {
+     "target_key": "LEGITEXT000006073189|LEGIARTI000051289018",
+     "view_sha256": "da4cf027a0b150a33727d5b84e712984a6b4a7ae2fd057c9f7372ba16370e07a",
+     "assessment": "R135-16-2 : La source et la proposition conservent le plafond annuel au premier alinéa, devenu premier alinéa du I. Le transfert proposé au II vise seulement les salariés du régime général employés par une personne privée ; son financement, sa gouvernance et le calcul des droits restent préalables. Il ne modifie pas la référence de 11,5 % du PASS des indépendants et ne constitue pas une baisse de cotisations. R135-17 conserve les moyennes annuelles et la référence avant ventilation, sans raccorder les autres régimes."
+    },
+    {
+     "target_key": "LEGITEXT000006073189|LEGIARTI000053279221",
+     "view_sha256": "829970fa053c4de9e9d0f63e80f2c859279612b623fb24d18ed68ea96f6d0e2a",
+     "assessment": "R135-16-2 : Les 1°, 2° et 3° distinguent prestations assimilées, revenus de remplacement et chômage involontaire non indemnisé. La proposition corrige seulement la mention anachronique du congé supplémentaire de naissance dans les rentes antérieures à juillet 1930 ; elle préserve le nouveau congé selon la note de 2026. Le versement FSV ne crée pas une indemnité de rupture et ne peut conditionner ces validations au seuil salarié d'un an."
+    }
+   ],
+   "substantive_impact": {
+    "version": 1,
+    "classification": "coordination_only",
+    "assessment": "Coordination nécessaire de l’identité du fournisseur d’effectifs : la source juxtapose Pôle emploi au deuxième alinéa et France Travail au dernier ; le même opérateur est désormais nommé uniformément. Le doublon matériel « au au 2° » est rectifié explicitement. Aucun changement de formule : chômage indemnisé, fraction du non-indemnisé, professions et régimes, taux L633-10, assiette de 11,5 % du PASS et répartition sont conservés.",
+    "scope_limitations": "La concordance L633-10 et la version de L135-2 ne sont pas établies ; code rural et décret 2025-1409 manquent. Aucune baisse ni validation de formule complète n'est revendiquée. Le XXII de l'article 24 de la loi n° 2025-199 (dévolution à la Caisse nationale d'assurance vieillesse) est cité d'après la lecture faite par l'audit E09 sur Légifrance le 29 octobre 2026 ; les textes de dissolution, de liquidation et l'arrêté d'approbation des comptes 2025 ne sont pas au corpus.",
+    "new_burdens_review": "Aucune charge nouvelle identifiée : le corps proposé conserve les données et contrôles nécessaires ; il n'ajoute ni registre, ni déclaration, ni visa de remplacement. Les conditions transitoires protègent les actes et droits antérieurs.",
+    "effects": [
+     {
+      "kind": "coordination",
+      "measure_id": "fsv-operateur-france-travail",
+      "description": "Dénomination cohérente du fournisseur des statistiques ; aucun taux modifié.",
+      "before": "Pôle emploi au deuxième alinéa et France Travail au dernier.",
+      "after": "France Travail dans les deux fonctions ; assiette de 11,5 % du PASS inchangée.",
+      "unit": "other",
+      "affected_population": "Organismes calculant les versements pour les indépendants.",
+      "conditions_and_transition": "Coordination de dénomination ; périodes et droits couverts inchangés.",
+      "replacement_or_new_burdens": "Aucune formalité de remplacement ni nouvelle charge identifiée ; contrôles autonomes et droits antérieurs conservés.",
+      "source_quote": "selon les statistiques de Pôle emploi.",
+      "proposed_quote": "selon les statistiques de l'opérateur France Travail."
+     },
+     {
+      "kind": "coordination",
+      "measure_id": "fsv-suppression-r135-16-2",
+      "description": "Rattachement d'un versement forfaitaire à la branche qui a repris les dépenses du fonds.",
+      "before": "Versement forfaitaire du fonds aux régimes au titre des périodes validées.",
+      "after": "Versement dû seulement dans la mesure de sa prise en charge par la branche vieillesse, gérée par la CNAV, selon la même formule.",
+      "unit": "regime",
+      "affected_population": "Fonds de solidarité vieillesse en liquidation, Caisse nationale d'assurance vieillesse et régimes concernés.",
+      "conditions_and_transition": "Depuis le 1er janvier 2026 ; exercices antérieurs, régularisations et recours régis par les règles alors applicables.",
+      "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+      "source_quote": "Les versements forfaitaires résultant de l'application des a et b du 2° de l'article L. 135-2",
+      "proposed_quote": "À compter de cette date, les versements forfaitaires prévus au présent article"
+     }
+    ]
+   },
+   "substantive_impact_certificate": {
+    "version": 1,
+    "source_sha256": "d5bc4ccac759c701532a6ac77d8eb83de4ec5ca6dd7fd2c72f9ed730406fbf10",
+    "source_notes_sha256": "b74e040a6365436c31d272f8d52cbf1294b81aa2873ec7428088dcefb8ec5764",
+    "proposed_sha256": "82f4b05266e725afdc1b5cb46723a49a72a8f62ddb1cd09989a11ba1d2151c24",
+    "assessment_sha256": "73601b7e8516a61cdbb2ad1a2c272e34f1315c556be7b2a5acfbe9066d02065c",
+    "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+    "verification": "exact_passages_and_hashes_only",
+    "independent_impact_audit": false,
+    "semantic_review_by_jurist": false
+   },
+   "reference_coherence": {
+    "version": 3,
+    "referrer_sha256": "e03f63ef7bb633983161286524e6750fddf798518c2788caf83a7bf46b0e62a0",
+    "policy_sha256": {
+     "policy-coordinations.json": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+     "site-summaries.json": "27b423da5a7eef8b2f66d71ec7eec7a049c57793808864ce4930b19c7fc8c512"
+    },
+    "referrer_source": {
+     "code_id": "LEGITEXT000006073189",
+     "source_id": "LEGIARTI000053335371",
+     "source_sha256": "d5bc4ccac759c701532a6ac77d8eb83de4ec5ca6dd7fd2c72f9ed730406fbf10",
+     "source_xml_sha256": "2e8cef2a90e306c9ebab2ca7beeb258d38f0dbca075bda8a711d884f8dc7c06c",
+     "source_notes_sha256": "b74e040a6365436c31d272f8d52cbf1294b81aa2873ec7428088dcefb8ec5764"
+    },
+    "targets": {
+     "LEGITEXT000006072050|LEGIARTI000006901112": {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000006901112",
+      "source_sha256": "263c966f0220c97c9f469106826520c1ced2885992e1c7b97cad26a7a094252f",
+      "view_kind": "proposal",
+      "view_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
+      "source_xml_sha256": "0be1837dacf1ea6aab83b44cf12c2b06486d663106cd76e1e63240f96a4b636e",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     },
+     "LEGITEXT000006072050|LEGIARTI000019071087": {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000019071087",
+      "source_sha256": "6d93b306fc32b36deb261d1fd218bc9ef641671c308b34cfc98da04217234724",
+      "view_kind": "proposal",
+      "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+      "source_xml_sha256": "3eee7516de9e763f6b5a419902540eb770a91bfe92259b8cd19b9026f42cda67",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     },
+     "LEGITEXT000006072050|LEGIARTI000035644154": {
+      "code_id": "LEGITEXT000006072050",
+      "source_id": "LEGIARTI000035644154",
+      "source_sha256": "e13c88bb3827410e511a22d4c8c881583899a0fb5163883cacfedeaf53e5c030",
+      "view_kind": "proposal",
+      "view_sha256": "07c3c02ea91c33bfe38f9dd4010d72cc213a2fee8e654638d29b3dec91f0446c",
+      "source_xml_sha256": "f016b3a023633d4af1524a3c88eefb928510961979af854348c3bddf0b4299ed",
+      "source_notes_sha256": "2f78a10db02b6a521c47475b95845c153d94fd3c0d74413d4d4af29267a8ef7b"
+     },
+     "LEGITEXT000006073189|LEGIARTI000037379155": {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000037379155",
+      "source_sha256": "e524cc23e17aaa53f18e1dee441345c021add9150baf3cde959a88ad1ea32f46",
+      "view_kind": "official_source_only",
+      "view_sha256": "f811f8c76a7b87946135604a1998725068a4b8f0817bbda29b2d773e82a09063",
+      "source_xml_sha256": "f811f8c76a7b87946135604a1998725068a4b8f0817bbda29b2d773e82a09063",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     },
+     "LEGITEXT000006073189|LEGIARTI000037388247": {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000037388247",
+      "source_sha256": "919795dad9432a6f09775e69edbf77b303841819d184e1c875546f95c3c39dc0",
+      "view_kind": "official_source_only",
+      "view_sha256": "6a41c8807278c8a89515290e47c1daf3cd1c9d1368f0b0962d52693fe6cd4115",
+      "source_xml_sha256": "6a41c8807278c8a89515290e47c1daf3cd1c9d1368f0b0962d52693fe6cd4115",
+      "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     },
+     "LEGITEXT000006073189|LEGIARTI000051289018": {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000051289018",
+      "source_sha256": "f24a47a718341114ed58d5d347d73421a343ddda2f51c3de23e245d594c2ee28",
+      "view_kind": "proposal",
+      "view_sha256": "da4cf027a0b150a33727d5b84e712984a6b4a7ae2fd057c9f7372ba16370e07a",
+      "source_xml_sha256": "8d35bc4f165ffa614db5e2902504de338ae1bccaedc9f6d70a2e2a2713d7ce5d",
+      "source_notes_sha256": "8422c34317608b96fc744fcada974079076169e7cbe59dca6ff38d1e4f4a1763"
+     },
+     "LEGITEXT000006073189|LEGIARTI000053279221": {
+      "code_id": "LEGITEXT000006073189",
+      "source_id": "LEGIARTI000053279221",
+      "source_sha256": "a48861133dce3720c550e4c1818d4040db257bf6177bd6f88e0980cf655d8355",
+      "view_kind": "proposal",
+      "view_sha256": "829970fa053c4de9e9d0f63e80f2c859279612b623fb24d18ed68ea96f6d0e2a",
+      "source_xml_sha256": "9cb4027b313f6d9f87e42fb463db3fa3ffcff408ffd036ebaf5395b7270b0417",
+      "source_notes_sha256": "7ee242dfe2915d7b7d04ef70add84d8b665139dc0417553f07d79d902cc7f94e"
+     }
+    },
+    "assessments": [
+     {
+      "target_key": "LEGITEXT000006072050|LEGIARTI000006901112",
+      "view_sha256": "ca34bc126ce10bb5bdd7720f3cd21af78fb1e50f42c7481f9992edd54d469800",
+      "assessment": "R135-16-2 : Différence de champ : le préavis de licenciement salarié (ancien régime de six mois/deux ans et régime proposé de quinze jours calendaires) ne règle pas ce dispositif. Aucun délai de versement, de statistique ou de mandat n'est une notification de rupture ; les protections et procédures spéciales ne sont pas écartées."
+     },
+     {
+      "target_key": "LEGITEXT000006072050|LEGIARTI000019071087",
+      "view_sha256": "0a424087fd3feecf301564a0cb84a961f2da0ea518034152c6494836e516842e",
+      "assessment": "R135-16-2 : Différence de champ : le contrat unique proposé concerne les nouvelles relations privées, sans fin automatique de mission ou de formation ; il préserve les contrats anciens et les avantages futurs de même objet. Le présent article ne crée aucun emploi à durée déterminée et ne transforme ni période d'assurance, ni convention entre organismes, ni mandat en contrat de travail."
+     },
+     {
+      "target_key": "LEGITEXT000006072050|LEGIARTI000035644154",
+      "view_sha256": "07c3c02ea91c33bfe38f9dd4010d72cc213a2fee8e654638d29b3dec91f0446c",
+      "assessment": "R135-16-2 : Différence de champ : l'indemnité ordinaire proposée naît à un an au terme effectif, préavis inclus, puis porte sur toute l'ancienneté à 0,20 mois par année, mois complets au prorata et plafond de six mois. Les notifications antérieures et indemnités spéciales ont leurs règles propres. Aucun montant, effectif ni mandat du présent article ne relève de ce barème ; aucune condition d'ancienneté salariée ne lui est ajoutée."
+     },
+     {
+      "target_key": "LEGITEXT000006073189|LEGIARTI000037379155",
+      "view_sha256": "f811f8c76a7b87946135604a1998725068a4b8f0817bbda29b2d773e82a09063",
+      "assessment": "R135-16-2 : Le texte officiel valide comme périodes d'assurance de base des avocats les périodes d'allocation L5424-25. R135-16-2 les finance sans les transformer en indemnités de licenciement ; les futurs bénéficiaires demeurent inclus et aucun seuil d'un an de salariat n'est importé."
+     },
+     {
+      "target_key": "LEGITEXT000006073189|LEGIARTI000037388247",
+      "view_sha256": "6a41c8807278c8a89515290e47c1daf3cd1c9d1368f0b0962d52693fe6cd4115",
+      "assessment": "R135-16-2 : Le texte officiel valide l'allocation L5424-25 pour la retraite de base des professions libérales. Le renvoi de R135-16-2 correspond bien à cette population, distincte des indépendants du régime général pour le chômage non indemnisé. Le changement de nom de l'opérateur ne ferme aucun droit futur."
+     },
+     {
+      "target_key": "LEGITEXT000006073189|LEGIARTI000051289018",
+      "view_sha256": "da4cf027a0b150a33727d5b84e712984a6b4a7ae2fd057c9f7372ba16370e07a",
+      "assessment": "R135-16-2 : La source et la proposition conservent le plafond annuel au premier alinéa, devenu premier alinéa du I. Le transfert proposé au II vise seulement les salariés du régime général employés par une personne privée ; son financement, sa gouvernance et le calcul des droits restent préalables. Il ne modifie pas la référence de 11,5 % du PASS des indépendants et ne constitue pas une baisse de cotisations. R135-17 conserve les moyennes annuelles et la référence avant ventilation, sans raccorder les autres régimes."
+     },
+     {
+      "target_key": "LEGITEXT000006073189|LEGIARTI000053279221",
+      "view_sha256": "829970fa053c4de9e9d0f63e80f2c859279612b623fb24d18ed68ea96f6d0e2a",
+      "assessment": "R135-16-2 : Les 1°, 2° et 3° distinguent prestations assimilées, revenus de remplacement et chômage involontaire non indemnisé. La proposition corrige seulement la mention anachronique du congé supplémentaire de naissance dans les rentes antérieures à juillet 1930 ; elle préserve le nouveau congé selon la note de 2026. Le versement FSV ne crée pas une indemnité de rupture et ne peut conditionner ces validations au seuil salarié d'un an."
+     }
+    ],
+    "assessments_sha256": "26910edd20eaff2c507c179d3728c306795cada7007b102cd435aca9ffdd2c9f",
+    "semantic_review_by_jurist": false
+   },
+   "policy_review_id": "substantive_outcomes_2026_10_19",
+   "prior_proposal_sha256": "e03f63ef7bb633983161286524e6750fddf798518c2788caf83a7bf46b0e62a0",
+   "third_pass_correction": {
+    "objection": "AUDIT6-E069",
+    "applied_by": "troisième passe (red-team indépendante)"
+   }
+  },
+  "diagnostics": [
+   {
+    "source_id": "LEGIARTI000053335371",
+    "number": "R135-16-2",
+    "check": "references_changed",
+    "removed": [],
+    "added": [
+     "L135-1",
+     "L135-5",
+     "L200-2",
+     "L222-2-1"
+    ]
+   }
+  ]
+ }
+]

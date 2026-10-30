@@ -1,0 +1,611 @@
+{
+ "group": "E08",
+ "read_from": "production",
+ "read_date": "2026-10-29",
+ "method": "Lecture de chaque article par CITE_PRODUCTION=1 python3 -I tools/cite.py (sorties dans evidence/cited/production-20261029/). Les liens directs sont lus par requêtes en lecture seule sur la base de production (mode=ro, query_only). Qualification faite avant toute consultation du registre et des audits antérieurs.",
+ "counts": {
+  "G": 2,
+  "m": 5,
+  "zero": 24,
+  "total": 31
+ },
+ "articles": [
+  {
+   "sample_id": "E008",
+   "code": "css",
+   "number": "D756-3",
+   "source_id": "LEGIARTI000034726217",
+   "verdict": "m",
+   "families": [
+    "F3",
+    "F10"
+   ],
+   "description": "Article maintenu (périodes ouvrant droit à l'allocation aux vieux travailleurs non salariés). La source renvoie au revenu « mentionné à l'article D. 812-4 », article abrogé depuis le 13 janvier 2007 : renvoi mort hérité du droit officiel (conflit de source), sans effet nouveau du projet. Les notes affirment à tort que D812-4 est « absent du corpus consulté » : il y figure, avec l'état ABROGE.",
+   "evidence": "css D756-3 LEGIARTI000034726217 (source) : « un revenu professionnel annuel au moins égal à celui mentionné à l'article D. 812-4 » ; css D812-4 LEGIARTI000006739481 : état ABROGE, en vigueur du 1999-12-02 au 2007-01-13 ; notes de D756-3 : « D812-4 est absent du corpus consulté ».",
+   "links_read": [
+    "css D812-4 (toutes versions)",
+    "css D756-1, D756-2 (abrogés)",
+    "css D173-21-3 proposé (renvoi à D. 756-2)",
+    "recherche des renvois entrants à D. 756-3 (aucun)"
+   ],
+   "links_not_read": "Décret n° 75-1098 du 25 novembre 1975 (hors corpus) ; base légale historique de l'allocation (ordonnance n° 2004-605) non consultée.",
+   "known_objection": "audit/sweeps/candidates.json, S8_reference_to_long_repealed (D756-3 cite D812-4, cited_ended 2007-01-13) ; candidat de balayage, sans objection au registre.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E018",
+   "code": "travail",
+   "number": "R5212-17",
+   "source_id": "LEGIARTI000053488981",
+   "verdict": "0",
+   "families": [],
+   "description": "Suppression de l'envoi des bilans annuels en plus du bilan récapitulatif. Les autorités destinataires sont nommées directement et concordent avec R5212-15 proposé (contrôle, plus d'agrément) ; R5212-16 garde les bilans internes. Le solde, le 31 mai et les justificatifs restent. Transition correcte.",
+   "evidence": "",
+   "links_read": [
+    "travail R5212-15 proposé",
+    "travail R5212-16",
+    "travail R5212-18 proposé",
+    "travail L5212-8 proposé",
+    "travail L5212-10 proposé"
+   ],
+   "links_not_read": "Arrêté organisant le téléservice (hors corpus) ; L2331-1 non relu.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E028",
+   "code": "css",
+   "number": "L168-1",
+   "source_id": "LEGIARTI000054137747",
+   "verdict": "0",
+   "families": [],
+   "description": "Réécriture à droit constant de l'allocation journalière d'accompagnement d'une personne en fin de vie ; les deux voies restent alternatives. Le renvoi par plage « L. 3142-6 à L. 3142-15 » englobe L3142-9, abrogé par le projet, sans effet (renvoi de plage). D168-1 proposé reste cohérent avec les 1° et 2°.",
+   "evidence": "",
+   "links_read": [
+    "travail L3142-6 à L3142-15 (propositions)",
+    "css D168-1 proposé",
+    "css L168-2 proposé",
+    "css L136-8, R844-5, R861-10 (renvois entrants listés)"
+   ],
+   "links_not_read": "Code général de la fonction publique, code de la défense L4138-6 et code de la santé publique L1111-6 (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E038",
+   "code": "cch",
+   "number": "R132-18",
+   "source_id": "LEGIARTI000050726098",
+   "verdict": "0",
+   "families": [],
+   "description": "Organisation de la visite par un contrôleur technique agréé et information de l'occupant, maintenues. Cohérent avec L181-1-1 (agrément, assermentation, assentiment) et avec R132-19 proposé (attestation sur l'honneur supprimée, règle d'impartialité maintenue).",
+   "evidence": "",
+   "links_read": [
+    "cch L181-1-1",
+    "cch R132-17",
+    "cch R132-19 proposé",
+    "cch R132-20"
+   ],
+   "links_not_read": "Code des assurances L125-2-2 (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E048",
+   "code": "cch",
+   "number": "R132-3",
+   "source_id": "LEGIARTI000043818705",
+   "verdict": "0",
+   "families": [],
+   "description": "Carte d'exposition au retrait-gonflement des argiles maintenue ; le IV limite L132-4 à L132-9 aux expositions moyenne ou forte. Ces articles sont maintenus (L132-6 seulement allégé de la mention contractuelle) : le renvoi reste opérant.",
+   "evidence": "",
+   "links_read": [
+    "cch L132-4 à L132-9 (propositions)",
+    "cch R122-38 (renvoi entrant identifié)"
+   ],
+   "links_not_read": "Arrêtés de critères et de carte (hors corpus) ; R122-38 non relu en entier.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E058",
+   "code": "urba",
+   "number": "L132-5",
+   "source_id": "LEGIARTI000031210804",
+   "verdict": "0",
+   "families": [],
+   "description": "Mise à disposition gratuite des services de l'État maintenue ; L132-10 proposé la réserve expressément et L132-15 la préserve. Aucune formalité.",
+   "evidence": "",
+   "links_read": [
+    "urba L132-10 proposé",
+    "urba L132-15",
+    "urba L135-2 (renvoi entrant identifié)"
+   ],
+   "links_not_read": "Code général des collectivités territoriales L1614-1 et L1614-3 (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E068",
+   "code": "travail",
+   "number": "R7122-2",
+   "source_id": "LEGIARTI000039159643",
+   "verdict": "m",
+   "families": [
+    "F8",
+    "F3"
+   ],
+   "description": "L'abrogation de la déclaration et du récépissé est cohérente avec L7122-3 (2° abrogé), L7122-6, L7122-16 et L7122-17 proposés. Le défaut est hors de l'article : CGI 278-0 bis F 2° (proposition actuelle) conditionne toujours le taux réduit à un exploitant « titulaire de la licence », alors que la licence disparaît. Les futurs exploitants de ces établissements perdraient le taux réduit, une faveur supprimée sans décision. Portée incertaine : 278-0 bis est abrogé au 1er janvier 2027, avec une reprise au CIBS hors corpus (réserve documentaire). Le défaut est donc qualifié de mineur pour R7122-2 ; il doit être corrigé dans l'article fiscal ou dans sa reprise au CIBS.",
+   "evidence": "cgi 278-0 bis LEGIARTI000053562844 (proposition, F 2°) : « dont l'exploitant est titulaire de la licence de la catégorie mentionnée au 1° de l'article D. 7122-1 du code du travail » ; travail L7122-3 LEGIARTI000038723890 (proposition) : « 2° Abrogé. » et « cette activité n'est subordonnée à aucune déclaration d'activité, licence, délivrance de récépissé » ; NOTA de 278-0 bis : « sont abrogées à compter du 1er janvier 2027 ».",
+   "links_read": [
+    "travail L7122-3 proposé",
+    "travail L7122-6 proposé",
+    "travail L7122-16 et L7122-17 proposés",
+    "travail D7122-1",
+    "cgi 278-0 bis LEGIARTI000053562844 (F 2°, NOTA)",
+    "cgi 220 quindecies proposé (critère L7122-2, sans licence)",
+    "recherche des renvois entrants à R7122-2 (R7122-4 à R7122-11, R7122-27 : sources seules)"
+   ],
+   "links_not_read": "Code des impositions sur les biens et services L213-182 et L213-183 (reprise au 1er janvier 2027, hors corpus) ; arrêté du ministre de la culture fixant les pièces (hors corpus) ; R7122-4 à R7122-27 non relus un par un.",
+   "known_objection": "audit/sweeps/candidates-S11-notes.json (drapeaux de notes R7122-2 et D7122-1 : « CGI 278-0 bis F 2° [...] conserve « dont l'exploitant est titulaire de la licence » ») ; aucune objection correspondante au registre.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E078",
+   "code": "travail",
+   "number": "R4215-15",
+   "source_id": "LEGIARTI000022765032",
+   "verdict": "0",
+   "families": [],
+   "description": "Présomption de conformité par les normes d'installation, maintenue ; R4215-14 et R4226-6 cohérents.",
+   "evidence": "",
+   "links_read": [
+    "travail R4215-14",
+    "travail R4226-6",
+    "travail R4215-1"
+   ],
+   "links_not_read": "Arrêté publiant les normes homologuées (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E088",
+   "code": "cgi",
+   "number": "1466 F",
+   "source_id": "LEGIARTI000053543439",
+   "verdict": "0",
+   "families": [],
+   "description": "Abattement de CFE en outre-mer maintenu. Seule la répétition annuelle de la déclaration sans modification est supprimée, avec une transition. Les renvois aux 2°, 3° et 4° b du III de 44 quaterdecies restent opérants dans ses deux versions. L'option du VI reste rattachée aux déclarations de 1477, qui sont maintenues.",
+   "evidence": "",
+   "links_read": [
+    "cgi 1477 proposé",
+    "cgi 44 quaterdecies LEGIARTI000053543403 et LEGIARTI000052094616 (propositions)"
+   ],
+   "links_not_read": "cgi 1639 A bis et 1467 A non relus ; listes réglementaires de communes (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E098",
+   "code": "cch",
+   "number": "L821-3",
+   "source_id": "LEGIARTI000038814972",
+   "verdict": "0",
+   "families": [],
+   "description": "Non-cumul : l'enfant allocataire d'une aide personnelle au logement n'est pas compté à charge pour les prestations familiales. Cohérent avec CSS L512-1, qui emploie encore les anciennes dénominations (« allocation de logement sociale ou de l'aide personnalisée au logement ») ; ce décalage de source est sans effet.",
+   "evidence": "",
+   "links_read": [
+    "css L512-1",
+    "cch L821-1, L821-2"
+   ],
+   "links_not_read": "Néant d'important.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E108",
+   "code": "travail",
+   "number": "L2313-10",
+   "source_id": "LEGIARTI000035650929",
+   "verdict": "0",
+   "families": [],
+   "description": "Non-renouvellement du CSE sous onze salariés pendant douze mois, maintenu ; cohérent avec L2311-2 et L2314-4.",
+   "evidence": "",
+   "links_read": [
+    "travail L2311-2",
+    "travail L2314-4",
+    "travail L2313-9",
+    "travail L2312-2"
+   ],
+   "links_not_read": "travail L1111-2 (calcul des effectifs) non relu.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E118",
+   "code": "cch",
+   "number": "L422-11-1",
+   "source_id": "LEGIARTI000039652833",
+   "verdict": "0",
+   "families": [],
+   "description": "L'avis du comité régional et l'approbation distincte de l'attribution sont supprimés. R362-2 6° proposé est coordonné : la consultation n'est pas requise pour une fusion relevant de L. 422-11-1. Transition pour les demandes pendantes.",
+   "evidence": "",
+   "links_read": [
+    "cch R362-2 proposé (6° et transition)",
+    "cch L422-5 proposé",
+    "cch L481-1"
+   ],
+   "links_not_read": "Code de commerce L236-3 (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E128",
+   "code": "a3",
+   "number": "46 quater-0 YE",
+   "source_id": "LEGIARTI000033188857",
+   "verdict": "0",
+   "families": [],
+   "description": "Contenu de la déclaration pays par pays maintenu ; il concorde avec 223 quinquies C, lui aussi maintenu, dont le 1 et le 2 du I sont repris aux I et VIII.",
+   "evidence": "",
+   "links_read": [
+    "cgi 223 quinquies C",
+    "cgi 223 quinquies B (renvoi entrant identifié)",
+    "cgi 1729 F (renvoi entrant identifié)"
+   ],
+   "links_not_read": "Directive 2016/881 et accords d'échange (hors corpus, droit supérieur non vérifié) ; 1729 F non relu en entier.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E138",
+   "code": "cch",
+   "number": "D481-5-6",
+   "source_id": "LEGIARTI000021632165",
+   "verdict": "0",
+   "families": [],
+   "description": "Dépôt sans délai des fonds du mandant sur un compte dédié, maintenu ; D481-5-7 II proposé corrige son renvoi (R. → D. 481-5-6).",
+   "evidence": "",
+   "links_read": [
+    "cch D481-5-7 proposé",
+    "cch D481-5-5"
+   ],
+   "links_not_read": "Base légale (régime du mandat des SEM) non relue.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E148",
+   "code": "css",
+   "number": "D752-2-3",
+   "source_id": "LEGIARTI000034730990",
+   "verdict": "G",
+   "families": [
+    "F3",
+    "F10"
+   ],
+   "description": "Renvoi décalé dès le 1er janvier 2028. Une version future publiée de L752-1 (LEGIARTI000054466934, ordonnance n° 2026-647) insère un alinéa sur la caisse de Mayotte. La caisse de mutualité sociale agricole de Saint-Barthélemy passe au quatrième alinéa et le conseil de suivi au cinquième. La proposition de cette version future en tient compte pour son propre dernier alinéa (« quatrième alinéa »). D752-2-3, réécrit par le projet, vise toujours « la caisse de mutualité sociale agricole mentionnée au troisième alinéa ». À partir de 2028, ce troisième alinéa ne traite que de la compétence des caisses de Guadeloupe à Saint-Martin, et le renvoi devient vide. Le même décalage touche D752-2-1, D752-2-5 et D752-2-6 (« troisième alinéa »), ainsi que D752-2-4 : son « quatrième alinéa » désignera la caisse et non plus le conseil de suivi. Les notes affirment à tort qu'aucun successeur n'existe. Effet pratique limité, car l'organisme reste identifiable, mais le défaut est visible pour un juriste qui lit la base légale applicable en 2028. Nature : coordination manquante du projet ; le droit officiel ne coordonne pas non plus ces décrets.",
+   "evidence": "css D752-2-3 LEGIARTI000034730990 (proposition) : « la caisse de mutualité sociale agricole mentionnée au troisième alinéa de l'article L. 752-1 » ; css L752-1 LEGIARTI000054466934 (VIGUEUR_DIFF 2028-01-01), deuxième alinéa : « La caisse de sécurité sociale de Mayotte est compétente pour l'application de la législation de sécurité sociale à Mayotte », troisième alinéa : « La caisse générale de sécurité sociale et la caisse d'allocations familiales de Guadeloupe sont compétentes, chacune dans leur domaine, pour l'application de la législation en matière de sécurité sociale à Saint-Martin. » ; proposition de LEGIARTI000054466934 : « la caisse de mutualité sociale agricole mentionnée au quatrième alinéa du présent article » ; css D752-2-4 LEGIARTI000034730992 : « Le conseil de suivi de l'activité de la caisse mentionné au quatrième alinéa de l'article L. 752-1 » ; notes de D752-2-3 : « Successeur de L752-1 au 1er janvier 2028 absent. »",
+   "links_read": [
+    "css L752-1 LEGIARTI000042684012 et LEGIARTI000054466934 (sources, NOTA, propositions)",
+    "css D752-2-1",
+    "css D752-2-4",
+    "css D752-2-5 proposé",
+    "css D752-2-6 proposé"
+   ],
+   "links_not_read": "css D752-2-2 non relu ; aucun décret de coordination de 2028 n'a été trouvé au corpus (absence constatée, pas une preuve d'absence).",
+   "known_objection": null,
+   "suggested_correction": "Dans D752-2-3, remplacer « la caisse de mutualité sociale agricole mentionnée au troisième alinéa de l'article L. 752-1 » par « la caisse de mutualité sociale agricole chargée, en application de l'article L. 752-1, de l'application de la législation de sécurité sociale à Saint-Barthélemy ». Faire la même substitution, neutre quant au numéro d'alinéa, dans D752-2-1, D752-2-5 et D752-2-6. Dans D752-2-4, écrire : « Le conseil de suivi de l'activité de la caisse à Saint-Barthélemy prévu à l'article L. 752-1 » ; au 3°, viser la même caisse sans numéro d'alinéa. Aucune modification de fond : convention, durée libre, conseil, financements et transitions conservés, sans formalité nouvelle. Corriger la note : la version de 2028 existe (LEGIARTI000054466934)."
+  },
+  {
+   "sample_id": "E158",
+   "code": "a3",
+   "number": "384 bis A",
+   "source_id": "LEGIARTI000006299696",
+   "verdict": "m",
+   "families": [
+    "F3",
+    "F7"
+   ],
+   "description": "L'état unique et le reçu remplacent le dépôt en double exemplaire ; cohérent avec 263 proposé (abrogé). Défauts mineurs. L'article 245 de l'annexe III, maintenu, renvoie encore « aux articles 263 et 384 bis A » alors que 263 est abrogé par le projet ; l'effet est nul, car 384 bis A porte seul les modalités. La transition reprend un modèle inadapté (« crédits en cours », « sûretés », « droits des tiers ») pour un simple versement de droits sur état.",
+   "evidence": "a3 245 LEGIARTI000006299195 (maintenu) : « Le cas échéant les droits dus sur ces actes sont payés sur états suivant les modalités prévues aux articles 263 et 384 bis A. » ; a3 263 LEGIARTI000006299220 (proposition) : « Le présent article est abrogé à compter de l'entrée en vigueur de la loi. » ; 384 bis A LEGIARTI000006299696 (proposition) : « y compris pour les dossiers et crédits en cours. Elles ne remettent pas en cause les paiements effectués, les créances et droits à restitution antérieurement acquis, les sûretés déjà valablement constituées ni les droits des tiers. »",
+   "links_read": [
+    "a3 245",
+    "a3 263 proposé",
+    "a4 60"
+   ],
+   "links_not_read": "Arrêté listant les actes dispensés (annexe IV art. 60, non relu en entier).",
+   "known_objection": "audit/V04.json, articles[27] (renvoi de l'annexe III art. 245 vers 263 abrogé) ; mentionné aussi dans les notes de 384 bis A.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E168",
+   "code": "travail",
+   "number": "R7213-10",
+   "source_id": "LEGIARTI000018521396",
+   "verdict": "0",
+   "families": [],
+   "description": "Répartition par moitié de la rémunération des deux salariés en couple pour l'indemnité de congé, maintenue ; cohérent avec L7213-3, R7213-1 et R7213-9.",
+   "evidence": "",
+   "links_read": [
+    "travail L7213-3",
+    "travail R7213-1",
+    "travail R7213-9"
+   ],
+   "links_not_read": "travail R7213-11 et L3141-8 non relus.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E178",
+   "code": "a4",
+   "number": "50 sexies I",
+   "source_id": "LEGIARTI000006300414",
+   "verdict": "0",
+   "families": [],
+   "description": "Déclaration du système de billetterie supprimée ; conformité au cahier des charges de 1993 bornée aux spectacles antérieurs à l'abrogation de 290 quater. Cohérent avec 290 quater, 50 sexies B (V) et 50 sexies G proposés.",
+   "evidence": "",
+   "links_read": [
+    "cgi 290 quater proposé",
+    "a4 50 sexies B proposé",
+    "a4 50 sexies G proposé"
+   ],
+   "links_not_read": "a4 50 sexies H et cgi 1791 bis non relus ; arrêté du 8 mars 1993 (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E188",
+   "code": "css",
+   "number": "R178-14",
+   "source_id": "LEGIARTI000052196451",
+   "verdict": "0",
+   "families": [],
+   "description": "Fin de la suspension automatique des acomptes du concours APA en cas de retard des états. Le concours définitif, l'échéance du 15 septembre et l'imputation des soldes négatifs sont conservés. R178-13 proposé maintient les états dus. Mesure entre personnes publiques, conforme à l'orientation d'allègement.",
+   "evidence": "",
+   "links_read": [
+    "css R178-13 proposé",
+    "css R178-11",
+    "css R178-7 proposé",
+    "css R178-10",
+    "css L223-11 proposé"
+   ],
+   "links_not_read": "Néant d'important.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E198",
+   "code": "cch",
+   "number": "D321-27",
+   "source_id": "LEGIARTI000045459272",
+   "verdict": "0",
+   "families": [],
+   "description": "Loyer maximum des logements conventionnés ANAH, maintenu. Les renvois restent opérants : L321-4 et L321-8 proposés, R156-1, D353-16, et le dernier alinéa du 1 du I de l'article 2 terdecies F de l'annexe III proposé (« la surface à prendre en compte s'entend de celle prévue au III de l'article 46 AG terdecies »).",
+   "evidence": "",
+   "links_read": [
+    "cch L321-4 proposé",
+    "cch L321-8 proposé",
+    "cch R156-1",
+    "cch D353-16",
+    "a3 2 terdecies F proposé"
+   ],
+   "links_not_read": "Règlement général de l'ANAH et arrêté des annexes (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E208",
+   "code": "urba",
+   "number": "R122-12-1",
+   "source_id": "LEGIARTI000044210669",
+   "verdict": "0",
+   "families": [],
+   "description": "Saisine de l'autorité environnementale pour avis conforme avant la demande d'autorisation d'une unité touristique nouvelle, maintenue. R104-33 à R104-37 subsistent : formulaire facultatif, délais maintenus. L122-20 et L122-21 proposés suppriment seulement les avis de commissions.",
+   "evidence": "",
+   "links_read": [
+    "urba R122-13",
+    "urba R104-33 à R104-37 (propositions)",
+    "urba L122-20 et L122-21 proposés",
+    "urba L142-4 et L142-5 proposés"
+   ],
+   "links_not_read": "urba R122-14 à R122-18 non relus en entier.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E218",
+   "code": "cgi",
+   "number": "182 A bis",
+   "source_id": "LEGIARTI000042907688",
+   "verdict": "0",
+   "families": [],
+   "description": "Retenue à la source sur les prestations artistiques, maintenue. 197 B proposé retire la condition de nationalité, ce qui élargit la faveur ; ses renvois à 197 A a et 182 A III restent opérants. L'ambiguïté de « la limite supérieure fixée par le III de l'article 182 A », barème à deux tranches, est préexistante et sans effet nouveau.",
+   "evidence": "",
+   "links_read": [
+    "cgi 182 A",
+    "cgi 197 A proposé",
+    "cgi 197 B proposé"
+   ],
+   "links_not_read": "cgi 238-0 A non relu.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E228",
+   "code": "css",
+   "number": "L932-13-6",
+   "source_id": "LEGIARTI000036919365",
+   "verdict": "0",
+   "families": [],
+   "description": "Document d'information normalisé non-vie (exigence européenne de distribution d'assurances), maintenu avec ses deux dispenses ; R932-1-8 et L861-4 b cohérents.",
+   "evidence": "",
+   "links_read": [
+    "css R932-1-8",
+    "css L861-4",
+    "css L932-15-1 (renvoi entrant identifié)"
+   ],
+   "links_not_read": "Directive (UE) 2016/97 et code de la consommation L313-10 (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E238",
+   "code": "css",
+   "number": "D412-64",
+   "source_id": "LEGIARTI000051831507",
+   "verdict": "0",
+   "families": [],
+   "description": "Assiette de la rente accident du travail des personnes détenues, maintenue ; R434-29, R434-30 (proposé, plus d'arrêté préfectoral) et R436-1 restent opérants. L412-8 5° couvre le contrat d'emploi pénitentiaire dans ses deux versions.",
+   "evidence": "",
+   "links_read": [
+    "css R434-29",
+    "css R434-30 proposé",
+    "css R436-1",
+    "css L412-8 (deux versions, propositions)"
+   ],
+   "links_not_read": "Néant d'important.",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E248",
+   "code": "cch",
+   "number": "R823-6-1",
+   "source_id": "LEGIARTI000042932258",
+   "verdict": "0",
+   "families": [],
+   "description": "Alignement des réexamens trimestriels APL, RSA, prime d'activité et AAH, maintenu. R823-6 proposé garde le réexamen trimestriel et vise expressément R. 823-6-1 ; R861-5 6° proposé corrige la cible littérale (« ou l'allocation aux adultes handicapés »).",
+   "evidence": "",
+   "links_read": [
+    "cch R823-6 proposé",
+    "cch R861-5 proposé",
+    "cch R822-3",
+    "cch R863-6 (renvoi entrant identifié)"
+   ],
+   "links_not_read": "Code de l'action sociale et des familles L262-2 (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E258",
+   "code": "cch",
+   "number": "D331-91",
+   "source_id": "LEGIARTI000038977438",
+   "verdict": "0",
+   "families": [],
+   "description": "Plafonds de subvention (60 000 € en zone A, 40 000 € ailleurs), maintenus. L'article 2 duodecies de l'annexe III proposé, désormais borné à l'ancien 31 j, définit toujours les zones A, B et C par arrêté : le renvoi reste opérant.",
+   "evidence": "",
+   "links_read": [
+    "a3 2 duodecies proposé",
+    "cch D331-90",
+    "cch D331-92 proposé"
+   ],
+   "links_not_read": "Arrêté de zonage (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E268",
+   "code": "cch",
+   "number": "R165-2",
+   "source_id": "LEGIARTI000043819313",
+   "verdict": "G",
+   "families": [
+    "F3",
+    "F5",
+    "F10"
+   ],
+   "description": "Renvoi vers un article abrogé par le projet, sans neutralisation complète. Le I proposé rend toujours le propriétaire « responsable de la transmission des éléments de suivi [...] prévus à l'article R. 165-16 ». Or R165-16 proposé est abrogé et supprime tous les documents de suivi, y compris le bilan de fin d'agenda. Le IV neutralise seulement « les documents dispensés par l'article L. 165-5 », c'est-à-dire le point à un an et le bilan à mi-parcours ; il laisse croire qu'un bilan final resterait dû. Cette ambiguïté rejoint la contradiction entre L165-5 proposé, qui dit que la dispense « ne modifie ni [...] le bilan de fin d'agenda », et R165-16, qui le supprime. Les notes décrivent un état périmé de R165-16 : bilan à mi-parcours maintenu et bilan final retiré.",
+   "evidence": "cch R165-2 LEGIARTI000043819313 (proposition, I) : « Il est également responsable de la transmission des éléments de suivi de l'agenda d'accessibilité programmée prévus à l'article R. 165-16 et de l'attestation d'achèvement de cet agenda prévue à l'article R. 165-17. » ; (IV) : « Les éléments de suivi mentionnés au I ne comprennent pas les documents dispensés par l'article L. 165-5 » ; cch R165-16 LEGIARTI000043819353 (proposition) : « Le présent article est abrogé à compter de l'entrée en vigueur de la réforme supprimant les documents de suivi des agendas d'accessibilité programmée. » et « Aucun point de situation à l'issue de la première année, bilan à mi-parcours ou bilan de fin d'agenda [...] ne sont exigés » ; cch L165-5 LEGIARTI000041569725 (proposition) : « Elle ne modifie ni les engagements de travaux, ni les pouvoirs de contrôle, ni le bilan de fin d'agenda, ni l'attestation d'achèvement. » ; notes de R165-2 : « R165-16 proposé maintient « un bilan des travaux et autres actions de mise en accessibilité réalisés à la moitié de la durée de l'agenda » et retire le bilan final ».",
+   "links_read": [
+    "cch R165-16 proposé",
+    "cch L165-5 proposé",
+    "cch L164-2 proposé",
+    "cch R165-17 proposé",
+    "cch L165-7 proposé",
+    "cch D165-20"
+   ],
+   "links_not_read": "cch R165-18, R165-19 et L165-6 non relus dans cette passe ; arrêtés de contenu (hors corpus).",
+   "known_objection": "Partiellement connu : audit/K08.json, articles[4] (incohérence L165-5/L165-6/R165-16 sur le « bilan de fin d'agenda ») et audit/sweeps/candidates-S11-notes.json (R165-16). Le renvoi de R165-2 I vers R165-16 abrogé n'y est pas relevé. Les candidats de balayage sur R165-2 (candidates.json S9, candidates-4.json S9x, J07 lead 15) portent sur L164-2, qualifié « déjà réglé ».",
+   "suggested_correction": "R165-2 I, seconde phrase : « Il est également responsable de la transmission de l'attestation d'achèvement de cet agenda prévue à l'article R. 165-17. » IV, second alinéa : remplacer la première phrase par « À compter de l'abrogation de l'article R. 165-16, aucun document de suivi de l'agenda n'incombe au propriétaire ou à l'exploitant au titre du présent article, y compris pour les transmissions restant à effectuer ; aucun document de remplacement n'est exigé. » et conserver la seconde phrase. Coordination à faire dans L165-5 : retirer « ni le bilan de fin d'agenda », pour aligner la loi sur la suppression déjà retenue au décret ; l'attestation d'achèvement, les contrôles et les sanctions de L165-7 restent inchangés. Corriger les notes."
+  },
+  {
+   "sample_id": "E278",
+   "code": "cgi",
+   "number": "1047",
+   "source_id": "LEGIARTI000006305799",
+   "verdict": "0",
+   "families": [],
+   "description": "Exonération des actes pris en application de la loi n° 62-883 (Fort-Mardyck), maintenue ; aucune formalité.",
+   "evidence": "",
+   "links_read": [
+    "NOTA (loi 2004-1485, art. 95 IV)",
+    "recherche de renvois (aucun)",
+    "cgi 678 et régime de la taxe de publicité foncière non examinés en détail"
+   ],
+   "links_not_read": "Loi n° 62-883 du 31 juillet 1962 (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E288",
+   "code": "travail",
+   "number": "R5312-38",
+   "source_id": "LEGIARTI000050943213",
+   "verdict": "m",
+   "families": [
+    "F10"
+   ],
+   "description": "Finalités du traitement France Travail, correctement coordonnées avec l'abrogation de L1251-46 (relevés) et de L1243-11-1 (signalements). R5312-42 proposé est désormais aligné (1° b et 1° c). Seul défaut : les notes signalent encore comme « contradiction hors lot » un 1° c) de R5312-42 qui « conserve » le relevé, alors que ce point est réglé.",
+   "evidence": "travail R5312-38 LEGIARTI000050943213 (notes) : « Contradiction hors lot : le 1° c) de R5312-42 proposé conserve « au relevé de mission de travail temporaire mentionné à l'article L. 1251-46 » » ; travail R5312-42 LEGIARTI000050943179 (proposition, 1° c) : « aucune donnée n'est collectée ou reconstituée sur le fondement du présent c pour établir le relevé spécial supprimé ».",
+   "links_read": [
+    "travail R5312-42 proposé",
+    "travail L1251-46 proposé",
+    "travail L1243-11-1 proposé"
+   ],
+   "links_not_read": "travail R5312-38-1, R5312-39 à R5312-45 non relus en entier ; arrêtés de responsabilité conjointe (hors corpus).",
+   "known_objection": "audit/sweeps/W10.json, leads 47 et 48 (« F10 non corrigé : ses notes signalent encore une contradiction de R5312-42, réglée ») ; reports/register.json, objection d'index 323 (R5312-42, réglée au réexamen).",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E298",
+   "code": "travail",
+   "number": "R6523-13",
+   "source_id": "LEGIARTI000041541575",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "Le bilan annuel préfectoral est supprimé et la faculté de remboursement intégral est maintenue ; la transition est correcte. Le texte réécrit garde la coquille de la source « à Saint-Martin à Saint-Pierre-et-Miquelon » (séparateur manquant) : rédaction maladroite, sans effet.",
+   "evidence": "travail R6523-13 LEGIARTI000041541575 (proposition) : « à Saint-Barthélemy, à Saint-Martin à Saint-Pierre-et-Miquelon, qui suivent en France métropolitaine un stage ».",
+   "links_read": [
+    "travail R6523-12",
+    "travail R6523-14",
+    "travail L6523-2-4 (renvoi identifié)"
+   ],
+   "links_not_read": "travail R6123-3-1 proposé (cité par le motif) non relu.",
+   "known_objection": "audit/sweeps/candidates-S11-notes.json (drapeau de notes R6523-13 : « « à Saint-Martin à Saint-Pierre-et-Miquelon » figure sans séparateur ») ; aucune objection au registre.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "E308",
+   "code": "travail",
+   "number": "R4216-2",
+   "source_id": "LEGIARTI000024769367",
+   "verdict": "0",
+   "families": [],
+   "description": "Objectifs de sécurité incendie des bâtiments de travail, maintenus jusqu'à l'abrogation officielle du 1er janvier 2027 (décret n° 2025-1100). La version future de R4227-37 (LEGIARTI000052645197) renvoie désormais au code de la construction et de l'habitation (R. 141-7) : la crainte de renvoi orphelin exprimée dans les notes est levée par le droit officiel. Le projet n'affirme aucune abrogation.",
+   "evidence": "",
+   "links_read": [
+    "travail R4227-37 LEGIARTI000052645197 (VIGUEUR_DIFF 2027)",
+    "travail R4211-3 LEGIARTI000052645178 (VIGUEUR_DIFF 2027)",
+    "LIEN ABROGE du document (décret n° 2025-1100, art. 2)"
+   ],
+   "links_not_read": "CCH R141-7 et R144-14 non relus ; les versions 2027 de R4227-37, R4211-3, R4214-7, R4214-9, R4214-28 et R4227-2 n'ont ni proposition ni inventaire. Cette anomalie d'inventaire est signalée hors échantillon et n'a pas été qualifiée.",
+   "known_objection": null,
+   "suggested_correction": null
+  }
+ ],
+ "disclaimer": "Revue IA : ce n'est pas une validation par un juriste."
+}

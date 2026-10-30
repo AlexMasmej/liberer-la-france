@@ -1686,33 +1686,51 @@
     "source_id": "LEGIARTI000038789380",
     "source_sha256": "08197b1e790cac8433e650af0178b742fe309225f8351e3c390f7c9487277c62",
     "number": "R251-9",
-    "proposed_xml": null,
-    "reason": "Maintien des ressources et dépenses administratives, dotations, subventions, avances et remises de gestion mutualistes pour les prestations des fonctionnaires. Aucune suppression d'une charge privée n'est démontrée par la disparition de cette imputation budgétaire ; les services de prestations doivent rester financés. Seconde passe : maintien intégral confirmé après examen des interactions décrites dans les notes ; aucune reformulation du corps.",
-    "review_notes": "Différence de champ : « aux organismes mutualistes qui assurent aux fonctionnaires » ne soumet pas les agents publics au contrat unique privé. R252-11, lu entier, réserve R251-9 et conserve les remises locales, leurs minima et maxima : aucune double cotisation n’en résulte. Les sections spéciales R251-10/11 précisent des imputations internes et non de nouvelles charges des assurés. L251-1 et l’arrêté de fraction restent absents et non vérifiés.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "proposed_xml": "\n<p>Les recettes du Fonds national de la gestion administrative sont constituées par la fraction du produit des cotisations de l'assurance maladie, ainsi que de celle des cotisations de l'assurance des accidents du travail et des maladies professionnelles, qui lui sont affectées.</p>\n<p>Ce fonds supporte les charges de fonctionnement et les dépenses en capital des services administratifs de la caisse nationale. Les dépenses comportent également les dotations, et éventuellement les subventions et avances destinées à couvrir les charges de fonctionnement et les dépenses en capital des services administratifs des caisses primaires et des caisses régionales d'assurance maladie.</p>\n<p>Ce fonds supporte en outre les remises de gestion versées par la caisse nationale aux organismes mutualistes qui assurent aux fonctionnaires le service des prestations en nature des assurances maladie, maternité, invalidité.</p>\n<br />\n",
+    "reason": "Coordination nécessaire, sans changement de fond : le premier alinéa fait dépendre les recettes du Fonds national de la gestion administrative de « l'arrêté pris en application de l'article L. 251-1 ». Or l'article L. 251-1 n'a plus aucune version en vigueur depuis le 1er janvier 2001 (dernière version LEGIARTI000006742171, ABROGE). Le renvoi mort est retiré ; la fraction des cotisations affectée au fonds, ses dépenses, dotations, subventions, avances et remises de gestion mutualistes sont reprises sans changement. Aucune base légale de remplacement n'est désignée, faute de pièce au corpus.",
+    "review_notes": "Différence de champ : « aux organismes mutualistes qui assurent aux fonctionnaires » ne soumet pas les agents publics au contrat unique privé. R252-11, lu entier, réserve R251-9 et conserve les remises locales, leurs minima et maxima : aucune double cotisation n’en résulte. Les sections spéciales R251-10/11 précisent des imputations internes et non de nouvelles charges des assurés. L251-1 et l’arrêté de fraction restent absents et non vérifiés. Correction de la troisième passe (balayage Z02, piste S16b) : le renvoi à l'arrêté pris en application de l'article L. 251-1, abrogé depuis le 1er janvier 2001 sans successeur au corpus, est retiré ; la phrase « L251-1 et l'arrêté de fraction restent absents et non vérifiés » se lit désormais ainsi : L251-1 est au corpus, mais toutes ses versions ont pris fin le 1er janvier 2001. Le fonds, ses recettes et ses dépenses sont maintenus ; aucune recette, formalité ni autorité nouvelle n'est créée. La base actuelle de l'affectation (convention d'objectifs et de gestion, lois de financement) n'est pas au corpus et n'est pas affirmée. Revue assistée par IA, non validée par un juriste.",
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien du financement des services et remises mutualistes, sans réduction démontrée d’une obligation privée ni création de recette.",
-      "scope_limitations": "Différence de champ : « aux organismes mutualistes qui assurent aux fonctionnaires » ne soumet pas les agents publics au contrat unique privé. R252-11, lu entier, réserve R251-9 et conserve les remises locales, leurs minima et maxima : aucune double cotisation n’en résulte. Les sections spéciales R251-10/11 précisent des imputations internes et non de nouvelles charges des assurés. L251-1 et l’arrêté de fraction restent absents et non vérifiés. Le solde de coût ou de complexité des neuf recueils n’est pas établi.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : le texte officiel est intégralement maintenu, sans donnée, registre, délai ou condition supplémentaire.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Retrait du seul renvoi à l'arrêté pris en application de l'article L. 251-1, dont toutes les versions ont pris fin le 1er janvier 2001 ; les recettes et dépenses du Fonds national de la gestion administrative sont maintenues sans changement de fond.",
+      "scope_limitations": "La base actuelle de l'affectation des recettes au fonds (convention d'objectifs et de gestion, lois de financement, arrêtés éventuels) n'est pas au corpus et n'est pas affirmée. R252-11 et les sections spéciales R251-10 et R251-11 ne sont pas modifiés. Aucun solde global n'est chiffré.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucune recette, déclaration, autorisation, délai ni condition n'est ajouté ; seul un renvoi éteint est retiré, sans base de remplacement.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "fnga-renvoi-l251-1-eteint",
+          "description": "Retrait du renvoi à l'arrêté d'application d'un article législatif éteint depuis 2001.",
+          "before": "Recettes affectées par l'arrêté pris en application de l'article L. 251-1, abrogé.",
+          "after": "Recettes affectées au fonds sans renvoi à une base éteinte ; fraction, charges et remises inchangées.",
+          "unit": "regime",
+          "affected_population": "Caisse nationale de l'assurance maladie, caisses primaires et régionales, organismes mutualistes des fonctionnaires.",
+          "conditions_and_transition": "Affectations et remises en cours et futures, sans remise en cause des exercices clos.",
+          "replacement_or_new_burdens": "Aucune base, formalité ni recette de remplacement.",
+          "source_quote": "qui lui sont affectées par l'arrêté pris en application de l'article L. 251-1",
+          "proposed_quote": "des cotisations de l'assurance des accidents du travail et des maladies professionnelles, qui lui sont affectées."
+        }
+      ]
     },
     "reference_checks": [],
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "08197b1e790cac8433e650af0178b742fe309225f8351e3c390f7c9487277c62",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "ea04445db8386d7865fa67ccb5cc6d1cb3aa56c5c5ca03ce9b22ca54a875b99a",
+      "proposed_sha256": "7f5df86ac2ff21eefc0a9cd766872d195b64eeaeb3bfe90a61a5f5ee6c93bec5",
+      "assessment_sha256": "01a6e16f338a0fb6d20c0c818da8e1513bfd07ea944c73557c3ecf5794f6eb5d",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_pass_correction": {
+      "objection": "SWEEP-Z02-R251-9",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006073189",

@@ -1,0 +1,53 @@
+{
+ "group": "W07y",
+ "changes": [
+  {
+   "objection": "AUDIT6-E069",
+   "code_id": "LEGITEXT000006073189",
+   "source_id": "LEGIARTI000053335371",
+   "mode": "replace",
+   "proposed_xml": "\n<br />\n<p>Les versements forfaitaires résultant de l'application des a et b du 2° de l'article L. 135-2 pour les travailleurs indépendants mentionnés à l'article L. 611-1 et pour les personnes non salariées des professions agricoles, concernant les périodes mentionnées aux 2° et 3° de l'article L. 351-3, aux articles L. 643-3-1 et L. 653-3-1 du présent code et au 2° de l'article L. 732-21 du code rural et de la pêche maritime , sont égaux aux produits, d'une part, du taux et de l'assiette de cotisations fixés au troisième alinéa du présent article et, d'autre part, des effectifs des assurés mentionnés ci-dessus ayant bénéficié de l'allocation mentionnée à l' article L. 5424-25 du code du travail .</p>\n<p>S'agissant des périodes de chômage indemnisé, les effectifs mentionnés au premier alinéa correspondent à la moyenne annuelle de l'effectif constaté chaque fin de mois selon les statistiques de l'opérateur France Travail. S'agissant des périodes de chômage non indemnisé des travailleurs indépendants du régime général mentionnés à l'article L. 631-1 du présent code, les effectifs concernés sont constitués d'une fraction de l'effectif des travailleurs indépendants du régime général indemnisés, fixée par arrêté du ministre chargé de la sécurité sociale.</p>\n<p>Le taux de la cotisation mentionnée au premier alinéa est égal au taux de la cotisation en vigueur pour la couverture du risque vieillesse de base des travailleurs indépendants du régime général mentionnée à l'article L. 633-10. Cette cotisation est assise sur une assiette forfaitaire annuelle égale à 11,5 % de la valeur du plafond annuel mentionné au premier alinéa de l'article L. 241-3.</p>\n<p>S'agissant des périodes de chômage indemnisé, le versement du Fonds de solidarité vieillesse est réparti entre les régimes concernés, au prorata de leurs effectifs d'assurés bénéficiant de l'allocation mentionnée à l' article L. 5424-25 du code du travail  et notifié à chacun d'eux par l'opérateur France Travail.</p>\n<br /><p>Le fonds de solidarité vieillesse a été supprimé au 1er janvier 2026 par l'abrogation des articles L. 135-1 à L. 135-5 (article 24 de la loi n° 2025-199 du 28 février 2025) ; ses droits et obligations ont été dévolus à cette date à la Caisse nationale d'assurance vieillesse, et ses dépenses relèvent depuis lors de la branche mentionnée au 3° de l'article L. 200-2 en application de l'article L. 222-2-1. À compter de cette date, les versements forfaitaires prévus au présent article ne sont dus que dans la mesure où ils sont pris en charge par cette branche en application de l'article L. 222-2-1 ; les mentions du fonds et de l'article L. 135-2 s'entendent alors de la Caisse nationale d'assurance vieillesse, au titre de cette branche, et de l'article L. 222-2-1. Les versements afférents aux exercices antérieurs, leurs régularisations et les recours qui s'y rapportent restent régis par les dispositions alors applicables. Aucune formalité de remplacement n'est instituée.</p>",
+   "reason": "Coordination nécessaire de l’identité du fournisseur d’effectifs : la source juxtapose Pôle emploi au deuxième alinéa et France Travail au dernier ; le même opérateur est désormais nommé uniformément. Le doublon matériel « au au 2° » est rectifié explicitement. Aucun changement de formule : chômage indemnisé, fraction du non-indemnisé, professions et régimes, taux L633-10, assiette de 11,5 % du PASS et répartition sont conservés. Correction de la troisième passe : le fonds étant supprimé depuis le 1er janvier 2026, la formule ne s'applique plus qu'aux sommes prises en charge par la branche vieillesse en application de l'article L. 222-2-1, la Caisse nationale d'assurance vieillesse se substituant au fonds ; les exercices antérieurs gardent leur régime.",
+   "review_notes": "La rédaction source applicable au 1er janvier 2026, ses notes et les cibles L643-3-1/L653-3-1/L241-3 ont été lues. L5424-25 officiel, lu dans travail.json, concerne l’allocation des travailleurs indépendants, non le préavis ou l’indemnité d’un salarié ; L633-10 n’est pas présent dans le corpus fourni, sa valeur de taux n’est donc pas inventée. Le renvoi au premier alinéa de L241-3 demeure celui du plafond, y compris si la proposition de ce texte le regroupe dans un I. L732-21 rural est hors des cinq codes et non fourni : sa concordance n’est pas certifiée. Les modalités du II de l’article 2 du décret de 2025 cité en note restent distinctes. L’absence de L633-10 du corpus n’est pas une preuve de son abrogation ni une table de concordance. L633-1 et D633-3 ont été lus en entier : le premier vise les cotisations de base plafonnées et déplafonnées et le second fixe deux taux distincts, 17,15 % et 0,72 %. Sans filiation locale établissant quelle composante remplace exactement la cotisation visée par L633-10 pour ce versement, aucune substitution ni somme de taux n’est inventée. Ce renvoi de calcul reste expressément non résolu et ne compte pas comme coordination de formule achevée ; le changement de nom de l’opérateur n’en prouve pas la validité.\n\nSeconde passe : coordination nécessaire confirmée entre « selon les statistiques de Pôle emploi » et « notifié à chacun d'eux par l'opérateur France Travail ». Le corps précédent est conservé. L5424-25, L611-1, L631-1, L633-1 et D633-3 ont été relus dans le corpus. Point non vérifiable : « mentionnée à l'article L. 633-10 » reste sans cible ni concordance historique fournie ; les deux composantes de D633-3 (17,15 % plafonnée et 0,72 % déplafonnée) ne suffisent pas à identifier la composante voulue. Aucune substitution de taux n'est donc affirmée. L135-2, L732-21 rural et le II de l'article 2 du décret 2025-1409 demeurent des pièces manquantes à obtenir avant consolidation. La formule n'est pas déclarée entièrement validée. Correction de la troisième passe (objection AUDIT6-E069, sixième audit, groupe X8) : le fonds de solidarité vieillesse est supprimé au 1er janvier 2026 (L. 135-1 LEGIARTI000037290440 et L. 135-2 LEGIARTI000042683484 figurent au corpus à l'état ABROGE à cette date, avec un lien ABROGE vers l'article 24 de la loi n° 2025-199 ; L. 135-3 à L. 135-5 aussi) ; les mentions des présentes notes qui les disent absents du corpus, ou qui supposent le fonctionnement futur du fonds, sont périmées. le versement de financement des périodes validées ne reste dû que dans la mesure où la branche vieillesse le prend en charge. Même solution que R135-2, R135-6 et R135-14 (variantes W02ma et W04ma) ; transferts à la Caisse nationale d'assurance vieillesse conservés ; aucune formalité de remplacement. Revue IA, sans validation par un juriste.",
+   "overrides": {
+    "substantive_impact": {
+     "version": 1,
+     "classification": "coordination_only",
+     "assessment": "Coordination nécessaire de l’identité du fournisseur d’effectifs : la source juxtapose Pôle emploi au deuxième alinéa et France Travail au dernier ; le même opérateur est désormais nommé uniformément. Le doublon matériel « au au 2° » est rectifié explicitement. Aucun changement de formule : chômage indemnisé, fraction du non-indemnisé, professions et régimes, taux L633-10, assiette de 11,5 % du PASS et répartition sont conservés.",
+     "scope_limitations": "La concordance L633-10 et la version de L135-2 ne sont pas établies ; code rural et décret 2025-1409 manquent. Aucune baisse ni validation de formule complète n'est revendiquée. Le XXII de l'article 24 de la loi n° 2025-199 (dévolution à la Caisse nationale d'assurance vieillesse) est cité d'après la lecture faite par l'audit E09 sur Légifrance le 29 octobre 2026 ; les textes de dissolution, de liquidation et l'arrêté d'approbation des comptes 2025 ne sont pas au corpus.",
+     "new_burdens_review": "Aucune charge nouvelle identifiée : le corps proposé conserve les données et contrôles nécessaires ; il n'ajoute ni registre, ni déclaration, ni visa de remplacement. Les conditions transitoires protègent les actes et droits antérieurs.",
+     "effects": [
+      {
+       "kind": "coordination",
+       "measure_id": "fsv-operateur-france-travail",
+       "description": "Dénomination cohérente du fournisseur des statistiques ; aucun taux modifié.",
+       "before": "Pôle emploi au deuxième alinéa et France Travail au dernier.",
+       "after": "France Travail dans les deux fonctions ; assiette de 11,5 % du PASS inchangée.",
+       "unit": "other",
+       "affected_population": "Organismes calculant les versements pour les indépendants.",
+       "conditions_and_transition": "Coordination de dénomination ; périodes et droits couverts inchangés.",
+       "replacement_or_new_burdens": "Aucune formalité de remplacement ni nouvelle charge identifiée ; contrôles autonomes et droits antérieurs conservés.",
+       "source_quote": "selon les statistiques de Pôle emploi.",
+       "proposed_quote": "selon les statistiques de l'opérateur France Travail."
+      },
+      {
+       "kind": "coordination",
+       "measure_id": "fsv-suppression-r135-16-2",
+       "description": "Rattachement d'un versement forfaitaire à la branche qui a repris les dépenses du fonds.",
+       "before": "Versement forfaitaire du fonds aux régimes au titre des périodes validées.",
+       "after": "Versement dû seulement dans la mesure de sa prise en charge par la branche vieillesse, gérée par la CNAV, selon la même formule.",
+       "unit": "regime",
+       "affected_population": "Fonds de solidarité vieillesse en liquidation, Caisse nationale d'assurance vieillesse et régimes concernés.",
+       "conditions_and_transition": "Depuis le 1er janvier 2026 ; exercices antérieurs, régularisations et recours régis par les règles alors applicables.",
+       "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+       "source_quote": "Les versements forfaitaires résultant de l'application des a et b du 2° de l'article L. 135-2",
+       "proposed_quote": "À compter de cette date, les versements forfaitaires prévus au présent article"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "requests": [],
+ "skipped": []
+}

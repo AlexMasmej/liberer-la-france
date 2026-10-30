@@ -126,11 +126,36 @@ Les pistes, réparties sur 916 articles en 18 groupes disjoints (`apply/Y01` à 
   - **S17 donne 56 G** : les premiers balayages avaient classé « m » des renvois morts qu'un juriste juge grossiers. Le seuil de qualification a été resserré pour ce balayage.
 - **Total de la cinquième ronde** : 97 lignes appliquées ; 321 tests OK.
 
+## 2 septies. Sixième mesure et sixième balayage
+
+| Mesure | Défauts grossiers | Grossiers et mineurs |
+|---|---|---|
+| Audit 6 (après la cinquième ronde) | 13 / 314, **4,1 % ± 2,2** | 15,3 % ± 4,0 |
+
+Échantillon : `sample-6.json`, graine 20261103, tiré hors des 1 565 articles déjà lus.
+
+- **Pas de baisse.** Sur six mesures, on compte 64 défauts grossiers sur 1 879 articles, soit **3,4 % ± 0,8**. D'un audit à l'autre, le taux oscille entre 2,5 % et 4,1 %, dans la marge d'un échantillon de 314.
+- **Une ronde peut créer des défauts.** Trois des 13 défauts viennent de l'annexe II, articles 371 (organismes agréés). La cinquième ronde y avait abrogé une partie des articles sans base légale, mais les articles voisins organisaient encore l'agrément. Le groupe X8 traite désormais les chapitres en entier : annexe II 371 et CSS R135 (Fonds de solidarité vieillesse, supprimé en 2026). Il a appliqué 81 lignes.
+- **Sixième balayage** (`tools/sweeps6.py`, groupes Z01 à Z07, 292 articles, 365 pistes) :
+  - S16b : base légale éteinte, filtre de transition resserré ;
+  - S18 : article qui s'appuie sur un voisin abrogé ;
+  - S19a : alinéa décalé par une version future publiée ;
+  - S19b : adaptation locale future sans proposition, par exemple à Mayotte.
+
+  Résultats : 25 pistes G, 28 m, 151 déjà réglées, 161 faux positifs. Ces pistes ont donné 23 lignes, plus 6 lignes de fermeture (X9, X10 et variantes).
+- **Contrôle de régression.** Après application, on cherche les articles non abrogés qui citent l'un des 115 articles abrogés par les rondes 5 et 6. Le contrôle a donné 5 pistes : 2 défauts, corrigés, et 3 faux positifs.
+- **Total de la sixième ronde** : 110 lignes appliquées ; 321 tests OK.
+
 ## 4. Taux mesuré et ce qu'il signifie
 
-- **Taux mesuré** : environ **3 % des articles** gardent un défaut qu'un juriste remarquerait. Sur cinq mesures indépendantes, on compte 51 défauts grossiers sur 1 565 articles (3,3 %). Les deux dernières mesures donnent 2,5 % ± 1,7 et 3,2 % ± 1,9. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
+- **Taux mesuré** : environ **3 % des articles** gardent un défaut qu'un juriste remarquerait. Sur six mesures indépendantes, on compte 64 défauts grossiers sur 1 879 articles (3,4 % ± 0,8). Aucune tendance à la baisse n'est mesurable d'une ronde à l'autre. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
 - **Probabilité pour un juriste** qui lit 20 articles de sa matière de tomber sur au moins un défaut grossier : environ une chance sur deux.
-- **Ce qu'il faudrait pour descendre sous 1 %** : une lecture systématique de l'ensemble des articles, ou au moins des articles réécrits les plus importants. Aucun signal mécanique ne concentre plus assez les défauts restants pour qu'un balayage ciblé suffise.
+- **Pourquoi les rondes ne font pas baisser le taux mesuré** : environ 1 000 articles sur 30 000 gardent un défaut grossier. Une ronde en corrige 50 à 110, soit une baisse attendue d'environ 0,3 point. C'est en dessous de ce qu'un audit de 314 articles peut détecter (± 2 points).
+- **Ce qu'il faudrait pour descendre nettement sous 3 %** : une lecture systématique, article par article.
+  - Les 14 182 articles réécrits : environ 460 lectures de 31 articles.
+  - L'ensemble du corpus : environ 980 lectures.
+
+  Aucun signal mécanique ne concentre plus assez les défauts restants pour qu'un balayage ciblé suffise.
 - **Les signalements extérieurs ont le meilleur rendement mesuré** : 9 des 11 issues du premier contributeur visaient un vrai défaut. Voir ci-dessous comment signaler une erreur.
 
 ## 5. Signaler une erreur
@@ -146,7 +171,7 @@ Chaque issue est triée contre le registre, corrigée si elle relève d'une cont
 
 ## 3. Ce qui reste
 
-- Une **sixième mesure**, pour savoir si la cinquième ronde, qui a corrigé une lacune de méthode (CGI), fait enfin baisser le taux.
+- Une **lecture systématique** des articles réécrits, seule voie mesurable vers un taux nettement plus bas.
 - Le **reste des pistes S9 larges** hors annexes (environ 2 000 articles au score faible), non balayé.
 - **S3** (numéros introuvables) : l'échantillon de 40 montre surtout des renvois à d'autres codes ; il n'est pas balayé en entier.
 - **S6** (désignations de la loi de réforme) : 60 formules différentes, dont « loi portant la présente réforme » (1 452 occurrences), « loi instituant le contrat de travail unique » (394) et « loi instituant le contrat unique » (338). Une désignation unique est un choix de rédaction à arrêter.

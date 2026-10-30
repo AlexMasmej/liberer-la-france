@@ -100,3 +100,16 @@ Les pistes S1, S2 et S8 antérieures ne lisaient que les numéros L, R, D et A. 
 Pour **S8c** et **S16**, quand la base légale est éteinte, la correction alignée est de cesser d'organiser le régime pour l'avenir (abrogation ou limitation aux situations en cours), sans formalité de remplacement et avec une transition. Ne réécris pas un régime mort.
 
 Pour **S17**, requalifie avec le critère de l'audit : un juriste qui ouvre l'article le jugerait-il anormal ? Si oui, c'est un G à corriger, même si le défaut vient de la source. Sinon, il reste m.
+
+## Sixième balayage : chapitres à moitié abrogés, bases légales éteintes, versions futures (S16b, S18, S19)
+
+| Code | Ce que l'outil a détecté | Exemple de l'audit |
+|---|---|---|
+| **S16b/F3** | Un article réglementaire, réécrit **ou maintenu**, cite hors transition un article L du même code dont toutes les versions ont pris fin. | R371-10 organise les règlements de L371-12, abrogé en 1990. |
+| **S18/F1+F5** | Un article non abrogé s'appuie, hors transition, sur un article du même code (ou de la même annexe) que le projet abroge. C'est le signe d'un chapitre à moitié abrogé. | L'annexe II garde la demande, la décision, l'acceptation tacite et le retrait d'un agrément (371 F à 371 K, 371 R à 371 V) dont les articles de base sont abrogés. |
+| **S19a/F3** | Renvoi au « n-ième alinéa de l'article X » alors que la prochaine version publiée de X décale cet alinéa. | D752-2-3 vise le « troisième alinéa » de L752-1, qui devient le quatrième en 2028. |
+| **S19b/F4** | Une version future publiée, sans proposition, applique « dans la rédaction suivante » des articles réécrits par le projet : l'adaptation locale écrase la réforme. | L759-23 (Mayotte, 2028) rétablit le non-cumul que L755-19 proposé supprime. |
+
+Pour **S18** : il faut traiter le chapitre en entier. Si l'abrogation du voisin est voulue, aligne l'article (abrogation ou limitation aux situations en cours), sans formalité de remplacement. Si l'article garde une fonction utile, retire seulement le renvoi mort.
+
+Pour **S19b** : crée une proposition (`new`) pour la version future. Elle reporte la réforme dans l'adaptation locale, et seulement la réforme. Garde toutes les adaptations propres au territoire qui n'ont pas de rapport avec la réforme.
