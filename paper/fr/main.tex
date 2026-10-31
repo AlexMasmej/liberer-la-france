@@ -457,6 +457,14 @@ Sur les 96 défauts, 86 sont corrigés (81 lignes, dont 16 demandées entre grou
 
 La lecture a consommé environ 30 millions de jetons (hors lectures de cache), soit environ 11\,000 jetons par article.
 
+\subsection{Coût}
+
+\begin{itemize}
+  \item \textbf{Passes de rédaction (Codex d'OpenAI)~:} environ 1\,000~dollars US de crédits API, plus un abonnement ChatGPT Pro (200~dollars par mois).
+  \item \textbf{Troisième passe (Claude Code)~:} menée avec un abonnement Claude Max (200~dollars par mois), sans crédits API facturés. Son coût en équivalent API est d'environ \textbf{1\,870~dollars}, dont environ 430~dollars pour la lecture systématique du code fiscal. Cette estimation repose sur la consommation de jetons enregistrée pour 23\,015 requêtes au modèle (20,8~millions de jetons de sortie, 3,9~milliards de jetons lus en cache et 97~millions de jetons écrits en cache), aux tarifs de l'affichage des coûts de Claude Code.
+\end{itemize}
+En comptant un mois de chaque abonnement, la dépense réelle du projet a été d'environ \textbf{1\,400~dollars}, soit moins de 5~centimes par article. Aux prix de l'API, elle aurait été d'environ 2\,900~dollars, soit moins de 10~centimes par article. Ces montants n'incluent pas le temps humain.
+
 \subsection{Exemples de défauts}
 
 Les exemples suivants, tous corrigés sauf mention contraire, montrent le type d'erreurs que produit la rédaction par IA et que la revue par IA peut détecter~:
@@ -498,7 +506,7 @@ Aucun juriste n'a validé le résultat. La chaîne rend la relecture juridique \
   \item Le corpus est figé au 18~octobre 2026, et les textes hors des neuf recueils ne sont pas réécrits.
   \item Des échantillons d'audit d'environ 314 articles ne détectent que des écarts d'environ $\pm$\,2 points~; les taux par strate sont donc imprécis.
   \item Les modèles de rédaction et le modèle de revue viennent de fournisseurs différents, ce qui limite les angles morts communs sans les supprimer.
-  \item Les coûts n'ont pas été suivis de façon homogène d'une passe à l'autre~; toute affirmation de productivité serait spéculative.
+  \item Les coûts sont donnés tels que payés, avec une estimation en équivalent API pour la troisième passe. Ils n'incluent pas le temps humain et ne constituent pas une mesure de productivité.
   \item Les effets économiques et budgétaires de la réforme sortent du champ de cet article.
 \end{itemize}
 
@@ -513,6 +521,19 @@ Prochaines étapes~:
   \item la validation par des juristes praticiens, en commençant par les objections et arbitrages ouverts.
 \end{itemize}
 Au-delà de cette réforme particulière, la méthode est un modèle~: une couche de politiques explicite, une rédaction complète, des écritures gardées, une red team indépendante et une mesure honnête. Nous espérons qu'elle rende le droit plus lisible, et qu'elle donne à chacun un moyen concret de vérifier la cohérence d'une réforme proposée.
+
+\section*{Appel à contributions}
+
+Ces textes ne sont pas infaillibles~: environ 3\,\% des articles portent encore un défaut grossier, et aucun juriste ne les a validés. Tout est public~:
+\begin{center}\url{https://github.com/AlexMasmej/liberer-la-france}\end{center}
+
+Nous invitons juristes, universitaires, fonctionnaires, citoyens et toute personne intéressée à aider à consolider ce code. Pour signaler un défaut, ouvrez une issue avec~:
+\begin{itemize}
+  \item l'article (code, numéro et identifiant \texttt{LEGIARTI})~;
+  \item le passage exact~;
+  \item le problème et, si possible, une correction proposée.
+\end{itemize}
+Chaque issue est triée par rapport au registre. Les contradictions et les failles sont corrigées, et l'issue est close avec un lien vers le commit. Les demandes qui changeraient une orientation politique sont expliquées et closes. Les demandes de fusion sont aussi bienvenues.
 
 \section*{Disponibilité des données et du code}
 

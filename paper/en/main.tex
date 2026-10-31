@@ -458,6 +458,14 @@ Of the 96 defects, 86 are corrected (81 rows, 16 of them requested across groups
 
 The reading consumed about 30 million tokens (excluding cache reads), roughly 11{,}000 tokens per article.
 
+\subsection{Cost}
+
+\begin{itemize}
+  \item \textbf{Drafting passes (OpenAI Codex):} about US\$1{,}000 of API credits, plus a ChatGPT Pro subscription (US\$200 per month).
+  \item \textbf{Third pass (Claude Code):} run under a Claude Max subscription (US\$200 per month), with no API credits billed. Its API-equivalent cost is about \textbf{US\$1{,}870}, of which about US\$430 went on the systematic reading of the tax code. This estimate uses the token usage logged for 23{,}015 model requests (20.8 million output tokens, 3.9 billion cache-read tokens and 97 million cache-write tokens), at the rates of Claude Code's own cost display.
+\end{itemize}
+Counting one month of each subscription, the cash outlay for the whole project was about \textbf{US\$1{,}400}, or under 5 cents per article. At API-equivalent prices it would have been about US\$2{,}900, or under 10 cents per article. These figures exclude human time.
+
 \subsection{Examples of defects}
 
 The following examples, all corrected unless stated otherwise, show the kind of errors AI drafting produces and AI review can catch:
@@ -499,7 +507,7 @@ No lawyer has validated the output. The pipeline makes legal review \emph{cheape
   \item The corpus is frozen at 18 October 2026, and texts outside the nine instruments are not rewritten.
   \item Audit samples of about 314 articles detect changes of about $\pm$2 points only, so per-stratum rates are imprecise.
   \item The drafting models and the reviewing model come from different vendors, which limits shared blind spots but does not remove them.
-  \item Costs were not tracked uniformly across passes, and productivity claims would be speculative.
+  \item Costs are given as paid, plus an API-equivalent estimate for the third pass. They exclude human time and are not a productivity benchmark.
   \item The economic and fiscal effects of the reform are outside the scope of this paper.
 \end{itemize}
 
@@ -514,6 +522,19 @@ Next steps:
   \item validation by practising lawyers, starting with the open objections and arbitrations.
 \end{itemize}
 Beyond this particular reform, the method is a template: an explicit policy layer, complete drafting, guarded writes, an independent red team and honest measurement. We hope it makes the law more legible, and that it gives anyone a concrete way to check whether a proposed reform is coherent.
+
+\section*{Call for contributions}
+
+These texts are not foolproof: about 3\% of articles still carry a gross defect, and no lawyer has validated them. Everything is public:
+\begin{center}\url{https://github.com/AlexMasmej/liberer-la-france}\end{center}
+
+We invite lawyers, legal scholars, civil servants, French citizens and anyone interested to help harden the code. To report a defect, open an issue with:
+\begin{itemize}
+  \item the article (code, number and \texttt{LEGIARTI} identifier);
+  \item the exact passage;
+  \item the problem and, if possible, a proposed correction.
+\end{itemize}
+Every issue is triaged against the register. Contradictions and loopholes are corrected, and the issue is closed with a link to the commit. Requests that would change a political orientation are explained and closed. Pull requests are welcome too.
 
 \section*{Data and code availability}
 
