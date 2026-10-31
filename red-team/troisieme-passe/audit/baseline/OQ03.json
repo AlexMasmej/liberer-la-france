@@ -1,0 +1,574 @@
+{
+ "group": "OQ03",
+ "paired_with": "Q03",
+ "read_from": "official-source",
+ "reference_date": "2026-10-18",
+ "read_command": "CITE_PRODUCTION=1 CITE_SOURCE_ONLY=1 python3 -I tools/cite.py",
+ "evidence_dir": "evidence/cited/production-20261030-source-only/",
+ "articles": [
+  {
+   "sample_id": "Q003",
+   "code": "css",
+   "number": "L168-11",
+   "source_id": "LEGIARTI000042684385",
+   "verdict": "0",
+   "families": [],
+   "description": "Article de gestion de l'allocation journalière du proche aidant (service et contrôle par les organismes débiteurs des prestations familiales pour le compte de la CNSA). Version en vigueur depuis le 1er janvier 2021 ; la phrase sur le financement a été supprimée sans laisser de renvoi orphelin. Cohérent avec L168-8 et les articles d'application D168-11 à D168-17.",
+   "evidence": "",
+   "links_read": [
+    "css L168-8 LEGIARTI000042686473",
+    "css D168-13 LEGIARTI000045088051 (recherche)",
+    "css D168-16/D168-17 (recherche par mots)",
+    "css L168-11 LEGIARTI000039787620 (version antérieure)"
+   ],
+   "links_not_read": "D168-11 à D168-17 lus seulement par extrait ; code de l'action sociale et des familles (CNSA) hors corpus."
+  },
+  {
+   "sample_id": "Q013",
+   "code": "a4",
+   "number": "54-0 BX",
+   "source_id": "LEGIARTI000006300563",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "L'article lui-même est cohérent avec ses renvois immédiats (54-0 BW, 54-0 B à 54-0 E, tous en vigueur). Mais il incorpore les « caractéristiques fixées par les articles 54-0 B à 54-0 E ». Or 54-0 B ancre ces capsules sur le « II de l'article 302 M » du CGI, qui traite désormais du document administratif électronique outre-mer et est en ABROGE_DIFF au profit du code des impositions sur les biens et services (CIBS). L'article voisin 54-0 BW vise encore le « droit de circulation » (art. 438 CGI abrogé). Le bloc des capsules reste applicable, mais ses ancrages législatifs sont périmés. C'est un doute raisonnable sur la base, sans impossibilité d'appliquer 54-0 BX.",
+   "evidence": "a4 54-0 BX LEGIARTI000006300563 : « Les capsules visées à l'article 54-0 BW doivent répondre aux caractéristiques fixées par les articles 54-0 B à 54-0 E ». a4 54-0 B LEGIARTI000006300705 : « Les capsules représentatives de droits visées au II de l'article 302 M du code général des impôts ». cgi 302 M LEGIARTI000042623631 (ABROGE_DIFF) : « II.-Pour l'application de l'article 302 L, les produits en suspension de droits circulent dans les territoires ultramarins sous couvert d'un document administratif électronique ». a4 54-0 BW LEGIARTI000006300735 : « à percevoir le droit de circulation lors de la répartition des capsules ». cgi 438 : dernière version LEGIARTI000043662369 état ABROGE.",
+   "links_read": [
+    "a4 54-0 BW LEGIARTI000006300735",
+    "a4 54-0 B LEGIARTI000006300705",
+    "a4 54-0 C LEGIARTI000006300484",
+    "a4 54-0 D LEGIARTI000032428098",
+    "a4 54-0 E LEGIARTI000024378326",
+    "a4 54-0 A LEGIARTI000006300480",
+    "cgi 302 M LEGIARTI000042623631",
+    "cgi 444 (dernière version ABROGE)",
+    "cgi 438 (dernière version ABROGE)",
+    "a4 164 AM LEGIARTI000051821531"
+   ],
+   "links_not_read": "CIBS (L. 311-39, L. 313-15) hors corpus. Le décret prévu au 5° de l'article 38 de l'ordonnance 2021-1843 n'a pas été vérifié."
+  },
+  {
+   "sample_id": "Q023",
+   "code": "css",
+   "number": "L355-1",
+   "source_id": "LEGIARTI000006742685",
+   "verdict": "0",
+   "families": [],
+   "description": "Majoration pour tierce personne : les renvois au 3° de L341-4 et à L351-8 (inaptitude, 2°) sont exacts. L'« âge plus élevé » est précisé par R355-1 (1° de L351-8). Rien d'anormal.",
+   "evidence": "",
+   "links_read": [
+    "css L341-4 LEGIARTI000006742597",
+    "css L351-8 LEGIARTI000051289852",
+    "css L341-15 LEGIARTI000047453137",
+    "css L341-16 LEGIARTI000047453121",
+    "css R355-1 LEGIARTI000024113081 (extrait)"
+   ],
+   "links_not_read": "L357-7 et L341-14-1 lus seulement par extrait."
+  },
+  {
+   "sample_id": "Q033",
+   "code": "urba",
+   "number": "R151-19",
+   "source_id": "LEGIARTI000031720613",
+   "verdict": "0",
+   "families": [],
+   "description": "Pour les zones urbaines d'un PLUi, l'article renvoie à R111-3, R111-5 à R111-13, R111-15 à R111-18 et R111-28 à R111-30. Tous ces articles sont en vigueur et portent sur l'objet attendu. La liste est cohérente avec R111-1, qui écarte les mêmes articles dans les territoires dotés d'un PLU.",
+   "evidence": "",
+   "links_read": [
+    "urba R111-1 LEGIARTI000034355056",
+    "urba R111-3 LEGIARTI000031721314",
+    "urba R111-5 LEGIARTI000031721310",
+    "urba R111-13 LEGIARTI000031721294",
+    "urba R111-15 LEGIARTI000031721290",
+    "urba R111-18 LEGIARTI000031721284",
+    "urba R111-28 LEGIARTI000031721256",
+    "urba R111-30 LEGIARTI000031721252",
+    "existence vérifiée de R111-1 à R111-31"
+   ],
+   "links_not_read": "La base légale (L151-x) n'a pas été lue en entier."
+  },
+  {
+   "sample_id": "Q043",
+   "code": "css",
+   "number": "R162-97",
+   "source_id": "LEGIARTI000046880022",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "Renvoi imprécis. Le III vise la « période de facturation … déterminée par l'arrêté prévu au I de l'article R. 162-95 ». Or le I de R162-95 prévoit d'abord l'arrêté tarifaire et précise que la périodicité de facturation est fixée par l'arrêté d'inscription de R162-73, ce que confirme R162-73 II. Le texte reste applicable : un lecteur retrouve la bonne période. Le reste de l'article (L162-52, R162-73, forfaits opérateur et technique) est cohérent.",
+   "evidence": "css R162-97 LEGIARTI000046880022 : « sur une période de facturation donnée, telle que déterminée par l'arrêté prévu au I de l'article R. 162-95 ». css R162-95 LEGIARTI000046880018 : « Il est facturable selon une périodicité et des modalités fixées par l'arrêté d'inscription prévu à l'article R. 162-73 ». css R162-73 LEGIARTI000053185293 : « les forfaits et modulations applicables ainsi que la périodicité de la facturation ».",
+   "links_read": [
+    "css L162-52 LEGIARTI000044565986",
+    "css R162-73 LEGIARTI000053185293",
+    "css R162-95 LEGIARTI000046880018"
+   ],
+   "links_not_read": "L162-48, L162-54 et R162-74 non lus."
+  },
+  {
+   "sample_id": "Q053",
+   "code": "cch",
+   "number": "R311-2",
+   "source_id": "LEGIARTI000039042766",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "L'article est conforme à sa base, L312-1, qui mentionne lui aussi le Crédit foncier de France et le Comptoir des entrepreneurs. Mais le dispositif des primes et bonifications d'intérêts paraît figé : il renvoie au Comptoir des entrepreneurs, établissement dont l'existence actuelle est douteuse et n'a pas pu être vérifiée dans le corpus. Un article réglementaire annonce en outre lui-même un « décret en Conseil d'Etat ». C'est une rédaction obsolète sans effet démontré, d'où un défaut mineur à confirmer.",
+   "evidence": "cch R311-2 LEGIARTI000039042766 : « converties en bonifications d'intérêts de prêts consentis par le Crédit foncier de France et le Comptoir des entrepreneurs » ; « Un décret en Conseil d'Etat, pris sur le rapport du ministre chargé des finances … fixe les conditions de cette substitution ». cch L312-1 LEGIARTI000041471383 : « prêts consentis par le Crédit foncier de France et le Comptoir des entrepreneurs ».",
+   "links_read": [
+    "cch L312-1 LEGIARTI000041471383",
+    "cch R311-1 LEGIARTI000039042771",
+    "cch R311-3 LEGIARTI000006896752",
+    "cch R311-4 LEGIARTI000006896753",
+    "cch L311-1 LEGIARTI000006824802",
+    "cch L311-2 LEGIARTI000006824803"
+   ],
+   "links_not_read": "Aucune source primaire consultée sur la disparition du Comptoir des entrepreneurs. Les décrets de bonification (D431-x) ne sont pas lus en entier."
+  },
+  {
+   "sample_id": "Q063",
+   "code": "css",
+   "number": "D174-19",
+   "source_id": "LEGIARTI000031081019",
+   "verdict": "0",
+   "families": [],
+   "description": "Il applique L174-20 (tarifs librement fixés pour les patients non couverts), qui renvoie à un « décret » : un décret simple suffit. Devis et facture : rien d'anormal.",
+   "evidence": "",
+   "links_read": [
+    "css L174-20 LEGIARTI000033865635",
+    "css D174-18 LEGIARTI000030829693 (section voisine)"
+   ],
+   "links_not_read": "L162-20-1 (ABROGE_DIFF) lu seulement par extrait. L6111-1-2 du code de la santé publique hors corpus."
+  },
+  {
+   "sample_id": "Q073",
+   "code": "travail",
+   "number": "R1523-6",
+   "source_id": "LEGIARTI000049813466",
+   "verdict": "0",
+   "families": [],
+   "description": "Remboursement des frais et indemnisation forfaitaire du temps de transport des conseillers prud'hommes de Saint-Martin et Saint-Barthélemy. Le décret 2006-781 est hors corpus et rien n'indique sa disparition. Le renvoi interne à « l'alinéa précédent » est exact.",
+   "evidence": "",
+   "links_read": [
+    "travail R1523-6 LEGIARTI000031695519 (version antérieure)"
+   ],
+   "links_not_read": "Le décret 2006-781 (hors corpus) et la base légale L1523-x ne sont pas lus."
+  },
+  {
+   "sample_id": "Q083",
+   "code": "travail",
+   "number": "R3423-2",
+   "source_id": "LEGIARTI000018532954",
+   "verdict": "0",
+   "families": [],
+   "description": "Rémunération mensuelle minimale outre-mer. Le seuil de vingt heures est cohérent avec L3423-6, et la formule avec L3423-7.",
+   "evidence": "",
+   "links_read": [
+    "travail L3423-6 LEGIARTI000006903134",
+    "travail L3423-7 LEGIARTI000006903135",
+    "travail L3423-8 LEGIARTI000006903136",
+    "travail L3423-9 LEGIARTI000006903137",
+    "travail R3423-1 LEGIARTI000018532956",
+    "travail R3423-3 LEGIARTI000018532952",
+    "travail R3423-4 LEGIARTI000018532948"
+   ],
+   "links_not_read": "Rien de notable."
+  },
+  {
+   "sample_id": "Q093",
+   "code": "travail",
+   "number": "L5427-5",
+   "source_id": "LEGIARTI000018767159",
+   "verdict": "0",
+   "families": [],
+   "description": "Échanges d'informations entre la caisse des congés spectacles, les caisses de retraite complémentaire et les organismes de sécurité sociale. Cohérent avec L5427-3 et L5427-4 (rédaction France Travail), et avec L5427-6, qui prévoit le décret d'application.",
+   "evidence": "",
+   "links_read": [
+    "travail L5427-1 LEGIARTI000048600544 / LEGIARTI000054468622 (VIGUEUR_DIFF 2028)",
+    "travail L5427-2 LEGIARTI000048600542",
+    "travail L5427-3 LEGIARTI000048600539",
+    "travail L5427-4 LEGIARTI000048600536",
+    "travail L5427-6 LEGIARTI000006903924"
+   ],
+   "links_not_read": "Le décret en Conseil d'Etat d'application (R5427-x) n'a pas été lu."
+  },
+  {
+   "sample_id": "Q103",
+   "code": "urba",
+   "number": "R*322-17",
+   "source_id": "LEGIARTI000029007726",
+   "verdict": "0",
+   "families": [],
+   "description": "Approbation par le préfet du plan de remembrement d'une association foncière urbaine. Les renvois au b et au c de L332-12 correspondent à la rédaction en vigueur : participation spécifique pour équipements publics exceptionnels, participation forfaitaire. La référence à L332-9 et L332-10 « dans leur rédaction antérieure » à la loi 2010-1658 est une référence historique assumée. R*322-8 et R*322-15 sont en vigueur.",
+   "evidence": "",
+   "links_read": [
+    "urba L332-12 LEGIARTI000045917241",
+    "urba L332-8 LEGIARTI000037671957",
+    "urba L332-9 (abrogé, référence historique)",
+    "urba R*322-15 LEGIARTI000044929676",
+    "urba R*322-8 LEGIARTI000033367584",
+    "urba R*322-16 et R*322-10 (extraits)"
+   ],
+   "links_not_read": "L332-10 et L322-6-1 non lus."
+  },
+  {
+   "sample_id": "Q113",
+   "code": "cgi",
+   "number": "1679 octies",
+   "source_id": "LEGIARTI000045913923",
+   "verdict": "0",
+   "families": [],
+   "description": "Recouvrement de la taxe d'aménagement par titres de perception (renvoi au LPF L255 A). Cohérent avec 1635 quater G (exigibilité à l'achèvement), 1635 quater P et 1679 nonies (acomptes au-delà de 3 000 m²).",
+   "evidence": "",
+   "links_read": [
+    "cgi 1658 LEGIARTI000042915030",
+    "cgi 1635 quater A LEGIARTI000045913732",
+    "cgi 1635 quater G LEGIARTI000045913769",
+    "cgi 1635 quater P LEGIARTI000045913814",
+    "cgi 1679 nonies LEGIARTI000053546621",
+    "cgi 235 ter ZG (extrait)"
+   ],
+   "links_not_read": "LPF L255 A hors corpus."
+  },
+  {
+   "sample_id": "Q123",
+   "code": "travail",
+   "number": "L4733-12",
+   "source_id": "LEGIARTI000032376276",
+   "verdict": "0",
+   "families": [],
+   "description": "Renvoi à un décret en Conseil d'Etat pour le chapitre sur les jeunes de moins de dix-huit ans. Ce décret existe : R4733-1 à R4733-15 sont en vigueur.",
+   "evidence": "",
+   "links_read": [
+    "travail L4733-1 LEGIARTI000032376302",
+    "travail L4733-11 LEGIARTI000032376280",
+    "travail R4733-1 LEGIARTI000038319547",
+    "travail R4733-15 LEGIARTI000038320006",
+    "liste L4733-1 à L4733-12 et R4733-1 à R4733-15"
+   ],
+   "links_not_read": "R4733-2 à R4733-14 non lus en entier."
+  },
+  {
+   "sample_id": "Q133",
+   "code": "travail",
+   "number": "L4721-5",
+   "source_id": "LEGIARTI000033025126",
+   "verdict": "0",
+   "families": [],
+   "description": "Procès-verbal immédiat sans mise en demeure en cas de danger grave ou imminent. Les renvois à L4721-4, L8112-1, L4732-1 et L4732-2 sont exacts.",
+   "evidence": "",
+   "links_read": [
+    "travail L4721-4 LEGIARTI000033025132",
+    "travail L8112-1 LEGIARTI000033025397",
+    "travail L4732-1 LEGIARTI000032376259",
+    "travail L4732-2 LEGIARTI000032376254"
+   ],
+   "links_not_read": "Rien de notable."
+  },
+  {
+   "sample_id": "Q143",
+   "code": "a4",
+   "number": "56 j terdecies D",
+   "source_id": "LEGIARTI000041545967",
+   "verdict": "0",
+   "families": [],
+   "description": "Suspension conservatoire de l'agrément des organismes qui produisent les fichiers de poinçons dématérialisés (garantie des métaux précieux). Les renvois à 275 bis F et 275 ter G de l'annexe II (versions de 2025) et au 1° de 56 J terdecies B sont cohérents.",
+   "evidence": "",
+   "links_read": [
+    "a2 275 bis F LEGIARTI000051820225",
+    "a2 275 ter G LEGIARTI000051820204",
+    "a4 56 j terdecies A LEGIARTI000041545978",
+    "a4 56 j terdecies B LEGIARTI000041545973",
+    "a4 56 j terdecies C LEGIARTI000041545971"
+   ],
+   "links_not_read": "Code de commerce (L832-4, L833-3) hors corpus."
+  },
+  {
+   "sample_id": "Q153",
+   "code": "travail",
+   "number": "R1431-11",
+   "source_id": "LEGIARTI000035423552",
+   "verdict": "0",
+   "families": [],
+   "description": "Composition de la commission permanente du Conseil supérieur de la prud'homie : 3 représentants de l'Etat, 6 et 6. Elle est compatible avec R1431-4 (5 représentants de l'Etat, 11 et 11) et avec la répartition de R1431-5 et R1431-6.",
+   "evidence": "",
+   "links_read": [
+    "travail L1431-1 LEGIARTI000006901483",
+    "travail R1431-4 LEGIARTI000033122525",
+    "travail R1431-5 LEGIARTI000035423558",
+    "travail R1431-6 LEGIARTI000035423556",
+    "travail R1431-10 LEGIARTI000018536639"
+   ],
+   "links_not_read": "Rien de notable."
+  },
+  {
+   "sample_id": "Q163",
+   "code": "travail",
+   "number": "R4755-2",
+   "source_id": "LEGIARTI000045646034",
+   "verdict": "0",
+   "families": [],
+   "description": "Procédure contradictoire préalable à l'amende administrative de l'autorité de surveillance du marché. Cohérente avec L4755-1 à L4755-4, R4755-1 et R4755-3.",
+   "evidence": "",
+   "links_read": [
+    "travail L4755-1 LEGIARTI000043890008",
+    "travail L4755-3 LEGIARTI000043890022",
+    "travail L4755-4 LEGIARTI000043890030",
+    "travail R4755-1 LEGIARTI000045646032",
+    "travail R4755-3 LEGIARTI000045646057"
+   ],
+   "links_not_read": "L8115-4 à L8115-7 non lus."
+  },
+  {
+   "sample_id": "Q173",
+   "code": "travail",
+   "number": "R4412-94",
+   "source_id": "LEGIARTI000025819070",
+   "verdict": "0",
+   "families": [],
+   "description": "Champ d'application de la section sur l'amiante. Cohérent avec R4412-95 et R4412-144, qui vise le 2°.",
+   "evidence": "",
+   "links_read": [
+    "travail R4412-95 LEGIARTI000025819066",
+    "travail R4412-114 LEGIARTI000025819001",
+    "travail R4412-144 LEGIARTI000025818836"
+   ],
+   "links_not_read": "Le reste de la section (R4412-96 à R4412-148) n'a pas été lu."
+  },
+  {
+   "sample_id": "Q183",
+   "code": "css",
+   "number": "L137-18",
+   "source_id": "LEGIARTI000053278789",
+   "verdict": "0",
+   "families": [],
+   "description": "Contribution sociale libératoire de 30 % sur le carried interest. Les renvois à 80 quindecies CGI et au III de L136-6 (règles de l'impôt sur le revenu) sont exacts. L'affectation à la CNAV et à la CNAM date de la loi 2025-1403.",
+   "evidence": "",
+   "links_read": [
+    "cgi 80 quindecies LEGIARTI000041464266",
+    "css L136-6 LEGIARTI000051218166"
+   ],
+   "links_not_read": "Les règles de répartition entre la CNAV et la CNAM ne sont pas recherchées."
+  },
+  {
+   "sample_id": "Q193",
+   "code": "travail",
+   "number": "R1454-1",
+   "source_id": "LEGIARTI000051931005",
+   "verdict": "0",
+   "families": [],
+   "description": "Mise en état par le bureau de conciliation et d'orientation, rédaction de 2025. Elle est compatible avec L1454-1-2 et R1454-19. La condition « si les parties n'assurent pas la mise en état » n'est pas contraire à la loi.",
+   "evidence": "",
+   "links_read": [
+    "travail L1454-1-2 LEGIARTI000033024155",
+    "travail R1454-19 LEGIARTI000032580215",
+    "travail R1454-3/R1454-4 (extraits)"
+   ],
+   "links_not_read": "Le code de procédure civile (mise en état conventionnelle) est hors corpus."
+  },
+  {
+   "sample_id": "Q203",
+   "code": "travail",
+   "number": "L2135-10",
+   "source_id": "LEGIARTI000051219948",
+   "verdict": "m",
+   "families": [
+    "F3",
+    "F7"
+   ],
+   "description": "Le III, ajouté en 2025, comporte des renvois approximatifs. Il désigne « l'association gestionnaire du fonds paritaire mentionnée à l'article L. 2135-9 », alors que L2135-9 ne vise que le fonds et que l'association est créée par L2135-15, renvoi exact au 1° du I. Il évoque « la contribution mentionné[e] au 4° du I », alors que le 4° parle de « ressource ». Le préavis porte sur la dénonciation de « l'accord » au lieu de la convention. Le sens reste reconstituable, sans impossibilité d'appliquer.",
+   "evidence": "travail L2135-10 LEGIARTI000051219948 : « Cette contribution est alors versée à l'association gestionnaire du fonds paritaire mentionnée à l'article L. 2135-9 » ; « Un délai de préavis lorsque l'une des parties envisage de dénoncer l'accord » ; au I 1° : « l'association paritaire gestionnaire du fonds mentionnée à l'article L. 2135-15 ». travail L2135-9 LEGIARTI000028689579 : « Un fonds paritaire … est créé par un accord ». travail L2135-15 LEGIARTI000033023424 : « Le fonds mentionné à l'article L. 2135-9 est géré par une association paritaire ».",
+   "links_read": [
+    "travail L2135-9 LEGIARTI000028689579",
+    "travail L2135-15 LEGIARTI000033023424",
+    "travail L2135-15-1 LEGIARTI000051179031",
+    "travail L6123-5 LEGIARTI000053549490 / LEGIARTI000052437578"
+   ],
+   "links_not_read": "CSS L225-1-1 et CRPM L723-11 non lus. Les décrets d'application (R2135-x) ne sont pas lus."
+  },
+  {
+   "sample_id": "Q213",
+   "code": "css",
+   "number": "R226-4",
+   "source_id": "LEGIARTI000006748712",
+   "verdict": "0",
+   "families": [],
+   "description": "Opposition aux délibérations des caisses nationales, délai de vingt jours. Cohérent avec L224-10, qui renvoie au décret pour le délai, ainsi qu'avec R224-5 et R612-7.",
+   "evidence": "",
+   "links_read": [
+    "css L224-10 LEGIARTI000044404083",
+    "css R224-5 (extrait)",
+    "css R612-7 (extrait)",
+    "css D224-11 (extrait)"
+   ],
+   "links_not_read": "Code de l'action sociale et des familles (CNSA) hors corpus."
+  },
+  {
+   "sample_id": "Q223",
+   "code": "travail",
+   "number": "R4323-20",
+   "source_id": "LEGIARTI000036483675",
+   "verdict": "0",
+   "families": [],
+   "description": "Le carnet de maintenance est tenu à la disposition des contrôleurs et du CSE. Cohérent avec R4323-19.",
+   "evidence": "",
+   "links_read": [
+    "travail R4323-19 LEGIARTI000018531493"
+   ],
+   "links_not_read": "Les arrêtés d'application, hors corpus, ne sont pas lus."
+  },
+  {
+   "sample_id": "Q233",
+   "code": "travail",
+   "number": "R2122-41",
+   "source_id": "LEGIARTI000041996159",
+   "verdict": "0",
+   "families": [],
+   "description": "Pourvoi en cassation contre la décision du tribunal judiciaire sur la validation des candidatures (audience TPE). Cohérent avec R2122-39 et R2122-40.",
+   "evidence": "",
+   "links_read": [
+    "travail R2122-39 LEGIARTI000042174978",
+    "travail R2122-40 LEGIARTI000039347787"
+   ],
+   "links_not_read": "Le CPC (art. 999 à 1009) et le COJ (L411-3) sont hors corpus."
+  },
+  {
+   "sample_id": "Q243",
+   "code": "css",
+   "number": "L523-3",
+   "source_id": "LEGIARTI000006743297",
+   "verdict": "m",
+   "families": [
+    "F5"
+   ],
+   "description": "L'article charge « le décret en Conseil d'Etat prévu à l'article L. 584-1 » de fixer les taux de l'allocation de soutien familial. Or L584-1 exclut expressément les « fixations de taux » du décret qu'il prévoit. Les taux sont fixés en pratique par R523-7, qui est un décret en Conseil d'Etat : la contradiction est sans effet, mais le renvoi est incohérent.",
+   "evidence": "css L523-3 LEGIARTI000006743297 : « Le décret en Conseil d'Etat prévu à l'article L. 584-1 fixe les taux respectifs de l'allocation ». css L584-1 LEGIARTI000006743462 : « Un décret en Conseil d'Etat détermine les mesures nécessaires à l'application du livre V autres que les fixations de taux ». css R523-7 LEGIARTI000046498993 : « Les taux servant au calcul de l'allocation de soutien familial sont fixés, en pourcentage de la base mensuelle de calcul ».",
+   "links_read": [
+    "css L584-1 LEGIARTI000006743462",
+    "css L523-1 LEGIARTI000044629511",
+    "css L523-2 LEGIARTI000006743296",
+    "css R523-7 LEGIARTI000046498993 (extrait)",
+    "css D523-1 LEGIARTI000037251339",
+    "css D523-2 LEGIARTI000037251331",
+    "css L551-1 LEGIARTI000046809143"
+   ],
+   "links_not_read": "R523-1 à R523-6 non lus."
+  },
+  {
+   "sample_id": "Q253",
+   "code": "travail",
+   "number": "R6231-5",
+   "source_id": "LEGIARTI000053057339",
+   "verdict": "0",
+   "families": [],
+   "description": "Présidence et fonctionnement du conseil de perfectionnement des CFA. Les renvois à R6352-1 (règlement intérieur) et au CRPM sont plausibles.",
+   "evidence": "",
+   "links_read": [
+    "travail R6352-1 LEGIARTI000039355645",
+    "travail R6231-4 LEGIARTI000039351866"
+   ],
+   "links_not_read": "CRPM L811-8 et R811-46 hors corpus."
+  },
+  {
+   "sample_id": "Q263",
+   "code": "travail",
+   "number": "R5221-46",
+   "source_id": "LEGIARTI000018525686",
+   "verdict": "0",
+   "families": [],
+   "description": "Présentation de l'autorisation de travail aux autorités de L8271-17. Renvoi exact.",
+   "evidence": "",
+   "links_read": [
+    "travail L8271-17 LEGIARTI000049049547"
+   ],
+   "links_not_read": "Le reste de la section R5221 n'a pas été lu."
+  },
+  {
+   "sample_id": "Q273",
+   "code": "travail",
+   "number": "R4451-59",
+   "source_id": "LEGIARTI000043948488",
+   "verdict": "0",
+   "families": [],
+   "description": "Formation des travailleurs relevant du II de R4451-58 (version de 2025), prise en charge par l'employeur. Renvoi exact.",
+   "evidence": "",
+   "links_read": [
+    "travail R4451-58 LEGIARTI000053220713",
+    "travail R4451-57 LEGIARTI000047715528"
+   ],
+   "links_not_read": "R4451-64 non lu."
+  },
+  {
+   "sample_id": "Q283",
+   "code": "urba",
+   "number": "R132-18",
+   "source_id": "LEGIARTI000034501646",
+   "verdict": "0",
+   "families": [],
+   "description": "Publicité de la saisine de la commission de conciliation en urbanisme. Cohérent avec L132-14, R132-10, R132-17 et R132-19 (version de 2026).",
+   "evidence": "",
+   "links_read": [
+    "urba L132-14 LEGIARTI000031210830",
+    "urba R132-10 LEGIARTI000031720785",
+    "urba R132-17 LEGIARTI000034509876",
+    "urba R132-19 LEGIARTI000054613367"
+   ],
+   "links_not_read": "Rien de notable."
+  },
+  {
+   "sample_id": "Q293",
+   "code": "cch",
+   "number": "R362-5",
+   "source_id": "LEGIARTI000036662133",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "La composition du collège des collectivités du CRHH mentionne encore les « syndicats d'agglomération nouvelle ». Le corpus parle lui-même des « anciens syndicats d'agglomération nouvelle » (urba R102-3) : la catégorie paraît éteinte, ce qui reste à confirmer et serait sans effet. Hors de l'article audité, R362-3 dit le comité « présidé par le préfet de région », alors que L364-1 prévoit une coprésidence avec un élu. Ce défaut relève de R362-3 et n'est pas compté ici.",
+   "evidence": "cch R362-5 LEGIARTI000036662133 : « Les présidents des métropoles, des communautés urbaines, des communautés d'agglomération et des syndicats d'agglomération nouvelle compétents en matière de programme local de l'habitat ». urba R102-3 LEGIARTI000053191816 : « des anciens syndicats d'agglomération nouvelle de Sénart ».",
+   "links_read": [
+    "cch R362-3 LEGIARTI000036662127",
+    "cch R362-4 LEGIARTI000029774169",
+    "cch L364-1 LEGIARTI000045211301",
+    "cch L301-5-1 LEGIARTI000045211697"
+   ],
+   "links_not_read": "CGCT (statut des SAN) hors corpus. Aucune source primaire consultée."
+  },
+  {
+   "sample_id": "Q303",
+   "code": "css",
+   "number": "D173-19",
+   "source_id": "LEGIARTI000006735714",
+   "verdict": "0",
+   "families": [],
+   "description": "Annulation et transfert des cotisations vieillesse en cas de validation de services dans un régime spécial. Disposition ancienne mais cohérente avec D173-15, D173-16 et D173-18. La mention des législations d'avant-guerre est volontaire, pour des périodes anciennes.",
+   "evidence": "",
+   "links_read": [
+    "css D173-15 LEGIARTI000006735534",
+    "css D173-16 LEGIARTI000025766876",
+    "css D173-18 LEGIARTI000006735538",
+    "css D173-20 LEGIARTI000006735539"
+   ],
+   "links_not_read": "La base légale L173-x n'a pas été lue."
+  },
+  {
+   "sample_id": "Q313",
+   "code": "travail",
+   "number": "L3121-63",
+   "source_id": "LEGIARTI000033003340",
+   "verdict": "0",
+   "families": [],
+   "description": "Les forfaits annuels sont mis en place par accord d'entreprise ou, à défaut, de branche. Cohérent avec L3121-56, L3121-58, L3121-64 et L3121-65.",
+   "evidence": "",
+   "links_read": [
+    "travail L3121-56 LEGIARTI000033003187",
+    "travail L3121-58 LEGIARTI000033003228",
+    "travail L3121-64 LEGIARTI000036262805",
+    "travail L3121-65 LEGIARTI000036262800"
+   ],
+   "links_not_read": "Rien de notable."
+  }
+ ]
+}

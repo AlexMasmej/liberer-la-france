@@ -37,7 +37,7 @@ des agents d'IA réécrivent et vérifient cinq grands codes français}
 \maketitle
 
 \begin{abstract}
-Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets d'application, les annexes fiscales et des versions consolidées futures, qui se contredisent souvent. Nous présentons une preuve de concept dans laquelle des agents d'IA réécrivent, puis auditent de façon contradictoire, cinq grands codes français complets (code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation)~: 30\,317 entrées d'articles issues de la base officielle LEGI au 18~octobre 2026. Deux passes de rédaction par des agents de programmation orchestrés ont produit 14\,115 articles réécrits et 16\,199 articles maintenus avec une justification propre. Une troisième passe, conduite comme une \og red team \fg{} indépendante, a constitué un registre d'objections (303 soulevées, 243 retenues sur le texte final), appliqué environ 1\,220 corrections par un écrivain gardé avec contrôle d'avant-image, trié les issues d'un contributeur externe et mesuré la fiabilité par six audits aléatoires stratifiés, menés à l'aveugle. Sur 1\,879 articles tirés au hasard, environ 3,4\,\%\,$\pm$\,0,8 portent encore un défaut qu'un juriste remarquerait~: surtout des renvois morts ou décalés, des versions futures qui défont la réforme sans bruit, et des décrets qui gardent des obligations que la loi a supprimées. Les balayages ciblés corrigent la famille qu'ils visent sans faire bouger le taux mesuré~; une lecture systématique, chapitre par chapitre, des 2\,740 articles fiscaux réécrits a trouvé 96 défauts grossiers (3,5\,\%), dont 86 ont été corrigés. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est une initiative indépendante et la méthode est neutre quant aux choix politiques. Textes, outils, échantillons et verdicts d'audit sont publics. Aucun juriste n'a validé le résultat.
+Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets d'application, les annexes fiscales et des versions consolidées futures, qui se contredisent souvent. Nous présentons une preuve de concept dans laquelle des agents d'IA réécrivent, puis auditent de façon contradictoire, cinq grands codes français complets (code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation)~: 30\,317 entrées d'articles issues de la base officielle LEGI au 18~octobre 2026. Deux passes de rédaction ont produit 14\,115 articles réécrits et 16\,199 articles maintenus avec justification. Une troisième passe, conduite comme une \og red team \fg{} indépendante, a tenu un registre d'objections, appliqué environ 1\,220 corrections par un écrivain gardé, trié les issues d'un contributeur externe et mesuré la fiabilité par six audits aléatoires stratifiés, menés à l'aveugle. Sur les mêmes 1\,879 articles tirés au hasard, après vérification de chaque défaut contesté dans les deux textes, des auditeurs IA trouvent un défaut grossier dans 7,0\,\%\,$\pm$\,1,2 des textes officiels, contre 4,6\,\%\,$\pm$\,0,9 du droit réécrit (test apparié, $p \approx 2\times10^{-5}$)~: la réécriture a réparé 77 défauts du droit officiel, surtout des renvois morts, pour 32 introduits. Les balayages ciblés corrigent la famille qu'ils visent sans faire bouger le taux mesuré~; une lecture systématique, chapitre par chapitre, des 2\,740 articles fiscaux réécrits a trouvé 96 défauts grossiers (3,5\,\%), dont 86 ont été corrigés. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est une initiative indépendante et la méthode est neutre quant aux choix politiques. Ces résultats, produits et mesurés par des agents d'IA seuls, sont publiés avec textes, outils et verdicts pour que juristes et citoyens les vérifient et les consolident.
 \end{abstract}
 
 \section{Introduction}
@@ -85,6 +85,7 @@ Le second objectif est le principal intérêt scientifique. Réformer un code es
     \item un écrivain gardé qui ne peut rien écraser sans contrôle (\S\ref{sec:redteam}).
   \end{itemize}
   \item Une méthode de mesure~: six audits aléatoires stratifiés, menés à l'aveugle, avec une taxonomie de dix familles de défauts (F1 à F10). Le taux s'accompagne d'un intervalle de confiance, pas d'une anecdote (\S\ref{sec:measure}).
+  \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte environ un tiers de défauts grossiers en moins que le droit qu'il remplace (\S\ref{sec:baseline}).
   \item Des constats empiriques sur ce que les agents d'IA font bien et mal en matière de cohérence juridique (\S\ref{sec:results}--\S\ref{sec:discussion})~:
   \begin{itemize}
     \item les balayages mécaniques atteignent un plateau~;
@@ -92,6 +93,9 @@ Le second objectif est le principal intérêt scientifique. Réformer un code es
     \item une large part de l'erreur résiduelle vient de textes hors du corpus.
   \end{itemize}
 \end{itemize}
+
+\paragraph{Des résultats produits par l'IA seule.}
+Cet article rapporte délibérément ce que des agents d'IA ont accompli seuls. Rédaction, revue, correction et mesure ont toutes été faites par des agents d'IA, sous direction et arbitrage humains, mais sans juristes. Nous publions les résultats pour que juristes et citoyens les vérifient et les consolident (voir l'appel à contributions à la fin).
 
 \paragraph{Position politique.}
 L'orientation de fond de la réécriture est explicite et n'est pas neutre. Elle vise moins d'impôts et moins de contraintes. Elle conserve les exonérations, les dérogations favorables, les droits acquis et les transitions. Elle n'introduit jamais de formalité de remplacement.
@@ -344,6 +348,9 @@ Après chaque audit, nous avons transformé ses défauts grossiers en générate
 \end{itemize}
 Une piste n'est pas un constat. Chaque piste est qualifiée par un agent qui lit les textes en entier~: faux positif, déjà réglé, G ou m. Une correction est rédigée pour chaque G confirmé.
 
+\paragraph{Référence.}
+Pour savoir si un taux résiduel est bon ou mauvais, nous avons mené le même audit sur le texte \emph{officiel} des mêmes 1\,879 articles, dans les mêmes paquets, avec le même critère. Un mode \og source seule \fg{} de l'outil de lecture masquait les propositions, motifs et notes du projet, et les paquets n'indiquaient pas si un article avait été réécrit. Les défauts vus d'un seul côté ont ensuite été vérifiés dans les deux textes par d'autres agents (\S\ref{sec:baseline}).
+
 \paragraph{Lecture systématique.}
 Enfin, nous avons lu chaque article réécrit du CGI et de ses annexes, là où les audits montraient les taux les plus élevés. Les 2\,740 articles non encore audités ont été regroupés par section, pour que chaque lecteur voie un chapitre entier. Ils ont été répartis en 132 paquets d'environ 21 articles. Chaque lecteur qualifie chaque article et rédige les corrections de ses défauts grossiers.
 
@@ -410,18 +417,20 @@ Ensemble & 1\,879 & 64 & \textbf{3,4\,\% $\pm$ 0,8} & \\
 \begin{axis}[
   width=0.82\linewidth, height=5.2cm,
   xlabel={Audit}, ylabel={Taux de défauts grossiers (\%)},
-  xmin=0.5, xmax=6.5, ymin=0, ymax=7,
-  xtick={1,2,3,4,5,6}, ytick={0,1,2,3,4,5,6,7},
+  xmin=0.5, xmax=6.5, ymin=0, ymax=10,
+  xtick={1,2,3,4,5,6}, ytick={0,2,4,6,8,10},
   grid=major, grid style={gray!20},
 ]
 \addplot+[only marks, mark=*, black, error bars/.cd, y dir=both, y explicit]
   coordinates {(1,4.0) +- (0,2.2) (2,2.9) +- (0,1.9) (3,3.8) +- (0,2.1)
                (4,2.5) +- (0,1.7) (5,3.2) +- (0,1.9) (6,4.1) +- (0,2.2)};
 \addplot[dashed, gray, domain=0.5:6.5] {3.4};
-\node[anchor=south, font=\small, gray] at (axis cs:3.5,3.45) {ensemble 3,4\,\%};
+\node[anchor=north, font=\small, gray] at (axis cs:3.5,3.35) {ensemble 3,4\,\%};
+\addplot[dashed, red!70!black, domain=0.5:6.5] {8.4};
+\node[anchor=south, font=\small, red!70!black] at (axis cs:3.5,8.45) {droit officiel, mêmes articles~: 8,4\,\%};
 \end{axis}
 \end{tikzpicture}
-\caption{Taux de défauts grossiers mesuré à chaque audit, avec intervalles à 95\,\%. Aucune baisse n'est détectable d'un tour à l'autre.}
+\caption{Taux de défauts grossiers mesuré à chaque audit, avec intervalles à 95\,\%. Aucune baisse n'est détectable d'un tour à l'autre. La ligne rouge est le même audit mené sur le texte officiel des mêmes 1\,879 articles (verdicts bruts, avant la vérification du \S\ref{sec:baseline}).}
 \label{fig:audits}
 \end{figure}
 
@@ -436,6 +445,52 @@ La composition des défauts, elle, a changé~:
   \item les audits suivants se sont concentrés sur les annexes fiscales.
 \end{itemize}
 Selon les audits, la moitié à trois quarts des défauts grossiers trouvés étaient inconnus du registre.
+
+\subsection{Référence~: le droit officiel, mêmes articles}
+\label{sec:baseline}
+
+Un taux de 3,4\,\% est-il bon ou mauvais~? Nous avons audité le texte officiel des mêmes 1\,879 articles avec la même méthode (\S\ref{sec:measure}).
+
+\paragraph{Verdicts bruts.}
+Les auditeurs IA ont trouvé un défaut grossier dans 158 articles officiels (8,4\,\%\,$\pm$\,1,3), contre 64 dans les audits du projet (3,4\,\%\,$\pm$\,0,8). Seuls 24 articles ont été signalés des deux côtés. La plupart des défauts officiels sont des renvois morts ou périmés (famille F3, 124 sur 158)~: articles abrogés depuis des années, organismes renommés, codes recodifiés.
+
+\paragraph{Vérifier les défauts contestés.}
+La comparaison brute ne suffit pas. Sur les 966 articles que le projet a maintenus sans changement, le texte est identique des deux côtés~; pourtant, les auditeurs du texte officiel en ont signalé 30 et ceux du projet 15. Soit les deux groupes d'auditeurs n'étaient pas aussi sévères, soit les auditeurs du projet ont minoré les défauts hérités de la source.
+
+D'autres agents ont donc vérifié chacun des 174 défauts vus d'un seul côté, dans les deux textes, en répondant à trois questions~: le défaut est-il présent dans le texte officiel~? dans le texte proposé~? est-il vraiment grossier~?
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+& & \multicolumn{2}{c}{Droit officiel} & \multicolumn{2}{c}{Droit réécrit}\\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Mêmes articles, après vérification & Articles & G & Taux & G & Taux\\
+\midrule
+Tous & 1\,879 & 131 & 7,0\,\% $\pm$ 1,2 & 86 & \textbf{4,6\,\% $\pm$ 0,9}\\
+Réécrits par le projet & 913 & 108 & 11,8\,\% & 64 & 7,0\,\%\\
+Maintenus sans changement (témoin) & 966 & 23 & 2,4\,\% & 22 & 2,3\,\%\\
+\midrule
+\multicolumn{4}{l}{Défauts du droit officiel réparés par la réécriture} & \multicolumn{2}{r}{77}\\
+\multicolumn{4}{l}{Défauts introduits par la réécriture} & \multicolumn{2}{r}{32}\\
+\multicolumn{4}{l}{Test apparié (McNemar, exact)} & \multicolumn{2}{r}{$p \approx 2\times10^{-5}$}\\
+\bottomrule
+\end{tabular}
+\caption{Défauts grossiers du droit officiel et du droit réécrit, sur les mêmes 1\,879 articles tirés au hasard, après vérification de tout défaut vu d'un seul côté. Les chiffres du projet sont ceux de chaque audit, à sa date.}
+\label{tab:baseline}
+\end{table}
+
+\paragraph{Résultat.}
+Après vérification, les articles maintenus, dont le texte est le même des deux côtés, présentent le même taux (23 et 22 défauts). La vérification semble donc effacer l'écart de sévérité. Sur cette base (tableau~\ref{tab:baseline})~:
+\begin{itemize}
+  \item le droit réécrit compte environ \textbf{un tiers de défauts grossiers en moins} que le droit officiel qu'il remplace~: 4,6\,\% contre 7,0\,\%~;
+  \item parmi les articles réécrits, le taux passe de 11,8\,\% à 7,0\,\%~;
+  \item pour chaque défaut introduit par la réécriture, plus de deux défauts du droit officiel ont été réparés (77 contre 32).
+\end{itemize}
+Une exception ressort. Dans la partie législative du CGI, l'échantillon compte plus de défauts vérifiés après la réécriture qu'avant (9 contre 3)~: réformer l'impôt sur les sociétés et l'impôt sur le revenu crée des incohérences plus vite qu'il n'en supprime. C'est là que s'est concentrée la lecture systématique (\S\ref{sec:results}).
+
+Les chiffres du projet sont ceux de chaque audit, à sa date. Les défauts trouvés par les audits ont été corrigés ensuite~: le texte actuel est donc meilleur sur ces articles, mais cet échantillon ne peut plus le mesurer sans biais.
 
 \subsection{Balayages~: rendement et plateau}
 
@@ -491,18 +546,19 @@ Les exemples suivants, tous corrigés sauf mention contraire, montrent le type d
 \end{itemize}
 
 \paragraph{La mesure change la discussion.}
-Sans les audits aléatoires, le nombre de corrections, plus de 1\,200, aurait laissé croire à un progrès régulier. Les audits montrent un plateau autour de 3 à 4\,\%, et ils l'expliquent. Les balayages ciblés aident, mais les défauts restants sont dispersés. Seule une lecture systématique peut faire nettement baisser le taux. Un taux de défauts publié, reproductible et assorti d'un intervalle nous semble le minimum pour toute affirmation sur une législation rédigée par IA.
+Sans les audits aléatoires, le nombre de corrections, plus de 1\,200, aurait laissé croire à un progrès régulier. Les audits montrent un plateau autour de 3 à 4\,\%, et ils l'expliquent. Les balayages ciblés aident, mais les défauts restants sont dispersés. Seule une lecture systématique peut faire nettement baisser le taux. La référence appariée transforme ce plateau en résultat~: le droit en vigueur n'est pas exempt de défauts non plus, et la réécriture, avec ses erreurs résiduelles, est mesurablement plus cohérente que les textes qu'elle remplace. Un taux de défauts publié, reproductible, assorti d'un intervalle et comparé à une référence nous semble le minimum pour toute affirmation sur une législation rédigée par IA.
 
 \paragraph{Contradictions et politique.}
 Tenir la red team à l'écart des choix politiques a été plus difficile que prévu. Beaucoup de contradictions apparentes ont deux résolutions cohérentes~: supprimer une faveur ou l'étendre, rétablir une formalité ou en effacer le reliquat. Nous avons tranché par un critère d'alignement explicite et publié (\S\ref{sec:redteam}), et nous avons renvoyé les vrais arbitrages à l'auteur. Un autre programme changerait le critère, pas la méthode.
 
-\paragraph{La relecture humaine.}
-Aucun juriste n'a validé le résultat. La chaîne rend la relecture juridique \emph{moins coûteuse}, pas inutile~: chaque article est livré avec sa source, son motif, ses notes, ses objections et sa trace d'audit. Le suivi public des issues s'est révélé le canal le plus efficace. Neuf des onze premières issues externes visaient un vrai défaut.
+\paragraph{La relecture par des experts.}
+Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les a encore validés. La chaîne rend la relecture par des experts \emph{moins coûteuse}, pas inutile~: chaque article est livré avec sa source, son motif, ses notes, ses objections et sa trace d'audit. Le suivi public des issues s'est révélé le canal le plus efficace. Neuf des onze premières issues externes visaient un vrai défaut.
 
 \section{Limites}
 
 \begin{itemize}
-  \item Une revue par IA n'est pas une validation juridique. Les verdicts d'audit sont des jugements de modèles et peuvent se tromper dans les deux sens.
+  \item Les résultats sont mesurés par l'IA, par choix. Les verdicts d'audit sont des jugements de modèles et peuvent se tromper dans les deux sens~; leur justesse est ouverte à la vérification par des experts, que nous invitons.
+  \item La sévérité des auditeurs varie. Sur des textes identiques, deux groupes d'auditeurs ont différé d'un facteur deux avant vérification (\S\ref{sec:baseline}). Le taux d'un audit isolé est à lire avec cette réserve.
   \item Le corpus est figé au 18~octobre 2026, et les textes hors des neuf recueils ne sont pas réécrits.
   \item Des échantillons d'audit d'environ 314 articles ne détectent que des écarts d'environ $\pm$\,2 points~; les taux par strate sont donc imprécis.
   \item Les modèles de rédaction et le modèle de revue viennent de fournisseurs différents, ce qui limite les angles morts communs sans les supprimer.
@@ -512,7 +568,7 @@ Aucun juriste n'a validé le résultat. La chaîne rend la relecture juridique \
 
 \section{Conclusion et travaux futurs}
 
-Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team indépendante, et mesuré ce qui reste faux. Le taux résiduel de défauts grossiers est d'environ 3,4\,\%, et toute la trace est publique.
+Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team indépendante, et mesuré ce qui reste faux. Le taux résiduel de défauts grossiers est d'environ 3,4\,\% dans les audits du projet. Comparée au droit officiel, sur les mêmes articles et après vérification, la réécriture compte environ un tiers de défauts grossiers en moins (4,6\,\% contre 7,0\,\%). Toute la trace est publique.
 
 Prochaines étapes~:
 \begin{itemize}
@@ -549,7 +605,7 @@ A.M.\ a conçu et dirigé le projet, fixé la couche de politiques, conduit les 
 
 \section*{Remerciements}
 
-Nous remercions Rand Hindi, dont l'exemple a inspiré l'approche de \og red teaming \fg{} de la troisième passe. Nous remercions toutes celles et ceux qui ont lu, critiqué et partagé le fil initial.
+Nous remercions Rand Hindi, dont l'exemple a inspiré l'approche de \og red teaming \fg{} de la troisième passe. Nous remercions Nathalie Gouailhardou d'avoir proposé l'analyse de référence~: mesurer le droit officiel avec le même audit, sur les mêmes articles, pour comparer la justesse de la réécriture à celle des textes d'origine. Nous remercions toutes celles et ceux qui ont lu, critiqué et partagé le fil initial.
 
 \begin{thebibliography}{99}
 

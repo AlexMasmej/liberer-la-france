@@ -1,0 +1,631 @@
+{
+ "group": "OH04",
+ "paired_with": "H04",
+ "read_from": "official-source",
+ "reference_date": "2026-10-18",
+ "read_command": "CITE_PRODUCTION=1 CITE_SOURCE_ONLY=1 python3 -I tools/cite.py ; requêtes en lecture seule sur articles et documents",
+ "articles": [
+  {
+   "sample_id": "H004",
+   "code": "cch",
+   "number": "R126-29",
+   "source_id": "LEGIARTI000043818629",
+   "verdict": "0",
+   "families": [],
+   "description": "Article de renvoi à un arrêté pour la sous-section DPE. Le renvoi à « l'évaluation des dépenses annuelles mentionnée à l'article R. 126-16 » correspond bien au b de R. 126-16. Rien d'anormal.",
+   "evidence": "",
+   "links_read": [
+    "cch R126-15 (LEGIARTI000043818595)",
+    "cch R126-16 (LEGIARTI000043818597)",
+    "cch R126-17",
+    "cch R126-26",
+    "cch R126-28",
+    "cch R126-30"
+   ],
+   "links_not_read": "Arrêtés d'application (hors corpus) et base légale L. 126-26 et suivants non relus en entier."
+  },
+  {
+   "sample_id": "H014",
+   "code": "css",
+   "number": "R491-18",
+   "source_id": "LEGIARTI000042586798",
+   "verdict": "0",
+   "families": [],
+   "description": "Règle de notification entre parties dans le contentieux du fonds d'indemnisation des victimes de pesticides devant la cour d'appel. Elle est cohérente avec R. 491-11 à R. 491-19 et avec L. 491-1 dans sa version du 1er janvier 2026.",
+   "evidence": "",
+   "links_read": [
+    "css R491-1",
+    "css R491-2",
+    "css R491-10 à R491-13",
+    "css R491-17",
+    "css R491-19",
+    "css R491-20",
+    "css L491-1 (LEGIARTI000051289892)"
+   ],
+   "links_not_read": "Code de procédure civile (titre VI du livre II) et code rural (L. 723-13-3) hors corpus."
+  },
+  {
+   "sample_id": "H024",
+   "code": "cgi",
+   "number": "199 tervicies",
+   "source_id": "LEGIARTI000048806449",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "La loi est cohérente : les charges de l'article 31 citées existent, et L. 313-4 du code de l'urbanisme et L. 341-4 du CSS sont en vigueur. Les 2° et 2° bis ont expiré au 31 décembre 2024, mais le III les vise encore pour le taux de 30 %, ce qui reste utile pour les dépenses antérieures. Défaut mineur dans le texte d'application : l'article 46 AZC de l'annexe III (version 2012) emploie encore les catégories antérieures à la loi LCAP, qui ont été remplacées par les sites patrimoniaux remarquables, et il ne mentionne pas le plan de valorisation de l'architecture et du patrimoine (PVAP) visé au b du 1° du I. Son IV 5° renvoie aussi aux « dépenses mentionnées au I » alors que la loi les définit au II.",
+   "evidence": "Annexe III art. 46 AZC (LEGIARTI000026314876) : « la mention qu'il est situé, selon le cas, dans un secteur sauvegardé, un quartier ancien dégradé, une zone de protection du patrimoine architectural, urbain et paysager ou une aire de mise en valeur de l'architecture et du patrimoine ». CGI 199 tervicies (LEGIARTI000048806449) : « 1° – Situé dans un site patrimonial remarquable classé en application du titre III du livre VI du code du patrimoine ».",
+   "links_read": [
+    "cgi 31 (LEGIARTI000053544761)",
+    "urba L313-4 (LEGIARTI000049397483)",
+    "css L341-4",
+    "cgi 199 decies E/F/G/I, 199 undecies A (états)",
+    "a3 46 AZC (LEGIARTI000026314876)",
+    "a2 95 ZN (mention)",
+    "cgi 199 undecies C, 239 nonies, 200-0 A (renvois entrants)"
+   ],
+   "links_not_read": "Code du patrimoine et code monétaire et financier (L. 214-114 et suivants pour les SCPI) hors corpus, non vérifiés. Le renvoi aux SCPI, identique dans d'autres articles du CGI, n'a pas été contrôlé.",
+   "evidence_files": [
+    "evidence/cited/production-20261030-source-only/cgi_199_tervicies_LEGIARTI000048806449.json",
+    "evidence/cited/production-20261030-source-only/a3_46_AZC_LEGIARTI000026314876.json"
+   ]
+  },
+  {
+   "sample_id": "H034",
+   "code": "css",
+   "number": "L162-40",
+   "source_id": "LEGIARTI000037950352",
+   "verdict": "0",
+   "families": [],
+   "description": "Obligation pour les établissements thermaux de pratiquer des prix plafonnés pour les bénéficiaires de la complémentaire santé solidaire. Les renvois à L. 162-39 3° (tarifs forfaitaires de responsabilité) et à L. 861-3 sont valides. Seule une virgule manque, sans effet.",
+   "evidence": "",
+   "links_read": [
+    "css L162-39 (LEGIARTI000028394397)",
+    "css L861-3 (LEGIARTI000046812151 et version future)",
+    "css L861-1"
+   ],
+   "links_not_read": "Textes réglementaires thermaux non recherchés."
+  },
+  {
+   "sample_id": "H044",
+   "code": "travail",
+   "number": "D7343-97",
+   "source_id": "LEGIARTI000046322343",
+   "verdict": "0",
+   "families": [],
+   "description": "Deux sièges par organisation de travailleurs dans la commission de négociation des plateformes. Le renvoi à D. 7343-61 (version du 8 juillet 2026, qui porte à quatre le nombre de représentants) est cohérent avec deux titulaires et un suppléant.",
+   "evidence": "",
+   "links_read": [
+    "travail D7343-61 (deux versions)",
+    "travail D7343-88",
+    "travail D7343-94",
+    "travail D7343-96",
+    "travail D7343-98",
+    "travail D7343-99",
+    "travail L7343-12",
+    "travail L7343-54"
+   ],
+   "links_not_read": ""
+  },
+  {
+   "sample_id": "H054",
+   "code": "travail",
+   "number": "R4643-6",
+   "source_id": "LEGIARTI000018527724",
+   "verdict": "0",
+   "families": [],
+   "description": "Composition paritaire du conseil du comité national de l'OPPBTP. Elle est cohérente avec R. 4643-5, R4643-7 et R4643-8 et avec la base légale L. 4643-1 à L. 4643-3.",
+   "evidence": "",
+   "links_read": [
+    "travail L4643-1",
+    "travail L4643-2",
+    "travail L4643-3",
+    "travail R4643-5",
+    "travail R4643-7",
+    "travail R4643-8"
+   ],
+   "links_not_read": "Les autres articles de R. 4643-9 à R. 4643-42 n'ont pas été relus."
+  },
+  {
+   "sample_id": "H064",
+   "code": "cgi",
+   "number": "238 terdecies",
+   "source_id": "LEGIARTI000006309130",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "Le texte de 238 terdecies est cohérent par lui-même. En revanche, les articles 238 nonies, 238 decies et 238 undecies, dont il fixe les conditions d'application, définissent leur champ par « un terrain non bâti ou un bien assimilé au sens du A de l'article 1594-0 G ». Or, depuis la réforme de la TVA immobilière de 2010, le A de 1594-0 G ne définit plus de « biens assimilés » : il vise les acquisitions assorties d'un engagement de construire. Le renvoi est donc décalé dans les textes liés. Le fonctionnement propre de 238 terdecies (détention de deux ans, différé limité à cinq ans, exclusion de 150 U) n'est pas atteint : défaut mineur au niveau de l'article échantillonné.",
+   "evidence": "CGI 238 decies (LEGIARTI000006304098) : « En cas d'apport d'un terrain non bâti ou d'un bien assimilé au sens du A de l'article 1594-0 G ». CGI 1594-0 G (LEGIARTI000031219381) : « A. I. – Les acquisitions d'immeubles réalisées par une personne assujettie au sens de l'article 256 A, lorsque l'acte d'acquisition contient l'engagement, pris par l'acquéreur, d'effectuer dans un délai de quatre ans les travaux ». Version antérieure (LEGIARTI000020465676) : « 1° De terrains nus ou recouverts de bâtiments destinés à être démolis ; 2° D'immeubles inachevés ».",
+   "links_read": [
+    "cgi 238 nonies (LEGIARTI000006304095)",
+    "cgi 238 decies (LEGIARTI000006304098)",
+    "cgi 238 undecies (LEGIARTI000006304100)",
+    "cgi 238 duodecies (LEGIARTI000006304101)",
+    "cgi 1594-0 G (toutes versions)"
+   ],
+   "links_not_read": "Article 150 U non relu en entier. Aucun texte d'application trouvé dans les annexes.",
+   "evidence_files": [
+    "evidence/cited/production-20261030-source-only/cgi_238_terdecies_LEGIARTI000006309130.json",
+    "evidence/cited/production-20261030-source-only/cgi_238_decies_LEGIARTI000006304098.json",
+    "evidence/cited/production-20261030-source-only/cgi_238_nonies_LEGIARTI000006304095.json",
+    "evidence/cited/production-20261030-source-only/cgi_238_undecies_LEGIARTI000006304100.json",
+    "evidence/cited/production-20261030-source-only/cgi_1594-0_G_LEGIARTI000031219381.json"
+   ]
+  },
+  {
+   "sample_id": "H074",
+   "code": "css",
+   "number": "R755-0-3",
+   "source_id": "LEGIARTI000006752163",
+   "verdict": "0",
+   "families": [],
+   "description": "Extension aux DOM des règles d'allocataire et d'attributaire (R. 513-1 et R. 513-2), avec substitution de L. 755-4 à L. 552-6. R. 513-2 vise bien L. 552-6 dans son deuxième alinéa, et L. 755-4 en est l'équivalent outre-mer. Cohérent.",
+   "evidence": "",
+   "links_read": [
+    "css R513-1",
+    "css R513-2",
+    "css L552-6",
+    "css L755-4",
+    "css L755-10",
+    "css L751-1 (version en vigueur et version future 2028)"
+   ],
+   "links_not_read": ""
+  },
+  {
+   "sample_id": "H084",
+   "code": "cgi",
+   "number": "210",
+   "source_id": "LEGIARTI000006308598",
+   "verdict": "0",
+   "families": [],
+   "description": "Régime ancien d'exonération des plus-values de fusion, réservé aux plus-values réalisées avant l'entrée en vigueur des articles 39 duodecies à 39 quindecies A. Il est obsolète mais cohérent : il fonctionne comme une disposition transitoire, et son articulation avec 238 octies (I et II, deuxième alinéa) se tient. Une disposition de transition visant des faits anciens ne compte pas comme un défaut.",
+   "evidence": "",
+   "links_read": [
+    "cgi 238 octies (LEGIARTI000021957449)",
+    "cgi 39 duodecies, 39 quindecies A (états)",
+    "cgi 210 A à 210 C (renvois entrants)"
+   ],
+   "links_not_read": "Décrets de date d'effet (années 1960) hors corpus."
+  },
+  {
+   "sample_id": "H094",
+   "code": "cgi",
+   "number": "1472 A ter",
+   "source_id": "LEGIARTI000021641358",
+   "verdict": "0",
+   "families": [],
+   "description": "Coefficient de 0,75 sur les bases de CFE en Corse. Le texte est simple et cohérent.",
+   "evidence": "",
+   "links_read": [
+    "cgi 1472 A ter (versions)"
+   ],
+   "links_not_read": "Articles 1467 et suivants (base de la CFE) non relus en entier."
+  },
+  {
+   "sample_id": "H104",
+   "code": "a3",
+   "number": "281 J",
+   "source_id": "LEGIARTI000018617987",
+   "verdict": "0",
+   "families": [],
+   "description": "Date d'effet des engagements forestiers et des engagements sur espaces naturels prévus à l'article 793 du CGI. Les trois engagements visés existent : b du 3° du 1, b du 2° du 2 et b du 7° du 2. Le texte ne vise pas l'engagement du 3 de l'article 793 (compte d'investissement forestier), qui est postérieur ; c'est une lacune de coordination sans effet démontré.",
+   "evidence": "",
+   "links_read": [
+    "cgi 793 (LEGIARTI000051149498)",
+    "a3 281 A à 281 P (liste)"
+   ],
+   "links_not_read": ""
+  },
+  {
+   "sample_id": "H114",
+   "code": "css",
+   "number": "L244-7",
+   "source_id": "LEGIARTI000006742097",
+   "verdict": "0",
+   "families": [],
+   "description": "Point de départ de la prescription de l'action publique : un mois après l'avertissement ou la mise en demeure de L. 244-2. Le délai d'un mois concorde avec L. 244-2 et L. 244-4. La plage « L. 244-1 à L. 244-4 » inclut L. 244-3, qui ne crée pas d'infraction, mais c'est une plage de renvoi ordinaire. La version future de 2029 (« action pénale ») relève du calendrier normal.",
+   "evidence": "",
+   "links_read": [
+    "css L244-1 (en vigueur et future)",
+    "css L244-2",
+    "css L244-3",
+    "css L244-4",
+    "css L244-6"
+   ],
+   "links_not_read": ""
+  },
+  {
+   "sample_id": "H124",
+   "code": "travail",
+   "number": "R4227-32",
+   "source_id": "LEGIARTI000018532073",
+   "verdict": "0",
+   "families": [],
+   "description": "Obligation de tenir du sable ou de la terre meuble contre les débuts d'incendie. Le texte est clair et a une base légale (L. 4111-6).",
+   "evidence": "",
+   "links_read": [
+    "travail L4111-6"
+   ],
+   "links_not_read": "Autres articles R. 4227-28 et suivants non relus."
+  },
+  {
+   "sample_id": "H134",
+   "code": "travail",
+   "number": "D6325-6",
+   "source_id": "LEGIARTI000029408683",
+   "verdict": "0",
+   "families": [],
+   "description": "Choix du tuteur en contrat de professionnalisation. Les renvois au « second alinéa » et à D. 6325-9 sont exacts. D. 6325-9 mentionne encore les « périodes de professionnalisation », supprimées depuis, mais ce texte lié est sans effet sur D. 6325-6.",
+   "evidence": "",
+   "links_read": [
+    "travail L6325-3-1",
+    "travail D6325-7",
+    "travail D6325-8",
+    "travail D6325-9",
+    "travail D6325-10"
+   ],
+   "links_not_read": ""
+  },
+  {
+   "sample_id": "H144",
+   "code": "a3",
+   "number": "49 E",
+   "source_id": "LEGIARTI000006298444",
+   "verdict": "0",
+   "families": [],
+   "description": "Contenu de la déclaration prévue à 49 D (IFU), fondée sur l'article 242 ter du CGI. Cohérent ; la mention du prélèvement libératoire reste pertinente pour les régimes résiduels.",
+   "evidence": "",
+   "links_read": [
+    "a3 49 D (LEGIARTI000037100804)",
+    "a3 49 F"
+   ],
+   "links_not_read": "CGI 242 ter non relu en entier."
+  },
+  {
+   "sample_id": "H154",
+   "code": "cch",
+   "number": "D323-8",
+   "source_id": "LEGIARTI000049977433",
+   "verdict": "0",
+   "families": [],
+   "description": "Délai d'achèvement de cinq ans des travaux d'amélioration aidés, avec un NOTA transitoire explicite pour les décisions antérieures. La terminologie « aide » ou « subvention » est cohérente avec D. 323-1, D. 323-2 et D. 323-9.",
+   "evidence": "",
+   "links_read": [
+    "cch D323-1",
+    "cch D323-2",
+    "cch D323-7",
+    "cch D323-9",
+    "cch D323-10",
+    "cch D323-11"
+   ],
+   "links_not_read": "L. 831-1 du CCH visé par D. 323-2 non relu."
+  },
+  {
+   "sample_id": "H164",
+   "code": "urba",
+   "number": "L153-33",
+   "source_id": "LEGIARTI000031211400",
+   "verdict": "0",
+   "families": [],
+   "description": "Procédure de révision du PLU. Le renvoi à la « section 3 » vise bien la section « Elaboration du plan local d'urbanisme » (contexte LEGI de L. 153-12). Le renvoi à L. 153-12 est exact. L'avis des communes est organisé par R. 153-11.",
+   "evidence": "",
+   "links_read": [
+    "urba L153-12",
+    "urba L153-31 (version du 26 mai 2026)",
+    "urba L153-32",
+    "urba L153-35",
+    "urba L153-34 (abrogé le 26 mai 2026 ; aucun renvoi résiduel trouvé)",
+    "urba R153-11"
+   ],
+   "links_not_read": ""
+  },
+  {
+   "sample_id": "H174",
+   "code": "travail",
+   "number": "R2272-10",
+   "source_id": "LEGIARTI000047171312",
+   "verdict": "0",
+   "families": [],
+   "description": "Répartition des missions de la CNNCEFP entre six sous-commissions. Les renvois aux 1° à 10° de L. 2271-1, aux I, II et IV de L. 2261-32 et à R.* 3231-1 sont exacts.",
+   "evidence": "",
+   "links_read": [
+    "travail L2271-1",
+    "travail L2261-32",
+    "travail R*3231-1"
+   ],
+   "links_not_read": ""
+  },
+  {
+   "sample_id": "H184",
+   "code": "css",
+   "number": "D162-1-7",
+   "source_id": "LEGIARTI000006735431",
+   "verdict": "G",
+   "families": [
+    "F3"
+   ],
+   "description": "Renvoi décalé. Depuis la version de L. 162-5-3 du 28 janvier 2016, qui a inséré un deuxième alinéa sur les mineurs de seize ans, la majoration de participation figure au sixième alinéa. Le cinquième alinéa traite de la perte des avantages du médecin référent. D. 162-1-7, inchangé depuis 2006, vise toujours la « majoration prévue au cinquième alinéa ». Le même décalage affecte D. 162-1-6 et R. 160-6. Le sens reste reconstructible, mais l'exemption d'accès direct (gynécologie, ophtalmologie, psychiatrie) s'appuie sur un alinéa qui ne prévoit aucune majoration.",
+   "evidence": "CSS D162-1-7 (LEGIARTI000006735431) : « La majoration prévue au cinquième alinéa de l'article L. 162-5-3 n'est pas appliquée ». CSS L162-5-3 (LEGIARTI000048691431), cinquième alinéa : « Dans le cas où l'assuré désigne un médecin traitant autre que son médecin référent, ce dernier, pour ce qui concerne cet assuré, perd les avantages relatifs à l'adhésion à cette option conventionnelle. » ; sixième alinéa : « Sauf pour les patients âgés de moins de seize ans, la participation prévue au I de l'article L. 160-13 peut être majorée ».",
+   "links_read": [
+    "css L162-5-3 (toutes versions)",
+    "css D162-1-6 (LEGIARTI000038925697)",
+    "css R160-6 (LEGIARTI000031796275)",
+    "css R871-1, L871-1, L162-5-4 (renvois entrants)"
+   ],
+   "links_not_read": "",
+   "evidence_files": [
+    "evidence/cited/production-20261030-source-only/css_D162-1-7_LEGIARTI000006735431.json",
+    "evidence/cited/production-20261030-source-only/css_L162-5-3_LEGIARTI000048691431.json",
+    "evidence/cited/production-20261030-source-only/css_D162-1-6_LEGIARTI000038925697.json",
+    "evidence/cited/production-20261030-source-only/css_R160-6_LEGIARTI000031796275.json"
+   ]
+  },
+  {
+   "sample_id": "H194",
+   "code": "css",
+   "number": "L245-5-6",
+   "source_id": "LEGIARTI000006742404",
+   "verdict": "0",
+   "families": [],
+   "description": "Renvoi à un décret en Conseil d'État pour la contribution sur la promotion des dispositifs médicaux. La section L. 245-5-1 à L. 245-5-6 est en vigueur, et les textes d'application existent (R. 245-16 et suivants).",
+   "evidence": "",
+   "links_read": [
+    "css L245-5-1",
+    "css L245-5-5",
+    "css R245-16",
+    "css R245-16-1",
+    "css R245-16-2"
+   ],
+   "links_not_read": ""
+  },
+  {
+   "sample_id": "H204",
+   "code": "travail",
+   "number": "L6131-2",
+   "source_id": "LEGIARTI000037375133",
+   "verdict": "0",
+   "families": [],
+   "description": "Composition de la CUFPA. Les renvois à L. 6241-1, L. 6331-1 et L. 6331-3 sont valides et réciproques. Le texte contient une coquille sans effet (« L. 6331-1et »).",
+   "evidence": "",
+   "links_read": [
+    "travail L6131-1",
+    "travail L6131-3",
+    "travail L6241-1",
+    "travail L6331-1",
+    "travail L6331-3"
+   ],
+   "links_not_read": ""
+  },
+  {
+   "sample_id": "H214",
+   "code": "travail",
+   "number": "R1455-7",
+   "source_id": "LEGIARTI000018535974",
+   "verdict": "0",
+   "families": [],
+   "description": "Provision et exécution d'une obligation de faire en référé prud'homal. Standard, cohérent.",
+   "evidence": "",
+   "links_read": [
+    "travail R1455-5",
+    "travail R1455-6",
+    "travail R1455-8 (liste de section)"
+   ],
+   "links_not_read": "Code de procédure civile non relu."
+  },
+  {
+   "sample_id": "H224",
+   "code": "travail",
+   "number": "L5224-1",
+   "source_id": "LEGIARTI000006903754",
+   "verdict": "0",
+   "families": [],
+   "description": "La sanction vise L. 5221-4 (interdiction pour une entreprise de travail temporaire de mettre des étrangers à disposition hors de France). Cette obligation est en vigueur. La sanction et l'obligation se correspondent.",
+   "evidence": "",
+   "links_read": [
+    "travail L5221-4 (versions)",
+    "travail L5221-3",
+    "travail L8241-2",
+    "travail R8241-2"
+   ],
+   "links_not_read": "Conformité au droit de l'Union (libre prestation) non examinée ; la réserve « des accords internationaux » couvre l'hypothèse."
+  },
+  {
+   "sample_id": "H234",
+   "code": "css",
+   "number": "L381-23",
+   "source_id": "LEGIARTI000031686566",
+   "verdict": "0",
+   "families": [],
+   "description": "Financement de la prise en charge des frais de santé des pensionnés militaires (L. 381-20). Les textes d'application de la contribution de l'État existent (R. 381-80 à R. 381-85). Aucun décret fixant le taux de la cotisation du 1° n'a été trouvé dans le CSS, mais il peut exister ailleurs, d'où une simple alerte. L. 381-20 vise des numéros de l'ancien code des pensions militaires (hors corpus, non vérifié).",
+   "evidence": "",
+   "links_read": [
+    "css L381-20",
+    "css L381-24",
+    "css L381-25",
+    "css R381-80",
+    "css R381-81",
+    "css R381-83",
+    "css R381-84",
+    "css R381-85",
+    "css D160-14"
+   ],
+   "links_not_read": "Code des pensions militaires d'invalidité hors corpus ; décret de taux non trouvé."
+  },
+  {
+   "sample_id": "H244",
+   "code": "travail",
+   "number": "R742-19",
+   "source_id": "LEGIARTI000018519102",
+   "verdict": "G",
+   "families": [
+    "F3"
+   ],
+   "description": "Renvoi mort. R. 742-19 est maintenu en vigueur par le décret n° 2008-244, d'après son NOTA, et donne compétence au directeur régional des affaires maritimes « pour l'application à la marine marchande des articles R. 524-1 à R. 524-13 ». Or ces articles de l'ancien code (médiation des conflits collectifs) sont abrogés depuis le 1er mai 2008 et ne figurent pas dans la liste des articles maintenus. L'article ne s'applique donc à rien de façon identifiable. Complément non vérifié dans le corpus : l'autorité désignée (direction régionale des affaires maritimes) a été remplacée par les directions interrégionales de la mer.",
+   "evidence": "Travail R742-19 (LEGIARTI000018519102) : « Pour l'application à la marine marchande des articles R. 524-1 à R. 524-13, le directeur régional des affaires maritimes exerce les attributions conférées au directeur régional du travail et de l'emploi. » NOTA : « demeurent en vigueur [...] les dispositions des articles R. 713-1 à R. 713-14, R. 742-1 à R. 742-39 [...] ». Travail R524-1 (LEGIARTI000018507123) : état ABROGE, 1988-03-02 → 2008-05-01 ; R524-13 (LEGIARTI000018507085) : état ABROGE, 1985-01-25 → 2008-05-01.",
+   "links_read": [
+    "travail R524-1 (toutes versions)",
+    "travail R524-2",
+    "travail R524-13",
+    "travail R742-* (liste)"
+   ],
+   "links_not_read": "Décret n° 2008-244 (texte complet, notamment une éventuelle clause générale de substitution des renvois) et code des transports non consultés.",
+   "evidence_files": [
+    "evidence/cited/production-20261030-source-only/travail_R742-19_LEGIARTI000018519102.json",
+    "evidence/cited/production-20261030-source-only/travail_R524-1_LEGIARTI000018507123.json",
+    "evidence/cited/production-20261030-source-only/travail_R524-13_LEGIARTI000018507085.json"
+   ]
+  },
+  {
+   "sample_id": "H254",
+   "code": "cch",
+   "number": "R175-3",
+   "source_id": "LEGIARTI000047427508",
+   "verdict": "0",
+   "families": [],
+   "description": "Exigences fonctionnelles des systèmes d'automatisation et de contrôle des bâtiments (BACS). Les renvois à R. 175-2 (y compris son II) et à R. 175-1 4° sont exacts, et la base légale est L. 174-3.",
+   "evidence": "",
+   "links_read": [
+    "cch R175-1",
+    "cch R175-2 (version 2025-12-28)",
+    "cch R175-4",
+    "cch R175-6",
+    "cch L174-3"
+   ],
+   "links_not_read": ""
+  },
+  {
+   "sample_id": "H264",
+   "code": "travail",
+   "number": "L3134-2",
+   "source_id": "LEGIARTI000006902624",
+   "verdict": "0",
+   "families": [],
+   "description": "Interdiction du travail dominical en Alsace-Moselle sauf exceptions du chapitre. Cohérente avec L. 3134-1.",
+   "evidence": "",
+   "links_read": [
+    "travail L3134-1"
+   ],
+   "links_not_read": "L3134-3 à L3134-16 non relus en entier."
+  },
+  {
+   "sample_id": "H274",
+   "code": "cgi",
+   "number": "219 bis",
+   "source_id": "LEGIARTI000036427378",
+   "verdict": "0",
+   "families": [],
+   "description": "Taux réduits d'IS sur les revenus patrimoniaux des organismes sans but lucratif. Les renvois à 206-5, 124 B (premier alinéa), 118, 119, 238 septies A, 238 septies B et 238 septies E sont en vigueur.",
+   "evidence": "",
+   "links_read": [
+    "cgi 124 B",
+    "cgi 118, 119, 238 septies A, B, E (états)"
+   ],
+   "links_not_read": "Article 206 non relu en entier."
+  },
+  {
+   "sample_id": "H284",
+   "code": "css",
+   "number": "R162-145",
+   "source_id": "LEGIARTI000053911672",
+   "verdict": "0",
+   "families": [],
+   "description": "Prise en charge de deux protections périodiques réutilisables par an pour les moins de 26 ans et les bénéficiaires de la CSS. Conforme au 11° de L. 160-8 et à L. 162-59, avec un NOTA transitoire explicite.",
+   "evidence": "",
+   "links_read": [
+    "css L162-59",
+    "css L162-60",
+    "css L160-8 11° (LEGIARTI000054711241)",
+    "css L861-1",
+    "css R162-144",
+    "css R162-146",
+    "css R162-147"
+   ],
+   "links_not_read": ""
+  },
+  {
+   "sample_id": "H294",
+   "code": "css",
+   "number": "D134-9",
+   "source_id": "LEGIARTI000025103643",
+   "verdict": "m",
+   "families": [
+    "F5"
+   ],
+   "description": "La clause de champ « présente section » limite toute la section aux régimes de plus de 20 000 personnes. Ce seuil a été conçu pour la compensation démographique. Depuis 2016, la section (« Relations financières entre les régimes d'assurance vieillesse ») contient aussi D. 134-10 et D. 134-11, qui organisent les transmissions des régimes adossés ou équilibrés par la CNAV (L. 134-3), dont plusieurs régimes très petits. Lu à la lettre, D. 134-9 les exclurait des obligations que D. 134-10 leur impose nommément. Le texte spécial l'emporte probablement ; l'effet est limité.",
+   "evidence": "CSS D134-9 (LEGIARTI000025103643) : « Les dispositions de la présente section ne sont applicables qu'aux régimes de sécurité sociale dont l'effectif des actifs cotisants et des retraités [...] dépasse au total 20 000 personnes ». CSS D134-10 (LEGIARTI000053300675) : « les organismes gestionnaires des régimes mentionnés aux a à l du même 3° transmettent à la Caisse nationale d'assurance vieillesse ». CSS L134-3 (LEGIARTI000051288904) : « l) Du régime de la Caisse de retraite des chemins de fer franco-éthiopiens ».",
+   "links_read": [
+    "css L134-1",
+    "css L134-3",
+    "css D134-2",
+    "css D134-3",
+    "css D134-7",
+    "css D134-10",
+    "css D134-11",
+    "contexte LEGI des sections (documents)"
+   ],
+   "links_not_read": "Effectifs réels des régimes visés non vérifiés.",
+   "evidence_files": [
+    "evidence/cited/production-20261030-source-only/css_D134-9_LEGIARTI000025103643.json",
+    "evidence/cited/production-20261030-source-only/css_D134-10_LEGIARTI000053300675.json",
+    "evidence/cited/production-20261030-source-only/css_L134-3_LEGIARTI000051288904.json"
+   ]
+  },
+  {
+   "sample_id": "H304",
+   "code": "travail",
+   "number": "L6332-14-1",
+   "source_id": "LEGIARTI000052437216",
+   "verdict": "G",
+   "families": [
+    "F5"
+   ],
+   "description": "Contradiction entre deux articles législatifs issus de la même loi n° 2025-989. Le II de L. 6332-14-1 subordonne la prise en charge, par l'OPCO, de la rémunération et des frais annexes à la « conclusion des accords mentionnés à l'article L. 6324-9 ». Or L. 6324-9 lui-même (C, et A après un désaccord), L. 6324-10 et R. 6324-2 admettent aussi la « décision unilatérale de l'employeur ». Lu à la lettre, L. 6332-14-1 exclut ce financement dans les entreprises de moins de 50 salariés ou sans délégué syndical, qui ne peuvent procéder que par décision unilatérale. Un juriste le relèverait.",
+   "evidence": "Travail L6332-14-1 (LEGIARTI000052437216) : « la rémunération des salariés bénéficiant d'une période de reconversion, sous réserve de la conclusion des accords mentionnés à l'article L. 6324-9 ». Travail L6324-10 (LEGIARTI000052437277) : « Les accords mentionnés à l'article L. 6324-9 ou, le cas échéant, la décision unilatérale de l'employeur peuvent prévoir que, en période de reconversion, la rémunération du salarié et les frais annexes à la formation peuvent être pris en charge par l'opérateur de compétences, en application du II de l'article L. 6332-14-1 ». Travail L6324-9 (LEGIARTI000052437285) : « C.-Dans les entreprises de moins de cinquante salariés [...] l'employeur peut fixer unilatéralement la période de reconversion externe. »",
+   "links_read": [
+    "travail L6324-1",
+    "travail L6324-2",
+    "travail L6324-3",
+    "travail L6324-5",
+    "travail L6324-6",
+    "travail L6324-9",
+    "travail L6324-10",
+    "travail L6324-11",
+    "travail L6332-3",
+    "travail R6324-2",
+    "travail D6332-91 (extrait)",
+    "travail L2242-21, L1237-19-1 (extraits)"
+   ],
+   "links_not_read": "Décrets D. 6332-91 et suivants non relus en entier.",
+   "evidence_files": [
+    "evidence/cited/production-20261030-source-only/travail_L6332-14-1_LEGIARTI000052437216.json",
+    "evidence/cited/production-20261030-source-only/travail_L6324-10_LEGIARTI000052437277.json",
+    "evidence/cited/production-20261030-source-only/travail_L6324-9_LEGIARTI000052437285.json",
+    "evidence/cited/production-20261030-source-only/travail_R6324-2_LEGIARTI000053428028.json"
+   ]
+  },
+  {
+   "sample_id": "H314",
+   "code": "css",
+   "number": "A931-3-30",
+   "source_id": "LEGIARTI000031807427",
+   "verdict": "0",
+   "families": [],
+   "description": "Procès-verbal de carence en cas de quorum non atteint dans les assemblées des institutions de prévoyance. Cohérent avec A. 931-3-29 et A. 931-3-31.",
+   "evidence": "",
+   "links_read": [
+    "css A931-3-29",
+    "css A931-3-31",
+    "css A931-3-4",
+    "css R931-3-* (existence)"
+   ],
+   "links_not_read": ""
+  }
+ ],
+ "counts": {
+  "G": 3,
+  "m": 3,
+  "0": 26,
+  "total": 32
+ }
+}

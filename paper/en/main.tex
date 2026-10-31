@@ -37,7 +37,7 @@ AI Agents Rewrite and Red-Team\\ Five Major Codes of French Law}
 \maketitle
 
 \begin{abstract}
-French law is hard to read: a single rule is spread across a statute, its implementing decrees, the tax annexes and future consolidated versions, which often contradict one another. We report a proof of concept in which AI agents rewrite, and then adversarially audit, five major French codes in full (the Labour Code, the General Tax Code and its four annexes, the Social Security Code, the Town Planning Code, and the Construction and Housing Code): 30{,}317 article entries from the official LEGI database as of 18 October 2026. Two drafting passes by orchestrated coding agents produced 14{,}115 rewritten articles and 16{,}199 articles retained with a specific justification. A third pass, run as an independent red team, built a register of objections (303 raised, 243 retained on the final text), applied about 1{,}220 corrections through a guarded writer with before-image checks, triaged issues filed by an external contributor, and measured reliability with six blind, stratified random audits. Over 1{,}879 randomly drawn articles, about 3.4\%\,$\pm$\,0.8 still carry a defect that a lawyer would notice, mostly dead or shifted cross-references, future versions that silently undo the reform, and decrees that keep obligations the statute removed. Targeted sweeps fix the family they aim at but do not move the measured rate; a systematic chapter-by-chapter reading of the 2{,}740 rewritten tax articles found 96 gross defects (3.5\%), 86 of which were corrected. The substantive choices follow the 2027 programme of David Lisnard, but the project is an independent initiative and the method is policy-agnostic. All texts, tools, audit samples and verdicts are public. No lawyer has validated the output.
+French law is hard to read: a single rule is spread across a statute, its implementing decrees, the tax annexes and future consolidated versions, which often contradict one another. We report a proof of concept in which AI agents rewrite, and then adversarially audit, five major French codes in full (the Labour Code, the General Tax Code and its four annexes, the Social Security Code, the Town Planning Code, and the Construction and Housing Code): 30{,}317 article entries from the official LEGI database as of 18 October 2026. Two drafting passes by orchestrated coding agents produced 14{,}115 rewritten articles and 16{,}199 articles retained with a specific justification. A third pass, run as an independent red team, built a register of objections (303 raised, 243 retained on the final text), applied about 1{,}220 corrections through a guarded writer with before-image checks, triaged issues filed by an external contributor, and measured reliability with six blind, stratified random audits. On the same 1{,}879 randomly drawn articles, after checking each disputed defect against both texts, AI auditors find a gross defect in 7.0\%\,$\pm$\,1.2 of the official texts in force but in 4.6\%\,$\pm$\,0.9 of the rewritten law (paired test, $p \approx 2\times10^{-5}$): the rewrite repaired 77 defects of the official law, mostly dead or outdated cross-references, for 32 it introduced. Targeted sweeps fix the family they aim at but do not move the measured rate; a systematic chapter-by-chapter reading of the 2{,}740 rewritten tax articles found 96 gross defects (3.5\%), 86 of which were corrected. The substantive choices follow the 2027 programme of David Lisnard, but the project is an independent initiative and the method is policy-agnostic. All results are produced and measured by AI agents alone; we release them, with all texts, tools, samples and verdicts, for verification and hardening by legal experts and citizens.
 \end{abstract}
 
 \section{Introduction}
@@ -85,6 +85,7 @@ The second goal is the main scientific interest. Reforming a code is easy to sta
     \item a guarded writer that cannot silently overwrite (\S\ref{sec:redteam}).
   \end{itemize}
   \item A measurement method: six blind, stratified random audits, with a taxonomy of ten defect families (F1--F10). The rate has a confidence interval, not an anecdote (\S\ref{sec:measure}).
+  \item A paired baseline: the same audit run on the official law, on the same articles. The rewritten law has about a third fewer gross defects than the law it replaces (\S\ref{sec:baseline}).
   \item Empirical findings on what AI agents do well and badly on legal coherence (\S\ref{sec:results}--\S\ref{sec:discussion}):
   \begin{itemize}
     \item mechanical sweeps reach a plateau;
@@ -92,6 +93,9 @@ The second goal is the main scientific interest. Reforming a code is easy to sta
     \item a large part of the residual error comes from texts outside the corpus.
   \end{itemize}
 \end{itemize}
+
+\paragraph{AI-only results.}
+This paper deliberately reports what AI agents achieved on their own. Drafting, review, correction and measurement were all done by AI agents, under human direction and arbitration but without legal experts. We release the results so that lawyers and citizens can verify and harden them (see the call for contributions at the end).
 
 \paragraph{Political stance.}
 The substantive orientation of the rewrite is explicit and is not neutral. It aims at fewer taxes and constraints. It keeps exemptions, favourable derogations, acquired rights and transitions. It never introduces a replacement formality.
@@ -345,6 +349,9 @@ After each audit, we turned its gross defects into mechanical lead generators an
 \end{itemize}
 Leads are not findings. Each lead is qualified by an agent that reads the texts in full, as a false positive, already fixed, G or m. A correction is drafted for every confirmed G.
 
+\paragraph{Baseline.}
+To know whether a residual rate is good or bad, we ran the same audit on the \emph{official} text of the same 1{,}879 articles, in the same packets, with the same criterion. A source-only mode of the reading tool hid the project's proposals, reasons and notes, and the packets did not say whether an article had been rewritten. Defects seen on only one side were then checked against both texts by separate verifier agents (\S\ref{sec:baseline}).
+
 \paragraph{Systematic reading.}
 Finally, we read every rewritten article of the CGI and its annexes, where the audits showed the highest rates. The 2{,}740 articles not already audited were grouped by their deepest section, so that each reader sees a whole chapter. They were split into 132 packets of about 21 articles. Each reader qualifies every article and drafts corrections for its gross defects.
 
@@ -411,18 +418,20 @@ Pooled & 1{,}879 & 64 & \textbf{3.4\% $\pm$ 0.8} & \\
 \begin{axis}[
   width=0.82\linewidth, height=5.2cm,
   xlabel={Audit}, ylabel={Gross-defect rate (\%)},
-  xmin=0.5, xmax=6.5, ymin=0, ymax=7,
-  xtick={1,2,3,4,5,6}, ytick={0,1,2,3,4,5,6,7},
+  xmin=0.5, xmax=6.5, ymin=0, ymax=10,
+  xtick={1,2,3,4,5,6}, ytick={0,2,4,6,8,10},
   grid=major, grid style={gray!20},
 ]
 \addplot+[only marks, mark=*, black, error bars/.cd, y dir=both, y explicit]
   coordinates {(1,4.0) +- (0,2.2) (2,2.9) +- (0,1.9) (3,3.8) +- (0,2.1)
                (4,2.5) +- (0,1.7) (5,3.2) +- (0,1.9) (6,4.1) +- (0,2.2)};
 \addplot[dashed, gray, domain=0.5:6.5] {3.4};
-\node[anchor=south, font=\small, gray] at (axis cs:3.5,3.45) {pooled 3.4\%};
+\node[anchor=north, font=\small, gray] at (axis cs:3.5,3.35) {pooled 3.4\%};
+\addplot[dashed, red!70!black, domain=0.5:6.5] {8.4};
+\node[anchor=south, font=\small, red!70!black] at (axis cs:3.5,8.45) {official law, same articles: 8.4\%};
 \end{axis}
 \end{tikzpicture}
-\caption{Measured gross-defect rate per audit, with 95\% intervals. No decline can be detected from one round to the next.}
+\caption{Measured gross-defect rate per audit, with 95\% intervals. No decline can be detected from one round to the next. The red line is the same audit run on the official text of the same 1{,}879 articles (raw verdicts, before the verification of \S\ref{sec:baseline}).}
 \label{fig:audits}
 \end{figure}
 
@@ -437,6 +446,52 @@ The composition of the defects did change:
   \item later audits concentrated on the tax annexes.
 \end{itemize}
 Of the gross defects found by audits, between half and three quarters were unknown to the register.
+
+\subsection{Baseline: the official law, same articles}
+\label{sec:baseline}
+
+Is 3.4\% good or bad? We audited the official text of the same 1{,}879 articles with the same method (\S\ref{sec:measure}).
+
+\paragraph{Raw verdicts.}
+AI auditors found a gross defect in 158 official articles (8.4\%\,$\pm$\,1.3), against 64 in the project audits (3.4\%\,$\pm$\,0.8). Only 24 articles were flagged on both sides. Most official defects are dead or outdated references (family F3, 124 of 158): articles repealed years ago, bodies that were renamed, codes that were recodified.
+
+\paragraph{Checking the disputed defects.}
+The raw comparison is not enough. On the 966 articles that the project retained unchanged, the text is identical on both sides, yet the official-text auditors flagged 30 and the project auditors 15. Either the two sets of auditors were not equally strict, or the project auditors discounted defects inherited from the source.
+
+We therefore had separate verifier agents check each of the 174 defects seen on only one side, against both texts, answering three questions: is it present in the official text, is it present in the proposed text, and is it really gross?
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+& & \multicolumn{2}{c}{Official law} & \multicolumn{2}{c}{Rewritten law}\\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Same articles, verified & Articles & G & Rate & G & Rate\\
+\midrule
+All & 1{,}879 & 131 & 7.0\% $\pm$ 1.2 & 86 & \textbf{4.6\% $\pm$ 0.9}\\
+Rewritten by the project & 913 & 108 & 11.8\% & 64 & 7.0\%\\
+Retained unchanged (control) & 966 & 23 & 2.4\% & 22 & 2.3\%\\
+\midrule
+\multicolumn{4}{l}{Defects of the official law repaired by the rewrite} & \multicolumn{2}{r}{77}\\
+\multicolumn{4}{l}{Defects introduced by the rewrite} & \multicolumn{2}{r}{32}\\
+\multicolumn{4}{l}{Paired test (McNemar, exact)} & \multicolumn{2}{r}{$p \approx 2\times10^{-5}$}\\
+\bottomrule
+\end{tabular}
+\caption{Gross defects in the official law and in the rewritten law, on the same 1{,}879 randomly drawn articles, after verification of every defect seen on only one side. Project figures are at the time of each audit.}
+\label{tab:baseline}
+\end{table}
+
+\paragraph{Result.}
+After verification, the retained articles, whose text is the same on both sides, show the same rate (23 and 22 defects). This suggests that the verification removes the difference in strictness. On that basis (Table~\ref{tab:baseline}):
+\begin{itemize}
+  \item the rewritten law has about \textbf{a third fewer gross defects} than the official law it replaces: 4.6\% against 7.0\%;
+  \item among rewritten articles, the rate falls from 11.8\% to 7.0\%;
+  \item for every defect the rewrite introduced, it repaired more than two in the official law (77 against 32).
+\end{itemize}
+One exception stands out. In the legislative part of the CGI, the sample has more verified defects after the rewrite than before (9 against 3): reforming corporate and income tax creates inconsistencies faster than it removes old ones. This is where the systematic reading (\S\ref{sec:results}) was concentrated.
+
+The project figures are those at the time of each audit. The defects the audits found were corrected afterwards, so the current text is better on these articles, but this sample can no longer measure it without bias.
 
 \subsection{Sweeps: yield and plateau}
 
@@ -492,18 +547,19 @@ At this scale, agents are tireless, complete and literal readers. They reproduce
 \end{itemize}
 
 \paragraph{Measurement changes the conversation.}
-Without the random audits, the number of corrections, over 1{,}200, would have suggested steady progress. The audits show a plateau around 3--4\%, and they explain it. Targeted sweeps help, but the remaining defects are scattered. Only systematic reading can bring the rate clearly down. We consider a published, reproducible defect rate with an interval the minimum standard for any claim about AI-drafted legislation.
+Without the random audits, the number of corrections, over 1{,}200, would have suggested steady progress. The audits show a plateau around 3--4\%, and they explain it. Targeted sweeps help, but the remaining defects are scattered. Only systematic reading can bring the rate clearly down. The paired baseline turns the plateau into a result: the law in force is not defect-free either, and the rewrite, with its residual errors, is measurably more coherent than the texts it replaces. We consider a published, reproducible defect rate with an interval, compared with a baseline, the minimum standard for any claim about AI-drafted legislation.
 
 \paragraph{Contradictions versus politics.}
 Keeping the red team away from political choices was harder than expected. Many apparent contradictions have two coherent resolutions: removing a favour or extending it, restoring a formality or deleting its remnant. We resolved this with an explicit, published alignment criterion (\S\ref{sec:redteam}), and we sent genuine arbitrations back to the author. A different programme would change the criterion, not the method.
 
-\paragraph{Human review.}
-No lawyer has validated the output. The pipeline makes legal review \emph{cheaper}, not unnecessary: each article comes with its source, reason, notes, objections and audit trail. The public issue tracker turned out to be the most efficient channel. Nine of the first eleven external issues pointed at a real defect.
+\paragraph{Expert review.}
+The results are AI-only by design, and no lawyer has validated them yet. The pipeline makes expert review \emph{cheaper}, not unnecessary: each article comes with its source, reason, notes, objections and audit trail. The public issue tracker turned out to be the most efficient channel. Nine of the first eleven external issues pointed at a real defect.
 
 \section{Limitations}
 
 \begin{itemize}
-  \item AI review is not legal validation. Audit verdicts are model judgements and may be wrong in either direction.
+  \item Results are AI-measured by design. Audit verdicts are model judgements and may be wrong in either direction; their accuracy is open to expert verification, which we invite.
+  \item Auditor strictness varies. On identical texts, two sets of auditors disagreed by a factor of two before verification (\S\ref{sec:baseline}). Single-audit rates should be read with this in mind.
   \item The corpus is frozen at 18 October 2026, and texts outside the nine instruments are not rewritten.
   \item Audit samples of about 314 articles detect changes of about $\pm$2 points only, so per-stratum rates are imprecise.
   \item The drafting models and the reviewing model come from different vendors, which limits shared blind spots but does not remove them.
@@ -513,7 +569,7 @@ No lawyer has validated the output. The pipeline makes legal review \emph{cheape
 
 \section{Conclusion and future work}
 
-We rewrote five French codes and the four CGI annexes end to end with AI agents, red-teamed the result independently, and measured what remains wrong. The residual gross-defect rate is about 3.4\%, and the full trail is public.
+We rewrote five French codes and the four CGI annexes end to end with AI agents, red-teamed the result independently, and measured what remains wrong. The residual gross-defect rate is about 3.4\% in the project's own audits. Against the official law, on the same articles and after verification, the rewrite has about a third fewer gross defects (4.6\% against 7.0\%). The full trail is public.
 
 Next steps:
 \begin{itemize}
@@ -550,7 +606,7 @@ A.M.\ conceived and directed the project, set the policy layer, ran the drafting
 
 \section*{Acknowledgements}
 
-We thank Rand Hindi for the inspiration behind the red-teaming approach of the third pass. We thank everyone who read, criticised and shared the initial thread.
+We thank Rand Hindi for the inspiration behind the red-teaming approach of the third pass. We thank Nathalie Gouailhardou for suggesting the baseline analysis: measuring the official law with the same audit, on the same articles, to compare the rewrite's accuracy against the original texts. We thank everyone who read, criticised and shared the initial thread.
 
 \begin{thebibliography}{99}
 

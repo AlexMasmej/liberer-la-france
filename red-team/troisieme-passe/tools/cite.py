@@ -15,6 +15,15 @@ CODES = dict(cgi='LEGITEXT000006069577', a1='LEGITEXT000006069568', a2='LEGITEXT
              css='LEGITEXT000006073189', urba='LEGITEXT000006074075', cch='LEGITEXT000006074096')
 HOME = Path(__file__).resolve().parent.parent
 SNAP = HOME / 'snapshots' / (HOME / 'snapshots' / 'LATEST').read_text().strip()
+# CITE_PRODUCTION=1 reads the live production instead (read-only: mode=ro, query_only), for audits after
+# the corrections; exports then go to evidence/cited/production-<date>/.
+import os, datetime
+PRODUCTION = os.environ.get('CITE_PRODUCTION') == '1'
+# CITE_SOURCE_ONLY=1 hides the project's proposal, reason and notes: only the official text is shown and
+# saved (baseline audit of the law as it stands).
+SOURCE_ONLY = os.environ.get('CITE_SOURCE_ONLY') == '1'
+if PRODUCTION:
+    SNAP = Path('/Users/alexandremasmejean/.codex/.chatgpt-projects/g-p-6ad59c015c308191aa21cba63c71a6dc/legal-rewrite')
 
 
 def plain(x):
@@ -30,7 +39,9 @@ def main(code, refs, quiet=False):
     inv = json.load(open(SNAP / 'runtime/radical-review-20261019.json'))
     entries = {f"{a['code_id']}|{a['source_id']}": a
                for a in inv['prior_articles'] + inv['documentary_holds'] + inv['historical_outside_current_inventory']}
-    out_dir = HOME / 'evidence' / 'cited' / SNAP.name
+    out_dir = HOME / 'evidence' / 'cited' / (('production-' + datetime.date.today().strftime('%Y%m%d')) if PRODUCTION else SNAP.name)
+    if SOURCE_ONLY:
+        out_dir = out_dir.with_name(out_dir.name + '-source-only')
     out_dir.mkdir(parents=True, exist_ok=True)
     for ref in refs:
         q = 'id=?' if ref.startswith('LEGIARTI') else 'number=?'
@@ -45,8 +56,10 @@ def main(code, refs, quiet=False):
             d = db.execute('select source_sha256,status,proposed_xml,reason,review_notes from drafts '
                            'where code_id=? and source_id=?', (code_id, vid)).fetchone()
             o = own.get(key)
+            if SOURCE_ONLY:
+                d = o = None
             notes = nota(doc[0]) if doc else ''
-            rec = dict(snapshot=SNAP.name, code=code, code_id=code_id, source_id=vid, number=number,
+            rec = dict(snapshot=('production-' + datetime.date.today().strftime('%Y%m%d')) if PRODUCTION else SNAP.name, code=code, code_id=code_id, source_id=vid, number=number,
                        state=state, valid_from=vf, valid_until=vu, source_sha256=ssha,
                        source_xml=xml, source_xml_sha256=digest(xml), nota=notes, nota_sha256=digest(notes),
                        document_xml=doc[0].decode() if doc and isinstance(doc[0], bytes) else (doc[0] if doc else None),

@@ -164,9 +164,28 @@ Les six audits donnaient aux articles réécrits du CGI et de ses annexes le tau
   - **1518 A sexies** : arbitrage déjà laissé à l'auteur (RT-FUTFISC-30).
 - **Contrôle d'alignement** : les corrections qui ajoutent des mots de formalité ou d'impôt ont été relues. Toutes retirent une formalité, gardent une transition ou reportent la réforme sur une version future.
 
+## 2 nonies. Référence : le droit officiel, sur les mêmes articles
+
+Pour savoir si 3,4 % est un bon ou un mauvais taux, le même audit a été mené sur le **texte officiel** au 18 octobre 2026 des **mêmes 1 879 articles**, dans les mêmes paquets et avec le même critère. Seul le texte lu change. Un mode « source seule » de l'outil de lecture (`CITE_SOURCE_ONLY=1`) masquait les propositions, motifs et notes du projet. Les paquets n'indiquaient pas si l'article avait été réécrit. Brief : `BRIEF-AUDIT-SOURCE.md`. Résultats : `audit/baseline/O*.json`.
+
+- **Verdicts bruts** : 158 défauts grossiers dans le droit officiel (8,4 % ± 1,3), contre 64 dans les audits du projet (3,4 % ± 0,8). Seuls 24 articles sont signalés des deux côtés. Les défauts officiels sont surtout des renvois morts ou périmés (F3, 124 sur 158).
+- **Écart de sévérité** : sur les 966 articles maintenus, dont le texte est identique des deux côtés, les auditeurs du texte officiel en signalent 30 et ceux du projet 15.
+- **Vérification** : chacun des 174 défauts vus d'un seul côté a été relu dans les deux textes par d'autres agents (`BRIEF-VERIFY-BASELINE.md`, `audit/baseline/VB*.json`). Les questions : présent dans le texte officiel ? dans le texte proposé ? vraiment grossier ?
+
+| Mêmes articles, après vérification | Articles | Droit officiel | Droit réécrit |
+|---|---|---|---|
+| Tous | 1 879 | 131 (7,0 % ± 1,2) | 86 (**4,6 % ± 0,9**) |
+| Réécrits | 913 | 108 (11,8 %) | 64 (7,0 %) |
+| Maintenus (témoin) | 966 | 23 (2,4 %) | 22 (2,3 %) |
+
+- **Résultat** : sur les articles maintenus, les deux côtés concordent après vérification (23 et 22), ce qui montre que la vérification efface l'écart de sévérité. Le droit réécrit compte **environ un tiers de défauts grossiers en moins** que le droit officiel : 77 défauts officiels réparés pour 32 introduits (McNemar exact, p ≈ 2 × 10⁻⁵).
+- **Exception** : dans la partie législative du CGI, l'échantillon compte plus de défauts après la réécriture qu'avant (9 contre 3).
+- **Date** : les chiffres du projet sont ceux de chaque audit. Les défauts trouvés ont été corrigés ensuite, donc le texte actuel est meilleur sur ces articles, mais l'échantillon ne peut plus le mesurer sans biais.
+- **Outils** : `tools/baseline_sample.py` (tirage frais non utilisé, conservé sous `audit/baseline/unused-fresh-sample/`), `tools/audit_rate.py` (taux pondéré par strate).
+
 ## 4. Taux mesuré et ce qu'il signifie
 
-- **Taux mesuré** : environ **3 % des articles** gardent un défaut qu'un juriste remarquerait. Sur six mesures indépendantes, on compte 64 défauts grossiers sur 1 879 articles (3,4 % ± 0,8). Aucune tendance à la baisse n'est mesurable d'une ronde à l'autre. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
+- **Taux mesuré** : environ **3 % des articles** gardent un défaut qu'un juriste remarquerait. Mesuré de la même façon sur les mêmes articles, le **droit officiel en vigueur** en compte 7,0 % après vérification, contre 4,6 % pour le droit réécrit (§ 2 nonies). Sur six mesures indépendantes, on compte 64 défauts grossiers sur 1 879 articles (3,4 % ± 0,8). Aucune tendance à la baisse n'est mesurable d'une ronde à l'autre. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
 - **Probabilité pour un juriste** qui lit 20 articles de sa matière de tomber sur au moins un défaut grossier : environ une chance sur deux.
 - **Pourquoi les rondes ne font pas baisser le taux mesuré** : environ 1 000 articles sur 30 000 gardent un défaut grossier. Une ronde en corrige 50 à 110, soit une baisse attendue d'environ 0,3 point. C'est en dessous de ce qu'un audit de 314 articles peut détecter (± 2 points).
 - **Ce qu'il faudrait pour descendre nettement sous 3 %** : une lecture systématique, article par article. Aucun signal mécanique ne concentre plus assez les défauts restants pour qu'un balayage ciblé suffise.

@@ -1,0 +1,548 @@
+{
+ "group": "OV03",
+ "read_from": "official-source",
+ "reference_date": "2026-10-18",
+ "read_on": "2026-10-30",
+ "method": "CITE_PRODUCTION=1 CITE_SOURCE_ONLY=1 python3 -I tools/cite.py ; table articles/documents en lecture seule ; Légifrance (JORF) pour 3 vérifications datées du 2026-10-30.",
+ "articles": [
+  {
+   "sample_id": "T003",
+   "code": "css",
+   "number": "R743-5",
+   "source_id": "LEGIARTI000006752147",
+   "verdict": "0",
+   "families": [],
+   "description": "Assurance volontaire AT des bénévoles : renvois à L. 433-1, L. 434-1, R. 743-4, R. 743-9 et R. 743-10, tous en vigueur et cohérents. La réforme de L. 434-1 au 1er novembre 2026 (VIGUEUR_DIFF) garde l'indemnité en capital : le renvoi reste valable.",
+   "evidence": "",
+   "links_read": [
+    "css L433-1 LEGIARTI000053283560",
+    "css L434-1 LEGIARTI000031688413 + VIGUEUR_DIFF LEGIARTI000051288500",
+    "css R743-4 LEGIARTI000006752145",
+    "css R743-9 LEGIARTI000006752555",
+    "css R743-10 LEGIARTI000006752556",
+    "css L743-2 LEGIARTI000006744150"
+   ],
+   "links_not_read": "Arrêtés de modèle de demande non lus (hors corpus)."
+  },
+  {
+   "sample_id": "T013",
+   "code": "travail",
+   "number": "L3133-1",
+   "source_id": "LEGIARTI000033020901",
+   "verdict": "0",
+   "families": [],
+   "description": "Liste des onze fêtes légales, complète et cohérente avec le chapitre III du titre III.",
+   "evidence": "",
+   "links_read": [
+    "travail L3111-3 LEGIARTI000033001438 (structure du livre)",
+    "contexte du chapitre III (Jours fériés)"
+   ],
+   "links_not_read": "L3133-2 à L3133-12 et L3134-13 (Alsace-Moselle) non lus en détail."
+  },
+  {
+   "sample_id": "T023",
+   "code": "css",
+   "number": "R161-4",
+   "source_id": "LEGIARTI000031827756",
+   "verdict": "0",
+   "families": [],
+   "description": "Fixe à vingt ans la limite d'âge que le 2° de L. 161-1 renvoie au décret en Conseil d'État. Le renvoi est exact, et R. 353-9 l'utilise.",
+   "evidence": "",
+   "links_read": [
+    "css L161-1 LEGIARTI000031686766",
+    "css R161-5 LEGIARTI000031827747",
+    "css R353-9 LEGIARTI000031828755 (renvoi entrant)"
+   ],
+   "links_not_read": "Autres utilisateurs de la notion de membre de la famille non lus."
+  },
+  {
+   "sample_id": "T033",
+   "code": "cgi",
+   "number": "244 quater B bis",
+   "source_id": "LEGIARTI000053544406",
+   "verdict": "m",
+   "families": [
+    "F5"
+   ],
+   "description": "La version échantillonnée (2026-01-01, « conclu jusqu'au 31 décembre 2028 ») est conforme à l'article 37 de la loi n° 2026-103 tel que publié au JORF. Mais la base LEGI porte une seconde version VIGUEUR, datée du 21 février 2026 (LEGIARTI000053561758), qui revient à « 2025 » alors que sa propre NOTA dit que le texte s'applique aux contrats conclus à partir du 1er janvier 2026. Le défaut tient à la consolidation, pas à la loi. Le renvoi de l'annexe III (art. 49 septies VB) au VI pour le seuil de 10 % paraît fondé sur le régime cadre (RGEC, art. 25), donc n'est pas retenu.",
+   "evidence": "LEGIARTI000053544406 : « contrat de collaboration de recherche conclu jusqu'au 31 décembre 2028 ». LEGIARTI000053561758 (VIGUEUR depuis 2026-02-21) : « contrat de collaboration de recherche conclu jusqu'au 31 décembre 2025 » ; NOTA : « s'appliquent aux contrats de collaboration de recherche conclus à compter du 1er janvier 2026 ». JORF, loi n° 2026-103, art. 37 (JORFARTI000053508358, consulté le 2026-10-30) : « l'année : « 2025 » est remplacée par l'année : « 2028 » ».",
+   "links_read": [
+    "cgi 244 quater B bis, les 5 versions",
+    "a3 49 septies V, VA, VB, VC, VE",
+    "cgi 199 ter B bis LEGIARTI000044922780",
+    "cgi 220 B bis LEGIARTI000044922790",
+    "cgi 223 O LEGIARTI000053543337",
+    "JORF loi 2026-103 art. 37 (Légifrance, consulté le 2026-10-30)"
+   ],
+   "links_not_read": "Régime cadre SA.111723 et communication 2014/C 198/01 non lus (hors corpus)."
+  },
+  {
+   "sample_id": "T043",
+   "code": "cgi",
+   "number": "223 WS quinquies",
+   "source_id": "LEGIARTI000048807689",
+   "verdict": "0",
+   "families": [],
+   "description": "Pilier 2 : le solde de l'état de suivi des distributions présumées réduit l'impôt couvert, puis il y a recalcul selon « la sous-section 3 de la section IV ». Dans le chapitre II bis, cette sous-section est « Impôt complémentaire additionnel » (223 WC), et 223 WC renvoie lui-même à 223 WS quinquies. Cohérent.",
+   "evidence": "",
+   "links_read": [
+    "cgi 223 WS ter LEGIARTI000048804153",
+    "cgi 223 WS quater LEGIARTI000048804155",
+    "cgi 223 WC LEGIARTI000048804010",
+    "plan de la section IV du chapitre II bis"
+   ],
+   "links_not_read": "223 WS, 223 WS bis et 223 WS sexies seulement vus (versions), non lus en entier ; directive (UE) 2022/2523 non consultée."
+  },
+  {
+   "sample_id": "T053",
+   "code": "travail",
+   "number": "L3111-3",
+   "source_id": "LEGIARTI000033001438",
+   "verdict": "0",
+   "families": [],
+   "description": "Délimite le triptyque ordre public, négociation et supplétif du livre Ier, 3e partie. Les exclusions (chap. II du titre III, Repos hebdomadaire ; titres VI, Jeunes travailleurs, et VII, Contrôle) correspondent au plan en vigueur.",
+   "evidence": "",
+   "links_read": [
+    "travail L3132-1 (contexte : Titre III, Chapitre II Repos hebdomadaire)",
+    "travail L3161-1 (Titre VI)",
+    "travail L3171-1 (Titre VII)"
+   ],
+   "links_not_read": "Contenu détaillé de chaque chapitre non lu."
+  },
+  {
+   "sample_id": "T063",
+   "code": "travail",
+   "number": "R5424-73",
+   "source_id": "LEGIARTI000038876694",
+   "verdict": "0",
+   "families": [],
+   "description": "ATI : point de départ des droits et délai de 12 mois. Cohérent avec L. 5424-25 et R. 5424-70 à R. 5424-72. La NOTA vise les procédures collectives (version 2019). Le 3° de L. 5424-25, ajouté en 2023 (cessation non viable), n'est pas contredit par l'article.",
+   "evidence": "",
+   "links_read": [
+    "travail L5424-25 LEGIARTI000045180455",
+    "travail R5424-70 LEGIARTI000045456002",
+    "travail R5424-71 LEGIARTI000045455999",
+    "travail R5424-72 LEGIARTI000038876686"
+   ],
+   "links_not_read": "R5424-74 inexistant ; R5424-69 et L5424-24 non lus."
+  },
+  {
+   "sample_id": "T073",
+   "code": "css",
+   "number": "Annexe II : Tableau n° 88",
+   "source_id": "LEGIARTI000006746412",
+   "verdict": "0",
+   "families": [],
+   "description": "Tableau de maladie professionnelle n° 88 (rouget du porc) : 4 lignes complètes (désignation, délai, travaux), rien de tronqué.",
+   "evidence": "",
+   "links_read": [
+    "css Annexe II Tableau n° 88 (texte entier)"
+   ],
+   "links_not_read": "L461-1 et L461-2 (base légale des tableaux) non relus."
+  },
+  {
+   "sample_id": "T083",
+   "code": "travail",
+   "number": "R6223-23",
+   "source_id": "LEGIARTI000018523964",
+   "verdict": "0",
+   "families": [],
+   "description": "Équipe tutorale et maître d'apprentissage référent. Fondé sur L. 6223-6 (« La fonction tutorale peut être partagée entre plusieurs salariés »). Cohérent.",
+   "evidence": "",
+   "links_read": [
+    "travail L6223-6 LEGIARTI000006904041",
+    "travail R6223-22 LEGIARTI000037813428"
+   ],
+   "links_not_read": "L6223-8-1 non lu en entier."
+  },
+  {
+   "sample_id": "T093",
+   "code": "travail",
+   "number": "L2135-15",
+   "source_id": "LEGIARTI000033023424",
+   "verdict": "0",
+   "families": [],
+   "description": "Gouvernance de l'association paritaire gestionnaire du fonds de financement des organisations. Les renvois (L. 2135-9, 3° de L. 2122-9, L. 2135-13, 3° du I de L. 2135-10, L. 2135-11 et L. 2135-12) sont exacts. La pondération 30/70 (voix au conseil) et la pondération 50/50 de L. 2135-13 (répartition des crédits) portent sur des objets distincts.",
+   "evidence": "",
+   "links_read": [
+    "travail L2135-9 LEGIARTI000028689579",
+    "travail L2135-10 LEGIARTI000051219948",
+    "travail L2122-9 LEGIARTI000035653166",
+    "travail L2135-13 LEGIARTI000035609629"
+   ],
+   "links_not_read": "Décret d'application (R2135-x) non lu."
+  },
+  {
+   "sample_id": "T103",
+   "code": "a4",
+   "number": "50-00 H",
+   "source_id": "LEGIARTI000006300440",
+   "verdict": "0",
+   "families": [],
+   "description": "Les agents de la DGCCRF peuvent mettre en œuvre les articles 50-00 C à 50-00 G (registres vitivinicoles). Les cinq articles visés sont en vigueur, et leur base (ann. II art. 286 I et 286 J) aussi. Les renvois propres à 50-00 C vers des articles du CGI transférés au CIBS ne concernent pas cet article.",
+   "evidence": "",
+   "links_read": [
+    "a4 50-00 A à 50-00 G (versions en vigueur)",
+    "a2 286 I LEGIARTI000038668407",
+    "a2 286 J LEGIARTI000038668387"
+   ],
+   "links_not_read": "Texte d'habilitation législative de la DGCCRF (code de la consommation) non lu."
+  },
+  {
+   "sample_id": "T113",
+   "code": "css",
+   "number": "D133-13-15",
+   "source_id": "LEGIARTI000048864312",
+   "verdict": "0",
+   "families": [],
+   "description": "Communication par les émetteurs de CESU préfinancés (R. 1271-8 C. trav.) à l'ACOSS. Les renvois à R. 1271-8 et au 1° du A de L. 1271-1 existent et ont un sens. Le périmètre (salariés du 3° de L. 133-5-6, sans la garde d'enfants du 4°) paraît voulu.",
+   "evidence": "",
+   "links_read": [
+    "travail R1271-8 LEGIARTI000038681538",
+    "travail L1271-1 LEGIARTI000048590028",
+    "css L133-5-6 LEGIARTI000044626557",
+    "css D133-25, D133-13-20 (renvois entrants)"
+   ],
+   "links_not_read": "D133-13-16 et suivants non lus en entier."
+  },
+  {
+   "sample_id": "T123",
+   "code": "css",
+   "number": "D531-5",
+   "source_id": "LEGIARTI000030058462",
+   "verdict": "G",
+   "families": [
+    "F3"
+   ],
+   "description": "La PreParE des élus locaux est ouverte quand les indemnités de fonction ne dépassent pas « la fraction représentative des frais d'emploi telle que définie à l'article 204-0 bis du code général des impôts ». Or 204-0 bis est abrogé depuis le 1er janvier 2017 (retenue à la source libératoire supprimée). La fraction figure désormais au 1° de l'article 81, par renvoi à 80 undecies B. Ce renvoi mort porte sur la définition même du seuil.",
+   "evidence": "LEGIARTI000030058462 : « au plus égales à la fraction représentative des frais d'emploi telle que définie à l'article 204-0 bis du code général des impôts ». CGI 204-0 bis, dernière version LEGIARTI000022171776 : state=ABROGE, 2010-05-01→2017-01-01. CGI 81 LEGIARTI000054703556, 1° : « Il en est de même des indemnités de fonction mentionnées au I de l'article 80 undecies B, à concurrence d'un montant égal à 17 % ».",
+   "links_read": [
+    "css L531-4 LEGIARTI000030055645 (2e alinéa du 1 du I : assimilation du mandat d'élu)",
+    "cgi 204-0 bis (toutes versions)",
+    "cgi 81 LEGIARTI000054703556",
+    "cgi 80 undecies B (via 81)"
+   ],
+   "links_not_read": "Décret n° 2003-1394 (NOTA) non lu ; 80 undecies B non lu en entier."
+  },
+  {
+   "sample_id": "T133",
+   "code": "css",
+   "number": "R815-13",
+   "source_id": "LEGIARTI000006753607",
+   "verdict": "0",
+   "families": [],
+   "description": "ASPA : demande du conjoint à charge adressée à l'organisme compétent. Cohérent avec R. 815-12 et R. 815-14. La notion de « majoration pour conjoint à charge » survit pour les droits ouverts. La formule « rattachée à l'avantage de vieillesse » est datée mais intelligible.",
+   "evidence": "",
+   "links_read": [
+    "css R815-12 LEGIARTI000006753599",
+    "css R815-14 LEGIARTI000006753615",
+    "css R815-11 LEGIARTI000006753591",
+    "css R815-15 LEGIARTI000039308797"
+   ],
+   "links_not_read": "L815-1 à L815-7 non relus en entier."
+  },
+  {
+   "sample_id": "T143",
+   "code": "a2",
+   "number": "242-0 Q",
+   "source_id": "LEGIARTI000022146960",
+   "verdict": "0",
+   "families": [],
+   "description": "Remboursement de TVA aux assujettis établis dans l'UE : condition de déduction dans l'État d'établissement et prorata. Les renvois à 242-0 N et aux articles 173 et 175 de la directive 2006/112/CE sont exacts.",
+   "evidence": "",
+   "links_read": [
+    "a2 242-0 M LEGIARTI000022146979",
+    "a2 242-0 N LEGIARTI000022146976",
+    "a2 242-0 R LEGIARTI000037481380"
+   ],
+   "links_not_read": "Directive 2008/9/CE et articles 173 et 175 de la directive 2006/112 non consultés."
+  },
+  {
+   "sample_id": "T153",
+   "code": "css",
+   "number": "R431-1",
+   "source_id": "LEGIARTI000006750288",
+   "verdict": "0",
+   "families": [],
+   "description": "Fixe à 10 % le taux du 4° de L. 431-1. Le 4° est maintenu dans la version VIGUEUR_DIFF du 1er novembre 2026 (« taux de l'incapacité professionnelle ») : le renvoi reste valable.",
+   "evidence": "",
+   "links_read": [
+    "css L431-1 LEGIARTI000035640835 et VIGUEUR_DIFF LEGIARTI000051288444",
+    "css L434-1 (versions 2015 et 2026)",
+    "css L434-2 (versions 2023 et 2026)"
+   ],
+   "links_not_read": "R434-1 et D434-1 non lus."
+  },
+  {
+   "sample_id": "T163",
+   "code": "cch",
+   "number": "L521-1",
+   "source_id": "LEGIARTI000049398958",
+   "verdict": "G",
+   "families": [
+    "F7"
+   ],
+   "description": "Texte défectueux. Après la phrase complète sur l'obligation de relogement, un alinéa commence par un tiret orphelin (« -lorsqu'un établissement recevant du public… ») qui ne se rattache à aucune énumération. Le défaut existe depuis la version de 2021 et la loi n° 2024-322 l'a reconduit. On ne sait plus si ce cas est le seul ou un cas parmi d'autres.",
+   "evidence": "LEGIARTI000049398958 : « Le propriétaire ou l'exploitant est tenu d'assurer le relogement ou l'hébergement des occupants ou de contribuer au coût correspondant dans les conditions prévues à l'article L. 521-3-1. » puis, en alinéa distinct : « -lorsqu'un établissement recevant du public utilisé aux fins d'hébergement fait l'objet de mesures destinées à faire cesser une situation d'insécurité en application de l'article L. 184-1. »",
+   "links_read": [
+    "cch L521-1, versions 2021 (LEGIARTI000042343009, LEGIARTI000041586711) et 2024 (XML brut)",
+    "cch L184-1 LEGIARTI000041571395",
+    "cch L521-3-1 LEGIARTI000049397643"
+   ],
+   "links_not_read": "L521-2, L521-3-2 et texte JORF de la loi 2024-322, art. 53 non lus."
+  },
+  {
+   "sample_id": "T173",
+   "code": "travail",
+   "number": "R7111-30",
+   "source_id": "LEGIARTI000018521965",
+   "verdict": "0",
+   "families": [],
+   "description": "Délai de réclamation devant la commission supérieure de la carte de presse (un mois franc, six mois si l'intéressé est éloigné). Cohérent avec R. 7111-29 et R. 7111-31.",
+   "evidence": "",
+   "links_read": [
+    "travail R7111-29",
+    "travail R7111-31 LEGIARTI000018521963",
+    "travail R7111-32"
+   ],
+   "links_not_read": "L7111-6 non lu."
+  },
+  {
+   "sample_id": "T183",
+   "code": "css",
+   "number": "R223-14",
+   "source_id": "LEGIARTI000046016825",
+   "verdict": "0",
+   "families": [],
+   "description": "Pouvoirs du directeur de la CNSA. Le renvoi à la COG de L. 227-1, qui vise la CNSA, est exact.",
+   "evidence": "",
+   "links_read": [
+    "css L227-1 LEGIARTI000042684374",
+    "css R223-12 LEGIARTI000046016681",
+    "css R223-15 LEGIARTI000051821405"
+   ],
+   "links_not_read": "L223-9 et suivants (statut CNSA) non lus."
+  },
+  {
+   "sample_id": "T193",
+   "code": "cch",
+   "number": "R261-28",
+   "source_id": "LEGIARTI000039041555",
+   "verdict": "0",
+   "families": [],
+   "description": "Plafonds du dépôt de garantie du contrat de réservation en VEFA. Fondé sur L. 261-15, cohérent avec R. 261-27 et R. 261-29.",
+   "evidence": "",
+   "links_read": [
+    "cch L261-15 LEGIARTI000037667790",
+    "cch R261-29 LEGIARTI000039041552",
+    "cch R261-27 (renvoi entrant)"
+   ],
+   "links_not_read": "R261-30 et R261-31 non lus."
+  },
+  {
+   "sample_id": "T203",
+   "code": "travail",
+   "number": "D3142-7",
+   "source_id": "LEGIARTI000033925216",
+   "verdict": "0",
+   "families": [],
+   "description": "Justification des cas d'urgence du congé de proche aidant. Les trois cas reprennent exactement le 3e alinéa de L. 3142-19.",
+   "evidence": "",
+   "links_read": [
+    "travail L3142-19 LEGIARTI000033022063",
+    "travail L3142-16 LEGIARTI000044628247"
+   ],
+   "links_not_read": "D3142-8 et suivants non lus."
+  },
+  {
+   "sample_id": "T213",
+   "code": "css",
+   "number": "D432-2",
+   "source_id": "LEGIARTI000006736976",
+   "verdict": "G",
+   "families": [
+    "F3",
+    "F9"
+   ],
+   "description": "Prime de fin de rééducation. (1) Le 1° renvoie aux condamnations du « chapitre VIII du titre II du livre Ier du code de commerce ». Ce chapitre (« Des incapacités d'exercer une profession commerciale ou industrielle », L. 128-1 à L. 128-6) est abrogé, et le chapitre VIII actuel porte sur le fichier national des interdits de gérer. Il renvoie aussi à « l'article L. 471-3 » du CSS, abrogé depuis le 20 décembre 2005. (2) Le 4° impose une résidence de trois ans aux seuls non-nationaux, ce qui est à confirmer au regard de l'égalité de traitement (règlement (CE) 883/2004, CEDH art. 14 et P1-1). Faute de source primaire, ce point reste « à confirmer ».",
+   "evidence": "LEGIARTI000006736976 : « n'avoir subi aucune des condamnations mentionnées au chapitre VIII du titre II du livre Ier du code de commerce, ou par les législations de sécurité sociale et en particulier par l'article L. 471-3 » ; « si elle ne possède pas la nationalité française résider en France depuis trois ans au moins au jour de l'accident ». CSS L471-3 LEGIARTI000006743149 : state=ABROGE, 2002-01-01→2005-12-20. Légifrance, sommaire du code de commerce (consulté le 2026-10-30, consolidation au 31 octobre 2026) : « ABROGÉ Chapitre VIII : Des incapacités d'exercer une profession commerciale ou industrielle » ; chapitre VIII actuel : « Du fichier national des interdits de gérer ».",
+   "links_read": [
+    "css L432-9 LEGIARTI000006743038",
+    "css L471-3 (versions)",
+    "css D432-1 LEGIARTI000006736974",
+    "css D432-3 LEGIARTI000006736977",
+    "css D432-2 version 1985 LEGIARTI000006736975",
+    "Légifrance sommaire code de commerce (2026-10-30)"
+   ],
+   "links_not_read": "R432-10 non lu en entier ; date et texte d'abrogation du chapitre VIII du code de commerce non vérifiés ; règlement 883/2004 non consulté."
+  },
+  {
+   "sample_id": "T223",
+   "code": "css",
+   "number": "R139-6",
+   "source_id": "LEGIARTI000038738881",
+   "verdict": "0",
+   "families": [],
+   "description": "Adossement actif-passif des régimes R. 139-1. Les renvois (4° de R. 139-5, 3° et 6° de R. 139-14, 3° de R. 139-16, 7° de R. 139-18) visent bien les projections, les dépôts et les OPC monétaires. La NOTA rappelle l'annulation partielle du décret de 2017 par le Conseil d'État, sans effet sur la rédaction de 2019.",
+   "evidence": "",
+   "links_read": [
+    "css R139-1 LEGIARTI000038786117",
+    "css R139-5 LEGIARTI000038786078",
+    "css R139-14 LEGIARTI000038739042",
+    "css R139-16 LEGIARTI000038739141",
+    "css R139-18 LEGIARTI000038739184"
+   ],
+   "links_not_read": "R139-21 et R139-22, et la décision du CE n° 412177, non lus."
+  },
+  {
+   "sample_id": "T233",
+   "code": "travail",
+   "number": "R5132-18",
+   "source_id": "LEGIARTI000028651385",
+   "verdict": "G",
+   "families": [
+    "F1",
+    "F3"
+   ],
+   "description": "Associations intermédiaires : le 1° fixe « le seuil prévu au 1° de l'article précité » (L. 5132-9) à 16 heures. Depuis la loi n° 2020-1577 (version de L. 5132-9 en vigueur au 15 juin 2021), le 1° de L. 5132-9 ne prévoit plus de seuil : la mise à disposition au-delà d'un seuil réservée aux personnes agréées a disparu avec l'agrément. Le décret fixe donc la valeur d'un seuil que la loi a supprimé. Le 2° (480 heures) reste valable.",
+   "evidence": "LEGIARTI000028651385 : « 1° Le seuil prévu au 1° de l'article précité est de 16 heures ». L5132-9 en vigueur LEGIARTI000042674154 : « 1° La mise à disposition n'est autorisée que pour l'exécution d'une tâche précise et temporaire ». Version antérieure LEGIARTI000019869558 : « 1° La mise à disposition pour l'exécution d'une tâche précise et temporaire d'une durée supérieure à un seuil déterminé par décret en Conseil d'Etat n'est autorisée que pour les personnes ayant fait l'objet de l'agrément ».",
+   "links_read": [
+    "travail L5132-9 (toutes versions)",
+    "travail D5132-18-1 LEGIARTI000049754347",
+    "travail R5132-22 LEGIARTI000018526798",
+    "travail L5132-11 LEGIARTI000018764871"
+   ],
+   "links_not_read": "Texte JORF de la loi 2020-1577 non consulté."
+  },
+  {
+   "sample_id": "T243",
+   "code": "travail",
+   "number": "R5221-34",
+   "source_id": "LEGIARTI000049999754",
+   "verdict": "0",
+   "families": [],
+   "description": "Motifs de refus de renouvellement d'une autorisation de travail. Les renvois à R. 5221-32, R. 5221-33 et aux 2°, 3°, 4° et 6° de R. 5221-20 (version de 2024) sont exacts.",
+   "evidence": "",
+   "links_read": [
+    "travail R5221-20 LEGIARTI000049999760",
+    "travail R5221-32 LEGIARTI000043320773",
+    "travail R5221-33 LEGIARTI000043320764"
+   ],
+   "links_not_read": "L5221-2 et suivants non lus."
+  },
+  {
+   "sample_id": "T253",
+   "code": "css",
+   "number": "R380-4",
+   "source_id": "LEGIARTI000034623626",
+   "verdict": "m",
+   "families": [
+    "F5"
+   ],
+   "description": "Cotisation subsidiaire maladie (L. 380-2), due par des personnes physiques sur leurs revenus du capital. Le IV prévoit une taxation forfaitaire à cinq plafonds annuels « en cas d'absence de mise à disposition par l'employeur d'élément probant », lors d'un contrôle L. 243-7. Viser l'« employeur » pour une cotisation due par un particulier non actif est incohérent, ou du moins doit être confirmé. Il n'est pas certain que le IV vise la cotisation de L. 380-3-1 (cf. R. 380-3).",
+   "evidence": "LEGIARTI000034623626, IV : « en cas d'absence de mise à disposition par l'employeur d'élément probant permettant le chiffrage des cotisations et contributions, l'organisme de recouvrement peut fixer l'assiette de la cotisation mentionnée au I à cinq fois le plafond annuel ». L380-2 LEGIARTI000037947779 : « Les personnes mentionnées à l'article L. 160-1 sont redevables d'une cotisation annuelle ».",
+   "links_read": [
+    "css L380-2 LEGIARTI000037947779",
+    "css R380-3 LEGIARTI000034623630",
+    "css R380-6, R380-7 (renvois entrants)"
+   ],
+   "links_not_read": "L380-3-1, L243-7, D380-1 à D380-5 non lus."
+  },
+  {
+   "sample_id": "T263",
+   "code": "travail",
+   "number": "R1235-3",
+   "source_id": "LEGIARTI000049816295",
+   "verdict": "0",
+   "families": [],
+   "description": "Contrainte de France Travail pour le remboursement des allocations (L. 1235-4). Les mentions et renvois à R. 1235-2 et R. 1235-4 sont cohérents. Le terme « huissier de justice » est daté (commissaire de justice) mais sans effet.",
+   "evidence": "",
+   "links_read": [
+    "travail L1235-4 LEGIARTI000048600688",
+    "travail R1235-2 LEGIARTI000049816299",
+    "travail R1235-4 LEGIARTI000038322478"
+   ],
+   "links_not_read": "R1235-5 et suivants non lus."
+  },
+  {
+   "sample_id": "T273",
+   "code": "a1",
+   "number": "59",
+   "source_id": "LEGIARTI000051821197",
+   "verdict": "0",
+   "families": [],
+   "description": "Certificat de jaugeage des récipients de plus de 10 hl (alcools de L. 313-15 du CIBS). Rédaction de 2025, cohérente. Le décret n° 2001-387 est cité ; rien dans le corpus n'indique qu'il ait disparu.",
+   "evidence": "",
+   "links_read": [
+    "a1 59 (versions 2016 et 2025)"
+   ],
+   "links_not_read": "CIBS L313-15 et décret 2001-387 hors corpus, non consultés."
+  },
+  {
+   "sample_id": "T283",
+   "code": "css",
+   "number": "R161-33-5",
+   "source_id": "LEGIARTI000046844819",
+   "verdict": "0",
+   "families": [],
+   "description": "Applique à la Caisse des Français de l'étranger la sous-section « Carte Vitale ». Cohérent : sous-section refondue au 1er janvier 2023.",
+   "evidence": "",
+   "links_read": [
+    "css R161-33-1 à R161-33-10 (versions en vigueur)",
+    "contexte de la sous-section 2 (Carte Vitale)"
+   ],
+   "links_not_read": "L161-31 et L766-1 et suivants non lus."
+  },
+  {
+   "sample_id": "T293",
+   "code": "travail",
+   "number": "R1263-11-1",
+   "source_id": "LEGIARTI000042168312",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "Injonction au prestataire étranger qui détache des salariés. Le texte vise l'agent « mentionné aux articles L. 8112-1 ou L. 8112-5 ». Or L. 8112-5 (contrôleurs du travail) est abrogé depuis le 1er juillet 2016, alors que cette version date de 2020. Renvoi mort sans effet pratique, puisque L. 8112-1 suffit et que L. 1263-3 ne vise que L. 8112-1.",
+   "evidence": "LEGIARTI000042168312 : « L'agent de contrôle de l'inspection du travail mentionné aux articles L. 8112-1 ou L. 8112-5 ». L8112-5 LEGIARTI000006904792 : state=ABROGE, 2008-05-01→2016-07-01.",
+   "links_read": [
+    "travail L1263-3 LEGIARTI000037388985",
+    "travail L1262-2-1 LEGIARTI000038156571",
+    "travail L8112-5 LEGIARTI000006904792"
+   ],
+   "links_not_read": "L8112-1 non relu ; R1263-11-2 et suivants non lus."
+  },
+  {
+   "sample_id": "T303",
+   "code": "css",
+   "number": "R742-12",
+   "source_id": "LEGIARTI000006752533",
+   "verdict": "G",
+   "families": [
+    "F1"
+   ],
+   "description": "Assurance volontaire vieillesse de la tierce personne familiale : le 2° exige « une fiche d'état civil ». Les fiches d'état civil ont été supprimées par l'article 1er du décret n° 2000-1277 du 26 décembre 2000. L'article, dans sa version de 2005, organise donc une pièce qui n'existe plus.",
+   "evidence": "LEGIARTI000006752533 : « 2°) une fiche d'état civil ». Décret n° 2000-1277 du 26 décembre 2000, art. 1er (JORFTEXT000000208063, Légifrance, consulté le 2026-10-30) : « La fiche individuelle d'état civil et de nationalité française et la fiche familiale d'état civil sont supprimées. »",
+   "links_read": [
+    "css L742-1 LEGIARTI000047453412",
+    "css R742-11 LEGIARTI000006752531",
+    "JORFTEXT000000208063 (Légifrance, 2026-10-30)"
+   ],
+   "links_not_read": "CASF L146-9 non lu ; dispositif de remplacement (CRPA) non vérifié."
+  },
+  {
+   "sample_id": "T313",
+   "code": "cch",
+   "number": "D331-28",
+   "source_id": "LEGIARTI000038975171",
+   "verdict": "0",
+   "families": [],
+   "description": "Seul article de la sous-section « Départements d'outre-mer » de la section sur les subventions et prêts aux logements locatifs aidés. Il écarte cette section outre-mer. Cohérent.",
+   "evidence": "",
+   "links_read": [
+    "cch D331-26 LEGIARTI000038975165",
+    "contexte LEGI de D331-28 (sous-section 6)"
+   ],
+   "links_not_read": "Dispositifs propres à l'outre-mer (R372-x) non lus."
+  }
+ ]
+}
