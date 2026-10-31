@@ -1,0 +1,561 @@
+{
+ "group": "OS10",
+ "paired_with": "S10",
+ "read_from": "official-source",
+ "reference_date": "2026-10-18",
+ "method": "Lecture par CITE_PRODUCTION=1 CITE_SOURCE_ONLY=1 python3 -I tools/cite.py (source officielle, NOTA, toutes versions). Recherches de renvois en lecture seule (mode=ro, query_only) sur les tables articles et documents de la base de production. Aucune lecture de drafts (proposed_xml, reason, review_notes), batches/, reports/, apply/ ni des qualifications d'autres audits. EUR-Lex tenté le 2026-10-31 sans succès (page vide). Revue IA : ce n'est pas une validation par un juriste.",
+ "articles": [
+  {
+   "sample_id": "S010",
+   "code": "travail",
+   "number": "R5132-1-18",
+   "source_id": "LEGIARTI000045950406",
+   "verdict": "0",
+   "families": [],
+   "description": "Exclusion des détenus titulaires d'un contrat d'emploi pénitentiaire du régime de la section préliminaire (parcours IAE). Cohérent avec L. 5132-3 et R. 5132-1-1 ; la mention « contrat d'emploi pénitentiaire » a été mise à jour en 2022.",
+   "evidence": "",
+   "links_read": [
+    "travail L5132-3 (LEGIARTI000048590593)",
+    "travail R5132-1-1 (LEGIARTI000043995953)",
+    "travail R5132-1-17, R5132-1-19 et renvois (recherche content_xml)"
+   ],
+   "links_not_read": "Code pénitentiaire (L. 412-10 et s.) et décret n° 2021-1128 (NOTA) hors corpus, non lus."
+  },
+  {
+   "sample_id": "S030",
+   "code": "urba",
+   "number": "L314-9",
+   "source_id": "LEGIARTI000006815492",
+   "verdict": "0",
+   "families": [],
+   "description": "Renvoi à un décret en Conseil d'Etat « en tant que de besoin » pour le chapitre relatif à la protection des occupants. Aucun article R. 314-* en vigueur (tous abrogés au 1er juillet 1986), mais les articles L. 314-1 et s. sont d'application directe et la formule est facultative : pas d'anomalie.",
+   "evidence": "",
+   "links_read": [
+    "urba L314-1 (LEGIARTI000006815475)",
+    "urba L314-2 (LEGIARTI000049398826)",
+    "urba L313-5, L421-5-3 (renvois à L. 314-9)",
+    "urba R314-1 à R314-12 (tous ABROGE 1986-07-01)"
+   ],
+   "links_not_read": "L. 314-3 à L. 314-8 non lus en détail."
+  },
+  {
+   "sample_id": "S050",
+   "code": "cgi",
+   "number": "1740-0 C",
+   "source_id": "LEGIARTI000037947314",
+   "verdict": "0",
+   "families": [],
+   "description": "Amende de 5 % pour défaut de réponse à la mise en demeure du II de l'article L. 13 BA du LPF (documentation du régime IP box de l'article 238). Article 238 en vigueur et cohérent ; aucune autre disposition ne renvoie à L. 13 BA dans le corpus.",
+   "evidence": "",
+   "links_read": [
+    "cgi 238 (LEGIARTI000048833463)",
+    "recherche « 13 BA » dans le corpus"
+   ],
+   "links_not_read": "LPF L. 13 BA hors corpus, non lu."
+  },
+  {
+   "sample_id": "S070",
+   "code": "urba",
+   "number": "R*322-27-1",
+   "source_id": "LEGIARTI000006818783",
+   "verdict": "0",
+   "families": [],
+   "description": "Option des associés d'une AFU de groupement (paiement en monnaie ou en fractions d'immeubles) dans le mois de la notification de l'arrêté préfectoral. Cohérent avec L. 322-2 2° (même option ouverte par la loi) et L. 322-3 (AFU autorisée par l'autorité administrative).",
+   "evidence": "",
+   "links_read": [
+    "urba L322-2 (LEGIARTI000032861028)",
+    "urba L322-3 (LEGIARTI000006815565)",
+    "urba R*322-27 (LEGIARTI000006818776)",
+    "urba R*322-28 (LEGIARTI000006818779)"
+   ],
+   "links_not_read": "Ordonnance n° 2004-632 (associations syndicales) hors corpus."
+  },
+  {
+   "sample_id": "S090",
+   "code": "a1",
+   "number": "189",
+   "source_id": "LEGIARTI000032881214",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "Circulation des produits à base d'alcool dénaturé par procédé spécial. Rédaction sans effet mais désuète : l'avis est confié au « service des laboratoires de la direction générale des douanes et droits indirects » alors que l'article 170 de la même annexe, modifié par le même décret de 2016, vise le « service commun des laboratoires » ; la dispense est accordée par « le service » alors que les articles 188 et 190 confient les dérogations voisines au directeur interrégional. Base légale (CGI 302 D bis, 458) au statut ABROGE_DIFF jusqu'à une date indéterminée (2222-02-22) : toujours applicable au 18 octobre 2026.",
+   "evidence": "LEGIARTI000032881214 : « le service des douanes et droits indirects peut, sur l'avis du service des laboratoires de la direction générale des douanes et droits indirects, les dispenser des formalités à la circulation » ; LEGIARTI000032881236 (a1 170) : « après avis du service commun des laboratoires ». Fichiers : evidence/cited/production-20261031-source-only/a1_189_LEGIARTI000032881214.json",
+   "links_read": [
+    "a1 188 (LEGIARTI000032881220)",
+    "a1 170 (LEGIARTI000032881236)",
+    "a1 190 (LEGIARTI000032881246)",
+    "cgi 302 D bis (LEGIARTI000041472187, ABROGE_DIFF)",
+    "cgi 458 (LEGIARTI000041472229, ABROGE_DIFF)"
+   ],
+   "links_not_read": "Code des impositions sur les biens et services hors corpus ; date effective d'abrogation des articles 302 D bis et 458 non établie."
+  },
+  {
+   "sample_id": "S110",
+   "code": "travail",
+   "number": "D3141-11",
+   "source_id": "LEGIARTI000018534285",
+   "verdict": "0",
+   "families": [],
+   "description": "Agrément préfectoral (cinq ans au plus, renouvelable) des contrôleurs des caisses de congés payés. Conforme à L. 3141-33 (« Les contrôleurs sont agréés ») et à L. 3141-32.",
+   "evidence": "",
+   "links_read": [
+    "travail L3141-33 (LEGIARTI000033008685)",
+    "travail L3141-32 (LEGIARTI000033008678)",
+    "travail D3141-12 (LEGIARTI000020572124)",
+    "travail D5424-44 (contrôleurs)"
+   ],
+   "links_not_read": "Arrêtés d'application non lus."
+  },
+  {
+   "sample_id": "S130",
+   "code": "urba",
+   "number": "R*423-52",
+   "source_id": "LEGIARTI000028678360",
+   "verdict": "0",
+   "families": [],
+   "description": "Consultation des services habilités à demander les contributions du 2° de L. 332-6-1 ou de L. 332-9 (rédaction antérieure à la loi 2010-1658). Le 2° de L. 332-6-1 en vigueur ne comprend plus que le c (participation pour équipements exceptionnels), qui subsiste ; L. 332-9 est visé dans sa rédaction antérieure, comme dans L. 332-6 : renvois valides.",
+   "evidence": "",
+   "links_read": [
+    "urba L332-6-1 (LEGIARTI000030060787)",
+    "urba L332-6 (LEGIARTI000051560744)",
+    "urba L332-9 (ABROGE 2012)",
+    "urba R332-41 (LEGIARTI000028678292)"
+   ],
+   "links_not_read": "L. 332-8 non lu."
+  },
+  {
+   "sample_id": "S150",
+   "code": "travail",
+   "number": "D1225-4-1",
+   "source_id": "LEGIARTI000018537820",
+   "verdict": "0",
+   "families": [],
+   "description": "Forme (LRAR ou remise contre récépissé) de l'avertissement de l'employeur prévu au premier alinéa de L. 1225-24 : le renvoi vise bien la phrase « La salariée avertit l'employeur du motif de son absence… ».",
+   "evidence": "",
+   "links_read": [
+    "travail L1225-24 (LEGIARTI000018764607)",
+    "recherche des renvois à L. 1225-24"
+   ],
+   "links_not_read": "L. 1225-17 et s. non lus."
+  },
+  {
+   "sample_id": "S170",
+   "code": "cch",
+   "number": "R134-11",
+   "source_id": "LEGIARTI000053629116",
+   "verdict": "0",
+   "families": [],
+   "description": "Contrôle technique quinquennal des ascenseurs, complété en 2026 (compatibilité des moyens d'alerte avec les réseaux autres que le RTC et la 2G/3G). Cohérent avec L. 134-4, R. 134-2 (objectif 6°), R. 134-12 et la sanction de R. 186-1 4°.",
+   "evidence": "",
+   "links_read": [
+    "cch R134-2 (LEGIARTI000043818727)",
+    "cch R134-12 (LEGIARTI000043818749)",
+    "cch L134-4 (LEGIARTI000041588174)",
+    "cch R186-1 (LEGIARTI000043819591)"
+   ],
+   "links_not_read": "Arrêtés du 11 décembre 2007 et du 7 août 2012 hors corpus."
+  },
+  {
+   "sample_id": "S190",
+   "code": "travail",
+   "number": "R5123-30",
+   "source_id": "LEGIARTI000018526966",
+   "verdict": "0",
+   "families": [],
+   "description": "Versement par l'entreprise de l'allocation de cessation anticipée d'activité pendant la suspension du contrat. Rien d'anormal dans l'article lui-même. Remarque sur un lien, non comptée ici : R. 5123-22 fonde le dispositif sur une exonération « dans les conditions prévues aux articles L. 5123-6 et L. 5422-10 », alors que L. 5422-10 ne traite plus que de l'assiette CSG et de la déductibilité des contributions chômage.",
+   "evidence": "",
+   "links_read": [
+    "travail R5123-22 à R5123-39 (section 6)",
+    "travail L5123-6 (LEGIARTI000035640809)",
+    "travail L5422-10 (LEGIARTI000042683508)",
+    "travail L5123-2 (LEGIARTI000025076605)"
+   ],
+   "links_not_read": "Accords professionnels et arrêtés hors corpus."
+  },
+  {
+   "sample_id": "S210",
+   "code": "travail",
+   "number": "R4323-43",
+   "source_id": "LEGIARTI000018531435",
+   "verdict": "0",
+   "families": [],
+   "description": "Mode opératoire pour le levage simultané d'une charge par plusieurs équipements. Règle autonome, cohérente avec la section 5 ; R. 4535-6 n'étend pas cet article aux travailleurs indépendants, ce qui est un choix explicite.",
+   "evidence": "",
+   "links_read": [
+    "travail R4535-6 (LEGIARTI000018528935)",
+    "section 5 du chapitre III (R4323-29 et s., par recherche)"
+   ],
+   "links_not_read": "L. 4321-1 et directive 2009/104/CE non lus."
+  },
+  {
+   "sample_id": "S230",
+   "code": "css",
+   "number": "R931-1-5",
+   "source_id": "LEGIARTI000006754788",
+   "verdict": "0",
+   "families": [],
+   "description": "Statuts des institutions de prévoyance : mentions fixées par arrêté ; interdiction des avantages particuliers aux fondateurs. Arrêté d'application présent (A. 931-1-6), base légale L. 931-1.",
+   "evidence": "",
+   "links_read": [
+    "css L931-1 (LEGIARTI000038589859)",
+    "css R931-1-4 (LEGIARTI000006754787)",
+    "css A931-1-6 (LEGIARTI000006734940)"
+   ],
+   "links_not_read": "R. 931-1-6 et R. 931-1-7 non lus."
+  },
+  {
+   "sample_id": "S250",
+   "code": "css",
+   "number": "R251-6-2",
+   "source_id": "LEGIARTI000047958524",
+   "verdict": "0",
+   "families": [],
+   "description": "Liste des pièces à fournir avant l'attribution d'un financement par le fonds d'investissement dans la prévention de l'usure professionnelle, sans préjudice de l'article 10 de la loi DCRA. Cohérent avec L. 221-1-5 et R. 251-6-1 à R. 251-6-4 ; arrêté du 11 mars 2024 pris.",
+   "evidence": "",
+   "links_read": [
+    "css L221-1-5 (LEGIARTI000047449926)",
+    "css R251-6-1 (LEGIARTI000047958522)",
+    "css R251-6-3, R251-6-4",
+    "css R221-9-1 (existence)"
+   ],
+   "links_not_read": "Loi n° 2000-321 art. 10 et arrêté du 11 mars 2024 hors corpus."
+  },
+  {
+   "sample_id": "S270",
+   "code": "cgi",
+   "number": "223 WT ter",
+   "source_id": "LEGIARTI000048804171",
+   "verdict": "0",
+   "families": [],
+   "description": "Montant corrigé des impôts couverts d'une entité d'investissement (pilier 2). Le renvoi au « paragraphe 5 de la sous-section 2 de la section III » vise bien les articles 223 VW et s. (affectation spécifique des impôts couverts). Cohérent avec 223 WT, WT bis et WT quater.",
+   "evidence": "",
+   "links_read": [
+    "cgi 223 WT (LEGIARTI000048804167)",
+    "cgi 223 WT bis (LEGIARTI000048804169)",
+    "cgi 223 WT quater (LEGIARTI000048804175)",
+    "structure section III (223 VW à VW nonies)"
+   ],
+   "links_not_read": "Directive (UE) 2022/2523 non consultée."
+  },
+  {
+   "sample_id": "S290",
+   "code": "travail",
+   "number": "L8271-6-3",
+   "source_id": "LEGIARTI000031673559",
+   "verdict": "0",
+   "families": [],
+   "description": "Échanges d'informations entre les agents de contrôle du travail illégal et les agents du CNAPS. Depuis 2021, les agents du CNAPS figurent eux-mêmes au 9° de L. 8271-1-2, ce qui rend le second alinéa en partie superflu. Le premier alinéa garde un objet propre (contrôle des activités privées de sécurité) : pas de défaut.",
+   "evidence": "",
+   "links_read": [
+    "travail L8271-1-2 (LEGIARTI000054334961 ; 9° présent depuis LEGIARTI000043540507)"
+   ],
+   "links_not_read": "Code de la sécurité intérieure L. 634-1 hors corpus."
+  },
+  {
+   "sample_id": "S310",
+   "code": "urba",
+   "number": "R122-13",
+   "source_id": "LEGIARTI000034739989",
+   "verdict": "0",
+   "families": [],
+   "description": "Dépôt de la demande d'autorisation d'UTN (structurante ou locale) au préfet du département. Cohérent avec R. 122-8, R. 122-9, R. 122-15 (transmission au préfet coordonnateur pour les UTN structurantes) et R. 122-14 (dossier mis à jour en 2021 après l'annulation partielle de 2019 citée en NOTA).",
+   "evidence": "",
+   "links_read": [
+    "urba R122-8 (LEGIARTI000034739171)",
+    "urba R122-9 (LEGIARTI000034739167)",
+    "urba R122-14 (LEGIARTI000044221891)",
+    "urba R122-15 (LEGIARTI000044221887)"
+   ],
+   "links_not_read": "L. 122-19 à L. 122-21 non lus en entier."
+  },
+  {
+   "sample_id": "S330",
+   "code": "urba",
+   "number": "L313-1",
+   "source_id": "LEGIARTI000052866403",
+   "verdict": "0",
+   "families": [],
+   "description": "Plan de sauvegarde et de mise en valeur (version issue de la loi n° 2025-1129). Le législateur a lui-même mis à jour le renvoi (L. 153-42 devenu L. 153-41) ; les articles L. 153-37, L. 153-40, L. 153-41 et L. 153-43 visés existent et organisent bien la modification du PLU.",
+   "evidence": "",
+   "links_read": [
+    "urba L153-37 (LEGIARTI000031211410)",
+    "urba L153-40 (LEGIARTI000031211416 / VIGUEUR_DIFF LEGIARTI000052866319)",
+    "urba L153-41 (LEGIARTI000052866324)",
+    "urba L153-43 (LEGIARTI000052866332)",
+    "urba L153-36 (LEGIARTI000052866306)",
+    "version antérieure LEGIARTI000032860980 (comparaison)"
+   ],
+   "links_not_read": "Code du patrimoine (L. 631-3) et code de l'environnement hors corpus."
+  },
+  {
+   "sample_id": "S350",
+   "code": "css",
+   "number": "L742-8",
+   "source_id": "LEGIARTI000037063978",
+   "verdict": "m",
+   "families": [
+    "F5"
+   ],
+   "description": "Rachat de cotisations d'assurance volontaire vieillesse des indépendants pour une activité à l'étranger. L'article prévoit des arrêtés fixant le versement « forfaitairement… pour chaque classe de cotisation ». Or L. 742-7 fixe ces cotisations « par référence à celles dues… en application des articles L. 351-14-1, L. 643-2 ou L. 653-5 », et le décret (D. 742-28, D. 742-30) les aligne sur le rachat de L. 351-14-1 et D. 643-6. Les classes de cotisation ont disparu pour ces régimes. Il reste un résidu de 1965 qui contredit la méthode de L. 742-7 ; effet limité, puisque les décrets suivent L. 742-7.",
+   "evidence": "LEGIARTI000037063978 : « Des arrêtés fixent forfaitairement pour chacune des années à prendre en considération, et pour chaque classe de cotisation, le montant du versement » ; LEGIARTI000037063948 (L742-7) : « moyennant le versement de cotisations fixées par référence à celles dues, selon leur activité, en application des articles L. 351-14-1, L. 643-2 ou L. 653-5 » ; LEGIARTI000041967183 (D742-30) : « Les montants des cotisations dues au titre du rachat prévu à l'article L. 742-7 sont égaux à ceux mentionnés aux deux derniers alinéas de l'article D. 742-28 ». Fichier : evidence/cited/production-20261031-source-only/css_L742-8_LEGIARTI000037063978.json",
+   "links_read": [
+    "css L742-7 (LEGIARTI000037063948)",
+    "css L742-6 (LEGIARTI000037063958)",
+    "css D742-13, D742-20 à D742-31",
+    "css L351-14-1, L643-2, L653-5 (existence)"
+   ],
+   "links_not_read": "Arrêtés pris en application de L. 742-8 hors corpus : on ne sait pas s'il en existe encore."
+  },
+  {
+   "sample_id": "S370",
+   "code": "urba",
+   "number": "L153-55",
+   "source_id": "LEGIARTI000031211456",
+   "verdict": "0",
+   "families": [],
+   "description": "Enquête publique sur la mise en compatibilité du PLU (DUP, déclaration de projet, procédure intégrée) : compétence de l'Etat ou de l'EPCI/maire. Cohérent avec L. 153-54, L. 153-58, L. 300-6 (renvoi à L. 153-54 à L. 153-59) et L. 300-6-1.",
+   "evidence": "",
+   "links_read": [
+    "urba L153-54 (LEGIARTI000031211454)",
+    "urba L153-58 (LEGIARTI000031211462)",
+    "urba L300-6 (LEGIARTI000054141883)",
+    "urba L300-6-1 (LEGIARTI000049399379)"
+   ],
+   "links_not_read": "Code de l'environnement (chapitre III du titre II du livre Ier) hors corpus ; dispenses éventuelles d'enquête publique ou participation par voie électronique propres à ce code non vérifiées."
+  },
+  {
+   "sample_id": "S390",
+   "code": "travail",
+   "number": "R3313-4",
+   "source_id": "LEGIARTI000047146393",
+   "verdict": "0",
+   "families": [],
+   "description": "Accord d'intéressement rédigé sur le site de l'URSSAF Caisse nationale : code d'identification, présomption de conformité et exonérations. Application exacte du dernier alinéa de L. 3313-3 ; dépôt sur la plateforme de D. 2231-4.",
+   "evidence": "",
+   "links_read": [
+    "travail L3313-3 (LEGIARTI000046194067)",
+    "travail D2231-4 (LEGIARTI000036920597)"
+   ],
+   "links_not_read": "CSS L. 225-1 et L. 3345-2 non lus."
+  },
+  {
+   "sample_id": "S410",
+   "code": "travail",
+   "number": "L5316-2",
+   "source_id": "LEGIARTI000048587809",
+   "verdict": "0",
+   "families": [],
+   "description": "Cahier des charges et CPOM pour les organismes de repérage et d'accompagnement des personnes les plus éloignées de l'emploi (loi plein emploi). Cohérent avec L. 5316-1, L. 5316-4 et les décrets D. 5316-1 et s.",
+   "evidence": "",
+   "links_read": [
+    "travail L5316-1 (LEGIARTI000048587805)",
+    "travail L5316-3 (LEGIARTI000048587817)",
+    "travail L5316-4 (LEGIARTI000048587915)",
+    "travail D5316-1 à D5316-17 (recherche)"
+   ],
+   "links_not_read": "Arrêté portant cahier des charges hors corpus."
+  },
+  {
+   "sample_id": "S430",
+   "code": "travail",
+   "number": "L2262-14-1",
+   "source_id": "LEGIARTI000036759227",
+   "verdict": "0",
+   "families": [],
+   "description": "Délai de six mois imparti au juge saisi d'une action en nullité d'un accord collectif. C'est un délai indicatif sans sanction, procédé courant : pas d'anomalie.",
+   "evidence": "",
+   "links_read": [
+    "travail L2262-14 (LEGIARTI000035624175, réserve CC 2018-761 DC en NOTA)",
+    "travail L2262-15 (LEGIARTI000035609643)"
+   ],
+   "links_not_read": "Code de procédure civile non lu."
+  },
+  {
+   "sample_id": "S450",
+   "code": "a4",
+   "number": "121 Z quinquies",
+   "source_id": "LEGIARTI000051183437",
+   "verdict": "0",
+   "families": [],
+   "description": "Service compétent pour les déclarations des personnes résidant à Monaco (SIP Nice Est-Ouest-Menton ; SDE de Nice), mis à jour en 2025 ; l'IFI a remplacé l'ISF. Articles 53 A et 97 du CGI en vigueur.",
+   "evidence": "",
+   "links_read": [
+    "cgi 53 A (LEGIARTI000006302451)",
+    "cgi 97 (LEGIARTI000006302636)",
+    "a4 01 (cité)"
+   ],
+   "links_not_read": "Convention fiscale franco-monégasque de 1963 hors corpus."
+  },
+  {
+   "sample_id": "S470",
+   "code": "cgi",
+   "number": "223 WA quater",
+   "source_id": "LEGIARTI000051215580",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "Déduction fondée sur la substance pour les établissements stables. Le troisième alinéa vise le résultat « exclu conformément à l'article 223 VR et aux 2° et 3° de l'article 223 WQ ». Mais 223 WQ ne fait que définir le champ du paragraphe (entités visées) ; l'exclusion elle-même résulte des I et II de 223 WQ bis, que vise correctement 223 WA quinquies. Le renvoi est imprécis mais se comprend, sans effet probable.",
+   "evidence": "LEGIARTI000051215580 : « a été totalement ou partiellement exclu conformément à l'article 223 VR et aux 2° et 3° de l'article 223 WQ » ; LEGIARTI000048804141 (223 WQ) : « Le présent paragraphe s'applique aux entités suivantes » ; LEGIARTI000048803992 (223 WA quinquies) : « conformément aux I et II de l'article 223 WQ bis ». Fichier : evidence/cited/production-20261031-source-only/cgi_223_WA_quater_LEGIARTI000051215580.json",
+   "links_read": [
+    "cgi 223 WA bis (LEGIARTI000051215586)",
+    "cgi 223 WA ter (LEGIARTI000051215583)",
+    "cgi 223 WA quinquies (LEGIARTI000048803992)",
+    "cgi 223 WQ (LEGIARTI000048804141)",
+    "cgi 223 WQ bis (LEGIARTI000048804143)",
+    "cgi 223 VR (LEGIARTI000053545806)"
+   ],
+   "links_not_read": "223 VQ et 223 VQ bis non lus ; directive (UE) 2022/2523 non consultée."
+  },
+  {
+   "sample_id": "S490",
+   "code": "css",
+   "number": "R173-6",
+   "source_id": "LEGIARTI000023719561",
+   "verdict": "0",
+   "families": [],
+   "description": "Avance sur la majoration du minimum contributif en attendant l'écrêtement prévu à L. 173-2. Cohérent avec L. 173-2 et L. 351-10. Le renvoi au « premier alinéa de l'article R. 351-6 », restructuré en I et II en 2026, désigne toujours la durée maximale d'assurance (premier alinéa du I).",
+   "evidence": "",
+   "links_read": [
+    "css L173-2 (LEGIARTI000036391874)",
+    "css L351-10 (LEGIARTI000048697787)",
+    "css R351-6 (LEGIARTI000053335582)"
+   ],
+   "links_not_read": "Arrêté fixant le seuil hors corpus. L. 173-2 vise encore le « régime social des indépendants » : relevé sur un lien, non compté ici."
+  },
+  {
+   "sample_id": "S510",
+   "code": "travail",
+   "number": "R4313-69",
+   "source_id": "LEGIARTI000019761050",
+   "verdict": "G",
+   "families": [
+    "F1",
+    "F5",
+    "F9"
+   ],
+   "description": "Contrôle par l'organisme notifié du « système d'assurance qualité CE de la production avec surveillance » propre aux équipements de protection individuelle (paragraphe 2 de la sous-section 4, R. 4313-62 à R. 4313-74, inchangés depuis 2009). Cette procédure transpose la directive 89/686/CEE. Or le code lui-même vise désormais le « règlement (UE) 2016/425… abrogeant la directive 89/686/CEE » (L. 4311-6, L. 4746-1). En 2022, R. 4746-3 a substitué, pour les EPI, l'« attestation UE de type prévue au point 6 de l'annexe V du règlement (UE) 2016/425 » à l'attestation CE nationale, qu'il réserve aux machines. Le décret organise donc encore pour les EPI une procédure d'évaluation de la conformité tirée d'une directive abrogée, concurrente des modules du règlement directement applicable, sans disposition de neutralisation. L'effet concret est limité, parce que la primauté du règlement et la proximité de fond avec la surveillance du module D le neutralisent, mais un juriste jugerait anormal qu'elle subsiste. L'aspect droit de l'Union reste à confirmer : EUR-Lex n'a pas pu être lu (page vide, consultation du 31 octobre 2026).",
+   "evidence": "LEGIARTI000019761050 : « L'organisme notifié contrôle, par surveillance, que le fabricant remplit correctement les obligations qui découlent du système d'assurance qualité approuvé. » ; LEGIARTI000019761073 (R4313-62) : « Le système d'assurance qualité CE de la production avec surveillance est la procédure par laquelle un fabricant… » ; LEGIARTI000043894057 (L4311-6) : « règlement (UE) 2016/425 du Parlement européen et du Conseil du 9 mars 2016 relatif aux équipements de protection individuelle et abrogeant la directive 89/686/ CEE du Conseil » ; LEGIARTI000045645802 (R4746-3) : « L'attestation UE de type prévue au point 6 de l'annexe V du règlement (UE) 2016/425 pour les équipements de protection individuelle ou l'attestation d'examen CE de type prévue à l'article R. 4313-31 pour les machines ». Fichiers : evidence/cited/production-20261031-source-only/travail_R4313-69_LEGIARTI000019761050.json, evidence/cited/production-20261031-source-only/travail_R4313-17_LEGIARTI000045651895.json",
+   "links_read": [
+    "travail R4313-62 à R4313-74 (paragraphe 2, liste en vigueur)",
+    "travail R4313-82 (rattachement des EPI à ces procédures)",
+    "travail L4311-6 (LEGIARTI000043894057)",
+    "travail L4311-3 (LEGIARTI000006903200)",
+    "travail R4746-3 (LEGIARTI000045645802)",
+    "travail R4313-17 (LEGIARTI000045651895)",
+    "recherche « 2016/425 » dans le corpus (L4746-1, R4746-1)"
+   ],
+   "links_not_read": "Règlement (UE) 2016/425 non lu dans sa source primaire (EUR-Lex inaccessible le 31 octobre 2026). Arrêtés d'habilitation des organismes notifiés hors corpus.",
+   "suggested_correction": "Abroger, pour les EPI, les articles R. 4313-57 à R. 4313-74 et R. 4313-80 à R. 4313-82 (ou restreindre la sous-section 4 aux renvois au règlement (UE) 2016/425) et viser directement les modules du règlement, sans créer de formalité nationale nouvelle."
+  },
+  {
+   "sample_id": "S530",
+   "code": "travail",
+   "number": "R3243-9",
+   "source_id": "LEGIARTI000033627094",
+   "verdict": "0",
+   "families": [],
+   "description": "Consultation des bulletins de paie électroniques par le service en ligne du CPA (2° du II de L. 5151-6). Le renvoi est exact et cohérent avec L. 3243-2 et D. 3243-8.",
+   "evidence": "",
+   "links_read": [
+    "travail L5151-6 (LEGIARTI000037064956)",
+    "travail L3243-2 (LEGIARTI000033024092)",
+    "travail D3243-8 (LEGIARTI000033627046)"
+   ],
+   "links_not_read": "Aucun autre lien significatif."
+  },
+  {
+   "sample_id": "S550",
+   "code": "css",
+   "number": "L942-9",
+   "source_id": "LEGIARTI000038837064",
+   "verdict": "G",
+   "families": [
+    "F3"
+   ],
+   "description": "Transfert de portefeuille des institutions de retraite professionnelle supplémentaire : l'article rend applicables des sections du code des assurances et remplace leurs renvois. Depuis l'ordonnance n° 2019-766, il dispose que « la référence à l'article L. 381-1 du code des assurances est remplacée par la référence à l'article L. 214-1 du présent code ». Or l'article L. 214-1 du code de la sécurité sociale est abrogé depuis le 25 avril 1996. Le pendant de L. 381-1 C. assur. (définition des fonds de retraite professionnelle supplémentaire) est L. 942-1 CSS, qui définit les IRPS ; le chiffre « L. 214-1 » est celui du code de la mutualité. Le renvoi est donc mort et vise le mauvais code, dans une table de correspondance législative : un juriste le remarque aussitôt. L'effet reste rattrapable par interprétation.",
+   "evidence": "LEGIARTI000038837064 : « la référence à l'article L. 381-1 du code des assurances est remplacée par la référence à l'article L. 214-1 du présent code » ; css L214-1 : LEGIARTI000006741649 state=ABROGE 1988-01-06→1996-04-25 (aucune version en vigueur) ; LEGIARTI000038658367 (L942-1) : « Les institutions de retraite professionnelle supplémentaire sont des personnes morales de droit privé… » et « mutuelles ou d'unions de retraite professionnelle supplémentaire mentionnées à l'article L. 214-1 du code de la mutualité ». Fichier : evidence/cited/production-20261031-source-only/css_L942-9_LEGIARTI000038837064.json",
+   "links_read": [
+    "css L214-1 (toutes versions : abrogé 1996)",
+    "css L942-1 (LEGIARTI000038658367)",
+    "version antérieure L942-9 LEGIARTI000034383896 (sans la phrase litigieuse)"
+   ],
+   "links_not_read": "Code des assurances (L. 381-1, L. 384-1, L. 384-2) et code de la mutualité hors corpus, non lus : la portée exacte du renvoi dans les sections 1 et 3 n'a pas été vérifiée.",
+   "suggested_correction": "Remplacer « l'article L. 214-1 du présent code » par « l'article L. 942-1 du présent code »."
+  },
+  {
+   "sample_id": "S570",
+   "code": "travail",
+   "number": "R6332-14",
+   "source_id": "LEGIARTI000037934421",
+   "verdict": "0",
+   "families": [],
+   "description": "Les opérateurs de compétences ne peuvent posséder que les biens nécessaires à leur fonctionnement. Règle de constitution prise sur le 1° de L. 6332-6 : rien d'anormal.",
+   "evidence": "",
+   "links_read": [
+    "travail L6332-6 (LEGIARTI000054336490)",
+    "sous-section 2 (contexte)"
+   ],
+   "links_not_read": "L. 6332-1 non relu en entier."
+  },
+  {
+   "sample_id": "S590",
+   "code": "css",
+   "number": "L713-18",
+   "source_id": "LEGIARTI000006744036",
+   "verdict": "G",
+   "families": [
+    "F3"
+   ],
+   "description": "Cotisations du régime de sécurité sociale des militaires : l'article fonde la cotisation sur la « couverture des risques mentionnés aux articles L. 713-3, L. 713-5 et L. 713-6 ». L'article L. 713-3, qui ouvrait aux militaires d'active les prestations en nature maladie-maternité, est abrogé depuis le 29 décembre 1996 ; ce risque est désormais couvert par L. 713-1-1. Le texte de 1985 n'a jamais été mis à jour : l'assiette légale de la cotisation renvoie, pour le risque principal (militaires en activité), à un article mort. Un juriste le relève immédiatement ; l'effet pratique est atténué parce que l'objet se déduit de L. 713-1-1 et de L. 713-21.",
+   "evidence": "LEGIARTI000006744036 : « La couverture des risques mentionnés aux articles L. 713-3, L. 713-5 et L. 713-6 est assurée par une cotisation des bénéficiaires » ; css L713-3 LEGIARTI000006744293 state=ABROGE 1985-12-21→1996-12-29 ; LEGIARTI000031686476 (L713-1-1) : « les personnes relevant de la caisse prévue à l'article L. 713-19 bénéficient de la prise en charge de leurs frais de santé ». Fichier : evidence/cited/production-20261031-source-only/css_L713-18_LEGIARTI000006744036.json",
+   "links_read": [
+    "css L713-3 (abrogé 1996)",
+    "css L713-1-1 (LEGIARTI000031686476)",
+    "css L713-5 (LEGIARTI000006744025)",
+    "css L713-6 (LEGIARTI000027432173)",
+    "css L713-7 (LEGIARTI000006744295)",
+    "css L713-1 (LEGIARTI000037200822)",
+    "css L713-23, L713-21"
+   ],
+   "links_not_read": "Décrets d'application (R. 713-*) non lus.",
+   "suggested_correction": "Remplacer « L. 713-3 » par « L. 713-1-1 » (« La couverture des risques mentionnés aux articles L. 713-1-1, L. 713-5 et L. 713-6… »), sans autre changement."
+  },
+  {
+   "sample_id": "S610",
+   "code": "travail",
+   "number": "L3123-5",
+   "source_id": "LEGIARTI000033020084",
+   "verdict": "0",
+   "families": [],
+   "description": "Égalité de traitement des salariés à temps partiel (droits, essai, rémunération proportionnelle, ancienneté, indemnités). Texte cohérent et complet.",
+   "evidence": "",
+   "links_read": [
+    "travail L1234-9 et dispositions sur le temps partiel (non cités en détail)"
+   ],
+   "links_not_read": "Directive 97/81/CE non consultée ; R. 1234-1 non lu."
+  },
+  {
+   "sample_id": "S630",
+   "code": "travail",
+   "number": "L351-6",
+   "source_id": "LEGIARTI000018124358",
+   "verdict": "G",
+   "families": [
+    "F3",
+    "F5"
+   ],
+   "description": "Article de la « Partie législative ancienne » du code du travail (avant la recodification de 2008), présenté comme en vigueur depuis le 1er janvier 2011 (version issue de l'art. 5 de la loi n° 2008-126, NOTA). Il exige une mise en demeure par LRAR avant toute action pour infraction « aux dispositions du présent chapitre, des chapitres correspondants des deuxième et troisième parties du présent code ». Ces renvois visent la structure de l'ancien code, dont les autres articles L. 351-* ne sont plus en vigueur (seuls L. 351-5-1, L. 351-6, L. 351-8, L. 351-13 et L. 351-14 apparaissent en vigueur ; 28 articles de l'ancienne partie au total). Le même objet est régi en même temps, avec un autre champ (exceptions) et d'autres modalités (décret), par L. 5422-15 du code en vigueur. Deux normes législatives concurrentes en résultent, l'une faite de renvois sans objet. C'est soit un conflit réel, soit un artefact de consolidation (modification différée d'un article abrogé) : dans les deux cas, un juriste le jugerait anormal. À confirmer par l'ordonnance n° 2007-329 (abrogation de l'ancienne partie), non lue.",
+   "evidence": "LEGIARTI000018124358 : « Toute action ou poursuite intentée contre un employeur pour infraction aux dispositions du présent chapitre, des chapitres correspondants des deuxième et troisième parties du présent code et des décrets pris pour leur application est obligatoirement précédée d'une mise en demeure par lettre recommandée avec demande d'avis de réception » ; LEGIARTI000006903837 (L5422-15) : « Toute action ou poursuite intentée contre un employeur pour manquement aux dispositions du présent titre, à l'exception de celles des articles L. 5422-10, L. 5422-21, L. 5422-22 et L. 5422-24 ainsi que de celles du chapitre IV, est précédée d'une mise en demeure. » Fichier : evidence/cited/production-20261031-source-only/travail_L351-6_LEGIARTI000018124358.json",
+   "links_read": [
+    "travail L5422-15 (LEGIARTI000006903837)",
+    "travail L5422-16 (LEGIARTI000048600606)",
+    "liste des articles L. 35x-* de l'ancienne partie en vigueur (table articles)",
+    "contexte LEGI (TITRE_TM « Partie législative ancienne », liens CONCORDE vers L5422-15 à L5422-17)"
+   ],
+   "links_not_read": "Ordonnance n° 2007-329 et loi n° 2008-126 (texte JORF) non lues ; R. 5422-1 et R. 5422-2 non lus.",
+   "suggested_correction": "Constater l'abrogation de l'article ancien (ou le retirer de la consolidation s'il s'agit d'un artefact) : la règle subsiste à L. 5422-15, qui garde la mise en demeure préalable ; aucune formalité nouvelle."
+  }
+ ]
+}

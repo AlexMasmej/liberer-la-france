@@ -183,9 +183,24 @@ Pour savoir si 3,4 % est un bon ou un mauvais taux, le même audit a été mené
 - **Date** : les chiffres du projet sont ceux de chaque audit. Les défauts trouvés ont été corrigés ensuite, donc le texte actuel est meilleur sur ces articles, mais l'échantillon ne peut plus le mesurer sans biais.
 - **Outils** : `tools/baseline_sample.py` (tirage frais non utilisé, conservé sous `audit/baseline/unused-fresh-sample/`), `tools/audit_rate.py` (taux pondéré par strate).
 
+## 2 decies. Corrections de l'échantillon apparié et audit apparié frais du texte actuel
+
+- **Corrections** : les défauts grossiers de l'échantillon apparié encore présents dans le texte réécrit ont été corrigés : 28 défauts vérifiés présents, plus 24 vus par les deux audits à revérifier, soit 52 articles. Groupes BL1 à BL5, puis R4 et R5 pour les demandes croisées. Total : **27 lignes appliquées**, 321 tests OK. L'échantillon apparié ne peut plus mesurer le texte actuel sans biais.
+- **Audit 7, apparié et frais** : 632 nouveaux articles, jamais tirés auparavant (`sample-7.json`, graine 20261105, mêmes strates, allocation doublée). Chacun a été lu deux fois à l'aveugle, par 20 agents sur le texte réécrit actuel (`audit/S01` à `S20`) et 20 agents sur le texte officiel (`audit/baseline/OS01` à `OS20`). Les auditeurs du texte réécrit savaient qu'un défaut hérité compte. Les 52 défauts vus d'un seul côté ont été vérifiés dans les deux textes (`audit/baseline/VC01` à `VC04`).
+
+| Échantillon frais, après vérification | Articles | Droit officiel | Droit réécrit aujourd'hui |
+|---|---|---|---|
+| Tous | 632 | 49 (7,8 % ± 2,1) | 28 (**4,4 % ± 1,6**) |
+| Réécrits | 282 | 41 (14,5 %) | 21 (7,4 %) |
+| Maintenus (témoin) | 350 | 8 (2,3 %) | 7 (2,0 %) |
+
+- **Résultat** : le droit réécrit actuel compte environ **45 % de défauts grossiers en moins** que le droit officiel. Il a réparé 28 défauts officiels pour 7 introduits (McNemar exact, p ≈ 5 × 10⁻⁴).
+- **Verdicts bruts** : 8,4 % pour le droit officiel, comme dans le premier échantillon apparié, contre 2,4 % pour le droit réécrit.
+- **Défauts restants** : sur les 28 défauts du texte réécrit, 21 sont hérités du droit officiel et 7 introduits. Le CGI compte ici 0 défaut officiel et 1 défaut réécrit.
+
 ## 4. Taux mesuré et ce qu'il signifie
 
-- **Taux mesuré** : environ **3 % des articles** gardent un défaut qu'un juriste remarquerait. Mesuré de la même façon sur les mêmes articles, le **droit officiel en vigueur** en compte 7,0 % après vérification, contre 4,6 % pour le droit réécrit (§ 2 nonies). Sur six mesures indépendantes, on compte 64 défauts grossiers sur 1 879 articles (3,4 % ± 0,8). Aucune tendance à la baisse n'est mesurable d'une ronde à l'autre. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
+- **Taux mesuré** : environ **3 % des articles** gardent un défaut qu'un juriste remarquerait. Mesuré de la même façon sur les mêmes articles, le **droit officiel en vigueur** en compte 7,0 % après vérification, contre 4,6 % pour le droit réécrit (§ 2 nonies). Sur un échantillon frais de 632 articles du texte actuel : 7,8 % contre 4,4 % (§ 2 decies). Sur six mesures indépendantes, on compte 64 défauts grossiers sur 1 879 articles (3,4 % ± 0,8). Aucune tendance à la baisse n'est mesurable d'une ronde à l'autre. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
 - **Probabilité pour un juriste** qui lit 20 articles de sa matière de tomber sur au moins un défaut grossier : environ une chance sur deux.
 - **Pourquoi les rondes ne font pas baisser le taux mesuré** : environ 1 000 articles sur 30 000 gardent un défaut grossier. Une ronde en corrige 50 à 110, soit une baisse attendue d'environ 0,3 point. C'est en dessous de ce qu'un audit de 314 articles peut détecter (± 2 points).
 - **Ce qu'il faudrait pour descendre nettement sous 3 %** : une lecture systématique, article par article. Aucun signal mécanique ne concentre plus assez les défauts restants pour qu'un balayage ciblé suffise.

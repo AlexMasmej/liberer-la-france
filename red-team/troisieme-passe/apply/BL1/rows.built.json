@@ -1,0 +1,72 @@
+[
+ {
+  "mode": "replace",
+  "objection": "BL1-D134-4",
+  "row": {
+   "code_id": "LEGITEXT000006073189",
+   "source_id": "LEGIARTI000006735260",
+   "source_sha256": "226ba1ffb3898f3316360a9cd0e96c318f13e13ea30d0e8d3484cad9592a71e0",
+   "number": "D134-4",
+   "proposed_xml": "<p>Est considérée comme cotisant actif toute personne quel que soit son âge, exerçant une activité professionnelle, assujettie à un régime obligatoire de sécurité sociale et qui verse personnellement ou pour laquelle est versée une cotisation.</p><p>Ne sont pas considérés comme des cotisants actifs :</p><p>1°) les affiliés mentionnés à la section 5 du chapitre 1er du titre VIII du livre III ;</p><p>2°) les assurés volontaires ;</p><p>3°) les assujettis exonérés ou dispensés totalement du versement des cotisations.</p><p>Sont néanmoins considérés comme cotisants actifs les effectifs dont les cotisations sont prises en charge par la branche mentionnée au 3° de l'article L. 200-2 en application de l'article L. 222-2-1 ; pour la compensation afférente aux exercices antérieurs à 2026, ces effectifs s'entendent de ceux dont les cotisations étaient prises en charge par le fonds de solidarité vieillesse, supprimé au 1er janvier 2026 par l'abrogation des articles L. 135-1 à L. 135-5 ; les calculs, régularisations et recours afférents à ces exercices restent régis par les dispositions alors applicables.</p>",
+   "reason": "Coordination nécessaire : le dernier alinéa comptait comme cotisants actifs les effectifs dont les cotisations sont prises en charge par « le fonds mentionné au chapitre V du titre III du livre Ier », c'est-à-dire le fonds de solidarité vieillesse, supprimé au 1er janvier 2026 (L. 135-1 à L. 135-5 abrogés par l'article 24 de la loi n° 2025-199) ; ce chapitre ne comprend plus que le fonds de réserve pour les retraites, qui ne prend en charge aucune cotisation. Les prises en charge correspondantes relèvent désormais de la branche vieillesse en application de L. 222-2-1. Le renvoi est dirigé vers cette branche, comme le projet l'a déjà fait pour les versements de R. 135-16, afin de conserver l'inclusion de ces effectifs que le maintien de l'article voulait préserver ; les exercices antérieurs gardent leur régime. Le renvoi à la section 3 (étudiants), dont tous les articles sont abrogés, est retiré sans effet sur le décompte. Définition du cotisant actif, trois exclusions et inclusion des effectifs pris en charge maintenues ; aucune cotisation ni formalité nouvelle.",
+   "review_notes": "Les exonérations et dispenses totales du 3° ne sont ni instituées ni supprimées ici. Elles restent ouvertes aux situations futures selon leurs textes propres ; leur exclusion statistique et l’exception FSV sont conservées. Les deux références aux sections du livre III ne deviennent pas des conditions de contrat unique. Différence de champ : « les assujettis exonérés ou dispensés totalement du versement des cotisations » est une exclusion du décompte, non une abrogation de leurs avantages. La section 5, lue par L381-20, L381-23 et L381-24, porte sur les invalides de guerre ; la suppression proposée de leur cotisation maladie ne les transforme pas en cotisants vieillesse actifs. Point non vérifiable : aucun article actif de la section 3 du chapitre L381 ne figure dans le corpus consulté ; son renvoi historique et ses éventuels effets résiduels nécessitent les versions abrogées, sans réattribution conjecturale à la nouvelle section 2 des aidants. Le maintien ne valide pas cette filiation historique. Correction de la troisième passe (paquet BL1, défaut vérifié de l'échantillon apparié) : L. 135-1 (LEGIARTI000037290440) et L. 135-2 (LEGIARTI000042683484) figurent au corpus à l'état ABROGE au 1er janvier 2026, avec un lien ABROGE vers l'article 24 de la loi n° 2025-199 ; L. 135-6 (LEGIARTI000051288968) et suivants ne portent plus que sur le fonds de réserve pour les retraites. L. 222-2-1 (LEGIARTI000051288889, ABROGE_DIFF au 1er janvier 2028, et sa version LEGIARTI000054466881 au 1er janvier 2028) lu : la branche prend en charge notamment, au 2°, les sommes représentatives de la prise en compte des périodes de chômage et assimilées par les autres régimes. Le motif antérieur qui présentait l'exception comme celle des « effectifs financés par le fonds de solidarité vieillesse » est rectifié. D134-2 (LEGIARTI000047961321) renvoie au dernier alinéa du présent article pour l'assiette forfaitaire de R. 135-16 : la transition est placée dans ce même dernier alinéa, de sorte que ce renvoi vise toujours l'inclusion des effectifs pris en charge. Même solution que R. 135-16 proposé (AUDIT6-E069, groupe X8). Section 3 « Étudiants » : L381-3 à L381-11 tous abrogés, le dernier au 1er septembre 2018 ; aucun article L, R ou D en vigueur. Réserve : le texte de l'article 24 de la loi n° 2025-199 n'a pas été relu ici ; une éventuelle clause générale de substitution des références au fonds rendrait cette coordination déclarative. Revue IA, sans validation par un juriste.",
+   "status": "rewrite_draft",
+   "reference_checks": [],
+   "classification": "coordination_only",
+   "substantive_impact": {
+    "version": 1,
+    "classification": "coordination_only",
+    "assessment": "Renvoi au fonds de solidarité vieillesse supprimé au 1er janvier 2026 remplacé par la branche vieillesse qui prend en charge les cotisations correspondantes (L. 222-2-1) ; renvoi à une section vide retiré.",
+    "scope_limitations": "Texte de l'article 24 de la loi n° 2025-199 non relu ; effet financier sur la compensation non chiffré.",
+    "new_burdens_review": "Aucune charge nouvelle : aucune déclaration, autorisation, condition ni prélèvement n'est ajouté ; seule la désignation de la disposition visée change.",
+    "effects": [
+     {
+      "kind": "coordination",
+      "measure_id": "compensation-cotisants-actifs-fsv-coordination",
+      "description": "Inclusion dans les cotisants actifs des effectifs dont les cotisations sont prises en charge au titre de la solidarité, rattachée à la branche qui les prend désormais en charge.",
+      "before": "Inclusion des effectifs pris en charge par un fonds supprimé depuis le 1er janvier 2026.",
+      "after": "Inclusion des effectifs pris en charge par la branche vieillesse en application de L. 222-2-1 ; exercices antérieurs inchangés.",
+      "unit": "regime",
+      "affected_population": "Régimes participant à la compensation démographique vieillesse.",
+      "conditions_and_transition": "Exercices antérieurs à 2026 régis par les dispositions alors applicables.",
+      "replacement_or_new_burdens": "Aucune obligation, formalité ni prélèvement de remplacement.",
+      "source_quote": "les effectifs dont les cotisations sont prises en charge par le fonds mentionné au chapitre V du titre III du livre Ier du présent code",
+      "proposed_quote": "les effectifs dont les cotisations sont prises en charge par la branche mentionnée au 3° de l'article L. 200-2 en application de l'article L. 222-2-1"
+     }
+    ]
+   },
+   "benefit_review": "Les exonérations et dispenses totales mentionnées au 3° restent intégralement applicables aux situations futures selon leurs fondements propres : le texte règle seulement leur exclusion du comptage des actifs. L’exception favorable aux effectifs financés par le fonds de solidarité vieillesse demeure ; les assurés volontaires et catégories des sections visées ne perdent aucun droit à prestations. Aucune nouvelle cotisation ne découle de ce maintien.",
+   "substantive_impact_certificate": {
+    "version": 1,
+    "source_sha256": "226ba1ffb3898f3316360a9cd0e96c318f13e13ea30d0e8d3484cad9592a71e0",
+    "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "proposed_sha256": "4ef9d9e3e560bfc3df7b554935c2fefa994a2f1ef44ba61a74e278bb286f6a7b",
+    "assessment_sha256": "20b585a05db7ed7a182a5050894c88d559dd8f0fa0514b9b1888e50e8a28f213",
+    "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
+    "verification": "exact_passages_and_hashes_only",
+    "independent_impact_audit": false,
+    "semantic_review_by_jurist": false
+   },
+   "policy_review_id": "substantive_outcomes_2026_10_19",
+   "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "third_pass_correction": {
+    "objection": "BL1-D134-4",
+    "applied_by": "troisième passe (red-team indépendante)"
+   }
+  },
+  "diagnostics": [
+   {
+    "source_id": "LEGIARTI000006735260",
+    "number": "D134-4",
+    "check": "references_changed",
+    "removed": [],
+    "added": [
+     "L135-1",
+     "L135-5",
+     "L200-2",
+     "L222-2-1"
+    ]
+   }
+  ]
+ }
+]

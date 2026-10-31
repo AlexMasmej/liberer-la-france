@@ -1,0 +1,557 @@
+{
+ "group": "OS11",
+ "read_from": "official-source",
+ "paired_with": "S11",
+ "reference_date": "2026-10-18",
+ "read_on": "2026-10-31",
+ "tool": "CITE_PRODUCTION=1 CITE_SOURCE_ONLY=1 python3 -I tools/cite.py",
+ "articles": [
+  {
+   "sample_id": "S011",
+   "code": "css",
+   "number": "R255-6",
+   "source_id": "LEGIARTI000046021657",
+   "verdict": "0",
+   "families": [],
+   "description": "Suivi quotidien du solde de trésorerie par branche par l'ACOSS, rémunération des soldes : cohérent avec la base légale L. 225-1 (individualisation de la trésorerie de chaque branche) et avec R. 255-7, qui renvoie correctement à R. 255-6.",
+   "evidence": "",
+   "links_read": [
+    "css L225-1 LEGIARTI000042684379",
+    "css R255-7 LEGIARTI000024083611",
+    "css R255-5 LEGIARTI000020882557"
+   ],
+   "links_not_read": "Arrêté fixant le taux d'intérêt (hors corpus) ; L. 225-1-3 non relu."
+  },
+  {
+   "sample_id": "S031",
+   "code": "travail",
+   "number": "L5214-3",
+   "source_id": "LEGIARTI000048849238",
+   "verdict": "0",
+   "families": [],
+   "description": "Affectation des ressources de l'association gestionnaire de l'Agefiph : rédaction 2023 cohérente avec L. 5212-9 (contribution affectée à l'association) et L. 5214-1 ; R. 5214-22 renvoie correctement aux missions de L. 5214-3 ; le renvoi à L. 5212-2 est vivant.",
+   "evidence": "",
+   "links_read": [
+    "travail L5214-1 LEGIARTI000048849242",
+    "travail L5212-9 LEGIARTI000048849245",
+    "travail R5214-22 LEGIARTI000018525810",
+    "travail R5214-21 LEGIARTI000018525812",
+    "travail L5214-3-1 LEGIARTI000048597549",
+    "travail L5212-11 LEGIARTI000037388667"
+   ],
+   "links_not_read": "L. 5212-2 non relu en entier ; convention d'objectifs (hors corpus)."
+  },
+  {
+   "sample_id": "S051",
+   "code": "a1",
+   "number": "38",
+   "source_id": "LEGIARTI000006293466",
+   "verdict": "0",
+   "families": [],
+   "description": "Rendement minimal des bouilleurs de cru. Le régime de l'annexe I a été maintenu par le décret n° 2025-591 (articles 37, 39 et 40 modifiés au 1er juillet 2025 avec des renvois figés au CGI « dans sa rédaction en vigueur » au 31 décembre 2021 ou au 30 juin 2025). L'article 38, qui ne contient aucun renvoi, s'articule avec l'article 39, 5° (déclaration du rendement minimal) et avec l'article 41. Les articles 311 à 324 du CGI sont abrogés ou en ABROGE_DIFF, mais le régime a été repris hors corpus (CIBS) : on ne le compte pas comme défaut.",
+   "evidence": "",
+   "links_read": [
+    "a1 37 LEGIARTI000051821246",
+    "a1 39 LEGIARTI000054363080",
+    "a1 40 LEGIARTI000051821241",
+    "a1 41 LEGIARTI000006293468",
+    "cgi 311-324 (états)"
+   ],
+   "links_not_read": "Code des impositions sur les biens et services (hors corpus) : base légale actuelle du régime des bouilleurs de cru non vérifiée."
+  },
+  {
+   "sample_id": "S071",
+   "code": "css",
+   "number": "R342-5",
+   "source_id": "LEGIARTI000045250252",
+   "verdict": "0",
+   "families": [],
+   "description": "Pension d'invalidité de veuf ou de veuve : le renvoi à R. 341-17 et au « II de l'article R. 341-17 » (période de référence) est exact dans la version de 2023. La comparaison avec le SMIC pour les bénéficiaires sans activité antérieure est cohérente avec le décret n° 2022-257.",
+   "evidence": "",
+   "links_read": [
+    "css R341-17 LEGIARTI000047908363",
+    "css L342-1 LEGIARTI000047453698"
+   ],
+   "links_not_read": "R. 341-4 et R. 341-14 non relus."
+  },
+  {
+   "sample_id": "S091",
+   "code": "urba",
+   "number": "R441-5",
+   "source_id": "LEGIARTI000045422535",
+   "verdict": "0",
+   "families": [],
+   "description": "Pièces complémentaires du permis d'aménager (étude d'impact, décision au cas par cas, étude actualisée). Le NOTA, qui signale l'annulation partielle du décret du 25 mars 2022 par le Conseil d'État, vise R*424-1 et non cet article.",
+   "evidence": "",
+   "links_read": [
+    "NOTA (CE 4 oct. 2023, n° 465921)"
+   ],
+   "links_not_read": "Code de l'environnement L. 122-1-1 et R. 122-2-1 (hors corpus) ; R*424-1 et R. 441-1 non relus."
+  },
+  {
+   "sample_id": "S111",
+   "code": "travail",
+   "number": "L4624-8-2",
+   "source_id": "LEGIARTI000043890473",
+   "verdict": "0",
+   "families": [],
+   "description": "Référentiels d'interopérabilité des systèmes d'information des SPST : cohérent avec L. 4622-9-3, 5°, qui renvoie en retour à cet article, et avec D. 4622-49-1. L'entrée en vigueur au 1er janvier 2024 est conforme au NOTA.",
+   "evidence": "",
+   "links_read": [
+    "travail L4622-9-3 LEGIARTI000043890111",
+    "recherche des renvois (D4622-49-1)"
+   ],
+   "links_not_read": "CSP L. 1111-24 (hors corpus) ; D. 4622-49-1 non relu en entier."
+  },
+  {
+   "sample_id": "S131",
+   "code": "travail",
+   "number": "L1255-10",
+   "source_id": "LEGIARTI000030435071",
+   "verdict": "0",
+   "families": [],
+   "description": "Sanction pénale de l'utilisateur : les renvois à L. 1251-42 (délai de deux jours ouvrables) et au 6° de L. 1251-43 (éléments de rémunération) sont exacts, et les obligations sanctionnées existent.",
+   "evidence": "",
+   "links_read": [
+    "travail L1251-42 LEGIARTI000006901298",
+    "travail L1251-43 LEGIARTI000006901299"
+   ],
+   "links_not_read": "Aucun texte d'application (disposition pénale autonome)."
+  },
+  {
+   "sample_id": "S151",
+   "code": "a2",
+   "number": "206",
+   "source_id": "LEGIARTI000049904359",
+   "verdict": "G",
+   "families": [
+    "F3"
+   ],
+   "description": "Le IV.3 (coefficient d'admission des carburants) renvoie aux « a, b et c du 1° du même 4 » de l'article 298 du CGI, avec une répartition « respectivement » entre essences, gazoles/superéthanol E 85 et gaz de pétrole/pétrole lampant. Or, depuis l'ordonnance n° 2021-1843 (1er janvier 2022), l'article 298, 4, 1° vise au a les gazoles et les essences, le b est abrogé et le c vise les gaz naturels et les GPL. Le renvoi au b est mort et la correspondance des catégories est fausse. Le décret a pourtant été modifié trois fois depuis (2023, 2023 et 2024) sans correction. L'effet pratique est limité, car les pourcentages résultent directement du CGI. Accessoirement, le IV.1 renvoie encore aux « cas décrits aux 2 à 4 » alors que le 4 est abrogé. Calendrier à signaler, sans le compter : l'article 298 est en ABROGE_DIFF au 1er janvier 2027 (ordonnance n° 2025-1247).",
+   "evidence": "LEGIARTI000049904359 (ann. II art. 206, IV.3) : « le coefficient d'admission est calculé en application des dispositions relatives à l'exclusion du droit à déduction fixées aux a, b et c du 1° du même 4 concernant, respectivement, les essences, les gazoles et le superéthanol E 85 et les gaz de pétrole et autres hydrocarbures présentés à l'état gazeux et le pétrole lampant » ; IV.1 : « sauf dans les cas décrits aux 2 à 4 » / « 4. (Abrogé) ». LEGIARTI000044873424 (CGI art. 298, 4, 1°) : « a) Dans la limite de 20 % de son montant, les carburants relevant des catégories fiscales des gazoles et des essences » ; « b) (Abrogé) ; ».",
+   "links_read": [
+    "cgi 298 LEGIARTI000044873424",
+    "a2 205 LEGIARTI000006294407",
+    "a2 209 LEGIARTI000046086713"
+   ],
+   "links_not_read": "CGI 256 C, 266 et 297 A non relus ; CIBS L. 312-22 (hors corpus) ; texte de reprise de l'article 298 après le 1er janvier 2027 non identifié."
+  },
+  {
+   "sample_id": "S171",
+   "code": "cch",
+   "number": "L541-1",
+   "source_id": "LEGIARTI000041586672",
+   "verdict": "0",
+   "families": [],
+   "description": "Opposition non suspensive aux titres exécutoires (astreintes, exécution d'office, relogement) : les renvois à L. 511-15, L. 511-16, L. 184-1 et L. 521-3-2 sont vivants et correspondent aux objets visés.",
+   "evidence": "",
+   "links_read": [
+    "cch L184-1 LEGIARTI000041571395",
+    "cch L511-15 LEGIARTI000049398505",
+    "cch L511-16 LEGIARTI000042338102",
+    "cch L521-3-2 LEGIARTI000049398947"
+   ],
+   "links_not_read": "CGCT L. 1617-5 (hors corpus)."
+  },
+  {
+   "sample_id": "S191",
+   "code": "travail",
+   "number": "R6523-2",
+   "source_id": "LEGIARTI000037584023",
+   "verdict": "G",
+   "families": [
+    "F3",
+    "F5"
+   ],
+   "description": "Dispense outre-mer de l'obligation de financement de la formation professionnelle sous un seuil de salaires. (1) L'article place cette obligation dans « les articles L. 6313-1 et suivants ». Depuis 2019, L. 6313-1 énumère seulement les actions concourant au développement des compétences ; l'obligation de financement figure aux articles L. 6131-1 et L. 6331-1. R. 6523-1 cite d'ailleurs correctement ces articles. (2) Le seuil est exprimé en « salaire hebdomadaire minimum de croissance », notion qui n'existe pas : le SMIC est horaire. (3) La dispense réglementaire d'une contribution légale (CUFPA, L. 6131-2 et L. 6331-1, recouvrée par l'URSSAF sans seuil) n'a pas de base législative identifiable. Un problème de compétence est possible, à confirmer.",
+   "evidence": "LEGIARTI000037584023 : « ne sont soumis à l'obligation de participer au financement de la formation professionnelle continue, prévue par les articles L. 6313-1 et suivants, que si le montant total des salaires versés pendant l'année est au moins égal à 520 fois le salaire hebdomadaire minimum de croissance ». LEGIARTI000037385660 (L. 6313-1) : « Les actions concourant au développement des compétences qui entrent dans le champ d'application des dispositions relatives à la formation professionnelle sont : ».",
+   "links_read": [
+    "travail L6313-1 LEGIARTI000037385660",
+    "travail R6523-1 LEGIARTI000041611735",
+    "travail L6131-1 LEGIARTI000043709709",
+    "travail L6331-1 LEGIARTI000044981927",
+    "travail L6523-1 LEGIARTI000038987386",
+    "travail L6523-2 LEGIARTI000038987395"
+   ],
+   "links_not_read": "L. 6131-2, L. 6331-3 et suivants, et L. 6523-1-1 et suivants non relus ; historique antérieur à 2018 non relu."
+  },
+  {
+   "sample_id": "S211",
+   "code": "travail",
+   "number": "L2212-1",
+   "source_id": "LEGIARTI000033023348",
+   "verdict": "G",
+   "families": [
+    "F3"
+   ],
+   "description": "L'article lui-même est sain : ses renvois à L. 2135-9 et L. 2135-11, 3° (financement des formations communes) sont cohérents. Le défaut se trouve dans le texte d'application R. 2212-3, qui organise le suivi des formations communes. Pour les salariés, il renvoie au « plan de formation » (devenu plan de développement des compétences) et aux « 2° et 8° de l'article L. 6313-1 ». Or L. 6313-1 ne compte que quatre items depuis 2019 : le renvoi au 8° est mort et le 2° vise désormais les bilans de compétences. Accessoirement, le NOTA de R. 2212-2 renvoie à un « 5° de l'article R. 2212-2 » qui n'existe pas.",
+   "evidence": "LEGIARTI000037387777 (R. 2212-3, 1°) : « soit du plan de formation mentionné à l'article L. 6312-1 pour les actions de formation mentionnées aux 2° et 8° de l'article L. 6313-1 ». LEGIARTI000037385660 (L. 6313-1) : « 4° Les actions de formation par apprentissage, au sens de l'article L. 6211-2. » (dernier item).",
+   "links_read": [
+    "travail R2212-1 LEGIARTI000034570309",
+    "travail R2212-2 LEGIARTI000034570324",
+    "travail R2212-3 LEGIARTI000037387777",
+    "travail L2212-2 LEGIARTI000033010709",
+    "travail L2135-9 LEGIARTI000028689579",
+    "travail L2135-11 LEGIARTI000051219939",
+    "travail L6313-1 LEGIARTI000037385660"
+   ],
+   "links_not_read": "L. 6312-1 et L. 2145-5 non relus ; textes de la fonction publique cités par R. 2212-3 (hors corpus)."
+  },
+  {
+   "sample_id": "S231",
+   "code": "travail",
+   "number": "R713-14",
+   "source_id": "LEGIARTI000018519056",
+   "verdict": "G",
+   "families": [
+    "F3",
+    "F4",
+    "F7"
+   ],
+   "description": "Article de l'ancienne partie réglementaire (industries électriques et gazières), maintenu par l'article 10 du décret n° 2008-244. Il organise l'élection d'un « comité central d'entreprise » par les « comités d'établissement », institutions supprimées et remplacées par le CSE central et les CSE d'établissement (ordonnance n° 2017-1386). Il renvoie, à défaut d'accord, au « quatrième alinéa de l'article L. 435-4 » de l'ancien code, article abrogé dès le 3 août 2005 (LEGIARTI000006649287, ABROGE 2005-08-03). Il contient en outre la coquille « aliéna ». Le texte est inapplicable en l'état.",
+   "evidence": "LEGIARTI000018519056 : « Lorsqu'il existe un comité central d'entreprise, les membres titulaires et suppléants sont élus, pour chacun des collèges, par l'ensemble des membres titulaires des comités d'établissement » ; « Les modalités d'application du premier et du deuxième aliéna du présent article sont fixées par des accords d'entreprise. A défaut d'accord, il est procédé comme indiqué au quatrième alinéa de l'article L. 435-4. » ; NOTA (décret n° 2008-244, art. 10) : « demeurent en vigueur, dans leur rédaction à la date de publication du présent décret, les dispositions des articles R. 713-1 à R. 713-14 ».",
+   "links_read": [
+    "ancien L435-4 (états : ABROGE 2005-08-03)",
+    "travail R713-13 (état)",
+    "travail R713-1 (ABROGE 2016)",
+    "travail L2327-1 (ABROGE 2018)"
+   ],
+   "links_not_read": "Loi du 8 avril 1946, art. 5 (hors corpus) ; statut national du personnel des IEG (hors corpus) ; R. 713-13 non relu en entier."
+  },
+  {
+   "sample_id": "S251",
+   "code": "travail",
+   "number": "L5424-1",
+   "source_id": "LEGIARTI000038951954",
+   "verdict": "0",
+   "families": [],
+   "description": "Auto-assurance chômage des employeurs publics : renvois à L. 5422-2 et L. 5422-3 vivants ; cas de la rupture d'un commun accord (2019) cohérent. La mention de France Télécom renvoie à la loi n° 90-568 (hors corpus), ce qui n'est pas un défaut.",
+   "evidence": "",
+   "links_read": [
+    "travail L5422-2 LEGIARTI000054241899",
+    "travail L5422-3 LEGIARTI000037388297"
+   ],
+   "links_not_read": "L. 5424-2 et suivants et décrets d'application (R. 5424-1 et suivants) non relus ; loi n° 90-568 (hors corpus)."
+  },
+  {
+   "sample_id": "S271",
+   "code": "urba",
+   "number": "R151-47",
+   "source_id": "LEGIARTI000031720535",
+   "verdict": "0",
+   "families": [],
+   "description": "Desserte des terrains et collecte des déchets : renvoi exact à L. 151-39, dont il est l'application.",
+   "evidence": "",
+   "links_read": [
+    "urba L151-39 LEGIARTI000031211247"
+   ],
+   "links_not_read": "Autres articles R. 151-x du règlement du PLU non relus."
+  },
+  {
+   "sample_id": "S291",
+   "code": "travail",
+   "number": "R6323-9-1",
+   "source_id": "LEGIARTI000040340619",
+   "verdict": "0",
+   "families": [],
+   "description": "Ancienneté requise pour le projet de transition professionnelle des intermittents et des intérimaires : il applique le deuxième alinéa de L. 6323-17-1 (décret en Conseil d'État) ; le « congé spécifique » de L. 6323-17-1 existe. Les versions de L. 6323-17-2 à venir (2027 et 2028) ne touchent pas cet article.",
+   "evidence": "",
+   "links_read": [
+    "travail L6323-17-1 LEGIARTI000047452269",
+    "travail L6323-17-2 (versions 2023, 2027, 2028)"
+   ],
+   "links_not_read": "R. 6323-9 non relu ; L. 7121-2 et L. 1251-2 non relus."
+  },
+  {
+   "sample_id": "S311",
+   "code": "travail",
+   "number": "R2524-3",
+   "source_id": "LEGIARTI000018534780",
+   "verdict": "0",
+   "families": [],
+   "description": "Composition de la Cour supérieure d'arbitrage, conforme à L. 2524-8 (présidence par le vice-président du Conseil d'État ou un président de section, composition paritaire).",
+   "evidence": "",
+   "links_read": [
+    "travail L2524-7 LEGIARTI000006902423",
+    "travail L2524-8 LEGIARTI000006902424",
+    "travail R2524-2 LEGIARTI000018534782",
+    "travail R2524-4 LEGIARTI000018534778"
+   ],
+   "links_not_read": ""
+  },
+  {
+   "sample_id": "S331",
+   "code": "travail",
+   "number": "R4543-4",
+   "source_id": "LEGIARTI000019940102",
+   "verdict": "0",
+   "families": [],
+   "description": "Mise à jour de l'étude de sécurité spécifique pour les interventions sur ascenseurs. Le renvoi à L. 4131-1 (danger grave et imminent) est exact et cohérent avec R. 4543-1 et R. 4543-3.",
+   "evidence": "",
+   "links_read": [
+    "travail R4543-1 LEGIARTI000019940113",
+    "travail R4543-3 LEGIARTI000019940105",
+    "travail L4131-1 LEGIARTI000006903155"
+   ],
+   "links_not_read": "R. 4543-2 et textes du CCH sur le contrôle technique des ascenseurs non relus."
+  },
+  {
+   "sample_id": "S351",
+   "code": "css",
+   "number": "L173-6",
+   "source_id": "LEGIARTI000006741462",
+   "verdict": "0",
+   "families": [],
+   "description": "Cumul des avantages en cas de polyaffiliation au régime des cultes. Aucun texte du chapitre 173 ne renvoie à L. 173-6, mais le décret est seulement facultatif (« éventuellement, dans les limites fixées par décret »).",
+   "evidence": "",
+   "links_read": [
+    "css chapitre 173 (L., R. et D. en vigueur, recherche des renvois)"
+   ],
+   "links_not_read": "Régime des cultes L. 382-15 et suivants, et D. 382-x non relus."
+  },
+  {
+   "sample_id": "S371",
+   "code": "urba",
+   "number": "L163-4",
+   "source_id": "LEGIARTI000031211504",
+   "verdict": "0",
+   "families": [],
+   "description": "Avis de la chambre d'agriculture et de la CDPENAF sur la carte communale : renvoi au code rural (hors corpus) sans indice de disparition ; cohérent avec L. 163-3, L. 163-5 et R. 163-1.",
+   "evidence": "",
+   "links_read": [
+    "urba L163-3 LEGIARTI000031211500",
+    "urba L163-5 LEGIARTI000052866382",
+    "urba R163-1 LEGIARTI000031720387"
+   ],
+   "links_not_read": "Code rural L. 112-1-1 (hors corpus) ; R. 163-2 et suivants non relus."
+  },
+  {
+   "sample_id": "S391",
+   "code": "css",
+   "number": "D713-23",
+   "source_id": "LEGIARTI000041969063",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "Ordonnancement des cotisations des retraités fonctionnaires et militaires (D. 713-22) au profit de la CNMSS et de la CNAM. La révision annuelle se réfère au « compte général de l'administration des finances », document disparu avec la LOLF (compte général de l'État). L'appellation CNAM a bien été mise à jour en 2020, mais pas cette référence. Effet limité.",
+   "evidence": "LEGIARTI000041969063 : « peuvent faire l'objet d'une révision, lors de la publication du compte général de l'administration des finances concernant ladite année ».",
+   "links_read": [
+    "css D713-22 LEGIARTI000036467685",
+    "css L713-21 LEGIARTI000037064448"
+   ],
+   "links_not_read": "L. 131-9, D. 711-5, D. 712-39 et D. 713-16 non relus ; LOLF (hors corpus)."
+  },
+  {
+   "sample_id": "S411",
+   "code": "travail",
+   "number": "L5134-113",
+   "source_id": "LEGIARTI000026538123",
+   "verdict": "0",
+   "families": [],
+   "description": "Durée de l'aide à l'emploi d'avenir : renvoi aux 1° et 2° de L. 5134-19-1 (France Travail, organismes de L. 5314-1, président du conseil départemental) vivant. L'absence de nouvelles prescriptions relève de choix budgétaires, pas d'un défaut du texte.",
+   "evidence": "",
+   "links_read": [
+    "travail L5134-19-1 LEGIARTI000038902605",
+    "travail L5134-110 LEGIARTI000048846885"
+   ],
+   "links_not_read": "R. 5134-161 et suivants (décrets d'application) non relus."
+  },
+  {
+   "sample_id": "S431",
+   "code": "travail",
+   "number": "R1431-7",
+   "source_id": "LEGIARTI000018536647",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "Suppléants au Conseil supérieur de la prud'homie : la première phrase est grammaticalement incohérente (« suppléants à celui des titulaires » ; il faut lire « en nombre égal à celui des titulaires »). Le sens se reconstitue sans peine, et la composition de R. 1431-4 à R. 1431-6 est par ailleurs cohérente (11 + 11).",
+   "evidence": "LEGIARTI000018536647 : « Des membres employeurs et salariés suppléants à celui des titulaires sont désignés en nombre égal dans les mêmes conditions que ces derniers. »",
+   "links_read": [
+    "travail R1431-4 LEGIARTI000033122525",
+    "travail R1431-5 LEGIARTI000035423558",
+    "travail R1431-6 LEGIARTI000035423556",
+    "travail R1431-8 LEGIARTI000035423554"
+   ],
+   "links_not_read": "Base légale L. 1431-1 non relue."
+  },
+  {
+   "sample_id": "S451",
+   "code": "css",
+   "number": "D252-2",
+   "source_id": "LEGIARTI000006735944",
+   "verdict": "0",
+   "families": [],
+   "description": "Désignation des ministres signataires de l'arrêté prévu à L. 252-2. L. 252-2 prévoit bien un « arrêté interministériel ». Le mécanisme de L. 252-2 (dotations et excédents des CPAM) est ancien, mais l'article est cohérent.",
+   "evidence": "",
+   "links_read": [
+    "css L252-2 LEGIARTI000006742192"
+   ],
+   "links_not_read": "L. 252-3 et R. 252-7 non relus."
+  },
+  {
+   "sample_id": "S471",
+   "code": "css",
+   "number": "L932-23-3",
+   "source_id": "LEGIARTI000034387688",
+   "verdict": "0",
+   "families": [],
+   "description": "Participation aux excédents des institutions de prévoyance et des IRPS : cohérent avec L. 942-9 (substitution de L. 932-23-3 à L. 132-29 du code des assurances) et avec R. 931-4-1, qui renvoie à cet article.",
+   "evidence": "",
+   "links_read": [
+    "css L942-9 LEGIARTI000038837064",
+    "css R931-4-1 LEGIARTI000030585522"
+   ],
+   "links_not_read": "Décret fixant les conditions de participation (articles A. 932-3-x et D. 932-x) non relu en entier ; code des assurances (hors corpus)."
+  },
+  {
+   "sample_id": "S491",
+   "code": "css",
+   "number": "L713-6",
+   "source_id": "LEGIARTI000027432173",
+   "verdict": "m",
+   "families": [
+    "F3",
+    "F5"
+   ],
+   "description": "Veuves et veufs de guerre de militaires de carrière. L'article, rendu neutre en 2013, aligne leurs droits sur ceux des « veuves et veufs titulaires d'une pension de réversion », mais L. 713-5, qui ouvre ces droits, ne vise toujours que « les veuves ». Par ailleurs, L. 713-18, qui finance les risques de L. 713-6, renvoie encore à L. 713-3, abrogé depuis 1996. Défauts limités et situés dans les liens.",
+   "evidence": "LEGIARTI000027432173 : « ont droit aux mêmes prestations que les veuves et veufs titulaires d'une pension de réversion » ; LEGIARTI000006744025 (L. 713-5) : « ainsi que les veuves titulaires d'une pension de réversion » ; LEGIARTI000006744036 (L. 713-18) : « La couverture des risques mentionnés aux articles L. 713-3, L. 713-5 et L. 713-6 » (L. 713-3 : LEGIARTI000006744293, ABROGE 1996-12-29).",
+   "links_read": [
+    "css L713-5 LEGIARTI000006744025",
+    "css L713-18 LEGIARTI000006744036",
+    "css L713-7 LEGIARTI000006744295",
+    "css L713-3 LEGIARTI000006744293",
+    "css L713-23 (état)"
+   ],
+   "links_not_read": "Code des pensions civiles et militaires de retraite L. 66 (hors corpus)."
+  },
+  {
+   "sample_id": "S511",
+   "code": "cgi",
+   "number": "41",
+   "source_id": "LEGIARTI000020033991",
+   "verdict": "m",
+   "families": [
+    "F5"
+   ],
+   "description": "Report d'imposition en cas de transmission à titre gratuit d'une entreprise individuelle. Le d bis (partage avec soulte) maintient le report, mais les états de suivi du IV b et c ne visent que les plus-values reportées « conformément aux a, c et d du I », sans le d bis. Coquille au d (« à la date ou »). Renvoi aux I et II de l'article 151 octies exact. Lacune déclarative mineure.",
+   "evidence": "LEGIARTI000020033991 : « dont l'imposition est reportée conformément aux a, c et d du I » (IV b et c) ; « à la date ou l'un des événements cités au a se réalise » (I d).",
+   "links_read": [
+    "cgi 151 octies (structure I à IV, en vigueur)",
+    "a3 41-0 A bis A LEGIARTI000019613253",
+    "recherche des renvois à l'article 41 dans les annexes"
+   ],
+   "links_not_read": "Décret du V (obligations déclaratives) non identifié avec certitude dans l'annexe III ; 39 duodecies à 39 quindecies et 151 septies non relus."
+  },
+  {
+   "sample_id": "S531",
+   "code": "urba",
+   "number": "R*322-20",
+   "source_id": "LEGIARTI000026854717",
+   "verdict": "0",
+   "families": [],
+   "description": "Publication de l'arrêté de remembrement d'une AFU : renvois exacts à R*322-15 (2° à 6°) et à L. 322-6 (renouvellement de la publicité des droits reportés).",
+   "evidence": "",
+   "links_read": [
+    "urba R*322-15 LEGIARTI000044929676",
+    "urba L322-6 LEGIARTI000029738274"
+   ],
+   "links_not_read": "Décrets n° 55-22 et n° 55-1350 (hors corpus)."
+  },
+  {
+   "sample_id": "S551",
+   "code": "cch",
+   "number": "R641-10",
+   "source_id": "LEGIARTI000006900539",
+   "verdict": "G",
+   "families": [
+    "F1"
+   ],
+   "description": "Notification des réquisitions de logements. Depuis la loi ELAN (version de L. 641-1 du 25 novembre 2018), la réquisition préfectorale ne porte plus que sur les « locaux vacants » : les locaux « inoccupés ou insuffisamment occupés » ont été retirés, de même que la proposition du service municipal du logement. R. 641-10 (et R. 641-7) organisent toujours la réquisition des locaux « inoccupés ou insuffisamment occupés ». La procédure de notification reste utilisable pour les locaux vacants, mais le décret organise un dispositif que la loi ne prévoit plus.",
+   "evidence": "LEGIARTI000006900539 : « Les réquisitions des locaux vacants, inoccupés ou insuffisamment occupés sont notifiées aux frais du bénéficiaire, par le préfet » ; LEGIARTI000037667255 (L. 641-1 en vigueur) : « à la prise de possession partielle ou totale des locaux vacants, en vue de les attribuer aux personnes mentionnées à l'article L. 641-2 » ; LEGIARTI000006825887 (L. 641-1 avant 2018) : « des locaux à usage d'habitation vacants, inoccupés ou insuffisamment occupés ».",
+   "links_read": [
+    "cch L641-1 (versions 1978 à 2018)",
+    "cch L641-3 LEGIARTI000037667247",
+    "cch L621-1 LEGIARTI000006825830",
+    "cch L621-2 LEGIARTI000037669855",
+    "cch R641-7 LEGIARTI000006900535",
+    "cch R641-9 LEGIARTI000006900537",
+    "cch R641-11 LEGIARTI000006900541"
+   ],
+   "links_not_read": "L. 641-2 et L. 641-4 et suivants non relus."
+  },
+  {
+   "sample_id": "S571",
+   "code": "a3",
+   "number": "49 septies ZZ bis",
+   "source_id": "LEGIARTI000050175598",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "Calcul du crédit d'impôt du prêt avance mutation (art. 244 quater T du CGI) : cohérent avec le II et le VIII de la loi et avec L. 312-1 du CCH (cinquième et dernier alinéa : société de gestion). Deux scories : le taux de référence est défini « à la maturité » sans dire laquelle, et l'article écrit « d'intérêt perçus ». Sans effet sérieux.",
+   "evidence": "LEGIARTI000050175598 : « Le taux d'intérêt de référence i est le taux d'intérêt annuel de la courbe des zéros coupons du marché interbancaire à la maturité. » ; « pour compenser l'absence d'intérêt perçus ».",
+   "links_read": [
+    "cgi 244 quater T LEGIARTI000049641580",
+    "cch L312-1 LEGIARTI000041471383"
+   ],
+   "links_not_read": "Code de la consommation L. 315-2 (hors corpus) ; article 49 septies ZZ (PTZ) non relu pour comparaison."
+  },
+  {
+   "sample_id": "S591",
+   "code": "travail",
+   "number": "L5214-1",
+   "source_id": "LEGIARTI000048849242",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "Fonds de développement pour l'insertion des handicapés. Depuis 2023, l'association gestionnaire du fonds « attribue des subventions à ce fonds ». La formule est circulaire, puisque le fonds, sans personnalité morale, est géré par cette même association. Elle s'explique par l'affectation de la contribution à l'association (L. 5212-9). Rédaction maladroite sans effet démontré ; les décrets R. 5214-19 à R. 5214-22 restent cohérents.",
+   "evidence": "LEGIARTI000048849242 : « La gestion de ce fonds est confiée à une association [...]. Cette association attribue des subventions à ce fonds, dans la limite des contributions qu'elle perçoit. »",
+   "links_read": [
+    "travail L5212-9 LEGIARTI000048849245",
+    "travail L5214-3 LEGIARTI000048849238",
+    "travail R5214-19 LEGIARTI000018525816",
+    "travail R5214-20 LEGIARTI000018525814",
+    "travail R5214-21 LEGIARTI000018525812",
+    "travail L5212-11 LEGIARTI000037388667"
+   ],
+   "links_not_read": "Loi de finances ou LFSS d'origine (hors corpus) ; statuts agréés."
+  },
+  {
+   "sample_id": "S611",
+   "code": "travail",
+   "number": "R6261-18",
+   "source_id": "LEGIARTI000039115775",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "Rapports des experts consulaires en Alsace-Moselle : les renvois à R. 6251-3 et R. 6261-16 sont vivants. Le texte lié R. 6261-16, modifié en 2022, a remplacé la mention des « départements de la Moselle, du Bas-Rhin et du Haut-Rhin » par la « chambre de métiers et de l'artisanat de région Grand Est ». Son second alinéa garde pourtant « de ces mêmes départements », qui n'a plus d'antécédent. L'intitulé du titre VI permet de rétablir le sens. Défaut mineur, situé dans le lien.",
+   "evidence": "LEGIARTI000046074439 (R. 6261-16) : « désignés par la chambre de métiers et de l'artisanat de région Grand Est » ; « désignés par les chambres de commerce et d'industrie territoriales de ces mêmes départements ». Version antérieure LEGIARTI000039115788 : « chambre régionale de métiers et de l'artisanat des départements de la Moselle, du Bas-Rhin et du Haut-Rhin ».",
+   "links_read": [
+    "travail R6261-16 LEGIARTI000046074439 et LEGIARTI000039115788",
+    "travail R6261-17 LEGIARTI000039115779",
+    "travail R6251-3 LEGIARTI000037872700"
+   ],
+   "links_not_read": "R. 6251-1 et R. 6251-2 et base légale L. 6261-x non relus."
+  },
+  {
+   "sample_id": "S631",
+   "code": "urba",
+   "number": "R*442-14",
+   "source_id": "LEGIARTI000006819486",
+   "verdict": "0",
+   "families": [],
+   "description": "Garantie d'achèvement des travaux de lotissement : cohérent avec R*442-13, R*442-15 et R*442-16, qui y renvoient. Le terme « établissement financier » est ancien, mais ce n'est pas un défaut caractérisé.",
+   "evidence": "",
+   "links_read": [
+    "urba R*442-13 LEGIARTI000006819794",
+    "urba R*442-15 LEGIARTI000006820124",
+    "urba R*442-16 LEGIARTI000006820125"
+   ],
+   "links_not_read": "CMF L. 515-4 à L. 515-12 (hors corpus) : existence actuelle non vérifiée."
+  }
+ ]
+}
