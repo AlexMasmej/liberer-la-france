@@ -14,7 +14,7 @@ La revue recherche les contradictions, les fragilités juridiques, les effets in
 
 > **29 octobre 2026 : corrections appliquées.** Les corrections des objections P0 et P1, et celles des issues GitHub qui relèvent d'une contradiction, ont été appliquées au projet, selon les orientations inspirées du programme 2027 de David Lisnard : voir [`reports/applied/CORRECTIONS-APPLIQUEES.md`](reports/applied/CORRECTIONS-APPLIQUEES.md) et le dossier `apply/`.
 
-> **Fiabilité mesurée (30 octobre 2026).** Six audits par tirage aléatoire (1 879 articles lus à l'aveugle) donnent un taux de défauts grossiers d'environ **3,4 % ± 0,8** des articles (64 / 1 879), après plus de 1 100 corrections appliquées ; aucune baisse n'est mesurable d'une ronde à l'autre. Méthode, résultats, limites et façon de signaler une erreur : [`audit/AUDIT-ET-BALAYAGES.md`](audit/AUDIT-ET-BALAYAGES.md).
+> **Fiabilité mesurée (31 octobre 2026).** Six audits par tirage aléatoire (1 879 articles lus à l'aveugle) donnent un taux de défauts grossiers d'environ **3,4 % ± 0,8** des articles (64 / 1 879), après plus de 1 100 corrections appliquées ; aucune baisse n'est mesurable d'une ronde à l'autre. Une lecture systématique a ensuite couvert les 2 740 articles réécrits du CGI et de ses annexes : 96 défauts grossiers (3,5 %), tous corrigés sauf 10 (réformes de TVA écrites dans des subdivisions reprises au CIBS, hors corpus, et un arbitrage). Méthode, résultats, limites et façon de signaler une erreur : [`audit/AUDIT-ET-BALAYAGES.md`](audit/AUDIT-ET-BALAYAGES.md).
 
 ## Commencer ici
 

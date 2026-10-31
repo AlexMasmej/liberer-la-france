@@ -109,33 +109,56 @@
     "source_id": "LEGIARTI000030625675",
     "source_sha256": "98efdd66266528101e61f888d73784e69106d7e9f12999ee9bedc65e308383db",
     "number": "50-0 BC",
-    "proposed_xml": null,
-    "reason": "Maintien nécessaire après examen : le document relie la vente à son traitement fiscal par les produits, la destination et la date. Les deux dispenses b, d et f réduisent déjà les données à bord. Supprimer davantage sans coordination des conditions de vente exonérée affaiblirait la justification de l’avantage. La reformulation antérieure est abandonnée sans gain revendiqué.",
-    "review_notes": "111-0 HB et HC lus entièrement. Tension préexistante entre le statut fiscal exigé par HC et la dispense de f ici : harmonisation explicite de HC nécessaire, sans retirer la dispense favorable. Aucun renvoi nouveau ; aucune extension de taxe. Les conditions de destination et de ventes exclusivement en droits acquittés sont conservées.",
-    "status": "retained_unchanged",
-    "classification": "retained_necessary",
+    "proposed_xml": "<p>Le document commercial mentionné aux articles 111-0 HB et 111-0 HC de l'annexe III au code général des impôts comprend les informations suivantes :</p>\n<p>a la nature, la valeur unitaire, le nombre des articles achetés et vendus ;</p>\n<p>b l'identité de l'acquéreur ;</p>\n<p>c le numéro de vol ou la liaison maritime concernée ;</p>\n<p>d le lieu de destination figurant sur le titre de transport ;</p>\n<p>e la date de la transaction ;</p>\n<p>f l'indication “ ventes en exonération des droits et taxes ” ou “ ventes en droits acquittés ”, selon le cas.</p>\n<p>Pour les ventes en droits acquittés, dans les comptoirs de vente comme dans les boutiques de vente à bord, les informations reprises aux points b et d ne sont pas exigées.</p>\n<p>Pour les boutiques de vente à bord d'aéronefs, les informations reprises aux points b, d et f ne sont pas exigées.</p>\n<p>Pour les boutiques de vente à bord de navires qui n'effectuent que des ventes en droits acquittés à des passagers à destination d'un autre Etat membre de l'Union européenne, les informations reprises aux points b, d et f sont facultatives.</p>\n<p>La dispense des informations reprises aux points b et d pour les ventes en droits acquittés s'applique aux ventes effectuées à compter de l'entrée en vigueur de la réforme des articles 111-0 HB et 111-0 HC de l'annexe III au code général des impôts. Les documents relatifs aux ventes antérieures restent conservés selon les règles qui leur sont applicables.</p>",
+    "reason": "Coordination de fond avec les articles 111-0 HB et 111-0 HC de l'annexe III proposés, que le présent arrêté applique : ces décrets suppriment, pour toute vente en droits acquittés, l'identité de l'acheteur et sa destination sur le document commercial et interdisent à l'arrêté de les imposer. Les points b et d cessent donc d'être exigés pour ces ventes. Les ventes exonérées restent nominatives avec leur destination ; les points a, c, e et f et les deux dispenses existantes (aéronefs, navires ne vendant qu'en droits acquittés) sont conservés sans changement. Aucune mention ni formalité nouvelle n'est créée.",
+    "review_notes": "Correction de la troisième passe (objection TA-T108-01) : le texte maintenu exigeait b (identité) et d (destination figurant sur le titre de transport) pour toute vente en comptoir et pour les ventes à bord des navires effectuant aussi des ventes exonérées, en contradiction avec 111-0 HB (« Ces deux dernières informations ne sont pas exigées au titre du présent article pour une vente en droits acquittés » ; l'arrêté « ne peut imposer l'identité et la destination finale pour les ventes en droits acquittés ») et 111-0 HC (« Pour toute vente en droits acquittés, le document commercial n'a pas à indiquer le nom du voyageur ni la destination figurant sur son titre de transport »). Point laissé à l'auteur : le point c (numéro de vol) reste exigé pour les ventes en comptoir en droits acquittés ; il peut être recueilli sans présentation du titre de transport, dont 111-0 HB dispense, mais sa suppression pour ces ventes relèverait d'un arbitrage. La tension entre la dispense du point f et le statut fiscal exigé par 111-0 HC est réglée dans 111-0 HC (objection TA-T108-02), qui fonde expressément cette dispense. Revue IA, sans validation par un juriste.",
+    "status": "rewrite_draft",
+    "classification": "coordination_only",
     "substantive_impact": {
       "version": 1,
-      "classification": "retained_necessary",
-      "assessment": "Maintien nécessaire après examen : le document relie la vente à son traitement fiscal par les produits, la destination et la date. Les deux dispenses b, d et f réduisent déjà les données à bord. Supprimer davantage sans coordination des conditions de vente exonérée affaiblirait la justification de l’avantage. La reformulation antérieure est abandonnée sans gain revendiqué.",
-      "scope_limitations": "111-0 HB et HC lus entièrement. Tension préexistante entre le statut fiscal exigé par HC et la dispense de f ici : harmonisation explicite de HC nécessaire, sans retirer la dispense favorable. Aucun renvoi nouveau ; aucune extension de taxe. Les conditions de destination et de ventes exclusivement en droits acquittés sont conservées.",
-      "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées par aucun dépôt, registre ou justificatif nouveau. Les contrôles existants demeurent ; aucun solde global des codes n’est chiffré.",
-      "effects": []
+      "classification": "coordination_only",
+      "assessment": "Coordination de l'arrêté avec 111-0 HB et 111-0 HC de l'annexe III proposés, qui suppriment l'identité de l'acheteur et sa destination sur le document commercial des ventes en droits acquittés et interdisent à l'arrêté de les imposer. L'allègement est celui de ces articles ; il n'est pas compté une seconde fois.",
+      "scope_limitations": "Seuls les points b et d pour les ventes en droits acquittés sont touchés ; les points a, c, e et f, les ventes exonérées et les deux dispenses existantes sont inchangés. Le maintien du point c pour les ventes en comptoir en droits acquittés reste un point laissé à l'auteur.",
+      "new_burdens_review": "Aucune charge nouvelle identifiée : aucune mention, pièce ni formalité n'est ajoutée ; les documents des ventes antérieures restent conservés selon leurs règles.",
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "accises-ventes-taxees-donnees-voyageur",
+          "description": "Retrait des points b et d de l'arrêté pour les ventes en droits acquittés, par coordination avec 111-0 HB et 111-0 HC.",
+          "before": "Identité de l'acquéreur et lieu de destination exigés pour toute vente en comptoir et pour les ventes à bord des navires effectuant aussi des ventes exonérées.",
+          "after": "Identité et destination non exigées pour toute vente en droits acquittés ; ventes exonérées inchangées.",
+          "unit": "legal_duty",
+          "affected_population": "Entrepositaires agréés exploitant des comptoirs de vente et responsables de boutiques de vente à bord.",
+          "conditions_and_transition": "Ventes effectuées à compter de l'entrée en vigueur de la réforme de 111-0 HB et 111-0 HC ; documents antérieurs conservés selon leurs règles.",
+          "replacement_or_new_burdens": "Aucune mention ni formalité de remplacement ; mesure déjà comptée en 111-0 HB et 111-0 HC.",
+          "source_quote": "b l'identité de l'acquéreur ;",
+          "proposed_quote": "Pour les ventes en droits acquittés, dans les comptoirs de vente comme dans les boutiques de vente à bord, les informations reprises aux points b et d ne sont pas exigées."
+        }
+      ]
     },
-    "benefit_review": "Les mentions b, d et f restent dispensées pour les aéronefs et facultatives pour les navires ne vendant qu’en droits acquittés à destination d’un autre État membre. Ces avantages restent ouverts aux ventes futures ; les ventes exonérées et leurs fondements ne sont pas supprimés.",
+    "benefit_review": "Les mentions b, d et f restent dispensées pour les aéronefs et facultatives pour les navires ne vendant qu’en droits acquittés à destination d’un autre État membre ; les mentions b et d ne sont plus exigées pour toute vente en droits acquittés, conformément à 111-0 HB et 111-0 HC proposés. Ces avantages restent ouverts aux ventes futures ; les ventes exonérées et leurs fondements ne sont pas supprimés.",
     "substantive_impact_certificate": {
       "version": 1,
       "source_sha256": "98efdd66266528101e61f888d73784e69106d7e9f12999ee9bedc65e308383db",
       "source_notes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "proposed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "assessment_sha256": "cb2c4049c954086eb20b98ecfaa2776050d90bca4c0890d73051690c80064728",
+      "proposed_sha256": "4baac7cb8028eb6423c1ce3ab45c6456ed2615c78acee6dce26b263ed2a2a728",
+      "assessment_sha256": "82c7c8a54fa9fbe35f1284f0f17eda8af200988e803a1f8ce4745d27592025a6",
       "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
       "verification": "exact_passages_and_hashes_only",
       "independent_impact_audit": false,
       "semantic_review_by_jurist": false
     },
     "policy_review_id": "substantive_outcomes_2026_10_19",
-    "prior_proposal_sha256": "e587724fec02ab9ee884500fe1110b8b45a62a89a11ec343f6d1ab880d1d2a2b"
+    "prior_proposal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "change_type": "normative_reduction",
+    "reform_policy_id": "editorial_direction_2026_10_19",
+    "removed_provisions": [
+      "Identité de l'acquéreur (b) et lieu de destination figurant sur le titre de transport (d) exigés pour les ventes en droits acquittés, contraires à 111-0 HB et 111-0 HC proposés"
+    ],
+    "third_pass_correction": {
+      "objection": "TA-T108-01",
+      "applied_by": "troisième passe (red-team indépendante)"
+    }
   },
   {
     "code_id": "LEGITEXT000006069576",

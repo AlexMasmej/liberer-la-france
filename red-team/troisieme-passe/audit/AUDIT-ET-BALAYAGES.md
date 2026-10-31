@@ -146,16 +146,32 @@ Les pistes, réparties sur 916 articles en 18 groupes disjoints (`apply/Y01` à 
 - **Contrôle de régression.** Après application, on cherche les articles non abrogés qui citent l'un des 115 articles abrogés par les rondes 5 et 6. Le contrôle a donné 5 pistes : 2 défauts, corrigés, et 3 faux positifs.
 - **Total de la sixième ronde** : 110 lignes appliquées ; 321 tests OK.
 
+## 2 octies. Lecture systématique, palier A : articles réécrits du CGI et de ses annexes
+
+Les six audits donnaient aux articles réécrits du CGI et de ses annexes le taux le plus haut : 9 % pour le CGI et 12 % pour les annexes. Ces taux reposent sur de petits échantillons (76 et 128 articles), donc à ± 5 points près. Ce palier lit donc chacun de ces articles.
+
+- **Périmètre** : 2 740 articles réécrits en vigueur, soit 1 310 du CGI et 1 430 des annexes I à IV. Les articles déjà lus par les audits sont exclus.
+  - `tools/tier_a.py` les répartit en 132 paquets, groupes T001 à T132, suivant l'ordre des sections, pour que chaque lecteur voie une section entière.
+  - Le brief des lecteurs est `BRIEF-LECTURE.md`. Le résultat de chaque paquet est dans `audit/tier-a/T*.json`.
+- **Résultat** : 96 défauts grossiers (**3,5 %**), 383 mineurs et 2 261 articles sans défaut. Avec les mineurs, on arrive à 17,5 %, comme dans les audits.
+  - Le taux de défauts grossiers est bien plus bas que les 9 à 12 % attendus. Deux raisons, dont on ne peut pas séparer le poids :
+    - les rondes 4 à 6 ont surtout corrigé le CGI et ses annexes, avant cette lecture ;
+    - un lecteur qui parcourt une section entière classe peut-être moins souvent en défaut grossier qu'un auditeur qui tire des articles au hasard.
+- **Corrections** : 81 lignes appliquées (53 dossiers), dont 16 corrections que les lecteurs ont demandées sur des articles hors de leur paquet. Les groupes R1 à R3 les ont traitées.
+  - Les 21 autres demandes étaient déjà couvertes par une correction en attente ailleurs, sauf une, écartée comme défaut mineur.
+- **Restent ouverts** (10) :
+  - **TVA recodifiée au CIBS (environ 9 cas : 289 A, 293 A, 293 D, 296 ter, 298, 298 nonies, 298 sexdecies D et I…)**. Le projet écrit sa réforme dans des subdivisions du CGI que l'ordonnance n° 2025-1247 abroge au 1er janvier 2027, pour les reprendre dans le code des impositions sur les biens et services (CIBS). La loi de réforme ne pouvant entrer en vigueur avant cette date, ces réformes resteraient sans effet. Le CIBS n'est pas au corpus. La correction suppose de l'y ajouter, ou d'écrire la réforme dans une disposition non codifiée.
+  - **1518 A sexies** : arbitrage déjà laissé à l'auteur (RT-FUTFISC-30).
+- **Contrôle d'alignement** : les corrections qui ajoutent des mots de formalité ou d'impôt ont été relues. Toutes retirent une formalité, gardent une transition ou reportent la réforme sur une version future.
+
 ## 4. Taux mesuré et ce qu'il signifie
 
 - **Taux mesuré** : environ **3 % des articles** gardent un défaut qu'un juriste remarquerait. Sur six mesures indépendantes, on compte 64 défauts grossiers sur 1 879 articles (3,4 % ± 0,8). Aucune tendance à la baisse n'est mesurable d'une ronde à l'autre. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
 - **Probabilité pour un juriste** qui lit 20 articles de sa matière de tomber sur au moins un défaut grossier : environ une chance sur deux.
 - **Pourquoi les rondes ne font pas baisser le taux mesuré** : environ 1 000 articles sur 30 000 gardent un défaut grossier. Une ronde en corrige 50 à 110, soit une baisse attendue d'environ 0,3 point. C'est en dessous de ce qu'un audit de 314 articles peut détecter (± 2 points).
-- **Ce qu'il faudrait pour descendre nettement sous 3 %** : une lecture systématique, article par article.
-  - Les 14 182 articles réécrits : environ 460 lectures de 31 articles.
-  - L'ensemble du corpus : environ 980 lectures.
-
-  Aucun signal mécanique ne concentre plus assez les défauts restants pour qu'un balayage ciblé suffise.
+- **Ce qu'il faudrait pour descendre nettement sous 3 %** : une lecture systématique, article par article. Aucun signal mécanique ne concentre plus assez les défauts restants pour qu'un balayage ciblé suffise.
+  - Elle a commencé par les articles réécrits du CGI et de ses annexes (palier A, § 2 octies) : 2 740 articles lus, 96 défauts grossiers trouvés, et tous corrigés sauf 10.
+  - Restent les articles réécrits des autres codes, environ 11 400.
 - **Les signalements extérieurs ont le meilleur rendement mesuré** : 9 des 11 issues du premier contributeur visaient un vrai défaut. Voir ci-dessous comment signaler une erreur.
 
 ## 5. Signaler une erreur
@@ -171,7 +187,11 @@ Chaque issue est triée contre le registre, corrigée si elle relève d'une cont
 
 ## 3. Ce qui reste
 
-- Une **lecture systématique** des articles réécrits, seule voie mesurable vers un taux nettement plus bas.
+- La **lecture systématique** des autres articles réécrits.
+  - **Palier A**, CGI et annexes : fait, voir § 2 octies.
+  - **Palier B**, construction-habitation et sécurité sociale : environ 5 500 articles, à faire.
+  - **Palier C**, travail et urbanisme : environ 5 900 articles, à faire.
+- Le **CIBS** n'est pas au corpus. Les réformes de TVA écrites dans des subdivisions du CGI abrogées au 1er janvier 2027 restent sans effet (§ 2 octies).
 - Le **reste des pistes S9 larges** hors annexes (environ 2 000 articles au score faible), non balayé.
 - **S3** (numéros introuvables) : l'échantillon de 40 montre surtout des renvois à d'autres codes ; il n'est pas balayé en entier.
 - **S6** (désignations de la loi de réforme) : 60 formules différentes, dont « loi portant la présente réforme » (1 452 occurrences), « loi instituant le contrat de travail unique » (394) et « loi instituant le contrat unique » (338). Une désignation unique est un choix de rédaction à arrêter.
