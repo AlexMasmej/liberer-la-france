@@ -1,0 +1,150 @@
+{
+ "group": "VD01",
+ "read_from": "production",
+ "read_on": "2026-10-31",
+ "method": "Chaque article lu en entier avec CITE_PRODUCTION=1 python3 -I tools/cite.py (source officielle, NOTA, bornes, proposition, motif, notes), ainsi que les articles visés par le défaut dans leurs versions officielle et proposée ; requêtes ciblées sur corpus.sqlite en mode=ro avec query_only. Exports dans evidence/cited/production-20261031/. Revue IA : ce n'est pas une validation par un juriste.",
+ "items": [
+  {
+   "code": "a2",
+   "source_id": "LEGIARTI000006295060",
+   "number": "371 LD",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "a2 371 LD LEGIARTI000006295060 (VIGUEUR 1979-07-28→2999-01-01), source : « Les centres de gestion agréés portent les obligations définies aux articles 371 LB et 371 LC à la connaissance de leurs adhérents. » ; a2 371 LA LEGIARTI000033238602, source : « Pour l'application de l'article 1649 quater E bis du code général des impôts » ; cgi 1649 quater E bis LEGIARTI000031815919 : état ABROGE, 2016-01-01→2025-02-16 (version suivante absente : aucune version en vigueur au 18 octobre 2026).",
+   "evidence_project": "a2 371 LD LEGIARTI000006295060, proposition (rewrite_draft) : « Le présent article est abrogé à compter de l'entrée en vigueur de la présente réforme. L'article 1649 quater E bis du code général des impôts, pour l'application duquel était organisée l'information de la clientèle des adhérents des centres de gestion agréés, a été abrogé, avec l'ensemble des articles 1649 quater C à 1649 quater O de ce code, par le 6° de l'article 11 de la loi n° 2025-127 du 14 février 2025 » ; a2 371 LA LEGIARTI000033238602, proposition : « Les articles 371 LB à 371 LD, qui en fixent les modalités, ne peuvent l'imposer pour l'avenir. » ; les propositions de 371 LB (LEGIARTI000033238588), 371 LC (LEGIARTI000033238595) et 371 LE (LEGIARTI000006295061) commencent toutes par « Le présent article est abrogé à compter de l'entrée en vigueur de la présente réforme. »",
+   "note": "Défaut présent dans le droit officiel (annexe réglementaire organisant une obligation dont la base légale est abrogée depuis le 16 février 2025). Le projet l'a corrigé : abrogation pour l'avenir de toute la série 371 LA à 371 LE avec transition, notes datées de la troisième passe (AUDIT6-E240, balayage M05). Grossier : un praticien ouvrant 371 LA lit immédiatement un renvoi à un article abrogé."
+  },
+  {
+   "code": "a3",
+   "source_id": "LEGIARTI000022179739",
+   "number": "41 DA",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "oui",
+   "gross": "oui",
+   "evidence_official": "a3 41 DA LEGIARTI000022179739 (VIGUEUR 2010-05-01→2999-01-01), source : « Les gestionnaires désignés par la convention ou l'accord agréé créant le fonds salarial doivent déclarer annuellement, pour chaque salarié, la nature et la valeur des opérations inscrites au compte ouvert à son nom dans le fonds, en distinguant : 1° (Périmé). » Requête production (mode=ro) : aucun article du CGI (LEGITEXT000006069577) en vigueur au 18 octobre 2026 ne contient « fonds salaria » (count = 0) ; aucune proposition du CGI ne le contient (count = 0) ; seul 41 DA le contient dans l'annexe III.",
+   "evidence_project": "a3 41 DA LEGIARTI000022179739, draft status=retained_unchanged, « (no proposed body) » ; motif : « Maintien intégral de la source après seconde passe. » ; notes : « Le 1° périmé est conservé. » Le texte proposé est donc la source, inchangée.",
+   "note": "Le défaut est identique des deux côtés : le projet maintient à l'identique un article d'annexe qui organise une déclaration pour un dispositif que la loi fiscale ne connaît plus et dont le 1° est marqué « (Périmé) ». Grossier : texte visiblement périmé, non abrogé. Réserve conservée : le texte instituant les fonds salariaux (1983) est hors corpus ; l'existence résiduelle de tels fonds n'a pas été vérifiée."
+  },
+  {
+   "code": "cch",
+   "source_id": "LEGIARTI000047400121",
+   "number": "Annexe I à l'article R. 373-3",
+   "flagged_in": "project",
+   "present_official": "oui",
+   "present_project": "oui",
+   "gross": "oui",
+   "evidence_official": "cch Annexe I à l'article R. 373-3 LEGIARTI000047400121 (VIGUEUR 2023-04-05→2999-01-01, aucune version future), source, article 7 : « Conformément aux articles L. 824-1, R. 824-4 et R. 824-31 du code de la construction et de l'habitation, lorsque le locataire est débiteur à l'égard du bailleur d'une somme au moins égale à deux fois le montant mensuel brut de la redevance, le gestionnaire signale l'impayé à l'organisme payeur [...] dans un délai de deux mois après la constitution de l'impayé tel que défini à l'article R. 824-1 ». R824-1 LEGIARTI000038878877, R824-4 LEGIARTI000038878867, R824-31 LEGIARTI000038878800 : état ABROGE_DIFF, 2019-09-01→2027-01-01. R824-1 LEGIARTI000053470474 (VIGUEUR_DIFF 2027-01-01→) : « le gestionnaire de logement-foyer conventionné, le prêteur et l'établissement habilité sont assimilés au bailleur » ; R824-2 LEGIARTI000053470471 (2027) : « 1° Lorsque trois mois après un premier défaut de paiement constaté par le bailleur [...] 2° Lorsque le montant de l'impayé dépasse 450 euros. » ; R824-3 LEGIARTI000053470469 (2027) : signalement « dans un délai de deux mois » ; R824-4 LEGIARTI000053470467 (2027) : « l'organisme payeur en informe la commission de coordination des actions de prévention des expulsions locatives, dans un délai de quinze jours suivant le signalement du bailleur » ; R824-31 : aucune version postérieure au 1er janvier 2027 dans le corpus.",
+   "evidence_project": "LEGIARTI000047400121, proposition, article 7 : « Conformément aux articles L. 824-1, R. 824-1, R. 824-4 et R. 824-31 du code de la construction et de l'habitation, le gestionnaire percevant l'aide pour le compte du résident signale à l'organisme payeur [...] l'impayé dans un délai de deux mois après sa constitution [...]. Lorsque l'aide est versée entre les mains du gestionnaire, l'impayé est constitué lorsque le résident est débiteur d'une somme au moins égale à deux fois le montant mensuel net de la redevance, après déduction de l'aide. Lorsque l'aide est versée au bénéficiaire, l'impayé est constitué lorsque la dette atteint deux fois le montant mensuel brut de la redevance. » ; même article : « La présente convention ne proroge pas les dispositions réglementaires au-delà de leur abrogation ni n'anticipe l'application de dispositions nouvelles. » Comparer R824-4 LEGIARTI000038878867, proposition : « La présente rédaction s'applique jusqu'à l'entrée en vigueur, le 1er janvier 2027, de la rédaction du présent article issue du décret n° 2026-84 du 12 février 2026 » (borne absente de l'annexe).",
+   "note": "Côté officiel, le défaut est latent mais déjà constitué au 18 octobre 2026 : le décret n° 2026-84 est publié, les trois articles visés changent de contenu (ou disparaissent, R. 824-31) au 1er janvier 2027 et aucune version future de l'annexe ne les coordonne ; les renvois sont encore exacts à la date de référence. Côté projet, le défaut est aggravé : la proposition inscrit en toutes lettres les seuils de R. 824-1 (brut/net) et le renvoi explicite à R. 824-1, que le droit publié remplace (trois mois ou 450 euros) avant toute entrée en vigueur plausible, et R. 824-4 devient un texte sur l'information de la CCAPEX ; la clause de non-prorogation contredit les seuils stipulés, alors que la proposition de R. 824-4 du même projet se borne expressément au 1er janvier 2027. Grossier : un praticien du logement-foyer qui connaît le décret de février 2026 le relève immédiatement."
+  },
+  {
+   "code": "cch",
+   "source_id": "LEGIARTI000028808838",
+   "number": "L301-2",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "cch L301-2 LEGIARTI000028808838 (VIGUEUR 2014-03-27→2999-01-01), source : « 5° Des aides personnelles au logement, dont l'aide personnalisée instituée au chapitre Ier du titre V du présent livre, qui sont versées aux locataires ou aux propriétaires accédants, sous condition de ressources. » Requête production (mode=ro) : aucun article L351-* du CCH en vigueur au 18 octobre 2026 (count = 0).",
+   "evidence_project": "cch L301-2 LEGIARTI000028808838, proposition : « 5° Des aides personnelles au logement, dont l'aide personnalisée au logement régie par le titre III du livre VIII, qui sont versées aux locataires ou aux propriétaires accédants, sous condition de ressources. » ; motif : « Coordination de recodification déjà proposée conservée : le 5° renvoie au titre III du livre VIII. »",
+   "note": "Renvoi mort depuis le 1er septembre 2019 dans le texte officiel ; corrigé par le projet vers le titre III du livre VIII (APL, L. 821-1 et suivants). Grossier : chapitre disparu depuis sept ans, visible à la première lecture."
+  },
+  {
+   "code": "cch",
+   "source_id": "LEGIARTI000053629124",
+   "number": "R134-6",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "cch R134-6 LEGIARTI000053629124 (VIGUEUR 2026-04-01→2999-01-01), source, 2° b : « qu'aura repérés le contrôle technique mentionné à l'article R. 134-14 » ; R134-14 LEGIARTI000043818755 (VIGUEUR 2021-07-01→) : « Toute personne disposant d'un titre d'occupation dans un immeuble comportant un ascenseur a le droit de consulter [...] le rapport du contrôle technique. » ; R134-11 LEGIARTI000053629116 (VIGUEUR 2026-05-15→) : « Le propriétaire d'un ascenseur est tenu de faire réaliser tous les cinq ans un contrôle technique de son installation. » ; R134-12 LEGIARTI000043818749 : « Pour réaliser le contrôle technique prévu à l'article R. 134-11 ».",
+   "evidence_project": "cch R134-6 LEGIARTI000053629124, proposition, 2° b : « qu'aura repérés le contrôle technique mentionné à l'article R. 134-11 » ; motif : « Coordination explicite de l'erreur de renvoi R134-14 vers R134-11, qui définit réellement le contrôle technique. »",
+   "note": "Renvoi décalé présent dans le texte officiel (reconduit par le décret n° 2026-166), corrigé par le projet. Grossier : le renvoi vise un article sur le droit de consultation du rapport, non le contrôle lui-même."
+  },
+  {
+   "code": "cch",
+   "source_id": "LEGIARTI000006900535",
+   "number": "R641-7",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "cch R641-7 LEGIARTI000006900535 (VIGUEUR 1999-05-05→2999-01-01), source : « Sauf dans le cas où il s'agit de locaux insuffisamment occupés, la réquisition porte sur la totalité du local » ; « S'il s'agit de locaux insuffisamment occupés, la réquisition s'applique à l'usage privatif des pièces habitables en excédent ». L641-1 LEGIARTI000037667255 (VIGUEUR 2018-11-25→) : « à la prise de possession partielle ou totale des locaux vacants » ; L641-1 LEGIARTI000006825887 (2006-07-16→2018-11-25) : « des locaux à usage d'habitation vacants, inoccupés ou insuffisamment occupés ». L641-5 LEGIARTI000037667239 : « Le détenteur d'un local insuffisamment occupé dispose d'un délai d'un mois ». R641-10 LEGIARTI000006900539, source : « Les réquisitions des locaux vacants, inoccupés ou insuffisamment occupés ».",
+   "evidence_project": "cch R641-7 LEGIARTI000006900535, proposition (alinéas 1 à 3 inchangés, puis) : « Les mentions de locaux inoccupés ou insuffisamment occupés au présent article ne constituent pas un fondement autonome de réquisition. Elles ne permettent une réquisition que dans le champ et les conditions prévus à l'article L. 641-1. » ; même clause ajoutée à R641-10 LEGIARTI000006900539, proposition ; motif de R641-7 : « Coordination nécessaire de la discordance préexistante : L641-1 limite son premier alinéa aux « locaux vacants », alors que le règlement vise l'inoccupation ou l'occupation insuffisante. » L641-5 LEGIARTI000037667239 : retained_unchanged (« Le détenteur d'un local insuffisamment occupé »).",
+   "note": "Le défaut décrit (décret non coordonné avec la loi ELAN) est présent dans le texte officiel. Le projet le neutralise par une clause expresse de subordination à L. 641-1 dans R. 641-7 et R. 641-10, sans supprimer les mentions résiduelles ; la discordance interne à la partie législative (L. 641-1 « vacants » / L. 641-5 « insuffisamment occupé ») subsiste, L. 641-5 étant maintenu inchangé. La non-coordination du décret n'est donc plus présente ; il reste une rédaction maladroite (mentions mortes conservées), de l'ordre du mineur. Grossier côté officiel : un juriste ouvrant L. 641-1 puis R. 641-7 constate que le règlement organise un cas que la loi ne prévoit plus."
+  },
+  {
+   "code": "cgi",
+   "source_id": "LEGIARTI000053189823",
+   "number": "300 bis",
+   "flagged_in": "project",
+   "present_official": "non",
+   "present_project": "oui",
+   "gross": "oui",
+   "evidence_official": "cgi 300 bis LEGIARTI000053189823 : state=ABROGE_DIFF 2026-03-31→2027-01-01 ; document_xml, LIENS : « Ordonnance n°2026-671 du 27 juillet 2026 - art. 7 » typelien=\"ABROGE\" ; « Code des douanes - art. 266 quindecies (T) » typelien=\"CONCORDE\" ; NOTA : « Conformément au IV de l'ordonnance n° 2025-1247 du 17 décembre 2025, ces dispositions, dans leur rédaction résultant du II du même article, entrent en vigueur le 31 mars 2026. » Le texte officiel organise lui-même la fin de l'article au 1er janvier 2027 : ce n'est pas un défaut du droit officiel mais une recodification publiée.",
+   "evidence_project": "cgi 300 bis LEGIARTI000053189823, proposition : « Le présent article est abrogé pour les années civiles commençant à compter du 1er janvier de l'année suivant celle de l'entrée en vigueur de la loi. » ; « Aucune taxe incitative relative à l'utilisation d'énergie renouvelable dans les transports n'est due sur les volumes d'essences et de gazoles au titre de ces années. » ; la proposition ne vise aucun texte successeur ; notes : « Coordonner les dispositions de reprise CIBS de l'ordonnance 2025-1247 au 1er janvier 2027 et les mesures réglementaires de traçabilité exclusivement TIRUERT, hors de ce lot. » (l'abrogation est portée par l'ordonnance n° 2026-671, art. 7, selon le lien LEGI).",
+   "note": "Défaut propre au projet : il abroge, au plus tôt au 1er janvier 2027, un article que le droit publié fait disparaître à cette même date, et ne touche pas les dispositions qui reprennent la taxe hors corpus ; la suppression voulue de la TIRUERT n'est donc pas réalisée par la proposition telle qu'écrite, et les notes attribuent la reprise à la mauvaise ordonnance. Grossier : l'état ABROGE_DIFF et le lien d'abrogation sont visibles à l'ouverture de l'article. Réserve documentaire : texte de l'ordonnance n° 2026-671 et articles successeurs (CIBS) absents du corpus ; non consultés en ligne."
+  },
+  {
+   "code": "css",
+   "source_id": "LEGIARTI000053220328",
+   "number": "R133-8-2",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "css R133-8-2 LEGIARTI000053220328 (VIGUEUR 2026-01-01→2999-01-01), huit alinéas ; al. 4 : « Lorsque l'intéressé présente ses observations avant la fin du délai imparti, le directeur de l'organisme de recouvrement est tenu de répondre. » ; al. 5 : « Cette période contradictoire prend fin, en l'absence de réponse de l'intéressé, au terme du délai prévu au troisième alinéa, ou à la date d'envoi de la réponse du directeur de l'organisme de recouvrement mentionnée au cinquième alinéa. » ; css R244-1 LEGIARTI000053220402, source : « corrigés le cas échéant à la suite des échanges mentionnés au cinquième alinéa de l'article R. 133-8-2 ».",
+   "evidence_project": "css R133-8-2 LEGIARTI000053220328, proposition, al. 5 : « ou à la date d'envoi de la réponse du directeur de l'organisme de recouvrement mentionnée au quatrième alinéa. » ; motif : « Coordination nécessaire du cinquième alinéa : la réponse motivée du directeur est prévue au quatrième alinéa, et non au cinquième qui contient lui-même le renvoi erroné. » ; css R244-1 LEGIARTI000053220402, proposition : « à la suite des échanges mentionnés aux troisième et quatrième alinéas de l'article R. 133-8-2 ».",
+   "note": "Renvoi interne décalé (l'alinéa se vise lui-même) présent dans le texte officiel issu du décret n° 2025-1338, ainsi que dans R. 244-1 ; le projet corrige les deux. Grossier : un juriste qui compte les alinéas le relève aussitôt, même si le sens se reconstitue."
+  },
+  {
+   "code": "travail",
+   "source_id": "LEGIARTI000045676960",
+   "number": "D4622-44",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "oui",
+   "gross": "oui",
+   "evidence_official": "travail D4622-44 LEGIARTI000045676960 (VIGUEUR 2022-04-28→2999-01-01), source : « est conclu entre chaque service de prévention et de santé au travail agréé d'une part, le directeur régional des entreprises, de la concurrence, de la consommation, du travail et de l'emploi et les organismes de prévention des caisses de sécurité sociale d'autre part, après avis du groupe permanent régional d'orientation des conditions de travail. » ; R4641-15 LEGIARTI000033696498 (2016-12-25→2022-03-31) : « Un groupe permanent régional d'orientation des conditions de travail est constitué en son sein. » ; R4641-15 LEGIARTI000044804685 (VIGUEUR 2022-03-31→) : « Un comité régional de prévention et de santé au travail est constitué en son sein. » ; R4641-18 LEGIARTI000044804677, 8° : « Adopte les avis du comité régional de prévention et de santé au travail. » Requête production (mode=ro) : D4622-44 est le seul article du code du travail en vigueur au 18 octobre 2026 contenant « groupe permanent régional ».",
+   "evidence_project": "travail D4622-44 LEGIARTI000045676960, proposition : « est conclu entre chaque service de prévention et de santé au travail agréé d'une part, le directeur régional des entreprises, de la concurrence, de la consommation, du travail et de l'emploi et les organismes de prévention des caisses de sécurité sociale d'autre part. La conclusion et la révision du contrat ne sont pas subordonnées à l'avis préalable du groupe permanent régional d'orientation des conditions de travail. » ; travail L4622-10 LEGIARTI000043894074, proposition : « les avis du comité régional de prévention et de santé au travail et du groupe permanent régional d'orientation des conditions de travail portant sur la conclusion, le contenu ou la révision de ces contrats sont facultatifs. »",
+   "note": "Dans le texte officiel, l'avis obligatoire vise une formation supprimée depuis le 31 mars 2022 : renvoi mort. Le projet lève l'exigence d'avis (le défaut n'est plus bloquant) mais continue de désigner le « groupe permanent régional d'orientation des conditions de travail » comme une instance existante, dans D. 4622-44 et dans la proposition de L. 4622-10 ; il conserve aussi la désignation de la DIRECCTE, supprimée le 1er avril 2021. Le renvoi à une instance disparue est donc présent des deux côtés, sous une forme atténuée dans le projet. Grossier : un praticien de la santé au travail sait que cette formation n'existe plus. Incertitude conservée : clause de substitution éventuelle du décret n° 2021-1792, hors corpus, non vérifiée."
+  },
+  {
+   "code": "travail",
+   "source_id": "LEGIARTI000028698904",
+   "number": "L6111-4",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "travail L6111-4 LEGIARTI000028698904 (VIGUEUR 2015-01-01→2999-01-01), source : « Une convention peut être conclue entre l'Etat, les régions et le fonds visé à l'article L. 6332-18 pour concourir au financement de ce service. » ; L6332-18 LEGIARTI000021341841 : état ABROGE, 2009-11-26→2019-01-01 : « Le fonds paritaire de sécurisation des parcours professionnels [...] est créé par un accord » ; aucune version postérieure dans le corpus. Source, al. 1 : « Il est créé                           un service dématérialisé gratuit ».",
+   "evidence_project": "travail L6111-4 LEGIARTI000028698904, proposition : « Une convention peut être conclue entre l'Etat et les régions pour concourir au financement de ce service, sans préjudice de la participation des autres organismes dans le cadre de leurs compétences légales. » ; motif : « Retrait du renvoi sans cible active au fonds de L6332-18 dans la convention facultative. » La proposition conserve toutefois l'alinéa 1 avec le blanc : « Il est créé                           un service dématérialisé gratuit ».",
+   "note": "Le renvoi mort (fonds paritaire de sécurisation des parcours professionnels, L. 6332-18 abrogé au 1er janvier 2019) est présent dans le texte officiel et retiré par le projet. Le défaut accessoire (blanc de suppression non recousu au premier alinéa, F7) subsiste à l'identique dans la proposition ; il est d'ordre typographique. Grossier au titre du renvoi mort de plus de sept ans."
+  },
+  {
+   "code": "travail",
+   "source_id": "LEGIARTI000036483619",
+   "number": "R4624-48",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "travail R4624-48 LEGIARTI000036483619 (VIGUEUR 2018-01-01→2999-01-01), source : « Elle est présentée au                    comité social et économique en même temps que le bilan annuel prévu à l'article L. 4612-16. » ; L4612-16 LEGIARTI000035640823 : état ABROGE, 2017-10-01→2018-01-01, aucune version postérieure ; L2312-27 LEGIARTI000043893927 (VIGUEUR 2022-03-31→), 1° : « Un rapport annuel écrit faisant le bilan de la situation générale de la santé, de la sécurité et des conditions de travail dans l'entreprise ».",
+   "evidence_project": "travail R4624-48 LEGIARTI000036483619, proposition : « Elle est présentée au comité social et économique en même temps que le rapport annuel prévu au 1° de l'article L. 2312-27, dans les entreprises soumises à la présentation de ce rapport. » ; motif : « Coordination nécessaire du renvoi obsolète au bilan de L4612-16 vers le rapport annuel de santé et sécurité du 1° de L2312-27. »",
+   "note": "Renvoi mort depuis le 1er janvier 2018 dans le texte officiel, corrigé par le projet pour cet article. Hors périmètre de l'élément : la requête production montre que R. 4643-37 (LEGIARTI000036483888) renvoie encore à L. 4612-16 dans son texte retenu ou proposé. Grossier : renvoi vers un article abrogé le jour même de l'entrée en vigueur de la version qui le cite."
+  }
+ ],
+ "summary": {
+  "items": 11,
+  "present_official": {"oui": 10, "non": 1, "incertain": 0},
+  "present_project": {"oui": 4, "non": 7, "incertain": 0},
+  "gross": {"oui": 11, "non": 0},
+  "both_texts": ["LEGIARTI000022179739 (a3 41 DA)", "LEGIARTI000047400121 (cch Annexe I R. 373-3)", "LEGIARTI000045676960 (travail D4622-44)"],
+  "official_only": ["LEGIARTI000006295060", "LEGIARTI000028808838", "LEGIARTI000053629124", "LEGIARTI000006900535", "LEGIARTI000053220328", "LEGIARTI000028698904", "LEGIARTI000036483619"],
+  "project_only": ["LEGIARTI000053189823 (cgi 300 bis)"],
+  "neither": []
+ }
+}

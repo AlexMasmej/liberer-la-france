@@ -1,0 +1,270 @@
+{
+ "group": "OP03",
+ "paired_with": "P03",
+ "read_from": "official-source",
+ "reference_date": "2026-10-18",
+ "method": "Lecture du seul droit officiel avec CITE_PRODUCTION=1 CITE_SOURCE_ONLY=1 python3 -I tools/cite.py (sorties sous evidence/cited/production-20261031-source-only/). Aucune lecture des colonnes proposed_xml, reason, review_notes, ni de batches/, reports/, apply/ ou des autres fichiers de audit/. Recherches de renvois limitées à la table articles (content_xml, number, state, valid_from, valid_until) en lecture seule. Les sources primaires externes (EUR-Lex, Légifrance JORF) ont été tentées le 2026-10-31 par WebFetch sans succès (pages dynamiques vides) : les points qui en dépendent sont notés « à confirmer ».",
+ "articles": [
+  {
+   "sample_id": "P003", "code": "css", "number": "L634-3", "source_id": "LEGIARTI000036391704",
+   "verdict": "0", "families": [],
+   "description": "Disposition de maintien des prestations antérieures à 1973 avec renvoi au coefficient de revalorisation de L. 161-25, qui existe et porte bien sur la revalorisation annuelle. Le NOTA Légifrance cite comme dérogations L. 812-1 et L. 813-5, abrogés en 2006 : simple scorie éditoriale du NOTA, hors du texte de l'article.",
+   "evidence": "LEGIARTI000036391704 : « Les coefficients de revalorisation mentionnés à l'article L. 161-25 sont applicables aux prestations contributives mentionnées au présent article. » ; LEGIARTI000031781092 (L. 161-25) : « La revalorisation annuelle des montants de prestations dont les dispositions renvoient au présent article est effectuée sur la base d'un coefficient… »",
+   "links_read": ["css L161-25 LEGIARTI000031781092", "css L812-1 LEGIARTI000006744739 (ABROGE)", "css L813-5 LEGIARTI000006744770 (ABROGE)", "renvois entrants : D173-21-2, R173-4-4 (non lus)"],
+   "links_not_read": "Décrets d'adaptation visés par « sous réserve d'adaptation par décret » ; D. 173-21-2 et R. 173-4-4 (2026)."
+  },
+  {
+   "sample_id": "P023", "code": "cgi", "number": "197", "source_id": "LEGIARTI000053542636",
+   "verdict": "0", "families": [],
+   "description": "Barème de l'impôt sur le revenu (LF 2026). Les renvois internes (4 B, 4 de l'article 6, I et II de 194, a à f du 1 et 2 à 6 de 195, 199 quater F à 200) existent et correspondent : l'article 195 en vigueur comporte bien des a, b, c, d, d bis, e, f au 1 et des 2 à 6.",
+   "evidence": "LEGIARTI000053542636 : « Les contribuables qui bénéficient d'une demi-part au titre des a, b, c, d, d bis, e et f du 1 ainsi que des 2 à 6 de l'article 195… » ; LEGIARTI000046860994 (195) : « d bis. Sont titulaires de la carte “ mobilité inclusion ”… » et « 6. Les contribuables mariés, lorsque l'un des conjoints est âgé de plus de 74 ans… »",
+   "links_read": ["cgi 4 B LEGIARTI000051202565", "cgi 194 LEGIARTI000033817781 (existence/version)", "cgi 195 LEGIARTI000046860994", "cgi 199 quater F LEGIARTI000006303194 (existence)"],
+   "links_not_read": "Article 6 (4), articles 199 quater F à 200 pris un à un, textes d'application (annexes) du barème."
+  },
+  {
+   "sample_id": "P043", "code": "travail", "number": "R2344-1", "source_id": "LEGIARTI000024740026",
+   "verdict": "0", "families": [],
+   "description": "Barème de répartition des sièges du groupe spécial de négociation et du comité d'entreprise européen par État. Le renvoi aux « Etats mentionnés à l'article L. 2341-1 » (États membres et EEE) est exact ; la base légale (L. 2342-3 et s., L. 2343-4) existe. La mention « Communauté européenne » dans L. 2341-1 est une rédaction datée sans effet.",
+   "evidence": "LEGIARTI000024740026 : « pour chacun des Etats mentionnés à l'article L. 2341-1 est fixé selon les règles suivantes » ; LEGIARTI000025578952 (L. 2341-1) : « dans les Etats membres de la Communauté européenne ou de l'Espace économique européen »",
+   "links_read": ["travail L2341-1 LEGIARTI000025578952", "travail L2342-3 LEGIARTI000024694746", "travail L2343-4 LEGIARTI000024694755"],
+   "links_not_read": "L. 2342-4 et s. (composition du GSN), L. 2343-7 ; aucun article officiel du code ne renvoie à R. 2344-1."
+  },
+  {
+   "sample_id": "P063", "code": "css", "number": "R341-2", "source_id": "LEGIARTI000045250316",
+   "verdict": "0", "families": [],
+   "description": "Conditions d'application de L. 341-1 (invalidité réduisant des 2/3 la capacité ; salaire de référence inférieur au tiers de la rémunération). La rédaction 2022 a été alignée sur L. 341-1 modifié en 2020 (« rémunération » au lieu de « rémunération normale »). Cohérent.",
+   "evidence": "LEGIARTI000045250316 : « le salaire de référence ne doit pas être supérieur au tiers de la rémunération mentionnée audit article » ; LEGIARTI000041398968 (L. 341-1) : « un salaire supérieur à une fraction de la rémunération soumise à cotisations et contributions sociales qu'il percevait »",
+   "links_read": ["css L341-1 LEGIARTI000041398968"],
+   "links_not_read": "R. 341-1, R. 341-4 et s. (calcul de la pension)."
+  },
+  {
+   "sample_id": "P083", "code": "travail", "number": "L7124-4", "source_id": "LEGIARTI000023755161",
+   "verdict": "0", "families": [],
+   "description": "Dispense d'autorisation individuelle pour l'enfant engagé par une agence de mannequins licenciée (L. 7123-11) et agréée. L. 7123-11 (licence) et L. 7124-5 (agrément « prévu aux articles L. 7124-4 et L. 7124-4-1 ») existent et sont cohérents avec L. 7124-1.",
+   "evidence": "LEGIARTI000023755161 : « engagé par une agence de mannequins exerçant son activité dans les conditions prévues par l'article L. 7123-11 et qui a obtenu un agrément » ; LEGIARTI000042442664 (L. 7124-5) : « Les agréments prévus aux articles L. 7124-4 et L. 7124-4-1 pour l'engagement des enfants de moins de seize ans sont accordés par l'autorité administrative »",
+   "links_read": ["travail L7123-11 LEGIARTI000023755158", "travail L7124-1 LEGIARTI000047666661", "travail L7124-5 LEGIARTI000042442664"],
+   "links_not_read": "R. 7124-9 et s. (procédure d'agrément), L. 7124-4-1."
+  },
+  {
+   "sample_id": "P103", "code": "a3", "number": "211 AC", "source_id": "LEGIARTI000051830701",
+   "verdict": "0", "families": [],
+   "description": "Déclaration de mise en fabrication (garantie des métaux précieux) déposée au bureau de garantie. Depuis le 1er juillet 2025 le renvoi vise le b du 3° de l'article L. 834-7 du code de commerce (texte hors corpus), à la suite de l'abrogation de l'article 545 du CGI (ABROGE au 2025-07-01). Rien n'indique que le texte de renvoi ait disparu ; aucun article de l'annexe III ne renvoie plus à l'article 545.",
+   "evidence": "LEGIARTI000051830701 : « La déclaration prévue au b du 3° de l'article L. 834-7 du code de commerce est déposée au bureau de garantie quarante huit heures avant la mise en fabrication. » ; cgi 545 LEGIARTI000006310026 state=ABROGE 2005-01-01→2025-07-01",
+   "links_read": ["cgi 545 LEGIARTI000006310026 (ABROGE)", "recherche a3 « article 545 » : 0 article en vigueur", "recherche a3 « L. 834-7 » : 1 (211 AC)"],
+   "links_not_read": "Code de commerce L. 834-7 (hors corpus, non vérifié) ; autres articles 211 A et s. de l'annexe III."
+  },
+  {
+   "sample_id": "P123", "code": "cch", "number": "Annexe I à l'article D353-200", "source_id": "LEGIARTI000039048914",
+   "verdict": "G", "families": ["F5", "F7"],
+   "description": "Convention type obligatoire (D. 353-200 : les conventions « doivent être conformes à la convention type reproduite en annexe ») restée dans son état d'origine : loyers exprimés en francs (« ... F le mètre carré »), phrase incohérente à l'article 1er (« et décret dans le document joint »), et surtout contradiction avec l'article qu'elle applique : la variante organismes HLM fixe le loyer maximum « de surface corrigée » alors que D. 353-208 prescrit pour ces organismes un loyer au mètre carré « de surface utile, résultant de l'application du 1° et du 2° de l'article D. 353-16 ». Un praticien qui ouvre la convention type et D. 353-208 constate immédiatement l'anomalie.",
+   "evidence": "LEGIARTI000039048914 : « Le prix mensuel du loyer maximum visé à l'article D. 353-208 est fixé à ... F le mètre carré : Variante n° 1 (organisme d'habitations à loyer modéré) : de surface corrigée (2) et (3) » ; « financé au moyen de prêts prévus par la sous-section 4 bis de la section II du chapitre Ier du titre III du livre III du code de la construction et de l'habitation et décret dans le document joint à la présente convention » ; LEGIARTI000039048515 (D. 353-208) : « dont la valeur est fixée, pour les organismes d'habitations à loyer modéré, au mètre carré de surface utile, résultant de l'application du 1° et du 2° de l'article D. 353-16, ou, pour les autres bailleurs, au mètre carré de surface habitable » ; LEGIARTI000039006337 (D. 353-200) : « doivent être conformes à la convention type reproduite en annexe du présent code »",
+   "links_read": ["cch D353-200 LEGIARTI000039006337", "cch D353-208 LEGIARTI000039048515", "cch D353-16 LEGIARTI000053356492", "cch L353-3 LEGIARTI000006824995", "cch L353-14 LEGIARTI000006825011", "cch L353-17 LEGIARTI000006825017", "cch L831-1 LEGIARTI000038814882"],
+   "links_not_read": "Annexes II et III à l'article D353-200 ; existence effective d'une « sous-section 4 bis » dans la partie réglementaire du titre III du livre III (aucun article en vigueur du code ne la mentionne hormis D. 353-200 et son annexe) ; L. 353-1 à L. 353-16 un à un."
+  },
+  {
+   "sample_id": "P143", "code": "travail", "number": "R7124-37", "source_id": "LEGIARTI000045711711",
+   "verdict": "0", "families": [],
+   "description": "Gestion du pécule de l'enfant par la Caisse des dépôts (information annuelle, majorité, émancipation). Le renvoi interne à « la communication prévue au troisième alinéa » vise bien l'alinéa relatif à l'émancipation. Base légale L. 7124-9 cohérente (pécule géré « jusqu'à la majorité de l'enfant ou son émancipation »).",
+   "evidence": "LEGIARTI000045711711 : « A compter de la majorité de l'enfant ou de la communication prévue au troisième alinéa, la Caisse des dépôts et consignations transfère les fonds » ; LEGIARTI000042442661 (L. 7124-9) : « géré par cette caisse jusqu'à la majorité de l'enfant ou son émancipation »",
+   "links_read": ["travail L7124-9 LEGIARTI000042442661"],
+   "links_not_read": "R. 7124-31 à R. 7124-36 (versement du pécule)."
+  },
+  {
+   "sample_id": "P163", "code": "a4", "number": "44", "source_id": "LEGIARTI000006300391",
+   "verdict": "0", "families": [],
+   "description": "Obligations comptables des vendeurs de produits incorporés aux navires visés à l'article 42 et d'engins de pêche : renvoi aux articles 42 et 43-b, qui existent et portent bien sur ces bâtiments et sur les mentions de facture.",
+   "evidence": "LEGIARTI000006300391 : « sont soumises aux obligations prévues à l'article 43-b » ; LEGIARTI000006300390 (43) : « b. Elles sont tenues d'indiquer sur leurs factures : le nom du bâtiment ou du bateau, les numéros et date de francisation ou d'inscription correspondants. »",
+   "links_read": ["a4 42 LEGIARTI000006300389", "a4 43 LEGIARTI000006300390"],
+   "links_not_read": "Base légale CGI 262 II (livraisons aux navires)."
+  },
+  {
+   "sample_id": "P183", "code": "a2", "number": "326 ter A", "source_id": "LEGIARTI000053775213",
+   "verdict": "0", "families": [],
+   "description": "Modalités de justification de la contribution pour l'aide juridique rétablie par la LF 2026 à l'article 1635 bis Q du CGI (versions du 2026-02-21 et du 2026-07-01, toutes deux relatives à une contribution de 50 € par instance civile ou prud'homale). Renvoi aux articles 62 à 62-5 du code de procédure civile, hors corpus ; rien n'indique leur disparition.",
+   "evidence": "LEGIARTI000053775213 : « Pour l'application de l'article 1635 bis Q du code général des impôts, les conditions dans lesquelles il est justifié de l'acquittement de la contribution pour l'aide juridique… sont déterminées conformément aux articles 62 à 62-5 du code de procédure civile. » ; LEGIARTI000054373093 (1635 bis Q) : « Une contribution pour l'aide juridique de 50 euros est perçue par instance introduite en matière civile et prud'homale »",
+   "links_read": ["cgi 1635 bis Q LEGIARTI000053547096", "cgi 1635 bis Q LEGIARTI000054373093"],
+   "links_not_read": "Code de procédure civile articles 62 à 62-5 (hors corpus) ; décret en Conseil d'État prévu au VI de 1635 bis Q."
+  },
+  {
+   "sample_id": "P203", "code": "travail", "number": "R1227-1", "source_id": "LEGIARTI000018537748",
+   "verdict": "0", "families": [],
+   "description": "Contravention de 5e classe sanctionnant le défaut de déclaration préalable à l'embauche : l'obligation (L. 1221-10) et ses modalités (R. 1221-1 à R. 1221-6) existent en droit officiel.",
+   "evidence": "LEGIARTI000018537748 : « Le fait de ne pas procéder à la déclaration préalable à l'embauche, prévue à l'article L. 1221-10, dans les conditions déterminées aux articles R. 1221-1 à R. 1221-6, est puni de l'amende prévue pour les contraventions de la cinquième classe. » ; LEGIARTI000006900849 (L. 1221-10) : « L'embauche d'un salarié ne peut intervenir qu'après déclaration nominative accomplie par l'employeur »",
+   "links_read": ["travail L1221-10 LEGIARTI000006900849", "travail R1221-1 LEGIARTI000035492419", "travail R1221-6 LEGIARTI000024214315"],
+   "links_not_read": "R. 1221-2 à R. 1221-5."
+  },
+  {
+   "sample_id": "P223", "code": "cch", "number": "L126-9", "source_id": "LEGIARTI000041565237",
+   "verdict": "0", "families": [],
+   "description": "Procédure d'urgence relative aux équipements communs : renvois à L. 126-7 (deuxième alinéa : propriétaires et titulaires de droits réels), L. 126-8, L. 521-1, L. 521-3-1 et L. 521-3-2, tous en vigueur ; L. 126-7 renvoie réciproquement à L. 126-9. Cohérent.",
+   "evidence": "LEGIARTI000041565237 : « après en avoir informé les personnes mentionnées au deuxième alinéa de l'article L. 126-7 » ; LEGIARTI000044056449 (L. 126-7) : « le maire ordonne préalablement les mesures provisoires indispensables pour écarter ce danger, dans les conditions prévues à l'article L. 126-9. »",
+   "links_read": ["cch L126-7 LEGIARTI000044056449", "cch L126-8 LEGIARTI000041565235", "cch L521-3-1 LEGIARTI000049397643", "cch L521-3-2 LEGIARTI000049398947", "cch L126-6 LEGIARTI000041565129"],
+   "links_not_read": "L. 521-1 ; décret en Conseil d'État sur la procédure contradictoire (L. 126-8)."
+  },
+  {
+   "sample_id": "P243", "code": "cch", "number": "R311-63", "source_id": "LEGIARTI000039042491",
+   "verdict": "0", "families": [],
+   "description": "Conséquences de l'annulation ou de la suspension des primes à la construction sur les prêts du Crédit foncier : les articles visés (R. 311-5 à R. 311-22, R. 311-60 à R. 311-62) existent et R. 311-60 renvoie réciproquement à R. 311-63. Régime historique (contrats postérieurs au 10 septembre 1977) mais cohérent.",
+   "evidence": "LEGIARTI000039042491 : « en application des dispositions des articles R. 311-5 à R. 311-22 et de celles des articles R. 311-60 à R. 311-62 » ; LEGIARTI000039042509 (R. 311-60) : « dans les conditions prévues par les articles R. 311-5 à R. 311-22 et les articles R. 311-60 à R. 311-63 »",
+   "links_read": ["cch R311-5 LEGIARTI000039042761", "cch R311-22 LEGIARTI000039042695", "cch R311-60 LEGIARTI000039042509", "cch R311-62 LEGIARTI000039042496"],
+   "links_not_read": "R. 311-6 à R. 311-21, R. 311-61, L. 311-5."
+  },
+  {
+   "sample_id": "P263", "code": "css", "number": "R922-46", "source_id": "LEGIARTI000006754765",
+   "verdict": "0", "families": [],
+   "description": "Instance représentative d'une fédération AGIRC-ARRCO : assemblée générale ou commission paritaire élargie de R. 922-49, qui existe et la définit.",
+   "evidence": "LEGIARTI000006754765 : « soit la commission paritaire élargie mentionnée à l'article R. 922-49 » ; LEGIARTI000006754768 (R. 922-49) : « La commission paritaire exerce les compétences définies au premier alinéa de l'article R. 922-48 dans une formation élargie. »",
+   "links_read": ["css R922-49 LEGIARTI000006754768"],
+   "links_not_read": "R. 922-42, R. 922-48 ; base légale L. 922-4."
+  },
+  {
+   "sample_id": "P283", "code": "css", "number": "R133-22", "source_id": "LEGIARTI000046176903",
+   "verdict": "0", "families": [],
+   "description": "Échéanciers et sursis à poursuites accordés par le directeur de l'organisme de recouvrement de L. 133-5-10 (dispositifs simplifiés) dans les conditions des deux premiers alinéas de R. 243-21 : les deux articles existent et les deux premiers alinéas de R. 243-21 portent bien sur l'octroi et les garanties.",
+   "evidence": "LEGIARTI000046176903 : « dans les conditions prévues aux deux premiers alinéas de l'article R. 243-21 » ; LEGIARTI000039222687 (R. 243-21) : « Le directeur de l'organisme chargé du recouvrement des cotisations a la possibilité d'accorder des échéanciers de paiement et des sursis à poursuites… L'échéancier ou le sursis prévu à l'alinéa précédent doit être assorti de garanties du débiteur »",
+   "links_read": ["css L133-5-10 LEGIARTI000048700691", "css R243-21 LEGIARTI000039222687"],
+   "links_not_read": "L. 133-5-6, L. 133-5-9-1."
+  },
+  {
+   "sample_id": "P303", "code": "css", "number": "D122-1-3", "source_id": "LEGIARTI000043380010",
+   "verdict": "0", "families": [],
+   "description": "Inventaire annuel (ou triennal en cas d'inventaire permanent) du patrimoine des organismes de sécurité sociale et contrôle de concordance par le directeur comptable et financier. Sans renvoi externe ; rien à signaler.",
+   "evidence": "LEGIARTI000043380010 : « Tout organisme de sécurité sociale contrôle par inventaire, au moins une fois tous les douze mois, l'existence et la valeur des éléments actifs et passifs de son patrimoine. »",
+   "links_read": [],
+   "links_not_read": "D. 122-1 et s. (missions du directeur comptable et financier)."
+  },
+  {
+   "sample_id": "P323", "code": "css", "number": "R147-11-2", "source_id": "LEGIARTI000026913555",
+   "verdict": "G", "families": ["F3"],
+   "description": "Renvoi décalé : l'article, inchangé depuis 2013, renvoie deux fois à « la saisine prévue au 2° du III de l'article R. 147-2 ». Dans la version de R. 147-2 en vigueur depuis le 31 décembre 2023, le 2° du III est désormais la décision de prononcer un avertissement ; la saisine du directeur général de l'UNCAM a été déplacée au 3° du III. Jusqu'au 31 décembre 2023 (version LEGIARTI000031828689) la saisine figurait bien au 2° du III. Le troisième alinéa de R. 147-11-2 répète en outre le délai d'avis d'un mois du directeur général déjà prévu par R. 147-2. Le renvoi à R. 147-5 III (délai de trois ans porté à cinq ans) reste exact.",
+   "evidence": "LEGIARTI000026913555 : « dispose d'un délai de quinze jours à l'issue du délai d'un mois prévu au premier alinéa du I de l'article R. 147-2 pour effectuer la saisine prévue au 2° du III du même article et poursuivre la procédure prévue au même article » ; LEGIARTI000048831176 (R. 147-2, en vigueur) : « III.-… 2° Soit, dans un délai de quinze jours décider de prononcer un avertissement. L'avertissement précise les voies et délais de recours. 3° Soit décider de poursuivre la procédure, auquel cas il dispose d'un délai de quinze jours pour saisir le directeur général de l'Union nationale des caisses d'assurance maladie d'une demande d'avis conforme » ; LEGIARTI000031828689 (R. 147-2, 2016→2023) : « 2° Soit décider de poursuivre la procédure, auquel cas il dispose d'un délai de quinze jours pour saisir le directeur général de l'Union nationale des caisses d'assurance maladie »",
+   "links_read": ["css R147-2 LEGIARTI000048831176", "css R147-2 LEGIARTI000031828689 (version antérieure)", "css R147-5 LEGIARTI000048831129"],
+   "links_not_read": "L. 114-17-1, L. 114-17-2, R. 147-11 (définition de la fraude), R. 147-6."
+  },
+  {
+   "sample_id": "P343", "code": "cch", "number": "D312-22", "source_id": "LEGIARTI000046589653",
+   "verdict": "0", "families": [],
+   "description": "Durée de la garantie des fonds (sous-section relative à la garantie de l'État / L. 312-8) limitée à la durée du prêt, au plus 25 ans. Cohérent avec D. 312-21 voisin.",
+   "evidence": "LEGIARTI000046589653 : « Les garanties mentionnées dans la présente sous-section sont délivrées pour la durée totale du prêt qui ne peut excéder 25 ans. »",
+   "links_read": ["cch D312-21 LEGIARTI000046589633"],
+   "links_not_read": "L. 312-8, D. 312-24 (comité de gestion)."
+  },
+  {
+   "sample_id": "P363", "code": "travail", "number": "R4412-77", "source_id": "LEGIARTI000021490913",
+   "verdict": "0", "families": [],
+   "description": "Arrêt du travail en cas de dépassement d'une VLEP contraignante de R. 4412-149 : cet article existe (version du 2026-04-10) et contient le tableau des valeurs limites.",
+   "evidence": "LEGIARTI000021490913 : « En cas de dépassement d'une valeur limite d'exposition professionnelle contraignante prévue à l'article R. 4412-149, l'employeur arrête le travail aux postes de travail concernés » ; LEGIARTI000053786000 (R. 4412-149) : « Les concentrations des agents chimiques présents dans l'atmosphère des lieux de travail figurant dans le tableau suivant ne doivent pas dépasser… »",
+   "links_read": ["travail R4412-149 LEGIARTI000053786000"],
+   "links_not_read": "R. 4412-76, R. 4412-78 (mesures de contrôle)."
+  },
+  {
+   "sample_id": "P383", "code": "urba", "number": "R*421-20", "source_id": "LEGIARTI000034355335",
+   "verdict": "0", "families": [],
+   "description": "Permis d'aménager obligatoire dans les secteurs protégés pour les aménagements des h, i et j de R*421-19 : dans la version de R*421-19 en vigueur depuis le 29 juillet 2026, h (parc d'attractions), i (golf) et j (aires de stationnement) correspondent toujours. Les seuils propres aux affouillements en secteur protégé (2 m / 100 m²) sont plus stricts que le k de R*421-19 (2 ha), ce qui est cohérent avec l'objet de l'article.",
+   "evidence": "LEGIARTI000034355335 : « les aménagements mentionnés aux h, i et j de l'article R. 421-19, quelle que soit leur importance » ; LEGIARTI000054550582 (R*421-19) : « h) L'aménagement d'un parc d'attractions… i) L'aménagement d'un golf… j) Lorsqu'ils sont susceptibles de contenir au moins cinquante unités les aires de stationnement ouvertes au public »",
+   "links_read": ["urba R*421-19 LEGIARTI000054550582"],
+   "links_not_read": "R*421-23 (déclaration préalable), L. 421-2."
+  },
+  {
+   "sample_id": "P403", "code": "travail", "number": "L2261-3", "source_id": "LEGIARTI000006901781",
+   "verdict": "0", "families": [],
+   "description": "Adhésion à une convention ou un accord collectif ; renvois à L. 2261-5 (adhésion élargissant le champ) et L. 2261-6 (agrément), qui existent et correspondent à l'hypothèse visée.",
+   "evidence": "LEGIARTI000006901781 : « leur adhésion est soumise aux dispositions des articles L. 2261-5 ou L. 2261-6, selon le cas » ; LEGIARTI000006901784 (L. 2261-6) : « l'adhésion de l'employeur à une telle convention ou à un tel accord est subordonnée à un agrément des organisations mentionnées à l'article L. 2232-16 »",
+   "links_read": ["travail L2261-5 LEGIARTI000006901783", "travail L2261-6 LEGIARTI000006901784"],
+   "links_not_read": "D. 2231-2 et s. (dépôt), L. 2231-1, L. 2232-16."
+  },
+  {
+   "sample_id": "P423", "code": "a1", "number": "73", "source_id": "LEGIARTI000006293537",
+   "verdict": "0", "families": [],
+   "description": "Bilan de fabrication en fin de campagne dans les distilleries et définition de la perte de fabrication par référence à la comptabilité matières. Pas de renvoi numéroté ; rien à signaler.",
+   "evidence": "LEGIARTI000006293537 : « La perte de fabrication est représentée par le manquant général apparaissant à ce bilan, atténué du manquant dégagé à la comptabilité matières. »",
+   "links_read": ["a1 40 LEGIARTI000051821241 (contexte comptabilité matières)"],
+   "links_not_read": "Articles 71, 72, 74 de l'annexe I ; CIBS (reprise de 302 G)."
+  },
+  {
+   "sample_id": "P443", "code": "urba", "number": "L134-4", "source_id": "LEGIARTI000031210866",
+   "verdict": "0", "families": [],
+   "description": "Modalités de collaboration entre le conseil de territoire (établissement public territorial du Grand Paris) et les communes pour le PLUi ; cohérent avec L. 134-2 et L. 134-3.",
+   "evidence": "LEGIARTI000031210866 : « Le conseil de territoire arrête les modalités de la collaboration avec les communes concernées, après avoir réuni l'ensemble des maires de ces communes. »",
+   "links_read": ["urba L134-1 LEGIARTI000042013043", "urba L134-2 LEGIARTI000031210862", "urba L134-3 LEGIARTI000031210864"],
+   "links_not_read": "L. 153-8 (procédure PLUi), CGCT L. 5219-2."
+  },
+  {
+   "sample_id": "P463", "code": "css", "number": "LO111-4-5", "source_id": "LEGIARTI000045354840",
+   "verdict": "0", "families": [],
+   "description": "Publication en format ouvert des données des documents annexés aux LFSS. Les renvois numérotés existent tous : LO 111-4-1 comporte dix items (1° à 8° visés), LO 111-4-3 trois items (1° et 2° visés), LO 111-4-4 huit items (1° à 5°, 7° et 8° visés).",
+   "evidence": "LEGIARTI000045354840 : « aux 1° à 8° de l'article LO 111-4-1, à l'article LO 111-4-2, aux 1° et 2° de l'article LO 111-4-3 ainsi qu'aux 1° à 5° et aux 7° et 8° de l'article LO 111-4-4 » ; LEGIARTI000045354830 (LO 111-4-4) : « 8° Présentant, pour le dernier exercice clos, les comptes définitifs »",
+   "links_read": ["css LO111-4 LEGIARTI000045358043", "css LO111-4-1 LEGIARTI000045354808", "css LO111-4-2 LEGIARTI000045354814", "css LO111-4-3 LEGIARTI000045354818", "css LO111-4-4 LEGIARTI000045354830"],
+   "links_not_read": "Aucun."
+  },
+  {
+   "sample_id": "P483", "code": "a4", "number": "50 octies C", "source_id": "LEGIARTI000020786735",
+   "verdict": "m", "families": ["F3"],
+   "description": "Réserve des exonérations à l'importation accordées dans le cadre d'accords internationaux : renvoi à « l'article 91 de la directive (CEE) n° 83/181 modifiée du Conseil du 28 mars 1983 ». À la connaissance de l'auditeur, cette directive a été abrogée et codifiée par la directive 2009/132/CE du 19 octobre 2009, postérieure à la version de l'article (25 juin 2009), avec tableau de correspondance ; le renvoi reste lisible mais vise un texte disparu. Texte hors corpus : à confirmer (EUR-Lex inaccessible le 2026-10-31). Le renvoi à l'article 143 f à i de la directive 2006/112/CE est exact.",
+   "evidence": "LEGIARTI000020786735 : « dans le cadre des accords internationaux mentionnés à l'article 143 sous f à i) de la directive (CE) n° 2006/112 du 28 novembre 2006 du Conseil des communautés européennes et à l'article 91 de la directive (CEE) n° 83/181 modifiée du Conseil du 28 mars 1983. »",
+   "links_read": ["a4 50 octies A LEGIARTI000020786741", "a4 50 octies B LEGIARTI000020786739"],
+   "links_not_read": "Directive 83/181/CEE et directive 2009/132/CE (EUR-Lex non consultable) ; article 50 octies ; base légale CGI 291."
+  },
+  {
+   "sample_id": "P503", "code": "css", "number": "D715-11", "source_id": "LEGIARTI000041969364",
+   "verdict": "0", "families": [],
+   "description": "Transmission d'informations de la CNAV à la CARCEPT pour le calcul de la contribution. Rédaction réduite à un alinéa depuis 2015 (suppression de la transmission inverse), espaces surnuméraires sans effet. Rien à signaler.",
+   "evidence": "LEGIARTI000041969364 : « La Caisse nationale d'assurance vieillesse communique à la Caisse autonome de retraites complémentaires et de prévoyance du transport les informations nécessaires à cette dernière pour le calcul de la contribution à sa charge. »",
+   "links_read": [],
+   "links_not_read": "D. 715-1 et s. (intégration financière), L. 715-1 et s."
+  },
+  {
+   "sample_id": "P523", "code": "a2", "number": "242 C", "source_id": "LEGIARTI000025622311",
+   "verdict": "0", "families": [],
+   "description": "Conditions de transparence financière et plafonds de ressources pour la rémunération des dirigeants d'organismes sans but lucratif (d du 1° du 7 de l'article 261 CGI). Le décompte des alinéas du d dans la version de 261 en vigueur (LEGIARTI000054374042) correspond : 4e, 5e et 6e alinéas (seuils de ressources pour un, deux, trois dirigeants), 8e (constat par commissaire aux comptes), 9e (plafond de trois fois le plafond L. 241-3). L'abrogation différée de 261 au 1er janvier 2027 (ordonnance 2025-1247) maintient expressément les 3e à 10e et dernier alinéas du d : calendrier normal, non compté.",
+   "evidence": "LEGIARTI000025622311 : « Pour l'appréciation des montants de ressources mentionnés aux quatrième, cinquième, sixième et huitième alinéas du d du 1° du 7 de l'article 261 » ; LEGIARTI000054374042 (261, 8e alinéa du d) : « le montant des ressources le cas échéant hors ressources issues des versements effectués par des personnes morales de droit public est constaté par un commissaire aux comptes ; » ; (9e alinéa) : « ne peut en aucun cas excéder trois fois le montant du plafond visé à l'article L. 241-3 du code de la sécurité sociale. »",
+   "links_read": ["cgi 261 LEGIARTI000054374042"],
+   "links_not_read": "Ordonnance 2025-1247 et CIBS L. 213-82, L. 213-107 (hors corpus)."
+  },
+  {
+   "sample_id": "P543", "code": "a1", "number": "40", "source_id": "LEGIARTI000051821241",
+   "verdict": "0", "families": [],
+   "description": "Inscriptions des bouilleurs dans la comptabilité matières tenue en application du III de l'article 302 G du CGI « dans sa rédaction en vigueur au 31 décembre 2021 » : renvoi délibérément figé à une rédaction antérieure (302 G en état ABROGE_DIFF, repris par le CIBS), conforme à la règle du brief (renvoi à une rédaction antérieure non compté). Le renvoi à l'article 39 de l'annexe I (déclaration de distillation) est exact.",
+   "evidence": "LEGIARTI000051821241 : « dans la comptabilité matières qu'ils doivent tenir en application des dispositions du III de l'article 302 G du code général des impôts dans sa rédaction en vigueur au 31 décembre 2021 » ; cgi 302 G LEGIARTI000050085168 state=ABROGE_DIFF 2022-01-01→2222-02-22",
+   "links_read": ["cgi 302 G LEGIARTI000050085168 (état)", "a1 39 LEGIARTI000054363080"],
+   "links_not_read": "Texte intégral de 302 G au 31 décembre 2021 ; CIBS."
+  },
+  {
+   "sample_id": "P563", "code": "cch", "number": "R175-2", "source_id": "LEGIARTI000053216492",
+   "verdict": "0", "families": [],
+   "description": "Obligation d'équipement en systèmes d'automatisation et de contrôle des bâtiments tertiaires (L. 174-3) ; renvoi au 4° de R. 175-1 (systèmes techniques), exact. Calendrier modifié en décembre 2025 (échéance 2030 pour les 70 kW) : calendrier normal.",
+   "evidence": "LEGIARTI000053216492 : « Sont munis d'un système d'automatisation et de contrôle, prévu à l'article L. 174-3… l'ensemble des systèmes techniques mentionnés au 4° de l'article R. 175-1 » ; LEGIARTI000047427489 (R. 175-1) : « 4° Système technique de bâtiment : tout équipement technique de chauffage des locaux… »",
+   "links_read": ["cch L174-3 LEGIARTI000042122391", "cch R175-1 LEGIARTI000047427489"],
+   "links_not_read": "Arrêté sur le temps de retour sur investissement (III) ; R. 175-3 et s."
+  },
+  {
+   "sample_id": "P583", "code": "cch", "number": "R165-21", "source_id": "LEGIARTI000043819365",
+   "verdict": "0", "families": [],
+   "description": "Contraventions relatives aux attestations d'accessibilité et d'achèvement : le II de R. 165-3 comporte bien quatre alinéas dont les deuxième et troisième fixent le contenu de l'attestation ; les I et II de R. 165-17 désignent bien les personnes habilitées. Renvois exacts.",
+   "evidence": "LEGIARTI000043819365 : « 1° De produire une attestation d'accessibilité non conforme aux deuxième et troisième alinéas du II de l'article R. 165-3 » ; LEGIARTI000043819317 (R. 165-3 II) : « Il précise la dénomination de l'établissement, sa catégorie et son type… Il indique les pièces qui établissent la conformité »",
+   "links_read": ["cch R165-3 LEGIARTI000043819317", "cch R165-17 LEGIARTI000043819355"],
+   "links_not_read": "L. 164-2, L. 165-5 ; code pénal 131-13, 131-35, 132-11, 132-15 (hors corpus)."
+  },
+  {
+   "sample_id": "P603", "code": "travail", "number": "L8115-4", "source_id": "LEGIARTI000037312987",
+   "verdict": "0", "families": [],
+   "description": "Critères de choix entre avertissement et amende administrative et de fixation du montant (loi 2018-771). Pas de renvoi numéroté ; rien à signaler.",
+   "evidence": "LEGIARTI000037312987 : « Pour déterminer si elle prononce un avertissement ou une amende et, le cas échéant, pour fixer le montant de cette dernière, l'autorité administrative prend en compte les circonstances et la gravité du manquement »",
+   "links_read": [],
+   "links_not_read": "L. 8115-1 à L. 8115-3, L. 8115-5 et s., R. 8115-1 et s."
+  },
+  {
+   "sample_id": "P623", "code": "travail", "number": "R5122-16", "source_id": "LEGIARTI000042050270",
+   "verdict": "m", "families": ["F3"],
+   "description": "Paiement de l'allocation d'activité partielle par l'ASP en cas de procédure collective : l'article (version du 29 juin 2020) désigne encore le « directeur régional des entreprises, de la concurrence, de la consommation, du travail et de l'emploi », autorité supprimée au 1er avril 2021 au profit des DREETS. À la connaissance de l'auditeur, le décret n° 2020-1545 du 9 décembre 2020 contient une clause générale de substitution des références, ce qui prive l'anomalie d'effet ; non vérifié (Légifrance inaccessible le 2026-10-31). Le renvoi à L. 3253-14 (association AGS) est exact ; 191 articles en vigueur du code portent la même désignation.",
+   "evidence": "LEGIARTI000042050270 : « le préfet, ou sur délégation le directeur régional des entreprises, de la concurrence, de la consommation, du travail et de l'emploi, peut faire procéder au paiement de l'allocation d'activité partielle par l'Agence de services et de paiement » ; LEGIARTI000018767187 (L. 3253-14) : « L'assurance prévue à l'article L. 3253-6 est mise en oeuvre par une association créée par les organisations nationales professionnelles d'employeurs »",
+   "links_read": ["travail L3253-14 LEGIARTI000018767187", "renvois entrants : R5122-17, R5122-20, R5122-21 (non lus)"],
+   "links_not_read": "Décret n° 2020-1545 du 9 décembre 2020 (hors corpus, non consultable) ; R. 5122-17 à R. 5122-21 ; L. 5122-1."
+  }
+ ],
+ "summary": {"G": 2, "m": 2, "0": 28, "total": 32,
+  "G_list": ["P123 cch Annexe I à l'article D353-200 (F5, F7)", "P323 css R147-11-2 (F3)"],
+  "m_list": ["P483 a4 50 octies C (F3, à confirmer)", "P623 travail R5122-16 (F3, à confirmer)"],
+  "families_observed": ["F3", "F5", "F7"],
+  "caveat": "Revue IA : ce n'est pas une validation par un juriste."}
+}

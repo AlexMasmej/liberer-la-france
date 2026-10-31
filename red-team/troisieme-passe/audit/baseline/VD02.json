@@ -1,0 +1,148 @@
+{
+  "group": "VD02",
+  "read_from": "production",
+  "read_on": "2026-10-31",
+  "method": "CITE_PRODUCTION=1 python3 -I tools/cite.py pour chaque article du paquet et pour ses cibles (source officielle et proposition lues en entier) ; requêtes sqlite3 en mode=ro avec query_only pour les renvois entrants ; une consultation Légifrance (code de commerce L441-9) datée du 31 octobre 2026. Exports conservés sous evidence/cited/production-20261031/. Revue IA, sans validation par un juriste.",
+  "items": [
+    {
+      "source_id": "LEGIARTI000034597961",
+      "code": "a3",
+      "number": "2 vicies",
+      "flagged_in": "official",
+      "present_official": "oui",
+      "present_project": "non",
+      "gross": "oui",
+      "evidence_official": "LEGIARTI000034597961 (source) : « mentionnées aux articles 2 novodecies, 2 novodecies A et 2 novodecies Best admise dans la proportion » ; « reprise de l'engagement par le conjoint survivant prévue aux cinquième et dixième alinéas du g et aux cinquième et dixième alinéas du h du 1° du I de l'article 31 ». CGI 31 LEGIARTI000053544761 (source), h, alinéas comptés : 4e « Toutefois, lorsque le transfert de la propriété du bien ou le démembrement de ce droit résulte du décès de l'un des époux soumis à imposition commune, le conjoint survivant attributaire du bien ou titulaire de son usufruit peut demander la reprise à son profit » ; 5e « Lorsque l'option est exercée, les dispositions du b ne sont pas applicables, mais les droits suivants sont ouverts : ». Au g, le 5e alinéa est bien celui du conjoint survivant.",
+      "evidence_project": "LEGIARTI000034597961 (proposition, rewrite_draft) : « 2 novodecies A et 2 novodecies B est admise dans la proportion » ; « prévue aux cinquième et dixième alinéas du g et aux quatrième et dixième alinéas du h du 1° du I de l'article 31 ». CGI 31 LEGIARTI000053544761 (proposition) : l'ordre des alinéas du h est inchangé (4e = reprise par le conjoint survivant ; 5e = « Lorsque l'option est exercée… » ; 10e = « le conjoint survivant attributaire des titres ou titulaire de leur usufruit peut demander la reprise »).",
+      "note": "Les deux défauts (coquille « Best », renvoi au cinquième alinéa du h au lieu du quatrième) sont dans le texte officiel et corrigés par la proposition ; le motif du projet le dit expressément. Grossier au sens du renvoi décalé vérifiable en ouvrant l'article 31, mais portée pratique réduite (dispositifs clos, achèvement au plus tard le 1er juillet 2025)."
+    },
+    {
+      "source_id": "LEGIARTI000038009168",
+      "code": "a4",
+      "number": "23 L sexies",
+      "flagged_in": "official",
+      "present_official": "oui",
+      "present_project": "non",
+      "gross": "oui",
+      "evidence_official": "LEGIARTI000038009168 (source) : « I.-Pour l'application du  1° de l'article 242 bis du code général des impôts , à l'occasion de chaque transaction réalisée par l'intermédiaire d'une plateforme ». CGI 242 bis LEGIARTI000044981558 (source, en vigueur 2023-01-01) : deux alinéas sans 1°, 2° ni 3° ; « Un arrêté des ministres chargés du budget et de la sécurité sociale précise le contenu des obligations prévues au premier alinéa. »",
+      "evidence_project": "LEGIARTI000038009168 (proposition) : « I. – Pour l'application du premier alinéa de l'article 242 bis du code général des impôts, l'entreprise mentionnée au premier alinéa de cet article met à la disposition […] une information accessible sur son interface ». CGI 242 bis LEGIARTI000044981558 (proposition) : « précise le contenu des obligations prévues au premier alinéa sans imposer de répétition de l'information par transaction ».",
+      "note": "Renvoi au « 1° » inexistant depuis le 1er janvier 2023 : présent dans l'arrêté codifié officiel, remplacé dans la proposition par le premier alinéa, en cohérence avec 242 bis proposé. Grossier : subdivision visée disparue depuis près de quatre ans, même si la substance restait identifiable."
+    },
+    {
+      "source_id": "LEGIARTI000039049069",
+      "code": "cch",
+      "number": "Annexe V à l'article D353-127",
+      "flagged_in": "official",
+      "present_official": "oui",
+      "present_project": "oui",
+      "gross": "oui",
+      "evidence_official": "LEGIARTI000039049069 (source), article 11 : « dispose du délai de six mois, mentionné à l'article 11, à compter de la réception du projet de bail » ; article 9 : « le locataire titulaire d'un bail en cours dispose de six mois pour accepter le nouveau bail » ; article 23 : « en aviser immédiatement les organismes liquidateurs ainsi que la commission départementale de l'aide personnalisée au logement » et « tel que défini par les directives du conseil de gestion du fonds national de l'habitation » ; article 4 : « dans les conditions définies par l'arrêté du 9 mars 1978 précité » (aucune mention antérieure de cet arrêté) ; « II. - Engagements à l'égard des locataires. » figure deux fois (avant l'article 7 et avant l'article 18). D353-127 LEGIARTI000039048584 (source) : « (annexe n° 1) […] (annexe n. 2) […] (annexe n° 3) » ; en production, les numéros existants sont « Annexe I », « Annexe II », « Annexe III » et « Annexe V à l'article D353-127 » (pas d'annexe IV).",
+      "evidence_project": "LEGIARTI000039049069 (proposition) — corrigés : article 11 « dispose du délai de six mois, mentionné à l'article 9 » ; article 23 « tel que défini par les directives du conseil de gestion du fonds national d'aide au logement » ; article 4 réécrit sans l'arrêté de 1978 (« il choisit le gestionnaire sans agrément spécial au titre de la présente convention »). Subsistent : article 23 « en aviser immédiatement les organismes liquidateurs ainsi que la commission départementale de l'aide personnalisée au logement » ; « II. - Engagements à l'égard des locataires. » toujours deux fois (notes de revue : « répétition du titre II conservée pour ne pas déplacer les subdivisions ») ; D353-127 LEGIARTI000039048584 status=retained_unchanged, toujours limité aux annexes n° 1 à 3, aucune proposition ne rattache l'annexe V.",
+      "note": "Défaut composite. Dans le texte proposé, l'auto-renvoi de l'article 11, le fonds national de l'habitation et l'arrêté de 1978 « précité » sont corrigés ; restent la commission départementale de l'APL (supprimée depuis la loi ALUR, L. 351-14 confiant la décision à « l'organisme payeur »), le doublon du titre II et le défaut de rattachement de l'annexe V à D. 353-127. Le défaut est donc présent des deux côtés, sous une forme réduite dans le projet. Grossier : auto-renvoi et organismes disparus dans une convention type recodifiée en 2019. Non vérifié ici : L. 351-14 et L. 351-6 historiques cités par le paquet (hors des besoins de la réponse, le texte de l'annexe suffit)."
+    },
+    {
+      "source_id": "LEGIARTI000045211845",
+      "code": "cch",
+      "number": "L411-10",
+      "flagged_in": "official",
+      "present_official": "oui",
+      "present_project": "non",
+      "gross": "oui",
+      "evidence_official": "LEGIARTI000045211845 (source) : « aux établissements publics de coopération intercommunale mentionnés au vingt-troisième alinéa de l'article L. 441-1 ». L441-1 LEGIARTI000054354341 (source, en vigueur 2026-07-01), alinéas comptés : 23e « Le plan départemental d'action pour le logement et l'hébergement des personnes défavorisées, la convention intercommunale d'attribution ou, pour la commune de Paris, la convention d'attribution » ; 24e « Sur le territoire des établissements publics de coopération intercommunale tenus de se doter d'un programme local de l'habitat en application du dernier alinéa du IV de l'article L. 302-1 ou ayant la compétence en matière d'habitat et au moins un quartier prioritaire de la politique de la ville » ; l'article se désigne lui-même : « Sur les territoires mentionnés au vingt-quatrième alinéa du présent article, au moins 50 % des attributions annuelles ».",
+      "evidence_project": "LEGIARTI000045211845 (proposition) : « aux établissements publics de coopération intercommunale tenus de se doter d'un programme local de l'habitat ou ayant la compétence en matière d'habitat et au moins un quartier prioritaire de la politique de la ville, mentionnés à l'article L. 441-1 » (plus de renvoi ordinal). Motif : « Correction supplémentaire d'un renvoi ordinal préexistant : « au vingt-troisième alinéa de l'article L. 441-1 » désigne désormais l'alinéa relatif au plan départemental et aux conventions ».",
+      "note": "Renvoi décalé d'un alinéa confirmé dans le texte officiel (le décompte est corroboré par la référence interne « vingt-quatrième alinéa » de L. 441-1). Supprimé par la proposition, qui nomme la catégorie. Les notes du projet signalent le même décalage dans L445-1 (hors paquet, non qualifié ici)."
+    },
+    {
+      "source_id": "LEGIARTI000043819565",
+      "code": "cch",
+      "number": "R184-3",
+      "flagged_in": "official",
+      "present_official": "oui",
+      "present_project": "non",
+      "gross": "oui",
+      "evidence_official": "LEGIARTI000043819565 (source) : « Sans préjudice de l'application, le cas échéant, des peines plus fortes prévues aux articles 209 à 233 du code pénal et de l'article L. 183-11, sont punis des peines prévues à l'article 131-41 du code pénal ceux qui mettent obstacle à l'exécution des fonctions incombant, en application des dispositions du présent titre, aux membres de la commission consultative départementale de la protection civile et à ceux de la commission technique interministérielle des immeubles de grande hauteur. » Contexte : « Titre VIII : CONTRÔLE ET SANCTIONS ». Le motif du projet le constate aussi : « La référence aux anciens articles 209 à 233 du code pénal et le renvoi isolé à 131-41 ne fournissent pas un dispositif de sanction cohérent ».",
+      "evidence_project": "LEGIARTI000043819565 (proposition) : « Le présent article est abrogé à compter de l'entrée en vigueur de la loi portant la présente réforme. Aucune poursuite ni condamnation ne peut être fondée sur le présent article pour des faits commis à compter de cette date. […] L'abrogation ne supprime ni les missions de contrôle et les garanties de visite légalement établies, ni l'infraction d'obstacle prévue à l'article L. 183-11 dans son champ propre ». L183-11 LEGIARTI000041570617 : retained_unchanged, « puni de six mois d'emprisonnement et de 7 500 € d'amende ».",
+      "note": "Dans le texte officiel, la peine applicable aux personnes physiques est indéterminable (131-41 ne fixe qu'un taux pour les personnes morales), avec renvoi à l'ancien code pénal et à une commission disparue : grossier. Le projet abroge l'article avec transition pénale ; le texte défectueux ne subsiste pas. Les textes du code pénal (131-41, anciens 209 à 233) et R. 122-12 historique ne sont pas dans le corpus ; la réponse repose sur le libellé de R184-3 lui-même, suffisant."
+    },
+    {
+      "source_id": "LEGIARTI000038725560",
+      "code": "cgi",
+      "number": "1751",
+      "flagged_in": "official",
+      "present_official": "oui",
+      "present_project": "oui",
+      "gross": "oui",
+      "evidence_official": "LEGIARTI000038725560 (source, 2019-07-05→2029-01-01) : « 2. Dans tous les cas où est constaté un manquement aux règles de facturation telles que prévues aux articles L. 441-9 et L. 443-3 du code de commerce (1), l'entreprise de l'auteur du délit peut être placée sous séquestre » ; « La mise sous séquestre peut être ordonnée par le juge d'instruction ou par le tribunal correctionnel saisis, en tout état de la procédure, sur réquisition du procureur de la République. » Version future LEGIARTI000052845689 (2029-01-01) : « par le juge d'instruction ou par le tribunal délictuel », « l'auteur du délit » maintenu. Code de commerce L441-9 II (Légifrance LEGIARTI000038414397, consulté le 31 octobre 2026, texte en vigueur depuis le 26 avril 2019, ord. n° 2019-359) : « Tout manquement au I est passible d'une amende administrative dont le montant ne peut excéder 75 000 € pour une personne physique et 375 000 € pour une personne morale ». Annexe III 406 A 12 LEGIARTI000042160740 : « poursuites sont exercées pour des manquements visés au 2 de l'article 1751 » ; 406 A 15 LEGIARTI000024678982 : « par le juge d'instruction ou par le tribunal correctionnel ».",
+      "evidence_project": "LEGIARTI000038725560 (proposition) : « Dans tous les cas où est constaté un manquement aux règles de facturation […] l'entreprise de l'auteur du délit peut être placée sous séquestre jusqu'à l'exécution de la décision définitive. La mesure de séquestre prévue au présent article ne peut être étendue à l'ensemble du patrimoine de l'auteur du délit. La mise sous séquestre peut être ordonnée par le juge d'instruction ou par le tribunal correctionnel saisis, en tout état de la procédure, sur réquisition du procureur de la République. » Notes de revue : « La qualification de délit employée par la source doit être confrontée aux sanctions actuelles du code de commerce ; elle n'est pas corrigée silencieusement. » Même rédaction dans la proposition de la version 2029 (LEGIARTI000052845689, « tribunal délictuel »). 406 A 12 proposé : « des biens de l'entreprise des personnes à l'encontre desquelles des poursuites sont exercées pour des manquements » ; 406 A 15 proposé : « ordonnée par le juge d'instruction ou par le tribunal correctionnel ».",
+      "note": "L'incohérence manquement/délit et le rattachement de la mesure à une juridiction répressive saisie d'un délit qui n'existe plus (amende administrative depuis 2019) sont dans le texte officiel et reconduits tels quels par la proposition, qui ne touche que l'extension au patrimoine. Le projet en a conscience (notes) sans corriger. Grossier : la voie principale du séquestre (réquisition du procureur, juge d'instruction, tribunal correctionnel) est sans objet ; seul le référé reste praticable. L. 443-3 du code de commerce et LPF L. 246 non consultés."
+    },
+    {
+      "source_id": "LEGIARTI000041968074",
+      "code": "css",
+      "number": "D114-4-4",
+      "flagged_in": "official",
+      "present_official": "oui",
+      "present_project": "non",
+      "gross": "oui",
+      "evidence_official": "LEGIARTI000041968074 (source) : « 5° La tenue de la comptabilité matière prévue au dernier alinéa de l'article D. 122-1-1 ; ». D122-1-1 LEGIARTI000046356404 (source, en vigueur 2023-01-01) : « 3° (Supprimé) ; 4° La comptabilité analytique d'exploitation s'il en existe une ; 5° La comptabilité de programme en tant que de besoin. » (aucune comptabilité matière).",
+      "evidence_project": "LEGIARTI000041968074 (proposition) : « 5° La tenue de la comptabilité matière ; ». D122-1-1 LEGIARTI000046356404 : retained_unchanged ; ses notes relèvent : « Le renvoi entrant est donc inexact et doit être corrigé dans D114-4-4 ».",
+      "note": "Renvoi mort confirmé dans le texte officiel ; supprimé par la proposition, qui conserve la compétence de l'instruction conjointe sur la comptabilité matière sans renvoi. Grossier au sens F3 (renvoi vers un alinéa qui n'existe plus), à effet pratique limité (instruction comptable interne). La version 2020-2021 de D122-1-1 (LEGIARTI000041941508) n'a pas été relue : la réponse repose sur la version en vigueur."
+    },
+    {
+      "source_id": "LEGIARTI000026913555",
+      "code": "css",
+      "number": "R147-11-2",
+      "flagged_in": "official",
+      "present_official": "oui",
+      "present_project": "non",
+      "gross": "oui",
+      "evidence_official": "LEGIARTI000026913555 (source) : « pour effectuer la saisine prévue au 2° du III du même article et poursuivre la procédure prévue au même article » (deux occurrences). R147-2 LEGIARTI000048831176 (source, en vigueur 2023-12-31), III : « 2° Soit, dans un délai de quinze jours décider de prononcer un avertissement. L'avertissement précise les voies et délais de recours. 3° Soit décider de poursuivre la procédure, auquel cas il dispose d'un délai de quinze jours pour saisir le directeur général de l'Union nationale des caisses d'assurance maladie d'une demande d'avis conforme ».",
+      "evidence_project": "LEGIARTI000026913555 (proposition) : « pour effectuer la saisine prévue au 3° du III du même article et poursuivre la procédure prévue au même article » (deux occurrences). R147-2 LEGIARTI000048831176 (proposition), III : « 2° Soit, dans un délai de quinze jours décider de prononcer un avertissement » ; « 3° Soit décider de poursuivre la procédure, auquel cas il dispose d'un délai de quinze jours pour saisir le directeur général de l'Union nationale des caisses d'assurance maladie d'une demande d'avis conforme » (ordre inchangé).",
+      "note": "Renvoi décalé (2° au lieu de 3° du III) confirmé dans le texte officiel depuis la réécriture de R147-2 au 31 décembre 2023 ; corrigé dans la proposition, cohérente avec R147-2 proposé. Grossier : désignation de la mauvaise étape d'une procédure de pénalité. La répétition du délai d'un mois et les gardes ajoutées par le projet (L114-17-1, L114-17-2) ne sont pas qualifiées ici."
+    },
+    {
+      "source_id": "LEGIARTI000006902312",
+      "code": "travail",
+      "number": "L2411-18",
+      "flagged_in": "official",
+      "present_official": "oui",
+      "present_project": "non",
+      "gross": "oui",
+      "evidence_official": "LEGIARTI000006902312 (source, retained_unchanged) : « Conformément à l'article L. 231-11 du code de la sécurité sociale, la procédure d'autorisation de licenciement et les périodes et durées de protection du salarié membre du conseil ou administrateur d'une caisse de sécurité sociale sont celles applicables au délégué syndical, prévues par l'article L. 2411-3. » CSS L231-11 LEGIARTI000006741869 (source) : « Le licenciement par l'employeur d'un salarié exerçant le mandat de membre du conseil ou d'administrateur ou ayant cessé son mandat depuis moins de six mois est soumis à la procédure prévue par l'article L. 412-18 du code du travail. Il en est de même du licenciement des candidats […] pendant une durée de trois mois. » Travail L2411-3 LEGIARTI000006902294 (source) : « durant les douze mois suivant la date de cessation de ses fonctions, s'il a exercé ces dernières pendant au moins un an ».",
+      "evidence_project": "CSS L231-11 LEGIARTI000006741869 (proposition) : « est soumis à l'autorisation préalable de l'inspecteur du travail, selon les articles L. 2421-1 et L. 2421-2 du code du travail. Il en est de même du licenciement des candidats dès la publication des candidatures et pendant trois mois. Les garanties et les périodes de protection plus favorables résultant des articles L. 2411-3 et L. 2411-18 du même code demeurent applicables, sans réduire les protections du présent alinéa. » L2411-18 et L2411-3 : retained_unchanged ; notes de L2411-18 : « La source extérieure conserve ses six mois après mandat, ses trois mois de candidature et sa prolongation saisonnière ; la proposition les articule avec les garanties plus favorables du présent article. »",
+      "note": "Dans le texte officiel, deux textes en vigueur fixent des durées différentes pour la même protection, le premier se disant « conformément » au second, qui renvoie en outre à L. 412-18 abrogé en 2008 : grossier. Dans le projet, L. 231-11 proposé supprime le renvoi mort et pose expressément le cumul (« plus favorables … demeurent applicables, sans réduire ») : la contradiction est résolue par articulation, bien que L2411-18 conserve la formule « Conformément à l'article L. 231-11 » et deux durées coexistent toujours (six mois autonomes, douze mois sous condition). Réponse « non » pour le projet au sens d'une contradiction ; la rédaction reste perfectible, non qualifiée ici."
+    },
+    {
+      "source_id": "LEGIARTI000033813180",
+      "code": "travail",
+      "number": "L7233-7",
+      "flagged_in": "official",
+      "present_official": "oui",
+      "present_project": "non",
+      "gross": "oui",
+      "evidence_official": "LEGIARTI000033813180 (source) : « L'aide financière de l'entreprise bénéficie des dispositions du f du I de l'article 244 quater F du même code. » CGI 244 quater F LEGIARTI000048590114 (source), I : « 1. Les entreprises imposées d'après leur bénéfice réel peuvent bénéficier d'un crédit d'impôt égal à 50 % […] 2. Elles peuvent également bénéficier d'un crédit d'impôt égal à 25 % des dépenses engagées au titre de l'aide financière de l'entreprise mentionnée aux articles L. 7233-4 et L. 7233-5 du code du travail. 3. […] a) […] b) […] c) […] d) » — aucune subdivision f.",
+      "evidence_project": "LEGIARTI000033813180 (proposition) : « L'aide financière de l'entreprise bénéficie des dispositions du 2 du I de l'article 244 quater F du même code. » CGI 244 quater F LEGIARTI000048590114 (proposition), I : « 2. Elles peuvent également bénéficier d'un crédit d'impôt égal à 25 % des dépenses engagées au titre de l'aide financière de l'entreprise mentionnée aux articles L. 7233-4 et L. 7233-5 du code du travail. »",
+      "note": "Renvoi à une subdivision inexistante confirmé dans le texte officiel ; corrigé par la proposition (« 2 du I »), cohérente avec 244 quater F proposé. Grossier (renvoi mort dans un article législatif), à effet limité puisque 244 quater F s'applique de lui-même."
+    },
+    {
+      "source_id": "LEGIARTI000049816200",
+      "code": "travail",
+      "number": "R5134-21",
+      "flagged_in": "official",
+      "present_official": "oui",
+      "present_project": "non",
+      "gross": "oui",
+      "evidence_official": "LEGIARTI000049816200 (source, en vigueur 2024-07-01) : « 3° Les organismes mentionnés à l'article D. 5134-14, pour les aides attribuées au nom de l'Etat ; ». D5134-14 LEGIARTI000021338146 : seule version en production, state=TRANSFERE 2010-01-01→2012-05-07 : « Les organismes mentionnés aux 1°, 3° et 4° de l'article L. 5311-4 peuvent conclure pour le compte de l'Etat des conventions individuelles ». R5134-14 LEGIARTI000049816204 (source, en vigueur 2024-07-01) : « L'opérateur France Travail, les organismes mentionnés à l'article L. 5314-1 et au 1° bis de l'article L. 5311-4, ainsi que les recteurs d'académie […] peuvent attribuer pour le compte de l'Etat des aides à l'insertion professionnelle ».",
+      "evidence_project": "LEGIARTI000049816200 (proposition) : « 3° Les organismes mentionnés à l'article R. 5134-14, pour les aides attribuées au nom de l'Etat ; ». R5134-14 LEGIARTI000049816204 : retained_unchanged.",
+      "note": "Renvoi mort (D. 5134-14 sans version en vigueur depuis 2012) confirmé dans le texte officiel, y compris après la réécriture par le décret n° 2024-606 ; corrigé par la proposition en R. 5134-14, article en vigueur et maintenu. Grossier : destinataires de données d'un traitement non identifiables sans reconstituer la généalogie D/R."
+    }
+  ],
+  "summary": {
+    "items": 11,
+    "present_official": {"oui": 11, "non": 0, "incertain": 0},
+    "present_project": {"oui": 2, "non": 9, "incertain": 0},
+    "gross": {"oui": 11, "non": 0},
+    "both_texts": ["LEGIARTI000039049069 (Annexe V à D353-127, forme réduite dans le projet)", "LEGIARTI000038725560 (CGI 1751)"],
+    "official_only": ["LEGIARTI000034597961", "LEGIARTI000038009168", "LEGIARTI000045211845", "LEGIARTI000043819565", "LEGIARTI000041968074", "LEGIARTI000026913555", "LEGIARTI000006902312", "LEGIARTI000033813180", "LEGIARTI000049816200"]
+  }
+}

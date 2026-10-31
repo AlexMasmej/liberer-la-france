@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-31T09:07:18.266997+00:00",
+  "generated_at": "2026-10-31T18:55:11.195797+00:00",
   "source_snapshot": "2026-10-18",
   "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
   "scope": "Current exported proposals only; hash checks do not establish independent semantic review.",
@@ -21,22 +21,22 @@
   },
   "coverage": {
     "exported_articles": 30317,
-    "exported_proposals": 14264,
-    "retained_sources": 16050,
+    "exported_proposals": 14273,
+    "retained_sources": 16041,
     "current_worker_declarations": 30287,
     "current_approved_independent_reviews": 27,
     "unassessed_proposals": 0,
     "unassessed_retained_sources": 0
   },
   "classification_counts": {
-    "coordination_only": 5977,
+    "coordination_only": 5986,
     "editorial_only": 1440,
     "financing_transfer": 19,
     "material_reduction": 6252,
     "mixed": 520,
     "payment_timing_relief": 56,
     "reserved": 7,
-    "retained_necessary": 16043
+    "retained_necessary": 16034
   },
   "measures": [
     {
@@ -3291,6 +3291,34 @@
             "source_id": "LEGIARTI000030256234",
             "number": "286 W",
             "slug": "impots-annexe-2"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "accises-secours-reception-alinea-expediteur",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "accises-secours-reception-alinea-expediteur",
+          "description": "Alinéa de réception recopié du I rattaché au cas de l'expédition sous document papier ; phrase d'information redondante retirée.",
+          "before": "Au II, « Il en est de même lorsque l'expéditeur ne peut se connecter au service suite à une indisponibilité de son propre système informatique », suivi d'une information des motifs par un « il » sans antécédent.",
+          "after": "Même règle de réception sous document papier lorsque l'expéditeur a expédié sous le secours du I faute de connexion ; l'information des motifs reste celle du I.",
+          "unit": "legal_duty",
+          "affected_population": "Destinataires de produits expédiés sous la procédure de secours ; expéditeurs concernés.",
+          "conditions_and_transition": "À compter de l'entrée en vigueur, y compris aux mouvements en cours ; documents antérieurs conservés.",
+          "replacement_or_new_burdens": "Aucune formalité ni condition de remplacement ; une phrase d'information redondante est retirée.",
+          "source_quote": "Il en est de même lorsque l'expéditeur ne peut se connecter au service suite à une indisponibilité de son propre système informatique.",
+          "proposed_quote": "Il en est de même lorsque, dans le cas prévu au I, l'expéditeur n'a pu se connecter au service au moment de l'expédition en raison d'une indisponibilité de son propre système informatique.",
+          "article": {
+            "code_id": "LEGITEXT000006069574",
+            "source_id": "LEGIARTI000047114063",
+            "number": "111 H quindecies",
+            "slug": "impots-annexe-3"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -21220,14 +21248,14 @@
           "kind": "coordination",
           "measure_id": "allocation-complementaire-fondement-remboursement",
           "description": "Correction du renvoi du financement public sans nouveau taux.",
-          "before": "Renvoi à L3232-8 absent du corpus ; part publique de 50 % du montant de l’allocation.",
-          "after": "Renvoi à L3232-9 1° ; même taux de 50 % et même allocation, fondement législatif à confirmer.",
+          "before": "Renvoi à L3232-8 abrogé en 2013 ; part publique de 50 % organisée pour l'avenir.",
+          "after": "Taux de 50 % limité aux périodes couvertes par L3232-8 avant son abrogation ; aucun remboursement pour l'avenir sur ce fondement.",
           "unit": "legal_duty",
           "affected_population": "Employeurs et salariés éligibles à l’allocation complémentaire.",
-          "conditions_and_transition": "Entrée en vigueur de la réforme ; droits, créances et recours antérieurs préservés selon le corps proposé.",
+          "conditions_and_transition": "Périodes antérieures régies par les dispositions alors applicables ; créances et recours préservés.",
           "replacement_or_new_burdens": "Aucune formalité de remplacement ; conditions de fond et contrôles autonomes conservés.",
           "source_quote": "L'aide de l'Etat prévue à l'article L. 3232-8, est fixée à 50 % du montant de l'allocation complémentaire.",
-          "proposed_quote": "La part de l'allocation complémentaire remboursée par l'Etat, dont les modalités sont prévues au 1° de l'article L. 3232-9, est fixée à 50 % du montant de cette allocation.",
+          "proposed_quote": "Pour les périodes au titre desquelles l'Etat remboursait à l'employeur une fraction de l'allocation complémentaire en application de l'article L. 3232-8, dans sa rédaction antérieure à son abrogation par la loi n° 2013-504 du 14 juin 2013, cette fraction est fixée à 50 % du montant de l'allocation complémentaire.",
           "article": {
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000018533840",
@@ -24750,6 +24778,118 @@
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000006648776",
             "number": "L323-21",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "ancien-code-l351-14-contribution-spectacle-doublon",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "ancien-code-l351-14-contribution-spectacle-doublon",
+          "description": "Abrogation de L351-14 (partie législative ancienne), doublon de la partie en vigueur.",
+          "before": "Article de l'ancien code affiché en vigueur, fondement concurrent de la contribution spécifique du spectacle et d'aménagements renvoyant à l'ancien code.",
+          "after": "Article abrogé ; aménagements, règles spécifiques et suppression de la contribution régis par la partie en vigueur ; périodes antérieures conservées.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs et salariés des professions de la production cinématographique, de l'audiovisuel et du spectacle ; professions à modalités particulières d'exercice.",
+          "conditions_and_transition": "À l'entrée en vigueur de la réforme ; situations, accords, contributions et contentieux antérieurs conservés.",
+          "replacement_or_new_burdens": "Aucune formalité, sanction ni contribution de remplacement.",
+          "source_quote": "être financée par une contribution spécifique à la charge des employeurs et des salariés relevant de ces professions",
+          "proposed_quote": "aucune contribution de remplacement n'est instituée",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000018125034",
+            "number": "L351-14",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "ancien-code-l351-5-1-recouvrement-doublon",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "ancien-code-l351-5-1-recouvrement-doublon",
+          "description": "Abrogation de L351-5-1 (partie législative ancienne), doublon de la partie en vigueur.",
+          "before": "Article de l'ancien code affiché en vigueur, circuit de recouvrement concurrent renvoyant aux anciens L321-4-2, L351-3-1, L351-14 et L351-21.",
+          "after": "Article abrogé ; recouvrement, dérogations, contentieux et convention régis par L5422-16 ; situations antérieures conservées.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs redevables des contributions d'assurance chômage, organismes de recouvrement, organisme gestionnaire du régime.",
+          "conditions_and_transition": "À l'entrée en vigueur de la réforme ; situations, accords, contributions et contentieux antérieurs conservés.",
+          "replacement_or_new_burdens": "Aucune formalité, sanction ni contribution de remplacement.",
+          "source_quote": "sont recouvrées et contrôlées par les organismes chargés du recouvrement mentionnés à l'article L. 351-21",
+          "proposed_quote": "Les contributions, conventions, créances et contentieux antérieurs conservent leur régime",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000038314413",
+            "number": "L351-5-1",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "ancien-code-l351-6-mise-en-demeure-doublon",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "ancien-code-l351-6-mise-en-demeure-doublon",
+          "description": "Suppression de l'article ancien faisant double emploi avec L. 5422-15, aux renvois structurels morts.",
+          "before": "Article de l'ancien code affiché en vigueur, exigeant une mise en demeure par lettre recommandée avant action pour infraction au « présent chapitre » de l'ancien code.",
+          "after": "Article abrogé ; la mise en demeure préalable par lettre recommandée résulte de L. 5422-15 et R. 5422-9 ; actes antérieurs conservés.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs redevables des contributions d'assurance chômage et organismes de recouvrement.",
+          "conditions_and_transition": "À l'entrée en vigueur de la réforme ; mises en demeure, actions et régularisations antérieures conservées.",
+          "replacement_or_new_burdens": "Aucune formalité ni sanction de remplacement.",
+          "source_quote": "est obligatoirement précédée d'une mise en demeure par lettre recommandée avec demande d'avis de réception",
+          "proposed_quote": "aucune formalité ni sanction de remplacement n'est instituée",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000018124358",
+            "number": "L351-6",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "ancien-code-l351-8-accord-agree-doublon",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "ancien-code-l351-8-accord-agree-doublon",
+          "description": "Abrogation de L351-8 (partie législative ancienne), doublon de la partie en vigueur.",
+          "before": "Article de l'ancien code affiché en vigueur, renvoyant aux anciens L351-4 à L351-6 et L352-1 à L352-2-1.",
+          "after": "Article abrogé ; accord agréé, effet obligatoire et décret supplétif régis par L5422-20 à L5422-22.",
+          "unit": "legal_duty",
+          "affected_population": "Organisations représentatives d'employeurs et de salariés, employeurs et salariés couverts par l'accord agréé.",
+          "conditions_and_transition": "À l'entrée en vigueur de la réforme ; situations, accords, contributions et contentieux antérieurs conservés.",
+          "replacement_or_new_burdens": "Aucune formalité, sanction ni contribution de remplacement.",
+          "source_quote": "font l'objet d'un accord conclu et agréé dans les conditions définies aux articles L. 352-1, L. 352-2 et L. 352-2-1",
+          "proposed_quote": "Les accords agréés et les décrets antérieurs conservent leurs effets",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000018124711",
+            "number": "L351-8",
             "slug": "travail"
           },
           "evidence_origin": "worker_declaration"
@@ -91998,15 +92138,15 @@
         {
           "kind": "deadline_reduced",
           "measure_id": "conge-syndical-fin-anticipation-minimale",
-          "description": "Retrait des trente jours obligatoires d’anticipation.",
+          "description": "Réduction des trente jours obligatoires d’anticipation à huit jours.",
           "before": "Demande du salarié au moins trente jours avant le congé.",
-          "after": "Demande avant le congé sans nombre minimal de jours.",
+          "after": "Demande du salarié au moins huit jours avant le congé.",
           "unit": "calendar_days",
           "affected_population": "Salariés demandant le congé de formation syndicale, hors régime spécial CSE.",
           "conditions_and_transition": "Demandes nouvelles ou en cours ; refus antérieurs et recours préservés.",
-          "replacement_or_new_burdens": "Demande préalable conservée ; réponse patronale coordonnée dans R2145-5.",
+          "replacement_or_new_burdens": "Demande préalable conservée avec un délai minimal de huit jours ; réponse patronale coordonnée dans R2145-5.",
           "source_quote": "au moins trente jours avant le début du congé",
-          "proposed_quote": "Aucun délai minimal d'anticipation de cette demande n'est exigé.",
+          "proposed_quote": "au moins huit jours avant le début du congé",
           "article": {
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000045680800",
@@ -92883,6 +93023,34 @@
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000049090537",
             "number": "R1225-14",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "conges-payes-caisses-controleurs-sans-agrement",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "conges-payes-caisses-controleurs-sans-agrement",
+          "description": "Alignement du décret sur la suppression de l'agrément et la limitation des pièces demandables décidées à L. 3141-33.",
+          "before": "Justification à tout moment, y compris aux « contrôleurs agréés » de la caisse, de toutes ses obligations envers celle-ci.",
+          "after": "Justification à tout moment envers l'inspection du travail et les officiers de police judiciaire ; communication aux contrôleurs de la caisse des seules pièces nécessaires non déjà légalement disponibles.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs affiliés à une caisse de congés payés, contrôleurs des caisses, inspection du travail.",
+          "conditions_and_transition": "Contrôles et demandes de pièces à compter de l'entrée en vigueur de la loi, y compris en cours ; actes antérieurs soumis à leur régime.",
+          "replacement_or_new_burdens": "Aucune déclaration ni pièce de remplacement.",
+          "source_quote": "aux contrôleurs agréés de la caisse d'affiliation dont il relève",
+          "proposed_quote": "Il communique aux contrôleurs de cette caisse les seules pièces nécessaires à la vérification de ses obligations relatives aux congés payés qui ne sont pas déjà légalement à la disposition de la caisse",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000018534227",
+            "number": "D3141-37",
             "slug": "travail"
           },
           "evidence_origin": "worker_declaration"
@@ -118025,7 +118193,7 @@
           "conditions_and_transition": "Rectification du modèle sans création de créance rétroactive ni validation des sanctions anciennes ; leur légalité et les recours demeurent appréciés selon le droit applicable.",
           "replacement_or_new_burdens": "Aucun nouveau document ni nouveau circuit ; pas de second gain compté pour les mesures portées par les articles principaux.",
           "source_quote": "En cas de non-versement au fonds national de l'habitation de la contribution prévue à l'article 7 de la présente convention et après mise en demeure restée sans effet, une somme de ... p. 100 du montant de la contribution est payable par mois de retard.",
-          "proposed_quote": "En cas de non-versement au fonds national de l'habitation de la contribution prévue au deuxième alinéa du présent article et après mise en demeure restée sans effet, une somme de ... p. 100 du montant de la contribution est payable par mois de retard.",
+          "proposed_quote": "En cas de non-versement au fonds national d'aide au logement de la contribution prévue au deuxième alinéa du présent article et après mise en demeure restée sans effet, une somme de ... p. 100 du montant de la contribution est payable par mois de retard.",
           "article": {
             "code_id": "LEGITEXT000006074096",
             "source_id": "LEGIARTI000039049075",
@@ -167165,6 +167333,34 @@
       ]
     },
     {
+      "measure_id": "epi-procedures-nationales-reglement-2016-425",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "epi-procedures-nationales-reglement-2016-425",
+          "description": "Limitation des procédures nationales de qualité des EPI au champ transitoire de la directive 89/686/CEE.",
+          "before": "Sept catégories d'EPI soumises, au choix du fabricant, aux procédures nationales de garantie ou d'assurance qualité CE, sans limite dans le temps malgré le règlement (UE) 2016/425.",
+          "after": "Mêmes procédures réservées aux EPI mis sur le marché avant le 21 avril 2019 sous la directive et aux approbations valables au plus tard jusqu'au 21 avril 2023 ; autres EPI soumis au seul règlement (UE) 2016/425.",
+          "unit": "regime",
+          "affected_population": "Fabricants, importateurs et organismes notifiés d'équipements de protection individuelle.",
+          "conditions_and_transition": "Approbations et attestations antérieures conservées jusqu'à leur terme ; aucune formalité nouvelle.",
+          "replacement_or_new_burdens": "Aucune procédure nationale de remplacement.",
+          "source_quote": "soit à la procédure de système d'assurance qualité CE de la production avec surveillance définie par les articles R. 4313-62 à R. 4313-74",
+          "proposed_quote": "relèvent des procédures d'évaluation de la conformité prévues par le règlement (UE) 2016/425 du Parlement européen et du Conseil du 9 mars 2016 ; aucune procédure nationale ne s'y ajoute",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000019760989",
+            "number": "R4313-82",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
       "measure_id": "epi-suppression-date-remise-registre",
       "kinds": [
         "obligation_removed"
@@ -171095,7 +171291,7 @@
           "after": "Décision de l'organisme sans avis ; demande et examen de l'évolution de l'effectif conservés.",
           "unit": "legal_duty",
           "affected_population": "Entreprises demandant l'exonération après passage sous onze salariés ; organisme de recouvrement et préfecture.",
-          "conditions_and_transition": "Demandes nouvelles et en cours dès l'entrée en vigueur du décret ; dépôt initial et droits anciens protégés, articulation législative L752-3-1 à vérifier.",
+          "conditions_and_transition": "Demandes nouvelles et en cours dès l'entrée en vigueur du décret ; dépôt initial et droits anciens protégés ; renvois législatifs redirigés vers L. 760-15 (ex-L752-3-1).",
           "replacement_or_new_burdens": "Pas de formalité équivalente de remplacement ; organisme apprécie les mêmes faits, durée réelle de décision non chiffrée.",
           "source_quote": "Le directeur dudit organisme saisit, dans les quinze jours suivant l'envoi ou le dépôt de la demande, le représentant de l'Etat dans le département pour avis.",
           "proposed_quote": "Le directeur de l'organisme statue sans saisine pour avis du représentant de l'Etat.",
@@ -171304,6 +171500,34 @@
             "code_id": "LEGITEXT000006073189",
             "source_id": "LEGIARTI000048846851",
             "number": "L241-20",
+            "slug": "securite-sociale"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "exoneration-spm-renvoi-l760-15",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "exoneration-spm-renvoi-l760-15",
+          "description": "Redirection des trois renvois à L. 752-3-1, renuméroté L. 760-15, sans changement de fond.",
+          "before": "Renvois à l'article L. 752-3-1, transféré le 23 juillet 2026.",
+          "after": "Renvois à l'article L. 760-15, même I, mêmes 1° et 2°.",
+          "unit": "legal_duty",
+          "affected_population": "Entreprises, employeurs et organismes de Saint-Pierre-et-Miquelon bénéficiaires de l'exonération et organisme de recouvrement.",
+          "conditions_and_transition": "Effet immédiat ; aucune condition, seuil ni date n'est modifié ; régularisations et droits antérieurs inchangés.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "Pour l'application des seuils prévus aux 1° et 2° du I de l'article L. 752-3-1",
+          "proposed_quote": "Pour l'application des seuils prévus aux 1° et 2° du I de l'article L. 760-15",
+          "article": {
+            "code_id": "LEGITEXT000006073189",
+            "source_id": "LEGIARTI000021647722",
+            "number": "R752-20",
             "slug": "securite-sociale"
           },
           "evidence_origin": "worker_declaration"
@@ -183550,8 +183774,8 @@
           "kind": "coordination",
           "measure_id": "formation-outremer-franchise-preservee",
           "description": "Corrige le fondement de la participation sans altérer la franchise territoriale.",
-          "before": "Franchise sous 520 fois le salaire hebdomadaire minimum, proratisée aux semaines d'activité, avec renvoi à L6313-1 et suivants.",
-          "after": "Même seuil, mêmes personnes et même prorata ; renvoi au financement législatif, sans contribution ressuscitée.",
+          "before": "Franchise sous 520 fois un « salaire hebdomadaire minimum de croissance » non défini, proratisée aux semaines d'activité, avec renvoi à L6313-1 et suivants.",
+          "after": "Même multiplicateur de 520, appliqué au salaire minimum de croissance horaire multiplié par la durée légale hebdomadaire (formule de L3232-3) ; mêmes personnes et même prorata ; renvoi au financement législatif, sans contribution ressuscitée.",
           "unit": "legal_duty",
           "affected_population": "Employeurs des sept territoires nommés employant des salariés à temps partiel, intermittents ou à domicile.",
           "conditions_and_transition": "Correction prospective ; exonérations, restitutions et recours des périodes antérieures conservés.",
@@ -245672,15 +245896,15 @@
         {
           "kind": "coordination",
           "measure_id": "mayotte-exclusions-formation",
-          "description": "Conserver le champ de la dispense mahoraise sans faire revivre une cible ancienne.",
-          "before": "Exclusion du deuxième alinéa de L6331-54 sans limite temporelle explicite.",
-          "after": "Même exclusion dans toute situation à laquelle la cible reste applicable ; aucune remise en vigueur.",
+          "description": "Renvoi au deuxième alinéa de L6331-54 rattaché à sa rédaction abrogée et aux périodes antérieures au 1er janvier 2018.",
+          "before": "Exclusion du deuxième alinéa de L6331-54, article abrogé le jour de l'entrée en vigueur du présent article, présentée comme applicable à toute situation.",
+          "after": "Exclusion limitée à la rédaction abrogée et aux contributions des périodes antérieures au 1er janvier 2018 ; aucune remise en vigueur.",
           "unit": "legal_duty",
           "affected_population": "Situations entrant dans le champ de L6331-54 à Mayotte.",
-          "conditions_and_transition": "Pas de fermeture aux seules situations antérieures ; historique de la cible à vérifier.",
+          "conditions_and_transition": "Dispenses et droits antérieurs conservés ; aucune contribution nouvelle.",
           "replacement_or_new_burdens": "Aucune obligation de remplacement ; conditions de fond et protections autonomes conservées.",
           "source_quote": "Le deuxième alinéa de l'article L. 6331-54",
-          "proposed_quote": "Le a ne remet pas en vigueur une disposition qui a cessé de s'appliquer.",
+          "proposed_quote": "dans sa rédaction antérieure à son abrogation, au 1er janvier 2018, par l'article 41 de la loi n° 2016-1088 du 8 août 2016",
           "article": {
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000035902685",
@@ -246980,6 +247204,34 @@
             "source_id": "LEGIARTI000006298973",
             "number": "214",
             "slug": "impots-annexe-3"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "medecin-conseil-saisine-sans-seuil",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "medecin-conseil-saisine-sans-seuil",
+          "description": "Retrait du seuil de plus de trois mois, en coordination avec L. 323-4-1 proposé (« sans durée minimale préalable »).",
+          "before": "Saisine du médecin du travail réservée aux interruptions de plus de trois mois, contraire à la loi (trente jours depuis la loi n° 2025-1403).",
+          "after": "Saisine possible au cours de toute interruption de travail, sans durée minimale, comme le prévoit la loi proposée.",
+          "unit": "legal_duty",
+          "affected_population": "Assurés en arrêt de travail, médecins-conseils, médecins traitants et médecins du travail.",
+          "conditions_and_transition": "Saisines effectuées à compter de l'entrée en vigueur de la loi, y compris en cours d'arrêt ; aucune visite systématique.",
+          "replacement_or_new_burdens": "Aucune formalité, visite ni démarche de remplacement.",
+          "source_quote": "En cas d'interruption de travail de plus de trois mois, le médecin-conseil peut",
+          "proposed_quote": "Au cours de toute interruption de travail, sans durée minimale préalable, le médecin-conseil peut",
+          "article": {
+            "code_id": "LEGITEXT000006073189",
+            "source_id": "LEGIARTI000006736472",
+            "number": "D323-3",
+            "slug": "securite-sociale"
           },
           "evidence_origin": "worker_declaration"
         }
@@ -264966,26 +265218,6 @@
           "before": "Six collectivités désignées par renvoi à L751-1, qui expire le 1er janvier 2028.",
           "after": "Les mêmes six collectivités désignées dans cet article ; avantages non fermés après 2028.",
           "unit": "other",
-          "affected_population": "Bénéficiaires du régime propre à L757-3",
-          "conditions_and_transition": "La désignation directe des collectivités au présent article maintient son champ territorial à compter de l’entrée en vigueur de la loi portant cette coordination, y compris après le 1er janvier 2028. Elle ne modifie ni les conditions de fond des droits et avantages prévus au présent article, ouverts également aux situations futures éligibles, ni les règles applicables aux périodes antérieures, à leurs régularisations, restitutions et recours.",
-          "replacement_or_new_burdens": "Aucune formalité de remplacement ; les conditions de fond et les obligations autonomes restent applicables.",
-          "source_quote": "collectivités mentionnées à l'article L. 751-1",
-          "proposed_quote": "collectivités de la Guadeloupe, de la Guyane, de la Martinique, de La Réunion, de Saint-Barthélemy et de Saint-Martin",
-          "article": {
-            "code_id": "LEGITEXT000006073189",
-            "source_id": "LEGIARTI000031324239",
-            "number": "L757-3",
-            "slug": "securite-sociale"
-          },
-          "evidence_origin": "worker_declaration"
-        },
-        {
-          "kind": "coordination",
-          "measure_id": "outre-mer-reference-territoriale-autonome",
-          "description": "Désignation directe du champ géographique pour éviter un renvoi abrogé en 2028.",
-          "before": "Six collectivités désignées par renvoi à L751-1, qui expire le 1er janvier 2028.",
-          "after": "Les mêmes six collectivités désignées dans cet article ; avantages non fermés après 2028.",
-          "unit": "other",
           "affected_population": "Bénéficiaires du régime propre à L758-2",
           "conditions_and_transition": "La désignation directe des collectivités au présent article maintient son champ territorial à compter de l’entrée en vigueur de la loi portant cette coordination, y compris après le 1er janvier 2028. Elle ne modifie ni les conditions de fond des droits et avantages prévus au présent article, ouverts également aux situations futures éligibles, ni les règles applicables aux périodes antérieures, à leurs régularisations, restitutions et recours.",
           "replacement_or_new_burdens": "Aucune formalité de remplacement ; les conditions de fond et les obligations autonomes restent applicables.",
@@ -265015,6 +265247,34 @@
             "code_id": "LEGITEXT000006073189",
             "source_id": "LEGIARTI000031324206",
             "number": "L758-3",
+            "slug": "securite-sociale"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "outre-mer-reference-territoriale-l751-1-renvoi-dynamique",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "outre-mer-reference-territoriale-l751-1-renvoi-dynamique",
+          "description": "Rétablissement du renvoi à L. 751-1 pour le champ territorial de l'habilitation.",
+          "before": "Six collectivités désignées par renvoi à L. 751-1 (version jusqu'au 31 décembre 2027).",
+          "after": "Collectivités désignées par L. 751-1 dans sa rédaction applicable, Mayotte comprise à compter du 1er janvier 2028.",
+          "unit": "other",
+          "affected_population": "Bénéficiaires de l'allocation aux adultes handicapés dans les collectivités de L. 751-1.",
+          "conditions_and_transition": "Aucune ; les périodes antérieures, régularisations, restitutions et recours conservent leur régime.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "dans les collectivités mentionnées à l'article L. 751-1",
+          "proposed_quote": "dans les collectivités mentionnées à l'article L. 751-1",
+          "article": {
+            "code_id": "LEGITEXT000006073189",
+            "source_id": "LEGIARTI000031324239",
+            "number": "L757-3",
             "slug": "securite-sociale"
           },
           "evidence_origin": "worker_declaration"
@@ -291905,7 +292165,7 @@
           "measure_id": "premiere-propriete-assouplissement-affectation",
           "description": "Accès élargi aux dérogations de location, occupation et usage professionnel.",
           "before": "Mobilité : au moins 50 km ou 1 h 30 ; chômage supérieur à un an attesté ; location et éloignement plafonnés à trois ans ; usage professionnel limité à 15 % ; meublé et accessoire au contrat interdits.",
-          "after": "Seuils et plafonds retirés, meublé non saisonnier et usage lié au travail admis dans les conditions maintenues.",
+          "after": "Seuils et plafonds retirés, sauf la limite de trois ans de l’éloignement professionnel ; meublé non saisonnier et usage lié au travail admis dans les conditions maintenues.",
           "unit": "legal_duty",
           "affected_population": "Acquéreurs d’une première propriété éligible à la délibération départementale.",
           "conditions_and_transition": "Faits après entrée en vigueur, engagements en cours et acquisitions futures ; décisions fiscales définitives non rouvertes.",
@@ -292371,13 +292631,13 @@
           "measure_id": "prereprise-coordination-renvoi-et-opposition",
           "description": "Actualisation du renvoi et préservation expresse de l'opposition à communiquer les éléments médicaux.",
           "before": "Renvoi à R241-51 ; communication sous vingt jours après examen consenti, sans mention explicite d'opposition à la communication.",
-          "after": "Renvoi aux R4624-29 et R4624-30 actuels ; communication sous vingt jours sauf opposition de l'assuré.",
+          "after": "Renvoi aux R4624-29 et R4624-30 actuels, examen de préreprise seulement lorsque l'assuré peut en bénéficier ; communication sous vingt jours sauf opposition de l'assuré.",
           "unit": "legal_duty",
-          "affected_population": "Assurés dont l'interruption dépasse trois mois dans ce circuit.",
+          "affected_population": "Assurés en interruption de travail, sans durée minimale, dans ce circuit.",
           "conditions_and_transition": "Garanties de préreprise maintenues ; aucun effacement des anciennes transmissions ni des recours ; circuit trente jours autonome conservé.",
           "replacement_or_new_burdens": "Aucune obligation de remplacement ni donnée nouvelle ; les obligations de fond expressément maintenues restent applicables.",
           "source_quote": "après l'examen médical de préreprise mentionné à l'article R. 241-51 du code du travail, organisé avec l'accord de l'intéressé",
-          "proposed_quote": "après l'examen médical de préreprise mentionné aux articles R. 4624-29 et R. 4624-30 du code du travail, organisé avec l'accord de l'intéressé, communique au médecin-conseil, sauf opposition de l'assuré à cette communication, sous vingt jours",
+          "proposed_quote": "le cas échéant après l'examen médical de préreprise mentionné aux articles R. 4624-29 et R. 4624-30 du code du travail lorsque l'assuré peut en bénéficier, organisé avec l'accord de l'intéressé, communique au médecin-conseil, sauf opposition de l'assuré à cette communication, sous vingt jours",
           "article": {
             "code_id": "LEGITEXT000006073189",
             "source_id": "LEGIARTI000006736472",
@@ -299435,6 +299695,26 @@
             "code_id": "LEGITEXT000006073189",
             "source_id": "LEGIARTI000006753018",
             "number": "R731-8",
+            "slug": "securite-sociale"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "prevoyance-r731-base-legale-eteinte",
+          "description": "Désignation de l'autorité compétente rattachée à la rédaction antérieure de L. 731-1 et limitée aux institutions autorisées avant 1994.",
+          "before": "Désignation de l'autorité « mentionnée au premier alinéa de l'article L. 731-1 », alinéa sans autorité depuis 1990 et abrogé depuis 1994.",
+          "after": "Désignation rattachée à la rédaction antérieure au 2 janvier 1990, valable seulement pour les institutions autorisées avant l'abrogation de 1994 ; aucune autorisation nouvelle.",
+          "unit": "regime",
+          "affected_population": "Institutions de prévoyance autorisées avant 1994 sur le fondement de L. 731-1 ; ministre chargé de la sécurité sociale.",
+          "conditions_and_transition": "Autorisations antérieures et droits des adhérents conservés.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "L'autorité compétente de l'Etat mentionnée au premier alinéa de l'article L. 731-1 est le ministre chargé de la sécurité sociale.",
+          "proposed_quote": "aucune autorisation nouvelle ne peut être sollicitée ni accordée sur ce fondement",
+          "article": {
+            "code_id": "LEGITEXT000006073189",
+            "source_id": "LEGIARTI000006753042",
+            "number": "R731-18",
             "slug": "securite-sociale"
           },
           "evidence_origin": "worker_declaration"
@@ -315734,26 +316014,6 @@
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000018124959",
             "number": "L321-4-2",
-            "slug": "travail"
-          },
-          "evidence_origin": "worker_declaration"
-        },
-        {
-          "kind": "coordination",
-          "measure_id": "reclassement-crp-consolidation",
-          "description": "Coordonner le recouvrement CRP et protéger les échéances ultérieures des situations sauvegardées.",
-          "before": "Renvoi général au recouvrement des contributions L321-4-2, L351-3-1 et L351-14 selon les garanties sociales et dérogations.",
-          "after": "Seul le renvoi CRP est limité ; situations anciennes et engagements conservés financent encore les échéances et prestations ultérieures.",
-          "unit": "regime",
-          "affected_population": "Employeurs redevables, organismes de recouvrement et bénéficiaires du dispositif ancien.",
-          "conditions_and_transition": "Entrée en vigueur ; aucune contribution liée à une situation nouvelle, sans éteindre les engagements anciens préservés par la cible.",
-          "replacement_or_new_burdens": "Aucun registre, déclaration, contrôle ou autorisation de remplacement ajouté.",
-          "source_quote": "Les contributions prévues aux articles L. 321-4-2, L. 351-3-1 et L. 351-14",
-          "proposed_quote": "Les conventions valablement conclues, les situations antérieures légalement couvertes et les engagements de financement dont l'article L. 321-4-2 conserve les effets demeurent régis par les dispositions antérieures, y compris pour leurs échéances et prestations ultérieures.",
-          "article": {
-            "code_id": "LEGITEXT000006072050",
-            "source_id": "LEGIARTI000038314413",
-            "number": "L351-5-1",
             "slug": "travail"
           },
           "evidence_origin": "worker_declaration"
@@ -340790,6 +341050,34 @@
       ]
     },
     {
+      "measure_id": "rmm-participation-etat-base-abrogee",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "rmm-participation-etat-base-abrogee",
+          "description": "Limitation du redressement de la participation de l'Etat aux périodes couvertes par L. 3232-8 avant son abrogation.",
+          "before": "Redressements dans le calcul d'une participation de l'Etat sans base légale depuis 2013.",
+          "after": "Redressements des charges sociales inchangés ; participation de l'Etat redressée pour les seules périodes où L. 3232-8 s'appliquait.",
+          "unit": "legal_duty",
+          "affected_population": "Employeurs versant l'allocation complémentaire de rémunération mensuelle minimale et agents de contrôle de l'inspection du travail.",
+          "conditions_and_transition": "Périodes antérieures régies par les dispositions alors applicables ; aucune formalité de remplacement.",
+          "replacement_or_new_burdens": "Aucune obligation, formalité ni prélèvement de remplacement.",
+          "source_quote": "les redressements nécessaires sont effectués dans le calcul de la participation de l'Etat au versement des allocations complémentaires et dans la détermination des charges sociales incombant à l'employeur et aux salariés.",
+          "proposed_quote": "les redressements nécessaires sont effectués dans la détermination des charges sociales incombant à l'employeur et aux salariés ainsi que, pour les périodes au titre desquelles l'Etat remboursait à l'employeur une fraction de l'allocation complémentaire en application de l'article L. 3232-8, dans sa rédaction antérieure à son abrogation par la loi n° 2013-504 du 14 juin 2013, dans le calcul de cette participation.",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000043128611",
+            "number": "R3232-7",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
       "measure_id": "rncps-arrete-recapitulatif-suppression",
       "kinds": [
         "obligation_removed"
@@ -344801,6 +345089,34 @@
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000033769002",
             "number": "R4624-49",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "sante-travail-etablissements-renvoi-surveillance-renforcee",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "sante-travail-etablissements-renvoi-surveillance-renforcee",
+          "description": "Redirection du renvoi décalé à R. 4624-18 vers les dispositions successeurs.",
+          "before": "Renvoi à R. 4624-18, qui ne vise plus depuis 2017 que les travailleurs de nuit et les moins de dix-huit ans.",
+          "after": "Renvoi aux postes à risques particuliers (R. 4624-23) et aux agents visés par R. 4624-18, R. 4624-19 et R. 4624-20.",
+          "unit": "legal_duty",
+          "affected_population": "Agents des établissements mentionnés à l'article R. 4626-1 et médecins du travail de ces établissements.",
+          "conditions_and_transition": "Effet immédiat, sans changement des modalités ; aucun bénéficiaire actuel n'est retiré.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "Les agents mentionnés à l'article R. 4624-18",
+          "proposed_quote": "Les agents affectés à un poste présentant des risques particuliers au sens de l'article R. 4624-23",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000031571257",
+            "number": "R4626-27",
             "slug": "travail"
           },
           "evidence_origin": "worker_declaration"
@@ -350607,6 +350923,54 @@
             "code_id": "LEGITEXT000006073189",
             "source_id": "LEGIARTI000030919026",
             "number": "R641-9",
+            "slug": "securite-sociale"
+          },
+          "evidence_origin": "worker_declaration"
+        }
+      ]
+    },
+    {
+      "measure_id": "sections-locales-base-legale-l160-17",
+      "kinds": [
+        "coordination"
+      ],
+      "effects": [
+        {
+          "kind": "coordination",
+          "measure_id": "sections-locales-base-legale-l160-17",
+          "description": "Délégation obligatoire aux sections locales rattachée à L. 160-17 et à la convention de R. 160-26.",
+          "before": "Caisses primaires tenues de confier le service des prestations aux sections locales, sans base légale depuis 2016 ni articulation avec les conventions de délégation.",
+          "after": "Même obligation, exercée en application de L. 160-17 et dans le cadre de la convention de R. 160-26 ; reprise selon R. 160-26 et R. 160-28 à défaut de convention.",
+          "unit": "regime",
+          "affected_population": "Caisses primaires, mutuelles de fonctionnaires, assurés fonctionnaires.",
+          "conditions_and_transition": "Sections existantes et conventions en cours conservées.",
+          "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+          "source_quote": "doivent confier le service des prestations en nature des assurances maladie, maternité et invalidité",
+          "proposed_quote": "en application du deuxième alinéa de l'article L. 160-17 et dans le cadre de la convention mentionnée à l'article R. 160-26",
+          "article": {
+            "code_id": "LEGITEXT000006073189",
+            "source_id": "LEGIARTI000006738840",
+            "number": "D712-30",
+            "slug": "securite-sociale"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "sections-locales-base-legale-l160-17",
+          "description": "Rattachement de la création des sections locales à la délégation de gestion de L. 160-17 et à la convention de R. 160-26, après abrogation de L. 712-6.",
+          "before": "Sections locales créées à l'initiative des mutuelles de fonctionnaires sur le fondement implicite de L. 712-6, abrogé depuis le 1er janvier 2016, sans articulation avec les conventions de délégation.",
+          "after": "Sections locales créées pour l'exécution des opérations de gestion déléguées en application de L. 160-17 et de la convention de R. 160-26 ; aucune délégation distincte.",
+          "unit": "regime",
+          "affected_population": "Mutuelles et sections de mutuelles de fonctionnaires, caisses primaires, assurés fonctionnaires.",
+          "conditions_and_transition": "Sections existantes et engagements conservés ; suppression du minimum d'adhérents inchangée.",
+          "replacement_or_new_burdens": "Aucune formalité ni condition de remplacement : la convention est déjà exigée par L. 160-17 et R. 160-26.",
+          "source_quote": "Les sections locales sont créées à l'initiative des mutuelles ou sections de mutuelles constituées entre fonctionnaires",
+          "proposed_quote": "pour l'exécution des opérations de gestion confiées aux mutuelles ou groupements de mutuelles en application du deuxième alinéa de l'article L. 160-17 et de la convention mentionnée à l'article R. 160-26",
+          "article": {
+            "code_id": "LEGITEXT000006073189",
+            "source_id": "LEGIARTI000006738841",
+            "number": "D712-31",
             "slug": "securite-sociale"
           },
           "evidence_origin": "worker_declaration"
@@ -358470,7 +358834,6 @@
     {
       "measure_id": "spectacle-suppression-contribution-specifique",
       "kinds": [
-        "coordination",
         "tax_removed"
       ],
       "effects": [
@@ -358490,26 +358853,6 @@
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000037388345",
             "number": "L5424-20",
-            "slug": "travail"
-          },
-          "evidence_origin": "worker_declaration"
-        },
-        {
-          "kind": "coordination",
-          "measure_id": "spectacle-suppression-contribution-specifique",
-          "description": "Neutralisation du fondement ancien du prélèvement spécifique déjà supprimé dans la proposition moderne.",
-          "before": "Contribution spécifique employeur et salarié sur rémunération brute plafonnée, en plus de la contribution ordinaire ; taux fixé par accord et absent de l'article.",
-          "after": "Aucune contribution spécifique pour les périodes nouvelles, y compris sous contrat ancien ; contribution ordinaire et prestations conservées.",
-          "unit": "financing",
-          "affected_population": "Employeurs et salariés des professions cinématographiques, audiovisuelles et du spectacle couverts par cet aménagement.",
-          "conditions_and_transition": "Périodes d'emploi à compter de l'entrée en vigueur de la suppression de L5424-20 ; recouvrement, plafonds, exonérations et recours anciens conservés.",
-          "replacement_or_new_burdens": "Aucun prélèvement ni formalité de remplacement sur ce fondement ; financement des allocations non chiffré.",
-          "source_quote": "peut, en sus de la contribution prévue à l'article L. 351-3-1, être financée par une contribution spécifique à la charge des employeurs et des salariés relevant de ces professions, assise sur la rémunération brute dans la limite d'un plafond",
-          "proposed_quote": "Elle n'est plus due au titre des périodes d'emploi accomplies à compter de l'entrée en vigueur de la loi supprimant la contribution spécifique prévue à l'article L. 5424-20, quelle que soit la date de conclusion du contrat de travail.",
-          "article": {
-            "code_id": "LEGITEXT000006072050",
-            "source_id": "LEGIARTI000018125034",
-            "number": "L351-14",
             "slug": "travail"
           },
           "evidence_origin": "worker_declaration"
@@ -396792,7 +397135,7 @@
           "conditions_and_transition": "Nouveaux droits à déduction dès l'entrée en vigueur de la loi supprimant les exclusions de 298 ; droits et régularisations antérieurs préservés, sans restitution générale.",
           "replacement_or_new_burdens": "Aucune formalité de remplacement ; seules les exigences techniques, garanties et obligations de fond maintenues subsistent.",
           "source_quote": "3. A l'exception des cas prévus au 1° bis du 4 de l'article 298 du code général des impôts, le coefficient d'admission est calculé en application des dispositions relatives à l'exclusion du droit à déduction fixées aux a, b et c du 1° du même 4 concernant, respectivement, les essences, les gazoles et le superéthanol E 85 et les gaz de pétrole et autres hydrocarbures présentés à l'état gazeux et le pétrole lampant.",
-          "proposed_quote": "3. Pour les produits mentionnés au 1° du 4 de l'article 298 du code général des impôts, aucune exclusion ou limitation du coefficient d'admission ne peut être fondée sur leur seule affectation à un véhicule, un aéronef ou un engin exclu du droit à déduction, ou pris en location lorsque la taxe relative à cette location n'est pas déductible. Les autres exclusions du présent IV, les coefficients d'assujettissement et de taxation et le droit à déduction des produits ultérieurement livrés ou vendus prévu au 1° bis du 4 de l'article 298 demeurent applicables dans leur champ propre. La déduction relative à l'acquisition ou à la location du véhicule, de l'aéronef ou de l'engin lui-même n'est pas modifiée.",
+          "proposed_quote": "3. Pour les produits mentionnés au 1° du 4 de l'article 298 du code général des impôts, dans sa rédaction en vigueur au 31 décembre 2026, ou dans les dispositions du code des impositions sur les biens et services qui s'y substituent à compter du 1er janvier 2027, aucune exclusion ou limitation du coefficient d'admission ne peut être fondée sur leur seule affectation à un véhicule, un aéronef ou un engin exclu du droit à déduction, ou pris en location lorsque la taxe relative à cette location n'est pas déductible. Les autres exclusions du présent IV, les coefficients d'assujettissement et de taxation et le droit à déduction des produits ultérieurement livrés ou vendus prévu au 1° bis du 4 de l'article 298, dans la même rédaction ou dans les dispositions qui s'y substituent, demeurent applicables dans leur champ propre. La déduction relative à l'acquisition ou à la location du véhicule, de l'aéronef ou de l'engin lui-même n'est pas modifiée.",
           "article": {
             "code_id": "LEGITEXT000006069569",
             "source_id": "LEGIARTI000049904359",
@@ -508003,22 +508346,22 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Coordination nécessaire du renvoi à L6331-54, sans suppression nouvelle de prélèvement. Le précédent « les situations antérieures » limitait la dispense sur la seule absence de la cible dans le corpus courant : cette fermeture non démontrée est retirée. Le a conserve l'exclusion dans tout le champ réellement applicable de sa cible sans la remettre en vigueur ; le b reste entier.",
-        "scope_limitations": "L'historique de L6331-54 manque ; aucune extinction de son champ ni nouvelle baisse de contribution nationale n'est démontrée.",
+        "assessment": "Coordination d'un renvoi mort : le deuxième alinéa de L6331-54, abrogé au 1er janvier 2018, est visé dans sa rédaction abrogée et pour les seules périodes antérieures ; aucune contribution nouvelle, aucune suppression nouvelle ; le b reste entier.",
+        "scope_limitations": "L'historique de L6331-54 est au corpus (abrogation au 1er janvier 2018 par la loi n° 2016-1088, art. 41) ; aucune cible successeur n'est désignée. Le champ résiduel du a est vraisemblablement vide.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : le texte conserve ses conditions et circuits existants ; aucune donnée, déclaration, autorisation ou échéance supplémentaire n'est créée.",
         "effects": [
           {
             "kind": "coordination",
             "measure_id": "mayotte-exclusions-formation",
-            "description": "Conserver le champ de la dispense mahoraise sans faire revivre une cible ancienne.",
-            "before": "Exclusion du deuxième alinéa de L6331-54 sans limite temporelle explicite.",
-            "after": "Même exclusion dans toute situation à laquelle la cible reste applicable ; aucune remise en vigueur.",
+            "description": "Renvoi au deuxième alinéa de L6331-54 rattaché à sa rédaction abrogée et aux périodes antérieures au 1er janvier 2018.",
+            "before": "Exclusion du deuxième alinéa de L6331-54, article abrogé le jour de l'entrée en vigueur du présent article, présentée comme applicable à toute situation.",
+            "after": "Exclusion limitée à la rédaction abrogée et aux contributions des périodes antérieures au 1er janvier 2018 ; aucune remise en vigueur.",
             "unit": "legal_duty",
             "affected_population": "Situations entrant dans le champ de L6331-54 à Mayotte.",
-            "conditions_and_transition": "Pas de fermeture aux seules situations antérieures ; historique de la cible à vérifier.",
+            "conditions_and_transition": "Dispenses et droits antérieurs conservés ; aucune contribution nouvelle.",
             "replacement_or_new_burdens": "Aucune obligation de remplacement ; conditions de fond et protections autonomes conservées.",
             "source_quote": "Le deuxième alinéa de l'article L. 6331-54",
-            "proposed_quote": "Le a ne remet pas en vigueur une disposition qui a cessé de s'appliquer."
+            "proposed_quote": "dans sa rédaction antérieure à son abrogation, au 1er janvier 2018, par l'article 41 de la loi n° 2016-1088 du 8 août 2016"
           }
         ]
       }
@@ -539308,22 +539651,22 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Suppression du minimum uniforme de trente jours entre la demande et le début du congé. La demande préalable, ses informations utiles et les motifs légaux de refus subsistent. Cette réduction de délai permet les formations annoncées tardivement sans supprimer les garanties de rémunération.",
-        "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. Articulation avec R2145-5 : le délai de huit jours demeure un délai maximal de réponse, sans suspension automatique du départ ni nouveau pouvoir de refus pour demande tardive. L2145-11 conserve les seuls motifs de refus et l’avis conforme du CSE. Les contestations et décisions déjà intervenues restent régies par leur droit ; les demandes pendantes bénéficient de la levée du minimum. Coordination nécessaire désormais opérée dans R2145-5 du présent lot : le refus doit être notifié avant le début du congé et dans les huit jours au maximum. La formule conservée « ce délai maximal ne suspend pas, par lui-même, le début du congé » devient ainsi opérante sans refus postérieur au départ. Différence de champ : R2315-17, lu entier, impose encore « au moins trente jours avant le début du stage » aux demandes relevant de son régime CSE ; le présent texte ne l'abroge pas. L2145-7 proposé permet moins d'une demi-journée sans modifier les plafonds annuels de douze et dix-huit jours. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification.",
-        "new_burdens_review": "Aucune charge nouvelle dans cet article : demande et informations existaient déjà. La coordination R2145-5 impose toutefois à l'employeur une réaction avant le départ ; ce coût est recensé dans cet article, sans solde global présumé.",
+        "assessment": "Réduction du minimum uniforme de trente jours entre la demande et le début du congé, ramené à huit jours. La demande préalable, ses informations utiles et les motifs légaux de refus subsistent. Cette réduction de délai permet les formations annoncées tardivement sans supprimer les garanties de rémunération.",
+        "scope_limitations": "Examen du texte officiel entier et des cibles locales citées dans les notes. Articulation avec R2145-5 : le délai de huit jours demeure un délai maximal de réponse, sans suspension automatique du départ ni nouveau pouvoir de refus pour demande tardive. L2145-11 conserve les seuls motifs de refus et l’avis conforme du CSE. Les contestations et décisions déjà intervenues restent régies par leur droit ; les demandes pendantes bénéficient de la réduction du minimum. Coordination nécessaire désormais opérée dans R2145-5 du présent lot : le refus doit être notifié avant le début du congé et dans les huit jours au maximum. La formule conservée « ce délai maximal ne suspend pas, par lui-même, le début du congé » devient ainsi opérante sans refus postérieur au départ. Différence de champ : R2315-17, lu entier, impose encore « au moins trente jours avant le début du stage » aux demandes relevant de son régime CSE ; le présent texte ne l'abroge pas. L2145-7 proposé permet moins d'une demi-journée sans modifier les plafonds annuels de douze et dix-huit jours. Aucun solde national de prélèvements, de coût ou de complexité n'est établi ; les actes externes et la jurisprudence non fournis restent hors vérification. Troisième passe : le délai minimal de huit jours reproduit la durée de réponse de R2145-5 ; il rend matériellement possible, avant le début du congé, l'avis conforme du CSE exigé par L2145-11 (ordre du jour communiqué trois jours au moins avant la réunion, L2315-30 maintenu).",
+        "new_burdens_review": "Aucune charge nouvelle dans cet article : demande et informations existaient déjà, avec un délai minimal réduit de trente à huit jours. La coordination R2145-5 impose toutefois à l'employeur une réaction avant le départ ; ce coût est recensé dans cet article, sans solde global présumé.",
         "effects": [
           {
             "kind": "deadline_reduced",
             "measure_id": "conge-syndical-fin-anticipation-minimale",
-            "description": "Retrait des trente jours obligatoires d’anticipation.",
+            "description": "Réduction des trente jours obligatoires d’anticipation à huit jours.",
             "before": "Demande du salarié au moins trente jours avant le congé.",
-            "after": "Demande avant le congé sans nombre minimal de jours.",
+            "after": "Demande du salarié au moins huit jours avant le congé.",
             "unit": "calendar_days",
             "affected_population": "Salariés demandant le congé de formation syndicale, hors régime spécial CSE.",
             "conditions_and_transition": "Demandes nouvelles ou en cours ; refus antérieurs et recours préservés.",
-            "replacement_or_new_burdens": "Demande préalable conservée ; réponse patronale coordonnée dans R2145-5.",
+            "replacement_or_new_burdens": "Demande préalable conservée avec un délai minimal de huit jours ; réponse patronale coordonnée dans R2145-5.",
             "source_quote": "au moins trente jours avant le début du congé",
-            "proposed_quote": "Aucun délai minimal d'anticipation de cette demande n'est exigé."
+            "proposed_quote": "au moins huit jours avant le début du congé"
           }
         ]
       }
@@ -554893,15 +555236,29 @@
       "source_id": "LEGIARTI000018534227",
       "number": "D3141-37",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien de la preuve du respect des obligations lors des contrôles, distincte des pièces systématiques supprimées à chaque versement ; aucun nouveau gain déclaratif compté.",
-        "scope_limitations": "Transition compatible avec D3141-29 proposé : « Aucun justificatif ne doit accompagner systématiquement chaque versement » reste distinct de « justifie à tout moment » lors du contrôle. Les pièces nécessaires à une vérification restent accessibles ; aucun certificat périodique ni registre autonome ne peut être déduit de ce maintien. D3141-31 retire les accessoires futurs : être à jour ne permet pas de les rétablir. D3141-26 et D3141-27 lus entiers conservent l’exonération UE/EEE fondée sur des droits équivalents et ses propres preuves auprès de l’institution étrangère ; aucune nouvelle affiliation française ne résulte du présent texte.",
-        "new_burdens_review": "Aucune charge nouvelle n’est identifiée : la source demeure intégralement applicable, sans nouveau document, délai, registre ou condition. Ce constat ne chiffre pas le solde de l’ensemble des codes.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination avec L. 3141-33 proposé : retrait de la qualité de contrôleur « agréé », qui n'existe plus (« L'exercice de cette mission n'est soumis ni à un agrément ni à son renouvellement »), et alignement des pièces que la caisse peut demander sur la limite légale (« les seules pièces nécessaires à la vérification de leurs obligations relatives aux congés payés qui ne sont pas déjà légalement à la disposition de la caisse »). La justification à tout moment envers l'inspection du travail et les officiers de police judiciaire, agents publics, est conservée telle quelle. Aucun allègement nouveau n'est compté : la réduction est celle déjà décidée à L. 3141-33.",
+        "scope_limitations": "Transition compatible avec D3141-29 proposé : « Aucun justificatif ne doit accompagner systématiquement chaque versement » reste distinct de « justifie à tout moment » lors du contrôle. Les pièces nécessaires à une vérification restent accessibles ; aucun certificat périodique ni registre autonome ne peut être déduit de ce maintien. D3141-31 retire les accessoires futurs : être à jour ne permet pas de les rétablir. D3141-26 et D3141-27 lus entiers conservent l’exonération UE/EEE fondée sur des droits équivalents et ses propres preuves auprès de l’institution étrangère ; aucune nouvelle affiliation française ne résulte du présent texte. D3141-11 proposé abroge l'agrément des contrôleurs ; R3143-1, maintenu, n'est pas modifié ici (la dispense de sanction du seul défaut de communication aux contrôleurs privés est portée par L. 3141-33 proposé).",
+        "new_burdens_review": "Aucune charge nouvelle : aucune pièce, déclaration, registre ni délai n'est institué ; le champ des pièces demandables par la caisse est réduit à la limite légale, sans pouvoir de contrainte privé.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "conges-payes-caisses-controleurs-sans-agrement",
+            "description": "Alignement du décret sur la suppression de l'agrément et la limitation des pièces demandables décidées à L. 3141-33.",
+            "before": "Justification à tout moment, y compris aux « contrôleurs agréés » de la caisse, de toutes ses obligations envers celle-ci.",
+            "after": "Justification à tout moment envers l'inspection du travail et les officiers de police judiciaire ; communication aux contrôleurs de la caisse des seules pièces nécessaires non déjà légalement disponibles.",
+            "unit": "legal_duty",
+            "affected_population": "Employeurs affiliés à une caisse de congés payés, contrôleurs des caisses, inspection du travail.",
+            "conditions_and_transition": "Contrôles et demandes de pièces à compter de l'entrée en vigueur de la loi, y compris en cours ; actes antérieurs soumis à leur régime.",
+            "replacement_or_new_burdens": "Aucune déclaration ni pièce de remplacement.",
+            "source_quote": "aux contrôleurs agréés de la caisse d'affiliation dont il relève",
+            "proposed_quote": "Il communique aux contrôleurs de cette caisse les seules pièces nécessaires à la vérification de ses obligations relatives aux congés payés qui ne sont pas déjà légalement à la disposition de la caisse"
+          }
+        ]
       }
     },
     {
@@ -558738,22 +559095,22 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Coordination du renvoi à L3232-8, absent du corpus actif, avec l'habilitation expresse de L3232-9, 1°. Le taux réglementaire de 50 % et l'allocation concernée sont conservés, sans suppression de l'avantage ni présentation de ce maintien comme une baisse nouvelle.",
-        "scope_limitations": "Incohérence préexistante : L3232-7 met l'allocation à la charge de l'employeur, L3232-9 1° prévoit les modalités de remboursement de la part de l'Etat, et L3232-8 n'est pas fourni dans le corpus actif. L3232-9 a été lu en entier ; ce renvoi nouveau n'est pas une cible fournie dans reference-targets.json. La concordance historique et le fondement législatif du financement doivent être confirmés dans la loi de réforme ; aucune réactivation d'une aide historiquement éteinte n'est présumée démontrée. Le maintien du taux ne résout pas à lui seul cette question. La revue ne démontre ni économie nationale ni cohérence exhaustive hors des textes effectivement consultés.",
+        "assessment": "Coordination : L3232-8, qui instituait le remboursement par l'Etat, est abrogé depuis le 17 juin 2013 (loi n° 2013-504) ; le taux de 50 % est conservé pour les seules périodes au titre desquelles ce remboursement était légalement dû, et l'article cesse d'organiser pour l'avenir un régime sans base légale. Aucun taux nouveau, aucune formalité.",
+        "scope_limitations": "L3232-7 met l'allocation à la charge de l'employeur ; le 1° de L3232-9 est une habilitation résiduelle de modalités, non une base de dépense. R3232-4, R3232-6 et R3232-7 sont coordonnés dans le même sens. Un rétablissement de la participation de l'Etat relèverait de la loi. Effet budgétaire non chiffré.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : le corps conserve les conditions de fond et droits antérieurs ; aucune déclaration, approbation ou pièce de remplacement n’est instituée. Le solde de coût de l’ensemble des codes n’est pas chiffré.",
         "effects": [
           {
             "kind": "coordination",
             "measure_id": "allocation-complementaire-fondement-remboursement",
             "description": "Correction du renvoi du financement public sans nouveau taux.",
-            "before": "Renvoi à L3232-8 absent du corpus ; part publique de 50 % du montant de l’allocation.",
-            "after": "Renvoi à L3232-9 1° ; même taux de 50 % et même allocation, fondement législatif à confirmer.",
+            "before": "Renvoi à L3232-8 abrogé en 2013 ; part publique de 50 % organisée pour l'avenir.",
+            "after": "Taux de 50 % limité aux périodes couvertes par L3232-8 avant son abrogation ; aucun remboursement pour l'avenir sur ce fondement.",
             "unit": "legal_duty",
             "affected_population": "Employeurs et salariés éligibles à l’allocation complémentaire.",
-            "conditions_and_transition": "Entrée en vigueur de la réforme ; droits, créances et recours antérieurs préservés selon le corps proposé.",
+            "conditions_and_transition": "Périodes antérieures régies par les dispositions alors applicables ; créances et recours préservés.",
             "replacement_or_new_burdens": "Aucune formalité de remplacement ; conditions de fond et contrôles autonomes conservés.",
             "source_quote": "L'aide de l'Etat prévue à l'article L. 3232-8, est fixée à 50 % du montant de l'allocation complémentaire.",
-            "proposed_quote": "La part de l'allocation complémentaire remboursée par l'Etat, dont les modalités sont prévues au 1° de l'article L. 3232-9, est fixée à 50 % du montant de cette allocation."
+            "proposed_quote": "Pour les périodes au titre desquelles l'Etat remboursait à l'employeur une fraction de l'allocation complémentaire en application de l'article L. 3232-8, dans sa rédaction antérieure à son abrogation par la loi n° 2013-504 du 14 juin 2013, cette fraction est fixée à 50 % du montant de l'allocation complémentaire."
           }
         ]
       }
@@ -558769,7 +559126,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Suppression de fond du visa préalable de l'inspection du travail, tout en gardant les états nominatifs et leur calcul nécessaires à la vérification du remboursement. Aucun visa ni déclaration équivalente ne le remplace ; le délai de versement de trois mois reste inchangé.",
-        "scope_limitations": "Les deux alinéas utiles sont conservés à leur place : production et destinataire, puis délai à compter de l'envoi, non de l'approbation. La dispense couvre les dossiers en cours sans remettre le compteur à zéro. Le contrôle R3232-7 subsiste. L'incertitude du fondement législatif du financement signalée sous R3232-3 demeure ; aucun paiement indu nouveau n'est autorisé. La revue ne démontre ni économie nationale ni cohérence exhaustive hors des textes effectivement consultés.",
+        "scope_limitations": "Les deux alinéas utiles sont conservés à leur place : production et destinataire, puis délai à compter de l'envoi, non de l'approbation. La dispense couvre les dossiers en cours sans remettre le compteur à zéro. Le contrôle R3232-7 subsiste. Troisième passe : l'aide de l'Etat n'est due qu'au titre des périodes mentionnées à l'article R. 3232-3, c'est-à-dire celles couvertes par L. 3232-8 avant son abrogation (loi n° 2013-504 du 14 juin 2013) ; aucun paiement pour l'avenir sur ce fondement, aucune formalité nouvelle. La revue ne démontre ni économie nationale ni cohérence exhaustive hors des textes effectivement consultés.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : le corps conserve les conditions de fond et droits antérieurs ; aucune déclaration, approbation ou pièce de remplacement n’est instituée. Le solde de coût de l’ensemble des codes n’est pas chiffré.",
         "effects": [
           {
@@ -558829,7 +559186,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Réduction de fond du circuit administratif : le préfet peut ordonner le paiement direct sans proposition préalable du directeur régional. La sauvegarde, le redressement, la liquidation et les simples difficultés financières demeurent tous des cas d'ouverture ; aucune demande ou approbation nouvelle n'est imposée au salarié.",
-        "scope_limitations": "Note source lue en entier : déploiement régional du décret 2009-1377 selon nominations, exclusion initiale Ile-de-France et outre-mer, puis application francilienne au 1er juillet 2010 par décret 2010-687. Ces dates ne sont pas celles de la réforme. Le titre administratif ancien est signalé ; le texte dispense aussi son successeur sans prétendre établir la concordance organique ultramarine. Le paiement reste limité à la part légalement due par l'Etat ; le problème de fondement signalé sous R3232-3 subsiste. La revue ne démontre ni économie nationale ni cohérence exhaustive hors des textes effectivement consultés.",
+        "scope_limitations": "Note source lue en entier : déploiement régional du décret 2009-1377 selon nominations, exclusion initiale Ile-de-France et outre-mer, puis application francilienne au 1er juillet 2010 par décret 2010-687. Ces dates ne sont pas celles de la réforme. Le titre administratif ancien est signalé ; le texte dispense aussi son successeur sans prétendre établir la concordance organique ultramarine. Troisième passe : le paiement direct ne porte que sur la part de l'Etat due au titre des périodes mentionnées à l'article R. 3232-3 (L. 3232-8 abrogé le 17 juin 2013) ; la compétence préfectorale et la dispense de proposition préalable sont inchangées. La revue ne démontre ni économie nationale ni cohérence exhaustive hors des textes effectivement consultés.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : le corps conserve les conditions de fond et droits antérieurs ; aucune déclaration, approbation ou pièce de remplacement n’est instituée. Le solde de coût de l’ensemble des codes n’est pas chiffré.",
         "effects": [
           {
@@ -558853,15 +559210,29 @@
       "source_id": "LEGIARTI000043128611",
       "number": "R3232-7",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien de la vérification de la répartition sur douze mois et des redressements en cas de report abusif ou d'inégalités injustifiées. Cette règle protège contre une allocation artificiellement majorée ; elle ne commande pas un rapport annuel supplémentaire de l'employeur.",
-        "scope_limitations": "L'année civile écoulée et les douze mois demeurent ; les redressements portent sur participation publique et charges sociales, non sur une nouvelle pénalité. L'articulation actuelle du financement de l'Etat doit être éclaircie au niveau législatif : L3232-8 absent du corpus actif, L3232-7 et L3232-9 toujours présents. La revue ne démontre ni économie nationale ni cohérence exhaustive hors des textes effectivement consultés.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : le texte source reste intégralement applicable, sans document, registre, délai ou condition supplémentaire.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Les redressements de la participation de l'Etat sont limités aux périodes au titre desquelles l'Etat remboursait une fraction de l'allocation complémentaire en application de L. 3232-8, abrogé depuis le 17 juin 2013 ; les redressements des charges sociales et la vérification de la répartition sur douze mois sont conservés.",
+        "scope_limitations": "Les articles R. 3232-3, R. 3232-4 et R. 3232-6, qui organisent encore la part de l'Etat, relèvent de demandes de coordination séparées ; aucun effet budgétaire n'est chiffré.",
+        "new_burdens_review": "Aucune charge nouvelle : aucun état, déclaration, délai, condition ni prélèvement n'est ajouté ; seul le champ temporel du redressement de la participation de l'Etat est précisé.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "rmm-participation-etat-base-abrogee",
+            "description": "Limitation du redressement de la participation de l'Etat aux périodes couvertes par L. 3232-8 avant son abrogation.",
+            "before": "Redressements dans le calcul d'une participation de l'Etat sans base légale depuis 2013.",
+            "after": "Redressements des charges sociales inchangés ; participation de l'Etat redressée pour les seules périodes où L. 3232-8 s'appliquait.",
+            "unit": "legal_duty",
+            "affected_population": "Employeurs versant l'allocation complémentaire de rémunération mensuelle minimale et agents de contrôle de l'inspection du travail.",
+            "conditions_and_transition": "Périodes antérieures régies par les dispositions alors applicables ; aucune formalité de remplacement.",
+            "replacement_or_new_burdens": "Aucune obligation, formalité ni prélèvement de remplacement.",
+            "source_quote": "les redressements nécessaires sont effectués dans le calcul de la participation de l'Etat au versement des allocations complémentaires et dans la détermination des charges sociales incombant à l'employeur et aux salariés.",
+            "proposed_quote": "les redressements nécessaires sont effectués dans la détermination des charges sociales incombant à l'employeur et aux salariés ainsi que, pour les périodes au titre desquelles l'Etat remboursait à l'employeur une fraction de l'allocation complémentaire en application de l'article L. 3232-8, dans sa rédaction antérieure à son abrogation par la loi n° 2013-504 du 14 juin 2013, dans le calcul de cette participation."
+          }
+        ]
       }
     },
     {
@@ -576499,15 +576870,29 @@
       "source_id": "LEGIARTI000019760989",
       "number": "R4313-82",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Aucun changement normatif par rapport à la source officielle entière. Maintien intégral nécessaire, sans reformulation ni réforme de fond. Les sept familles exposent à des conséquences graves : risque respiratoire, immersion, chimie, rayonnements, températures extrêmes, chute et électricité. La surveillance de production complète l'examen du modèle sans lui faire double emploi. Le choix entre garantie qualité et assurance qualité avec surveillance est maintenu pour les futurs fabricants.",
-        "scope_limitations": "Différence de champ : « au choix du fabricant, soit » maintient des voies alternatives R4313-57 à 61 et R4313-62 à 74, toutes lues intégralement, non deux contrôles cumulatifs. R4313-73 assure le retour à la garantie qualité après retrait de l'assurance qualité ; R4313-61 et 74 préservent le recours de R4313-35. Renvoi entrant R4312-8 6° lu : interdiction relative aux EPI d'occasion « à l'exception des appareils de protection respiratoire destinés à la plongée », distincte des EPI neufs visés ici ; cette exception reste intacte. Ambiguïté préexistante hors lot : « augmentation de la périodicité » à R4313-60, fréquence ou intervalle, ne doit pas être interprétée comme un espacement des contrôles correctifs ; coordination rédactionnelle à examiner dans cet article, sans modification silencieuse du présent texte. Aucun solde national de coût ou de complexité n’est établi ; la vérification locale ne remplace pas la confrontation aux textes européens intégraux.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : le texte source est maintenu intégralement, sans nouvelle formalité, donnée, condition ni délai. Les obligations existantes de sécurité ne sont pas comptées comme des réductions.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Procédures nationales de la sous-section 4 limitées aux équipements de protection individuelle relevant de la directive 89/686/CEE (mis sur le marché avant le 21 avril 2019, approbations valables au plus tard jusqu'au 21 avril 2023) ; renvoi aux procédures du règlement (UE) 2016/425 pour les équipements nouveaux, sans procédure nationale supplémentaire.",
+        "scope_limitations": "R4313-80 et R4313-81 (autocertification et examen CE de type des EPI) et les articles R4313-57 à R4313-74 ne sont pas modifiés ici ; existence d'approbations nationales encore invoquées non vérifiée.",
+        "new_burdens_review": "Aucune charge nouvelle : aucune procédure, déclaration ni condition n'est ajoutée ; des procédures nationales sans objet depuis le règlement directement applicable sont bornées à leur champ transitoire.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "epi-procedures-nationales-reglement-2016-425",
+            "description": "Limitation des procédures nationales de qualité des EPI au champ transitoire de la directive 89/686/CEE.",
+            "before": "Sept catégories d'EPI soumises, au choix du fabricant, aux procédures nationales de garantie ou d'assurance qualité CE, sans limite dans le temps malgré le règlement (UE) 2016/425.",
+            "after": "Mêmes procédures réservées aux EPI mis sur le marché avant le 21 avril 2019 sous la directive et aux approbations valables au plus tard jusqu'au 21 avril 2023 ; autres EPI soumis au seul règlement (UE) 2016/425.",
+            "unit": "regime",
+            "affected_population": "Fabricants, importateurs et organismes notifiés d'équipements de protection individuelle.",
+            "conditions_and_transition": "Approbations et attestations antérieures conservées jusqu'à leur terme ; aucune formalité nouvelle.",
+            "replacement_or_new_burdens": "Aucune procédure nationale de remplacement.",
+            "source_quote": "soit à la procédure de système d'assurance qualité CE de la production avec surveillance définie par les articles R. 4313-62 à R. 4313-74",
+            "proposed_quote": "relèvent des procédures d'évaluation de la conformité prévues par le règlement (UE) 2016/425 du Parlement européen et du Conseil du 9 mars 2016 ; aucune procédure nationale ne s'y ajoute"
+          }
+        ]
       }
     },
     {
@@ -603475,15 +603860,29 @@
       "source_id": "LEGIARTI000031571257",
       "number": "R4626-27",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien de la surveillance renforcée des catégories visées par R. 4624-18 et des agents revenant d'un congé de longue durée ou de longue maladie. Il s'agit d'un droit à prévention ciblée, non d'une autorisation administrative d'embauche ou d'un prélèvement. Aucun allègement nouveau revendiqué par rapport à la source officielle entière.",
-        "scope_limitations": "Point non vérifiable : la source date du 1er janvier 2016, mais R. 4624-18 fourni prend effet le 1er janvier 2017 et vise « Tout travailleur de nuit » et « tout travailleur âgé de moins de dix-huit ans ». Cette divergence chronologique interdit de considérer, comme pouvait le laisser entendre la note précédente, la filiation entièrement résolue. La version antérieure de R. 4624-18 et le dispositif transitoire de 2016 ne sont pas fournis : aucun retrait de bénéficiaires historiques n’est déduit. R. 4624-23 actuel définit séparément les postes à risques ; lui substituer silencieusement le renvoi ferait disparaître le groupe actuel des mineurs et travailleurs de nuit. Maintien conservatoire du texte, avec réserve explicite sur cette concordance historique. R. 4626-23 conserve les examens liés aux expositions ; R. 4626-28 laisse les modalités de surveillance au médecin ; R. 4626-29 conserve les examens de reprise, notamment maternité et maladie professionnelle. Aucun bilan net de l’ensemble des codes n’est établi.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : le texte officiel reste intégralement applicable sans ajout de pièce, registre, donnée, délai ni condition. Les obligations existantes sont justifiées dans le motif spécifique.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination de renvoi seulement : le 1° vise désormais les dispositions qui ont remplacé, au 1er janvier 2017, l'ancienne liste des bénéficiaires de la surveillance médicale renforcée de R. 4624-18 (R. 4624-23, R. 4624-18, R. 4624-19 et R. 4624-20). Le 2° et le reste du régime sont inchangés ; aucun allègement n'est revendiqué.",
+        "scope_limitations": "Seul le renvoi du 1° est modifié. La liste des postes à risques de R. 4624-23 proposé a été lue dans son I ; le bruit et les vibrations, retirés du droit commun en 2017, ne sont pas réintroduits. Les textes extérieurs au corpus (arrêtés, recommandations de bonnes pratiques) ne sont pas lus ; aucun solde de simplification n'est revendiqué.",
+        "new_burdens_review": "Aucune charge nouvelle : ni formalité, ni condition, ni délai, ni prélèvement ; la surveillance renforcée reste un droit à prévention dont les modalités sont fixées par le médecin du travail (R. 4626-28).",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "sante-travail-etablissements-renvoi-surveillance-renforcee",
+            "description": "Redirection du renvoi décalé à R. 4624-18 vers les dispositions successeurs.",
+            "before": "Renvoi à R. 4624-18, qui ne vise plus depuis 2017 que les travailleurs de nuit et les moins de dix-huit ans.",
+            "after": "Renvoi aux postes à risques particuliers (R. 4624-23) et aux agents visés par R. 4624-18, R. 4624-19 et R. 4624-20.",
+            "unit": "legal_duty",
+            "affected_population": "Agents des établissements mentionnés à l'article R. 4626-1 et médecins du travail de ces établissements.",
+            "conditions_and_transition": "Effet immédiat, sans changement des modalités ; aucun bénéficiaire actuel n'est retiré.",
+            "replacement_or_new_burdens": "Aucune.",
+            "source_quote": "Les agents mentionnés à l'article R. 4624-18",
+            "proposed_quote": "Les agents affectés à un poste présentant des risques particuliers au sens de l'article R. 4624-23"
+          }
+        ]
       }
     },
     {
@@ -654778,7 +655177,7 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "La source favorable est conservée quant à ses territoires, salariés, seuil de 520 salaires hebdomadaires et prorata ; seule la désignation du fondement législatif est rectifiée. Aucun nouveau taux réduit ni nouvel allègement autonome.",
+        "assessment": "La source favorable est conservée quant à ses territoires, salariés, seuil de 520 salaires hebdomadaires et prorata ; seule la désignation du fondement législatif est rectifiée. Aucun nouveau taux réduit ni nouvel allègement autonome. Le seuil est rendu déterminable par la formule de L. 3232-3, sans changement du multiplicateur.",
         "scope_limitations": "Le renvoi entrant de l'annexe II 163 sexdecies a été vérifié. L'historique complet du seuil et tous les régimes sectoriels ne sont pas reconstitués ; le texte exclut le rétablissement des contributions supprimées.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : aucune condition, pièce ou obligation de remplacement n'est ajoutée ; la franchise et les autres exonérations plus favorables demeurent.",
         "effects": [
@@ -654786,8 +655185,8 @@
             "kind": "coordination",
             "measure_id": "formation-outremer-franchise-preservee",
             "description": "Corrige le fondement de la participation sans altérer la franchise territoriale.",
-            "before": "Franchise sous 520 fois le salaire hebdomadaire minimum, proratisée aux semaines d'activité, avec renvoi à L6313-1 et suivants.",
-            "after": "Même seuil, mêmes personnes et même prorata ; renvoi au financement législatif, sans contribution ressuscitée.",
+            "before": "Franchise sous 520 fois un « salaire hebdomadaire minimum de croissance » non défini, proratisée aux semaines d'activité, avec renvoi à L6313-1 et suivants.",
+            "after": "Même multiplicateur de 520, appliqué au salaire minimum de croissance horaire multiplié par la durée légale hebdomadaire (formule de L3232-3) ; mêmes personnes et même prorata ; renvoi au financement législatif, sans contribution ressuscitée.",
             "unit": "legal_duty",
             "affected_population": "Employeurs des sept territoires nommés employant des salariés à temps partiel, intermittents ou à domicile.",
             "conditions_and_transition": "Correction prospective ; exonérations, restitutions et recours des périodes antérieures conservés.",
@@ -671629,22 +672028,22 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Le recouvrement général du corps source est intégralement préservé. Le renvoi CRP est limité aux situations anciennes en précisant leurs échéances futures pour éviter une fermeture de financement contraire à L321-4-2 cible. Aucun second prélèvement supprimé n'est compté.",
-        "scope_limitations": "Les bases historiques L351-3-1 et L351-21 et les textes extérieurs agricole/territorial ne sont pas fournis. Les contributions autonomes de garantie et du spectacle subsistent ; ni leur taux ni leur assiette ne sont diminués ici.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, formulaire, donnée, justificatif, délai ou autorisation de remplacement n'est créé ; les obligations autonomes conservées ne sont pas de nouveaux dispositifs. Aucun solde global des codes n'est chiffré.",
+        "assessment": "Abrogation d'un article de la partie législative ancienne affiché comme en vigueur par des modifications différées ; ses renvois visent l'ancien code et son objet entier est régi par L. 5422-16, que le projet coordonne déjà. Aucune garantie perdue, aucune formalité ni contribution de remplacement.",
+        "scope_limitations": "L'article 12 de l'ordonnance n° 2007-329 n'est connu que par la NOTA de L351-13 ; la loi n° 2008-126 n'est connue que par les NOTA des articles.",
+        "new_burdens_review": "Aucune charge nouvelle : ni formalité, ni sanction, ni condition ni contribution de remplacement.",
         "effects": [
           {
             "kind": "coordination",
-            "measure_id": "reclassement-crp-consolidation",
-            "description": "Coordonner le recouvrement CRP et protéger les échéances ultérieures des situations sauvegardées.",
-            "before": "Renvoi général au recouvrement des contributions L321-4-2, L351-3-1 et L351-14 selon les garanties sociales et dérogations.",
-            "after": "Seul le renvoi CRP est limité ; situations anciennes et engagements conservés financent encore les échéances et prestations ultérieures.",
-            "unit": "regime",
-            "affected_population": "Employeurs redevables, organismes de recouvrement et bénéficiaires du dispositif ancien.",
-            "conditions_and_transition": "Entrée en vigueur ; aucune contribution liée à une situation nouvelle, sans éteindre les engagements anciens préservés par la cible.",
-            "replacement_or_new_burdens": "Aucun registre, déclaration, contrôle ou autorisation de remplacement ajouté.",
-            "source_quote": "Les contributions prévues aux articles L. 321-4-2, L. 351-3-1 et L. 351-14",
-            "proposed_quote": "Les conventions valablement conclues, les situations antérieures légalement couvertes et les engagements de financement dont l'article L. 321-4-2 conserve les effets demeurent régis par les dispositions antérieures, y compris pour leurs échéances et prestations ultérieures."
+            "measure_id": "ancien-code-l351-5-1-recouvrement-doublon",
+            "description": "Abrogation de L351-5-1 (partie législative ancienne), doublon de la partie en vigueur.",
+            "before": "Article de l'ancien code affiché en vigueur, circuit de recouvrement concurrent renvoyant aux anciens L321-4-2, L351-3-1, L351-14 et L351-21.",
+            "after": "Article abrogé ; recouvrement, dérogations, contentieux et convention régis par L5422-16 ; situations antérieures conservées.",
+            "unit": "legal_duty",
+            "affected_population": "Employeurs redevables des contributions d'assurance chômage, organismes de recouvrement, organisme gestionnaire du régime.",
+            "conditions_and_transition": "À l'entrée en vigueur de la réforme ; situations, accords, contributions et contentieux antérieurs conservés.",
+            "replacement_or_new_burdens": "Aucune formalité, sanction ni contribution de remplacement.",
+            "source_quote": "sont recouvrées et contrôlées par les organismes chargés du recouvrement mentionnés à l'article L. 351-21",
+            "proposed_quote": "Les contributions, conventions, créances et contentieux antérieurs conservent leur régime"
           }
         ]
       }
@@ -671654,15 +672053,29 @@
       "source_id": "LEGIARTI000018124358",
       "number": "L351-6",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "La source entière impose une mise en demeure protectrice avant action ou poursuite. Son maintien ne supprime ni prélèvement ni obligation et ne constitue pas une simplification supplémentaire.",
-        "scope_limitations": "Le champ ancien des infractions et les décrets non présents restent à vérifier ; aucune conclusion globale sur l'assurance chômage ou les neuf recueils n'en est tirée.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : proposed_xml reste nul et le texte source, y compris la preuve postale et l'invitation à régulariser, est intégralement conservé.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Abrogation d'un article de la partie législative ancienne, affiché comme en vigueur par une modification différée postérieure à l'abrogation de cette partie ; la garantie de mise en demeure préalable par lettre recommandée subsiste à L. 5422-15 et R. 5422-9.",
+        "scope_limitations": "L'article 12 de l'ordonnance n° 2007-329 n'est connu que par la NOTA de L351-13 ; la loi n° 2008-126 et le décret n° 2009-1708 ne sont connus que par la NOTA de l'article.",
+        "new_burdens_review": "Aucune charge nouvelle : ni formalité, ni sanction, ni condition de remplacement ; la mise en demeure préalable demeure au titre de L. 5422-15.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "ancien-code-l351-6-mise-en-demeure-doublon",
+            "description": "Suppression de l'article ancien faisant double emploi avec L. 5422-15, aux renvois structurels morts.",
+            "before": "Article de l'ancien code affiché en vigueur, exigeant une mise en demeure par lettre recommandée avant action pour infraction au « présent chapitre » de l'ancien code.",
+            "after": "Article abrogé ; la mise en demeure préalable par lettre recommandée résulte de L. 5422-15 et R. 5422-9 ; actes antérieurs conservés.",
+            "unit": "legal_duty",
+            "affected_population": "Employeurs redevables des contributions d'assurance chômage et organismes de recouvrement.",
+            "conditions_and_transition": "À l'entrée en vigueur de la réforme ; mises en demeure, actions et régularisations antérieures conservées.",
+            "replacement_or_new_burdens": "Aucune formalité ni sanction de remplacement.",
+            "source_quote": "est obligatoirement précédée d'une mise en demeure par lettre recommandée avec demande d'avis de réception",
+            "proposed_quote": "aucune formalité ni sanction de remplacement n'est instituée"
+          }
+        ]
       }
     },
     {
@@ -671670,15 +672083,29 @@
       "source_id": "LEGIARTI000018124711",
       "number": "L351-8",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "L'accord agréé, son extension obligatoire et le décret supplétif sont maintenus en entier pour assurer la continuité et l'opposabilité des garanties de ressources. Aucun agrément supprimé ni coût économisé n'est compté ici.",
-        "scope_limitations": "Les anciens articles d'agrément ne sont pas disponibles ; les règles modernes lues confirment la différence de fonction mais ne démontrent pas toutes les concordances historiques.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien de la source sans nouveau dépôt, visa, échéance ou justificatif ; l'agrément existant conserve sa fonction normative.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Abrogation d'un article de la partie législative ancienne affiché comme en vigueur par une modification différée ; l'accord agréé d'assurance chômage, son effet obligatoire et le décret supplétif sont régis par L. 5422-20 à L. 5422-22, que le projet maintient. Aucune garantie perdue, aucune formalité de remplacement.",
+        "scope_limitations": "L'article 12 de l'ordonnance n° 2007-329 n'est connu que par la NOTA de L351-13 ; la loi n° 2008-126 n'est connue que par les NOTA des articles.",
+        "new_burdens_review": "Aucune charge nouvelle : ni formalité, ni sanction, ni condition ni contribution de remplacement.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "ancien-code-l351-8-accord-agree-doublon",
+            "description": "Abrogation de L351-8 (partie législative ancienne), doublon de la partie en vigueur.",
+            "before": "Article de l'ancien code affiché en vigueur, renvoyant aux anciens L351-4 à L351-6 et L352-1 à L352-2-1.",
+            "after": "Article abrogé ; accord agréé, effet obligatoire et décret supplétif régis par L5422-20 à L5422-22.",
+            "unit": "legal_duty",
+            "affected_population": "Organisations représentatives d'employeurs et de salariés, employeurs et salariés couverts par l'accord agréé.",
+            "conditions_and_transition": "À l'entrée en vigueur de la réforme ; situations, accords, contributions et contentieux antérieurs conservés.",
+            "replacement_or_new_burdens": "Aucune formalité, sanction ni contribution de remplacement.",
+            "source_quote": "font l'objet d'un accord conclu et agréé dans les conditions définies aux articles L. 352-1, L. 352-2 et L. 352-2-1",
+            "proposed_quote": "Les accords agréés et les décrets antérieurs conservent leurs effets"
+          }
+        ]
       }
     },
     {
@@ -671707,22 +672134,22 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Par rapport à la source officielle entière, le financement spécifique supplémentaire est fermé pour les périodes futures, conformément à la suppression déjà portée par L5424-20. Les quatre alinéas sources subsistent dans leur champ utile ou historique ; allocations et adaptations restent. Cette coordination n'est pas une seconde taxe supprimée.",
-        "scope_limitations": "Le taux conventionnel de la contribution n'est pas fourni ; aucune perte nationale ni financement des droits conservés n'est chiffré. Les conventions VIII/X et le renvoi entrant L351-5-1 restent à coordonner hors lot.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, déclaration, agrément ou cotisation de remplacement ; les conditions des prestations restent celles du régime et la durée de mission ne devient pas un terme d'emploi.",
+        "assessment": "Abrogation d'un article de la partie législative ancienne affiché comme en vigueur par une modification différée ; ses renvois visent l'ancien code et son objet est régi par L. 5422-6, L. 5424-20, L. 5424-22 et L. 5422-16, où le projet opère déjà la suppression de la contribution spécifique du spectacle pour les périodes nouvelles. Aucune allocation ni aménagement n'est réduit ; aucune contribution de remplacement.",
+        "scope_limitations": "L'article 12 de l'ordonnance n° 2007-329 n'est connu que par la NOTA de L351-13 ; la loi n° 2008-126 n'est connue que par les NOTA des articles.",
+        "new_burdens_review": "Aucune charge nouvelle : ni formalité, ni sanction, ni condition ni contribution de remplacement.",
         "effects": [
           {
             "kind": "coordination",
-            "measure_id": "spectacle-suppression-contribution-specifique",
-            "description": "Neutralisation du fondement ancien du prélèvement spécifique déjà supprimé dans la proposition moderne.",
-            "before": "Contribution spécifique employeur et salarié sur rémunération brute plafonnée, en plus de la contribution ordinaire ; taux fixé par accord et absent de l'article.",
-            "after": "Aucune contribution spécifique pour les périodes nouvelles, y compris sous contrat ancien ; contribution ordinaire et prestations conservées.",
-            "unit": "financing",
-            "affected_population": "Employeurs et salariés des professions cinématographiques, audiovisuelles et du spectacle couverts par cet aménagement.",
-            "conditions_and_transition": "Périodes d'emploi à compter de l'entrée en vigueur de la suppression de L5424-20 ; recouvrement, plafonds, exonérations et recours anciens conservés.",
-            "replacement_or_new_burdens": "Aucun prélèvement ni formalité de remplacement sur ce fondement ; financement des allocations non chiffré.",
-            "source_quote": "peut, en sus de la contribution prévue à l'article L. 351-3-1, être financée par une contribution spécifique à la charge des employeurs et des salariés relevant de ces professions, assise sur la rémunération brute dans la limite d'un plafond",
-            "proposed_quote": "Elle n'est plus due au titre des périodes d'emploi accomplies à compter de l'entrée en vigueur de la loi supprimant la contribution spécifique prévue à l'article L. 5424-20, quelle que soit la date de conclusion du contrat de travail."
+            "measure_id": "ancien-code-l351-14-contribution-spectacle-doublon",
+            "description": "Abrogation de L351-14 (partie législative ancienne), doublon de la partie en vigueur.",
+            "before": "Article de l'ancien code affiché en vigueur, fondement concurrent de la contribution spécifique du spectacle et d'aménagements renvoyant à l'ancien code.",
+            "after": "Article abrogé ; aménagements, règles spécifiques et suppression de la contribution régis par la partie en vigueur ; périodes antérieures conservées.",
+            "unit": "legal_duty",
+            "affected_population": "Employeurs et salariés des professions de la production cinématographique, de l'audiovisuel et du spectacle ; professions à modalités particulières d'exercice.",
+            "conditions_and_transition": "À l'entrée en vigueur de la réforme ; situations, accords, contributions et contentieux antérieurs conservés.",
+            "replacement_or_new_burdens": "Aucune formalité, sanction ni contribution de remplacement.",
+            "source_quote": "être financée par une contribution spécifique à la charge des employeurs et des salariés relevant de ces professions",
+            "proposed_quote": "aucune contribution de remplacement n'est instituée"
           }
         ]
       }
@@ -696634,7 +697061,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Réforme de fond : supprimer la taxe nationale à 17 % puis 34 % de la valeur locative et ses seuls accessoires futurs. La seule disparition de 232, déjà programmée au 1er janvier 2027, ne suffirait pas : le corps proposé écarte expressément le relais de 1406 bis dans les communes de son I B, y compris les majorations communales de ce relais. Les références de zonage et les exclusions utiles à d’autres avantages sont coordonnées sans conserver la taxe ni élargir une imposition locale. Les régimes de vacance extérieurs à cette zone ne sont pas abolis implicitement. Le maintien exprès du I comme définition de zonage et des V et VI pour leurs renvois autonomes conduit à qualifier la proposition de réduction normative partielle, et non d’abrogation intégrale de l’article. Seconde passe : coordination nécessaire de la phrase « Les taxes sur la vacance dans les communes autres que celles mentionnées au II » avec les abrogations intégrales proposées à 1406 bis et 1407 bis. Le IX ne doit pas être compris comme leur maintien ; sa réserve est corrigée sans étendre les taxes ni annuler les coupes acquises.",
-        "scope_limitations": "Les limites temporelles et les champs des régimes autonomes restent ceux du corps proposé. Les textes hors lot identifiés dans les notes restent à coordonner ; aucun solde budgétaire national ni gain net global de complexité n’est établi.",
+        "scope_limitations": "Les limites temporelles et les champs des régimes autonomes restent ceux du corps proposé. Les textes hors lot identifiés dans les notes restent à coordonner ; aucun solde budgétaire national ni gain net global de complexité n’est établi. Troisième passe : le X écarte l'abrogation programmée au 1er janvier 2027 par l'article 108 de la loi n° 2026-103 pour la seule rédaction issue de la réforme, sans rétablir aucune imposition ; le texte de cet article 108 n'a pas été lu.",
         "new_burdens_review": "Aucune charge nouvelle n'est identifiée : aucune déclaration, garantie, taxe ni pièce de remplacement n'est créée. Le maintien des liquidations anciennes et des conditions d'avantages autonomes ne constitue pas une obligation nouvelle ; le coût public net n'est pas chiffré.",
         "effects": [
           {
@@ -783020,22 +783447,22 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Maintien nécessaire de l'habilitation aux adaptations outre-mer des règles d'allocation aux adultes handicapés. Elle ne crée elle-même ni autorisation individuelle, ni contribution accessoire, ni dossier périodique ; la supprimer fragiliserait le fondement des adaptations utiles à l'accès au droit. Seconde passe : coordination territoriale nécessaire, sans diminution nouvelle de prélèvement, par désignation directe des six collectivités après constat de l’abrogation différée de L. 751-1.",
-        "scope_limitations": "Le renvoi au titre II du livre VIII désigne l'allocation aux adultes handicapés et ne doit pas être assimilé à une pension de retraite soumise au gel proposé. Le décret en Conseil d'Etat reste la règle sauf disposition contraire. Les dispositions de fond de l'AAH ne sont pas remplacées. La désignation territoriale de L. 751-1, abrogée en 2028, est remplacée dans cet article par une liste directe sans fermeture des prestations futures. Coordination nécessaire établie : la source L. 751-1, lue en entier, énumère « en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Saint-Barthélemy et à Saint-Martin » et porte une fin de validité au 1er janvier 2028. La désignation directe conserve ces six territoires ; elle n'ajoute ni Mayotte ni Saint-Pierre-et-Miquelon. La coordination du reste du titre et des règlements qui continuent de viser L. 751-1 reste hors lot ; leur fondement territorial propre n'est pas abrogé ici.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : la coordination ne crée ni donnée, ni registre, ni déclaration, ni délai, ni condition d'accès supplémentaire. Le solde de complexité et de financement de l'ensemble des codes n'est pas chiffré.",
+        "assessment": "Maintien de l'habilitation aux adaptations outre-mer des règles d'allocation aux adultes handicapés, avec rétablissement du renvoi dynamique à L. 751-1 ; la liste figée de six collectivités introduite en seconde passe aurait exclu Mayotte à compter du 1er janvier 2028, date à laquelle la version publiée de L. 751-1 l'ajoute.",
+        "scope_limitations": "Le renvoi au titre II du livre VIII désigne l'allocation aux adultes handicapés. Le décret en Conseil d'Etat reste la règle sauf disposition contraire. L'ordonnance n° 2026-647 n'est connue que par la NOTA de L. 751-1 (2028) ; son texte n'a pas été lu.",
+        "new_burdens_review": "Aucune charge nouvelle : aucune donnée, registre, déclaration, délai ni condition d'accès ; le champ territorial suit celui de L. 751-1.",
         "effects": [
           {
             "kind": "coordination",
-            "measure_id": "outre-mer-reference-territoriale-autonome",
-            "description": "Désignation directe du champ géographique pour éviter un renvoi abrogé en 2028.",
-            "before": "Six collectivités désignées par renvoi à L751-1, qui expire le 1er janvier 2028.",
-            "after": "Les mêmes six collectivités désignées dans cet article ; avantages non fermés après 2028.",
+            "measure_id": "outre-mer-reference-territoriale-l751-1-renvoi-dynamique",
+            "description": "Rétablissement du renvoi à L. 751-1 pour le champ territorial de l'habilitation.",
+            "before": "Six collectivités désignées par renvoi à L. 751-1 (version jusqu'au 31 décembre 2027).",
+            "after": "Collectivités désignées par L. 751-1 dans sa rédaction applicable, Mayotte comprise à compter du 1er janvier 2028.",
             "unit": "other",
-            "affected_population": "Bénéficiaires du régime propre à L757-3",
-            "conditions_and_transition": "La désignation directe des collectivités au présent article maintient son champ territorial à compter de l’entrée en vigueur de la loi portant cette coordination, y compris après le 1er janvier 2028. Elle ne modifie ni les conditions de fond des droits et avantages prévus au présent article, ouverts également aux situations futures éligibles, ni les règles applicables aux périodes antérieures, à leurs régularisations, restitutions et recours.",
-            "replacement_or_new_burdens": "Aucune formalité de remplacement ; les conditions de fond et les obligations autonomes restent applicables.",
-            "source_quote": "collectivités mentionnées à l'article L. 751-1",
-            "proposed_quote": "collectivités de la Guadeloupe, de la Guyane, de la Martinique, de La Réunion, de Saint-Barthélemy et de Saint-Martin"
+            "affected_population": "Bénéficiaires de l'allocation aux adultes handicapés dans les collectivités de L. 751-1.",
+            "conditions_and_transition": "Aucune ; les périodes antérieures, régularisations, restitutions et recours conservent leur régime.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+            "source_quote": "dans les collectivités mentionnées à l'article L. 751-1",
+            "proposed_quote": "dans les collectivités mentionnées à l'article L. 751-1"
           }
         ]
       }
@@ -852642,15 +853069,29 @@
       "source_id": "LEGIARTI000006753042",
       "number": "R731-18",
       "slug": "securite-sociale",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien de la désignation du ministre compétent pour l'autorisation institutionnelle : la solvabilité et la garantie de prestations restent contrôlées. Cette attribution ne crée ni seconde autorisation ni nouvelle déclaration. La suppression des approbations de modifications de R731-3 ne supprime pas l'autorisation initiale.",
-        "scope_limitations": "Transition compatible : R731-3 proposé conserve « autorisation de fonctionnement » et « approbation initiale » mais supprime le visa des modifications. La désignation « le ministre chargé de la sécurité sociale » ne rétablit pas ce visa. Point non vérifiable : L731-1 manque effectivement au corpus local ; son absence ne prouve pas son abrogation. Aucun fondement de remplacement n’est inventé.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral du texte officiel, sans formalité, registre, donnée ou condition supplémentaire. Aucun solde global des codes n’est chiffré.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Désignation du ministre chargé de la sécurité sociale rattachée à la rédaction de L. 731-1 qui mentionnait l'autorité compétente (avant le 2 janvier 1990) et limitée aux institutions autorisées avant l'abrogation de 1994 ; aucune autorisation nouvelle, aucune charge.",
+        "scope_limitations": "Le chapitre R. 731 est déjà limité aux institutions autorisées avant 1994 par les propositions de R. 731-1, R. 731-3, R. 731-3-1 et R. 731-8. L'existence d'institutions encore autorisées n'est pas vérifiée. Les arrêtés pris sur le chapitre ne sont pas fournis.",
+        "new_burdens_review": "Aucune charge nouvelle : aucune déclaration, autorisation, délai ni condition n'est ajouté ; une désignation d'autorité est seulement bornée à son champ légal antérieur.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "prevoyance-r731-base-legale-eteinte",
+            "description": "Désignation de l'autorité compétente rattachée à la rédaction antérieure de L. 731-1 et limitée aux institutions autorisées avant 1994.",
+            "before": "Désignation de l'autorité « mentionnée au premier alinéa de l'article L. 731-1 », alinéa sans autorité depuis 1990 et abrogé depuis 1994.",
+            "after": "Désignation rattachée à la rédaction antérieure au 2 janvier 1990, valable seulement pour les institutions autorisées avant l'abrogation de 1994 ; aucune autorisation nouvelle.",
+            "unit": "regime",
+            "affected_population": "Institutions de prévoyance autorisées avant 1994 sur le fondement de L. 731-1 ; ministre chargé de la sécurité sociale.",
+            "conditions_and_transition": "Autorisations antérieures et droits des adhérents conservés.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+            "source_quote": "L'autorité compétente de l'Etat mentionnée au premier alinéa de l'article L. 731-1 est le ministre chargé de la sécurité sociale.",
+            "proposed_quote": "aucune autorisation nouvelle ne peut être sollicitée ni accordée sur ce fondement"
+          }
+        ]
       }
     },
     {
@@ -855039,15 +855480,29 @@
       "source_id": "LEGIARTI000021647722",
       "number": "R752-20",
       "slug": "securite-sociale",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien des seuils et des régularisations qui rendent opératoire l’exonération de Saint-Pierre-et-Miquelon. Les références aux règles d’effectif peuvent recevoir les coordinations du contrat unique sans modifier ici les seuils ni supprimer les exclusions favorables. Seconde passe : maintien du texte officiel entier, sans nouvelle rédaction stylistique ; interactions et limites documentaires précisées dans les notes.",
-        "scope_limitations": "Transition compatible avec L1111-2, L1111-3 et L1251-54 proposés : exclusion des remplacements réels, prorata et apprentissage/aides futurs conservés ; aucune durée de mission ne devient durée d'emploi. Le renvoi exprès de cet article à L1251-54 justifie ici la condition de trois mois de missions ; ne pas lui substituer R130-1. D752-6 entier lu : moyenne des six derniers mois, demande distincte et effet au premier jour du mois suivant, régularisation par R752-20 ; sa proposition retire l'avis préfectoral, sans nouveau dépôt pour demandes pendantes. Dix/cinquante et moins de onze/cinquante et un se concilient avec l'arrondi à l'unité ; le 50 % BTP est une réduction du taux d'exonération, pas du taux de cotisation. L752-3-1 manque : concordance législative de Saint-Pierre-et-Miquelon non certifiée. Le solde net de coût et de complexité de l'ensemble des codes n'est pas établi.",
+        "classification": "coordination_only",
+        "assessment": "Coordination de renvoi seulement : les trois renvois à l'article L. 752-3-1 (premier et deuxième alinéas du I, premier alinéa du II) visent l'article L. 760-15, numéro que cet article a pris le 23 juillet 2026 (ordonnance n° 2026-648 du 22 juillet 2026, art. 1er, 4°). Seuils, moyenne annuelle, plafonds provisionnels, régularisation au 31 mars, prorata des créations et implantations et réduction de moitié du taux BTP sont repris mot pour mot ; aucun allègement n'est revendiqué.",
+        "scope_limitations": "Transition compatible avec L1111-2, L1111-3 et L1251-54 proposés : exclusion des remplacements réels, prorata et apprentissage/aides futurs conservés ; aucune durée de mission ne devient durée d'emploi. Le renvoi exprès de cet article à L1251-54 justifie ici la condition de trois mois de missions ; ne pas lui substituer R130-1. D752-6 entier lu : moyenne des six derniers mois, demande distincte et effet au premier jour du mois suivant, régularisation par R752-20 ; sa proposition retire l'avis préfectoral, sans nouveau dépôt pour demandes pendantes. Dix/cinquante et moins de onze/cinquante et un se concilient avec l'arrondi à l'unité ; le 50 % BTP est une réduction du taux d'exonération, pas du taux de cotisation. L752-3-1 figure au corpus (dernière version LEGIARTI000053280475, état TRANSFERE, 2026-01-01 → 2026-07-23) et est devenu L. 760-15 ; le 12° de l'ordonnance n° 2026-648 ne modifie que le premier alinéa, le V bis et le V ter, de sorte que les 1° et 2° du I subsistent. Réserve documentaire : L. 760-15 n'est pas au corpus ; l'ordonnance a été lue sur Légifrance (JORFTEXT000054456926) le 31 octobre 2026, sans clause générale de substitution des références. Le solde net de coût et de complexité de l'ensemble des codes n'est pas établi.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, dépôt, donnée, délai ou condition supplémentaire n'est institué par cet article. Les exigences autonomes expressément conservées ne sont pas des formalités de remplacement. Aucun solde national n'est chiffré.",
-        "effects": []
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "exoneration-spm-renvoi-l760-15",
+            "description": "Redirection des trois renvois à L. 752-3-1, renuméroté L. 760-15, sans changement de fond.",
+            "before": "Renvois à l'article L. 752-3-1, transféré le 23 juillet 2026.",
+            "after": "Renvois à l'article L. 760-15, même I, mêmes 1° et 2°.",
+            "unit": "legal_duty",
+            "affected_population": "Entreprises, employeurs et organismes de Saint-Pierre-et-Miquelon bénéficiaires de l'exonération et organisme de recouvrement.",
+            "conditions_and_transition": "Effet immédiat ; aucune condition, seuil ni date n'est modifié ; régularisations et droits antérieurs inchangés.",
+            "replacement_or_new_burdens": "Aucune.",
+            "source_quote": "Pour l'application des seuils prévus aux 1° et 2° du I de l'article L. 752-3-1",
+            "proposed_quote": "Pour l'application des seuils prévus aux 1° et 2° du I de l'article L. 760-15"
+          }
+        ]
       }
     },
     {
@@ -885189,7 +885644,7 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Coordination nécessaire : le renvoi source « à l'article R. 241-51 du code du travail » est remplacé par R4624-29 et R4624-30, textes actuels lus intégralement. Une seconde coordination protège l'opposition à la communication : R4624-30 prévoit « sauf si le travailleur s'y oppose », tandis que le brouillon ne mentionnait que l'examen « organisé avec l'accord de l'intéressé ». Consentir à l'examen ne vaut pas renoncer à l'opposition à la transmission. Les trois mois, l'information du traitant et de l'assuré et les vingt jours restent entiers ; aucune nouvelle baisse de charge revendiquée.",
+        "assessment": "Coordination nécessaire : le renvoi source « à l'article R. 241-51 du code du travail » est remplacé par R4624-29 et R4624-30, textes actuels lus intégralement. Une seconde coordination protège l'opposition à la communication : R4624-30 prévoit « sauf si le travailleur s'y oppose », tandis que le brouillon ne mentionnait que l'examen « organisé avec l'accord de l'intéressé ». Consentir à l'examen ne vaut pas renoncer à l'opposition à la transmission. Les trois mois, l'information du traitant et de l'assuré et les vingt jours restent entiers ; aucune nouvelle baisse de charge revendiquée. Troisième passe : le seuil de plus de trois mois est retiré en coordination avec L. 323-4-1 proposé ; l'examen de préreprise n'est une étape que lorsque l'assuré peut en bénéficier.",
         "scope_limitations": "Coordination sans nouvelle réduction de délai ni de cotisation ; concordance de toutes les versions historiques de R241-51 non fournie.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : la faculté d'opposition découle du règlement actuel ; aucun registre, consentement écrit supplémentaire ou nouvelle transmission n'est imposé. Le solde de coût ou de complexité de l'ensemble des codes n'est pas chiffré.",
         "effects": [
@@ -885198,13 +885653,26 @@
             "measure_id": "prereprise-coordination-renvoi-et-opposition",
             "description": "Actualisation du renvoi et préservation expresse de l'opposition à communiquer les éléments médicaux.",
             "before": "Renvoi à R241-51 ; communication sous vingt jours après examen consenti, sans mention explicite d'opposition à la communication.",
-            "after": "Renvoi aux R4624-29 et R4624-30 actuels ; communication sous vingt jours sauf opposition de l'assuré.",
+            "after": "Renvoi aux R4624-29 et R4624-30 actuels, examen de préreprise seulement lorsque l'assuré peut en bénéficier ; communication sous vingt jours sauf opposition de l'assuré.",
             "unit": "legal_duty",
-            "affected_population": "Assurés dont l'interruption dépasse trois mois dans ce circuit.",
+            "affected_population": "Assurés en interruption de travail, sans durée minimale, dans ce circuit.",
             "conditions_and_transition": "Garanties de préreprise maintenues ; aucun effacement des anciennes transmissions ni des recours ; circuit trente jours autonome conservé.",
             "replacement_or_new_burdens": "Aucune obligation de remplacement ni donnée nouvelle ; les obligations de fond expressément maintenues restent applicables.",
             "source_quote": "après l'examen médical de préreprise mentionné à l'article R. 241-51 du code du travail, organisé avec l'accord de l'intéressé",
-            "proposed_quote": "après l'examen médical de préreprise mentionné aux articles R. 4624-29 et R. 4624-30 du code du travail, organisé avec l'accord de l'intéressé, communique au médecin-conseil, sauf opposition de l'assuré à cette communication, sous vingt jours"
+            "proposed_quote": "le cas échéant après l'examen médical de préreprise mentionné aux articles R. 4624-29 et R. 4624-30 du code du travail lorsque l'assuré peut en bénéficier, organisé avec l'accord de l'intéressé, communique au médecin-conseil, sauf opposition de l'assuré à cette communication, sous vingt jours"
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "medecin-conseil-saisine-sans-seuil",
+            "description": "Retrait du seuil de plus de trois mois, en coordination avec L. 323-4-1 proposé (« sans durée minimale préalable »).",
+            "before": "Saisine du médecin du travail réservée aux interruptions de plus de trois mois, contraire à la loi (trente jours depuis la loi n° 2025-1403).",
+            "after": "Saisine possible au cours de toute interruption de travail, sans durée minimale, comme le prévoit la loi proposée.",
+            "unit": "legal_duty",
+            "affected_population": "Assurés en arrêt de travail, médecins-conseils, médecins traitants et médecins du travail.",
+            "conditions_and_transition": "Saisines effectuées à compter de l'entrée en vigueur de la loi, y compris en cours d'arrêt ; aucune visite systématique.",
+            "replacement_or_new_burdens": "Aucune formalité, visite ni démarche de remplacement.",
+            "source_quote": "En cas d'interruption de travail de plus de trois mois, le médecin-conseil peut",
+            "proposed_quote": "Au cours de toute interruption de travail, sans durée minimale préalable, le médecin-conseil peut"
           }
         ]
       }
@@ -900448,15 +900916,29 @@
       "source_id": "LEGIARTI000006738840",
       "number": "D712-30",
       "slug": "securite-sociale",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien du service des prestations en nature par les sections locales. La délégation obligatoire assure un interlocuteur et un payeur aux assurés ; aucune double demande individuelle n'est établie ici. Le renvoi à D712-31 à D712-33 accueille les seuils allégés sans les rétablir. Maintien confirmé après examen de la source entière, des charges et des interactions décrites en notes ; aucune réduction comptabilisée.",
-        "scope_limitations": "Cohérence avec les trois cibles internes : « dans les conditions prévues aux articles D. 712-31 à D. 712-33 » renvoie aux règles nouvelles sans figer mille adhérents ni six élus. D712-34 conserve les avances des caisses et D712-36 proposé l'identification comptable, sans comptabilité distincte obligatoire si l'identification est assurée. La délégation demeure obligatoire : aucun gain de coût public n'est prétendu.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien ou la coordination conserve les circuits existants et les suppressions de seuils ne créent ni déclaration, ni agrément, ni registre de remplacement. Le coût public et le solde de complexité de l'ensemble des codes ne sont pas chiffrés.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Obligation de confier le service des prestations aux sections locales rattachée à la délégation de L. 160-17 et à la convention de R. 160-26, après abrogation de L. 712-6 ; cas de l'absence ou de la résiliation de la convention renvoyé à R. 160-26 et R. 160-28.",
+        "scope_limitations": "D712-31 corrigé dans le même paquet ; pratique des conventions non vérifiée ; R160-26 vise encore L. 712-1 et L. 712-2 abrogés (hors paquet).",
+        "new_burdens_review": "Aucune charge nouvelle : aucune déclaration, autorisation ni condition n'est ajoutée ; la convention est déjà exigée par L. 160-17 et R. 160-26.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "sections-locales-base-legale-l160-17",
+            "description": "Délégation obligatoire aux sections locales rattachée à L. 160-17 et à la convention de R. 160-26.",
+            "before": "Caisses primaires tenues de confier le service des prestations aux sections locales, sans base légale depuis 2016 ni articulation avec les conventions de délégation.",
+            "after": "Même obligation, exercée en application de L. 160-17 et dans le cadre de la convention de R. 160-26 ; reprise selon R. 160-26 et R. 160-28 à défaut de convention.",
+            "unit": "regime",
+            "affected_population": "Caisses primaires, mutuelles de fonctionnaires, assurés fonctionnaires.",
+            "conditions_and_transition": "Sections existantes et conventions en cours conservées.",
+            "replacement_or_new_burdens": "Aucune formalité de remplacement.",
+            "source_quote": "doivent confier le service des prestations en nature des assurances maladie, maternité et invalidité",
+            "proposed_quote": "en application du deuxième alinéa de l'article L. 160-17 et dans le cadre de la convention mentionnée à l'article R. 160-26"
+          }
+        ]
       }
     },
     {
@@ -900470,7 +900952,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Réforme de fond : suppression du minimum de mille adhérents pour créer une section locale. L'initiative mutualiste, le périmètre départemental et les liens d'administration ou d'établissement restent intégralement conservés ; le contrôle élu et les règles de financement des articles voisins restent applicables. Proposition précédente conservée après confrontation des règles voisines ; aucune nouvelle coupe ajoutée lors de cette passe.",
-        "scope_limitations": "Transition compatible : « aux créations en cours à cette date » ouvre aussi le bénéfice aux dossiers pendants ; les sections existantes et engagements sont préservés. D712-30 applique le renvoi dynamique, D712-32 garde la possibilité interadministrative et D712-33 retire six membres sans abolir le comité élu. Le deuxième alinéa demeure entier, avec son département et ses rattachements ; suppression du seul minimum de 1 000, sans agrément substitutif.",
+        "scope_limitations": "Transition compatible : « aux créations en cours à cette date » ouvre aussi le bénéfice aux dossiers pendants ; les sections existantes et engagements sont préservés. D712-30 applique le renvoi dynamique, D712-32 garde la possibilité interadministrative et D712-33 retire six membres sans abolir le comité élu. Le deuxième alinéa demeure entier, avec son département et ses rattachements ; suppression du seul minimum de 1 000, sans agrément substitutif. Troisième passe : la création des sections est rattachée à la délégation de L. 160-17 et à la convention de R. 160-26, base légale qui a pris la suite de L. 712-6 (abrogé au 1er janvier 2016) ; aucune délégation distincte ni formalité nouvelle.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : le maintien ou la coordination conserve les circuits existants et les suppressions de seuils ne créent ni déclaration, ni agrément, ni registre de remplacement. Le coût public et le solde de complexité de l'ensemble des codes ne sont pas chiffrés.",
         "effects": [
           {
@@ -900485,6 +900967,19 @@
             "replacement_or_new_burdens": "Aucune déclaration ou autorisation de remplacement ; garanties existantes conservées.",
             "source_quote": "Une section locale ne peut être créée que si elle groupe au minimum 1 000 adhérents.",
             "proposed_quote": "La création d'une section locale n'est soumise à aucun nombre minimal d'adhérents."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "sections-locales-base-legale-l160-17",
+            "description": "Rattachement de la création des sections locales à la délégation de gestion de L. 160-17 et à la convention de R. 160-26, après abrogation de L. 712-6.",
+            "before": "Sections locales créées à l'initiative des mutuelles de fonctionnaires sur le fondement implicite de L. 712-6, abrogé depuis le 1er janvier 2016, sans articulation avec les conventions de délégation.",
+            "after": "Sections locales créées pour l'exécution des opérations de gestion déléguées en application de L. 160-17 et de la convention de R. 160-26 ; aucune délégation distincte.",
+            "unit": "regime",
+            "affected_population": "Mutuelles et sections de mutuelles de fonctionnaires, caisses primaires, assurés fonctionnaires.",
+            "conditions_and_transition": "Sections existantes et engagements conservés ; suppression du minimum d'adhérents inchangée.",
+            "replacement_or_new_burdens": "Aucune formalité ni condition de remplacement : la convention est déjà exigée par L. 160-17 et R. 160-26.",
+            "source_quote": "Les sections locales sont créées à l'initiative des mutuelles ou sections de mutuelles constituées entre fonctionnaires",
+            "proposed_quote": "pour l'exécution des opérations de gestion confiées aux mutuelles ou groupements de mutuelles en application du deuxième alinéa de l'article L. 160-17 et de la convention mentionnée à l'article R. 160-26"
           }
         ]
       }
@@ -903032,7 +903527,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Réduction de fond : suppression de la consultation préfectorale obligatoire et de son circuit de quinze jours puis deux mois. L'organisme décide sur les mêmes faits ; la demande d'exonération, le seuil de onze salariés, la moyenne de six mois et la date favorable liée au dépôt sont conservés.",
-        "scope_limitations": "Différence de champ : « dans les quinze jours suivant l'envoi ou le dépôt de la demande » est un délai de saisine administrative, non un préavis de rupture. R752-20 maintient la moyenne annuelle, les plafonds provisionnels dix/cinquante salariés et la régularisation « au plus tard le 31 mars de l'année suivante » ; la moyenne des six derniers mois sert seulement au déclenchement de la demande en cas de baisse. Transition compatible : date initiale de dépôt conservée, même dossier en cours, aucune reprise du circuit préfectoral. Point non vérifiable : L752-3-1 demeure absent du corpus actif et des cibles fournies ; son exigence législative éventuelle d'avis ne peut être certifiée. Le décret proposé doit être coordonné à cette version avant adoption. Corps précédent conservé ; aucun délai maximal de décision ni acceptation tacite ne sont inventés.",
+        "scope_limitations": "Différence de champ : « dans les quinze jours suivant l'envoi ou le dépôt de la demande » est un délai de saisine administrative, non un préavis de rupture. R752-20 maintient la moyenne annuelle, les plafonds provisionnels dix/cinquante salariés et la régularisation « au plus tard le 31 mars de l'année suivante » ; la moyenne des six derniers mois sert seulement au déclenchement de la demande en cas de baisse. Transition compatible : date initiale de dépôt conservée, même dossier en cours, aucune reprise du circuit préfectoral. Troisième passe : L752-3-1 (TRANSFERE au 23 juillet 2026) est devenu L. 760-15 (ordonnance n° 2026-648, art. 1er, 4°) ; les renvois sont redirigés. Le I et son 1° subsistent ; la loi n'exige aucun avis préfectoral. L. 760-15 reste hors corpus (réserve documentaire). Corps précédent conservé ; aucun délai maximal de décision ni acceptation tacite ne sont inventés.",
         "new_burdens_review": "Aucune formalité autonome nouvelle identifiée : les corrections conservent les droits et les conditions utiles. Les effets financiers et le coût net de l'ensemble des codes ne sont pas établis.",
         "effects": [
           {
@@ -903043,7 +903538,7 @@
             "after": "Décision de l'organisme sans avis ; demande et examen de l'évolution de l'effectif conservés.",
             "unit": "legal_duty",
             "affected_population": "Entreprises demandant l'exonération après passage sous onze salariés ; organisme de recouvrement et préfecture.",
-            "conditions_and_transition": "Demandes nouvelles et en cours dès l'entrée en vigueur du décret ; dépôt initial et droits anciens protégés, articulation législative L752-3-1 à vérifier.",
+            "conditions_and_transition": "Demandes nouvelles et en cours dès l'entrée en vigueur du décret ; dépôt initial et droits anciens protégés ; renvois législatifs redirigés vers L. 760-15 (ex-L752-3-1).",
             "replacement_or_new_burdens": "Pas de formalité équivalente de remplacement ; organisme apprécie les mêmes faits, durée réelle de décision non chiffrée.",
             "source_quote": "Le directeur dudit organisme saisit, dans les quinze jours suivant l'envoi ou le dépôt de la demande, le représentant de l'Etat dans le département pour avis.",
             "proposed_quote": "Le directeur de l'organisme statue sans saisine pour avis du représentant de l'Etat."
@@ -967839,7 +968334,7 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "La source entière régit déclencheurs réglementaires. La proposition en réserve les effets aux faits générateurs anciens et coordonne l’abolition législative. Cette exécution de la même mesure ne constitue pas une deuxième taxe supprimée. La seconde passe protège aussi les allègements applicables au stock ancien.",
+        "assessment": "La source entière régit déclencheurs réglementaires. La proposition en réserve les effets aux faits générateurs anciens et coordonne l’abolition législative. Cette exécution de la même mesure ne constitue pas une deuxième taxe supprimée. La seconde passe protège aussi les allègements applicables au stock ancien. Troisième passe : l'article n'est plus déclaré abrogé ; il devient la disposition transitoire du fait générateur réglementaire, réservée aux faits antérieurs.",
         "scope_limitations": "Adoption concomitante de la suppression législative nécessaire ; faits générateurs anciens, impôts distincts et contrôles autonomes restent à leur champ. Ni perte nette de recettes ni solde global de complexité des codes ne sont chiffrés.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : ni formulaire de remplacement, ni taux, ni délai ou preuve supplémentaire. Les conditions anciennes sont seulement conservées pour les dettes anciennes, sous réserve expresse des allègements déjà proposés.",
         "effects": [
@@ -1051420,7 +1051915,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Réduction conservée et transition compatible : suppression des transmissions « Avant le 15 février », « Avant le 31 mars » et « Dans le délai d'un mois », sans suppression des comptes ni du renseignement demandé pour le suivi du prêt.",
-        "scope_limitations": "R431-20 ne fige pas l'ancien contenu. R431-24 exclut l'exigibilité pour la transmission supprimée. R431-15 proposé comporte la même suppression pour son destinataire CDC : le renvoi général de R431-25 ne reconstitue donc pas ces envois. R431-27 et R432-6 conservent des mesures administratives après contradictoire pour des prescriptions réellement applicables, non les anciennes transmissions supprimées. La dénomination historique du prêteur reste un point institutionnel non résolu.",
+        "scope_limitations": "R431-20 ne fige pas l'ancien contenu. R431-24 exclut l'exigibilité pour la transmission supprimée. R431-15 proposé comporte la même suppression pour son destinataire CDC : le renvoi général de R431-25 ne reconstitue donc pas ces envois. R431-27 et R432-6 conservent des mesures administratives après contradictoire pour des prescriptions réellement applicables, non les anciennes transmissions supprimées. Le destinataire des renseignements est désigné par sa fonction (organisme qui gère le prêt pour le compte de l'Etat), la dénomination historique « caisse nationale de prévoyance » n'étant plus exacte.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ou coordinations n'ajoutent ni registre, donnée, déclaration, délai ni condition de financement. Les contrôles et obligations autonomes explicitement maintenus existaient déjà ; le solde de coût de l'ensemble des codes n'est pas chiffré.",
         "effects": [
           {
@@ -1054320,7 +1054815,7 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Transition compatible avec L441-11 proposé : « Aucun renvoi au présent article ne peut rétablir cette pénalité pour ces manquements. » Le mois d'observations de la source est conservé pour les seules procédures résiduelles légalement possibles, sous réserve de la loi répressive plus douce. Ce délai n'est ni un préavis d'emploi ni une nouvelle période de sanction. Point non vérifiable : le décret 2012-1246 n'est pas joint ; ses modalités détaillées de recouvrement ne sont pas déclarées revues. Aucun retrait du contradictoire pour une dette ancienne. Aucun changement supplémentaire du corps précédent n'est nécessaire ; la comparaison d'impact porte sur la source officielle entière.",
+        "assessment": "Transition compatible avec L441-11 proposé : « Aucun renvoi au présent article ne peut rétablir cette pénalité pour ces manquements. » Pour les seuls manquements antérieurs encore sanctionnables, la procédure est celle des articles L. 342-12 à L. 342-16 (contradictoire, proposition de l'ANCOLS, décision du ministre, recouvrement comme en matière d'impôts directs), et non plus la procédure préfectorale que la loi ne prévoit plus depuis 2015. Aucun retrait du contradictoire pour une dette ancienne ; aucun pouvoir de sanction nouveau. Le délai d'un mois pour présenter ses observations est conservé comme plancher.",
         "scope_limitations": "La mesure reste un projet nécessitant l'entrée en vigueur coordonnée de la loi et de ses règlements ; aucun solde budgétaire national ni contrôle exhaustif de tous les textes extérieurs n'est établi. Les arrêtés et modèles extérieurs non fournis ne sont pas réputés réécrits.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : aucun registre, donnée, délai ou condition de remplacement ajouté ; les obligations autonomes conservées existaient déjà. Aucun solde de complexité de l'ensemble des codes n'est chiffré.",
         "effects": [
@@ -1071093,7 +1071588,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Par rapport à la source entière, retrait de l’agrément spécial déjà décidé, avec coordination de la dénonciation allégée dans D353-130. La correction ICC/IRL rétablit la cohérence avec les lois existantes ; elle ne démontre pas une nouvelle baisse de prélèvement ou de loyer.",
-        "scope_limitations": "Une seule suppression d’agrément commune aux modèles, sans double compte. Arrêté de 1978 et autres coordinations hors lot restent ouverts ; les effets financiers et le solde global de complexité des codes ne sont pas établis.",
+        "scope_limitations": "Une seule suppression d’agrément commune aux modèles, sans double compte. Arrêté de 1978 et autres coordinations hors lot restent ouverts ; les effets financiers et le solde global de complexité des codes ne sont pas établis. Troisième passe : le bénéficiaire de la pénalité est le fonds national d'aide au logement, qui a pris la suite du fonds national de l'habitation ; coordination sans effet sur le taux ni la procédure.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : pas de déclaration, registre, justificatif ou délai supplémentaire. La preuve de réception remplace la forme exclusive et les règles IRL proviennent déjà des textes législatifs applicables ; contrôles, plafonds et protections autonomes subsistent.",
         "effects": [
           {
@@ -1071159,7 +1071654,7 @@
             "conditions_and_transition": "Rectification du modèle sans création de créance rétroactive ni validation des sanctions anciennes ; leur légalité et les recours demeurent appréciés selon le droit applicable.",
             "replacement_or_new_burdens": "Aucun nouveau document ni nouveau circuit ; pas de second gain compté pour les mesures portées par les articles principaux.",
             "source_quote": "En cas de non-versement au fonds national de l'habitation de la contribution prévue à l'article 7 de la présente convention et après mise en demeure restée sans effet, une somme de ... p. 100 du montant de la contribution est payable par mois de retard.",
-            "proposed_quote": "En cas de non-versement au fonds national de l'habitation de la contribution prévue au deuxième alinéa du présent article et après mise en demeure restée sans effet, une somme de ... p. 100 du montant de la contribution est payable par mois de retard."
+            "proposed_quote": "En cas de non-versement au fonds national d'aide au logement de la contribution prévue au deuxième alinéa du présent article et après mise en demeure restée sans effet, une somme de ... p. 100 du montant de la contribution est payable par mois de retard."
           }
         ]
       }
@@ -1082633,7 +1083128,7 @@
         "version": 1,
         "classification": "coordination_only",
         "assessment": "Par rapport à la source officielle entière : Coordination de fond indispensable avec CGI 298 proposé, lu avec sa source entière : le règlement ne peut rétablir les exclusions de déduction sur carburants et lubrifiants déjà supprimées. Les autres alinéas, formules, options, arrondis favorables, exceptions et échéances sont maintenus intégralement depuis la source. Le précédent brouillon stylistique conservait un renvoi devenu incohérent ; il n'est pas repris. Aucune suppression générale du prorata ou des exclusions étrangères à la mesure n'est justifiée par cette coordination. Les retraits exécutent une réforme déjà portée par l'article législatif ; ils ne constituent pas une nouvelle mesure indépendante.",
-        "scope_limitations": "Les effets sont limités au champ expressément coordonné ; la TVA, les obligations autonomes et les droits anciens subsistent. Les textes extérieurs signalés ne sont pas réputés réécrits. Aucun solde national de coût, de recettes ou de complexité n'est établi.",
+        "scope_limitations": "Les effets sont limités au champ expressément coordonné ; la TVA, les obligations autonomes et les droits anciens subsistent. Les textes extérieurs signalés ne sont pas réputés réécrits. Aucun solde national de coût, de recettes ou de complexité n'est établi. Les renvois à CGI 298 sont ancrés sur la rédaction en vigueur au 31 décembre 2026 et aux dispositions du code des impositions sur les biens et services qui s'y substituent ; la reprise législative de la suppression dans ce code reste à faire hors corpus.",
         "new_burdens_review": "Aucune charge nouvelle n'est identifiée : aucun registre, justificatif, dépôt, délai minimal, agrément ou déclaration de remplacement n'est créé. Les garanties techniques et les règles de fond conservées existaient dans la source ; leur coût net global n'est pas chiffré.",
         "effects": [
           {
@@ -1082647,7 +1083142,7 @@
             "conditions_and_transition": "Nouveaux droits à déduction dès l'entrée en vigueur de la loi supprimant les exclusions de 298 ; droits et régularisations antérieurs préservés, sans restitution générale.",
             "replacement_or_new_burdens": "Aucune formalité de remplacement ; seules les exigences techniques, garanties et obligations de fond maintenues subsistent.",
             "source_quote": "3. A l'exception des cas prévus au 1° bis du 4 de l'article 298 du code général des impôts, le coefficient d'admission est calculé en application des dispositions relatives à l'exclusion du droit à déduction fixées aux a, b et c du 1° du même 4 concernant, respectivement, les essences, les gazoles et le superéthanol E 85 et les gaz de pétrole et autres hydrocarbures présentés à l'état gazeux et le pétrole lampant.",
-            "proposed_quote": "3. Pour les produits mentionnés au 1° du 4 de l'article 298 du code général des impôts, aucune exclusion ou limitation du coefficient d'admission ne peut être fondée sur leur seule affectation à un véhicule, un aéronef ou un engin exclu du droit à déduction, ou pris en location lorsque la taxe relative à cette location n'est pas déductible. Les autres exclusions du présent IV, les coefficients d'assujettissement et de taxation et le droit à déduction des produits ultérieurement livrés ou vendus prévu au 1° bis du 4 de l'article 298 demeurent applicables dans leur champ propre. La déduction relative à l'acquisition ou à la location du véhicule, de l'aéronef ou de l'engin lui-même n'est pas modifiée."
+            "proposed_quote": "3. Pour les produits mentionnés au 1° du 4 de l'article 298 du code général des impôts, dans sa rédaction en vigueur au 31 décembre 2026, ou dans les dispositions du code des impositions sur les biens et services qui s'y substituent à compter du 1er janvier 2027, aucune exclusion ou limitation du coefficient d'admission ne peut être fondée sur leur seule affectation à un véhicule, un aéronef ou un engin exclu du droit à déduction, ou pris en location lorsque la taxe relative à cette location n'est pas déductible. Les autres exclusions du présent IV, les coefficients d'assujettissement et de taxation et le droit à déduction des produits ultérieurement livrés ou vendus prévu au 1° bis du 4 de l'article 298, dans la même rédaction ou dans les dispositions qui s'y substituent, demeurent applicables dans leur champ propre. La déduction relative à l'acquisition ou à la location du véhicule, de l'aéronef ou de l'engin lui-même n'est pas modifiée."
           }
         ]
       }
@@ -1086369,7 +1086864,7 @@
         "version": 1,
         "classification": "material_reduction",
         "assessment": "Réforme de fond : suppression de la déclaration annuelle nationale de clôture du IV, qui s’ajoutait aux balances et déclarations mensuelles. La clôture et les inventaires annuels restent nécessaires au contrôle physique et comptable. Le précédent brouillon maintenait tout ce circuit. Les neuf subdivisions, les facultés de report au dixième jour, d’informatisation, d’utilisation de la comptabilité commerciale et de regroupement des registres restent conservées. Les renvois anciens sont coordonnés par leur objet sans inventer de nouveaux numéros.",
-        "scope_limitations": "Les droits et taxes ne sont pas abaissés par cette mesure. Lecture intégrale de la source et de sa note historique de 2015. 302 G III vérifié dans le corpus ; 302 D, 407, 450, 302 M/bis/ter et 614 n’y figurent pas. Les renvois orphelins sont remplacés par des objets autonomes, sans prétendre établir la concordance détaillée du CIBS, du code rural ou du droit européen. Vérification extérieure nécessaire des textes succédant aux règlements 1234/2007 et 436/2009 et du périmètre des obligations anciennement visées par 614 ; cette lacune n’est pas déclarée résolue. La seule déclaration retirée est celle du IV, pas les déclarations européennes de stocks, récolte ou production. Les arrêtés et formulaires d’exécution doivent être coordonnés. Toutes les autres échéances sont conservées : jour ouvrable suivant, troisième jour ouvrable des sorties, dixième jour mensuel. La protection probatoire de la balance est maintenue ; aucune exigibilité nouvelle ni sanction aggravée. Le VIII est explicitement raccordé aux pièces de clôture et à l’adresse, sans reconstituer la déclaration supprimée.",
+        "scope_limitations": "Les droits et taxes ne sont pas abaissés par cette mesure. Lecture intégrale de la source et de sa note historique de 2015. 302 G III vérifié dans le corpus ; 302 D, 407, 450, 302 M ter et 614 y figurent à l'état ABROGE. Les renvois à ces articles abrogés sont remplacés par des objets autonomes, sans prétendre établir la concordance détaillée du CIBS, du code rural ou du droit européen. Vérification extérieure nécessaire du texte succédant au règlement (CE) n° 436/2009 ; cette lacune n’est pas déclarée résolue. Le renvoi à l'article 614, abrogé au 1er juillet 2025, est retiré ; le repère de champ est le règlement (UE) n° 1308/2013. La seule déclaration retirée est celle du IV, pas les déclarations européennes de stocks, récolte ou production. Les arrêtés et formulaires d’exécution doivent être coordonnés. Toutes les autres échéances sont conservées : jour ouvrable suivant, troisième jour ouvrable des sorties, dixième jour mensuel. La protection probatoire de la balance est maintenue ; aucune exigibilité nouvelle ni sanction aggravée. Le VIII est explicitement raccordé aux pièces de clôture et à l’adresse, sans reconstituer la déclaration supprimée.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : les suppressions ne sont remplacées ni par une déclaration ni par des données supplémentaires. Le solde de coût de l’ensemble des codes n’est pas chiffré.",
         "effects": [
           {
@@ -1113576,7 +1114071,7 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "La procédure favorable de secours reste entière, avec ses preuves et retour au système ; seules les références et l'auteur de l'accusé final sont explicités. Aucun coût supprimé ni extension du régime de panne n'est compté, et l'incohérence restante est signalée.",
+        "assessment": "La procédure favorable de secours reste entière, avec ses preuves et retour au système ; seules les références et l'auteur de l'accusé final sont explicités. Aucun coût supprimé ni extension du régime de panne n'est compté, et l'incohérence restante est signalée. Troisième passe : le deuxième alinéa du II est rattaché au cas de l'expédition sous document papier et sa phrase d'information redondante est retirée ; aucune charge nouvelle.",
         "scope_limitations": "Le corpus ne contient ni le CIBS ni les textes européens complets : la concordance externe reste à vérifier avant adoption. Aucun solde national de coût ou de complexité n'est établi.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : les données, preuves, responsables et échéances conservés proviennent de la source ; aucun dépôt supplémentaire n'est institué.",
         "effects": [
@@ -1113592,6 +1114087,19 @@
             "replacement_or_new_burdens": "Aucune obligation de remplacement ni charge nouvelle.",
             "source_quote": "il établit un accusé de réception par voie électronique conformément aux dispositions du présent article 111 H quaterdecies",
             "proposed_quote": "le destinataire établit un accusé de réception par voie électronique conformément à l'article 111 H quaterdecies."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "accises-secours-reception-alinea-expediteur",
+            "description": "Alinéa de réception recopié du I rattaché au cas de l'expédition sous document papier ; phrase d'information redondante retirée.",
+            "before": "Au II, « Il en est de même lorsque l'expéditeur ne peut se connecter au service suite à une indisponibilité de son propre système informatique », suivi d'une information des motifs par un « il » sans antécédent.",
+            "after": "Même règle de réception sous document papier lorsque l'expéditeur a expédié sous le secours du I faute de connexion ; l'information des motifs reste celle du I.",
+            "unit": "legal_duty",
+            "affected_population": "Destinataires de produits expédiés sous la procédure de secours ; expéditeurs concernés.",
+            "conditions_and_transition": "À compter de l'entrée en vigueur, y compris aux mouvements en cours ; documents antérieurs conservés.",
+            "replacement_or_new_burdens": "Aucune formalité ni condition de remplacement ; une phrase d'information redondante est retirée.",
+            "source_quote": "Il en est de même lorsque l'expéditeur ne peut se connecter au service suite à une indisponibilité de son propre système informatique.",
+            "proposed_quote": "Il en est de même lorsque, dans le cas prévu au I, l'expéditeur n'a pu se connecter au service au moment de l'expédition en raison d'une indisponibilité de son propre système informatique."
           }
         ]
       }
@@ -1115411,7 +1115919,7 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Les restrictions chiffrées et les interdictions générales identifiées disparaissent réellement. La réduction ou exonération départementale demeure conditionnelle, sans création d’un taux ni exonération nationale automatique.",
+        "assessment": "Les restrictions chiffrées et les interdictions générales identifiées disparaissent réellement, à l’exception de la limite de trois ans de l’éloignement professionnel, conservée pour que la dispense n’absorbe pas l’engagement légal d’affectation continue. La réduction ou exonération départementale demeure conditionnelle, sans création d’un taux ni exonération nationale automatique.",
         "scope_limitations": "L’engagement législatif de cinq ans de 1594 F septies demeure. Aucune baisse universelle des droits de mutation ni effet chiffré sur les logements n’est établi.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : aucune déclaration, donnée, condition, délai ou registre supplémentaire n’est institué. Les obligations autonomes demeurent dans leur champ ; le solde global des codes n’est pas chiffré.",
         "effects": [
@@ -1115420,7 +1115928,7 @@
             "measure_id": "premiere-propriete-assouplissement-affectation",
             "description": "Accès élargi aux dérogations de location, occupation et usage professionnel.",
             "before": "Mobilité : au moins 50 km ou 1 h 30 ; chômage supérieur à un an attesté ; location et éloignement plafonnés à trois ans ; usage professionnel limité à 15 % ; meublé et accessoire au contrat interdits.",
-            "after": "Seuils et plafonds retirés, meublé non saisonnier et usage lié au travail admis dans les conditions maintenues.",
+            "after": "Seuils et plafonds retirés, sauf la limite de trois ans de l’éloignement professionnel ; meublé non saisonnier et usage lié au travail admis dans les conditions maintenues.",
             "unit": "legal_duty",
             "affected_population": "Acquéreurs d’une première propriété éligible à la délibération départementale.",
             "conditions_and_transition": "Faits après entrée en vigueur, engagements en cours et acquisitions futures ; décisions fiscales définitives non rouvertes.",

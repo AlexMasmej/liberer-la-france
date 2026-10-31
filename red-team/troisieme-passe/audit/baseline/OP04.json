@@ -1,0 +1,509 @@
+{
+ "group": "OP04",
+ "read_from": "official-source",
+ "reference_date": "2026-10-18",
+ "method": "Lecture du seul texte officiel avec CITE_PRODUCTION=1 CITE_SOURCE_ONLY=1 python3 -I tools/cite.py ; requêtes en lecture seule sur la table articles ; aucune lecture des propositions, motifs, notes, lots, rapports ou autres audits. Critère : un juriste qui ouvre l'article, ses renvois et ses textes d'application le jugerait-il anormal ?",
+ "counts": {
+  "G": 2,
+  "m": 8,
+  "zero": 22
+ },
+ "articles": [
+  {
+   "sample_id": "P004",
+   "code": "css",
+   "number": "R641-16",
+   "source_id": "LEGIARTI000030919006",
+   "verdict": "0",
+   "families": [],
+   "description": "Modalités de vote (électronique ou par correspondance, secret, procuration interdite, collèges) dans les sections professionnelles de la CNAVPL. Texte cohérent avec R. 641-15 (candidatures selon les statuts) et R. 641-1 (dix sections). Rien à signaler.",
+   "evidence": "LEGIARTI000030919006 : « Les statuts peuvent prévoir soit le vote par voie électronique, soit le vote par correspondance, soit l'un et l'autre à la fois. »",
+   "links_read": [
+    "css R641-15 LEGIARTI000006751776",
+    "css R641-1 LEGIARTI000047265836"
+   ],
+   "links_not_read": "L. 641-5 (base légale des statuts), R. 641-17 et suivants"
+  },
+  {
+   "sample_id": "P024",
+   "code": "travail",
+   "number": "L2411-18",
+   "source_id": "LEGIARTI000006902312",
+   "verdict": "G",
+   "families": [
+    "F5",
+    "F3"
+   ],
+   "description": "L'article dit se conformer à l'article L. 231-11 du code de la sécurité sociale et aligne les « périodes et durées de protection » du salarié administrateur de caisse sur celles du délégué syndical (L. 2411-3 : douze mois après la cessation des fonctions, si elles ont duré au moins un an). Or L. 231-11 CSS, toujours en vigueur, fixe une autre durée (protection de l'ancien administrateur pendant « moins de six mois », et des candidats pendant trois mois) et renvoie encore à « l'article L. 412-18 du code du travail », abrogé par la recodification de 2008. Deux textes en vigueur fixent donc des durées de protection différentes pour la même personne, alors que le premier affirme être « conforme » au second ; un juriste consulté sur la validité d'un licenciement le relèverait immédiatement. Le renvoi mort de L. 231-11 est formellement couvert par la clause générale de l'ordonnance de recodification, d'où F3 en complément.",
+   "evidence": "LEGIARTI000006902312 : « Conformément à l'article L. 231-11 du code de la sécurité sociale, la procédure d'autorisation de licenciement et les périodes et durées de protection du salarié membre du conseil ou administrateur d'une caisse de sécurité sociale sont celles applicables au délégué syndical, prévues par l'article L. 2411-3. » — css LEGIARTI000006741869 (L. 231-11) : « Le licenciement par l'employeur d'un salarié exerçant le mandat de membre du conseil ou d'administrateur ou ayant cessé son mandat depuis moins de six mois est soumis à la procédure prévue par l'article L. 412-18 du code du travail. Il en est de même du licenciement des candidats […] pendant une durée de trois mois. » — travail LEGIARTI000006902294 (L. 2411-3) : « Cette autorisation est également requise pour le licenciement de l'ancien délégué syndical, durant les douze mois suivant la date de cessation de ses fonctions, s'il a exercé ces dernières pendant au moins un an. »",
+   "links_read": [
+    "css L231-11 LEGIARTI000006741869",
+    "travail L2411-3 LEGIARTI000006902294"
+   ],
+   "links_not_read": "L. 2412-x (CDD), L. 2413-1 ; jurisprudence de la Cour de cassation sur l'articulation des deux durées (non consultée)"
+  },
+  {
+   "sample_id": "P044",
+   "code": "travail",
+   "number": "R1456-3",
+   "source_id": "LEGIARTI000032580261",
+   "verdict": "0",
+   "families": [],
+   "description": "Délai de trois mois des mesures de mise en état devant le conseil de prud'hommes, prorogeable par le bureau de jugement sur demande motivée du technicien ou du conseiller rapporteur. Rien à signaler.",
+   "evidence": "LEGIARTI000032580261 : « Les mesures de mise en état sont exécutées dans un délai n'excédant pas trois mois. »",
+   "links_read": [
+    "travail L1423-12 LEGIARTI000031091232"
+   ],
+   "links_not_read": "R. 1454-1 et suivants (conseiller rapporteur), R. 1456-1 et R. 1456-2"
+  },
+  {
+   "sample_id": "P064",
+   "code": "a3",
+   "number": "315-0 bis",
+   "source_id": "LEGIARTI000038929129",
+   "verdict": "0",
+   "families": [],
+   "description": "Obligations déclaratives pour l'exonération de TFPB de l'article 1384 C du CGI. Les renvois aux 3°, 4° et 5° de l'article L. 831-1 du CCH et au premier alinéa du II de l'article 1384 C correspondent au texte en vigueur de ces articles. Rien à signaler.",
+   "evidence": "LEGIARTI000038929129 : « Pour les immeubles mentionnés aux 3° et 5° de l'article L. 831-1 du code de la construction et de l'habitation, la déclaration doit indiquer le mode de financement […] »",
+   "links_read": [
+    "cgi 1384 C LEGIARTI000046869260",
+    "cch L831-1 LEGIARTI000038814882"
+   ],
+   "links_not_read": "cch R. 372-1 ; cgi 1384 A, 1384 B, 1384 F"
+  },
+  {
+   "sample_id": "P084",
+   "code": "css",
+   "number": "R148-5",
+   "source_id": "LEGIARTI000037262084",
+   "verdict": "0",
+   "families": [],
+   "description": "Suivi de l'objectif de réduction des prescriptions (procédure alternative à la mise sous accord préalable). Les renvois à R. 148-3 et aux 2°, 3° et 5° du I de L. 162-1-15 sont exacts dans la version de L. 162-1-15 en vigueur depuis le 27 juin 2026. Observation sans qualification : le II de L. 162-1-15 ouvre la procédure d'objectif aux centres de santé et sociétés de téléconsultation, alors que R. 148-1 à R. 148-5 ne visent que le « professionnel de santé » ; c'est une lacune du décret, non une contradiction.",
+   "evidence": "LEGIARTI000037262084 : « […] et pour les 2°, 3° et 5° du I de l'article L. 162-1-15, par rapport au nombre de patients pour lesquels au moins un acte ou une consultation a été facturé. »",
+   "links_read": [
+    "css R148-3 LEGIARTI000037262087",
+    "css R148-1 LEGIARTI000037262091",
+    "css L162-1-15 LEGIARTI000054335791"
+   ],
+   "links_not_read": "R. 148-6 et suivants (section 3), R. 148-2"
+  },
+  {
+   "sample_id": "P104",
+   "code": "css",
+   "number": "D162-1-12",
+   "source_id": "LEGIARTI000051948244",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "Déclaration de l'infirmier référent. La numérotation est cassée : le premier paragraphe n'est pas précédé de « I.- » alors que le texte comporte un II, un III et un IV, et que le IV renvoie aux « conditions prévues au I du présent article ». Le sens reste clair ; défaut de forme. Le V, annulé par le Conseil d'État (décision n° 497270 du 22 juillet 2025), a bien été retiré de la version en vigueur.",
+   "evidence": "LEGIARTI000051948244 : le texte commence par « L'assuré ou l'ayant droit âgé de seize ans ou plus […] » sans « I.- », puis : « II.-La déclaration de l'infirmier référent peut être faite […] » et « IV.-L'assuré ou l'ayant droit […] peut à tout moment changer d'infirmier référent en effectuant une nouvelle déclaration dans les conditions prévues au I du présent article. »",
+   "links_read": [
+    "css L162-12-2-1 LEGIARTI000048685119",
+    "css R160-13 LEGIARTI000033240399"
+   ],
+   "links_not_read": "L. 160-14 (3°), D. 162-1-13 et suivants"
+  },
+  {
+   "sample_id": "P124",
+   "code": "urba",
+   "number": "R219-3",
+   "source_id": "LEGIARTI000049851558",
+   "verdict": "0",
+   "families": [],
+   "description": "Liste limitative des documents que le titulaire du droit de préemption « trait de côte » peut demander, prise en application du quatrième alinéa de L. 219-6. Le renvoi au II de R. 213-7 est exact. Rien à signaler.",
+   "evidence": "LEGIARTI000049851558 : « Les documents susceptibles d'être demandés par le titulaire du droit de préemption en application du quatrième alinéa de l'article L. 219-6 sont les suivants : 1° Tout ou partie des documents mentionnés au II de l'article R. 213-7 ; »",
+   "links_read": [
+    "urba L219-6 LEGIARTI000043962151",
+    "urba R213-7 LEGIARTI000033231371"
+   ],
+   "links_not_read": "R. 219-1, R. 219-2, L. 219-1 à L. 219-3"
+  },
+  {
+   "sample_id": "P144",
+   "code": "a3",
+   "number": "313-0 BR bis",
+   "source_id": "LEGIARTI000043690586",
+   "verdict": "G",
+   "families": [
+    "F1",
+    "F3"
+   ],
+   "description": "L'article organise le lieu de dépôt de « l'engagement prévu au d du 3° de l'article 990 E du CGI ». Or, depuis le 27 juin 2026, le d du 3° de l'article 990 E ne prévoit plus aucun engagement : la rédaction antérieure (« communiquent chaque année ou prennent et respectent l'engagement de communiquer […] L'engagement est pris à la date de l'acquisition […] ») a été remplacée par une déclaration annuelle au plus tard le 15 mai, au lieu fixé par l'arrêté prévu à l'article 990 F. L'annexe III organise donc une formalité que la loi ne prévoit plus et renvoie à une disposition qui ne la contient plus ; l'article 313-0 BR voisin, qui vise la « déclaration prévue aux d et e », est quant à lui cohérent avec la nouvelle loi. Un fiscaliste qui ouvre l'article et le d du 3° de 990 E le relève aussitôt.",
+   "evidence": "LEGIARTI000043690586 : « L'engagement prévu au d du 3° de l'article 990 E du code général des impôts est déposé : 1. Pour les entités juridiques qui ont leur siège en France […] au service des impôts du lieu du principal établissement ; » — cgi LEGIARTI000054334448 (990 E, en vigueur depuis le 27 juin 2026), 3° d : « Ou qui déclarent chaque année, au plus tard le 15 mai, au lieu fixé par l'arrêté prévu à l'article 990 F du présent code, la situation, la consistance et la valeur des immeubles possédés au 1er janvier […] » — cgi LEGIARTI000028441448 (990 E, version 2014-01-04→2026-06-27), 3° d : « Ou qui communiquent chaque année ou prennent et respectent l'engagement de communiquer à l'administration fiscale, sur sa demande […] L'engagement est pris à la date de l'acquisition par l'entité du bien ou droit immobilier […] »",
+   "links_read": [
+    "cgi 990 E LEGIARTI000054334448",
+    "cgi 990 E LEGIARTI000028441448 (version antérieure)",
+    "cgi 990 F LEGIARTI000054334436",
+    "a3 313-0 BR LEGIARTI000018658153"
+   ],
+   "links_not_read": "cgi 990 D ; arrêté prévu à l'article 990 F ; texte de la loi de 2026 modifiant 990 E (NOTA absent)"
+  },
+  {
+   "sample_id": "P164",
+   "code": "travail",
+   "number": "R4228-18",
+   "source_id": "LEGIARTI000036483591",
+   "verdict": "0",
+   "families": [],
+   "description": "Décision de l'inspecteur du travail (dispense de l'article R. 4228-17 en matière d'installations sanitaires) prise après avis du médecin du travail et du CSE. Rien à signaler.",
+   "evidence": "LEGIARTI000036483591 : « L'inspecteur du travail prend sa décision après avis du médecin du travail et du comité social et économique. »",
+   "links_read": [
+    "travail R4228-17 LEGIARTI000018531966",
+    "travail R4228-19 LEGIARTI000018531960"
+   ],
+   "links_not_read": "R. 4228-16 ; L. 4221-1 (base légale)"
+  },
+  {
+   "sample_id": "P184",
+   "code": "css",
+   "number": "D412-92",
+   "source_id": "LEGIARTI000030067856",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "Salaire de base des rentes et indemnités journalières des bénéficiaires d'actions France Travail (11° de L. 412-8) et des demandeurs d'emploi. Les renvois (11° de L. 412-8, L. 434-16, L. 5421-2 du code du travail) sont exacts. Coquille dans le texte officiel : « revenus de remplaçement ». Sans effet.",
+   "evidence": "LEGIARTI000030067856 : « […] des demandeurs d'emploi titulaires d'un des revenus de remplaçement mentionnés à l'article L. 5421-2 du code du travail […] »",
+   "links_read": [
+    "css L412-8 LEGIARTI000053283575",
+    "css L434-16 LEGIARTI000031688385 (et version future LEGIARTI000051288487)",
+    "travail L5421-2 LEGIARTI000037388221"
+   ],
+   "links_not_read": "D. 412-90, D. 412-91 ; L. 433-2"
+  },
+  {
+   "sample_id": "P204",
+   "code": "travail",
+   "number": "R1451-3",
+   "source_id": "LEGIARTI000039347817",
+   "verdict": "0",
+   "families": [],
+   "description": "Procédure applicable lorsque le tribunal judiciaire statue en matière prud'homale (cas du dernier alinéa de L. 1423-11). Rien à signaler.",
+   "evidence": "LEGIARTI000039347817 : « Lorsqu'un tribunal judiciaire est appelé à statuer en matière prud'homale, les demandes sont formées, instruites et jugées conformément aux dispositions du présent titre. »",
+   "links_read": [
+    "travail L1423-11 LEGIARTI000039280803"
+   ],
+   "links_not_read": "R. 1451-1, R. 1451-2 ; L. 1423-10"
+  },
+  {
+   "sample_id": "P224",
+   "code": "css",
+   "number": "R161-19-11",
+   "source_id": "LEGIARTI000053335393",
+   "verdict": "0",
+   "families": [],
+   "description": "Suppression, suspension et reprise de la fraction de pension en retraite progressive. Les renvois au premier et au second alinéa de L. 161-22-1-8 et aux 2° et 3° de L. 161-22-1-5 correspondent au texte en vigueur. Rien à signaler.",
+   "evidence": "LEGIARTI000053335393 : « I. - La suppression de la fraction de pension prévue au premier alinéa de l'article L. 161-22-1-8 prend effet au premier jour du mois suivant celui où les conditions de suppression sont remplies. »",
+   "links_read": [
+    "css L161-22-1-8 LEGIARTI000047450667",
+    "css L161-22-1-5 LEGIARTI000052437156"
+   ],
+   "links_not_read": "L. 161-25 ; R. 161-19-1 à R. 161-19-10 ; décret n° 2025-1409 (II de l'article 2)"
+  },
+  {
+   "sample_id": "P244",
+   "code": "travail",
+   "number": "R6422-4",
+   "source_id": "LEGIARTI000048721677",
+   "verdict": "0",
+   "families": [],
+   "description": "Réponse de l'employeur à la demande d'autorisation d'absence pour congé de VAE : quinze jours, report d'un mois au plus, silence vaut accord. Cohérent avec L. 6422-1 (report motivé par des raisons de service, dans un délai fixé par décret) et R. 6422-3 (demande trente jours avant). Rien à signaler.",
+   "evidence": "LEGIARTI000048721677 : « L'absence de réponse de l'employeur dans un délai de quinze jours calendaires suivant la réception de la demande d'autorisation d'absence vaut accord. »",
+   "links_read": [
+    "travail L6422-1 LEGIARTI000037385847",
+    "travail R6422-3 LEGIARTI000048721680",
+    "travail R6422-5 LEGIARTI000048721671"
+   ],
+   "links_not_read": "L. 6323-17 ; L. 6422-2 et suivants"
+  },
+  {
+   "sample_id": "P264",
+   "code": "a3",
+   "number": "41 B",
+   "source_id": "LEGIARTI000006297927",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "Conditions des versements à fonds perdus déductibles (article 41 A). Texte de 1979 jamais toiletté : coquille « au sens du 3 de de l'article 39 » et référence aux « primes à la construction », dispositif disparu. Les renvois au 3 de l'article 39 et à l'article 211 bis du CGI visent des dispositions toujours en vigueur. Sans effet pratique.",
+   "evidence": "LEGIARTI000006297927 : « 3° Les dirigeants de l'entreprise versante au sens du 3 de de l'article 39 et de l'article 211 bis du code général des impôts […] » ; « […] les caractéristiques et les prix fixés pour l'octroi des primes à la construction ; »",
+   "links_read": [
+    "a3 41 A LEGIARTI000006297926",
+    "cgi 39 LEGIARTI000053542680 (3)",
+    "cgi 211 bis LEGIARTI000019288234"
+   ],
+   "links_not_read": "cch L. 313-1, R. 313-1 et suivants"
+  },
+  {
+   "sample_id": "P284",
+   "code": "css",
+   "number": "L862-8",
+   "source_id": "LEGIARTI000042686084",
+   "verdict": "0",
+   "families": [],
+   "description": "Fonds d'accompagnement à la protection complémentaire créé par les organismes du b de L. 861-4 pour les personnes au-dessus du plafond du 1° de L. 861-1. Renvois exacts. Rien à signaler.",
+   "evidence": "LEGIARTI000042686084 : « Les organismes mentionnés au b de l'article L. 861-4 peuvent créer un fonds d'accompagnement à la protection complémentaire des personnes dont les ressources sont supérieures au plafond prévu au 1° de l'article L. 861-1. »",
+   "links_read": [
+    "css L861-4 LEGIARTI000037950225",
+    "css L861-1 LEGIARTI000037950247"
+   ],
+   "links_not_read": "L. 862-1 et suivants (fonds CMU-C / complémentaire santé solidaire)"
+  },
+  {
+   "sample_id": "P304",
+   "code": "travail",
+   "number": "L4524-1",
+   "source_id": "LEGIARTI000035652660",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "Comité interentreprises de santé et de sécurité au travail dans le périmètre d'un PPRT. La loi vise la liste de l'article L. 515-36 du code de l'environnement et les articles L. 211-2, L. 211-3 et les titres II à VII du livre II du code minier ; son décret d'application R. 4524-1, jamais actualisé depuis 2008, vise encore « l'article L. 515-8 » du code de l'environnement et « les articles 3-1 et 104 à 104-8 du code minier », numérotation de l'ancien code minier abrogé par l'ordonnance n° 2011-91 (renvois couverts par la clause de correspondance de la recodification). Décalage loi/décret sans effet démontré sur la composition du comité.",
+   "evidence": "LEGIARTI000035652660 : « […] au moins une installation figurant sur la liste prévue à l'article L. 515-36 du code de l'environnement ou soumise aux dispositions des articles L. 211-2 et L. 211-3, des titres II à VII et du chapitre II du titre VIII du livre II du code minier […] » — travail LEGIARTI000018529642 (R. 4524-1) : « […] une installation susceptible de donner lieu à des servitudes d'utilité publique en application de l'article L. 515-8 du même code ou mentionnée aux articles 3-1 et 104 à 104-8 du code minier […] »",
+   "links_read": [
+    "travail R4524-1 LEGIARTI000018529642"
+   ],
+   "links_not_read": "code de l'environnement L. 515-8, L. 515-15, L. 515-36 (hors corpus) ; code minier (hors corpus) ; R. 4524-2 et suivants"
+  },
+  {
+   "sample_id": "P324",
+   "code": "travail",
+   "number": "R1431-15",
+   "source_id": "LEGIARTI000018536629",
+   "verdict": "0",
+   "families": [],
+   "description": "Groupes de travail du Conseil supérieur de la prud'homie. Rien à signaler.",
+   "evidence": "LEGIARTI000018536629 : « Le Conseil supérieur de la prud'homie peut constituer en son sein des groupes de travail chargés de procéder à des études sur des questions particulières relevant de sa compétence. »",
+   "links_read": [],
+   "links_not_read": "L. 1431-1 (base légale), R. 1431-1 à R. 1431-14"
+  },
+  {
+   "sample_id": "P344",
+   "code": "cch",
+   "number": "L421-6",
+   "source_id": "LEGIARTI000037694588",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "Collectivités de rattachement des offices publics de l'habitat. Coquille dans le texte officiel : « la commune de paris » sans majuscule à l'avant-dernière phrase du onzième alinéa, alors que le 4° écrit « la commune de Paris ». Les textes d'application (R. 421-1 et R. 421-1-1) organisent bien le rattachement prononcé par le préfet. Sans effet.",
+   "evidence": "LEGIARTI000037694588 : « […] ou d'un établissement public territorial mentionné à l'article L. 5219-2 du code général des collectivités territoriales, sauf dans le cas de la commune de paris. »",
+   "links_read": [
+    "cch R421-1 LEGIARTI000049243543",
+    "cch R421-1-1 LEGIARTI000033065061"
+   ],
+   "links_not_read": "CGCT L. 5219-2 (hors corpus) ; L. 421-7 ; R. 411-6"
+  },
+  {
+   "sample_id": "P364",
+   "code": "css",
+   "number": "D613-3",
+   "source_id": "LEGIARTI000041967534",
+   "verdict": "0",
+   "families": [],
+   "description": "Extension du régime micro-social (L. 613-7) aux professions du 11° de R. 641-1 (section CIPAV), prise sur le fondement du II de L. 613-7 qui autorise cette extension par décret. Rien à signaler.",
+   "evidence": "LEGIARTI000041967534 : « Les personnes mentionnées au 11° de l'article R. 641-1 peuvent bénéficier des dispositions prévues à l'article L. 613-7. »",
+   "links_read": [
+    "css R641-1 LEGIARTI000047265836",
+    "css L613-7 LEGIARTI000048683570"
+   ],
+   "links_not_read": "D. 613-4 et suivants ; L. 640-1"
+  },
+  {
+   "sample_id": "P384",
+   "code": "cch",
+   "number": "D174-19",
+   "source_id": "LEGIARTI000043819491",
+   "verdict": "0",
+   "families": [],
+   "description": "Contenu de l'annexe environnementale des baux (éléments fournis par le bailleur), pris pour l'application du 1 de l'article L. 125-9 du code de l'environnement. Symétrique de D. 174-20 (éléments fournis par le preneur). Rien à signaler.",
+   "evidence": "LEGIARTI000043819491 : « L'annexe environnementale mentionnée au 1 de l'article L. 125-9 du code de l'environnement comporte les éléments suivants, fournis par le bailleur : »",
+   "links_read": [
+    "cch D174-20 LEGIARTI000043819493",
+    "cch D174-21 LEGIARTI000043819495"
+   ],
+   "links_not_read": "code de l'environnement L. 125-9 (hors corpus)"
+  },
+  {
+   "sample_id": "P404",
+   "code": "css",
+   "number": "L441-2",
+   "source_id": "LEGIARTI000006743085",
+   "verdict": "0",
+   "families": [],
+   "description": "Déclaration de l'accident du travail par l'employeur (délai fixé par R. 441-3 : quarante-huit heures) et par la victime (deux ans). Rien à signaler.",
+   "evidence": "LEGIARTI000006743085 : « L'employeur ou l'un de ses préposés doit déclarer tout accident dont il a eu connaissance à la caisse primaire d'assurance maladie dont relève la victime selon des modalités et dans un délai déterminés. »",
+   "links_read": [
+    "css R441-3 LEGIARTI000038423383"
+   ],
+   "links_not_read": "L. 471-1 et R. 471-3 (sanction) ; L. 441-1 ; R. 441-2"
+  },
+  {
+   "sample_id": "P424",
+   "code": "travail",
+   "number": "R4224-11",
+   "source_id": "LEGIARTI000018532213",
+   "verdict": "0",
+   "families": [],
+   "description": "Sécurité des portes et portails coulissants ou s'ouvrant vers le haut. Rien à signaler.",
+   "evidence": "LEGIARTI000018532213 : « Les portes et portails coulissants sont munis d'un système de sécurité les empêchant de sortir de leur rail et de tomber. »",
+   "links_read": [],
+   "links_not_read": "R. 4224-9, R. 4224-10, R. 4224-12 ; L. 4221-1"
+  },
+  {
+   "sample_id": "P444",
+   "code": "travail",
+   "number": "R6362-8",
+   "source_id": "LEGIARTI000037934492",
+   "verdict": "m",
+   "families": [
+    "F7"
+   ],
+   "description": "Rapport annuel du préfet de région sur l'activité des services de contrôle de la formation professionnelle. L'intitulé de l'instance destinataire est amputé : « comité régional de l'emploi, de la formation de l'orientation professionnelles » au lieu de « comité régional de l'emploi, de la formation et de l'orientation professionnelles » (L. 6123-3). Sans effet.",
+   "evidence": "LEGIARTI000037934492 : « Le préfet de région présente chaque année au comité régional de l'emploi, de la formation de l'orientation professionnelles un rapport relatif à l'activité des services de contrôle. » — travail LEGIARTI000048597567 (L. 6123-3) : « Le comité régional de l'emploi, de la formation et de l'orientation professionnelles a pour mission […] »",
+   "links_read": [
+    "travail L6123-3 LEGIARTI000048597567",
+    "travail R6362-7 LEGIARTI000037934494",
+    "travail L6361-1 LEGIARTI000048600372"
+   ],
+   "links_not_read": "L. 6361-2, L. 6361-3 ; base légale précise du rapport (non identifiée dans L. 636x)"
+  },
+  {
+   "sample_id": "P464",
+   "code": "css",
+   "number": "D242-6-24",
+   "source_id": "LEGIARTI000034196582",
+   "verdict": "m",
+   "families": [
+    "F7",
+    "F3"
+   ],
+   "description": "Comité de suivi paritaire de la tarification AT/MP. L'article codifié dit que le comité suit « les règles fixées par le présent décret » : dans un code, ce renvoi n'a pas d'objet identifiable (la formule provient du II de l'article 3 du décret n° 2010-753, non codifié, qui instituait le comité jusqu'au 31 décembre 2014, comme le rappelle le NOTA de D. 242-6-23). Le lecteur comprend qu'il s'agit des règles de la section (D. 242-6-1 et suivants), mais la rédaction est incohérente.",
+   "evidence": "LEGIARTI000034196582 : « Un comité de suivi paritaire […] suit la mise en œuvre des règles fixées par le présent décret et peut proposer toute mesure utile au ministre chargé de la sécurité sociale pour leur adaptation. » — NOTA de css LEGIARTI000022446485 (D. 242-6-23) : « II. - Un comité de suivi paritaire […] est institué jusqu'au 31 décembre 2014. Il suit la mise en œuvre des règles fixées par le présent décret […] »",
+   "links_read": [
+    "css D242-6-1 LEGIARTI000054980972",
+    "css D242-6-23 LEGIARTI000022446485"
+   ],
+   "links_not_read": "L. 242-5 (base légale) ; D. 242-6-2 à D. 242-6-22 ; décret n° 2017-337 (création de l'article)"
+  },
+  {
+   "sample_id": "P484",
+   "code": "urba",
+   "number": "L422-1",
+   "source_id": "LEGIARTI000028810368",
+   "verdict": "0",
+   "families": [],
+   "description": "Autorité compétente pour délivrer les autorisations d'urbanisme (maire au nom de la commune ou préfet/maire au nom de l'État), avec le régime transitoire des cartes communales issu de la loi ALUR. Cohérent avec L. 422-2 (exceptions au profit de l'État) et L. 422-3 (délégation à l'EPCI). Rien à signaler.",
+   "evidence": "LEGIARTI000028810368 : « a) Le maire, au nom de la commune, dans les communes qui se sont dotées d'un plan local d'urbanisme ou d'un document d'urbanisme en tenant lieu […] »",
+   "links_read": [
+    "urba L422-2 LEGIARTI000054702388",
+    "urba L422-3 LEGIARTI000006815847"
+   ],
+   "links_not_read": "R. 422-1 et suivants ; L. 422-4 à L. 422-8"
+  },
+  {
+   "sample_id": "P504",
+   "code": "travail",
+   "number": "L6352-5",
+   "source_id": "LEGIARTI000006904402",
+   "verdict": "0",
+   "families": [],
+   "description": "Renvoi à un décret en Conseil d'État pour l'application de la section (personnel, règlement intérieur, neutralité des organismes de formation, L. 6352-1 à L. 6352-4). Les articles R. 6352-1 et suivants existent (23 articles en vigueur). Rien à signaler.",
+   "evidence": "LEGIARTI000006904402 : « Un décret en Conseil d'Etat détermine les mesures d'application de la présente section. »",
+   "links_read": [
+    "travail L6352-1 LEGIARTI000021343625",
+    "travail L6352-2 LEGIARTI000038951584",
+    "travail L6352-3 LEGIARTI000037386220",
+    "travail L6352-4 LEGIARTI000054336971"
+   ],
+   "links_not_read": "R. 6352-1 à R. 6352-15 (existence vérifiée, contenu non lu)"
+  },
+  {
+   "sample_id": "P524",
+   "code": "css",
+   "number": "L713-19",
+   "source_id": "LEGIARTI000006744037",
+   "verdict": "0",
+   "families": [],
+   "description": "Caisse nationale militaire de sécurité sociale, circonscription « territoire métropolitain ». Une version future (ordonnance n° 2026-647, applicable au 1er janvier 2028) étend la circonscription aux territoires de L. 111-2 : calendrier normal, pas de défaut.",
+   "evidence": "LEGIARTI000006744037 : « Il est institué pour le personnel militaire une caisse autonome de sécurité sociale dont la circonscription englobe l'ensemble du territoire métropolitain et qui fonctionne dans les conditions du livre II. »",
+   "links_read": [
+    "css L713-19 LEGIARTI000054466960 (version future 2028)"
+   ],
+   "links_not_read": "L. 713-7, L. 713-20 et suivants ; L. 111-2"
+  },
+  {
+   "sample_id": "P544",
+   "code": "css",
+   "number": "D161-13-2",
+   "source_id": "LEGIARTI000032973806",
+   "verdict": "m",
+   "families": [
+    "F3"
+   ],
+   "description": "Tiers payant : le décret de 2016 exige la présentation de « sa carte d'assurance maladie mentionnée à l'article L. 161-31 », alors que L. 161-31 (depuis 2021) et L. 161-36-3 et L. 161-36-4 ne parlent plus que du « moyen d'identification électronique », matériel ou immatériel ; L. 161-36-4 (2022) pose en outre quatre conditions, dont le décret ne reprend que la première. Vocabulaire obsolète et décret incomplet, sans contradiction de fond.",
+   "evidence": "LEGIARTI000032973806 : « Pour bénéficier du tiers payant prévu à l'article L. 161-36-4, le bénéficiaire des soins doit présenter au professionnel de santé sa carte d'assurance maladie mentionnée à l'article L. 161-31. » — css LEGIARTI000046812170 (L. 161-36-4) : « 1° Présenter au professionnel de santé le moyen d'identification électronique mentionné à l'article L. 161-31 ; 2° Avoir donné l'autorisation prévue au II de l'article L. 160-13 […] »",
+   "links_read": [
+    "css L161-36-3 LEGIARTI000054337006",
+    "css L161-36-4 LEGIARTI000046812170",
+    "css L161-31 LEGIARTI000043498566"
+   ],
+   "links_not_read": "D. 161-13-1, D. 161-13-3 ; L. 160-13"
+  },
+  {
+   "sample_id": "P564",
+   "code": "travail",
+   "number": "R4542-4",
+   "source_id": "LEGIARTI000018528867",
+   "verdict": "0",
+   "families": [],
+   "description": "Pauses ou changements d'activité pour le travail sur écran. Rien à signaler.",
+   "evidence": "LEGIARTI000018528867 : « L'employeur organise l'activité du travailleur de telle sorte que son temps quotidien de travail sur écran soit périodiquement interrompu par des pauses ou par des changements d'activité réduisant la charge de travail sur écran. »",
+   "links_read": [],
+   "links_not_read": "R. 4542-1 à R. 4542-3 ; L. 4121-1"
+  },
+  {
+   "sample_id": "P584",
+   "code": "travail",
+   "number": "L2242-2",
+   "source_id": "LEGIARTI000036262221",
+   "verdict": "0",
+   "families": [],
+   "description": "Négociation quadriennale (ordre public) sur la gestion des emplois et des parcours professionnels dans les entreprises d'au moins trois cents salariés. L. 2242-20 (supplétif, « tous les trois ans ») s'articule normalement avec ce plancher. Rien à signaler.",
+   "evidence": "LEGIARTI000036262221 : « […] l'employeur engage, au moins une fois tous les quatre ans, en plus des négociations mentionnées à l'article L. 2242-1, une négociation sur la gestion des emplois et des parcours professionnels. »",
+   "links_read": [
+    "travail L2242-20 LEGIARTI000043975202"
+   ],
+   "links_not_read": "L. 2331-1, L. 2341-1, L. 2341-2 ; L. 2242-1, L. 2242-13"
+  },
+  {
+   "sample_id": "P604",
+   "code": "travail",
+   "number": "L2371-5",
+   "source_id": "LEGIARTI000047591094",
+   "verdict": "0",
+   "families": [],
+   "description": "Renvoi à un décret en Conseil d'État pour la procédure des litiges et les informations transmises à l'inspection du travail en cas d'opération transfrontalière. Les articles R. 2372-17 et R. 2373-5 organisent la transmission à l'agent de contrôle de l'inspection du travail. Rien à signaler.",
+   "evidence": "LEGIARTI000047591094 : « Les dispositions d'application du présent titre relatives à la procédure applicable aux litiges et aux informations transmises à l'inspection du travail […] sont déterminées par décret en Conseil d'Etat. »",
+   "links_read": [
+    "travail D2371-1 LEGIARTI000047631155",
+    "travail R2372-17 LEGIARTI000047631123",
+    "travail R2373-5 LEGIARTI000047631067"
+   ],
+   "links_not_read": "R. 2372-19, D. 2372-13 ; code de commerce L. 229-3 (hors corpus)"
+  },
+  {
+   "sample_id": "P624",
+   "code": "a3",
+   "number": "46 quater-0 Z",
+   "source_id": "LEGIARTI000006298286",
+   "verdict": "0",
+   "families": [],
+   "description": "Règle transitoire de 1985 sur les plus-values des caisses de crédit agricole (fraction acquise à compter du 1er janvier 1985). Texte ancien mais complet et intelligible ; sa base légale (assujettissement des caisses à l'IS en 1985) n'a pas été identifiée dans le CGI en vigueur. Rien à signaler.",
+   "evidence": "LEGIARTI000006298286 : « Les plus-values ou moins-values réalisées par les caisses de crédit mutuel agricole et rural lors de la cession d'éléments d'actif immobilisés ou de titres de placement ne sont soumises à l'impôt que pour leur fraction acquise à compter du 1er janvier 1985. »",
+   "links_read": [],
+   "links_not_read": "cgi 206, 207, 219 ; loi de finances pour 1985 (hors corpus)"
+  }
+ ]
+}

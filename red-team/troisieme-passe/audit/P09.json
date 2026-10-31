@@ -1,0 +1,302 @@
+{
+ "group": "P09",
+ "read_from": "production",
+ "date": "2026-10-31",
+ "auditor_model": "claude-fable-5-1",
+ "method": "Lecture intégrale de chaque article (toutes versions, dont VIGUEUR_DIFF/ABROGE_DIFF) via CITE_PRODUCTION=1 tools/cite.py ; lecture des renvois, des textes d'application ou de la base légale dans la base de production en lecture seule (mode=ro, query_only) ; qualification avant toute consultation de reports/register.json et des audits antérieurs. Revue IA : ce n'est pas une validation par un juriste.",
+ "counts": {"G": 1, "m": 6, "0": 25},
+ "articles": [
+  {
+   "sample_id": "P009", "code": "travail", "number": "R6313-3", "source_id": "LEGIARTI000038014103", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Preuve de réalisation « par tout élément probant » maintenue ; R6313-1 et R6313-2 (propositions) et la base L6313-1/L6313-2 restent cohérents. Rien à signaler.",
+   "evidence": "travail R6313-3 LEGIARTI000038014103 (source maintenue) : « La réalisation de l'action de formation composant le parcours doit être justifiée par le dispensateur par tout élément probant. »",
+   "links_read": ["travail R6313-1 LEGIARTI000038014099 (proposition)", "travail R6313-2 LEGIARTI000038014101 (maintenu)", "travail L6313-1 LEGIARTI000037385660 (maintenu)", "travail L6313-2 LEGIARTI000037385657 (maintenu)"],
+   "links_not_read": "L6316-1, L6331-48 (financeurs) ; D6275-4 cité par les notes.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P029", "code": "css", "number": "R221-12", "source_id": "LEGIARTI000038789241", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Contrôle ministériel des actes du directeur général de la CNAM maintenu ; L227-1 proposé (suppression de la durée minimale de quatre ans) et R221-13 proposé (suppression du gel de quinze jours sur les décisions locales) ne touchent pas ce délai national d'opposition. Rien à signaler.",
+   "evidence": "css R221-12 LEGIARTI000038789241 (source maintenue) : « Dans un délai de quinze jours à compter de leur réception, les ministres peuvent, par décision motivée, faire connaître leur opposition à leur mise en oeuvre »",
+   "links_read": ["css L227-1 LEGIARTI000042684374 (proposition)", "css R221-13 LEGIARTI000038789889 (proposition)", "css L221-3-1 LEGIARTI000036390839 (proposition)"],
+   "links_not_read": "Arrêté fixant la liste des actes communiqués (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P049", "code": "cgi", "number": "1635 quater O", "source_id": "LEGIARTI000045913789", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Règle du taux le moins élevé maintenue ; elle reste opérante avec 1635 quater L proposé (secteurs) et 1635 quater N proposé (taux ramenés à 5 % pour les faits générateurs nouveaux, secteurs antérieurs conservés pour la dispense de contributions). Le renvoi à N ne devient pas mort. Rien à signaler.",
+   "evidence": "cgi 1635 quater O LEGIARTI000045913789 (source maintenue) : « si le projet de construction ou d'aménagement est réalisé dans des secteurs comportant des taux différents en application des articles 1635 quater L et 1635 quater N du présent code, il est fait application du taux le moins élevé. »",
+   "links_read": ["cgi 1635 quater L LEGIARTI000047623408 (proposition)", "cgi 1635 quater M LEGIARTI000045913785 (proposition)", "cgi 1635 quater N LEGIARTI000045913787 (proposition)"],
+   "links_not_read": "1635 quater A, 1639 A ; décret n° 2022-1102 (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P069", "code": "css", "number": "R122-2", "source_id": "LEGIARTI000046021783", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Champ organique de R122-1 maintenu ; R122-1 proposé conserve l'agrément du directeur sous réserve de la dispense de R123-48 proposé et retire le seul agrément budgétaire : le renvoi reste utile. Rien à signaler.",
+   "evidence": "css R122-2 LEGIARTI000046021783 (source maintenue) : « Les dispositions de l'article R. 122-1 sont applicables à tous les organismes de droit privé jouissant de la personnalité civile ou de l'autonomie financière »",
+   "links_read": ["css R122-1 LEGIARTI000046800544 (proposition)", "css R123-48 LEGIARTI000006748131 (proposition)"],
+   "links_not_read": "R121-1, R123-50-1, R123-49.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P089", "code": "cgi", "number": "1464 I", "source_id": "LEGIARTI000037992851", "status": "rewrite_draft",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Suppression de la répétition annuelle de la déclaration d'exonération sans changement ; cohérente avec 1477 (I et II inchangés), 1467 A, 1639 A bis et avec la même rédaction retenue à 1464 I bis proposé. Label au 1er janvier, conditions PME/capital et article 53 du règlement 651/2014 conservés. Rien à signaler.",
+   "evidence": "cgi 1464 I LEGIARTI000037992851 (proposition) : « les contribuables déclarent, lors de leur première demande et dans les conditions et délais prévus à l'article 1477, les éléments entrant dans son champ d'application. Pour les années suivantes, seules leurs modifications sont déclarées dans les mêmes conditions et délais. »",
+   "links_read": ["cgi 1477 LEGIARTI000030752139 (proposition)", "cgi 1467 A LEGIARTI000023380825 (maintenu)", "cgi 1639 A bis LEGIARTI000049641187 (proposition)", "cgi 1464 I bis LEGIARTI000037961505 (proposition)"],
+   "links_not_read": "Décret en Conseil d'État du label, règlement (UE) 651/2014, code de commerce L330-3 (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P109", "code": "cch", "number": "R631-1", "source_id": "LEGIARTI000006900477", "status": "rewrite_draft",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "La proposition répare l'incohérence héritée (la source soumettait à arrêté « incluant le ministre de l'intérieur » des « primes » de L631-3, qui ne prévoit que des compléments locaux facultatifs) et L631-4 proposé est coordonné (« sans arrêté ministériel »). Rien à signaler.",
+   "evidence": "cch R631-1 LEGIARTI000006900477 (proposition) : « Les compléments à l'aide financière accordés sur leurs ressources par les départements et les communes en application de l'article L. 631-3 sont déterminés par ces collectivités dans le cadre de leurs compétences, sans arrêté ministériel » ; cch L631-4 LEGIARTI000019286925 (proposition) : « sont déterminés par ces collectivités sur leurs ressources, dans le cadre de leurs compétences, sans arrêté ministériel fixant leur montant ou leurs conditions de versement. »",
+   "links_read": ["cch L631-1 LEGIARTI000019286933 (maintenu)", "cch L631-2 LEGIARTI000019286930 (maintenu)", "cch L631-3 LEGIARTI000019286927 (maintenu)", "cch L631-4 LEGIARTI000019286925 (proposition)"],
+   "links_not_read": "Arrêtés de montants (hors corpus) ; L631-5, L631-6.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P129", "code": "css", "number": "R351-38", "source_id": "LEGIARTI000006749394", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Relevé interrégimes des trimestres maintenu ; le deuxième alinéa de L351-1 visé est repris mot pour mot dans la proposition de L351-1 (l'ajout final sur le compte de capitalisation ne déplace pas les alinéas). Rien à signaler.",
+   "evidence": "css R351-38 LEGIARTI000006749394 (source maintenue) : « Pour l'application du deuxième alinéa de l'article L. 351-1, les caisses et services gestionnaires des régimes de base obligatoires d'assurance vieillesse communiquent »",
+   "links_read": ["css L351-1 LEGIARTI000023035688 (proposition)", "css R351-37 LEGIARTI000047633235 et LEGIARTI000054060160 (propositions, version 2026-11-01)"],
+   "links_not_read": "R173-x (coordination interrégimes), L161-17-2.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P149", "code": "cgi", "number": "1751", "source_id": "LEGIARTI000038725560", "status": "rewrite_draft",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Suppression de l'extension du séquestre à l'ensemble du patrimoine ; la version du 1er janvier 2029 (LEGIARTI000052845689, « tribunal délictuel ») porte une proposition identique, et 406 A 12 à 406 A 16 de l'annexe III sont coordonnés (406 A 15 y compris sa version 2029). Les clauses erronées sur une abrogation différée ont été retirées. Rien à signaler.",
+   "evidence": "cgi 1751 LEGIARTI000038725560 et LEGIARTI000052845689 (propositions) : « La mesure de séquestre prévue au présent article ne peut être étendue à l'ensemble du patrimoine de l'auteur du délit. » ; a3 406 A 12 LEGIARTI000042160740 (proposition) : « Elle ne peut être étendue à l'ensemble du patrimoine de ces personnes sur le fondement du présent article. »",
+   "links_read": ["a3 406 A 12 LEGIARTI000042160740 (proposition)", "a3 406 A 13 LEGIARTI000006299773 (proposition)", "a3 406 A 14 LEGIARTI000006299774 (proposition)", "a3 406 A 15 LEGIARTI000024678982 et LEGIARTI000052845672 (propositions)", "a3 406 A 16 LEGIARTI000039439952 (maintenu)"],
+   "links_not_read": "LPF L246, code de commerce L441-9 et L443-3, CPC 485-486, arrêté validé du 23 novembre 1940 (hors corpus).",
+   "known_objection": "RT-FUTFISC-01 et RT-RXF01-01 (confirmés, P1) : défaut de lecture d'ABROGE_DIFF, corrigé en production (proposition sur la version 2029) ; plus visible.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "P169", "code": "a2", "number": "286 E", "source_id": "LEGIARTI000006294711", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Régularisation symétrique après changement de prix maintenue ; 286 D (proposition : déclaration regroupée mais conservée) reste la cible du renvoi ; 286 F, y compris sa version du 1er août 2027 sans proposition, maintient l'exclusion outre-mer de « 282 à 286 E ». Rien à signaler.",
+   "evidence": "a2 286 E LEGIARTI000006294711 (source maintenue) : « Pour les tabacs qui font l'objet des déclarations prévues à l'article 286 D la différence entre le montant des droits et taxes [...] est, selon le cas, versée par le fournisseur au service des douanes et droits indirects ou restituée au fournisseur par ce dernier »",
+   "links_read": ["a2 286 D LEGIARTI000052522045 (proposition)", "a2 286 B LEGIARTI000052522041 (maintenu)", "a2 286 F LEGIARTI000052522049 (maintenu) et LEGIARTI000054411930 (VIGUEUR_DIFF 2027-08-01, sans proposition)"],
+   "links_not_read": "CIBS L314-1 et suivants (hors corpus) ; a2 285.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P189", "code": "css", "number": "L224-5-3", "source_id": "LEGIARTI000006742284", "status": "rewrite_draft",
+   "verdict": "m", "families": ["F5"], "origin": "introduit par le projet",
+   "description": "La proposition conserve « Par dérogation aux articles L. 123-1 et L. 123-2 » alors que les propositions de ces deux articles suppriment l'agrément auquel la dérogation échappait : la dérogation n'a plus d'objet. L224-5-1 proposé, pour la même union et les mêmes articles, écrit au contraire « Conformément aux articles L. 123-1 et L. 123-2 ». Incohérence rédactionnelle entre deux articles sans effet pratique (dans les deux cas, application sans agrément). Correction simple : remplacer « Par dérogation aux » par « Sans préjudice des » ou supprimer l'incise.",
+   "evidence": "css L224-5-3 LEGIARTI000006742284 (proposition) : « Par dérogation aux articles L. 123-1 et L. 123-2, les décisions et les accords de l'Union des caisses nationales de sécurité sociale s'appliquent de plein droit lorsqu'ils assurent l'application automatique d'un accord collectif national. » ; css L123-1 LEGIARTI000037948839 (proposition) : « Les dispositions de ces conventions sont applicables sans agrément de l'autorité compétente de l'Etat. » ; css L123-2 LEGIARTI000037948868 (proposition) : « conventions collectives spéciales qui sont applicables sans agrément de l'autorité compétente de l'Etat » ; css L224-5-1 LEGIARTI000037948891 (proposition) : « Conformément aux articles L. 123-1 et L. 123-2, les accords collectifs nationaux conclus par l'union ne sont pas soumis à agrément ministériel. »",
+   "links_read": ["css L123-1 LEGIARTI000037948839 (proposition)", "css L123-2 LEGIARTI000037948868 (proposition)", "css L224-5-1 LEGIARTI000037948891 (proposition)", "css L224-5 LEGIARTI000044404097 (proposition)"],
+   "links_not_read": "L224-5-2 ; textes de tarification des établissements de santé (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P209", "code": "travail", "number": "L7413-3", "source_id": "LEGIARTI000033025255", "status": "rewrite_draft",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Abrogation de la déclaration de début/fin de travail à domicile ; R7424-1 proposé est coordonné (communication sur demande, limitée aux travaux à risques), R7413-5 ne sanctionne que R7413-1 et R7413-2, aucun autre texte du code ne renvoie à L7413-3 (0 occurrence dans content_xml). La note « coordination hors lot à expliciter dans R7424-1 » est désormais satisfaite. Rien à signaler.",
+   "evidence": "travail L7413-3 LEGIARTI000033025255 (proposition) : « Aucune déclaration de commencement ou de cessation du travail à domicile ni régularisation d'une telle déclaration ne peut être exigée après cette date sur le fondement du présent article » ; travail R7424-1 LEGIARTI000018520940 (proposition) : « communique, à la demande de l'inspection du travail, la nature exacte de ces travaux. »",
+   "links_read": ["travail R7424-1 LEGIARTI000018520940 (proposition)", "travail R7413-1 LEGIARTI000018521025 (proposition)", "travail R7413-2 LEGIARTI000022357341 (proposition)", "travail R7413-5 LEGIARTI000018521013 (maintenu)", "travail L7413-1, L7413-2, L7424-1 (maintenus)"],
+   "links_not_read": "Arrêtés pris pour L7424-1 (hors corpus) ; L8112-1, L8113-4.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P229", "code": "travail", "number": "L6323-17-5", "source_id": "LEGIARTI000038610058", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Rémunération minimale du projet de transition professionnelle et circuit de remboursement maintenus ; L6323-17-6 (version 2026), D6323-18-1 et D6323-18-2 proposé (payeur après fin effective de tout contrat, contrat unique compris) et CSS L130-1 restent cohérents. Rien à signaler.",
+   "evidence": "travail L6323-17-5 LEGIARTI000038610058 (source maintenue) : « Dans les entreprises de cinquante salariés et plus, la rémunération due au bénéficiaire du projet de transition professionnelle est versée par l'employeur, qui est remboursé par la commission paritaire interprofessionnelle régionale »",
+   "links_read": ["travail L6323-17-6 LEGIARTI000052437413 (maintenu)", "travail D6323-18-1 LEGIARTI000039738032 (maintenu)", "travail D6323-18-2 LEGIARTI000038030719 (proposition)", "css L130-1 LEGIARTI000051287151 (maintenu)"],
+   "links_not_read": "R6323-14-1, R6323-14-3, R6323-18-5 à -23 (2026), L6323-17-2 versions 2027/2028, L6123-5 version 2027 : 20 articles citent L6323-17-5, trois seulement lus.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P249", "code": "cch", "number": "R824-4", "source_id": "LEGIARTI000038878867", "status": "rewrite_draft",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Suppression de la justification des poursuites de recouvrement ; R824-6 proposé retire la sanction correspondante ; la version du 1er janvier 2027 (LEGIARTI000053470467, information de la CCAPEX) et R824-3 version 2027 (signalement sous deux mois) n'exigent aucune justification : la réforme n'est pas écrasée, et la clause finale borne correctement la rédaction. Rien à signaler.",
+   "evidence": "cch R824-4 LEGIARTI000038878867 (proposition) : « Le bailleur n'est pas tenu de justifier de démarches de recouvrement de sa créance au titre du présent article. » ; cch R824-3 LEGIARTI000053470469 (VIGUEUR_DIFF 2027-01-01) : « sa situation est soumise à l'organisme payeur par le bailleur percevant l'aide pour son compte, dans un délai de deux mois »",
+   "links_read": ["cch R824-6 LEGIARTI000038878863 (proposition) et LEGIARTI000053470485 (2027)", "cch R824-1 LEGIARTI000038878877 et LEGIARTI000053470474 (2027)", "cch R824-3 LEGIARTI000053470469 (2027)", "cch R824-5, R824-7 (propositions et versions 2027)", "cch L824-1 LEGIARTI000038814900, L824-2 LEGIARTI000047900095 (maintenus)"],
+   "links_not_read": "Article 5 du décret n° 2026-84 ; article 7-2 de la loi n° 90-449 (hors corpus) ; R824-32.",
+   "known_objection": "RT-FUTTL-11 (confirmé, P2) : clause d'abrogation inexistante, corrigée en production (borne d'application au 1er janvier 2027) ; plus visible.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "P269", "code": "cch", "number": "L261-11", "source_id": "LEGIARTI000037667798", "status": "rewrite_draft",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Réécriture à droit constant des mentions de l'acte de VEFA ; d et e conservent L261-10-1 et le II de L261-15 ; R261-12 proposé supprime le renvoi hérité à une condition résolutoire absente du premier alinéa ; R261-13-3 abrogé sans toucher le e. Rien à signaler.",
+   "evidence": "cch L261-11 LEGIARTI000037667798 (proposition) : « d) Pour une vente en l'état futur d'achèvement, prévue à l'article 1601-3 du code civil et reproduite à l'article L. 261-3 du présent code, la justification de la garantie financière prescrite à l'article L. 261-10-1. »",
+   "links_read": ["cch L261-10-1 LEGIARTI000037667804 (proposition)", "cch L261-15 LEGIARTI000037667790 (proposition)", "cch L261-3 LEGIARTI000006824583 (proposition)", "cch R261-12 LEGIARTI000039041613 (proposition)", "cch R261-13-3 LEGIARTI000038684331 (proposition)"],
+   "links_not_read": "R261-13, R261-13-1, R261-13-2 ; décret sur les prêts spéciaux du Crédit foncier (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P289", "code": "urba", "number": "L113-27", "source_id": "LEGIARTI000033034858", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Statut domanial et affectation au programme d'action maintenus ; L113-28 proposé (cahier des charges intégrable à l'acte) et L215-2 proposé restent cohérents. Rien à signaler.",
+   "evidence": "urba L113-27 LEGIARTI000033034858 (source maintenue) : « Ils ne peuvent être utilisés qu'en vue de la réalisation des objectifs définis par le programme d'action. »",
+   "links_read": ["urba L113-26 LEGIARTI000031210371 (maintenu)", "urba L113-28 LEGIARTI000031210377 (proposition)", "urba L215-2 LEGIARTI000033034855 (proposition)"],
+   "links_not_read": "L215-5, L215-8, L113-25.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P309", "code": "css", "number": "D932-1", "source_id": "LEGIARTI000043659747", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Participation minimale aux excédents maintenue ; D932-2, D932-3, L931-1 proposé et A931-11-10 (catégories 1 à 5, 7, 12 et 14) concordent. Rien à signaler.",
+   "evidence": "css D932-1 LEGIARTI000043659747 (source maintenue) : « Cette part est égale à 85 % du solde du compte financier défini au I de l'article D. 932-3. »",
+   "links_read": ["css D932-2 LEGIARTI000042352266 (maintenu)", "css D932-3 LEGIARTI000049792472 (maintenu)", "css L931-1 LEGIARTI000038589859 (proposition)", "css A931-11-10 LEGIARTI000043660196 (maintenu)"],
+   "links_not_read": "Règlement ANC, code des assurances R343-6 (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P329", "code": "css", "number": "L242-1", "source_id": "LEGIARTI000053282401", "status": "rewrite_draft",
+   "verdict": "m", "families": ["F7"], "origin": "introduit par le projet",
+   "description": "Fond cohérent : suppression des assujettissements intégraux au-delà de cinq ou dix PASS, coordonnée avec L136-1-1 proposé (III, 5° et 5° bis, IV) et avec CGI 80 duodecies proposé ; aucun texte ne renvoie à un « 8° du II » disparu. Défaut de rédaction seulement : le corps codifié du 7° énonce la règle par comparaison avec le droit antérieur (« n'entraîne plus »), alors que la transition figure déjà au III. Sans effet juridique.",
+   "evidence": "css L242-1 LEGIARTI000053282401 (proposition, 7°) : « Le dépassement d'un montant de cinq ou de dix fois le plafond annuel n'entraîne plus l'assujettissement de la fraction exclue dans la limite de deux fois ce plafond ; seule la fraction non couverte par l'exclusion demeure assujettie. » ; css L136-1-1 LEGIARTI000053282440 (proposition) : « Le dépassement de dix fois le plafond annuel défini à l'article L. 241-3 ne remet pas en cause l'exclusion ainsi déterminée ; seule la fraction non couverte par celle-ci demeure assujettie »",
+   "links_read": ["css L136-1-1 LEGIARTI000053282440 (proposition)", "css L241-3 LEGIARTI000051289018 (proposition)", "cgi 80 duodecies LEGIARTI000051200373 (proposition)", "recherche « 8° du II de l'article L. 242-1 » dans content_xml et proposed_xml : 0 occurrence"],
+   "links_not_read": "D242-1 et suivants (limites réglementaires du 4°), L137-15, L311-2, L311-3, CGI 80 bis, 80 ter, 80 quaterdecies ; 58 propositions citent L242-1, non toutes relues.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P349", "code": "travail", "number": "L1263-6", "source_id": "LEGIARTI000037388967", "status": "rewrite_draft",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Réécriture à droit constant de l'amende pour non-respect des décisions de suspension ; L1263-4, L1263-4-1 et L1263-4-2 proposés sont eux aussi à droit constant, L8112-1 maintenu. Rien à signaler.",
+   "evidence": "travail L1263-6 LEGIARTI000037388967 (proposition) : « L'amende ne peut dépasser 10 000 € par salarié concerné par le manquement. »",
+   "links_read": ["travail L1263-4 LEGIARTI000030996769 (proposition)", "travail L1263-4-1 LEGIARTI000033013536 (proposition)", "travail L1263-4-2 LEGIARTI000037379447 (proposition)", "travail L8112-1 LEGIARTI000033025397 (maintenu)"],
+   "links_not_read": "L1264-1 à L1264-3, R1263-11-1 et suivants.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P369", "code": "travail", "number": "D1272-5", "source_id": "LEGIARTI000018536969", "status": "rewrite_draft",
+   "verdict": "G", "families": ["F5", "F3"], "origin": "hérité du texte officiel (décret de 2019 réécrivant D1272-1 sans toucher D1272-5), non réparé par la proposition",
+   "description": "Deux articles de la même section fixent, avec des listes différentes, le contenu de la même déclaration d'identification du salarié du titre emploi-service entreprise. La source de D1272-5 renvoie à un « volet d'identification du salarié prévu au 2° de l'article D. 1272-1 » qui n'existe plus depuis 2019 (le 2° de D1272-1 énumère les mentions d'emploi). La proposition réécrit D1272-5, corrige ce renvoi en déclarant le volet « intégré à la déclaration prévue à l'article D. 1272-1 », mais maintient une liste concurrente qui diverge de D1272-1 proposé : toutes les mentions de R1221-1 (y compris le 1° relatif à l'employeur et le 5° agricole) contre les seuls 2° et 3° ; « salaire prévu à l'embauche » contre « montant de la rémunération et de ses différentes composantes » ; absence du niveau d'emploi (d), des abattements (i) et du versement transport (k) ; ajout d'une « affiliation au régime agricole » étrangère au TESE. Un employeur ou l'organisme gestionnaire ne peut savoir quelle liste fait foi (F5). En outre, la réserve « sous réserve de la transition du 2° a) pour les mentions de durée déterminée » vise des mentions de durée de contrat que R1221-1 proposé abroge (4°) : renvoi devenu vide (F3). D1273-9 proposé étend la double liste aux employeurs sans établissement en France (« D. 1272-1 à D. 1272-5 »).",
+   "evidence": "travail D1272-5 LEGIARTI000018536969 (source) : « Le volet d'identification du salarié prévu au 2° de l'article D. 1272-1 comporte les mentions suivantes » ; travail D1272-1 LEGIARTI000038251771 (source) : « 2° Mentions relatives à l'emploi : a) La nature du contrat de travail » ; travail D1272-5 LEGIARTI000018536969 (proposition) : « Le volet d'identification du salarié est intégré à la déclaration prévue à l'article D. 1272-1. [...] Il comporte les informations suivantes : 1° Informations relatives au salarié : a) Les mentions prévues à l'article R. 1221-1, relatif à la déclaration préalable à l'embauche, sous réserve de la transition du 2° a) pour les mentions de durée déterminée ; b) Son affiliation au régime général ou au régime agricole ; [...] c) Le salaire prévu à l'embauche ; d) La durée du travail ; e) La nature et la catégorie de l'emploi » ; travail D1272-1 LEGIARTI000038251771 (proposition) : « La déclaration d'identification du salarié prévue à l'article D. 133-13-1 du code de la sécurité sociale comporte les informations suivantes [...] 1° Les mentions relatives au salarié et à son embauche prévues aux 2° et 3° de l'article R. 1221-1 [...] d) La catégorie et la nature de l'emploi ainsi que, le cas échéant, son niveau hiérarchique et son coefficient ; [...] f) Le montant de la rémunération et de ses différentes composantes, y compris les primes et accessoires de salaire lorsqu'il en existe ; [...] i) Les abattements applicables à l'assiette ou au taux des cotisations. [...] k) Le cas échéant, l'assujettissement au versement de transport » ; travail R1221-1 LEGIARTI000035492419 (proposition) : « 4° Abrogé. » et « La nature et la durée du contrat ainsi que la durée de la période d'essai ne sont plus demandées au titre de cette déclaration. » ; travail D1273-9 LEGIARTI000038251826 (proposition) : « Les dispositions des articles D. 1272-1 à D. 1272-5 sont applicables aux entreprises mentionnées au II de l'article L. 243-1-2 du code de la sécurité sociale »",
+   "links_read": ["travail D1272-1 LEGIARTI000038251771 (source et proposition)", "travail D1272-4 LEGIARTI000038251811 (proposition)", "travail R1221-1 LEGIARTI000035492419 (proposition)", "travail D1272-2 LEGIARTI000038251781, D1272-3 LEGIARTI000038251807", "travail D1273-9 LEGIARTI000038251826 (proposition ; seul article renvoyant à D1272-5)", "css D133-13-1 LEGIARTI000048864504 (proposition)"],
+   "links_not_read": "css L133-5-6, L133-5-10, D133-13-2 ; formulaires TESE de l'URSSAF (hors corpus).",
+   "known_objection": null,
+   "suggested_correction": "Abroger D1272-5, devenu sans objet depuis que D1272-1 définit seul la déclaration d'identification : « Article D. 1272-5. – Le présent article est abrogé. Le contenu de la déclaration d'identification du salarié est fixé par le seul article D. 1272-1 ; aucune mention supplémentaire ne peut être exigée sur le fondement du présent article. Les volets d'identification établis avant l'entrée en vigueur du présent décret demeurent valables sans réfection ; les dispenses prévues aux articles D. 1272-1 et D. 1272-4 leur sont applicables. » Coordination : dans D1273-9 proposé, remplacer « D. 1272-1 à D. 1272-5 » par « D. 1272-1 à D. 1272-4 ». Si l'affiliation au régime agricole devait être conservée, l'ajouter au 1° de D1272-1 plutôt que de maintenir une seconde liste. Résultat : une seule liste, moins de mentions, aucune formalité de remplacement, documents antérieurs conservés."
+  },
+  {
+   "sample_id": "P389", "code": "travail", "number": "R1221-39", "source_id": "LEGIARTI000048286387", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Modalités de remise (papier à date certaine ou électronique sous trois conditions) maintenues ; R1221-34, R1221-36, R1221-37 et R1221-40 proposés ainsi que L1221-5-1 proposé y renvoient de façon cohérente. Rien à signaler.",
+   "evidence": "travail R1221-39 LEGIARTI000048286387 (source maintenue) : « 3° L'employeur conserve un justificatif de la transmission ou de la réception de ces informations. »",
+   "links_read": ["travail R1221-34 LEGIARTI000048288642 (proposition)", "travail R1221-36 LEGIARTI000048286381 (proposition)", "travail L1221-5-1 LEGIARTI000047285930 (proposition)", "travail R1221-37 LEGIARTI000048286383, R1221-40 LEGIARTI000048286389 (propositions)"],
+   "links_not_read": "R1221-35 ; directive (UE) 2019/1152 (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P409", "code": "cch", "number": "D134-52", "source_id": "LEGIARTI000043818862", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Dispositifs de sécurité des piscines maintenus ; D134-51, D134-54 proposé (modèle d'attestation rendu facultatif, renvoi aux II et III conservé) et L134-10 concordent. Rien à signaler.",
+   "evidence": "cch D134-52 LEGIARTI000043818862 (source maintenue) : « II. - Ce dispositif est constitué par une barrière de protection, une couverture, un abri ou une alarme »",
+   "links_read": ["cch D134-51 LEGIARTI000043818859 (maintenu)", "cch D134-54 LEGIARTI000043818866 (proposition)", "cch L134-10 LEGIARTI000041566140 (maintenu)"],
+   "links_not_read": "D134-53 ; normes NF publiées au JO (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P429", "code": "travail", "number": "R3332-1", "source_id": "LEGIARTI000018533158", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Annexe d'information du règlement du PEE maintenue ; L3332-7 maintenu et R3332-4 proposé (dépôt devenu facultatif, annexes critères/liste conservées) sont cohérents. Rien à signaler.",
+   "evidence": "travail R3332-1 LEGIARTI000018533158 (source maintenue) : « Le règlement du plan d'épargne d'entreprise comporte, en annexe, les critères de choix et la liste des instruments de placement ainsi que les notices »",
+   "links_read": ["travail L3332-7 LEGIARTI000038589731 (maintenu)", "travail R3332-4 LEGIARTI000047171329 (proposition)"],
+   "links_not_read": "L3332-27, R3332-2, R3332-3.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P449", "code": "css", "number": "D632-7", "source_id": "LEGIARTI000041921873", "status": "rewrite_draft",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Suppression du pouvoir particulier d'opposition du ministre du budget ; L632-3 (base légale, maintenue) n'exige que l'approbation par arrêté ministériel, conservée. D632-8 n'existe pas en vigueur. Rien à signaler.",
+   "evidence": "css D632-7 LEGIARTI000041921873 (proposition) : « Le règlement prévu à l'article L. 632-3 est approuvé par arrêté du ministre chargé de la sécurité sociale. » ; css L632-3 LEGIARTI000036378240 (maintenu) : « règlement du Conseil de la protection sociale des travailleurs indépendants approuvé par arrêté ministériel. »",
+   "links_read": ["css L632-3 LEGIARTI000036378240 (maintenu)", "css D632-6 LEGIARTI000041966739 (proposition)"],
+   "links_not_read": "L612-1 et suivants (CPSTI) ; règlement du régime invalidité-décès (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P469", "code": "travail", "number": "R1225-4", "source_id": "LEGIARTI000023417352", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Liste des six expositions ouvrant la garantie de rémunération maintenue ; L1225-14 est maintenu avec ses trois alinéas, le renvoi au « troisième alinéa » reste exact ; L1225-12 maintenu. Rien à signaler.",
+   "evidence": "travail R1225-4 LEGIARTI000023417352 (source maintenue) : « Pour bénéficier de la garantie de rémunération prévue au troisième alinéa de l'article L. 1225-14 » ; travail L1225-14 LEGIARTI000006900893 (maintenu, troisième alinéa) : « La salariée bénéficie d'une garantie de rémunération pendant la suspension du contrat de travail »",
+   "links_read": ["travail L1225-14 LEGIARTI000006900893 (maintenu)", "travail L1225-12 LEGIARTI000006900891 (maintenu)"],
+   "links_not_read": "css L333-1 (proposition), travail L1226-1.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P489", "code": "urba", "number": "R213-30", "source_id": "LEGIARTI000025266967", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Extension aux communes associées et déléguées maintenue ; R213-27 proposé (renvoi à la loi de 1982 remplacé par la consultation « légalement requise »), R213-28 maintenu, R213-29 proposé (annexe supprimée) et R219-7 restent cohérents. Coquille héritée sans effet (« issu de même loi »). Rien à signaler.",
+   "evidence": "urba R213-30 LEGIARTI000025266967 (source maintenue) : « lorsqu'il y a lieu à la consultation des conseils ou commissions consultatifs en application des articles L. 2113-17 à L. 2113-20 du code général des collectivités territoriales »",
+   "links_read": ["urba R213-27 LEGIARTI000006817783 (proposition)", "urba R213-28 LEGIARTI000006817785 (maintenu)", "urba R213-29 LEGIARTI000006817787 (proposition)", "urba R219-7 LEGIARTI000049851566 (maintenu)"],
+   "links_not_read": "CGCT L2113-17 à L2113-20 (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P509", "code": "travail", "number": "L6351-8", "source_id": "LEGIARTI000021343618", "status": "retained_unchanged",
+   "verdict": "m", "families": ["F10"], "origin": "notes du projet périmées",
+   "description": "Habilitation maintenue, sans défaut normatif : la suppression du bilan pédagogique et financier (L6352-11 proposé) est désormais répercutée dans L6351-6, L6351-7, L6351-7-1, R6351-9, R6351-13 et R6351-14 proposés. Mais les notes de revue de L6351-8 affirment encore une coordination « encore ouverte » et décrivent R6351-9, R6351-13 et R6351-14 comme conservant le circuit du bilan, ce qui est faux en production. Notes seulement.",
+   "evidence": "travail L6351-8 LEGIARTI000021343618 (notes de revue) : « Coordination nécessaire encore ouverte : R6351-9 conserve « recettes figurant dans le dernier bilan pédagogique et financier » ; R6351-13 et R6351-14 1°, 2° et 5° conservent le circuit du bilan. » ; travail R6351-9 LEGIARTI000022257953 (proposition) : « les recettes du dernier exercice comptable clos à la date du contrôle » ; travail R6351-13 LEGIARTI000043764879 (proposition) : « Ce téléservice permet aux prestataires mentionnés à l'article L. 6351-1 d'accomplir la déclaration mentionnée à l'article L. 6351-2. »",
+   "links_read": ["travail L6351-1 LEGIARTI000037386232 (maintenu)", "travail L6351-6 LEGIARTI000021343608, L6351-7 LEGIARTI000021343620, L6351-7-1 LEGIARTI000021343604 (propositions)", "travail L6352-11 LEGIARTI000037386206 (proposition)", "travail R6351-9 LEGIARTI000022257953, R6351-13 LEGIARTI000043764879, R6351-14 LEGIARTI000052016225 (propositions)"],
+   "links_not_read": "R6351-15 à R6351-17, R6352-22 à R6352-24, L6351-2 à L6351-5.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P529", "code": "cch", "number": "D331-26", "source_id": "LEGIARTI000038975165", "status": "rewrite_draft",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Récupération des subventions maintenue, avec exclusion du seul motif tiré du rapport annuel supprimé ; D331-25-1 proposé supprime effectivement ce rapport et neutralise sa sanction. Rien à signaler.",
+   "evidence": "cch D331-26 LEGIARTI000038975165 (proposition) : « le défaut de transmission du rapport annuel spécifique supprimé à l'article D. 331-25-1 ne peut, à lui seul, fonder une demande de remboursement de la subvention » ; cch D331-25-1 LEGIARTI000046332092 (proposition) : « Les organismes visés à l'article D. 331-14 ne sont pas tenus de présenter un rapport annuel spécifique au titre du présent article. »",
+   "links_read": ["cch D331-25-1 LEGIARTI000046332092 (proposition)", "cch D331-24 et D331-25 (abrogés en 2022, aucune version en vigueur)"],
+   "links_not_read": "D331-7, D331-14, D331-16, L342-14.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P549", "code": "cch", "number": "R254-5", "source_id": "LEGIARTI000032792438", "status": "retained_unchanged",
+   "verdict": "m", "families": ["F7"], "origin": "hérité (consolidation LEGI) ; non réparé",
+   "description": "Le plafond de cession des droits réels du bail réel immobilier repose sur deux formules qui n'existent dans le texte consolidé que sous forme d'images, remplacées par une phrase éditoriale renvoyant au fac-similé du JO. Le projet maintient l'article tel quel, alors que ses notes ont transcrit la formule. Texte amputé mais contenu retrouvable au JO : défaut mineur, hérité.",
+   "evidence": "cch R254-5 LEGIARTI000032792438 (source maintenue) : « Lors de la cession l'année N, la valeur du droit réel est calculée selon la formule suivante : Vous pouvez consulter l'image dans le fac-similé du JO n º 0150 du 29/06/2016, texte n º 48 » ; notes de revue : « Conserver V_N = VL_N * (1 - (1 + t_N)^(-n)) / t_N et le rapport loyer annuel moyen/vente moyenne »",
+   "links_read": ["cch R254-4 LEGIARTI000032792434 (proposition)", "cch L254-1 LEGIARTI000031009463 (proposition)", "a3 2 terdecies D LEGIARTI000054364082 (proposition)"],
+   "links_not_read": "Loi n° 89-462 articles 17 et 17-2, décret n° 2013-803 (hors corpus) ; R254-6.",
+   "known_objection": "RT-DOC-03 (à confirmer, P2) : R254-5 classé parmi les pièces « récupérées sur fac-similé officiel » ; la transcription en texte n'est pas entrée dans la proposition.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "P569", "code": "css", "number": "L755-22", "source_id": "LEGIARTI000031324160", "status": "retained_unchanged",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Allocation de rentrée scolaire outre-mer maintenue ; L751-1 (et sa version du 1er janvier 2028 ajoutant Mayotte, sans proposition, que le renvoi absorbe) et R755-14 concordent. Rien à signaler.",
+   "evidence": "css L755-22 LEGIARTI000031324160 (source maintenue) : « L'allocation de rentrée scolaire est attribuée dans les collectivités mentionnées à l'article L. 751-1. »",
+   "links_read": ["css L751-1 LEGIARTI000031323778 (maintenu) et LEGIARTI000054466946 (VIGUEUR_DIFF 2028-01-01)", "css R755-14 LEGIARTI000006753206 (maintenu)"],
+   "links_not_read": "R543-1 à R543-7, L543-1, R755-14-1.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P589", "code": "css", "number": "R351-14", "source_id": "LEGIARTI000053335633", "status": "rewrite_draft",
+   "verdict": "m", "families": [], "origin": "introduit par le projet",
+   "description": "Suppression de la fenêtre de dépôt octobre-décembre pour les sportifs de haut niveau, cohérente avec le 9° de R351-12 (toutes versions) et le 7° de L351-3. Doute raisonnable sur l'échéance de décision : en déplaçant le « 30 avril » à « l'année suivant celle du dépôt » tout en ouvrant le dépôt à tout moment, le délai d'instruction garanti passe de quatre à sept mois (source) à une durée variable de quatre à seize mois selon le mois de dépôt ; la garantie de réponse rapide est affaiblie sans décision explicite. Pas de contradiction ni de perte de droit.",
+   "evidence": "css R351-14 LEGIARTI000053335633 (proposition) : « peuvent déposer une demande auprès de la Caisse nationale d'assurance vieillesse à tout moment après la fin de cette année. [...] informe les intéressés de sa décision avant le 30 avril de l'année suivant celle du dépôt. » ; source : « Entre le 1er octobre et le 31 décembre de chaque année [...] informe les intéressés de sa décision avant le 30 avril de l'année suivante. »",
+   "links_read": ["css R351-12 LEGIARTI000054167657, LEGIARTI000054060166 et LEGIARTI000054425288 (propositions, 9°)", "css L351-3 LEGIARTI000053279221 et LEGIARTI000051288449 (propositions, 7°)"],
+   "links_not_read": "Arrêté fixant la liste des pièces justificatives ; code du sport L221-2 (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P609", "code": "travail", "number": "R1221-36", "source_id": "LEGIARTI000048286381", "status": "rewrite_draft",
+   "verdict": "0", "families": [], "origin": null,
+   "description": "Informations du salarié envoyé à l'étranger réécrites à droit constant, avec précision utile pour le contrat unique (la durée prévue ne fixe pas le terme) ; R1221-34 et L1221-5-1 proposés, R1221-37, R1221-39 et R1221-40 concordent. Rien à signaler.",
+   "evidence": "travail R1221-36 LEGIARTI000048286381 (proposition) : « Pour les contrats uniques conclus à compter de l'entrée en vigueur de la loi les instituant, la durée prévue au 1° du I est celle du travail à l'étranger et ne fixe pas le terme du contrat de travail. »",
+   "links_read": ["travail R1221-34 LEGIARTI000048288642 (proposition)", "travail L1221-5-1 LEGIARTI000047285930 (proposition)", "travail R1221-37 LEGIARTI000048286383, R1221-39 LEGIARTI000048286387, R1221-40 LEGIARTI000048286389"],
+   "links_not_read": "Directives 96/71/CE et 2014/67/UE (hors corpus) ; R1221-35.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P629", "code": "cch", "number": "L222-3", "source_id": "LEGIARTI000006824486", "status": "rewrite_draft",
+   "verdict": "m", "families": ["F10"], "origin": "notes du projet périmées",
+   "description": "Réécriture à droit constant correcte (nullité réservée au maître de l'ouvrage, inopposabilité rattachée à la nullité, a à h conservés) ; L222-2, L222-6 et L222-7 proposés cohérents. Le renvoi erroné de L242-2 (« sixième alinéa, e » pour désigner la garantie du h) est réparé dans L242-2 proposé, mais les notes de L222-3 affirment encore que « le brouillon de L242-2 reproduit l'erreur ». Notes seulement.",
+   "evidence": "cch L222-3 LEGIARTI000006824486 (notes de revue) : « Coordination hors lot nécessaire dans L242-2 : « La nature des garanties énoncées à l'article L. 222-3, sixième alinéa, e » désigne les modalités de financement e et non la garantie h ; le brouillon de L242-2 reproduit l'erreur. » ; cch L242-2 LEGIARTI000038433476 (proposition) : « La nature et les modalités de la garantie énoncée au h de l'article L. 222-3 ; »",
+   "links_read": ["cch L242-2 LEGIARTI000038433476 (proposition)", "cch L222-2 LEGIARTI000006824485 (proposition)", "cch L222-6 LEGIARTI000006824491 (proposition)", "cch L222-7 LEGIARTI000006824492 (proposition)", "cch R222-2 LEGIARTI000039041821 (maintenu)"],
+   "links_not_read": "R222-4 à R222-9, L212-10, L213-6.",
+   "known_objection": null, "suggested_correction": null
+  }
+ ]
+}

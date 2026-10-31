@@ -1,0 +1,147 @@
+{
+ "group": "VD04",
+ "read_from": "production",
+ "read_on": "2026-10-31",
+ "method": "Chaque article lu en entier avec CITE_PRODUCTION=1 python3 -I tools/cite.py (source officielle au 18 octobre 2026 et proposition du projet), ainsi que les articles visés par le défaut dans leurs deux versions. Base de production ouverte seulement en lecture seule (mode=ro, query_only) pour les recherches de numéros et d'occurrences. Sources primaires Légifrance consultées le 31 octobre 2026 pour la loi n° 78-17 et pour CCH L541-6. Aucun autre défaut qualifié, aucune correction proposée. Revue IA : ce n'est pas une validation par un juriste.",
+ "items": [
+  {
+   "code": "a3",
+   "source_id": "LEGIARTI000049642303",
+   "number": "361",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "LEGIARTI000049642303 (a3 361, source) : « Les versements effectués au titre de la seconde phrase du quatrième alinéa du 2 de l'article 1663 du code général des impôts ». CGI 1663 en vigueur LEGIARTI000033812134 (2019-01-01→) : le 2 compte trois alinéas (« 2. Le déménagement hors du ressort… », « En cas de déménagement à l'étranger… », « Leur paiement peut toutefois être différé… ») ; la phrase visée est la seconde du premier alinéa du 3 : « 3. En cas de cession ou de cessation d'entreprise … Par exception, le montant dû par les sociétés ayant opté pour le régime du II de l'article 208 C … est exigible le 15 décembre de l'année d'option pour le quart de son montant ». Version antérieure LEGIARTI000022178428 (2010-05-01→2019-01-01) : cette phrase figurait bien au quatrième alinéa du 2.",
+   "evidence_project": "Proposition a3 361 (rewrite_draft, LEGIARTI000049642303) : « Les versements effectués au titre de la seconde phrase du premier alinéa du 3 de l'article 1663 du code général des impôts sont accompagnés d'un relevé daté ». Proposition CGI 1663 (LEGIARTI000033812134) : le 3 est repris à l'identique, première alinéa, seconde phrase : « Par exception, le montant dû par les sociétés ayant opté pour le régime du II de l'article 208 C … est exigible le 15 décembre de l'année d'option pour le quart de son montant » ; ses notes de revue précisent « sans déplacer la seconde phrase du premier alinéa du 3, cible exacte du 361 de l'annexe III proposé ».",
+   "note": "Renvoi décalé confirmé dans le texte officiel (ordonnance n° 2017-1390, restructuration du 2 et création du 3 de 1663). La proposition corrige le renvoi et la cible proposée conserve la structure visée. Le second alinéa de 361 (prélèvement du II ter de 208 C) n'est pas concerné par le défaut décrit."
+  },
+  {
+   "code": "cch",
+   "source_id": "LEGIARTI000039048914",
+   "number": "Annexe I à l'article D353-200",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "oui",
+   "gross": "oui",
+   "evidence_official": "LEGIARTI000039048914 (source), article 3 : « Le prix mensuel du loyer maximum visé à l'article D. 353-208 est fixé à ... F le mètre carré : Variante n° 1 (organisme d'habitations à loyer modéré) : de surface corrigée (2) et (3) » ; article 1er : « financé au moyen de prêts prévus par la sous-section 4 bis de la section II du chapitre Ier du titre III du livre III du code de la construction et de l'habitation et décret dans le document joint à la présente convention ». D353-208 LEGIARTI000039048515 (source) : « dont la valeur est fixée, pour les organismes d'habitations à loyer modéré, au mètre carré de surface utile, résultant de l'application du 1° et du 2° de l'article D. 353-16, ou, pour les autres bailleurs, au mètre carré de surface habitable ». D353-200 LEGIARTI000039006337 (source) : « doivent être conformes à la convention type reproduite en annexe du présent code ».",
+   "evidence_project": "Proposition Annexe I (rewrite_draft, LEGIARTI000039048914) : la contradiction principale est corrigée, article 3 : « Variante n° 1 (organisme d'habitations à loyer modéré) : de surface utile déterminée conformément à l'article D. 353-208 » (D353-208 et D353-200 sont retained_unchanged). Mais la proposition conserve « est fixé à ... F le mètre carré » et, variante n° 2, « fixé à ... F annuels le mètre carré », ainsi que la phrase de l'article 1er « et décret dans le document joint à la présente convention » ; ses notes de revue le reconnaissent : « Le mot “décret” à l'article 1 paraît une coquille pour “décrit” : laissé sans correction silencieuse » et « celles sur les appels de notes manquants et les unités historiques F restent ouvertes ».",
+   "note": "Dans le texte officiel les trois éléments décrits (francs, phrase incohérente, surface corrigée contre surface utile) sont présents. Dans le projet, la contradiction F5 avec D353-208 est levée pour les conventions nouvelles, mais les deux défauts F7 (montants en francs, phrase « et décret dans le document joint ») subsistent à la lettre de la convention type proposée ; c'est pourquoi present_project = oui, à portée réduite."
+  },
+  {
+   "code": "cch",
+   "source_id": "LEGIARTI000038982593",
+   "number": "D442-7",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "oui",
+   "gross": "oui",
+   "evidence_official": "LEGIARTI000038982593 (D442-7, source) : « Les paiements effectués antérieurement par les associés à titre d'apport sont affectés d'un coefficient annuel de réévaluation figurant en annexe au présent code. » D442-8 LEGIARTI000039048689 : « Le remboursement de l'apport, réévalué comme il est indiqué à l'article D. 442-7 ». D443-25 LEGIARTI000039048669 : « sont affectées d'un coefficient annuel de réévaluation figurant en annexe au présent code ». Base de production (lecture seule) : 201 articles « Annexe… » dans le CCH, aucun ne contient « coefficient annuel de réévaluation » ni ne vise D442-7/D443-25 ; les seules occurrences de l'expression sont R442-7 (TRANSFERE), R443-25 (TRANSFERE), D442-7 et D443-25.",
+   "evidence_project": "D442-7 : status=retained_unchanged, « (no proposed body) » ; D442-8, D443-24 et D443-25 également retained_unchanged. Notes de revue de D442-7 : « L'annexe contenant les coefficients n'a pas été identifiée dans le corpus fourni » ; de D443-25 : « Point non vérifiable : table annuelle annexée non identifiée dans le corpus disponible ». Aucune proposition du CCH ne contient « coefficient annuel de réévaluation » (recherche dans drafts.proposed_xml).",
+   "note": "Le renvoi à une annexe introuvable dans le code subsiste tel quel dans le projet, qui maintient les quatre articles concernés sans neutralisation ; le projet lui-même constate l'absence de l'annexe. Réserve : l'annexe de coefficients a pu exister comme table non codifiée (décret de 1978) hors de la table articles LEGI ; à la lettre du code, le renvoi est mort. Portée pratique faible (cohorte historique antérieure au 23 mars 1973)."
+  },
+  {
+   "code": "cch",
+   "source_id": "LEGIARTI000041586641",
+   "number": "L541-6",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "LEGIARTI000041586641 (source) : « Lorsqu'un immeuble frappé d'un arrêté pris en application des articles L. 184-1-3 ou l'article L. 511-11 du présent code ou le fonds de commerce qui y est exploité aux fins d'hébergement font l'objet d'une mutation ». Base de production : les seuls numéros L184-* du CCH sont L184-1 à L184-9 ; cite.py : « NOT FOUND cch L184-1-3 ». L184-1 LEGIARTI000041571395 : « Dans le cas où un établissement recevant du public est à usage total ou partiel d'hébergement et le maire a prescrit, par arrêté, à l'exploitant et au propriétaire les mesures nécessaires ». Légifrance (consulté le 31 octobre 2026, article en vigueur depuis le 1er juillet 2021) affiche le même texte « des articles L. 184-1-3 ou l'article L. 511-11 ».",
+   "evidence_project": "Proposition L541-6 (rewrite_draft) : « Lorsqu'un immeuble frappé d'un arrêté pris en application de l'article L. 184-1 ou de l'article L. 511-11 du présent code ou le fonds de commerce qui y est exploité aux fins d'hébergement font l'objet d'une mutation, le notaire qui dresse l'acte notifie sans délai cette mutation à l'auteur de l'arrêté. » Motif : « Coordination expresse du renvoi inexistant L184-1-3 vers L184-1 ». L184-1 est retained_unchanged.",
+   "note": "Renvoi mort et syntaxe défectueuse confirmés dans le texte officiel ; le projet renvoie à L. 184-1, article qui fonde bien l'arrêté du maire (L184-2 et L184-3, lus, parlent de « l'arrêté prévu à l'article L. 184-1 »). La question de savoir si le texte officiel voulait viser « L. 184-1 à L. 184-3 » n'est pas tranchée ici et ne change pas la réponse."
+  },
+  {
+   "code": "cch",
+   "source_id": "LEGIARTI000039043181",
+   "number": "R423-20",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "LEGIARTI000039043181 (R423-20, source) : « Le comptable de l'office public de l'habitat est un comptable de la direction générale des finances publiques ayant la qualité de comptable principal. » R423-19 LEGIARTI000039043183 : « applicable aux offices publics de l'habitat soumis aux règles de la comptabilité publique ». R423-2 LEGIARTI000039043257 : « La délibération du conseil d'administration arrêtant le choix de l'office en application de l'article L. 421-17 ». R423-3 LEGIARTI000039043247 : « Lorsque l'office opte pour le régime de la comptabilité publique ». L421-17 en vigueur LEGIARTI000037668522 (2021-01-01→) : « En matière de gestion financière et comptable, les offices publics de l'habitat sont soumis aux règles applicables aux entreprises de commerce. » ; version antérieure LEGIARTI000006825231 : « soit aux règles applicables aux entreprises de commerce, soit aux règles de la comptabilité publique ». L421-19 LEGIARTI000006825233 et L421-20 LEGIARTI000028808799 : state=ABROGE, valid_until 2021-01-01.",
+   "evidence_project": "Proposition R423-20 : corps source conservé puis « les dispositions du présent article s'appliquent uniquement aux opérations afférentes aux périodes de comptabilité publique qui demeurent légalement soumises à ce régime … Elles ne rétablissent pas de régime de comptabilité publique pour la gestion courante des offices soumise à l'article L. 421-17. » Proposition R423-19 : même cantonnement. Proposition R423-2 : « Le présent article est abrogé … Ils ne peuvent servir à instaurer un choix nouveau entre comptabilité publique et comptabilité commerciale, l'article L. 421-17 imposant cette dernière depuis le 1er janvier 2021. » Proposition R423-3 : « Le présent article est abrogé … Aucune entrée nouvelle en comptabilité publique ne peut être préparée sur le fondement du présent article. »",
+   "note": "Le texte officiel maintient un régime réglementaire (option, comptable DGFiP, GBCP) sans base légale depuis 2021 : défaut F1/F4 confirmé. Le projet abroge l'option (R423-2, R423-3) et cantonne R423-19/R423-20 aux périodes résiduelles ; la contradiction avec L421-17 est donc neutralisée. Les dispositions transitoires non codifiées de la loi ELAN n'ont pas été lues (hors corpus) ; L421-12 proposé n'a pas été lu."
+  },
+  {
+   "code": "cgi",
+   "source_id": "LEGIARTI000042912650",
+   "number": "217 duodecies",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "oui",
+   "gross": "oui",
+   "evidence_official": "LEGIARTI000042912650 (source), al. 2 : « à l'exception des investissements réalisés dans le secteur de la navigation de croisière conformément aux dispositions de la dernière phrase du cinquième alinéa du I du même article 217 undecies » ; al. 3 : « titulaire du titre de maître-restaurateur mentionné à l'article 244 quater Q ». CGI 217 undecies en vigueur LEGIARTI000046893133 (2026-01-01→), I, cinquième alinéa, dernière phrase : « La déduction prévue au premier alinéa du présent I s'applique également aux investissements mentionnés au I quinquies de l'article 199 undecies B, lorsque les conditions prévues au même I quinquies sont satisfaites » ; la phrase croisière est au milieu de l'alinéa : « s'applique également aux investissements mentionnés au I quater de l'article 199 undecies B … à hauteur de 20 % de leur coût de revient ». CGI 244 quater Q : dernier état LEGIARTI000044989456 state=ABROGE 2022-01-01→2023-01-01 ; seul article du CGI en vigueur citant encore « 244 quater Q » : 217 duodecies. 199 undecies B en vigueur LEGIARTI000046892900 : « titre de maître-restaurateur défini à l'article L. 122-21 du code de la consommation ».",
+   "evidence_project": "Proposition 217 duodecies, al. 2 : « conformément aux dispositions du cinquième alinéa du I du même article 217 undecies relatives à la détermination de l'assiette de la déduction pour les investissements dans le secteur de la navigation de croisière » (renvoi décalé corrigé ; le cinquième alinéa du I de la proposition 217 undecies est identique à la source). Al. 3 inchangé : « restaurants dont le dirigeant ou un salarié est titulaire du titre de maître-restaurateur mentionné à l'article 244 quater Q, restaurants de tourisme classés ». Proposition 199 undecies B : « titre de maître-restaurateur défini à l'article L. 122-21 du code de la consommation ».",
+   "note": "Des deux renvois défectueux décrits, le projet corrige le premier (phrase du cinquième alinéa) mais conserve le second : le renvoi à 244 quater Q, abrogé, et des mots entre guillemets qui ne figurent plus ainsi dans 199 undecies B (officiel comme proposé), lequel vise désormais L. 122-21 du code de la consommation. present_project = oui pour cette partie. Portée atténuée par le caractère résiduel du régime (investissements jusqu'au 31 décembre 2021, option transitoire)."
+  },
+  {
+   "code": "css",
+   "source_id": "LEGIARTI000006737331",
+   "number": "D532-2",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "LEGIARTI000006737331 (D532-2, source) : « Si les examens mentionnés à l'article L. 533-1 ne sont pas passés, en l'absence de motifs légitimes, l'organisme débiteur de prestations familiales suspend le versement de la prestation d'accueil du jeune enfant sur demande du médecin responsable du service départemental de protection maternelle et infantile. » L533-1 en vigueur LEGIARTI000017841360 (2007-12-22→) : « Le versement de la prime à la naissance est subordonné à la justification de la passation du premier examen prénatal médical obligatoire de la mère … Un décret définit les conditions dans lesquelles est produite cette justification. » Version antérieure LEGIARTI000006743337 (2003-12-19→2007-12-22) : « Le versement de l'allocation de base est subordonné à la passation des examens médicaux obligatoires prévus à l'article L. 2132-2 » ; « les conditions dans lesquelles la prestation d'accueil du jeune enfant est suspendue lorsque ces justifications ne sont pas fournies ».",
+   "evidence_project": "Proposition D532-2 : « Le présent article est abrogé à compter de l'entrée en vigueur de la présente réforme. Aucune suspension de la prestation d'accueil du jeune enfant ne peut être décidée ou poursuivie sur son seul fondement pour les périodes postérieures à cette date. » Proposition L533-1 : « Le présent article est abrogé … le seul défaut de réalisation ou de justification de cet examen ne peut davantage fonder une suspension de la prestation d'accueil du jeune enfant. »",
+   "note": "Décret sans base légale depuis la LFSS pour 2008 confirmé dans le texte officiel (la loi ne prévoit plus ni les examens de l'enfant ni la suspension). Le projet abroge D532-2 et L533-1 avec transition ; le défaut disparaît. D532-1 proposé (document médical de grossesse) non lu ici : hors du défaut décrit."
+  },
+  {
+   "code": "travail",
+   "source_id": "LEGIARTI000037481367",
+   "number": "D1441-24-3",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "LEGIARTI000037481367 (source) : « IV. – Les droits d'accès et de rectification prévus par les articles 39 et 40 de la loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés s'exercent auprès de la direction des services judiciaires. V. – Le droit d'opposition prévu à l'article 38 de la loi mentionnée au IV ne s'applique pas à ce traitement. » Loi n° 78-17 consolidée, Légifrance consulté le 31 octobre 2026 (texte en vigueur au 31/10/2026) : art. 38 (LEGIARTI000051671811) « Toute personne peut mandater une association régulièrement déclarée depuis cinq ans au moins » ; art. 39 (LEGIARTI000037822840) « Dans le cas où, saisie d'une réclamation dirigée contre un responsable de traitement ou son sous-traitant, la Commission nationale de l'informatique et des libertés » ; art. 40 (LEGIARTI000037822849) « Les infractions aux dispositions de la présente loi sont prévues par la section 5 du chapitre VI du titre II du livre II » ; art. 49 (LEGIARTI000043887429) « Le droit d'accès de la personne concernée s'exerce dans les conditions prévues à l'article 15 du règlement (UE) 2016/679 » ; art. 50 (LEGIARTI000037823122) « Le droit de rectification s'exerce dans les conditions prévues à l'article 16 du règlement (UE) 2016/679 » ; art. 56 (LEGIARTI000037823103) « Le droit d'opposition s'exerce dans les conditions prévues à l'article 21 du règlement (UE) 2016/679 ».",
+   "evidence_project": "Proposition D1441-24-3 : « IV. – Les personnes dont les données sont enregistrées disposent de droits d'accès et de rectification qu'elles exercent auprès de la direction des services judiciaires, dans les conditions de la législation relative à la protection des données à caractère personnel. V. – Le droit d'opposition ne s'applique pas à ce traitement, sous réserve des dispositions de rang supérieur relatives à la protection des données à caractère personnel. » Motif : « Coordination des renvois historiques aux articles 38 à 40 de la loi du 6 janvier 1978 : énoncé direct des droits d'accès et de rectification … sans nouvelle numérotation supposée. »",
+   "note": "Renvois décalés confirmés par la source primaire : depuis la renumérotation du 1er juin 2019, les articles 38, 39 et 40 visés n'ont plus de rapport avec les droits d'accès, de rectification et d'opposition (art. 49, 50 et 56). Le projet supprime les numéros d'articles au profit d'un renvoi matériel : le défaut n'y figure plus. La validité de l'exclusion du droit d'opposition au regard du RGPD (art. 23) n'est pas examinée ici."
+  },
+  {
+   "code": "travail",
+   "source_id": "LEGIARTI000018764871",
+   "number": "L5132-11",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "LEGIARTI000018764871 (source), al. 3 : « Le paiement des jours fériés est dû au salarié d'une association intermédiaire mis à disposition des employeurs mentionnés à l'article L. 2212-1 (1) dès lors que les salariés de cette personne morale en bénéficient. » NOTA : « (1) Transféré à l'article L. 2211-1 par loi n° 2008-67 du 21 janvier 2008, article 3-2°. » L2212-1 en vigueur LEGIARTI000033023348 (2016-08-10→) : « Les salariés et les employeurs ou leurs représentants peuvent bénéficier de formations communes visant à améliorer les pratiques du dialogue social dans les entreprises ». L2211-1 en vigueur LEGIARTI000018765556 (2008-05-01→) : « Les dispositions du présent livre sont applicables aux employeurs de droit privé ainsi qu'à leurs salariés. »",
+   "evidence_project": "Proposition L5132-11, al. 3 : « Les jours fériés sont payés au salarié d'une association intermédiaire mis à disposition d'un employeur mentionné à l'article L. 2211-1 dès lors que les salariés de cet employeur en bénéficient. » Proposition L2211-1 : « Le présent livre s'applique aux employeurs de droit privé et à leurs salariés. Il s'applique également : 1° Aux établissements publics à caractère industriel et commercial ; 2° Aux établissements publics à caractère administratif … ».",
+   "note": "Renvoi vers un numéro recyclé (L2212-1 régit depuis 2016 les formations communes au dialogue social) confirmé dans le texte officiel ; seul l'appel de note et le NOTA éditorial renseignent le lecteur. Le projet renvoie à L2211-1, dont la proposition conserve le champ visé. Défaut jugé grossier malgré le NOTA, qui n'a pas valeur normative."
+  },
+  {
+   "code": "travail",
+   "source_id": "LEGIARTI000036483964",
+   "number": "R4514-7",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "LEGIARTI000036483964 (source, 2018-01-01→) : « le comité social et économique de l'entreprise utilisatrice procède, dans le cadre de ses missions, aux inspections et enquêtes prévues aux articles L. 4612-4 et L. 4612-5, sur les lieux de travail temporairement occupés par des travailleurs d'entreprises extérieures » ; coquille « les installations et matériels des différentes entreprise ». L4612-4 LEGIARTI000006903304 : state=ABROGE 2008-05-01→2018-01-01 (« Le comité d'hygiène, de sécurité et des conditions de travail procède, à intervalles réguliers, à des inspections. ») ; L4612-5 LEGIARTI000006903305 : state=ABROGE 2008-05-01→2018-01-01 ; aucune version en vigueur.",
+   "evidence_project": "Proposition R4514-7 : « le comité social et économique de l'entreprise utilisatrice procède, dans le cadre de ses missions, aux inspections et enquêtes prévues à l'article L. 2312-13, sur les lieux de travail temporairement occupés par des travailleurs d'entreprises extérieures » ; coquille corrigée (« des différentes entreprises »). L2312-13 LEGIARTI000035609774, retained_unchanged : « Le comité social et économique procède, à intervalles réguliers, à des inspections en matière de santé, de sécurité et des conditions de travail. Il réalise des enquêtes en matière d'accidents du travail ou de maladies professionnelles ou à caractère professionnel. »",
+   "note": "Renvois vers deux articles abrogés le jour même de l'entrée en vigueur de la rédaction (ordonnance n° 2017-1386) confirmés dans le texte officiel. Le projet renvoie à L2312-13, qui reprend exactement les inspections et enquêtes visées."
+  },
+  {
+   "code": "urba",
+   "source_id": "LEGIARTI000006817595",
+   "number": "R211-4",
+   "flagged_in": "official",
+   "present_official": "oui",
+   "present_project": "non",
+   "gross": "oui",
+   "evidence_official": "LEGIARTI000006817595 (source, 1987-06-01→) : « La délibération prise en application du dernier alinéa de l'article L. 211-1 est affichée en mairie pendant un mois … Elle est notifiée, selon le cas, au lotisseur ou à la personne chargée de l'aménagement de la zone d'aménagement concerté. » et « La délibération prise en application du dernier alinéa de l'article L. 211-4 est affichée et publiée ». L211-1 en vigueur LEGIARTI000043978681 (2021-08-25→), dernier alinéa : « Par dérogation au premier alinéa du même article L. 210-1, le droit de préemption institué dans les conditions prévues au présent article peut être exercé en vue de la relocalisation d'activités » ; avant-dernier alinéa : « Lorsqu'un lotissement a été autorisé ou une zone d'aménagement concerté créée, la commune peut exclure du champ d'application du droit de préemption urbain ». Même structure dans la version LEGIARTI000037667080 (2018-11-25→2021-08-25). L211-4 en vigueur LEGIARTI000028810700 (2014-03-27→), dernier alinéa : « le représentant de l'Etat dans le département peut également décider, par arrêté motivé, d'appliquer le droit de préemption » ; avant-dernier : « Toutefois, par délibération motivée, la commune peut décider d'appliquer ce droit de préemption ».",
+   "evidence_project": "Proposition R211-4 : « La délibération qui exclut du champ du droit de préemption urbain les ventes de lots d'un lotissement autorisé ou les cessions de terrains par la personne chargée de l'aménagement d'une zone d'aménagement concerté, en application de l'article L. 211-1, est affichée en mairie pendant un mois » ; « La délibération motivée par laquelle la commune décide d'appliquer le droit de préemption urbain aux aliénations et cessions mentionnées à l'article L. 211-4 est affichée et publiée ». Proposition L211-1 : l'exclusion des lotissements/ZAC reste au quatrième alinéa (« la commune peut exclure du champ d'application du droit de préemption urbain … Cette exclusion n'est soumise à aucune limite légale de durée ») ; proposition L211-4 : « la commune peut, par une délibération motivée, soumettre à ce droit de préemption les aliénations et cessions mentionnées au présent article ».",
+   "note": "Les deux renvois décalés sont confirmés dans le texte officiel (depuis 2018 pour L211-1, 2014 pour L211-4 ; R211-4 inchangé depuis 1987). Le projet remplace les renvois par alinéa par la désignation matérielle des délibérations, cohérente avec les propositions de L211-1 et L211-4."
+  }
+ ],
+ "summary": {
+  "items": 11,
+  "present_official": {"oui": 11, "non": 0, "incertain": 0},
+  "present_project": {"oui": 3, "non": 8, "incertain": 0},
+  "gross": {"oui": 11, "non": 0},
+  "present_project_oui": ["LEGIARTI000039048914 (Annexe I à D353-200 : francs et phrase incohérente subsistent, contradiction de surface corrigée)", "LEGIARTI000038982593 (D442-7 : annexe introuvable, articles maintenus)", "LEGIARTI000042912650 (217 duodecies : renvoi à 244 quater Q abrogé conservé, renvoi décalé corrigé)"]
+ }
+}

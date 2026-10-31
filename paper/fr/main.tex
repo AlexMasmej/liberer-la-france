@@ -37,7 +37,7 @@ des agents d'IA réécrivent et vérifient cinq grands codes français}
 \maketitle
 
 \begin{abstract}
-Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets d'application, les annexes fiscales et des versions consolidées futures, qui se contredisent souvent. Nous présentons une preuve de concept dans laquelle des agents d'IA réécrivent, puis auditent de façon contradictoire, cinq grands codes français complets (code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation)~: 30\,317 entrées d'articles issues de la base officielle LEGI au 18~octobre 2026. Deux passes de rédaction ont produit 14\,115 articles réécrits et 16\,199 articles maintenus avec justification. Une troisième passe, conduite comme une \og red team \fg{} indépendante, a tenu un registre d'objections, appliqué environ 1\,250 corrections par un écrivain gardé et mesuré la fiabilité par six audits aléatoires stratifiés, menés à l'aveugle. Sur un échantillon frais de 632 articles, audités à l'aveugle sur les deux textes et chaque défaut contesté vérifié, des auditeurs IA trouvent un défaut grossier dans 7,8\,\%\,$\pm$\,2,1 des textes officiels, contre 4,4\,\%\,$\pm$\,1,6 du droit réécrit (test apparié, $p \approx 5\times10^{-4}$)~: quatre défauts officiels réparés, surtout des renvois morts, pour un introduit. Une comparaison sur 1\,879 articles concorde (7,0 contre 4,6\,\%). Les balayages ciblés corrigent la famille qu'ils visent sans faire bouger le taux mesuré~; une lecture systématique, chapitre par chapitre, des 2\,740 articles fiscaux réécrits a trouvé 96 défauts grossiers (3,5\,\%), dont 86 ont été corrigés. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est une initiative indépendante et la méthode est neutre quant aux choix politiques. Ces résultats, produits et mesurés par des agents d'IA seuls, sont publiés avec textes, outils et verdicts pour que juristes et citoyens les vérifient et les consolident.
+Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets d'application, les annexes fiscales et des versions consolidées futures, qui se contredisent souvent. Des agents d'IA réécrivent, puis auditent de façon contradictoire, cinq grands codes français complets (code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation)~: 30\,317 entrées d'articles issues de la base officielle LEGI au 18~octobre 2026. Deux passes de rédaction ont produit 14\,115 articles réécrits et 16\,199 articles maintenus avec justification. Une troisième passe, en \og red team \fg{} indépendante, a tenu un registre d'objections, appliqué environ 1\,290 corrections et mesuré la fiabilité par six audits aléatoires stratifiés à l'aveugle. Sur deux échantillons frais totalisant 1\,264 articles, audités à l'aveugle sur les deux textes et chaque défaut contesté vérifié, des auditeurs IA trouvent un défaut grossier dans 7,5\,\%\,$\pm$\,1,5 des textes officiels, contre 3,5\,\%\,$\pm$\,1,0 du droit réécrit actuel (test apparié, $p \approx 2\times10^{-10}$)~: 60 défauts officiels réparés, surtout des renvois morts, pour 9 introduits. Une comparaison sur 1\,879 articles concorde (7,0 contre 4,6\,\%). Les balayages ciblés corrigent une famille à la fois sans faire bouger le taux mesuré~; une lecture systématique des 2\,740 articles fiscaux réécrits a trouvé 96 défauts grossiers et en a corrigé 86. Le projet a coûté environ 1\,400~dollars~; le même travail par des juristes se chiffrerait en millions d'euros. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est une initiative indépendante et la méthode est neutre quant aux choix politiques. Ces résultats, produits et mesurés par des agents d'IA seuls, sont publiés avec textes, outils et verdicts pour que juristes et citoyens les vérifient et les consolident.
 \end{abstract}
 
 \section{Introduction}
@@ -85,7 +85,8 @@ Le second objectif est le principal intérêt scientifique. Réformer un code es
     \item un écrivain gardé qui ne peut rien écraser sans contrôle (\S\ref{sec:redteam}).
   \end{itemize}
   \item Une méthode de mesure~: six audits aléatoires stratifiés, menés à l'aveugle, avec une taxonomie de dix familles de défauts (F1 à F10). Le taux s'accompagne d'un intervalle de confiance, pas d'une anecdote (\S\ref{sec:measure}).
-  \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte d'un tiers à près de moitié moins de défauts grossiers que le droit qu'il remplace~: 4,6\,\% contre 7,0\,\% sur 1\,879 articles, et 4,4\,\% contre 7,8\,\% sur un échantillon frais de 632 articles du texte actuel (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
+  \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte moins de défauts grossiers que le droit qu'il remplace~: 4,6\,\% contre 7,0\,\% sur 1\,879 articles à la date des audits, et 3,5\,\% contre 7,5\,\%, soit moins de la moitié, sur deux échantillons frais de 1\,264 articles du texte actuel (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
+  \item Une comparaison de coût~: environ 1\,400~dollars déboursés, 3\,500 à 5\,100~dollars au prix de l'API, contre un ordre de grandeur de plusieurs millions d'euros pour le même travail par des juristes (\S\ref{sec:cost}).
   \item Des constats empiriques sur ce que les agents d'IA font bien et mal en matière de cohérence juridique (\S\ref{sec:results}--\S\ref{sec:discussion})~:
   \begin{itemize}
     \item les balayages mécaniques atteignent un plateau~;
@@ -238,7 +239,7 @@ La seconde passe s'est achevée le 29~octobre, avec l'acceptation des 30\,314 id
 \section{Red team indépendante (troisième passe)}
 \label{sec:redteam}
 
-La troisième passe a utilisé un autre système~: Claude Code d'Anthropic (Claude Opus 5.5). Un agent coordinateur a lancé environ 390 sous-agents en cinq jours. Il a travaillé comme un relecteur \emph{indépendant}, sous des règles strictes~:
+La troisième passe a utilisé un autre système~: Claude Code d'Anthropic (Claude Opus 5.5~; le dernier cycle, l'audit 8 et ses corrections, a tourné sur Claude Fable 5.1). Un agent coordinateur a lancé environ 390 sous-agents en cinq jours. Il a travaillé comme un relecteur \emph{indépendant}, sous des règles strictes~:
 \begin{itemize}
   \item lecture seule de la production, sur des instantanés figés dont tous les fichiers sont empreintés~;
   \item citations exactes, avec identifiant de version, pour toute affirmation~;
@@ -359,9 +360,9 @@ Enfin, nous avons lu chaque article réécrit du CGI et de ses annexes, là où 
 
 \subsection{Corrections appliquées}
 
-En six jours, la troisième passe a appliqué \textbf{1\,249 lignes de correction sur 1\,178 articles distincts}~:
+En six jours, la troisième passe a appliqué \textbf{1\,285 lignes de correction sur 1\,211 articles distincts}~:
 \begin{itemize}
-  \item 992 remplacements de propositions existantes~;
+  \item 1\,028 remplacements de propositions existantes~;
   \item 257 propositions nouvelles sur des versions futures publiées, qui auraient sinon rétabli le texte d'avant la réforme à leur entrée en vigueur.
 \end{itemize}
 Chaque ligne a été validée par le validateur du projet et archivée avec ses empreintes avant et après. Les 321 tests du projet passent après chaque tour. Le tableau~\ref{tab:rounds} détaille les lignes par origine.
@@ -383,6 +384,7 @@ Tour 5 (audit 5 et balayage fiscal) & 548 pistes $\rightarrow$ 114 G & 97\\
 Tour 6 (audit 6 et chapitres entiers) & 365 pistes $\rightarrow$ 25 G & 110\\
 Lecture systématique, CGI et annexes & 2\,740 articles $\rightarrow$ 96 G & 81\\
 Défauts de l'échantillon apparié encore présents & 52 articles $\rightarrow$ 28 G & 27\\
+Défauts du premier échantillon frais encore présents & 28 articles $\rightarrow$ 28 G & 36\\
 \bottomrule
 \end{tabularx}
 \caption{Corrections appliquées par la troisième passe, par origine. Les nombres viennent des rapports de chaque tour~; la ligne \og $\approx$ \fg{} regroupe de petits ensembles de corrections.}
@@ -408,9 +410,10 @@ Audit (état du texte) & Échantillon & G & Taux G & G ou m\\
 Ensemble, audits 1 à 6 & 1\,879 & 64 & \textbf{3,4\,\% $\pm$ 0,8} & \\
 \midrule
 7 (échantillon frais, texte actuel) & 632 & 15 & 2,4\,\% $\pm$ 1,2 & 20,7\,\%\\
+8 (second échantillon frais, texte actuel) & 632 & 9 & 1,4\,\% $\pm$ 0,9 & 12,3\,\%\\
 \bottomrule
 \end{tabular}
-\caption{Sept audits aléatoires indépendants, menés à l'aveugle (verdicts bruts). Chaque échantillon exclut tous les articles déjà lus. L'audit 7 est le côté \og texte réécrit \fg{} de l'audit apparié frais (\S\ref{sec:fresh})~; ses auditeurs savaient explicitement qu'un défaut hérité du texte officiel compte.}
+\caption{Sept audits aléatoires indépendants, menés à l'aveugle (verdicts bruts). Chaque échantillon exclut tous les articles déjà lus. Les audits 7 et 8 sont le côté \og texte réécrit \fg{} des audits appariés frais (\S\ref{sec:fresh})~; leurs auditeurs savaient explicitement qu'un défaut hérité du texte officiel compte. L'audit 8 a tourné sur un autre modèle (Fable 5.1).}
 \label{tab:audits}
 \end{table}
 
@@ -420,22 +423,23 @@ Ensemble, audits 1 à 6 & 1\,879 & 64 & \textbf{3,4\,\% $\pm$ 0,8} & \\
 \begin{axis}[
   width=0.82\linewidth, height=5.2cm,
   xlabel={Audit}, ylabel={Taux de défauts grossiers (\%)},
-  xmin=0.5, xmax=7.5, ymin=0, ymax=10,
-  xtick={1,2,3,4,5,6,7}, ytick={0,2,4,6,8,10},
+  xmin=0.5, xmax=8.5, ymin=0, ymax=10,
+  xtick={1,2,3,4,5,6,7,8}, ytick={0,2,4,6,8,10},
   grid=major, grid style={gray!20},
 ]
 \addplot+[only marks, mark=*, black, error bars/.cd, y dir=both, y explicit]
   coordinates {(1,4.0) +- (0,2.2) (2,2.9) +- (0,1.9) (3,3.8) +- (0,2.1)
                (4,2.5) +- (0,1.7) (5,3.2) +- (0,1.9) (6,4.1) +- (0,2.2)};
 \addplot+[only marks, mark=square*, blue!60!black, error bars/.cd, y dir=both, y explicit]
-  coordinates {(7,2.4) +- (0,1.2)};
+  coordinates {(7,2.4) +- (0,1.2) (8,1.4) +- (0,0.9)};
 \addplot[dashed, gray, domain=0.5:6.5] {3.4};
 \node[anchor=north, font=\small, gray] at (axis cs:3.5,3.35) {ensemble 3,4\,\%};
 \addplot[dashed, red!70!black, domain=0.5:7.5] {8.4};
-\node[anchor=south, font=\small, red!70!black] at (axis cs:4,8.45) {droit officiel, mêmes articles~: 8,4\,\% (deux échantillons appariés)};
+\addplot[dashed, red!70!black, domain=7.5:8.5] {6.8};
+\node[anchor=south, font=\small, red!70!black] at (axis cs:4.5,8.45) {droit officiel, mêmes articles~: 8,4\,\%, 8,4\,\%, 6,8\,\%};
 \end{axis}
 \end{tikzpicture}
-\caption{Taux de défauts grossiers mesuré à chaque audit, avec intervalles à 95\,\%. Aucune baisse n'est détectable d'un tour à l'autre. La ligne rouge est le même audit mené sur le texte officiel des mêmes articles~; elle vaut 8,4\,\% sur les deux échantillons appariés (verdicts bruts, avant la vérification du \S\ref{sec:baseline}). Le carré est l'audit 7, sur un échantillon frais du texte actuel.}
+\caption{Taux de défauts grossiers mesuré à chaque audit, avec intervalles à 95\,\%. Aucune baisse n'est détectable d'un tour à l'autre. La ligne rouge est le même audit mené sur le texte officiel des mêmes articles~; 8,4\,\% sur les deux premiers échantillons appariés et 6,8\,\% sur le troisième (verdicts bruts, avant vérification). Les carrés sont les audits 7 et 8, sur des échantillons frais du texte actuel.}
 \label{fig:audits}
 \end{figure}
 
@@ -497,41 +501,45 @@ Une exception ressort. Dans la partie législative du CGI, l'échantillon compte
 
 Les chiffres du projet sont ceux de chaque audit, à sa date. Tout défaut grossier de cet échantillon encore présent dans le texte réécrit a depuis été corrigé (27 lignes, tableau~\ref{tab:rounds}). Cet échantillon ne peut donc plus mesurer le texte actuel sans biais~: nous en avons tiré un nouveau.
 
-\subsection{Un audit apparié frais du texte actuel}
+\subsection{Deux audits appariés frais du texte actuel}
 \label{sec:fresh}
 
 Nous avons tiré 632 nouveaux articles, jamais tirés auparavant, avec les mêmes strates et une allocation doublée. Chacun a été audité deux fois, à l'aveugle~: une fois sur le texte réécrit actuel (audit 7), une fois sur le texte officiel, par 20 agents de chaque côté. Les auditeurs du texte réécrit savaient explicitement qu'un défaut hérité du texte officiel compte, ce qui rend ce côté plus sévère que dans les audits 1 à 6. Les 52 défauts vus d'un seul côté ont de nouveau été vérifiés dans les deux textes.
 
+Les 28 défauts encore présents dans cet échantillon ont ensuite été corrigés (36 lignes), et l'audit a été répliqué sur un second échantillon frais de 632 articles (audit 8), avec le même protocole et un autre modèle (Claude Fable 5.1 au lieu de Claude Opus 5.5)~; 44 défauts vus d'un seul côté ont été vérifiés.
+
 \begin{table}[ht]
 \centering
 \small
-\begin{tabular}{lrrrrr}
+\begin{tabular}{lrrrrrr}
 \toprule
-& & \multicolumn{2}{c}{Droit officiel} & \multicolumn{2}{c}{Droit réécrit, aujourd'hui}\\
+& & \multicolumn{2}{c}{Droit officiel} & \multicolumn{2}{c}{Droit réécrit, aujourd'hui} & Réparés /\\
 \cmidrule(lr){3-4}\cmidrule(lr){5-6}
-Échantillon frais, après vérification & Articles & G & Taux & G & Taux\\
+Échantillons frais, après vérification & Articles & G & Taux & G & Taux & introduits\\
 \midrule
-Tous & 632 & 49 & 7,8\,\% $\pm$ 2,1 & 28 & \textbf{4,4\,\% $\pm$ 1,6}\\
-Réécrits par le projet & 282 & 41 & 14,5\,\% & 21 & 7,4\,\%\\
-Maintenus sans changement (témoin) & 350 & 8 & 2,3\,\% & 7 & 2,0\,\%\\
+Audit 7 (Opus 5.5) & 632 & 49 & 7,8\,\% $\pm$ 2,1 & 28 & 4,4\,\% $\pm$ 1,6 & 28 / 7\\
+Audit 8 (Fable 5.1) & 632 & 46 & 7,3\,\% $\pm$ 2,0 & 16 & 2,5\,\% $\pm$ 1,2 & 32 / 2\\
 \midrule
-\multicolumn{4}{l}{Défauts du droit officiel réparés par la réécriture} & \multicolumn{2}{r}{28}\\
-\multicolumn{4}{l}{Défauts introduits par la réécriture} & \multicolumn{2}{r}{7}\\
-\multicolumn{4}{l}{Test apparié (McNemar, exact)} & \multicolumn{2}{r}{$p \approx 5\times10^{-4}$}\\
+Ensemble & 1\,264 & 95 & 7,5\,\% $\pm$ 1,5 & 44 & \textbf{3,5\,\% $\pm$ 1,0} & 60 / 9\\
+\quad réécrits par le projet & 581 & 84 & 14,5\,\% & 35 & 6,0\,\% & \\
+\quad maintenus sans changement (témoin) & 683 & 11 & 1,6\,\% & 9 & 1,3\,\% & \\
+\midrule
+\multicolumn{5}{l}{Test apparié sur les deux échantillons (McNemar, exact)} & \multicolumn{2}{r}{$p \approx 2\times10^{-10}$}\\
 \bottomrule
 \end{tabular}
-\caption{Défauts grossiers du droit officiel et du droit réécrit actuel, sur un échantillon frais de 632 articles jamais tirés auparavant, après vérification de tout défaut vu d'un seul côté.}
+\caption{Défauts grossiers du droit officiel et du droit réécrit actuel, sur deux échantillons frais de 632 articles chacun, jamais tirés auparavant, après vérification de tout défaut vu d'un seul côté.}
 \label{tab:fresh}
 \end{table}
 
-L'échantillon frais confirme la comparaison appariée (tableau~\ref{tab:fresh})~:
+Les échantillons frais confirment et précisent la comparaison appariée (tableau~\ref{tab:fresh})~:
 \begin{itemize}
-  \item le droit réécrit actuel compte environ \textbf{45\,\% de défauts grossiers en moins} que le droit officiel~: 4,4\,\% contre 7,8\,\%~;
-  \item parmi les articles réécrits, le taux est divisé par deux, de 14,5\,\% à 7,4\,\%~;
-  \item la réécriture a réparé quatre défauts du droit officiel pour chaque défaut introduit (28 contre 7), contre deux pour un dans le premier échantillon~;
-  \item le témoin concorde de nouveau~: les articles maintenus présentent 8 et 7 défauts.
+  \item le droit réécrit actuel compte \textbf{moins de la moitié des défauts grossiers} du droit officiel~: 3,5\,\% contre 7,5\,\% sur 1\,264 articles~;
+  \item parmi les articles réécrits, le taux passe de 14,5\,\% à 6,0\,\%~;
+  \item la réécriture a réparé environ sept défauts du droit officiel pour chaque défaut introduit (60 contre 9), contre deux pour un dans le premier échantillon apparié~;
+  \item le témoin concorde~: les articles maintenus, dont le texte est identique des deux côtés, présentent 11 et 9 défauts~;
+  \item les deux modèles concordent sur le texte officiel (7,8 et 7,3\,\%)~; sur le texte réécrit, Fable trouve moins de défauts (2,5 contre 4,4\,\%), dans les intervalles.
 \end{itemize}
-Les verdicts bruts donnent 8,4\,\% pour le texte officiel, exactement comme dans le premier échantillon apparié, contre 2,4\,\% pour le texte réécrit. Sur les 28 défauts qui restent dans le texte réécrit, 21 sont hérités du droit officiel et pas encore réparés~; 7 seulement ont été introduits par la réécriture. Le code fiscal, l'exception du premier échantillon, compte ici 0 défaut officiel et 1 défaut réécrit, après la lecture systématique.
+Les verdicts bruts donnent 8,4 et 6,8\,\% pour le texte officiel, contre 2,4 et 1,4\,\% pour le texte réécrit. Sur les 44 défauts qui restent dans le texte réécrit, 35 sont hérités du droit officiel et pas encore réparés~; 9 ont été introduits par la réécriture. Le code fiscal, exception du premier échantillon apparié, compte ici 3 défauts officiels et 5 défauts réécrits sur 96 articles.
 
 \subsection{Balayages~: rendement et plateau}
 
@@ -554,12 +562,17 @@ Sur les 96 défauts, 86 sont corrigés (81 lignes, dont 16 demandées entre grou
 La lecture a consommé environ 30 millions de jetons (hors lectures de cache), soit environ 11\,000 jetons par article.
 
 \subsection{Coût}
+\label{sec:cost}
 
+\paragraph{Ce qui a été payé.}
 \begin{itemize}
   \item \textbf{Passes de rédaction (Codex d'OpenAI)~:} environ 1\,000~dollars US de crédits API, plus un abonnement ChatGPT Pro (200~dollars par mois).
-  \item \textbf{Troisième passe (Claude Code)~:} menée avec un abonnement Claude Max (200~dollars par mois), sans crédits API facturés. Son coût en équivalent API est d'environ \textbf{1\,870~dollars}, dont environ 430~dollars pour la lecture systématique du code fiscal. Cette estimation repose sur la consommation de jetons enregistrée pour 23\,015 requêtes au modèle (20,8~millions de jetons de sortie, 3,9~milliards de jetons lus en cache et 97~millions de jetons écrits en cache), aux tarifs de l'affichage des coûts de Claude Code.
+  \item \textbf{Troisième passe (Claude Code)~:} un abonnement Claude Max (200~dollars par mois), sans crédits API facturés. Sa consommation enregistrée sur six jours est de 32\,046 requêtes au modèle, 29,5~millions de jetons de sortie, 5,1~milliards de jetons lus en cache et 135~millions de jetons écrits en cache~: environ \textbf{2\,500~dollars} aux tarifs de l'affichage des coûts de Claude Code, ou environ 4\,100~dollars aux prix publics de l'API.
 \end{itemize}
-En comptant un mois de chaque abonnement, la dépense réelle du projet a été d'environ \textbf{1\,400~dollars}, soit moins de 5~centimes par article. Aux prix de l'API, elle aurait été d'environ 2\,900~dollars, soit moins de 10~centimes par article. Ces montants n'incluent pas le temps humain.
+En comptant un mois de chaque abonnement, la dépense réelle du projet a été d'environ \textbf{1\,400~dollars}, moins de 5~centimes par article. Au prix de l'API, elle aurait été de 3\,500 à 5\,100~dollars, soit 12 à 17~centimes par article. Ces montants n'incluent pas le temps humain~: quelques jours de direction et d'arbitrage d'une personne.
+
+\paragraph{Ce que le même travail coûterait avec des juristes.}
+C'est un ordre de grandeur, pas une mesure, et ses hypothèses sont volontairement basses. Supposons qu'un juriste mette deux heures pour réécrire un article avec un motif écrit, après lecture de ses sources et de ses contreparties~; une demi-heure pour lire un article avec ses trois liens principaux et le maintenir ou le qualifier~; une demi-heure par article pour la relecture de cohérence de la seconde passe~; une heure et demie par correction. Le travail effectivement accompli représente alors environ 36\,000~heures pour la première passe (14\,115 réécritures et 16\,199 maintiens motivés), 15\,000~heures pour la seconde (30\,314 relectures) et 9\,000~heures pour la troisième (environ 12\,500 lectures d'audit et de balayage, 1\,943 alertes qualifiées, 1\,285 corrections)~: à peu près \textbf{60\,000~heures de juriste}, soit 35 à 40 années de travail. À un coût complet de 100~euros de l'heure pour des rédacteurs juridiques internes, cela fait environ 6~millions d'euros~; au tarif moyen d'un cabinet, 250~euros de l'heure, environ 15~millions. En divisant chaque hypothèse par deux, il reste plusieurs millions d'euros, contre environ 1\,400~dollars dépensés ici. La comparaison porte sur le coût, pas sur la qualité~: des juristes ne laisseraient pas 3,5\,\% d'articles avec un défaut grossier, et le résultat de ce projet attend encore leur relecture.
 
 \subsection{Exemples de défauts}
 
@@ -599,7 +612,8 @@ Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les 
 
 \begin{itemize}
   \item Les résultats sont mesurés par l'IA, par choix. Les verdicts d'audit sont des jugements de modèles et peuvent se tromper dans les deux sens~; leur justesse est ouverte à la vérification par des experts, que nous invitons.
-  \item La sévérité des auditeurs varie. Sur des textes identiques, deux groupes d'auditeurs ont différé d'un facteur deux avant vérification (\S\ref{sec:baseline}). Le taux d'un audit isolé est à lire avec cette réserve.
+  \item La sévérité des auditeurs varie. Sur des textes identiques, deux groupes d'auditeurs ont différé d'un facteur deux avant vérification (\S\ref{sec:baseline}). Le taux d'un audit isolé est à lire avec cette réserve. L'audit 8 a tourné sur un autre modèle que les audits 1 à 7~; il concorde sur le texte officiel mais trouve moins de défauts dans le texte réécrit, et un écart de sévérité entre modèles ne peut être exclu.
+  \item Le coût \og juristes \fg{} est un ordre de grandeur construit sur des hypothèses explicites, ni un devis ni une mesure.
   \item Le corpus est figé au 18~octobre 2026, et les textes hors des neuf recueils ne sont pas réécrits.
   \item Des échantillons d'audit d'environ 314 articles ne détectent que des écarts d'environ $\pm$\,2 points~; les taux par strate sont donc imprécis.
   \item Les modèles de rédaction et le modèle de revue viennent de fournisseurs différents, ce qui limite les angles morts communs sans les supprimer.
@@ -609,7 +623,7 @@ Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les 
 
 \section{Conclusion et travaux futurs}
 
-Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team indépendante, et mesuré ce qui reste faux. Mesuré contre le droit officiel sur les mêmes articles, chaque défaut contesté vérifié, le droit réécrit compte moins de défauts grossiers~: 4,6\,\% contre 7,0\,\% sur 1\,879 articles, et 4,4\,\% contre 7,8\,\% aujourd'hui sur un échantillon frais de 632. Les trois quarts des défauts qui restent sont hérités du droit en vigueur. Toute la trace est publique.
+Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team indépendante, et mesuré ce qui reste faux. Mesuré contre le droit officiel sur les mêmes articles, chaque défaut contesté vérifié, le droit réécrit compte moins de défauts grossiers~: 4,6\,\% contre 7,0\,\% sur 1\,879 articles à la date des audits, et 3,5\,\% contre 7,5\,\% aujourd'hui, soit moins de la moitié, sur deux échantillons frais de 1\,264 articles. Les quatre cinquièmes des défauts qui restent sont hérités du droit en vigueur. Le projet a coûté environ 1\,400~dollars là où des juristes auraient coûté des millions. Toute la trace est publique.
 
 Prochaines étapes~:
 \begin{itemize}

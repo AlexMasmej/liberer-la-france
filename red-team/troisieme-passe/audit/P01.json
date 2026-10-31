@@ -1,0 +1,301 @@
+{
+ "group": "P01",
+ "read_from": "production",
+ "read_date": "2026-10-31",
+ "method": "Lecture intégrale de chaque article (source, NOTA, proposition, motif, notes, versions futures) via CITE_PRODUCTION=1 tools/cite.py ; lecture des renvois et textes d'application cités dans links_read ; recherche des renvois entrants dans la base de production en lecture seule (mode=ro, query_only). Qualification faite avant toute consultation de reports/register.json et des audits antérieurs ; known_objection renseigné ensuite seulement. Revue IA : ne vaut pas validation par un juriste.",
+ "summary": {"G": 1, "m": 3, "0": 28, "G_list": ["P241"], "m_list": ["P041", "P061", "P441"]},
+ "articles": [
+  {
+   "sample_id": "P001", "code": "travail", "number": "L3142-62", "source_id": "LEGIARTI000033021762", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Congé de représentation : demi-journées, non-imputation sur les congés payés, assimilation à du travail effectif. Texte autonome, cohérent avec L3142-60 (maintenu), L3142-61 (proposition corrigeant « déduction fiscale » en « réduction d'impôt ») et L3142-63 (maintenu).",
+   "evidence": null,
+   "links_read": ["travail L3142-60 LEGIARTI000033021773", "travail L3142-61 LEGIARTI000033021769", "travail L3142-63 LEGIARTI000038791164"],
+   "links_not_read": "CSS L412-8 (renvoi mentionné dans les notes), R3142-45 à R3142-53.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P021", "code": "css", "number": "L283-1", "source_id": "LEGIARTI000006742243", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Habilitation réglementaire générale du livre II. Les abrogations proposées de L281-4 et L282-1 interdisent expressément tout visa de remplacement ; l'habilitation conservée n'y contrevient pas. La coordination de R281-4 (approbation encore organisée) est un point propre à L281-4, signalé dans ses notes, non un défaut de L283-1.",
+   "evidence": null,
+   "links_read": ["css L281-4 LEGIARTI000025516592", "css L282-1 LEGIARTI000006742245"],
+   "links_not_read": "R281-4, R282-1, L752-1.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P041", "code": "a4", "number": "41 quinquies A", "source_id": "LEGIARTI000043573787", "status": "retained_unchanged",
+   "verdict": "m", "families": ["F4", "F3"],
+   "description": "Doute à confirmer (défaut hérité). L'article maintenu fixe le contenu des registres « prévus au 9 de l'article 298 sexdecies F et au X de l'article 298 sexdecies G ». Les deux articles du CGI sont ABROGE_DIFF au 1er janvier 2027 (ordonnance 2025-1247) et leurs NOTA ne maintiennent que les 1 à 8 bis de F et les I à IX de G jusqu'à reprise dans le CIBS : le 9 de F et le X de G, seuls visés ici, disparaissent à cette date. Au 18 octobre 2026 le renvoi est vivant ; il sera mort à l'entrée en vigueur d'une réforme nécessairement postérieure. Aucune proposition ne rattache l'arrêté aux articles du CIBS de reprise (hors corpus). Effet limité : coordination à prévoir, pas d'impossibilité d'appliquer aujourd'hui.",
+   "evidence": "a4 41 quinquies A (LEGIARTI000043573787) : « Les registres prévus au 9 de l'article 298 sexdecies F et au X de l'article 298 sexdecies G du code général des impôts comportent, pour chaque opération, les informations suivantes ». CGI 298 sexdecies F (LEGIARTI000042887609, state=ABROGE_DIFF), NOTA : « les dispositions des 1 à 8 bis du présent article sont maintenues en vigueur jusqu'à leur reprise par les mesures réglementaires ». CGI 298 sexdecies G (LEGIARTI000041471209, state=ABROGE_DIFF), NOTA : « les dispositions des I à IX du présent article sont maintenues en vigueur jusqu'à leur reprise » ; notes de la proposition de G : « la prolongation des I à IX jusqu'à reprise ne prolonge pas implicitement X ».",
+   "links_read": ["cgi 298 sexdecies F LEGIARTI000042887609", "cgi 298 sexdecies G LEGIARTI000041471209"],
+   "links_not_read": "Annexe III 95 D, 97 bis, 97 ter ; annexe IV 41 nonies, 50 sexies J ; articles L. 161-1, L. 171-1, L. 216-30, L. 216-32, L. 216-49 du CIBS (hors corpus) ; règlement d'exécution (UE) 282/2011.",
+   "known_objection": "Aucune entrée du registre ne vise 41 quinquies A. La classe du défaut est couverte par RT-FUTFISC-01 (P1, confirmé, coordination manquante : recodification TVA dans le CIBS au 1er janvier 2027, renvois aux articles 256 à 298 du CGI à rebaser).",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "P061", "code": "cch", "number": "R641-7", "source_id": "LEGIARTI000006900535", "status": "rewrite_draft",
+   "verdict": "m", "families": ["F5"],
+   "description": "Rédaction maladroite sans effet pratique. La proposition ajoute que les mentions de locaux insuffisamment occupés « ne permettent une réquisition que dans le champ et les conditions prévus à l'article L. 641-1 ». Or L641-1 (proposé) ne vise que « les locaux vacants » et les hôtels, tandis que L641-5 (législatif, maintenu) régit expressément « un local insuffisamment occupé » et le délai d'un mois laissé à son détenteur. La clause désigne donc un fondement législatif incomplet et laisse subsister un troisième alinéa (pièces habitables en excédent) qu'elle semble priver d'objet. La discordance L641-1 / L641-5 / R641-7 est héritée du texte officiel ; la clause introduite ne crée pas de pouvoir nouveau, mais elle aurait dû viser les articles L. 641-1 et L. 641-5.",
+   "evidence": "cch R641-7 proposé (LEGIARTI000006900535) : « Les mentions de locaux inoccupés ou insuffisamment occupés au présent article ne constituent pas un fondement autonome de réquisition. Elles ne permettent une réquisition que dans le champ et les conditions prévus à l'article L. 641-1. » ; même texte, troisième alinéa conservé : « S'il s'agit de locaux insuffisamment occupés, la réquisition s'applique à l'usage privatif des pièces habitables en excédent ». cch L641-1 proposé (LEGIARTI000037667255) : « la prise de possession partielle ou totale des locaux vacants ». cch L641-5 maintenu (LEGIARTI000037667239) : « Le détenteur d'un local insuffisamment occupé dispose d'un délai d'un mois, à compter de l'avis qui lui est adressé par le représentant de l'Etat dans le département, pour abandonner le logement ou pour pourvoir à l'occupation effective des lieux ».",
+   "links_read": ["cch L641-1 LEGIARTI000037667255", "cch L641-5 LEGIARTI000037667239", "cch R641-1 LEGIARTI000006900523", "cch R641-2 LEGIARTI000006900525"],
+   "links_not_read": "L641-2 à L641-4, R641-8 à R641-12.",
+   "known_objection": "Aucune entrée du registre ne vise R641-7. La vérification de base VC02 (R641-10) signale la même discordance « locaux vacants » / « insuffisamment occupés » dans le texte officiel comme défaut de coordination à effet limité.",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "P081", "code": "travail", "number": "L4162-5", "source_id": "LEGIARTI000037385292", "status": "rewrite_draft",
+   "verdict": "0", "families": [],
+   "description": "Renvoi hérité mort (« 1° du I de l'article L. 4162-4 » vise aujourd'hui la pénalité de L4162-4) réparé par la proposition, qui rattache la conversion des anciens points C3P au 1° du I de L4163-7 (formation) et à L4163-8 (conversion en euros vers le CPF), tous deux lus et concordants. Le texte proposé évite la double conversion.",
+   "evidence": null,
+   "links_read": ["travail L4163-7 LEGIARTI000047452226", "travail L4163-8 LEGIARTI000037385284", "travail L4162-4 LEGIARTI000036262858", "travail L6323-1 LEGIARTI000033023569"],
+   "links_not_read": "Ordonnance 2017-1389 (transfert des points C3P vers le C2P), R4163-11 à R4163-13.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P101", "code": "css", "number": "R471-4", "source_id": "LEGIARTI000006750492", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Contravention sanctionnant R412-2. La proposition de R412-2 conserve l'obligation (trois destinataires, vingt-quatre heures) et ne retire que la lettre recommandée : la sanction survit à une obligation qui subsiste, sans viser un dispositif supprimé.",
+   "evidence": null,
+   "links_read": ["css R412-2 LEGIARTI000043128366", "css R242-6-2 LEGIARTI000006748761 (renvoi entrant, extrait)"],
+   "links_not_read": "L412-4.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P121", "code": "a4", "number": "52 quater", "source_id": "LEGIARTI000006300476", "status": "rewrite_draft",
+   "verdict": "0", "families": [],
+   "description": "Suppression du carnet à souches pour les certificats d'exportation préalable de rhums ; certificat, non-cessibilité, six mois, imputation sur contingents conservés. Annexe III 144 bis (maintenu) renvoie au décret de 1948 pour les certificats historiques sans contradiction. Aucun autre article de l'annexe IV n'organise le carnet.",
+   "evidence": null,
+   "links_read": ["a3 144 bis LEGIARTI000006298912", "recherche a4 « carnet à souches / certificat d'exportation préalable » (seuls 127, 150, 50 sexies B, sans lien)"],
+   "links_not_read": "Décret n° 48-1590 du 8 octobre 1948 ; CGI 362.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P141", "code": "travail", "number": "R4412-155", "source_id": "LEGIARTI000044620004", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Définitions de Cns, Cq, Cc, Ct utilisées par la formule de R4412-154 (maintenu, lu). Le « 2° (Abrogé) » est hérité de la source. Cohérent.",
+   "evidence": null,
+   "links_read": ["travail R4412-154 LEGIARTI000044620011"],
+   "links_not_read": "R4222-10, tableau de R4412-149.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P161", "code": "urba", "number": "R152-6", "source_id": "LEGIARTI000032722278", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Dérogation de 30 cm pour isolation en saillie et protections solaires. La proposition de L152-5 conserve aux 1° et 3° les mêmes opérations ; R152-5 proposé abroge la condition de deux ans ; R152-8 proposé retire le plafond commun en gardant les limites propres. Renvois cohérents.",
+   "evidence": null,
+   "links_read": ["urba L152-5 LEGIARTI000054142260", "urba R152-5 LEGIARTI000032722276", "urba R152-8 LEGIARTI000032722282"],
+   "links_not_read": "R152-7, R*431-31-2.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P181", "code": "travail", "number": "L3142-36", "source_id": "LEGIARTI000033022144", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Droit annuel au congé de formation des administrateurs mutualistes. L3142-37 (maintenu), L3142-38 (2° abrogé, liste inopposable), L3142-39 (maintenu), L3142-40 et L3142-41 (suppression coordonnée du contingent par établissement) lus : la sous-section reste cohérente.",
+   "evidence": null,
+   "links_read": ["travail L3142-37 LEGIARTI000033022140", "travail L3142-38 LEGIARTI000033022136", "travail L3142-39 LEGIARTI000038791175", "travail L3142-40 LEGIARTI000033022128", "travail L3142-41 LEGIARTI000033022124"],
+   "links_not_read": "Code de la mutualité L114-16 (hors corpus) ; R3142-22 à R3142-29.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P201", "code": "travail", "number": "R4462-11", "source_id": "LEGIARTI000028140452", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Enceinte pyrotechnique : clôture ou signalisation, interdiction d'accès et exceptions. Définitions de R4462-2 (maintenu) concordantes (7° enceinte, 17° périmètre de sécurité).",
+   "evidence": null,
+   "links_read": ["travail R4462-2 LEGIARTI000028140049"],
+   "links_not_read": "R4462-6, R4462-32.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P221", "code": "css", "number": "D762-3", "source_id": "LEGIARTI000038676555", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Conditions d'accès à l'aide de L762-6-5. La proposition de L762-6-5 conserve nationalité, résidence hors EEE, adhésion individuelle et ressources ; D762-7 proposé est coordonné (retrait du cycle triennal). La faute d'accord « les personnes ... inscrits » est héritée et sans effet.",
+   "evidence": null,
+   "links_read": ["css L762-6-5 LEGIARTI000037894591", "css D762-7 LEGIARTI000038676525"],
+   "links_not_read": "D762-4 à D762-6, arrêté de modulation.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P241", "code": "travail", "number": "R4511-8", "source_id": "LEGIARTI000034670067", "status": "rewrite_draft",
+   "verdict": "G", "families": ["F3", "F5"],
+   "description": "Défaut hérité du texte officiel et toujours présent dans la proposition. La source renvoie à « l'article R. 111-45 du code de la construction et de l'habitation », abrogé au 1er juillet 2021 (recodification du CCH ; le diagnostic déchets de démolition est désormais à R126-8 et suivants). La proposition ne redirige pas le renvoi : elle le conserve sous la forme « l'ancien article R. 111-45 » et requalifie ce diagnostic en « dossiers techniques relatifs à l'amiante », alors que l'ancien R111-45 portait sur le diagnostic déchets. Un juriste constate donc qu'un texte prospectif renvoie à un article abrogé et que, pour les opérations postérieures au 1er juillet 2021, le chef de l'entreprise utilisatrice n'a plus à demander le diagnostic R126-10 — tandis que les trois articles frères coordonnés par le même projet (R4412-133 14°, R4512-11, R4532-7) renvoient au diagnostic de R126-10 « lorsqu'il est requis ». Incohérence interne au projet entre R4511-8 et R4512-11, qui portent sur le même plan de prévention.",
+   "evidence": "Source R4511-8 (LEGIARTI000034670067) : « prévus aux articles R. 1334-29-4 à R. 1334-29-6 du code de la santé publique et à l'article R. 111-45 du code de la construction et de l'habitation ». Proposition R4511-8 : « ainsi que les dossiers techniques relatifs à l'amiante établis en application de l'ancien article R. 111-45 du code de la construction et de l'habitation ». CCH R111-45 (LEGIARTI000024100518) : state=ABROGE 2011-06-02→2021-07-01 ; aucune version en vigueur. Proposition R4512-11 (LEGIARTI000043841178) : « les informations relatives à l'amiante contenues dans le diagnostic prévu à l'article R. 126-10 du code de la construction et de l'habitation ». Proposition R4532-7 (LEGIARTI000043841170) : « Il demande également le diagnostic prévu à l'article R. 126-10 du code de la construction et de l'habitation lorsque ce diagnostic est requis ». Proposition R4412-133 (LEGIARTI000046882717), 14° : « le diagnostic portant sur les produits de construction, les équipements constitutifs du bâtiment, les matériaux et les déchets prévu à l'article R. 126-10 du code de la construction et de l'habitation, lorsqu'il est requis ». CCH R126-10 (LEGIARTI000043824305) : « réalise un diagnostic portant sur les produits de construction, les équipements constitutifs du bâtiment, les matériaux et les déchets issus de ces travaux ».",
+   "links_read": ["cch R111-45 LEGIARTI000024100518 (ABROGE)", "cch R126-8 LEGIARTI000043824016", "cch R126-10 LEGIARTI000043824305", "cch R126-11 LEGIARTI000043824785", "travail R4412-97-5 LEGIARTI000043841186", "travail R4512-11 LEGIARTI000043841178", "travail R4532-7 LEGIARTI000043841170", "travail R4412-133 LEGIARTI000046882717", "travail R4412-148 LEGIARTI000043128546", "travail R4227-53 LEGIARTI000018532024 (renvoi entrant, extrait)"],
+   "links_not_read": "CSP R1334-29-4 à R1334-29-6 (hors corpus) ; décret n° 2021-872 du 30 juin 2021 (texte de recodification) ; R4511-5 à R4511-7.",
+   "known_objection": "Aucune entrée de reports/register.json ne vise R4511-8 ni R111-45. L'article figurait comme simple piste dans audit/sweeps/candidates.json (S3_unknown_reference) et candidates-S11-notes.json, sans qualification ni correction retrouvée. Défaut nouveau.",
+   "suggested_correction": "Remplacer le deuxième alinéa de la proposition de R4511-8 par : « En outre, il demande au propriétaire de l'établissement les dossiers techniques regroupant les informations relatives à la recherche et à l'identification des matériaux contenant de l'amiante prévus aux articles R. 1334-29-4 à R. 1334-29-6 du code de la santé publique, les informations relatives à l'amiante contenues dans le diagnostic prévu à l'article R. 126-10 du code de la construction et de l'habitation lorsque ce diagnostic est requis ou, le cas échéant, le rapport de repérage de l'amiante prévu à l'article R. 4412-97-5 du présent code. Lorsqu'ils existent, les dossiers techniques établis avant le 1er juillet 2021 en application de l'ancien article R. 111-45 du code de la construction et de l'habitation sont demandés et communiqués dans les mêmes conditions. Il communique ces documents au chef de l'entreprise extérieure intervenant dans l'établissement. » Conserver le troisième alinéa transitoire. Aucune formalité nouvelle : le diagnostic R126-10 existe sur son propre fondement et n'est demandé que s'il est requis ; les dossiers anciens restent couverts. Alignement mot pour mot sur la proposition de R4512-11."
+  },
+  {
+   "sample_id": "P261", "code": "travail", "number": "R4163-10", "source_id": "LEGIARTI000036331774", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Doublement des points pour les assurés nés avant le 1er juillet 1956, dérogation à R4163-9 (maintenu, lu). Cohérent avec le IV de L4163-7 proposé.",
+   "evidence": null,
+   "links_read": ["travail R4163-9 LEGIARTI000047962405", "travail L4163-7 LEGIARTI000047452226"],
+   "links_not_read": "R4163-8.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P281", "code": "a4", "number": "56 AI", "source_id": "LEGIARTI000006301473", "status": "rewrite_draft",
+   "verdict": "0", "families": [],
+   "description": "Information du retrait de garantie par la « caution solidaire mentionnée à l'article 56 AD » : concordant avec 56 AD proposé (agrément supprimé) et 56 AH proposé (attestation de la caution solidaire).",
+   "evidence": null,
+   "links_read": ["a4 56 AD LEGIARTI000006300766", "a4 56 AH LEGIARTI000006300613"],
+   "links_not_read": "Annexe II 282, 282 A, 282 B.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P301", "code": "urba", "number": "R*311-3", "source_id": "LEGIARTI000006818340", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Création de ZAC : délibération valant création ou transmission à l'autorité compétente. R*311-4 proposé (avis réputé émis à deux mois, transition pour les dossiers en cours) et L311-1 maintenu restent cohérents avec le renvoi.",
+   "evidence": null,
+   "links_read": ["urba R*311-4 LEGIARTI000006818344", "urba L311-1 LEGIARTI000037666723"],
+   "links_not_read": "R*311-7, R311-8, R318-18.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P321", "code": "cch", "number": "L121-7", "source_id": "LEGIARTI000041564608", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Composition du Conseil supérieur de la construction. L121-6 proposé rend la consultation facultative ; D121-12 proposé est coordonné avec prise d'effet liée à L121-6 ; D121-13 (maintenu) conserve les cinq collèges. Aucune consultation obligatoire ne survit isolément dans les textes lus.",
+   "evidence": null,
+   "links_read": ["cch L121-6 LEGIARTI000041564606", "cch D121-12 LEGIARTI000043818385", "cch D121-13 à D121-22 (renvois entrants, extraits)"],
+   "links_not_read": "Ordonnance 2020-71 (article 8).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P341", "code": "a1", "number": "32", "source_id": "LEGIARTI000006293461", "status": "rewrite_draft",
+   "verdict": "0", "families": [],
+   "description": "Scellés des appareils de distillation : suppression du préavis de trois jours, de l'attente de trois heures et de la prorogation avant fête légale ; scellés, motifs et remise des plombs conservés. Article 33 proposé (destruction sans présence obligatoire) cohérent ; article 31 n'a pas de version en vigueur.",
+   "evidence": null,
+   "links_read": ["a1 33 LEGIARTI000006293464", "a1 31 (versions historiques seulement)"],
+   "links_not_read": "LPF (visites), CGI 302 D et suivants.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P361", "code": "travail", "number": "L1225-23", "source_id": "LEGIARTI000018764604", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Prolongation du congé de maternité en cas d'accouchement très prématuré avec hospitalisation. L1225-17, L1225-18 et L1225-19 maintenus : la plage de renvoi est intacte.",
+   "evidence": null,
+   "links_read": ["travail L1225-17 LEGIARTI000018764596", "travail L1225-18 LEGIARTI000006900898", "travail L1225-19 LEGIARTI000018764594"],
+   "links_not_read": "L1225-20 à L1225-22 ; CSS L331-3.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P381", "code": "travail", "number": "L6111-4", "source_id": "LEGIARTI000028698904", "status": "rewrite_draft",
+   "verdict": "0", "families": [],
+   "description": "Service dématérialisé d'orientation : retrait du renvoi hérité mort au « fonds visé à l'article L. 6332-18 » (FPSPP supprimé, numéro absent du corpus), convention Etat-régions conservée. Aucun renvoi entrant dans les neuf recueils.",
+   "evidence": null,
+   "links_read": ["recherche production « L. 6111-4 » (aucun renvoi entrant)", "notes de la proposition (L6123-5)"],
+   "links_not_read": "L6123-5 (texte entier), L6332-18 (absent du corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P401", "code": "urba", "number": "R*422-5", "source_id": "LEGIARTI000006819273", "status": "rewrite_draft",
+   "verdict": "0", "families": [],
+   "description": "Convention de mise à disposition des services de l'Etat : retrait du volet statistique. L422-8 proposé (réécriture à droit constant, seuils 10 000 habitants) reste la base du renvoi.",
+   "evidence": null,
+   "links_read": ["urba L422-8 LEGIARTI000028810360"],
+   "links_not_read": "R423-75 à R423-79.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P421", "code": "a2", "number": "371 LD", "source_id": "LEGIARTI000006295060", "status": "rewrite_draft",
+   "verdict": "0", "families": [],
+   "description": "Abrogation pour l'avenir, fondée sur l'abrogation de CGI 1649 quater E bis (vérifiée au corpus : ABROGE au 16 février 2025). Toute la chaîne 371 LA, LB, LC, LE et 371 Z quindecies est abrogée de façon concordante avec la même transition. Observation sans effet, hors article : la proposition de 371 LA dit que « Les articles 371 LB à 371 LD ... ne peuvent l'imposer pour l'avenir » comme s'ils subsistaient, alors que 371 LE constate qu'ils sont abrogés.",
+   "evidence": null,
+   "links_read": ["cgi 1649 quater E bis LEGIARTI000031815919 (ABROGE 2016-01-01→2025-02-16)", "a2 371 LA LEGIARTI000033238602", "a2 371 LB LEGIARTI000033238595", "a2 371 LC LEGIARTI000033238588", "a2 371 LE LEGIARTI000006295061", "a2 371 Z quindecies LEGIARTI000033238677"],
+   "links_not_read": "371 E, 371 Z sexies ; article 11 de la loi 2025-127 (lu par le projet, non par moi).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P441", "code": "a2", "number": "242-0 P", "source_id": "LEGIARTI000022146964", "status": "retained_unchanged",
+   "verdict": "m", "families": ["F4", "F3"],
+   "description": "Doute à confirmer (défaut hérité). L'exclusion du remboursement vise les livraisons exonérées « du 2° du I de l'article 262 du code général des impôts, du I de l'article 262 ter et du II de l'article 298 sexies ». Les trois articles du CGI sont ABROGE_DIFF au titre de l'ordonnance 2025-1247 (262 et 262 ter au 1er janvier 2027 ; pour 298 sexies la NOTA indique le 1er septembre 2026, seuls V bis et V ter étant maintenus, alors que l'état Légifrance reste différé : réserve documentaire). Le texte maintenu ne prévoit aucun rattachement aux dispositions du CIBS de reprise. Au 18 octobre 2026 les renvois à 262 et 262 ter sont vivants ; celui au II de 298 sexies est incertain. Effet limité : l'exonération elle-même subsiste dans le CIBS, seule la référence doit être rebasée.",
+   "evidence": "a2 242-0 P (LEGIARTI000022146964) : « peuvent l'être en application du 2° du I de l'article 262 du code général des impôts, du I de l'article 262 ter et du II de l'article 298 sexies du même code ». CGI 298 sexies (LEGIARTI000006314586, state=ABROGE_DIFF), NOTA : « ces dispositions, à l'exception de celles mentionnées à la première colonne du tableau de l'article 15, sont abrogées à compter du 1er septembre 2026 » et « les dispositions des V bis et V ter du présent article sont maintenues en vigueur jusqu'à leur reprise ». CGI 262 (LEGIARTI000033469152) : state=ABROGE_DIFF 2018-01-01→2027-01-01. CGI 262 ter (LEGIARTI000051764907) : state=ABROGE_DIFF 2025-06-19→2027-01-01.",
+   "links_read": ["cgi 262 LEGIARTI000033469152", "cgi 262 ter LEGIARTI000051764907", "cgi 298 sexies LEGIARTI000006314586"],
+   "links_not_read": "242-0 M à 242-0 Z ter (procédure de remboursement) ; CIBS livre II (hors corpus) ; directive 2008/9/CE.",
+   "known_objection": "Aucune entrée du registre ne vise 242-0 P. Le balayage J10 l'avait qualifié faux positif sur une autre piste (seuil de 262). La classe du défaut est couverte par RT-FUTFISC-01 (P1, confirmé : recodification TVA dans le CIBS, renvois aux articles 256 à 298 à rebaser).",
+   "suggested_correction": null
+  },
+  {
+   "sample_id": "P461", "code": "travail", "number": "D5151-13", "source_id": "LEGIARTI000038033580", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Ordre d'antériorité entre financeurs du CEC et transmission par la CDC. L5151-11 (version 2021-2028, maintenue) et sa version future 2028 (sans proposition, lue) conservent les financeurs et le versement au gestionnaire : le renvoi reste valable dans les deux versions. Virgule manquante héritée (« des collectivités territoriales de la santé »), sans effet.",
+   "evidence": null,
+   "links_read": ["travail L5151-11 LEGIARTI000044375921", "travail L5151-11 LEGIARTI000054703477 (VIGUEUR_DIFF 2028-01-01)"],
+   "links_not_read": "L5151-9, L6333-1, D5151-11, D5151-15, R5151-16 à R5151-18 ; arrêté de périodicité.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P481", "code": "css", "number": "R133-14-5", "source_id": "LEGIARTI000048854858", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Information de l'employeur en cas de trop-versé. Texte autonome, sans renvoi.",
+   "evidence": null,
+   "links_read": [],
+   "links_not_read": "R133-14 à R133-14-4 (même section).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P501", "code": "css", "number": "R227-2", "source_id": "LEGIARTI000030955061", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Tirage au sort pour les sièges impairs. R227-1 (maintenu) y renvoie expressément ; L231-1 proposé (droit constant) conserve la parité. Cohérent.",
+   "evidence": null,
+   "links_read": ["css R227-1 LEGIARTI000046021681", "css L231-1 LEGIARTI000044404057"],
+   "links_not_read": "R227-3, R227-4, R612-2 ; arrêté de tirage au sort.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P521", "code": "travail", "number": "R7111-12", "source_id": "LEGIARTI000018522013", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Annulation de la carte de journaliste après convocation et explications. R7111-13 (notification, maintenu) et R7111-17 (carte honoraire, maintenu) renvoient à cette procédure sans discordance.",
+   "evidence": null,
+   "links_read": ["travail R7111-13 LEGIARTI000018522011", "travail R7111-17 LEGIARTI000018522001"],
+   "links_not_read": "R7111-29 à R7111-31, L7111-3 à L7111-6.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P541", "code": "urba", "number": "L153-27", "source_id": "LEGIARTI000043977819", "status": "rewrite_draft",
+   "verdict": "0", "families": [],
+   "description": "Analyse des résultats du PLU à six ans : réécriture qui clarifie l'auteur de la délibération (EPCI ou conseil municipal) sans changer le délai ni les objets. La délibération reste au troisième alinéa, ce que L153-28 proposé vise correctement (le renvoi officiel de L153-28 au « deuxième alinéa » était décalé et est corrigé). L121-22-1 maintenu.",
+   "evidence": null,
+   "links_read": ["urba L153-28 LEGIARTI000043977812", "urba L121-22-1 LEGIARTI000043961472"],
+   "links_not_read": "L101-2, L122-16, L151-5, R153-20 ; CGCT L2231-1 et code des transports L1214-1/L1214-2 (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P561", "code": "travail", "number": "R4642-7", "source_id": "LEGIARTI000030975572", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Agents contractuels de l'ANACT selon le décret 2014-21. Texte autonome ; décret hors corpus.",
+   "evidence": null,
+   "links_read": [],
+   "links_not_read": "R4642-1, R4642-4 ; décret n° 2014-21 (hors corpus).",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P581", "code": "cch", "number": "R318-22", "source_id": "LEGIARTI000039047887", "status": "rewrite_draft",
+   "verdict": "0", "families": [],
+   "description": "Récupération de l'avantage indu du PTZ 2005-2009 : suppression des deux majorations de 25 %, concordante avec 199 ter I proposé (« Celui-ci ne peut excéder le montant du crédit d'impôt ») et sa clause de loi répressive plus douce. Le renvoi aux « alinéas huit à treize du I de l'article 244 quater J » reste exact dans la version 2026 et dans la proposition (alinéas non déplacés) ; renvois internes aux deuxième et troisième alinéas conservés.",
+   "evidence": null,
+   "links_read": ["cgi 199 ter I LEGIARTI000027654214", "cgi 244 quater J LEGIARTI000053544499"],
+   "links_not_read": "R318-5, R318-12, D312-3-1, L312-1 ; arrêté prévu à R318-5.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P601", "code": "a4", "number": "74", "source_id": "LEGIARTI000006300792", "status": "rewrite_draft",
+   "verdict": "0", "families": [],
+   "description": "Machines à timbrer : suppression de la garantie permanente, des relevés hebdomadaires, du carnet agréé et de l'empreinte à zéro ; relevé mensuel, liquidation, paiement et remise de 0,50 % conservés. 164 AD proposé (autorisation d'usage) cohérent ; aucun autre article de l'annexe IV ni du CGI (887, 1840 I) n'organise le carnet d'emploi ou la provision.",
+   "evidence": null,
+   "links_read": ["a4 164 AD LEGIARTI000006301906", "recherche a4/cgi « carnet d'emploi / machines à timbrer » (164 N, 164 Y, 164 AH, 164 AJ, 887, 1840 I, extraits)"],
+   "links_not_read": "164 L à 164 AJ en texte intégral.",
+   "known_objection": null, "suggested_correction": null
+  },
+  {
+   "sample_id": "P621", "code": "cch", "number": "R232-7", "source_id": "LEGIARTI000039041673", "status": "retained_unchanged",
+   "verdict": "0", "families": [],
+   "description": "Pénalités de retard du contrat sans fourniture de plan. L232-1 proposé conserve le d (pénalités de retard de livraison) ; R231-14 maintenu est le pendant pour le contrat avec plan.",
+   "evidence": null,
+   "links_read": ["cch L232-1 LEGIARTI000041586842", "cch R231-14 LEGIARTI000039041701"],
+   "links_not_read": "L232-2, L231-6.",
+   "known_objection": null, "suggested_correction": null
+  }
+ ]
+}

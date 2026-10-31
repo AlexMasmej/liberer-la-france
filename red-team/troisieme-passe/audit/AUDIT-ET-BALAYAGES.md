@@ -198,9 +198,25 @@ Pour savoir si 3,4 % est un bon ou un mauvais taux, le même audit a été mené
 - **Verdicts bruts** : 8,4 % pour le droit officiel, comme dans le premier échantillon apparié, contre 2,4 % pour le droit réécrit.
 - **Défauts restants** : sur les 28 défauts du texte réécrit, 21 sont hérités du droit officiel et 7 introduits. Le CGI compte ici 0 défaut officiel et 1 défaut réécrit.
 
+## 2 undecies. Dernier cycle : corrections de l'échantillon frais et second audit apparié frais
+
+- **Corrections** : les 28 défauts grossiers de l'échantillon frais (audit 7) encore présents dans le texte réécrit ont été traités (groupes BM1 à BM4, puis R6 et R7 pour les demandes croisées) : **36 lignes appliquées**, 321 tests OK. Une correction est signalée comme fermeture de faille (`loophole_closure`) : annexe III 265, où la condition de trois ans exigée par l'article 1594 F septies du CGI est rétablie dans le décret.
+- **Audit 8, second échantillon apparié frais** : 632 nouveaux articles (`sample-8.json`, graine 20261106, hors des 2 511 déjà tirés), lus à l'aveugle sur le texte réécrit actuel (`audit/P01` à `P20`) et sur le texte officiel (`audit/baseline/OP01` à `OP20`), puis vérification des 44 défauts vus d'un seul côté (`audit/baseline/VD01` à `VD04`). Cet audit a été mené avec un autre modèle (Claude Fable 5.1) que les précédents (Claude Opus 5.5).
+
+| Après vérification | Articles | Droit officiel | Droit réécrit aujourd'hui | Réparés / introduits |
+|---|---|---|---|---|
+| Audit 7 (Opus 5.5) | 632 | 49 (7,8 % ± 2,1) | 28 (4,4 % ± 1,6) | 28 / 7 |
+| Audit 8 (Fable 5.1) | 632 | 46 (7,3 % ± 2,0) | 16 (2,5 % ± 1,2) | 32 / 2 |
+| **Ensemble** | **1 264** | **95 (7,5 % ± 1,5)** | **44 (3,5 % ± 1,0)** | **60 / 9** |
+| dont réécrits | 581 | 84 (14,5 %) | 35 (6,0 %) | |
+| dont maintenus (témoin) | 683 | 11 (1,6 %) | 9 (1,3 %) | |
+
+- **Résultat** : sur 1 264 articles frais, le droit réécrit compte **un peu moins de la moitié** des défauts grossiers du droit officiel (3,5 % contre 7,5 % ; McNemar exact, p ≈ 2 × 10⁻¹⁰). Il a réparé 60 défauts officiels pour 9 introduits. Le témoin concorde (1,6 % contre 1,3 %). Le côté officiel donne le même taux avec les deux modèles (7,8 et 7,3 %) ; le côté réécrit varie davantage (4,4 et 2,5 %), dans les intervalles.
+- **Total des corrections de la troisième passe** : voir le README.
+
 ## 4. Taux mesuré et ce qu'il signifie
 
-- **Taux mesuré** : environ **3 % des articles** gardent un défaut qu'un juriste remarquerait. Mesuré de la même façon sur les mêmes articles, le **droit officiel en vigueur** en compte 7,0 % après vérification, contre 4,6 % pour le droit réécrit (§ 2 nonies). Sur un échantillon frais de 632 articles du texte actuel : 7,8 % contre 4,4 % (§ 2 decies). Sur six mesures indépendantes, on compte 64 défauts grossiers sur 1 879 articles (3,4 % ± 0,8). Aucune tendance à la baisse n'est mesurable d'une ronde à l'autre. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
+- **Taux mesuré** : environ **3 % des articles** gardent un défaut qu'un juriste remarquerait. Mesuré de la même façon sur les mêmes articles, le **droit officiel en vigueur** en compte 7,0 % après vérification, contre 4,6 % pour le droit réécrit (§ 2 nonies). Sur deux échantillons frais du texte actuel, 1 264 articles : 7,5 % contre 3,5 %, soit un peu moins de la moitié (§ 2 decies et 2 undecies). Sur six mesures indépendantes, on compte 64 défauts grossiers sur 1 879 articles (3,4 % ± 0,8). Aucune tendance à la baisse n'est mesurable d'une ronde à l'autre. Il s'agit surtout de contradictions entre deux propositions, de renvois et de décrets d'application non alignés. Le reste ne présente pas de défaut grossier.
 - **Probabilité pour un juriste** qui lit 20 articles de sa matière de tomber sur au moins un défaut grossier : environ une chance sur deux.
 - **Pourquoi les rondes ne font pas baisser le taux mesuré** : environ 1 000 articles sur 30 000 gardent un défaut grossier. Une ronde en corrige 50 à 110, soit une baisse attendue d'environ 0,3 point. C'est en dessous de ce qu'un audit de 314 articles peut détecter (± 2 points).
 - **Ce qu'il faudrait pour descendre nettement sous 3 %** : une lecture systématique, article par article. Aucun signal mécanique ne concentre plus assez les défauts restants pour qu'un balayage ciblé suffise.
