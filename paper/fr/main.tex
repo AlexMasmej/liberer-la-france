@@ -1,0 +1,579 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[french]{babel}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage[hidelinks]{hyperref}
+
+\setlist{itemsep=2pt,topsep=4pt}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\title{Rendre le droit lisible avec des agents d'IA~:\\
+réécrire, éprouver et mesurer cinq codes français}
+
+\author{
+  Alex Masmejean\thanks{Auteur correspondant~: \texttt{alex@masmej.com}.}\\
+  \small Indépendant
+  \and
+  Kevin Primicerio\\
+  \small Indépendant
+}
+
+\date{31 octobre 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets d'application, les annexes fiscales et des versions consolidées futures, qui se contredisent souvent. Nous présentons une preuve de concept dans laquelle des agents d'IA réécrivent, puis auditent de façon contradictoire, cinq codes français complets (travail, code général des impôts et ses quatre annexes, sécurité sociale, urbanisme, construction et habitation)~: 30\,317 entrées d'articles issues de la base officielle LEGI au 18~octobre 2026. Deux passes de rédaction par des agents de programmation orchestrés ont produit 14\,115 articles réécrits et 16\,199 articles maintenus avec une justification propre. Une troisième passe, conduite comme une \og red team \fg{} indépendante, a constitué un registre d'objections (303 soulevées, 243 retenues sur le texte final), appliqué environ 1\,220 corrections par un écrivain gardé avec contrôle d'avant-image, trié les issues d'un contributeur externe et mesuré la fiabilité par six audits aléatoires stratifiés, menés à l'aveugle. Sur 1\,879 articles tirés au hasard, environ 3,4\,\%\,$\pm$\,0,8 portent encore un défaut qu'un juriste remarquerait~: surtout des renvois morts ou décalés, des versions futures qui défont la réforme sans bruit, et des décrets qui gardent des obligations que la loi a supprimées. Les balayages ciblés corrigent la famille qu'ils visent sans faire bouger le taux mesuré~; une lecture systématique, chapitre par chapitre, des 2\,740 articles fiscaux réécrits a trouvé 96 défauts grossiers (3,5\,\%), dont 86 ont été corrigés. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est une initiative indépendante et la méthode est neutre quant aux choix politiques. Textes, outils, échantillons et verdicts d'audit sont publics. Aucun juriste n'a validé le résultat.
+\end{abstract}
+
+\section{Introduction}
+
+\paragraph{La lisibilité, une exigence juridique.}
+L'accessibilité et l'intelligibilité de la loi sont, en France, un objectif de valeur constitutionnelle \cite{cc99421}. Le Conseil d'État critique depuis des décennies l'inflation et l'instabilité des textes \cite{ce2016}.
+
+Le problème n'est pas seulement le volume. Une même règle se répartit entre plusieurs textes~:
+\begin{itemize}
+  \item une loi (partie législative)~;
+  \item ses décrets d'application (partie réglementaire)~;
+  \item pour la fiscalité, les quatre annexes du CGI~;
+  \item des versions consolidées futures, déjà publiées mais pas encore en vigueur.
+\end{itemize}
+Quand l'un de ces textes change et pas les autres, des contradictions apparaissent. Certaines viennent des sources officielles elles-mêmes~; d'autres naissent de la réforme.
+
+\paragraph{Origine de ce travail.}
+Le 19~octobre 2026, le premier auteur a publié un court fil en français \cite{tweet}. Il répondait à un défi public et annonçait que des agents d'IA avaient produit, en une nuit, des versions réécrites de plusieurs codes français, publiées sur cinq sites thématiques. Le fil invitait juristes, économistes, salariés et entrepreneurs à critiquer les propositions article par article.
+
+L'accueil a été bien plus large que prévu~: environ 120\,000 vues, 1\,190 mentions «~j'aime~», 201 republications et 293 signets au dernier relevé. Les critiques qui ont suivi ont été plus utiles encore. Elles ont montré qu'un premier jet rapide ne suffisait pas, et qu'une démonstration crédible demandait trois choses~:
+\begin{enumerate}[label=(\roman*)]
+  \item les codes complets, pas une sélection~;
+  \item une recherche systématique des contradictions~;
+  \item une mesure honnête de ce qui reste faux.
+\end{enumerate}
+Cet article documente cette seconde phase, plus lente.
+
+\paragraph{Objectif.}
+Nous poursuivons deux objectifs.
+\begin{itemize}
+  \item \textbf{La lisibilité.} Produire, pour chaque article du périmètre, un texte proposé complet, présenté en regard de la source officielle et accompagné d'une justification écrite.
+  \item \textbf{Une preuve de concept pour trouver et résoudre les contradictions.} Montrer comment des agents d'IA peuvent trouver et résoudre les contradictions d'un vaste corpus juridique interconnecté, et jusqu'où.
+\end{itemize}
+Le second objectif est le principal intérêt scientifique. Réformer un code est simple à énoncer et difficile à faire de façon cohérente. Supprimer une obligation dans une loi n'a pas de sens si un décret, une annexe fiscale ou une version consolidée future continue de l'imposer.
+
+\paragraph{Contributions.}
+\begin{itemize}
+  \item Une réécriture complète, versionnée et publique de neuf recueils juridiques (30\,317 entrées). Sources officielles et propositions sont tenues séparées, avec un lecteur comparatif et des téléchargements (\S\ref{sec:corpus}--\S\ref{sec:drafting}).
+  \item Un protocole de \og red teaming \fg{} pour la législation produite par IA~:
+  \begin{itemize}
+    \item instantanés figés, dont tous les fichiers sont empreintés~;
+    \item un registre d'objections, avec priorités et natures~;
+    \item un réexamen sur les différences~;
+    \item une correction soumise à un critère d'alignement explicite~;
+    \item un écrivain gardé qui ne peut rien écraser sans contrôle (\S\ref{sec:redteam}).
+  \end{itemize}
+  \item Une méthode de mesure~: six audits aléatoires stratifiés, menés à l'aveugle, avec une taxonomie de dix familles de défauts (F1 à F10). Le taux s'accompagne d'un intervalle de confiance, pas d'une anecdote (\S\ref{sec:measure}).
+  \item Des constats empiriques sur ce que les agents d'IA font bien et mal en matière de cohérence juridique (\S\ref{sec:results}--\S\ref{sec:discussion})~:
+  \begin{itemize}
+    \item les balayages mécaniques atteignent un plateau~;
+    \item les tours de correction peuvent créer de nouveaux défauts~;
+    \item une large part de l'erreur résiduelle vient de textes hors du corpus.
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Position politique.}
+L'orientation de fond de la réécriture est explicite et n'est pas neutre. Elle vise moins d'impôts et moins de contraintes. Elle conserve les exonérations, les dérogations favorables, les droits acquis et les transitions. Elle n'introduit jamais de formalité de remplacement.
+
+Ces choix s'inspirent du programme 2027 de David Lisnard \cite{lisnard}. \textbf{Ce projet est une initiative indépendante.} Il n'est ni commandé, ni relu, ni approuvé par David Lisnard ni par son mouvement, Nouvelle Énergie, et les sites publiés le disent.
+
+La méthode, elle, est neutre. La couche de politiques est une entrée distincte et explicite (\S\ref{sec:policy}), et la même chaîne pourrait mettre en œuvre n'importe quel autre programme. La red team avait pour consigne de corriger les contradictions et les failles, \emph{jamais} de modifier les choix politiques.
+
+\section{Travaux connexes}
+
+Les grands modèles de langage sont de plus en plus évalués sur le raisonnement juridique, par exemple avec LegalBench \cite{legalbench}. Les travaux qui rendent la législation lisible par machine prennent deux formes~:
+\begin{itemize}
+  \item des langages de programmation pour les lois, comme Catala, appliqué au droit fiscal français \cite{catala}~;
+  \item les initiatives \og rules as code \fg{} \cite{oecd2020}.
+\end{itemize}
+Ces deux approches formalisent fidèlement le droit existant. Notre objectif est différent~: nous \emph{réécrivons} le droit selon un programme de réforme, puis nous vérifions la cohérence du résultat.
+
+Le \og red teaming \fg{}, recherche contradictoire de défaillances par une partie indépendante, est une pratique courante pour les systèmes d'IA \cite{ganguli2022}. Il est ici retourné contre une législation produite par IA.
+
+Nous ne connaissons pas de travail antérieur qui réécrive de bout en bout des codes nationaux complets et publie un taux de défauts mesuré.
+
+\section{Corpus et périmètre}
+\label{sec:corpus}
+
+Le corpus est figé au \textbf{18~octobre 2026}. Il est construit à partir de la base officielle LEGI de la Direction de l'information légale et administrative (DILA) \cite{legi}~: le stock du 13~juillet 2025, plus 466 mises à jour quotidiennes.
+
+L'identité de travail d'un article est le couple (identifiant du code, identifiant de version \texttt{LEGIARTI}), accompagné d'une empreinte de sa source et de ses dates de validité. On ne se fie jamais au seul numéro, car les numéros sont recyclés. La base contient 135\,904 versions historiques~; le périmètre couvre les 30\,317 entrées en vigueur ou programmées (tableau~\ref{tab:corpus}).
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabularx}{\linewidth}{lRRRR}
+\toprule
+Recueil & Entrées & Réécrits & Maintenus & Réserves\\
+\midrule
+Code du travail & 11\,593 & 4\,296 & 7\,297 & 0\\
+Code général des impôts (CGI) & 2\,375 & 1\,387 & 988 & 0\\
+Code de la sécurité sociale & 7\,427 & 3\,178 & 4\,247 & 2\\
+Code de l'urbanisme & 2\,459 & 1\,530 & 929 & 0\\
+Code de la construction et de l'habitation & 4\,126 & 2\,205 & 1\,921 & 0\\
+CGI, annexe I & 71 & 42 & 29 & 0\\
+CGI, annexe II & 674 & 388 & 286 & 0\\
+CGI, annexe III & 1\,115 & 799 & 316 & 0\\
+CGI, annexe IV & 477 & 290 & 186 & 1\\
+\midrule
+Total & 30\,317 & 14\,115 & 16\,199 & 3\\
+\bottomrule
+\end{tabularx}
+\caption{Périmètre à la fin de la seconde passe. Les articles \og maintenus \fg{} sont conservés sans changement, avec une justification propre. Les trois \og réserves \fg{} sont des lacunes documentaires (une figure manquante, des formulaires originaux manquants et un conflit dans la consolidation officielle) qui n'ont pas été comblées par supposition.}
+\label{tab:corpus}
+\end{table}
+
+Sont hors périmètre les textes que le corpus cite sans les contenir. Par exemple~: le code monétaire et financier, le code de commerce, les lois non codifiées, les arrêtés, et le code des impositions sur les biens et services (CIBS), dans lequel une grande partie de la TVA est recodifiée au 1\textsuperscript{er}~janvier 2027. Cette frontière se révèle importante (\S\ref{sec:discussion}).
+
+\section{Chaîne de rédaction (première et seconde passes)}
+\label{sec:drafting}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[node distance=3mm and 4mm, font=\small,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=11mm, text width=25mm, fill=gray!6},
+  arr/.style={-{Stealth[length=2mm]}, thick}]
+\node[box] (src) {Sources officielles\\LEGI (DILA)};
+\node[box, right=of src] (pol) {Couche de politiques\\(choix explicites)};
+\node[box, right=of pol] (p1) {Passe 1\\agents de rédaction};
+\node[box, right=of p1] (p2) {Passe 2\\contradictions};
+\node[box, below=7mm of p2] (rt) {Passe 3\\red team indépendante};
+\node[box, left=of rt] (fix) {Écrivain gardé\\(avant-image)};
+\node[box, left=of fix] (aud) {Audits aléatoires\\et balayages};
+\node[box, left=of aud] (pub) {Lecteur, téléchar\-gements, dépôt public};
+\draw[arr] (src) -- (pol); \draw[arr] (pol) -- (p1); \draw[arr] (p1) -- (p2);
+\draw[arr] (p2) -- (rt); \draw[arr] (rt) -- (fix); \draw[arr] (fix) -- (aud);
+\draw[arr] (aud) -- (pub);
+\draw[arr, dashed] (aud.south) to[bend right=22] node[below, font=\scriptsize]{nouvelles familles de défauts} (rt.south);
+\end{tikzpicture}
+\caption{Vue d'ensemble de la chaîne. Toute écriture passe par le même écrivain gardé~; les audits renvoient de nouvelles familles de défauts à la red team.}
+\label{fig:pipeline}
+\end{figure}
+
+\subsection{Couche de politiques}
+\label{sec:policy}
+
+La figure~\ref{fig:pipeline} résume l'ensemble de la chaîne. Toutes les décisions de fond sont stockées comme des objets de politique explicites et versionnés, séparés du texte juridique~: coordinations par domaine, résumés des sites et méthode de chiffrage net des mesures fiscales. Exemples~:
+\begin{itemize}
+  \item un contrat de travail unique à durée indéterminée, avec un préavis de quinze jours de chaque côté~;
+  \item un impôt sur les sociétés déclenché par la distribution~;
+  \item la suppression des droits de succession, les donations restant taxées~;
+  \item la suppression des impôts de production~;
+  \item des délais d'instruction des permis raccourcis.
+\end{itemize}
+Le reste de la chaîne les traite comme des entrées.
+
+Des invariants éditoriaux s'appliquent partout~:
+\begin{itemize}
+  \item les sources officielles ne sont jamais écrasées~;
+  \item aucun taux, aucune date, aucune équivalence ni aucun fac-similé n'est inventé~;
+  \item on ne supprime jamais une faveur pour rendre deux textes artificiellement cohérents~;
+  \item une obligation supprimée dans une loi ne doit pas survivre dans un décret, un formulaire ou un renvoi.
+\end{itemize}
+
+\subsection{Agents par article}
+
+Chaque article, ou lot d'articles liés, est traité par un agent de programmation non interactif. L'agent reçoit~:
+\begin{itemize}
+  \item le XML source complet, avec ses notes (NOTA), ses tableaux et ses versions~;
+  \item les politiques applicables~;
+  \item les cibles de renvoi explicites.
+\end{itemize}
+Il doit rendre l'article proposé \emph{complet}, jamais un résumé, avec un motif et des notes de revue. Il lui attribue l'un de deux statuts, \texttt{rewrite\_draft} ou \texttt{retained\_unchanged}. Les abrogations et réductions partielles sont typées (\texttt{full\_repeal}, \texttt{normative\_reduction}). Chaque disposition retirée est listée, pour qu'une réduction soit vérifiable.
+
+La première passe a utilisé un modèle d'OpenAI (\texttt{gpt-6-astra}, effort moyen) via l'agent en ligne de commande Codex. La seconde passe a utilisé \texttt{gpt-6.1-sol} en effort élevé.
+
+\subsection{Seconde passe~: les contradictions d'abord}
+
+À partir du 23~octobre, la priorité est passée des coupes supplémentaires aux \emph{contradictions et incohérences}~: dans un article, entre articles et entre les neuf recueils. Les 30\,314 propositions antérieures ont toutes été relues au regard de leurs sources et contreparties complètes. Chaque agent a classé chaque tension trouvée parmi~:
+\begin{itemize}
+  \item une contradiction effective~;
+  \item une coordination nécessaire~;
+  \item une transition compatible~;
+  \item une différence de champ~;
+  \item un point invérifiable.
+\end{itemize}
+
+\subsection{Gardes}
+
+Rien n'est accepté sur la seule parole d'un modèle. Une réponse n'est acceptée qu'après les contrôles suivants~:
+\begin{itemize}
+  \item la source, les NOTA et les dates de validité~;
+  \item la validation du contenu, y compris le balisage autorisé et les tableaux complets~;
+  \item un contrôle d'avant-image sur cinq champs canoniques (empreinte de source, statut, proposition, motif, notes), dans la base comme dans le fichier de lot propriétaire de l'article~;
+  \item la propriété, le registre et l'archive~;
+  \item une validation indépendante de tout le corpus.
+\end{itemize}
+Les preuves d'exécution natives (modèle, effort, session) sont aussi contrôlées.
+
+Ces gardes ne sont pas décoratives. Elles ont arrêté de vraies divergences~: trois tâches de seconde passe ont été refusées parce que l'article avait changé entre-temps. Elles ont aussi rendu possible la troisième passe, puisque chaque correction a pu passer par le même écrivain.
+
+La seconde passe s'est achevée le 29~octobre, avec l'acceptation des 30\,314 identités. Un audit structurel a posteriori a ensuite relevé 94\,059 points à examiner, dont 1\,412 prioritaires, sur 792 articles. Ce sont des pistes, pas des contradictions établies.
+
+\section{Red team indépendante (troisième passe)}
+\label{sec:redteam}
+
+La troisième passe a utilisé un autre système~: Claude Code d'Anthropic (Claude Opus 5.5). Un agent coordinateur a lancé environ 390 sous-agents en cinq jours. Il a travaillé comme un relecteur \emph{indépendant}, sous des règles strictes~:
+\begin{itemize}
+  \item lecture seule de la production, sur des instantanés figés dont tous les fichiers sont empreintés~;
+  \item citations exactes, avec identifiant de version, pour toute affirmation~;
+  \item aucune source, date ou \og preuve de résolution \fg{} inventée~;
+  \item aucun contournement de contrôle d'accès~;
+  \item la mention explicite qu'une revue par IA ne vaut pas validation par un juriste.
+\end{itemize}
+
+\subsection{Registre des objections}
+
+La première vague a couvert 31 dossiers thématiques (par exemple versions futures, décrets contre lois, annexes fiscales, transitions de la réforme des accidents du travail de 2026). Cinq domaines prioritaires ont suivi~: l'impôt sur les sociétés à la distribution, les successions, les quotas de logements sociaux SRU, la CVAE et la taxe sur les salaires.
+
+Chaque objection indique~:
+\begin{itemize}
+  \item une priorité~: P0 (effet grave et certain), P1 (effet probable) ou P2 (effet limité)~;
+  \item une nature~: coordination manquante, incohérence introduite par le projet, risque juridique, conflit de source, anomalie d'inventaire, réserve documentaire ou simple alerte~;
+  \item les passages exacts, le raisonnement et une \emph{correction minimale}~;
+  \item ce qu'il faut préserver~: droits, faveurs et transitions.
+\end{itemize}
+Les 1\,943 alertes structurelles jugées prioritaires par l'audit statique ont été qualifiées une à une. Les doublons ont été fusionnés avec un motif écrit (46 fusions).
+
+\subsection{Réexamen sur les différences}
+
+La seconde passe tournait encore quand la red team a commencé. Le registre a donc été réexaminé deux fois, sur un instantané intermédiaire puis sur l'instantané final, à partir d'un diff fichier par fichier. Sur le texte final, 136 objections dont l'article avait changé ont été relues~:
+\begin{itemize}
+  \item 58 étaient résolues par la seconde passe (dont 17 P1)~;
+  \item 30 ont été reformulées~;
+  \item 48 ont été maintenues.
+\end{itemize}
+Le registre final compte \textbf{243 objections}~: 3 P0, 83 P1 et 157 P2, dont 188 confirmées et 55 à confirmer.
+
+\subsection{De la revue à la correction}
+
+Après la revue, le premier auteur a fait de la red team l'unique écrivain, avec une consigne permanente~: les corrections peuvent lever des contradictions et fermer des failles, jamais changer des choix politiques. Une correction n'est appliquée que si elle fait l'une de ces trois choses~:
+\begin{enumerate}[label=(\alph*)]
+  \item rendre effective une réforme décidée, par exemple en la reportant sur une version future publiée qui rétablirait sinon l'ancienne règle~;
+  \item lever une contradiction~;
+  \item fermer une faille qui contredit l'objet déclaré du projet.
+\end{enumerate}
+Une correction est refusée si elle fait l'une des choses suivantes~:
+\begin{itemize}
+  \item créer ou augmenter un impôt~;
+  \item ajouter une formalité ou une condition~;
+  \item supprimer une exonération ou un droit acquis~;
+  \item revenir sur un choix explicite de l'auteur~;
+  \item trancher une question politique ouverte.
+\end{itemize}
+
+Les agents rédacteurs n'écrivent leurs corrections que dans un espace de travail, sous forme de textes d'articles complets avec des métadonnées typées. Un vérificateur reconstruit chaque ligne exactement comme le ferait l'applicateur de production, et lance le validateur du projet dans un répertoire temporaire.
+
+Le coordinateur applique ensuite les corrections avec l'outil gardé. Cet outil contrôle l'avant-image, archive l'ancien texte, revalide tout le corpus et revient en arrière en cas d'échec. Une table de propriété attribue chaque article à un seul groupe. Les besoins entre groupes passent par des demandes, si bien que deux agents n'écrivent jamais le même article.
+
+\subsection{Contributions externes}
+
+Pendant la revue, un contributeur externe (le second auteur) a ouvert 13 issues et deux demandes de fusion sur le dépôt public. Produites avec ses propres agents d'IA, elles portaient sur des renvois du code du travail, des décrets qui survivent à des lois abrogées, des sanctions et les commissions du CSE. Chaque issue a été triée par rapport au registre, sur le texte courant. Trois d'entre elles demandaient un changement d'orientation politique~; elles ont été expliquées et closes comme non retenues.
+
+\section{Mesurer la fiabilité}
+\label{sec:measure}
+
+Un registre dit ce qui a été trouvé, pas ce qui reste. Nous avons donc mesuré directement le taux de défauts résiduel.
+
+\paragraph{Échantillonnage.}
+Chaque audit tire environ 314 articles au hasard. Le tirage est stratifié par recueil et par niveau (législatif ou réglementaire), avec au moins six articles par strate. Chaque audit exclut tous les articles déjà lus. Les graines sont publiées.
+
+\paragraph{Lecture à l'aveugle.}
+Dix agents par audit lisent leur part \og comme un juriste \fg{}, sur le texte de production~: l'article, ses versions futures, ses trois liens les plus importants, et ses textes d'application ou sa base légale. Ils ne consultent pas le registre avant de qualifier un article.
+
+\paragraph{Verdicts.}
+Chaque article est classé~:
+\begin{itemize}
+  \item \textbf{G} (grossier)~: un juriste le remarquerait et le jugerait anormal~;
+  \item \textbf{m} (mineur)~: notes fausses, rédaction maladroite mais sans effet, ou doute raisonnable~;
+  \item \textbf{0}~: rien à signaler.
+\end{itemize}
+Tout G ou m exige une citation exacte. Les taux sont pondérés par strate, avec des intervalles à 95\,\%. Les défauts sont classés en dix familles~:
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+F1 & La loi supprime une formalité ou une obligation, mais un décret ou une annexe l'organise encore.\\
+F2 & Une sanction survit à l'obligation qu'elle sanctionne.\\
+F3 & Renvoi mort, décalé ou erroné.\\
+F4 & Une version future publiée, sans proposition, rétablit l'ancienne règle~; ou une abrogation affirmée à tort.\\
+F5 & Contradiction entre deux dispositions (hors F1).\\
+F6 & Transition absente ou fautive (rétroactivité, perte de droits acquis).\\
+F7 & Texte défectueux (tronqué, numérotation cassée, tableau amputé).\\
+F8 & Contraire à une orientation déclarée (impôt ou formalité recréés, faveur supprimée sans décision).\\
+F9 & Risque de droit supérieur (Constitution, droit de l'Union), toujours \og à confirmer \fg{}.\\
+F10 & Notes ou motifs seulement (toujours mineur).\\
+\bottomrule
+\end{tabularx}
+\caption{Familles de défauts utilisées par les auditeurs et les balayages.}
+\label{tab:families}
+\end{table}
+
+\paragraph{Balayages par famille.}
+Après chaque audit, nous avons transformé ses défauts grossiers en générateurs mécaniques de pistes, puis balayé tout le corpus. Exemples~:
+\begin{itemize}
+  \item un décret qui cite une loi abrogée~;
+  \item une sanction qui vise un article supprimé~;
+  \item un renvoi au $n$-ième alinéa d'un article qu'une proposition ou une version future a décalé~;
+  \item une version actuelle dotée d'une proposition dont la version publiée suivante n'en a pas~;
+  \item un décret qui emploie encore les mots distinctifs de ce que sa loi a retiré~;
+  \item un chapitre dont seule une partie des articles est abrogée.
+\end{itemize}
+Une piste n'est pas un constat. Chaque piste est qualifiée par un agent qui lit les textes en entier~: faux positif, déjà réglé, G ou m. Une correction est rédigée pour chaque G confirmé.
+
+\paragraph{Lecture systématique.}
+Enfin, nous avons lu chaque article réécrit du CGI et de ses annexes, là où les audits montraient les taux les plus élevés. Les 2\,740 articles non encore audités ont été regroupés par section, pour que chaque lecteur voie un chapitre entier. Ils ont été répartis en 132 paquets d'environ 21 articles. Chaque lecteur qualifie chaque article et rédige les corrections de ses défauts grossiers.
+
+\section{Résultats}
+\label{sec:results}
+
+\subsection{Corrections appliquées}
+
+En cinq jours, la troisième passe a appliqué \textbf{1\,222 lignes de correction sur 1\,151 articles distincts}~:
+\begin{itemize}
+  \item 966 remplacements de propositions existantes~;
+  \item 256 propositions nouvelles sur des versions futures publiées, qui auraient sinon rétabli le texte d'avant la réforme à leur entrée en vigueur.
+\end{itemize}
+Chaque ligne a été validée par le validateur du projet et archivée avec ses empreintes avant et après. Les 321 tests du projet passent après chaque tour. Le tableau~\ref{tab:rounds} détaille les lignes par origine.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabularx}{\linewidth}{Xrr}
+\toprule
+Origine des corrections & Pistes ou objections & Lignes appliquées\\
+\midrule
+Objections P0/P1 et premières issues GitHub & 86 objections & 395\\
+Objections P2 & 157 objections & 201\\
+Balayage 1 (renvois morts, versions futures) & 1\,127 pistes $\rightarrow$ 154 G & 145\\
+Balayage 2 (la loi retire, le décret garde) & 1\,117 pistes $\rightarrow$ 33 G & 36\\
+Défauts des audits 1 à 3, pilote \og notes \fg{}, issues suivantes & -- & $\approx$\,90\\
+Tour 4 (audit 4 et balayage) & 918 pistes $\rightarrow$ 45 G & 64\\
+Tour 5 (audit 5 et balayage fiscal) & 548 pistes $\rightarrow$ 114 G & 97\\
+Tour 6 (audit 6 et chapitres entiers) & 365 pistes $\rightarrow$ 25 G & 110\\
+Lecture systématique, CGI et annexes & 2\,740 articles $\rightarrow$ 96 G & 81\\
+\bottomrule
+\end{tabularx}
+\caption{Corrections appliquées par la troisième passe, par origine. Les nombres viennent des rapports de chaque tour~; la ligne \og $\approx$ \fg{} regroupe de petits ensembles de corrections.}
+\label{tab:rounds}
+\end{table}
+
+\subsection{Taux de défauts résiduel}
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Audit (état du texte) & Échantillon & G & Taux G & G ou m\\
+\midrule
+1 (après corrections P0/P1) & 309 & 12 & 4,0\,\% $\pm$ 2,2 & 21,1\,\%\\
+2 (après balayage 1) & 314 & 9 & 2,9\,\% $\pm$ 1,9 & 22,1\,\%\\
+3 (après balayage 2) & 314 & 12 & 3,8\,\% $\pm$ 2,1 & 17,7\,\%\\
+4 (après objections P2) & 314 & 8 & 2,5\,\% $\pm$ 1,7 & 14,6\,\%\\
+5 (après tour 4) & 314 & 10 & 3,2\,\% $\pm$ 1,9 & 22,6\,\%\\
+6 (après tour 5) & 314 & 13 & 4,1\,\% $\pm$ 2,2 & 15,3\,\%\\
+\midrule
+Ensemble & 1\,879 & 64 & \textbf{3,4\,\% $\pm$ 0,8} & \\
+\bottomrule
+\end{tabular}
+\caption{Six audits aléatoires indépendants, menés à l'aveugle. Chaque échantillon exclut tous les articles déjà lus.}
+\label{tab:audits}
+\end{table}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.82\linewidth, height=5.2cm,
+  xlabel={Audit}, ylabel={Taux de défauts grossiers (\%)},
+  xmin=0.5, xmax=6.5, ymin=0, ymax=7,
+  xtick={1,2,3,4,5,6}, ytick={0,1,2,3,4,5,6,7},
+  grid=major, grid style={gray!20},
+]
+\addplot+[only marks, mark=*, black, error bars/.cd, y dir=both, y explicit]
+  coordinates {(1,4.0) +- (0,2.2) (2,2.9) +- (0,1.9) (3,3.8) +- (0,2.1)
+               (4,2.5) +- (0,1.7) (5,3.2) +- (0,1.9) (6,4.1) +- (0,2.2)};
+\addplot[dashed, gray, domain=0.5:6.5] {3.4};
+\node[anchor=south, font=\small, gray] at (axis cs:3.5,3.45) {ensemble 3,4\,\%};
+\end{axis}
+\end{tikzpicture}
+\caption{Taux de défauts grossiers mesuré à chaque audit, avec intervalles à 95\,\%. Aucune baisse n'est détectable d'un tour à l'autre.}
+\label{fig:audits}
+\end{figure}
+
+Environ 3,4\,\% des articles (intervalle à 95\,\% de 2,6 à 4,2\,\%) portent encore un défaut grossier (tableau~\ref{tab:audits}, figure~\ref{fig:audits}). Autrement dit, un juriste qui lit 20 articles de sa matière a à peu près une chance sur deux de tomber sur au moins un défaut.
+
+Le taux ne baisse pas de façon mesurable d'un tour à l'autre, alors que chaque tour corrige 50 à 110 articles. C'est attendu. Si environ 1\,000 articles sont défectueux, en corriger 100 abaisse le taux d'environ 0,3 point, bien en dessous de ce qu'un audit de 314 articles peut détecter ($\pm$\,2 points).
+
+La composition des défauts, elle, a changé~:
+\begin{itemize}
+  \item après le premier balayage, les renvois morts (F3) ont reculé~;
+  \item les contradictions entre deux propositions (F5) sont passées au premier plan~;
+  \item les audits suivants se sont concentrés sur les annexes fiscales.
+\end{itemize}
+Selon les audits, la moitié à trois quarts des défauts grossiers trouvés étaient inconnus du registre.
+
+\subsection{Balayages~: rendement et plateau}
+
+Le rendement des balayages a baissé à mesure que chaque famille s'épuisait. Le balayage \og la loi retire, le décret garde \fg{} a donné 3\,\% de G par piste, contre 14\,\% pour le premier balayage. Seule la requalification a fait remonter le rendement~: relues au seuil de l'audit, 56 des 166 pistes jugées mineures auparavant se sont révélées grossières.
+
+Un pilote sur 250 articles dont les notes de revue annonçaient une coordination ouverte a montré que 60\,\% de ces notes étaient simplement périmées. Son taux de G était de 4,8\,\%, à peine plus que la lecture au hasard~: le balayage complet n'a donc pas été lancé.
+
+\subsection{Lecture systématique du code fiscal}
+
+La lecture, chapitre par chapitre, des 2\,740 articles réécrits du CGI et de ses annexes a donné~:
+\begin{itemize}
+  \item 96 défauts grossiers (3,5\,\%)~;
+  \item 383 défauts mineurs~;
+  \item 2\,261 articles sans rien à signaler.
+\end{itemize}
+Ce taux de 3,5\,\% est bien inférieur aux 9 à 12\,\% que suggéraient les audits pour ces strates. Ces estimations reposaient sur de petits échantillons (76 et 128 articles), et les tours 4 à 6 s'étaient concentrés sur les annexes fiscales. Nous ne pouvons pas exclure qu'un lecteur qui parcourt un chapitre entier soit un peu moins strict qu'un auditeur à l'aveugle.
+
+Sur les 96 défauts, 86 sont corrigés (81 lignes, dont 16 demandées entre groupes). Dix restent ouverts. Neuf sont des réformes de TVA écrites dans des subdivisions du CGI qu'une ordonnance de 2025 transfère au CIBS le 1\textsuperscript{er}~janvier 2027~: ces réformes seraient donc sans effet, et le CIBS est hors du corpus. Le dixième est un arbitrage politique laissé à l'auteur.
+
+La lecture a consommé environ 30 millions de jetons (hors lectures de cache), soit environ 11\,000 jetons par article.
+
+\subsection{Exemples de défauts}
+
+Les exemples suivants, tous corrigés sauf mention contraire, montrent le type d'erreurs que produit la rédaction par IA et que la revue par IA peut détecter~:
+\begin{itemize}
+  \item \emph{Recréer un impôt que le projet supprime.} L'inventaire avait retenu une version de l'article 1609 \emph{quinvicies} du CGI jamais entrée en vigueur. Sa proposition rétablissait la contribution supplémentaire à l'apprentissage, que l'article L6242-1 proposé du code du travail supprime.
+  \item \emph{Un taux \og réduit \fg{} supérieur au taux normal.} Après la réforme de l'impôt sur les sociétés, le taux réduit de 24\,\% des organismes sans but lucratif (CGI 219 \emph{bis}) dépassait le nouveau taux normal de 20\,\%.
+  \item \emph{Des chapitres à moitié abrogés.} Dans l'annexe II du CGI, un tour de correction a abrogé une partie des articles sur les centres de gestion agréés, dont la base légale (CGI 1649 \emph{quater}~C à~O) avait été abrogée en 2025. Les articles voisins organisaient encore la procédure d'agrément. L'audit suivant l'a relevé, et le chapitre a ensuite été traité en entier.
+  \item \emph{Des versions futures qui défont la réforme.} Une adaptation à Mayotte prévue pour 2028 (CSS L759-23) appliquait \og dans la rédaction suivante \fg{} un article réécrit par le projet, rétablissant ainsi la règle que le projet supprime.
+  \item \emph{Un décret contre sa loi.} Un décret fiscal proposé supprimait l'accréditation préalable des représentants fiscaux, alors que la loi (CGI 1671) l'exigeait encore. La correction cohérente aligne la loi, au lieu de rétablir une formalité.
+\end{itemize}
+
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{Ce que les agents d'IA font bien.}
+À cette échelle, les agents sont des lecteurs infatigables, complets et littéraux. Ils reproduisent des articles entiers, y compris des tableaux de plusieurs centaines de milliers de caractères. Ils suivent les renvois à travers neuf recueils et de nombreuses versions, et ils gardent des citations exactes. Avec des modifications typées et des écritures gardées, cela a permis de réécrire puis de réparer un corpus qu'aucune personne ne pourrait relire en une semaine. Le travail est aussi entièrement vérifiable~: chaque changement est archivé avec son avant-image et son motif.
+
+\paragraph{Ce qu'ils font mal.}
+\begin{itemize}
+  \item \emph{La frontière du corpus.} Beaucoup de défauts impliquent un texte qui n'était pas fourni~: le CIBS, des lois non codifiées, des arrêtés. Un agent ne peut que les signaler comme réserves documentaires, et ne doit pas deviner.
+  \item \emph{Le temps.} Les textes juridiques ont des versions futures programmées. Une réforme écrite sur une version qui prend fin avant que la réforme puisse s'appliquer est sans effet. Une version future sans proposition rétablit sans bruit l'ancienne règle.
+  \item \emph{Une cohérence locale sans cohérence globale.} Une modification isolée est valide, mais ses voisines restent incohérentes. L'un de nos propres tours de correction a créé exactement un tel chapitre à moitié abrogé. Nous l'avons corrigé en traitant les chapitres en entier, et en lançant un contrôle de régression après chaque application~: tout article qui cite encore un article abrogé au cours du tour.
+  \item \emph{La calibration.} Les lecteurs ne séparent pas grossier et mineur avec la même sévérité. Les premiers balayages avaient classé des renvois morts comme mineurs. Requalifiés au seuil de l'audit, un tiers d'entre eux sont devenus des défauts grossiers.
+\end{itemize}
+
+\paragraph{La mesure change la discussion.}
+Sans les audits aléatoires, le nombre de corrections, plus de 1\,200, aurait laissé croire à un progrès régulier. Les audits montrent un plateau autour de 3 à 4\,\%, et ils l'expliquent. Les balayages ciblés aident, mais les défauts restants sont dispersés. Seule une lecture systématique peut faire nettement baisser le taux. Un taux de défauts publié, reproductible et assorti d'un intervalle nous semble le minimum pour toute affirmation sur une législation rédigée par IA.
+
+\paragraph{Contradictions et politique.}
+Tenir la red team à l'écart des choix politiques a été plus difficile que prévu. Beaucoup de contradictions apparentes ont deux résolutions cohérentes~: supprimer une faveur ou l'étendre, rétablir une formalité ou en effacer le reliquat. Nous avons tranché par un critère d'alignement explicite et publié (\S\ref{sec:redteam}), et nous avons renvoyé les vrais arbitrages à l'auteur. Un autre programme changerait le critère, pas la méthode.
+
+\paragraph{La relecture humaine.}
+Aucun juriste n'a validé le résultat. La chaîne rend la relecture juridique \emph{moins coûteuse}, pas inutile~: chaque article est livré avec sa source, son motif, ses notes, ses objections et sa trace d'audit. Le suivi public des issues s'est révélé le canal le plus efficace. Neuf des onze premières issues externes visaient un vrai défaut.
+
+\section{Limites}
+
+\begin{itemize}
+  \item Une revue par IA n'est pas une validation juridique. Les verdicts d'audit sont des jugements de modèles et peuvent se tromper dans les deux sens.
+  \item Le corpus est figé au 18~octobre 2026, et les textes hors des neuf recueils ne sont pas réécrits.
+  \item Des échantillons d'audit d'environ 314 articles ne détectent que des écarts d'environ $\pm$\,2 points~; les taux par strate sont donc imprécis.
+  \item Les modèles de rédaction et le modèle de revue viennent de fournisseurs différents, ce qui limite les angles morts communs sans les supprimer.
+  \item Les coûts n'ont pas été suivis de façon homogène d'une passe à l'autre~; toute affirmation de productivité serait spéculative.
+  \item Les effets économiques et budgétaires de la réforme sortent du champ de cet article.
+\end{itemize}
+
+\section{Conclusion et travaux futurs}
+
+Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team indépendante, et mesuré ce qui reste faux. Le taux résiduel de défauts grossiers est d'environ 3,4\,\%, et toute la trace est publique.
+
+Prochaines étapes~:
+\begin{itemize}
+  \item la lecture systématique des autres articles réécrits~: construction-habitation et sécurité sociale (environ 5\,500), puis travail et urbanisme (environ 5\,900)~;
+  \item l'intégration du CIBS au corpus~;
+  \item la validation par des juristes praticiens, en commençant par les objections et arbitrages ouverts.
+\end{itemize}
+Au-delà de cette réforme particulière, la méthode est un modèle~: une couche de politiques explicite, une rédaction complète, des écritures gardées, une red team indépendante et une mesure honnête. Nous espérons qu'elle rende le droit plus lisible, et qu'elle donne à chacun un moyen concret de vérifier la cohérence d'une réforme proposée.
+
+\section*{Disponibilité des données et du code}
+
+Le corpus réécrit, les sources officielles, les politiques, les lots, les rapports et le registre de la troisième passe, les échantillons et verdicts d'audit, et les outils de balayage et de lecture sont publics sur \url{https://github.com/AlexMasmej/liberer-la-france}. Un lecteur comparatif et des téléchargements complets sont disponibles sur \url{https://www.libererlaretraite.com/corpus/} et \url{https://www.libererlaretraite.com/telechargements/}.
+
+\section*{Usage de l'IA}
+
+Des systèmes d'IA ont effectué l'essentiel du travail de rédaction, de revue et de correction décrit ici, sous la direction et l'arbitrage d'humains. Ce manuscrit a été rédigé avec l'aide de Claude (Anthropic) à partir des archives du projet, puis relu par les auteurs.
+
+\section*{Contributions des auteurs}
+
+A.M.\ a conçu et dirigé le projet, fixé la couche de politiques, conduit les passes de rédaction et arbitré tous les choix politiques. K.P.\ a mené une revue externe indépendante des codes publiés avec ses propres agents d'IA, en ouvrant des issues et des tests d'acceptation qui ont été triés et en partie intégrés. Les deux auteurs ont relu le manuscrit.
+
+\section*{Remerciements}
+
+Nous remercions Rand Hindi, dont l'exemple a inspiré l'approche de \og red teaming \fg{} de la troisième passe. Nous remercions toutes celles et ceux qui ont lu, critiqué et partagé le fil initial.
+
+\begin{thebibliography}{99}
+
+\bibitem{cc99421}
+Conseil constitutionnel,
+Décision n\textsuperscript{o}~99-421~DC du 16~décembre 1999, \emph{Loi portant habilitation du Gouvernement à procéder, par ordonnances, à l'adoption de la partie législative de certains codes}.
+
+\bibitem{ce2016}
+Conseil d'État,
+\emph{Simplification et qualité du droit}, Étude annuelle 2016, La Documentation française, 2016.
+
+\bibitem{tweet}
+A.~Masmej,
+Fil publié sur X, 19~octobre 2026,
+\url{https://x.com/AlexMasmej/status/2112088220804722917} (chiffres d'audience relevés le 31~octobre 2026).
+
+\bibitem{lisnard}
+D.~Lisnard et Nouvelle Énergie,
+Programme pour l'élection présidentielle de 2027,
+\url{https://www.unenouvelleenergie.fr/}.
+
+\bibitem{legi}
+Direction de l'information légale et administrative (DILA),
+LEGI~: codes, lois et règlements consolidés,
+\url{https://www.data.gouv.fr/datasets/legi-codes-lois-et-reglements-consolides}.
+
+\bibitem{legalbench}
+N.~Guha et al.,
+LegalBench: A collaboratively built benchmark for measuring legal reasoning in large language models,
+\emph{NeurIPS Datasets and Benchmarks}, 2023. arXiv:2308.11462.
+
+\bibitem{catala}
+D.~Merigoux, N.~Chataing et J.~Protzenko,
+Catala: A programming language for the law,
+\emph{Proceedings of the ACM on Programming Languages} 5(ICFP), 2021. arXiv:2103.03198.
+
+\bibitem{oecd2020}
+Observatoire de l'innovation dans le secteur public de l'OCDE,
+\emph{Cracking the Code: Rulemaking for Humans and Machines}, OCDE, 2020.
+
+\bibitem{ganguli2022}
+D.~Ganguli et al.,
+Red teaming language models to reduce harms: Methods, scaling behaviors, and lessons learned,
+arXiv:2209.07858, 2022.
+
+\end{thebibliography}
+
+\end{document}
