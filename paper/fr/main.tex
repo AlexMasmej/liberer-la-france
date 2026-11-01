@@ -40,7 +40,7 @@ des agents d'IA réécrivent et vérifient cinq grands codes français}
 \maketitle
 
 \begin{abstract}
-Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets d'application, les annexes fiscales et des versions consolidées futures, qui se contredisent souvent. Des agents d'IA réécrivent, puis auditent de façon contradictoire, cinq grands codes français complets (code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation)~: 30\,317 entrées d'articles issues de la base officielle LEGI au 18~octobre 2026. Deux passes de rédaction ont produit 14\,115 articles réécrits et 16\,199 articles maintenus avec justification. Une troisième passe, en \og red team \fg{} indépendante, a tenu un registre d'objections, appliqué environ 1\,290 corrections et mesuré la fiabilité par six audits aléatoires stratifiés à l'aveugle. Sur deux échantillons frais totalisant 1\,264 articles, audités à l'aveugle sur les deux textes et chaque défaut contesté vérifié, des auditeurs IA trouvent un défaut grossier dans 7,5\,\%\,$\pm$\,1,5 des textes officiels, contre 3,5\,\%\,$\pm$\,1,0 du droit réécrit actuel (test apparié, $p \approx 2\times10^{-10}$)~: 60 défauts officiels réparés, surtout des renvois morts, pour 9 introduits. Une comparaison sur 1\,879 articles concorde (7,0 contre 4,6\,\%). Les balayages ciblés corrigent une famille à la fois sans faire bouger le taux mesuré~; une lecture systématique des 2\,740 articles fiscaux réécrits a trouvé 96 défauts grossiers et en a corrigé 86. Le projet a coûté environ 1\,400~dollars~; le même travail par des juristes se chiffrerait en millions d'euros. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est une initiative indépendante et la méthode est neutre quant aux choix politiques. Ces résultats, produits et mesurés par des agents d'IA seuls, sont publiés avec textes, outils et verdicts pour que juristes et citoyens les vérifient et les consolident.
+Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets, les annexes fiscales et des versions futures qui se contredisent souvent. Des agents d'IA réécrivent ici cinq grands codes français complets~: code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation, soit 30\,317 articles de la base officielle LEGI au 18~octobre 2026. Le travail a suivi trois passes et une revue publique ouverte. La première a réécrit chaque article (14\,115 réécrits, 16\,199 maintenus avec justification)~; la deuxième les a tous relus pour les contradictions~; la troisième, en \og red team \fg{} indépendante, a soulevé 303 objections, appliqué environ 1\,290 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle~; les issues GitHub publiques ont nourri la même boucle. Sur deux échantillons frais de 1\,264 articles, audités à l'aveugle sur les deux textes, chaque défaut contesté vérifié, des auditeurs IA trouvent un défaut grossier dans 7,5\,\%\,$\pm$\,1,5 des textes officiels, contre 3,5\,\%\,$\pm$\,1,0 du droit réécrit (test apparié, $p \approx 2\times10^{-10}$)~: 60 défauts officiels réparés, surtout des renvois morts, pour 9 introduits. Le projet a coûté environ 1\,400~dollars~; le même travail par des juristes coûterait des millions d'euros. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est indépendant et la méthode neutre. Ces résultats, produits et mesurés par l'IA seule, sont publiés avec textes, outils et verdicts pour que juristes et citoyens les vérifient et les consolident.
 \end{abstract}
 
 \section{Introduction}
@@ -78,7 +78,7 @@ Le second objectif est le principal intérêt scientifique. Réformer un code es
 
 \paragraph{Contributions.}
 \begin{itemize}
-  \item Une réécriture complète, versionnée et publique de neuf recueils juridiques (30\,317 entrées). Sources officielles et propositions sont tenues séparées, avec un lecteur comparatif et des téléchargements (\S\ref{sec:corpus}--\S\ref{sec:drafting}).
+  \item Une réécriture complète de cinq grands codes et des quatre annexes du CGI (30\,317 entrées), en trois passes et une revue publique ouverte, versionnée et publique. Sources officielles et propositions sont tenues séparées, avec un lecteur comparatif et des téléchargements (\S\ref{sec:corpus}--\S\ref{sec:drafting}).
   \item Un protocole de \og red teaming \fg{} pour la législation produite par IA~:
   \begin{itemize}
     \item instantanés figés, dont tous les fichiers sont empreintés~;
@@ -97,6 +97,27 @@ Le second objectif est le principal intérêt scientifique. Réformer un code es
     \item une large part de l'erreur résiduelle vient de textes hors du corpus.
   \end{itemize}
 \end{itemize}
+
+\paragraph{Le projet en un coup d'œil.}
+Le tableau~\ref{tab:glance} résume l'ensemble~: trois passes sur les cinq codes et les quatre annexes fiscales, une revue publique ouverte, et les mesures présentées ici.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{3.1cm}>{\raggedright\arraybackslash}X}
+\toprule
+Étape & Dates (oct.\ 2026) & Agents & Ce qu'elle a fait\\
+\midrule
+Passe 1~: rédaction & 18--23 & Codex d'OpenAI (\texttt{gpt-6-astra}) & A lu chaque article en entier et rédigé une proposition complète~: 14\,115 réécrits, 16\,199 maintenus avec une justification écrite.\\
+Passe 2~: cohérence & 23--29 & Codex d'OpenAI (\texttt{gpt-6.1-sol}) & A relu les 30\,314 propositions au regard de leurs sources et contreparties, contradictions d'abord~; 2\,894 sessions d'agents.\\
+Passe 3~: red team & 26--31 & Claude Code (Opus 5.5, Fable 5.1) & Environ 570 exécutions d'agents~: 303 objections soulevées, 243 retenues~; 1\,285 corrections sur 1\,211 articles~; lecture complète des 2\,740 articles fiscaux réécrits.\\
+Revue publique & dès le 27 & Contributeur externe, lecteurs & 13 issues et 2 demandes de fusion sur GitHub, dont neuf des onze premières visaient un vrai défaut~; triées et corrigées dans la même boucle.\\
+Mesure & 29--31 & Auditeurs IA à l'aveugle & Huit audits aléatoires (3\,143 articles lus à l'aveugle) et trois comparaisons appariées avec le droit officiel.\\
+\bottomrule
+\end{tabularx}
+\caption{Le projet en un coup d'œil.}
+\label{tab:glance}
+\end{table}
 
 \paragraph{Des résultats produits par l'IA seule.}
 Cet article rapporte délibérément ce que des agents d'IA ont accompli seuls. Rédaction, revue, correction et mesure ont toutes été faites par des agents d'IA, sous direction et arbitrage humains, mais sans juristes. Nous publions les résultats pour que juristes et citoyens les vérifient et les consolident (voir l'appel à contributions à la fin).
