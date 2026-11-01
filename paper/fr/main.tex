@@ -41,7 +41,7 @@ des agents d'IA réécrivent et vérifient cinq grands codes français}
 \maketitle
 
 \begin{abstract}
-Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets, les annexes fiscales et des versions futures qui se contredisent souvent. Des agents d'IA réécrivent ici cinq grands codes français complets~: code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation, soit 30\,317 articles de la base officielle LEGI au 18~octobre 2026. Le travail a suivi trois passes et une revue publique ouverte. La première a réécrit chaque article (14\,115 réécrits, 16\,199 maintenus avec justification)~; la deuxième les a tous relus pour les contradictions~; la troisième, en \og red team \fg{} indépendante, a soulevé 303 objections, appliqué environ 1\,290 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle~; les issues GitHub publiques ont nourri la même boucle. Sur deux échantillons frais de 1\,264 articles, audités à l'aveugle sur les deux textes, chaque défaut contesté vérifié, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 des articles réécrits contre 7,5\,\%\,$\pm$\,1,5 des articles officiels (test apparié, $p \approx 2\times10^{-10}$)~; 60 défauts officiels réparés, surtout des renvois morts, pour 9 introduits. Le projet a coûté environ 1\,400~dollars, 2\,500 à 10\,000 fois moins que les estimations du même travail par des juristes. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est indépendant et la méthode neutre. Ces résultats, produits et mesurés par l'IA seule, sont publiés avec textes, outils et verdicts pour que juristes et citoyens les vérifient et les consolident.
+Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets, les annexes fiscales et des versions futures qui se contredisent souvent. Des agents d'IA réécrivent ici cinq grands codes français complets~: code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation, soit 30\,317 articles de la base officielle LEGI au 18~octobre 2026. Le travail a suivi trois passes et une relecture publique ouverte. La première a réécrit chaque article (14\,115 réécrits, 16\,199 maintenus avec justification)~; la deuxième les a tous relus pour les contradictions~; la troisième, en \og red team \fg{} indépendante, a soulevé 303 objections, appliqué environ 1\,290 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle~; les signalements publics sur GitHub ont nourri la même boucle. Sur deux échantillons frais de 1\,264 articles, audités à l'aveugle sur les deux textes, chaque défaut contesté vérifié, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 des articles réécrits contre 7,5\,\%\,$\pm$\,1,5 des articles officiels (test apparié, $p \approx 2\times10^{-10}$)~; 60 défauts officiels réparés, surtout des renvois morts, pour 9 introduits. Le projet a coûté environ 1\,400~dollars, 2\,500 à 10\,000 fois moins que les estimations du même travail par des juristes. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est indépendant et la méthode neutre. Ces résultats, produits et mesurés par l'IA seule, sont publiés avec textes, outils et verdicts pour que juristes et citoyens les vérifient et les consolident.
 \end{abstract}
 
 \begin{center}
@@ -65,7 +65,7 @@ Quand l'un de ces textes change et pas les autres, des contradictions apparaisse
 \paragraph{Origine de ce travail.}
 Le 19~octobre 2026, le premier auteur a publié un court fil en français \cite{tweet}. Il répondait à un défi public et annonçait que des agents d'IA avaient produit, en une nuit, des versions réécrites de plusieurs codes français, publiées sur cinq sites thématiques. Le fil invitait juristes, économistes, salariés et entrepreneurs à critiquer les propositions article par article.
 
-L'accueil a été bien plus large que prévu~: environ 120\,000 vues, 1\,190 mentions «~j'aime~», 201 republications et 293 signets au dernier relevé. Les critiques qui ont suivi ont été plus utiles encore. Elles ont montré qu'un premier jet rapide ne suffisait pas, et qu'une démonstration crédible demandait trois choses~:
+L'accueil a été bien plus large que prévu~: environ 120\,000 vues, 1\,190 mentions \og j'aime\fg{}, 201 republications et 293 signets au dernier relevé. Les critiques qui ont suivi ont été plus utiles encore. Elles ont montré qu'un premier jet rapide ne suffisait pas, et qu'une démonstration crédible demandait trois choses~:
 \begin{enumerate}[label=(\roman*)]
   \item les codes complets, pas une sélection~;
   \item une recherche systématique des contradictions~;
@@ -83,10 +83,10 @@ Le second objectif est le principal intérêt scientifique. Réformer un code es
 
 \paragraph{Contributions.}
 \begin{itemize}
-  \item Une réécriture complète de cinq grands codes et des quatre annexes du CGI (30\,317 entrées), en trois passes et une revue publique ouverte, versionnée et publique. Sources officielles et propositions sont tenues séparées, avec un lecteur comparatif et des téléchargements (\S\ref{sec:corpus}--\S\ref{sec:drafting}).
+  \item Une réécriture complète de cinq grands codes et des quatre annexes du CGI (30\,317 entrées), en trois passes et une relecture publique ouverte~; chaque version est conservée et publiée. Sources officielles et propositions sont tenues séparées, avec un lecteur comparatif et des téléchargements (\S\ref{sec:corpus}--\S\ref{sec:drafting}).
   \item Un protocole de \og red teaming \fg{} pour la législation produite par IA~:
   \begin{itemize}
-    \item instantanés figés, dont tous les fichiers sont empreintés~;
+    \item instantanés figés, dont chaque fichier est identifié par une empreinte numérique (hachage SHA-256)~;
     \item un registre d'objections, avec priorités et natures~;
     \item un réexamen sur les différences~;
     \item une correction soumise à un critère d'alignement explicite~;
@@ -103,8 +103,8 @@ Le second objectif est le principal intérêt scientifique. Réformer un code es
   \end{itemize}
 \end{itemize}
 
-\paragraph{Le projet en un coup d'œil.}
-Le tableau~\ref{tab:glance} résume l'ensemble~: trois passes sur les cinq codes et les quatre annexes fiscales, une revue publique ouverte, et les mesures présentées ici.
+\paragraph{Le projet en un coup d'\oe{}il.}
+Le tableau~\ref{tab:glance} résume l'ensemble~: trois passes sur les cinq codes et les quatre annexes fiscales, une relecture publique ouverte, et les mesures présentées ici.
 
 \begin{table}[ht]
 \centering
@@ -116,11 +116,11 @@ Le tableau~\ref{tab:glance} résume l'ensemble~: trois passes sur les cinq codes
 Passe 1~: rédaction & 18--23 & Codex d'OpenAI (\texttt{gpt-6-astra}) & A lu chaque article en entier et rédigé une proposition complète~: 14\,115 réécrits, 16\,199 maintenus avec une justification écrite.\\
 Passe 2~: cohérence & 23--29 & Codex d'OpenAI (\texttt{gpt-6.1-sol}) & A relu les 30\,314 propositions au regard de leurs sources et contreparties, contradictions d'abord~; 2\,894 sessions d'agents.\\
 Passe 3~: red team & 26--31 & Claude Code (Opus 5.5, Fable 5.1) & Environ 570 exécutions d'agents~: 303 objections soulevées, 243 retenues~; 1\,285 corrections sur 1\,211 articles~; lecture complète des 2\,740 articles fiscaux réécrits.\\
-Revue publique & dès le 27 & Contributeur externe, lecteurs & 13 issues et 2 demandes de fusion sur GitHub, dont neuf des onze premières visaient un vrai défaut~; triées et corrigées dans la même boucle.\\
+Relecture publique & dès le 27 & Contributeur externe, lecteurs & 13 signalements (\og issues \fg{}) et 2 demandes de fusion sur GitHub, dont neuf des onze premières visaient un vrai défaut~; triées et corrigées dans la même boucle.\\
 Mesure & 29--31 & Auditeurs IA à l'aveugle & Huit audits aléatoires (3\,143 articles lus à l'aveugle) et trois comparaisons appariées avec le droit officiel.\\
 \bottomrule
 \end{tabularx}
-\caption{Le projet en un coup d'œil.}
+\caption{Le projet en un coup d'\oe{}il.}
 \label{tab:glance}
 \end{table}
 
@@ -132,7 +132,7 @@ L'orientation de fond de la réécriture est explicite et n'est pas neutre. Elle
 
 Ces choix s'inspirent du programme 2027 de David Lisnard \cite{lisnard}. \textbf{Ce projet est une initiative indépendante.} Il n'est ni commandé, ni relu, ni approuvé par David Lisnard ni par son mouvement, Nouvelle Énergie, et les sites publiés le disent.
 
-La méthode, elle, est neutre. La couche de politiques est une entrée distincte et explicite (\S\ref{sec:policy}), et la même chaîne pourrait mettre en œuvre n'importe quel autre programme. La red team avait pour consigne de corriger les contradictions et les failles, \emph{jamais} de modifier les choix politiques.
+La méthode, elle, est neutre. La couche de politiques est une entrée distincte et explicite (\S\ref{sec:policy}), et la même chaîne pourrait mettre en \oe{}uvre n'importe quel autre programme. La red team avait pour consigne de corriger les contradictions et les failles, \emph{jamais} de modifier les choix politiques.
 
 \section{Travaux connexes}
 
@@ -270,7 +270,7 @@ La seconde passe s'est achevée le 29~octobre, avec l'acceptation des 30\,314 id
 
 La troisième passe a utilisé un autre système~: Claude Code d'Anthropic (Claude Opus 5.5~; le dernier cycle, l'audit 8 et ses corrections, a tourné sur Claude Fable 5.1). Un agent coordinateur a lancé environ 390 sous-agents en cinq jours. Il a travaillé comme un relecteur \emph{indépendant}, sous des règles strictes~:
 \begin{itemize}
-  \item lecture seule de la production, sur des instantanés figés dont tous les fichiers sont empreintés~;
+  \item lecture seule de la production, sur des instantanés figés dont chaque fichier est identifié par une empreinte numérique (hachage SHA-256)~;
   \item citations exactes, avec identifiant de version, pour toute affirmation~;
   \item aucune source, date ou \og preuve de résolution \fg{} inventée~;
   \item aucun contournement de contrôle d'accès~;
@@ -323,7 +323,7 @@ Le coordinateur applique ensuite les corrections avec l'outil gardé. Cet outil 
 
 \subsection{Contributions externes}
 
-Pendant la revue, un contributeur externe (le second auteur) a ouvert 13 issues et deux demandes de fusion sur le dépôt public. Produites avec ses propres agents d'IA, elles portaient sur des renvois du code du travail, des décrets qui survivent à des lois abrogées, des sanctions et les commissions du CSE. Chaque issue a été triée par rapport au registre, sur le texte courant. Trois d'entre elles demandaient un changement d'orientation politique~; elles ont été expliquées et closes comme non retenues.
+Pendant la revue, un contributeur externe (le second auteur) a ouvert 13 signalements (\og issues \fg{} GitHub) et deux demandes de fusion sur le dépôt public. Produites avec ses propres agents d'IA, elles portaient sur des renvois du code du travail, des décrets qui survivent à des lois abrogées, des sanctions et les commissions du CSE. Chaque issue a été triée par rapport au registre, sur le texte courant. Trois d'entre elles demandaient un changement d'orientation politique~; elles ont été expliquées et closes comme non retenues.
 
 \section{Mesurer la fiabilité}
 \label{sec:measure}
