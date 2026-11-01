@@ -41,8 +41,12 @@ AI Agents Rewrite and Red-Team\\ Five Major Codes of French Law}
 \maketitle
 
 \begin{abstract}
-French law is hard to read: a single rule is spread across a statute, its decrees, tax annexes and future versions that often contradict one another. We report a proof of concept in which AI agents rewrite five major French codes in full: the Labour Code, the General Tax Code and its four annexes, the Social Security Code, the Town Planning Code, and the Construction and Housing Code, 30{,}317 articles from the official LEGI database as of 18 October 2026. The work ran in three passes and an open public review. A first pass rewrote every article (14{,}115 rewritten, 16{,}199 retained with a justification); a second re-read all of them for contradictions; a third, run as an independent red team, raised 303 objections, applied about 1{,}290 corrections and measured reliability with blind random audits; public GitHub issues fed the same loop. On two fresh random samples totalling 1{,}264 articles, audited blind on both texts with every disputed defect checked, AI auditors find a gross defect in 7.5\%\,$\pm$\,1.5 of the official texts in force but in 3.5\%\,$\pm$\,1.0 of the rewritten law (paired test, $p \approx 2\times10^{-10}$): the rewrite repaired 60 defects of the official law, mostly dead cross-references, and introduced 9. The project cost about US\$1{,}400; the same work by lawyers would run to several million euros. The substantive choices follow the 2027 programme of David Lisnard, but the project is an independent initiative and the method is policy-agnostic. All results are produced and measured by AI agents alone; we release them, with all texts, tools, samples and verdicts, for verification and hardening by legal experts and citizens.
+French law is hard to read: a single rule is spread across a statute, its decrees, tax annexes and future versions that often contradict one another. We report a proof of concept in which AI agents rewrite five major French codes in full: the Labour Code, the General Tax Code and its four annexes, the Social Security Code, the Town Planning Code, and the Construction and Housing Code, 30{,}317 articles from the official LEGI database as of 18 October 2026. The work ran in three passes and an open public review. A first pass rewrote every article (14{,}115 rewritten, 16{,}199 retained with a justification); a second re-read all of them for contradictions; a third, run as an independent red team, raised 303 objections, applied about 1{,}290 corrections and measured reliability with blind random audits; public GitHub issues fed the same loop. On two fresh random samples totalling 1{,}264 articles, audited blind on both texts with every disputed defect checked, the rewritten law has \textbf{54\% fewer gross defects} than the law in force (95\% CI 40--64\%): AI auditors find one in 3.5\%\,$\pm$\,1.0 of rewritten articles against 7.5\%\,$\pm$\,1.5 of official ones (paired test, $p \approx 2\times10^{-10}$). The rewrite repaired 60 defects of the official law, mostly dead cross-references, and introduced 9. The project cost about US\$1{,}400; the same work by lawyers would run to several million euros. The substantive choices follow the 2027 programme of David Lisnard, but the project is an independent initiative and the method is policy-agnostic. All results are produced and measured by AI agents alone; we release them, with all texts, tools, samples and verdicts, for verification and hardening by legal experts and citizens.
 \end{abstract}
+
+\begin{center}
+\fbox{\parbox{0.9\linewidth}{\centering\textbf{Key result.} Measured the same way on the same randomly drawn articles, the AI-rewritten law has \textbf{54\% fewer gross defects} than the French law in force: 3.5\% of articles against 7.5\% (1{,}264 articles, 95\% CI of the reduction 40--64\%).}}
+\end{center}
 
 \section{Introduction}
 
@@ -89,7 +93,7 @@ The second goal is the main scientific interest. Reforming a code is easy to sta
     \item a guarded writer that cannot silently overwrite (\S\ref{sec:redteam}).
   \end{itemize}
   \item A measurement method: six blind, stratified random audits, with a taxonomy of ten defect families (F1--F10). The rate has a confidence interval, not an anecdote (\S\ref{sec:measure}).
-  \item A paired baseline: the same audit run on the official law, on the same articles. The rewritten law has fewer gross defects than the law it replaces: 4.6\% against 7.0\% on 1{,}879 articles at the time of the audits, and 3.5\% against 7.5\%, less than half, on two fresh samples of 1{,}264 articles of the current text (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
+  \item A paired baseline: the same audit run on the official law, on the same articles. The rewritten law has 34\% fewer gross defects than the law it replaces on 1{,}879 articles at the time of the audits (4.6\% against 7.0\%), and \textbf{54\% fewer} today on two fresh samples of 1{,}264 articles (3.5\% against 7.5\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
   \item A cost comparison: about US\$1{,}400 in cash, US\$3{,}500 to 5{,}100 at API prices, against an order-of-magnitude estimate of several million euros for the same work by lawyers (\S\ref{sec:cost}).
   \item Empirical findings on what AI agents do well and badly on legal coherence (\S\ref{sec:results}--\S\ref{sec:discussion}):
   \begin{itemize}
@@ -519,7 +523,7 @@ Retained unchanged (control) & 966 & 23 & 2.4\% & 22 & 2.3\%\\
 \paragraph{Result.}
 After verification, the retained articles, whose text is the same on both sides, show the same rate (23 and 22 defects). This suggests that the verification removes the difference in strictness. On that basis (Table~\ref{tab:baseline}):
 \begin{itemize}
-  \item the rewritten law has about \textbf{a third fewer gross defects} than the official law it replaces: 4.6\% against 7.0\%;
+  \item the rewritten law has \textbf{34\% fewer gross defects} than the official law it replaces (95\% CI 19--47\%): 4.6\% against 7.0\%;
   \item among rewritten articles, the rate falls from 11.8\% to 7.0\%;
   \item for every defect the rewrite introduced, it repaired more than two in the official law (77 against 32).
 \end{itemize}
@@ -559,8 +563,8 @@ Both & 1{,}264 & 95 & 7.5\% $\pm$ 1.5 & 44 & \textbf{3.5\% $\pm$ 1.0} & 60 / 9\\
 
 The fresh samples confirm and sharpen the paired comparison (Table~\ref{tab:fresh}):
 \begin{itemize}
-  \item the current rewritten law has \textbf{less than half the gross defects} of the official law: 3.5\% against 7.5\% on 1{,}264 articles;
-  \item among rewritten articles, the rate falls from 14.5\% to 6.0\%;
+  \item the current rewritten law has \textbf{54\% fewer gross defects} than the official law (95\% CI 40--64\%): 3.5\% against 7.5\% on 1{,}264 articles;
+  \item among rewritten articles, the rate falls from 14.5\% to 6.0\%, 58\% fewer;
   \item the rewrite repaired about seven defects of the official law for each one it introduced (60 against 9), against two to one in the first paired sample;
   \item the control agrees: retained articles, whose text is identical on both sides, show 11 and 9 defects;
   \item the two models agree on the official text (7.8\% and 7.3\%); on the rewritten text, Fable finds fewer defects (2.5\% against 4.4\%), within the intervals.
@@ -641,6 +645,7 @@ The results are AI-only by design, and no lawyer has validated them yet. The pip
   \item Auditor strictness varies. On identical texts, two sets of auditors disagreed by a factor of two before verification (\S\ref{sec:baseline}). Single-audit rates should be read with this in mind. Audit 8 ran on a different model from audits 1--7; it agrees on the official text but finds fewer defects in the rewritten text, and a difference in strictness between models cannot be excluded.
   \item The lawyer-cost figure is an order of magnitude built from stated assumptions, not a quotation or a measurement.
   \item The corpus is frozen at 18 October 2026, and texts outside the nine instruments are not rewritten.
+  \item Case law is not taken into account. Drafting and audits read the codes only, not the court decisions that interpret them, so a rewrite may unintentionally depart from a settled interpretation, and an audit may miss a defect that the courts have already identified.
   \item Audit samples of about 314 articles detect changes of about $\pm$2 points only, so per-stratum rates are imprecise.
   \item The drafting models and the reviewing model come from different vendors, which limits shared blind spots but does not remove them.
   \item Costs are given as paid, plus an API-equivalent estimate for the third pass. They exclude human time and are not a productivity benchmark.
@@ -649,12 +654,13 @@ The results are AI-only by design, and no lawyer has validated them yet. The pip
 
 \section{Conclusion and future work}
 
-We rewrote five French codes and the four CGI annexes end to end with AI agents, red-teamed the result independently, and measured what remains wrong. Measured against the official law on the same articles, with every disputed defect verified, the rewritten law has fewer gross defects: 4.6\% against 7.0\% on 1{,}879 articles at the time of the audits, and 3.5\% against 7.5\% today, less than half, on two fresh samples of 1{,}264 articles. Four fifths of the defects that remain are inherited from the law in force. It cost about US\$1{,}400 where lawyers would have cost millions. The full trail is public.
+We rewrote five French codes and the four CGI annexes end to end with AI agents, red-teamed the result independently, and measured what remains wrong. Measured against the official law on the same articles, with every disputed defect verified, the rewritten law has 34\% fewer gross defects on 1{,}879 articles at the time of the audits, and \textbf{54\% fewer} today on two fresh samples of 1{,}264 articles (3.5\% against 7.5\%). Four fifths of the defects that remain are inherited from the law in force. It cost about US\$1{,}400 where lawyers would have cost millions. The full trail is public.
 
 Next steps:
 \begin{itemize}
   \item systematic reading of the remaining rewritten articles: the housing and social security codes (about 5{,}500), then labour and town planning (about 5{,}900);
   \item bringing the CIBS into the corpus;
+  \item in a second version, taking case law into account: linking each article to the decisions of the Conseil constitutionnel, the Conseil d'État and the Cour de cassation that interpret it (DILA open data and the Judilibre API), so that rewrites respect settled interpretations and audits check them;
   \item validation by practising lawyers, starting with the open objections and arbitrations.
 \end{itemize}
 Beyond this particular reform, the method is a template: an explicit policy layer, complete drafting, guarded writes, an independent red team and honest measurement. We hope it makes the law more legible, and that it gives anyone a concrete way to check whether a proposed reform is coherent.

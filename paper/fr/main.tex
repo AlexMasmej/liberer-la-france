@@ -40,8 +40,12 @@ des agents d'IA réécrivent et vérifient cinq grands codes français}
 \maketitle
 
 \begin{abstract}
-Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets, les annexes fiscales et des versions futures qui se contredisent souvent. Des agents d'IA réécrivent ici cinq grands codes français complets~: code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation, soit 30\,317 articles de la base officielle LEGI au 18~octobre 2026. Le travail a suivi trois passes et une revue publique ouverte. La première a réécrit chaque article (14\,115 réécrits, 16\,199 maintenus avec justification)~; la deuxième les a tous relus pour les contradictions~; la troisième, en \og red team \fg{} indépendante, a soulevé 303 objections, appliqué environ 1\,290 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle~; les issues GitHub publiques ont nourri la même boucle. Sur deux échantillons frais de 1\,264 articles, audités à l'aveugle sur les deux textes, chaque défaut contesté vérifié, des auditeurs IA trouvent un défaut grossier dans 7,5\,\%\,$\pm$\,1,5 des textes officiels, contre 3,5\,\%\,$\pm$\,1,0 du droit réécrit (test apparié, $p \approx 2\times10^{-10}$)~: 60 défauts officiels réparés, surtout des renvois morts, pour 9 introduits. Le projet a coûté environ 1\,400~dollars~; le même travail par des juristes coûterait des millions d'euros. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est indépendant et la méthode neutre. Ces résultats, produits et mesurés par l'IA seule, sont publiés avec textes, outils et verdicts pour que juristes et citoyens les vérifient et les consolident.
+Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets, les annexes fiscales et des versions futures qui se contredisent souvent. Des agents d'IA réécrivent ici cinq grands codes français complets~: code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation, soit 30\,317 articles de la base officielle LEGI au 18~octobre 2026. Le travail a suivi trois passes et une revue publique ouverte. La première a réécrit chaque article (14\,115 réécrits, 16\,199 maintenus avec justification)~; la deuxième les a tous relus pour les contradictions~; la troisième, en \og red team \fg{} indépendante, a soulevé 303 objections, appliqué environ 1\,290 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle~; les issues GitHub publiques ont nourri la même boucle. Sur deux échantillons frais de 1\,264 articles, audités à l'aveugle sur les deux textes, chaque défaut contesté vérifié, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 des articles réécrits contre 7,5\,\%\,$\pm$\,1,5 des articles officiels (test apparié, $p \approx 2\times10^{-10}$)~; 60 défauts officiels réparés, surtout des renvois morts, pour 9 introduits. Le projet a coûté environ 1\,400~dollars~; le même travail par des juristes coûterait des millions d'euros. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est indépendant et la méthode neutre. Ces résultats, produits et mesurés par l'IA seule, sont publiés avec textes, outils et verdicts pour que juristes et citoyens les vérifient et les consolident.
 \end{abstract}
+
+\begin{center}
+\fbox{\parbox{0.9\linewidth}{\centering\textbf{Résultat clé.} Mesuré de la même façon sur les mêmes articles tirés au hasard, le droit réécrit par l'IA compte \textbf{54\,\% de défauts grossiers en moins} que le droit français en vigueur~: 3,5\,\% des articles contre 7,5\,\% (1\,264 articles, IC à 95\,\% de la baisse~: 40 à 64\,\%).}}
+\end{center}
 
 \section{Introduction}
 
@@ -88,7 +92,7 @@ Le second objectif est le principal intérêt scientifique. Réformer un code es
     \item un écrivain gardé qui ne peut rien écraser sans contrôle (\S\ref{sec:redteam}).
   \end{itemize}
   \item Une méthode de mesure~: six audits aléatoires stratifiés, menés à l'aveugle, avec une taxonomie de dix familles de défauts (F1 à F10). Le taux s'accompagne d'un intervalle de confiance, pas d'une anecdote (\S\ref{sec:measure}).
-  \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte moins de défauts grossiers que le droit qu'il remplace~: 4,6\,\% contre 7,0\,\% sur 1\,879 articles à la date des audits, et 3,5\,\% contre 7,5\,\%, soit moins de la moitié, sur deux échantillons frais de 1\,264 articles du texte actuel (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
+  \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte 34\,\% de défauts grossiers en moins que le droit qu'il remplace sur 1\,879 articles à la date des audits (4,6\,\% contre 7,0\,\%), et \textbf{54\,\% de moins} aujourd'hui sur deux échantillons frais de 1\,264 articles (3,5\,\% contre 7,5\,\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
   \item Une comparaison de coût~: environ 1\,400~dollars déboursés, 3\,500 à 5\,100~dollars au prix de l'API, contre un ordre de grandeur de plusieurs millions d'euros pour le même travail par des juristes (\S\ref{sec:cost}).
   \item Des constats empiriques sur ce que les agents d'IA font bien et mal en matière de cohérence juridique (\S\ref{sec:results}--\S\ref{sec:discussion})~:
   \begin{itemize}
@@ -517,7 +521,7 @@ Maintenus sans changement (témoin) & 966 & 23 & 2,4\,\% & 22 & 2,3\,\%\\
 \paragraph{Résultat.}
 Après vérification, les articles maintenus, dont le texte est le même des deux côtés, présentent le même taux (23 et 22 défauts). La vérification semble donc effacer l'écart de sévérité. Sur cette base (tableau~\ref{tab:baseline})~:
 \begin{itemize}
-  \item le droit réécrit compte environ \textbf{un tiers de défauts grossiers en moins} que le droit officiel qu'il remplace~: 4,6\,\% contre 7,0\,\%~;
+  \item le droit réécrit compte \textbf{34\,\% de défauts grossiers en moins} que le droit officiel qu'il remplace (IC à 95\,\%~: 19 à 47\,\%)~: 4,6\,\% contre 7,0\,\%~;
   \item parmi les articles réécrits, le taux passe de 11,8\,\% à 7,0\,\%~;
   \item pour chaque défaut introduit par la réécriture, plus de deux défauts du droit officiel ont été réparés (77 contre 32).
 \end{itemize}
@@ -557,8 +561,8 @@ Ensemble & 1\,264 & 95 & 7,5\,\% $\pm$ 1,5 & 44 & \textbf{3,5\,\% $\pm$ 1,0} & 6
 
 Les échantillons frais confirment et précisent la comparaison appariée (tableau~\ref{tab:fresh})~:
 \begin{itemize}
-  \item le droit réécrit actuel compte \textbf{moins de la moitié des défauts grossiers} du droit officiel~: 3,5\,\% contre 7,5\,\% sur 1\,264 articles~;
-  \item parmi les articles réécrits, le taux passe de 14,5\,\% à 6,0\,\%~;
+  \item le droit réécrit actuel compte \textbf{54\,\% de défauts grossiers en moins} que le droit officiel (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\% contre 7,5\,\% sur 1\,264 articles~;
+  \item parmi les articles réécrits, le taux passe de 14,5\,\% à 6,0\,\%, soit 58\,\% de moins~;
   \item la réécriture a réparé environ sept défauts du droit officiel pour chaque défaut introduit (60 contre 9), contre deux pour un dans le premier échantillon apparié~;
   \item le témoin concorde~: les articles maintenus, dont le texte est identique des deux côtés, présentent 11 et 9 défauts~;
   \item les deux modèles concordent sur le texte officiel (7,8 et 7,3\,\%)~; sur le texte réécrit, Fable trouve moins de défauts (2,5 contre 4,4\,\%), dans les intervalles.
@@ -639,6 +643,7 @@ Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les 
   \item La sévérité des auditeurs varie. Sur des textes identiques, deux groupes d'auditeurs ont différé d'un facteur deux avant vérification (\S\ref{sec:baseline}). Le taux d'un audit isolé est à lire avec cette réserve. L'audit 8 a tourné sur un autre modèle que les audits 1 à 7~; il concorde sur le texte officiel mais trouve moins de défauts dans le texte réécrit, et un écart de sévérité entre modèles ne peut être exclu.
   \item Le coût \og juristes \fg{} est un ordre de grandeur construit sur des hypothèses explicites, ni un devis ni une mesure.
   \item Le corpus est figé au 18~octobre 2026, et les textes hors des neuf recueils ne sont pas réécrits.
+  \item La jurisprudence n'est pas prise en compte. Rédaction et audits lisent les codes, pas les décisions qui les interprètent~: une réécriture peut donc s'écarter sans le vouloir d'une interprétation établie, et un audit peut manquer un défaut déjà relevé par les juges.
   \item Des échantillons d'audit d'environ 314 articles ne détectent que des écarts d'environ $\pm$\,2 points~; les taux par strate sont donc imprécis.
   \item Les modèles de rédaction et le modèle de revue viennent de fournisseurs différents, ce qui limite les angles morts communs sans les supprimer.
   \item Les coûts sont donnés tels que payés, avec une estimation en équivalent API pour la troisième passe. Ils n'incluent pas le temps humain et ne constituent pas une mesure de productivité.
@@ -647,12 +652,13 @@ Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les 
 
 \section{Conclusion et travaux futurs}
 
-Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team indépendante, et mesuré ce qui reste faux. Mesuré contre le droit officiel sur les mêmes articles, chaque défaut contesté vérifié, le droit réécrit compte moins de défauts grossiers~: 4,6\,\% contre 7,0\,\% sur 1\,879 articles à la date des audits, et 3,5\,\% contre 7,5\,\% aujourd'hui, soit moins de la moitié, sur deux échantillons frais de 1\,264 articles. Les quatre cinquièmes des défauts qui restent sont hérités du droit en vigueur. Le projet a coûté environ 1\,400~dollars là où des juristes auraient coûté des millions. Toute la trace est publique.
+Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team indépendante, et mesuré ce qui reste faux. Mesuré contre le droit officiel sur les mêmes articles, chaque défaut contesté vérifié, le droit réécrit compte 34\,\% de défauts grossiers en moins sur 1\,879 articles à la date des audits, et \textbf{54\,\% de moins} aujourd'hui sur deux échantillons frais de 1\,264 articles (3,5\,\% contre 7,5\,\%). Les quatre cinquièmes des défauts qui restent sont hérités du droit en vigueur. Le projet a coûté environ 1\,400~dollars là où des juristes auraient coûté des millions. Toute la trace est publique.
 
 Prochaines étapes~:
 \begin{itemize}
   \item la lecture systématique des autres articles réécrits~: construction-habitation et sécurité sociale (environ 5\,500), puis travail et urbanisme (environ 5\,900)~;
   \item l'intégration du CIBS au corpus~;
+  \item dans une seconde version, la prise en compte de la jurisprudence~: relier chaque article aux décisions du Conseil constitutionnel, du Conseil d'État et de la Cour de cassation qui l'interprètent (données ouvertes de la DILA et API Judilibre), pour que les réécritures respectent les interprétations établies et que les audits les vérifient~;
   \item la validation par des juristes praticiens, en commençant par les objections et arbitrages ouverts.
 \end{itemize}
 Au-delà de cette réforme particulière, la méthode est un modèle~: une couche de politiques explicite, une rédaction complète, des écritures gardées, une red team indépendante et une mesure honnête. Nous espérons qu'elle rende le droit plus lisible, et qu'elle donne à chacun un moyen concret de vérifier la cohérence d'une réforme proposée.
