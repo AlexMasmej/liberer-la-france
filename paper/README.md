@@ -13,7 +13,7 @@ Suggested metadata:
 - Title (FR): Le code source du droit : des agents d'IA réécrivent et vérifient cinq grands codes français
 - Authors: Alexandre Masmejean, Kevin Primicerio, Nathalie Gouailhardou (all independent; every author must approve the final manuscript and the contribution statement before submission)
 - Primary category: cs.CY (Computers and Society); cross-lists: cs.AI, cs.CL
-- Comments: 17 pages, 2 figures, 7 tables. French version available as a companion submission. Code and data: https://github.com/AlexMasmej/liberer-la-france
+- Comments: 18 pages, 2 figures, 8 tables. French version available as a companion submission. Code and data: https://github.com/AlexMasmej/liberer-la-france
 - License: CC BY 4.0 (suggested)
 
 Sources compile with pdflatex (TeX Live) and were checked with tectonic.

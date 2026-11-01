@@ -41,11 +41,11 @@ AI Agents Rewrite and Red-Team\\ Five Major Codes of French Law}
 \maketitle
 
 \begin{abstract}
-French law is hard to read: a single rule is spread across a statute, its decrees, tax annexes and future versions that often contradict one another. We report a proof of concept in which AI agents rewrite five major French codes in full: the Labour Code, the General Tax Code and its four annexes, the Social Security Code, the Town Planning Code, and the Construction and Housing Code, 30{,}317 articles from the official LEGI database as of 18 October 2026. The work ran in three passes and an open public review. A first pass rewrote every article (14{,}115 rewritten, 16{,}199 retained with a justification); a second re-read all of them for contradictions; a third, run as an independent red team, raised 303 objections, applied about 1{,}290 corrections and measured reliability with blind random audits; public GitHub issues fed the same loop. On two fresh random samples totalling 1{,}264 articles, audited blind on both texts with every disputed defect checked, the rewritten law has \textbf{54\% fewer gross defects} than the law in force (95\% CI 40--64\%): AI auditors find one in 3.5\%\,$\pm$\,1.0 of rewritten articles against 7.5\%\,$\pm$\,1.5 of official ones (paired test, $p \approx 2\times10^{-10}$). The rewrite repaired 60 defects of the official law, mostly dead cross-references, and introduced 9. The project cost about US\$1{,}400, roughly 2{,}500 times less than an estimate for the same work by lawyers. The substantive choices follow the 2027 programme of David Lisnard, but the project is an independent initiative and the method is policy-agnostic. All results are produced and measured by AI agents alone; we release them, with all texts, tools, samples and verdicts, for verification and hardening by legal experts and citizens.
+French law is hard to read: a single rule is spread across a statute, its decrees, tax annexes and future versions that often contradict one another. We report a proof of concept in which AI agents rewrite five major French codes in full: the Labour Code, the General Tax Code and its four annexes, the Social Security Code, the Town Planning Code, and the Construction and Housing Code, 30{,}317 articles from the official LEGI database as of 18 October 2026. The work ran in three passes and an open public review. A first pass rewrote every article (14{,}115 rewritten, 16{,}199 retained with a justification); a second re-read all of them for contradictions; a third, run as an independent red team, raised 303 objections, applied about 1{,}290 corrections and measured reliability with blind random audits; public GitHub issues fed the same loop. On two fresh random samples totalling 1{,}264 articles, audited blind on both texts with every disputed defect checked, the rewritten law has \textbf{54\% fewer gross defects} than the law in force (95\% CI 40--64\%): AI auditors find one in 3.5\%\,$\pm$\,1.0 of rewritten articles against 7.5\%\,$\pm$\,1.5 of official ones (paired test, $p \approx 2\times10^{-10}$). The rewrite repaired 60 defects of the official law, mostly dead cross-references, and introduced 9. The project cost about US\$1{,}400, 2{,}500 to 10{,}000 times less than estimates for the same work by lawyers. The substantive choices follow the 2027 programme of David Lisnard, but the project is an independent initiative and the method is policy-agnostic. All results are produced and measured by AI agents alone; we release them, with all texts, tools, samples and verdicts, for verification and hardening by legal experts and citizens.
 \end{abstract}
 
 \begin{center}
-\fbox{\parbox{0.9\linewidth}{\centering\textbf{Key result.} Measured the same way on the same randomly drawn articles, the AI-rewritten law has \textbf{54\% fewer gross defects} than the French law in force: 3.5\% of articles against 7.5\% (1{,}264 articles, 95\% CI of the reduction 40--64\%). It cost about \textbf{1/2{,}500th} of what the same work by lawyers would cost (an order-of-magnitude estimate, \S\ref{sec:cost}).}}
+\fbox{\parbox{0.9\linewidth}{\centering\textbf{Key result.} Measured the same way on the same randomly drawn articles, the AI-rewritten law has \textbf{54\% fewer gross defects} than the French law in force: 3.5\% of articles against 7.5\% (1{,}264 articles, 95\% CI of the reduction 40--64\%). It was \textbf{2{,}500 to 10{,}000 times cheaper} than the same work by lawyers (order-of-magnitude estimates, \S\ref{sec:cost}).}}
 \end{center}
 
 \section{Introduction}
@@ -94,7 +94,7 @@ The second goal is the main scientific interest. Reforming a code is easy to sta
   \end{itemize}
   \item A measurement method: six blind, stratified random audits, with a taxonomy of ten defect families (F1--F10). The rate has a confidence interval, not an anecdote (\S\ref{sec:measure}).
   \item A paired baseline: the same audit run on the official law, on the same articles. The rewritten law has 34\% fewer gross defects than the law it replaces on 1{,}879 articles at the time of the audits (4.6\% against 7.0\%), and \textbf{54\% fewer} today on two fresh samples of 1{,}264 articles (3.5\% against 7.5\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
-  \item A cost comparison: about US\$1{,}400 in cash, US\$3{,}500 to 5{,}100 at API prices, against an order-of-magnitude estimate of several million euros for the same work by lawyers (\S\ref{sec:cost}).
+  \item A cost comparison: about US\$1{,}400 in cash, US\$3{,}500 to 5{,}100 at API prices, against order-of-magnitude estimates of \euro{}6 to 36 million for the same work by lawyers, 2{,}500 to 10{,}000 times more (\S\ref{sec:cost}).
   \item Empirical findings on what AI agents do well and badly on legal coherence (\S\ref{sec:results}--\S\ref{sec:discussion}):
   \begin{itemize}
     \item mechanical sweeps reach a plateau;
@@ -602,7 +602,26 @@ The reading consumed about 30 million tokens (excluding cache reads), roughly 11
 Counting one month of each subscription, the cash outlay for the whole project was about \textbf{US\$1{,}400}, under 5 cents per article. At API prices it would have been US\$3{,}500 to 5{,}100, 12 to 17 cents per article. These figures exclude human time: a few days of direction and arbitration by one person.
 
 \paragraph{What the same work would cost with lawyers.}
-This is an order-of-magnitude estimate, not a measurement; its assumptions are deliberately low. Suppose a lawyer takes two hours to rewrite an article with a written reason after reading its sources and counterparts, half an hour to read an article with its three main links and decide to retain it or to qualify it, half an hour per article for the second-pass coherence reading, and an hour and a half per correction. The work actually performed then amounts to about 36{,}000 hours for the first pass (14{,}115 rewrites and 16{,}199 justified retentions), 15{,}000 hours for the second pass (30{,}314 re-readings) and 9{,}000 hours for the third (about 12{,}500 audit and sweep readings, 1{,}943 alerts classified, 1{,}285 corrections): roughly \textbf{60{,}000 lawyer-hours}, or 35 to 40 lawyer-years. At a fully loaded cost of \euro{}100 per hour for in-house legal drafters this is about \euro{}6 million; at a blended law-firm rate of \euro{}250 per hour, about \euro{}15 million. Halving every assumption still leaves several million euros, against about US\$1{,}400 spent here. At about US\$1.10 per euro, the lawyer estimate is 1{,}300 to 4{,}700 times the API-equivalent cost of the AI work (US\$3{,}500 to 5{,}100), about \textbf{2{,}500 times} at the geometric middle of that range, and 4{,}700 to 11{,}800 times the cash actually spent. The comparison is one of cost, not of quality: lawyers would not leave 3.5\% of articles with a gross defect, and the output of this project still awaits their review.
+This is an order-of-magnitude estimate, not a measurement, and it depends on its assumptions, so we give two scenarios (Table~\ref{tab:lawyers}). Both count only the work actually performed here: 14{,}115 rewrites and 16{,}199 justified retentions in the first pass, 30{,}314 re-readings in the second, and about 12{,}500 audit and sweep readings, 1{,}943 classified alerts and 1{,}285 corrections in the third. The \emph{conservative} scenario assumes 2 hours per rewritten article, half an hour per reading and an hour and a half per correction. The \emph{realistic} scenario assumes 6 hours per rewritten article, which leaves time to check its cross-references and implementing texts, 1 hour per retained article and per coherence reading, half an hour per audit reading, 1 hour per alert and 3 hours per correction. Costs use \euro{}100 per hour for in-house legal drafters and \euro{}250 for a blended law-firm rate, and US\$1.10 per euro.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+& & & \multicolumn{2}{c}{Times the cost of the AI work}\\
+\cmidrule(lr){4-5}
+Scenario & Lawyer-hours & Lawyer cost & at API prices & cash spent\\
+\midrule
+Conservative & 60{,}000 & \euro{}6--15 M & 1{,}300--4{,}700$\times$ & 4{,}700--11{,}800$\times$\\
+Realistic & 143{,}000 & \euro{}14--36 M & 3{,}100--11{,}300$\times$ & 11{,}000--28{,}000$\times$\\
+\bottomrule
+\end{tabular}
+\caption{Order-of-magnitude cost of the same work by lawyers. 60{,}000 hours is 35 to 40 lawyer-years; 143{,}000 hours is about 85. The AI work cost US\$3{,}500 to 5{,}100 at API prices and about US\$1{,}400 in cash.}
+\label{tab:lawyers}
+\end{table}
+
+Across both scenarios, the AI work is therefore \textbf{2{,}500 to 10{,}000 times cheaper}: about 2{,}500 times at the middle of the conservative scenario, and about 10{,}000 times in the realistic scenario at law-firm rates or against the cash actually spent. The comparison is one of cost, not of quality: lawyers would not leave 3.5\% of articles with a gross defect, and the output of this project still awaits their review.
 
 \subsection{Examples of defects}
 
@@ -643,7 +662,7 @@ The results are AI-only by design, and no lawyer has validated them yet. The pip
 \begin{itemize}
   \item Results are AI-measured by design. Audit verdicts are model judgements and may be wrong in either direction; their accuracy is open to expert verification, which we invite.
   \item Auditor strictness varies. On identical texts, two sets of auditors disagreed by a factor of two before verification (\S\ref{sec:baseline}). Single-audit rates should be read with this in mind. Audit 8 ran on a different model from audits 1--7; it agrees on the official text but finds fewer defects in the rewritten text, and a difference in strictness between models cannot be excluded.
-  \item The lawyer-cost figure is an order of magnitude built from stated assumptions, not a quotation or a measurement.
+  \item The lawyer-cost figures are orders of magnitude built from two stated sets of assumptions, not a quotation or a measurement.
   \item The corpus is frozen at 18 October 2026, and texts outside the nine instruments are not rewritten.
   \item Case law is not taken into account. Drafting and audits read the codes only, not the court decisions that interpret them, so a rewrite may unintentionally depart from a settled interpretation, and an audit may miss a defect that the courts have already identified.
   \item Audit samples of about 314 articles detect changes of about $\pm$2 points only, so per-stratum rates are imprecise.
@@ -654,7 +673,7 @@ The results are AI-only by design, and no lawyer has validated them yet. The pip
 
 \section{Conclusion and future work}
 
-We rewrote five French codes and the four CGI annexes end to end with AI agents, red-teamed the result independently, and measured what remains wrong. Measured against the official law on the same articles, with every disputed defect verified, the rewritten law has 34\% fewer gross defects on 1{,}879 articles at the time of the audits, and \textbf{54\% fewer} today on two fresh samples of 1{,}264 articles (3.5\% against 7.5\%). Four fifths of the defects that remain are inherited from the law in force. It cost about US\$1{,}400, roughly 2{,}500 times less than the same work by lawyers would have. The full trail is public.
+We rewrote five French codes and the four CGI annexes end to end with AI agents, red-teamed the result independently, and measured what remains wrong. Measured against the official law on the same articles, with every disputed defect verified, the rewritten law has 34\% fewer gross defects on 1{,}879 articles at the time of the audits, and \textbf{54\% fewer} today on two fresh samples of 1{,}264 articles (3.5\% against 7.5\%). Four fifths of the defects that remain are inherited from the law in force. It cost about US\$1{,}400, 2{,}500 to 10{,}000 times less than the same work by lawyers would have. The full trail is public.
 
 Next steps:
 \begin{itemize}

@@ -6,6 +6,7 @@
 \usepackage[french]{babel}
 \usepackage[margin=2.6cm]{geometry}
 \usepackage{microtype}
+\usepackage{eurosym}
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -40,11 +41,11 @@ des agents d'IA réécrivent et vérifient cinq grands codes français}
 \maketitle
 
 \begin{abstract}
-Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets, les annexes fiscales et des versions futures qui se contredisent souvent. Des agents d'IA réécrivent ici cinq grands codes français complets~: code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation, soit 30\,317 articles de la base officielle LEGI au 18~octobre 2026. Le travail a suivi trois passes et une revue publique ouverte. La première a réécrit chaque article (14\,115 réécrits, 16\,199 maintenus avec justification)~; la deuxième les a tous relus pour les contradictions~; la troisième, en \og red team \fg{} indépendante, a soulevé 303 objections, appliqué environ 1\,290 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle~; les issues GitHub publiques ont nourri la même boucle. Sur deux échantillons frais de 1\,264 articles, audités à l'aveugle sur les deux textes, chaque défaut contesté vérifié, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 des articles réécrits contre 7,5\,\%\,$\pm$\,1,5 des articles officiels (test apparié, $p \approx 2\times10^{-10}$)~; 60 défauts officiels réparés, surtout des renvois morts, pour 9 introduits. Le projet a coûté environ 1\,400~dollars, à peu près 2\,500 fois moins qu'une estimation du même travail par des juristes. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est indépendant et la méthode neutre. Ces résultats, produits et mesurés par l'IA seule, sont publiés avec textes, outils et verdicts pour que juristes et citoyens les vérifient et les consolident.
+Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets, les annexes fiscales et des versions futures qui se contredisent souvent. Des agents d'IA réécrivent ici cinq grands codes français complets~: code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation, soit 30\,317 articles de la base officielle LEGI au 18~octobre 2026. Le travail a suivi trois passes et une revue publique ouverte. La première a réécrit chaque article (14\,115 réécrits, 16\,199 maintenus avec justification)~; la deuxième les a tous relus pour les contradictions~; la troisième, en \og red team \fg{} indépendante, a soulevé 303 objections, appliqué environ 1\,290 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle~; les issues GitHub publiques ont nourri la même boucle. Sur deux échantillons frais de 1\,264 articles, audités à l'aveugle sur les deux textes, chaque défaut contesté vérifié, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 des articles réécrits contre 7,5\,\%\,$\pm$\,1,5 des articles officiels (test apparié, $p \approx 2\times10^{-10}$)~; 60 défauts officiels réparés, surtout des renvois morts, pour 9 introduits. Le projet a coûté environ 1\,400~dollars, 2\,500 à 10\,000 fois moins que les estimations du même travail par des juristes. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est indépendant et la méthode neutre. Ces résultats, produits et mesurés par l'IA seule, sont publiés avec textes, outils et verdicts pour que juristes et citoyens les vérifient et les consolident.
 \end{abstract}
 
 \begin{center}
-\fbox{\parbox{0.9\linewidth}{\centering\textbf{Résultat clé.} Mesuré de la même façon sur les mêmes articles tirés au hasard, le droit réécrit par l'IA compte \textbf{54\,\% de défauts grossiers en moins} que le droit français en vigueur~: 3,5\,\% des articles contre 7,5\,\% (1\,264 articles, IC à 95\,\% de la baisse~: 40 à 64\,\%). Pour environ \textbf{2\,500 fois moins cher} que le même travail par des juristes (ordre de grandeur, \S\ref{sec:cost}).}}
+\fbox{\parbox{0.9\linewidth}{\centering\textbf{Résultat clé.} Mesuré de la même façon sur les mêmes articles tirés au hasard, le droit réécrit par l'IA compte \textbf{54\,\% de défauts grossiers en moins} que le droit français en vigueur~: 3,5\,\% des articles contre 7,5\,\% (1\,264 articles, IC à 95\,\% de la baisse~: 40 à 64\,\%). Pour un coût \textbf{2\,500 à 10\,000 fois moindre} que le même travail par des juristes (ordres de grandeur, \S\ref{sec:cost}).}}
 \end{center}
 
 \section{Introduction}
@@ -93,7 +94,7 @@ Le second objectif est le principal intérêt scientifique. Réformer un code es
   \end{itemize}
   \item Une méthode de mesure~: six audits aléatoires stratifiés, menés à l'aveugle, avec une taxonomie de dix familles de défauts (F1 à F10). Le taux s'accompagne d'un intervalle de confiance, pas d'une anecdote (\S\ref{sec:measure}).
   \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte 34\,\% de défauts grossiers en moins que le droit qu'il remplace sur 1\,879 articles à la date des audits (4,6\,\% contre 7,0\,\%), et \textbf{54\,\% de moins} aujourd'hui sur deux échantillons frais de 1\,264 articles (3,5\,\% contre 7,5\,\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
-  \item Une comparaison de coût~: environ 1\,400~dollars déboursés, 3\,500 à 5\,100~dollars au prix de l'API, contre un ordre de grandeur de plusieurs millions d'euros pour le même travail par des juristes (\S\ref{sec:cost}).
+  \item Une comparaison de coût~: environ 1\,400~dollars déboursés, 3\,500 à 5\,100~dollars au prix de l'API, contre des ordres de grandeur de 6 à 36~millions d'euros pour le même travail par des juristes, soit 2\,500 à 10\,000 fois plus (\S\ref{sec:cost}).
   \item Des constats empiriques sur ce que les agents d'IA font bien et mal en matière de cohérence juridique (\S\ref{sec:results}--\S\ref{sec:discussion})~:
   \begin{itemize}
     \item les balayages mécaniques atteignent un plateau~;
@@ -600,7 +601,26 @@ La lecture a consommé environ 30 millions de jetons (hors lectures de cache), s
 En comptant un mois de chaque abonnement, la dépense réelle du projet a été d'environ \textbf{1\,400~dollars}, moins de 5~centimes par article. Au prix de l'API, elle aurait été de 3\,500 à 5\,100~dollars, soit 12 à 17~centimes par article. Ces montants n'incluent pas le temps humain~: quelques jours de direction et d'arbitrage d'une personne.
 
 \paragraph{Ce que le même travail coûterait avec des juristes.}
-C'est un ordre de grandeur, pas une mesure, et ses hypothèses sont volontairement basses. Supposons qu'un juriste mette deux heures pour réécrire un article avec un motif écrit, après lecture de ses sources et de ses contreparties~; une demi-heure pour lire un article avec ses trois liens principaux et le maintenir ou le qualifier~; une demi-heure par article pour la relecture de cohérence de la seconde passe~; une heure et demie par correction. Le travail effectivement accompli représente alors environ 36\,000~heures pour la première passe (14\,115 réécritures et 16\,199 maintiens motivés), 15\,000~heures pour la seconde (30\,314 relectures) et 9\,000~heures pour la troisième (environ 12\,500 lectures d'audit et de balayage, 1\,943 alertes qualifiées, 1\,285 corrections)~: à peu près \textbf{60\,000~heures de juriste}, soit 35 à 40 années de travail. À un coût complet de 100~euros de l'heure pour des rédacteurs juridiques internes, cela fait environ 6~millions d'euros~; au tarif moyen d'un cabinet, 250~euros de l'heure, environ 15~millions. En divisant chaque hypothèse par deux, il reste plusieurs millions d'euros, contre environ 1\,400~dollars dépensés ici. À environ 1,10~dollar pour un euro, l'estimation \og juristes \fg{} vaut de 1\,300 à 4\,700 fois le coût du travail de l'IA au prix de l'API (3\,500 à 5\,100~dollars), soit environ \textbf{2\,500 fois} au milieu géométrique de cette fourchette, et de 4\,700 à 11\,800 fois la dépense réelle. La comparaison porte sur le coût, pas sur la qualité~: des juristes ne laisseraient pas 3,5\,\% d'articles avec un défaut grossier, et le résultat de ce projet attend encore leur relecture.
+C'est un ordre de grandeur, pas une mesure, et il dépend de ses hypothèses~; nous donnons donc deux scénarios (tableau~\ref{tab:lawyers}). Tous deux ne comptent que le travail effectivement accompli ici~: 14\,115 réécritures et 16\,199 maintiens motivés en première passe, 30\,314 relectures en seconde, et environ 12\,500 lectures d'audit et de balayage, 1\,943 alertes qualifiées et 1\,285 corrections en troisième. Le scénario \emph{prudent} suppose 2~heures par article réécrit, une demi-heure par lecture et une heure et demie par correction. Le scénario \emph{réaliste} suppose 6~heures par article réécrit, ce qui laisse le temps d'en vérifier les renvois et les textes d'application, 1~heure par article maintenu et par relecture de cohérence, une demi-heure par lecture d'audit, 1~heure par alerte et 3~heures par correction. Les coûts retiennent 100~euros de l'heure pour des rédacteurs juridiques internes, 250~euros pour un tarif moyen de cabinet, et 1,10~dollar pour un euro.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+& & & \multicolumn{2}{c}{Fois le coût du travail de l'IA}\\
+\cmidrule(lr){4-5}
+Scénario & Heures & Coût juristes & prix de l'API & dépense réelle\\
+\midrule
+Prudent & 60\,000 & 6 à 15 M\euro{} & 1\,300 à 4\,700 & 4\,700 à 11\,800\\
+Réaliste & 143\,000 & 14 à 36 M\euro{} & 3\,100 à 11\,300 & 11\,000 à 28\,000\\
+\bottomrule
+\end{tabular}
+\caption{Ordre de grandeur du coût du même travail par des juristes. 60\,000~heures représentent 35 à 40 années de travail~; 143\,000~heures, environ 85. Le travail de l'IA a coûté 3\,500 à 5\,100~dollars au prix de l'API et environ 1\,400~dollars en dépense réelle.}
+\label{tab:lawyers}
+\end{table}
+
+Selon le scénario, le travail de l'IA est donc \textbf{2\,500 à 10\,000 fois moins cher}~: environ 2\,500 fois au milieu du scénario prudent, et environ 10\,000 fois dans le scénario réaliste au tarif des cabinets ou rapporté à la dépense réelle. La comparaison porte sur le coût, pas sur la qualité~: des juristes ne laisseraient pas 3,5\,\% d'articles avec un défaut grossier, et le résultat de ce projet attend encore leur relecture.
 
 \subsection{Exemples de défauts}
 
@@ -641,7 +661,7 @@ Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les 
 \begin{itemize}
   \item Les résultats sont mesurés par l'IA, par choix. Les verdicts d'audit sont des jugements de modèles et peuvent se tromper dans les deux sens~; leur justesse est ouverte à la vérification par des experts, que nous invitons.
   \item La sévérité des auditeurs varie. Sur des textes identiques, deux groupes d'auditeurs ont différé d'un facteur deux avant vérification (\S\ref{sec:baseline}). Le taux d'un audit isolé est à lire avec cette réserve. L'audit 8 a tourné sur un autre modèle que les audits 1 à 7~; il concorde sur le texte officiel mais trouve moins de défauts dans le texte réécrit, et un écart de sévérité entre modèles ne peut être exclu.
-  \item Le coût \og juristes \fg{} est un ordre de grandeur construit sur des hypothèses explicites, ni un devis ni une mesure.
+  \item Les coûts \og juristes \fg{} sont des ordres de grandeur construits sur deux jeux d'hypothèses explicites, ni un devis ni une mesure.
   \item Le corpus est figé au 18~octobre 2026, et les textes hors des neuf recueils ne sont pas réécrits.
   \item La jurisprudence n'est pas prise en compte. Rédaction et audits lisent les codes, pas les décisions qui les interprètent~: une réécriture peut donc s'écarter sans le vouloir d'une interprétation établie, et un audit peut manquer un défaut déjà relevé par les juges.
   \item Des échantillons d'audit d'environ 314 articles ne détectent que des écarts d'environ $\pm$\,2 points~; les taux par strate sont donc imprécis.
@@ -652,7 +672,7 @@ Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les 
 
 \section{Conclusion et travaux futurs}
 
-Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team indépendante, et mesuré ce qui reste faux. Mesuré contre le droit officiel sur les mêmes articles, chaque défaut contesté vérifié, le droit réécrit compte 34\,\% de défauts grossiers en moins sur 1\,879 articles à la date des audits, et \textbf{54\,\% de moins} aujourd'hui sur deux échantillons frais de 1\,264 articles (3,5\,\% contre 7,5\,\%). Les quatre cinquièmes des défauts qui restent sont hérités du droit en vigueur. Le projet a coûté environ 1\,400~dollars, à peu près 2\,500 fois moins que le même travail par des juristes. Toute la trace est publique.
+Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team indépendante, et mesuré ce qui reste faux. Mesuré contre le droit officiel sur les mêmes articles, chaque défaut contesté vérifié, le droit réécrit compte 34\,\% de défauts grossiers en moins sur 1\,879 articles à la date des audits, et \textbf{54\,\% de moins} aujourd'hui sur deux échantillons frais de 1\,264 articles (3,5\,\% contre 7,5\,\%). Les quatre cinquièmes des défauts qui restent sont hérités du droit en vigueur. Le projet a coûté environ 1\,400~dollars, 2\,500 à 10\,000 fois moins que le même travail par des juristes. Toute la trace est publique.
 
 Prochaines étapes~:
 \begin{itemize}
