@@ -11,9 +11,9 @@
 Suggested metadata:
 - Title (EN): The Source Code of Law: AI Agents Rewrite and Red-Team Five Major Codes of French Law
 - Title (FR): Le code source du droit : des agents d'IA réécrivent et vérifient cinq grands codes français
-- Authors: Alex Masmejean, Kevin Primicerio
+- Authors: Alex Masmejean, Kevin Primicerio, Nathalie Gouailhardou (all independent; every author must approve the final manuscript and the contribution statement before submission)
 - Primary category: cs.CY (Computers and Society); cross-lists: cs.AI, cs.CL
-- Comments: 16 pages (French: 17), 2 figures, 6 tables. French version available as a companion submission. Code and data: https://github.com/AlexMasmej/liberer-la-france
+- Comments: 17 pages, 2 figures, 6 tables. French version available as a companion submission. Code and data: https://github.com/AlexMasmej/liberer-la-france
 - License: CC BY 4.0 (suggested)
 
 Sources compile with pdflatex (TeX Live) and were checked with tectonic.
