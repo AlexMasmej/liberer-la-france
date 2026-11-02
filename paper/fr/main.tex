@@ -46,6 +46,10 @@ Traduire un programme politique en droit applicable exige de modifier un corpus 
 \end{abstract}
 
 \begin{center}
+\parbox{0.9\linewidth}{\small\emph{Note~: cette version française est une traduction de l'article original, rédigé en anglais. En cas de divergence, la version anglaise fait foi.}}
+\end{center}
+
+\begin{center}
 \fbox{\parbox{0.9\linewidth}{\centering\textbf{Résultat clé.} Mesuré de la même façon sur les mêmes articles tirés au hasard, le droit réécrit par l'IA compte \textbf{54\,\% de défauts grossiers en moins} que le droit français en vigueur~: 3,5\,\% des articles contre 7,5\,\% (1\,264 articles, IC à 95\,\% de la baisse~: 40 à 64\,\%). Pour un coût \textbf{2\,500 à 10\,000 fois moindre} que le même travail par des juristes (ordres de grandeur, \S\ref{sec:cost}).}}
 \end{center}
 
@@ -99,7 +103,7 @@ Nous la décomposons en trois objectifs~:
     \item un registre d'objections, avec priorités et natures~;
     \item un réexamen sur les différences~;
     \item une correction soumise à un critère d'alignement explicite~;
-    \item un écrivain gardé qui ne peut rien écraser sans contrôle (\S\ref{sec:redteam}).
+    \item un outil d'écriture contrôlée, qui ne peut rien écraser sans vérification (\S\ref{sec:redteam}).
   \end{itemize}
   \item Une méthode de mesure~: six audits aléatoires stratifiés, menés à l'aveugle, avec une taxonomie de dix familles de défauts (F1 à F10). Le taux s'accompagne d'un intervalle de confiance, pas d'une anecdote (\S\ref{sec:measure}).
   \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte 34\,\% de défauts grossiers en moins que le droit qu'il remplace sur 1\,879 articles à la date des audits (4,6\,\% contre 7,0\,\%), et \textbf{54\,\% de moins} aujourd'hui sur deux échantillons frais de 1\,264 articles (3,5\,\% contre 7,5\,\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
@@ -205,11 +209,11 @@ Sont hors périmètre les textes que le corpus cite sans les contenir. Par exemp
   box/.style={draw, rounded corners=2pt, align=center, minimum height=11mm, text width=25mm, fill=gray!6},
   arr/.style={-{Stealth[length=2mm]}, thick}]
 \node[box] (src) {Sources officielles\\LEGI (DILA)};
-\node[box, right=of src] (pol) {Couche de politiques\\(choix explicites)};
+\node[box, right=of src] (pol) {Paramétrage\\du programme};
 \node[box, right=of pol] (p1) {Passe 1\\agents de rédaction};
 \node[box, right=of p1] (p2) {Passe 2\\contradictions};
 \node[box, below=7mm of p2] (rt) {Passe 3\\red team indépendante};
-\node[box, left=of rt] (fix) {Écrivain gardé\\(avant-image)};
+\node[box, left=of rt] (fix) {Écriture contrôlée\\(état antérieur)};
 \node[box, left=of fix] (aud) {Audits aléatoires\\et balayages};
 \node[box, left=of aud] (pub) {Lecteur, téléchar\-gements, dépôt public};
 \draw[arr] (src) -- (pol); \draw[arr] (pol) -- (p1); \draw[arr] (p1) -- (p2);
@@ -217,14 +221,14 @@ Sont hors périmètre les textes que le corpus cite sans les contenir. Par exemp
 \draw[arr] (aud) -- (pub);
 \draw[arr, dashed] (aud.south) to[bend right=22] node[below, font=\scriptsize]{nouvelles familles de défauts} (rt.south);
 \end{tikzpicture}
-\caption{Vue d'ensemble de la chaîne. Toute écriture passe par le même écrivain gardé~; les audits renvoient de nouvelles familles de défauts à la red team.}
+\caption{Vue d'ensemble de la chaîne. Toute écriture passe par le même outil d'écriture contrôlée~; les audits renvoient de nouvelles familles de défauts à la red team.}
 \label{fig:pipeline}
 \end{figure}
 
-\subsection{Couche de politiques}
+\subsection{Paramétrage du programme}
 \label{sec:policy}
 
-La figure~\ref{fig:pipeline} résume l'ensemble de la chaîne. Toutes les décisions de fond sont stockées comme des objets de politique explicites et versionnés, séparés du texte juridique~: coordinations par domaine, résumés des sites et méthode de chiffrage net des mesures fiscales. Exemples~:
+La figure~\ref{fig:pipeline} résume l'ensemble de la chaîne. Toutes les décisions de fond sont stockées comme des fichiers de paramétrage explicites, dont chaque version est conservée, séparés du texte juridique~: coordinations par domaine, résumés des sites et méthode de chiffrage net des mesures fiscales. Exemples~:
 \begin{itemize}
   \item un contrat de travail unique à durée indéterminée, avec un préavis de quinze jours de chaque côté~;
   \item un impôt sur les sociétés déclenché par la distribution~;
@@ -243,7 +247,7 @@ Des invariants éditoriaux s'appliquent partout~:
 \end{itemize}
 
 \paragraph{Remplacer le programme.}
-En principe, un autre programme remplacerait la couche de politiques sans toucher au reste. Le tableau~\ref{tab:portability} dit ce qui, dans la chaîne actuelle, dépend du programme et ce qui n'en dépend pas.
+En principe, un autre programme remplacerait le paramétrage du programme sans toucher au reste. Le tableau~\ref{tab:portability} dit ce qui, dans la chaîne actuelle, dépend du programme et ce qui n'en dépend pas.
 
 \begin{table}[ht]
 \centering
@@ -252,10 +256,10 @@ En principe, un autre programme remplacerait la couche de politiques sans touche
 \toprule
 Élément & Dépend du programme & Ce qu'il faudrait changer\\
 \midrule
-Objets de politique (coordinations, résumés, chiffrage) & Oui & Les réécrire pour le nouveau programme. Ils ont été rédigés sous la direction de l'auteur, pas extraits automatiquement d'un programme.\\
+Fichiers de paramétrage (coordinations, résumés, chiffrage) & Oui & Les réécrire pour le nouveau programme. Ils ont été rédigés sous la direction de l'auteur, pas extraits automatiquement d'un programme.\\
 Consigne de rédaction des agents & En partie & Remplacer l'instruction d'orientation (aujourd'hui~: \og couper davantage les taxes et les contraintes \fg{})~; le reste (lire en entier, rendre l'article complet, ne rien inventer) est général.\\
 Critère d'alignement de la red team & Oui & Le reformuler à partir du nouveau programme. Le principe (corriger contradictions et failles, renvoyer les arbitrages) reste.\\
-Gardes, écrivain gardé, validation & Non & Rien.\\
+Garde-fous, écriture contrôlée, validation & Non & Rien.\\
 Audits, familles F1 à F7 et F9 & Non & Rien. La famille F8 (\og contraire aux orientations \fg{}) se recalcule avec le nouveau programme.\\
 Référence sur le droit officiel & Non & Rien~: elle ne lit aucun programme.\\
 \bottomrule
@@ -289,19 +293,19 @@ La première passe a utilisé un modèle d'OpenAI (\texttt{gpt-6-astra}, effort 
   \item un point invérifiable.
 \end{itemize}
 
-\subsection{Gardes}
+\subsection{Garde-fous}
 
 Rien n'est accepté sur la seule parole d'un modèle. Une réponse n'est acceptée qu'après les contrôles suivants~:
 \begin{itemize}
   \item la source, les NOTA et les dates de validité~;
   \item la validation du contenu, y compris le balisage autorisé et les tableaux complets~;
-  \item un contrôle d'avant-image sur cinq champs canoniques (empreinte de source, statut, proposition, motif, notes), dans la base comme dans le fichier de lot propriétaire de l'article~;
+  \item un contrôle de l'état antérieur sur cinq champs canoniques (empreinte de source, statut, proposition, motif, notes), dans la base comme dans le fichier de lot propriétaire de l'article~;
   \item la propriété, le registre et l'archive~;
   \item une validation indépendante de tout le corpus.
 \end{itemize}
 Les preuves d'exécution natives (modèle, effort, session) sont aussi contrôlées.
 
-Ces gardes ne sont pas décoratives. Elles ont arrêté de vraies divergences~: trois tâches de seconde passe ont été refusées parce que l'article avait changé entre-temps. Elles ont aussi rendu possible la troisième passe, puisque chaque correction a pu passer par le même écrivain.
+Ces garde-fous ne sont pas décoratifs. Ils ont arrêté de vraies divergences~: trois tâches de seconde passe ont été refusées parce que l'article avait changé entre-temps. Ils ont aussi rendu possible la troisième passe, puisque chaque correction a pu passer par le même écrivain.
 
 La seconde passe s'est achevée le 29~octobre, avec l'acceptation des 30\,314 identités. Un audit structurel a posteriori a ensuite relevé 94\,059 points à examiner, dont 1\,412 prioritaires, sur 792 articles. Ce sont des pistes, pas des contradictions établies.
 
@@ -359,7 +363,7 @@ Une correction est refusée si elle fait l'une des choses suivantes~:
 
 Les agents rédacteurs n'écrivent leurs corrections que dans un espace de travail, sous forme de textes d'articles complets avec des métadonnées typées. Un vérificateur reconstruit chaque ligne exactement comme le ferait l'applicateur de production, et lance le validateur du projet dans un répertoire temporaire.
 
-Le coordinateur applique ensuite les corrections avec l'outil gardé. Cet outil contrôle l'avant-image, archive l'ancien texte, revalide tout le corpus et revient en arrière en cas d'échec. Une table de propriété attribue chaque article à un seul groupe. Les besoins entre groupes passent par des demandes, si bien que deux agents n'écrivent jamais le même article.
+Le coordinateur applique ensuite les corrections avec l'outil d'écriture contrôlée. Cet outil vérifie l'état antérieur, archive l'ancien texte, revalide tout le corpus et revient en arrière en cas d'échec. Une table de propriété attribue chaque article à un seul groupe. Les besoins entre groupes passent par des demandes, si bien que deux agents n'écrivent jamais le même article.
 
 \subsection{Contributions externes}
 
@@ -677,7 +681,7 @@ Les exemples suivants, tous corrigés sauf mention contraire, montrent le type d
 \label{sec:discussion}
 
 \paragraph{Ce que les agents d'IA font bien.}
-À cette échelle, les agents sont des lecteurs infatigables, complets et littéraux. Ils reproduisent des articles entiers, y compris des tableaux de plusieurs centaines de milliers de caractères. Ils suivent les renvois à travers neuf recueils et de nombreuses versions, et ils gardent des citations exactes. Avec des modifications typées et des écritures gardées, cela a permis de réécrire puis de réparer un corpus qu'aucune personne ne pourrait relire en une semaine. Le travail est aussi entièrement vérifiable~: chaque changement est archivé avec son avant-image et son motif.
+À cette échelle, les agents sont des lecteurs infatigables, complets et littéraux. Ils reproduisent des articles entiers, y compris des tableaux de plusieurs centaines de milliers de caractères. Ils suivent les renvois à travers neuf recueils et de nombreuses versions, et ils gardent des citations exactes. Avec des modifications typées et des écritures contrôlées, cela a permis de réécrire puis de réparer un corpus qu'aucune personne ne pourrait relire en une semaine. Le travail est aussi entièrement vérifiable~: chaque changement est archivé avec son état antérieur et son motif.
 
 \paragraph{Ce qu'ils font mal.}
 \begin{itemize}
@@ -738,11 +742,11 @@ Le tableau~\ref{tab:future} décrit la chaîne que ce travail amorce, et sépare
 Étape & État dans ce travail\\
 \midrule
 1. Ingérer le programme d'un parti & À construire~: fait à la main, sous la direction de l'auteur.\\
-2. Le convertir en spécifications structurées & En partie~: objets de politique explicites, rédigés à la main.\\
+2. Le convertir en spécifications structurées & En partie~: fichiers de paramétrage explicites, rédigés à la main.\\
 3. Identifier les lois, règlements, renvois et dépendances concernés & Démontré sur cinq codes et quatre annexes~; hors corpus (CIBS, lois non codifiées) à étendre.\\
 4. Proposer les modifications dans tout le corpus touché & Démontré~: 14\,115 articles réécrits.\\
 5. Détecter contradictions, effets non voulus et ambiguïtés & Démontré et mesuré~: red team, registre, audits.\\
-6. Produire une proposition versionnée et auditable, article par article & Démontré~: dépôt public, lecteur, avant-images.\\
+6. Produire une proposition versionnée et auditable, article par article & Démontré~: dépôt public, lecteur, états antérieurs archivés.\\
 7. Estimer l'effort et lister les questions qui exigent un jugement humain & En partie~: coûts mesurés, arbitrages renvoyés à l'auteur.\\
 \bottomrule
 \end{tabularx}
@@ -751,7 +755,7 @@ Le tableau~\ref{tab:future} décrit la chaîne que ce travail amorce, et sépare
 \end{table}
 
 L'échéance de 2027 fournit un cas d'usage immédiat, mais l'objectif scientifique dépasse toute élection et tout parti~: examiner si l'IA peut faire de la réforme législative, aujourd'hui manuelle, coûteuse et fragmentée, un processus reproductible, auditable et configurable par programme. À terme, des programmes concurrents pourraient ainsi être traduits en propositions législatives comparables et techniquement cohérentes, ce qui rendrait les conséquences pratiques des choix politiques plus faciles à examiner et à débattre.
-Au-delà de ce cas d'étude, la méthode est un modèle~: une couche de politiques explicite, une rédaction complète, des écritures gardées, une red team indépendante et une mesure honnête. Nous espérons qu'elle rende le droit plus lisible, et qu'elle donne à chacun un moyen concret de vérifier la cohérence d'une réforme proposée.
+Au-delà de ce cas d'étude, la méthode est un modèle~: un paramétrage explicite du programme, une rédaction complète, des écritures contrôlées, une red team indépendante et une mesure honnête. Nous espérons qu'elle rende le droit plus lisible, et qu'elle donne à chacun un moyen concret de vérifier la cohérence d'une réforme proposée.
 
 \section*{Appel à contributions}
 
@@ -780,7 +784,7 @@ Des systèmes d'IA ont effectué l'essentiel du travail de rédaction, de revue 
 
 Les contributions sont données selon la taxonomie CRediT.
 \begin{itemize}
-  \item \textbf{Alexandre Masmejean~:} Conceptualisation (a conçu le projet)~; Méthodologie (a fixé la couche de politiques)~; Investigation (a conduit les passes de rédaction)~; Supervision et Administration du projet (a dirigé le projet et arbitré tous les choix politiques)~; Rédaction -- révision et édition.
+  \item \textbf{Alexandre Masmejean~:} Conceptualisation (a conçu le projet)~; Méthodologie (a fixé le paramétrage du programme)~; Investigation (a conduit les passes de rédaction)~; Supervision et Administration du projet (a dirigé le projet et arbitré tous les choix politiques)~; Rédaction -- révision et édition.
   \item \textbf{Kevin Primicerio~:} Investigation (revue externe indépendante des codes publiés avec ses propres agents d'IA)~; Validation (issues et tests d'acceptation, triés et en partie intégrés)~; Rédaction -- révision et édition.
   \item \textbf{Nathalie Gouailhardou~:} Conceptualisation (a proposé de comparer systématiquement les taux d'erreur des textes juridiques officiels et de leurs équivalents réécrits par l'IA, l'évaluation comparative des \S\ref{sec:baseline} et \S\ref{sec:fresh})~; Méthodologie (a relevé qu'évaluer différemment les textes officiels et réécrits introduirait des facteurs de confusion, et a proposé d'appliquer aux deux la même méthode et les mêmes critères d'évaluation, ce qui a établi une référence cohérente pour une comparaison valide).
   % Ajouter « Rédaction -- révision et édition » pour N.G. seulement si elle relit ou révise substantiellement le manuscrit.
