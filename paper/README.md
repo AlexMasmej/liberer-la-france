@@ -6,7 +6,7 @@
 | `code-source-du-droit-fr.pdf` | French paper (compiled preview) |
 | `arxiv-en.tar.gz` | English LaTeX source to upload (single `main.tex`, bibliography inline, no figures to attach) |
 | `arxiv-fr.tar.gz` | French LaTeX source to upload |
-| `en/abstract.txt`, `fr/abstract.txt` | Plain-text abstracts for the arXiv form (1,503 and 1,614 characters; limit 1,920) |
+| `en/abstract.txt`, `fr/abstract.txt` | Plain-text abstracts for the arXiv form (1,527 and 1,643 characters; limit 1,920) |
 
 Suggested metadata:
 - Title (EN): The Source Code of Law: A Policy-Configurable AI Agent Pipeline for Rewriting Legislation, Tested on Five Major Codes of French Law
