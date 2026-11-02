@@ -6,14 +6,14 @@
 | `code-source-du-droit-fr.pdf` | French paper (compiled preview) |
 | `arxiv-en.tar.gz` | English LaTeX source to upload (single `main.tex`, bibliography inline, no figures to attach) |
 | `arxiv-fr.tar.gz` | French LaTeX source to upload |
-| `en/abstract.txt`, `fr/abstract.txt` | Plain-text abstracts for the arXiv form (1,704 and 1,709 characters; limit 1,920) |
+| `en/abstract.txt`, `fr/abstract.txt` | Plain-text abstracts for the arXiv form (1,503 and 1,614 characters; limit 1,920) |
 
 Suggested metadata:
-- Title (EN): The Source Code of Law: AI Agents Rewrite and Red-Team Five Major Codes of French Law
-- Title (FR): Le code source du droit : des agents d'IA réécrivent et vérifient cinq grands codes français
+- Title (EN): The Source Code of Law: A Policy-Configurable AI Agent Pipeline for Rewriting Legislation, Tested on Five Major Codes of French Law
+- Title (FR): Le code source du droit : une chaîne d'agents d'IA configurable pour réécrire la loi, éprouvée sur cinq grands codes français
 - Authors: Alexandre Masmejean, Kevin Primicerio, Nathalie Gouailhardou (all independent; every author must approve the final manuscript and the contribution statement before submission)
 - Primary category: cs.CY (Computers and Society); cross-lists: cs.AI, cs.CL
-- Comments: 18 pages, 2 figures, 8 tables. French version available as a companion submission. Code and data: https://github.com/AlexMasmej/liberer-la-france
+- Comments: 20 pages, 2 figures, 10 tables. French version available as a companion submission. Code and data: https://github.com/AlexMasmej/liberer-la-france
 - License: CC BY 4.0 (suggested)
 
 Sources compile with pdflatex (TeX Live) and were checked with tectonic.

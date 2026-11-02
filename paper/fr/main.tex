@@ -22,7 +22,8 @@
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
 
 \title{Le code source du droit~:\\
-des agents d'IA réécrivent et vérifient cinq grands codes français}
+une chaîne d'agents d'IA configurable pour réécrire la loi,\\
+éprouvée sur cinq grands codes français}
 
 \author{
   Alexandre Masmejean\thanks{Auteur correspondant~: \texttt{alex@masmej.com}. Alex Masmej sur X~: \url{https://x.com/AlexMasmej}.}\\
@@ -41,7 +42,7 @@ des agents d'IA réécrivent et vérifient cinq grands codes français}
 \maketitle
 
 \begin{abstract}
-Le droit français est difficile à lire~: une même règle se répartit entre une loi, ses décrets, les annexes fiscales et des versions futures qui se contredisent souvent. Des agents d'IA réécrivent ici cinq grands codes français complets~: code du travail, code général des impôts et ses quatre annexes, codes de la sécurité sociale, de l'urbanisme et de la construction et de l'habitation, soit 30\,317 articles de la base officielle LEGI au 18~octobre 2026. Le travail a suivi trois passes et une relecture publique ouverte. La première a réécrit chaque article (14\,115 réécrits, 16\,199 maintenus avec justification)~; la deuxième les a tous relus pour les contradictions~; la troisième, en \og red team \fg{} indépendante, a soulevé 303 objections, appliqué environ 1\,290 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle~; les signalements publics sur GitHub ont nourri la même boucle. Sur deux échantillons frais de 1\,264 articles, audités à l'aveugle sur les deux textes, chaque défaut contesté vérifié, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 des articles réécrits contre 7,5\,\%\,$\pm$\,1,5 des articles officiels (test apparié, $p \approx 2\times10^{-10}$)~; 60 défauts officiels réparés, surtout des renvois morts, pour 9 introduits. Le projet a coûté environ 1\,400~dollars, 2\,500 à 10\,000 fois moins que les estimations du même travail par des juristes. Les choix de fond suivent le programme 2027 de David Lisnard, mais le projet est indépendant et la méthode neutre. Ces résultats, produits et mesurés par l'IA seule, sont publiés avec textes, outils et verdicts pour que juristes et citoyens les vérifient et les consolident.
+Traduire un programme politique en droit applicable exige de modifier un corpus vaste et interconnecté~: lois, décrets, annexes fiscales et versions futures, qui se contredisent souvent. Nous étudions si une chaîne d'agents d'IA, configurable par un programme politique, peut faire cette traduction de façon cohérente, vérifiable et bien moins coûteuse que la rédaction manuelle. Cas d'étude~: cinq grands codes français complets (travail, CGI et ses quatre annexes, sécurité sociale, urbanisme, construction et habitation), soit 30\,317 articles de la base LEGI au 18~octobre 2026, réécrits selon des réformes inspirées du programme 2027 de David Lisnard, dans un projet indépendant. Le travail a suivi trois passes et une relecture publique ouverte~: réécriture de chaque article (14\,115 réécrits, 16\,199 maintenus avec justification), relecture de cohérence complète, puis une red team indépendante qui a appliqué environ 1\,290 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle. Sur deux échantillons frais de 1\,264 articles, audités à l'aveugle sur les deux textes avec le même protocole, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 contre 7,5\,\%\,$\pm$\,1,5 (test apparié, $p \approx 2\times10^{-10}$). Le coût est 2\,500 à 10\,000 fois inférieur aux estimations du même travail par des juristes. Le programme est une entrée distincte de la chaîne~; la portabilité vers d'autres programmes reste à démontrer expérimentalement. Ces résultats, produits et mesurés par l'IA seule, sont publiés pour que juristes et citoyens les vérifient.
 \end{abstract}
 
 \begin{center}
@@ -73,16 +74,24 @@ L'accueil a été bien plus large que prévu~: environ 120\,000 vues, 1\,190 men
 \end{enumerate}
 Cet article documente cette seconde phase, plus lente.
 
-\paragraph{Objectif.}
-Nous poursuivons deux objectifs.
+\paragraph{Pourquoi maintenant~: l'élection présidentielle de 2027.}
+La France élira son prochain président de la République en 2027, au terme du mandat de cinq ans en cours \cite{constitution}. Les partis y présenteront des réformes de la fiscalité, du travail, des retraites, du logement ou de la réglementation des entreprises. Une promesse de réforme n'est pas encore du droit~: pour s'appliquer, elle doit être traduite en modifications précises de lois et de règlements, à travers un corpus vaste et interconnecté. Ce travail de traduction est aujourd'hui long, coûteux et difficile à vérifier de l'extérieur.
+
+L'échéance de 2027 offre donc un cas d'usage concret et immédiat à l'ingénierie législative assistée par IA, quel que soit le vainqueur et quelle que soit l'ampleur des réformes qui suivront. Nous ne prétendons pas qu'une réforme de cette ampleur aura lieu~; nous examinons si des agents d'IA peuvent rendre cette traduction nettement moins chère, plus rapide, plus systématique et plus facile à auditer.
+
+\paragraph{Question de recherche.}
+\emph{Une chaîne multi-agents généraliste, configurable par un programme politique, peut-elle traduire des objectifs de réforme ambitieux en modifications cohérentes et vérifiables d'un corpus juridique national, à un coût bien inférieur à celui d'une rédaction manuelle~?}
+
+Nous la décomposons en trois objectifs~:
 \begin{itemize}
   \item \textbf{La lisibilité.} Produire, pour chaque article du périmètre, un texte proposé complet, présenté en regard de la source officielle et accompagné d'une justification écrite.
-  \item \textbf{Une preuve de concept pour trouver et résoudre les contradictions.} Montrer comment des agents d'IA peuvent trouver et résoudre les contradictions d'un vaste corpus juridique interconnecté, et jusqu'où.
+  \item \textbf{La cohérence.} Montrer comment des agents d'IA peuvent trouver et résoudre les contradictions d'un vaste corpus interconnecté, et jusqu'où. Réformer un code est simple à énoncer et difficile à faire de façon cohérente~: supprimer une obligation dans une loi n'a pas de sens si un décret, une annexe fiscale ou une version consolidée future continue de l'imposer.
+  \item \textbf{La configurabilité.} Séparer le programme politique, traité comme une entrée, de l'infrastructure de réécriture et de vérification, et dire ce qui, dans cette infrastructure, en dépend encore.
 \end{itemize}
-Le second objectif est le principal intérêt scientifique. Réformer un code est simple à énoncer et difficile à faire de façon cohérente. Supprimer une obligation dans une loi n'a pas de sens si un décret, une annexe fiscale ou une version consolidée future continue de l'imposer.
 
 \paragraph{Contributions.}
 \begin{itemize}
+  \item Une architecture en quatre couches, qui sépare la \emph{spécification des politiques} (quels objectifs mettre en \oe{}uvre) de la \emph{transformation législative} (comment les traduire en modifications du droit), de la \emph{vérification de cohérence} (contradictions, renvois morts, dispositions incompatibles, erreurs de mise en \oe{}uvre) et de l'\emph{évaluation indépendante} (\S\ref{sec:policy}). Nous indiquons précisément quelles parties de l'infrastructure actuelle dépendent encore du programme choisi.
   \item Une réécriture complète de cinq grands codes et des quatre annexes du CGI (30\,317 entrées), en trois passes et une relecture publique ouverte~; chaque version est conservée et publiée. Sources officielles et propositions sont tenues séparées, avec un lecteur comparatif et des téléchargements (\S\ref{sec:corpus}--\S\ref{sec:drafting}).
   \item Un protocole de \og red teaming \fg{} pour la législation produite par IA~:
   \begin{itemize}
@@ -127,12 +136,19 @@ Mesure & 29--31 & Auditeurs IA à l'aveugle & Huit audits aléatoires (3\,143 ar
 \paragraph{Des résultats produits par l'IA seule.}
 Cet article rapporte délibérément ce que des agents d'IA ont accompli seuls. Rédaction, revue, correction et mesure ont toutes été faites par des agents d'IA, sous direction et arbitrage humains, mais sans juristes. Nous publions les résultats pour que juristes et citoyens les vérifient et les consolident (voir l'appel à contributions à la fin).
 
-\paragraph{Position politique.}
-L'orientation de fond de la réécriture est explicite et n'est pas neutre. Elle vise moins d'impôts et moins de contraintes. Elle conserve les exonérations, les dérogations favorables, les droits acquis et les transitions. Elle n'introduit jamais de formalité de remplacement.
+\paragraph{Un cas d'étude~: le programme de David Lisnard.}
+La première mise en \oe{}uvre utilise des réformes inspirées du programme 2027 de David Lisnard \cite{lisnard}. Ce choix fournit un jeu d'hypothèses concret et ambitieux pour éprouver une chaîne générale~: moins d'impôts et moins de contraintes, conservation des exonérations, des dérogations favorables, des droits acquis et des transitions, et jamais de formalité de remplacement. C'est l'origine historique du projet, et nous la maintenons explicitement.
 
-Ces choix s'inspirent du programme 2027 de David Lisnard \cite{lisnard}. \textbf{Ce projet est une initiative indépendante.} Il n'est ni commandé, ni relu, ni approuvé par David Lisnard ni par son mouvement, Nouvelle Énergie, et les sites publiés le disent.
+\textbf{Ce projet est une initiative indépendante.} Il n'est ni commandé, ni relu, ni approuvé par David Lisnard ni par son mouvement, Nouvelle Énergie, et les sites publiés le disent. Cet article ne soutient pas, scientifiquement, que ces orientations soient préférables à d'autres.
 
-La méthode, elle, est neutre. La couche de politiques est une entrée distincte et explicite (\S\ref{sec:policy}), et la même chaîne pourrait mettre en \oe{}uvre n'importe quel autre programme. La red team avait pour consigne de corriger les contradictions et les failles, \emph{jamais} de modifier les choix politiques.
+Nous distinguons quatre questions, qui relèvent de couches différentes~:
+\begin{itemize}
+  \item \textbf{Spécification des politiques~:} quels objectifs politiques mettre en \oe{}uvre~? C'est l'entrée, ici le programme retenu~; la question n'est pas scientifique.
+  \item \textbf{Transformation législative~:} comment des agents d'IA traduisent-ils ces objectifs en modifications du droit existant~?
+  \item \textbf{Vérification de cohérence~:} comment détectent-ils les contradictions, renvois morts, dispositions incompatibles et erreurs de mise en \oe{}uvre~?
+  \item \textbf{Évaluation indépendante~:} comment évaluer le corpus obtenu sans privilégier une philosophie politique~?
+\end{itemize}
+Seule la première couche devrait changer avec un autre programme, qu'il soit libéral, centriste, socialiste, conservateur ou autre. La red team avait pour consigne de corriger les contradictions et les failles, \emph{jamais} de modifier les choix politiques. Dans l'état actuel, la séparation n'est pas encore complète (\S\ref{sec:policy})~; la portabilité est donc une hypothèse de conception, pas un résultat démontré.
 
 \section{Travaux connexes}
 
@@ -145,7 +161,7 @@ Ces deux approches formalisent fidèlement le droit existant. Notre objectif est
 
 Le \og red teaming \fg{}, recherche contradictoire de défaillances par une partie indépendante, est une pratique courante pour les systèmes d'IA \cite{ganguli2022}. Il est ici retourné contre une législation produite par IA.
 
-Nous ne connaissons pas de travail antérieur qui réécrive de bout en bout des codes nationaux complets et publie un taux de défauts mesuré.
+Nous ne connaissons pas de travail antérieur qui réécrive de bout en bout des codes nationaux complets et publie un taux de défauts mesuré. Nous situons ce travail dans une \emph{ingénierie législative}~: traiter un programme comme une spécification, le corpus juridique comme l'objet à transformer, et la cohérence du résultat comme une propriété à mesurer.
 
 \section{Corpus et périmètre}
 \label{sec:corpus}
@@ -225,6 +241,30 @@ Des invariants éditoriaux s'appliquent partout~:
   \item on ne supprime jamais une faveur pour rendre deux textes artificiellement cohérents~;
   \item une obligation supprimée dans une loi ne doit pas survivre dans un décret, un formulaire ou un renvoi.
 \end{itemize}
+
+\paragraph{Remplacer le programme.}
+En principe, un autre programme remplacerait la couche de politiques sans toucher au reste. Le tableau~\ref{tab:portability} dit ce qui, dans la chaîne actuelle, dépend du programme et ce qui n'en dépend pas.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{4.3cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}X}
+\toprule
+Élément & Dépend du programme & Ce qu'il faudrait changer\\
+\midrule
+Objets de politique (coordinations, résumés, chiffrage) & Oui & Les réécrire pour le nouveau programme. Ils ont été rédigés sous la direction de l'auteur, pas extraits automatiquement d'un programme.\\
+Consigne de rédaction des agents & En partie & Remplacer l'instruction d'orientation (aujourd'hui~: \og couper davantage les taxes et les contraintes \fg{})~; le reste (lire en entier, rendre l'article complet, ne rien inventer) est général.\\
+Critère d'alignement de la red team & Oui & Le reformuler à partir du nouveau programme. Le principe (corriger contradictions et failles, renvoyer les arbitrages) reste.\\
+Gardes, écrivain gardé, validation & Non & Rien.\\
+Audits, familles F1 à F7 et F9 & Non & Rien. La famille F8 (\og contraire aux orientations \fg{}) se recalcule avec le nouveau programme.\\
+Référence sur le droit officiel & Non & Rien~: elle ne lit aucun programme.\\
+\bottomrule
+\end{tabularx}
+\caption{Ce qui dépend du programme dans la chaîne actuelle.}
+\label{tab:portability}
+\end{table}
+
+L'audit apparié du droit officiel (\S\ref{sec:baseline}) montre que l'évaluation fonctionne sans aucun programme. En revanche, aucun autre programme n'a encore été mis en \oe{}uvre~: la portabilité de la transformation elle-même n'est pas mesurée.
 
 \subsection{Agents par article}
 
@@ -653,6 +693,9 @@ Sans les audits aléatoires, le nombre de corrections, plus de 1\,200, aurait la
 \paragraph{Contradictions et politique.}
 Tenir la red team à l'écart des choix politiques a été plus difficile que prévu. Beaucoup de contradictions apparentes ont deux résolutions cohérentes~: supprimer une faveur ou l'étendre, rétablir une formalité ou en effacer le reliquat. Nous avons tranché par un critère d'alignement explicite et publié (\S\ref{sec:redteam}), et nous avons renvoyé les vrais arbitrages à l'auteur. Un autre programme changerait le critère, pas la méthode.
 
+\paragraph{Portabilité et neutralité.}
+Deux arguments plaident pour la portabilité. D'abord, la plupart des défauts mesurés (renvois morts, versions futures, décrets non alignés, contradictions) ne dépendent pas du sens de la réforme~: ils apparaîtraient avec n'importe quel programme qui modifie beaucoup d'articles. Ensuite, l'évaluation est appliquée au droit officiel sans aucun programme. Deux arguments plaident pour la prudence. Les consignes de rédaction et le critère d'alignement portent l'orientation du programme~; et les modèles peuvent traiter différemment des réformes qui vont dans des sens différents. Seule une expérience comparative peut trancher~: appliquer la même chaîne à deux programmes contrastés au moins, avec le même protocole d'évaluation, et comparer les taux de défauts. Nous ne l'avons pas faite.
+
 \paragraph{La relecture par des experts.}
 Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les a encore validés. La chaîne rend la relecture par des experts \emph{moins coûteuse}, pas inutile~: chaque article est livré avec sa source, son motif, ses notes, ses objections et sa trace d'audit. Le suivi public des issues s'est révélé le canal le plus efficace. Neuf des onze premières issues externes visaient un vrai défaut.
 
@@ -662,6 +705,7 @@ Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les 
   \item Les résultats sont mesurés par l'IA, par choix. Les verdicts d'audit sont des jugements de modèles et peuvent se tromper dans les deux sens~; leur justesse est ouverte à la vérification par des experts, que nous invitons.
   \item La sévérité des auditeurs varie. Sur des textes identiques, deux groupes d'auditeurs ont différé d'un facteur deux avant vérification (\S\ref{sec:baseline}). Le taux d'un audit isolé est à lire avec cette réserve. L'audit 8 a tourné sur un autre modèle que les audits 1 à 7~; il concorde sur le texte officiel mais trouve moins de défauts dans le texte réécrit, et un écart de sévérité entre modèles ne peut être exclu.
   \item Les coûts \og juristes \fg{} sont des ordres de grandeur construits sur deux jeux d'hypothèses explicites, ni un devis ni une mesure.
+  \item Un seul programme a été mis en \oe{}uvre. La portabilité vers d'autres programmes et la neutralité de la chaîne ne sont pas démontrées, et la séparation entre programme et infrastructure n'est pas complète (tableau~\ref{tab:portability}).
   \item Le corpus est figé au 18~octobre 2026, et les textes hors des neuf recueils ne sont pas réécrits.
   \item La jurisprudence n'est pas prise en compte. Rédaction et audits lisent les codes, pas les décisions qui les interprètent~: une réécriture peut donc s'écarter sans le vouloir d'une interprétation établie, et un audit peut manquer un défaut déjà relevé par les juges.
   \item Des échantillons d'audit d'environ 314 articles ne détectent que des écarts d'environ $\pm$\,2 points~; les taux par strate sont donc imprécis.
@@ -679,9 +723,35 @@ Prochaines étapes~:
   \item la lecture systématique des autres articles réécrits~: construction-habitation et sécurité sociale (environ 5\,500), puis travail et urbanisme (environ 5\,900)~;
   \item l'intégration du CIBS au corpus~;
   \item dans une seconde version, la prise en compte de la jurisprudence~: relier chaque article aux décisions du Conseil constitutionnel, du Conseil d'État et de la Cour de cassation qui l'interprètent (données ouvertes de la DILA et API Judilibre), pour que les réécritures respectent les interprétations établies et que les audits les vérifient~;
-  \item la validation par des juristes praticiens, en commençant par les objections et arbitrages ouverts.
+  \item la validation par des juristes praticiens, en commençant par les objections et arbitrages ouverts~;
+  \item une expérience comparative~: appliquer la même chaîne à deux programmes contrastés au moins, avec le même protocole d'évaluation.
 \end{itemize}
-Au-delà de cette réforme particulière, la méthode est un modèle~: une couche de politiques explicite, une rédaction complète, des écritures gardées, une red team indépendante et une mesure honnête. Nous espérons qu'elle rende le droit plus lisible, et qu'elle donne à chacun un moyen concret de vérifier la cohérence d'une réforme proposée.
+
+\paragraph{Vers une chaîne configurable par programme.}
+Le tableau~\ref{tab:future} décrit la chaîne que ce travail amorce, et sépare ce qui est démontré ici de ce qui reste à construire.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{5.2cm}}
+\toprule
+Étape & État dans ce travail\\
+\midrule
+1. Ingérer le programme d'un parti & À construire~: fait à la main, sous la direction de l'auteur.\\
+2. Le convertir en spécifications structurées & En partie~: objets de politique explicites, rédigés à la main.\\
+3. Identifier les lois, règlements, renvois et dépendances concernés & Démontré sur cinq codes et quatre annexes~; hors corpus (CIBS, lois non codifiées) à étendre.\\
+4. Proposer les modifications dans tout le corpus touché & Démontré~: 14\,115 articles réécrits.\\
+5. Détecter contradictions, effets non voulus et ambiguïtés & Démontré et mesuré~: red team, registre, audits.\\
+6. Produire une proposition versionnée et auditable, article par article & Démontré~: dépôt public, lecteur, avant-images.\\
+7. Estimer l'effort et lister les questions qui exigent un jugement humain & En partie~: coûts mesurés, arbitrages renvoyés à l'auteur.\\
+\bottomrule
+\end{tabularx}
+\caption{Une chaîne configurable par programme~: ce qui est démontré et ce qui reste à faire.}
+\label{tab:future}
+\end{table}
+
+L'échéance de 2027 fournit un cas d'usage immédiat, mais l'objectif scientifique dépasse toute élection et tout parti~: examiner si l'IA peut faire de la réforme législative, aujourd'hui manuelle, coûteuse et fragmentée, un processus reproductible, auditable et configurable par programme. À terme, des programmes concurrents pourraient ainsi être traduits en propositions législatives comparables et techniquement cohérentes, ce qui rendrait les conséquences pratiques des choix politiques plus faciles à examiner et à débattre.
+Au-delà de ce cas d'étude, la méthode est un modèle~: une couche de politiques explicite, une rédaction complète, des écritures gardées, une red team indépendante et une mesure honnête. Nous espérons qu'elle rende le droit plus lisible, et qu'elle donne à chacun un moyen concret de vérifier la cohérence d'une réforme proposée.
 
 \section*{Appel à contributions}
 
@@ -695,6 +765,8 @@ Nous invitons juristes, universitaires, fonctionnaires, citoyens et toute person
   \item le problème et, si possible, une correction proposée.
 \end{itemize}
 Chaque issue est triée par rapport au registre. Les contradictions et les failles sont corrigées, et l'issue est close avec un lien vers le commit. Les demandes qui changeraient une orientation politique sont expliquées et closes. Les demandes de fusion sont aussi bienvenues.
+
+Nous invitons aussi chercheurs, juristes, organisations politiques et contributeurs indépendants à adapter la chaîne à d'autres programmes~: proposer d'autres configurations de politiques, écrire une représentation structurée du programme d'autres partis, et vérifier si la chaîne produit des modifications cohérentes sous d'autres hypothèses. L'ambition n'est pas de promouvoir un candidat, mais de construire une infrastructure réutilisable au service du travail législatif de n'importe quel futur gouvernement.
 
 \section*{Disponibilité des données et du code}
 
@@ -720,6 +792,9 @@ Tous les auteurs ont lu et approuvé la version finale du manuscrit.
 Nous remercions Rand Hindi, dont l'exemple a inspiré l'approche de \og red teaming \fg{} de la troisième passe. Nous remercions Emmanuel Masmejean pour sa relecture attentive de la version française. Nous remercions toutes celles et ceux qui ont lu, critiqué et partagé le fil initial.
 
 \begin{thebibliography}{99}
+
+\bibitem{constitution}
+Constitution du 4~octobre 1958, articles~6 et~7 (élection du Président de la République au suffrage universel direct, pour cinq ans).
 
 \bibitem{cc99421}
 Conseil constitutionnel,
