@@ -11,7 +11,7 @@
 Suggested metadata:
 - Title (EN): The Source Code of Law: A Policy-Configurable AI Agent Pipeline for Rewriting Legislation, Tested on Five Major Codes of French Law
 - Title (FR): Le code source du droit : une chaîne d'agents d'IA configurable pour réécrire la loi, éprouvée sur cinq grands codes français
-- Authors: Alexandre Masmejean, Kevin Primicerio, Nathalie Gouailhardou (all independent; every author must approve the final manuscript and the contribution statement before submission)
+- Authors: Alexandre Masmejean, Nathalie Gouailhardou, Kevin Primicerio (all independent; every author must approve the final manuscript and the contribution statement before submission)
 - Primary category: cs.CY (Computers and Society); cross-lists: cs.AI, cs.CL
 - Comments: 20 pages (French: 21), 2 figures, 10 tables. French version available as a companion submission. Code and data: https://github.com/AlexMasmej/liberer-la-france
 - License: CC BY 4.0 (suggested)
