@@ -42,7 +42,7 @@ une chaîne d'agents d'IA configurable pour réécrire la loi,\\
 \maketitle
 
 \begin{abstract}
-Traduire un programme politique en droit applicable exige de modifier un corpus vaste et interconnecté~: lois, décrets, annexes fiscales et versions futures, qui se contredisent souvent. Nous étudions si une chaîne d'agents d'IA, configurable par un programme politique, peut faire cette traduction de façon cohérente, vérifiable et bien moins coûteuse que la rédaction manuelle. Cas d'étude~: cinq grands codes français complets (travail, CGI et ses quatre annexes, sécurité sociale, urbanisme, construction et habitation), soit 30\,317 articles de la base LEGI au 18~octobre 2026, réécrits selon des réformes inspirées du programme 2027 de David Lisnard, dans un projet indépendant. Le travail a suivi trois passes et une relecture publique ouverte~: réécriture de chaque article (14\,115 réécrits, 16\,199 maintenus avec justification), relecture de cohérence complète, puis une red team indépendante qui a appliqué environ 1\,290 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle. Sur deux nouveaux échantillons de 1\,264 articles jamais tirés auparavant, audités à l'aveugle sur les deux textes avec le même protocole, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 contre 7,5\,\%\,$\pm$\,1,5 (test apparié, $p \approx 2\times10^{-10}$). Le coût est 2\,500 à 10\,000 fois inférieur aux estimations du même travail par des juristes. Le programme est une entrée distincte~: la détection des défauts ne dépend pas de lui, et nous invitons à faire passer d'autres programmes par la même chaîne. Ces résultats, produits et mesurés par l'IA seule, sont publiés pour que juristes et citoyens les vérifient.
+Traduire un programme politique en droit applicable exige de modifier un corpus vaste et interconnecté~: lois, décrets, annexes fiscales et versions futures, qui se contredisent souvent. Nous étudions si une chaîne d'agents d'IA, configurable par un programme politique, peut faire cette traduction de façon cohérente, vérifiable et bien moins coûteuse que la rédaction manuelle. Cas d'étude~: cinq grands codes français complets (travail, CGI et ses quatre annexes, sécurité sociale, urbanisme, construction et habitation), soit 30\,317 articles de la base LEGI au 18~octobre 2026, réécrits selon des réformes inspirées du programme 2027 de David Lisnard, dans un projet indépendant. Le travail a suivi trois passes et une relecture publique ouverte~: réécriture de chaque article (14\,115 réécrits, 16\,199 maintenus avec justification), relecture de cohérence complète, puis une red team distincte qui a appliqué 1\,285 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle. Sur deux nouveaux échantillons de 1\,264 articles jamais tirés auparavant, audités à l'aveugle sur les deux textes avec le même protocole, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 contre 7,5\,\%\,$\pm$\,1,5 (test apparié, $p \approx 2\times10^{-10}$). Le coût est 2\,500 à 10\,000 fois inférieur aux estimations du même travail par des juristes. Le programme est une entrée distincte~: la détection des défauts ne dépend pas de lui, et nous invitons à faire passer d'autres programmes par la même chaîne. Ces résultats, produits et mesurés par l'IA seule, sont publiés pour que juristes et citoyens les vérifient.
 \end{abstract}
 
 \begin{center}
@@ -50,7 +50,7 @@ Traduire un programme politique en droit applicable exige de modifier un corpus 
 \end{center}
 
 \begin{center}
-\fbox{\parbox{0.9\linewidth}{\centering\textbf{Résultat clé.} Mesuré de la même façon sur les mêmes articles tirés au hasard, le droit réécrit par l'IA compte \textbf{54\,\% de défauts grossiers en moins} que le droit français en vigueur~: 3,5\,\% des articles contre 7,5\,\% (1\,264 articles, IC à 95\,\% de la baisse~: 40 à 64\,\%). Pour un coût \textbf{2\,500 à 10\,000 fois moindre} que le même travail par des juristes (ordres de grandeur, \S\ref{sec:cost}).}}
+\fbox{\parbox{0.9\linewidth}{\centering\textbf{Résultat clé.} Mesuré de la même façon sur les mêmes articles tirés au hasard, le droit réécrit par l'IA compte \textbf{54\,\% de défauts grossiers en moins} que le droit français en vigueur~: 3,5\,\% des articles contre 7,5\,\% (1\,264 articles, IC à 95\,\% de la baisse~: 40 à 64\,\%). \textbf{Le taux mesure surtout la cohérence (renvois, versions, contradictions, transitions)~; il ne juge ni la conformité au droit de l'Union ou à la Constitution (F9, \og à confirmer \fg{}), ni l'opportunité des réformes.} Pour un coût \textbf{2\,500 à 10\,000 fois moindre} aux points médians (les fourchettes du tableau~\ref{tab:lawyers} vont de 1\,300 à 28\,000, hors temps humain de direction, et les heures de juriste sont des hypothèses) que le même travail par des juristes (ordres de grandeur, \S\ref{sec:cost}). Aucun article n'a été relu par un juriste~: ces textes sont une base de travail vérifiable, pas une proposition de loi prête à déposer.}}
 \end{center}
 
 \section{Introduction}
@@ -107,7 +107,7 @@ Nous la décomposons en trois objectifs~:
   \end{itemize}
   \item Une méthode de mesure~: six audits aléatoires stratifiés, menés à l'aveugle, avec une taxonomie de dix familles de défauts (F1 à F10). Le taux s'accompagne d'un intervalle de confiance, pas d'une anecdote (\S\ref{sec:measure}).
   \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte 34\,\% de défauts grossiers en moins que le droit qu'il remplace sur 1\,879 articles à la date des audits (4,6\,\% contre 7,0\,\%), et \textbf{54\,\% de moins} aujourd'hui sur deux nouveaux échantillons de 1\,264 articles (3,5\,\% contre 7,5\,\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
-  \item Une comparaison de coût~: environ 1\,400~dollars déboursés, 3\,500 à 5\,100~dollars au prix de l'API, contre des ordres de grandeur de 6 à 36~millions d'euros pour le même travail par des juristes, soit 2\,500 à 10\,000 fois plus (\S\ref{sec:cost}).
+  \item Une comparaison de coût~: environ 1\,400~dollars déboursés, 3\,500 à 5\,100~dollars au prix de l'API, contre des ordres de grandeur de 6 à 36~millions d'euros pour le même travail par des juristes, soit 2\,500 à 10\,000 fois plus aux points médians (les fourchettes du tableau~\ref{tab:lawyers} vont de 1\,300 à 28\,000, hors temps humain de direction, et les heures de juriste sont des hypothèses~; \S\ref{sec:cost}).
   \item Des constats empiriques sur ce que les agents d'IA font bien et mal en matière de cohérence juridique (\S\ref{sec:results}--\S\ref{sec:discussion})~:
   \begin{itemize}
     \item les balayages mécaniques atteignent un plateau~;
@@ -129,7 +129,7 @@ Le tableau~\ref{tab:glance} résume l'ensemble~: trois passes sur les cinq codes
 Passe 1~: rédaction & 18--23 & Codex d'OpenAI (\texttt{gpt-6-astra}) & A lu chaque article en entier et rédigé une proposition complète~: 14\,115 réécrits, 16\,199 maintenus avec une justification écrite.\\
 Passe 2~: cohérence & 23--29 & Codex d'OpenAI (\texttt{gpt-6.1-sol}) & A relu les 30\,314 propositions au regard de leurs sources et contreparties, contradictions d'abord~; 2\,894 sessions d'agents.\\
 Passe 3~: red team & 26--31 & Claude Code (Opus 5.5, Fable 5.1) & Environ 570 exécutions d'agents~: 303 objections soulevées, 243 retenues~; 1\,285 corrections sur 1\,211 articles~; lecture complète des 2\,740 articles fiscaux réécrits.\\
-Relecture publique & dès le 27 & Contributeur externe, lecteurs & 13 signalements (\og issues \fg{}) et 2 demandes de fusion sur GitHub, dont neuf des onze premières visaient un vrai défaut~; triées et corrigées dans la même boucle.\\
+Relecture publique & dès le 27 & Contributeur externe, lecteurs & 13 signalements (\og issues \fg{}) et 2 demandes de fusion sur GitHub, dont neuf des onze premières visaient un vrai défaut~; triées au fil de l'eau~; certaines restent ouvertes à la date de cette version.\\
 Mesure & 29--31 & Auditeurs IA à l'aveugle & Huit audits aléatoires (3\,143 articles lus à l'aveugle) et trois comparaisons appariées avec le droit officiel.\\
 \bottomrule
 \end{tabularx}
@@ -194,7 +194,7 @@ CGI, annexe IV & 477 & 290 & 186 & 1\\
 Total & 30\,317 & 14\,115 & 16\,199 & 3\\
 \bottomrule
 \end{tabularx}
-\caption{Périmètre à la fin de la seconde passe. Les articles \og maintenus \fg{} sont conservés sans changement, avec une justification propre. Les trois \og réserves \fg{} sont des lacunes documentaires (une figure manquante, des formulaires originaux manquants et un conflit dans la consolidation officielle) qui n'ont pas été comblées par supposition.}
+\caption{Périmètre à la fin de la seconde passe. Les articles \og maintenus \fg{} sont conservés sans changement, avec une justification propre. Les trois \og réserves \fg{} sont des lacunes documentaires (une figure manquante, des formulaires originaux manquants et un conflit dans la consolidation officielle) qui n'ont pas été comblées par supposition. Au commit 55621278, \texttt{progress.json} compte 14\,273 articles rédigés et 16\,041 maintenus après les requalifications de la troisième passe~; s'y ajoutent les 257 propositions sur des versions futures.}
 \label{tab:corpus}
 \end{table}
 
@@ -212,7 +212,7 @@ Sont hors périmètre les textes que le corpus cite sans les contenir. Par exemp
 \node[box, right=of src] (pol) {Paramétrage\\du programme};
 \node[box, right=of pol] (p1) {Passe 1\\agents de rédaction};
 \node[box, right=of p1] (p2) {Passe 2\\contradictions};
-\node[box, below=7mm of p2] (rt) {Passe 3\\red team indépendante};
+\node[box, below=7mm of p2] (rt) {Passe 3\\red team distincte};
 \node[box, left=of rt] (fix) {Écriture contrôlée\\(état antérieur)};
 \node[box, left=of fix] (aud) {Audits aléatoires\\et balayages};
 \node[box, left=of aud] (pub) {Lecteur, téléchar\-gements, dépôt public};
@@ -309,10 +309,10 @@ Ces garde-fous ne sont pas décoratifs. Ils ont arrêté de vraies divergences~:
 
 La seconde passe s'est achevée le 29~octobre, avec l'acceptation des 30\,314 identités. Un audit structurel a posteriori a ensuite relevé 94\,059 points à examiner, dont 1\,412 prioritaires, sur 792 articles. Ce sont des pistes, pas des contradictions établies.
 
-\section{Red team indépendante (troisième passe)}
+\section{Red team distincte (troisième passe)}
 \label{sec:redteam}
 
-La troisième passe a utilisé un autre système~: Claude Code d'Anthropic (Claude Opus 5.5~; le dernier cycle, l'audit 8 et ses corrections, a tourné sur Claude Fable 5.1). Un agent coordinateur a lancé environ 390 sous-agents en cinq jours. Il a travaillé comme un relecteur \emph{indépendant}, sous des règles strictes~:
+La troisième passe a utilisé un autre système~: Claude Code d'Anthropic (Claude Opus 5.5~; le dernier cycle, l'audit 8 et ses corrections, a tourné sur Claude Fable 5.1). Un agent coordinateur a lancé environ 570 exécutions de sous-agents en six jours. Il a travaillé comme un relecteur \emph{distinct des agents rédacteurs}, sous des règles strictes~:
 \begin{itemize}
   \item lecture seule de la production, sur des instantanés figés dont chaque fichier est identifié par une empreinte numérique (hachage SHA-256)~;
   \item citations exactes, avec identifiant de version, pour toute affirmation~;
@@ -465,6 +465,7 @@ Défauts du premier nouvel échantillon encore présents & 28 articles $\rightar
 \end{table}
 
 \subsection{Taux de défauts résiduel}
+Les auditeurs ont aussi relevé des risques de droit supérieur (F9), publiés dans les verdicts~; nous ne les qualifions pas, car cela exige une analyse juridique que la chaîne ne fait pas.
 
 \begin{table}[ht]
 \centering
@@ -486,7 +487,7 @@ Ensemble, audits 1 à 6 & 1\,879 & 64 & \textbf{3,4\,\% $\pm$ 0,8} & \\
 8 (second nouvel échantillon, texte actuel) & 632 & 9 & 1,4\,\% $\pm$ 0,9 & 12,3\,\%\\
 \bottomrule
 \end{tabular}
-\caption{Huit audits aléatoires indépendants, menés à l'aveugle (verdicts bruts). Chaque échantillon exclut tous les articles déjà lus. Les audits 7 et 8 sont le côté \og texte réécrit \fg{} des audits appariés sur de nouveaux échantillons (\S\ref{sec:fresh})~; leurs auditeurs savaient explicitement qu'un défaut hérité du texte officiel compte. L'audit 8 a tourné sur un autre modèle (Fable 5.1).}
+\caption{Huit audits aléatoires sur des échantillons disjoints, menés à l'aveugle (verdicts bruts). Chaque échantillon exclut tous les articles déjà lus. Les audits 7 et 8 sont le côté \og texte réécrit \fg{} des audits appariés sur de nouveaux échantillons (\S\ref{sec:fresh})~; leurs auditeurs savaient explicitement qu'un défaut hérité du texte officiel compte. L'audit 8 a tourné sur un autre modèle (Fable 5.1).}
 \label{tab:audits}
 \end{table}
 
@@ -630,7 +631,7 @@ La lecture, chapitre par chapitre, des 2\,740 articles réécrits du CGI et de s
 \end{itemize}
 Ce taux de 3,5\,\% est bien inférieur aux 9 à 12\,\% que suggéraient les audits pour ces strates. Ces estimations reposaient sur de petits échantillons (76 et 128 articles), et les tours 4 à 6 s'étaient concentrés sur les annexes fiscales. Nous ne pouvons pas exclure qu'un lecteur qui parcourt un chapitre entier soit un peu moins strict qu'un auditeur à l'aveugle.
 
-Sur les 96 défauts, 86 sont corrigés (81 lignes, dont 16 demandées entre groupes). Dix restent ouverts. Neuf sont des réformes de TVA écrites dans des subdivisions du CGI qu'une ordonnance de 2025 transfère au CIBS le 1\textsuperscript{er}~janvier 2027~: ces réformes seraient donc sans effet, et le CIBS est hors du corpus. Le dixième est un arbitrage politique laissé à l'auteur.
+Sur les 96 défauts, 86 sont corrigés (81 lignes, dont 16 demandées entre groupes). Dix restent ouverts. Neuf sont des réformes de TVA écrites dans des subdivisions du CGI que l'ordonnance n\textsuperscript{o}~2025-1247 transfère au CIBS le 1\textsuperscript{er}~janvier 2027~: ces réformes seraient donc sans effet, et le CIBS est hors du corpus. Le dixième est un arbitrage politique laissé à l'auteur.
 
 La lecture a consommé environ 30 millions de jetons (hors lectures de cache), soit environ 11\,000 jetons par article.
 
@@ -664,7 +665,7 @@ Réaliste & 143\,000 & 14 à 36 M\euro{} & 3\,100 à 11\,300 & 11\,000 à 28\,00
 \label{tab:lawyers}
 \end{table}
 
-Selon le scénario, le travail de l'IA est donc \textbf{2\,500 à 10\,000 fois moins cher}~: environ 2\,500 fois au milieu du scénario prudent, et environ 10\,000 fois dans le scénario réaliste au tarif des cabinets ou rapporté à la dépense réelle. La comparaison porte sur le coût, pas sur la qualité~: des juristes ne laisseraient pas 3,5\,\% d'articles avec un défaut grossier, et le résultat de ce projet attend encore leur relecture.
+Selon le scénario, le travail de l'IA est donc \textbf{2\,500 à 10\,000 fois moins cher}~: environ 2\,500 fois au milieu du scénario prudent, et environ 10\,000 fois dans le scénario réaliste au tarif des cabinets ou rapporté à la dépense réelle. La comparaison porte sur le coût, pas sur la qualité~: le résultat de ce projet attend encore une relecture par des juristes, qu'aucune mesure par l'IA ne remplace.
 
 \subsection{Exemples de défauts}
 
@@ -675,6 +676,7 @@ Les exemples suivants, tous corrigés sauf mention contraire, montrent le type d
   \item \emph{Des chapitres à moitié abrogés.} Dans l'annexe II du CGI, un tour de correction a abrogé une partie des articles sur les centres de gestion agréés, dont la base légale (CGI 1649 \emph{quater}~C à~O) avait été abrogée en 2025. Les articles voisins organisaient encore la procédure d'agrément. L'audit suivant l'a relevé, et le chapitre a ensuite été traité en entier.
   \item \emph{Des versions futures qui défont la réforme.} Une adaptation à Mayotte prévue pour 2028 (CSS L759-23) appliquait \og dans la rédaction suivante \fg{} un article réécrit par le projet, rétablissant ainsi la règle que le projet supprime.
   \item \emph{Un décret contre sa loi.} Un décret fiscal proposé supprimait l'accréditation préalable des représentants fiscaux, alors que la loi (CGI 1671) l'exigeait encore. La correction cohérente aligne la loi, au lieu de rétablir une formalité.
+  \item \emph{Une réduction cohérente qui retire une protection (non corrigé).} La réécriture de L600-8 du code de l'urbanisme supprime la sanction des transactions qui monnaient le retrait d'un recours contre un permis (ordonnance n\textsuperscript{o}~2013-638), sans casser aucun renvoi. Le point a été signalé par le troisième auteur (issue~\#17) après les audits~; à la date de cette version, l'issue n'a pas encore reçu de réponse.
 \end{itemize}
 
 \section{Discussion}
@@ -707,7 +709,9 @@ Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les 
 
 \begin{itemize}
   \item Les résultats sont mesurés par l'IA, par choix. Les verdicts d'audit sont des jugements de modèles et peuvent se tromper dans les deux sens~; leur justesse est ouverte à la vérification par des experts, que nous invitons.
+  \item Une suppression cohérente d'une garantie, voulue par le programme, n'est comptée comme défaut que si l'auditeur la juge anormale~; les risques F9 ne font pas l'objet d'un taux publié.
   \item La sévérité des auditeurs varie. Sur des textes identiques, deux groupes d'auditeurs ont différé d'un facteur deux avant vérification (\S\ref{sec:baseline}). Le taux d'un audit isolé est à lire avec cette réserve. L'audit 8 a tourné sur un autre modèle que les audits 1 à 7~; il concorde sur le texte officiel mais trouve moins de défauts dans le texte réécrit, et un écart de sévérité entre modèles ne peut être exclu.
+  \item Auto-évaluation partielle. Le modèle qui a corrigé (Claude Opus 5.5) a aussi mené les audits 1 à 7, et les deux modèles d'audit viennent du même fournisseur~; un audit croisé du même échantillon par un modèle d'un autre fournisseur reste à faire, et les verdicts et les graines publiés permettent à quiconque de le mener.
   \item Les coûts \og juristes \fg{} sont des ordres de grandeur construits sur deux jeux d'hypothèses explicites, ni un devis ni une mesure.
   \item Un seul programme a été mis en \oe{}uvre~; l'expérience comparative avec d'autres programmes reste à mener, et les consignes de rédaction et le critère d'alignement doivent être réécrits pour chaque programme (tableau~\ref{tab:portability}).
   \item Le corpus est figé au 18~octobre 2026, et les textes hors des neuf recueils ne sont pas réécrits.
@@ -720,7 +724,7 @@ Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les 
 
 \section{Conclusion et travaux futurs}
 
-Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team indépendante, et mesuré ce qui reste faux. Mesuré contre le droit officiel sur les mêmes articles, chaque défaut contesté vérifié, le droit réécrit compte 34\,\% de défauts grossiers en moins sur 1\,879 articles à la date des audits, et \textbf{54\,\% de moins} aujourd'hui sur deux nouveaux échantillons de 1\,264 articles (3,5\,\% contre 7,5\,\%). Les quatre cinquièmes des défauts qui restent sont hérités du droit en vigueur. Le projet a coûté environ 1\,400~dollars, 2\,500 à 10\,000 fois moins que le même travail par des juristes. Toute la trace est publique.
+Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team distincte, et mesuré ce qui reste faux. Mesuré contre le droit officiel sur les mêmes articles, chaque défaut contesté vérifié, le droit réécrit compte 34\,\% de défauts grossiers en moins sur 1\,879 articles à la date des audits, et \textbf{54\,\% de moins} aujourd'hui sur deux nouveaux échantillons de 1\,264 articles (3,5\,\% contre 7,5\,\%). Les quatre cinquièmes des défauts qui restent sont hérités du droit en vigueur. Le projet a coûté environ 1\,400~dollars, 2\,500 à 10\,000 fois moins que le même travail par des juristes. Toute la trace est publique.
 
 Prochaines étapes~:
 \begin{itemize}
@@ -755,7 +759,7 @@ Le tableau~\ref{tab:future} décrit la chaîne que ce travail amorce, et sépare
 \end{table}
 
 L'échéance de 2027 fournit un cas d'usage immédiat, mais l'objectif scientifique dépasse toute élection et tout parti~: examiner si l'IA peut faire de la réforme législative, aujourd'hui manuelle, coûteuse et fragmentée, un processus reproductible, auditable et configurable par programme. À terme, des programmes concurrents pourraient ainsi être traduits en propositions législatives comparables et techniquement cohérentes, ce qui rendrait les conséquences pratiques des choix politiques plus faciles à examiner et à débattre.
-Au-delà de ce cas d'étude, la méthode est un modèle~: un paramétrage explicite du programme, une rédaction complète, des écritures contrôlées, une red team indépendante et une mesure honnête. Nous espérons qu'elle rende le droit plus lisible, et qu'elle donne à chacun un moyen concret de vérifier la cohérence d'une réforme proposée.
+Au-delà de ce cas d'étude, la méthode est un modèle~: un paramétrage explicite du programme, une rédaction complète, des écritures contrôlées, une red team distincte et une mesure honnête. Nous espérons qu'elle rende le droit plus lisible, et qu'elle donne à chacun un moyen concret de vérifier la cohérence d'une réforme proposée.
 
 \section*{Appel à contributions}
 

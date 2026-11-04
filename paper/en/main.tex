@@ -43,11 +43,11 @@ Tested on Five Major Codes of French Law}
 \maketitle
 
 \begin{abstract}
-Turning a political programme into enforceable law means amending a vast, interconnected corpus: statutes, decrees, tax annexes and future versions that often contradict one another. We study whether a policy-configurable pipeline of AI agents can make this translation coherent, verifiable and far cheaper than manual drafting. Case study: five major French codes in full (Labour, the General Tax Code and its four annexes, Social Security, Town Planning, Construction and Housing), 30{,}317 articles from the official LEGI database as of 18 October 2026, rewritten according to reforms inspired by David Lisnard's 2027 programme, in an independent project. The work ran in three passes and an open public review: every article rewritten (14{,}115 rewritten, 16{,}199 retained with a justification), a complete coherence re-reading, then an independent red team that applied about 1{,}290 corrections and measured reliability with blind random audits. On two fresh samples totalling 1{,}264 articles, audited blind on both texts with the same protocol, the rewritten law has \textbf{54\% fewer gross defects} than the law in force (95\% CI 40--64\%): 3.5\%\,$\pm$\,1.0 against 7.5\%\,$\pm$\,1.5 (paired test, $p \approx 2\times10^{-10}$). The cost is 2{,}500 to 10{,}000 times lower than estimates for the same work by lawyers. The programme is a separate input: defect detection does not depend on it, and we invite other programmes to be run through the same pipeline. These results, produced and measured by AI agents alone, are released for verification by lawyers and citizens.
+Turning a political programme into enforceable law means amending a vast, interconnected corpus: statutes, decrees, tax annexes and future versions that often contradict one another. We study whether a policy-configurable pipeline of AI agents can make this translation coherent, verifiable and far cheaper than manual drafting. Case study: five major French codes in full (Labour, the General Tax Code and its four annexes, Social Security, Town Planning, Construction and Housing), 30{,}317 articles from the official LEGI database as of 18 October 2026, rewritten according to reforms inspired by David Lisnard's 2027 programme, in an independent project. The work ran in three passes and an open public review: every article rewritten (14{,}115 rewritten, 16{,}199 retained with a justification), a complete coherence re-reading, then a separate red team that applied 1{,}285 corrections and measured reliability with blind random audits. On two fresh samples totalling 1{,}264 articles, audited blind on both texts with the same protocol, the rewritten law has \textbf{54\% fewer gross defects} than the law in force (95\% CI 40--64\%): 3.5\%\,$\pm$\,1.0 against 7.5\%\,$\pm$\,1.5 (paired test, $p \approx 2\times10^{-10}$). The cost is 2{,}500 to 10{,}000 times lower than estimates for the same work by lawyers. The programme is a separate input: defect detection does not depend on it, and we invite other programmes to be run through the same pipeline. These results, produced and measured by AI agents alone, are released for verification by lawyers and citizens.
 \end{abstract}
 
 \begin{center}
-\fbox{\parbox{0.9\linewidth}{\centering\textbf{Key result.} Measured the same way on the same randomly drawn articles, the AI-rewritten law has \textbf{54\% fewer gross defects} than the French law in force: 3.5\% of articles against 7.5\% (1{,}264 articles, 95\% CI of the reduction 40--64\%). It was \textbf{2{,}500 to 10{,}000 times cheaper} than the same work by lawyers (order-of-magnitude estimates, \S\ref{sec:cost}).}}
+\fbox{\parbox{0.9\linewidth}{\centering\textbf{Key result.} Measured the same way on the same randomly drawn articles, the AI-rewritten law has \textbf{54\% fewer gross defects} than the French law in force: 3.5\% of articles against 7.5\% (1{,}264 articles, 95\% CI of the reduction 40--64\%). \textbf{The rate mainly measures coherence (references, versions, contradictions, transitions); it judges neither compliance with EU or constitutional law (F9, ``to be confirmed'') nor the merits of the reforms.} It was \textbf{2{,}500 to 10{,}000 times cheaper} at the midpoints (Table~\ref{tab:lawyers} ranges run from 1{,}300 to 28{,}000, excluding human direction time, and lawyer hours are assumptions) than the same work by lawyers (order-of-magnitude estimates, \S\ref{sec:cost}). No article has been reviewed by a lawyer: these texts are a verifiable working basis, not a bill ready to be tabled.}}
 \end{center}
 
 \section{Introduction}
@@ -104,7 +104,7 @@ We break it into three aims:
   \end{itemize}
   \item A measurement method: six blind, stratified random audits, with a taxonomy of ten defect families (F1--F10). The rate has a confidence interval, not an anecdote (\S\ref{sec:measure}).
   \item A paired baseline: the same audit run on the official law, on the same articles. The rewritten law has 34\% fewer gross defects than the law it replaces on 1{,}879 articles at the time of the audits (4.6\% against 7.0\%), and \textbf{54\% fewer} today on two fresh samples of 1{,}264 articles (3.5\% against 7.5\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
-  \item A cost comparison: about US\$1{,}400 in cash, US\$3{,}500 to 5{,}100 at API prices, against order-of-magnitude estimates of \euro{}6 to 36 million for the same work by lawyers, 2{,}500 to 10{,}000 times more (\S\ref{sec:cost}).
+  \item A cost comparison: about US\$1{,}400 in cash, US\$3{,}500 to 5{,}100 at API prices, against order-of-magnitude estimates of \euro{}6 to 36 million for the same work by lawyers, 2{,}500 to 10{,}000 times more at the midpoints (Table~\ref{tab:lawyers} ranges run from 1{,}300 to 28{,}000, excluding human direction time, and lawyer hours are assumptions; \S\ref{sec:cost}).
   \item Empirical findings on what AI agents do well and badly on legal coherence (\S\ref{sec:results}--\S\ref{sec:discussion}):
   \begin{itemize}
     \item mechanical sweeps reach a plateau;
@@ -126,7 +126,7 @@ Stage & Dates (Oct.\ 2026) & Agents & What it did\\
 Pass 1: drafting & 18--23 & OpenAI Codex (\texttt{gpt-6-astra}) & Read every article in full and wrote a complete proposal: 14{,}115 rewritten, 16{,}199 retained with a written justification.\\
 Pass 2: coherence & 23--29 & OpenAI Codex (\texttt{gpt-6.1-sol}) & Re-read all 30{,}314 proposals against their sources and counterparts, contradictions first; 2{,}894 agent sessions.\\
 Pass 3: red team & 26--31 & Claude Code (Opus 5.5, Fable 5.1) & About 570 agent runs: 303 objections raised and 243 retained; 1{,}285 corrections on 1{,}211 articles; full reading of the 2{,}740 rewritten tax articles.\\
-Public review & from 27 & External contributor, readers & 13 issues and 2 pull requests on GitHub, nine of the first eleven pointing at a real defect; triaged and fixed in the same loop.\\
+Public review & from 27 & External contributor, readers & 13 issues and 2 pull requests on GitHub, nine of the first eleven pointing at a real defect; triaged as they came; some remain open at the date of this version.\\
 Measurement & 29--31 & Blind AI auditors & Eight random audits (3{,}143 articles read blind) and three paired comparisons with the official law.\\
 \bottomrule
 \end{tabularx}
@@ -191,7 +191,7 @@ CGI annex IV & 477 & 290 & 186 & 1\\
 Total & 30{,}317 & 14{,}115 & 16{,}199 & 3\\
 \bottomrule
 \end{tabularx}
-\caption{Scope at the end of the second pass. ``Retained'' articles are kept unchanged with a specific justification. The three ``reserves'' are documentary gaps (a missing figure, missing original forms, and a conflict in the official consolidation) that were not filled by guesswork.}
+\caption{Scope at the end of the second pass. ``Retained'' articles are kept unchanged with a specific justification. The three ``reserves'' are documentary gaps (a missing figure, missing original forms, and a conflict in the official consolidation) that were not filled by guesswork. At commit 55621278, \texttt{progress.json} counts 14{,}273 drafted and 16{,}041 retained articles after pass-3 requalifications, plus the 257 proposals on future versions.}
 \label{tab:corpus}
 \end{table}
 
@@ -209,7 +209,7 @@ Out of scope are texts that the corpus cites but does not contain. Examples are 
 \node[box, right=of src] (pol) {Policy layer\\(explicit choices)};
 \node[box, right=of pol] (p1) {Pass 1\\drafting agents};
 \node[box, right=of p1] (p2) {Pass 2\\contradictions};
-\node[box, below=7mm of p2] (rt) {Pass 3\\independent red team};
+\node[box, below=7mm of p2] (rt) {Pass 3\\separate red team};
 \node[box, left=of rt] (fix) {Guarded writer\\(before-image)};
 \node[box, left=of fix] (aud) {Random audits\\and sweeps};
 \node[box, left=of aud] (pub) {Reader, downloads,\\public repository};
@@ -307,10 +307,10 @@ These guards are not decoration. They caught real divergences: three second-pass
 
 The second pass ended on 29 October with all 30{,}314 identities accepted. A post-hoc structural audit then listed 94{,}059 points to examine, 1{,}412 of them high-priority, on 792 articles. These are leads, not established contradictions.
 
-\section{Independent red team (third pass)}
+\section{Separate red team (third pass)}
 \label{sec:redteam}
 
-The third pass was run with a different system, Anthropic's Claude Code (Claude Opus 5.5; the last cycle, audit 8 and its fixes, ran on Claude Fable 5.1). A coordinating agent dispatched about 390 sub-agent runs over five days. It worked as an \emph{independent} reviewer, under strict rules:
+The third pass was run with a different system, Anthropic's Claude Code (Claude Opus 5.5; the last cycle, audit 8 and its fixes, ran on Claude Fable 5.1). A coordinating agent dispatched about 570 sub-agent runs over six days. It worked as a reviewer \emph{separate from the drafting agents}, under strict rules:
 \begin{itemize}
   \item read-only access to production, on frozen snapshots whose files are all hashed;
   \item exact quotations with version identifiers for every claim;
@@ -463,6 +463,7 @@ Defects of the first fresh sample still present & 28 articles $\rightarrow$ 28 G
 \end{table}
 
 \subsection{Residual defect rate}
+Auditors also flagged higher-law risks (F9), published in the verdicts; we do not qualify them, since that requires a legal analysis the pipeline does not perform.
 
 \begin{table}[ht]
 \centering
@@ -484,7 +485,7 @@ Pooled, audits 1--6 & 1{,}879 & 64 & \textbf{3.4\% $\pm$ 0.8} & \\
 8 (second fresh sample, current text) & 632 & 9 & 1.4\% $\pm$ 0.9 & 12.3\%\\
 \bottomrule
 \end{tabular}
-\caption{Eight independent blind random audits (raw verdicts). Each sample excludes all previously read articles. Audits 7 and 8 are the rewritten-text side of the fresh paired audits (\S\ref{sec:fresh}); their auditors were told explicitly that a defect inherited from the official text counts. Audit 8 ran on a different model (Fable 5.1).}
+\caption{Eight blind random audits on disjoint samples (raw verdicts). Each sample excludes all previously read articles. Audits 7 and 8 are the rewritten-text side of the fresh paired audits (\S\ref{sec:fresh}); their auditors were told explicitly that a defect inherited from the official text counts. Audit 8 ran on a different model (Fable 5.1).}
 \label{tab:audits}
 \end{table}
 
@@ -628,7 +629,7 @@ The chapter-by-chapter reading of the 2{,}740 rewritten CGI and annex articles g
 \end{itemize}
 The 3.5\% is far below the 9--12\% that the pooled audits suggested for these strata. Those estimates rested on small samples (76 and 128 articles), and rounds 4 to 6 had concentrated on the tax annexes. We cannot exclude that a reader going through a whole chapter is somewhat less strict than a blind auditor.
 
-Of the 96 defects, 86 are corrected (81 rows, 16 of them requested across groups). Ten remain open. Nine are VAT reforms written into CGI subdivisions that a 2025 ordinance moves to the CIBS on 1 January 2027, so the reforms would have no effect; the CIBS is outside the corpus. The tenth is a political arbitration left to the author.
+Of the 96 defects, 86 are corrected (81 rows, 16 of them requested across groups). Ten remain open. Nine are VAT reforms written into CGI subdivisions that Ordinance No.~2025-1247 moves to the CIBS on 1 January 2027, so the reforms would have no effect; the CIBS is outside the corpus. The tenth is a political arbitration left to the author.
 
 The reading consumed about 30 million tokens (excluding cache reads), roughly 11{,}000 tokens per article.
 
@@ -662,7 +663,7 @@ Realistic & 143{,}000 & \euro{}14--36 M & 3{,}100--11{,}300$\times$ & 11{,}000--
 \label{tab:lawyers}
 \end{table}
 
-Across both scenarios, the AI work is therefore \textbf{2{,}500 to 10{,}000 times cheaper}: about 2{,}500 times at the middle of the conservative scenario, and about 10{,}000 times in the realistic scenario at law-firm rates or against the cash actually spent. The comparison is one of cost, not of quality: lawyers would not leave 3.5\% of articles with a gross defect, and the output of this project still awaits their review.
+Across both scenarios, the AI work is therefore \textbf{2{,}500 to 10{,}000 times cheaper}: about 2{,}500 times at the middle of the conservative scenario, and about 10{,}000 times in the realistic scenario at law-firm rates or against the cash actually spent. The comparison is one of cost, not of quality: the output of this project still awaits review by lawyers, which no AI measurement replaces.
 
 \subsection{Examples of defects}
 
@@ -673,6 +674,7 @@ The following examples, all corrected unless stated otherwise, show the kind of 
   \item \emph{Half-repealed chapters.} In CGI annex II, a correction round repealed some articles on approved management centres, whose legal basis (CGI 1649 \emph{quater} C to O) had been repealed in 2025. Neighbouring articles still organised the approval procedure. The next audit caught it, and the whole chapter was then treated at once.
   \item \emph{Future versions undoing the reform.} A Mayotte adaptation scheduled for 2028 (Social Security Code L759-23) applied ``in the following wording'' an article that the project rewrote, and so restored the rule the project removes.
   \item \emph{A regulation against its statute.} A proposed tax decree dropped the prior accreditation of fiscal representatives, while the statute (CGI 1671) still required it. The coherent fix aligns the statute instead of restoring a formality.
+  \item \emph{A coherent cut that removes a protection (not corrected).} The rewrite of Urban Planning Code L600-8 removes the sanction on settlements that pay for the withdrawal of an appeal against a building permit (Ordinance No.~2013-638), without breaking any cross-reference. The third author reported it (issue~\#17) after the audits; at the date of this version, the issue has not yet received a reply.
 \end{itemize}
 
 \section{Discussion}
@@ -705,7 +707,9 @@ The results are AI-only by design, and no lawyer has validated them yet. The pip
 
 \begin{itemize}
   \item Results are AI-measured by design. Audit verdicts are model judgements and may be wrong in either direction; their accuracy is open to expert verification, which we invite.
+  \item A coherent removal of a safeguard that the programme intends is counted as a defect only if the auditor judges it abnormal; F9 risks have no published rate.
   \item Auditor strictness varies. On identical texts, two sets of auditors disagreed by a factor of two before verification (\S\ref{sec:baseline}). Single-audit rates should be read with this in mind. Audit 8 ran on a different model from audits 1--7; it agrees on the official text but finds fewer defects in the rewritten text, and a difference in strictness between models cannot be excluded.
+  \item Partial self-evaluation. The model that made the corrections (Claude Opus 5.5) also ran audits 1--7, and both audit models come from the same vendor; a cross-audit of the same sample by another vendor's model remains to be done, and the published verdicts and seeds let anyone run it.
   \item The lawyer-cost figures are orders of magnitude built from two stated sets of assumptions, not a quotation or a measurement.
   \item Only one programme has been implemented; the comparative experiment with other programmes remains to be run, and the drafting instructions and alignment criterion must be rewritten for each programme (Table~\ref{tab:portability}).
   \item The corpus is frozen at 18 October 2026, and texts outside the nine instruments are not rewritten.
@@ -718,7 +722,7 @@ The results are AI-only by design, and no lawyer has validated them yet. The pip
 
 \section{Conclusion and future work}
 
-We rewrote five French codes and the four CGI annexes end to end with AI agents, red-teamed the result independently, and measured what remains wrong. Measured against the official law on the same articles, with every disputed defect verified, the rewritten law has 34\% fewer gross defects on 1{,}879 articles at the time of the audits, and \textbf{54\% fewer} today on two fresh samples of 1{,}264 articles (3.5\% against 7.5\%). Four fifths of the defects that remain are inherited from the law in force. It cost about US\$1{,}400, 2{,}500 to 10{,}000 times less than the same work by lawyers would have. The full trail is public.
+We rewrote five French codes and the four CGI annexes end to end with AI agents, red-teamed the result with a separate pipeline, and measured what remains wrong. Measured against the official law on the same articles, with every disputed defect verified, the rewritten law has 34\% fewer gross defects on 1{,}879 articles at the time of the audits, and \textbf{54\% fewer} today on two fresh samples of 1{,}264 articles (3.5\% against 7.5\%). Four fifths of the defects that remain are inherited from the law in force. It cost about US\$1{,}400, 2{,}500 to 10{,}000 times less than the same work by lawyers would have. The full trail is public.
 
 Next steps:
 \begin{itemize}
@@ -753,7 +757,7 @@ Step & Status in this work\\
 \end{table}
 
 France's 2027 election provides an immediate use case, but the scientific objective extends beyond any election or party: to explore whether AI can turn legislative reform from a costly, fragmented manual process into a reproducible, auditable and policy-configurable computational workflow. Competing programmes could then be translated into comparable, technically coherent legislative proposals, making the practical consequences of political choices easier to inspect and debate.
-Beyond this case study, the method is a template: an explicit policy layer, complete drafting, guarded writes, an independent red team and honest measurement. We hope it makes the law more legible, and that it gives anyone a concrete way to check whether a proposed reform is coherent.
+Beyond this case study, the method is a template: an explicit policy layer, complete drafting, guarded writes, a separate red team and honest measurement. We hope it makes the law more legible, and that it gives anyone a concrete way to check whether a proposed reform is coherent.
 
 \section*{Call for contributions}
 
