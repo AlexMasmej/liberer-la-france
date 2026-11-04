@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-31T18:55:11.195797+00:00",
+  "generated_at": "2026-11-04T22:01:45.620467+00:00",
   "source_snapshot": "2026-10-18",
   "policy_sha256": "a124c4c31a9ec9395f66ec470708878f2458bdee9ae8d72d6e36737f3ab7c14e",
   "scope": "Current exported proposals only; hash checks do not establish independent semantic review.",
@@ -21,22 +21,22 @@
   },
   "coverage": {
     "exported_articles": 30317,
-    "exported_proposals": 14273,
-    "retained_sources": 16041,
+    "exported_proposals": 14279,
+    "retained_sources": 16035,
     "current_worker_declarations": 30287,
     "current_approved_independent_reviews": 27,
     "unassessed_proposals": 0,
     "unassessed_retained_sources": 0
   },
   "classification_counts": {
-    "coordination_only": 5986,
+    "coordination_only": 5993,
     "editorial_only": 1440,
     "financing_transfer": 19,
-    "material_reduction": 6252,
+    "material_reduction": 6251,
     "mixed": 520,
     "payment_timing_relief": 56,
     "reserved": 7,
-    "retained_necessary": 16034
+    "retained_necessary": 16028
   },
   "measures": [
     {
@@ -20314,11 +20314,11 @@
           "before": "Rapport transmis obligatoirement à l'employeur et au commissaire aux comptes.",
           "after": "Rapport toujours transmis à l'employeur ; envoi au commissaire facultatif au titre de cet article.",
           "unit": "legal_duty",
-          "affected_population": "CSE et commissions économiques relevant du droit d’alerte économique.",
+          "affected_population": "Comités sociaux et économiques exerçant le droit d'alerte économique.",
           "conditions_and_transition": "Rapports établis après entrée en vigueur ; anciennes obligations exigibles préservées. Régime sectoriel CSS distinct.",
           "replacement_or_new_burdens": "Aucun rapport, registre ou dépôt de remplacement ; les obligations autonomes demeurent dans leur champ.",
           "source_quote": "Ce rapport, au titre du droit d'alerte économique, est transmis à l'employeur et au commissaire aux comptes.",
-          "proposed_quote": "Le comité social et économique ou, le cas échéant, la commission économique peut également le transmettre au commissaire aux comptes ; cette transmission n'est pas obligatoire au titre du présent article.",
+          "proposed_quote": "Le comité social et économique peut également le transmettre au commissaire aux comptes ; cette transmission n'est pas obligatoire au titre du présent article.",
           "article": {
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000035610999",
@@ -85317,34 +85317,6 @@
       ]
     },
     {
-      "measure_id": "commission-economique-facultative",
-      "kinds": [
-        "coordination"
-      ],
-      "effects": [
-        {
-          "kind": "coordination",
-          "measure_id": "commission-economique-facultative",
-          "description": "Rapport établi par le CSE lorsque la commission facultative n'existe pas.",
-          "before": "Commission désignée comme auteur du rapport à partir de mille salariés en l'absence d'accord.",
-          "after": "Même rapport établi par la commission constituée ou, à défaut, par le CSE.",
-          "unit": "regime",
-          "affected_population": "Entreprises d’au moins mille salariés, en l’absence de l’accord prévu.",
-          "conditions_and_transition": "Bascule à l'entrée en vigueur de la commission facultative ; travaux repris et actes conservés.",
-          "replacement_or_new_burdens": "Aucun rapport, registre ou dépôt de remplacement ; les obligations autonomes demeurent dans leur champ.",
-          "source_quote": "ce rapport est établi par la commission économique prévue par l'article L. 2315-46.",
-          "proposed_quote": "à défaut de commission, il est établi par le comité social et économique.",
-          "article": {
-            "code_id": "LEGITEXT000006072050",
-            "source_id": "LEGIARTI000035610999",
-            "number": "L2312-63",
-            "slug": "travail"
-          },
-          "evidence_origin": "worker_declaration"
-        }
-      ]
-    },
-    {
       "measure_id": "commission-elargie-delai-quinze-jours",
       "kinds": [
         "deadline_reduced"
@@ -130424,34 +130396,6 @@
       ]
     },
     {
-      "measure_id": "cse-audition-cadres-sans-visa",
-      "kinds": [
-        "authorization_removed"
-      ],
-      "effects": [
-        {
-          "kind": "authorization_removed",
-          "measure_id": "cse-audition-cadres-sans-visa",
-          "description": "Suppression du visa patronal préalable à la demande d'audition volontaire.",
-          "before": "Accord de l'employeur avant audition demandée d'un cadre supérieur ou dirigeant.",
-          "after": "Demande sans autorisation patronale ; absence d'obligation de comparution.",
-          "unit": "legal_duty",
-          "affected_population": "Accord de l'employeur avant audition demandée d'un cadre supérieur ou dirigeant.",
-          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi ; règles transitoires intégrales dans le texte proposé. Accords autonomes, droits acquis et responsabilités préservés dans leur champ.",
-          "replacement_or_new_burdens": "Aucun nouveau dépôt, registre, justificatif ni autorisation de remplacement. Les fonctions maintenues sont exercées par le CSE ou la commission choisie ; coût organisationnel net non chiffré.",
-          "source_quote": "Elle peut demander à entendre tout cadre supérieur ou dirigeant de l'entreprise après accord de l'employeur.",
-          "proposed_quote": "Elle peut demander à entendre tout cadre supérieur ou dirigeant de l'entreprise, sans autorisation préalable de l'employeur. Cette demande ne crée pas d'obligation de comparution.",
-          "article": {
-            "code_id": "LEGITEXT000006072050",
-            "source_id": "LEGIARTI000035626489",
-            "number": "L2315-48",
-            "slug": "travail"
-          },
-          "evidence_origin": "worker_declaration"
-        }
-      ]
-    },
-    {
       "measure_id": "cse-avis-conventions-sportives-facultatif",
       "kinds": [
         "obligation_removed"
@@ -130804,25 +130748,206 @@
     {
       "measure_id": "cse-commission-economique-facultative",
       "kinds": [
+        "coordination",
         "obligation_removed"
       ],
       "effects": [
         {
+          "kind": "coordination",
+          "measure_id": "cse-commission-economique-facultative",
+          "description": "Retrait de la commission économique abrogée de la procédure de concentration.",
+          "before": "Expertise proposée et deuxième réunion tenue par le comité ou la commission économique.",
+          "after": "Expertise proposée et deuxième réunion tenue par le comité.",
+          "unit": "legal_duty",
+          "affected_population": "Comités sociaux et économiques d'entreprises parties à une concentration.",
+          "conditions_and_transition": "Même date que l'abrogation de L2315-46.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "le comité ou la commission économique tient une deuxième réunion",
+          "proposed_quote": "Dans ce cas, le comité tient une deuxième réunion",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000036262374",
+            "number": "L2312-41",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "cse-commission-economique-facultative",
+          "description": "Rapport d'alerte établi par le comité après l'abrogation de la commission économique.",
+          "before": "Rapport établi par la commission économique dans les entreprises d'au moins mille salariés sans accord.",
+          "after": "Rapport établi par le comité dans toutes les entreprises ; travaux en cours repris sans second rapport.",
+          "unit": "legal_duty",
+          "affected_population": "Entreprises d'au moins mille salariés dotées d'un CSE, sans accord L2315-45.",
+          "conditions_and_transition": "Dès l'entrée en vigueur ; reprise des travaux en cours, rapports déjà établis, droits à rémunération et engagements préservés.",
+          "replacement_or_new_burdens": "Aucun rapport, registre ou dépôt de remplacement.",
+          "source_quote": "ce rapport est établi par la commission économique prévue par l'article L. 2315-46.",
+          "proposed_quote": "Le comité reprend les travaux en cours de la commission économique supprimée",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000035610999",
+            "number": "L2312-63",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "cse-commission-economique-facultative",
+          "description": "Retrait de la commission économique abrogée des moyens de l'alerte.",
+          "before": "Moyens ouverts au comité ou, le cas échéant, à la commission économique.",
+          "after": "Mêmes moyens ouverts au comité.",
+          "unit": "legal_duty",
+          "affected_population": "Comités sociaux et économiques exerçant le droit d'alerte économique.",
+          "conditions_and_transition": "Même date que l'abrogation de L2315-46 ; droits à rémunération des salariés conservés.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "Le comité social et économique ou, le cas échéant, la commission économique peut se faire assister",
+          "proposed_quote": "Le comité social et économique peut se faire assister",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000035611001",
+            "number": "L2312-64",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "cse-commission-economique-facultative",
+          "description": "Retrait de la commission économique abrogée comme auteur du rapport.",
+          "before": "Rapport du comité ou, le cas échéant, de la commission économique.",
+          "after": "Rapport du comité.",
+          "unit": "legal_duty",
+          "affected_population": "Comités sociaux et économiques exerçant le droit d'alerte économique.",
+          "conditions_and_transition": "Même date que l'abrogation de L2315-46.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "Le rapport du comité social et économique ou, le cas échéant, de la commission économique conclut",
+          "proposed_quote": "Le rapport du comité social et économique conclut",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000035611003",
+            "number": "L2312-65",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "cse-commission-economique-facultative",
+          "description": "Retrait de la commission économique abrogée de la communication aux associés.",
+          "before": "Communication du rapport de la commission économique ou du comité.",
+          "after": "Communication du rapport du comité.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés sans conseil et groupements d'intérêt économique.",
+          "conditions_and_transition": "Même date que l'abrogation de L2315-46.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "le rapport de la commission économique ou du comité.",
+          "proposed_quote": "le gérant ou les administrateurs leur communiquent le rapport du comité.",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000035611005",
+            "number": "L2312-66",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
           "kind": "obligation_removed",
           "measure_id": "cse-commission-economique-facultative",
-          "description": "Retrait de l'organe distinct imposé à mille salariés en régime supplétif.",
-          "before": "Entreprise d'au moins mille salariés sans accord : création obligatoire.",
-          "after": "Même champ : création facultative et exercice direct par le comité des missions maintenues.",
+          "description": "Retrait de la commission économique du régime supplétif ; création possible par accord.",
+          "before": "Entreprise d'au moins mille salariés sans accord : commission économique créée au sein du CSE ou du CSE central.",
+          "after": "Aucune commission économique légale à défaut d'accord ; le CSE exerce lui-même ses attributions économiques.",
           "unit": "legal_duty",
-          "affected_population": "Entreprise d'au moins mille salariés sans accord : création obligatoire.",
-          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi ; règles transitoires intégrales dans le texte proposé. Accords autonomes, droits acquis et responsabilités préservés dans leur champ.",
-          "replacement_or_new_burdens": "Aucun nouveau dépôt, registre, justificatif ni autorisation de remplacement. Les fonctions maintenues sont exercées par le CSE ou la commission choisie ; coût organisationnel net non chiffré.",
+          "affected_population": "Entreprises d'au moins mille salariés dotées d'un CSE, sans accord L2315-45.",
+          "conditions_and_transition": "Dès l'entrée en vigueur ; reprise des travaux en cours et droits acquis préservés par L2312-63.",
+          "replacement_or_new_burdens": "Aucune formalité ni commission de remplacement ; création possible par accord d'entreprise (L2315-45), sans changement de cet article.",
           "source_quote": "une commission économique est créée au sein du comité social et économique ou du comité social et économique central.",
-          "proposed_quote": "une commission économique peut être créée par délibération du comité social et économique ou du comité social et économique central, en son sein.",
+          "proposed_quote": "Le présent article est abrogé.",
           "article": {
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000035626485",
             "number": "L2315-46",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "cse-commission-economique-facultative",
+          "description": "Règles de présidence et de composition d'une commission abrogée.",
+          "before": "Commission économique présidée par l'employeur, cinq représentants au plus dont un cadre.",
+          "after": "Article sans objet après l'abrogation de L2315-46 ; aucune règle de remplacement.",
+          "unit": "legal_duty",
+          "affected_population": "Entreprises d'au moins mille salariés dotées d'un CSE, sans accord L2315-45.",
+          "conditions_and_transition": "Même date que l'abrogation de L2315-46.",
+          "replacement_or_new_burdens": "Aucune formalité ni commission de remplacement ; création possible par accord d'entreprise (L2315-45), sans changement de cet article.",
+          "source_quote": "La commission est présidée par l'employeur ou son représentant.",
+          "proposed_quote": "Le présent article est abrogé.",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000035626487",
+            "number": "L2315-47",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "cse-commission-economique-facultative",
+          "description": "Auditions et assistance d'experts d'une commission abrogée.",
+          "before": "Audition de cadres après accord de l'employeur et assistance de l'expert-comptable du comité.",
+          "after": "Sans objet ; le comité garde ses propres moyens d'expertise (sous-section 10, L2312-64).",
+          "unit": "legal_duty",
+          "affected_population": "Entreprises d'au moins mille salariés dotées d'un CSE, sans accord L2315-45.",
+          "conditions_and_transition": "Même date que l'abrogation de L2315-46.",
+          "replacement_or_new_burdens": "Aucune formalité ni commission de remplacement ; création possible par accord d'entreprise (L2315-45), sans changement de cet article.",
+          "source_quote": "Elle peut demander à entendre tout cadre supérieur ou dirigeant de l'entreprise après accord de l'employeur.",
+          "proposed_quote": "Le présent article est abrogé.",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000035626489",
+            "number": "L2315-48",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "cse-commission-economique-facultative",
+          "description": "Retrait de la commission économique abrogée de la communication réglementaire.",
+          "before": "Communication du rapport du comité ou, le cas échéant, de la commission économique.",
+          "after": "Communication du rapport du comité.",
+          "unit": "legal_duty",
+          "affected_population": "Sociétés sans conseil et groupements d'intérêt économique.",
+          "conditions_and_transition": "Même date que l'abrogation de L2315-46.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "ou le cas échéant de la commission économique",
+          "proposed_quote": "le rapport du comité social et économique dans les huit jours",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000036412664",
+            "number": "R2312-30",
+            "slug": "travail"
+          },
+          "evidence_origin": "worker_declaration"
+        },
+        {
+          "kind": "coordination",
+          "measure_id": "cse-commission-economique-facultative",
+          "description": "Retrait du renvoi à un article abrogé.",
+          "before": "Présidence par un membre, sans préjudice de L2315-39 et L2315-47.",
+          "after": "Présidence par un membre, sans préjudice de L2315-39.",
+          "unit": "legal_duty",
+          "affected_population": "Comités sociaux et économiques dotés de commissions supplétives.",
+          "conditions_and_transition": "Même date que l'abrogation de L2315-47.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "Sans préjudice des dispositions des articles L. 2315-39 et L. 2315-47",
+          "proposed_quote": "Sans préjudice des dispositions de l'article L. 2315-39",
+          "article": {
+            "code_id": "LEGITEXT000006072050",
+            "source_id": "LEGIARTI000036433687",
+            "number": "R2315-28",
             "slug": "travail"
           },
           "evidence_origin": "worker_declaration"
@@ -130838,15 +130963,15 @@
         {
           "kind": "obligation_removed",
           "measure_id": "cse-commission-economique-reunions-libres",
-          "description": "Suppression du plancher annuel de réunions de commission, sous réserve des réunions spéciales.",
-          "before": "Au moins deux réunions chaque année de la commission économique.",
-          "after": "Pas de minimum annuel général ; restitution L2312-41 et engagements conventionnels conservés.",
+          "description": "Fin du plancher de deux réunions annuelles de la commission économique.",
+          "before": "Au moins deux réunions par an de la commission économique.",
+          "after": "Aucune commission légale ni plancher de réunions ; restitution L2312-41 tenue par le comité.",
           "unit": "legal_duty",
-          "affected_population": "Au moins deux réunions chaque année de la commission économique.",
-          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi ; règles transitoires intégrales dans le texte proposé. Accords autonomes, droits acquis et responsabilités préservés dans leur champ.",
-          "replacement_or_new_burdens": "Aucun nouveau dépôt, registre, justificatif ni autorisation de remplacement. Les fonctions maintenues sont exercées par le CSE ou la commission choisie ; coût organisationnel net non chiffré.",
+          "affected_population": "Entreprises d'au moins mille salariés dotées d'un CSE, sans accord L2315-45.",
+          "conditions_and_transition": "Dès l'entrée en vigueur ; aucune obligation de rattrapage des réunions antérieures.",
+          "replacement_or_new_burdens": "Aucune formalité ni commission de remplacement ; création possible par accord d'entreprise (L2315-45), sans changement de cet article.",
           "source_quote": "La commission économique se réunit au moins deux fois par an.",
-          "proposed_quote": "La commission économique peut se réunir selon les besoins de ses travaux, sans minimum légal de deux réunions par an.",
+          "proposed_quote": "Le présent article est abrogé.",
           "article": {
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000035626489",
@@ -130866,15 +130991,15 @@
         {
           "kind": "obligation_removed",
           "measure_id": "cse-commission-egalite-facultative",
-          "description": "Retrait de la création obligatoire d’une commission supplémentaire.",
-          "before": "Commission obligatoire à défaut d’accord à partir de trois cents salariés.",
-          "after": "Création facultative par délibération ; attributions et obligations d’égalité demeurent.",
+          "description": "Retrait de la commission de l'égalité professionnelle du régime supplétif ; création possible par accord.",
+          "before": "Entreprise d'au moins trois cents salariés sans accord : commission de l'égalité professionnelle créée au sein du CSE.",
+          "after": "Aucune commission de l'égalité légale à défaut d'accord ; le CSE exerce lui-même ses attributions.",
           "unit": "legal_duty",
-          "affected_population": "CSE des entreprises d’au moins trois cents salariés sans accord de commissions.",
-          "conditions_and_transition": "Dès entrée en vigueur ; pas de dissolution automatique ni annulation d’accord.",
-          "replacement_or_new_burdens": "Aucune déclaration ni autorisation de remplacement ; obligations autonomes et engagements acquis conservés.",
+          "affected_population": "Entreprises d'au moins trois cents salariés dotées d'un CSE, sans accord L2315-45.",
+          "conditions_and_transition": "Dès l'entrée en vigueur ; consultations et obligations d'égalité inchangées.",
+          "replacement_or_new_burdens": "Aucune formalité ni commission de remplacement ; création possible par accord d'entreprise (L2315-45), sans changement de cet article.",
           "source_quote": "une commission de l'égalité professionnelle est créée au sein du comité social et économique.",
-          "proposed_quote": "le comité social et économique peut créer en son sein une commission de l'égalité professionnelle par délibération.",
+          "proposed_quote": "Le présent article est abrogé.",
           "article": {
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000036262545",
@@ -130895,15 +131020,15 @@
         {
           "kind": "obligation_removed",
           "measure_id": "cse-commission-formation-facultative",
-          "description": "La structure distincte devient facultative ; les trois missions subsistent.",
-          "before": "Entreprise d'au moins trois cents salariés sans accord : commission formation imposée.",
-          "after": "Même champ : le CSE peut conserver la commission ou exercer directement ses attributions.",
+          "description": "Retrait de la commission de la formation du régime supplétif ; création possible par accord.",
+          "before": "Entreprise d'au moins trois cents salariés sans accord : le CSE constitue une commission de la formation.",
+          "after": "Aucune commission de la formation légale à défaut d'accord ; le CSE exerce lui-même ces attributions.",
           "unit": "legal_duty",
-          "affected_population": "Entreprise d'au moins trois cents salariés sans accord : commission formation imposée.",
-          "conditions_and_transition": "À compter de l'entrée en vigueur de la loi ; règles transitoires intégrales dans le texte proposé. Accords autonomes, droits acquis et responsabilités préservés dans leur champ.",
-          "replacement_or_new_burdens": "Aucun nouveau dépôt, registre, justificatif ni autorisation de remplacement. Les fonctions maintenues sont exercées par le CSE ou la commission choisie ; coût organisationnel net non chiffré.",
+          "affected_population": "Entreprises d'au moins trois cents salariés dotées d'un CSE, sans accord L2315-45.",
+          "conditions_and_transition": "Dès l'entrée en vigueur ; consultations et informations dues au CSE ; droits individuels des salariés inchangés.",
+          "replacement_or_new_burdens": "Aucune formalité ni commission de remplacement ; création possible par accord d'entreprise (L2315-45), sans changement de cet article.",
           "source_quote": "le comité social et économique constitue une commission de la formation.",
-          "proposed_quote": "le comité social et économique peut constituer une commission de la formation.",
+          "proposed_quote": "Le présent article est abrogé.",
           "article": {
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000035626493",
@@ -130915,15 +131040,15 @@
         {
           "kind": "coordination",
           "measure_id": "cse-commission-formation-facultative",
-          "description": "Conditionnement du circuit de la commission à son existence selon L2315-49 proposé.",
-          "before": "La commission est un destinataire imposé dans les entreprises d’au moins trois cents salariés sans accord.",
-          "after": "Le CSE assure les missions et reçoit les informations en l’absence de commission ; commission facultative.",
+          "description": "Retrait du circuit transitoire d'une commission abrogée.",
+          "before": "Commission de la formation prévue à l'article L. 2315-49, destinataire de la consultation.",
+          "after": "Aucune commission légale ; le comité est seul consulté.",
           "unit": "legal_duty",
           "affected_population": "Comités sociaux et économiques relevant du présent article.",
-          "conditions_and_transition": "Dès l'entrée en vigueur ; travaux en cours repris par le CSE, droits à congé, formation et rémunération préservés.",
-          "replacement_or_new_burdens": "Aucun dépôt, registre, justificatif ou autorisation de remplacement ; missions et contrôles autonomes conservés.",
-          "source_quote": "dans les entreprises d'au moins trois cents salariés",
-          "proposed_quote": "lorsqu'elle est constituée",
+          "conditions_and_transition": "Même date que l'abrogation de L2315-49.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "la commission de la formation prévue à l'article L. 2315-49",
+          "proposed_quote": "2° De la validation des acquis de l'expérience",
           "article": {
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000036433691",
@@ -130935,15 +131060,15 @@
         {
           "kind": "coordination",
           "measure_id": "cse-commission-formation-facultative",
-          "description": "Conditionnement du circuit de la commission à son existence selon L2315-49 proposé.",
-          "before": "La commission est un destinataire imposé dans les entreprises d’au moins trois cents salariés sans accord.",
-          "after": "Le CSE assure les missions et reçoit les informations en l’absence de commission ; commission facultative.",
+          "description": "Retrait de la commission abrogée comme second destinataire.",
+          "before": "Information du CSE et, dans les entreprises d'au moins trois cents salariés, de la commission de la formation.",
+          "after": "Information du seul CSE.",
           "unit": "legal_duty",
           "affected_population": "Comités sociaux et économiques relevant du présent article.",
-          "conditions_and_transition": "Dès l'entrée en vigueur ; travaux en cours repris par le CSE, droits à congé, formation et rémunération préservés.",
-          "replacement_or_new_burdens": "Aucun dépôt, registre, justificatif ou autorisation de remplacement ; missions et contrôles autonomes conservés.",
-          "source_quote": "dans les entreprises d'au moins trois cents salariés",
-          "proposed_quote": "lorsqu'elle est constituée",
+          "conditions_and_transition": "Même date que l'abrogation de L2315-49.",
+          "replacement_or_new_burdens": "Aucune.",
+          "source_quote": "dans les entreprises d'au moins trois cents salariés, la commission de la formation sont informés",
+          "proposed_quote": "le comité social et économique est informé des possibilités de congé",
           "article": {
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000036433693",
@@ -131278,15 +131403,15 @@
         {
           "kind": "obligation_merged",
           "measure_id": "cse-consultation-formation-unifiee",
-          "description": "Maintien de la suppression du second avis obligatoire dans le régime supplétif.",
-          "before": "Consultation du CSE et de la commission dans les entreprises d’au moins trois cents salariés.",
-          "after": "Consultation du CSE ; commission existante prépare sans consultation séparée obligatoire.",
+          "description": "Suppression du second avis obligatoire dans le régime supplétif.",
+          "before": "Consultation du CSE et de la commission de la formation dans les entreprises d'au moins trois cents salariés.",
+          "after": "Consultation du seul CSE.",
           "unit": "legal_duty",
           "affected_population": "Comités sociaux et économiques relevant du présent article.",
-          "conditions_and_transition": "Consultations nouvelles à compter de l'entrée en vigueur ; consultations anciennes conservées, reprise par le CSE si la commission est supprimée.",
-          "replacement_or_new_burdens": "Aucun dépôt, registre, justificatif ou autorisation de remplacement ; missions et contrôles autonomes conservés.",
+          "conditions_and_transition": "Dès l'entrée en vigueur ; consultation du comité intégralement conservée.",
+          "replacement_or_new_burdens": "Aucun dépôt, registre, justificatif ou autorisation de remplacement.",
           "source_quote": "le comité social et économique et, dans les entreprises d'au moins trois cents salariés",
-          "proposed_quote": "sans consultation séparée obligatoire",
+          "proposed_quote": "le comité social et économique est consulté sur les problèmes généraux",
           "article": {
             "code_id": "LEGITEXT000006072050",
             "source_id": "LEGIARTI000036433691",
@@ -391986,34 +392111,6 @@
       ]
     },
     {
-      "measure_id": "transactions-urbanisme-dispense-enregistrement",
-      "kinds": [
-        "coordination"
-      ],
-      "effects": [
-        {
-          "kind": "coordination",
-          "measure_id": "transactions-urbanisme-dispense-enregistrement",
-          "description": "Alignement sur la dispense de L600-8 proposé.",
-          "before": "Enregistrement du désistement indemnisé dans le mois.",
-          "after": "Dispense des nouvelles transactions pour ce seul motif.",
-          "unit": "legal_duty",
-          "affected_population": "Parties et professionnels concernés par les opérations visées par cet article.",
-          "conditions_and_transition": "Application dans le champ et à la date de bascule précisés par la proposition ; droits et recours des opérations antérieures préservés.",
-          "replacement_or_new_burdens": "Aucune formalité de remplacement ; obligations autonomes conservées dans leur champ.",
-          "source_quote": "9° La transaction prévoyant, en contrepartie du versement d'une somme d'argent ou de l'octroi d'un avantage en nature, le désistement du recours pour excès de pouvoir formé contre un permis de construire, de démolir ou d'aménager.",
-          "proposed_quote": "Pour les transactions conclues à compter de cette entrée en vigueur, aucun enregistrement n'est dû du seul fait de cet engagement ; les obligations fondées sur une autre caractéristique de l'acte demeurent applicables.",
-          "article": {
-            "code_id": "LEGITEXT000006069577",
-            "source_id": "LEGIARTI000042911346",
-            "number": "635",
-            "slug": "impots"
-          },
-          "evidence_origin": "worker_declaration"
-        }
-      ]
-    },
-    {
       "measure_id": "transfert-creances-liberales-fin-limite-trois-mois",
       "kinds": [
         "payment_deferred"
@@ -416962,34 +417059,6 @@
             "code_id": "LEGITEXT000006074075",
             "source_id": "LEGIARTI000028667895",
             "number": "R*431-25-2",
-            "slug": "urbanisme"
-          },
-          "evidence_origin": "worker_declaration"
-        }
-      ]
-    },
-    {
-      "measure_id": "urbanisme-transactions-fin-enregistrement",
-      "kinds": [
-        "obligation_removed"
-      ],
-      "effects": [
-        {
-          "kind": "obligation_removed",
-          "measure_id": "urbanisme-transactions-fin-enregistrement",
-          "description": "Dispense du dépôt exclusivement lié au désistement et retrait de sa répétition automatique.",
-          "before": "Transaction rémunérant le désistement ou le non-recours : enregistrement dans un mois, à défaut contrepartie répétible.",
-          "after": "Transaction nouvelle dispensée sur ce seul fondement ; aucune répétition pour la seule omission.",
-          "unit": "legal_duty",
-          "affected_population": "Parties aux transactions relatives aux permis de construire, démolir ou aménager.",
-          "conditions_and_transition": "Transactions conclues dès entrée en vigueur ; anciennes transactions et prescription de cinq ans préservées.",
-          "replacement_or_new_burdens": "Aucune formalité, donnée, registre ni prélèvement de remplacement ; garanties autonomes maintenues.",
-          "source_quote": "doit être enregistrée conformément à l'article 635 du code général des impôts.",
-          "proposed_quote": "est dispensée de l'enregistrement lorsque cet enregistrement est requis du seul fait de cet engagement.",
-          "article": {
-            "code_id": "LEGITEXT000006074075",
-            "source_id": "LEGIARTI000037667978",
-            "number": "L600-8",
             "slug": "urbanisme"
           },
           "evidence_origin": "worker_declaration"
@@ -453424,15 +453493,29 @@
       "source_id": "LEGIARTI000036262374",
       "number": "L2312-41",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien intégral : la réunion sous trois jours permet l'information utile lors d'une concentration ; l'expertise demeure facultative et sa restitution intervient seulement si elle est décidée. La dispense déjà prévue lorsque le CSE se réunit au titre d'une OPA évite le véritable doublon. Supprimer la première information ou l'audition des conclusions retirerait une garantie d'examen de changements économiques majeurs.",
-        "scope_limitations": "Transition compatible et avantage maintenu : « Les dispositions du premier alinéa sont réputées satisfaites » lorsque le CSE se réunit à la suite d’une OPA. La seconde réunion est conditionnée au recours à l’expertise ; elle n’est pas supprimée par la dispense de première réunion. L2315-92 I 1° et L2315-93 maintiennent respectivement la désignation facultative et l’accès aux documents des sociétés intéressées. Aucun délai individuel de rupture ne modifie les trois jours de cette information.",
-        "new_burdens_review": "Aucune charge nouvelle n'est identifiée : le corps officiel reste intégralement maintenu, sans nouveau document, registre, délai ou condition d'accès. Ce maintien ne démontre aucune réduction nette à l'échelle des codes.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination de l'abrogation de L2315-46 : le recours à l'expert-comptable et la deuxième réunion relèvent du seul comité ; aucun délai ni aucune réunion n'est supprimé.",
+        "scope_limitations": "L2315-45 lu en entier et inchangé. Seules les mentions de la commission économique supplétive (L2315-46, abrogé dans le même groupe) sont retirées ; le reste du texte est repris mot pour mot.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai, seuil ni formalité n'est créé en remplacement ; les consultations, informations et moyens d'expertise restent dus au comité social et économique dans les conditions inchangées.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "cse-commission-economique-facultative",
+            "description": "Retrait de la commission économique abrogée de la procédure de concentration.",
+            "before": "Expertise proposée et deuxième réunion tenue par le comité ou la commission économique.",
+            "after": "Expertise proposée et deuxième réunion tenue par le comité.",
+            "unit": "legal_duty",
+            "affected_population": "Comités sociaux et économiques d'entreprises parties à une concentration.",
+            "conditions_and_transition": "Même date que l'abrogation de L2315-46.",
+            "replacement_or_new_burdens": "Aucune.",
+            "source_quote": "le comité ou la commission économique tient une deuxième réunion",
+            "proposed_quote": "Dans ce cas, le comité tient une deuxième réunion"
+          }
+        ]
       }
     },
     {
@@ -453805,9 +453888,9 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Réforme de fond : suppression de la transmission automatique au commissaire aux comptes de chaque rapport d'alerte économique, désormais laissée au choix du comité ou de la commission économique. Le rapport, sa transmission à l'employeur, la demande d'explications, son inscription de droit à l'ordre du jour et la compétence de la commission dans les entreprises d'au moins mille salariés sont conservés. La faculté de convoquer le commissaire et ses obligations autonomes préviennent la perte des garanties utiles ; le routage systématique n'a pas de fonction essentielle distincte démontrée. Seconde passe : correction de la contradiction de compétence avec L2315-46 proposé, qui rend la commission facultative. Le rapport reste dû et le CSE l'établit en l'absence de commission ; cette coordination ne constitue pas une deuxième suppression de rapport ou de commission.",
-        "scope_limitations": "Contradiction effective entre brouillons : « ce rapport est établi par la commission économique » dans le précédent L2312-63, contre « une commission économique peut être créée » et « en l'absence de commission économique, le comité exerce lui-même les attributions prévues pour celle-ci » dans L2315-46 proposé. Correction au même alinéa : compétence de la commission lorsqu'elle existe, sinon du comité, avec reprise des travaux sans second rapport. Le seuil de mille salariés et la réserve de l'accord L2315-45 restent. L2315-45, L2315-46, L2315-92 et L2312-64 à 67 lus en entier, sources et propositions disponibles : l'expertise, la convocation du commissaire, les cinq heures rémunérées, le vote et la confidentialité ne disparaissent pas. Différence de champ : CSS R931-3-60 source et proposition prescrivent encore « Le rapport est transmis au directeur général et au commissaire aux comptes. » ; R931-1-29 VI proposé relaie ce régime spécial. Ces deux articles entiers ont été lus : l'envoi sectoriel autonome demeure pour les institutions, unions et sociétés de groupe concernées ; la dispense de L2312-63 n'est pas une dispense générale de tout envoi au commissaire. Le code de commerce extérieur n'est pas intégralement fourni : aucune conformité exhaustive de l'alerte du commissaire n'est affirmée.",
-        "new_burdens_review": "Aucune charge nouvelle distincte identifiée : les droits et procédures conservés gardent leur champ, sans dépôt ou rapport de remplacement. Le solde global des coûts et des contraintes des codes n'est pas chiffré.",
+        "assessment": "Réforme de fond : suppression de la transmission automatique au commissaire aux comptes de chaque rapport d'alerte économique, désormais laissée au choix du comité. Coordination de l'abrogation de L2315-46 : le rapport est établi par le comité dans toutes les entreprises, sans compter cette coordination comme une seconde réduction.",
+        "scope_limitations": "L2315-45, L2315-46, L2315-92 et L2312-64 à L2312-66 lus. La reprise des travaux en cours de la commission économique supprimée et la préservation des droits acquis sont conservées. Régime sectoriel CSS (R931-3-60, R931-1-29) distinct et non modifié. Le code de commerce n'est pas intégralement fourni.",
+        "new_burdens_review": "Aucune charge nouvelle distincte identifiée : les droits et procédures conservés gardent leur champ, sans dépôt ou rapport de remplacement ; aucun organe ni seuil n'est créé. Le solde global des coûts et des contraintes des codes n'est pas chiffré.",
         "effects": [
           {
             "kind": "obligation_removed",
@@ -453816,24 +453899,24 @@
             "before": "Rapport transmis obligatoirement à l'employeur et au commissaire aux comptes.",
             "after": "Rapport toujours transmis à l'employeur ; envoi au commissaire facultatif au titre de cet article.",
             "unit": "legal_duty",
-            "affected_population": "CSE et commissions économiques relevant du droit d’alerte économique.",
+            "affected_population": "Comités sociaux et économiques exerçant le droit d'alerte économique.",
             "conditions_and_transition": "Rapports établis après entrée en vigueur ; anciennes obligations exigibles préservées. Régime sectoriel CSS distinct.",
             "replacement_or_new_burdens": "Aucun rapport, registre ou dépôt de remplacement ; les obligations autonomes demeurent dans leur champ.",
             "source_quote": "Ce rapport, au titre du droit d'alerte économique, est transmis à l'employeur et au commissaire aux comptes.",
-            "proposed_quote": "Le comité social et économique ou, le cas échéant, la commission économique peut également le transmettre au commissaire aux comptes ; cette transmission n'est pas obligatoire au titre du présent article."
+            "proposed_quote": "Le comité social et économique peut également le transmettre au commissaire aux comptes ; cette transmission n'est pas obligatoire au titre du présent article."
           },
           {
             "kind": "coordination",
-            "measure_id": "commission-economique-facultative",
-            "description": "Rapport établi par le CSE lorsque la commission facultative n'existe pas.",
-            "before": "Commission désignée comme auteur du rapport à partir de mille salariés en l'absence d'accord.",
-            "after": "Même rapport établi par la commission constituée ou, à défaut, par le CSE.",
-            "unit": "regime",
-            "affected_population": "Entreprises d’au moins mille salariés, en l’absence de l’accord prévu.",
-            "conditions_and_transition": "Bascule à l'entrée en vigueur de la commission facultative ; travaux repris et actes conservés.",
-            "replacement_or_new_burdens": "Aucun rapport, registre ou dépôt de remplacement ; les obligations autonomes demeurent dans leur champ.",
+            "measure_id": "cse-commission-economique-facultative",
+            "description": "Rapport d'alerte établi par le comité après l'abrogation de la commission économique.",
+            "before": "Rapport établi par la commission économique dans les entreprises d'au moins mille salariés sans accord.",
+            "after": "Rapport établi par le comité dans toutes les entreprises ; travaux en cours repris sans second rapport.",
+            "unit": "legal_duty",
+            "affected_population": "Entreprises d'au moins mille salariés dotées d'un CSE, sans accord L2315-45.",
+            "conditions_and_transition": "Dès l'entrée en vigueur ; reprise des travaux en cours, rapports déjà établis, droits à rémunération et engagements préservés.",
+            "replacement_or_new_burdens": "Aucun rapport, registre ou dépôt de remplacement.",
             "source_quote": "ce rapport est établi par la commission économique prévue par l'article L. 2315-46.",
-            "proposed_quote": "à défaut de commission, il est établi par le comité social et économique."
+            "proposed_quote": "Le comité reprend les travaux en cours de la commission économique supprimée"
           }
         ]
       }
@@ -453843,15 +453926,29 @@
       "source_id": "LEGIARTI000035611001",
       "number": "L2312-64",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien intégral nécessaire après examen : l'expertise comptable annuelle, la convocation du commissaire aux comptes et l'appui de deux salariés compétents rendent le droit d'alerte économique effectivement utilisable. Les cinq heures rémunérées de chacun de ces salariés sont un droit favorable, non un reporting à supprimer. Aucune autorisation, déclaration ou pièce redondante n'est imposée par cet article ; supprimer l'assistance ou sa rémunération affaiblirait la protection collective plutôt que simplifier une démarche.",
-        "scope_limitations": "Seconde passe — transition compatible : L2315-46 proposé permet au comité de reprendre les attributions de la commission absente ; « Le comité social et économique ou, le cas échéant, la commission économique » couvre déjà les deux situations. L2312-63 corrigé garde le rapport ; sa transmission facultative au commissaire ne supprime pas le droit distinct de « convoquer le commissaire aux comptes ». L2315-92 I 2° lu conserve l'expertise d'alerte. L2315-80 source et proposition lus : proportions 20 % / 80 % et prise en charge patronale conditionnelle demeurent, aucune gratuité générale nouvelle. Une fois par exercice, deux salariés, voix consultative, cinq heures chacun et rémunération conservés. Aucun effet du préavis individuel sur ces moyens collectifs.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : le texte source est intégralement maintenu, sans registre, formalité, délai ou condition additionnels. Aucune baisse nette de prélèvements ni économie globale n'est revendiquée.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination de l'abrogation de L2315-46 : l'expert-comptable, la convocation du commissaire aux comptes et les deux salariés à cinq heures rémunérées assistent le comité ; aucun moyen n'est retiré.",
+        "scope_limitations": "L2315-45 lu en entier et inchangé. Seules les mentions de la commission économique supplétive (L2315-46, abrogé dans le même groupe) sont retirées ; le reste du texte est repris mot pour mot.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai, seuil ni formalité n'est créé en remplacement ; les consultations, informations et moyens d'expertise restent dus au comité social et économique dans les conditions inchangées.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "cse-commission-economique-facultative",
+            "description": "Retrait de la commission économique abrogée des moyens de l'alerte.",
+            "before": "Moyens ouverts au comité ou, le cas échéant, à la commission économique.",
+            "after": "Mêmes moyens ouverts au comité.",
+            "unit": "legal_duty",
+            "affected_population": "Comités sociaux et économiques exerçant le droit d'alerte économique.",
+            "conditions_and_transition": "Même date que l'abrogation de L2315-46 ; droits à rémunération des salariés conservés.",
+            "replacement_or_new_burdens": "Aucune.",
+            "source_quote": "Le comité social et économique ou, le cas échéant, la commission économique peut se faire assister",
+            "proposed_quote": "Le comité social et économique peut se faire assister"
+          }
+        ]
       }
     },
     {
@@ -453859,15 +453956,29 @@
       "source_id": "LEGIARTI000035611003",
       "number": "L2312-65",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien intégral : le rapport et le vote à la majorité des membres présents assurent que la saisine de la gouvernance procède d'une décision collective identifiable. L'avis de l'expert accompagne la saisine pour permettre une réponse éclairée ; il ne constitue ni agrément ni nouvelle étude obligatoire. Aucun second rapport distinct n'est exigé par ce texte. Retirer le vote ou l'avis existant ne serait pas une simple suppression de doublon.",
-        "scope_limitations": "Seconde passe — transition compatible : « à la majorité des membres présents » reste le critère de saisine, sans substitution de majorité des suffrages ou des titulaires. Le rapport de L2312-63 subsiste malgré la dispense d'envoi automatique au commissaire et la commission facultative de L2315-46 proposé. L2312-64 rend l'expertise facultative : « l'avis de l'expert-comptable est joint » concerne l'avis lorsqu'une expertise a été décidée, sans créer par lui-même une expertise obligatoire. L2312-66 proposé retire seulement l'anticipation de quinze jours ; R2312-29 lu conserve « délibère dans le mois de la saisine ». Ni vote ni saisine ni réponse motivée ne sont supprimés. Les trois textes du circuit ont été confrontés dans leur intégralité.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : le texte source est intégralement maintenu, sans registre, formalité, délai ou condition additionnels. Aucune baisse nette de prélèvements ni économie globale n'est revendiquée.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination de l'abrogation de L2315-46 : le rapport conclusif est celui du comité ; l'avis, le vote à la majorité des membres présents et la jonction de l'avis de l'expert sont conservés.",
+        "scope_limitations": "L2315-45 lu en entier et inchangé. Seules les mentions de la commission économique supplétive (L2315-46, abrogé dans le même groupe) sont retirées ; le reste du texte est repris mot pour mot.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai, seuil ni formalité n'est créé en remplacement ; les consultations, informations et moyens d'expertise restent dus au comité social et économique dans les conditions inchangées.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "cse-commission-economique-facultative",
+            "description": "Retrait de la commission économique abrogée comme auteur du rapport.",
+            "before": "Rapport du comité ou, le cas échéant, de la commission économique.",
+            "after": "Rapport du comité.",
+            "unit": "legal_duty",
+            "affected_population": "Comités sociaux et économiques exerçant le droit d'alerte économique.",
+            "conditions_and_transition": "Même date que l'abrogation de L2315-46.",
+            "replacement_or_new_burdens": "Aucune.",
+            "source_quote": "Le rapport du comité social et économique ou, le cas échéant, de la commission économique conclut",
+            "proposed_quote": "Le rapport du comité social et économique conclut"
+          }
+        ]
       }
     },
     {
@@ -453880,7 +453991,7 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Réduction de fond : suppression de la condition imposant une saisine du conseil au moins quinze jours avant sa prochaine séance. L'alerte peut ainsi être examinée dès cette séance sans attendre la suivante. Maintien intégral du champ des personnes morales, de la réponse motivée et de la communication du rapport aux associés ou membres des GIE. Le vote et les conclusions prévus par L2312-65 demeurent ; aucun autre délai collectif n'est supprimé.",
+        "assessment": "Réduction de fond : suppression de la condition imposant une saisine du conseil au moins quinze jours avant sa prochaine séance. L'alerte peut ainsi être examinée dès cette séance sans attendre la suivante. Maintien intégral du champ des personnes morales, de la réponse motivée et de la communication du rapport aux associés ou membres des GIE. Le vote et les conclusions prévus par L2312-65 demeurent ; aucun autre délai collectif n'est supprimé. Coordination de l'abrogation de L2315-46 : le rapport communiqué est celui du comité, sans compter cette coordination comme une seconde réduction.",
         "scope_limitations": "Seconde passe — transition compatible : la suppression de « à condition que celui-ci ait pu être saisi au moins quinze jours à l'avance » n'efface pas R2312-29, lu entier : « cet organe délibère dans le mois de la saisine » puis transmission de l'extrait dans le mois suivant la réunion. Ce sont deux maxima, non deux attentes minimales. L2312-65 garde la majorité des membres présents et l'avis d'expert éventuel. La prochaine séance peut donc intervenir avant le mois ; l'absence de séance programmée ne dispense pas de délibérer dans ce maximum. Les séances futures sont visées même après saisine ancienne, les délibérations passées restent protégées. Point non vérifiable : les règles et statuts de convocation des conseils hors corpus nécessitent une vérification propre ; aucun délai de convocation commercial n'est déclaré supprimé. Cette accélération accroît la contrainte de réactivité du conseil, sans nouveau rapport ni nouvelle donnée ; son coût net n'est pas établi. Les quinze jours sont étrangers au préavis du contrat unique.",
         "new_burdens_review": "Aucun document, registre ni consultation distincts ajoutés. La suppression du délai préalable accroît toutefois la réactivité exigée du conseil pour la prochaine séance. Les convocations autonomes restent à vérifier et le solde net des coûts n'est pas établi ; il ne s'agit pas d'une nouvelle réunion périodique.",
         "effects": [
@@ -453896,6 +454007,19 @@
             "replacement_or_new_burdens": "Aucun rapport, registre ou dépôt de remplacement ; les obligations autonomes demeurent dans leur champ.",
             "source_quote": "à condition que celui-ci ait pu être saisi au moins quinze jours à l'avance.",
             "proposed_quote": "la demande d'explication sur le caractère préoccupant de la situation économique de l'entreprise est inscrite à l'ordre du jour de la prochaine séance du conseil d'administration ou du conseil de surveillance."
+          },
+          {
+            "kind": "coordination",
+            "measure_id": "cse-commission-economique-facultative",
+            "description": "Retrait de la commission économique abrogée de la communication aux associés.",
+            "before": "Communication du rapport de la commission économique ou du comité.",
+            "after": "Communication du rapport du comité.",
+            "unit": "legal_duty",
+            "affected_population": "Sociétés sans conseil et groupements d'intérêt économique.",
+            "conditions_and_transition": "Même date que l'abrogation de L2315-46.",
+            "replacement_or_new_burdens": "Aucune.",
+            "source_quote": "le rapport de la commission économique ou du comité.",
+            "proposed_quote": "le gérant ou les administrateurs leur communiquent le rapport du comité."
           }
         ]
       }
@@ -456233,22 +456357,22 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Réforme de fond : retirer la création supplétive obligatoire d'une commission économique à mille salariés et permettre au CSE ou au CSE central de travailler directement. L'étude des comptes, l'alerte et les consultations ne disparaissent pas ; la structure de préparation distincte n'est plus imposée. Les accords qui organisent des moyens spécifiques restent applicables. Comparaison à la source officielle entière : les seuls effets démontrés sont recensés ci-dessous, sans compter les corrections de cette seconde passe comme de nouvelles suppressions.",
-        "scope_limitations": "Transition compatible : le projet actuel de L2312-63 précise déjà « à défaut de commission, il est établi par le comité social et économique » et protège la reprise des travaux sans second rapport. La coordination n'est donc plus seulement un travail futur comme le disaient les anciennes notes. Sa suppression distincte de l'envoi obligatoire au commissaire aux comptes n'est pas annulée par « demeurent applicables dans les mêmes conditions ». L2312-64 conserve deux salariés compétents et cinq heures rémunérées chacun ; L2312-65 garde la majorité des membres présents. Le projet L2312-66 retire son anticipation de quinze jours, sans lien avec le préavis de rupture ; R2312-30 garde huit jours de communication. L2312-41 garde réunion et restitution des concentrations ; aucun de ces actes n'est supprimé. Vérification bornée aux textes locaux cités et aux recherches de renvois dans les neuf recueils ; aucune cohérence exhaustive ni validation par un juriste n’est attestée. Le coût net et le solde de complexité de l’ensemble des codes ne sont pas établis.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : les documents, autorisations et organes retirés ne sont pas remplacés par de nouvelles formalités. La reprise des fonctions existantes par le CSE conserve leurs objets et bénéficiaires ; les actes internes de décision organisent une faculté, sans dépôt externe ni nouvelles données. Les coûts effectifs de réorganisation ne sont pas chiffrés.",
+        "assessment": "Abrogation : la commission économique imposée à mille salariés à défaut d'accord (source) disparaît du régime supplétif ; elle reste possible par accord d'entreprise (L2315-45). L'étude des documents économiques, l'alerte économique, l'expertise et les consultations restent exercées par le comité social et économique.",
+        "scope_limitations": "L2315-45 lu en entier et inchangé. L2312-63 conserve la reprise des travaux en cours de la commission économique supprimée et la préservation des rapports déjà établis, des droits à rémunération et des engagements valablement pris. Les accords d'entreprise qui renverraient à cet article sont hors corpus. Le coût net de réorganisation n'est pas chiffré.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai, seuil ni formalité n'est créé en remplacement ; les consultations, informations et moyens d'expertise restent dus au comité social et économique dans les conditions inchangées.",
         "effects": [
           {
             "kind": "obligation_removed",
             "measure_id": "cse-commission-economique-facultative",
-            "description": "Retrait de l'organe distinct imposé à mille salariés en régime supplétif.",
-            "before": "Entreprise d'au moins mille salariés sans accord : création obligatoire.",
-            "after": "Même champ : création facultative et exercice direct par le comité des missions maintenues.",
+            "description": "Retrait de la commission économique du régime supplétif ; création possible par accord.",
+            "before": "Entreprise d'au moins mille salariés sans accord : commission économique créée au sein du CSE ou du CSE central.",
+            "after": "Aucune commission économique légale à défaut d'accord ; le CSE exerce lui-même ses attributions économiques.",
             "unit": "legal_duty",
-            "affected_population": "Entreprise d'au moins mille salariés sans accord : création obligatoire.",
-            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi ; règles transitoires intégrales dans le texte proposé. Accords autonomes, droits acquis et responsabilités préservés dans leur champ.",
-            "replacement_or_new_burdens": "Aucun nouveau dépôt, registre, justificatif ni autorisation de remplacement. Les fonctions maintenues sont exercées par le CSE ou la commission choisie ; coût organisationnel net non chiffré.",
+            "affected_population": "Entreprises d'au moins mille salariés dotées d'un CSE, sans accord L2315-45.",
+            "conditions_and_transition": "Dès l'entrée en vigueur ; reprise des travaux en cours et droits acquis préservés par L2312-63.",
+            "replacement_or_new_burdens": "Aucune formalité ni commission de remplacement ; création possible par accord d'entreprise (L2315-45), sans changement de cet article.",
             "source_quote": "une commission économique est créée au sein du comité social et économique ou du comité social et économique central.",
-            "proposed_quote": "une commission économique peut être créée par délibération du comité social et économique ou du comité social et économique central, en son sein."
+            "proposed_quote": "Le présent article est abrogé."
           }
         ]
       }
@@ -456258,15 +456382,29 @@
       "source_id": "LEGIARTI000035626487",
       "number": "L2315-47",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien intégral des garanties de composition de la commission économique désormais facultative par L2315-46 proposé : présidence identifiée, cinq représentants au plus et représentation d'au moins un cadre. Les désignations restent faites par le CSE ou le CSE central parmi leurs membres. Aucune seconde élection n'est organisée. Comparaison à la source officielle entière : aucun changement normatif ni gain de simplification revendiqué.",
-        "scope_limitations": "Différence de champ vérifiée : R2315-28 dit « Sans préjudice des dispositions des articles L. 2315-39 et L. 2315-47 ». Sa présidence générale par un membre ne contredit donc pas la présidence patronale spéciale. « au maximum cinq membres représentants du personnel, dont au moins un représentant de la catégorie des cadres » est intégralement conservé. Cette composition conditionnelle ne rétablit pas la création obligatoire supprimée par L2315-46. Vérification bornée aux textes locaux cités et aux recherches de renvois dans les neuf recueils ; aucune cohérence exhaustive ni validation par un juriste n’est attestée. Le coût net et le solde de complexité de l’ensemble des codes ne sont pas établis.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : le texte source est intégralement maintenu, sans procédure, données ni délai ajoutés.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination de l'abrogation de L2315-46 : les règles de présidence et de composition de la commission économique supplétive tombent avec elle ; la suppression est comptée une seule fois sous la mesure de L2315-46.",
+        "scope_limitations": "L2315-46, R2315-28 et L2315-45 lus. Les commissions conventionnelles restent organisées par leur accord. Aucun autre article en vigueur ne renvoie à L2315-47 après coordination de R2315-28.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai, seuil ni formalité n'est créé en remplacement ; les consultations, informations et moyens d'expertise restent dus au comité social et économique dans les conditions inchangées.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "cse-commission-economique-facultative",
+            "description": "Règles de présidence et de composition d'une commission abrogée.",
+            "before": "Commission économique présidée par l'employeur, cinq représentants au plus dont un cadre.",
+            "after": "Article sans objet après l'abrogation de L2315-46 ; aucune règle de remplacement.",
+            "unit": "legal_duty",
+            "affected_population": "Entreprises d'au moins mille salariés dotées d'un CSE, sans accord L2315-45.",
+            "conditions_and_transition": "Même date que l'abrogation de L2315-46.",
+            "replacement_or_new_burdens": "Aucune formalité ni commission de remplacement ; création possible par accord d'entreprise (L2315-45), sans changement de cet article.",
+            "source_quote": "La commission est présidée par l'employeur ou son représentant.",
+            "proposed_quote": "Le présent article est abrogé."
+          }
+        ]
       }
     },
     {
@@ -456279,35 +456417,35 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Réforme de fond : retirer le minimum légal de deux réunions par an et le visa patronal avant une demande d'audition. Les réunions sont adaptées aux besoins et les cadres restent libres de comparaître : aucune nouvelle convocation coercitive. Maintien intégral des deux voies d'assistance par experts et de leurs conditions. Seconde passe : réserve explicite de la réunion spéciale de restitution en matière de concentration, distincte du minimum annuel supprimé. Comparaison à la source officielle entière : les seuls effets démontrés sont recensés ci-dessous, sans compter les corrections de cette seconde passe comme de nouvelles suppressions.",
-        "scope_limitations": "Contradiction potentielle corrigée : « sans fréquence minimale imposée par la loi » dans le brouillon pouvait être opposé à L2312-41, qui dispose « le comité ou la commission économique tient une deuxième réunion afin d'entendre les résultats des travaux de l'expert ». La proposition réserve expressément cette réunion, tout en supprimant les deux réunions annuelles générales. L2312-64 conserve sa convocation distincte du commissaire aux comptes. L2315-80/81/88/90/91/92 lus : financement et champs de l'expertise ne sont pas modifiés. L2315-11 conserve paiement et non-imputation dans leurs limites ; pas de nouvelle comparution obligatoire ni de nouveau quota rémunéré. Vérification bornée aux textes locaux cités et aux recherches de renvois dans les neuf recueils ; aucune cohérence exhaustive ni validation par un juriste n’est attestée. Le coût net et le solde de complexité de l’ensemble des codes ne sont pas établis.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : les documents, autorisations et organes retirés ne sont pas remplacés par de nouvelles formalités. La reprise des fonctions existantes par le CSE conserve leurs objets et bénéficiaires ; les actes internes de décision organisent une faculté, sans dépôt externe ni nouvelles données. Les coûts effectifs de réorganisation ne sont pas chiffrés.",
+        "assessment": "Abrogation : le plancher légal de deux réunions annuelles de la commission économique (source) et l'accord patronal préalable à l'audition des cadres disparaissent avec la commission. Les moyens d'expertise du comité et la réunion de restitution de L2312-41 demeurent.",
+        "scope_limitations": "L2315-46, L2312-41 et L2312-64 lus. Les effets sont recensés sans double compte avec la mesure de L2315-46 : seul le plancher de réunions propre à cet article est compté comme retrait distinct.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai, seuil ni formalité n'est créé en remplacement ; les consultations, informations et moyens d'expertise restent dus au comité social et économique dans les conditions inchangées.",
         "effects": [
           {
             "kind": "obligation_removed",
             "measure_id": "cse-commission-economique-reunions-libres",
-            "description": "Suppression du plancher annuel de réunions de commission, sous réserve des réunions spéciales.",
-            "before": "Au moins deux réunions chaque année de la commission économique.",
-            "after": "Pas de minimum annuel général ; restitution L2312-41 et engagements conventionnels conservés.",
+            "description": "Fin du plancher de deux réunions annuelles de la commission économique.",
+            "before": "Au moins deux réunions par an de la commission économique.",
+            "after": "Aucune commission légale ni plancher de réunions ; restitution L2312-41 tenue par le comité.",
             "unit": "legal_duty",
-            "affected_population": "Au moins deux réunions chaque année de la commission économique.",
-            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi ; règles transitoires intégrales dans le texte proposé. Accords autonomes, droits acquis et responsabilités préservés dans leur champ.",
-            "replacement_or_new_burdens": "Aucun nouveau dépôt, registre, justificatif ni autorisation de remplacement. Les fonctions maintenues sont exercées par le CSE ou la commission choisie ; coût organisationnel net non chiffré.",
+            "affected_population": "Entreprises d'au moins mille salariés dotées d'un CSE, sans accord L2315-45.",
+            "conditions_and_transition": "Dès l'entrée en vigueur ; aucune obligation de rattrapage des réunions antérieures.",
+            "replacement_or_new_burdens": "Aucune formalité ni commission de remplacement ; création possible par accord d'entreprise (L2315-45), sans changement de cet article.",
             "source_quote": "La commission économique se réunit au moins deux fois par an.",
-            "proposed_quote": "La commission économique peut se réunir selon les besoins de ses travaux, sans minimum légal de deux réunions par an."
+            "proposed_quote": "Le présent article est abrogé."
           },
           {
-            "kind": "authorization_removed",
-            "measure_id": "cse-audition-cadres-sans-visa",
-            "description": "Suppression du visa patronal préalable à la demande d'audition volontaire.",
-            "before": "Accord de l'employeur avant audition demandée d'un cadre supérieur ou dirigeant.",
-            "after": "Demande sans autorisation patronale ; absence d'obligation de comparution.",
+            "kind": "coordination",
+            "measure_id": "cse-commission-economique-facultative",
+            "description": "Auditions et assistance d'experts d'une commission abrogée.",
+            "before": "Audition de cadres après accord de l'employeur et assistance de l'expert-comptable du comité.",
+            "after": "Sans objet ; le comité garde ses propres moyens d'expertise (sous-section 10, L2312-64).",
             "unit": "legal_duty",
-            "affected_population": "Accord de l'employeur avant audition demandée d'un cadre supérieur ou dirigeant.",
-            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi ; règles transitoires intégrales dans le texte proposé. Accords autonomes, droits acquis et responsabilités préservés dans leur champ.",
-            "replacement_or_new_burdens": "Aucun nouveau dépôt, registre, justificatif ni autorisation de remplacement. Les fonctions maintenues sont exercées par le CSE ou la commission choisie ; coût organisationnel net non chiffré.",
+            "affected_population": "Entreprises d'au moins mille salariés dotées d'un CSE, sans accord L2315-45.",
+            "conditions_and_transition": "Même date que l'abrogation de L2315-46.",
+            "replacement_or_new_burdens": "Aucune formalité ni commission de remplacement ; création possible par accord d'entreprise (L2315-45), sans changement de cet article.",
             "source_quote": "Elle peut demander à entendre tout cadre supérieur ou dirigeant de l'entreprise après accord de l'employeur.",
-            "proposed_quote": "Elle peut demander à entendre tout cadre supérieur ou dirigeant de l'entreprise, sans autorisation préalable de l'employeur. Cette demande ne crée pas d'obligation de comparution."
+            "proposed_quote": "Le présent article est abrogé."
           }
         ]
       }
@@ -456322,22 +456460,22 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Réforme de fond : rendre facultative la commission de la formation imposée à trois cents salariés en régime supplétif. Les trois missions sont intégralement conservées et assumées directement par le CSE sans commission, ce qui retire le second circuit d'information et consultation. Les droits individuels des jeunes, travailleurs handicapés et autres salariés ne sont pas supprimés. Comparaison à la source officielle entière : les seuls effets démontrés sont recensés ci-dessous, sans compter les corrections de cette seconde passe comme de nouvelles suppressions.",
-        "scope_limitations": "Coordination nécessaire : R2315-30 proposé supprime déjà la consultation séparée pour les consultations nouvelles ; sa mention de la commission doit être conditionnée à son existence. R2315-31 source demeure « le comité social et économique et, dans les entreprises d'au moins trois cents salariés, la commission de la formation sont informés » : préciser hors lot que ce second destinataire n'existe que si la commission est constituée. Les travaux en cours sont repris par le comité selon le dernier alinéa proposé sans retrait de l'objet des consultations anciennes. L2312-17 conserve orientations stratégiques (1°), politique sociale (3°), environnement et durabilité dans leurs champs ; aucune nouvelle contribution CPF-CDD ni extinction des congés et formations. Vérification bornée aux textes locaux cités et aux recherches de renvois dans les neuf recueils ; aucune cohérence exhaustive ni validation par un juriste n’est attestée. Le coût net et le solde de complexité de l’ensemble des codes ne sont pas établis.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : les documents, autorisations et organes retirés ne sont pas remplacés par de nouvelles formalités. La reprise des fonctions existantes par le CSE conserve leurs objets et bénéficiaires ; les actes internes de décision organisent une faculté, sans dépôt externe ni nouvelles données. Les coûts effectifs de réorganisation ne sont pas chiffrés.",
+        "assessment": "Abrogation : la commission de la formation imposée à trois cents salariés à défaut d'accord (source) disparaît du régime supplétif ; elle reste possible par accord (L2315-45). Le comité exerce directement les consultations et reçoit les informations en matière de formation.",
+        "scope_limitations": "L2315-45, L2312-17, R2315-30 et R2315-31 lus. Les clauses de reprise des travaux en cours et de maintien des commissions existantes disparaissent avec l'article ; les consultations restent dues au CSE. Les accords d'entreprise qui renverraient à cet article sont hors corpus.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai, seuil ni formalité n'est créé en remplacement ; les consultations, informations et moyens d'expertise restent dus au comité social et économique dans les conditions inchangées.",
         "effects": [
           {
             "kind": "obligation_removed",
             "measure_id": "cse-commission-formation-facultative",
-            "description": "La structure distincte devient facultative ; les trois missions subsistent.",
-            "before": "Entreprise d'au moins trois cents salariés sans accord : commission formation imposée.",
-            "after": "Même champ : le CSE peut conserver la commission ou exercer directement ses attributions.",
+            "description": "Retrait de la commission de la formation du régime supplétif ; création possible par accord.",
+            "before": "Entreprise d'au moins trois cents salariés sans accord : le CSE constitue une commission de la formation.",
+            "after": "Aucune commission de la formation légale à défaut d'accord ; le CSE exerce lui-même ces attributions.",
             "unit": "legal_duty",
-            "affected_population": "Entreprise d'au moins trois cents salariés sans accord : commission formation imposée.",
-            "conditions_and_transition": "À compter de l'entrée en vigueur de la loi ; règles transitoires intégrales dans le texte proposé. Accords autonomes, droits acquis et responsabilités préservés dans leur champ.",
-            "replacement_or_new_burdens": "Aucun nouveau dépôt, registre, justificatif ni autorisation de remplacement. Les fonctions maintenues sont exercées par le CSE ou la commission choisie ; coût organisationnel net non chiffré.",
+            "affected_population": "Entreprises d'au moins trois cents salariés dotées d'un CSE, sans accord L2315-45.",
+            "conditions_and_transition": "Dès l'entrée en vigueur ; consultations et informations dues au CSE ; droits individuels des salariés inchangés.",
+            "replacement_or_new_burdens": "Aucune formalité ni commission de remplacement ; création possible par accord d'entreprise (L2315-45), sans changement de cet article.",
             "source_quote": "le comité social et économique constitue une commission de la formation.",
-            "proposed_quote": "le comité social et économique peut constituer une commission de la formation."
+            "proposed_quote": "Le présent article est abrogé."
           }
         ]
       }
@@ -456531,22 +456669,22 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Réforme de fond : retrait de la création obligatoire, à défaut d'accord, d'une structure spécialisée supplémentaire à partir de trois cents salariés. La préparation des délibérations peut rester confiée à une commission décidée par les élus. Les attributions du CSE, l'égalité professionnelle, les consultations et négociations obligatoires et les règles de non-discrimination restent entières ; la réforme porte sur l'organe interne, pas sur ces protections.",
-        "scope_limitations": "Obligations de consultation, négociation et non-discrimination maintenues ; accords et commissions existantes protégés. Aucun chiffrage du coût d'organisation évité.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : les décisions facultatives utilisent les organes et supports existants ; aucun nouveau registre, dépôt, justificatif ou délai imposé. Les obligations autonomes et accords financiers subsistent ; le solde global des codes n'est pas chiffré.",
+        "assessment": "Abrogation : la commission de l'égalité professionnelle imposée à trois cents salariés à défaut d'accord (source) disparaît du régime supplétif ; elle reste possible par accord (L2315-45). Le comité exerce directement la consultation sur la politique sociale.",
+        "scope_limitations": "L2315-45 et L2312-17 lus. Les obligations d'égalité professionnelle, de négociation et de non-discrimination relèvent d'autres articles, non modifiés ici. La clause de maintien des commissions existantes disparaît ; les accords valablement conclus continuent de produire leurs effets selon leurs propres termes.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai, seuil ni formalité n'est créé en remplacement ; les consultations, informations et moyens d'expertise restent dus au comité social et économique dans les conditions inchangées.",
         "effects": [
           {
             "kind": "obligation_removed",
             "measure_id": "cse-commission-egalite-facultative",
-            "description": "Retrait de la création obligatoire d’une commission supplémentaire.",
-            "before": "Commission obligatoire à défaut d’accord à partir de trois cents salariés.",
-            "after": "Création facultative par délibération ; attributions et obligations d’égalité demeurent.",
+            "description": "Retrait de la commission de l'égalité professionnelle du régime supplétif ; création possible par accord.",
+            "before": "Entreprise d'au moins trois cents salariés sans accord : commission de l'égalité professionnelle créée au sein du CSE.",
+            "after": "Aucune commission de l'égalité légale à défaut d'accord ; le CSE exerce lui-même ses attributions.",
             "unit": "legal_duty",
-            "affected_population": "CSE des entreprises d’au moins trois cents salariés sans accord de commissions.",
-            "conditions_and_transition": "Dès entrée en vigueur ; pas de dissolution automatique ni annulation d’accord.",
-            "replacement_or_new_burdens": "Aucune déclaration ni autorisation de remplacement ; obligations autonomes et engagements acquis conservés.",
+            "affected_population": "Entreprises d'au moins trois cents salariés dotées d'un CSE, sans accord L2315-45.",
+            "conditions_and_transition": "Dès l'entrée en vigueur ; consultations et obligations d'égalité inchangées.",
+            "replacement_or_new_burdens": "Aucune formalité ni commission de remplacement ; création possible par accord d'entreprise (L2315-45), sans changement de cet article.",
             "source_quote": "une commission de l'égalité professionnelle est créée au sein du comité social et économique.",
-            "proposed_quote": "le comité social et économique peut créer en son sein une commission de l'égalité professionnelle par délibération."
+            "proposed_quote": "Le présent article est abrogé."
           }
         ]
       }
@@ -543726,15 +543864,29 @@
       "source_id": "LEGIARTI000036412664",
       "number": "R2312-30",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "Maintien intégral, sans réécriture stylistique. La communication du rapport aux associés ou membres du GIE sous huit jours compense l'absence de conseil d'administration ou de surveillance. Ce circuit permet l'exercice de l'alerte économique ; sa suppression priverait les destinataires de cette information. Aucune réduction normative nouvelle n’est comptée par rapport à la source officielle entière.",
-        "scope_limitations": "Transition compatible : « ou le cas échéant de la commission économique » reste opérant avec L2315-46 proposé, qui rend la commission facultative, et L2312-63 proposé, qui attribue le rapport au CSE en son absence. L2312-65 lu maintient la décision à la majorité des membres présents ; les huit jours partent de cette délibération. Différence de destinataires : la suppression de l'envoi obligatoire au commissaire aux comptes dans L2312-63 ne supprime pas celui aux associés et membres du GIE. L2312-66 source et proposition mentionnent « le gérant ou les administrateurs » : le présent règlement visant les administrateurs ne dispense pas le gérant de son obligation législative. Aucun nouveau rapport requis. Les statuts individuels ne sont pas fournis.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun nouveau corps normatif, registre, donnée, délai ou condition ne remplace la source maintenue. Les obligations existantes restent celles examinées dans le motif ; aucun solde global des codes n’est chiffré.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination de l'abrogation de L2315-46 : le rapport communiqué sous huit jours aux associés et membres du groupement est celui du comité ; délai et destinataires inchangés.",
+        "scope_limitations": "L2315-45 lu en entier et inchangé. Seules les mentions de la commission économique supplétive (L2315-46, abrogé dans le même groupe) sont retirées ; le reste du texte est repris mot pour mot.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai, seuil ni formalité n'est créé en remplacement ; les consultations, informations et moyens d'expertise restent dus au comité social et économique dans les conditions inchangées.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "cse-commission-economique-facultative",
+            "description": "Retrait de la commission économique abrogée de la communication réglementaire.",
+            "before": "Communication du rapport du comité ou, le cas échéant, de la commission économique.",
+            "after": "Communication du rapport du comité.",
+            "unit": "legal_duty",
+            "affected_population": "Sociétés sans conseil et groupements d'intérêt économique.",
+            "conditions_and_transition": "Même date que l'abrogation de L2315-46.",
+            "replacement_or_new_burdens": "Aucune.",
+            "source_quote": "ou le cas échéant de la commission économique",
+            "proposed_quote": "le rapport du comité social et économique dans les huit jours"
+          }
+        ]
       }
     },
     {
@@ -545724,15 +545876,29 @@
       "source_id": "LEGIARTI000036433687",
       "number": "R2315-28",
       "slug": "travail",
-      "status": "retained_unchanged",
+      "status": "rewrite_draft",
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "retained_necessary",
-        "assessment": "La participation de salariés non membres constitue une souplesse utile ; la présidence par un membre assure la responsabilité de la commission devant le comité. Le caractère supplétif et les exceptions des commissions spéciales sont maintenus, sans agrément ni déclaration ajoutés. Aucune modification normative par rapport à la source officielle entière.",
-        "scope_limitations": "Différence de champ vérifiée : L2315-39 réserve la présidence de la CSSCT à l'employeur et sa composition aux membres du CSE ; L2315-47 réserve de même la présidence de la commission économique. L2315-44-3 impose des membres titulaires pour la commission des marchés, même facultative selon L2315-44-1 proposé : cette règle spéciale législative prévaut sur la faculté générale « des salariés de l'entreprise n'appartenant pas au comité ». L2315-45 conserve accord majoritaire, voix consultative des experts, secret et délibération du comité. Aucune contradiction imposant de modifier cet article n'est établie ; les créations facultatives ne changent pas ces règles de composition. Vérification locale bornée ; aucune cohérence globale des neuf recueils ni économie nationale n’est démontrée.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : maintien intégral de la règle, sans ajout de donnée, délai, registre ni condition. Les charges nécessaires existantes sont explicitées dans le motif ; aucun solde global des codes n'est chiffré.",
-        "effects": []
+        "classification": "coordination_only",
+        "assessment": "Coordination de l'abrogation de L2315-47 : le renvoi à la présidence patronale d'une commission abrogée est retiré ; la réserve de L2315-39 et la règle générale de présidence sont conservées.",
+        "scope_limitations": "L2315-39, L2315-45 et L2315-47 lus. Seul le renvoi à L2315-47 est retiré ; le reste du texte est repris mot pour mot.",
+        "new_burdens_review": "Aucune charge nouvelle identifiée : aucun organe, registre, délai, seuil ni formalité n'est créé en remplacement ; les consultations, informations et moyens d'expertise restent dus au comité social et économique dans les conditions inchangées.",
+        "effects": [
+          {
+            "kind": "coordination",
+            "measure_id": "cse-commission-economique-facultative",
+            "description": "Retrait du renvoi à un article abrogé.",
+            "before": "Présidence par un membre, sans préjudice de L2315-39 et L2315-47.",
+            "after": "Présidence par un membre, sans préjudice de L2315-39.",
+            "unit": "legal_duty",
+            "affected_population": "Comités sociaux et économiques dotés de commissions supplétives.",
+            "conditions_and_transition": "Même date que l'abrogation de L2315-47.",
+            "replacement_or_new_burdens": "Aucune.",
+            "source_quote": "Sans préjudice des dispositions des articles L. 2315-39 et L. 2315-47",
+            "proposed_quote": "Sans préjudice des dispositions de l'article L. 2315-39"
+          }
+        ]
       }
     },
     {
@@ -545775,35 +545941,35 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Suppression de la consultation séparée obligatoire de la commission de formation ; la consultation du CSE et les attributions préparatoires légales de la commission subsistent. Les deux objets, formation continue et validation des acquis, sont intégralement conservés. Coordination nécessaire du précédent brouillon : « la commission de la formation [...] prépare » supposait sa présence, alors que L2315-49 proposé dit « peut constituer une commission ». Sa préparation est désormais conditionnée à son existence ; la transition des consultations anciennes n'impose pas de reconstituer une commission supprimée.",
-        "scope_limitations": "L2315-45, L2315-49 et L2312-17 lus intégralement, sources et projets. La formation continue et la validation des acquis restent les deux objets de consultation ; les trois missions légales de la commission sont reprises par le CSE lorsqu'elle n'existe pas. La suppression de la consultation distincte pour les procédures nouvelles demeure une réduction propre, y compris lorsqu'une commission existe ; ne pas la confondre avec sa création facultative. La transition antérieure est conservée sous réserve de la reprise des travaux par le CSE prévue au nouveau L2315-49 ; aucune extinction du droit à consultation. Les chapitres de formation et de VAE visés ne sont pas réécrits ici ni déclarés intégralement audités. Aucun solde global de coût ou de complexité des codes n’est établi.",
+        "assessment": "Suppression de la consultation séparée obligatoire de la commission de la formation (source) ; la consultation du comité sur ses deux objets subsiste. Coordination de l'abrogation de L2315-49, sans compter cette coordination comme une seconde réduction.",
+        "scope_limitations": "L2315-45, L2315-49 et L2312-17 lus. Le paragraphe transitoire de la proposition antérieure disparaît avec la commission ; les consultations restent dues au comité. Les chapitres de formation et de VAE ne sont pas audités ici.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : les corrections utilisent les organes, informations et supports existants, sans nouveau dépôt, registre, délai ni justificatif. Les fonctions conservées ne sont pas des formalités de remplacement ; coûts nets de réorganisation non chiffrés.",
         "effects": [
           {
             "kind": "obligation_merged",
             "measure_id": "cse-consultation-formation-unifiee",
-            "description": "Maintien de la suppression du second avis obligatoire dans le régime supplétif.",
-            "before": "Consultation du CSE et de la commission dans les entreprises d’au moins trois cents salariés.",
-            "after": "Consultation du CSE ; commission existante prépare sans consultation séparée obligatoire.",
+            "description": "Suppression du second avis obligatoire dans le régime supplétif.",
+            "before": "Consultation du CSE et de la commission de la formation dans les entreprises d'au moins trois cents salariés.",
+            "after": "Consultation du seul CSE.",
             "unit": "legal_duty",
             "affected_population": "Comités sociaux et économiques relevant du présent article.",
-            "conditions_and_transition": "Consultations nouvelles à compter de l'entrée en vigueur ; consultations anciennes conservées, reprise par le CSE si la commission est supprimée.",
-            "replacement_or_new_burdens": "Aucun dépôt, registre, justificatif ou autorisation de remplacement ; missions et contrôles autonomes conservés.",
+            "conditions_and_transition": "Dès l'entrée en vigueur ; consultation du comité intégralement conservée.",
+            "replacement_or_new_burdens": "Aucun dépôt, registre, justificatif ou autorisation de remplacement.",
             "source_quote": "le comité social et économique et, dans les entreprises d'au moins trois cents salariés",
-            "proposed_quote": "sans consultation séparée obligatoire"
+            "proposed_quote": "le comité social et économique est consulté sur les problèmes généraux"
           },
           {
             "kind": "coordination",
             "measure_id": "cse-commission-formation-facultative",
-            "description": "Conditionnement du circuit de la commission à son existence selon L2315-49 proposé.",
-            "before": "La commission est un destinataire imposé dans les entreprises d’au moins trois cents salariés sans accord.",
-            "after": "Le CSE assure les missions et reçoit les informations en l’absence de commission ; commission facultative.",
+            "description": "Retrait du circuit transitoire d'une commission abrogée.",
+            "before": "Commission de la formation prévue à l'article L. 2315-49, destinataire de la consultation.",
+            "after": "Aucune commission légale ; le comité est seul consulté.",
             "unit": "legal_duty",
             "affected_population": "Comités sociaux et économiques relevant du présent article.",
-            "conditions_and_transition": "Dès l'entrée en vigueur ; travaux en cours repris par le CSE, droits à congé, formation et rémunération préservés.",
-            "replacement_or_new_burdens": "Aucun dépôt, registre, justificatif ou autorisation de remplacement ; missions et contrôles autonomes conservés.",
-            "source_quote": "dans les entreprises d'au moins trois cents salariés",
-            "proposed_quote": "lorsqu'elle est constituée"
+            "conditions_and_transition": "Même date que l'abrogation de L2315-49.",
+            "replacement_or_new_burdens": "Aucune.",
+            "source_quote": "la commission de la formation prévue à l'article L. 2315-49",
+            "proposed_quote": "2° De la validation des acquis de l'expérience"
           }
         ]
       }
@@ -545818,22 +545984,22 @@
       "assessment": {
         "version": 1,
         "classification": "coordination_only",
-        "assessment": "Coordination nécessaire : « le comité social et économique et [...] la commission de la formation sont informés » suppose deux destinataires, alors que L2315-49 proposé autorise le CSE à ne pas constituer de commission. Le second destinataire est conditionné à son existence ; toutes les informations sur les congés, leurs conditions et leurs résultats demeurent. Aucun gain autonome de suppression d'un rapport distinct n'est revendiqué.",
-        "scope_limitations": "Différence de champ avec R2315-30 : cet article porte sur l'information, non sur un second avis ; il ne rétablit donc pas la consultation séparée supprimée. L2315-45 et L2315-49, sources et projets lus : régime supplétif, seuil de trois cents salariés, transmission directe au CSE et reprise des travaux compatibles. Les accords autonomes, congés futurs éligibles et rémunérations ne sont pas limités aux anciens contrats. Aucun solde global de coût ou de complexité des codes n’est établi.",
+        "assessment": "Coordination de l'abrogation de L2315-49 : le comité est le seul destinataire de l'information sur les congés ; aucun élément d'information n'est retiré.",
+        "scope_limitations": "L2315-45 et L2315-49 lus. Le paragraphe transitoire disparaît avec la commission ; les droits des salariés aux congés et à la formation ne sont pas modifiés.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : les corrections utilisent les organes, informations et supports existants, sans nouveau dépôt, registre, délai ni justificatif. Les fonctions conservées ne sont pas des formalités de remplacement ; coûts nets de réorganisation non chiffrés.",
         "effects": [
           {
             "kind": "coordination",
             "measure_id": "cse-commission-formation-facultative",
-            "description": "Conditionnement du circuit de la commission à son existence selon L2315-49 proposé.",
-            "before": "La commission est un destinataire imposé dans les entreprises d’au moins trois cents salariés sans accord.",
-            "after": "Le CSE assure les missions et reçoit les informations en l’absence de commission ; commission facultative.",
+            "description": "Retrait de la commission abrogée comme second destinataire.",
+            "before": "Information du CSE et, dans les entreprises d'au moins trois cents salariés, de la commission de la formation.",
+            "after": "Information du seul CSE.",
             "unit": "legal_duty",
             "affected_population": "Comités sociaux et économiques relevant du présent article.",
-            "conditions_and_transition": "Dès l'entrée en vigueur ; travaux en cours repris par le CSE, droits à congé, formation et rémunération préservés.",
-            "replacement_or_new_burdens": "Aucun dépôt, registre, justificatif ou autorisation de remplacement ; missions et contrôles autonomes conservés.",
-            "source_quote": "dans les entreprises d'au moins trois cents salariés",
-            "proposed_quote": "lorsqu'elle est constituée"
+            "conditions_and_transition": "Même date que l'abrogation de L2315-49.",
+            "replacement_or_new_burdens": "Aucune.",
+            "source_quote": "dans les entreprises d'au moins trois cents salariés, la commission de la formation sont informés",
+            "proposed_quote": "le comité social et économique est informé des possibilités de congé"
           }
         ]
       }
@@ -708242,8 +708408,8 @@
       "assessment": {
         "version": 1,
         "classification": "material_reduction",
-        "assessment": "Réduction de fond ciblée : supprimer l'enregistrement obligatoire des seules opérations sociales du 5° qui ne génèrent aucun droit ou taxe et aucune autre opération soumise à dépôt. La dispense est expressément opposable au titre du 1° pour les actes notariés afin de ne pas être annulée par le filtre général. Maintien intégral des exclusions de capital déjà prévues et des autres catégories numérotées. Coordination des testaments avec l'abrogation prospective de 636 : l'exception n'est plus un renvoi vide. Les fiducies, mutations taxables et transactions de désistement gardent leurs fonctions de preuve et de lutte contre la fraude. Seconde passe : contradiction effective avec L600-8 proposé, qui dispose que la transaction « est dispensée de l'enregistrement lorsque cet enregistrement est requis du seul fait de cet engagement », alors que le 9° conservait sans transition « La transaction prévoyant ». Le 9° est borné aux anciennes transactions. Coordination nécessaire du 7° avec 726 IV proposé : « Aucune déclaration, pièce ou formalité exclusivement nécessaire à la perception de ces droits n'est exigée ». Les autres titres autonomes restent distincts.",
-        "scope_limitations": "635, 637, 647, 658, 662, 664, 680, 726, 746, 757, 790 G, 809, 810, 810 bis, 862, 867, 1655 sexies, 1717 bis et L600-8 ont été confrontés dans leurs textes source et propositions disponibles. Délai général d'un mois, numéros, abrogations anciennes et définition de prépondérance immobilière conservés. Transition compatible : L600-8 garde pour les seules anciennes transactions la répétition sous cinq ans ; 680 conserve l'exonération des transactions présentées volontairement ou à un autre titre. Différence de champ : L600-8 vise aussi l'engagement de ne pas introduire un recours ; sa dispense directe s'applique sans élargir le 9° fiscal. Le 1° notarial reste un fondement autonome pour les cessions reçues par notaire, comme l'admet 726 IV ; la dispense du 5° social lui est expressément opposable. 746 proposé exonère désormais les partages futurs mais conserve les obligations ayant un fondement propre : le 7° du 1 demeure, notamment pour la preuve et les soultes soumises à un régime distinct ; aucun droit de partage n'est recréé. 809/810 proposés élargissent la gratuité future sans conservation triennale : la dispense conditionnelle du 5° en tient compte automatiquement, anciens engagements préservés. 1655 sexies exclut 635, 1, 5° et 638 A. Annexe III 266 bis VI proposé retire l'acte complémentaire obligatoire, sans interdire un acte notarié volontaire relevant du 1°. Code civil 2019 et textes civils de forme hors corpus : point non vérifiable ici. 862 et 662 restent à expliciter hors lot pour les dispenses nouvelles ; leur seul renvoi ne peut les annuler. Le solde de complexité et le coût net de l’ensemble des codes ne sont pas établis.",
+        "assessment": "Réduction de fond ciblée : supprimer l'enregistrement obligatoire des seules opérations sociales du 5° qui ne génèrent aucun droit ou taxe et aucune autre opération soumise à dépôt. La dispense est expressément opposable au titre du 1° pour les actes notariés afin de ne pas être annulée par le filtre général. Maintien intégral des exclusions de capital déjà prévues et des autres catégories numérotées. Coordination des testaments avec l'abrogation prospective de 636 : l'exception n'est plus un renvoi vide. Les fiducies, mutations taxables et transactions de désistement gardent leurs fonctions de preuve et de lutte contre la fraude. Seconde passe : coordination nécessaire du 7° avec 726 IV proposé : « Aucune déclaration, pièce ou formalité exclusivement nécessaire à la perception de ces droits n'est exigée ». Les autres titres autonomes restent distincts.",
+        "scope_limitations": "635, 637, 647, 658, 662, 664, 680, 726, 746, 757, 790 G, 809, 810, 810 bis, 862, 867, 1655 sexies, 1717 bis et L600-8 ont été confrontés dans leurs textes source et propositions disponibles. Délai général d'un mois, numéros, abrogations anciennes et définition de prépondérance immobilière conservés. Coordination : L600-8 du code de l'urbanisme garde sa rédaction en vigueur (enregistrement dans le mois, répétition sous cinq ans) et 680 l'exonération de droit fixe des transactions du 9° du 1. Différence de champ préexistante, non élargie : L600-8 vise aussi l'engagement de ne pas introduire un recours. Le 1° notarial reste un fondement autonome pour les cessions reçues par notaire, comme l'admet 726 IV ; la dispense du 5° social lui est expressément opposable. 746 proposé exonère désormais les partages futurs mais conserve les obligations ayant un fondement propre : le 7° du 1 demeure, notamment pour la preuve et les soultes soumises à un régime distinct ; aucun droit de partage n'est recréé. 809/810 proposés élargissent la gratuité future sans conservation triennale : la dispense conditionnelle du 5° en tient compte automatiquement, anciens engagements préservés. 1655 sexies exclut 635, 1, 5° et 638 A. Annexe III 266 bis VI proposé retire l'acte complémentaire obligatoire, sans interdire un acte notarié volontaire relevant du 1°. Code civil 2019 et textes civils de forme hors corpus : point non vérifiable ici. 862 et 662 restent à expliciter hors lot pour les dispenses nouvelles ; leur seul renvoi ne peut les annuler. Le solde de complexité et le coût net de l’ensemble des codes ne sont pas établis.",
         "new_burdens_review": "Aucune charge nouvelle identifiée : le texte retire une charge ou coordonne une dispense sans déclaration, registre, justificatif ou autorisation de remplacement ; les obligations distinctes conservées ne sont pas présentées comme nouvelles.",
         "effects": [
           {
@@ -708258,19 +708424,6 @@
             "replacement_or_new_burdens": "Aucune formalité de remplacement ; obligations autonomes conservées dans leur champ.",
             "source_quote": "5° Les actes constatant la transformation d'une société et ceux constatant l'augmentation de son capital, à l'exception des augmentations de capital en numéraire et par incorporation de bénéfices, de réserves ou de provisions et des augmentations nettes de capital de société à capital variable constatées à la clôture d'un exercice ;",
             "proposed_quote": "Ces actes sont dispensés de la formalité de l'enregistrement lorsqu'ils ne donnent ouverture à aucun droit ou taxe et ne constatent aucune autre opération soumise à cette formalité à un autre titre ;"
-          },
-          {
-            "kind": "coordination",
-            "measure_id": "transactions-urbanisme-dispense-enregistrement",
-            "description": "Alignement sur la dispense de L600-8 proposé.",
-            "before": "Enregistrement du désistement indemnisé dans le mois.",
-            "after": "Dispense des nouvelles transactions pour ce seul motif.",
-            "unit": "legal_duty",
-            "affected_population": "Parties et professionnels concernés par les opérations visées par cet article.",
-            "conditions_and_transition": "Application dans le champ et à la date de bascule précisés par la proposition ; droits et recours des opérations antérieures préservés.",
-            "replacement_or_new_burdens": "Aucune formalité de remplacement ; obligations autonomes conservées dans leur champ.",
-            "source_quote": "9° La transaction prévoyant, en contrepartie du versement d'une somme d'argent ou de l'octroi d'un avantage en nature, le désistement du recours pour excès de pouvoir formé contre un permis de construire, de démolir ou d'aménager.",
-            "proposed_quote": "Pour les transactions conclues à compter de cette entrée en vigueur, aucun enregistrement n'est dû du seul fait de cet engagement ; les obligations fondées sur une autre caractéristique de l'acte demeurent applicables."
           },
           {
             "kind": "coordination",
@@ -937594,25 +937747,11 @@
       "evidence_status": "worker_declaration",
       "assessment": {
         "version": 1,
-        "classification": "material_reduction",
-        "assessment": "La source entière impose le dépôt fiscal dans le mois et une répétition automatique. Le brouillon conservé retire ces deux contraintes pour les transactions nouvelles, sans retirer l'interdiction associative et son exception. Aucun gain fiscal de 125 euros n'est allégué, ces transactions étant déjà exonérées.",
-        "scope_limitations": "Actes anciens et autres motifs d'enregistrement exclus de la dispense ; CGI 635/680 restent à coordonner hors lot. Coût net et fréquence des transactions non chiffrés.",
-        "new_burdens_review": "Aucune charge nouvelle identifiée : aucune déclaration ne remplace l'enregistrement supprimé, aucun registre ni justificatif de dispense n'est institué. Garanties civiles autonomes conservées.",
-        "effects": [
-          {
-            "kind": "obligation_removed",
-            "measure_id": "urbanisme-transactions-fin-enregistrement",
-            "description": "Dispense du dépôt exclusivement lié au désistement et retrait de sa répétition automatique.",
-            "before": "Transaction rémunérant le désistement ou le non-recours : enregistrement dans un mois, à défaut contrepartie répétible.",
-            "after": "Transaction nouvelle dispensée sur ce seul fondement ; aucune répétition pour la seule omission.",
-            "unit": "legal_duty",
-            "affected_population": "Parties aux transactions relatives aux permis de construire, démolir ou aménager.",
-            "conditions_and_transition": "Transactions conclues dès entrée en vigueur ; anciennes transactions et prescription de cinq ans préservées.",
-            "replacement_or_new_burdens": "Aucune formalité, donnée, registre ni prélèvement de remplacement ; garanties autonomes maintenues.",
-            "source_quote": "doit être enregistrée conformément à l'article 635 du code général des impôts.",
-            "proposed_quote": "est dispensée de l'enregistrement lorsque cet enregistrement est requis du seul fait de cet engagement."
-          }
-        ]
+        "classification": "coordination_only",
+        "assessment": "Texte en vigueur maintenu en entier ; seule la référence interne du quatrième alinéa est corrigée vers le deuxième alinéa, qui porte l'action en répétition.",
+        "scope_limitations": "Aucune obligation, sanction ni exception n'est ajoutée ou retirée. Coordination avec CGI 635, 1, 9° et 680 maintenus dans leur rédaction.",
+        "new_burdens_review": "Aucune charge nouvelle : l'enregistrement et la répétition existent déjà dans la source ; aucun registre, délai ni formalité supplémentaire.",
+        "effects": []
       }
     },
     {
