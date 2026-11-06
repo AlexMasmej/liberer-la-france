@@ -102,7 +102,7 @@ We break it into three aims:
     \item a guarded writer that cannot silently overwrite (\S\ref{sec:redteam}).
   \end{itemize}
   \item A measurement method: six blind, stratified random audits, with a taxonomy of ten defect families (F1--F10). The rate has a confidence interval, not an anecdote (\S\ref{sec:measure}).
-  \item A paired baseline: the same audit run on the official law, on the same articles. The rewritten law has 34\% fewer gross defects than the law it replaces on 1{,}879 articles at the time of the audits (4.6\% against 7.0\%), and \textbf{54\% fewer} today on two fresh samples of 1{,}264 articles (3.5\% against 7.5\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
+  \item A paired baseline: the same audit run on the official law, on the same articles. The rewritten law has 34\% fewer gross defects than the law it replaces on 1{,}879 articles at the time of the audits (4.6\% against 7.0\%), and \textbf{54\% fewer} on two fresh samples of 1{,}264 articles drawn at the end of the work (3.5\% against 7.5\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
   \item A cost comparison: about US\$1{,}400 in cash, US\$3{,}500 to 5{,}100 at API prices, against order-of-magnitude estimates of \euro{}6 to 36 million for the same work by lawyers, 2{,}500 to 10{,}000 times more at the midpoints (Table~\ref{tab:lawyers} ranges run from 1{,}300 to 28{,}000, excluding human direction time, and lawyer hours are assumptions; \S\ref{sec:cost}).
   \item Empirical findings on what AI agents do well and badly on legal coherence (\S\ref{sec:results}--\S\ref{sec:discussion}):
   \begin{itemize}
@@ -577,14 +577,14 @@ The project figures are those at the time of each audit. Every gross defect of t
 
 We drew 632 new articles, never sampled before, with the same strata and twice the allocation. Each was audited twice and blind: once on the current rewritten text (audit 7) and once on the official text, by 20 agents on each side. The rewritten-text auditors were told explicitly that a defect inherited from the official text counts, which makes this side stricter than in audits 1--6. The 52 defects seen on only one side were again checked against both texts.
 
-The 28 defects still present in that sample were then corrected (36 rows), and the audit was replicated on a second fresh sample of 632 articles (audit 8), with the same design and a different model (Claude Fable 5.1 instead of Claude Opus 5.5); 44 one-sided defects were checked.
+The 28 defects still present in that sample were then corrected (36 rows). The audit was replicated on a second fresh sample of 632 articles (audit 8), with the same design and a different model (Claude Fable 5.1 instead of Claude Opus 5.5); 44 one-sided defects were checked. Audit 8 was read while those corrections were being applied, but the correction archive shows that none of the 63 rows applied since the first fresh sample was drawn touched an audit-8 article before it was read; the only one that later did was applied 28 minutes after the last audit-8 verdict. The two audits therefore measure the same state of the corpus on disjoint articles, which is why we pool them. The 16 defects found by audit 8 were left uncorrected, so that sample remains an untouched measurement.
 
 \begin{table}[ht]
 \centering
 \small
 \begin{tabular}{lrrrrrr}
 \toprule
-& & \multicolumn{2}{c}{Official law} & \multicolumn{2}{c}{Rewritten law, today} & Repaired /\\
+& & \multicolumn{2}{c}{Official law} & \multicolumn{2}{c}{Rewritten law, at audit} & Repaired /\\
 \cmidrule(lr){3-4}\cmidrule(lr){5-6}
 Fresh samples, verified & Articles & G & Rate & G & Rate & introduced\\
 \midrule
@@ -598,19 +598,20 @@ Both & 1{,}264 & 95 & 7.5\% $\pm$ 1.5 & 44 & \textbf{3.5\% $\pm$ 1.0} & 60 / 9\\
 \multicolumn{5}{l}{Paired test on both samples (McNemar, exact)} & \multicolumn{2}{r}{$p \approx 2\times10^{-10}$}\\
 \bottomrule
 \end{tabular}
-\caption{Gross defects in the official law and in the current rewritten law, on two fresh random samples of 632 articles each, never sampled before, after verification of every defect seen on only one side.}
+\caption{Gross defects in the official law and in the rewritten law at the time of the audits, on two fresh random samples of 632 articles each, never sampled before, after verification of every defect seen on only one side.}
 \label{tab:fresh}
 \end{table}
 
 The fresh samples confirm and sharpen the paired comparison (Table~\ref{tab:fresh}):
 \begin{itemize}
-  \item the current rewritten law has \textbf{54\% fewer gross defects} than the official law (95\% CI 40--64\%): 3.5\% against 7.5\% on 1{,}264 articles;
+  \item the rewritten law has \textbf{54\% fewer gross defects} than the official law (95\% CI 40--64\%): 3.5\% against 7.5\% on 1{,}264 articles;
   \item among rewritten articles, the rate falls from 14.5\% to 6.0\%, 58\% fewer;
   \item the rewrite repaired about seven defects of the official law for each one it introduced (60 against 9), against two to one in the first paired sample;
   \item the control agrees: retained articles, whose text is identical on both sides, show 11 and 9 defects;
-  \item the two models agree on the official text (7.8\% and 7.3\%); on the rewritten text, Fable finds fewer defects (2.5\% against 4.4\%), within the intervals.
+  \item the two models agree on the official text (7.8\% and 7.3\%); on the rewritten text, Fable finds fewer defects (2.5\% against 4.4\%), within the intervals;
+  \item taken alone, audit 8, the most recent sample and the one left uncorrected, gives about two thirds fewer defects (16 against 46, 2.5\% against 7.3\%); we keep the pooled 54\% as the headline because it rests on twice as many articles and on two models.
 \end{itemize}
-Raw verdicts give 8.4\% and 6.8\% for the official text, against 2.4\% and 1.4\% for the rewritten text. Of the 44 defects that remain in the rewritten text, 35 are inherited from the official law and not yet repaired; 9 were introduced by the rewrite. The tax code, the exception in the first paired sample, shows 3 official and 5 rewritten defects on 96 articles here.
+Raw verdicts give 8.4\% and 6.8\% for the official text, against 2.4\% and 1.4\% for the rewritten text. Of the 44 defects found in the rewritten text, 35 were inherited from the official law and 9 were introduced by the rewrite. The 28 found by audit 7 have since been corrected; the 16 found by audit 8 remain open. The tax code, the exception in the first paired sample, shows 3 official and 5 rewritten defects on 96 articles here.
 
 \subsection{Sweeps: yield and plateau}
 
@@ -721,7 +722,7 @@ The results are AI-only by design, and no lawyer has validated them yet. The pip
 
 \section{Conclusion and future work}
 
-We rewrote five French codes and the four CGI annexes end to end with AI agents, red-teamed the result with a separate pipeline, and measured what remains wrong. Measured against the official law on the same articles, with every disputed defect verified, the rewritten law has 34\% fewer gross defects on 1{,}879 articles at the time of the audits, and \textbf{54\% fewer} today on two fresh samples of 1{,}264 articles (3.5\% against 7.5\%). Four fifths of the defects that remain are inherited from the law in force. It cost about US\$1{,}400, 2{,}500 to 10{,}000 times less than the same work by lawyers would have. The full trail is public.
+We rewrote five French codes and the four CGI annexes end to end with AI agents, red-teamed the result with a separate pipeline, and measured what remains wrong. Measured against the official law on the same articles, with every disputed defect verified, the rewritten law has 34\% fewer gross defects on 1{,}879 articles at the time of the audits, and \textbf{54\% fewer} on two fresh samples of 1{,}264 articles drawn at the end of the work (3.5\% against 7.5\%). Four fifths of the defects found are inherited from the law in force. It cost about US\$1{,}400, 2{,}500 to 10{,}000 times less than the same work by lawyers would have. The full trail is public.
 
 Next steps:
 \begin{itemize}

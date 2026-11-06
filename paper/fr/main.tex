@@ -106,7 +106,7 @@ Nous la décomposons en trois objectifs~:
     \item un outil d'écriture contrôlée, qui ne peut rien écraser sans vérification (\S\ref{sec:redteam}).
   \end{itemize}
   \item Une méthode de mesure~: six audits aléatoires stratifiés, menés à l'aveugle, avec une taxonomie de dix familles de défauts (F1 à F10). Le taux s'accompagne d'un intervalle de confiance, pas d'une anecdote (\S\ref{sec:measure}).
-  \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte 34\,\% de défauts grossiers en moins que le droit qu'il remplace sur 1\,879 articles à la date des audits (4,6\,\% contre 7,0\,\%), et \textbf{54\,\% de moins} aujourd'hui sur deux nouveaux échantillons de 1\,264 articles (3,5\,\% contre 7,5\,\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
+  \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte 34\,\% de défauts grossiers en moins que le droit qu'il remplace sur 1\,879 articles à la date des audits (4,6\,\% contre 7,0\,\%), et \textbf{54\,\% de moins} sur deux nouveaux échantillons de 1\,264 articles tirés en fin de travail (3,5\,\% contre 7,5\,\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
   \item Une comparaison de coût~: environ 1\,400~dollars déboursés, 3\,500 à 5\,100~dollars au prix de l'API, contre des ordres de grandeur de 6 à 36~millions d'euros pour le même travail par des juristes, soit 2\,500 à 10\,000 fois plus aux points médians (les fourchettes du tableau~\ref{tab:lawyers} vont de 1\,300 à 28\,000, hors temps humain de direction, et les heures de juriste sont des hypothèses~; \S\ref{sec:cost}).
   \item Des constats empiriques sur ce que les agents d'IA font bien et mal en matière de cohérence juridique (\S\ref{sec:results}--\S\ref{sec:discussion})~:
   \begin{itemize}
@@ -580,14 +580,14 @@ Les chiffres du projet sont ceux de chaque audit, à sa date. Tout défaut gross
 
 Nous avons tiré 632 nouveaux articles, jamais tirés auparavant, avec les mêmes strates et une allocation doublée. Chacun a été audité deux fois, à l'aveugle~: une fois sur le texte réécrit actuel (audit 7), une fois sur le texte officiel, par 20 agents de chaque côté. Les auditeurs du texte réécrit savaient explicitement qu'un défaut hérité du texte officiel compte, ce qui rend ce côté plus sévère que dans les audits 1 à 6. Les 52 défauts vus d'un seul côté ont de nouveau été vérifiés dans les deux textes.
 
-Les 28 défauts encore présents dans cet échantillon ont ensuite été corrigés (36 lignes), et l'audit a été répliqué sur un autre nouvel échantillon de 632 articles (audit 8), avec le même protocole et un autre modèle (Claude Fable 5.1 au lieu de Claude Opus 5.5)~; 44 défauts vus d'un seul côté ont été vérifiés.
+Les 28 défauts encore présents dans cet échantillon ont ensuite été corrigés (36 lignes). L'audit a été répliqué sur un autre nouvel échantillon de 632 articles (audit 8), avec le même protocole et un autre modèle (Claude Fable 5.1 au lieu de Claude Opus 5.5)~; 44 défauts vus d'un seul côté ont été vérifiés. L'audit 8 a été lu pendant que ces corrections étaient appliquées, mais l'archive des corrections montre qu'aucune des 63 lignes appliquées depuis le tirage du premier nouvel échantillon n'a touché un article de l'audit 8 avant sa lecture~; la seule qui l'a fait ensuite a été appliquée 28 minutes après le dernier verdict de l'audit 8. Les deux audits mesurent donc le même état du corpus sur des articles disjoints, ce qui justifie de les cumuler. Les 16 défauts trouvés par l'audit 8 n'ont pas été corrigés~: cet échantillon reste une mesure intacte.
 
 \begin{table}[ht]
 \centering
 \small
 \begin{tabular}{lrrrrrr}
 \toprule
-& & \multicolumn{2}{c}{Droit officiel} & \multicolumn{2}{c}{Droit réécrit, aujourd'hui} & Réparés /\\
+& & \multicolumn{2}{c}{Droit officiel} & \multicolumn{2}{c}{Droit réécrit, à la date de l'audit} & Réparés /\\
 \cmidrule(lr){3-4}\cmidrule(lr){5-6}
 Nouveaux échantillons, après vérification & Articles & G & Taux & G & Taux & introduits\\
 \midrule
@@ -601,19 +601,20 @@ Ensemble & 1\,264 & 95 & 7,5\,\% $\pm$ 1,5 & 44 & \textbf{3,5\,\% $\pm$ 1,0} & 6
 \multicolumn{5}{l}{Test apparié sur les deux échantillons (McNemar, exact)} & \multicolumn{2}{r}{$p \approx 2\times10^{-10}$}\\
 \bottomrule
 \end{tabular}
-\caption{Défauts grossiers du droit officiel et du droit réécrit actuel, sur deux nouveaux échantillons de 632 articles chacun, jamais tirés auparavant, après vérification de tout défaut vu d'un seul côté.}
+\caption{Défauts grossiers du droit officiel et du droit réécrit à la date des audits, sur deux nouveaux échantillons de 632 articles chacun, jamais tirés auparavant, après vérification de tout défaut vu d'un seul côté.}
 \label{tab:fresh}
 \end{table}
 
 Les nouveaux échantillons confirment et précisent la comparaison appariée (tableau~\ref{tab:fresh})~:
 \begin{itemize}
-  \item le droit réécrit actuel compte \textbf{54\,\% de défauts grossiers en moins} que le droit officiel (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\% contre 7,5\,\% sur 1\,264 articles~;
+  \item le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit officiel (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\% contre 7,5\,\% sur 1\,264 articles~;
   \item parmi les articles réécrits, le taux passe de 14,5\,\% à 6,0\,\%, soit 58\,\% de moins~;
   \item la réécriture a réparé environ sept défauts du droit officiel pour chaque défaut introduit (60 contre 9), contre deux pour un dans le premier échantillon apparié~;
   \item le témoin concorde~: les articles maintenus, dont le texte est identique des deux côtés, présentent 11 et 9 défauts~;
-  \item les deux modèles concordent sur le texte officiel (7,8 et 7,3\,\%)~; sur le texte réécrit, Fable trouve moins de défauts (2,5 contre 4,4\,\%), dans les intervalles.
+  \item les deux modèles concordent sur le texte officiel (7,8 et 7,3\,\%)~; sur le texte réécrit, Fable trouve moins de défauts (2,5 contre 4,4\,\%), dans les intervalles~;
+  \item pris seul, l'audit 8, le plus récent et laissé sans correction, donne environ deux tiers de défauts en moins (16 contre 46, 2,5 contre 7,3\,\%)~; nous gardons les 54\,\% cumulés comme résultat principal, parce qu'ils reposent sur deux fois plus d'articles et sur deux modèles.
 \end{itemize}
-Les verdicts bruts donnent 8,4 et 6,8\,\% pour le texte officiel, contre 2,4 et 1,4\,\% pour le texte réécrit. Sur les 44 défauts qui restent dans le texte réécrit, 35 sont hérités du droit officiel et pas encore réparés~; 9 ont été introduits par la réécriture. Le code fiscal, exception du premier échantillon apparié, compte ici 3 défauts officiels et 5 défauts réécrits sur 96 articles.
+Les verdicts bruts donnent 8,4 et 6,8\,\% pour le texte officiel, contre 2,4 et 1,4\,\% pour le texte réécrit. Sur les 44 défauts trouvés dans le texte réécrit, 35 étaient hérités du droit officiel et 9 introduits par la réécriture. Les 28 de l'audit 7 ont depuis été corrigés~; les 16 de l'audit 8 restent ouverts. Le code fiscal, exception du premier échantillon apparié, compte ici 3 défauts officiels et 5 défauts réécrits sur 96 articles.
 
 \subsection{Balayages~: rendement et plateau}
 
@@ -724,7 +725,7 @@ Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les 
 
 \section{Conclusion et travaux futurs}
 
-Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team distincte, et mesuré ce qui reste faux. Mesuré contre le droit officiel sur les mêmes articles, chaque défaut contesté vérifié, le droit réécrit compte 34\,\% de défauts grossiers en moins sur 1\,879 articles à la date des audits, et \textbf{54\,\% de moins} aujourd'hui sur deux nouveaux échantillons de 1\,264 articles (3,5\,\% contre 7,5\,\%). Les quatre cinquièmes des défauts qui restent sont hérités du droit en vigueur. Le projet a coûté environ 1\,400~dollars, 2\,500 à 10\,000 fois moins que le même travail par des juristes. Toute la trace est publique.
+Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team distincte, et mesuré ce qui reste faux. Mesuré contre le droit officiel sur les mêmes articles, chaque défaut contesté vérifié, le droit réécrit compte 34\,\% de défauts grossiers en moins sur 1\,879 articles à la date des audits, et \textbf{54\,\% de moins} sur deux nouveaux échantillons de 1\,264 articles tirés en fin de travail (3,5\,\% contre 7,5\,\%). Les quatre cinquièmes des défauts trouvés sont hérités du droit en vigueur. Le projet a coûté environ 1\,400~dollars, 2\,500 à 10\,000 fois moins que le même travail par des juristes. Toute la trace est publique.
 
 Prochaines étapes~:
 \begin{itemize}
