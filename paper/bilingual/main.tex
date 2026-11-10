@@ -33,7 +33,8 @@ AI Agents Rewrite and Red-Team\\
   \small Independent
   \and
   Kevin Primicerio\\
-  \small Independent
+  \small Independent\\
+  \small\texttt{kevin.primicerio@gmail.com}
 }
 
 \date{31 October 2026}
@@ -44,7 +45,7 @@ AI Agents Rewrite and Red-Team\\
 \begin{center}\small\emph{A French version of this paper follows, from page~\pageref{fr:start}.}\end{center}
 
 \begin{abstract}
-Turning a political programme into enforceable law means amending a vast, interconnected corpus: statutes, decrees, tax annexes and future versions that often contradict one another. We study whether a policy-configurable pipeline of AI agents can make this translation coherent, verifiable and far cheaper than manual drafting. Case study: five major French codes in full (Labour, the General Tax Code and its four annexes, Social Security, Town Planning, Construction and Housing), 30{,}317 articles from the official LEGI database as of 18 October 2026, rewritten according to reforms inspired by David Lisnard's 2027 programme, in an independent project. The work ran in three passes and an open public review: every article rewritten (14{,}115 rewritten, 16{,}199 retained with a justification), a complete coherence re-reading, then a separate red team that applied 1{,}285 corrections and measured reliability with blind random audits. On two fresh samples totalling 1{,}264 articles, audited blind on both texts with the same protocol, the rewritten law has \textbf{54\% fewer gross defects} than the law in force (95\% CI 40--64\%): 3.5\%\,$\pm$\,1.0 against 7.5\%\,$\pm$\,1.5 (paired test, $p \approx 2\times10^{-10}$). The cost is 2{,}500 to 10{,}000 times lower than estimates for the same work by lawyers. The programme is a separate input: defect detection does not depend on it, and we invite other programmes to be run through the same pipeline. These results, produced and measured by AI agents alone, are released for verification by lawyers and citizens.
+Turning a political programme into enforceable law means amending a vast, interconnected corpus: statutes, decrees, tax annexes and future versions that often contradict one another. We study whether a policy-configurable pipeline of AI agents can make this translation coherent, verifiable and far cheaper than manual drafting. Case study: five major French codes in full (Labour, the General Tax Code and its four annexes, Social Security, Town Planning, Construction and Housing), 30{,}317 articles from the official LEGI database as of 18 October 2026, rewritten according to reforms inspired by David Lisnard's 2027 programme, in an independent project. The work ran in three passes and an open public review: every article rewritten (14{,}115 rewritten, 16{,}199 retained with a justification), a complete coherence re-reading, then a separate red team that applied 1{,}285 corrections and measured reliability with blind random audits. On two fresh samples totalling 1{,}264 articles, audited blind on both texts with the same protocol, the rewritten law has \textbf{54\% fewer gross defects} than the law in force (95\% CI 40--64\%): 3.5\%\,$\pm$\,1.0 against 7.5\%\,$\pm$\,1.5 (paired test, $p \approx 2\times10^{-10}$). The project cost about US\$1{,}400 in cash, against an order-of-magnitude estimate of \euro{}6 to 36 million for the same work by lawyers. The programme is a separate input: the coherence checks do not depend on it, and we invite other programmes to be run through the same pipeline. These results, produced and measured by AI agents alone, are released for verification by lawyers and citizens.
 \end{abstract}
 
 \begin{center}
@@ -104,7 +105,7 @@ We break it into three aims:
     \item a guarded writer that cannot silently overwrite (\S\ref{sec:redteam}).
   \end{itemize}
   \item A measurement method: six blind, stratified random audits, with a taxonomy of ten defect families (F1--F10). The rate has a confidence interval, not an anecdote (\S\ref{sec:measure}).
-  \item A paired baseline: the same audit run on the official law, on the same articles. The rewritten law has 34\% fewer gross defects than the law it replaces on 1{,}879 articles at the time of the audits (4.6\% against 7.0\%), and \textbf{54\% fewer} on two fresh samples of 1{,}264 articles drawn at the end of the work (3.5\% against 7.5\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
+  \item A paired baseline: the same audit run on the official law, on the same articles. The rewritten law has 34\% fewer gross defects than the law it replaces on 1{,}879 articles at the time of the audits (4.6\% against 7.0\%), and \textbf{54\% fewer} on two fresh samples totalling 1{,}264 articles drawn at the end of the work (3.5\% against 7.5\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
   \item A cost comparison: about US\$1{,}400 in cash, US\$3{,}500 to 5{,}100 at API prices, against order-of-magnitude estimates of \euro{}6 to 36 million for the same work by lawyers, 2{,}500 to 10{,}000 times more at the midpoints (Table~\ref{tab:lawyers} ranges run from 1{,}300 to 28{,}000, excluding human direction time, and lawyer hours are assumptions; \S\ref{sec:cost}).
   \item Empirical findings on what AI agents do well and badly on legal coherence (\S\ref{sec:results}--\S\ref{sec:discussion}):
   \begin{itemize}
@@ -150,7 +151,7 @@ We distinguish four questions, which belong to different layers:
   \item \textbf{Consistency verification:} how do they detect contradictions, broken references, incompatible provisions and implementation errors?
   \item \textbf{Independent evaluation:} how can the resulting corpus be evaluated without privileging a particular political philosophy?
 \end{itemize}
-Taking a complete, ambitious programme as the target shows that a large-scale reform can be drafted end to end with AI while ending up less defective than the law in force (\S\ref{sec:fresh}). Only the first layer should change with another programme, whether economically liberal, centrist, socialist, conservative or otherwise. The red team was instructed to fix contradictions and loopholes, \emph{never} to change political choices. Verification and evaluation do not depend on the programme; transformation depends on it through its instructions, which only need to be replaced (\S\ref{sec:policy}).
+Taking a complete, ambitious programme as the target shows that a large-scale reform can be drafted end to end with AI while ending up less defective than the law in force (\S\ref{sec:fresh}). With another programme, whether economically liberal, centrist, socialist, conservative or otherwise, the policy objects, the orientation of the drafting instruction and the red team's alignment criterion would change; the guards, the validation and the coherence audits would not (\S\ref{sec:policy}, Table~\ref{tab:portability}). The red team was instructed to fix contradictions and loopholes, \emph{never} to change political choices.
 
 \section{Related work}
 
@@ -246,7 +247,7 @@ Editorial invariants apply throughout:
 \end{itemize}
 
 \paragraph{Replacing the programme.}
-In principle, another programme would replace the policy layer and leave the rest untouched. Table~\ref{tab:portability} states what in the current pipeline depends on the programme and what does not.
+Table~\ref{tab:portability} states what in the current pipeline depends on the programme and what does not.
 
 \begin{table}[ht]
 \centering
@@ -267,7 +268,7 @@ Official-law baseline & No & Nothing: it reads no programme.\\
 \label{tab:portability}
 \end{table}
 
-The paired audit of the official law (\S\ref{sec:baseline}) shows that the evaluation works without any programme. No other programme has been implemented yet, however: the portability of the transformation itself is not measured.
+The paired audit of the official law (\S\ref{sec:baseline}) shows that the evaluation works without any programme. In the two fresh samples (\S\ref{sec:fresh}), no defect was classified F8, on either text: the headline rate rests only on families that do not depend on the programme. No other programme has been implemented yet, however: the portability of the transformation itself is not measured.
 
 \subsection{Article-level workers}
 
@@ -724,7 +725,7 @@ The results are AI-only by design, and no lawyer has validated them yet. The pip
 
 \section{Conclusion and future work}
 
-We rewrote five French codes and the four CGI annexes end to end with AI agents, red-teamed the result with a separate pipeline, and measured what remains wrong. Measured against the official law on the same articles, with every disputed defect verified, the rewritten law has 34\% fewer gross defects on 1{,}879 articles at the time of the audits, and \textbf{54\% fewer} on two fresh samples of 1{,}264 articles drawn at the end of the work (3.5\% against 7.5\%). Four fifths of the defects found are inherited from the law in force. It cost about US\$1{,}400, 2{,}500 to 10{,}000 times less than the same work by lawyers would have. The full trail is public.
+We rewrote five French codes and the four CGI annexes end to end with AI agents, red-teamed the result with a separate pipeline, and measured what remains wrong. Measured against the official law on the same articles, with every disputed defect verified, the rewritten law has 34\% fewer gross defects on 1{,}879 articles at the time of the audits, and \textbf{54\% fewer} on two fresh samples totalling 1{,}264 articles drawn at the end of the work (3.5\% against 7.5\%). Four fifths of the defects found are inherited from the law in force. It cost about US\$1{,}400 in cash, excluding human direction time, against an order-of-magnitude estimate of \euro{}6 to 36 million for the same work by lawyers (\S\ref{sec:cost}). The full trail is public.
 
 Next steps:
 \begin{itemize}
@@ -860,7 +861,7 @@ des agents d'IA réécrivent et passent au \emph{red-teaming}\\
 {\large
 \begin{tabular}[t]{c}Alexandre Masmejean\\ \small Indépendant\end{tabular}\hskip 1em
 \begin{tabular}[t]{c}Nathalie Gouailhardou\\ \small Indépendante\end{tabular}\hskip 1em
-\begin{tabular}[t]{c}Kevin Primicerio\\ \small Indépendant\end{tabular}\par}
+\begin{tabular}[t]{c}Kevin Primicerio\\ \small Indépendant\\ \small\texttt{kevin.primicerio@gmail.com}\end{tabular}\par}
 \vskip 1em
 {\large 31 octobre 2026\par}
 \vskip 0.5em
@@ -869,7 +870,7 @@ des agents d'IA réécrivent et passent au \emph{red-teaming}\\
 \vskip 1em
 
 \begin{abstract}
-Traduire un programme politique en droit applicable exige de modifier un corpus vaste et interconnecté~: lois, décrets, annexes fiscales et versions futures, qui se contredisent souvent. Nous étudions si une chaîne d'agents d'IA, configurable par un programme politique, peut faire cette traduction de façon cohérente, vérifiable et bien moins coûteuse que la rédaction manuelle. Cas d'étude~: cinq grands codes français complets (travail, CGI et ses quatre annexes, sécurité sociale, urbanisme, construction et habitation), soit 30\,317 articles de la base LEGI au 18~octobre 2026, réécrits selon des réformes inspirées du programme 2027 de David Lisnard, dans un projet indépendant. Le travail a suivi trois passes et une relecture publique ouverte~: réécriture de chaque article (14\,115 réécrits, 16\,199 maintenus avec justification), relecture de cohérence complète, puis une red team distincte qui a appliqué 1\,285 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle. Sur deux nouveaux échantillons de 1\,264 articles jamais tirés auparavant, audités à l'aveugle sur les deux textes avec le même protocole, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 contre 7,5\,\%\,$\pm$\,1,5 (test apparié, $p \approx 2\times10^{-10}$). Le coût est 2\,500 à 10\,000 fois inférieur aux estimations du même travail par des juristes. Le programme est une entrée distincte~: la détection des défauts ne dépend pas de lui, et nous invitons à faire passer d'autres programmes par la même chaîne. Ces résultats, produits et mesurés par l'IA seule, sont publiés pour que juristes et citoyens les vérifient.
+Traduire un programme politique en droit applicable exige de modifier un corpus vaste et interconnecté~: lois, décrets, annexes fiscales et versions futures, qui se contredisent souvent. Nous étudions si une chaîne d'agents d'IA, configurable par un programme politique, peut faire cette traduction de façon cohérente, vérifiable et bien moins coûteuse que la rédaction manuelle. Cas d'étude~: cinq grands codes français complets (travail, CGI et ses quatre annexes, sécurité sociale, urbanisme, construction et habitation), soit 30\,317 articles de la base LEGI au 18~octobre 2026, réécrits selon des réformes inspirées du programme 2027 de David Lisnard, dans un projet indépendant. Le travail a suivi trois passes et une relecture publique ouverte~: réécriture de chaque article (14\,115 réécrits, 16\,199 maintenus avec justification), relecture de cohérence complète, puis une red team distincte qui a appliqué 1\,285 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle. Sur deux nouveaux échantillons totalisant 1\,264 articles jamais tirés auparavant, audités à l'aveugle sur les deux textes avec le même protocole, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 contre 7,5\,\%\,$\pm$\,1,5 (test apparié, $p \approx 2\times10^{-10}$). Le projet a coûté environ 1\,400~dollars déboursés, contre un ordre de grandeur estimé de 6 à 36~millions d'euros pour le même travail par des juristes. Le programme est une entrée distincte~: les contrôles de cohérence ne dépendent pas de lui, et nous invitons à faire passer d'autres programmes par la même chaîne. Ces résultats, produits et mesurés par l'IA seule, sont publiés pour que juristes et citoyens les vérifient.
 \end{abstract}
 
 \begin{center}
@@ -933,7 +934,7 @@ Nous la décomposons en trois objectifs~:
     \item un outil d'écriture contrôlée, qui ne peut rien écraser sans vérification (\S\ref{fr:sec:redteam}).
   \end{itemize}
   \item Une méthode de mesure~: six audits aléatoires stratifiés, menés à l'aveugle, avec une taxonomie de dix familles de défauts (F1 à F10). Le taux s'accompagne d'un intervalle de confiance, pas d'une anecdote (\S\ref{fr:sec:measure}).
-  \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte 34\,\% de défauts grossiers en moins que le droit qu'il remplace sur 1\,879 articles à la date des audits (4,6\,\% contre 7,0\,\%), et \textbf{54\,\% de moins} sur deux nouveaux échantillons de 1\,264 articles tirés en fin de travail (3,5\,\% contre 7,5\,\%) (\S\ref{fr:sec:baseline}, \S\ref{fr:sec:fresh}).
+  \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte 34\,\% de défauts grossiers en moins que le droit qu'il remplace sur 1\,879 articles à la date des audits (4,6\,\% contre 7,0\,\%), et \textbf{54\,\% de moins} sur deux nouveaux échantillons totalisant 1\,264 articles tirés en fin de travail (3,5\,\% contre 7,5\,\%) (\S\ref{fr:sec:baseline}, \S\ref{fr:sec:fresh}).
   \item Une comparaison de coût~: environ 1\,400~dollars déboursés, 3\,500 à 5\,100~dollars au prix de l'API, contre des ordres de grandeur de 6 à 36~millions d'euros pour le même travail par des juristes, soit 2\,500 à 10\,000 fois plus aux points médians (les fourchettes du tableau~\ref{fr:tab:lawyers} vont de 1\,300 à 28\,000, hors temps humain de direction, et les heures de juriste sont des hypothèses~; \S\ref{fr:sec:cost}).
   \item Des constats empiriques sur ce que les agents d'IA font bien et mal en matière de cohérence juridique (\S\ref{fr:sec:results}--\S\ref{fr:sec:discussion})~:
   \begin{itemize}
@@ -979,7 +980,7 @@ Nous distinguons quatre questions, qui relèvent de couches différentes~:
   \item \textbf{Vérification de cohérence~:} comment détectent-ils les contradictions, renvois morts, dispositions incompatibles et erreurs de mise en \oe{}uvre~?
   \item \textbf{Évaluation indépendante~:} comment évaluer le corpus obtenu sans privilégier une philosophie politique~?
 \end{itemize}
-Prendre un programme complet et ambitieux comme cap montre qu'une réforme de grande ampleur peut être rédigée de bout en bout avec l'IA, tout en restant moins défectueuse que le droit en vigueur (\S\ref{fr:sec:fresh}). Seule la première couche devrait changer avec un autre programme, qu'il soit libéral, centriste, socialiste, conservateur ou autre. La red team avait pour consigne de corriger les contradictions et les failles, \emph{jamais} de modifier les choix politiques. La vérification et l'évaluation ne dépendent pas du programme~; la transformation en dépend par ses consignes, qu'il suffit de remplacer (\S\ref{fr:sec:policy}).
+Prendre un programme complet et ambitieux comme cap montre qu'une réforme de grande ampleur peut être rédigée de bout en bout avec l'IA, tout en restant moins défectueuse que le droit en vigueur (\S\ref{fr:sec:fresh}). Avec un autre programme, qu'il soit libéral, centriste, socialiste, conservateur ou autre, changeraient les fichiers de paramétrage, l'orientation de la consigne de rédaction et le critère d'alignement de la red team~; les garde-fous, la validation et les audits de cohérence resteraient les mêmes (\S\ref{fr:sec:policy}, tableau~\ref{fr:tab:portability}). La red team avait pour consigne de corriger les contradictions et les failles, \emph{jamais} de modifier les choix politiques.
 
 \section{Travaux connexes}
 
@@ -1074,7 +1075,7 @@ Des invariants éditoriaux s'appliquent partout~:
 \end{itemize}
 
 \paragraph{Remplacer le programme.}
-En principe, un autre programme remplacerait le paramétrage du programme sans toucher au reste. Le tableau~\ref{fr:tab:portability} dit ce qui, dans la chaîne actuelle, dépend du programme et ce qui n'en dépend pas.
+Le tableau~\ref{fr:tab:portability} dit ce qui, dans la chaîne actuelle, dépend du programme et ce qui n'en dépend pas.
 
 \begin{table}[ht]
 \centering
@@ -1095,7 +1096,7 @@ Référence sur le droit officiel & Non & Rien~: elle ne lit aucun programme.\\
 \label{fr:tab:portability}
 \end{table}
 
-L'audit apparié du droit officiel (\S\ref{fr:sec:baseline}) montre que l'évaluation fonctionne sans aucun programme. En revanche, aucun autre programme n'a encore été mis en \oe{}uvre~: la portabilité de la transformation elle-même n'est pas mesurée.
+L'audit apparié du droit officiel (\S\ref{fr:sec:baseline}) montre que l'évaluation fonctionne sans aucun programme. Dans les deux nouveaux échantillons (\S\ref{fr:sec:fresh}), aucun défaut n'a été classé F8, sur aucun des deux textes~: le taux principal ne repose que sur des familles qui ne dépendent pas du programme. En revanche, aucun autre programme n'a encore été mis en \oe{}uvre~: la portabilité de la transformation elle-même n'est pas mesurée.
 
 \subsection{Agents par article}
 
@@ -1552,7 +1553,7 @@ Les résultats sont produits par l'IA seule, par choix, et aucun juriste ne les 
 
 \section{Conclusion et travaux futurs}
 
-Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team distincte, et mesuré ce qui reste faux. Mesuré contre le droit officiel sur les mêmes articles, chaque défaut contesté vérifié, le droit réécrit compte 34\,\% de défauts grossiers en moins sur 1\,879 articles à la date des audits, et \textbf{54\,\% de moins} sur deux nouveaux échantillons de 1\,264 articles tirés en fin de travail (3,5\,\% contre 7,5\,\%). Les quatre cinquièmes des défauts trouvés sont hérités du droit en vigueur. Le projet a coûté environ 1\,400~dollars, 2\,500 à 10\,000 fois moins que le même travail par des juristes. Toute la trace est publique.
+Nous avons réécrit de bout en bout cinq codes français et les quatre annexes du CGI avec des agents d'IA, éprouvé le résultat par une red team distincte, et mesuré ce qui reste faux. Mesuré contre le droit officiel sur les mêmes articles, chaque défaut contesté vérifié, le droit réécrit compte 34\,\% de défauts grossiers en moins sur 1\,879 articles à la date des audits, et \textbf{54\,\% de moins} sur deux nouveaux échantillons totalisant 1\,264 articles tirés en fin de travail (3,5\,\% contre 7,5\,\%). Les quatre cinquièmes des défauts trouvés sont hérités du droit en vigueur. Le projet a coûté environ 1\,400~dollars déboursés, hors temps humain de direction, contre un ordre de grandeur estimé de 6 à 36~millions d'euros pour le même travail par des juristes (\S\ref{fr:sec:cost}). Toute la trace est publique.
 
 Prochaines étapes~:
 \begin{itemize}

@@ -62,7 +62,7 @@ fr_title = (
     "{\\large\n"
     "\\begin{tabular}[t]{c}Alexandre Masmejean\\\\ \\small Indépendant\\end{tabular}\\hskip 1em\n"
     "\\begin{tabular}[t]{c}Nathalie Gouailhardou\\\\ \\small Indépendante\\end{tabular}\\hskip 1em\n"
-    "\\begin{tabular}[t]{c}Kevin Primicerio\\\\ \\small Indépendant\\end{tabular}\\par}\n"
+    "\\begin{tabular}[t]{c}Kevin Primicerio\\\\ \\small Indépendant\\\\ \\small\\texttt{kevin.primicerio@gmail.com}\\end{tabular}\\par}\n"
     "\\vskip 1em\n"
     "{\\large " + date + "\\par}\n"
     "\\vskip 0.5em\n"
