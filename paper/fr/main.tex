@@ -37,13 +37,13 @@ des agents d'IA réécrivent et passent au \emph{red-teaming}\\
   \small\texttt{kevin.primicerio@gmail.com}
 }
 
-\date{31 octobre 2026}
+\date{31 octobre 2026 (révisé le 10 novembre 2026)}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Traduire un programme politique en droit applicable exige de modifier un corpus vaste et interconnecté~: lois, décrets, annexes fiscales et versions futures, qui se contredisent souvent. Nous étudions si une chaîne d'agents d'IA, configurable par un programme politique, peut faire cette traduction de façon cohérente, vérifiable et bien moins coûteuse que la rédaction manuelle. Cas d'étude~: cinq grands codes français complets (travail, CGI et ses quatre annexes, sécurité sociale, urbanisme, construction et habitation), soit 30\,317 articles de la base LEGI au 18~octobre 2026, réécrits selon des réformes inspirées du programme 2027 de David Lisnard, dans un projet indépendant. Le travail a suivi trois passes et une relecture publique ouverte~: réécriture de chaque article (14\,115 réécrits, 16\,199 maintenus avec justification), relecture de cohérence complète, puis une red team distincte qui a appliqué 1\,285 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle. Sur deux nouveaux échantillons totalisant 1\,264 articles jamais tirés auparavant, audités à l'aveugle sur les deux textes avec le même protocole, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 contre 7,5\,\%\,$\pm$\,1,5 (test apparié, $p \approx 2\times10^{-10}$). Le projet a coûté environ 1\,400~dollars déboursés, contre un ordre de grandeur estimé de 6 à 36~millions d'euros pour le même travail par des juristes. Le programme est une entrée distincte~: les contrôles de cohérence ne dépendent pas de lui, et nous invitons à faire passer d'autres programmes par la même chaîne. Ces résultats, produits et mesurés par l'IA seule, sont publiés pour que juristes et citoyens les vérifient.
+Traduire un programme politique en droit applicable exige de modifier un corpus vaste et interconnecté~: lois, décrets, annexes fiscales et versions futures, qui se contredisent souvent. Nous étudions si une chaîne d'agents d'IA, configurable par un programme politique, peut faire cette traduction de façon cohérente, vérifiable et bien moins coûteuse que la rédaction manuelle. Cas d'étude~: cinq grands codes français complets (travail, CGI et ses quatre annexes, sécurité sociale, urbanisme, construction et habitation), soit 30\,317 articles de la base LEGI au 18~octobre 2026, réécrits selon des réformes inspirées du programme 2027 de David Lisnard, dans un projet indépendant. Le travail a suivi trois passes et une relecture publique ouverte~: rédaction d'une proposition pour chaque article (14\,115 réécrits, 16\,199 maintenus avec justification), relecture de cohérence complète, puis une red team distincte qui a appliqué 1\,285 corrections et mesuré la fiabilité par des audits aléatoires à l'aveugle. Sur deux nouveaux échantillons totalisant 1\,264 articles jamais tirés auparavant, audités à l'aveugle sur les deux textes avec le même protocole, le droit réécrit compte \textbf{54\,\% de défauts grossiers en moins} que le droit en vigueur (IC à 95\,\%~: 40 à 64\,\%)~: 3,5\,\%\,$\pm$\,1,0 contre 7,5\,\%\,$\pm$\,1,5 (test apparié, $p \approx 2\times10^{-10}$). Le projet a coûté environ 1\,400~dollars déboursés, contre un ordre de grandeur estimé de 6 à 36~millions d'euros pour le même travail par des juristes. Le programme est une entrée distincte~: les contrôles de cohérence ne dépendent pas de lui, et nous invitons à faire passer d'autres programmes par la même chaîne. Ces résultats, produits et mesurés par l'IA seule, sont publiés pour que juristes et citoyens les vérifient.
 \end{abstract}
 
 \begin{center}
@@ -106,7 +106,7 @@ Nous la décomposons en trois objectifs~:
     \item une correction soumise à un critère d'alignement explicite~;
     \item un outil d'écriture contrôlée, qui ne peut rien écraser sans vérification (\S\ref{sec:redteam}).
   \end{itemize}
-  \item Une méthode de mesure~: six audits aléatoires stratifiés, menés à l'aveugle, avec une taxonomie de dix familles de défauts (F1 à F10). Le taux s'accompagne d'un intervalle de confiance, pas d'une anecdote (\S\ref{sec:measure}).
+  \item Une méthode de mesure~: huit audits aléatoires stratifiés, menés à l'aveugle, avec une taxonomie de dix familles de défauts (F1 à F10). Le taux s'accompagne d'un intervalle de confiance, pas d'une anecdote (\S\ref{sec:measure}).
   \item Une référence appariée~: le même audit mené sur le droit officiel, sur les mêmes articles. Le droit réécrit compte 34\,\% de défauts grossiers en moins que le droit qu'il remplace sur 1\,879 articles à la date des audits (4,6\,\% contre 7,0\,\%), et \textbf{54\,\% de moins} sur deux nouveaux échantillons totalisant 1\,264 articles tirés en fin de travail (3,5\,\% contre 7,5\,\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
   \item Une comparaison de coût~: environ 1\,400~dollars déboursés, 3\,500 à 5\,100~dollars au prix de l'API, contre des ordres de grandeur de 6 à 36~millions d'euros pour le même travail par des juristes, soit 2\,500 à 10\,000 fois plus aux points médians (les fourchettes du tableau~\ref{tab:lawyers} vont de 1\,300 à 28\,000, hors temps humain de direction, et les heures de juriste sont des hypothèses~; \S\ref{sec:cost}).
   \item Des constats empiriques sur ce que les agents d'IA font bien et mal en matière de cohérence juridique (\S\ref{sec:results}--\S\ref{sec:discussion})~:
@@ -128,9 +128,9 @@ Le tableau~\ref{tab:glance} résume l'ensemble~: trois passes sur les cinq codes
 Étape & Dates (oct.\ 2026) & Agents & Ce qu'elle a fait\\
 \midrule
 Passe 1~: rédaction & 18--23 & Codex d'OpenAI (\texttt{gpt-6-astra}) & A lu chaque article en entier et rédigé une proposition complète~: 14\,115 réécrits, 16\,199 maintenus avec une justification écrite.\\
-Passe 2~: cohérence & 23--29 & Codex d'OpenAI (\texttt{gpt-6.1-sol}) & A relu les 30\,314 propositions au regard de leurs sources et contreparties, contradictions d'abord~; 2\,894 sessions d'agents.\\
+Passe 2~: cohérence & 23--29 & Codex d'OpenAI (\texttt{gpt-6-astra}, puis \texttt{gpt-6.1-sol}) & A relu les 30\,314 propositions au regard de leurs sources et contreparties, contradictions d'abord~; 2\,991 tâches de relecture.\\
 Passe 3~: red team & 26--31 & Claude Code (Opus 5.5, Fable 5.1) & Environ 570 exécutions d'agents~: 303 objections soulevées, 243 retenues~; 1\,285 corrections sur 1\,211 articles~; lecture complète des 2\,740 articles fiscaux réécrits.\\
-Relecture publique & dès le 27 & Contributeur externe, lecteurs & 13 signalements (\og issues \fg{}) et 2 demandes de fusion sur GitHub, dont neuf des onze premières visaient un vrai défaut~; triées au fil de l'eau~; toutes ont reçu une réponse à la date de cette version.\\
+Relecture publique & dès le 27 & Contributeur externe, lecteurs & 16 signalements (\og issues \fg{}) et 2 demandes de fusion sur GitHub (dont deux signalements sur cet article)~; neuf des onze premiers signalements visaient un vrai défaut~; triés au fil de l'eau~; tous ont reçu une réponse et sont clos à la date de cette version.\\
 Mesure & 29--31 & Auditeurs IA à l'aveugle & Huit audits aléatoires (3\,143 articles lus à l'aveugle) et trois comparaisons appariées avec le droit officiel.\\
 \bottomrule
 \end{tabularx}
@@ -281,7 +281,7 @@ Chaque article, ou lot d'articles liés, est traité par un agent de programmati
 \end{itemize}
 Il doit rendre l'article proposé \emph{complet}, jamais un résumé, avec un motif et des notes de revue. Il lui attribue l'un de deux statuts, \texttt{rewrite\_draft} ou \texttt{retained\_unchanged}. Les abrogations et réductions partielles sont typées (\texttt{full\_repeal}, \texttt{normative\_reduction}). Chaque disposition retirée est listée, pour qu'une réduction soit vérifiable.
 
-La première passe a utilisé un modèle d'OpenAI (\texttt{gpt-6-astra}, effort moyen) via l'agent en ligne de commande Codex. La seconde passe a utilisé \texttt{gpt-6.1-sol} en effort élevé.
+La première passe et l'essentiel de la seconde ont utilisé un modèle d'OpenAI (\texttt{gpt-6-astra}, effort moyen) via l'agent en ligne de commande Codex. Les 1\,079 dernières relectures de la seconde passe (28 et 29~octobre) ont utilisé \texttt{gpt-6.1-sol} en effort élevé.
 
 \subsection{Seconde passe~: les contradictions d'abord}
 
@@ -333,7 +333,7 @@ Chaque objection indique~:
   \item les passages exacts, le raisonnement et une \emph{correction minimale}~;
   \item ce qu'il faut préserver~: droits, faveurs et transitions.
 \end{itemize}
-Les 1\,943 alertes structurelles jugées prioritaires par l'audit statique ont été qualifiées une à une. Les doublons ont été fusionnés avec un motif écrit (46 fusions).
+La red team a qualifié une à une 1\,943 alertes structurelles de l'audit statique, dont toutes les alertes prioritaires encore vivantes sur le texte final (1\,324). Les doublons ont été fusionnés avec un motif écrit (46 fusions).
 
 \subsection{Réexamen sur les différences}
 
@@ -368,7 +368,7 @@ Le coordinateur applique ensuite les corrections avec l'outil d'écriture contr�
 
 \subsection{Contributions externes}
 
-Pendant la revue, un contributeur externe (le troisième auteur) a ouvert 13 signalements (\og issues \fg{} GitHub) et deux demandes de fusion sur le dépôt public. Produites avec ses propres agents d'IA, elles portaient sur des renvois du code du travail, des décrets qui survivent à des lois abrogées, des sanctions et les commissions du CSE. Chaque issue a été triée par rapport au registre, sur le texte courant. Trois d'entre elles demandaient un changement d'orientation politique~; elles ont été expliquées et closes comme non retenues.
+Pendant la revue, un contributeur externe (le troisième auteur) a ouvert 13 signalements (\og issues \fg{} GitHub) et deux demandes de fusion sur le dépôt public, puis trois autres issues après elle~: une sur un code et deux sur cet article. Produites avec ses propres agents d'IA, les issues sur les codes portaient sur des renvois du code du travail, des décrets qui survivent à des lois abrogées, des sanctions, les commissions du CSE, une exonération d'impôt sur la fortune immobilière et une garantie du contentieux de l'urbanisme. Chacune a été triée par rapport au registre, sur le texte courant. Quatre demandaient un changement d'orientation politique ou le retrait d'une faveur~; elles ont été expliquées et closes comme non retenues. Deux ont été retirées par leur auteur. Les 18 lignes de correction appliquées le 4~novembre à la suite des derniers signalements ne sont pas comptées dans les totaux de la \S\ref{sec:results}.
 
 \section{Mesurer la fiabilité}
 \label{sec:measure}
@@ -388,7 +388,7 @@ Chaque article est classé~:
   \item \textbf{m} (mineur)~: notes fausses, rédaction maladroite mais sans effet, ou doute raisonnable~;
   \item \textbf{0}~: rien à signaler.
 \end{itemize}
-Tout G ou m exige une citation exacte. Les taux sont pondérés par strate, avec des intervalles à 95\,\%. Les défauts sont classés en dix familles~:
+Tout G ou m exige une citation exacte. Les pourcentages sont de simples proportions des articles lus, avec des intervalles à 95\,\% calculés par l'approximation normale. L'allocation étant proche de la proportionnelle, les taux pondérés par strate (outil publié \texttt{audit\_rate.py}) s'en écartent d'au plus 0,25 point pour les défauts grossiers~; sur les nouveaux échantillons de la \S\ref{sec:fresh}, ils donnent 3,6\,\% contre 7,7\,\%, soit une baisse de 53,5\,\%. L'intervalle d'une baisse relative est calculé par la méthode logarithmique pour un rapport de proportions appariées. Les défauts sont classés en dix familles~:
 
 \begin{table}[ht]
 \centering
@@ -475,9 +475,9 @@ Les auditeurs ont aussi relevé des risques de droit supérieur (F9), publiés d
 \toprule
 Audit (état du texte) & Échantillon & G & Taux G & G ou m\\
 \midrule
-1 (après corrections P0/P1) & 309 & 12 & 4,0\,\% $\pm$ 2,2 & 21,1\,\%\\
-2 (après balayage 1) & 314 & 9 & 2,9\,\% $\pm$ 1,9 & 22,1\,\%\\
-3 (après balayage 2) & 314 & 12 & 3,8\,\% $\pm$ 2,1 & 17,7\,\%\\
+1 (après corrections P0/P1) & 309 & 12 & 3,9\,\% $\pm$ 2,2 & 21,0\,\%\\
+2 (après balayage 1) & 314 & 9 & 2,9\,\% $\pm$ 1,8 & 22,6\,\%\\
+3 (après balayage 2) & 314 & 12 & 3,8\,\% $\pm$ 2,1 & 17,8\,\%\\
 4 (après objections P2) & 314 & 8 & 2,5\,\% $\pm$ 1,7 & 14,6\,\%\\
 5 (après tour 4) & 314 & 10 & 3,2\,\% $\pm$ 1,9 & 22,6\,\%\\
 6 (après tour 5) & 314 & 13 & 4,1\,\% $\pm$ 2,2 & 15,3\,\%\\
@@ -503,7 +503,7 @@ Ensemble, audits 1 à 6 & 1\,879 & 64 & \textbf{3,4\,\% $\pm$ 0,8} & \\
   grid=major, grid style={gray!20},
 ]
 \addplot+[only marks, mark=*, black, error bars/.cd, y dir=both, y explicit]
-  coordinates {(1,4.0) +- (0,2.2) (2,2.9) +- (0,1.9) (3,3.8) +- (0,2.1)
+  coordinates {(1,3.9) +- (0,2.2) (2,2.9) +- (0,1.8) (3,3.8) +- (0,2.1)
                (4,2.5) +- (0,1.7) (5,3.2) +- (0,1.9) (6,4.1) +- (0,2.2)};
 \addplot+[only marks, mark=square*, blue!60!black, error bars/.cd, y dir=both, y explicit]
   coordinates {(7,2.4) +- (0,1.2) (8,1.4) +- (0,0.9)};
@@ -520,7 +520,7 @@ Ensemble, audits 1 à 6 & 1\,879 & 64 & \textbf{3,4\,\% $\pm$ 0,8} & \\
 
 Environ 3,4\,\% des articles (intervalle à 95\,\% de 2,6 à 4,2\,\%) portent encore un défaut grossier (tableau~\ref{tab:audits}, figure~\ref{fig:audits}). Autrement dit, un juriste qui lit 20 articles de sa matière a à peu près une chance sur deux de tomber sur au moins un défaut.
 
-Le taux ne baisse pas de façon mesurable d'un tour à l'autre, alors que chaque tour corrige 50 à 110 articles. C'est attendu. Si environ 1\,000 articles sont défectueux, en corriger 100 abaisse le taux d'environ 0,3 point, bien en dessous de ce qu'un audit de 314 articles peut détecter ($\pm$\,2 points).
+Le taux ne baisse pas de façon mesurable d'un tour à l'autre, alors que chaque tour applique entre 36 et 201 lignes de correction (tableau~\ref{tab:rounds}). C'est attendu. Si environ 1\,000 articles sont défectueux, en corriger 100 abaisse le taux d'environ 0,3 point, et en corriger 200 de moins de 0,7 point, bien en dessous de ce qu'un audit de 314 articles peut détecter ($\pm$\,2 points).
 
 La composition des défauts, elle, a changé~:
 \begin{itemize}
@@ -561,14 +561,14 @@ Maintenus sans changement (témoin) & 966 & 23 & 2,4\,\% & 22 & 2,3\,\%\\
 \multicolumn{4}{l}{Test apparié (McNemar, exact)} & \multicolumn{2}{r}{$p \approx 2\times10^{-5}$}\\
 \bottomrule
 \end{tabular}
-\caption{Défauts grossiers du droit officiel et du droit réécrit, sur les mêmes 1\,879 articles tirés au hasard, après vérification de tout défaut vu d'un seul côté. Les chiffres du projet sont ceux de chaque audit, à sa date.}
+\caption{Défauts grossiers du droit officiel et du droit réécrit, sur les mêmes 1\,879 articles tirés au hasard, après vérification de tout défaut vu d'un seul côté. Les chiffres du projet sont ceux de chaque audit, à sa date. Trois défauts dont le vérificateur n'a pas pu établir la présence dans le texte réécrit sont comptés comme présents.}
 \label{tab:baseline}
 \end{table}
 
 \paragraph{Résultat.}
 Après vérification, les articles maintenus, dont le texte est le même des deux côtés, présentent le même taux (23 et 22 défauts). La vérification semble donc effacer l'écart de sévérité. Sur cette base (tableau~\ref{tab:baseline})~:
 \begin{itemize}
-  \item le droit réécrit compte \textbf{34\,\% de défauts grossiers en moins} que le droit officiel qu'il remplace (IC à 95\,\%~: 19 à 47\,\%)~: 4,6\,\% contre 7,0\,\%~;
+  \item le droit réécrit compte \textbf{34\,\% de défauts grossiers en moins} que le droit officiel qu'il remplace (IC à 95\,\%~: 20 à 46\,\%)~: 4,6\,\% contre 7,0\,\%~;
   \item parmi les articles réécrits, le taux passe de 11,8\,\% à 7,0\,\%~;
   \item pour chaque défaut introduit par la réécriture, plus de deux défauts du droit officiel ont été réparés (77 contre 32).
 \end{itemize}
@@ -581,7 +581,7 @@ Les chiffres du projet sont ceux de chaque audit, à sa date. Tout défaut gross
 
 Nous avons tiré 632 nouveaux articles, jamais tirés auparavant, avec les mêmes strates et une allocation doublée. Chacun a été audité deux fois, à l'aveugle~: une fois sur le texte réécrit actuel (audit 7), une fois sur le texte officiel, par 20 agents de chaque côté. Les auditeurs du texte réécrit savaient explicitement qu'un défaut hérité du texte officiel compte, ce qui rend ce côté plus sévère que dans les audits 1 à 6. Les 52 défauts vus d'un seul côté ont de nouveau été vérifiés dans les deux textes.
 
-Les 28 défauts encore présents dans cet échantillon ont ensuite été corrigés (36 lignes). L'audit a été répliqué sur un autre nouvel échantillon de 632 articles (audit 8), avec le même protocole et un autre modèle (Claude Fable 5.1 au lieu de Claude Opus 5.5)~; 44 défauts vus d'un seul côté ont été vérifiés. L'audit 8 a été lu pendant que ces corrections étaient appliquées, mais l'archive des corrections montre qu'aucune des 63 lignes appliquées depuis le tirage du premier nouvel échantillon n'a touché un article de l'audit 8 avant sa lecture~; la seule qui l'a fait ensuite a été appliquée 28 minutes après le dernier verdict de l'audit 8. Les deux audits mesurent donc le même état du corpus sur des articles disjoints, ce qui justifie de les cumuler. Les 16 défauts trouvés par l'audit 8 n'ont pas été corrigés~: cet échantillon reste une mesure intacte.
+Les 28 défauts encore présents dans cet échantillon ont ensuite été corrigés (36 lignes). L'audit a été répliqué sur un autre nouvel échantillon de 632 articles (audit 8), avec le même protocole et un autre modèle (Claude Fable 5.1 au lieu de Claude Opus 5.5)~; 44 défauts vus d'un seul côté ont été vérifiés. L'audit 8 a été lu pendant que ces corrections étaient appliquées, mais l'archive des corrections montre qu'aucune des 63 lignes appliquées depuis le tirage du premier nouvel échantillon n'a touché un article de l'audit 8 avant sa lecture~; la seule qui l'a fait ensuite a été appliquée 28 minutes après le dernier verdict de l'audit 8 sur le texte réécrit (le côté \og texte officiel \fg{}, que les corrections ne peuvent pas affecter, s'est achevé deux minutes avant elle). Les deux audits mesurent donc le même état du corpus sur des articles disjoints, ce qui justifie de les cumuler. Les 16 défauts trouvés par l'audit 8 n'ont pas été corrigés~: cet échantillon reste une mesure intacte.
 
 \begin{table}[ht]
 \centering
@@ -643,9 +643,9 @@ La lecture a consommé environ 30 millions de jetons (hors lectures de cache), s
 \paragraph{Ce qui a été payé.}
 \begin{itemize}
   \item \textbf{Passes de rédaction (Codex d'OpenAI)~:} environ 1\,000~dollars US de crédits API, plus un abonnement ChatGPT Pro (200~dollars par mois).
-  \item \textbf{Troisième passe (Claude Code)~:} un abonnement Claude Max (200~dollars par mois), sans crédits API facturés. Sa consommation enregistrée sur six jours est de 32\,046 requêtes au modèle, 29,5~millions de jetons de sortie, 5,1~milliards de jetons lus en cache et 135~millions de jetons écrits en cache~: environ \textbf{2\,500~dollars} aux tarifs de l'affichage des coûts de Claude Code, ou environ 4\,100~dollars aux prix publics de l'API.
+  \item \textbf{Troisième passe (Claude Code)~:} un abonnement Claude Max (200~dollars par mois), sans crédits API facturés. Sa consommation enregistrée sur six jours est de 32\,046 requêtes au modèle, 29,5~millions de jetons de sortie, 5,1~milliards de jetons lus en cache et 135~millions de jetons écrits en cache~: environ \textbf{2\,500~dollars} aux prix publics de l'API des deux modèles utilisés (Claude Opus 5.5 pour 97\,\% des requêtes, Claude Fable 5.1 pour le reste), ce qui concorde avec l'affichage des coûts de Claude Code. Aux prix de la génération précédente d'Opus (5 et 25~dollars par million de jetons d'entrée et de sortie, lectures de cache à 0,50~dollar), la même consommation coûterait environ 4\,100~dollars~; nous gardons ce montant comme borne haute.
 \end{itemize}
-En comptant un mois de chaque abonnement, la dépense réelle du projet a été d'environ \textbf{1\,400~dollars}, moins de 5~centimes par article. Au prix de l'API, elle aurait été de 3\,500 à 5\,100~dollars, soit 12 à 17~centimes par article. Ces montants n'incluent pas le temps humain~: quelques jours de direction et d'arbitrage d'une personne.
+En comptant un mois de chaque abonnement, la dépense réelle du projet a été d'environ \textbf{1\,400~dollars}, moins de 5~centimes par article. Au prix de l'API, elle aurait été d'environ 3\,500~dollars (12~centimes par article), et d'au plus 5\,100~dollars (17~centimes) avec la borne haute ci-dessus. Ces montants n'incluent pas le temps humain~: quelques jours de direction et d'arbitrage d'une personne.
 
 \paragraph{Ce que le même travail coûterait avec des juristes.}
 C'est un ordre de grandeur, pas une mesure, et il dépend de ses hypothèses~; nous donnons donc deux scénarios (tableau~\ref{tab:lawyers}). Tous deux ne comptent que le travail effectivement accompli ici~: 14\,115 réécritures et 16\,199 maintiens motivés en première passe, 30\,314 relectures en seconde, et environ 12\,500 lectures d'audit et de balayage, 1\,943 alertes qualifiées et 1\,285 corrections en troisième. Le scénario \emph{prudent} suppose 2~heures par article réécrit, une demi-heure par lecture et une heure et demie par correction. Le scénario \emph{réaliste} suppose 6~heures par article réécrit, ce qui laisse le temps d'en vérifier les renvois et les textes d'application, 1~heure par article maintenu et par relecture de cohérence, une demi-heure par lecture d'audit, 1~heure par alerte et 3~heures par correction. Les coûts retiennent 100~euros de l'heure pour des rédacteurs juridiques internes, 250~euros pour un tarif moyen de cabinet, et 1,10~dollar pour un euro.
@@ -663,7 +663,7 @@ Prudent & 60\,000 & 6 à 15 M\euro{} & 1\,300 à 4\,700 & 4\,700 à 11\,800\\
 Réaliste & 143\,000 & 14 à 36 M\euro{} & 3\,100 à 11\,300 & 11\,000 à 28\,000\\
 \bottomrule
 \end{tabular}
-\caption{Ordre de grandeur du coût du même travail par des juristes. 60\,000~heures représentent 35 à 40 années de travail~; 143\,000~heures, environ 85. Le travail de l'IA a coûté 3\,500 à 5\,100~dollars au prix de l'API et environ 1\,400~dollars en dépense réelle.}
+\caption{Ordre de grandeur du coût du même travail par des juristes. 60\,000~heures représentent 35 à 40 années de travail~; 143\,000~heures, environ 85. Le travail de l'IA a coûté environ 3\,500~dollars aux prix publics de l'API (5\,100~dollars avec la borne haute de la \S\ref{sec:cost}, qui donne les multiples les plus bas) et environ 1\,400~dollars en dépense réelle.}
 \label{tab:lawyers}
 \end{table}
 

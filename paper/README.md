@@ -8,7 +8,7 @@ arXiv accepts one submission per work and asks for translations to be included i
 | `source-code-of-law-bilingual.pdf` | Compiled preview of the bilingual submission (43 pages) |
 | `source-code-of-law-en.pdf`, `code-source-du-droit-fr.pdf` | English and French versions on their own, for reading |
 | `en/main.tex`, `fr/main.tex` | Sources of truth; `python3 build_bilingual.py` regenerates `bilingual/main.tex` from them |
-| `en/abstract.txt` | Plain-text abstract for the arXiv form (English; 1,564 characters, limit 1,920) |
+| `en/abstract.txt` | Plain-text abstract for the arXiv form (English; 1,571 characters, limit 1,920) |
 | `fr/abstract.txt` | French abstract, for reference |
 
 Suggested metadata:

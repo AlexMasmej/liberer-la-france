@@ -37,13 +37,13 @@ AI Agents Rewrite and Red-Team\\
   \small\texttt{kevin.primicerio@gmail.com}
 }
 
-\date{31 October 2026}
+\date{31 October 2026 (revised 10 November 2026)}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Turning a political programme into enforceable law means amending a vast, interconnected corpus: statutes, decrees, tax annexes and future versions that often contradict one another. We study whether a policy-configurable pipeline of AI agents can make this translation coherent, verifiable and far cheaper than manual drafting. Case study: five major French codes in full (Labour, the General Tax Code and its four annexes, Social Security, Town Planning, Construction and Housing), 30{,}317 articles from the official LEGI database as of 18 October 2026, rewritten according to reforms inspired by David Lisnard's 2027 programme, in an independent project. The work ran in three passes and an open public review: every article rewritten (14{,}115 rewritten, 16{,}199 retained with a justification), a complete coherence re-reading, then a separate red team that applied 1{,}285 corrections and measured reliability with blind random audits. On two fresh samples totalling 1{,}264 articles, audited blind on both texts with the same protocol, the rewritten law has \textbf{54\% fewer gross defects} than the law in force (95\% CI 40--64\%): 3.5\%\,$\pm$\,1.0 against 7.5\%\,$\pm$\,1.5 (paired test, $p \approx 2\times10^{-10}$). The project cost about US\$1{,}400 in cash, against an order-of-magnitude estimate of \euro{}6 to 36 million for the same work by lawyers. The programme is a separate input: the coherence checks do not depend on it, and we invite other programmes to be run through the same pipeline. These results, produced and measured by AI agents alone, are released for verification by lawyers and citizens.
+Turning a political programme into enforceable law means amending a vast, interconnected corpus: statutes, decrees, tax annexes and future versions that often contradict one another. We study whether a policy-configurable pipeline of AI agents can make this translation coherent, verifiable and far cheaper than manual drafting. Case study: five major French codes in full (Labour, the General Tax Code and its four annexes, Social Security, Town Planning, Construction and Housing), 30{,}317 articles from the official LEGI database as of 18 October 2026, rewritten according to reforms inspired by David Lisnard's 2027 programme, in an independent project. The work ran in three passes and an open public review: a first draft of every article (14{,}115 rewritten, 16{,}199 retained with a justification), a complete coherence re-reading, then a separate red team that applied 1{,}285 corrections and measured reliability with blind random audits. On two fresh samples totalling 1{,}264 articles, audited blind on both texts with the same protocol, the rewritten law has \textbf{54\% fewer gross defects} than the law in force (95\% CI 40--64\%): 3.5\%\,$\pm$\,1.0 against 7.5\%\,$\pm$\,1.5 (paired test, $p \approx 2\times10^{-10}$). The project cost about US\$1{,}400 in cash, against an order-of-magnitude estimate of \euro{}6 to 36 million for the same work by lawyers. The programme is a separate input: the coherence checks do not depend on it, and we invite other programmes to be run through the same pipeline. These results, produced and measured by AI agents alone, are released for verification by lawyers and citizens.
 \end{abstract}
 
 \begin{center}
@@ -102,7 +102,7 @@ We break it into three aims:
     \item correction under an explicit alignment criterion;
     \item a guarded writer that cannot silently overwrite (\S\ref{sec:redteam}).
   \end{itemize}
-  \item A measurement method: six blind, stratified random audits, with a taxonomy of ten defect families (F1--F10). The rate has a confidence interval, not an anecdote (\S\ref{sec:measure}).
+  \item A measurement method: eight blind, stratified random audits, with a taxonomy of ten defect families (F1--F10). The rate has a confidence interval, not an anecdote (\S\ref{sec:measure}).
   \item A paired baseline: the same audit run on the official law, on the same articles. The rewritten law has 34\% fewer gross defects than the law it replaces on 1{,}879 articles at the time of the audits (4.6\% against 7.0\%), and \textbf{54\% fewer} on two fresh samples totalling 1{,}264 articles drawn at the end of the work (3.5\% against 7.5\%) (\S\ref{sec:baseline}, \S\ref{sec:fresh}).
   \item A cost comparison: about US\$1{,}400 in cash, US\$3{,}500 to 5{,}100 at API prices, against order-of-magnitude estimates of \euro{}6 to 36 million for the same work by lawyers, 2{,}500 to 10{,}000 times more at the midpoints (Table~\ref{tab:lawyers} ranges run from 1{,}300 to 28{,}000, excluding human direction time, and lawyer hours are assumptions; \S\ref{sec:cost}).
   \item Empirical findings on what AI agents do well and badly on legal coherence (\S\ref{sec:results}--\S\ref{sec:discussion}):
@@ -124,9 +124,9 @@ Table~\ref{tab:glance} summarises the whole undertaking: three passes over the f
 Stage & Dates (Oct.\ 2026) & Agents & What it did\\
 \midrule
 Pass 1: drafting & 18--23 & OpenAI Codex (\texttt{gpt-6-astra}) & Read every article in full and wrote a complete proposal: 14{,}115 rewritten, 16{,}199 retained with a written justification.\\
-Pass 2: coherence & 23--29 & OpenAI Codex (\texttt{gpt-6.1-sol}) & Re-read all 30{,}314 proposals against their sources and counterparts, contradictions first; 2{,}894 agent sessions.\\
+Pass 2: coherence & 23--29 & OpenAI Codex (\texttt{gpt-6-astra}, then \texttt{gpt-6.1-sol}) & Re-read all 30{,}314 proposals against their sources and counterparts, contradictions first; 2{,}991 review jobs.\\
 Pass 3: red team & 26--31 & Claude Code (Opus 5.5, Fable 5.1) & About 570 agent runs: 303 objections raised and 243 retained; 1{,}285 corrections on 1{,}211 articles; full reading of the 2{,}740 rewritten tax articles.\\
-Public review & from 27 & External contributor, readers & 13 issues and 2 pull requests on GitHub, nine of the first eleven pointing at a real defect; triaged as they came; all had received a reply at the date of this version.\\
+Public review & from 27 & External contributor, readers & 16 issues and 2 pull requests on GitHub (two of the issues on this paper), nine of the first eleven pointing at a real defect; triaged as they came; all answered and closed at the date of this version.\\
 Measurement & 29--31 & Blind AI auditors & Eight random audits (3{,}143 articles read blind) and three paired comparisons with the official law.\\
 \bottomrule
 \end{tabularx}
@@ -278,7 +278,7 @@ Each article (or batch of related articles) is processed by a non-interactive co
 \end{itemize}
 It must return the \emph{complete} proposed article, never a summary, together with a reason and review notes. It assigns one of two statuses, \texttt{rewrite\_draft} or \texttt{retained\_unchanged}. Repeals and partial reductions are typed (\texttt{full\_repeal}, \texttt{normative\_reduction}). Every removed provision is listed, so that a reduction is auditable.
 
-The first pass used an OpenAI model (\texttt{gpt-6-astra}, medium effort) through the Codex command-line agent. The second pass used \texttt{gpt-6.1-sol} at high effort.
+The first pass and most of the second ran on an OpenAI model (\texttt{gpt-6-astra}, medium effort) through the Codex command-line agent. The last 1{,}079 re-readings of the second pass (28--29 October) ran on \texttt{gpt-6.1-sol} at high effort.
 
 \subsection{Second pass: contradictions first}
 
@@ -330,7 +330,7 @@ Each objection records:
   \item the exact passages, the reasoning and a \emph{minimal correction};
   \item what must be preserved: rights, favours and transitions.
 \end{itemize}
-The 1{,}943 structural alerts given high priority by the static audit were classified one by one. Duplicates were merged with a written reason (46 merges).
+The red team classified 1{,}943 structural alerts of the static audit one by one, including every high-priority alert still live on the final text (1{,}324). Duplicates were merged with a written reason (46 merges).
 
 \subsection{Re-examination on diffs}
 
@@ -365,7 +365,7 @@ The coordinator then applies the corrections with the guarded tool. That tool ch
 
 \subsection{External contributions}
 
-During the review, an external contributor (the third author) filed 13 issues and two pull requests on the public repository. These were produced with his own AI agents and covered labour-law cross-references, decrees that survive repealed statutes, penalties and works-council committees. Each issue was triaged against the register on the current text. Three of the issues asked for policy changes; they were explained and closed as not planned.
+During the review, an external contributor (the third author) filed 13 issues and two pull requests on the public repository, and three more issues after it: one on a code and two on this paper. The issues on the codes were produced with his own AI agents and covered labour-law cross-references, decrees that survive repealed statutes, penalties, works-council committees, a real-estate wealth-tax exemption and a safeguard in planning litigation. Each was triaged against the register on the current text. Four asked for a policy change or the removal of a favour; they were explained and closed as not planned. Two were withdrawn by their author. The 18 correction rows applied on 4~November in response to the later reports are not counted in the totals of \S\ref{sec:results}.
 
 \section{Measuring reliability}
 \label{sec:measure}
@@ -385,7 +385,7 @@ Each article is classified as:
   \item \textbf{m} (minor): wrong notes, clumsy but harmless wording, or a reasonable doubt;
   \item \textbf{0}: nothing to report.
 \end{itemize}
-Each G or m needs an exact quotation. Rates are weighted by stratum, with 95\% intervals. Defects are classified into ten families:
+Each G or m needs an exact quotation. Percentages are simple proportions of the articles read, with normal-approximation 95\% intervals. Because the allocation is close to proportional, stratum-weighted rates (the published \texttt{audit\_rate.py}) differ from them by at most 0.25 point for gross defects; on the fresh samples of \S\ref{sec:fresh} they give 3.6\% against 7.7\%, a 53.5\% reduction. The interval of a relative reduction uses the log method for a ratio of paired proportions. Defects are classified into ten families:
 
 \begin{table}[ht]
 \centering
@@ -472,9 +472,9 @@ Auditors also flagged higher-law risks (F9), published in the verdicts; we do no
 \toprule
 Audit (state of the text) & Sample & G & G rate & G or m\\
 \midrule
-1 (after P0/P1 corrections) & 309 & 12 & 4.0\% $\pm$ 2.2 & 21.1\%\\
-2 (after sweep 1) & 314 & 9 & 2.9\% $\pm$ 1.9 & 22.1\%\\
-3 (after sweep 2) & 314 & 12 & 3.8\% $\pm$ 2.1 & 17.7\%\\
+1 (after P0/P1 corrections) & 309 & 12 & 3.9\% $\pm$ 2.2 & 21.0\%\\
+2 (after sweep 1) & 314 & 9 & 2.9\% $\pm$ 1.8 & 22.6\%\\
+3 (after sweep 2) & 314 & 12 & 3.8\% $\pm$ 2.1 & 17.8\%\\
 4 (after P2 objections) & 314 & 8 & 2.5\% $\pm$ 1.7 & 14.6\%\\
 5 (after round 4) & 314 & 10 & 3.2\% $\pm$ 1.9 & 22.6\%\\
 6 (after round 5) & 314 & 13 & 4.1\% $\pm$ 2.2 & 15.3\%\\
@@ -500,7 +500,7 @@ Pooled, audits 1--6 & 1{,}879 & 64 & \textbf{3.4\% $\pm$ 0.8} & \\
   grid=major, grid style={gray!20},
 ]
 \addplot+[only marks, mark=*, black, error bars/.cd, y dir=both, y explicit]
-  coordinates {(1,4.0) +- (0,2.2) (2,2.9) +- (0,1.9) (3,3.8) +- (0,2.1)
+  coordinates {(1,3.9) +- (0,2.2) (2,2.9) +- (0,1.8) (3,3.8) +- (0,2.1)
                (4,2.5) +- (0,1.7) (5,3.2) +- (0,1.9) (6,4.1) +- (0,2.2)};
 \addplot+[only marks, mark=square*, blue!60!black, error bars/.cd, y dir=both, y explicit]
   coordinates {(7,2.4) +- (0,1.2) (8,1.4) +- (0,0.9)};
@@ -517,7 +517,7 @@ Pooled, audits 1--6 & 1{,}879 & 64 & \textbf{3.4\% $\pm$ 0.8} & \\
 
 About 3.4\% of articles (95\% interval 2.6--4.2\%) still carry a gross defect (Table~\ref{tab:audits}, Figure~\ref{fig:audits}). Put differently, a lawyer who reads 20 articles in their field has roughly an even chance of meeting at least one.
 
-The rate shows no measurable decline from round to round, even though each round fixed 50 to 110 articles. This is expected. If about 1{,}000 articles are defective, fixing 100 lowers the rate by about 0.3 points, well below what a 314-article audit can detect ($\pm$2 points).
+The rate shows no measurable decline from round to round, even though each round applied between 36 and 201 correction rows (Table~\ref{tab:rounds}). This is expected. If about 1{,}000 articles are defective, fixing 100 lowers the rate by about 0.3 points, and fixing 200 by less than 0.7, well below what a 314-article audit can detect ($\pm$2 points).
 
 The composition of the defects did change:
 \begin{itemize}
@@ -558,14 +558,14 @@ Retained unchanged (control) & 966 & 23 & 2.4\% & 22 & 2.3\%\\
 \multicolumn{4}{l}{Paired test (McNemar, exact)} & \multicolumn{2}{r}{$p \approx 2\times10^{-5}$}\\
 \bottomrule
 \end{tabular}
-\caption{Gross defects in the official law and in the rewritten law, on the same 1{,}879 randomly drawn articles, after verification of every defect seen on only one side. Project figures are at the time of each audit.}
+\caption{Gross defects in the official law and in the rewritten law, on the same 1{,}879 randomly drawn articles, after verification of every defect seen on only one side. Project figures are at the time of each audit. Three defects whose presence in the rewritten text the verifier could not settle are counted as present.}
 \label{tab:baseline}
 \end{table}
 
 \paragraph{Result.}
 After verification, the retained articles, whose text is the same on both sides, show the same rate (23 and 22 defects). This suggests that the verification removes the difference in strictness. On that basis (Table~\ref{tab:baseline}):
 \begin{itemize}
-  \item the rewritten law has \textbf{34\% fewer gross defects} than the official law it replaces (95\% CI 19--47\%): 4.6\% against 7.0\%;
+  \item the rewritten law has \textbf{34\% fewer gross defects} than the official law it replaces (95\% CI 20--46\%): 4.6\% against 7.0\%;
   \item among rewritten articles, the rate falls from 11.8\% to 7.0\%;
   \item for every defect the rewrite introduced, it repaired more than two in the official law (77 against 32).
 \end{itemize}
@@ -578,7 +578,7 @@ The project figures are those at the time of each audit. Every gross defect of t
 
 We drew 632 new articles, never sampled before, with the same strata and twice the allocation. Each was audited twice and blind: once on the current rewritten text (audit 7) and once on the official text, by 20 agents on each side. The rewritten-text auditors were told explicitly that a defect inherited from the official text counts, which makes this side stricter than in audits 1--6. The 52 defects seen on only one side were again checked against both texts.
 
-The 28 defects still present in that sample were then corrected (36 rows). The audit was replicated on a second fresh sample of 632 articles (audit 8), with the same design and a different model (Claude Fable 5.1 instead of Claude Opus 5.5); 44 one-sided defects were checked. Audit 8 was read while those corrections were being applied, but the correction archive shows that none of the 63 rows applied since the first fresh sample was drawn touched an audit-8 article before it was read; the only one that later did was applied 28 minutes after the last audit-8 verdict. The two audits therefore measure the same state of the corpus on disjoint articles, which is why we pool them. The 16 defects found by audit 8 were left uncorrected, so that sample remains an untouched measurement.
+The 28 defects still present in that sample were then corrected (36 rows). The audit was replicated on a second fresh sample of 632 articles (audit 8), with the same design and a different model (Claude Fable 5.1 instead of Claude Opus 5.5); 44 one-sided defects were checked. Audit 8 was read while those corrections were being applied, but the correction archive shows that none of the 63 rows applied since the first fresh sample was drawn touched an audit-8 article before it was read; the only one that later did was applied 28 minutes after the last audit-8 verdict on the rewritten text (the official-text side, which corrections cannot affect, finished two minutes before it). The two audits therefore measure the same state of the corpus on disjoint articles, which is why we pool them. The 16 defects found by audit 8 were left uncorrected, so that sample remains an untouched measurement.
 
 \begin{table}[ht]
 \centering
@@ -640,9 +640,9 @@ The reading consumed about 30 million tokens (excluding cache reads), roughly 11
 \paragraph{What was paid.}
 \begin{itemize}
   \item \textbf{Drafting passes (OpenAI Codex):} about US\$1{,}000 of API credits, plus a ChatGPT Pro subscription (US\$200 per month).
-  \item \textbf{Third pass (Claude Code):} a Claude Max subscription (US\$200 per month), with no API credits billed. Its logged usage over six days is 32{,}046 model requests, 29.5 million output tokens, 5.1 billion cache-read tokens and 135 million cache-write tokens. That is about \textbf{US\$2{,}500} at the rates of Claude Code's own cost display, or about US\$4{,}100 at list API prices.
+  \item \textbf{Third pass (Claude Code):} a Claude Max subscription (US\$200 per month), with no API credits billed. Its logged usage over six days is 32{,}046 model requests, 29.5 million output tokens, 5.1 billion cache-read tokens and 135 million cache-write tokens. That is about \textbf{US\$2{,}500} at the list API prices of the two models used (Claude Opus 5.5 for 97\% of the requests, Claude Fable 5.1 for the rest), consistent with Claude Code's own cost display. At the prices of the previous Opus generation (US\$5 and US\$25 per million input and output tokens, cache reads at US\$0.50), the same usage would cost about US\$4{,}100; we keep that figure as an upper bound.
 \end{itemize}
-Counting one month of each subscription, the cash outlay for the whole project was about \textbf{US\$1{,}400}, under 5 cents per article. At API prices it would have been US\$3{,}500 to 5{,}100, 12 to 17 cents per article. These figures exclude human time: a few days of direction and arbitration by one person.
+Counting one month of each subscription, the cash outlay for the whole project was about \textbf{US\$1{,}400}, under 5 cents per article. At API prices it would have been about US\$3{,}500 (12 cents per article), and at most US\$5{,}100 (17 cents) with the upper bound above. These figures exclude human time: a few days of direction and arbitration by one person.
 
 \paragraph{What the same work would cost with lawyers.}
 This is an order-of-magnitude estimate, not a measurement, and it depends on its assumptions, so we give two scenarios (Table~\ref{tab:lawyers}). Both count only the work actually performed here: 14{,}115 rewrites and 16{,}199 justified retentions in the first pass, 30{,}314 re-readings in the second, and about 12{,}500 audit and sweep readings, 1{,}943 classified alerts and 1{,}285 corrections in the third. The \emph{conservative} scenario assumes 2 hours per rewritten article, half an hour per reading and an hour and a half per correction. The \emph{realistic} scenario assumes 6 hours per rewritten article, which leaves time to check its cross-references and implementing texts, 1 hour per retained article and per coherence reading, half an hour per audit reading, 1 hour per alert and 3 hours per correction. Costs use \euro{}100 per hour for in-house legal drafters and \euro{}250 for a blended law-firm rate, and US\$1.10 per euro.
@@ -660,7 +660,7 @@ Conservative & 60{,}000 & \euro{}6--15 M & 1{,}300--4{,}700$\times$ & 4{,}700--1
 Realistic & 143{,}000 & \euro{}14--36 M & 3{,}100--11{,}300$\times$ & 11{,}000--28{,}000$\times$\\
 \bottomrule
 \end{tabular}
-\caption{Order-of-magnitude cost of the same work by lawyers. 60{,}000 hours is 35 to 40 lawyer-years; 143{,}000 hours is about 85. The AI work cost US\$3{,}500 to 5{,}100 at API prices and about US\$1{,}400 in cash.}
+\caption{Order-of-magnitude cost of the same work by lawyers. 60{,}000 hours is 35 to 40 lawyer-years; 143{,}000 hours is about 85. The AI work cost about US\$3{,}500 at API list prices (US\$5{,}100 with the upper bound of \S\ref{sec:cost}, which gives the lower multiples) and about US\$1{,}400 in cash.}
 \label{tab:lawyers}
 \end{table}
 
